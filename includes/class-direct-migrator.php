@@ -201,9 +201,11 @@ class IELTS_CM_Direct_Migrator {
         update_post_meta($new_lesson_id, '_ld_original_id', $ld_lesson->ID);
         
         // Get associated course from LearnDash
-        $course_id = learndash_get_course_id($ld_lesson->ID);
-        if ($course_id) {
-            update_post_meta($new_lesson_id, '_ld_original_course_id', $course_id);
+        if (function_exists('learndash_get_course_id')) {
+            $course_id = learndash_get_course_id($ld_lesson->ID);
+            if ($course_id) {
+                update_post_meta($new_lesson_id, '_ld_original_course_id', $course_id);
+            }
         }
         
         $this->log(sprintf('Migrated lesson: %s (ID: %d → %d)', $ld_lesson->post_title, $ld_lesson->ID, $new_lesson_id));
@@ -280,9 +282,11 @@ class IELTS_CM_Direct_Migrator {
         update_post_meta($new_topic_id, '_ld_original_id', $ld_topic->ID);
         
         // Get associated lesson from LearnDash
-        $lesson_id = learndash_get_lesson_id($ld_topic->ID);
-        if ($lesson_id) {
-            update_post_meta($new_topic_id, '_ld_original_lesson_id', $lesson_id);
+        if (function_exists('learndash_get_lesson_id')) {
+            $lesson_id = learndash_get_lesson_id($ld_topic->ID);
+            if ($lesson_id) {
+                update_post_meta($new_topic_id, '_ld_original_lesson_id', $lesson_id);
+            }
         }
         
         $this->log(sprintf('Migrated topic: %s (ID: %d → %d)', $ld_topic->post_title, $ld_topic->ID, $new_topic_id));
@@ -402,14 +406,18 @@ class IELTS_CM_Direct_Migrator {
         update_post_meta($new_quiz_id, '_ld_original_id', $ld_quiz->ID);
         
         // Get associated course and lesson
-        $course_id = learndash_get_course_id($ld_quiz->ID);
-        if ($course_id) {
-            update_post_meta($new_quiz_id, '_ld_original_course_id', $course_id);
+        if (function_exists('learndash_get_course_id')) {
+            $course_id = learndash_get_course_id($ld_quiz->ID);
+            if ($course_id) {
+                update_post_meta($new_quiz_id, '_ld_original_course_id', $course_id);
+            }
         }
         
-        $lesson_id = learndash_get_lesson_id($ld_quiz->ID);
-        if ($lesson_id) {
-            update_post_meta($new_quiz_id, '_ld_original_lesson_id', $lesson_id);
+        if (function_exists('learndash_get_lesson_id')) {
+            $lesson_id = learndash_get_lesson_id($ld_quiz->ID);
+            if ($lesson_id) {
+                update_post_meta($new_quiz_id, '_ld_original_lesson_id', $lesson_id);
+            }
         }
         
         // Convert and attach questions to this quiz
@@ -423,6 +431,11 @@ class IELTS_CM_Direct_Migrator {
      */
     private function convert_quiz_questions($ld_quiz_id, $new_quiz_id) {
         // Get questions associated with this quiz using LearnDash function
+        if (!function_exists('learndash_get_quiz_questions')) {
+            $this->log('LearnDash function learndash_get_quiz_questions not available', 'warning');
+            return;
+        }
+        
         $question_ids = learndash_get_quiz_questions($ld_quiz_id);
         
         if (empty($question_ids)) {

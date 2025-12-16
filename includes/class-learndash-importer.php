@@ -12,6 +12,12 @@ if (!defined('ABSPATH')) {
 class IELTS_CM_LearnDash_Importer {
     
     /**
+     * Constants for CDATA protection during preprocessing
+     */
+    const CDATA_START_MARKER = '___CDATA_START___';
+    const CDATA_END_MARKER = '___CDATA_END___';
+    
+    /**
      * Imported items tracking
      */
     private $imported_courses = array();
@@ -362,7 +368,7 @@ class IELTS_CM_LearnDash_Importer {
             '/<!\[CDATA\[(.*?)\]\]>/s',
             function($matches) {
                 // Mark CDATA sections to protect them
-                return '___CDATA_START___' . base64_encode($matches[1]) . '___CDATA_END___';
+                return self::CDATA_START_MARKER . base64_encode($matches[1]) . self::CDATA_END_MARKER;
             },
             $content
         );
@@ -372,7 +378,7 @@ class IELTS_CM_LearnDash_Importer {
         
         // Restore CDATA sections
         $content = preg_replace_callback(
-            '/___CDATA_START___(.*?)___CDATA_END___/s',
+            '/' . preg_quote(self::CDATA_START_MARKER, '/') . '(.*?)' . preg_quote(self::CDATA_END_MARKER, '/') . '/s',
             function($matches) {
                 return '<![CDATA[' . base64_decode($matches[1]) . ']]>';
             },
