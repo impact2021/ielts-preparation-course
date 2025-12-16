@@ -7,6 +7,11 @@
     
     $(document).ready(function() {
         
+        // Helper function to force reload from server, bypassing cache
+        function forceReload() {
+            window.location.href = window.location.href.split('#')[0] + '?refresh=' + Date.now();
+        }
+        
         // Enrollment
         $('.enroll-button').on('click', function(e) {
             e.preventDefault();
@@ -28,8 +33,7 @@
                     if (response.success) {
                         showMessage('success', 'You have been enrolled successfully!');
                         setTimeout(function() {
-                            // Force reload from server, not from cache
-                            window.location.href = window.location.href.split('#')[0] + '?refresh=' + Date.now();
+                            forceReload();
                         }, 1500);
                     } else {
                         showMessage('error', response.data.message || 'Failed to enroll');
@@ -66,8 +70,7 @@
                     if (response.success) {
                         showMessage('success', 'Lesson marked as complete!');
                         setTimeout(function() {
-                            // Force reload from server, not from cache
-                            window.location.href = window.location.href.split('#')[0] + '?refresh=' + Date.now();
+                            forceReload();
                         }, 1500);
                     } else {
                         showMessage('error', response.data.message || 'Failed to save progress');
@@ -135,7 +138,7 @@
                             html += '<p>Keep studying and try again to improve your score!</p>';
                         }
                         
-                        html += '<button class="button button-primary" onclick="window.location.href = window.location.href.split(\'#\')[0] + \'?refresh=\' + Date.now()">Take Quiz Again</button>';
+                        html += '<button class="button button-primary quiz-retake-btn">Take Quiz Again</button>';
                         html += '</div>';
                         
                         form.hide();
@@ -155,6 +158,12 @@
                     form.find('button[type="submit"]').prop('disabled', false).text('Submit Quiz');
                 }
             });
+        });
+        
+        // Event delegation for quiz retake button
+        $(document).on('click', '.quiz-retake-btn', function(e) {
+            e.preventDefault();
+            forceReload();
         });
         
         // Helper function to show messages
