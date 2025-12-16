@@ -197,9 +197,12 @@ set_time_limit(300); // 5 minutes</pre>
             exit;
         }
         
-        // Validate file type
+        // Validate file type (both extension and MIME type)
         $file_info = pathinfo($_FILES['import_file']['name']);
-        if (!isset($file_info['extension']) || strtolower($file_info['extension']) !== 'xml') {
+        $file_type = wp_check_filetype($_FILES['import_file']['name'], array('xml' => 'application/xml', 'xml' => 'text/xml'));
+        
+        if (!isset($file_info['extension']) || strtolower($file_info['extension']) !== 'xml' || 
+            !in_array($file_type['type'], array('application/xml', 'text/xml'))) {
             wp_redirect(add_query_arg(array(
                 'page' => 'ielts-import-learndash',
                 'error' => 'invalid_file_type'

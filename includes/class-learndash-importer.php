@@ -113,8 +113,14 @@ class IELTS_CM_LearnDash_Importer {
         
         // Check if already exists (by title)
         if (!empty($options['skip_duplicates'])) {
-            $existing = get_page_by_title($title, OBJECT, $new_post_type);
-            if ($existing) {
+            $existing_posts = get_posts(array(
+                'post_type' => $new_post_type,
+                'title' => $title,
+                'posts_per_page' => 1,
+                'post_status' => 'any',
+                'fields' => 'ids'
+            ));
+            if (!empty($existing_posts)) {
                 $this->log("Skipping duplicate: {$title}", 'warning');
                 return;
             }
@@ -169,9 +175,9 @@ class IELTS_CM_LearnDash_Importer {
             $mapped_key = $this->map_meta_key($key, $post_type);
             
             if ($mapped_key) {
-                // Unserialize if needed
+                // Unserialize if needed (using WordPress helper for safety)
                 if ($this->is_serialized($value)) {
-                    $value = unserialize($value);
+                    $value = maybe_unserialize($value);
                 }
                 
                 update_post_meta($new_id, $mapped_key, $value);
