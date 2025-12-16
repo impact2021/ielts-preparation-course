@@ -63,18 +63,22 @@ Quiz features:
 
 1. Go to **IELTS Courses > Add New Course**
 2. Enter course title and description
-3. Set duration and difficulty level
-4. Add a featured image (optional)
-5. Publish the course
+3. Add a featured image (optional)
+4. Publish the course
 
 ### Creating Lessons
 
 1. Go to **IELTS Courses > Lessons > Add New**
 2. Enter lesson title and content
-3. Assign to a course
-4. Set lesson duration
-5. Use the menu order to control lesson sequence
-6. Publish the lesson
+3. Assign to one or more courses (use Ctrl/Cmd to select multiple)
+4. Publish the lesson
+
+### Reordering Lessons
+
+1. Go to the course edit page
+2. Find the **Course Lessons** meta box
+3. Drag and drop lessons to reorder them
+4. The order is saved automatically
 
 ### Adding Resources
 
