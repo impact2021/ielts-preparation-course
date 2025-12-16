@@ -35,6 +35,13 @@ class IELTS_CM_Frontend {
             }
         }
         
+        if (is_singular('ielts_quiz')) {
+            $custom_template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-page.php';
+            if (file_exists($custom_template)) {
+                return $custom_template;
+            }
+        }
+        
         if (is_post_type_archive('ielts_course')) {
             $custom_template = IELTS_CM_PLUGIN_DIR . 'templates/archive-courses.php';
             if (file_exists($custom_template)) {
@@ -55,6 +62,10 @@ class IELTS_CM_Frontend {
         
         if (is_singular('ielts_lesson')) {
             $classes[] = 'ielts-lesson-single';
+        }
+        
+        if (is_singular('ielts_quiz')) {
+            $classes[] = 'ielts-quiz-single';
         }
         
         if (is_post_type_archive('ielts_course')) {
