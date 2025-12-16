@@ -120,21 +120,29 @@ class IELTS_CM_Progress_Tracker {
         global $wpdb;
         
         // Get all lessons in the course (check both old and new meta keys)
+        // Join with wp_posts to ensure we only get lessons
         $lesson_ids = $wpdb->get_col($wpdb->prepare("
-            SELECT DISTINCT post_id 
-            FROM {$wpdb->postmeta} 
-            WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_course_ids' AND meta_value LIKE %s)
+            SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_lesson'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_course_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_course_ids' AND pm.meta_value LIKE %s))
         ", $course_id, '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%'));
         
         $total_lessons = count($lesson_ids);
         
         // Get all quizzes in the course (check both old and new meta keys)
+        // Join with wp_posts to ensure we only get quizzes
         $quiz_ids = $wpdb->get_col($wpdb->prepare("
-            SELECT DISTINCT post_id 
-            FROM {$wpdb->postmeta} 
-            WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_course_ids' AND meta_value LIKE %s)
+            SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_quiz'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_course_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_course_ids' AND pm.meta_value LIKE %s))
         ", $course_id, '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%'));
         
         $total_quizzes = count($quiz_ids);
@@ -157,6 +165,8 @@ class IELTS_CM_Progress_Tracker {
         $quiz_results_table = $this->db->get_quiz_results_table();
         $completed_quizzes = 0;
         if (!empty($quiz_ids)) {
+            // Ensure all quiz_ids are integers for safety
+            $quiz_ids = array_map('intval', $quiz_ids);
             $quiz_ids_placeholders = implode(',', array_fill(0, count($quiz_ids), '%d'));
             $query = $wpdb->prepare(
                 "SELECT COUNT(DISTINCT quiz_id) FROM $quiz_results_table WHERE user_id = %d AND quiz_id IN ($quiz_ids_placeholders)",

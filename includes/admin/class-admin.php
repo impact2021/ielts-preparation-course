@@ -952,6 +952,11 @@ class IELTS_CM_Admin {
     public function settings_page() {
         // Save settings if form submitted
         if (isset($_POST['ielts_cm_settings_nonce']) && wp_verify_nonce($_POST['ielts_cm_settings_nonce'], 'ielts_cm_settings')) {
+            // Check user capability
+            if (!current_user_can('manage_options')) {
+                wp_die(__('You do not have sufficient permissions to access this page.', 'ielts-course-manager'));
+            }
+            
             if (isset($_POST['ielts_cm_delete_data_on_uninstall'])) {
                 update_option('ielts_cm_delete_data_on_uninstall', true);
             } else {
