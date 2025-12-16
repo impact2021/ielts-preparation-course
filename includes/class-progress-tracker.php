@@ -217,6 +217,21 @@ class IELTS_CM_Progress_Tracker {
     }
     
     /**
+     * Check if resource is completed
+     */
+    public function is_resource_completed($user_id, $lesson_id, $resource_id) {
+        global $wpdb;
+        $table = $this->db->get_progress_table();
+        
+        $completed = $wpdb->get_var($wpdb->prepare(
+            "SELECT completed FROM $table WHERE user_id = %d AND lesson_id = %d AND resource_id = %d AND completed = 1",
+            $user_id, $lesson_id, $resource_id
+        ));
+        
+        return (bool) $completed;
+    }
+    
+    /**
      * Check if a course is 100% complete
      * Requires all lessons completed AND all quizzes taken (regardless of score)
      */
