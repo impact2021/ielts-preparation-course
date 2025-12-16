@@ -74,14 +74,18 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                             <?php endif; ?>
                             <td class="resource-title">
                                 <strong>
-                                    <?php if ($resource_url): ?>
-                                        <a href="<?php echo esc_url($resource_url); ?>" target="_blank">
-                                            <?php echo esc_html($resource->post_title); ?>
-                                        </a>
-                                    <?php else: ?>
+                                    <a href="<?php echo get_permalink($resource->ID); ?>">
                                         <?php echo esc_html($resource->post_title); ?>
-                                    <?php endif; ?>
+                                    </a>
                                 </strong>
+                                <?php if ($resource_url): ?>
+                                    <br>
+                                    <small>
+                                        <a href="<?php echo esc_url($resource_url); ?>" target="_blank">
+                                            <?php _e('External Resource', 'ielts-course-manager'); ?>
+                                        </a>
+                                    </small>
+                                <?php endif; ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>

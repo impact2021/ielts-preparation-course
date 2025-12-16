@@ -58,6 +58,8 @@ body.ielts-lesson-single .content-area {
                     'post_type' => 'ielts_resource',
                     'posts_per_page' => -1,
                     'post__in' => $resource_ids,
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
                     'post_status' => 'publish'
                 ));
             }
