@@ -9,7 +9,10 @@
         
         // Helper function to force reload from server, bypassing cache
         function forceReload() {
-            window.location.href = window.location.href.split('#')[0] + '?refresh=' + Date.now();
+            var url = window.location.href.split('#')[0].split('?')[0];
+            var params = new URLSearchParams(window.location.search);
+            params.set('refresh', Date.now());
+            window.location.href = url + '?' + params.toString();
         }
         
         // Enrollment
@@ -160,7 +163,7 @@
             });
         });
         
-        // Event delegation for quiz retake button
+        // Event delegation for dynamically created quiz retake button
         $(document).on('click', '.quiz-retake-btn', function(e) {
             e.preventDefault();
             forceReload();
