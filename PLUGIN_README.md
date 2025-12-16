@@ -48,6 +48,13 @@ Quiz features:
 - See all quiz results in one place
 - Completion statistics
 
+### LearnDash Import
+- Import courses, lessons, topics (lesson pages), and quizzes from LearnDash XML exports
+- Batch processing support for large migrations (25+ courses with hundreds of lessons)
+- Automatic relationship mapping between imported content
+- Skip duplicate items during import
+- Detailed import logging with error and warning tracking
+
 ## Installation
 
 1. Upload the `ielts-course-manager` folder to `/wp-content/plugins/`
@@ -99,6 +106,19 @@ Quiz features:
    - Set correct answer
    - Assign points
 6. Publish the quiz
+
+### Importing from LearnDash
+
+For migrating content from LearnDash:
+
+1. Go to **IELTS Courses > Import from LearnDash**
+2. Upload your LearnDash XML export file
+3. Configure import options:
+   - Check "Skip items with duplicate titles" to avoid re-importing
+4. Click **Import XML File**
+5. Review the import results and log
+
+**For detailed import instructions**, especially for large migrations (25+ courses), see [LEARNDASH_IMPORT_GUIDE.md](LEARNDASH_IMPORT_GUIDE.md).
 
 ### Displaying Content
 

@@ -21,6 +21,7 @@ This plugin provides a complete course management system with:
 ✅ **Student Progress Page** - Consolidated view of all progress and quiz results  
 ✅ **Easy Content Management** - Simple WordPress post types for courses, lessons, lesson pages, and quizzes  
 ✅ **Shortcode Support** - Display courses and progress anywhere on your site  
+✅ **LearnDash Import Tool** - Easily migrate from LearnDash with built-in XML import functionality  
 
 ## Installation
 
@@ -36,6 +37,14 @@ See [PLUGIN_README.md](PLUGIN_README.md) for detailed documentation on:
 - Using shortcodes
 - Managing student progress
 - Quiz question type guidelines
+
+### Migrating from LearnDash?
+
+See [LEARNDASH_IMPORT_GUIDE.md](LEARNDASH_IMPORT_GUIDE.md) for comprehensive instructions on:
+- Exporting content from LearnDash
+- Importing XML files into IELTS Course Manager
+- Batch processing for large migrations (25+ courses)
+- Troubleshooting and best practices
 
 ## Requirements
 
