@@ -34,6 +34,7 @@ require_once IELTS_CM_PLUGIN_DIR . 'includes/class-quiz-handler.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-shortcodes.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-enrollment.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-admin.php';
+require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-import-page.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/frontend/class-frontend.php';
 
 /**
