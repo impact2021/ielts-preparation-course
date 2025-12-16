@@ -7,6 +7,13 @@
     
     $(document).ready(function() {
         
+        // Helper function to force reload from server, bypassing cache
+        function forceReload() {
+            var url = new URL(window.location);
+            url.searchParams.set('refresh', Date.now());
+            window.location.href = url.toString();
+        }
+        
         // Enrollment
         $('.enroll-button').on('click', function(e) {
             e.preventDefault();
@@ -28,7 +35,7 @@
                     if (response.success) {
                         showMessage('success', 'You have been enrolled successfully!');
                         setTimeout(function() {
-                            location.reload();
+                            forceReload();
                         }, 1500);
                     } else {
                         showMessage('error', response.data.message || 'Failed to enroll');
@@ -65,7 +72,7 @@
                     if (response.success) {
                         showMessage('success', 'Lesson marked as complete!');
                         setTimeout(function() {
-                            location.reload();
+                            forceReload();
                         }, 1500);
                     } else {
                         showMessage('error', response.data.message || 'Failed to save progress');
@@ -133,7 +140,7 @@
                             html += '<p>Keep studying and try again to improve your score!</p>';
                         }
                         
-                        html += '<button class="button button-primary" onclick="location.reload()">Take Quiz Again</button>';
+                        html += '<button class="button button-primary quiz-retake-btn">Take Quiz Again</button>';
                         html += '</div>';
                         
                         form.hide();
@@ -153,6 +160,12 @@
                     form.find('button[type="submit"]').prop('disabled', false).text('Submit Quiz');
                 }
             });
+        });
+        
+        // Event delegation for dynamically created quiz retake button
+        $(document).on('click', '.quiz-retake-btn', function(e) {
+            e.preventDefault();
+            forceReload();
         });
         
         // Helper function to show messages
