@@ -51,7 +51,10 @@ body.ielts-quiz-single .content-area {
             $lesson_id = get_post_meta($quiz_id, '_ielts_cm_lesson_id', true);
             
             // Include the single quiz template
-            include IELTS_CM_PLUGIN_DIR . 'templates/single-quiz.php';
+            $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz.php';
+            if (file_exists($template)) {
+                include $template;
+            }
             
         endwhile;
         ?>
