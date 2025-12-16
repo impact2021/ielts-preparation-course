@@ -26,6 +26,9 @@ class IELTS_CM_Admin {
         
         // Add AJAX handlers
         add_action('wp_ajax_ielts_cm_update_lesson_order', array($this, 'ajax_update_lesson_order'));
+        
+        // Register settings
+        add_action('admin_init', array($this, 'register_settings'));
     }
     
     /**
@@ -649,6 +652,15 @@ class IELTS_CM_Admin {
             'ielts-documentation',
             array($this, 'documentation_page')
         );
+        
+        add_submenu_page(
+            'edit.php?post_type=ielts_course',
+            __('Settings', 'ielts-course-manager'),
+            __('Settings', 'ielts-course-manager'),
+            'manage_options',
+            'ielts-settings',
+            array($this, 'settings_page')
+        );
     }
     
     /**
@@ -919,6 +931,69 @@ class IELTS_CM_Admin {
                 margin: 5px 0;
             }
             </style>
+        </div>
+        <?php
+    }
+    
+    /**
+     * Register settings
+     */
+    public function register_settings() {
+        register_setting('ielts_cm_settings', 'ielts_cm_delete_data_on_uninstall', array(
+            'type' => 'boolean',
+            'default' => false,
+            'sanitize_callback' => 'rest_sanitize_boolean'
+        ));
+    }
+    
+    /**
+     * Settings page
+     */
+    public function settings_page() {
+        // Check user capability first
+        if (!current_user_can('manage_options')) {
+            wp_die(__('You do not have sufficient permissions to access this page.', 'ielts-course-manager'));
+        }
+        
+        // Save settings if form submitted
+        if (isset($_POST['ielts_cm_settings_nonce']) && wp_verify_nonce($_POST['ielts_cm_settings_nonce'], 'ielts_cm_settings')) {
+            if (isset($_POST['ielts_cm_delete_data_on_uninstall'])) {
+                update_option('ielts_cm_delete_data_on_uninstall', true);
+            } else {
+                update_option('ielts_cm_delete_data_on_uninstall', false);
+            }
+            echo '<div class="notice notice-success is-dismissible"><p>' . __('Settings saved.', 'ielts-course-manager') . '</p></div>';
+        }
+        
+        $delete_data_on_uninstall = get_option('ielts_cm_delete_data_on_uninstall', false);
+        ?>
+        <div class="wrap">
+            <h1><?php _e('IELTS Course Manager Settings', 'ielts-course-manager'); ?></h1>
+            
+            <form method="post" action="">
+                <?php wp_nonce_field('ielts_cm_settings', 'ielts_cm_settings_nonce'); ?>
+                
+                <table class="form-table">
+                    <tr>
+                        <th scope="row">
+                            <?php _e('Data Management', 'ielts-course-manager'); ?>
+                        </th>
+                        <td>
+                            <fieldset>
+                                <label>
+                                    <input type="checkbox" name="ielts_cm_delete_data_on_uninstall" value="1" <?php checked($delete_data_on_uninstall, true); ?>>
+                                    <?php _e('Delete all plugin data when uninstalling', 'ielts-course-manager'); ?>
+                                </label>
+                                <p class="description">
+                                    <?php _e('When enabled, all courses, lessons, resources, quizzes, progress data, and settings will be permanently deleted when you uninstall the plugin. When disabled (recommended), your data will be preserved.', 'ielts-course-manager'); ?>
+                                </p>
+                            </fieldset>
+                        </td>
+                    </tr>
+                </table>
+                
+                <?php submit_button(); ?>
+            </form>
         </div>
         <?php
     }

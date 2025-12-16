@@ -119,31 +119,69 @@ class IELTS_CM_Progress_Tracker {
     public function get_course_completion_percentage($user_id, $course_id) {
         global $wpdb;
         
-        // Get all lessons in the course
-        $lessons = get_posts(array(
-            'post_type' => 'ielts_lesson',
-            'posts_per_page' => -1,
-            'meta_query' => array(
-                array(
-                    'key' => '_ielts_cm_course_id',
-                    'value' => $course_id
-                )
-            )
-        ));
+        // Get all lessons in the course (check both old and new meta keys)
+        // Join with wp_posts to ensure we only get lessons
+        $lesson_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_lesson'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_course_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_course_ids' AND pm.meta_value LIKE %s))
+        ", $course_id, '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%'));
         
-        $total_lessons = count($lessons);
-        if ($total_lessons == 0) {
+        $total_lessons = count($lesson_ids);
+        
+        // Get all quizzes in the course (check both old and new meta keys)
+        // Join with wp_posts to ensure we only get quizzes
+        $quiz_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_quiz'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_course_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_course_ids' AND pm.meta_value LIKE %s))
+        ", $course_id, '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%'));
+        
+        $total_quizzes = count($quiz_ids);
+        
+        // Total items needed for 100% completion
+        $total_items = $total_lessons + $total_quizzes;
+        
+        if ($total_items == 0) {
             return 0;
         }
         
         // Get completed lessons
         $table = $this->db->get_progress_table();
-        $completed = $wpdb->get_var($wpdb->prepare(
+        $completed_lessons = $wpdb->get_var($wpdb->prepare(
             "SELECT COUNT(DISTINCT lesson_id) FROM $table WHERE user_id = %d AND course_id = %d AND completed = 1",
             $user_id, $course_id
         ));
         
-        return ($completed / $total_lessons) * 100;
+        // Get completed quizzes (any quiz taken counts, regardless of score)
+        $quiz_results_table = $this->db->get_quiz_results_table();
+        $completed_quizzes = 0;
+        if (!empty($quiz_ids)) {
+            // Ensure all quiz_ids are integers for safety
+            $quiz_ids = array_map('intval', $quiz_ids);
+            // Validate count to prevent potential issues
+            $quiz_count = count($quiz_ids);
+            if ($quiz_count > 0 && $quiz_count <= 1000) {
+                $quiz_ids_placeholders = implode(',', array_fill(0, $quiz_count, '%d'));
+                $query = $wpdb->prepare(
+                    "SELECT COUNT(DISTINCT quiz_id) FROM $quiz_results_table WHERE user_id = %d AND quiz_id IN ($quiz_ids_placeholders)",
+                    array_merge(array($user_id), $quiz_ids)
+                );
+                $completed_quizzes = $wpdb->get_var($query);
+            }
+        }
+        
+        $completed_items = $completed_lessons + $completed_quizzes;
+        
+        return ($completed_items / $total_items) * 100;
     }
     
     /**
@@ -176,5 +214,14 @@ class IELTS_CM_Progress_Tracker {
         ));
         
         return (bool) $completed;
+    }
+    
+    /**
+     * Check if a course is 100% complete
+     * Requires all lessons completed AND all quizzes taken (regardless of score)
+     */
+    public function is_course_complete($user_id, $course_id) {
+        $percentage = $this->get_course_completion_percentage($user_id, $course_id);
+        return $percentage >= 100;
     }
 }
