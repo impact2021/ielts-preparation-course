@@ -70,6 +70,6 @@ class IELTS_Course_Manager {
     
     public function enqueue_admin_scripts() {
         wp_enqueue_style('ielts-cm-admin', IELTS_CM_PLUGIN_URL . 'assets/css/admin.css', array(), IELTS_CM_VERSION);
-        wp_enqueue_script('ielts-cm-admin', IELTS_CM_PLUGIN_URL . 'assets/js/admin.js', array('jquery'), IELTS_CM_VERSION, true);
+        wp_enqueue_script('ielts-cm-admin', IELTS_CM_PLUGIN_URL . 'assets/js/admin.js', array('jquery', 'jquery-ui-sortable'), IELTS_CM_VERSION, true);
     }
 }

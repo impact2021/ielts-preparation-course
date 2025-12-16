@@ -853,7 +853,6 @@ class IELTS_CM_Admin {
                 <ol>
                     <li><?php _e('Go to IELTS Courses > Add New Course', 'ielts-course-manager'); ?></li>
                     <li><?php _e('Enter course title and description', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Set duration (hours) and difficulty level', 'ielts-course-manager'); ?></li>
                     <li><?php _e('Add a featured image (optional)', 'ielts-course-manager'); ?></li>
                     <li><?php _e('Publish the course', 'ielts-course-manager'); ?></li>
                 </ol>
@@ -863,10 +862,9 @@ class IELTS_CM_Admin {
                     <li><?php _e('Go to IELTS Courses > Lessons > Add New', 'ielts-course-manager'); ?></li>
                     <li><?php _e('Enter lesson title and content', 'ielts-course-manager'); ?></li>
                     <li><?php _e('Assign to one or more courses (use Ctrl/Cmd to select multiple)', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Set lesson duration in minutes', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Use the menu order field to control lesson sequence', 'ielts-course-manager'); ?></li>
                     <li><?php _e('Publish the lesson', 'ielts-course-manager'); ?></li>
                 </ol>
+                <p><strong><?php _e('Reordering Lessons:', 'ielts-course-manager'); ?></strong> <?php _e('Go to the course edit page and use the "Course Lessons" meta box to drag and drop lessons into the desired order.', 'ielts-course-manager'); ?></p>
                 
                 <h3><?php _e('3. Add Resources', 'ielts-course-manager'); ?></h3>
                 <ol>
