@@ -1,0 +1,50 @@
+/**
+ * Admin styles for IELTS Course Manager
+ */
+
+/* Quiz Questions */
+#ielts-cm-questions {
+    margin-top: 20px;
+}
+
+#questions-container {
+    margin-top: 15px;
+}
+
+.question-item {
+    position: relative;
+}
+
+.question-item h4 {
+    margin-top: 0;
+}
+
+.question-item .remove-question {
+    background: #dc3232;
+    color: #fff;
+    border-color: #dc3232;
+}
+
+.question-item .remove-question:hover {
+    background: #a00;
+    border-color: #a00;
+}
+
+#add-question {
+    margin-top: 15px;
+}
+
+/* Progress Reports */
+.ielts-progress-reports h3 {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Admin columns */
+.column-lessons,
+.column-enrolled,
+.column-course,
+.column-resources {
+    width: 100px;
+}
