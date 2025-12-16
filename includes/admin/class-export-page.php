@@ -303,7 +303,17 @@ class IELTS_CM_Export_Page {
                 $xml .= "\t<wp:category>\n";
                 $xml .= "\t\t<wp:term_id>" . intval($category->term_id) . "</wp:term_id>\n";
                 $xml .= "\t\t<wp:category_nicename>" . $this->wxr_cdata($category->slug) . "</wp:category_nicename>\n";
-                $xml .= "\t\t<wp:category_parent>" . $this->wxr_cdata($category->parent ? get_term($category->parent)->slug : '') . "</wp:category_parent>\n";
+                
+                // Safely get parent slug
+                $parent_slug = '';
+                if ($category->parent) {
+                    $parent_term = get_term($category->parent);
+                    if (!is_wp_error($parent_term) && $parent_term) {
+                        $parent_slug = $parent_term->slug;
+                    }
+                }
+                $xml .= "\t\t<wp:category_parent>" . $this->wxr_cdata($parent_slug) . "</wp:category_parent>\n";
+                
                 $xml .= "\t\t<wp:cat_name>" . $this->wxr_cdata($category->name) . "</wp:cat_name>\n";
                 $xml .= "\t</wp:category>\n";
             }
