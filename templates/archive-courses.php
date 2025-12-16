@@ -18,6 +18,10 @@ get_header();
  * 2. Inline styles have highest specificity to override theme styles
  * 3. These styles are page-specific and should only apply to this template
  */
+body.ielts-course-archive #main.site-main {
+    padding: 60px 40px !important;
+}
+/* Fallback for themes with different structure */
 body.ielts-course-archive .site-main,
 body.ielts-course-archive #primary,
 body.ielts-course-archive .content-area {
@@ -27,7 +31,7 @@ body.ielts-course-archive .content-area {
 </style>
 
 <div id="primary" class="content-area ielts-full-width">
-    <main id="main" class="site-main" style="padding: 60px 40px;">
+    <main id="main" class="site-main">
         
         <header class="page-header">
             <h1 class="page-title"><?php _e('IELTS Courses', 'ielts-course-manager'); ?></h1>

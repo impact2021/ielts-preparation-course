@@ -76,14 +76,16 @@ class IELTS_Course_Manager {
         
         $current_version = get_option('ielts_cm_version');
         
-        // If version has changed, flush rewrite rules
+        // If version has changed, flush rewrite rules and update version
         if ($current_version !== IELTS_CM_VERSION) {
             flush_rewrite_rules();
             update_option('ielts_cm_version', IELTS_CM_VERSION);
+            // Set transient after flushing to confirm version is updated
+            set_transient('ielts_cm_version_checked', IELTS_CM_VERSION, HOUR_IN_SECONDS);
+        } else {
+            // Version is current but transient expired, reset it without flushing
+            set_transient('ielts_cm_version_checked', IELTS_CM_VERSION, HOUR_IN_SECONDS);
         }
-        
-        // Set transient to prevent checking again for 1 hour
-        set_transient('ielts_cm_version_checked', IELTS_CM_VERSION, HOUR_IN_SECONDS);
     }
     
     public function enqueue_scripts() {
