@@ -184,7 +184,7 @@ class IELTS_CM_Quiz_Handler {
     public static function get_quiz_types() {
         return array(
             'multiple_choice' => __('Multiple Choice', 'ielts-course-manager'),
-            'true_false' => __('True/False', 'ielts-course-manager'),
+            'true_false' => __('True/False/Not Given', 'ielts-course-manager'),
             'fill_blank' => __('Fill in the Blank', 'ielts-course-manager'),
             'essay' => __('Essay', 'ielts-course-manager')
         );

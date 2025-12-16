@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: IELTS Course Manager
- * Plugin URI: https://github.com/impact2021/ielts-preparation-course
+ * Plugin URI: https://www.impactwebsites.co.nz/
  * Description: A flexible Learning Management System for IELTS preparation courses with lessons, resources, quizzes, and progress tracking.
- * Version: 1.0.0
- * Author: IELTS Preparation Team
- * Author URI: https://github.com/impact2021
+ * Version: 1.1
+ * Author: Impact Websites
+ * Author URI: https://www.impactwebsites.co.nz/
  * Text Domain: ielts-course-manager
  * Domain Path: /languages
  * Requires at least: 5.0
@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('IELTS_CM_VERSION', '1.0.0');
+define('IELTS_CM_VERSION', '1.1');
 define('IELTS_CM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('IELTS_CM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('IELTS_CM_PLUGIN_FILE', __FILE__);

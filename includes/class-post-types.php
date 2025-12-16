@@ -92,16 +92,16 @@ class IELTS_CM_Post_Types {
     }
     
     /**
-     * Register Resource post type
+     * Register Lesson page post type
      */
     private function register_resource() {
         $labels = array(
-            'name' => __('Resources', 'ielts-course-manager'),
-            'singular_name' => __('Resource', 'ielts-course-manager'),
-            'menu_name' => __('Resources', 'ielts-course-manager'),
-            'add_new' => __('Add New Resource', 'ielts-course-manager'),
-            'add_new_item' => __('Add New Resource', 'ielts-course-manager'),
-            'edit_item' => __('Edit Resource', 'ielts-course-manager'),
+            'name' => __('Lesson pages', 'ielts-course-manager'),
+            'singular_name' => __('Lesson page', 'ielts-course-manager'),
+            'menu_name' => __('Lesson pages', 'ielts-course-manager'),
+            'add_new' => __('Add New Lesson page', 'ielts-course-manager'),
+            'add_new_item' => __('Add New Lesson page', 'ielts-course-manager'),
+            'edit_item' => __('Edit Lesson page', 'ielts-course-manager'),
         );
         
         $args = array(
@@ -112,7 +112,7 @@ class IELTS_CM_Post_Types {
             'show_in_rest' => true,
             'menu_icon' => 'dashicons-media-document',
             'supports' => array('title', 'editor', 'thumbnail'),
-            'rewrite' => array('slug' => 'ielts-resource'),
+            'rewrite' => array('slug' => 'ielts-lesson-page'),
             'capability_type' => 'post',
         );
         
