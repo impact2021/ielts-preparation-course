@@ -23,6 +23,9 @@ class IELTS_CM_Admin {
         
         add_filter('manage_ielts_lesson_posts_columns', array($this, 'lesson_columns'));
         add_action('manage_ielts_lesson_posts_custom_column', array($this, 'lesson_column_content'), 10, 2);
+        
+        // Add AJAX handlers
+        add_action('wp_ajax_ielts_cm_update_lesson_order', array($this, 'ajax_update_lesson_order'));
     }
     
     /**
@@ -34,6 +37,16 @@ class IELTS_CM_Admin {
             'ielts_cm_course_meta',
             __('Course Settings', 'ielts-course-manager'),
             array($this, 'course_meta_box'),
+            'ielts_course',
+            'normal',
+            'high'
+        );
+        
+        // Course lessons meta box
+        add_meta_box(
+            'ielts_cm_course_lessons',
+            __('Course Lessons', 'ielts-course-manager'),
+            array($this, 'course_lessons_meta_box'),
             'ielts_course',
             'normal',
             'high'
@@ -75,22 +88,179 @@ class IELTS_CM_Admin {
      */
     public function course_meta_box($post) {
         wp_nonce_field('ielts_cm_course_meta', 'ielts_cm_course_meta_nonce');
-        
-        $duration = get_post_meta($post->ID, '_ielts_cm_duration', true);
-        $difficulty = get_post_meta($post->ID, '_ielts_cm_difficulty', true);
         ?>
         <p>
-            <label for="ielts_cm_duration"><?php _e('Duration (hours)', 'ielts-course-manager'); ?></label><br>
-            <input type="number" id="ielts_cm_duration" name="ielts_cm_duration" value="<?php echo esc_attr($duration); ?>" min="0" step="0.5" style="width: 100%;">
+            <?php _e('Use the Course Lessons meta box below to manage and reorder lessons for this course.', 'ielts-course-manager'); ?>
         </p>
-        <p>
-            <label for="ielts_cm_difficulty"><?php _e('Difficulty Level', 'ielts-course-manager'); ?></label><br>
-            <select id="ielts_cm_difficulty" name="ielts_cm_difficulty" style="width: 100%;">
-                <option value="beginner" <?php selected($difficulty, 'beginner'); ?>><?php _e('Beginner', 'ielts-course-manager'); ?></option>
-                <option value="intermediate" <?php selected($difficulty, 'intermediate'); ?>><?php _e('Intermediate', 'ielts-course-manager'); ?></option>
-                <option value="advanced" <?php selected($difficulty, 'advanced'); ?>><?php _e('Advanced', 'ielts-course-manager'); ?></option>
-            </select>
-        </p>
+        <?php
+    }
+    
+    /**
+     * Course lessons meta box - display and reorder lessons
+     */
+    public function course_lessons_meta_box($post) {
+        // Get lessons for this course
+        global $wpdb;
+        $lesson_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT post_id 
+            FROM {$wpdb->postmeta} 
+            WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
+               OR (meta_key = '_ielts_cm_course_ids' AND meta_value LIKE %s)
+        ", $post->ID, '%' . $wpdb->esc_like(serialize(strval($post->ID))) . '%'));
+        
+        $lessons = array();
+        if (!empty($lesson_ids)) {
+            $lessons = get_posts(array(
+                'post_type' => 'ielts_lesson',
+                'posts_per_page' => -1,
+                'post__in' => $lesson_ids,
+                'orderby' => 'menu_order',
+                'order' => 'ASC'
+            ));
+        }
+        ?>
+        <div id="ielts-cm-course-lessons">
+            <?php if (empty($lessons)): ?>
+                <p><?php _e('No lessons have been assigned to this course yet. Create lessons and assign them to this course in the Lesson Settings.', 'ielts-course-manager'); ?></p>
+            <?php else: ?>
+                <p><?php _e('Drag and drop lessons to reorder them:', 'ielts-course-manager'); ?></p>
+                <ul id="course-lessons-sortable" class="course-lessons-list">
+                    <?php foreach ($lessons as $lesson): ?>
+                        <li class="lesson-item" data-lesson-id="<?php echo esc_attr($lesson->ID); ?>">
+                            <span class="dashicons dashicons-menu"></span>
+                            <span class="lesson-title"><?php echo esc_html($lesson->post_title); ?></span>
+                            <span class="lesson-order"><?php printf(__('Order: %d', 'ielts-course-manager'), $lesson->menu_order); ?></span>
+                            <a href="<?php echo get_edit_post_link($lesson->ID); ?>" class="button button-small" target="_blank">
+                                <?php _e('Edit', 'ielts-course-manager'); ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <div class="lesson-order-status"></div>
+            <?php endif; ?>
+        </div>
+        
+        <style>
+        #ielts-cm-course-lessons .course-lessons-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        #ielts-cm-course-lessons .lesson-item {
+            padding: 12px;
+            margin-bottom: 5px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            cursor: move;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        #ielts-cm-course-lessons .lesson-item:hover {
+            background: #f0f0f0;
+        }
+        #ielts-cm-course-lessons .lesson-item .dashicons-menu {
+            color: #999;
+        }
+        #ielts-cm-course-lessons .lesson-item .lesson-title {
+            flex: 1;
+            font-weight: 500;
+        }
+        #ielts-cm-course-lessons .lesson-item .lesson-order {
+            color: #666;
+            font-size: 12px;
+        }
+        #ielts-cm-course-lessons .lesson-item.ui-sortable-helper {
+            opacity: 0.8;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        #ielts-cm-course-lessons .lesson-item.ui-sortable-placeholder {
+            background: #e0e0e0;
+            border: 2px dashed #999;
+            visibility: visible !important;
+        }
+        #ielts-cm-course-lessons .lesson-order-status {
+            margin-top: 10px;
+            padding: 8px;
+            display: none;
+        }
+        #ielts-cm-course-lessons .lesson-order-status.success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            display: block;
+        }
+        #ielts-cm-course-lessons .lesson-order-status.error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            display: block;
+        }
+        </style>
+        
+        <script>
+        jQuery(document).ready(function($) {
+            <?php if (!empty($lessons)): ?>
+            $('#course-lessons-sortable').sortable({
+                placeholder: 'ui-sortable-placeholder',
+                update: function(event, ui) {
+                    var lessonOrder = [];
+                    $('#course-lessons-sortable .lesson-item').each(function(index) {
+                        lessonOrder.push({
+                            lesson_id: $(this).data('lesson-id'),
+                            order: index
+                        });
+                    });
+                    
+                    // Save the new order via AJAX
+                    $.ajax({
+                        url: ajaxurl,
+                        type: 'POST',
+                        data: {
+                            action: 'ielts_cm_update_lesson_order',
+                            nonce: '<?php echo wp_create_nonce('ielts_cm_lesson_order'); ?>',
+                            course_id: <?php echo intval($post->ID); ?>,
+                            lesson_order: lessonOrder
+                        },
+                        success: function(response) {
+                            if (response.success) {
+                                $('.lesson-order-status')
+                                    .removeClass('error')
+                                    .addClass('success')
+                                    .text('<?php _e('Lesson order updated successfully!', 'ielts-course-manager'); ?>')
+                                    .fadeIn()
+                                    .delay(3000)
+                                    .fadeOut();
+                                
+                                // Update the order numbers in the UI
+                                $('#course-lessons-sortable .lesson-item').each(function(index) {
+                                    $(this).find('.lesson-order').text('<?php _e('Order:', 'ielts-course-manager'); ?> ' + index);
+                                });
+                            } else {
+                                $('.lesson-order-status')
+                                    .removeClass('success')
+                                    .addClass('error')
+                                    .text('<?php _e('Failed to update lesson order. Please try again.', 'ielts-course-manager'); ?>')
+                                    .fadeIn()
+                                    .delay(5000)
+                                    .fadeOut();
+                            }
+                        },
+                        error: function() {
+                            $('.lesson-order-status')
+                                .removeClass('success')
+                                .addClass('error')
+                                .text('<?php _e('An error occurred. Please try again.', 'ielts-course-manager'); ?>')
+                                .fadeIn()
+                                .delay(5000)
+                                .fadeOut();
+                        }
+                    });
+                }
+            });
+            <?php endif; ?>
+        });
+        </script>
         <?php
     }
     
@@ -107,7 +277,6 @@ class IELTS_CM_Admin {
             $old_course_id = get_post_meta($post->ID, '_ielts_cm_course_id', true);
             $course_ids = $old_course_id ? array($old_course_id) : array();
         }
-        $duration = get_post_meta($post->ID, '_ielts_cm_duration', true);
         
         $courses = get_posts(array(
             'post_type' => 'ielts_course',
@@ -126,10 +295,6 @@ class IELTS_CM_Admin {
                 <?php endforeach; ?>
             </select>
             <small><?php _e('Hold Ctrl (Cmd on Mac) to select multiple courses', 'ielts-course-manager'); ?></small>
-        </p>
-        <p>
-            <label for="ielts_cm_lesson_duration"><?php _e('Duration (minutes)', 'ielts-course-manager'); ?></label><br>
-            <input type="number" id="ielts_cm_lesson_duration" name="ielts_cm_lesson_duration" value="<?php echo esc_attr($duration); ?>" min="0" style="width: 100%;">
         </p>
         <?php
     }
@@ -403,12 +568,7 @@ class IELTS_CM_Admin {
         
         // Save course meta
         if (isset($_POST['ielts_cm_course_meta_nonce']) && wp_verify_nonce($_POST['ielts_cm_course_meta_nonce'], 'ielts_cm_course_meta')) {
-            if (isset($_POST['ielts_cm_duration'])) {
-                update_post_meta($post_id, '_ielts_cm_duration', sanitize_text_field($_POST['ielts_cm_duration']));
-            }
-            if (isset($_POST['ielts_cm_difficulty'])) {
-                update_post_meta($post_id, '_ielts_cm_difficulty', sanitize_text_field($_POST['ielts_cm_difficulty']));
-            }
+            // Course meta is now minimal - just verify nonce
         }
         
         // Save lesson meta
@@ -424,9 +584,6 @@ class IELTS_CM_Admin {
             } else {
                 update_post_meta($post_id, '_ielts_cm_course_ids', array());
                 delete_post_meta($post_id, '_ielts_cm_course_id');
-            }
-            if (isset($_POST['ielts_cm_lesson_duration'])) {
-                update_post_meta($post_id, '_ielts_cm_duration', sanitize_text_field($_POST['ielts_cm_lesson_duration']));
             }
         }
         
@@ -497,6 +654,42 @@ class IELTS_CM_Admin {
                 update_post_meta($post_id, '_ielts_cm_questions', $questions);
             }
         }
+    }
+    
+    /**
+     * AJAX handler for updating lesson order
+     */
+    public function ajax_update_lesson_order() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_lesson_order')) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        // Check user capabilities
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(array('message' => __('You do not have permission to do this', 'ielts-course-manager')));
+        }
+        
+        // Get the lesson order data
+        $course_id = isset($_POST['course_id']) ? intval($_POST['course_id']) : 0;
+        $lesson_order = isset($_POST['lesson_order']) ? $_POST['lesson_order'] : array();
+        
+        if (!$course_id || empty($lesson_order)) {
+            wp_send_json_error(array('message' => __('Invalid data', 'ielts-course-manager')));
+        }
+        
+        // Update menu_order for each lesson
+        foreach ($lesson_order as $item) {
+            $lesson_id = intval($item['lesson_id']);
+            $order = intval($item['order']);
+            
+            wp_update_post(array(
+                'ID' => $lesson_id,
+                'menu_order' => $order
+            ));
+        }
+        
+        wp_send_json_success(array('message' => __('Lesson order updated successfully', 'ielts-course-manager')));
     }
     
     /**

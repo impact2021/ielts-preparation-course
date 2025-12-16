@@ -24,33 +24,14 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
             </div>
         <?php endif; ?>
         
+        <?php if ($is_enrolled): ?>
         <div class="course-meta">
-            <?php
-            $duration = get_post_meta($course->ID, '_ielts_cm_duration', true);
-            $difficulty = get_post_meta($course->ID, '_ielts_cm_difficulty', true);
-            
-            if ($duration):
-            ?>
-                <span class="course-duration">
-                    <strong><?php _e('Duration:', 'ielts-course-manager'); ?></strong>
-                    <?php printf(__('%s hours', 'ielts-course-manager'), $duration); ?>
-                </span>
-            <?php endif; ?>
-            
-            <?php if ($difficulty): ?>
-                <span class="course-difficulty">
-                    <strong><?php _e('Level:', 'ielts-course-manager'); ?></strong>
-                    <?php echo esc_html(ucfirst($difficulty)); ?>
-                </span>
-            <?php endif; ?>
-            
-            <?php if ($is_enrolled): ?>
-                <span class="course-progress">
-                    <strong><?php _e('Progress:', 'ielts-course-manager'); ?></strong>
-                    <?php echo round($completion, 1); ?>%
-                </span>
-            <?php endif; ?>
+            <span class="course-progress">
+                <strong><?php _e('Progress:', 'ielts-course-manager'); ?></strong>
+                <?php echo round($completion, 1); ?>%
+            </span>
         </div>
+        <?php endif; ?>
         
         <?php if (!$is_enrolled && is_user_logged_in()): ?>
             <div class="enrollment-section">
@@ -83,7 +64,6 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                         <?php endif; ?>
                         <th class="lesson-title-col"><?php _e('Lesson', 'ielts-course-manager'); ?></th>
                         <th class="lesson-description-col"><?php _e('Description', 'ielts-course-manager'); ?></th>
-                        <th class="lesson-duration-col"><?php _e('Duration', 'ielts-course-manager'); ?></th>
                         <?php if ($is_enrolled): ?>
                             <th class="lesson-action-col"><?php _e('Action', 'ielts-course-manager'); ?></th>
                         <?php endif; ?>
@@ -93,7 +73,6 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                     <?php foreach ($lessons as $lesson): ?>
                         <?php
                         $is_completed = $is_enrolled && $progress_tracker->is_lesson_completed($user_id, $lesson->ID);
-                        $lesson_duration = get_post_meta($lesson->ID, '_ielts_cm_duration', true);
                         ?>
                         <tr class="lesson-row <?php echo $is_completed ? 'completed' : ''; ?>">
                             <?php if ($is_enrolled): ?>
@@ -114,9 +93,6 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                             </td>
                             <td class="lesson-description">
                                 <?php echo $lesson->post_excerpt ? esc_html($lesson->post_excerpt) : ''; ?>
-                            </td>
-                            <td class="lesson-duration">
-                                <?php echo $lesson_duration ? sprintf(__('%s min', 'ielts-course-manager'), $lesson_duration) : '—'; ?>
                             </td>
                             <?php if ($is_enrolled): ?>
                                 <td class="lesson-action">
@@ -156,9 +132,6 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
         }
         .ielts-lessons-table .lesson-status {
             text-align: center;
-        }
-        .ielts-lessons-table .lesson-duration-col {
-            width: 100px;
         }
         .ielts-lessons-table .lesson-action-col {
             width: 100px;
