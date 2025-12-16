@@ -2,6 +2,36 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [1.3.0] - 2024-12-16
+
+### Added
+- **Direct LearnDash Converter**: New one-click conversion tool for sites with both LearnDash and IELTS Course Manager installed
+  - Convert LearnDash courses directly from the database without XML export/import
+  - Real-time progress monitoring with modal window
+  - Live conversion log showing each step
+  - Automatically detects and skips already-converted courses
+  - Converts courses, lessons, topics (to lesson pages), and quizzes
+  - Preserves course structure and relationships
+  - Safe to re-run - will not create duplicates
+- Modal UI for conversion progress tracking
+- Comprehensive error reporting during conversion
+- New JavaScript asset for converter functionality
+- New CSS styling for converter interface
+
+### Changed
+- Updated plugin version to 1.3.0
+- Replaced XML import functionality with direct database conversion
+- Improved user experience for LearnDash migration
+
+### Removed
+- XML import page and functionality (replaced by direct converter)
+- XML-based LearnDash import process (no longer needed when both plugins are on same site)
+
+### Documentation
+- Added comprehensive [LEARNDASH_CONVERSION_GUIDE.md](LEARNDASH_CONVERSION_GUIDE.md) with detailed conversion instructions
+- Updated [README.md](README.md) to highlight new direct conversion feature
+- Includes troubleshooting, best practices, and FAQ for conversion process
+
 ## [1.0.0] - 2024-12-16
 
 ### Added
