@@ -28,7 +28,8 @@
                     if (response.success) {
                         showMessage('success', 'You have been enrolled successfully!');
                         setTimeout(function() {
-                            location.reload();
+                            // Force reload from server, not from cache
+                            window.location.href = window.location.href.split('#')[0] + '?refresh=' + Date.now();
                         }, 1500);
                     } else {
                         showMessage('error', response.data.message || 'Failed to enroll');
@@ -65,7 +66,8 @@
                     if (response.success) {
                         showMessage('success', 'Lesson marked as complete!');
                         setTimeout(function() {
-                            location.reload();
+                            // Force reload from server, not from cache
+                            window.location.href = window.location.href.split('#')[0] + '?refresh=' + Date.now();
                         }, 1500);
                     } else {
                         showMessage('error', response.data.message || 'Failed to save progress');
@@ -133,7 +135,7 @@
                             html += '<p>Keep studying and try again to improve your score!</p>';
                         }
                         
-                        html += '<button class="button button-primary" onclick="location.reload()">Take Quiz Again</button>';
+                        html += '<button class="button button-primary" onclick="window.location.href = window.location.href.split(\'#\')[0] + \'?refresh=\' + Date.now()">Take Quiz Again</button>';
                         html += '</div>';
                         
                         form.hide();
