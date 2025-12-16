@@ -71,56 +71,105 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
         <?php echo wpautop($course->post_content); ?>
     </div>
     
-    <?php if ($is_enrolled && !empty($lessons)): ?>
+    <?php if (!empty($lessons)): ?>
         <div class="course-lessons">
             <h3><?php _e('Course Lessons', 'ielts-course-manager'); ?></h3>
             
-            <div class="lessons-list">
-                <?php foreach ($lessons as $lesson): ?>
-                    <?php
-                    $is_completed = $progress_tracker->is_lesson_completed($user_id, $lesson->ID);
-                    $lesson_duration = get_post_meta($lesson->ID, '_ielts_cm_duration', true);
-                    ?>
-                    <div class="lesson-item <?php echo $is_completed ? 'completed' : ''; ?>">
-                        <div class="lesson-status">
-                            <?php if ($is_completed): ?>
-                                <span class="dashicons dashicons-yes-alt"></span>
-                            <?php else: ?>
-                                <span class="dashicons dashicons-marker"></span>
+            <table class="ielts-lessons-table">
+                <thead>
+                    <tr>
+                        <?php if ($is_enrolled): ?>
+                            <th class="lesson-status-col"><?php _e('Status', 'ielts-course-manager'); ?></th>
+                        <?php endif; ?>
+                        <th class="lesson-title-col"><?php _e('Lesson', 'ielts-course-manager'); ?></th>
+                        <th class="lesson-description-col"><?php _e('Description', 'ielts-course-manager'); ?></th>
+                        <th class="lesson-duration-col"><?php _e('Duration', 'ielts-course-manager'); ?></th>
+                        <?php if ($is_enrolled): ?>
+                            <th class="lesson-action-col"><?php _e('Action', 'ielts-course-manager'); ?></th>
+                        <?php endif; ?>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($lessons as $lesson): ?>
+                        <?php
+                        $is_completed = $is_enrolled && $progress_tracker->is_lesson_completed($user_id, $lesson->ID);
+                        $lesson_duration = get_post_meta($lesson->ID, '_ielts_cm_duration', true);
+                        ?>
+                        <tr class="lesson-row <?php echo $is_completed ? 'completed' : ''; ?>">
+                            <?php if ($is_enrolled): ?>
+                                <td class="lesson-status">
+                                    <?php if ($is_completed): ?>
+                                        <span class="dashicons dashicons-yes-alt" style="color: #46b450;"></span>
+                                    <?php else: ?>
+                                        <span class="dashicons dashicons-marker" style="color: #999;"></span>
+                                    <?php endif; ?>
+                                </td>
                             <?php endif; ?>
-                        </div>
-                        
-                        <div class="lesson-content">
-                            <h4>
-                                <a href="<?php echo get_permalink($lesson->ID); ?>">
-                                    <?php echo esc_html($lesson->post_title); ?>
-                                </a>
-                            </h4>
-                            
-                            <?php if ($lesson->post_excerpt): ?>
-                                <p><?php echo esc_html($lesson->post_excerpt); ?></p>
+                            <td class="lesson-title">
+                                <strong>
+                                    <a href="<?php echo get_permalink($lesson->ID); ?>">
+                                        <?php echo esc_html($lesson->post_title); ?>
+                                    </a>
+                                </strong>
+                            </td>
+                            <td class="lesson-description">
+                                <?php echo $lesson->post_excerpt ? esc_html($lesson->post_excerpt) : ''; ?>
+                            </td>
+                            <td class="lesson-duration">
+                                <?php echo $lesson_duration ? sprintf(__('%s min', 'ielts-course-manager'), $lesson_duration) : '—'; ?>
+                            </td>
+                            <?php if ($is_enrolled): ?>
+                                <td class="lesson-action">
+                                    <a href="<?php echo get_permalink($lesson->ID); ?>" class="button button-small">
+                                        <?php echo $is_completed ? __('Review', 'ielts-course-manager') : __('Start', 'ielts-course-manager'); ?>
+                                    </a>
+                                </td>
                             <?php endif; ?>
-                            
-                            <?php if ($lesson_duration): ?>
-                                <span class="lesson-duration">
-                                    <?php printf(__('%s minutes', 'ielts-course-manager'), $lesson_duration); ?>
-                                </span>
-                            <?php endif; ?>
-                        </div>
-                        
-                        <div class="lesson-actions">
-                            <a href="<?php echo get_permalink($lesson->ID); ?>" class="button">
-                                <?php echo $is_completed ? __('Review', 'ielts-course-manager') : __('Start', 'ielts-course-manager'); ?>
-                            </a>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
-    <?php elseif (!empty($lessons)): ?>
-        <div class="course-curriculum">
-            <h3><?php _e('Course Curriculum', 'ielts-course-manager'); ?></h3>
-            <p><?php printf(__('This course contains %d lessons.', 'ielts-course-manager'), count($lessons)); ?></p>
-        </div>
+        
+        <style>
+        .ielts-lessons-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .ielts-lessons-table th,
+        .ielts-lessons-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .ielts-lessons-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .ielts-lessons-table tr:hover {
+            background-color: #f5f5f5;
+        }
+        .ielts-lessons-table .lesson-status-col {
+            width: 60px;
+            text-align: center;
+        }
+        .ielts-lessons-table .lesson-status {
+            text-align: center;
+        }
+        .ielts-lessons-table .lesson-duration-col {
+            width: 100px;
+        }
+        .ielts-lessons-table .lesson-action-col {
+            width: 100px;
+            text-align: center;
+        }
+        .ielts-lessons-table .lesson-action {
+            text-align: center;
+        }
+        .ielts-lessons-table .completed {
+            background-color: #f0f9f0;
+        }
+        </style>
     <?php endif; ?>
 </div>
