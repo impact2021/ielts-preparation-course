@@ -123,12 +123,12 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
     
     <?php if (!empty($quizzes)): ?>
         <div class="lesson-quizzes">
-            <h3><?php _e('Quizzes', 'ielts-course-manager'); ?></h3>
+            <h3><?php _e('Exercises', 'ielts-course-manager'); ?></h3>
             
             <table class="ielts-quizzes-table">
                 <thead>
                     <tr>
-                        <th class="quiz-title-col"><?php _e('Quiz', 'ielts-course-manager'); ?></th>
+                        <th class="quiz-title-col"><?php _e('Exercise', 'ielts-course-manager'); ?></th>
                         <?php if ($user_id): ?>
                             <th class="quiz-score-col"><?php _e('Best Score', 'ielts-course-manager'); ?></th>
                         <?php endif; ?>
@@ -159,7 +159,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                             <?php endif; ?>
                             <td class="quiz-action">
                                 <a href="<?php echo get_permalink($quiz->ID); ?>" class="button button-primary button-small">
-                                    <?php echo $best_result ? __('Retake', 'ielts-course-manager') : __('Take Quiz', 'ielts-course-manager'); ?>
+                                    <?php echo $best_result ? __('Retake', 'ielts-course-manager') : __('Take Exercise', 'ielts-course-manager'); ?>
                                 </a>
                             </td>
                         </tr>
