@@ -117,6 +117,18 @@ class IELTS_Course_Manager {
                         'orderLabel' => __('Order:', 'ielts-course-manager')
                     )
                 ));
+            } elseif ($post && $post->post_type === 'ielts_lesson') {
+                wp_localize_script('ielts-cm-admin', 'ieltsCMAdmin', array(
+                    'ajaxUrl' => admin_url('admin-ajax.php'),
+                    'pageOrderNonce' => wp_create_nonce('ielts_cm_page_order'),
+                    'lessonId' => $post->ID,
+                    'i18n' => array(
+                        'pageOrderUpdated' => __('Lesson page order updated successfully!', 'ielts-course-manager'),
+                        'pageOrderFailed' => __('Failed to update lesson page order. Please try again.', 'ielts-course-manager'),
+                        'pageOrderError' => __('An error occurred. Please try again.', 'ielts-course-manager'),
+                        'orderLabel' => __('Order:', 'ielts-course-manager')
+                    )
+                ));
             }
         }
     }

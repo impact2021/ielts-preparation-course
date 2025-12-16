@@ -26,6 +26,7 @@ class IELTS_CM_Admin {
         
         // Add AJAX handlers
         add_action('wp_ajax_ielts_cm_update_lesson_order', array($this, 'ajax_update_lesson_order'));
+        add_action('wp_ajax_ielts_cm_update_page_order', array($this, 'ajax_update_page_order'));
         
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
@@ -60,6 +61,16 @@ class IELTS_CM_Admin {
             'ielts_cm_lesson_meta',
             __('Lesson Settings', 'ielts-course-manager'),
             array($this, 'lesson_meta_box'),
+            'ielts_lesson',
+            'normal',
+            'high'
+        );
+        
+        // Lesson pages meta box
+        add_meta_box(
+            'ielts_cm_lesson_pages',
+            __('Lesson Pages', 'ielts-course-manager'),
+            array($this, 'lesson_pages_meta_box'),
             'ielts_lesson',
             'normal',
             'high'
@@ -235,6 +246,111 @@ class IELTS_CM_Admin {
             </select>
             <small><?php _e('Hold Ctrl (Cmd on Mac) to select multiple courses', 'ielts-course-manager'); ?></small>
         </p>
+        <?php
+    }
+    
+    /**
+     * Lesson pages meta box - display and reorder lesson pages
+     */
+    public function lesson_pages_meta_box($post) {
+        // Get lesson pages for this lesson
+        global $wpdb;
+        $resource_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT post_id 
+            FROM {$wpdb->postmeta} 
+            WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+               OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
+        ", $post->ID, '%' . $wpdb->esc_like(serialize(strval($post->ID))) . '%'));
+        
+        $resources = array();
+        if (!empty($resource_ids)) {
+            $resources = get_posts(array(
+                'post_type' => 'ielts_resource',
+                'posts_per_page' => -1,
+                'post__in' => $resource_ids,
+                'orderby' => 'menu_order',
+                'order' => 'ASC'
+            ));
+        }
+        ?>
+        <div id="ielts-cm-lesson-pages">
+            <?php if (empty($resources)): ?>
+                <p><?php _e('No lesson pages have been assigned to this lesson yet. Create lesson pages and assign them to this lesson in the Lesson Page Settings.', 'ielts-course-manager'); ?></p>
+            <?php else: ?>
+                <p><?php _e('Drag and drop lesson pages to reorder them:', 'ielts-course-manager'); ?></p>
+                <ul id="lesson-pages-sortable" class="lesson-pages-list">
+                    <?php foreach ($resources as $resource): ?>
+                        <li class="page-item" data-page-id="<?php echo esc_attr($resource->ID); ?>">
+                            <span class="dashicons dashicons-menu"></span>
+                            <span class="page-title"><?php echo esc_html($resource->post_title); ?></span>
+                            <span class="page-order"><?php printf(__('Order: %d', 'ielts-course-manager'), $resource->menu_order); ?></span>
+                            <a href="<?php echo get_edit_post_link($resource->ID); ?>" class="button button-small" target="_blank">
+                                <?php _e('Edit', 'ielts-course-manager'); ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <div class="page-order-status"></div>
+            <?php endif; ?>
+        </div>
+        
+        <style>
+        #ielts-cm-lesson-pages .lesson-pages-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        #ielts-cm-lesson-pages .page-item {
+            padding: 12px;
+            margin-bottom: 5px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            cursor: move;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        #ielts-cm-lesson-pages .page-item:hover {
+            background: #f0f0f0;
+        }
+        #ielts-cm-lesson-pages .page-item .dashicons-menu {
+            color: #999;
+        }
+        #ielts-cm-lesson-pages .page-item .page-title {
+            flex: 1;
+            font-weight: 500;
+        }
+        #ielts-cm-lesson-pages .page-item .page-order {
+            color: #666;
+            font-size: 12px;
+        }
+        #ielts-cm-lesson-pages .page-item.ui-sortable-helper {
+            opacity: 0.8;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        #ielts-cm-lesson-pages .page-item.ui-sortable-placeholder {
+            background: #e0e0e0;
+            border: 2px dashed #999;
+            visibility: visible !important;
+        }
+        #ielts-cm-lesson-pages .page-order-status {
+            margin-top: 10px;
+            padding: 8px;
+            display: none;
+        }
+        #ielts-cm-lesson-pages .page-order-status.success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            display: block;
+        }
+        #ielts-cm-lesson-pages .page-order-status.error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            display: block;
+        }
+        </style>
         <?php
     }
     
@@ -632,6 +748,42 @@ class IELTS_CM_Admin {
         }
         
         wp_send_json_success(array('message' => __('Lesson order updated successfully', 'ielts-course-manager')));
+    }
+    
+    /**
+     * AJAX handler for updating lesson page order
+     */
+    public function ajax_update_page_order() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_page_order')) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        // Check user capabilities
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(array('message' => __('You do not have permission to do this', 'ielts-course-manager')));
+        }
+        
+        // Get the page order data
+        $lesson_id = isset($_POST['lesson_id']) ? intval($_POST['lesson_id']) : 0;
+        $page_order = isset($_POST['page_order']) ? $_POST['page_order'] : array();
+        
+        if (!$lesson_id || empty($page_order)) {
+            wp_send_json_error(array('message' => __('Invalid data', 'ielts-course-manager')));
+        }
+        
+        // Update menu_order for each page
+        foreach ($page_order as $item) {
+            $page_id = intval($item['page_id']);
+            $order = intval($item['order']);
+            
+            wp_update_post(array(
+                'ID' => $page_id,
+                'menu_order' => $order
+            ));
+        }
+        
+        wp_send_json_success(array('message' => __('Lesson page order updated successfully', 'ielts-course-manager')));
     }
     
     /**
