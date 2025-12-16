@@ -11,6 +11,25 @@ if (!defined('ABSPATH')) {
 get_header();
 ?>
 
+<style>
+/* 
+ * Inline styles are used here (instead of wp_add_inline_style) because:
+ * 1. This template is loaded via template_include filter, not through standard enqueue
+ * 2. Inline styles have highest specificity to override theme styles
+ * 3. These styles are page-specific and should only apply to this template
+ */
+body.ielts-course-single #main.site-main {
+    padding: 60px 40px !important;
+}
+/* Fallback for themes with different structure */
+body.ielts-course-single .site-main,
+body.ielts-course-single #primary,
+body.ielts-course-single .content-area {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+}
+</style>
+
 <div id="primary" class="content-area ielts-full-width">
     <main id="main" class="site-main">
         <?php

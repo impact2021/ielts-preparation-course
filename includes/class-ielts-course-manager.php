@@ -42,6 +42,9 @@ class IELTS_Course_Manager {
         // Register post types
         add_action('init', array($this->post_types, 'register_post_types'));
         
+        // Check for version update and flush permalinks if needed
+        add_action('init', array($this, 'check_version_update'));
+        
         // Initialize admin
         if (is_admin()) {
             $this->admin->init();
@@ -56,6 +59,33 @@ class IELTS_Course_Manager {
         // Enqueue scripts and styles
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
         add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_scripts'));
+    }
+    
+    /**
+     * Check if plugin version has been updated and flush permalinks if needed
+     * Uses a transient to avoid checking on every page load
+     */
+    public function check_version_update() {
+        // Use a transient to avoid checking on every page load
+        $version_checked = get_transient('ielts_cm_version_checked');
+        
+        if ($version_checked === IELTS_CM_VERSION) {
+            // Version already checked and is current
+            return;
+        }
+        
+        $current_version = get_option('ielts_cm_version');
+        
+        // If version has changed, flush rewrite rules and update version
+        if ($current_version !== IELTS_CM_VERSION) {
+            flush_rewrite_rules();
+            update_option('ielts_cm_version', IELTS_CM_VERSION);
+            // Set transient after flushing to confirm version is updated
+            set_transient('ielts_cm_version_checked', IELTS_CM_VERSION, HOUR_IN_SECONDS);
+        } else {
+            // Version is current but transient expired, reset it without flushing
+            set_transient('ielts_cm_version_checked', IELTS_CM_VERSION, HOUR_IN_SECONDS);
+        }
     }
     
     public function enqueue_scripts() {
