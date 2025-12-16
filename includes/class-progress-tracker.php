@@ -167,12 +167,16 @@ class IELTS_CM_Progress_Tracker {
         if (!empty($quiz_ids)) {
             // Ensure all quiz_ids are integers for safety
             $quiz_ids = array_map('intval', $quiz_ids);
-            $quiz_ids_placeholders = implode(',', array_fill(0, count($quiz_ids), '%d'));
-            $query = $wpdb->prepare(
-                "SELECT COUNT(DISTINCT quiz_id) FROM $quiz_results_table WHERE user_id = %d AND quiz_id IN ($quiz_ids_placeholders)",
-                array_merge(array($user_id), $quiz_ids)
-            );
-            $completed_quizzes = $wpdb->get_var($query);
+            // Validate count to prevent potential issues
+            $quiz_count = count($quiz_ids);
+            if ($quiz_count > 0 && $quiz_count <= 1000) {
+                $quiz_ids_placeholders = implode(',', array_fill(0, $quiz_count, '%d'));
+                $query = $wpdb->prepare(
+                    "SELECT COUNT(DISTINCT quiz_id) FROM $quiz_results_table WHERE user_id = %d AND quiz_id IN ($quiz_ids_placeholders)",
+                    array_merge(array($user_id), $quiz_ids)
+                );
+                $completed_quizzes = $wpdb->get_var($query);
+            }
         }
         
         $completed_items = $completed_lessons + $completed_quizzes;
