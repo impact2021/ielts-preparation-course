@@ -68,8 +68,26 @@ class IELTS_Course_Manager {
         ));
     }
     
-    public function enqueue_admin_scripts() {
+    public function enqueue_admin_scripts($hook) {
         wp_enqueue_style('ielts-cm-admin', IELTS_CM_PLUGIN_URL . 'assets/css/admin.css', array(), IELTS_CM_VERSION);
         wp_enqueue_script('ielts-cm-admin', IELTS_CM_PLUGIN_URL . 'assets/js/admin.js', array('jquery', 'jquery-ui-sortable'), IELTS_CM_VERSION, true);
+        
+        // Localize script for course edit pages
+        if ($hook === 'post.php' || $hook === 'post-new.php') {
+            global $post;
+            if ($post && $post->post_type === 'ielts_course') {
+                wp_localize_script('ielts-cm-admin', 'ieltsCMAdmin', array(
+                    'ajaxUrl' => admin_url('admin-ajax.php'),
+                    'lessonOrderNonce' => wp_create_nonce('ielts_cm_lesson_order'),
+                    'courseId' => $post->ID,
+                    'i18n' => array(
+                        'orderUpdated' => __('Lesson order updated successfully!', 'ielts-course-manager'),
+                        'orderFailed' => __('Failed to update lesson order. Please try again.', 'ielts-course-manager'),
+                        'orderError' => __('An error occurred. Please try again.', 'ielts-course-manager'),
+                        'orderLabel' => __('Order:', 'ielts-course-manager')
+                    )
+                ));
+            }
+        }
     }
 }
