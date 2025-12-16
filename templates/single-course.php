@@ -18,32 +18,17 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
     <div class="course-header">
         <h2><?php echo esc_html($course->post_title); ?></h2>
         
-        <?php if (has_post_thumbnail($course->ID)): ?>
-            <div class="course-featured-image">
-                <?php echo get_the_post_thumbnail($course->ID, 'large'); ?>
-            </div>
-        <?php endif; ?>
-        
         <?php if ($is_enrolled): ?>
         <div class="course-meta">
             <span class="course-progress">
-                <strong><?php _e('Progress:', 'ielts-course-manager'); ?></strong>
-                <?php echo round($completion, 1); ?>%
+                <?php echo round($completion, 1); ?>% <?php _e('Complete', 'ielts-course-manager'); ?>
             </span>
         </div>
         <?php endif; ?>
         
-        <?php if (!$is_enrolled && is_user_logged_in()): ?>
-            <div class="enrollment-section">
-                <button class="button button-primary enroll-button" data-course-id="<?php echo $course->ID; ?>">
-                    <?php _e('Enroll in this Course', 'ielts-course-manager'); ?>
-                </button>
-            </div>
-        <?php elseif (!is_user_logged_in()): ?>
-            <div class="enrollment-section">
-                <a href="<?php echo wp_login_url(get_permalink($course->ID)); ?>" class="button button-primary">
-                    <?php _e('Login to Enroll', 'ielts-course-manager'); ?>
-                </a>
+        <?php if (has_post_thumbnail($course->ID)): ?>
+            <div class="course-featured-image">
+                <?php echo get_the_post_thumbnail($course->ID, 'large'); ?>
             </div>
         <?php endif; ?>
     </div>
@@ -63,7 +48,6 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                             <th class="lesson-status-col"><?php _e('Status', 'ielts-course-manager'); ?></th>
                         <?php endif; ?>
                         <th class="lesson-title-col"><?php _e('Lesson', 'ielts-course-manager'); ?></th>
-                        <th class="lesson-description-col"><?php _e('Description', 'ielts-course-manager'); ?></th>
                         <?php if ($is_enrolled): ?>
                             <th class="lesson-action-col"><?php _e('Action', 'ielts-course-manager'); ?></th>
                         <?php endif; ?>
@@ -90,9 +74,6 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                                         <?php echo esc_html($lesson->post_title); ?>
                                     </a>
                                 </strong>
-                            </td>
-                            <td class="lesson-description">
-                                <?php echo $lesson->post_excerpt ? esc_html($lesson->post_excerpt) : ''; ?>
                             </td>
                             <?php if ($is_enrolled): ?>
                                 <td class="lesson-action">

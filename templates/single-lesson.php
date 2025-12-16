@@ -45,13 +45,13 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
     
     <?php if (!empty($resources)): ?>
         <div class="lesson-resources">
-            <h3><?php _e('Learning Resources', 'ielts-course-manager'); ?></h3>
+            <h3><?php _e('Learning Materials', 'ielts-course-manager'); ?></h3>
             
             <table class="ielts-resources-table">
                 <thead>
                     <tr>
                         <th class="resource-type-col"><?php _e('Type', 'ielts-course-manager'); ?></th>
-                        <th class="resource-title-col"><?php _e('Resource', 'ielts-course-manager'); ?></th>
+                        <th class="resource-title-col"><?php _e('Material', 'ielts-course-manager'); ?></th>
                         <th class="resource-description-col"><?php _e('Description', 'ielts-course-manager'); ?></th>
                         <th class="resource-action-col"><?php _e('Action', 'ielts-course-manager'); ?></th>
                     </tr>
