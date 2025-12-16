@@ -19,6 +19,7 @@ class IELTS_CM_Structure_Rebuild_Page {
         add_action('admin_post_ielts_cm_parse_structure', array($this, 'handle_parse_structure'));
         add_action('admin_post_ielts_cm_create_structure', array($this, 'handle_create_structure'));
         add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
+        add_action('admin_notices', array($this, 'display_creation_notice'));
     }
     
     /**
@@ -258,7 +259,7 @@ Introduction to IELTS
                 
                 function updateStructureData() {
                     var structure = {
-                        course_name: <?php echo json_encode($structure['course_name']); ?>,
+                        course_name: <?php echo wp_json_encode($structure['course_name']); ?>,
                         lessons: []
                     };
                     
@@ -378,12 +379,18 @@ Introduction to IELTS
         $structure_input = wp_kses_post($_POST['structure_input']);
         $input_type = sanitize_text_field($_POST['input_type']);
         
+        // Disable external entity loading for security
+        $previous_value = libxml_disable_entity_loader(true);
+        
         // Parse the structure
         if ($input_type === 'html') {
             $structure = $this->parse_html_structure($structure_input, $course_name);
         } else {
             $structure = $this->parse_text_structure($structure_input, $course_name);
         }
+        
+        // Restore previous libxml entity loader setting
+        libxml_disable_entity_loader($previous_value);
         
         // Store parsed structure in transient
         set_transient('ielts_cm_parsed_structure', $structure, 3600);
@@ -513,17 +520,20 @@ Introduction to IELTS
         $current_lesson_index = null;
         
         foreach ($lines as $line) {
+            // Store original line for indentation check
+            $original_line = $line;
+            $trimmed_line = trim($line);
+            
             // Check if line is empty after trimming
-            if (empty(trim($line))) {
+            if (empty($trimmed_line)) {
                 continue;
             }
             
             // Determine indentation level BEFORE removing spaces
-            $indent_level = strlen($line) - strlen(ltrim($line));
+            $indent_level = strlen($original_line) - strlen(ltrim($original_line));
             
             // Now clean up the line
-            $line = trim($line);
-            $line = preg_replace('/^[-•*]+\s*/', '', $line);
+            $line = preg_replace('/^[-•*]+\s*/', '', $trimmed_line);
             
             if ($indent_level == 0) {
                 // This is a lesson (no indentation)
@@ -562,8 +572,8 @@ Introduction to IELTS
         $structure_json = stripslashes($_POST['structure_data']);
         $structure = json_decode($structure_json, true);
         
-        if (!$structure) {
-            wp_die(__('Invalid structure data', 'ielts-course-manager'));
+        if (!$structure || json_last_error() !== JSON_ERROR_NONE) {
+            wp_die(__('Invalid structure data: ', 'ielts-course-manager') . json_last_error_msg());
         }
         
         // Create the course
@@ -594,6 +604,7 @@ Introduction to IELTS
                 $lessons_created++;
                 
                 // Link lesson to course
+                // Store both singular and plural for backward compatibility
                 update_post_meta($lesson_id, '_ielts_cm_course_id', $course_id);
                 update_post_meta($lesson_id, '_ielts_cm_course_ids', array($course_id));
                 
@@ -611,6 +622,7 @@ Introduction to IELTS
                             $topics_created++;
                             
                             // Link topic to lesson
+                            // Store both singular and plural for backward compatibility
                             update_post_meta($topic_id, '_ielts_cm_lesson_id', $lesson_id);
                             update_post_meta($topic_id, '_ielts_cm_lesson_ids', array($lesson_id));
                         }
@@ -634,23 +646,25 @@ Introduction to IELTS
         ), admin_url('edit.php?post_type=ielts_course')));
         exit;
     }
-}
-
-// Add admin notice hook for structure creation results
-add_action('admin_notices', function() {
-    if (isset($_GET['page']) && $_GET['page'] === 'ielts-rebuild-structure' && isset($_GET['created'])) {
-        $results = get_transient('ielts_cm_structure_created');
-        if ($results) {
-            echo '<div class="notice notice-success is-dismissible">';
-            echo '<p><strong>' . __('Course structure created successfully!', 'ielts-course-manager') . '</strong></p>';
-            echo '<ul>';
-            echo '<li>' . sprintf(__('Course: %s (ID: %d)', 'ielts-course-manager'), esc_html($results['course_name']), $results['course_id']) . '</li>';
-            echo '<li>' . sprintf(__('Lessons created: %d', 'ielts-course-manager'), $results['lessons']) . '</li>';
-            echo '<li>' . sprintf(__('Lesson pages created: %d', 'ielts-course-manager'), $results['topics']) . '</li>';
-            echo '</ul>';
-            echo '<p><a href="' . get_edit_post_link($results['course_id']) . '" class="button button-primary">' . __('Edit Course', 'ielts-course-manager') . '</a></p>';
-            echo '</div>';
-            delete_transient('ielts_cm_structure_created');
+    
+    /**
+     * Display admin notice for structure creation results
+     */
+    public function display_creation_notice() {
+        if (isset($_GET['page']) && $_GET['page'] === 'ielts-rebuild-structure' && isset($_GET['created'])) {
+            $results = get_transient('ielts_cm_structure_created');
+            if ($results) {
+                echo '<div class="notice notice-success is-dismissible">';
+                echo '<p><strong>' . __('Course structure created successfully!', 'ielts-course-manager') . '</strong></p>';
+                echo '<ul>';
+                echo '<li>' . sprintf(__('Course: %s (ID: %d)', 'ielts-course-manager'), esc_html($results['course_name']), $results['course_id']) . '</li>';
+                echo '<li>' . sprintf(__('Lessons created: %d', 'ielts-course-manager'), $results['lessons']) . '</li>';
+                echo '<li>' . sprintf(__('Lesson pages created: %d', 'ielts-course-manager'), $results['topics']) . '</li>';
+                echo '</ul>';
+                echo '<p><a href="' . get_edit_post_link($results['course_id']) . '" class="button button-primary">' . __('Edit Course', 'ielts-course-manager') . '</a></p>';
+                echo '</div>';
+                delete_transient('ielts_cm_structure_created');
+            }
         }
     }
-});
+}
