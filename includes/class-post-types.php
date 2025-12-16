@@ -124,12 +124,12 @@ class IELTS_CM_Post_Types {
      */
     private function register_quiz() {
         $labels = array(
-            'name' => __('Quizzes', 'ielts-course-manager'),
-            'singular_name' => __('Quiz', 'ielts-course-manager'),
-            'menu_name' => __('Quizzes', 'ielts-course-manager'),
-            'add_new' => __('Add New Quiz', 'ielts-course-manager'),
-            'add_new_item' => __('Add New Quiz', 'ielts-course-manager'),
-            'edit_item' => __('Edit Quiz', 'ielts-course-manager'),
+            'name' => __('Exercises', 'ielts-course-manager'),
+            'singular_name' => __('Exercise', 'ielts-course-manager'),
+            'menu_name' => __('Exercises', 'ielts-course-manager'),
+            'add_new' => __('Add New Exercise', 'ielts-course-manager'),
+            'add_new_item' => __('Add New Exercise', 'ielts-course-manager'),
+            'edit_item' => __('Edit Exercise', 'ielts-course-manager'),
         );
         
         $args = array(
