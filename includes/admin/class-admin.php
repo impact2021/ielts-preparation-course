@@ -359,6 +359,16 @@ class IELTS_CM_Admin {
                 <?php endif; ?>
             </div>
             <button type="button" class="button" id="add-question"><?php _e('Add Question', 'ielts-course-manager'); ?></button>
+            
+            <div style="margin-top: 20px; padding: 15px; background: #f0f0f1; border-left: 4px solid #72aee6;">
+                <h4 style="margin-top: 0;"><?php _e('Question Type Guidelines:', 'ielts-course-manager'); ?></h4>
+                <ul style="margin-bottom: 0;">
+                    <li><strong><?php _e('Multiple Choice:', 'ielts-course-manager'); ?></strong> <?php _e('Enter options one per line. Correct answer is the option number (0 for first, 1 for second, etc.)', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('True/False/Not Given:', 'ielts-course-manager'); ?></strong> <?php _e('Enter correct answer as "true", "false", or "not_given" (lowercase)', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Fill in the Blank:', 'ielts-course-manager'); ?></strong> <?php _e('Enter the expected answer. Matching is case-insensitive and ignores punctuation/extra spaces.', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Essay:', 'ielts-course-manager'); ?></strong> <?php _e('No correct answer needed - requires manual grading.', 'ielts-course-manager'); ?></li>
+                </ul>
+            </div>
         </div>
         
         <script>
@@ -567,9 +577,14 @@ class IELTS_CM_Admin {
             if (isset($_POST['ielts_cm_pass_percentage'])) {
                 update_post_meta($post_id, '_ielts_cm_pass_percentage', intval($_POST['ielts_cm_pass_percentage']));
             }
-            if (isset($_POST['questions'])) {
-                $questions = array();
+            // Always save questions, even if empty
+            $questions = array();
+            if (isset($_POST['questions']) && is_array($_POST['questions'])) {
                 foreach ($_POST['questions'] as $question) {
+                    // Skip empty questions
+                    if (empty($question['question'])) {
+                        continue;
+                    }
                     $questions[] = array(
                         'type' => sanitize_text_field($question['type']),
                         'question' => sanitize_textarea_field($question['question']),
@@ -578,8 +593,8 @@ class IELTS_CM_Admin {
                         'points' => isset($question['points']) ? floatval($question['points']) : 1
                     );
                 }
-                update_post_meta($post_id, '_ielts_cm_questions', $questions);
             }
+            update_post_meta($post_id, '_ielts_cm_questions', $questions);
         }
     }
     

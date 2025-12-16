@@ -42,17 +42,16 @@ This plugin replaces LearnDash with a more flexible system for managing IELTS pr
 3. Click **Publish**
 4. Repeat to create all lessons for your course
 
-### Step 4: Add Learning Resources
+### Step 4: Add Lesson pages
 
-1. Go to **IELTS Courses > Resources > Add New**
+1. Go to **IELTS Courses > Lesson pages > Add New**
 2. Enter:
-   - Resource title (e.g., "Speaking Sample Questions PDF")
-   - Resource description
+   - Lesson page title (e.g., "Speaking Sample Questions PDF")
+   - Lesson page description
    - Assign to a lesson
-   - Select resource type (Document, Video, Audio, or External Link)
-   - Add resource URL
+   - Optionally add a resource URL for external resources
 3. Click **Publish**
-4. Add multiple resources per lesson as needed
+4. Add multiple lesson pages per lesson as needed
 
 ### Step 5: Create Quizzes
 
@@ -69,17 +68,19 @@ This plugin replaces LearnDash with a more flexible system for managing IELTS pr
    - Enter correct answer (option number: 0, 1, 2, etc.)
    - Set points
    
-   **For True/False:**
-   - Select "True/False" type
+   **For True/False/Not Given:**
+   - Select "True/False/Not Given" type
    - Enter question text
-   - Enter correct answer (true or false)
+   - Enter correct answer (true, false, or not_given - lowercase)
    - Set points
+   - Note: This is the standard IELTS format
    
    **For Fill in the Blank:**
    - Select "Fill in the Blank" type
-   - Enter question text
-   - Enter correct answer (exact text)
+   - Enter question text (include blank with _____ or similar)
+   - Enter correct answer
    - Set points
+   - Note: Matching is case-insensitive and ignores punctuation/extra spaces
    
    **For Essay:**
    - Select "Essay" type
