@@ -220,7 +220,7 @@ class IELTS_CM_Export_Page {
         $xml = $this->generate_export_xml($export_types, $include_drafts);
         
         // Set headers for download
-        $filename = sanitize_file_name('ielts-export-' . date('Y-m-d') . '.xml');
+        $filename = sanitize_file_name('ielts-export-' . gmdate('Y-m-d') . '.xml');
         header('Content-Description: File Transfer');
         header('Content-Disposition: attachment; filename="' . esc_attr($filename) . '"');
         header('Content-Type: text/xml; charset=' . get_option('blog_charset'), true);
@@ -253,7 +253,7 @@ class IELTS_CM_Export_Page {
         $xml .= "\t<title>" . $this->wxr_cdata(get_bloginfo('name')) . "</title>\n";
         $xml .= "\t<link>" . esc_url(get_bloginfo('url')) . "</link>\n";
         $xml .= "\t<description>" . $this->wxr_cdata(get_bloginfo('description')) . "</description>\n";
-        $xml .= "\t<pubDate>" . date('D, d M Y H:i:s +0000') . "</pubDate>\n";
+        $xml .= "\t<pubDate>" . gmdate('D, d M Y H:i:s +0000') . "</pubDate>\n";
         $xml .= "\t<language>" . get_bloginfo('language') . "</language>\n";
         $xml .= "\t<wp:wxr_version>1.2</wp:wxr_version>\n";
         $xml .= "\t<wp:base_site_url>" . esc_url(get_bloginfo('url')) . "</wp:base_site_url>\n";
@@ -385,13 +385,14 @@ class IELTS_CM_Export_Page {
      */
     private function wxr_cdata($str) {
         if (!seems_utf8($str)) {
-            // Use mb_convert_encoding for PHP 8.2+ compatibility
+            // Use mb_convert_encoding (always preferred, utf8_encode is deprecated in PHP 8.2+)
             if (function_exists('mb_convert_encoding')) {
                 $str = mb_convert_encoding($str, 'UTF-8', 'ISO-8859-1');
-            } else {
-                // Fallback for older PHP versions
+            } elseif (function_exists('utf8_encode')) {
+                // Only use utf8_encode if mb_convert_encoding is not available and utf8_encode is not yet removed
                 $str = utf8_encode($str);
             }
+            // If neither function is available, leave string as-is (better than fatal error)
         }
         $str = '<![CDATA[' . str_replace(']]>', ']]]]><![CDATA[>', $str) . ']]>';
         return $str;
