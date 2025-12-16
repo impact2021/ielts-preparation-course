@@ -18,6 +18,7 @@ The IELTS Course Manager includes a built-in import tool that converts LearnDash
 1. **Export from LearnDash**
    - Go to Tools > Export in your LearnDash site
    - Select: Courses, Lessons, Topics, and Quizzes
+   - **Important:** WordPress's native export tool requires you to select ALL these content types together in a single export to preserve their relationships
    - Download the XML file
 
 2. **Import to IELTS Course Manager**
@@ -25,6 +26,25 @@ The IELTS Course Manager includes a built-in import tool that converts LearnDash
    - Upload your XML file
    - Click "Import XML File"
    - Review the results
+
+### Exporting from IELTS Course Manager
+
+**NEW:** If you need to export content FROM IELTS Course Manager (for backup, migration, or sharing):
+
+1. **Navigate to Export Page**
+   - Go to IELTS Courses > Export to XML
+   
+2. **Select Content Types**
+   - Choose which content types to export (Courses, Lessons, Lesson Pages, Quizzes)
+   - All types are selected by default to preserve relationships
+   
+3. **Generate Export**
+   - Click "Generate XML Export File"
+   - Save the downloaded XML file
+   
+4. **Use Exported File**
+   - Import the XML on another IELTS Course Manager site using the Import tool
+   - All relationships between courses, lessons, and resources are preserved
 
 ### For Large Imports (25+ Courses, Hundreds of Lessons)
 
@@ -227,6 +247,25 @@ For experts comfortable with database operations, you can manually import the Wo
    - Clear browser cache
 
 ## Troubleshooting
+
+### Broken Relationships After Import
+
+**Problem:** Courses, lessons, and resources are imported but their links/relationships are broken. Lessons don't appear in courses, or lesson pages don't appear in lessons.
+
+**Cause:** WordPress's native export tool cannot export multiple post types (courses, lessons, topics, quizzes) together in a single XML file unless you select them all at once. If you exported them separately (e.g., courses in one file, lessons in another), the relationships between them are lost.
+
+**Solutions:**
+1. **Best Solution:** Re-export from the source site with ALL content types selected together:
+   - Go to Tools > Export
+   - Select "All content" or manually check ALL post types: Courses, Lessons, Topics, Quizzes
+   - Download the single XML file
+   - Import this comprehensive file into IELTS Course Manager
+   
+2. **Alternative (for IELTS Course Manager sites):** Use the built-in Export to XML feature:
+   - Go to IELTS Courses > Export to XML
+   - Select all content types
+   - Download the XML file
+   - This ensures all relationships are preserved in the export
 
 ### Import Timeouts
 

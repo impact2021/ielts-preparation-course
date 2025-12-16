@@ -17,6 +17,7 @@ class IELTS_Course_Manager {
     protected $enrollment;
     protected $admin;
     protected $import_page;
+    protected $export_page;
     protected $frontend;
     
     public function __construct() {
@@ -37,6 +38,7 @@ class IELTS_Course_Manager {
         $this->enrollment = new IELTS_CM_Enrollment();
         $this->admin = new IELTS_CM_Admin();
         $this->import_page = new IELTS_CM_Import_Page();
+        $this->export_page = new IELTS_CM_Export_Page();
         $this->frontend = new IELTS_CM_Frontend();
     }
     
@@ -51,6 +53,7 @@ class IELTS_Course_Manager {
         if (is_admin()) {
             $this->admin->init();
             $this->import_page->init();
+            $this->export_page->init();
         }
         
         // Initialize frontend
