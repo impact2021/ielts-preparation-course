@@ -64,16 +64,17 @@ class IELTS_CM_Progress_Tracker {
         }
         
         // Check if record exists
-        $where = array(
-            'user_id' => $user_id,
-            'lesson_id' => $lesson_id,
-            'resource_id' => $resource_id
-        );
-        
-        $existing = $wpdb->get_row($wpdb->prepare(
-            "SELECT id FROM $table WHERE user_id = %d AND lesson_id = %d AND (resource_id = %d OR (resource_id IS NULL AND %d IS NULL))",
-            $user_id, $lesson_id, $resource_id, $resource_id
-        ));
+        if ($resource_id) {
+            $existing = $wpdb->get_row($wpdb->prepare(
+                "SELECT id FROM $table WHERE user_id = %d AND lesson_id = %d AND resource_id = %d",
+                $user_id, $lesson_id, $resource_id
+            ));
+        } else {
+            $existing = $wpdb->get_row($wpdb->prepare(
+                "SELECT id FROM $table WHERE user_id = %d AND lesson_id = %d AND resource_id IS NULL",
+                $user_id, $lesson_id
+            ));
+        }
         
         if ($existing) {
             return $wpdb->update($table, $data, array('id' => $existing->id));

@@ -242,11 +242,11 @@ class IELTS_CM_Admin {
         
         <script>
         jQuery(document).ready(function($) {
-            var questionIndex = <?php echo count($questions); ?>;
+            var questionIndex = <?php echo intval(count($questions)); ?>;
             
             $('#add-question').on('click', function() {
-                var html = '<?php echo addslashes($this->get_question_template()); ?>';
-                html = html.replace(/QUESTION_INDEX/g, questionIndex);
+                var template = <?php echo json_encode($this->get_question_template()); ?>;
+                var html = template.replace(/QUESTION_INDEX/g, questionIndex);
                 $('#questions-container').append(html);
                 questionIndex++;
             });

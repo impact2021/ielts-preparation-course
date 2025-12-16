@@ -42,7 +42,7 @@ class IELTS_CM_Database {
             KEY user_id (user_id),
             KEY course_id (course_id),
             KEY lesson_id (lesson_id),
-            UNIQUE KEY user_lesson (user_id, lesson_id, resource_id)
+            KEY user_lesson_resource (user_id, lesson_id, resource_id)
         ) $charset_collate;";
         
         // Quiz results table

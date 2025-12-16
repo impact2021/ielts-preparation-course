@@ -86,6 +86,11 @@ class IELTS_CM_Quiz_Handler {
             case 'fill_blank':
                 $correct = isset($question['correct_answer']) ? strtolower(trim($question['correct_answer'])) : '';
                 $user = strtolower(trim($user_answer));
+                // Remove extra whitespace and punctuation for more flexible matching
+                $correct = preg_replace('/[^\w\s]/', '', $correct);
+                $user = preg_replace('/[^\w\s]/', '', $user);
+                $correct = preg_replace('/\s+/', ' ', $correct);
+                $user = preg_replace('/\s+/', ' ', $user);
                 return $correct === $user;
                 
             case 'essay':
