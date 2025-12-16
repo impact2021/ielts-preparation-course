@@ -16,19 +16,16 @@ A flexible Learning Management System (LMS) plugin for WordPress, designed speci
 - Add rich content to each lesson
 - Track lesson completion status
 
-### Learning Resources
-- Attach multiple resources to each lesson
-- Support for various resource types:
-  - Documents
-  - Videos
-  - Audio files
-  - External links
+### Lesson pages
+- Attach multiple lesson pages to each lesson
+- Add optional resource URLs for external resources
+- Rich content support with WordPress editor
 
 ### Quiz System
 Multiple quiz types similar to LearnDash:
 - **Multiple Choice** - Select from predefined options
-- **True/False** - Binary choice questions
-- **Fill in the Blank** - Text input answers
+- **True/False/Not Given** - Standard IELTS format with three options
+- **Fill in the Blank** - Text input answers with flexible matching (case-insensitive, ignores punctuation/extra spaces)
 - **Essay** - Long-form responses (manual grading)
 
 Quiz features:
@@ -82,12 +79,11 @@ Quiz features:
 
 ### Adding Resources
 
-1. Go to **IELTS Courses > Resources > Add New**
-2. Enter resource title and description
+1. Go to **IELTS Courses > Lesson pages > Add New**
+2. Enter lesson page title and description
 3. Assign to a lesson
-4. Select resource type
-5. Add resource URL if applicable
-6. Publish the resource
+4. Optionally add a resource URL for external resources
+5. Publish the lesson page
 
 ### Creating Quizzes
 

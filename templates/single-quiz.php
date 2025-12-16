@@ -110,6 +110,13 @@ if (!$pass_percentage) {
                                                required>
                                         <span><?php _e('False', 'ielts-course-manager'); ?></span>
                                     </label>
+                                    <label class="option-label">
+                                        <input type="radio" 
+                                               name="answer_<?php echo $index; ?>" 
+                                               value="not_given" 
+                                               required>
+                                        <span><?php _e('Not Given', 'ielts-course-manager'); ?></span>
+                                    </label>
                                 </div>
                                 <?php
                                 break;

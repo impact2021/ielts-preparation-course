@@ -8,18 +8,18 @@ This plugin provides a complete course management system with:
 
 - **Course Management** - Create and organize up to 25+ courses
 - **Lesson Structure** - Build structured lessons within each course
-- **Learning Resources** - Attach documents, videos, audio, and links to lessons
-- **Quiz System** - Multiple quiz types (Multiple Choice, True/False, Fill in the Blank, Essay)
+- **Lesson pages** - Attach lesson pages with optional resource URLs to lessons
+- **Quiz System** - Multiple quiz types (Multiple Choice, True/False/Not Given, Fill in the Blank, Essay)
 - **Progress Tracking** - Per-course progress tracking for students
 - **Student Dashboard** - Comprehensive progress and quiz results page
 
 ## Key Features
 
 ✅ **Flexible Course Structure** - More flexible than LearnDash with customizable course organization  
-✅ **Multiple Quiz Types** - Same quiz types as LearnDash (Multiple Choice, True/False, Fill in the Blank, Essay)  
+✅ **Multiple Quiz Types** - IELTS-friendly quiz types (Multiple Choice, True/False/Not Given, Fill in the Blank with flexible matching, Essay)  
 ✅ **Progress Tracking** - Automatic tracking of lesson completion and quiz results  
 ✅ **Student Progress Page** - Consolidated view of all progress and quiz results  
-✅ **Easy Content Management** - Simple WordPress post types for courses, lessons, resources, and quizzes  
+✅ **Easy Content Management** - Simple WordPress post types for courses, lessons, lesson pages, and quizzes  
 ✅ **Shortcode Support** - Display courses and progress anywhere on your site  
 
 ## Installation
@@ -32,9 +32,10 @@ This plugin provides a complete course management system with:
 
 See [PLUGIN_README.md](PLUGIN_README.md) for detailed documentation on:
 - Creating courses, lessons, and quizzes
-- Adding learning resources
+- Adding lesson pages
 - Using shortcodes
 - Managing student progress
+- Quiz question type guidelines
 
 ## Requirements
 
