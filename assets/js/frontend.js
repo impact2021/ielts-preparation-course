@@ -9,10 +9,9 @@
         
         // Helper function to force reload from server, bypassing cache
         function forceReload() {
-            var url = window.location.href.split('#')[0].split('?')[0];
-            var params = new URLSearchParams(window.location.search);
-            params.set('refresh', Date.now());
-            window.location.href = url + '?' + params.toString();
+            var url = new URL(window.location);
+            url.searchParams.set('refresh', Date.now());
+            window.location.href = url.toString();
         }
         
         // Enrollment
