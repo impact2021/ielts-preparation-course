@@ -3,7 +3,7 @@
  * Plugin Name: IELTS Course Manager
  * Plugin URI: https://www.impactwebsites.co.nz/
  * Description: A flexible Learning Management System for IELTS preparation courses with lessons, resources, quizzes, and progress tracking.
- * Version: 1.2
+ * Version: 1.3
  * Author: Impact Websites
  * Author URI: https://www.impactwebsites.co.nz/
  * Text Domain: ielts-course-manager
@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('IELTS_CM_VERSION', '1.2');
+define('IELTS_CM_VERSION', '1.3');
 define('IELTS_CM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('IELTS_CM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('IELTS_CM_PLUGIN_FILE', __FILE__);
@@ -34,7 +34,7 @@ require_once IELTS_CM_PLUGIN_DIR . 'includes/class-quiz-handler.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-shortcodes.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-enrollment.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-admin.php';
-require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-import-page.php';
+require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-converter-page.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-export-page.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-structure-rebuild-page.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/frontend/class-frontend.php';

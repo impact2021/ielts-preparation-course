@@ -16,7 +16,7 @@ class IELTS_Course_Manager {
     protected $shortcodes;
     protected $enrollment;
     protected $admin;
-    protected $import_page;
+    protected $converter_page;
     protected $export_page;
     protected $structure_rebuild_page;
     protected $frontend;
@@ -38,7 +38,7 @@ class IELTS_Course_Manager {
         $this->shortcodes = new IELTS_CM_Shortcodes();
         $this->enrollment = new IELTS_CM_Enrollment();
         $this->admin = new IELTS_CM_Admin();
-        $this->import_page = new IELTS_CM_Import_Page();
+        $this->converter_page = new IELTS_CM_Converter_Page();
         $this->export_page = new IELTS_CM_Export_Page();
         $this->structure_rebuild_page = new IELTS_CM_Structure_Rebuild_Page();
         $this->frontend = new IELTS_CM_Frontend();
@@ -54,7 +54,7 @@ class IELTS_Course_Manager {
         // Initialize admin
         if (is_admin()) {
             $this->admin->init();
-            $this->import_page->init();
+            $this->converter_page->init();
             $this->export_page->init();
             $this->structure_rebuild_page->init();
         }
