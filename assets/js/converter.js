@@ -31,11 +31,12 @@
             });
             
             if (selectedCourses.length === 0) {
-                alert('Please select at least one course to convert.');
+                // Show WordPress-style admin notice
+                showAdminNotice('Please select at least one course to convert.', 'error');
                 return;
             }
             
-            // Confirm
+            // Confirm using a more WordPress-friendly approach
             if (!confirm(ieltsCMConverter.strings.confirm)) {
                 return;
             }
@@ -214,6 +215,42 @@
         
         // Enable close button
         $('#close-modal-btn').prop('disabled', false);
+    }
+    
+    /**
+     * Show WordPress-style admin notice
+     */
+    function showAdminNotice(message, type) {
+        type = type || 'info';
+        const noticeClass = 'notice notice-' + type + ' is-dismissible';
+        const $notice = $('<div>')
+            .addClass(noticeClass)
+            .html('<p>' + message + '</p>');
+        
+        // Add dismiss button
+        const $dismissBtn = $('<button>')
+            .attr('type', 'button')
+            .addClass('notice-dismiss')
+            .html('<span class="screen-reader-text">Dismiss this notice.</span>')
+            .on('click', function() {
+                $notice.fadeOut(function() {
+                    $(this).remove();
+                });
+            });
+        
+        $notice.append($dismissBtn);
+        
+        // Insert at top of wrap
+        $('.wrap').prepend($notice);
+        
+        // Auto-dismiss after 5 seconds for non-error notices
+        if (type !== 'error') {
+            setTimeout(function() {
+                $notice.fadeOut(function() {
+                    $(this).remove();
+                });
+            }, 5000);
+        }
     }
     
 })(jQuery);

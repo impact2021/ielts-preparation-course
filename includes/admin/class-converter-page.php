@@ -337,23 +337,32 @@ class IELTS_CM_Converter_Page {
         global $wpdb;
         
         $lessons = $wpdb->get_var($wpdb->prepare(
-            "SELECT COUNT(*) FROM {$wpdb->postmeta} 
-            WHERE meta_key = 'course_id' AND meta_value = %d 
-            AND post_id IN (SELECT ID FROM {$wpdb->posts} WHERE post_type = 'sfwd-lessons')",
+            "SELECT COUNT(*) 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE pm.meta_key = 'course_id' 
+            AND pm.meta_value = %d 
+            AND p.post_type = 'sfwd-lessons'",
             $course_id
         ));
         
         $topics = $wpdb->get_var($wpdb->prepare(
-            "SELECT COUNT(*) FROM {$wpdb->postmeta} 
-            WHERE meta_key = 'course_id' AND meta_value = %d 
-            AND post_id IN (SELECT ID FROM {$wpdb->posts} WHERE post_type = 'sfwd-topic')",
+            "SELECT COUNT(*) 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE pm.meta_key = 'course_id' 
+            AND pm.meta_value = %d 
+            AND p.post_type = 'sfwd-topic'",
             $course_id
         ));
         
         $quizzes = $wpdb->get_var($wpdb->prepare(
-            "SELECT COUNT(*) FROM {$wpdb->postmeta} 
-            WHERE meta_key = 'course_id' AND meta_value = %d 
-            AND post_id IN (SELECT ID FROM {$wpdb->posts} WHERE post_type = 'sfwd-quiz')",
+            "SELECT COUNT(*) 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE pm.meta_key = 'course_id' 
+            AND pm.meta_value = %d 
+            AND p.post_type = 'sfwd-quiz'",
             $course_id
         ));
         

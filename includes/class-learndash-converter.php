@@ -75,7 +75,7 @@ class IELTS_CM_LearnDash_Converter {
             return $this->get_results();
         }
         
-        $this->log("Starting conversion of course: {$course->post_title} (ID: {$course_id})");
+        $this->log('Starting conversion of course: ' . esc_html($course->post_title) . ' (ID: ' . $course_id . ')');
         
         // Check if already converted
         $existing_id = $this->find_existing_course($course_id);
@@ -114,15 +114,19 @@ class IELTS_CM_LearnDash_Converter {
      * Convert course post
      */
     private function convert_course_post($course) {
-        $this->log("Converting course: {$course->post_title}");
+        $this->log('Converting course: ' . esc_html($course->post_title));
+        
+        // Validate post status
+        $valid_statuses = array('publish', 'draft', 'pending', 'private');
+        $post_status = in_array($course->post_status, $valid_statuses) ? $course->post_status : 'draft';
         
         $post_data = array(
-            'post_title' => $course->post_title,
-            'post_content' => $course->post_content,
-            'post_excerpt' => $course->post_excerpt,
-            'post_status' => $course->post_status,
+            'post_title' => sanitize_text_field($course->post_title),
+            'post_content' => wp_kses_post($course->post_content),
+            'post_excerpt' => sanitize_textarea_field($course->post_excerpt),
+            'post_status' => $post_status,
             'post_type' => 'ielts_course',
-            'post_date' => $course->post_date
+            'post_date' => sanitize_text_field($course->post_date)
         );
         
         $new_id = wp_insert_post($post_data);
@@ -183,7 +187,7 @@ class IELTS_CM_LearnDash_Converter {
      * Convert a lesson
      */
     private function convert_lesson($lesson, $old_course_id, $new_course_id) {
-        $this->log("Converting lesson: {$lesson->post_title}");
+        $this->log('Converting lesson: ' . esc_html($lesson->post_title));
         
         // Check if already converted
         $existing_id = $this->find_existing_lesson($lesson->ID);
@@ -194,14 +198,18 @@ class IELTS_CM_LearnDash_Converter {
             return $existing_id;
         }
         
+        // Validate post status
+        $valid_statuses = array('publish', 'draft', 'pending', 'private');
+        $post_status = in_array($lesson->post_status, $valid_statuses) ? $lesson->post_status : 'draft';
+        
         $post_data = array(
-            'post_title' => $lesson->post_title,
-            'post_content' => $lesson->post_content,
-            'post_excerpt' => $lesson->post_excerpt,
-            'post_status' => $lesson->post_status,
+            'post_title' => sanitize_text_field($lesson->post_title),
+            'post_content' => wp_kses_post($lesson->post_content),
+            'post_excerpt' => sanitize_textarea_field($lesson->post_excerpt),
+            'post_status' => $post_status,
             'post_type' => 'ielts_lesson',
-            'post_date' => $lesson->post_date,
-            'menu_order' => $lesson->menu_order
+            'post_date' => sanitize_text_field($lesson->post_date),
+            'menu_order' => intval($lesson->menu_order)
         );
         
         $new_id = wp_insert_post($post_data);
@@ -277,7 +285,7 @@ class IELTS_CM_LearnDash_Converter {
      * Convert a topic (lesson page)
      */
     private function convert_topic($topic, $old_lesson_id, $new_lesson_id) {
-        $this->log("Converting topic: {$topic->post_title}");
+        $this->log('Converting topic: ' . esc_html($topic->post_title));
         
         // Check if already converted
         $existing_id = $this->find_existing_topic($topic->ID);
@@ -288,14 +296,18 @@ class IELTS_CM_LearnDash_Converter {
             return $existing_id;
         }
         
+        // Validate post status
+        $valid_statuses = array('publish', 'draft', 'pending', 'private');
+        $post_status = in_array($topic->post_status, $valid_statuses) ? $topic->post_status : 'draft';
+        
         $post_data = array(
-            'post_title' => $topic->post_title,
-            'post_content' => $topic->post_content,
-            'post_excerpt' => $topic->post_excerpt,
-            'post_status' => $topic->post_status,
+            'post_title' => sanitize_text_field($topic->post_title),
+            'post_content' => wp_kses_post($topic->post_content),
+            'post_excerpt' => sanitize_textarea_field($topic->post_excerpt),
+            'post_status' => $post_status,
             'post_type' => 'ielts_resource',
-            'post_date' => $topic->post_date,
-            'menu_order' => $topic->menu_order
+            'post_date' => sanitize_text_field($topic->post_date),
+            'menu_order' => intval($topic->menu_order)
         );
         
         $new_id = wp_insert_post($post_data);
@@ -365,7 +377,7 @@ class IELTS_CM_LearnDash_Converter {
      * Convert a quiz
      */
     private function convert_quiz($quiz, $old_course_id, $new_course_id) {
-        $this->log("Converting quiz: {$quiz->post_title}");
+        $this->log('Converting quiz: ' . esc_html($quiz->post_title));
         
         // Check if already converted
         $existing_id = $this->find_existing_quiz($quiz->ID);
@@ -375,14 +387,18 @@ class IELTS_CM_LearnDash_Converter {
             return $existing_id;
         }
         
+        // Validate post status
+        $valid_statuses = array('publish', 'draft', 'pending', 'private');
+        $post_status = in_array($quiz->post_status, $valid_statuses) ? $quiz->post_status : 'draft';
+        
         $post_data = array(
-            'post_title' => $quiz->post_title,
-            'post_content' => $quiz->post_content,
-            'post_excerpt' => $quiz->post_excerpt,
-            'post_status' => $quiz->post_status,
+            'post_title' => sanitize_text_field($quiz->post_title),
+            'post_content' => wp_kses_post($quiz->post_content),
+            'post_excerpt' => sanitize_textarea_field($quiz->post_excerpt),
+            'post_status' => $post_status,
             'post_type' => 'ielts_quiz',
-            'post_date' => $quiz->post_date,
-            'menu_order' => $quiz->menu_order
+            'post_date' => sanitize_text_field($quiz->post_date),
+            'menu_order' => intval($quiz->menu_order)
         );
         
         $new_id = wp_insert_post($post_data);
@@ -425,9 +441,12 @@ class IELTS_CM_LearnDash_Converter {
         global $wpdb;
         
         $existing_id = $wpdb->get_var($wpdb->prepare(
-            "SELECT post_id FROM {$wpdb->postmeta} 
-            WHERE meta_key = '_ld_original_id' AND meta_value = %d 
-            AND post_id IN (SELECT ID FROM {$wpdb->posts} WHERE post_type = 'ielts_course')
+            "SELECT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE pm.meta_key = '_ld_original_id' 
+            AND pm.meta_value = %d 
+            AND p.post_type = 'ielts_course'
             LIMIT 1",
             $ld_course_id
         ));
@@ -442,9 +461,12 @@ class IELTS_CM_LearnDash_Converter {
         global $wpdb;
         
         $existing_id = $wpdb->get_var($wpdb->prepare(
-            "SELECT post_id FROM {$wpdb->postmeta} 
-            WHERE meta_key = '_ld_original_id' AND meta_value = %d 
-            AND post_id IN (SELECT ID FROM {$wpdb->posts} WHERE post_type = 'ielts_lesson')
+            "SELECT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE pm.meta_key = '_ld_original_id' 
+            AND pm.meta_value = %d 
+            AND p.post_type = 'ielts_lesson'
             LIMIT 1",
             $ld_lesson_id
         ));
@@ -459,9 +481,12 @@ class IELTS_CM_LearnDash_Converter {
         global $wpdb;
         
         $existing_id = $wpdb->get_var($wpdb->prepare(
-            "SELECT post_id FROM {$wpdb->postmeta} 
-            WHERE meta_key = '_ld_original_id' AND meta_value = %d 
-            AND post_id IN (SELECT ID FROM {$wpdb->posts} WHERE post_type = 'ielts_resource')
+            "SELECT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE pm.meta_key = '_ld_original_id' 
+            AND pm.meta_value = %d 
+            AND p.post_type = 'ielts_resource'
             LIMIT 1",
             $ld_topic_id
         ));
@@ -476,9 +501,12 @@ class IELTS_CM_LearnDash_Converter {
         global $wpdb;
         
         $existing_id = $wpdb->get_var($wpdb->prepare(
-            "SELECT post_id FROM {$wpdb->postmeta} 
-            WHERE meta_key = '_ld_original_id' AND meta_value = %d 
-            AND post_id IN (SELECT ID FROM {$wpdb->posts} WHERE post_type = 'ielts_quiz')
+            "SELECT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE pm.meta_key = '_ld_original_id' 
+            AND pm.meta_value = %d 
+            AND p.post_type = 'ielts_quiz'
             LIMIT 1",
             $ld_quiz_id
         ));
