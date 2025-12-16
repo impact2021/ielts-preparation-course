@@ -164,8 +164,9 @@ class IELTS_CM_Export_Page {
                 <ul>
                     <li><strong><?php _e('File Size:', 'ielts-course-manager'); ?></strong> <?php _e('Large sites with many courses may generate large XML files. This is normal.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Export Time:', 'ielts-course-manager'); ?></strong> <?php _e('Exporting may take a few seconds to a few minutes depending on content volume.', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Memory Usage:', 'ielts-course-manager'); ?></strong> <?php _e('Sites with thousands of posts may encounter memory issues. If this occurs, export content types separately or increase PHP memory_limit.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Browser Timeout:', 'ielts-course-manager'); ?></strong> <?php _e('If the export times out, try exporting fewer content types at once or contact your hosting provider to increase PHP limits.', 'ielts-course-manager'); ?></li>
-                    <li><strong><?php _e('Batch Export:', 'ielts-course-manager'); ?></strong> <?php _e('For very large sites (25+ courses), consider exporting content types separately and importing them in sequence.', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Batch Export:', 'ielts-course-manager'); ?></strong> <?php _e('For very large sites (25+ courses with hundreds of lessons), consider exporting content types separately and importing them in sequence.', 'ielts-course-manager'); ?></li>
                 </ul>
             </div>
         </div>
@@ -360,7 +361,8 @@ class IELTS_CM_Export_Page {
         $xml .= "\t\t<wp:menu_order>" . intval($post->menu_order) . "</wp:menu_order>\n";
         $xml .= "\t\t<wp:post_type>" . $this->wxr_cdata($post->post_type) . "</wp:post_type>\n";
         $xml .= "\t\t<wp:post_password>" . $this->wxr_cdata($post->post_password) . "</wp:post_password>\n";
-        $xml .= "\t\t<wp:is_sticky>" . intval($post->post_type == 'post' && is_sticky($post->ID)) . "</wp:is_sticky>\n";
+        // Only check is_sticky for standard posts (custom post types don't support stickiness)
+        $xml .= "\t\t<wp:is_sticky>" . intval($post->post_type === 'post' && is_sticky($post->ID)) . "</wp:is_sticky>\n";
         
         // Export categories
         $categories = get_the_terms($post->ID, 'ielts_course_category');
@@ -407,12 +409,12 @@ class IELTS_CM_Export_Page {
                     }
                 }
                 $str = mb_convert_encoding($str, 'UTF-8', $from_encoding);
-            } elseif (function_exists('utf8_encode')) {
-                // Only use utf8_encode if mb_convert_encoding is not available
+            } elseif (function_exists('utf8_encode') && PHP_VERSION_ID < 80200) {
+                // Only use utf8_encode on PHP < 8.2 where it's not deprecated
                 // Assumes ISO-8859-1 source encoding
                 $str = utf8_encode($str);
             }
-            // If neither function is available, leave string as-is (better than fatal error)
+            // If no encoding function is available or PHP 8.2+ without mbstring, leave string as-is
         }
         $str = '<![CDATA[' . str_replace(']]>', ']]]]><![CDATA[>', $str) . ']]>';
         return $str;
