@@ -71,11 +71,31 @@
     margin-top: 15px;
 }
 
+/* Full-width content area for custom post types */
+.ielts-full-width {
+    width: 100%;
+    max-width: 100%;
+}
+
+.ielts-full-width .site-main {
+    padding: 60px 40px;
+}
+
+/* Hide search form on IELTS custom post types */
+.ielts-course-single .search-form,
+.ielts-lesson-single .search-form,
+.ielts-course-archive .search-form,
+.ielts-course-single .widget_search,
+.ielts-lesson-single .widget_search,
+.ielts-course-archive .widget_search {
+    display: none;
+}
+
 /* Single Course */
 .ielts-single-course {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
 }
 
 .ielts-single-course .course-header {
@@ -159,7 +179,7 @@
 
 /* Single Lesson */
 .ielts-single-lesson {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -231,7 +251,7 @@
 
 /* Quiz */
 .ielts-single-quiz {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -351,7 +371,7 @@
 
 /* Progress Page */
 .ielts-progress-page {
-    max-width: 1000px;
+    max-width: 100%;
     margin: 0 auto;
 }
 

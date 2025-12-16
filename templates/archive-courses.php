@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
 get_header();
 ?>
 
-<div id="primary" class="content-area">
+<div id="primary" class="content-area ielts-full-width">
     <main id="main" class="site-main">
         
         <header class="page-header">
@@ -49,5 +49,4 @@ get_header();
 </div>
 
 <?php
-get_sidebar();
 get_footer();
