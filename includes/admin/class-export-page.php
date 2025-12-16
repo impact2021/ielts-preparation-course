@@ -203,8 +203,13 @@ class IELTS_CM_Export_Page {
             wp_die(__('You do not have sufficient permissions to perform this action.', 'ielts-course-manager'));
         }
         
-        // Get export types
-        $export_types = isset($_POST['export_types']) && is_array($_POST['export_types']) ? $_POST['export_types'] : array();
+        // Get export types and validate against whitelist
+        $submitted_types = isset($_POST['export_types']) && is_array($_POST['export_types']) ? $_POST['export_types'] : array();
+        
+        // Whitelist of allowed post types
+        $allowed_types = array('ielts_course', 'ielts_lesson', 'ielts_resource', 'ielts_quiz');
+        $export_types = array_intersect($submitted_types, $allowed_types);
+        
         if (empty($export_types)) {
             wp_redirect(add_query_arg(array(
                 'page' => 'ielts-export-xml',
@@ -268,12 +273,18 @@ class IELTS_CM_Export_Page {
             $post_statuses[] = 'draft';
         }
         
+        // Use a reasonable limit for memory management, get posts in chunks if needed
+        // For typical IELTS sites with <1000 total posts, -1 is acceptable
+        // For larger sites, this could be optimized with pagination
         $args = array(
             'post_type' => $export_types,
             'post_status' => $post_statuses,
             'posts_per_page' => -1,
             'orderby' => 'ID',
-            'order' => 'ASC'
+            'order' => 'ASC',
+            'no_found_rows' => true, // Optimize query performance
+            'update_post_meta_cache' => false, // We'll get meta separately
+            'update_post_term_cache' => false  // We'll get terms separately
         );
         
         $posts = get_posts($args);
@@ -387,9 +398,18 @@ class IELTS_CM_Export_Page {
         if (!seems_utf8($str)) {
             // Use mb_convert_encoding (always preferred, utf8_encode is deprecated in PHP 8.2+)
             if (function_exists('mb_convert_encoding')) {
-                $str = mb_convert_encoding($str, 'UTF-8', 'ISO-8859-1');
+                // Try to detect encoding, fallback to ISO-8859-1 if detection fails
+                $from_encoding = 'ISO-8859-1';
+                if (function_exists('mb_detect_encoding')) {
+                    $detected = mb_detect_encoding($str, array('UTF-8', 'ISO-8859-1', 'Windows-1252', 'ASCII'), true);
+                    if ($detected !== false) {
+                        $from_encoding = $detected;
+                    }
+                }
+                $str = mb_convert_encoding($str, 'UTF-8', $from_encoding);
             } elseif (function_exists('utf8_encode')) {
-                // Only use utf8_encode if mb_convert_encoding is not available and utf8_encode is not yet removed
+                // Only use utf8_encode if mb_convert_encoding is not available
+                // Assumes ISO-8859-1 source encoding
                 $str = utf8_encode($str);
             }
             // If neither function is available, leave string as-is (better than fatal error)
