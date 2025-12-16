@@ -1,0 +1,134 @@
+/**
+ * Structure Rebuild Page Styles
+ */
+
+.rebuild-instructions {
+    max-width: 900px;
+    margin: 20px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-left: 4px solid #2271b1;
+}
+
+.rebuild-instructions h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.rebuild-instructions h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #1d2327;
+}
+
+.rebuild-instructions ul,
+.rebuild-instructions ol {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.rebuild-instructions ul ul,
+.rebuild-instructions ol ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.structure-editor {
+    max-width: 900px;
+    margin: 20px 0;
+}
+
+.structure-tree {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.lesson-list,
+.topic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lesson-item,
+.topic-item {
+    padding: 10px;
+    margin: 5px 0;
+    background: #f9f9f9;
+    border-left: 4px solid #2271b1;
+    cursor: move;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topic-item {
+    margin-left: 30px;
+    border-left-color: #72aee6;
+    background: #f0f6fc;
+}
+
+.handle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #ddd;
+    margin-right: 10px;
+    cursor: move;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 3px;
+}
+
+.handle:before {
+    content: "⋮⋮";
+    color: #666;
+    font-weight: bold;
+}
+
+.handle:hover {
+    background: #ccc;
+}
+
+.sortable-placeholder {
+    background: #fff3cd;
+    border: 2px dashed #ffc107;
+    height: 40px;
+    margin: 5px 0;
+}
+
+.lesson-name,
+.topic-name {
+    font-weight: 600;
+    display: inline-block;
+    flex: 1;
+}
+
+.lesson-item:hover,
+.topic-item:hover {
+    background: #e8f4f8;
+}
+
+.rebuild-examples {
+    max-width: 900px;
+    margin: 20px 0;
+    padding: 15px;
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+}
+
+.rebuild-examples h3 {
+    margin-top: 0;
+}
+
+.rebuild-examples pre {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 13px;
+    line-height: 1.6;
+}
