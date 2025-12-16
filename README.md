@@ -40,11 +40,18 @@ See [PLUGIN_README.md](PLUGIN_README.md) for detailed documentation on:
 
 ### Migrating from LearnDash?
 
-See [LEARNDASH_IMPORT_GUIDE.md](LEARNDASH_IMPORT_GUIDE.md) for comprehensive instructions on:
-- Exporting content from LearnDash
-- Importing XML files into IELTS Course Manager
-- Batch processing for large migrations (25+ courses)
-- Troubleshooting and best practices
+We offer two powerful migration tools:
+
+**Option 1: XML Import** - See [LEARNDASH_IMPORT_GUIDE.md](LEARNDASH_IMPORT_GUIDE.md)
+- Import complete LearnDash exports
+- Automatically maps content types
+- Best for when XML exports preserve relationships
+
+**Option 2: Structure Rebuild** - See [STRUCTURE_REBUILD_GUIDE.md](STRUCTURE_REBUILD_GUIDE.md)
+- Rebuild course structure from LearnDash HTML or text outline
+- Perfect when XML exports lose course/lesson/topic relationships
+- Paste HTML from browser developer tools or provide a text outline
+- Creates proper hierarchy automatically
 
 ## Requirements
 
