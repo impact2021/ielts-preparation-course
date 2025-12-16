@@ -113,14 +113,13 @@ class IELTS_CM_LearnDash_Importer {
         
         // Check if already exists (by title)
         if (!empty($options['skip_duplicates'])) {
-            $existing_posts = get_posts(array(
-                'post_type' => $new_post_type,
-                'title' => $title,
-                'posts_per_page' => 1,
-                'post_status' => 'any',
-                'fields' => 'ids'
+            global $wpdb;
+            $existing_id = $wpdb->get_var($wpdb->prepare(
+                "SELECT ID FROM {$wpdb->posts} WHERE post_title = %s AND post_type = %s AND post_status != 'trash' LIMIT 1",
+                $title,
+                $new_post_type
             ));
-            if (!empty($existing_posts)) {
+            if ($existing_id) {
                 $this->log("Skipping duplicate: {$title}", 'warning');
                 return;
             }
@@ -175,11 +174,8 @@ class IELTS_CM_LearnDash_Importer {
             $mapped_key = $this->map_meta_key($key, $post_type);
             
             if ($mapped_key) {
-                // Unserialize if needed (using WordPress helper for safety)
-                if ($this->is_serialized($value)) {
-                    $value = maybe_unserialize($value);
-                }
-                
+                // Unserialize if needed (using WordPress built-in function)
+                $value = maybe_unserialize($value);
                 update_post_meta($new_id, $mapped_key, $value);
             }
             
@@ -299,39 +295,6 @@ class IELTS_CM_LearnDash_Importer {
         }
         
         return null;
-    }
-    
-    /**
-     * Check if value is serialized
-     */
-    private function is_serialized($value) {
-        if (!is_string($value)) {
-            return false;
-        }
-        $value = trim($value);
-        if ('N;' === $value) {
-            return true;
-        }
-        if (!preg_match('/^([adObis]):/', $value, $matches)) {
-            return false;
-        }
-        switch ($matches[1]) {
-            case 'a':
-            case 'O':
-            case 's':
-                if (preg_match("/^{$matches[1]}:[0-9]+:.*[;}]\$/s", $value)) {
-                    return true;
-                }
-                break;
-            case 'b':
-            case 'i':
-            case 'd':
-                if (preg_match("/^{$matches[1]}:[0-9.E-]+;\$/", $value)) {
-                    return true;
-                }
-                break;
-        }
-        return false;
     }
     
     /**

@@ -199,10 +199,11 @@ set_time_limit(300); // 5 minutes</pre>
         
         // Validate file type (both extension and MIME type)
         $file_info = pathinfo($_FILES['import_file']['name']);
-        $file_type = wp_check_filetype($_FILES['import_file']['name'], array('xml' => 'application/xml', 'xml' => 'text/xml'));
+        $allowed_mimes = array('xml' => 'text/xml');
+        $file_type = wp_check_filetype($_FILES['import_file']['name'], $allowed_mimes);
         
         if (!isset($file_info['extension']) || strtolower($file_info['extension']) !== 'xml' || 
-            !in_array($file_type['type'], array('application/xml', 'text/xml'))) {
+            !in_array($file_type['type'], array('application/xml', 'text/xml'), true)) {
             wp_redirect(add_query_arg(array(
                 'page' => 'ielts-import-learndash',
                 'error' => 'invalid_file_type'
