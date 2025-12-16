@@ -27,6 +27,7 @@ class IELTS_CM_Admin {
         // Add AJAX handlers
         add_action('wp_ajax_ielts_cm_update_lesson_order', array($this, 'ajax_update_lesson_order'));
         add_action('wp_ajax_ielts_cm_update_page_order', array($this, 'ajax_update_page_order'));
+        add_action('wp_ajax_ielts_cm_update_content_order', array($this, 'ajax_update_content_order'));
         
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
@@ -66,11 +67,11 @@ class IELTS_CM_Admin {
             'high'
         );
         
-        // Lesson pages meta box
+        // Lesson pages and exercises meta box
         add_meta_box(
-            'ielts_cm_lesson_pages',
-            __('Lesson Pages', 'ielts-course-manager'),
-            array($this, 'lesson_pages_meta_box'),
+            'ielts_cm_lesson_content',
+            __('Lesson Content (Pages & Exercises)', 'ielts-course-manager'),
+            array($this, 'lesson_content_meta_box'),
             'ielts_lesson',
             'normal',
             'high'
@@ -250,9 +251,9 @@ class IELTS_CM_Admin {
     }
     
     /**
-     * Lesson pages meta box - display and reorder lesson pages
+     * Lesson content meta box - display and reorder lesson pages and exercises together
      */
-    public function lesson_pages_meta_box($post) {
+    public function lesson_content_meta_box($post) {
         // Get lesson pages for this lesson
         global $wpdb;
         $resource_ids = $wpdb->get_col($wpdb->prepare("
@@ -272,35 +273,84 @@ class IELTS_CM_Admin {
                 'order' => 'ASC'
             ));
         }
+        
+        // Get quizzes for this lesson
+        $quiz_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT post_id 
+            FROM {$wpdb->postmeta} 
+            WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+               OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
+        ", $post->ID, '%' . $wpdb->esc_like(serialize(strval($post->ID))) . '%'));
+        
+        $quizzes = array();
+        if (!empty($quiz_ids)) {
+            $quizzes = get_posts(array(
+                'post_type' => 'ielts_quiz',
+                'posts_per_page' => -1,
+                'post__in' => $quiz_ids,
+                'orderby' => 'menu_order',
+                'order' => 'ASC'
+            ));
+        }
+        
+        // Combine resources and quizzes into a single array
+        $content_items = array();
+        foreach ($resources as $resource) {
+            $content_items[] = array(
+                'id' => $resource->ID,
+                'title' => $resource->post_title,
+                'type' => 'resource',
+                'order' => $resource->menu_order
+            );
+        }
+        foreach ($quizzes as $quiz) {
+            $content_items[] = array(
+                'id' => $quiz->ID,
+                'title' => $quiz->post_title,
+                'type' => 'quiz',
+                'order' => $quiz->menu_order
+            );
+        }
+        
+        // Sort by menu_order
+        usort($content_items, function($a, $b) {
+            return $a['order'] - $b['order'];
+        });
+        
         ?>
-        <div id="ielts-cm-lesson-pages">
-            <?php if (empty($resources)): ?>
-                <p><?php _e('No lesson pages have been assigned to this lesson yet. Create lesson pages and assign them to this lesson in the Lesson Page Settings.', 'ielts-course-manager'); ?></p>
+        <div id="ielts-cm-lesson-content">
+            <?php if (empty($content_items)): ?>
+                <p><?php _e('No lesson pages or exercises have been assigned to this lesson yet. Create lesson pages and assign them to this lesson in the Lesson Page Settings, or create exercises and assign them in the Exercise Settings.', 'ielts-course-manager'); ?></p>
             <?php else: ?>
-                <p><?php _e('Drag and drop lesson pages to reorder them:', 'ielts-course-manager'); ?></p>
-                <ul id="lesson-pages-sortable" class="lesson-pages-list">
-                    <?php foreach ($resources as $resource): ?>
-                        <li class="page-item" data-page-id="<?php echo esc_attr($resource->ID); ?>">
+                <p><?php _e('Drag and drop items to reorder them. You can mix lesson pages and exercises in any order:', 'ielts-course-manager'); ?></p>
+                <ul id="lesson-content-sortable" class="lesson-content-list">
+                    <?php foreach ($content_items as $item): ?>
+                        <li class="content-item content-item-<?php echo esc_attr($item['type']); ?>" 
+                            data-item-id="<?php echo esc_attr($item['id']); ?>" 
+                            data-item-type="<?php echo esc_attr($item['type']); ?>">
                             <span class="dashicons dashicons-menu"></span>
-                            <span class="page-title"><?php echo esc_html($resource->post_title); ?></span>
-                            <span class="page-order"><?php printf(__('Order: %d', 'ielts-course-manager'), $resource->menu_order); ?></span>
-                            <a href="<?php echo get_edit_post_link($resource->ID); ?>" class="button button-small" target="_blank">
+                            <span class="item-type-badge <?php echo esc_attr($item['type']); ?>">
+                                <?php echo $item['type'] === 'quiz' ? __('Exercise', 'ielts-course-manager') : __('Page', 'ielts-course-manager'); ?>
+                            </span>
+                            <span class="item-title"><?php echo esc_html($item['title']); ?></span>
+                            <span class="item-order"><?php printf(__('Order: %d', 'ielts-course-manager'), $item['order']); ?></span>
+                            <a href="<?php echo get_edit_post_link($item['id']); ?>" class="button button-small" target="_blank">
                                 <?php _e('Edit', 'ielts-course-manager'); ?>
                             </a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
-                <div class="page-order-status"></div>
+                <div class="content-order-status"></div>
             <?php endif; ?>
         </div>
         
         <style>
-        #ielts-cm-lesson-pages .lesson-pages-list {
+        #ielts-cm-lesson-content .lesson-content-list {
             list-style: none;
             margin: 0;
             padding: 0;
         }
-        #ielts-cm-lesson-pages .page-item {
+        #ielts-cm-lesson-content .content-item {
             padding: 12px;
             margin-bottom: 5px;
             background: #f9f9f9;
@@ -310,41 +360,56 @@ class IELTS_CM_Admin {
             align-items: center;
             gap: 10px;
         }
-        #ielts-cm-lesson-pages .page-item:hover {
+        #ielts-cm-lesson-content .content-item:hover {
             background: #f0f0f0;
         }
-        #ielts-cm-lesson-pages .page-item .dashicons-menu {
+        #ielts-cm-lesson-content .content-item .dashicons-menu {
             color: #999;
         }
-        #ielts-cm-lesson-pages .page-item .page-title {
+        #ielts-cm-lesson-content .content-item .item-type-badge {
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        #ielts-cm-lesson-content .content-item .item-type-badge.resource {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        #ielts-cm-lesson-content .content-item .item-type-badge.quiz {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        #ielts-cm-lesson-content .content-item .item-title {
             flex: 1;
             font-weight: 500;
         }
-        #ielts-cm-lesson-pages .page-item .page-order {
+        #ielts-cm-lesson-content .content-item .item-order {
             color: #666;
             font-size: 12px;
         }
-        #ielts-cm-lesson-pages .page-item.ui-sortable-helper {
+        #ielts-cm-lesson-content .content-item.ui-sortable-helper {
             opacity: 0.8;
             box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
-        #ielts-cm-lesson-pages .page-item.ui-sortable-placeholder {
+        #ielts-cm-lesson-content .content-item.ui-sortable-placeholder {
             background: #e0e0e0;
             border: 2px dashed #999;
             visibility: visible !important;
         }
-        #ielts-cm-lesson-pages .page-order-status {
+        #ielts-cm-lesson-content .content-order-status {
             margin-top: 10px;
             padding: 8px;
             display: none;
         }
-        #ielts-cm-lesson-pages .page-order-status.success {
+        #ielts-cm-lesson-content .content-order-status.success {
             background: #d4edda;
             border: 1px solid #c3e6cb;
             color: #155724;
             display: block;
         }
-        #ielts-cm-lesson-pages .page-order-status.error {
+        #ielts-cm-lesson-content .content-order-status.error {
             background: #f8d7da;
             border: 1px solid #f5c6cb;
             color: #721c24;
@@ -784,6 +849,42 @@ class IELTS_CM_Admin {
         }
         
         wp_send_json_success(array('message' => __('Lesson page order updated successfully', 'ielts-course-manager')));
+    }
+    
+    /**
+     * AJAX handler for updating lesson content (pages and exercises) order
+     */
+    public function ajax_update_content_order() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_content_order')) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        // Check user capabilities
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(array('message' => __('You do not have permission to do this', 'ielts-course-manager')));
+        }
+        
+        // Get the content order data
+        $lesson_id = isset($_POST['lesson_id']) ? intval($_POST['lesson_id']) : 0;
+        $content_order = isset($_POST['content_order']) ? $_POST['content_order'] : array();
+        
+        if (!$lesson_id || empty($content_order)) {
+            wp_send_json_error(array('message' => __('Invalid data', 'ielts-course-manager')));
+        }
+        
+        // Update menu_order for each content item (page or quiz)
+        foreach ($content_order as $item) {
+            $item_id = intval($item['item_id']);
+            $order = intval($item['order']);
+            
+            wp_update_post(array(
+                'ID' => $item_id,
+                'menu_order' => $order
+            ));
+        }
+        
+        wp_send_json_success(array('message' => __('Content order updated successfully', 'ielts-course-manager')));
     }
     
     /**

@@ -15,6 +15,11 @@
         if ($('#lesson-pages-sortable').length && typeof ieltsCMAdmin !== 'undefined') {
             initPageOrdering();
         }
+        
+        // Initialize lesson content (pages and exercises) ordering sortable
+        if ($('#lesson-content-sortable').length && typeof ieltsCMAdmin !== 'undefined') {
+            initContentOrdering();
+        }
     });
     
     /**
@@ -134,6 +139,70 @@
                             .removeClass('success')
                             .addClass('error')
                             .text(ieltsCMAdmin.i18n.pageOrderError)
+                            .fadeIn()
+                            .delay(5000)
+                            .fadeOut();
+                    }
+                });
+            }
+        });
+    }
+    
+    /**
+     * Initialize drag-and-drop lesson content (pages and exercises) ordering
+     */
+    function initContentOrdering() {
+        $('#lesson-content-sortable').sortable({
+            placeholder: 'ui-sortable-placeholder',
+            update: function(event, ui) {
+                var contentOrder = [];
+                $('#lesson-content-sortable .content-item').each(function(index) {
+                    contentOrder.push({
+                        item_id: $(this).data('item-id'),
+                        item_type: $(this).data('item-type'),
+                        order: index
+                    });
+                });
+                
+                // Save the new order via AJAX
+                $.ajax({
+                    url: ieltsCMAdmin.ajaxUrl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_update_content_order',
+                        nonce: ieltsCMAdmin.contentOrderNonce,
+                        lesson_id: ieltsCMAdmin.lessonId,
+                        content_order: contentOrder
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            $('.content-order-status')
+                                .removeClass('error')
+                                .addClass('success')
+                                .text(ieltsCMAdmin.i18n.contentOrderUpdated)
+                                .fadeIn()
+                                .delay(3000)
+                                .fadeOut();
+                            
+                            // Update the order numbers in the UI
+                            $('#lesson-content-sortable .content-item').each(function(index) {
+                                $(this).find('.item-order').text(ieltsCMAdmin.i18n.orderLabel + ' ' + index);
+                            });
+                        } else {
+                            $('.content-order-status')
+                                .removeClass('success')
+                                .addClass('error')
+                                .text(ieltsCMAdmin.i18n.contentOrderFailed)
+                                .fadeIn()
+                                .delay(5000)
+                                .fadeOut();
+                        }
+                    },
+                    error: function() {
+                        $('.content-order-status')
+                            .removeClass('success')
+                            .addClass('error')
+                            .text(ieltsCMAdmin.i18n.contentOrderError)
                             .fadeIn()
                             .delay(5000)
                             .fadeOut();
