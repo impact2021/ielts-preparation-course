@@ -510,34 +510,33 @@ Introduction to IELTS
         );
         
         $lines = explode("\n", $text);
-        $current_lesson = null;
+        $current_lesson_index = null;
         
         foreach ($lines as $line) {
-            $line = trim($line);
-            
-            if (empty($line)) {
+            // Check if line is empty after trimming
+            if (empty(trim($line))) {
                 continue;
             }
             
-            // Remove common prefixes
+            // Determine indentation level BEFORE removing spaces
+            $indent_level = strlen($line) - strlen(ltrim($line));
+            
+            // Now clean up the line
+            $line = trim($line);
             $line = preg_replace('/^[-•*]+\s*/', '', $line);
             
-            // Determine indentation level
-            $indent_level = strlen($line) - strlen(ltrim($line));
-            $line = trim($line);
-            
-            if ($indent_level == 0 || strpos($line, '-') === 0) {
-                // This is a lesson
-                $line = ltrim($line, '- ');
-                $current_lesson = array(
+            if ($indent_level == 0) {
+                // This is a lesson (no indentation)
+                $lesson = array(
                     'name' => $line,
                     'topics' => array()
                 );
-                $structure['lessons'][] = &$current_lesson;
-            } else if ($current_lesson !== null) {
-                // This is a topic under the current lesson
-                $line = ltrim($line, '- ');
-                $current_lesson['topics'][] = array(
+                $structure['lessons'][] = $lesson;
+                // Store index for adding topics
+                $current_lesson_index = count($structure['lessons']) - 1;
+            } else if ($current_lesson_index !== null) {
+                // This is a topic (indented)
+                $structure['lessons'][$current_lesson_index]['topics'][] = array(
                     'name' => $line
                 );
             }
