@@ -12,7 +12,12 @@ get_header();
 ?>
 
 <style>
-/* Ensure proper padding for course archive page */
+/* 
+ * Inline styles are used here (instead of wp_add_inline_style) because:
+ * 1. This template is loaded via template_include filter, not through standard enqueue
+ * 2. Inline styles have highest specificity to override theme styles
+ * 3. These styles are page-specific and should only apply to this template
+ */
 body.ielts-course-archive .site-main,
 body.ielts-course-archive #primary,
 body.ielts-course-archive .content-area {

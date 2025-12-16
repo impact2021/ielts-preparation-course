@@ -63,8 +63,17 @@ class IELTS_Course_Manager {
     
     /**
      * Check if plugin version has been updated and flush permalinks if needed
+     * Uses a transient to avoid checking on every page load
      */
     public function check_version_update() {
+        // Use a transient to avoid checking on every page load
+        $version_checked = get_transient('ielts_cm_version_checked');
+        
+        if ($version_checked === IELTS_CM_VERSION) {
+            // Version already checked and is current
+            return;
+        }
+        
         $current_version = get_option('ielts_cm_version');
         
         // If version has changed, flush rewrite rules
@@ -72,6 +81,9 @@ class IELTS_Course_Manager {
             flush_rewrite_rules();
             update_option('ielts_cm_version', IELTS_CM_VERSION);
         }
+        
+        // Set transient to prevent checking again for 1 hour
+        set_transient('ielts_cm_version_checked', IELTS_CM_VERSION, HOUR_IN_SECONDS);
     }
     
     public function enqueue_scripts() {
