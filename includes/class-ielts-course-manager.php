@@ -19,6 +19,7 @@ class IELTS_Course_Manager {
     protected $import_page;
     protected $export_page;
     protected $structure_rebuild_page;
+    protected $direct_migration_page;
     protected $frontend;
     
     public function __construct() {
@@ -41,6 +42,7 @@ class IELTS_Course_Manager {
         $this->import_page = new IELTS_CM_Import_Page();
         $this->export_page = new IELTS_CM_Export_Page();
         $this->structure_rebuild_page = new IELTS_CM_Structure_Rebuild_Page();
+        $this->direct_migration_page = new IELTS_CM_Direct_Migration_Page();
         $this->frontend = new IELTS_CM_Frontend();
     }
     
@@ -57,6 +59,7 @@ class IELTS_Course_Manager {
             $this->import_page->init();
             $this->export_page->init();
             $this->structure_rebuild_page->init();
+            $this->direct_migration_page->init();
         }
         
         // Initialize frontend

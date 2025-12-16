@@ -18,6 +18,7 @@ class IELTS_CM_LearnDash_Importer {
     private $imported_lessons = array();
     private $imported_topics = array();
     private $imported_quizzes = array();
+    private $imported_questions = array();
     private $import_log = array();
     
     /**
@@ -27,7 +28,8 @@ class IELTS_CM_LearnDash_Importer {
         'sfwd-courses' => 'ielts_course',
         'sfwd-lessons' => 'ielts_lesson',
         'sfwd-topic' => 'ielts_resource',
-        'sfwd-quiz' => 'ielts_quiz'
+        'sfwd-quiz' => 'ielts_quiz',
+        'sfwd-question' => 'question' // Questions are handled specially
     );
     
     /**
@@ -399,6 +401,13 @@ class IELTS_CM_LearnDash_Importer {
         // Map to new post type
         $new_post_type = $this->post_type_map[$post_type];
         
+        // Special handling for questions - don't create as posts
+        if ($post_type === 'sfwd-question') {
+            $this->log("Processing question (ID: {$old_id}): {$title}");
+            $this->process_question($item, $namespaces, $old_id, $title, $content);
+            return;
+        }
+        
         $this->log("Processing {$post_type} (ID: {$old_id}): {$title}");
         
         // Create the post
@@ -454,6 +463,30 @@ class IELTS_CM_LearnDash_Importer {
         
         // Process taxonomies
         $this->process_taxonomies($item, $new_id);
+    }
+    
+    /**
+     * Process a LearnDash question
+     * Questions are not created as separate posts but stored as metadata for conversion
+     */
+    private function process_question($item, $namespaces, $old_id, $title, $content) {
+        $question_data = array(
+            'id' => $old_id,
+            'title' => $title,
+            'content' => $content,
+            'meta' => array()
+        );
+        
+        // Extract metadata
+        foreach ($item->children($namespaces['wp'])->postmeta as $meta) {
+            $key = (string)$meta->meta_key;
+            $value = (string)$meta->meta_value;
+            $question_data['meta'][$key] = maybe_unserialize($value);
+        }
+        
+        // Store question data for later processing
+        $this->imported_questions[$old_id] = $question_data;
+        $this->log("Stored question data for later processing");
     }
     
     /**
@@ -539,7 +572,7 @@ class IELTS_CM_LearnDash_Importer {
             }
         }
         
-        // Link quizzes to courses and lessons
+        // Link quizzes to courses and lessons, and convert questions
         foreach ($this->imported_quizzes as $old_quiz_id => $new_quiz_id) {
             // Link to course
             $original_course_id = get_post_meta($new_quiz_id, '_ld_original_course_id', true);
@@ -566,7 +599,158 @@ class IELTS_CM_LearnDash_Importer {
                 update_post_meta($new_quiz_id, '_ielts_cm_lesson_ids', array_unique($lesson_ids));
                 update_post_meta($new_quiz_id, '_ielts_cm_lesson_id', $new_lesson_id);
             }
+            
+            // Convert and attach questions to this quiz
+            $this->convert_quiz_questions($old_quiz_id, $new_quiz_id);
         }
+    }
+    
+    /**
+     * Convert LearnDash questions to IELTS CM format and attach to quiz
+     */
+    private function convert_quiz_questions($old_quiz_id, $new_quiz_id) {
+        // Get the list of question IDs associated with this quiz
+        // LearnDash stores this in _ld_quiz_questions or ld_quiz_questions meta
+        $question_ids = get_post_meta($new_quiz_id, '_ld_original_ld_quiz_questions', true);
+        
+        if (empty($question_ids) || !is_array($question_ids)) {
+            // Try alternative meta key
+            $question_ids = get_post_meta($new_quiz_id, '_ld_original_quiz_questions', true);
+        }
+        
+        if (empty($question_ids) || !is_array($question_ids)) {
+            $this->log("No questions found for quiz ID: {$new_quiz_id}", 'warning');
+            return;
+        }
+        
+        $converted_questions = array();
+        $questions_converted = 0;
+        
+        foreach ($question_ids as $question_id) {
+            if (!isset($this->imported_questions[$question_id])) {
+                $this->log("Question ID {$question_id} not found in imported questions", 'warning');
+                continue;
+            }
+            
+            $question_data = $this->imported_questions[$question_id];
+            $converted = $this->convert_question_to_ielts_format($question_data);
+            
+            if ($converted) {
+                $converted_questions[] = $converted;
+                $questions_converted++;
+            }
+        }
+        
+        if (!empty($converted_questions)) {
+            update_post_meta($new_quiz_id, '_ielts_cm_questions', $converted_questions);
+            $this->log("Converted and attached {$questions_converted} questions to quiz ID: {$new_quiz_id}");
+        }
+    }
+    
+    /**
+     * Convert a LearnDash question to IELTS CM format
+     */
+    private function convert_question_to_ielts_format($question_data) {
+        $meta = $question_data['meta'];
+        
+        // Determine question type from LearnDash meta
+        // LearnDash types: single, multiple, free_answer, sort_answer, matrix_sort_answer, essay, fill_in_blank, cloze_answer
+        $ld_type = isset($meta['question_type']) ? $meta['question_type'] : 'single';
+        
+        // Map to IELTS question types
+        // Note: matrix_sort_answer and sort_answer are complex sorting questions
+        // They will be converted to essay type with instructions since IELTS CM doesn't have a sorting type
+        $type_map = array(
+            'single' => 'multiple_choice',
+            'multiple' => 'multiple_choice',
+            'free_answer' => 'fill_blank',
+            'essay' => 'essay',
+            'fill_in_blank' => 'fill_blank',
+            'cloze_answer' => 'fill_blank',
+            'sort_answer' => 'essay', // Sorting questions converted to essay for manual grading
+            'matrix_sort_answer' => 'essay', // Matrix sorting questions converted to essay for manual grading
+        );
+        
+        $ielts_type = isset($type_map[$ld_type]) ? $type_map[$ld_type] : 'multiple_choice';
+        
+        // Build IELTS question
+        $ielts_question = array(
+            'type' => $ielts_type,
+            'question' => $question_data['title'],
+            'points' => isset($meta['question_points']) ? floatval($meta['question_points']) : 1
+        );
+        
+        // Add question content if available
+        if (!empty($question_data['content'])) {
+            $ielts_question['question'] .= "\n\n" . strip_tags($question_data['content']);
+        }
+        
+        // Handle answers based on type
+        if ($ielts_type === 'multiple_choice') {
+            // Extract answers from LearnDash answer meta
+            $answers = isset($meta['_answer']) ? $meta['_answer'] : array();
+            if (!is_array($answers)) {
+                $answers = maybe_unserialize($answers);
+            }
+            
+            $options = array();
+            $correct_index = 0;
+            
+            if (is_array($answers)) {
+                foreach ($answers as $index => $answer) {
+                    if (is_array($answer)) {
+                        $answer_text = isset($answer['answer']) ? $answer['answer'] : '';
+                        $is_correct = isset($answer['correct']) && $answer['correct'];
+                        
+                        if ($is_correct) {
+                            $correct_index = count($options);
+                        }
+                        
+                        $options[] = strip_tags($answer_text);
+                    } elseif (is_string($answer)) {
+                        $options[] = strip_tags($answer);
+                    }
+                }
+            }
+            
+            $ielts_question['options'] = implode("\n", $options);
+            $ielts_question['correct_answer'] = (string)$correct_index;
+            
+        } elseif ($ielts_type === 'fill_blank') {
+            // Get the correct answer
+            $correct = isset($meta['_question_answer_correct']) ? $meta['_question_answer_correct'] : '';
+            if (empty($correct) && isset($meta['correct_answer'])) {
+                $correct = $meta['correct_answer'];
+            }
+            $ielts_question['correct_answer'] = strip_tags($correct);
+            
+        } elseif ($ielts_type === 'essay') {
+            // Essay questions don't have a correct answer
+            // For matrix sorting and sort answer questions, add the answer data to the question text
+            if ($ld_type === 'matrix_sort_answer' || $ld_type === 'sort_answer') {
+                $ielts_question['question'] .= "\n\n[NOTE: This was a " . ($ld_type === 'matrix_sort_answer' ? 'Matrix Sorting' : 'Sorting') . " question in LearnDash. Manual grading required.]";
+                
+                // Try to include the answer criteria if available
+                if (isset($meta['_answer']) && is_array($meta['_answer'])) {
+                    $ielts_question['question'] .= "\n\nExpected answer elements:";
+                    foreach ($meta['_answer'] as $index => $answer) {
+                        if (is_array($answer)) {
+                            $answer_text = isset($answer['answer']) ? strip_tags($answer['answer']) : '';
+                            $sort_order = isset($answer['sort_pos']) ? $answer['sort_pos'] : ($index + 1);
+                            if (!empty($answer_text)) {
+                                $ielts_question['question'] .= "\n" . $sort_order . ". " . $answer_text;
+                            }
+                        }
+                    }
+                } elseif (isset($meta['matrix_sort_criteria'])) {
+                    $ielts_question['question'] .= "\n\n" . strip_tags($meta['matrix_sort_criteria']);
+                }
+                
+                $this->log("Converted {$ld_type} question to essay format (requires manual grading)", 'warning');
+            }
+        }
+        
+        return $ielts_question;
     }
     
     /**
@@ -617,6 +801,7 @@ class IELTS_CM_LearnDash_Importer {
             'lessons' => count($this->imported_lessons),
             'topics' => count($this->imported_topics),
             'quizzes' => count($this->imported_quizzes),
+            'questions' => count($this->imported_questions),
             'log' => $this->import_log
         );
     }

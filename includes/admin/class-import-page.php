@@ -81,7 +81,8 @@ class IELTS_CM_Import_Page {
                 <h3><?php _e('Important Notes:', 'ielts-course-manager'); ?></h3>
                 <ul>
                     <li><?php _e('<strong>Large Imports:</strong> For sites with 25 courses and hundreds of lessons, consider splitting your export into smaller files (e.g., 5-10 courses per file).', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('<strong>Quiz Questions:</strong> LearnDash quiz questions may need manual review after import due to different quiz systems.', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('<strong>Quiz Questions:</strong> LearnDash uses a question bank system where questions are separate entities. The importer automatically converts these to internal quiz questions. Matrix Sorting and Sorting questions will be converted to Essay type for manual grading.', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('<strong>Question Bank:</strong> LearnDash questions (sfwd-question) are automatically converted and embedded into their respective quizzes. Question types are mapped as follows: Single/Multiple → Multiple Choice, Free Answer/Fill in Blank → Fill in Blank, Essay → Essay, Matrix Sorting/Sorting → Essay (manual grading).', 'ielts-course-manager'); ?></li>
                     <li><?php _e('<strong>Course Structure:</strong> The importer automatically maintains the relationships between courses, lessons, and lesson pages.', 'ielts-course-manager'); ?></li>
                     <li><?php _e('<strong>Backup First:</strong> Always backup your database before importing to ensure you can rollback if needed.', 'ielts-course-manager'); ?></li>
                     <li><?php _e('<strong>Progress Data:</strong> User progress and enrollment data from LearnDash is not imported. Students will need to re-enroll.', 'ielts-course-manager'); ?></li>
@@ -279,6 +280,9 @@ set_time_limit(300); // 5 minutes</pre>
                     echo '<li>' . sprintf(__('Lessons imported: %d', 'ielts-course-manager'), $results['lessons']) . '</li>';
                     echo '<li>' . sprintf(__('Lesson pages imported: %d', 'ielts-course-manager'), $results['topics']) . '</li>';
                     echo '<li>' . sprintf(__('Quizzes imported: %d', 'ielts-course-manager'), $results['quizzes']) . '</li>';
+                    if (isset($results['questions']) && $results['questions'] > 0) {
+                        echo '<li>' . sprintf(__('Questions converted: %d', 'ielts-course-manager'), $results['questions']) . '</li>';
+                    }
                     echo '</ul>';
                     
                     // Display log if there were warnings or errors
