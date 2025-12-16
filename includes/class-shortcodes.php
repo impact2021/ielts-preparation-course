@@ -222,26 +222,35 @@ class IELTS_CM_Shortcodes {
                     <?php
                 }
             } else {
-                // Display progress for all enrolled courses
-                $enrolled_courses = $enrollment->get_user_courses($user_id);
+                // Display progress for all courses
+                $all_courses = get_posts(array(
+                    'post_type' => 'ielts_course',
+                    'posts_per_page' => -1,
+                    'post_status' => 'publish',
+                    'orderby' => 'title',
+                    'order' => 'ASC'
+                ));
                 
-                if (empty($enrolled_courses)) {
-                    echo '<p>' . __('You are not enrolled in any courses yet.', 'ielts-course-manager') . '</p>';
+                if (empty($all_courses)) {
+                    echo '<p>' . __('No courses available yet.', 'ielts-course-manager') . '</p>';
                 } else {
                     ?>
                     <div class="all-courses-progress">
-                        <?php foreach ($enrolled_courses as $enrollment_data): 
-                            $course = get_post($enrollment_data->course_id);
-                            if (!$course) continue;
-                            
-                            $completion = $progress_tracker->get_course_completion_percentage($user_id, $enrollment_data->course_id);
-                            $quiz_results = $quiz_handler->get_quiz_results($user_id, $enrollment_data->course_id);
+                        <?php foreach ($all_courses as $course): 
+                            $is_enrolled = $enrollment->is_enrolled($user_id, $course->ID);
+                            $completion = $progress_tracker->get_course_completion_percentage($user_id, $course->ID);
+                            $quiz_results = $quiz_handler->get_quiz_results($user_id, $course->ID);
                             ?>
-                            <div class="course-progress-item">
+                            <div class="course-progress-item <?php echo !$is_enrolled ? 'not-enrolled' : ''; ?>">
                                 <h3>
                                     <a href="<?php echo get_permalink($course->ID); ?>">
                                         <?php echo esc_html($course->post_title); ?>
                                     </a>
+                                    <?php if (!$is_enrolled): ?>
+                                        <span class="enrollment-badge not-enrolled"><?php _e('Not Enrolled', 'ielts-course-manager'); ?></span>
+                                    <?php else: ?>
+                                        <span class="enrollment-badge enrolled"><?php _e('Enrolled', 'ielts-course-manager'); ?></span>
+                                    <?php endif; ?>
                                 </h3>
                                 <div class="progress-bar">
                                     <div class="progress-fill" style="width: <?php echo round($completion, 1); ?>%;">
@@ -291,6 +300,31 @@ class IELTS_CM_Shortcodes {
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
+        }
+        .ielts-my-progress .course-progress-item.not-enrolled {
+            background-color: #f9f9f9;
+            border-color: #ccc;
+        }
+        .ielts-my-progress .course-progress-item h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .ielts-my-progress .enrollment-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .ielts-my-progress .enrollment-badge.enrolled {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .ielts-my-progress .enrollment-badge.not-enrolled {
+            background-color: #fff3cd;
+            color: #856404;
         }
         .ielts-my-progress .completed-lessons-list {
             list-style: disc;
