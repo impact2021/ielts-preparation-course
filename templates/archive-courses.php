@@ -11,8 +11,18 @@ if (!defined('ABSPATH')) {
 get_header();
 ?>
 
+<style>
+/* Ensure proper padding for course archive page */
+body.ielts-course-archive .site-main,
+body.ielts-course-archive #primary,
+body.ielts-course-archive .content-area {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+}
+</style>
+
 <div id="primary" class="content-area ielts-full-width">
-    <main id="main" class="site-main">
+    <main id="main" class="site-main" style="padding: 60px 40px;">
         
         <header class="page-header">
             <h1 class="page-title"><?php _e('IELTS Courses', 'ielts-course-manager'); ?></h1>

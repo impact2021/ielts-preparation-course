@@ -42,6 +42,9 @@ class IELTS_Course_Manager {
         // Register post types
         add_action('init', array($this->post_types, 'register_post_types'));
         
+        // Check for version update and flush permalinks if needed
+        add_action('init', array($this, 'check_version_update'));
+        
         // Initialize admin
         if (is_admin()) {
             $this->admin->init();
@@ -56,6 +59,19 @@ class IELTS_Course_Manager {
         // Enqueue scripts and styles
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
         add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_scripts'));
+    }
+    
+    /**
+     * Check if plugin version has been updated and flush permalinks if needed
+     */
+    public function check_version_update() {
+        $current_version = get_option('ielts_cm_version');
+        
+        // If version has changed, flush rewrite rules
+        if ($current_version !== IELTS_CM_VERSION) {
+            flush_rewrite_rules();
+            update_option('ielts_cm_version', IELTS_CM_VERSION);
+        }
     }
     
     public function enqueue_scripts() {

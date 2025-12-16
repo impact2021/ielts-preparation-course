@@ -11,8 +11,18 @@ if (!defined('ABSPATH')) {
 get_header();
 ?>
 
+<style>
+/* Ensure proper padding for lesson page */
+body.ielts-lesson-single .site-main,
+body.ielts-lesson-single #primary,
+body.ielts-lesson-single .content-area {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+}
+</style>
+
 <div id="primary" class="content-area ielts-full-width">
-    <main id="main" class="site-main">
+    <main id="main" class="site-main" style="padding: 60px 40px;">
         <?php
         while (have_posts()) :
             the_post();
