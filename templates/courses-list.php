@@ -10,9 +10,14 @@ if (!defined('ABSPATH')) {
 $enrollment = new IELTS_CM_Enrollment();
 $progress_tracker = new IELTS_CM_Progress_Tracker();
 $user_id = get_current_user_id();
+
+// Set default columns if not provided
+if (!isset($columns)) {
+    $columns = 5;
+}
 ?>
 
-<div class="ielts-courses-list">
+<div class="ielts-courses-list" data-columns="<?php echo esc_attr($columns); ?>" style="grid-template-columns: repeat(<?php echo esc_attr($columns); ?>, 1fr);">
     <?php if (!empty($courses)): ?>
         <?php foreach ($courses as $course): ?>
             <div class="ielts-course-item">

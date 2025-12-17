@@ -45,7 +45,10 @@ class IELTS_CM_Admin {
      * Display admin notices for quiz validation
      */
     public function quiz_validation_notices() {
-        if (isset($_GET['ielts_cm_no_questions']) && $_GET['ielts_cm_no_questions'] == '1') {
+        // Check for validation notice transient
+        $user_id = get_current_user_id();
+        if (get_transient('ielts_cm_no_questions_' . $user_id)) {
+            delete_transient('ielts_cm_no_questions_' . $user_id);
             ?>
             <div class="notice notice-error is-dismissible">
                 <p>
@@ -838,16 +841,20 @@ class IELTS_CM_Admin {
             // Validate that quiz has at least one question before publishing
             $post = get_post($post_id);
             if ($post && $post->post_type === 'ielts_quiz' && $post->post_status === 'publish' && empty($questions)) {
+                // Remove publish hook temporarily to prevent infinite loop
+                remove_action('save_post', array($this, 'save_meta_boxes'));
+                
                 // Change status to draft if no questions
                 wp_update_post(array(
                     'ID' => $post_id,
                     'post_status' => 'draft'
                 ));
                 
-                // Set admin notice
-                add_filter('redirect_post_location', function($location) {
-                    return add_query_arg('ielts_cm_no_questions', '1', $location);
-                });
+                // Re-add the hook
+                add_action('save_post', array($this, 'save_meta_boxes'));
+                
+                // Set admin notice via transient to avoid multiple filter calls
+                set_transient('ielts_cm_no_questions_' . get_current_user_id(), '1', 60);
             }
         }
     }
@@ -1042,6 +1049,7 @@ class IELTS_CM_Admin {
      * Course columns
      */
     public function course_columns($columns) {
+        $columns['category'] = __('Category', 'ielts-course-manager');
         $columns['lessons'] = __('Lessons', 'ielts-course-manager');
         $columns['enrolled'] = __('Enrolled', 'ielts-course-manager');
         return $columns;
@@ -1051,7 +1059,18 @@ class IELTS_CM_Admin {
      * Course column content
      */
     public function course_column_content($column, $post_id) {
-        if ($column === 'lessons') {
+        if ($column === 'category') {
+            $terms = get_the_terms($post_id, 'ielts_course_category');
+            if (!empty($terms) && !is_wp_error($terms)) {
+                $category_names = array();
+                foreach ($terms as $term) {
+                    $category_names[] = '<a href="' . esc_url(admin_url('edit.php?post_type=ielts_course&ielts_course_category=' . $term->slug)) . '">' . esc_html($term->name) . '</a>';
+                }
+                echo implode(', ', $category_names);
+            } else {
+                echo '—';
+            }
+        } elseif ($column === 'lessons') {
             global $wpdb;
             $lesson_ids = $wpdb->get_col($wpdb->prepare("
                 SELECT DISTINCT pm.post_id 
@@ -1183,8 +1202,13 @@ class IELTS_CM_Admin {
                 
                 <h3><?php _e('Display All Courses', 'ielts-course-manager'); ?></h3>
                 <p><code>[ielts_courses]</code></p>
-                <p><?php _e('With category filter:', 'ielts-course-manager'); ?></p>
-                <p><code>[ielts_courses category="beginner" limit="10"]</code></p>
+                <p><?php _e('With options:', 'ielts-course-manager'); ?></p>
+                <ul style="list-style: disc; margin-left: 20px;">
+                    <li><code>[ielts_courses category="beginner"]</code> - <?php _e('Filter by category slug', 'ielts-course-manager'); ?></li>
+                    <li><code>[ielts_courses limit="10"]</code> - <?php _e('Limit number of courses displayed', 'ielts-course-manager'); ?></li>
+                    <li><code>[ielts_courses columns="3"]</code> - <?php _e('Set number of columns (1-6, default is 5)', 'ielts-course-manager'); ?></li>
+                    <li><code>[ielts_courses category="advanced" columns="4" limit="8"]</code> - <?php _e('Combine multiple options', 'ielts-course-manager'); ?></li>
+                </ul>
                 
                 <h3><?php _e('Display Single Course', 'ielts-course-manager'); ?></h3>
                 <p><code>[ielts_course id="123"]</code></p>
