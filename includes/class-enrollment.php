@@ -20,6 +20,18 @@ class IELTS_CM_Enrollment {
     }
     
     /**
+     * Check if user has automatic access to all courses
+     * Administrators and subscribers have automatic access
+     * 
+     * @param int $user_id User ID to check
+     * @return bool True if user has automatic access
+     */
+    private function has_automatic_access($user_id) {
+        $user = get_userdata($user_id);
+        return $user && (in_array('administrator', $user->roles) || in_array('subscriber', $user->roles));
+    }
+    
+    /**
      * Enroll a user in a course
      */
     public function enroll($user_id, $course_id, $status = 'active', $course_end_date = null) {
@@ -75,8 +87,14 @@ class IELTS_CM_Enrollment {
     
     /**
      * Check if user is enrolled in a course
+     * Administrators and subscribers have automatic access to all courses
      */
     public function is_enrolled($user_id, $course_id) {
+        // Check if user has automatic access (admin or subscriber)
+        if ($this->has_automatic_access($user_id)) {
+            return true;
+        }
+        
         global $wpdb;
         $table = $this->db->get_enrollment_table();
         
@@ -90,8 +108,33 @@ class IELTS_CM_Enrollment {
     
     /**
      * Get all enrolled courses for a user
+     * Administrators and subscribers automatically get all courses
      */
     public function get_user_courses($user_id) {
+        // Check if user has automatic access (admin or subscriber)
+        if ($this->has_automatic_access($user_id)) {
+            // Return all published courses for admins/subscribers
+            $all_courses = get_posts(array(
+                'post_type' => 'ielts_course',
+                'posts_per_page' => -1,
+                'post_status' => 'publish',
+                'orderby' => 'title',
+                'order' => 'ASC'
+            ));
+            
+            // Format to match the expected structure
+            $formatted_courses = array();
+            foreach ($all_courses as $course) {
+                $formatted_courses[] = (object) array(
+                    'course_id' => $course->ID,
+                    // Using current time for compatibility with code expecting enrolled_date
+                    'enrolled_date' => current_time('mysql'),
+                    'course_end_date' => null // No end date for admin/subscriber access
+                );
+            }
+            return $formatted_courses;
+        }
+        
         global $wpdb;
         $table = $this->db->get_enrollment_table();
         

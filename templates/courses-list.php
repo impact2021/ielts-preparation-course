@@ -8,6 +8,7 @@ if (!defined('ABSPATH')) {
 }
 
 $enrollment = new IELTS_CM_Enrollment();
+$progress_tracker = new IELTS_CM_Progress_Tracker();
 $user_id = get_current_user_id();
 ?>
 
@@ -56,6 +57,22 @@ $user_id = get_current_user_id();
                             </span>
                         <?php endif; ?>
                     </div>
+                    
+                    <?php if (is_user_logged_in() && $enrollment->is_enrolled($user_id, $course->ID)): ?>
+                        <div class="course-progress">
+                            <?php 
+                            $completion = $progress_tracker->get_course_completion_percentage($user_id, $course->ID);
+                            ?>
+                            <div class="progress-label">
+                                <?php _e('Your Progress:', 'ielts-course-manager'); ?>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: <?php echo esc_attr(round($completion, 1)); ?>%;">
+                                    <span class="progress-text"><?php echo esc_html(round($completion, 1)); ?>%</span>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                     
                     <div class="course-actions">
                         <?php if (is_user_logged_in()): ?>

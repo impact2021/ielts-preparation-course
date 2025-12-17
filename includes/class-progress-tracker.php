@@ -11,6 +11,9 @@ class IELTS_CM_Progress_Tracker {
     
     private $db;
     
+    // Maximum number of items allowed in a single query to prevent potential performance issues
+    const MAX_QUERY_ITEMS = 1000;
+    
     public function __construct() {
         $this->db = new IELTS_CM_Database();
         
@@ -115,12 +118,12 @@ class IELTS_CM_Progress_Tracker {
     
     /**
      * Calculate course completion percentage
+     * Based on sub lessons (resources) and quizzes only
      */
     public function get_course_completion_percentage($user_id, $course_id) {
         global $wpdb;
         
-        // Get all lessons in the course (check both old and new meta keys)
-        // Join with wp_posts to ensure we only get lessons
+        // Get all lessons in the course first
         $lesson_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT pm.post_id 
             FROM {$wpdb->postmeta} pm
@@ -131,7 +134,27 @@ class IELTS_CM_Progress_Tracker {
                 OR (pm.meta_key = '_ielts_cm_course_ids' AND pm.meta_value LIKE %s))
         ", $course_id, '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%'));
         
-        $total_lessons = count($lesson_ids);
+        // Get all resources (sub lessons) for all lessons in this course
+        // Using a single query to avoid N+1 problem
+        $resource_ids = array();
+        if (!empty($lesson_ids)) {
+            $lesson_count = count($lesson_ids);
+            if ($lesson_count <= self::MAX_QUERY_ITEMS) {
+                $lesson_ids = array_map('intval', $lesson_ids);
+                $lesson_placeholders = implode(',', array_fill(0, $lesson_count, '%d'));
+                $resource_ids = $wpdb->get_col($wpdb->prepare("
+                    SELECT DISTINCT pm.post_id 
+                    FROM {$wpdb->postmeta} pm
+                    INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+                    WHERE p.post_type = 'ielts_resource'
+                      AND p.post_status = 'publish'
+                      AND pm.meta_key = '_ielts_cm_lesson_id' 
+                      AND pm.meta_value IN ($lesson_placeholders)
+                ", $lesson_ids));
+            }
+        }
+        
+        $total_resources = count($resource_ids);
         
         // Get all quizzes in the course (check both old and new meta keys)
         // Join with wp_posts to ensure we only get quizzes
@@ -147,19 +170,28 @@ class IELTS_CM_Progress_Tracker {
         
         $total_quizzes = count($quiz_ids);
         
-        // Total items needed for 100% completion
-        $total_items = $total_lessons + $total_quizzes;
+        // Total items needed for 100% completion (resources + quizzes)
+        $total_items = $total_resources + $total_quizzes;
         
         if ($total_items == 0) {
             return 0;
         }
         
-        // Get completed lessons
+        // Get completed resources (sub lessons)
         $table = $this->db->get_progress_table();
-        $completed_lessons = $wpdb->get_var($wpdb->prepare(
-            "SELECT COUNT(DISTINCT lesson_id) FROM $table WHERE user_id = %d AND course_id = %d AND completed = 1",
-            $user_id, $course_id
-        ));
+        $completed_resources = 0;
+        if (!empty($resource_ids)) {
+            $resource_count = count($resource_ids);
+            if ($resource_count <= self::MAX_QUERY_ITEMS) {
+                $resource_ids = array_map('intval', $resource_ids);
+                $resource_placeholders = implode(',', array_fill(0, $resource_count, '%d'));
+                $query = $wpdb->prepare(
+                    "SELECT COUNT(DISTINCT resource_id) FROM $table WHERE user_id = %d AND course_id = %d AND resource_id IN ($resource_placeholders) AND completed = 1",
+                    array_merge(array($user_id, $course_id), $resource_ids)
+                );
+                $completed_resources = $wpdb->get_var($query);
+            }
+        }
         
         // Get completed quizzes (any quiz taken counts, regardless of score)
         $quiz_results_table = $this->db->get_quiz_results_table();
@@ -169,7 +201,7 @@ class IELTS_CM_Progress_Tracker {
             $quiz_ids = array_map('intval', $quiz_ids);
             // Validate count to prevent potential issues
             $quiz_count = count($quiz_ids);
-            if ($quiz_count > 0 && $quiz_count <= 1000) {
+            if ($quiz_count > 0 && $quiz_count <= self::MAX_QUERY_ITEMS) {
                 $quiz_ids_placeholders = implode(',', array_fill(0, $quiz_count, '%d'));
                 $query = $wpdb->prepare(
                     "SELECT COUNT(DISTINCT quiz_id) FROM $quiz_results_table WHERE user_id = %d AND quiz_id IN ($quiz_ids_placeholders)",
@@ -179,7 +211,7 @@ class IELTS_CM_Progress_Tracker {
             }
         }
         
-        $completed_items = $completed_lessons + $completed_quizzes;
+        $completed_items = $completed_resources + $completed_quizzes;
         
         return ($completed_items / $total_items) * 100;
     }
