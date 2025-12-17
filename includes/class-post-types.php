@@ -92,16 +92,16 @@ class IELTS_CM_Post_Types {
     }
     
     /**
-     * Register Lesson page post type
+     * Register Sub lesson post type
      */
     private function register_resource() {
         $labels = array(
-            'name' => __('Lesson pages', 'ielts-course-manager'),
-            'singular_name' => __('Lesson page', 'ielts-course-manager'),
-            'menu_name' => __('Lesson pages', 'ielts-course-manager'),
-            'add_new' => __('Add New Lesson page', 'ielts-course-manager'),
-            'add_new_item' => __('Add New Lesson page', 'ielts-course-manager'),
-            'edit_item' => __('Edit Lesson page', 'ielts-course-manager'),
+            'name' => __('Sub lessons', 'ielts-course-manager'),
+            'singular_name' => __('Sub lesson', 'ielts-course-manager'),
+            'menu_name' => __('Sub lessons', 'ielts-course-manager'),
+            'add_new' => __('Add New Sub lesson', 'ielts-course-manager'),
+            'add_new_item' => __('Add New Sub lesson', 'ielts-course-manager'),
+            'edit_item' => __('Edit Sub lesson', 'ielts-course-manager'),
         );
         
         $args = array(
