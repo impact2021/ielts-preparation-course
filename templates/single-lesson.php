@@ -142,12 +142,14 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                             </td>
                             <?php if ($user_id): ?>
                                 <td class="content-score">
-                                    <?php if ($item_type === 'quiz' && isset($best_result) && $best_result): ?>
-                                        <strong><?php echo round($best_result->percentage, 1); ?>%</strong>
-                                        <br>
-                                        <small>(<?php echo $best_result->score; ?> / <?php echo $best_result->max_score; ?>)</small>
-                                    <?php else: ?>
-                                        —
+                                    <?php if ($item_type === 'quiz'): ?>
+                                        <?php if (isset($best_result) && $best_result): ?>
+                                            <strong><?php echo round($best_result->percentage, 1); ?>%</strong>
+                                            <br>
+                                            <small>(<?php echo $best_result->score; ?> / <?php echo $best_result->max_score; ?>)</small>
+                                        <?php else: ?>
+                                            —
+                                        <?php endif; ?>
                                     <?php endif; ?>
                                 </td>
                             <?php endif; ?>
@@ -231,15 +233,5 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
             color: #f57c00;
         }
         </style>
-    <?php endif; ?>
-    
-    <?php if (is_user_logged_in() && !$is_completed): ?>
-        <div class="lesson-actions">
-            <button class="button button-primary mark-complete-button" 
-                    data-course-id="<?php echo esc_attr($course_id); ?>" 
-                    data-lesson-id="<?php echo esc_attr($lesson->ID); ?>">
-                <?php _e('Mark as Complete', 'ielts-course-manager'); ?>
-            </button>
-        </div>
     <?php endif; ?>
 </div>

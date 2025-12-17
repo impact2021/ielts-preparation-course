@@ -125,6 +125,17 @@ body.ielts-course-archive .content-area {
     margin-bottom: 30px;
 }
 
+.ielts-single-course .course-breadcrumb {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.ielts-single-course .course-breadcrumb a {
+    text-decoration: none;
+    color: #0073aa;
+}
+
 .ielts-single-course .course-featured-image {
     margin: 20px 0;
 }

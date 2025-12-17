@@ -239,4 +239,23 @@ class IELTS_CM_Progress_Tracker {
         $percentage = $this->get_course_completion_percentage($user_id, $course_id);
         return $percentage >= 100;
     }
+    
+    /**
+     * Auto-mark lesson as complete when visited
+     * This should be called when a user views a lesson page
+     */
+    public function auto_mark_lesson_complete($user_id, $lesson_id, $course_id) {
+        // Only auto-mark if user is logged in and enrolled
+        if (!$user_id) {
+            return false;
+        }
+        
+        // Check if already completed
+        if ($this->is_lesson_completed($user_id, $lesson_id)) {
+            return true;
+        }
+        
+        // Mark as complete automatically
+        return $this->record_progress($user_id, $course_id, $lesson_id, null, true);
+    }
 }
