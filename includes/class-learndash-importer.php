@@ -18,6 +18,7 @@ class IELTS_CM_LearnDash_Importer {
     private $imported_lessons = array();
     private $imported_topics = array();
     private $imported_quizzes = array();
+    private $imported_questions = array();
     private $import_log = array();
     
     /**
@@ -27,7 +28,8 @@ class IELTS_CM_LearnDash_Importer {
         'sfwd-courses' => 'ielts_course',
         'sfwd-lessons' => 'ielts_lesson',
         'sfwd-topic' => 'ielts_resource',
-        'sfwd-quiz' => 'ielts_quiz'
+        'sfwd-quiz' => 'ielts_quiz',
+        'sfwd-question' => 'question' // Questions are not posts, but stored in quiz meta
     );
     
     /**
@@ -102,13 +104,20 @@ class IELTS_CM_LearnDash_Importer {
         
         $this->log("Processing {$post_type} (ID: {$old_id}): {$title}");
         
+        // Get menu order for proper ordering
+        $menu_order = 0;
+        if (isset($item->children($namespaces['wp'])->menu_order)) {
+            $menu_order = (int)$item->children($namespaces['wp'])->menu_order;
+        }
+        
         // Create the post
         $post_data = array(
             'post_title' => $title,
             'post_content' => $content,
             'post_status' => $post_status === 'publish' ? 'publish' : 'draft',
             'post_type' => $new_post_type,
-            'post_date' => (string)$item->children($namespaces['wp'])->post_date
+            'post_date' => (string)$item->children($namespaces['wp'])->post_date,
+            'menu_order' => $menu_order
         );
         
         // Check if already exists (by title)
@@ -148,10 +157,28 @@ class IELTS_CM_LearnDash_Importer {
             case 'sfwd-quiz':
                 $this->imported_quizzes[$old_id] = $new_id;
                 break;
+            case 'sfwd-question':
+                // Store question data for later processing
+                $this->imported_questions[$old_id] = array(
+                    'title' => $title,
+                    'content' => $content,
+                    'meta' => array()
+                );
+                // We'll process questions after all items are imported
+                return;
         }
         
-        // Process metadata
-        $this->process_postmeta($item, $namespaces, $old_id, $new_id, $post_type);
+        // Process metadata (skip for questions since we return early above)
+        if ($post_type !== 'sfwd-question') {
+            $this->process_postmeta($item, $namespaces, $old_id, $new_id, $post_type);
+        } else {
+            // For questions, just store the metadata for later processing
+            foreach ($item->children($namespaces['wp'])->postmeta as $meta) {
+                $key = (string)$meta->meta_key;
+                $value = (string)$meta->meta_value;
+                $this->imported_questions[$old_id]['meta'][$key] = maybe_unserialize($value);
+            }
+        }
         
         // Process taxonomies
         $this->process_taxonomies($item, $new_id);
@@ -268,6 +295,128 @@ class IELTS_CM_LearnDash_Importer {
                 update_post_meta($new_quiz_id, '_ielts_cm_lesson_id', $new_lesson_id);
             }
         }
+        
+        // Process and convert quiz questions
+        $this->convert_quiz_questions();
+    }
+    
+    /**
+     * Convert quiz questions and attach them to quizzes
+     */
+    private function convert_quiz_questions() {
+        if (empty($this->imported_questions)) {
+            return;
+        }
+        
+        $this->log('Converting quiz questions');
+        
+        // Group questions by quiz
+        $questions_by_quiz = array();
+        foreach ($this->imported_questions as $old_question_id => $question_data) {
+            // Get the quiz this question belongs to
+            $quiz_id = isset($question_data['meta']['quiz_id']) ? $question_data['meta']['quiz_id'] : null;
+            
+            if (!$quiz_id || !isset($this->imported_quizzes[$quiz_id])) {
+                continue;
+            }
+            
+            $new_quiz_id = $this->imported_quizzes[$quiz_id];
+            
+            if (!isset($questions_by_quiz[$new_quiz_id])) {
+                $questions_by_quiz[$new_quiz_id] = array();
+            }
+            
+            // Convert question to IELTS CM format
+            $converted_question = $this->convert_single_question($question_data);
+            if ($converted_question) {
+                $questions_by_quiz[$new_quiz_id][] = $converted_question;
+            }
+        }
+        
+        // Save questions to quizzes
+        foreach ($questions_by_quiz as $quiz_id => $questions) {
+            update_post_meta($quiz_id, '_ielts_cm_questions', $questions);
+            $this->log("Added " . count($questions) . " questions to quiz ID: {$quiz_id}");
+        }
+    }
+    
+    /**
+     * Convert a single LearnDash question to IELTS CM format
+     */
+    private function convert_single_question($question_data) {
+        $question_type = isset($question_data['meta']['_question_type']) ? $question_data['meta']['_question_type'] : 'single';
+        
+        // Get question text
+        $question_text = wp_strip_all_tags($question_data['content']);
+        if (empty($question_text)) {
+            $question_text = $question_data['title'];
+        }
+        
+        // Get points
+        $points = isset($question_data['meta']['_question_points']) ? $question_data['meta']['_question_points'] : 1;
+        
+        $converted = array(
+            'question' => $question_text,
+            'points' => floatval($points)
+        );
+        
+        // Map LearnDash question types to IELTS CM types
+        switch ($question_type) {
+            case 'single':
+            case 'multiple':
+                // Multiple choice
+                $converted['type'] = 'multiple_choice';
+                $answer_data = isset($question_data['meta']['_question_answer_data']) ? $question_data['meta']['_question_answer_data'] : array();
+                
+                if (is_array($answer_data) && !empty($answer_data)) {
+                    $converted['options'] = array();
+                    $correct_index = 0;
+                    
+                    foreach ($answer_data as $index => $answer) {
+                        if (isset($answer['answer'])) {
+                            $converted['options'][] = $answer['answer'];
+                            if (!empty($answer['correct'])) {
+                                $correct_index = count($converted['options']) - 1;
+                            }
+                        }
+                    }
+                    
+                    $converted['correct_answer'] = $correct_index;
+                } else {
+                    $converted['options'] = array();
+                    $converted['correct_answer'] = 0;
+                }
+                break;
+                
+            case 'free_answer':
+            case 'essay':
+                // Essay
+                $converted['type'] = 'essay';
+                break;
+                
+            case 'fill_blank':
+                // Fill in the blank
+                $converted['type'] = 'fill_blank';
+                $answer_data = isset($question_data['meta']['_question_answer_data']) ? $question_data['meta']['_question_answer_data'] : array();
+                
+                if (is_array($answer_data) && !empty($answer_data)) {
+                    $first_answer = array_shift($answer_data);
+                    $converted['correct_answer'] = isset($first_answer['answer']) ? $first_answer['answer'] : '';
+                } else {
+                    $converted['correct_answer'] = '';
+                }
+                break;
+                
+            default:
+                // Default to multiple choice for unknown types
+                $converted['type'] = 'multiple_choice';
+                $converted['options'] = array();
+                $converted['correct_answer'] = 0;
+                $this->log("Unknown question type '{$question_type}' for question: {$question_data['title']}", 'warning');
+                break;
+        }
+        
+        return $converted;
     }
     
     /**
@@ -277,11 +426,11 @@ class IELTS_CM_LearnDash_Importer {
         // Common mappings
         $mappings = array(
             // Course mappings
-            'course_id' => '_ielts_cm_course_id',
+            'course_id' => ($post_type === 'sfwd-quiz' || $post_type === 'sfwd-topic') ? '_ld_original_course_id' : '_ielts_cm_course_id',
             'ld_course_' => '_ld_original_course_id',
             
             // Lesson mappings
-            'lesson_id' => '_ielts_cm_lesson_id',
+            'lesson_id' => ($post_type === 'sfwd-quiz' || $post_type === 'sfwd-topic') ? '_ld_original_lesson_id' : '_ielts_cm_lesson_id',
             'course' => '_ld_original_course_id',
             
             // Quiz mappings
@@ -318,6 +467,7 @@ class IELTS_CM_LearnDash_Importer {
             'lessons' => count($this->imported_lessons),
             'topics' => count($this->imported_topics),
             'quizzes' => count($this->imported_quizzes),
+            'questions' => count($this->imported_questions),
             'log' => $this->import_log
         );
     }

@@ -100,10 +100,10 @@ class IELTS_CM_LearnDash_Converter {
             $this->convert_lesson($lesson, $course_id, $new_course_id);
         }
         
-        // Get and convert quizzes
+        // Get and convert quizzes associated with course
         $quizzes = $this->get_course_quizzes($course_id);
         foreach ($quizzes as $quiz) {
-            $this->convert_quiz($quiz, $course_id, $new_course_id);
+            $this->convert_quiz($quiz, $course_id, $new_course_id, null);
         }
         
         $this->log('Course conversion completed successfully');
@@ -235,6 +235,12 @@ class IELTS_CM_LearnDash_Converter {
             $this->convert_topic($topic, $lesson->ID, $new_id);
         }
         
+        // Convert quizzes associated with this lesson
+        $lesson_quizzes = $this->get_lesson_quizzes($lesson->ID);
+        foreach ($lesson_quizzes as $quiz) {
+            $this->convert_quiz($quiz, $old_course_id, $new_course_id, $new_id);
+        }
+        
         return $new_id;
     }
     
@@ -347,15 +353,63 @@ class IELTS_CM_LearnDash_Converter {
     }
     
     /**
-     * Get quizzes for a course
+     * Get quizzes for a course (not associated with specific lessons)
      */
     private function get_course_quizzes($course_id) {
         global $wpdb;
         
-        $quiz_ids = $wpdb->get_col($wpdb->prepare(
+        // Get all quizzes for this course
+        $all_quiz_ids = $wpdb->get_col($wpdb->prepare(
             "SELECT post_id FROM {$wpdb->postmeta} 
             WHERE meta_key = 'course_id' AND meta_value = %d",
             $course_id
+        ));
+        
+        if (empty($all_quiz_ids)) {
+            return array();
+        }
+        
+        // Get quizzes that are associated with lessons
+        $lesson_quiz_ids = array();
+        if (!empty($all_quiz_ids)) {
+            $placeholders = implode(',', array_fill(0, count($all_quiz_ids), '%d'));
+            $lesson_quiz_ids = $wpdb->get_col($wpdb->prepare(
+                "SELECT DISTINCT pm.post_id 
+                FROM {$wpdb->postmeta} pm
+                WHERE pm.meta_key = 'lesson_id' 
+                AND pm.post_id IN ({$placeholders})",
+                $all_quiz_ids
+            ));
+        }
+        
+        // Return only quizzes that are NOT associated with lessons
+        $course_only_quiz_ids = array_diff($all_quiz_ids, $lesson_quiz_ids);
+        
+        if (empty($course_only_quiz_ids)) {
+            return array();
+        }
+        
+        $quizzes = get_posts(array(
+            'post_type' => 'sfwd-quiz',
+            'posts_per_page' => -1,
+            'post__in' => $course_only_quiz_ids,
+            'orderby' => 'menu_order',
+            'order' => 'ASC'
+        ));
+        
+        return $quizzes;
+    }
+    
+    /**
+     * Get quizzes for a lesson
+     */
+    private function get_lesson_quizzes($lesson_id) {
+        global $wpdb;
+        
+        $quiz_ids = $wpdb->get_col($wpdb->prepare(
+            "SELECT post_id FROM {$wpdb->postmeta} 
+            WHERE meta_key = 'lesson_id' AND meta_value = %d",
+            $lesson_id
         ));
         
         if (empty($quiz_ids)) {
@@ -376,13 +430,19 @@ class IELTS_CM_LearnDash_Converter {
     /**
      * Convert a quiz
      */
-    private function convert_quiz($quiz, $old_course_id, $new_course_id) {
+    private function convert_quiz($quiz, $old_course_id, $new_course_id, $new_lesson_id = null) {
         $this->log('Converting quiz: ' . esc_html($quiz->post_title));
         
         // Check if already converted
         $existing_id = $this->find_existing_quiz($quiz->ID);
         if ($existing_id) {
-            $this->log("Quiz already converted (ID: {$existing_id}). Skipping.", 'warning');
+            $this->log("Quiz already converted (ID: {$existing_id}). Linking to lesson if needed.", 'warning');
+            
+            // If we have a lesson_id and the quiz is already converted, link it to the lesson
+            if ($new_lesson_id) {
+                $this->link_quiz_to_lesson($existing_id, $new_lesson_id);
+            }
+            
             $this->converted_quizzes[$quiz->ID] = $existing_id;
             return $existing_id;
         }
@@ -412,6 +472,11 @@ class IELTS_CM_LearnDash_Converter {
         update_post_meta($new_id, '_ielts_cm_course_ids', array($new_course_id));
         update_post_meta($new_id, '_ielts_cm_course_id', $new_course_id);
         
+        // Link to lesson if provided
+        if ($new_lesson_id) {
+            $this->link_quiz_to_lesson($new_id, $new_lesson_id);
+        }
+        
         // Copy pass percentage if exists
         $pass_percentage = get_post_meta($quiz->ID, 'quiz_pass_percentage', true);
         if ($pass_percentage) {
@@ -424,14 +489,200 @@ class IELTS_CM_LearnDash_Converter {
         update_post_meta($new_id, '_ld_original_id', $quiz->ID);
         update_post_meta($new_id, '_converted_from_learndash', current_time('mysql'));
         
-        // Note: LearnDash quiz questions use a different system
-        // They need to be manually recreated
-        $this->log("Quiz converted (questions need manual review)", 'warning');
+        // Convert quiz questions
+        $questions_converted = $this->convert_quiz_questions($quiz->ID, $new_id);
+        if ($questions_converted > 0) {
+            $this->log("Converted {$questions_converted} quiz questions");
+        } else {
+            $this->log("No questions found for this quiz or questions could not be converted", 'warning');
+        }
         
         $this->converted_quizzes[$quiz->ID] = $new_id;
         $this->log("Quiz converted successfully (New ID: {$new_id})");
         
         return $new_id;
+    }
+    
+    /**
+     * Link quiz to lesson
+     */
+    private function link_quiz_to_lesson($quiz_id, $lesson_id) {
+        $lesson_ids = get_post_meta($quiz_id, '_ielts_cm_lesson_ids', true);
+        if (!is_array($lesson_ids)) {
+            $lesson_ids = array();
+        }
+        
+        if (!in_array($lesson_id, $lesson_ids)) {
+            $lesson_ids[] = $lesson_id;
+            update_post_meta($quiz_id, '_ielts_cm_lesson_ids', $lesson_ids);
+            update_post_meta($quiz_id, '_ielts_cm_lesson_id', $lesson_id);
+        }
+    }
+    
+    /**
+     * Convert quiz questions from LearnDash to IELTS CM format
+     */
+    private function convert_quiz_questions($ld_quiz_id, $ielts_quiz_id) {
+        global $wpdb;
+        
+        // Get questions associated with this quiz
+        // LearnDash stores quiz questions in post meta with key 'ld_quiz_questions'
+        $question_ids = get_post_meta($ld_quiz_id, 'ld_quiz_questions', true);
+        
+        // Alternative method: query by quiz_id meta
+        if (empty($question_ids)) {
+            $question_ids = $wpdb->get_col($wpdb->prepare(
+                "SELECT post_id FROM {$wpdb->postmeta} 
+                WHERE meta_key = 'quiz_id' AND meta_value = %d",
+                $ld_quiz_id
+            ));
+        }
+        
+        if (empty($question_ids)) {
+            return 0;
+        }
+        
+        $questions = get_posts(array(
+            'post_type' => 'sfwd-question',
+            'posts_per_page' => -1,
+            'post__in' => $question_ids,
+            'orderby' => 'menu_order',
+            'order' => 'ASC'
+        ));
+        
+        if (empty($questions)) {
+            return 0;
+        }
+        
+        $converted_questions = array();
+        
+        foreach ($questions as $question) {
+            $converted_question = $this->convert_single_question($question);
+            if ($converted_question) {
+                $converted_questions[] = $converted_question;
+            }
+        }
+        
+        // Save converted questions to the quiz
+        if (!empty($converted_questions)) {
+            update_post_meta($ielts_quiz_id, '_ielts_cm_questions', $converted_questions);
+        }
+        
+        return count($converted_questions);
+    }
+    
+    /**
+     * Convert a single LearnDash question to IELTS CM format
+     */
+    private function convert_single_question($ld_question) {
+        $question_type = get_post_meta($ld_question->ID, '_question_type', true);
+        
+        // Get question text
+        $question_text = wp_strip_all_tags($ld_question->post_content);
+        if (empty($question_text)) {
+            $question_text = $ld_question->post_title;
+        }
+        
+        // Get points
+        $points = get_post_meta($ld_question->ID, '_question_points', true);
+        if (empty($points)) {
+            $points = 1;
+        }
+        
+        $converted = array(
+            'question' => $question_text,
+            'points' => floatval($points)
+        );
+        
+        // Map LearnDash question types to IELTS CM types
+        switch ($question_type) {
+            case 'single':
+            case 'multiple':
+                // Multiple choice
+                $converted['type'] = 'multiple_choice';
+                $answers = $this->get_question_answers($ld_question->ID);
+                if (!empty($answers)) {
+                    $converted['options'] = array_column($answers, 'text');
+                    $correct_answers = array_filter($answers, function($a) { return !empty($a['correct']); });
+                    if (!empty($correct_answers)) {
+                        $first_correct = array_shift($correct_answers);
+                        $converted['correct_answer'] = array_search($first_correct['text'], $converted['options']);
+                    }
+                }
+                break;
+                
+            case 'free_answer':
+            case 'essay':
+                // Essay
+                $converted['type'] = 'essay';
+                break;
+                
+            case 'fill_blank':
+                // Fill in the blank
+                $converted['type'] = 'fill_blank';
+                $answers = $this->get_question_answers($ld_question->ID);
+                if (!empty($answers)) {
+                    $first_answer = array_shift($answers);
+                    $converted['correct_answer'] = $first_answer['text'];
+                }
+                break;
+                
+            default:
+                // Default to multiple choice for unknown types
+                $converted['type'] = 'multiple_choice';
+                $converted['options'] = array();
+                $converted['correct_answer'] = 0;
+                $this->log("Unknown question type '{$question_type}' for question: {$ld_question->post_title}", 'warning');
+                break;
+        }
+        
+        return $converted;
+    }
+    
+    /**
+     * Get answers for a LearnDash question
+     */
+    private function get_question_answers($question_id) {
+        $answers = array();
+        
+        // Try to get answers from _question_pro_id (for ProQuiz questions)
+        $pro_id = get_post_meta($question_id, '_question_pro_id', true);
+        if ($pro_id) {
+            global $wpdb;
+            $answer_table = $wpdb->prefix . 'learndash_pro_quiz_answer';
+            
+            // Check if tables exist
+            if ($wpdb->get_var($wpdb->prepare("SHOW TABLES LIKE %s", $answer_table)) === $answer_table) {
+                $results = $wpdb->get_results($wpdb->prepare(
+                    "SELECT answer, correct FROM {$answer_table} WHERE question_id = %d ORDER BY sort_pos ASC",
+                    $pro_id
+                ));
+                
+                foreach ($results as $result) {
+                    $answers[] = array(
+                        'text' => $result->answer,
+                        'correct' => $result->correct == 1
+                    );
+                }
+            }
+        }
+        
+        // Fallback: try to get from post meta
+        if (empty($answers)) {
+            $answer_data = get_post_meta($question_id, '_question_answer_data', true);
+            if (is_array($answer_data)) {
+                foreach ($answer_data as $answer) {
+                    if (isset($answer['answer'])) {
+                        $answers[] = array(
+                            'text' => $answer['answer'],
+                            'correct' => !empty($answer['correct'])
+                        );
+                    }
+                }
+            }
+        }
+        
+        return $answers;
     }
     
     /**
