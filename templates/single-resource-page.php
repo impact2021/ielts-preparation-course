@@ -127,7 +127,7 @@ body.ielts-resource-single .content-area {
                                         url: '<?php echo esc_url(admin_url('admin-ajax.php')); ?>',
                                         type: 'POST',
                                         data: {
-                                            action: 'ielts_cm_mark_resource_complete',
+                                            action: 'ielts_cm_mark_complete',
                                             nonce: '<?php echo esc_js(wp_create_nonce('ielts_cm_nonce')); ?>',
                                             lesson_id: <?php echo intval($lesson_id); ?>,
                                             resource_id: <?php echo intval($resource_id); ?>,
@@ -203,6 +203,124 @@ body.ielts-resource-single .content-area {
                 margin-top: 30px;
             }
             </style>
+            
+            <?php
+            // Previous/Next resource navigation within the lesson
+            if ($lesson_id) {
+                global $wpdb;
+                $resource_ids = $wpdb->get_col($wpdb->prepare("
+                    SELECT DISTINCT post_id 
+                    FROM {$wpdb->postmeta} 
+                    WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+                       OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
+                ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+                
+                $all_resources = array();
+                if (!empty($resource_ids)) {
+                    $all_resources = get_posts(array(
+                        'post_type' => 'ielts_resource',
+                        'posts_per_page' => -1,
+                        'post__in' => $resource_ids,
+                        'orderby' => 'menu_order',
+                        'order' => 'ASC',
+                        'post_status' => 'publish'
+                    ));
+                }
+                
+                $current_index = -1;
+                foreach ($all_resources as $index => $r) {
+                    if ($r->ID == $resource_id) {
+                        $current_index = $index;
+                        break;
+                    }
+                }
+                
+                $prev_resource = ($current_index > 0) ? $all_resources[$current_index - 1] : null;
+                $next_resource = ($current_index >= 0 && $current_index < count($all_resources) - 1) ? $all_resources[$current_index + 1] : null;
+                ?>
+                
+                <?php if ($prev_resource || $next_resource): ?>
+                    <div class="ielts-navigation">
+                        <div class="nav-prev">
+                            <?php if ($prev_resource): ?>
+                                <a href="<?php echo get_permalink($prev_resource->ID); ?>" class="nav-link">
+                                    <span class="nav-arrow">&laquo;</span>
+                                    <span class="nav-label">
+                                        <small><?php _e('Previous Sub Lesson', 'ielts-course-manager'); ?></small>
+                                        <strong><?php echo esc_html($prev_resource->post_title); ?></strong>
+                                    </span>
+                                </a>
+                            <?php endif; ?>
+                        </div>
+                        <div class="nav-next">
+                            <?php if ($next_resource): ?>
+                                <a href="<?php echo get_permalink($next_resource->ID); ?>" class="nav-link">
+                                    <span class="nav-label">
+                                        <small><?php _e('Next Sub Lesson', 'ielts-course-manager'); ?></small>
+                                        <strong><?php echo esc_html($next_resource->post_title); ?></strong>
+                                    </span>
+                                    <span class="nav-arrow">&raquo;</span>
+                                </a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    
+                    <style>
+                    .ielts-navigation {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 40px;
+                        padding-top: 30px;
+                        border-top: 2px solid #e0e0e0;
+                    }
+                    .ielts-navigation .nav-prev {
+                        flex: 0 0 48%;
+                    }
+                    .ielts-navigation .nav-next {
+                        flex: 0 0 48%;
+                        text-align: right;
+                    }
+                    .ielts-navigation .nav-link {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 15px 20px;
+                        background: #f5f5f5;
+                        border-radius: 5px;
+                        text-decoration: none;
+                        color: #333;
+                        transition: all 0.3s ease;
+                    }
+                    .ielts-navigation .nav-link:hover {
+                        background: #e0e0e0;
+                        transform: translateY(-2px);
+                        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                    }
+                    .ielts-navigation .nav-arrow {
+                        font-size: 24px;
+                        color: #0073aa;
+                        font-weight: bold;
+                    }
+                    .ielts-navigation .nav-label {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .ielts-navigation .nav-label small {
+                        font-size: 12px;
+                        color: #666;
+                        text-transform: uppercase;
+                    }
+                    .ielts-navigation .nav-label strong {
+                        font-size: 14px;
+                        color: #333;
+                        margin-top: 3px;
+                    }
+                    .ielts-navigation .nav-next .nav-label {
+                        align-items: flex-end;
+                    }
+                    </style>
+                <?php endif; ?>
+            <?php } ?>
             
         <?php endwhile; ?>
     </main>
