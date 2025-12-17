@@ -18,7 +18,6 @@ class IELTS_Course_Manager {
     protected $admin;
     protected $converter_page;
     protected $export_page;
-    protected $structure_rebuild_page;
     protected $enrollment_page;
     protected $frontend;
     
@@ -41,7 +40,6 @@ class IELTS_Course_Manager {
         $this->admin = new IELTS_CM_Admin();
         $this->converter_page = new IELTS_CM_Converter_Page();
         $this->export_page = new IELTS_CM_Export_Page();
-        $this->structure_rebuild_page = new IELTS_CM_Structure_Rebuild_Page();
         $this->enrollment_page = new IELTS_CM_Enrollment_Page();
         $this->frontend = new IELTS_CM_Frontend();
     }
@@ -58,7 +56,6 @@ class IELTS_Course_Manager {
             $this->admin->init();
             $this->converter_page->init();
             $this->export_page->init();
-            $this->structure_rebuild_page->init();
             $this->enrollment_page->init();
         }
         
