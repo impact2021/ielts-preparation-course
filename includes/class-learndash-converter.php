@@ -191,10 +191,11 @@ class IELTS_CM_LearnDash_Converter {
         
         // Check if already converted
         $existing_id = $this->find_existing_lesson($lesson->ID);
-        $new_id = $existing_id;
+        $new_id = null;
         
         if ($existing_id) {
-            $this->log("Lesson already converted (ID: {$existing_id}). Linking to course and processing relationships.", 'warning');
+            $new_id = $existing_id;
+            $this->log("Lesson already converted (ID: {$existing_id}). Re-linking to course and processing relationships.", 'info');
             $this->link_lesson_to_course($existing_id, $new_course_id);
             $this->converted_lessons[$lesson->ID] = $existing_id;
         } else {
