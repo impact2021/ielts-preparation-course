@@ -43,16 +43,36 @@ class IELTS_CM_Quiz_Handler {
         
         $score = 0;
         $max_score = 0;
+        $question_results = array();
         
         foreach ($questions as $index => $question) {
             $max_score += isset($question['points']) ? floatval($question['points']) : 1;
+            
+            $is_correct = false;
+            $feedback = '';
             
             if (isset($answers[$index])) {
                 $is_correct = $this->check_answer($question, $answers[$index]);
                 if ($is_correct) {
                     $score += isset($question['points']) ? floatval($question['points']) : 1;
+                    // Get correct answer feedback
+                    if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
+                        $feedback = $question['correct_feedback'];
+                    }
+                } else {
+                    // Get incorrect answer feedback
+                    if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                        $feedback = $question['incorrect_feedback'];
+                    }
                 }
             }
+            
+            $question_results[$index] = array(
+                'correct' => $is_correct,
+                'feedback' => $feedback,
+                'user_answer' => isset($answers[$index]) ? $answers[$index] : null,
+                'correct_answer' => isset($question['correct_answer']) ? $question['correct_answer'] : null
+            );
         }
         
         $percentage = $max_score > 0 ? ($score / $max_score) * 100 : 0;
@@ -65,7 +85,8 @@ class IELTS_CM_Quiz_Handler {
                 'message' => 'Quiz submitted successfully',
                 'score' => $score,
                 'max_score' => $max_score,
-                'percentage' => round($percentage, 2)
+                'percentage' => round($percentage, 2),
+                'question_results' => $question_results
             ));
         } else {
             wp_send_json_error(array('message' => 'Failed to save quiz result'));

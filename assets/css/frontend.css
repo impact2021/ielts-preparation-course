@@ -445,6 +445,73 @@ body.ielts-course-archive .content-area {
     color: #e65100;
 }
 
+.ielts-single-quiz .quiz-feedback-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.ielts-single-quiz .quiz-feedback-section h4 {
+    margin: 0 0 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.ielts-single-quiz .quiz-feedback-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ielts-single-quiz .feedback-item {
+    padding: 12px 15px;
+    border-radius: 5px;
+    border-left: 4px solid;
+}
+
+.ielts-single-quiz .feedback-item.correct {
+    background: rgba(76, 175, 80, 0.1);
+    border-left-color: #4caf50;
+}
+
+.ielts-single-quiz .feedback-item.incorrect {
+    background: rgba(244, 67, 54, 0.1);
+    border-left-color: #f44336;
+}
+
+.ielts-single-quiz .feedback-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.ielts-single-quiz .feedback-icon {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.ielts-single-quiz .feedback-item.correct .feedback-icon {
+    color: #4caf50;
+}
+
+.ielts-single-quiz .feedback-item.incorrect .feedback-icon {
+    color: #f44336;
+}
+
+.ielts-single-quiz .feedback-status {
+    font-weight: 600;
+}
+
+.ielts-single-quiz .feedback-message {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
 /* Progress Page */
 .ielts-progress-page {
     max-width: 100%;

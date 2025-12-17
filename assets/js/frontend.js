@@ -140,6 +140,36 @@
                             html += '<p>Keep studying and try again to improve your score!</p>';
                         }
                         
+                        // Show question-by-question feedback if available
+                        if (result.question_results && Object.keys(result.question_results).length > 0) {
+                            html += '<div class="quiz-feedback-section">';
+                            html += '<h4>Question Feedback</h4>';
+                            html += '<div class="quiz-feedback-list">';
+                            
+                            $.each(result.question_results, function(index, questionResult) {
+                                var questionNum = parseInt(index) + 1;
+                                var statusClass = questionResult.correct ? 'correct' : 'incorrect';
+                                var statusIcon = questionResult.correct ? '✓' : '✗';
+                                var statusText = questionResult.correct ? 'Correct' : 'Incorrect';
+                                
+                                html += '<div class="feedback-item ' + statusClass + '">';
+                                html += '<div class="feedback-header">';
+                                html += '<span class="feedback-icon">' + statusIcon + '</span>';
+                                html += '<strong>Question ' + questionNum + ':</strong> ';
+                                html += '<span class="feedback-status">' + statusText + '</span>';
+                                html += '</div>';
+                                
+                                if (questionResult.feedback) {
+                                    html += '<div class="feedback-message">' + questionResult.feedback + '</div>';
+                                }
+                                
+                                html += '</div>';
+                            });
+                            
+                            html += '</div>';
+                            html += '</div>';
+                        }
+                        
                         html += '<button class="button button-primary quiz-retake-btn">Take Quiz Again</button>';
                         html += '</div>';
                         

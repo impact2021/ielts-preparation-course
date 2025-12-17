@@ -17,6 +17,7 @@ class IELTS_CM_Converter_Page {
     public function init() {
         add_action('admin_menu', array($this, 'add_converter_menu'));
         add_action('wp_ajax_ielts_cm_convert_course', array($this, 'ajax_convert_course'));
+        add_action('wp_ajax_ielts_cm_convert_single_quiz', array($this, 'ajax_convert_single_quiz'));
         add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
     }
     
@@ -437,6 +438,111 @@ class IELTS_CM_Converter_Page {
             wp_send_json_success($results);
         } else {
             wp_send_json_error($results);
+        }
+    }
+    
+    /**
+     * AJAX handler for single quiz conversion
+     */
+    public function ajax_convert_single_quiz() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_convert_quiz')) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        // Check user capability
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error(array('message' => __('You do not have permission to do this', 'ielts-course-manager')));
+        }
+        
+        // Get quiz ID
+        $quiz_id = isset($_POST['quiz_id']) ? intval($_POST['quiz_id']) : 0;
+        
+        if (!$quiz_id) {
+            wp_send_json_error(array('message' => __('Invalid quiz ID', 'ielts-course-manager')));
+        }
+        
+        // Get the quiz
+        $quiz = get_post($quiz_id);
+        
+        if (!$quiz || $quiz->post_type !== 'sfwd-quiz') {
+            wp_send_json_error(array('message' => __('Invalid LearnDash quiz', 'ielts-course-manager')));
+        }
+        
+        // Perform conversion
+        require_once IELTS_CM_PLUGIN_DIR . 'includes/class-learndash-converter.php';
+        $converter = new IELTS_CM_LearnDash_Converter();
+        
+        // Check if already converted
+        $existing_id = $converter->find_existing_quiz($quiz_id);
+        if ($existing_id) {
+            wp_send_json_error(array(
+                'message' => __('This quiz has already been converted.', 'ielts-course-manager'),
+                'new_quiz_id' => $existing_id
+            ));
+        }
+        
+        // Get course ID from quiz meta
+        $course_id = get_post_meta($quiz_id, 'course_id', true);
+        
+        // If no course found, cannot convert
+        if (!$course_id) {
+            wp_send_json_error(array(
+                'message' => __('Cannot convert quiz: No associated course found. Please convert the course first.', 'ielts-course-manager')
+            ));
+        }
+        
+        // Check if course is already converted
+        $new_course_id = $converter->find_existing_course($course_id);
+        
+        if (!$new_course_id) {
+            wp_send_json_error(array(
+                'message' => __('Please convert the course first before converting individual quizzes.', 'ielts-course-manager')
+            ));
+        }
+        
+        // Get lesson ID if quiz is associated with a lesson
+        $lesson_id = get_post_meta($quiz_id, 'lesson_id', true);
+        $new_lesson_id = null;
+        
+        if ($lesson_id) {
+            // Try to find existing converted lesson
+            global $wpdb;
+            $new_lesson_id = $wpdb->get_var($wpdb->prepare(
+                "SELECT pm.post_id 
+                FROM {$wpdb->postmeta} pm
+                INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+                WHERE pm.meta_key = '_ld_original_id' 
+                AND pm.meta_value = %d 
+                AND p.post_type = 'ielts_lesson'
+                LIMIT 1",
+                $lesson_id
+            ));
+        }
+        
+        // Convert the quiz using the converter's convert_quiz method
+        $new_quiz_id = $converter->convert_quiz($quiz, $course_id, $new_course_id, $new_lesson_id);
+        
+        if ($new_quiz_id) {
+            $results = $converter->get_results();
+            
+            wp_send_json_success(array(
+                'message' => sprintf(
+                    __('Quiz converted successfully! %d questions were converted.', 'ielts-course-manager'),
+                    isset($results['log']) ? count(array_filter($results['log'], function($entry) {
+                        return strpos($entry['message'], 'question') !== false;
+                    })) : 0
+                ),
+                'new_quiz_id' => $new_quiz_id,
+                'log' => $results['log']
+            ));
+        } else {
+            $results = $converter->get_results();
+            wp_send_json_error(array(
+                'message' => __('Failed to convert quiz. See logs for details.', 'ielts-course-manager'),
+                'errors' => $results['errors'],
+                'log' => $results['log']
+            ));
         }
     }
 }
