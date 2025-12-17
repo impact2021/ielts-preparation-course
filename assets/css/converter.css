@@ -1,0 +1,56 @@
+/**
+ * LearnDash Converter Styles
+ */
+
+/* Modal styles are in the PHP file for now to keep them together */
+
+.course-item {
+    transition: background-color 0.2s ease;
+}
+
+.course-item:hover {
+    background-color: #f0f0f0 !important;
+}
+
+.course-item label {
+    cursor: pointer;
+}
+
+.course-checkbox:disabled + div {
+    opacity: 0.6;
+}
+
+.courses-list {
+    border-radius: 4px;
+}
+
+.courses-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.courses-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.courses-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.courses-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#convert-courses-btn {
+    font-size: 14px;
+    padding: 8px 24px;
+}
+
+#convert-courses-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.spinner.is-active {
+    visibility: visible;
+}

@@ -40,12 +40,14 @@ See [PLUGIN_README.md](PLUGIN_README.md) for detailed documentation on:
 
 ### Migrating from LearnDash?
 
-We offer two powerful migration tools:
+**NEW in v1.3:** Direct course conversion when both plugins are on the same site!
 
-**Option 1: XML Import** - See [LEARNDASH_IMPORT_GUIDE.md](LEARNDASH_IMPORT_GUIDE.md)
-- Import complete LearnDash exports
-- Automatically maps content types
-- Best for when XML exports preserve relationships
+**Option 1: Direct Conversion** - See [LEARNDASH_CONVERSION_GUIDE.md](LEARNDASH_CONVERSION_GUIDE.md) ⭐ **RECOMMENDED**
+- Convert LearnDash courses directly with one click
+- No XML export/import needed
+- Real-time progress monitoring with modal display
+- Automatically detects already-converted courses
+- Perfect when LearnDash and IELTS Course Manager are on the same site
 
 **Option 2: Structure Rebuild** - See [STRUCTURE_REBUILD_GUIDE.md](STRUCTURE_REBUILD_GUIDE.md)
 - Rebuild course structure from LearnDash HTML or text outline
