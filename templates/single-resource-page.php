@@ -52,6 +52,10 @@ body.ielts-resource-single .content-area {
             $user_id = get_current_user_id();
             $progress_tracker = new IELTS_CM_Progress_Tracker();
             
+            // Cache enrollment and completion status to avoid redundant queries
+            $is_enrolled = false;
+            $is_completed = false;
+            
             // Automatically mark resource as accessed when user views it
             if ($user_id && $lesson_id && $course_id) {
                 $enrollment = new IELTS_CM_Enrollment();
@@ -59,11 +63,12 @@ body.ielts-resource-single .content-area {
                 
                 if ($is_enrolled) {
                     // Check if already completed
-                    $is_already_completed = $progress_tracker->is_resource_completed($user_id, $lesson_id, $resource_id);
+                    $is_completed = $progress_tracker->is_resource_completed($user_id, $lesson_id, $resource_id);
                     
                     // If not already completed, mark as complete automatically
-                    if (!$is_already_completed) {
+                    if (!$is_completed) {
                         $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, true);
+                        $is_completed = true; // Update cached status
                     }
                 }
             }
@@ -93,16 +98,11 @@ body.ielts-resource-single .content-area {
                 <div class="resource-header">
                     <h1><?php echo esc_html($resource->post_title); ?></h1>
                     
-                    <?php if ($user_id && $lesson_id): ?>
-                        <?php
-                        $is_completed = $progress_tracker->is_resource_completed($user_id, $lesson_id, $resource_id);
-                        ?>
-                        <?php if ($is_completed): ?>
-                            <div class="resource-completed-badge">
-                                <span class="dashicons dashicons-yes-alt"></span>
-                                <?php _e('Completed', 'ielts-course-manager'); ?>
-                            </div>
-                        <?php endif; ?>
+                    <?php if ($user_id && $lesson_id && $is_completed): ?>
+                        <div class="resource-completed-badge">
+                            <span class="dashicons dashicons-yes-alt"></span>
+                            <?php _e('Completed', 'ielts-course-manager'); ?>
+                        </div>
                     <?php endif; ?>
                 </div>
                 
