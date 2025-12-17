@@ -363,6 +363,8 @@ class IELTS_CM_Converter_Page {
             
             // Double-check we still have valid IDs after filtering
             if (!empty($lesson_ids)) {
+                // Create placeholders for wpdb->prepare() - standard WordPress pattern for IN clauses
+                // Safe because lesson_ids are sanitized to integers above and count matches array length
                 $placeholders = implode(',', array_fill(0, count($lesson_ids), '%d'));
                 
                 // Count actual lesson posts
