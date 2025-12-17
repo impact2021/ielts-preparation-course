@@ -9,6 +9,8 @@ if (!defined('ABSPATH')) {
 
 class IELTS_CM_Admin {
     
+    private $processing_quiz_save = false;
+    
     public function init() {
         // Add meta boxes
         add_action('add_meta_boxes', array($this, 'add_meta_boxes'));
@@ -841,20 +843,21 @@ class IELTS_CM_Admin {
             // Validate that quiz has at least one question before publishing
             $post = get_post($post_id);
             if ($post && $post->post_type === 'ielts_quiz' && $post->post_status === 'publish' && empty($questions)) {
-                // Remove publish hook temporarily to prevent infinite loop
-                remove_action('save_post', array($this, 'save_meta_boxes'));
-                
-                // Change status to draft if no questions
-                wp_update_post(array(
-                    'ID' => $post_id,
-                    'post_status' => 'draft'
-                ));
-                
-                // Re-add the hook
-                add_action('save_post', array($this, 'save_meta_boxes'));
-                
-                // Set admin notice via transient to avoid multiple filter calls
-                set_transient('ielts_cm_no_questions_' . get_current_user_id(), '1', 60);
+                // Use flag to prevent infinite loop instead of removing/re-adding hook
+                if (!$this->processing_quiz_save) {
+                    $this->processing_quiz_save = true;
+                    
+                    // Change status to draft if no questions
+                    wp_update_post(array(
+                        'ID' => $post_id,
+                        'post_status' => 'draft'
+                    ));
+                    
+                    $this->processing_quiz_save = false;
+                    
+                    // Set admin notice via transient to avoid multiple filter calls
+                    set_transient('ielts_cm_no_questions_' . get_current_user_id(), '1', 60);
+                }
             }
         }
     }
