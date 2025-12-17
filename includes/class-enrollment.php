@@ -20,6 +20,18 @@ class IELTS_CM_Enrollment {
     }
     
     /**
+     * Check if user has automatic access to all courses
+     * Administrators and subscribers have automatic access
+     * 
+     * @param int $user_id User ID to check
+     * @return bool True if user has automatic access
+     */
+    private function has_automatic_access($user_id) {
+        $user = get_userdata($user_id);
+        return $user && (in_array('administrator', $user->roles) || in_array('subscriber', $user->roles));
+    }
+    
+    /**
      * Enroll a user in a course
      */
     public function enroll($user_id, $course_id, $status = 'active', $course_end_date = null) {
@@ -78,9 +90,8 @@ class IELTS_CM_Enrollment {
      * Administrators and subscribers have automatic access to all courses
      */
     public function is_enrolled($user_id, $course_id) {
-        // Check if user has administrator or subscriber role - they get automatic access
-        $user = get_userdata($user_id);
-        if ($user && (in_array('administrator', $user->roles) || in_array('subscriber', $user->roles))) {
+        // Check if user has automatic access (admin or subscriber)
+        if ($this->has_automatic_access($user_id)) {
             return true;
         }
         
@@ -100,9 +111,8 @@ class IELTS_CM_Enrollment {
      * Administrators and subscribers automatically get all courses
      */
     public function get_user_courses($user_id) {
-        // Check if user has administrator or subscriber role - they get all courses
-        $user = get_userdata($user_id);
-        if ($user && (in_array('administrator', $user->roles) || in_array('subscriber', $user->roles))) {
+        // Check if user has automatic access (admin or subscriber)
+        if ($this->has_automatic_access($user_id)) {
             // Return all published courses for admins/subscribers
             $all_courses = get_posts(array(
                 'post_type' => 'ielts_course',

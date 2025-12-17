@@ -11,6 +11,9 @@ class IELTS_CM_Progress_Tracker {
     
     private $db;
     
+    // Maximum number of items allowed in a single query to prevent potential performance issues
+    const MAX_QUERY_ITEMS = 1000;
+    
     public function __construct() {
         $this->db = new IELTS_CM_Database();
         
@@ -178,7 +181,7 @@ class IELTS_CM_Progress_Tracker {
         if (!empty($resource_ids)) {
             $resource_ids = array_map('intval', $resource_ids);
             $resource_count = count($resource_ids);
-            if ($resource_count > 0 && $resource_count <= 1000) {
+            if ($resource_count > 0 && $resource_count <= self::MAX_QUERY_ITEMS) {
                 $resource_placeholders = implode(',', array_fill(0, $resource_count, '%d'));
                 $query = $wpdb->prepare(
                     "SELECT COUNT(DISTINCT resource_id) FROM $table WHERE user_id = %d AND course_id = %d AND resource_id IN ($resource_placeholders) AND completed = 1",
@@ -196,7 +199,7 @@ class IELTS_CM_Progress_Tracker {
             $quiz_ids = array_map('intval', $quiz_ids);
             // Validate count to prevent potential issues
             $quiz_count = count($quiz_ids);
-            if ($quiz_count > 0 && $quiz_count <= 1000) {
+            if ($quiz_count > 0 && $quiz_count <= self::MAX_QUERY_ITEMS) {
                 $quiz_ids_placeholders = implode(',', array_fill(0, $quiz_count, '%d'));
                 $query = $wpdb->prepare(
                     "SELECT COUNT(DISTINCT quiz_id) FROM $quiz_results_table WHERE user_id = %d AND quiz_id IN ($quiz_ids_placeholders)",
