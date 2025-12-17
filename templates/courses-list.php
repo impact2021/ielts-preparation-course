@@ -8,6 +8,7 @@ if (!defined('ABSPATH')) {
 }
 
 $enrollment = new IELTS_CM_Enrollment();
+$progress_tracker = new IELTS_CM_Progress_Tracker();
 $user_id = get_current_user_id();
 ?>
 
@@ -57,6 +58,22 @@ $user_id = get_current_user_id();
                         <?php endif; ?>
                     </div>
                     
+                    <?php if (is_user_logged_in() && $enrollment->is_enrolled($user_id, $course->ID)): ?>
+                        <div class="course-progress">
+                            <?php 
+                            $completion = $progress_tracker->get_course_completion_percentage($user_id, $course->ID);
+                            ?>
+                            <div class="progress-label">
+                                <?php _e('Your Progress:', 'ielts-course-manager'); ?>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: <?php echo round($completion, 1); ?>%;">
+                                    <span class="progress-text"><?php echo round($completion, 1); ?>%</span>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                    
                     <div class="course-actions">
                         <?php if (is_user_logged_in()): ?>
                             <?php if ($enrollment->is_enrolled($user_id, $course->ID)): ?>
@@ -81,3 +98,45 @@ $user_id = get_current_user_id();
         <p><?php _e('No courses found.', 'ielts-course-manager'); ?></p>
     <?php endif; ?>
 </div>
+
+<style>
+.ielts-courses-list .course-progress {
+    margin: 15px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.ielts-courses-list .progress-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+.ielts-courses-list .progress-bar {
+    width: 100%;
+    height: 24px;
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ielts-courses-list .progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, #4caf50, #66bb6a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.5s ease;
+    min-width: 30px;
+}
+
+.ielts-courses-list .progress-text {
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+</style>

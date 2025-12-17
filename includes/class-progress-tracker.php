@@ -115,12 +115,12 @@ class IELTS_CM_Progress_Tracker {
     
     /**
      * Calculate course completion percentage
+     * Based on sub lessons (resources) and quizzes only
      */
     public function get_course_completion_percentage($user_id, $course_id) {
         global $wpdb;
         
-        // Get all lessons in the course (check both old and new meta keys)
-        // Join with wp_posts to ensure we only get lessons
+        // Get all lessons in the course first
         $lesson_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT pm.post_id 
             FROM {$wpdb->postmeta} pm
@@ -131,7 +131,25 @@ class IELTS_CM_Progress_Tracker {
                 OR (pm.meta_key = '_ielts_cm_course_ids' AND pm.meta_value LIKE %s))
         ", $course_id, '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%'));
         
-        $total_lessons = count($lesson_ids);
+        // Get all resources (sub lessons) for all lessons in this course
+        $resource_ids = array();
+        if (!empty($lesson_ids)) {
+            foreach ($lesson_ids as $lesson_id) {
+                $lesson_resources = $wpdb->get_col($wpdb->prepare("
+                    SELECT DISTINCT pm.post_id 
+                    FROM {$wpdb->postmeta} pm
+                    INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+                    WHERE p.post_type = 'ielts_resource'
+                      AND p.post_status = 'publish'
+                      AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
+                        OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
+                ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+                $resource_ids = array_merge($resource_ids, $lesson_resources);
+            }
+            $resource_ids = array_unique($resource_ids);
+        }
+        
+        $total_resources = count($resource_ids);
         
         // Get all quizzes in the course (check both old and new meta keys)
         // Join with wp_posts to ensure we only get quizzes
@@ -147,19 +165,28 @@ class IELTS_CM_Progress_Tracker {
         
         $total_quizzes = count($quiz_ids);
         
-        // Total items needed for 100% completion
-        $total_items = $total_lessons + $total_quizzes;
+        // Total items needed for 100% completion (resources + quizzes)
+        $total_items = $total_resources + $total_quizzes;
         
         if ($total_items == 0) {
             return 0;
         }
         
-        // Get completed lessons
+        // Get completed resources (sub lessons)
         $table = $this->db->get_progress_table();
-        $completed_lessons = $wpdb->get_var($wpdb->prepare(
-            "SELECT COUNT(DISTINCT lesson_id) FROM $table WHERE user_id = %d AND course_id = %d AND completed = 1",
-            $user_id, $course_id
-        ));
+        $completed_resources = 0;
+        if (!empty($resource_ids)) {
+            $resource_ids = array_map('intval', $resource_ids);
+            $resource_count = count($resource_ids);
+            if ($resource_count > 0 && $resource_count <= 1000) {
+                $resource_placeholders = implode(',', array_fill(0, $resource_count, '%d'));
+                $query = $wpdb->prepare(
+                    "SELECT COUNT(DISTINCT resource_id) FROM $table WHERE user_id = %d AND course_id = %d AND resource_id IN ($resource_placeholders) AND completed = 1",
+                    array_merge(array($user_id, $course_id), $resource_ids)
+                );
+                $completed_resources = $wpdb->get_var($query);
+            }
+        }
         
         // Get completed quizzes (any quiz taken counts, regardless of score)
         $quiz_results_table = $this->db->get_quiz_results_table();
@@ -179,7 +206,7 @@ class IELTS_CM_Progress_Tracker {
             }
         }
         
-        $completed_items = $completed_lessons + $completed_quizzes;
+        $completed_items = $completed_resources + $completed_quizzes;
         
         return ($completed_items / $total_items) * 100;
     }
