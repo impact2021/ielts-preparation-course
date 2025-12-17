@@ -14,6 +14,7 @@ class IELTS_CM_Shortcodes {
         add_shortcode('ielts_course', array($this, 'display_single_course'));
         add_shortcode('ielts_progress', array($this, 'display_progress'));
         add_shortcode('ielts_my_progress', array($this, 'display_my_progress'));
+        add_shortcode('ielts_my_account', array($this, 'display_my_account'));
         add_shortcode('ielts_lesson', array($this, 'display_lesson'));
         add_shortcode('ielts_quiz', array($this, 'display_quiz'));
     }
@@ -344,6 +345,265 @@ class IELTS_CM_Shortcodes {
         .ielts-my-progress .quiz-results-table th {
             background-color: #f0f0f0;
             font-weight: bold;
+        }
+        </style>
+        <?php
+        return ob_get_clean();
+    }
+    
+    /**
+     * Display user's account page with enrollment details
+     */
+    public function display_my_account($atts) {
+        if (!is_user_logged_in()) {
+            return '<div class="ielts-my-account">' . 
+                   '<p>' . __('Please log in to view your account.', 'ielts-course-manager') . '</p>' . 
+                   '</div>';
+        }
+        
+        $user_id = get_current_user_id();
+        $user = get_userdata($user_id);
+        $enrollment = new IELTS_CM_Enrollment();
+        $progress_tracker = new IELTS_CM_Progress_Tracker();
+        
+        // Get all enrolled courses
+        $enrolled_courses = $enrollment->get_user_courses($user_id);
+        
+        ob_start();
+        ?>
+        <div class="ielts-my-account">
+            <h2><?php _e('My Account', 'ielts-course-manager'); ?></h2>
+            
+            <div class="account-section user-details">
+                <h3><?php _e('User Information', 'ielts-course-manager'); ?></h3>
+                <table class="account-info-table">
+                    <tr>
+                        <th><?php _e('Username:', 'ielts-course-manager'); ?></th>
+                        <td><?php echo esc_html($user->user_login); ?></td>
+                    </tr>
+                    <tr>
+                        <th><?php _e('Email:', 'ielts-course-manager'); ?></th>
+                        <td><?php echo esc_html($user->user_email); ?></td>
+                    </tr>
+                    <tr>
+                        <th><?php _e('Name:', 'ielts-course-manager'); ?></th>
+                        <td><?php echo esc_html(trim($user->first_name . ' ' . $user->last_name)); ?></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="account-section course-enrollments">
+                <h3><?php _e('My Course Enrollments', 'ielts-course-manager'); ?></h3>
+                
+                <?php if (empty($enrolled_courses)): ?>
+                    <p><?php _e('You are not currently enrolled in any courses.', 'ielts-course-manager'); ?></p>
+                <?php else: ?>
+                    <div class="enrolled-courses-list">
+                        <?php foreach ($enrolled_courses as $enrollment_data): 
+                            $course = get_post($enrollment_data->course_id);
+                            if (!$course) continue;
+                            
+                            $completion = $progress_tracker->get_course_completion_percentage($user_id, $enrollment_data->course_id);
+                            $enrolled_date = date('F j, Y', strtotime($enrollment_data->enrolled_date));
+                            $end_date = $enrollment_data->course_end_date ? date('F j, Y', strtotime($enrollment_data->course_end_date)) : __('No end date set', 'ielts-course-manager');
+                            
+                            // Check if course access has expired
+                            $is_expired = false;
+                            if ($enrollment_data->course_end_date && strtotime($enrollment_data->course_end_date) < time()) {
+                                $is_expired = true;
+                            }
+                        ?>
+                            <div class="enrolled-course-item <?php echo $is_expired ? 'expired' : ''; ?>">
+                                <div class="course-header">
+                                    <h4>
+                                        <a href="<?php echo get_permalink($course->ID); ?>">
+                                            <?php echo esc_html($course->post_title); ?>
+                                        </a>
+                                        <?php if ($is_expired): ?>
+                                            <span class="expired-badge"><?php _e('Expired', 'ielts-course-manager'); ?></span>
+                                        <?php endif; ?>
+                                    </h4>
+                                </div>
+                                
+                                <div class="course-details">
+                                    <div class="course-detail-row">
+                                        <span class="detail-label"><?php _e('Enrolled:', 'ielts-course-manager'); ?></span>
+                                        <span class="detail-value"><?php echo esc_html($enrolled_date); ?></span>
+                                    </div>
+                                    <div class="course-detail-row">
+                                        <span class="detail-label"><?php _e('Access Until:', 'ielts-course-manager'); ?></span>
+                                        <span class="detail-value <?php echo $is_expired ? 'expired-date' : ''; ?>">
+                                            <?php echo esc_html($end_date); ?>
+                                        </span>
+                                    </div>
+                                    <div class="course-detail-row">
+                                        <span class="detail-label"><?php _e('Progress:', 'ielts-course-manager'); ?></span>
+                                        <span class="detail-value"><?php echo round($completion, 1); ?>%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: <?php echo round($completion, 1); ?>%;">
+                                        <span class="progress-text"><?php echo round($completion, 1); ?>%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="course-actions">
+                                    <?php if (!$is_expired): ?>
+                                        <a href="<?php echo get_permalink($course->ID); ?>" class="button">
+                                            <?php _e('Continue Learning', 'ielts-course-manager'); ?>
+                                        </a>
+                                    <?php else: ?>
+                                        <span class="expired-notice">
+                                            <?php _e('Your access to this course has expired. Please contact support to renew.', 'ielts-course-manager'); ?>
+                                        </span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+        
+        <style>
+        .ielts-my-account {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .ielts-my-account h2 {
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+        .account-section {
+            background: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .account-section h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .account-info-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .account-info-table th {
+            text-align: left;
+            padding: 10px;
+            width: 150px;
+            font-weight: 600;
+            color: #555;
+        }
+        .account-info-table td {
+            padding: 10px;
+            color: #333;
+        }
+        .enrolled-courses-list {
+            display: grid;
+            gap: 20px;
+        }
+        .enrolled-course-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            transition: box-shadow 0.3s;
+        }
+        .enrolled-course-item:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .enrolled-course-item.expired {
+            opacity: 0.7;
+            background: #f8f8f8;
+        }
+        .course-header h4 {
+            margin: 0 0 15px 0;
+            font-size: 20px;
+        }
+        .course-header h4 a {
+            color: #0073aa;
+            text-decoration: none;
+        }
+        .course-header h4 a:hover {
+            text-decoration: underline;
+        }
+        .expired-badge {
+            display: inline-block;
+            background: #dc3232;
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: normal;
+            margin-left: 10px;
+        }
+        .course-details {
+            margin-bottom: 15px;
+        }
+        .course-detail-row {
+            display: flex;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .course-detail-row:last-child {
+            border-bottom: none;
+        }
+        .detail-label {
+            font-weight: 600;
+            color: #555;
+            width: 150px;
+        }
+        .detail-value {
+            color: #333;
+        }
+        .detail-value.expired-date {
+            color: #dc3232;
+            font-weight: 600;
+        }
+        .progress-bar {
+            background: #e0e0e0;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .progress-fill {
+            background: linear-gradient(to right, #4caf50, #66bb6a);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: width 0.5s ease;
+        }
+        .progress-text {
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .course-actions {
+            text-align: left;
+        }
+        .course-actions .button {
+            background: #0073aa;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 3px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .course-actions .button:hover {
+            background: #005177;
+        }
+        .expired-notice {
+            color: #dc3232;
+            font-style: italic;
         }
         </style>
         <?php

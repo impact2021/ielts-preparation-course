@@ -160,11 +160,46 @@ Specific course:
 [ielts_quiz id="789"]
 ```
 
-### Enrollment
+#### Display User's Own Progress
+```
+[ielts_my_progress]
+```
 
-Students can enroll in courses by:
-1. Clicking "Enroll Now" button on course pages
-2. Administrator can manually enroll users through the backend
+Specific course:
+```
+[ielts_my_progress course_id="123"]
+```
+
+#### Display User Account Page (NEW in v1.7)
+```
+[ielts_my_account]
+```
+
+This displays:
+- User information
+- All course enrollments with enrollment dates
+- Course access expiration dates
+- Progress for each enrolled course
+- Visual indication of expired courses
+
+### Enrollment (NEW in v1.7)
+
+**Manual Enrollment System:**
+Administrators can manage user enrollments through **IELTS Courses > Manage Enrollments**:
+1. **Create New User and Enroll** - Create a new WordPress user and enroll them in courses
+   - Enter username, email, password, and optional first/last name
+   - Select multiple courses for enrollment
+   - Default access duration: 1 year from enrollment date
+2. **Enroll Existing User** - Enroll existing users in courses
+   - Select user from dropdown
+   - Choose multiple courses for enrollment
+   - Default access duration: 1 year
+3. **Modify Course End Dates** - Update access expiration for any enrollment
+4. **View All Enrollments** - See all active enrollments with user, course, dates, and status
+
+**Student Self-Enrollment:**
+Students can also enroll in courses by:
+1. Clicking "Enroll Now" button on course pages (if enabled)
 
 ### Progress Tracking
 

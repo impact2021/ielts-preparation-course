@@ -71,6 +71,7 @@ class IELTS_CM_Database {
             user_id bigint(20) NOT NULL,
             course_id bigint(20) NOT NULL,
             enrolled_date datetime DEFAULT CURRENT_TIMESTAMP,
+            course_end_date datetime DEFAULT NULL,
             status varchar(20) DEFAULT 'active',
             PRIMARY KEY  (id),
             KEY user_id (user_id),

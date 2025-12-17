@@ -12,6 +12,8 @@ This plugin provides a complete course management system with:
 - **Quiz System** - Multiple quiz types (Multiple Choice, True/False/Not Given, Fill in the Blank, Essay)
 - **Progress Tracking** - Per-course progress tracking for students
 - **Student Dashboard** - Comprehensive progress and quiz results page
+- **Manual Enrollment System** - Admin tools for creating users and managing course enrollments
+- **User Account Page** - Students can view their enrollments, access dates, and progress
 
 ## Key Features
 
@@ -19,6 +21,8 @@ This plugin provides a complete course management system with:
 ✅ **Multiple Quiz Types** - IELTS-friendly quiz types (Multiple Choice, True/False/Not Given, Fill in the Blank with flexible matching, Essay)  
 ✅ **Progress Tracking** - Automatic tracking of lesson completion and quiz results  
 ✅ **Student Progress Page** - Consolidated view of all progress and quiz results  
+✅ **Manual Enrollment System** - Create users and enroll them in courses with 1-year access duration  
+✅ **User Account Dashboard** - Students can view enrollment details, access dates, and progress  
 ✅ **Easy Content Management** - Simple WordPress post types for courses, lessons, lesson pages, and quizzes  
 ✅ **Shortcode Support** - Display courses and progress anywhere on your site  
 ✅ **LearnDash Import Tool** - Easily migrate from LearnDash with built-in XML import functionality  

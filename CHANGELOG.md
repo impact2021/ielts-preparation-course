@@ -2,6 +2,43 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [1.7.0] - 2024-12-17
+
+### Added
+- **Manual Enrollment System**: New admin page for managing user enrollments
+  - Create new users and enroll them in courses directly from admin panel
+  - Enroll existing users in multiple courses at once
+  - Default course duration of 1 year (365 days)
+  - Support for enrolling users in all available courses
+- **Course End Date Management**: Track and modify course access expiration
+  - Added `course_end_date` field to enrollment database table
+  - Admins can modify end dates for individual enrollments
+  - Automatic calculation of 1-year access from enrollment date
+- **My Account Page**: New user-facing account dashboard
+  - New shortcode `[ielts_my_account]` displays user enrollment details
+  - Shows course enrollment dates and access expiration dates
+  - Displays course completion progress for each enrolled course
+  - Visual indication of expired courses
+  - Direct links to continue learning in active courses
+
+### Changed
+- **Lesson Completion Logic**: Improved accuracy of lesson completion tracking
+  - Lessons now marked complete ONLY when ALL sublesson pages are viewed AND ALL exercises are attempted
+  - More accurate progress tracking and course completion percentages
+  - Prevents premature lesson completion status
+- **Page Layout Improvements**: Enhanced consistency across all page types
+  - Reduced top padding from 60px to 30px on all course/lesson/sublesson pages
+  - Fixed sublesson page width to match course and lesson pages (100% width)
+  - Improved visual consistency throughout the plugin
+- **Course Display**: Removed featured image from individual course pages
+  - Featured images now only display on course listing pages
+  - Cleaner, more focused course detail pages
+
+### Fixed
+- Enrollment table now properly tracks course end dates
+- Consistent width and padding across all IELTS custom post type pages
+- Lesson completion status now accurately reflects actual progress
+
 ## [1.6.0] - 2024-12-17
 
 ### Added

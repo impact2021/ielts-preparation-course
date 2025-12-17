@@ -22,9 +22,14 @@ class IELTS_CM_Enrollment {
     /**
      * Enroll a user in a course
      */
-    public function enroll($user_id, $course_id, $status = 'active') {
+    public function enroll($user_id, $course_id, $status = 'active', $course_end_date = null) {
         global $wpdb;
         $table = $this->db->get_enrollment_table();
+        
+        // If no end date provided, default to 1 year from now
+        if ($course_end_date === null) {
+            $course_end_date = date('Y-m-d H:i:s', strtotime('+1 year'));
+        }
         
         // Check if already enrolled
         $existing = $wpdb->get_row($wpdb->prepare(
@@ -33,10 +38,13 @@ class IELTS_CM_Enrollment {
         ));
         
         if ($existing) {
-            // Update status
+            // Update status and end date
             return $wpdb->update(
                 $table,
-                array('status' => $status),
+                array(
+                    'status' => $status,
+                    'course_end_date' => $course_end_date
+                ),
                 array('id' => $existing->id)
             );
         } else {
@@ -45,7 +53,8 @@ class IELTS_CM_Enrollment {
                 'user_id' => $user_id,
                 'course_id' => $course_id,
                 'status' => $status,
-                'enrolled_date' => current_time('mysql')
+                'enrolled_date' => current_time('mysql'),
+                'course_end_date' => $course_end_date
             ));
         }
     }
@@ -87,11 +96,54 @@ class IELTS_CM_Enrollment {
         $table = $this->db->get_enrollment_table();
         
         $courses = $wpdb->get_results($wpdb->prepare(
-            "SELECT course_id, enrolled_date FROM $table WHERE user_id = %d AND status = 'active' ORDER BY enrolled_date DESC",
+            "SELECT course_id, enrolled_date, course_end_date FROM $table WHERE user_id = %d AND status = 'active' ORDER BY enrolled_date DESC",
             $user_id
         ));
         
         return $courses;
+    }
+    
+    /**
+     * Get enrollment details for a user and course
+     */
+    public function get_enrollment($user_id, $course_id) {
+        global $wpdb;
+        $table = $this->db->get_enrollment_table();
+        
+        $enrollment = $wpdb->get_row($wpdb->prepare(
+            "SELECT * FROM $table WHERE user_id = %d AND course_id = %d",
+            $user_id, $course_id
+        ));
+        
+        return $enrollment;
+    }
+    
+    /**
+     * Get all enrollments (for admin)
+     */
+    public function get_all_enrollments() {
+        global $wpdb;
+        $table = $this->db->get_enrollment_table();
+        
+        $enrollments = $wpdb->get_results(
+            "SELECT * FROM $table ORDER BY enrolled_date DESC"
+        );
+        
+        return $enrollments;
+    }
+    
+    /**
+     * Update course end date for enrollment
+     */
+    public function update_course_end_date($user_id, $course_id, $end_date) {
+        global $wpdb;
+        $table = $this->db->get_enrollment_table();
+        
+        return $wpdb->update(
+            $table,
+            array('course_end_date' => $end_date),
+            array('user_id' => $user_id, 'course_id' => $course_id)
+        );
     }
     
     /**

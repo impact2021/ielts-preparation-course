@@ -32,11 +32,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
         </div>
         <?php endif; ?>
         
-        <?php if (has_post_thumbnail($course->ID)): ?>
-            <div class="course-featured-image">
-                <?php echo get_the_post_thumbnail($course->ID, 'large'); ?>
-            </div>
-        <?php endif; ?>
+
     </div>
     
     <div class="course-description">

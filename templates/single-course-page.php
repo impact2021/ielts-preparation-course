@@ -19,14 +19,14 @@ get_header();
  * 3. These styles are page-specific and should only apply to this template
  */
 body.ielts-course-single #main.site-main {
-    padding: 60px 40px !important;
+    padding: 30px 40px !important;
 }
 /* Fallback for themes with different structure */
 body.ielts-course-single .site-main,
 body.ielts-course-single #primary,
 body.ielts-course-single .content-area {
-    padding-top: 60px !important;
-    padding-bottom: 60px !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
 }
 </style>
 

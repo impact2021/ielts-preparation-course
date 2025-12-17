@@ -19,14 +19,14 @@ get_header();
  * 3. These styles are page-specific and should only apply to this template
  */
 body.ielts-resource-single #main.site-main {
-    padding: 60px 40px !important;
+    padding: 30px 40px !important;
 }
 /* Fallback for themes with different structure */
 body.ielts-resource-single .site-main,
 body.ielts-resource-single #primary,
 body.ielts-resource-single .content-area {
-    padding-top: 60px !important;
-    padding-bottom: 60px !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
 }
 </style>
 
@@ -156,7 +156,7 @@ body.ielts-resource-single .content-area {
             
             <style>
             .ielts-single-resource {
-                max-width: 900px;
+                max-width: 100%;
                 margin: 0 auto;
             }
             .resource-breadcrumb {
