@@ -2,6 +2,44 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [1.6.0] - 2024-12-17
+
+### Added
+- **Sub Lesson (Resource) Page Template**: New dedicated template for sub lesson pages with breadcrumb navigation
+  - Breadcrumb navigation showing Course > Lesson > Sub Lesson hierarchy
+  - Consistent padding and width matching course and lesson pages
+  - "Mark as Complete" functionality for enrolled students
+  - Support for external resource links
+- **Quiz Question Conversion**: Automatic conversion of LearnDash quiz questions during import/conversion
+  - Converts multiple choice questions
+  - Converts true/false questions
+  - Converts fill-in-the-blank questions
+  - Converts essay questions
+  - Maintains question points and correct answers
+
+### Changed
+- **Terminology Update**: Renamed "Lesson pages" to "Sub lessons" throughout the plugin for clarity
+  - Updated post type labels in admin interface
+  - Updated template display labels
+  - Improved consistency across the UI
+- **LearnDash Import Improvements**: Enhanced order preservation and relationship handling
+  - Fixed menu_order preservation in XML importer
+  - Fixed menu_order preservation in direct database converter
+  - Quizzes now properly linked to lessons (not just courses)
+  - Sub lessons now properly ordered within lessons
+
+### Fixed
+- Sub lesson pages now display with proper breadcrumb navigation
+- Sub lesson pages now have consistent styling with course and lesson pages
+- LearnDash import now preserves the original order of lessons, sub lessons, and quizzes
+- Quizzes are now correctly added to the lessons table during LearnDash import
+- Quiz questions are now automatically converted from LearnDash format
+
+### Security
+- Added proper escaping for JavaScript output in templates
+- Improved SQL query preparation with parameterized queries
+- Added input validation with intval() for all ID parameters
+
 ## [1.3.0] - 2024-12-16
 
 ### Added
