@@ -191,45 +191,47 @@ class IELTS_CM_LearnDash_Converter {
         
         // Check if already converted
         $existing_id = $this->find_existing_lesson($lesson->ID);
+        $new_id = $existing_id;
+        
         if ($existing_id) {
-            $this->log("Lesson already converted (ID: {$existing_id}). Linking to course.", 'warning');
+            $this->log("Lesson already converted (ID: {$existing_id}). Linking to course and processing relationships.", 'warning');
             $this->link_lesson_to_course($existing_id, $new_course_id);
             $this->converted_lessons[$lesson->ID] = $existing_id;
-            return $existing_id;
+        } else {
+            // Validate post status
+            $valid_statuses = array('publish', 'draft', 'pending', 'private');
+            $post_status = in_array($lesson->post_status, $valid_statuses) ? $lesson->post_status : 'draft';
+            
+            $post_data = array(
+                'post_title' => sanitize_text_field($lesson->post_title),
+                'post_content' => wp_kses_post($lesson->post_content),
+                'post_excerpt' => sanitize_textarea_field($lesson->post_excerpt),
+                'post_status' => $post_status,
+                'post_type' => 'ielts_lesson',
+                'post_date' => sanitize_text_field($lesson->post_date),
+                'menu_order' => intval($lesson->menu_order)
+            );
+            
+            $new_id = wp_insert_post($post_data);
+            
+            if (is_wp_error($new_id)) {
+                $this->log("Error creating lesson: " . $new_id->get_error_message(), 'error');
+                return false;
+            }
+            
+            // Link to course
+            $this->link_lesson_to_course($new_id, $new_course_id);
+            
+            // Store original LearnDash ID
+            update_post_meta($new_id, '_ld_original_id', $lesson->ID);
+            update_post_meta($new_id, '_converted_from_learndash', current_time('mysql'));
+            
+            $this->converted_lessons[$lesson->ID] = $new_id;
+            $this->log("Lesson converted successfully (New ID: {$new_id})");
         }
         
-        // Validate post status
-        $valid_statuses = array('publish', 'draft', 'pending', 'private');
-        $post_status = in_array($lesson->post_status, $valid_statuses) ? $lesson->post_status : 'draft';
-        
-        $post_data = array(
-            'post_title' => sanitize_text_field($lesson->post_title),
-            'post_content' => wp_kses_post($lesson->post_content),
-            'post_excerpt' => sanitize_textarea_field($lesson->post_excerpt),
-            'post_status' => $post_status,
-            'post_type' => 'ielts_lesson',
-            'post_date' => sanitize_text_field($lesson->post_date),
-            'menu_order' => intval($lesson->menu_order)
-        );
-        
-        $new_id = wp_insert_post($post_data);
-        
-        if (is_wp_error($new_id)) {
-            $this->log("Error creating lesson: " . $new_id->get_error_message(), 'error');
-            return false;
-        }
-        
-        // Link to course
-        $this->link_lesson_to_course($new_id, $new_course_id);
-        
-        // Store original LearnDash ID
-        update_post_meta($new_id, '_ld_original_id', $lesson->ID);
-        update_post_meta($new_id, '_converted_from_learndash', current_time('mysql'));
-        
-        $this->converted_lessons[$lesson->ID] = $new_id;
-        $this->log("Lesson converted successfully (New ID: {$new_id})");
-        
-        // Convert topics (lesson pages)
+        // Always convert topics (lesson pages) and quizzes, even if lesson already existed
+        // This ensures relationships are established on subsequent conversion runs
         $topics = $this->get_lesson_topics($lesson->ID);
         foreach ($topics as $topic) {
             $this->convert_topic($topic, $lesson->ID, $new_id);
