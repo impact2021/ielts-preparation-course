@@ -139,7 +139,7 @@ class IELTS_CM_Progress_Tracker {
         $resource_ids = array();
         if (!empty($lesson_ids)) {
             $lesson_count = count($lesson_ids);
-            if ($lesson_count > 0 && $lesson_count <= self::MAX_QUERY_ITEMS) {
+            if ($lesson_count <= self::MAX_QUERY_ITEMS) {
                 $lesson_ids = array_map('intval', $lesson_ids);
                 $lesson_placeholders = implode(',', array_fill(0, $lesson_count, '%d'));
                 $resource_ids = $wpdb->get_col($wpdb->prepare("
@@ -182,7 +182,7 @@ class IELTS_CM_Progress_Tracker {
         $completed_resources = 0;
         if (!empty($resource_ids)) {
             $resource_count = count($resource_ids);
-            if ($resource_count > 0 && $resource_count <= self::MAX_QUERY_ITEMS) {
+            if ($resource_count <= self::MAX_QUERY_ITEMS) {
                 $resource_ids = array_map('intval', $resource_ids);
                 $resource_placeholders = implode(',', array_fill(0, $resource_count, '%d'));
                 $query = $wpdb->prepare(
