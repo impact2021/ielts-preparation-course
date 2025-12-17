@@ -203,17 +203,72 @@ class IELTS_CM_Progress_Tracker {
     
     /**
      * Check if lesson is completed
+     * A lesson is only completed when ALL sublesson pages have been viewed 
+     * AND all exercises (quizzes) for that lesson have been attempted
      */
     public function is_lesson_completed($user_id, $lesson_id) {
         global $wpdb;
-        $table = $this->db->get_progress_table();
         
-        $completed = $wpdb->get_var($wpdb->prepare(
-            "SELECT completed FROM $table WHERE user_id = %d AND lesson_id = %d AND completed = 1",
-            $user_id, $lesson_id
-        ));
+        // Get all resources (sublesson pages) for this lesson
+        $resource_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_resource'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
+        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
         
-        return (bool) $completed;
+        // Get all quizzes for this lesson
+        $quiz_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_quiz'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
+        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+        
+        $total_resources = count($resource_ids);
+        $total_quizzes = count($quiz_ids);
+        
+        // If lesson has no resources and no quizzes, it's never "complete"
+        if ($total_resources == 0 && $total_quizzes == 0) {
+            return false;
+        }
+        
+        // Check completed resources
+        $completed_resources = 0;
+        if ($total_resources > 0) {
+            $progress_table = $this->db->get_progress_table();
+            $resource_ids = array_map('intval', $resource_ids);
+            $resource_placeholders = implode(',', array_fill(0, count($resource_ids), '%d'));
+            $query = $wpdb->prepare(
+                "SELECT COUNT(DISTINCT resource_id) FROM $progress_table 
+                WHERE user_id = %d AND lesson_id = %d AND resource_id IN ($resource_placeholders) AND completed = 1",
+                array_merge(array($user_id, $lesson_id), $resource_ids)
+            );
+            $completed_resources = $wpdb->get_var($query);
+        }
+        
+        // Check attempted quizzes
+        $attempted_quizzes = 0;
+        if ($total_quizzes > 0) {
+            $quiz_results_table = $this->db->get_quiz_results_table();
+            $quiz_ids = array_map('intval', $quiz_ids);
+            $quiz_placeholders = implode(',', array_fill(0, count($quiz_ids), '%d'));
+            $query = $wpdb->prepare(
+                "SELECT COUNT(DISTINCT quiz_id) FROM $quiz_results_table 
+                WHERE user_id = %d AND lesson_id = %d AND quiz_id IN ($quiz_placeholders)",
+                array_merge(array($user_id, $lesson_id), $quiz_ids)
+            );
+            $attempted_quizzes = $wpdb->get_var($query);
+        }
+        
+        // Lesson is complete only if ALL resources are completed AND ALL quizzes are attempted
+        return ($completed_resources == $total_resources) && ($attempted_quizzes == $total_quizzes);
     }
     
     /**
