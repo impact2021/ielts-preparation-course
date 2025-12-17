@@ -491,7 +491,7 @@ class IELTS_CM_LearnDash_Converter {
     /**
      * Convert a quiz
      */
-    private function convert_quiz($quiz, $old_course_id, $new_course_id, $new_lesson_id = null) {
+    public function convert_quiz($quiz, $old_course_id, $new_course_id, $new_lesson_id = null) {
         $this->log('Converting quiz: ' . esc_html($quiz->post_title));
         
         // Check if already converted
@@ -655,6 +655,17 @@ class IELTS_CM_LearnDash_Converter {
             'points' => floatval($points)
         );
         
+        // Get feedback messages for correct and incorrect answers
+        $correct_feedback = get_post_meta($ld_question->ID, '_correct_answer_feedback', true);
+        $incorrect_feedback = get_post_meta($ld_question->ID, '_incorrect_answer_feedback', true);
+        
+        if (!empty($correct_feedback)) {
+            $converted['correct_feedback'] = wp_strip_all_tags($correct_feedback);
+        }
+        if (!empty($incorrect_feedback)) {
+            $converted['incorrect_feedback'] = wp_strip_all_tags($incorrect_feedback);
+        }
+        
         // Map LearnDash question types to IELTS CM types
         switch ($question_type) {
             case 'single':
@@ -663,11 +674,14 @@ class IELTS_CM_LearnDash_Converter {
                 $converted['type'] = 'multiple_choice';
                 $answers = $this->get_question_answers($ld_question->ID);
                 if (!empty($answers)) {
-                    $converted['options'] = array_column($answers, 'text');
+                    // Store options as newline-separated string for template compatibility
+                    $options_array = array_column($answers, 'text');
+                    $converted['options'] = implode("\n", $options_array);
+                    
                     $correct_answers = array_filter($answers, function($a) { return !empty($a['correct']); });
                     if (!empty($correct_answers)) {
                         $first_correct = array_shift($correct_answers);
-                        $converted['correct_answer'] = array_search($first_correct['text'], $converted['options']);
+                        $converted['correct_answer'] = array_search($first_correct['text'], $options_array);
                     }
                 }
                 break;
@@ -691,7 +705,7 @@ class IELTS_CM_LearnDash_Converter {
             default:
                 // Default to multiple choice for unknown types
                 $converted['type'] = 'multiple_choice';
-                $converted['options'] = array();
+                $converted['options'] = '';
                 $converted['correct_answer'] = 0;
                 $this->log("Unknown question type '{$question_type}' for question: {$ld_question->post_title}", 'warning');
                 break;
@@ -715,15 +729,22 @@ class IELTS_CM_LearnDash_Converter {
             // Check if tables exist
             if ($wpdb->get_var($wpdb->prepare("SHOW TABLES LIKE %s", $answer_table)) === $answer_table) {
                 $results = $wpdb->get_results($wpdb->prepare(
-                    "SELECT answer, correct FROM {$answer_table} WHERE question_id = %d ORDER BY sort_pos ASC",
+                    "SELECT answer, correct, graded_type, answer_message FROM {$answer_table} WHERE question_id = %d ORDER BY sort_pos ASC",
                     $pro_id
                 ));
                 
                 foreach ($results as $result) {
-                    $answers[] = array(
+                    $answer_item = array(
                         'text' => $result->answer,
                         'correct' => $result->correct == 1
                     );
+                    
+                    // Include answer-specific feedback if available
+                    if (!empty($result->answer_message)) {
+                        $answer_item['feedback'] = wp_strip_all_tags($result->answer_message);
+                    }
+                    
+                    $answers[] = $answer_item;
                 }
             }
         }
@@ -734,10 +755,17 @@ class IELTS_CM_LearnDash_Converter {
             if (is_array($answer_data)) {
                 foreach ($answer_data as $answer) {
                     if (isset($answer['answer'])) {
-                        $answers[] = array(
+                        $answer_item = array(
                             'text' => $answer['answer'],
                             'correct' => !empty($answer['correct'])
                         );
+                        
+                        // Include answer-specific feedback if available
+                        if (!empty($answer['feedback'])) {
+                            $answer_item['feedback'] = wp_strip_all_tags($answer['feedback']);
+                        }
+                        
+                        $answers[] = $answer_item;
                     }
                 }
             }
@@ -809,7 +837,7 @@ class IELTS_CM_LearnDash_Converter {
     /**
      * Find existing converted quiz
      */
-    private function find_existing_quiz($ld_quiz_id) {
+    public function find_existing_quiz($ld_quiz_id) {
         global $wpdb;
         
         $existing_id = $wpdb->get_var($wpdb->prepare(

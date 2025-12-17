@@ -31,6 +31,11 @@ class IELTS_CM_Admin {
         
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
+        
+        // Add LearnDash quiz conversion button
+        add_filter('manage_sfwd-quiz_posts_columns', array($this, 'learndash_quiz_columns'));
+        add_action('manage_sfwd-quiz_posts_custom_column', array($this, 'learndash_quiz_column_content'), 10, 2);
+        add_action('admin_footer', array($this, 'learndash_quiz_conversion_scripts'));
     }
     
     /**
@@ -1284,6 +1289,151 @@ class IELTS_CM_Admin {
                 <?php submit_button(); ?>
             </form>
         </div>
+        <?php
+    }
+    
+    /**
+     * Add custom column to LearnDash quiz list
+     */
+    public function learndash_quiz_columns($columns) {
+        // Only add if LearnDash is active
+        if (!post_type_exists('sfwd-quiz')) {
+            return $columns;
+        }
+        
+        // Add conversion column before date
+        $new_columns = array();
+        foreach ($columns as $key => $value) {
+            if ($key === 'date') {
+                $new_columns['ielts_cm_convert'] = __('Convert to IELTS CM', 'ielts-course-manager');
+            }
+            $new_columns[$key] = $value;
+        }
+        
+        return $new_columns;
+    }
+    
+    /**
+     * Display content for custom column
+     */
+    public function learndash_quiz_column_content($column, $post_id) {
+        if ($column === 'ielts_cm_convert') {
+            require_once IELTS_CM_PLUGIN_DIR . 'includes/class-learndash-converter.php';
+            $converter = new IELTS_CM_LearnDash_Converter();
+            
+            // Check if already converted
+            $existing_id = $converter->find_existing_quiz($post_id);
+            
+            if ($existing_id) {
+                echo '<span style="color: #46b450;">✓ ' . esc_html__('Converted', 'ielts-course-manager') . '</span><br>';
+                echo '<a href="' . esc_url(get_edit_post_link($existing_id)) . '" target="_blank">' . esc_html__('Edit IELTS Quiz', 'ielts-course-manager') . '</a>';
+            } else {
+                echo '<button type="button" class="button button-small ielts-convert-quiz-btn" data-quiz-id="' . esc_attr($post_id) . '">';
+                echo esc_html__('Convert Quiz', 'ielts-course-manager');
+                echo '</button>';
+                echo '<span class="ielts-convert-status" style="display:none; margin-left: 10px;"></span>';
+            }
+        }
+    }
+    
+    /**
+     * Find existing converted quiz
+     */
+    public function find_existing_quiz($ld_quiz_id) {
+        global $wpdb;
+        
+        $existing_id = $wpdb->get_var($wpdb->prepare(
+            "SELECT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE pm.meta_key = '_ld_original_id' 
+            AND pm.meta_value = %d 
+            AND p.post_type = 'ielts_quiz'
+            LIMIT 1",
+            $ld_quiz_id
+        ));
+        
+        return $existing_id ? intval($existing_id) : false;
+    }
+    
+    /**
+     * Add JavaScript for quiz conversion on LearnDash quiz admin page
+     */
+    public function learndash_quiz_conversion_scripts() {
+        $screen = get_current_screen();
+        
+        // Only load on LearnDash quiz list page
+        if (!$screen || $screen->post_type !== 'sfwd-quiz' || $screen->base !== 'edit') {
+            return;
+        }
+        
+        ?>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            // Handle individual quiz conversion
+            $(document).on('click', '.ielts-convert-quiz-btn', function(e) {
+                e.preventDefault();
+                
+                var $btn = $(this);
+                var quizId = $btn.data('quiz-id');
+                var $status = $btn.siblings('.ielts-convert-status');
+                
+                if (!confirm('<?php echo esc_js(__('Convert this quiz to IELTS Course Manager format? This will create a new IELTS quiz with questions from the LearnDash quiz.', 'ielts-course-manager')); ?>')) {
+                    return;
+                }
+                
+                $btn.prop('disabled', true).text('<?php echo esc_js(__('Converting...', 'ielts-course-manager')); ?>');
+                $status.show().text('⏳').css('color', '#666');
+                
+                $.ajax({
+                    url: ajaxurl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_convert_single_quiz',
+                        nonce: '<?php echo wp_create_nonce('ielts_cm_convert_quiz'); ?>',
+                        quiz_id: quizId
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            $status.html('✓ <span style="color: #46b450;"><?php echo esc_js(__('Converted!', 'ielts-course-manager')); ?></span>');
+                            $btn.remove();
+                            
+                            // Show link to edit the new quiz
+                            if (response.data.new_quiz_id) {
+                                var editUrl = '<?php echo admin_url('post.php?action=edit&post='); ?>' + response.data.new_quiz_id;
+                                $status.after('<br><a href="' + editUrl + '" target="_blank"><?php echo esc_js(__('Edit IELTS Quiz', 'ielts-course-manager')); ?></a>');
+                            }
+                            
+                            // Show success message
+                            if (response.data.message) {
+                                $status.after('<br><small>' + response.data.message + '</small>');
+                            }
+                        } else {
+                            $status.html('✗ <span style="color: #d63638;"><?php echo esc_js(__('Failed', 'ielts-course-manager')); ?></span>');
+                            $btn.prop('disabled', false).text('<?php echo esc_js(__('Convert Quiz', 'ielts-course-manager')); ?>');
+                            
+                            var errorMsg = response.data && response.data.message ? response.data.message : '<?php echo esc_js(__('Conversion failed', 'ielts-course-manager')); ?>';
+                            alert(errorMsg);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        $status.html('✗ <span style="color: #d63638;"><?php echo esc_js(__('Error', 'ielts-course-manager')); ?></span>');
+                        $btn.prop('disabled', false).text('<?php echo esc_js(__('Convert Quiz', 'ielts-course-manager')); ?>');
+                        alert('<?php echo esc_js(__('AJAX error:', 'ielts-course-manager')); ?> ' + error);
+                    }
+                });
+            });
+        });
+        </script>
+        
+        <style>
+        .ielts-convert-quiz-btn {
+            font-size: 12px;
+            height: auto;
+            line-height: 1.5;
+            padding: 4px 8px;
+        }
+        </style>
         <?php
     }
 }
