@@ -127,7 +127,7 @@ body.ielts-resource-single .content-area {
                                         url: '<?php echo esc_url(admin_url('admin-ajax.php')); ?>',
                                         type: 'POST',
                                         data: {
-                                            action: 'ielts_cm_mark_resource_complete',
+                                            action: 'ielts_cm_mark_complete',
                                             nonce: '<?php echo esc_js(wp_create_nonce('ielts_cm_nonce')); ?>',
                                             lesson_id: <?php echo intval($lesson_id); ?>,
                                             resource_id: <?php echo intval($resource_id); ?>,
