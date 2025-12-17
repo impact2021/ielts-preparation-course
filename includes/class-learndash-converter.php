@@ -156,11 +156,36 @@ class IELTS_CM_LearnDash_Converter {
     private function get_course_lessons($course_id) {
         global $wpdb;
         
-        // Get lessons associated with this course
-        $lesson_ids = get_post_meta($course_id, 'ld_course_' . $course_id, true);
+        $lesson_ids = array();
         
+        // Method 1: Try LearnDash native function if available
+        if (function_exists('learndash_course_get_steps_by_type')) {
+            $lesson_ids = learndash_course_get_steps_by_type($course_id, 'sfwd-lessons');
+        }
+        
+        // Method 2: Try LearnDash's older native function
+        if (empty($lesson_ids) && function_exists('learndash_get_course_lessons_list')) {
+            $lessons_list = learndash_get_course_lessons_list($course_id);
+            if (!empty($lessons_list)) {
+                $lesson_ids = array_keys($lessons_list);
+            }
+        }
+        
+        // Method 3: Try course steps meta (newer LearnDash format)
         if (empty($lesson_ids)) {
-            // Try alternative method
+            $course_steps = get_post_meta($course_id, 'ld_course_steps', true);
+            if (!empty($course_steps) && isset($course_steps['sfwd-lessons'])) {
+                $lesson_ids = $course_steps['sfwd-lessons'];
+            }
+        }
+        
+        // Method 4: Try legacy format with course ID in meta key
+        if (empty($lesson_ids)) {
+            $lesson_ids = get_post_meta($course_id, 'ld_course_' . $course_id, true);
+        }
+        
+        // Method 5: Query all lessons with this course_id in their meta
+        if (empty($lesson_ids)) {
             $lesson_ids = $wpdb->get_col($wpdb->prepare(
                 "SELECT post_id FROM {$wpdb->postmeta} 
                 WHERE meta_key = 'course_id' AND meta_value = %d",
@@ -168,17 +193,50 @@ class IELTS_CM_LearnDash_Converter {
             ));
         }
         
+        // Method 6: Fallback - use meta_query to find lessons with this course_id
+        // This is a last resort to ensure we don't miss any lessons
         if (empty($lesson_ids)) {
+            $matching_lessons = get_posts(array(
+                'post_type' => 'sfwd-lessons',
+                'posts_per_page' => -1,
+                'post_status' => array('publish', 'draft'),
+                'fields' => 'ids',
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+                'meta_query' => array(
+                    array(
+                        'key' => 'course_id',
+                        'value' => $course_id,
+                        'compare' => '='
+                    )
+                )
+            ));
+            
+            if (!empty($matching_lessons)) {
+                $lesson_ids = $matching_lessons;
+            }
+        }
+        
+        if (empty($lesson_ids)) {
+            $this->log("No lessons found for course ID {$course_id}", 'warning');
             return array();
+        }
+        
+        // Ensure lesson_ids is an array
+        if (!is_array($lesson_ids)) {
+            $lesson_ids = array($lesson_ids);
         }
         
         $lessons = get_posts(array(
             'post_type' => 'sfwd-lessons',
             'posts_per_page' => -1,
             'post__in' => $lesson_ids,
+            'post_status' => array('publish', 'draft'),
             'orderby' => 'menu_order',
             'order' => 'ASC'
         ));
+        
+        $this->log("Found " . count($lessons) . " lessons for course ID {$course_id}");
         
         return $lessons;
     }
