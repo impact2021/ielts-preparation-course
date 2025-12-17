@@ -18,6 +18,9 @@ class IELTS_CM_Frontend {
         
         // Auto-mark lessons as complete when viewed
         add_action('wp', array($this, 'auto_mark_lesson_on_view'));
+        
+        // Auto-mark resources (sublessons) as complete when viewed
+        add_action('wp', array($this, 'auto_mark_resource_on_view'));
     }
     
     /**
@@ -120,5 +123,44 @@ class IELTS_CM_Frontend {
         // Auto-mark the lesson as complete
         $progress_tracker = new IELTS_CM_Progress_Tracker();
         $progress_tracker->auto_mark_lesson_complete($user_id, $lesson_id, $course_id);
+    }
+    
+    /**
+     * Auto-mark resource (sublesson) as complete when user views it
+     * This runs on every page load, but only acts on resource pages
+     */
+    public function auto_mark_resource_on_view() {
+        // Only process for resource pages
+        if (!is_singular('ielts_resource')) {
+            return;
+        }
+        
+        $user_id = get_current_user_id();
+        if (!$user_id) {
+            return;
+        }
+        
+        $resource_id = get_the_ID();
+        $lesson_id = get_post_meta($resource_id, '_ielts_cm_lesson_id', true);
+        
+        if (!$lesson_id) {
+            return;
+        }
+        
+        $course_id = get_post_meta($lesson_id, '_ielts_cm_course_id', true);
+        
+        if (!$course_id) {
+            return;
+        }
+        
+        // Check if user is enrolled
+        $enrollment = new IELTS_CM_Enrollment();
+        if (!$enrollment->is_enrolled($user_id, $course_id)) {
+            return;
+        }
+        
+        // Mark the resource as complete
+        $progress_tracker = new IELTS_CM_Progress_Tracker();
+        $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, true);
     }
 }
