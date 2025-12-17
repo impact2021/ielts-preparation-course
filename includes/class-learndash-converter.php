@@ -674,7 +674,9 @@ class IELTS_CM_LearnDash_Converter {
                 $converted['type'] = 'multiple_choice';
                 $answers = $this->get_question_answers($ld_question->ID);
                 if (!empty($answers)) {
-                    // Store options as newline-separated string for template compatibility
+                    // Store options as newline-separated string for template compatibility.
+                    // The single-quiz.php template expects options as a string that gets split by newlines
+                    // (see line 80: $options = array_filter(explode("\n", $question['options']));)
                     $options_array = array_column($answers, 'text');
                     $converted['options'] = implode("\n", $options_array);
                     

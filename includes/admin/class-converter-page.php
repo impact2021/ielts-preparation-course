@@ -484,17 +484,8 @@ class IELTS_CM_Converter_Page {
         
         // Get course ID from quiz meta
         $course_id = get_post_meta($quiz_id, 'course_id', true);
-        if (!$course_id) {
-            // Try to find a course this quiz belongs to
-            global $wpdb;
-            $course_id = $wpdb->get_var($wpdb->prepare(
-                "SELECT meta_value FROM {$wpdb->postmeta} 
-                WHERE post_id = %d AND meta_key = 'course_id' LIMIT 1",
-                $quiz_id
-            ));
-        }
         
-        // If still no course, try to convert the quiz's course first or create a placeholder
+        // If no course found, cannot convert
         if (!$course_id) {
             wp_send_json_error(array(
                 'message' => __('Cannot convert quiz: No associated course found. Please convert the course first.', 'ielts-course-manager')

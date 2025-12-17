@@ -1337,26 +1337,6 @@ class IELTS_CM_Admin {
     }
     
     /**
-     * Find existing converted quiz
-     */
-    public function find_existing_quiz($ld_quiz_id) {
-        global $wpdb;
-        
-        $existing_id = $wpdb->get_var($wpdb->prepare(
-            "SELECT pm.post_id 
-            FROM {$wpdb->postmeta} pm
-            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
-            WHERE pm.meta_key = '_ld_original_id' 
-            AND pm.meta_value = %d 
-            AND p.post_type = 'ielts_quiz'
-            LIMIT 1",
-            $ld_quiz_id
-        ));
-        
-        return $existing_id ? intval($existing_id) : false;
-    }
-    
-    /**
      * Add JavaScript for quiz conversion on LearnDash quiz admin page
      */
     public function learndash_quiz_conversion_scripts() {
@@ -1378,7 +1358,7 @@ class IELTS_CM_Admin {
                 var quizId = $btn.data('quiz-id');
                 var $status = $btn.siblings('.ielts-convert-status');
                 
-                if (!confirm('<?php echo esc_js(__('Convert this quiz to IELTS Course Manager format? This will create a new IELTS quiz with questions from the LearnDash quiz.', 'ielts-course-manager')); ?>')) {
+                if (!confirm('<?php echo esc_js(__('Convert this quiz to IELTS format?', 'ielts-course-manager')); ?>')) {
                     return;
                 }
                 
