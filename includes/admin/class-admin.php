@@ -1032,10 +1032,13 @@ class IELTS_CM_Admin {
         } elseif ($column === 'resources') {
             global $wpdb;
             $resource_ids = $wpdb->get_col($wpdb->prepare("
-                SELECT DISTINCT post_id 
-                FROM {$wpdb->postmeta} 
-                WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
-                   OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
+                SELECT DISTINCT pm.post_id 
+                FROM {$wpdb->postmeta} pm
+                INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+                WHERE p.post_type = 'ielts_resource'
+                  AND p.post_status = 'publish'
+                  AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
+                    OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
             ", $post_id, '%' . $wpdb->esc_like(serialize(strval($post_id))) . '%'));
             echo count($resource_ids);
         }
