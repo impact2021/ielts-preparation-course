@@ -400,6 +400,7 @@ class IELTS_CM_Enrollment_Page {
         
         $user_id = intval($_POST['user_id']);
         $course_id = intval($_POST['course_id']);
+        // Set end time to 23:59:59 so course access extends through the full end date
         $end_date = sanitize_text_field($_POST['end_date']) . ' 23:59:59';
         
         // Update enrollment

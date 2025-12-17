@@ -387,7 +387,7 @@ class IELTS_CM_Shortcodes {
                     </tr>
                     <tr>
                         <th><?php _e('Name:', 'ielts-course-manager'); ?></th>
-                        <td><?php echo esc_html($user->first_name . ' ' . $user->last_name); ?></td>
+                        <td><?php echo esc_html(trim($user->first_name . ' ' . $user->last_name)); ?></td>
                     </tr>
                 </table>
             </div>
