@@ -67,8 +67,8 @@ $user_id = get_current_user_id();
                                 <?php _e('Your Progress:', 'ielts-course-manager'); ?>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress-fill" style="width: <?php echo round($completion, 1); ?>%;">
-                                    <span class="progress-text"><?php echo round($completion, 1); ?>%</span>
+                                <div class="progress-fill" style="width: <?php echo esc_attr(round($completion, 1)); ?>%;">
+                                    <span class="progress-text"><?php echo esc_html(round($completion, 1)); ?>%</span>
                                 </div>
                             </div>
                         </div>

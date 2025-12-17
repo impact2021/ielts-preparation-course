@@ -127,6 +127,7 @@ class IELTS_CM_Enrollment {
             foreach ($all_courses as $course) {
                 $formatted_courses[] = (object) array(
                     'course_id' => $course->ID,
+                    // Using current time for compatibility with code expecting enrolled_date
                     'enrolled_date' => current_time('mysql'),
                     'course_end_date' => null // No end date for admin/subscriber access
                 );
