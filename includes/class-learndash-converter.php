@@ -370,12 +370,17 @@ class IELTS_CM_LearnDash_Converter {
         }
         
         // Get quizzes that are associated with lessons
-        $lesson_quiz_ids = $wpdb->get_col($wpdb->prepare(
-            "SELECT DISTINCT pm.post_id 
-            FROM {$wpdb->postmeta} pm
-            WHERE pm.meta_key = 'lesson_id' 
-            AND pm.post_id IN (" . implode(',', array_map('intval', $all_quiz_ids)) . ")"
-        ));
+        $lesson_quiz_ids = array();
+        if (!empty($all_quiz_ids)) {
+            $placeholders = implode(',', array_fill(0, count($all_quiz_ids), '%d'));
+            $lesson_quiz_ids = $wpdb->get_col($wpdb->prepare(
+                "SELECT DISTINCT pm.post_id 
+                FROM {$wpdb->postmeta} pm
+                WHERE pm.meta_key = 'lesson_id' 
+                AND pm.post_id IN ({$placeholders})",
+                $all_quiz_ids
+            ));
+        }
         
         // Return only quizzes that are NOT associated with lessons
         $course_only_quiz_ids = array_diff($all_quiz_ids, $lesson_quiz_ids);
@@ -644,11 +649,10 @@ class IELTS_CM_LearnDash_Converter {
         $pro_id = get_post_meta($question_id, '_question_pro_id', true);
         if ($pro_id) {
             global $wpdb;
-            $pro_table = $wpdb->prefix . 'learndash_pro_quiz_question';
             $answer_table = $wpdb->prefix . 'learndash_pro_quiz_answer';
             
             // Check if tables exist
-            if ($wpdb->get_var("SHOW TABLES LIKE '{$answer_table}'") === $answer_table) {
+            if ($wpdb->get_var($wpdb->prepare("SHOW TABLES LIKE %s", $answer_table)) === $answer_table) {
                 $results = $wpdb->get_results($wpdb->prepare(
                     "SELECT answer, correct FROM {$answer_table} WHERE question_id = %d ORDER BY sort_pos ASC",
                     $pro_id
