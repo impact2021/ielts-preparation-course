@@ -43,8 +43,14 @@
 
 /* Admin columns */
 .column-lessons,
-.column-enrolled,
-.column-course,
-.column-resources {
+.column-enrolled {
     width: 100px;
+}
+
+.column-course {
+    width: 250px; /* Expanded from 100px to show full course names */
+}
+
+.column-resources {
+    width: 120px;
 }

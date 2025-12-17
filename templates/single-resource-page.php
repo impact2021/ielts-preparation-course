@@ -51,6 +51,22 @@ body.ielts-resource-single .content-area {
             
             $user_id = get_current_user_id();
             $progress_tracker = new IELTS_CM_Progress_Tracker();
+            
+            // Automatically mark resource as accessed when user views it
+            if ($user_id && $lesson_id && $course_id) {
+                $enrollment = new IELTS_CM_Enrollment();
+                $is_enrolled = $enrollment->is_enrolled($user_id, $course_id);
+                
+                if ($is_enrolled) {
+                    // Check if already completed
+                    $is_already_completed = $progress_tracker->is_resource_completed($user_id, $lesson_id, $resource_id);
+                    
+                    // If not already completed, mark as complete automatically
+                    if (!$is_already_completed) {
+                        $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, true);
+                    }
+                }
+            }
             ?>
             
             <div class="ielts-single-resource">
@@ -105,53 +121,7 @@ body.ielts-resource-single .content-area {
                     </div>
                 <?php endif; ?>
                 
-                <?php if ($user_id && $lesson_id && $course_id): ?>
-                    <div class="resource-actions">
-                        <?php
-                        $enrollment = new IELTS_CM_Enrollment();
-                        $is_enrolled = $enrollment->is_enrolled($user_id, $course_id);
-                        
-                        if ($is_enrolled && !$is_completed):
-                        ?>
-                            <button id="mark-complete-btn" class="button button-primary">
-                                <?php _e('Mark as Complete', 'ielts-course-manager'); ?>
-                            </button>
-                            
-                            <script>
-                            jQuery(document).ready(function($) {
-                                $('#mark-complete-btn').on('click', function() {
-                                    var $btn = $(this);
-                                    $btn.prop('disabled', true).text('<?php _e('Saving...', 'ielts-course-manager'); ?>');
-                                    
-                                    $.ajax({
-                                        url: '<?php echo esc_url(admin_url('admin-ajax.php')); ?>',
-                                        type: 'POST',
-                                        data: {
-                                            action: 'ielts_cm_mark_complete',
-                                            nonce: '<?php echo esc_js(wp_create_nonce('ielts_cm_nonce')); ?>',
-                                            lesson_id: <?php echo intval($lesson_id); ?>,
-                                            resource_id: <?php echo intval($resource_id); ?>,
-                                            course_id: <?php echo intval($course_id); ?>
-                                        },
-                                        success: function(response) {
-                                            if (response.success) {
-                                                location.reload();
-                                            } else {
-                                                alert('<?php _e('Error marking as complete', 'ielts-course-manager'); ?>');
-                                                $btn.prop('disabled', false).text('<?php _e('Mark as Complete', 'ielts-course-manager'); ?>');
-                                            }
-                                        },
-                                        error: function() {
-                                            alert('<?php _e('Error marking as complete', 'ielts-course-manager'); ?>');
-                                            $btn.prop('disabled', false).text('<?php _e('Mark as Complete', 'ielts-course-manager'); ?>');
-                                        }
-                                    });
-                                });
-                            });
-                            </script>
-                        <?php endif; ?>
-                    </div>
-                <?php endif; ?>
+                <?php // Removed manual "Mark as Complete" button - now auto-marks on page view ?>
             </div>
             
             <style>
