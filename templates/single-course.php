@@ -16,6 +16,12 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
 
 <div class="ielts-single-course">
     <div class="course-header">
+        <div class="course-breadcrumb">
+            <a href="<?php echo home_url('/'); ?>"><?php _e('Home', 'ielts-course-manager'); ?></a>
+            <span class="separator">&raquo;</span>
+            <span><?php echo esc_html($course->post_title); ?></span>
+        </div>
+        
         <h2><?php echo esc_html($course->post_title); ?></h2>
         
         <?php if ($is_enrolled): ?>
