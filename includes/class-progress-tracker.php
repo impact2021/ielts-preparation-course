@@ -135,21 +135,23 @@ class IELTS_CM_Progress_Tracker {
         ", $course_id, '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%'));
         
         // Get all resources (sub lessons) for all lessons in this course
+        // Using a single query to avoid N+1 problem
         $resource_ids = array();
         if (!empty($lesson_ids)) {
-            foreach ($lesson_ids as $lesson_id) {
-                $lesson_resources = $wpdb->get_col($wpdb->prepare("
+            $lesson_ids = array_map('intval', $lesson_ids);
+            $lesson_count = count($lesson_ids);
+            if ($lesson_count > 0 && $lesson_count <= self::MAX_QUERY_ITEMS) {
+                $lesson_placeholders = implode(',', array_fill(0, $lesson_count, '%d'));
+                $resource_ids = $wpdb->get_col($wpdb->prepare("
                     SELECT DISTINCT pm.post_id 
                     FROM {$wpdb->postmeta} pm
                     INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
                     WHERE p.post_type = 'ielts_resource'
                       AND p.post_status = 'publish'
-                      AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
-                        OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
-                ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
-                $resource_ids = array_merge($resource_ids, $lesson_resources);
+                      AND pm.meta_key = '_ielts_cm_lesson_id' 
+                      AND pm.meta_value IN ($lesson_placeholders)
+                ", $lesson_ids));
             }
-            $resource_ids = array_unique($resource_ids);
         }
         
         $total_resources = count($resource_ids);
