@@ -121,7 +121,7 @@ body.ielts-resource-single .content-area {
                     </div>
                 <?php endif; ?>
                 
-                <?php // Removed manual "Mark as Complete" button - now auto-marks on page view ?>
+                <?php // Auto-completion implemented: resources are automatically marked complete when viewed by enrolled users ?>
             </div>
             
             <style>
