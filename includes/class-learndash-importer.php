@@ -102,13 +102,20 @@ class IELTS_CM_LearnDash_Importer {
         
         $this->log("Processing {$post_type} (ID: {$old_id}): {$title}");
         
+        // Get menu order for proper ordering
+        $menu_order = 0;
+        if (isset($item->children($namespaces['wp'])->menu_order)) {
+            $menu_order = (int)$item->children($namespaces['wp'])->menu_order;
+        }
+        
         // Create the post
         $post_data = array(
             'post_title' => $title,
             'post_content' => $content,
             'post_status' => $post_status === 'publish' ? 'publish' : 'draft',
             'post_type' => $new_post_type,
-            'post_date' => (string)$item->children($namespaces['wp'])->post_date
+            'post_date' => (string)$item->children($namespaces['wp'])->post_date,
+            'menu_order' => $menu_order
         );
         
         // Check if already exists (by title)
@@ -277,11 +284,11 @@ class IELTS_CM_LearnDash_Importer {
         // Common mappings
         $mappings = array(
             // Course mappings
-            'course_id' => '_ielts_cm_course_id',
+            'course_id' => ($post_type === 'sfwd-quiz' || $post_type === 'sfwd-topic') ? '_ld_original_course_id' : '_ielts_cm_course_id',
             'ld_course_' => '_ld_original_course_id',
             
             // Lesson mappings
-            'lesson_id' => '_ielts_cm_lesson_id',
+            'lesson_id' => ($post_type === 'sfwd-quiz' || $post_type === 'sfwd-topic') ? '_ld_original_lesson_id' : '_ielts_cm_lesson_id',
             'course' => '_ld_original_course_id',
             
             // Quiz mappings

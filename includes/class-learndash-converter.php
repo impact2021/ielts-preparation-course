@@ -100,10 +100,10 @@ class IELTS_CM_LearnDash_Converter {
             $this->convert_lesson($lesson, $course_id, $new_course_id);
         }
         
-        // Get and convert quizzes
+        // Get and convert quizzes associated with course
         $quizzes = $this->get_course_quizzes($course_id);
         foreach ($quizzes as $quiz) {
-            $this->convert_quiz($quiz, $course_id, $new_course_id);
+            $this->convert_quiz($quiz, $course_id, $new_course_id, null);
         }
         
         $this->log('Course conversion completed successfully');
@@ -235,6 +235,12 @@ class IELTS_CM_LearnDash_Converter {
             $this->convert_topic($topic, $lesson->ID, $new_id);
         }
         
+        // Convert quizzes associated with this lesson
+        $lesson_quizzes = $this->get_lesson_quizzes($lesson->ID);
+        foreach ($lesson_quizzes as $quiz) {
+            $this->convert_quiz($quiz, $old_course_id, $new_course_id, $new_id);
+        }
+        
         return $new_id;
     }
     
@@ -347,15 +353,58 @@ class IELTS_CM_LearnDash_Converter {
     }
     
     /**
-     * Get quizzes for a course
+     * Get quizzes for a course (not associated with specific lessons)
      */
     private function get_course_quizzes($course_id) {
         global $wpdb;
         
-        $quiz_ids = $wpdb->get_col($wpdb->prepare(
+        // Get all quizzes for this course
+        $all_quiz_ids = $wpdb->get_col($wpdb->prepare(
             "SELECT post_id FROM {$wpdb->postmeta} 
             WHERE meta_key = 'course_id' AND meta_value = %d",
             $course_id
+        ));
+        
+        if (empty($all_quiz_ids)) {
+            return array();
+        }
+        
+        // Get quizzes that are associated with lessons
+        $lesson_quiz_ids = $wpdb->get_col($wpdb->prepare(
+            "SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            WHERE pm.meta_key = 'lesson_id' 
+            AND pm.post_id IN (" . implode(',', array_map('intval', $all_quiz_ids)) . ")"
+        ));
+        
+        // Return only quizzes that are NOT associated with lessons
+        $course_only_quiz_ids = array_diff($all_quiz_ids, $lesson_quiz_ids);
+        
+        if (empty($course_only_quiz_ids)) {
+            return array();
+        }
+        
+        $quizzes = get_posts(array(
+            'post_type' => 'sfwd-quiz',
+            'posts_per_page' => -1,
+            'post__in' => $course_only_quiz_ids,
+            'orderby' => 'menu_order',
+            'order' => 'ASC'
+        ));
+        
+        return $quizzes;
+    }
+    
+    /**
+     * Get quizzes for a lesson
+     */
+    private function get_lesson_quizzes($lesson_id) {
+        global $wpdb;
+        
+        $quiz_ids = $wpdb->get_col($wpdb->prepare(
+            "SELECT post_id FROM {$wpdb->postmeta} 
+            WHERE meta_key = 'lesson_id' AND meta_value = %d",
+            $lesson_id
         ));
         
         if (empty($quiz_ids)) {
@@ -376,13 +425,19 @@ class IELTS_CM_LearnDash_Converter {
     /**
      * Convert a quiz
      */
-    private function convert_quiz($quiz, $old_course_id, $new_course_id) {
+    private function convert_quiz($quiz, $old_course_id, $new_course_id, $new_lesson_id = null) {
         $this->log('Converting quiz: ' . esc_html($quiz->post_title));
         
         // Check if already converted
         $existing_id = $this->find_existing_quiz($quiz->ID);
         if ($existing_id) {
-            $this->log("Quiz already converted (ID: {$existing_id}). Skipping.", 'warning');
+            $this->log("Quiz already converted (ID: {$existing_id}). Linking to lesson if needed.", 'warning');
+            
+            // If we have a lesson_id and the quiz is already converted, link it to the lesson
+            if ($new_lesson_id) {
+                $this->link_quiz_to_lesson($existing_id, $new_lesson_id);
+            }
+            
             $this->converted_quizzes[$quiz->ID] = $existing_id;
             return $existing_id;
         }
@@ -412,6 +467,11 @@ class IELTS_CM_LearnDash_Converter {
         update_post_meta($new_id, '_ielts_cm_course_ids', array($new_course_id));
         update_post_meta($new_id, '_ielts_cm_course_id', $new_course_id);
         
+        // Link to lesson if provided
+        if ($new_lesson_id) {
+            $this->link_quiz_to_lesson($new_id, $new_lesson_id);
+        }
+        
         // Copy pass percentage if exists
         $pass_percentage = get_post_meta($quiz->ID, 'quiz_pass_percentage', true);
         if ($pass_percentage) {
@@ -432,6 +492,22 @@ class IELTS_CM_LearnDash_Converter {
         $this->log("Quiz converted successfully (New ID: {$new_id})");
         
         return $new_id;
+    }
+    
+    /**
+     * Link quiz to lesson
+     */
+    private function link_quiz_to_lesson($quiz_id, $lesson_id) {
+        $lesson_ids = get_post_meta($quiz_id, '_ielts_cm_lesson_ids', true);
+        if (!is_array($lesson_ids)) {
+            $lesson_ids = array();
+        }
+        
+        if (!in_array($lesson_id, $lesson_ids)) {
+            $lesson_ids[] = $lesson_id;
+            update_post_meta($quiz_id, '_ielts_cm_lesson_ids', $lesson_ids);
+            update_post_meta($quiz_id, '_ielts_cm_lesson_id', $lesson_id);
+        }
     }
     
     /**
