@@ -193,24 +193,27 @@ class IELTS_CM_LearnDash_Converter {
             ));
         }
         
-        // Method 6: Fallback - get all published lessons with no filtering
+        // Method 6: Fallback - use meta_query to find lessons with this course_id
         // This is a last resort to ensure we don't miss any lessons
         if (empty($lesson_ids)) {
-            $all_lessons = get_posts(array(
+            $matching_lessons = get_posts(array(
                 'post_type' => 'sfwd-lessons',
                 'posts_per_page' => -1,
                 'post_status' => array('publish', 'draft'),
                 'fields' => 'ids',
                 'orderby' => 'menu_order',
-                'order' => 'ASC'
+                'order' => 'ASC',
+                'meta_query' => array(
+                    array(
+                        'key' => 'course_id',
+                        'value' => $course_id,
+                        'compare' => '='
+                    )
+                )
             ));
             
-            // Filter lessons that have this course in their course_id meta
-            foreach ($all_lessons as $lesson_id) {
-                $lesson_course_id = get_post_meta($lesson_id, 'course_id', true);
-                if ($lesson_course_id == $course_id) {
-                    $lesson_ids[] = $lesson_id;
-                }
+            if (!empty($matching_lessons)) {
+                $lesson_ids = $matching_lessons;
             }
         }
         
