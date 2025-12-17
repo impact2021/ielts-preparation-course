@@ -16,7 +16,7 @@ class IELTS_CM_Frontend {
         // Add body classes
         add_filter('body_class', array($this, 'add_body_classes'));
         
-        // Auto-mark lessons as complete when viewed
+        // Record lesson access when viewed (not marking as complete automatically)
         add_action('wp', array($this, 'auto_mark_lesson_on_view'));
         
         // Auto-mark resources (sublessons) as complete when viewed
@@ -93,7 +93,8 @@ class IELTS_CM_Frontend {
     }
     
     /**
-     * Auto-mark lesson as complete when user views it
+     * Record lesson access when user views it (but don't mark as complete)
+     * Lessons are only marked as complete when ALL resources are viewed and ALL quizzes are attempted
      * This runs on every page load, but only acts on lesson pages
      */
     public function auto_mark_lesson_on_view() {
@@ -120,9 +121,9 @@ class IELTS_CM_Frontend {
             return;
         }
         
-        // Auto-mark the lesson as complete
+        // Record lesson access (but don't mark as complete - that happens automatically when all requirements are met)
         $progress_tracker = new IELTS_CM_Progress_Tracker();
-        $progress_tracker->auto_mark_lesson_complete($user_id, $lesson_id, $course_id);
+        $progress_tracker->record_progress($user_id, $course_id, $lesson_id, null, false);
     }
     
     /**

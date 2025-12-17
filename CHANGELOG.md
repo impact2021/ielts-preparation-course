@@ -2,6 +2,22 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [1.11] - 2024-12-17
+
+### Fixed
+- **Sublesson Auto-Completion**: Fixed issue where sublessons were not showing as complete when viewed
+  - Modified `auto_mark_lesson_on_view()` to only record lesson access, not mark as complete
+  - Lessons are now only marked complete when ALL resources are viewed AND ALL quizzes are attempted
+  - Resources (sublessons) continue to be marked complete automatically when viewed by enrolled users
+  
+### Changed
+- **Courses Grid Layout**: Improved course listing display for better consistency
+  - Desktop (>1200px): 5 courses per row
+  - Tablet (900-1200px): 3 courses per row
+  - Small tablet (768-900px): 2 courses per row
+  - Mobile (<768px): 1 course per row
+  - Removed auto-fill behavior for more predictable layout
+
 ## [1.7.0] - 2024-12-17
 
 ### Added

@@ -5,7 +5,7 @@
 /* Course List */
 .ielts-courses-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     margin: 20px 0;
 }
@@ -551,6 +551,18 @@ body.ielts-course-archive .content-area {
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+    .ielts-courses-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .ielts-courses-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .ielts-courses-list {
         grid-template-columns: 1fr;
