@@ -355,27 +355,36 @@ class IELTS_CM_Converter_Page {
         $topics_count = 0;
         
         if (!empty($lesson_ids)) {
-            $placeholders = implode(',', array_fill(0, count($lesson_ids), '%d'));
+            // Ensure lesson_ids is an array and contains only integers for SQL safety
+            if (!is_array($lesson_ids)) {
+                $lesson_ids = array($lesson_ids);
+            }
+            $lesson_ids = array_filter(array_map('intval', $lesson_ids));
             
-            // Count actual lesson posts
-            $lessons_count = $wpdb->get_var($wpdb->prepare(
-                "SELECT COUNT(*) 
-                FROM {$wpdb->posts}
-                WHERE ID IN ({$placeholders})
-                AND post_type = 'sfwd-lessons'",
-                $lesson_ids
-            ));
-            
-            // Count topics (lesson pages) that belong to these lessons
-            $topics_count = $wpdb->get_var($wpdb->prepare(
-                "SELECT COUNT(*) 
-                FROM {$wpdb->postmeta} pm
-                INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
-                WHERE pm.meta_key = 'lesson_id' 
-                AND pm.meta_value IN ({$placeholders})
-                AND p.post_type = 'sfwd-topic'",
-                $lesson_ids
-            ));
+            // Double-check we still have valid IDs after filtering
+            if (!empty($lesson_ids)) {
+                $placeholders = implode(',', array_fill(0, count($lesson_ids), '%d'));
+                
+                // Count actual lesson posts
+                $lessons_count = $wpdb->get_var($wpdb->prepare(
+                    "SELECT COUNT(*) 
+                    FROM {$wpdb->posts}
+                    WHERE ID IN ({$placeholders})
+                    AND post_type = 'sfwd-lessons'",
+                    $lesson_ids
+                ));
+                
+                // Count topics (lesson pages) that belong to these lessons
+                $topics_count = $wpdb->get_var($wpdb->prepare(
+                    "SELECT COUNT(*) 
+                    FROM {$wpdb->postmeta} pm
+                    INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+                    WHERE pm.meta_key = 'lesson_id' 
+                    AND pm.meta_value IN ({$placeholders})
+                    AND p.post_type = 'sfwd-topic'",
+                    $lesson_ids
+                ));
+            }
         }
         
         // Count quizzes - both course-level and lesson-level
