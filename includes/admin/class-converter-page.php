@@ -332,30 +332,64 @@ class IELTS_CM_Converter_Page {
     
     /**
      * Count course content
+     * Uses the same logic as the converter to ensure accurate counts
      */
     private function count_course_content($course_id) {
         global $wpdb;
         
-        $lessons = $wpdb->get_var($wpdb->prepare(
-            "SELECT COUNT(*) 
-            FROM {$wpdb->postmeta} pm
-            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
-            WHERE pm.meta_key = 'course_id' 
-            AND pm.meta_value = %d 
-            AND p.post_type = 'sfwd-lessons'",
-            $course_id
-        ));
+        // Get lessons using the same logic as the converter
+        // First try to get from ld_course_{course_id} meta (LearnDash's primary storage method)
+        $lesson_ids = get_post_meta($course_id, 'ld_course_' . $course_id, true);
         
-        $topics = $wpdb->get_var($wpdb->prepare(
-            "SELECT COUNT(*) 
-            FROM {$wpdb->postmeta} pm
-            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
-            WHERE pm.meta_key = 'course_id' 
-            AND pm.meta_value = %d 
-            AND p.post_type = 'sfwd-topic'",
-            $course_id
-        ));
+        // Fallback to course_id meta query if ld_course_ meta is empty
+        if (empty($lesson_ids)) {
+            $lesson_ids = $wpdb->get_col($wpdb->prepare(
+                "SELECT post_id FROM {$wpdb->postmeta} 
+                WHERE meta_key = 'course_id' AND meta_value = %d",
+                $course_id
+            ));
+        }
         
+        // Filter to only valid lesson posts
+        $lessons_count = 0;
+        $topics_count = 0;
+        
+        if (!empty($lesson_ids)) {
+            // Ensure lesson_ids is an array and contains only integers for SQL safety
+            if (!is_array($lesson_ids)) {
+                $lesson_ids = array($lesson_ids);
+            }
+            $lesson_ids = array_filter(array_map('intval', $lesson_ids));
+            
+            // Double-check we still have valid IDs after filtering
+            if (!empty($lesson_ids)) {
+                // Create placeholders for wpdb->prepare() - standard WordPress pattern for IN clauses
+                // Safe because lesson_ids are sanitized to integers above and count matches array length
+                $placeholders = implode(',', array_fill(0, count($lesson_ids), '%d'));
+                
+                // Count actual lesson posts
+                $lessons_count = $wpdb->get_var($wpdb->prepare(
+                    "SELECT COUNT(*) 
+                    FROM {$wpdb->posts}
+                    WHERE ID IN ({$placeholders})
+                    AND post_type = 'sfwd-lessons'",
+                    $lesson_ids
+                ));
+                
+                // Count topics (lesson pages) that belong to these lessons
+                $topics_count = $wpdb->get_var($wpdb->prepare(
+                    "SELECT COUNT(*) 
+                    FROM {$wpdb->postmeta} pm
+                    INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+                    WHERE pm.meta_key = 'lesson_id' 
+                    AND pm.meta_value IN ({$placeholders})
+                    AND p.post_type = 'sfwd-topic'",
+                    $lesson_ids
+                ));
+            }
+        }
+        
+        // Count quizzes - both course-level and lesson-level
         $quizzes = $wpdb->get_var($wpdb->prepare(
             "SELECT COUNT(*) 
             FROM {$wpdb->postmeta} pm
@@ -367,8 +401,8 @@ class IELTS_CM_Converter_Page {
         ));
         
         return array(
-            'lessons' => intval($lessons),
-            'topics' => intval($topics),
+            'lessons' => intval($lessons_count),
+            'topics' => intval($topics_count),
             'quizzes' => intval($quizzes)
         );
     }
