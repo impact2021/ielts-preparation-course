@@ -58,8 +58,11 @@ See [PLUGIN_README.md](PLUGIN_README.md) for detailed documentation on:
 - See [XML_CONVERSION_README.md](XML_CONVERSION_README.md) for conversion details
 - Perfect for migrating between different servers or sites
 
-**NEW: XML Exercises Creator** - See [XML_EXERCISES_CREATOR_GUIDE.md](XML_EXERCISES_CREATOR_GUIDE.md)
+**NEW in v1.16: Enhanced XML Exercises Creator** - See [XML_EXERCISES_CREATOR_GUIDE.md](XML_EXERCISES_CREATOR_GUIDE.md)
 - Automatically create exercise pages from converted XML
+- **Groups related questions** into multi-question exercises
+- **WYSIWYG editor** preserves HTML, images, and formatting
+- **Placeholder values** pre-filled for options and correct answers
 - Navigate to "IELTS Courses > Create Exercises from XML"
 - Process all 4,547 exercises or test with a smaller batch
 - Auto-detects True/False questions and maps question types

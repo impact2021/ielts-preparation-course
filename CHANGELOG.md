@@ -2,6 +2,39 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [1.16] - 2025-12-18
+
+### Enhanced
+- **XML Exercises Creator - Question Grouping**: Questions that belong to the same quiz are now grouped into multi-question exercises
+  - Automatically detects quiz associations via `ld_quiz_*` metadata
+  - Creates single exercises with multiple questions instead of separate exercises per question
+  - Intelligently extracts base quiz titles (e.g., "Quiz Name Q1" → "Quiz Name")
+  - Displays question count in results table
+  - Significantly reduces number of exercise posts created
+
+- **XML Exercises Creator - Placeholder Values**: Pre-fills options and correct answers with helpful examples
+  - Multiple choice: Pre-fills with "Option A", "Option B", "Option C", "Option D" and correct answer "0"
+  - True/False: Pre-fills correct answer with "true" (placeholder to be updated)
+  - Fill in the blank: Pre-fills with "[Enter the expected answer here]"
+  - Makes it clear what format is expected for each question type
+
+- **Question Editor - WYSIWYG Support**: Question text now uses WordPress visual editor
+  - HTML content including images is properly preserved from XML
+  - Full visual editing capabilities with formatting toolbar
+  - Media buttons for adding/editing images
+  - Existing questions display in rich text editor
+  - New questions show helper text about HTML support
+
+- **Data Sanitization**: Improved security for question content
+  - Uses `wp_kses_post()` instead of `sanitize_textarea_field()` for question text
+  - Allows safe HTML while preventing XSS attacks
+  - Preserves formatting, images, and other HTML elements
+
+### Updated
+- Documentation updated to reflect new features
+- XML_EXERCISES_CREATOR_GUIDE.md updated with placeholder information
+- README.md highlights v1.16 improvements
+
 ## [1.15] - 2025-12-18
 
 ### Added
