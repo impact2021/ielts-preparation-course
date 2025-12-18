@@ -31,6 +31,7 @@ class IELTS_CM_Admin {
         add_action('wp_ajax_ielts_cm_update_page_order', array($this, 'ajax_update_page_order'));
         add_action('wp_ajax_ielts_cm_update_content_order', array($this, 'ajax_update_content_order'));
         add_action('wp_ajax_ielts_cm_push_to_subsites', array($this, 'ajax_push_to_subsites'));
+        add_action('wp_ajax_ielts_cm_get_lessons_by_courses', array($this, 'ajax_get_lessons_by_courses'));
         
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
@@ -1000,6 +1001,36 @@ class IELTS_CM_Admin {
                 }
             });
             
+            // Handle question expand/collapse
+            $(document).on('click', '.question-header', function(e) {
+                // Don't toggle if clicking on drag handle
+                if ($(e.target).hasClass('question-drag-handle')) {
+                    return;
+                }
+                
+                var $questionItem = $(this).closest('.question-item');
+                var $content = $questionItem.find('.question-content');
+                var $toggle = $(this).find('.question-toggle');
+                
+                if ($content.is(':visible')) {
+                    $content.slideUp(200);
+                    $toggle.removeClass('dashicons-arrow-down-alt2').addClass('dashicons-arrow-right-alt2');
+                } else {
+                    $content.slideDown(200);
+                    $toggle.removeClass('dashicons-arrow-right-alt2').addClass('dashicons-arrow-down-alt2');
+                }
+            });
+            
+            // Collapse all questions by default on page load
+            $('.question-item').each(function() {
+                var $content = $(this).find('.question-content');
+                var $toggle = $(this).find('.question-toggle');
+                if ($content.length && $toggle.length) {
+                    $content.hide();
+                    $toggle.removeClass('dashicons-arrow-down-alt2').addClass('dashicons-arrow-right-alt2');
+                }
+            });
+            
             // Duplicate question
             $(document).on('click', '.duplicate-question', function() {
                 var $question = $(this).closest('.question-item');
@@ -1054,6 +1085,55 @@ class IELTS_CM_Admin {
                 
                 updateQuestionWarning();
             });
+            
+            // Handle course selection change to filter lessons
+            $('#ielts_cm_quiz_course_ids').on('change', function() {
+                var selectedCourseIds = $(this).val() || [];
+                var selectedLessonIds = $('#ielts_cm_quiz_lesson_ids').val() || [];
+                
+                // Show loading indicator
+                var $lessonSelect = $('#ielts_cm_quiz_lesson_ids');
+                var $loading = $('<div class="spinner is-active" style="float: none; margin: 10px 0;"></div>');
+                $lessonSelect.after($loading);
+                $lessonSelect.prop('disabled', true);
+                
+                // Fetch filtered lessons
+                $.ajax({
+                    url: ajaxurl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_get_lessons_by_courses',
+                        nonce: '<?php echo wp_create_nonce('ielts_cm_quiz_lessons_filter'); ?>',
+                        course_ids: selectedCourseIds,
+                        selected_lesson_ids: selectedLessonIds
+                    },
+                    success: function(response) {
+                        if (response.success && response.data.lessons) {
+                            // Clear and repopulate lessons dropdown
+                            $lessonSelect.empty();
+                            
+                            $.each(response.data.lessons, function(i, lesson) {
+                                var option = $('<option></option>')
+                                    .attr('value', lesson.id)
+                                    .text(lesson.title);
+                                if (lesson.selected) {
+                                    option.prop('selected', true);
+                                }
+                                $lessonSelect.append(option);
+                            });
+                        }
+                        
+                        // Remove loading indicator
+                        $loading.remove();
+                        $lessonSelect.prop('disabled', false);
+                    },
+                    error: function() {
+                        $loading.remove();
+                        $lessonSelect.prop('disabled', false);
+                        alert('<?php _e('Failed to load lessons. Please try again.', 'ielts-course-manager'); ?>');
+                    }
+                });
+            });
         });
         </script>
         <?php
@@ -1107,8 +1187,12 @@ class IELTS_CM_Admin {
         ?>
         <div class="question-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9; position: relative;">
             <span class="dashicons dashicons-menu question-drag-handle" style="position: absolute; top: 15px; left: 15px; color: #999; cursor: move;"></span>
-            <h4 style="margin-left: 30px;"><?php printf(__('Question %d', 'ielts-course-manager'), $index + 1); ?></h4>
+            <div class="question-header" style="display: flex; align-items: center; margin-left: 30px; cursor: pointer; margin-bottom: 15px;">
+                <span class="dashicons dashicons-arrow-right-alt2 question-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>
+                <h4 style="margin: 0; flex: 1;"><?php printf(__('Question %d', 'ielts-course-manager'), $index + 1); ?></h4>
+            </div>
             
+            <div class="question-content" style="display: none;">
             <p>
                 <label><?php _e('Question Type', 'ielts-course-manager'); ?></label><br>
                 <select name="questions[<?php echo $index; ?>][type]" class="question-type" style="width: 100%;">
@@ -1257,6 +1341,7 @@ class IELTS_CM_Admin {
                 <button type="button" class="button duplicate-question"><?php _e('Duplicate Question', 'ielts-course-manager'); ?></button>
                 <button type="button" class="button remove-question"><?php _e('Remove Question', 'ielts-course-manager'); ?></button>
             </div>
+            </div><!-- .question-content -->
         </div>
         <?php
     }
@@ -1269,8 +1354,12 @@ class IELTS_CM_Admin {
         ?>
         <div class="question-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9; position: relative;">
             <span class="dashicons dashicons-menu question-drag-handle" style="position: absolute; top: 15px; left: 15px; color: #999; cursor: move;"></span>
-            <h4 style="margin-left: 30px;"><?php _e('New Question', 'ielts-course-manager'); ?></h4>
+            <div class="question-header" style="display: flex; align-items: center; margin-left: 30px; cursor: pointer; margin-bottom: 15px;">
+                <span class="dashicons dashicons-arrow-down-alt2 question-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>
+                <h4 style="margin: 0; flex: 1;"><?php _e('New Question', 'ielts-course-manager'); ?></h4>
+            </div>
             
+            <div class="question-content">
             <p>
                 <label><?php _e('Question Type', 'ielts-course-manager'); ?></label><br>
                 <select name="questions[QUESTION_INDEX][type]" class="question-type" style="width: 100%;">
@@ -1358,6 +1447,7 @@ class IELTS_CM_Admin {
                 <button type="button" class="button duplicate-question"><?php _e('Duplicate Question', 'ielts-course-manager'); ?></button>
                 <button type="button" class="button remove-question"><?php _e('Remove Question', 'ielts-course-manager'); ?></button>
             </div>
+            </div><!-- .question-content -->
         </div>
         <?php
         return ob_get_clean();
@@ -2471,5 +2561,74 @@ class IELTS_CM_Admin {
                 'results' => $formatted_results
             ));
         }
+    }
+    
+    /**
+     * AJAX handler to get lessons filtered by course IDs
+     */
+    public function ajax_get_lessons_by_courses() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_quiz_lessons_filter')) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        // Check user capabilities
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(array('message' => __('You do not have permission to do this', 'ielts-course-manager')));
+        }
+        
+        $course_ids = isset($_POST['course_ids']) ? array_map('intval', $_POST['course_ids']) : array();
+        $selected_lesson_ids = isset($_POST['selected_lesson_ids']) ? array_map('intval', $_POST['selected_lesson_ids']) : array();
+        
+        if (empty($course_ids)) {
+            // Return all lessons if no courses selected
+            $lessons = get_posts(array(
+                'post_type' => 'ielts_lesson',
+                'posts_per_page' => -1,
+                'orderby' => 'title',
+                'order' => 'ASC',
+                'post_status' => array('publish', 'draft', 'pending', 'private')
+            ));
+        } else {
+            // Get lessons associated with selected courses
+            global $wpdb;
+            $course_ids_placeholder = implode(',', array_fill(0, count($course_ids), '%d'));
+            
+            $lesson_ids = $wpdb->get_col($wpdb->prepare("
+                SELECT DISTINCT post_id 
+                FROM {$wpdb->postmeta} 
+                WHERE meta_key = '_ielts_cm_course_ids' 
+                AND (
+                    " . implode(' OR ', array_map(function($id) use ($wpdb) {
+                        return $wpdb->prepare("meta_value LIKE %s", '%' . $wpdb->esc_like(serialize(strval($id))) . '%');
+                    }, $course_ids)) . "
+                )
+            "));
+            
+            if (empty($lesson_ids)) {
+                wp_send_json_success(array('lessons' => array()));
+                return;
+            }
+            
+            $lessons = get_posts(array(
+                'post_type' => 'ielts_lesson',
+                'posts_per_page' => -1,
+                'post__in' => $lesson_ids,
+                'orderby' => 'title',
+                'order' => 'ASC',
+                'post_status' => array('publish', 'draft', 'pending', 'private')
+            ));
+        }
+        
+        $lessons_data = array();
+        foreach ($lessons as $lesson) {
+            $lessons_data[] = array(
+                'id' => $lesson->ID,
+                'title' => $lesson->post_title,
+                'selected' => in_array($lesson->ID, $selected_lesson_ids)
+            );
+        }
+        
+        wp_send_json_success(array('lessons' => $lessons_data));
     }
 }
