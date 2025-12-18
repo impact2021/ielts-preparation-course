@@ -9,11 +9,14 @@ The XML Exercises Creator is a tool that automatically creates exercise pages fr
 The XML Exercises Creator:
 
 1. **Reads the converted XML file** - Processes the `ieltstestonline.WordPress.2025-12-17.xml` file
-2. **Extracts exercise data** - Retrieves question content, metadata, and settings from each `ielts_quiz` item
-3. **Creates exercise posts** - Generates WordPress posts of type `ielts_quiz` with the extracted data
-4. **Maps question types** - Automatically converts LearnDash question types to IELTS Course Manager types
-5. **Detects True/False questions** - Identifies True/False questions based on title and content patterns
-6. **Preserves metadata** - Maintains point values and quiz associations from the original data
+2. **Groups related questions** - Automatically groups questions that belong to the same quiz into multi-question exercises
+3. **Extracts exercise data** - Retrieves question content, metadata, and settings from each `ielts_quiz` item
+4. **Creates exercise posts** - Generates WordPress posts of type `ielts_quiz` with the extracted data
+5. **Preserves HTML content** - Maintains images, formatting, and other HTML elements in question text
+6. **Adds placeholder values** - Pre-fills options and correct answers with helpful examples
+7. **Maps question types** - Automatically converts LearnDash question types to IELTS Course Manager types
+8. **Detects True/False questions** - Identifies True/False questions based on title and content patterns
+9. **Preserves metadata** - Maintains point values and quiz associations from the original data
 
 ## Features
 
@@ -81,32 +84,37 @@ Before creating exercises, configure these options:
 
 ### Step 4: Edit Exercises
 
-After creation, each exercise needs manual editing to add:
+After creation, each exercise will have **placeholder values** that you need to review and update:
 
 #### For Multiple Choice Questions:
-1. **Options**: Add answer options, one per line, e.g.:
+1. **Options**: Placeholder options are pre-filled (Option A, Option B, etc.). Replace these with your actual answer choices:
    ```
-   Option A
-   Option B
-   Option C
-   Option D
+   Your first option
+   Your second option
+   Your third option
+   Your fourth option
    ```
-2. **Correct Answer**: Enter the option number (starting from 0):
+2. **Correct Answer**: Pre-filled with `0` (first option). Update to the correct option number:
    - `0` for first option
    - `1` for second option
    - `2` for third option, etc.
 
 #### For True/False Questions:
-1. **Correct Answer**: Enter one of:
+1. **Correct Answer**: Pre-filled with `true`. Update to the correct answer:
    - `true`
    - `false`
    - `not_given`
 
 #### For Fill in the Blank Questions:
-1. **Correct Answer**: Enter the expected answer (case-insensitive matching)
+1. **Correct Answer**: Pre-filled with a placeholder. Replace with the expected answer (case-insensitive matching)
 
 #### For Essay Questions:
 - No correct answer needed (requires manual grading)
+
+#### Question Text Editor:
+- Questions are displayed in a **WYSIWYG editor** that preserves HTML formatting
+- Images and other HTML content from the XML are automatically included
+- You can edit formatting, add or remove images, and adjust styling as needed
 
 ### Step 5: Assign and Publish
 

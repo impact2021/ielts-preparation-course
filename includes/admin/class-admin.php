@@ -672,10 +672,23 @@ class IELTS_CM_Admin {
                 </select>
             </p>
             
-            <p>
-                <label><?php _e('Question Text', 'ielts-course-manager'); ?></label><br>
-                <textarea name="questions[<?php echo $index; ?>][question]" rows="3" style="width: 100%;"><?php echo esc_textarea(isset($question['question']) ? $question['question'] : ''); ?></textarea>
-            </p>
+            <div>
+                <label><?php _e('Question Text', 'ielts-course-manager'); ?></label>
+                <?php
+                $editor_id = 'question_' . $index;
+                $content = isset($question['question']) ? $question['question'] : '';
+                wp_editor($content, $editor_id, array(
+                    'textarea_name' => 'questions[' . $index . '][question]',
+                    'textarea_rows' => 8,
+                    'media_buttons' => true,
+                    'teeny' => false,
+                    'tinymce' => array(
+                        'toolbar1' => 'bold,italic,underline,strikethrough,bullist,numlist,blockquote,hr,alignleft,aligncenter,alignright,link,unlink,wp_more,spellchecker,fullscreen,wp_adv',
+                        'toolbar2' => 'formatselect,forecolor,pastetext,removeformat,charmap,outdent,indent,undo,redo,wp_help'
+                    )
+                ));
+                ?>
+            </div>
             
             <p class="options-field" style="<?php echo (isset($question['type']) && $question['type'] !== 'multiple_choice') ? 'display:none;' : ''; ?>">
                 <label><?php _e('Options (one per line)', 'ielts-course-manager'); ?></label><br>
@@ -717,7 +730,8 @@ class IELTS_CM_Admin {
             
             <p>
                 <label><?php _e('Question Text', 'ielts-course-manager'); ?></label><br>
-                <textarea name="questions[QUESTION_INDEX][question]" rows="3" style="width: 100%;"></textarea>
+                <textarea name="questions[QUESTION_INDEX][question]" rows="8" style="width: 100%;"></textarea>
+                <small><?php _e('HTML is supported. You can paste HTML with images and formatting. Save the post to enable the visual editor for this question.', 'ielts-course-manager'); ?></small>
             </p>
             
             <p class="options-field">
@@ -831,7 +845,7 @@ class IELTS_CM_Admin {
                     }
                     $questions[] = array(
                         'type' => sanitize_text_field($question['type']),
-                        'question' => sanitize_textarea_field($question['question']),
+                        'question' => wp_kses_post($question['question']), // Allow HTML with images
                         'options' => isset($question['options']) ? sanitize_textarea_field($question['options']) : '',
                         'correct_answer' => isset($question['correct_answer']) ? sanitize_text_field($question['correct_answer']) : '',
                         'points' => isset($question['points']) ? floatval($question['points']) : 1
