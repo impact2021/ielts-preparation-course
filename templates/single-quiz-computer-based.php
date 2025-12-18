@@ -171,7 +171,8 @@ if (!$reading_texts) {
                                         break;
                                         
                                     case 'summary_completion':
-                                        // Display paragraph with blank(s) marked by [blank] or similar
+                                        // Summary completion - similar to fill in the blank but for paragraph/summary contexts
+                                        // The question text should contain the paragraph with a blank indicated
                                         ?>
                                         <div class="question-answer">
                                             <input type="text" 
