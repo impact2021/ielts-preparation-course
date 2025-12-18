@@ -25,22 +25,14 @@ if (!$reading_texts) {
 ?>
 
 <div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>">
+    <?php 
+    // Check if in fullscreen mode
+    $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
+    ?>
+    
     <div class="quiz-header">
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <h2 style="margin: 0;"><?php echo esc_html($quiz->post_title); ?></h2>
-            <?php 
-            // Show fullscreen button if not already in fullscreen mode
-            $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
-            if (!$is_fullscreen): 
-            ?>
-                <a href="<?php echo add_query_arg('fullscreen', '1', get_permalink($quiz->ID)); ?>" 
-                   class="button button-secondary ielts-fullscreen-btn"
-                   data-fullscreen-url="<?php echo esc_url(add_query_arg('fullscreen', '1', get_permalink($quiz->ID))); ?>"
-                   style="white-space: nowrap;">
-                    <span class="dashicons dashicons-fullscreen-alt" style="vertical-align: middle;"></span>
-                    <?php _e('Open Fullscreen', 'ielts-course-manager'); ?>
-                </a>
-            <?php endif; ?>
         </div>
         
         <?php if ($course_id): ?>
@@ -75,7 +67,21 @@ if (!$reading_texts) {
         </div>
     </div>
     
-    <?php if (!empty($questions) && is_user_logged_in()): ?>
+    <?php if (!$is_fullscreen): ?>
+        <!-- Force fullscreen mode for CBT tests -->
+        <div class="cbt-fullscreen-notice" style="text-align: center; padding: 40px 20px; background: #f9f9f9; border: 2px solid #0073aa; border-radius: 8px; margin: 20px 0;">
+            <p style="font-size: 1.2em; margin-bottom: 20px; color: #333;">
+                <?php _e('This computer-based test must be viewed in fullscreen mode for the best experience.', 'ielts-course-manager'); ?>
+            </p>
+            <a href="<?php echo add_query_arg('fullscreen', '1', get_permalink($quiz->ID)); ?>" 
+               class="button button-primary button-large ielts-fullscreen-btn"
+               data-fullscreen-url="<?php echo esc_url(add_query_arg('fullscreen', '1', get_permalink($quiz->ID))); ?>"
+               style="font-size: 1.1em; padding: 12px 30px;">
+                <span class="dashicons dashicons-fullscreen-alt" style="vertical-align: middle; font-size: 1.2em;"></span>
+                <?php _e('Open in Fullscreen', 'ielts-course-manager'); ?>
+            </a>
+        </div>
+    <?php elseif (!empty($questions) && is_user_logged_in()): ?>
         <form id="ielts-quiz-form" class="quiz-form">
             <div class="computer-based-container">
                 <!-- Left Column: Reading Texts -->
@@ -107,7 +113,7 @@ if (!$reading_texts) {
                             <div class="quiz-question" id="question-<?php echo $index; ?>" data-reading-text-id="<?php echo esc_attr($question['reading_text_id'] ?? ''); ?>">
                                 <h4 class="question-number">
                                     <?php printf(__('Question %d', 'ielts-course-manager'), $index + 1); ?>
-                                    <span class="question-points">(<?php echo $question['points']; ?> <?php _e('points', 'ielts-course-manager'); ?>)</span>
+                                    <span class="question-points">(<?php printf(_n('%s point', '%s points', $question['points'], 'ielts-course-manager'), $question['points']); ?>)</span>
                                 </h4>
                                 
                                 <div class="question-text"><?php echo wp_kses_post($question['question']); ?></div>

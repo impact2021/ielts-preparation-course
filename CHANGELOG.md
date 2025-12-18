@@ -2,6 +2,23 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.7] - 2025-12-18
+
+### Changed
+- **Version Update**: Updated plugin version to 2.7
+- **Fullscreen Mode for CBT Tests**: Computer-based tests now require fullscreen mode
+  - Quiz content is hidden when not in fullscreen mode
+  - Users must click "Open in Fullscreen" button to access the test
+  - Improved fullscreen layout with better space utilization
+  - Removed unnecessary spacing below computer-based-container
+  - Question navigation now properly contained within viewport (no scrolling required)
+  - Optimized layout uses full viewport height efficiently
+
+### Fixed
+- **Grammar Issue**: Fixed "points" text to correctly show "point" (singular) when a question is worth 1 point
+  - Applied to both standard quiz layout and computer-based test layout
+  - Dynamic pluralization based on point value
+
 ## [2.6] - 2025-12-18
 
 ### Added
