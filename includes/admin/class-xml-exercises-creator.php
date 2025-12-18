@@ -495,7 +495,9 @@ class IELTS_CM_XML_Exercises_Creator {
                 'question' => $question_text,
                 'options' => $options,
                 'correct_answer' => $correct_answer,
-                'points' => $question_points
+                'points' => $question_points,
+                'correct_feedback' => '',
+                'incorrect_feedback' => ''
             );
         }
         
@@ -614,7 +616,9 @@ class IELTS_CM_XML_Exercises_Creator {
                 'question' => $this->clean_content($content),
                 'options' => $options,
                 'correct_answer' => $correct_answer,
-                'points' => $question_points
+                'points' => $question_points,
+                'correct_feedback' => '',
+                'incorrect_feedback' => ''
             )
         );
         
