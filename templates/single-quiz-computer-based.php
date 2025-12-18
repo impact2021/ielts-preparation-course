@@ -334,16 +334,17 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     background: #dc3232;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 6px 12px;
     cursor: pointer;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.4;
 }
 #cbt-fullscreen-modal .modal-close-btn:hover {
     background: #a00;
 }
 #cbt-fullscreen-modal #modal-content {
-    padding: 60px 20px 20px;
+    padding: 50px 20px 20px;
 }
 #cbt-fullscreen-modal .computer-based-container {
     display: flex;
@@ -357,6 +358,23 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     overflow-y: auto;
     padding: 20px;
     border: 1px solid #e0e0e0;
+    position: relative;
+}
+#cbt-fullscreen-modal .quiz-timer-fullscreen {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #fff;
+    border-bottom: 2px solid #0073aa;
+    padding: 10px 20px;
+    text-align: center;
+    margin: -20px -20px 20px -20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+#cbt-fullscreen-modal .computer-based-container {
+    margin-top: 0;
 }
 #cbt-fullscreen-modal .reading-column {
     border-right: 2px solid #e0e0e0;
@@ -388,6 +406,12 @@ jQuery(document).ready(function($) {
     if (isFullscreenMode) {
         // Already in fullscreen, show the form
         form.show();
+        
+        // Initialize timer for fullscreen mode
+        var timerMinutes = $('.ielts-computer-based-quiz').data('timer-minutes');
+        if (timerMinutes && timerMinutes > 0) {
+            initializeTimer(timerMinutes, form);
+        }
     }
     
     $('#open-modal-btn').on('click', function(e) {
