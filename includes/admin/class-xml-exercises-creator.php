@@ -122,14 +122,15 @@ class IELTS_CM_XML_Exercises_Creator {
                         <li><?php _e('Question type will be auto-detected and mapped (single choice → multiple choice, true/false, etc.)', 'ielts-course-manager'); ?></li>
                         <li><?php _e('Points will be preserved from the XML metadata', 'ielts-course-manager'); ?></li>
                         <li><?php _e('Exercises will be created as drafts for review and editing', 'ielts-course-manager'); ?></li>
-                        <li><?php _e('You will need to manually add answer options and correct answers', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('Placeholder options and answers will be pre-filled to help guide you', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('You will need to review and update the answer options and correct answers', 'ielts-course-manager'); ?></li>
                         <li><?php _e('You can add different feedback for correct and incorrect answers in the quiz handler', 'ielts-course-manager'); ?></li>
                     </ul>
                     
                     <div class="notice notice-info inline" style="margin-top: 15px;">
                         <p>
                             <strong><?php _e('Note:', 'ielts-course-manager'); ?></strong>
-                            <?php _e('The XML export does not contain answer options or feedback. These must be added manually after creation by editing each exercise.', 'ielts-course-manager'); ?>
+                            <?php _e('The XML export does not contain answer options or feedback. Placeholder values will be added to help you understand the format - you must review and update them after creation by editing each exercise.', 'ielts-course-manager'); ?>
                         </p>
                     </div>
                     
@@ -416,11 +417,19 @@ class IELTS_CM_XML_Exercises_Creator {
         $options = '';
         $correct_answer = '';
         
-        // Pre-fill True/False questions with default options
-        if ($ielts_type === 'true_false') {
-            // For true/false questions, we set a default but user still needs to set the correct answer
-            $correct_answer = ''; // User must specify which is correct
+        // Add helpful placeholders based on question type
+        if ($ielts_type === 'multiple_choice') {
+            // Add placeholder options to help user understand the format
+            $options = "Option A\nOption B\nOption C\nOption D";
+            $correct_answer = '0'; // Placeholder - user needs to change this to the correct option number
+        } elseif ($ielts_type === 'true_false') {
+            // For true/false questions, provide clear instructions
+            $correct_answer = 'true'; // Placeholder - user must change to: true, false, or not_given
+        } elseif ($ielts_type === 'fill_blank') {
+            // For fill in the blank, add a helpful placeholder
+            $correct_answer = '[Enter the expected answer here]';
         }
+        // Essay type needs no correct answer
         
         $question_data = array(
             array(
