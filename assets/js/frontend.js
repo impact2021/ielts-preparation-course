@@ -329,8 +329,65 @@
                 setTimeout(function() {
                     questionElement.removeClass('highlight-question');
                 }, 1000);
+                
+                // Switch reading text if needed
+                switchReadingText(questionElement);
             }
         });
+        
+        // Function to switch reading text based on question
+        function switchReadingText(questionElement) {
+            var readingTextId = questionElement.data('reading-text-id');
+            
+            // Only switch if the question has a linked reading text
+            if (readingTextId !== '' && readingTextId !== undefined) {
+                // Hide all reading texts
+                $('.reading-text-section').hide();
+                // Show the linked reading text
+                $('#reading-text-' + readingTextId).fadeIn(300);
+                
+                // Scroll reading column to top
+                $('.reading-column').animate({
+                    scrollTop: 0
+                }, 300);
+            }
+        }
+        
+        // Detect scroll position and switch reading text automatically
+        if ($('.ielts-computer-based-quiz').length) {
+            var questionsColumn = $('.questions-column');
+            var scrollTimeout;
+            
+            questionsColumn.on('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(function() {
+                    // Find the question most visible in viewport
+                    var columnScrollTop = questionsColumn.scrollTop();
+                    var columnHeight = questionsColumn.height();
+                    var viewportCenter = columnScrollTop + (columnHeight / 2);
+                    
+                    var closestQuestion = null;
+                    var closestDistance = Infinity;
+                    var columnOffset = questionsColumn.offset().top;
+                    
+                    $('.quiz-question').each(function() {
+                        var $question = $(this);
+                        var questionTop = $question.offset().top - columnOffset + columnScrollTop;
+                        var questionCenter = questionTop + ($question.height() / 2);
+                        var distance = Math.abs(questionCenter - viewportCenter);
+                        
+                        if (distance < closestDistance) {
+                            closestDistance = distance;
+                            closestQuestion = $question;
+                        }
+                    });
+                    
+                    if (closestQuestion) {
+                        switchReadingText(closestQuestion);
+                    }
+                }, 150); // Debounce scroll events
+            });
+        }
         
         // Track answered questions in computer-based layout using event delegation
         $('.ielts-computer-based-quiz').on('change', 'input[type="radio"]', function() {
