@@ -244,7 +244,7 @@
                 type: 'POST',
                 data: {
                     action: 'ielts_cm_add_lesson_to_course',
-                    nonce: typeof ieltsCMAdmin !== 'undefined' ? ieltsCMAdmin.lessonOrderNonce : '',
+                    nonce: typeof ieltsCMAdmin !== 'undefined' ? ieltsCMAdmin.courseLessonsNonce : '',
                     course_id: courseId,
                     lesson_id: lessonId
                 },
@@ -313,7 +313,7 @@
                 type: 'POST',
                 data: {
                     action: 'ielts_cm_remove_lesson_from_course',
-                    nonce: typeof ieltsCMAdmin !== 'undefined' ? ieltsCMAdmin.lessonOrderNonce : '',
+                    nonce: typeof ieltsCMAdmin !== 'undefined' ? ieltsCMAdmin.courseLessonsNonce : '',
                     course_id: courseId,
                     lesson_id: lessonId
                 },
@@ -375,7 +375,7 @@
                 type: 'POST',
                 data: {
                     action: 'ielts_cm_add_content_to_lesson',
-                    nonce: typeof ieltsCMAdmin !== 'undefined' ? ieltsCMAdmin.contentOrderNonce : '',
+                    nonce: typeof ieltsCMAdmin !== 'undefined' ? ieltsCMAdmin.lessonContentNonce : '',
                     lesson_id: lessonId,
                     content_id: contentId,
                     content_type: postType
@@ -449,7 +449,7 @@
                 type: 'POST',
                 data: {
                     action: 'ielts_cm_remove_content_from_lesson',
-                    nonce: typeof ieltsCMAdmin !== 'undefined' ? ieltsCMAdmin.contentOrderNonce : '',
+                    nonce: typeof ieltsCMAdmin !== 'undefined' ? ieltsCMAdmin.lessonContentNonce : '',
                     lesson_id: lessonId,
                     content_id: contentId
                 },

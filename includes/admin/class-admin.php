@@ -36,6 +36,7 @@ class IELTS_CM_Admin {
         add_action('wp_ajax_ielts_cm_remove_lesson_from_course', array($this, 'ajax_remove_lesson_from_course'));
         add_action('wp_ajax_ielts_cm_remove_content_from_lesson', array($this, 'ajax_remove_content_from_lesson'));
         add_action('wp_ajax_ielts_cm_get_available_exercises', array($this, 'ajax_get_available_exercises'));
+        add_action('wp_ajax_ielts_cm_get_available_sublessons', array($this, 'ajax_get_available_sublessons'));
         add_action('wp_ajax_ielts_cm_add_content_to_lesson', array($this, 'ajax_add_content_to_lesson'));
         
         // Register settings
@@ -509,8 +510,29 @@ class IELTS_CM_Admin {
                         }
                     });
                 } else {
-                    // Load sublessons (resources) - already loaded on page load
-                    location.reload();
+                    // Load sublessons (resources)
+                    $.ajax({
+                        url: ajaxurl,
+                        type: 'POST',
+                        data: {
+                            action: 'ielts_cm_get_available_sublessons',
+                            nonce: '<?php echo wp_create_nonce('ielts_cm_lesson_content'); ?>',
+                            lesson_id: lessonId
+                        },
+                        success: function(response) {
+                            if (response.success) {
+                                $('#lesson-content-selector').empty();
+                                $.each(response.data.sublessons, function(i, sublesson) {
+                                    $('#lesson-content-selector').append(
+                                        $('<option></option>')
+                                            .attr('value', sublesson.id)
+                                            .attr('data-type', 'sublesson')
+                                            .text(sublesson.title)
+                                    );
+                                });
+                            }
+                        }
+                    });
                 }
             });
         });
@@ -2710,18 +2732,26 @@ class IELTS_CM_Admin {
         } else {
             // Get lessons associated with selected courses
             global $wpdb;
-            $course_ids_placeholder = implode(',', array_fill(0, count($course_ids), '%d'));
             
-            $lesson_ids = $wpdb->get_col($wpdb->prepare("
+            // Build the WHERE clause with proper prepared statements
+            $like_conditions = array();
+            $prepare_args = array('_ielts_cm_course_ids');
+            
+            foreach ($course_ids as $course_id) {
+                $like_conditions[] = "meta_value LIKE %s";
+                $prepare_args[] = '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%';
+            }
+            
+            $where_clause = implode(' OR ', $like_conditions);
+            
+            $query = "
                 SELECT DISTINCT post_id 
                 FROM {$wpdb->postmeta} 
-                WHERE meta_key = '_ielts_cm_course_ids' 
-                AND (
-                    " . implode(' OR ', array_map(function($id) use ($wpdb) {
-                        return $wpdb->prepare("meta_value LIKE %s", '%' . $wpdb->esc_like(serialize(strval($id))) . '%');
-                    }, $course_ids)) . "
-                )
-            "));
+                WHERE meta_key = %s 
+                AND (" . $where_clause . ")
+            ";
+            
+            $lesson_ids = $wpdb->get_col($wpdb->prepare($query, $prepare_args));
             
             if (empty($lesson_ids)) {
                 wp_send_json_success(array('lessons' => array()));
@@ -2917,6 +2947,60 @@ class IELTS_CM_Admin {
         }
         
         wp_send_json_success(array('exercises' => $exercises_data));
+    }
+    
+    /**
+     * AJAX handler to get available sublessons not already in a lesson
+     */
+    public function ajax_get_available_sublessons() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_lesson_content')) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        // Check user capabilities
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(array('message' => __('You do not have permission to do this', 'ielts-course-manager')));
+        }
+        
+        $lesson_id = isset($_POST['lesson_id']) ? intval($_POST['lesson_id']) : 0;
+        
+        if (!$lesson_id) {
+            wp_send_json_error(array('message' => __('Invalid data', 'ielts-course-manager')));
+        }
+        
+        // Get sublessons not already in this lesson
+        global $wpdb;
+        $resource_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT post_id 
+            FROM {$wpdb->postmeta} 
+            WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+               OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
+        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+        
+        $args = array(
+            'post_type' => 'ielts_resource',
+            'posts_per_page' => -1,
+            'orderby' => 'title',
+            'order' => 'ASC',
+            'post_status' => array('publish', 'draft')
+        );
+        
+        if (!empty($resource_ids)) {
+            $args['post__not_in'] = $resource_ids;
+        }
+        
+        $sublessons = get_posts($args);
+        
+        $sublessons_data = array();
+        foreach ($sublessons as $sublesson) {
+            $sublessons_data[] = array(
+                'id' => $sublesson->ID,
+                'title' => $sublesson->post_title
+            );
+        }
+        
+        wp_send_json_success(array('sublessons' => $sublessons_data));
     }
     
     /**
