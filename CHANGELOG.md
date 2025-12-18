@@ -2,6 +2,25 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.2] - 2025-12-18
+
+### Fixed
+- **Database Table Creation**: Fixed issue where `wp_ielts_cm_site_connections` table would not exist on sites that installed the plugin before version 2.0
+  - Added automatic database table creation check on plugin version update
+  - All required tables are now created or verified when version changes
+  - Ensures multi-site sync functionality works on all installations
+
+- **Computer-Based Layout Heights**: Fixed viewport height issue for computer-based IELTS test layout
+  - Changed from fixed `max-height: 700px` to viewport-relative heights using `calc(100vh - Xpx)`
+  - Desktop layout now uses `calc(100vh - 300px)` to properly account for headers and page elements
+  - Tablet layout uses `calc(100vh - 400px)` for stacked columns
+  - Mobile layout uses `calc(100vh - 450px)` for optimal mobile viewing
+  - Layout now properly fills the screen regardless of header size
+
+### Changed
+- Updated plugin version to 2.2
+- Database upgrade routine now runs on version update to ensure all tables exist
+
 ## [2.1] - 2025-12-18
 
 ### Added - Computer-Based IELTS Test Layout

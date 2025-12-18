@@ -106,6 +106,9 @@ class IELTS_Course_Manager {
         
         // If version has changed, flush rewrite rules and update version
         if ($current_version !== IELTS_CM_VERSION) {
+            // Run upgrade routine to ensure all database tables exist
+            IELTS_CM_Database::create_tables();
+            
             flush_rewrite_rules();
             update_option('ielts_cm_version', IELTS_CM_VERSION);
             // Set transient after flushing to confirm version is updated
