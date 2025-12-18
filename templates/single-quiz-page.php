@@ -11,8 +11,19 @@ if (!defined('ABSPATH')) {
 // Check if fullscreen mode is requested
 $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
 
-// Only load header if not in fullscreen mode
-if (!$is_fullscreen) {
+// In fullscreen mode, create minimal HTML structure with all styles
+if ($is_fullscreen) {
+    ?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class('ielts-quiz-fullscreen'); ?>>
+    <?php
+} else {
+    // Load full header
     get_header();
 }
 ?>
@@ -106,8 +117,16 @@ body.ielts-quiz-single .content-area {
 </div>
 
 <?php
-// Only load footer if not in fullscreen mode
-if (!$is_fullscreen) {
+// Load footer or close HTML structure based on mode
+if ($is_fullscreen) {
+    // Close fullscreen HTML structure
+    wp_footer();
+    ?>
+</body>
+</html>
+    <?php
+} else {
+    // Load full footer
     get_footer();
 }
 ?>

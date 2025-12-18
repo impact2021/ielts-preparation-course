@@ -207,7 +207,7 @@ class IELTS_CM_Shortcodes {
                                     <tr>
                                         <th><?php _e('Quiz', 'ielts-course-manager'); ?></th>
                                         <th><?php _e('Score', 'ielts-course-manager'); ?></th>
-                                        <th><?php _e('Percentage', 'ielts-course-manager'); ?></th>
+                                        <th><?php _e('Result', 'ielts-course-manager'); ?></th>
                                         <th><?php _e('Date', 'ielts-course-manager'); ?></th>
                                     </tr>
                                 </thead>
@@ -215,11 +215,13 @@ class IELTS_CM_Shortcodes {
                                     <?php foreach ($quiz_results as $result): 
                                         $quiz = get_post($result->quiz_id);
                                         if ($quiz) {
+                                            // Get display score (band score or percentage)
+                                            $display_score_data = $quiz_handler->get_display_score($quiz->ID, $result->score, $result->percentage);
                                             ?>
                                             <tr>
                                                 <td><?php echo esc_html($quiz->post_title); ?></td>
                                                 <td><?php echo esc_html($result->score . ' / ' . $result->max_score); ?></td>
-                                                <td><?php echo round($result->percentage, 1); ?>%</td>
+                                                <td><?php echo esc_html($display_score_data['display']); ?></td>
                                                 <td><?php echo esc_html(mysql2date('F j, Y', $result->submitted_date)); ?></td>
                                             </tr>
                                             <?php

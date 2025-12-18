@@ -132,7 +132,14 @@
                         
                         var html = '<div class="quiz-result ' + (isPassing ? 'pass' : 'fail') + '">';
                         html += '<h3>' + (isPassing ? 'Congratulations! You Passed!' : 'Quiz Completed') + '</h3>';
-                        html += '<p><strong>Your Score:</strong> ' + result.score + ' / ' + result.max_score + ' (' + result.percentage + '%)</p>';
+                        
+                        // Display score based on type (band score or percentage)
+                        if (result.display_type === 'band') {
+                            html += '<p><strong>Your Score:</strong> ' + result.score + ' / ' + result.max_score + ' correct</p>';
+                            html += '<p><strong>IELTS Band Score:</strong> ' + result.display_score + '</p>';
+                        } else {
+                            html += '<p><strong>Your Score:</strong> ' + result.score + ' / ' + result.max_score + ' (' + result.percentage + '%)</p>';
+                        }
                         
                         if (isPassing) {
                             html += '<p>Great job! You have passed this quiz.</p>';
