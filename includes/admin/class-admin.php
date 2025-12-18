@@ -633,18 +633,22 @@ class IELTS_CM_Admin {
                 
                 if (type === 'multiple_choice') {
                     container.find('.options-field').show();
+                    container.find('.option-feedback-field').show();
                     container.find('.correct-answer-field label').text('<?php _e('Correct Answer (Option number)', 'ielts-course-manager'); ?>');
                     container.find('.correct-answer-field').show();
                 } else if (type === 'true_false') {
                     container.find('.options-field').hide();
+                    container.find('.option-feedback-field').hide();
                     container.find('.correct-answer-field label').text('<?php _e('Correct Answer (true/false/not_given)', 'ielts-course-manager'); ?>');
                     container.find('.correct-answer-field').show();
                 } else if (type === 'fill_blank') {
                     container.find('.options-field').hide();
+                    container.find('.option-feedback-field').hide();
                     container.find('.correct-answer-field label').text('<?php _e('Correct Answer', 'ielts-course-manager'); ?>');
                     container.find('.correct-answer-field').show();
                 } else if (type === 'essay') {
                     container.find('.options-field').hide();
+                    container.find('.option-feedback-field').hide();
                     container.find('.correct-answer-field').hide();
                 }
             });
@@ -705,6 +709,32 @@ class IELTS_CM_Admin {
                 <input type="number" name="questions[<?php echo $index; ?>][points]" value="<?php echo esc_attr(isset($question['points']) ? $question['points'] : 1); ?>" min="0" step="0.5" style="width: 100%;">
             </p>
             
+            <div style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
+                <h5 style="margin-top: 0;"><?php _e('Feedback Messages', 'ielts-course-manager'); ?></h5>
+                
+                <p>
+                    <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="questions[<?php echo $index; ?>][correct_feedback]" rows="3" style="width: 100%;"><?php echo esc_textarea(isset($question['correct_feedback']) ? $question['correct_feedback'] : ''); ?></textarea>
+                    <small><?php _e('Shown when the student answers correctly. HTML is supported.', 'ielts-course-manager'); ?></small>
+                </p>
+                
+                <p class="incorrect-feedback-field">
+                    <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="questions[<?php echo $index; ?>][incorrect_feedback]" rows="3" style="width: 100%;"><?php echo esc_textarea(isset($question['incorrect_feedback']) ? $question['incorrect_feedback'] : ''); ?></textarea>
+                    <small><?php _e('Shown when the student answers incorrectly. For multiple choice, this is a fallback if no option-specific feedback is provided. HTML is supported.', 'ielts-course-manager'); ?></small>
+                </p>
+                
+                <div class="option-feedback-field" style="<?php echo (isset($question['type']) && $question['type'] !== 'multiple_choice') ? 'display:none;' : ''; ?>">
+                    <label><?php _e('Per-Option Feedback (Multiple Choice)', 'ielts-course-manager'); ?></label><br>
+                    <small style="display: block; margin-bottom: 10px;"><?php _e('Optional: Provide specific feedback for each wrong answer option. Enter one feedback per line, matching the order of options above. Leave blank to use the general incorrect feedback. HTML is supported.', 'ielts-course-manager'); ?></small>
+                    <textarea name="questions[<?php echo $index; ?>][option_feedback_raw]" rows="4" style="width: 100%;"><?php 
+                        if (isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                            echo esc_textarea(implode("\n", $question['option_feedback']));
+                        }
+                    ?></textarea>
+                </div>
+            </div>
+            
             <button type="button" class="button remove-question"><?php _e('Remove Question', 'ielts-course-manager'); ?></button>
         </div>
         <?php
@@ -748,6 +778,28 @@ class IELTS_CM_Admin {
                 <label><?php _e('Points', 'ielts-course-manager'); ?></label><br>
                 <input type="number" name="questions[QUESTION_INDEX][points]" value="1" min="0" step="0.5" style="width: 100%;">
             </p>
+            
+            <div style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
+                <h5 style="margin-top: 0;"><?php _e('Feedback Messages', 'ielts-course-manager'); ?></h5>
+                
+                <p>
+                    <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="questions[QUESTION_INDEX][correct_feedback]" rows="3" style="width: 100%;"></textarea>
+                    <small><?php _e('Shown when the student answers correctly. HTML is supported.', 'ielts-course-manager'); ?></small>
+                </p>
+                
+                <p class="incorrect-feedback-field">
+                    <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="questions[QUESTION_INDEX][incorrect_feedback]" rows="3" style="width: 100%;"></textarea>
+                    <small><?php _e('Shown when the student answers incorrectly. For multiple choice, this is a fallback if no option-specific feedback is provided. HTML is supported.', 'ielts-course-manager'); ?></small>
+                </p>
+                
+                <div class="option-feedback-field">
+                    <label><?php _e('Per-Option Feedback (Multiple Choice)', 'ielts-course-manager'); ?></label><br>
+                    <small style="display: block; margin-bottom: 10px;"><?php _e('Optional: Provide specific feedback for each wrong answer option. Enter one feedback per line, matching the order of options above. Leave blank to use the general incorrect feedback. HTML is supported.', 'ielts-course-manager'); ?></small>
+                    <textarea name="questions[QUESTION_INDEX][option_feedback_raw]" rows="4" style="width: 100%;"></textarea>
+                </div>
+            </div>
             
             <button type="button" class="button remove-question"><?php _e('Remove Question', 'ielts-course-manager'); ?></button>
         </div>
@@ -843,13 +895,34 @@ class IELTS_CM_Admin {
                     if (empty($question['question'])) {
                         continue;
                     }
-                    $questions[] = array(
+                    // Process option feedback for multiple choice
+                    $option_feedback = array();
+                    if ($question['type'] === 'multiple_choice' && isset($question['option_feedback_raw']) && !empty($question['option_feedback_raw'])) {
+                        $feedback_lines = explode("\n", $question['option_feedback_raw']);
+                        // Preserve array indices - empty lines remain empty to match option positions
+                        foreach ($feedback_lines as $line) {
+                            $trimmed = trim($line);
+                            // Store empty string for blank lines to maintain option index alignment
+                            $option_feedback[] = wp_kses_post($trimmed);
+                        }
+                    }
+                    
+                    $question_data = array(
                         'type' => sanitize_text_field($question['type']),
                         'question' => wp_kses_post($question['question']), // Allow HTML with images
                         'options' => isset($question['options']) ? sanitize_textarea_field($question['options']) : '',
                         'correct_answer' => isset($question['correct_answer']) ? sanitize_text_field($question['correct_answer']) : '',
-                        'points' => isset($question['points']) ? floatval($question['points']) : 1
+                        'points' => isset($question['points']) ? floatval($question['points']) : 1,
+                        'correct_feedback' => isset($question['correct_feedback']) ? wp_kses_post($question['correct_feedback']) : '',
+                        'incorrect_feedback' => isset($question['incorrect_feedback']) ? wp_kses_post($question['incorrect_feedback']) : ''
                     );
+                    
+                    // Add option feedback only for multiple choice questions
+                    if (!empty($option_feedback)) {
+                        $question_data['option_feedback'] = $option_feedback;
+                    }
+                    
+                    $questions[] = $question_data;
                 }
             }
             update_post_meta($post_id, '_ielts_cm_questions', $questions);

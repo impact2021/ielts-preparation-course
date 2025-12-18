@@ -75,7 +75,7 @@ if (!$pass_percentage) {
                             <span class="question-points">(<?php echo $question['points']; ?> <?php _e('points', 'ielts-course-manager'); ?>)</span>
                         </h4>
                         
-                        <p class="question-text"><?php echo esc_html($question['question']); ?></p>
+                        <div class="question-text"><?php echo wp_kses_post($question['question']); ?></div>
                         
                         <?php
                         switch ($question['type']) {
