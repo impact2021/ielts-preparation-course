@@ -808,7 +808,17 @@ class IELTS_CM_Admin {
                         $(this).find('h4').text('<?php _e('Question', 'ielts-course-manager'); ?> ' + (index + 1));
                         
                         // Update all input/select/textarea names to reflect new index
-                        var oldIndex = $(this).find('select[name^="questions["]').first().attr('name').match(/questions\[(\d+)\]/)[1];
+                        var nameMatch = $(this).find('select[name^="questions["]').first().attr('name');
+                        if (!nameMatch) {
+                            return; // Skip if no match found
+                        }
+                        
+                        var matches = nameMatch.match(/questions\[(\d+)\]/);
+                        if (!matches || !matches[1]) {
+                            return; // Skip if regex doesn't match
+                        }
+                        
+                        var oldIndex = matches[1];
                         var newIndex = index;
                         
                         if (oldIndex != newIndex) {
@@ -828,8 +838,9 @@ class IELTS_CM_Admin {
                             if (typeof tinymce !== 'undefined' && tinymce.get(editorId)) {
                                 var editorContent = tinymce.get(editorId).getContent();
                                 tinymce.get(editorId).remove();
-                                $(this).find('textarea[id="' + editorId + '"]').attr('id', newEditorId);
-                                // Re-initialize will happen on save
+                                var $textarea = $(this).find('textarea[id="' + editorId + '"]');
+                                $textarea.attr('id', newEditorId);
+                                $textarea.val(editorContent); // Restore content to textarea
                             }
                         }
                     });
@@ -872,7 +883,16 @@ class IELTS_CM_Admin {
                 // Update heading
                 $clone.find('h4').text('<?php _e('Question', 'ielts-course-manager'); ?> ' + (nextIndex + 1) + ' (<?php _e('Duplicated', 'ielts-course-manager'); ?>)');
                 
-                // Remove any TinyMCE instances from clone
+                // Handle TinyMCE instances in cloned element
+                var oldEditorId = 'question_' + $question.find('select[name^="questions["]').first().attr('name').match(/questions\[(\d+)\]/)[1];
+                if (typeof tinymce !== 'undefined' && tinymce.get(oldEditorId)) {
+                    // Get content from original editor
+                    var content = tinymce.get(oldEditorId).getContent();
+                    // Set content to cloned textarea
+                    $clone.find('textarea[id^="question_"]').val(content);
+                }
+                
+                // Remove TinyMCE UI elements from clone and show textarea
                 $clone.find('.mce-tinymce').remove();
                 $clone.find('textarea[id^="question_"]').show();
                 

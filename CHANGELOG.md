@@ -4,6 +4,33 @@ All notable changes to the IELTS Course Manager plugin will be documented in thi
 
 ## [2.2] - 2025-12-18
 
+### Added
+- **Question Duplication**: Added duplicate button for questions in exercises
+  - One-click duplication of any question type
+  - Duplicates all question data including options, feedback, and points
+  - Automatically assigns new unique index to duplicated question
+  - Works with multiple choice, true/false, fill-in-blank, and essay questions
+
+- **Question Drag-and-Drop**: Implemented drag-and-drop reordering for questions
+  - Drag handle icon on each question for easy reordering
+  - Visual feedback during drag operation
+  - Automatic reindexing of question names after reordering
+  - Preserves question content and settings during reorder
+  - Improves exercise organization workflow
+
+- **WYSIWYG Editor for Reading Texts**: Enhanced reading text editor in computer-based layout
+  - Rich text editor (wp_editor) for reading passages
+  - Full formatting toolbar with bold, italic, lists, links, etc.
+  - Support for images and media embedding
+  - Preserves HTML formatting in reading passages
+  - Better content authoring experience for CBT exercises
+
+### Changed
+- **Pass Percentage Field**: Hidden pass percentage field from admin UI
+  - Field still saves to database for future features
+  - Reduces UI clutter in quiz settings
+  - Pass percentage remains configurable but not prominently displayed
+
 ### Fixed
 - **Database Table Creation**: Fixed issue where `wp_ielts_cm_site_connections` table would not exist on sites that installed the plugin before version 2.0
   - Added automatic database table creation check on plugin version update
@@ -17,9 +44,12 @@ All notable changes to the IELTS Course Manager plugin will be documented in thi
   - Mobile layout uses `calc(100vh - 450px)` for optimal mobile viewing
   - Layout now properly fills the screen regardless of header size
 
-### Changed
+### Technical
 - Updated plugin version to 2.2
 - Database upgrade routine now runs on version update to ensure all tables exist
+- Enhanced JavaScript for question management with jQuery sortable
+- Improved handling of TinyMCE editor instances in dynamic content
+- Added null checking for regex matches to prevent errors
 
 ## [2.1] - 2025-12-18
 
