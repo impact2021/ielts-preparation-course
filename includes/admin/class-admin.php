@@ -1425,9 +1425,13 @@ class IELTS_CM_Admin {
                 update_post_meta($post_id, '_ielts_cm_layout_type', sanitize_text_field($_POST['ielts_cm_layout_type']));
             }
             
-            // Save scoring type
+            // Save scoring type with validation
             if (isset($_POST['ielts_cm_scoring_type'])) {
-                update_post_meta($post_id, '_ielts_cm_scoring_type', sanitize_text_field($_POST['ielts_cm_scoring_type']));
+                $scoring_type = sanitize_text_field($_POST['ielts_cm_scoring_type']);
+                $valid_types = array('percentage', 'ielts_general_reading', 'ielts_academic_reading', 'ielts_listening');
+                if (in_array($scoring_type, $valid_types)) {
+                    update_post_meta($post_id, '_ielts_cm_scoring_type', $scoring_type);
+                }
             }
             
             // Save reading texts

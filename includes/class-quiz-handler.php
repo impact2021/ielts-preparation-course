@@ -386,6 +386,67 @@ class IELTS_CM_Quiz_Handler {
     }
     
     /**
+     * Get IELTS band score conversion table
+     * 
+     * @param string $scoring_type Type of scoring
+     * @return array Conversion table with max_score key
+     */
+    private function get_band_score_table($scoring_type) {
+        // Tables are static to avoid recreating on every call
+        static $tables = null;
+        
+        if ($tables === null) {
+            // IELTS Academic Reading conversion table (40 questions max)
+            $tables['ielts_academic_reading'] = array(
+                'max_score' => 39,
+                'table' => array(
+                    39 => 9.0, 38 => 8.5, 37 => 8.5, 36 => 8.0, 35 => 8.0,
+                    34 => 7.5, 33 => 7.5, 32 => 7.0, 31 => 7.0, 30 => 7.0,
+                    29 => 6.5, 28 => 6.5, 27 => 6.5, 26 => 6.0, 25 => 6.0,
+                    24 => 6.0, 23 => 6.0, 22 => 5.5, 21 => 5.5, 20 => 5.5,
+                    19 => 5.5, 18 => 5.0, 17 => 5.0, 16 => 5.0, 15 => 5.0,
+                    14 => 4.5, 13 => 4.5, 12 => 4.0, 11 => 4.0, 10 => 4.0,
+                    9 => 3.5, 8 => 3.5, 7 => 3.0, 6 => 3.0, 5 => 2.5,
+                    4 => 2.5, 3 => 2.0, 2 => 2.0, 1 => 1.5, 0 => 1.0
+                )
+            );
+            
+            // IELTS General Training Reading conversion table (40 questions)
+            $tables['ielts_general_reading'] = array(
+                'max_score' => 40,
+                'table' => array(
+                    40 => 9.0, 39 => 8.5, 38 => 8.0, 37 => 8.0, 36 => 7.5,
+                    35 => 7.5, 34 => 7.0, 33 => 7.0, 32 => 6.5, 31 => 6.5,
+                    30 => 6.0, 29 => 6.0, 28 => 5.5, 27 => 5.5, 26 => 5.5,
+                    25 => 5.0, 24 => 5.0, 23 => 5.0, 22 => 4.5, 21 => 4.5,
+                    20 => 4.5, 19 => 4.5, 18 => 4.0, 17 => 4.0, 16 => 4.0,
+                    15 => 4.0, 14 => 3.5, 13 => 3.5, 12 => 3.5, 11 => 3.0,
+                    10 => 3.0, 9 => 3.0, 8 => 2.5, 7 => 2.5, 6 => 2.5,
+                    5 => 2.0, 4 => 2.0, 3 => 2.0, 2 => 1.5, 1 => 1.5,
+                    0 => 1.0
+                )
+            );
+            
+            // IELTS Listening conversion table (40 questions)
+            $tables['ielts_listening'] = array(
+                'max_score' => 39,
+                'table' => array(
+                    39 => 9.0, 38 => 8.5, 37 => 8.5, 36 => 8.0, 35 => 8.0,
+                    34 => 7.5, 33 => 7.5, 32 => 7.5, 31 => 7.0, 30 => 7.0,
+                    29 => 6.5, 28 => 6.5, 27 => 6.5, 26 => 6.5, 25 => 6.0,
+                    24 => 6.0, 23 => 6.0, 22 => 5.5, 21 => 5.5, 20 => 5.5,
+                    19 => 5.5, 18 => 5.5, 17 => 5.0, 16 => 5.0, 15 => 4.5,
+                    14 => 4.5, 13 => 4.5, 12 => 4.0, 11 => 4.0, 10 => 4.0,
+                    9 => 3.5, 8 => 3.5, 7 => 3.0, 6 => 3.0, 5 => 2.5,
+                    4 => 2.5, 3 => 2.0, 2 => 2.0, 1 => 1.5, 0 => 1.0
+                )
+            );
+        }
+        
+        return isset($tables[$scoring_type]) ? $tables[$scoring_type] : null;
+    }
+    
+    /**
      * Convert correct answers to IELTS band score
      * 
      * @param int $correct_answers Number of correct answers
@@ -393,58 +454,15 @@ class IELTS_CM_Quiz_Handler {
      * @return float Band score (0-9)
      */
     public function convert_to_band_score($correct_answers, $scoring_type) {
-        // IELTS Academic Reading conversion table
-        $academic_table = array(
-            39 => 9.0, 38 => 8.5, 37 => 8.5, 36 => 8.0, 35 => 8.0,
-            34 => 7.5, 33 => 7.5, 32 => 7.0, 31 => 7.0, 30 => 7.0,
-            29 => 6.5, 28 => 6.5, 27 => 6.5, 26 => 6.0, 25 => 6.0,
-            24 => 6.0, 23 => 6.0, 22 => 5.5, 21 => 5.5, 20 => 5.5,
-            19 => 5.5, 18 => 5.0, 17 => 5.0, 16 => 5.0, 15 => 5.0,
-            14 => 4.5, 13 => 4.5, 12 => 4.0, 11 => 4.0, 10 => 4.0,
-            9 => 3.5, 8 => 3.5, 7 => 3.0, 6 => 3.0, 5 => 2.5,
-            4 => 2.5, 3 => 2.0, 2 => 2.0, 1 => 1.5, 0 => 1.0
-        );
+        // Get the conversion table
+        $table_data = $this->get_band_score_table($scoring_type);
         
-        // IELTS General Training Reading conversion table
-        $general_table = array(
-            40 => 9.0, 39 => 8.5, 38 => 8.0, 37 => 8.0, 36 => 7.5,
-            35 => 7.5, 34 => 7.0, 33 => 7.0, 32 => 6.5, 31 => 6.5,
-            30 => 6.0, 29 => 6.0, 28 => 5.5, 27 => 5.5, 26 => 5.5,
-            25 => 5.0, 24 => 5.0, 23 => 5.0, 22 => 4.5, 21 => 4.5,
-            20 => 4.5, 19 => 4.5, 18 => 4.0, 17 => 4.0, 16 => 4.0,
-            15 => 4.0, 14 => 3.5, 13 => 3.5, 12 => 3.5, 11 => 3.0,
-            10 => 3.0, 9 => 3.0, 8 => 2.5, 7 => 2.5, 6 => 2.5,
-            5 => 2.0, 4 => 2.0, 3 => 2.0, 2 => 1.5, 1 => 1.5,
-            0 => 1.0
-        );
-        
-        // IELTS Listening conversion table
-        $listening_table = array(
-            39 => 9.0, 38 => 8.5, 37 => 8.5, 36 => 8.0, 35 => 8.0,
-            34 => 7.5, 33 => 7.5, 32 => 7.5, 31 => 7.0, 30 => 7.0,
-            29 => 6.5, 28 => 6.5, 27 => 6.5, 26 => 6.5, 25 => 6.0,
-            24 => 6.0, 23 => 6.0, 22 => 5.5, 21 => 5.5, 20 => 5.5,
-            19 => 5.5, 18 => 5.5, 17 => 5.0, 16 => 5.0, 15 => 4.5,
-            14 => 4.5, 13 => 4.5, 12 => 4.0, 11 => 4.0, 10 => 4.0,
-            9 => 3.5, 8 => 3.5, 7 => 3.0, 6 => 3.0, 5 => 2.5,
-            4 => 2.5, 3 => 2.0, 2 => 2.0, 1 => 1.5, 0 => 1.0
-        );
-        
-        // Select the appropriate table
-        $table = array();
-        switch ($scoring_type) {
-            case 'ielts_academic_reading':
-                $table = $academic_table;
-                break;
-            case 'ielts_general_reading':
-                $table = $general_table;
-                break;
-            case 'ielts_listening':
-                $table = $listening_table;
-                break;
-            default:
-                return 0; // Invalid scoring type
+        if ($table_data === null) {
+            return 0; // Invalid scoring type
         }
+        
+        $table = $table_data['table'];
+        $max_score = $table_data['max_score'];
         
         // Look up the band score
         if (isset($table[$correct_answers])) {
@@ -452,7 +470,6 @@ class IELTS_CM_Quiz_Handler {
         }
         
         // If exact match not found, use the highest available score for scores above max
-        $max_score = max(array_keys($table));
         if ($correct_answers > $max_score) {
             return $table[$max_score];
         }
