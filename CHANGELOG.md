@@ -2,6 +2,33 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.3] - 2025-12-18
+
+### Added
+- **Recursive Content Sync**: When pushing a course, all associated content is now automatically synced
+  - Pushing a course now syncs all its lessons
+  - All sublessons (resources) within those lessons are synced
+  - All exercises (quizzes) within those lessons are synced
+  - Detailed sync statistics shown after push (lesson count, sublesson count, exercise count)
+  - Eliminates need to manually push each piece of content individually
+
+- **Fullscreen Mode for Computer-Based Tests**: CBT exercises now open in fullscreen mode
+  - New "Start CBT Exercise" button in lesson view opens exercise in fullscreen window
+  - Fullscreen mode removes WordPress header and footer for distraction-free testing
+  - "Open Fullscreen" button available within CBT exercise for manual fullscreen launch
+  - Optimized viewport heights for true fullscreen experience
+  - Mimics actual IELTS computer-delivered test environment
+
+### Fixed
+- **Lesson Meta Box Error**: Fixed critical error "Uncaught TypeError: in_array(): Argument #2 ($haystack) must be of type array, string given"
+  - Issue occurred when retrieving lesson course assignments that were stored as serialized strings
+  - Added proper unserialization handling for `_ielts_cm_course_ids`, `_ielts_cm_lesson_ids` metadata
+  - Applied fix to lesson_meta_box, resource_meta_box, and quiz_meta_box functions
+  - Maintains backward compatibility with both array and serialized string formats
+
+### Changed
+- Updated plugin version to 2.3
+
 ## [2.2] - 2025-12-18
 
 ### Added

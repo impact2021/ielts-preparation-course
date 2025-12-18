@@ -111,6 +111,9 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                             $is_completed = $best_result ? true : false;
                             $type_label = __('Exercise', 'ielts-course-manager');
                             $type_badge_class = 'quiz';
+                            // Check if this is a computer-based quiz
+                            $layout_type = get_post_meta($post_item->ID, '_ielts_cm_layout_type', true);
+                            $is_cbt = ($layout_type === 'computer_based');
                         }
                         ?>
                         <tr class="content-row <?php echo $is_completed ? 'completed' : ''; ?>">
@@ -157,15 +160,24 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                                 </td>
                             <?php endif; ?>
                             <td class="content-action">
-                                <a href="<?php echo get_permalink($post_item->ID); ?>" class="button button-primary button-small">
-                                    <?php 
-                                    if ($item_type === 'quiz') {
-                                        echo isset($best_result) && $best_result ? __('Retake', 'ielts-course-manager') : __('Take Exercise', 'ielts-course-manager');
-                                    } else {
-                                        echo $is_completed ? __('Review', 'ielts-course-manager') : __('View', 'ielts-course-manager');
-                                    }
-                                    ?>
-                                </a>
+                                <?php if ($item_type === 'quiz' && isset($is_cbt) && $is_cbt): ?>
+                                    <!-- CBT Exercise with fullscreen option -->
+                                    <a href="<?php echo add_query_arg('fullscreen', '1', get_permalink($post_item->ID)); ?>" 
+                                       class="button button-primary button-small ielts-cbt-fullscreen-btn"
+                                       data-fullscreen-url="<?php echo esc_url(add_query_arg('fullscreen', '1', get_permalink($post_item->ID))); ?>">
+                                        <?php echo isset($best_result) && $best_result ? __('Retake (Fullscreen)', 'ielts-course-manager') : __('Start CBT Exercise', 'ielts-course-manager'); ?>
+                                    </a>
+                                <?php else: ?>
+                                    <a href="<?php echo get_permalink($post_item->ID); ?>" class="button button-primary button-small">
+                                        <?php 
+                                        if ($item_type === 'quiz') {
+                                            echo isset($best_result) && $best_result ? __('Retake', 'ielts-course-manager') : __('Take Exercise', 'ielts-course-manager');
+                                        } else {
+                                            echo $is_completed ? __('Review', 'ielts-course-manager') : __('View', 'ielts-course-manager');
+                                        }
+                                        ?>
+                                    </a>
+                                <?php endif; ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -236,6 +248,22 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
             color: #f57c00;
         }
         </style>
+        
+        <script>
+        // Safe fullscreen launcher for CBT exercises
+        jQuery(document).ready(function($) {
+            $('.ielts-cbt-fullscreen-btn').on('click', function(e) {
+                e.preventDefault();
+                var url = $(this).data('fullscreen-url');
+                if (url) {
+                    var width = Math.max(800, window.screen.availWidth || window.screen.width);
+                    var height = Math.max(600, window.screen.availHeight || window.screen.height);
+                    var features = 'width=' + width + ',height=' + height + ',fullscreen=yes,scrollbars=yes';
+                    window.open(url, '_blank', features);
+                }
+            });
+        });
+        </script>
     <?php endif; ?>
     
     <?php

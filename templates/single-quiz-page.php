@@ -8,7 +8,13 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-get_header();
+// Check if fullscreen mode is requested
+$is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
+
+// Only load header if not in fullscreen mode
+if (!$is_fullscreen) {
+    get_header();
+}
 ?>
 
 <style>
@@ -18,6 +24,32 @@ get_header();
  * 2. Inline styles have highest specificity to override theme styles
  * 3. These styles are page-specific and should only apply to this template
  */
+<?php if ($is_fullscreen): ?>
+/* Fullscreen mode styles */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+body #page,
+body #main,
+body #primary,
+body .content-area,
+body .site-main {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100vh !important;
+    overflow: auto !important;
+}
+body .ielts-computer-based-quiz {
+    height: 100vh !important;
+}
+body .computer-based-container {
+    height: calc(100vh - 200px) !important;
+}
+<?php else: ?>
 body.ielts-quiz-single #main.site-main {
     padding: 60px 40px !important;
 }
@@ -28,6 +60,7 @@ body.ielts-quiz-single .content-area {
     padding-top: 60px !important;
     padding-bottom: 60px !important;
 }
+<?php endif; ?>
 </style>
 
 <div id="primary" class="content-area ielts-full-width">
@@ -73,4 +106,8 @@ body.ielts-quiz-single .content-area {
 </div>
 
 <?php
-get_footer();
+// Only load footer if not in fullscreen mode
+if (!$is_fullscreen) {
+    get_footer();
+}
+?>

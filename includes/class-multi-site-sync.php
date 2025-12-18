@@ -328,4 +328,173 @@ class IELTS_CM_Multi_Site_Sync {
         
         return $results ? $results : array();
     }
+    
+    /**
+     * Get all lessons associated with a course
+     */
+    private function get_course_lessons($course_id) {
+        global $wpdb;
+        
+        // Get lessons that have this course in their course_ids
+        $lesson_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT post_id 
+            FROM {$wpdb->postmeta} 
+            WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
+               OR (meta_key = '_ielts_cm_course_ids' AND (
+                   meta_value LIKE %s OR
+                   meta_value LIKE %s OR
+                   meta_value LIKE %s OR
+                   meta_value = %s
+               ))
+        ", 
+            $course_id,
+            '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%',  // Serialized array format
+            '%' . $wpdb->esc_like('"' . $course_id . '"') . '%',   // JSON format
+            '%' . $wpdb->esc_like(':' . $course_id . '}') . '%',   // End of serialized array
+            serialize(array($course_id))                            // Single item array
+        ));
+        
+        if (empty($lesson_ids)) {
+            return array();
+        }
+        
+        return get_posts(array(
+            'post_type' => 'ielts_lesson',
+            'posts_per_page' => -1,
+            'post__in' => $lesson_ids,
+            'post_status' => 'any'
+        ));
+    }
+    
+    /**
+     * Get all resources (sublessons) associated with a lesson
+     */
+    private function get_lesson_resources($lesson_id) {
+        global $wpdb;
+        
+        // Get resources that have this lesson in their lesson_ids
+        $resource_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT post_id 
+            FROM {$wpdb->postmeta} 
+            WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+               OR (meta_key = '_ielts_cm_lesson_ids' AND (
+                   meta_value LIKE %s OR
+                   meta_value LIKE %s OR
+                   meta_value LIKE %s OR
+                   meta_value = %s
+               ))
+        ", 
+            $lesson_id,
+            '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%',
+            '%' . $wpdb->esc_like('"' . $lesson_id . '"') . '%',
+            '%' . $wpdb->esc_like(':' . $lesson_id . '}') . '%',
+            serialize(array($lesson_id))
+        ));
+        
+        if (empty($resource_ids)) {
+            return array();
+        }
+        
+        return get_posts(array(
+            'post_type' => 'ielts_resource',
+            'posts_per_page' => -1,
+            'post__in' => $resource_ids,
+            'post_status' => 'any'
+        ));
+    }
+    
+    /**
+     * Get all exercises (quizzes) associated with a lesson
+     */
+    private function get_lesson_exercises($lesson_id) {
+        global $wpdb;
+        
+        // Get quizzes that have this lesson in their lesson_ids
+        $quiz_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT post_id 
+            FROM {$wpdb->postmeta} 
+            WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+               OR (meta_key = '_ielts_cm_lesson_ids' AND (
+                   meta_value LIKE %s OR
+                   meta_value LIKE %s OR
+                   meta_value LIKE %s OR
+                   meta_value = %s
+               ))
+        ", 
+            $lesson_id,
+            '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%',
+            '%' . $wpdb->esc_like('"' . $lesson_id . '"') . '%',
+            '%' . $wpdb->esc_like(':' . $lesson_id . '}') . '%',
+            serialize(array($lesson_id))
+        ));
+        
+        if (empty($quiz_ids)) {
+            return array();
+        }
+        
+        return get_posts(array(
+            'post_type' => 'ielts_quiz',
+            'posts_per_page' => -1,
+            'post__in' => $quiz_ids,
+            'post_status' => 'any'
+        ));
+    }
+    
+    /**
+     * Push content and all its children to subsites
+     */
+    public function push_content_with_children($content_id, $content_type) {
+        if (!$this->is_primary_site()) {
+            return new WP_Error('not_primary', 'Only primary sites can push content');
+        }
+        
+        $subsites = $this->get_connected_subsites();
+        if (empty($subsites)) {
+            return new WP_Error('no_subsites', 'No connected subsites found');
+        }
+        
+        $results = array();
+        
+        // Push the main content first
+        $main_results = $this->push_content_to_subsites($content_id, $content_type);
+        $results['main'] = $main_results;
+        
+        // If it's a course, push all lessons, resources, and exercises
+        if ($content_type === 'course') {
+            $lessons = $this->get_course_lessons($content_id);
+            $results['lessons'] = array();
+            
+            foreach ($lessons as $lesson) {
+                $lesson_results = $this->push_content_to_subsites($lesson->ID, 'lesson');
+                $results['lessons'][$lesson->ID] = array(
+                    'title' => $lesson->post_title,
+                    'sync_results' => $lesson_results
+                );
+                
+                // Push all resources for this lesson
+                $resources = $this->get_lesson_resources($lesson->ID);
+                $results['lessons'][$lesson->ID]['resources'] = array();
+                foreach ($resources as $resource) {
+                    $resource_results = $this->push_content_to_subsites($resource->ID, 'resource');
+                    $results['lessons'][$lesson->ID]['resources'][$resource->ID] = array(
+                        'title' => $resource->post_title,
+                        'sync_results' => $resource_results
+                    );
+                }
+                
+                // Push all exercises for this lesson
+                $exercises = $this->get_lesson_exercises($lesson->ID);
+                $results['lessons'][$lesson->ID]['exercises'] = array();
+                foreach ($exercises as $exercise) {
+                    $exercise_results = $this->push_content_to_subsites($exercise->ID, 'quiz');
+                    $results['lessons'][$lesson->ID]['exercises'][$exercise->ID] = array(
+                        'title' => $exercise->post_title,
+                        'sync_results' => $exercise_results
+                    );
+                }
+            }
+        }
+        
+        return $results;
+    }
 }
