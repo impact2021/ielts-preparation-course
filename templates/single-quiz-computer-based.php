@@ -358,6 +358,7 @@ jQuery(document).ready(function($) {
     var modal = $('#cbt-fullscreen-modal');
     var form = $('#ielts-quiz-form');
     var isFullscreenMode = <?php echo $is_fullscreen ? 'true' : 'false'; ?>;
+    var modalTimerInterval = null;
     
     if (isFullscreenMode) {
         // Already in fullscreen, show the form
@@ -381,14 +382,20 @@ jQuery(document).ready(function($) {
         // Initialize timer if present
         var timerMinutes = $('.ielts-computer-based-quiz').data('timer-minutes');
         if (timerMinutes && timerMinutes > 0) {
-            initializeTimer(timerMinutes, formClone);
+            modalTimerInterval = initializeTimer(timerMinutes, formClone);
         }
     });
     
     $('#close-modal-btn').on('click', function() {
         if (confirm('<?php _e('Are you sure you want to exit? Your progress will be lost.', 'ielts-course-manager'); ?>')) {
+            // Clean up timer
+            if (modalTimerInterval) {
+                clearInterval(modalTimerInterval);
+                modalTimerInterval = null;
+            }
             modal.removeClass('active');
             $('body').css('overflow', '');
+            $('#modal-content').html('');
         }
     });
     
@@ -397,7 +404,7 @@ jQuery(document).ready(function($) {
         var timerDisplay = targetForm.find('#timer-display-fullscreen');
         
         if (timerDisplay.length === 0) {
-            return;
+            return null;
         }
         
         var timerInterval = setInterval(function() {
@@ -426,6 +433,8 @@ jQuery(document).ready(function($) {
                 targetForm.submit();
             }
         }, 1000);
+        
+        return timerInterval;
     }
 });
 </script>

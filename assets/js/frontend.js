@@ -17,12 +17,13 @@
         // Initialize quiz timer if present
         var quizContainer = $('.ielts-single-quiz, .ielts-computer-based-quiz');
         var timerMinutes = quizContainer.data('timer-minutes');
+        var quizTimerInterval = null;
         
         if (timerMinutes && timerMinutes > 0 && $('#quiz-timer').length) {
             var totalSeconds = timerMinutes * 60;
             var timerDisplay = $('#timer-display');
             
-            var timerInterval = setInterval(function() {
+            quizTimerInterval = setInterval(function() {
                 totalSeconds--;
                 
                 var mins = Math.floor(totalSeconds / 60);
@@ -40,7 +41,8 @@
                 }
                 
                 if (totalSeconds <= 0) {
-                    clearInterval(timerInterval);
+                    clearInterval(quizTimerInterval);
+                    quizTimerInterval = null;
                     timerDisplay.text('0:00');
                     $('#quiz-timer').css('color', 'red');
                     
@@ -50,6 +52,14 @@
                 }
             }, 1000);
         }
+        
+        // Cleanup timer on page unload
+        $(window).on('beforeunload', function() {
+            if (quizTimerInterval) {
+                clearInterval(quizTimerInterval);
+                quizTimerInterval = null;
+            }
+        });
         
         // Enrollment
         $('.enroll-button').on('click', function(e) {
