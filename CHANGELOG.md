@@ -2,6 +2,19 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.13] - 2025-12-18
+
+### Changed
+- **CBT Fullscreen Mode Improvements**: Enhanced fullscreen mode for computer-based tests
+  - Quiz header with breadcrumb navigation is now hidden in fullscreen mode for distraction-free testing
+  - Provides a cleaner, more focused test-taking experience
+  
+### Added
+- **Answer Review Feedback**: Enhanced answer review functionality in CBT quizzes
+  - Feedback from correct_feedback and incorrect_feedback fields now displays below each question when reviewing answers
+  - Feedback appears after quiz submission when students click "Review my answers"
+  - Visual styling matches the correctness of the answer (green border for correct, red for incorrect)
+
 ## [2.12] - 2025-12-18
 
 ### Fixed

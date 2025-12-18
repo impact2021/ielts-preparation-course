@@ -1235,3 +1235,22 @@ body.ielts-course-archive .content-area {
 .cbt-result-modal-body .quiz-result h3 {
     margin-top: 0;
 }
+
+/* Question feedback message displayed during answer review */
+.question-feedback-message {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f0f0f1;
+    border-radius: 3px;
+    border-left: 4px solid #999;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.question-feedback-message.feedback-correct {
+    border-left-color: #4caf50;
+}
+
+.question-feedback-message.feedback-incorrect {
+    border-left-color: #f44336;
+}

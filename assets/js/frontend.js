@@ -379,6 +379,22 @@
                                     questionElement.find('input[type="text"], textarea').addClass('answer-incorrect');
                                 }
                             }
+                            
+                            // Add feedback message below the question if available (for CBT quizzes)
+                            if (isCBT && questionResult.feedback) {
+                                // Remove any existing feedback first
+                                questionElement.find('.question-feedback-message').remove();
+                                
+                                // Create feedback element with proper CSS classes
+                                var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
+                                var feedbackDiv = $('<div>')
+                                    .addClass('question-feedback-message')
+                                    .addClass(feedbackClass)
+                                    .html(questionResult.feedback); // Using .html() because feedback explicitly supports HTML formatting
+                                                                     // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
+                                
+                                questionElement.append(feedbackDiv);
+                            }
                         });
                         
                         if (isCBT) {
