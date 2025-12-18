@@ -305,18 +305,38 @@ class IELTS_CM_LearnDash_Importer {
      */
     private function convert_quiz_questions() {
         if (empty($this->imported_questions)) {
+            $this->log('No questions found to convert', 'warning');
             return;
         }
         
-        $this->log('Converting quiz questions');
+        $this->log('Converting ' . count($this->imported_questions) . ' quiz questions');
         
         // Group questions by quiz
         $questions_by_quiz = array();
+        $skipped_questions = 0;
+        
         foreach ($this->imported_questions as $old_question_id => $question_data) {
-            // Get the quiz this question belongs to
-            $quiz_id = isset($question_data['meta']['quiz_id']) ? $question_data['meta']['quiz_id'] : null;
+            // Get the quiz this question belongs to - try multiple possible meta keys
+            $quiz_id = null;
+            if (isset($question_data['meta']['quiz_id'])) {
+                $quiz_id = $question_data['meta']['quiz_id'];
+            } elseif (isset($question_data['meta']['_quiz_id'])) {
+                $quiz_id = $question_data['meta']['_quiz_id'];
+            } elseif (isset($question_data['meta']['_question_pro_id'])) {
+                // For ProQuiz questions, try to find the quiz by querying
+                // This is a fallback mechanism
+                $this->log("Question '{$question_data['title']}' has ProQuiz ID but no direct quiz_id link", 'warning');
+            }
             
-            if (!$quiz_id || !isset($this->imported_quizzes[$quiz_id])) {
+            if (!$quiz_id) {
+                $this->log("Skipping question '{$question_data['title']}' - no quiz_id found in meta", 'warning');
+                $skipped_questions++;
+                continue;
+            }
+            
+            if (!isset($this->imported_quizzes[$quiz_id])) {
+                $this->log("Skipping question '{$question_data['title']}' - quiz ID {$quiz_id} not found in imported quizzes", 'warning');
+                $skipped_questions++;
                 continue;
             }
             
@@ -330,13 +350,28 @@ class IELTS_CM_LearnDash_Importer {
             $converted_question = $this->convert_single_question($question_data);
             if ($converted_question) {
                 $questions_by_quiz[$new_quiz_id][] = $converted_question;
+            } else {
+                $this->log("Failed to convert question: {$question_data['title']}", 'error');
+                $skipped_questions++;
             }
+        }
+        
+        if ($skipped_questions > 0) {
+            $this->log("Skipped {$skipped_questions} questions due to missing quiz links or conversion errors", 'warning');
         }
         
         // Save questions to quizzes
         foreach ($questions_by_quiz as $quiz_id => $questions) {
             update_post_meta($quiz_id, '_ielts_cm_questions', $questions);
             $this->log("Added " . count($questions) . " questions to quiz ID: {$quiz_id}");
+        }
+        
+        // Log quizzes without questions
+        foreach ($this->imported_quizzes as $old_quiz_id => $new_quiz_id) {
+            if (!isset($questions_by_quiz[$new_quiz_id])) {
+                $quiz_post = get_post($new_quiz_id);
+                $this->log("Warning: Quiz '{$quiz_post->post_title}' (ID: {$new_quiz_id}) has no questions", 'warning');
+            }
         }
     }
     
@@ -360,6 +395,17 @@ class IELTS_CM_LearnDash_Importer {
             'points' => floatval($points)
         );
         
+        // Get feedback messages for correct and incorrect answers
+        $correct_feedback = isset($question_data['meta']['_correct_answer_feedback']) ? $question_data['meta']['_correct_answer_feedback'] : '';
+        $incorrect_feedback = isset($question_data['meta']['_incorrect_answer_feedback']) ? $question_data['meta']['_incorrect_answer_feedback'] : '';
+        
+        if (!empty($correct_feedback)) {
+            $converted['correct_feedback'] = wp_strip_all_tags($correct_feedback);
+        }
+        if (!empty($incorrect_feedback)) {
+            $converted['incorrect_feedback'] = wp_strip_all_tags($incorrect_feedback);
+        }
+        
         // Map LearnDash question types to IELTS CM types
         switch ($question_type) {
             case 'single':
@@ -369,21 +415,31 @@ class IELTS_CM_LearnDash_Importer {
                 $answer_data = isset($question_data['meta']['_question_answer_data']) ? $question_data['meta']['_question_answer_data'] : array();
                 
                 if (is_array($answer_data) && !empty($answer_data)) {
-                    $converted['options'] = array();
+                    $options_array = array();
                     $correct_index = 0;
                     
                     foreach ($answer_data as $index => $answer) {
                         if (isset($answer['answer'])) {
-                            $converted['options'][] = $answer['answer'];
+                            $options_array[] = $answer['answer'];
                             if (!empty($answer['correct'])) {
-                                $correct_index = count($converted['options']) - 1;
+                                $correct_index = count($options_array) - 1;
+                            }
+                            
+                            // Include answer-specific feedback if available
+                            if (!empty($answer['feedback'])) {
+                                // Store feedback for this specific answer option (future enhancement)
+                                // For now, we'll use the general correct/incorrect feedback
                             }
                         }
                     }
                     
+                    // Store options as newline-separated string for template compatibility
+                    // The single-quiz.php template expects options as a string that gets split by newlines
+                    // (see templates/single-quiz.php line 80: $options = array_filter(explode("\n", $question['options']));)
+                    $converted['options'] = implode("\n", $options_array);
                     $converted['correct_answer'] = $correct_index;
                 } else {
-                    $converted['options'] = array();
+                    $converted['options'] = '';
                     $converted['correct_answer'] = 0;
                 }
                 break;
