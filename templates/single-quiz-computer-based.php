@@ -23,12 +23,15 @@ if (!$reading_texts) {
     $reading_texts = array();
 }
 $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
+$open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
 ?>
 
 <div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>">
     <?php 
     // Check if in fullscreen mode
     $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
+    // Determine if we should show the fullscreen notice (only if popup is enabled and not already in fullscreen)
+    $show_fullscreen_notice = $open_as_popup && !$is_fullscreen;
     ?>
     
     <?php if (!$is_fullscreen): ?>
@@ -70,8 +73,8 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     </div>
     <?php endif; ?>
     
-    <?php if (!$is_fullscreen): ?>
-        <!-- Force fullscreen mode for CBT tests -->
+    <?php if ($show_fullscreen_notice): ?>
+        <!-- Force fullscreen mode for CBT tests (when popup is enabled) -->
         <div class="cbt-fullscreen-notice" style="text-align: center; padding: 40px 20px; background: #f9f9f9; border: 2px solid #0073aa; border-radius: 8px; margin: 20px 0;">
             <p style="font-size: 1.2em; margin-bottom: 20px; color: #333;">
                 <?php _e('This computer-based test must be viewed in fullscreen mode for the best experience.', 'ielts-course-manager'); ?>
@@ -84,7 +87,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     <?php endif; ?>
     
     <?php if (!empty($questions) && is_user_logged_in()): ?>
-        <form id="ielts-quiz-form" class="quiz-form" style="<?php echo !$is_fullscreen ? 'display:none;' : ''; ?>">
+        <form id="ielts-quiz-form" class="quiz-form" style="<?php echo $show_fullscreen_notice ? 'display:none;' : ''; ?>">
             <?php if ($is_fullscreen && $timer_minutes > 0): ?>
             <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
                 <strong><?php _e('Time Remaining:', 'ielts-course-manager'); ?></strong>
@@ -384,6 +387,94 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     border-radius: 5px;
     margin: 20px 0 0 0;
     padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+#cbt-fullscreen-modal .question-navigation .nav-label {
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+}
+#cbt-fullscreen-modal .question-navigation .question-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex: 1;
+}
+#cbt-fullscreen-modal .question-navigation .question-nav-btn {
+    min-width: 40px;
+    height: 40px;
+    padding: 8px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+    transition: all 0.2s ease;
+}
+#cbt-fullscreen-modal .question-navigation .question-nav-btn:hover {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+    transform: translateY(-2px);
+}
+#cbt-fullscreen-modal .question-navigation .question-nav-btn.answered {
+    background: #4caf50 !important;
+    border-color: #4caf50 !important;
+    color: #fff !important;
+}
+#cbt-fullscreen-modal .question-navigation .quiz-submit-btn {
+    margin-left: auto;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+#cbt-fullscreen-modal .quiz-question {
+    padding: 20px;
+    margin-bottom: 25px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+#cbt-fullscreen-modal .question-options {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px;
+    margin: 15px 0;
+}
+#cbt-fullscreen-modal .option-label {
+    display: block !important;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+#cbt-fullscreen-modal .option-label:hover {
+    background: #f0f7ff;
+    border-color: #0073aa;
+}
+#cbt-fullscreen-modal .option-label input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+#cbt-fullscreen-modal .reading-text {
+    color: #333;
+    line-height: 1.8;
+    font-size: 1em;
+}
+#cbt-fullscreen-modal .reading-title {
+    color: #0073aa;
+    margin-bottom: 15px;
+    font-size: 1.2em;
 }
 </style>
 
