@@ -236,8 +236,22 @@ class IELTS_CM_LearnDash_Importer {
         $this->log('Updating relationships between imported items');
         
         // Link lessons to courses
+        $lessons_linked = 0;
+        $lessons_without_course = 0;
+        
         foreach ($this->imported_lessons as $old_lesson_id => $new_lesson_id) {
+            // Try multiple meta keys to find the original course ID
             $original_course_id = get_post_meta($new_lesson_id, '_ld_original_course_id', true);
+            
+            // Fallback: check for course_id stored with _ld_original_ prefix
+            if (empty($original_course_id)) {
+                $original_course_id = get_post_meta($new_lesson_id, '_ld_original_course', true);
+            }
+            
+            // Another fallback: check the direct mapping
+            if (empty($original_course_id)) {
+                $original_course_id = get_post_meta($new_lesson_id, '_ielts_cm_course_id', true);
+            }
             
             if ($original_course_id && isset($this->imported_courses[$original_course_id])) {
                 $new_course_id = $this->imported_courses[$original_course_id];
@@ -248,12 +262,34 @@ class IELTS_CM_LearnDash_Importer {
                 $course_ids[] = $new_course_id;
                 update_post_meta($new_lesson_id, '_ielts_cm_course_ids', array_unique($course_ids));
                 update_post_meta($new_lesson_id, '_ielts_cm_course_id', $new_course_id);
+                $lessons_linked++;
+                
+                $lesson_post = get_post($new_lesson_id);
+                $this->log("Linked lesson '{$lesson_post->post_title}' to course ID: {$new_course_id}");
+            } else {
+                $lessons_without_course++;
+                $lesson_post = get_post($new_lesson_id);
+                $this->log("Warning: Lesson '{$lesson_post->post_title}' (ID: {$new_lesson_id}) has no course link. Original course ID: " . ($original_course_id ?: 'not found'), 'warning');
             }
         }
         
+        $this->log("Linked {$lessons_linked} lessons to courses");
+        if ($lessons_without_course > 0) {
+            $this->log("Warning: {$lessons_without_course} lessons could not be linked to courses", 'warning');
+        }
+        
         // Link topics (lesson pages) to lessons
+        $topics_linked = 0;
+        $topics_without_lesson = 0;
+        
         foreach ($this->imported_topics as $old_topic_id => $new_topic_id) {
+            // Try multiple meta keys to find the original lesson ID
             $original_lesson_id = get_post_meta($new_topic_id, '_ld_original_lesson_id', true);
+            
+            // Fallback: check for lesson_id stored with _ld_original_ prefix
+            if (empty($original_lesson_id)) {
+                $original_lesson_id = get_post_meta($new_topic_id, '_ld_original_lesson', true);
+            }
             
             if ($original_lesson_id && isset($this->imported_lessons[$original_lesson_id])) {
                 $new_lesson_id = $this->imported_lessons[$original_lesson_id];
@@ -264,13 +300,32 @@ class IELTS_CM_LearnDash_Importer {
                 $lesson_ids[] = $new_lesson_id;
                 update_post_meta($new_topic_id, '_ielts_cm_lesson_ids', array_unique($lesson_ids));
                 update_post_meta($new_topic_id, '_ielts_cm_lesson_id', $new_lesson_id);
+                $topics_linked++;
+            } else {
+                $topics_without_lesson++;
+                $topic_post = get_post($new_topic_id);
+                $this->log("Warning: Lesson page '{$topic_post->post_title}' (ID: {$new_topic_id}) has no lesson link. Original lesson ID: " . ($original_lesson_id ?: 'not found'), 'warning');
             }
         }
         
+        $this->log("Linked {$topics_linked} lesson pages to lessons");
+        if ($topics_without_lesson > 0) {
+            $this->log("Warning: {$topics_without_lesson} lesson pages could not be linked to lessons", 'warning');
+        }
+        
         // Link quizzes to courses and lessons
+        $quizzes_linked_to_course = 0;
+        $quizzes_linked_to_lesson = 0;
+        
         foreach ($this->imported_quizzes as $old_quiz_id => $new_quiz_id) {
             // Link to course
             $original_course_id = get_post_meta($new_quiz_id, '_ld_original_course_id', true);
+            
+            // Fallback: check for course_id stored with _ld_original_ prefix
+            if (empty($original_course_id)) {
+                $original_course_id = get_post_meta($new_quiz_id, '_ld_original_course', true);
+            }
+            
             if ($original_course_id && isset($this->imported_courses[$original_course_id])) {
                 $new_course_id = $this->imported_courses[$original_course_id];
                 $course_ids = get_post_meta($new_quiz_id, '_ielts_cm_course_ids', true);
@@ -280,10 +335,17 @@ class IELTS_CM_LearnDash_Importer {
                 $course_ids[] = $new_course_id;
                 update_post_meta($new_quiz_id, '_ielts_cm_course_ids', array_unique($course_ids));
                 update_post_meta($new_quiz_id, '_ielts_cm_course_id', $new_course_id);
+                $quizzes_linked_to_course++;
             }
             
             // Link to lesson
             $original_lesson_id = get_post_meta($new_quiz_id, '_ld_original_lesson_id', true);
+            
+            // Fallback: check for lesson_id stored with _ld_original_ prefix
+            if (empty($original_lesson_id)) {
+                $original_lesson_id = get_post_meta($new_quiz_id, '_ld_original_lesson', true);
+            }
+            
             if ($original_lesson_id && isset($this->imported_lessons[$original_lesson_id])) {
                 $new_lesson_id = $this->imported_lessons[$original_lesson_id];
                 $lesson_ids = get_post_meta($new_quiz_id, '_ielts_cm_lesson_ids', true);
@@ -293,8 +355,12 @@ class IELTS_CM_LearnDash_Importer {
                 $lesson_ids[] = $new_lesson_id;
                 update_post_meta($new_quiz_id, '_ielts_cm_lesson_ids', array_unique($lesson_ids));
                 update_post_meta($new_quiz_id, '_ielts_cm_lesson_id', $new_lesson_id);
+                $quizzes_linked_to_lesson++;
             }
         }
+        
+        $this->log("Linked {$quizzes_linked_to_course} quizzes to courses");
+        $this->log("Linked {$quizzes_linked_to_lesson} quizzes to lessons");
         
         // Process and convert quiz questions
         $this->convert_quiz_questions();
@@ -480,14 +546,16 @@ class IELTS_CM_LearnDash_Importer {
      */
     private function map_meta_key($key, $post_type) {
         // Common mappings
+        // For relationship keys, we store them with _ld_original_ prefix
+        // so update_relationships() can find the old IDs and map to new IDs
         $mappings = array(
-            // Course mappings
-            'course_id' => ($post_type === 'sfwd-quiz' || $post_type === 'sfwd-topic') ? '_ld_original_course_id' : '_ielts_cm_course_id',
+            // Course mappings - store as _ld_original_ for all types so relationships can be built
+            'course_id' => '_ld_original_course_id',
             'ld_course_' => '_ld_original_course_id',
-            
-            // Lesson mappings
-            'lesson_id' => ($post_type === 'sfwd-quiz' || $post_type === 'sfwd-topic') ? '_ld_original_lesson_id' : '_ielts_cm_lesson_id',
             'course' => '_ld_original_course_id',
+            
+            // Lesson mappings - store as _ld_original_ for all types so relationships can be built
+            'lesson_id' => '_ld_original_lesson_id',
             
             // Quiz mappings
             'quiz_pass_percentage' => '_ielts_cm_pass_percentage',
