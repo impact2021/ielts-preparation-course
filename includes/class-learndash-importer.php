@@ -389,9 +389,10 @@ class IELTS_CM_LearnDash_Importer {
             } elseif (isset($question_data['meta']['_quiz_id'])) {
                 $quiz_id = $question_data['meta']['_quiz_id'];
             } elseif (isset($question_data['meta']['_question_pro_id'])) {
-                // For ProQuiz questions, try to find the quiz by querying
-                // This is a fallback mechanism
-                $this->log("Question '{$question_data['title']}' has ProQuiz ID but no direct quiz_id link", 'warning');
+                // For ProQuiz questions, the quiz_id might not be in the XML export
+                // These questions are stored in LearnDash's ProQuiz database tables
+                // and may not have proper quiz_id meta in the XML
+                $this->log("Question '{$question_data['title']}' has ProQuiz ID but no quiz_id link - skipping (use direct converter for ProQuiz questions)", 'warning');
             }
             
             if (!$quiz_id) {
@@ -491,16 +492,13 @@ class IELTS_CM_LearnDash_Importer {
                                 $correct_index = count($options_array) - 1;
                             }
                             
-                            // Include answer-specific feedback if available
-                            if (!empty($answer['feedback'])) {
-                                // Store feedback for this specific answer option (future enhancement)
-                                // For now, we'll use the general correct/incorrect feedback
-                            }
+                            // Note: Answer-specific feedback is available in LearnDash but not currently
+                            // supported in IELTS CM quiz format. Using general correct/incorrect feedback instead.
                         }
                     }
                     
-                    // Store options as newline-separated string for template compatibility
-                    // The single-quiz.php template expects options as a newline-separated string
+                    // Store options as newline-separated string for quiz template compatibility
+                    // The quiz display template (templates/single-quiz.php) expects options as a string
                     // that gets split into an array using explode("\n", $question['options'])
                     $converted['options'] = implode("\n", $options_array);
                     $converted['correct_answer'] = $correct_index;
