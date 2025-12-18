@@ -283,10 +283,14 @@ This metadata is used to:
 - When you need to rebuild course hierarchy from scratch
 - See [STRUCTURE_REBUILD_GUIDE.md](STRUCTURE_REBUILD_GUIDE.md) for details
 
-### When to Use XML Export/Import
+### When to Use XML Export/Import with Conversion (NEW in v1.15)
 - When moving courses between **different sites**
 - When backing up IELTS Course Manager content
-- See [Export to XML](edit.php?post_type=ielts_course&page=ielts-export) in admin
+- When you have a LearnDash XML export and need to import it
+- **Important:** Must use conversion script (`convert-xml.php`) to convert `sfwd-question` to `ielts_quiz`
+- See [XML_CONVERSION_README.md](XML_CONVERSION_README.md) for conversion instructions
+- See [LEARNDASH_IMPORT_GUIDE.md](LEARNDASH_IMPORT_GUIDE.md) for import instructions
+- See [Export to XML](edit.php?post_type=ielts_course&page=ielts-export) for exporting from IELTS CM
 
 ## Migration Timeline Example
 

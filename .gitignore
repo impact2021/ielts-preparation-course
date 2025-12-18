@@ -36,3 +36,6 @@ build/
 # OS
 Thumbs.db
 .DS_Store
+
+# Large XML files (keep only converted versions)
+*-original.xml

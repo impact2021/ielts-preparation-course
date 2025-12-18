@@ -38,7 +38,10 @@ if (!isset($columns)) {
                     
                     <?php if ($course->post_excerpt): ?>
                         <div class="course-excerpt">
-                            <?php echo wpautop($course->post_excerpt); ?>
+                            <?php 
+                            // Apply WordPress content filters to process embeds and shortcodes
+                            echo apply_filters('the_content', $course->post_excerpt);
+                            ?>
                         </div>
                     <?php endif; ?>
                     

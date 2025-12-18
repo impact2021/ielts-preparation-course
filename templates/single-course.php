@@ -36,7 +36,10 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
     </div>
     
     <div class="course-description">
-        <?php echo wpautop($course->post_content); ?>
+        <?php 
+        // Apply WordPress content filters to process embeds and shortcodes
+        echo apply_filters('the_content', $course->post_content);
+        ?>
     </div>
     
     <?php if (!empty($lessons)): ?>

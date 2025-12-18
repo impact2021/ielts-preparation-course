@@ -2,6 +2,31 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [1.15] - 2025-12-18
+
+### Added
+- **LearnDash XML Conversion**: New XML conversion script for LearnDash exports
+  - Converts `sfwd-question` post types to `ielts_quiz` format
+  - Automatically updates URLs and GUIDs to match new structure
+  - Processes 4,500+ questions in under 2 minutes
+  - Preserves all metadata and relationships
+  - Creates backup of original file automatically
+
+### Documentation
+- **New Guide**: Added `XML_CONVERSION_README.md`
+  - Complete documentation of XML conversion process
+  - Verification steps to ensure successful conversion
+  - Import instructions for converted files
+  - Troubleshooting guide for common issues
+  - File structure and metadata preservation details
+
+### Tools
+- **Conversion Script**: Added `convert-xml.php`
+  - Standalone PHP script for XML transformation
+  - Can process large XML files (13+ MB)
+  - Reusable for multiple LearnDash exports
+  - Detailed progress reporting and statistics
+
 ## [1.14] - 2024-12-18
 
 ### Fixed

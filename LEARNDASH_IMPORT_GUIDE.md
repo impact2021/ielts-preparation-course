@@ -17,13 +17,25 @@ The IELTS Course Manager includes a built-in import tool that converts LearnDash
 
 1. **Export from LearnDash**
    - Go to Tools > Export in your LearnDash site
-   - Select: Courses, Lessons, Topics, and Quizzes
+   - Select: Courses, Lessons, Topics, Quizzes, **and Questions** (sfwd-question)
    - **Important:** WordPress's native export tool requires you to select ALL these content types together in a single export to preserve their relationships
    - Download the XML file
 
-2. **Import to IELTS Course Manager**
+2. **Convert XML Format (NEW in v1.15)**
+   - **REQUIRED STEP:** LearnDash exports questions as `sfwd-question` post type
+   - IELTS Course Manager uses `ielts_quiz` post type for exercises
+   - Run the conversion script before importing:
+   ```bash
+   cd /path/to/ielts-preparation-course
+   php convert-xml.php
+   ```
+   - This converts all `sfwd-question` items to `ielts_quiz` format
+   - The script creates a converted file automatically
+   - See [XML_CONVERSION_README.md](XML_CONVERSION_README.md) for detailed instructions
+
+3. **Import to IELTS Course Manager**
    - Go to IELTS Courses > Import from LearnDash
-   - Upload your XML file
+   - Upload your **converted** XML file (not the original)
    - Click "Import XML File"
    - Review the results
 
@@ -45,6 +57,86 @@ The IELTS Course Manager includes a built-in import tool that converts LearnDash
 4. **Use Exported File**
    - Import the XML on another IELTS Course Manager site using the Import tool
    - All relationships between courses, lessons, and resources are preserved
+
+## XML Conversion Process (v1.15+)
+
+**IMPORTANT:** LearnDash exports quiz questions as `sfwd-question` post type, but IELTS Course Manager uses `ielts_quiz` for exercises. You must convert the XML format before importing.
+
+### Why Conversion is Needed
+
+- LearnDash uses: `sfwd-question` post type
+- IELTS CM uses: `ielts_quiz` post type
+- Direct import of LearnDash XML will fail to create exercises properly
+- The conversion updates post types, URLs, and GUIDs automatically
+
+### Using the Conversion Script
+
+1. **Locate the Script**
+   - The `convert-xml.php` script is in the plugin root directory
+   - Works with any LearnDash XML export file
+
+2. **Run the Conversion**
+   ```bash
+   # Navigate to plugin directory
+   cd /path/to/ielts-preparation-course
+   
+   # Run conversion (it will process ieltstestonline.WordPress.YYYY-MM-DD.xml)
+   php convert-xml.php
+   ```
+
+3. **What It Does**
+   - Reads your LearnDash XML export
+   - Converts all `sfwd-question` items to `ielts_quiz`
+   - Updates URLs from `/sfwd-question/` to `/ielts-quiz/`
+   - Updates GUIDs to match new structure
+   - Creates backup of original file (`*-original.xml`)
+   - Generates converted file ready for import
+   - Processes 4,500+ questions in under 2 minutes
+
+4. **Verification**
+   ```bash
+   # Check conversion was successful
+   grep -c "<wp:post_type>ielts_quiz</wp:post_type>" your-converted-file.xml
+   
+   # Should return the number of questions (e.g., 4547)
+   ```
+
+### Output Files
+
+After running the script:
+- `yourfile.xml` - **USE THIS** for import (converted version)
+- `yourfile-original.xml` - Backup (automatically excluded from git)
+
+### Custom File Names
+
+To convert a different XML file, edit `convert-xml.php`:
+
+```php
+// Change these lines at the top of the file
+$input_file = 'your-learndash-export.xml';
+$output_file = 'your-learndash-export-converted.xml';
+```
+
+Then run:
+```bash
+php convert-xml.php
+```
+
+### Troubleshooting Conversion
+
+**Problem:** Script shows "File not found"
+- Solution: Make sure XML file is in the same directory as the script
+- Or update `$input_file` path in the script
+
+**Problem:** Script runs but shows 0 conversions
+- Solution: Your XML might not contain questions
+- Check: `grep -c "sfwd-question" yourfile.xml` should be > 0
+
+**Problem:** Out of memory
+- Solution: Increase PHP memory limit
+- Edit php.ini: `memory_limit = 512M`
+
+For detailed conversion documentation, see [XML_CONVERSION_README.md](XML_CONVERSION_README.md)
 
 ### For Large Imports (25+ Courses, Hundreds of Lessons)
 
@@ -76,8 +168,15 @@ Instead of exporting everything at once, export in manageable batches:
      - ☑ Lessons (sfwd-lessons)
      - ☑ Topics (sfwd-topic)
      - ☑ Quizzes (sfwd-quiz)
+     - ☑ **Questions (sfwd-question)** ← Don't forget!
    - For each batch, manually note which courses you want
    - Download separate XML files for each batch
+
+3. **Convert Each XML File**
+   - Before importing, convert each XML file using the conversion script
+   - Update `$input_file` in `convert-xml.php` for each batch
+   - Run: `php convert-xml.php`
+   - This ensures all questions are in the correct format
 
 #### Step 2: Prepare Your Environment
 

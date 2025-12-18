@@ -47,7 +47,10 @@ if (!$pass_percentage) {
         <?php endif; ?>
         
         <div class="quiz-description">
-            <?php echo wpautop($quiz->post_content); ?>
+            <?php 
+            // Apply WordPress content filters to process embeds and shortcodes
+            echo apply_filters('the_content', $quiz->post_content);
+            ?>
         </div>
         
         <div class="quiz-info">

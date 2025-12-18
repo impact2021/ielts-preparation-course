@@ -40,7 +40,10 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
     </div>
     
     <div class="lesson-content">
-        <?php echo wpautop($lesson->post_content); ?>
+        <?php 
+        // Apply WordPress content filters to process embeds and shortcodes
+        echo apply_filters('the_content', $lesson->post_content);
+        ?>
     </div>
     
     <?php 
