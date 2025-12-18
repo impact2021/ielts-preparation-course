@@ -2,6 +2,29 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.8] - 2025-12-18
+
+### Changed
+- **Version Update**: Updated plugin version to 2.8
+- **CBT Modal Improvements**: Fixed computer-based test modal to properly hide content when not in fullscreen mode
+  - Quiz form is now completely hidden when viewing the fullscreen notice
+  - Prevents content from showing below the "must be viewed in fullscreen" section
+- **CBT Navigation Enhancement**: Moved submit button to navigation row for better accessibility
+  - Submit button now appears in the question navigation bar at the bottom
+  - Improved layout and user experience for computer-based tests
+- **Answered Question Indication**: Enhanced visual feedback for answered questions
+  - Answered questions now show with green background in navigation
+  - Makes it easier to track progress through the test
+
+### Fixed
+- **Timer Visibility**: Ensured timer is properly visible for exercises with time limits
+  - Timer displays correctly in both standard and computer-based layouts
+  - Timer remains visible in fullscreen mode
+- **CBT Fullscreen Formatting**: Fixed formatting issues in fullscreen mode
+  - Reading text on left no longer disappears on scroll
+  - Proper CSS styling maintained in fullscreen modal
+  - Two-column layout properly maintained
+
 ## [2.7] - 2025-12-18
 
 ### Changed
