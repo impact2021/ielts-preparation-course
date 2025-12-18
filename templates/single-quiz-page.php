@@ -50,8 +50,19 @@ body.ielts-quiz-single .content-area {
             $course_id = get_post_meta($quiz_id, '_ielts_cm_course_id', true);
             $lesson_id = get_post_meta($quiz_id, '_ielts_cm_lesson_id', true);
             
-            // Include the single quiz template
-            $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz.php';
+            // Get layout type
+            $layout_type = get_post_meta($quiz_id, '_ielts_cm_layout_type', true);
+            if (!$layout_type) {
+                $layout_type = 'standard';
+            }
+            
+            // Include the appropriate template based on layout type
+            if ($layout_type === 'computer_based') {
+                $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-computer-based.php';
+            } else {
+                $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz.php';
+            }
+            
             if (file_exists($template)) {
                 include $template;
             }

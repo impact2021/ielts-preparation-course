@@ -527,9 +527,19 @@ class IELTS_CM_Admin {
         
         $questions = get_post_meta($post->ID, '_ielts_cm_questions', true);
         $pass_percentage = get_post_meta($post->ID, '_ielts_cm_pass_percentage', true);
+        $layout_type = get_post_meta($post->ID, '_ielts_cm_layout_type', true);
+        $reading_texts = get_post_meta($post->ID, '_ielts_cm_reading_texts', true);
         
         if (!$questions) {
             $questions = array();
+        }
+        
+        if (!$layout_type) {
+            $layout_type = 'standard';
+        }
+        
+        if (!$reading_texts) {
+            $reading_texts = array();
         }
         
         $courses = get_posts(array(
@@ -573,6 +583,29 @@ class IELTS_CM_Admin {
             <input type="number" id="ielts_cm_pass_percentage" name="ielts_cm_pass_percentage" value="<?php echo esc_attr($pass_percentage ? $pass_percentage : 70); ?>" min="0" max="100" style="width: 100%;">
         </p>
         
+        <p>
+            <label for="ielts_cm_layout_type"><?php _e('Layout Type', 'ielts-course-manager'); ?></label><br>
+            <select id="ielts_cm_layout_type" name="ielts_cm_layout_type" style="width: 100%;">
+                <option value="standard" <?php selected($layout_type, 'standard'); ?>><?php _e('Standard Layout', 'ielts-course-manager'); ?></option>
+                <option value="computer_based" <?php selected($layout_type, 'computer_based'); ?>><?php _e('Computer-Based IELTS Layout (Two Columns)', 'ielts-course-manager'); ?></option>
+            </select>
+            <small><?php _e('Computer-Based layout displays reading text on the left and questions on the right, similar to the actual IELTS computer test.', 'ielts-course-manager'); ?></small>
+        </p>
+        
+        <div id="reading-texts-section" style="<?php echo ($layout_type !== 'computer_based') ? 'display:none;' : ''; ?>">
+            <h3><?php _e('Reading Texts', 'ielts-course-manager'); ?></h3>
+            <p><small><?php _e('Add reading passages that will be displayed in the left column. You can link specific questions to each reading text.', 'ielts-course-manager'); ?></small></p>
+            
+            <div id="reading-texts-container">
+                <?php if (!empty($reading_texts)): ?>
+                    <?php foreach ($reading_texts as $index => $text): ?>
+                        <?php $this->render_reading_text_field($index, $text); ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
+            <button type="button" class="button" id="add-reading-text"><?php _e('Add Reading Text', 'ielts-course-manager'); ?></button>
+        </div>
+        
         <div id="ielts-cm-questions">
             <h3><?php _e('Questions', 'ielts-course-manager'); ?></h3>
             
@@ -608,6 +641,48 @@ class IELTS_CM_Admin {
         <script>
         jQuery(document).ready(function($) {
             var questionIndex = <?php echo intval(count($questions)); ?>;
+            var readingTextIndex = <?php echo intval(count($reading_texts)); ?>;
+            
+            // Localized strings
+            var i18n = {
+                readingText: <?php echo json_encode(__('Reading Text', 'ielts-course-manager')); ?>,
+                titleOptional: <?php echo json_encode(__('Title (Optional)', 'ielts-course-manager')); ?>,
+                placeholderPassage: <?php echo json_encode(__('e.g., Passage 1', 'ielts-course-manager')); ?>,
+                placeholderEnterText: <?php echo json_encode(__('Enter the reading passage here...', 'ielts-course-manager')); ?>,
+                removeReadingText: <?php echo json_encode(__('Remove Reading Text', 'ielts-course-manager')); ?>
+            };
+            
+            // Layout type change handler
+            $('#ielts_cm_layout_type').on('change', function() {
+                if ($(this).val() === 'computer_based') {
+                    $('#reading-texts-section').show();
+                } else {
+                    $('#reading-texts-section').hide();
+                }
+            });
+            
+            // Add reading text
+            $('#add-reading-text').on('click', function() {
+                var html = '<div class="reading-text-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9;">' +
+                    '<h4>' + i18n.readingText + ' ' + (readingTextIndex + 1) + '</h4>' +
+                    '<p>' +
+                    '<label>' + i18n.titleOptional + '</label><br>' +
+                    '<input type="text" name="reading_texts[' + readingTextIndex + '][title]" style="width: 100%;" placeholder="' + i18n.placeholderPassage + '">' +
+                    '</p>' +
+                    '<p>' +
+                    '<label>' + i18n.readingText + '</label><br>' +
+                    '<textarea name="reading_texts[' + readingTextIndex + '][content]" rows="10" style="width: 100%;" placeholder="' + i18n.placeholderEnterText + '"></textarea>' +
+                    '</p>' +
+                    '<button type="button" class="button remove-reading-text">' + i18n.removeReadingText + '</button>' +
+                    '</div>';
+                $('#reading-texts-container').append(html);
+                readingTextIndex++;
+            });
+            
+            // Remove reading text
+            $(document).on('click', '.remove-reading-text', function() {
+                $(this).closest('.reading-text-item').remove();
+            });
             
             // Function to check and update warning visibility
             function updateQuestionWarning() {
@@ -705,6 +780,29 @@ class IELTS_CM_Admin {
             });
         });
         </script>
+        <?php
+    }
+    
+    /**
+     * Render reading text field
+     */
+    private function render_reading_text_field($index, $text) {
+        ?>
+        <div class="reading-text-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9;">
+            <h4><?php printf(__('Reading Text %d', 'ielts-course-manager'), $index + 1); ?></h4>
+            
+            <p>
+                <label><?php _e('Title (Optional)', 'ielts-course-manager'); ?></label><br>
+                <input type="text" name="reading_texts[<?php echo $index; ?>][title]" value="<?php echo esc_attr(isset($text['title']) ? $text['title'] : ''); ?>" style="width: 100%;" placeholder="<?php _e('e.g., Passage 1', 'ielts-course-manager'); ?>">
+            </p>
+            
+            <p>
+                <label><?php _e('Reading Text', 'ielts-course-manager'); ?></label><br>
+                <textarea name="reading_texts[<?php echo $index; ?>][content]" rows="10" style="width: 100%;" placeholder="<?php _e('Enter the reading passage here...', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($text['content']) ? $text['content'] : ''); ?></textarea>
+            </p>
+            
+            <button type="button" class="button remove-reading-text"><?php _e('Remove Reading Text', 'ielts-course-manager'); ?></button>
+        </div>
         <?php
     }
     
@@ -1028,6 +1126,25 @@ class IELTS_CM_Admin {
             if (isset($_POST['ielts_cm_pass_percentage'])) {
                 update_post_meta($post_id, '_ielts_cm_pass_percentage', intval($_POST['ielts_cm_pass_percentage']));
             }
+            
+            // Save layout type
+            if (isset($_POST['ielts_cm_layout_type'])) {
+                update_post_meta($post_id, '_ielts_cm_layout_type', sanitize_text_field($_POST['ielts_cm_layout_type']));
+            }
+            
+            // Save reading texts
+            $reading_texts = array();
+            if (isset($_POST['reading_texts']) && is_array($_POST['reading_texts'])) {
+                foreach ($_POST['reading_texts'] as $text) {
+                    if (!empty($text['content'])) {
+                        $reading_texts[] = array(
+                            'title' => sanitize_text_field($text['title']),
+                            'content' => wp_kses_post($text['content'])
+                        );
+                    }
+                }
+            }
+            update_post_meta($post_id, '_ielts_cm_reading_texts', $reading_texts);
             // Always save questions, even if empty
             $questions = array();
             if (isset($_POST['questions']) && is_array($_POST['questions'])) {

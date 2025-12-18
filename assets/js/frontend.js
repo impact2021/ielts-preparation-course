@@ -307,6 +307,48 @@
                 });
             }, 5000);
         }
+        
+        // Computer-Based Quiz Layout: Question Navigation
+        $('.question-nav-btn').on('click', function(e) {
+            e.preventDefault();
+            var questionIndex = $(this).data('question');
+            var questionElement = $('#question-' + questionIndex);
+            
+            if (questionElement.length) {
+                // Scroll to the question in the right column
+                var questionsColumn = $('.questions-column');
+                var questionOffset = questionElement.position().top;
+                var columnScrollTop = questionsColumn.scrollTop();
+                
+                questionsColumn.animate({
+                    scrollTop: columnScrollTop + questionOffset - 20
+                }, 300);
+                
+                // Highlight the question briefly
+                questionElement.addClass('highlight-question');
+                setTimeout(function() {
+                    questionElement.removeClass('highlight-question');
+                }, 1000);
+            }
+        });
+        
+        // Track answered questions in computer-based layout using event delegation
+        $('.ielts-computer-based-quiz').on('change', 'input[type="radio"]', function() {
+            var questionIndex = $(this).attr('name').replace('answer_', '');
+            var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"]');
+            navButton.addClass('answered');
+        });
+        
+        $('.ielts-computer-based-quiz').on('input', 'input[type="text"], textarea', function() {
+            var questionIndex = $(this).attr('name').replace('answer_', '');
+            var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"]');
+            
+            if ($(this).val().trim().length > 0) {
+                navButton.addClass('answered');
+            } else {
+                navButton.removeClass('answered');
+            }
+        });
     });
     
 })(jQuery);
