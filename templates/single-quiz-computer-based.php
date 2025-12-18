@@ -22,14 +22,16 @@ $reading_texts = get_post_meta($quiz->ID, '_ielts_cm_reading_texts', true);
 if (!$reading_texts) {
     $reading_texts = array();
 }
+$timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
 ?>
 
-<div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>">
+<div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>">
     <?php 
     // Check if in fullscreen mode
     $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
     ?>
     
+    <?php if (!$is_fullscreen): ?>
     <div class="quiz-header">
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <h2 style="margin: 0;"><?php echo esc_html($quiz->post_title); ?></h2>
@@ -66,6 +68,7 @@ if (!$reading_texts) {
             ?>
         </div>
     </div>
+    <?php endif; ?>
     
     <?php if (!$is_fullscreen): ?>
         <!-- Force fullscreen mode for CBT tests -->
@@ -73,16 +76,21 @@ if (!$reading_texts) {
             <p style="font-size: 1.2em; margin-bottom: 20px; color: #333;">
                 <?php _e('This computer-based test must be viewed in fullscreen mode for the best experience.', 'ielts-course-manager'); ?>
             </p>
-            <a href="<?php echo add_query_arg('fullscreen', '1', get_permalink($quiz->ID)); ?>" 
-               class="button button-primary button-large ielts-fullscreen-btn"
-               data-fullscreen-url="<?php echo esc_url(add_query_arg('fullscreen', '1', get_permalink($quiz->ID))); ?>"
-               style="font-size: 1.1em; padding: 12px 30px;">
+            <button type="button" class="button button-primary button-large ielts-fullscreen-btn" id="open-modal-btn" style="font-size: 1.1em; padding: 12px 30px;">
                 <span class="dashicons dashicons-fullscreen-alt" style="vertical-align: middle; font-size: 1.2em;"></span>
                 <?php _e('Open in Fullscreen', 'ielts-course-manager'); ?>
-            </a>
+            </button>
         </div>
-    <?php elseif (!empty($questions) && is_user_logged_in()): ?>
-        <form id="ielts-quiz-form" class="quiz-form">
+    <?php endif; ?>
+    
+    <?php if (!empty($questions) && is_user_logged_in()): ?>
+        <form id="ielts-quiz-form" class="quiz-form" style="<?php echo $is_fullscreen ? 'display:none;' : ''; ?>">
+            <?php if ($is_fullscreen && $timer_minutes > 0): ?>
+            <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
+                <strong><?php _e('Time Remaining:', 'ielts-course-manager'); ?></strong>
+                <span id="timer-display-fullscreen">--:--</span>
+            </div>
+            <?php endif; ?>
             <div class="computer-based-container">
                 <!-- Left Column: Reading Texts -->
                 <div class="reading-column">
@@ -306,18 +314,127 @@ if (!$reading_texts) {
     <?php } ?>
 </div>
 
+<style>
+#cbt-fullscreen-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 999999;
+    overflow: auto;
+}
+#cbt-fullscreen-modal.active {
+    display: block;
+}
+#cbt-fullscreen-modal .modal-close-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000000;
+    background: #dc3232;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+#cbt-fullscreen-modal .modal-close-btn:hover {
+    background: #a00;
+}
+</style>
+
+<div id="cbt-fullscreen-modal">
+    <button type="button" class="modal-close-btn" id="close-modal-btn"><?php _e('Exit Fullscreen', 'ielts-course-manager'); ?></button>
+    <div id="modal-content"></div>
+</div>
+
 <script>
-// Safe fullscreen launcher for CBT exercises
+// Modal fullscreen for CBT exercises
 jQuery(document).ready(function($) {
-    $('.ielts-fullscreen-btn').on('click', function(e) {
+    var modal = $('#cbt-fullscreen-modal');
+    var form = $('#ielts-quiz-form');
+    var isFullscreenMode = <?php echo $is_fullscreen ? 'true' : 'false'; ?>;
+    var modalTimerInterval = null;
+    
+    if (isFullscreenMode) {
+        // Already in fullscreen, show the form
+        form.show();
+    }
+    
+    $('#open-modal-btn').on('click', function(e) {
         e.preventDefault();
-        var url = $(this).data('fullscreen-url');
-        if (url) {
-            var width = Math.max(800, window.screen.availWidth || window.screen.width);
-            var height = Math.max(600, window.screen.availHeight || window.screen.height);
-            var features = 'width=' + width + ',height=' + height + ',fullscreen=yes,scrollbars=yes';
-            window.open(url, '_blank', features);
+        
+        // Clone the form into modal
+        var formClone = form.clone(true, true);
+        formClone.show();
+        $('#modal-content').html(formClone);
+        
+        // Show modal
+        modal.addClass('active');
+        
+        // Disable body scroll
+        $('body').css('overflow', 'hidden');
+        
+        // Initialize timer if present
+        var timerMinutes = $('.ielts-computer-based-quiz').data('timer-minutes');
+        if (timerMinutes && timerMinutes > 0) {
+            modalTimerInterval = initializeTimer(timerMinutes, formClone);
         }
     });
+    
+    $('#close-modal-btn').on('click', function() {
+        if (confirm('<?php _e('Are you sure you want to exit? Your progress will be lost.', 'ielts-course-manager'); ?>')) {
+            // Clean up timer
+            if (modalTimerInterval) {
+                clearInterval(modalTimerInterval);
+                modalTimerInterval = null;
+            }
+            modal.removeClass('active');
+            $('body').css('overflow', '');
+            $('#modal-content').html('');
+        }
+    });
+    
+    function initializeTimer(minutes, targetForm) {
+        var totalSeconds = minutes * 60;
+        var timerDisplay = targetForm.find('#timer-display-fullscreen');
+        
+        if (timerDisplay.length === 0) {
+            return null;
+        }
+        
+        var timerInterval = setInterval(function() {
+            totalSeconds--;
+            
+            var mins = Math.floor(totalSeconds / 60);
+            var secs = totalSeconds % 60;
+            timerDisplay.text(mins + ':' + (secs < 10 ? '0' : '') + secs);
+            
+            // Warning at 5 minutes
+            if (totalSeconds === 300) {
+                timerDisplay.css('color', 'orange');
+            }
+            
+            // Critical at 1 minute
+            if (totalSeconds === 60) {
+                timerDisplay.css('color', 'red');
+            }
+            
+            if (totalSeconds <= 0) {
+                clearInterval(timerInterval);
+                timerDisplay.text('0:00').css('color', 'red');
+                
+                // Auto-submit
+                alert('<?php _e('Time is up! The exercise will be submitted automatically.', 'ielts-course-manager'); ?>');
+                targetForm.submit();
+            }
+        }, 1000);
+        
+        return timerInterval;
+    }
 });
 </script>

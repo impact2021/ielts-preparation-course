@@ -1047,3 +1047,47 @@ body.ielts-course-archive .content-area {
         transform: scale(1.02);
     }
 }
+
+/* Quiz Timer */
+.quiz-timer {
+    background: #f0f0f1;
+    border-left: 4px solid #0073aa;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.quiz-timer strong {
+    margin-right: 10px;
+}
+
+.quiz-timer #timer-display {
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0073aa;
+}
+
+/* Fullscreen timer */
+.quiz-timer-fullscreen {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 2px solid #0073aa;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 18px;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.quiz-timer-fullscreen strong {
+    margin-right: 10px;
+}
+
+.quiz-timer-fullscreen #timer-display-fullscreen {
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0073aa;
+}

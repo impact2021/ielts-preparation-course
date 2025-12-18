@@ -14,6 +14,53 @@
             window.location.href = url.toString();
         }
         
+        // Initialize quiz timer if present
+        var quizContainer = $('.ielts-single-quiz, .ielts-computer-based-quiz');
+        var timerMinutes = quizContainer.data('timer-minutes');
+        var quizTimerInterval = null;
+        
+        if (timerMinutes && timerMinutes > 0 && $('#quiz-timer').length) {
+            var totalSeconds = timerMinutes * 60;
+            var timerDisplay = $('#timer-display');
+            
+            quizTimerInterval = setInterval(function() {
+                totalSeconds--;
+                
+                var mins = Math.floor(totalSeconds / 60);
+                var secs = totalSeconds % 60;
+                timerDisplay.text(mins + ':' + (secs < 10 ? '0' : '') + secs);
+                
+                // Warning at 5 minutes
+                if (totalSeconds === 300) {
+                    $('#quiz-timer').css('color', 'orange');
+                }
+                
+                // Critical at 1 minute
+                if (totalSeconds === 60) {
+                    $('#quiz-timer').css('color', 'red');
+                }
+                
+                if (totalSeconds <= 0) {
+                    clearInterval(quizTimerInterval);
+                    quizTimerInterval = null;
+                    timerDisplay.text('0:00');
+                    $('#quiz-timer').css('color', 'red');
+                    
+                    // Auto-submit the form
+                    alert('Time is up! The exercise will be submitted automatically.');
+                    $('#ielts-quiz-form').submit();
+                }
+            }, 1000);
+        }
+        
+        // Cleanup timer on page unload
+        $(window).on('beforeunload', function() {
+            if (quizTimerInterval) {
+                clearInterval(quizTimerInterval);
+                quizTimerInterval = null;
+            }
+        });
+        
         // Enrollment
         $('.enroll-button').on('click', function(e) {
             e.preventDefault();
