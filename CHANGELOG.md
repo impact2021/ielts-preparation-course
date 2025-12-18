@@ -2,6 +2,28 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.12] - 2025-12-18
+
+### Fixed
+- **CBT Fullscreen Button**: Verified and maintained working fullscreen button functionality from v2.10
+  - Button opens CBT exercise in fullscreen modal correctly
+  - Text hyperlink opens quiz normally without modal
+  
+### Changed
+- **CBT Results Modal Simplified**: Streamlined results display for computer-based tests
+  - Removed detailed question-by-question feedback from results modal
+  - Removed automatic 5-second redirect countdown
+  - Added "Review my answers" button to view highlighted answers in the form
+  - Band score now displays prominently after submission
+  - Submit button is hidden after submission during answer review
+  - Visual highlighting (green/red) in quiz form remains for answer review
+
+### Added
+- **Review Answers Functionality**: New button to review answers after quiz submission
+  - Button appears in results modal under time taken section
+  - Closes modal and allows students to review their highlighted answers
+  - Students can see correct (green) and incorrect (red) answers directly in the form
+
 ## [2.11] - 2025-12-18
 
 ### Added
