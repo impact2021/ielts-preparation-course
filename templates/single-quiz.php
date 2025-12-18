@@ -16,9 +16,10 @@ $pass_percentage = get_post_meta($quiz->ID, '_ielts_cm_pass_percentage', true);
 if (!$pass_percentage) {
     $pass_percentage = 70;
 }
+$timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
 ?>
 
-<div class="ielts-single-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>">
+<div class="ielts-single-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>">
     <div class="quiz-header">
         <h2><?php echo esc_html($quiz->post_title); ?></h2>
         
@@ -58,7 +59,20 @@ if (!$pass_percentage) {
                 <strong><?php _e('Number of Questions:', 'ielts-course-manager'); ?></strong>
                 <?php echo count($questions); ?>
             </p>
+            <?php if ($timer_minutes > 0): ?>
+            <p>
+                <strong><?php _e('Time Limit:', 'ielts-course-manager'); ?></strong>
+                <?php echo intval($timer_minutes); ?> <?php _e('minutes', 'ielts-course-manager'); ?>
+            </p>
+            <?php endif; ?>
         </div>
+        
+        <?php if ($timer_minutes > 0 && !empty($questions) && is_user_logged_in()): ?>
+        <div id="quiz-timer" class="quiz-timer">
+            <strong><?php _e('Time Remaining:', 'ielts-course-manager'); ?></strong>
+            <span id="timer-display">--:--</span>
+        </div>
+        <?php endif; ?>
     </div>
     
     <form id="ielts-quiz-form" class="quiz-form">

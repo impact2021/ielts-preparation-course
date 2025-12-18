@@ -649,6 +649,15 @@ class IELTS_CM_Admin {
             <small><?php _e('Choose how results are displayed. For IELTS Reading and Listening exercises, results will show as band scores (0-9) instead of percentages.', 'ielts-course-manager'); ?></small>
         </p>
         
+        <?php
+        $timer_minutes = get_post_meta($post->ID, '_ielts_cm_timer_minutes', true);
+        ?>
+        <p>
+            <label for="ielts_cm_timer_minutes"><?php _e('Timer (Minutes)', 'ielts-course-manager'); ?></label><br>
+            <input type="number" id="ielts_cm_timer_minutes" name="ielts_cm_timer_minutes" value="<?php echo esc_attr($timer_minutes); ?>" min="0" step="1" style="width: 100%;" placeholder="<?php _e('Leave empty for no timer', 'ielts-course-manager'); ?>">
+            <small><?php _e('Set a time limit in minutes. The exercise will automatically submit when time expires, regardless of completion status. Leave empty for no timer.', 'ielts-course-manager'); ?></small>
+        </p>
+        
         <div id="reading-texts-section" style="<?php echo ($layout_type !== 'computer_based') ? 'display:none;' : ''; ?>">
             <h3><?php _e('Reading Texts', 'ielts-course-manager'); ?></h3>
             <p><small><?php _e('Add reading passages that will be displayed in the left column. You can link specific questions to each reading text.', 'ielts-course-manager'); ?></small></p>
@@ -1431,6 +1440,16 @@ class IELTS_CM_Admin {
                 $valid_types = array('percentage', 'ielts_general_reading', 'ielts_academic_reading', 'ielts_listening');
                 if (in_array($scoring_type, $valid_types)) {
                     update_post_meta($post_id, '_ielts_cm_scoring_type', $scoring_type);
+                }
+            }
+            
+            // Save timer minutes
+            if (isset($_POST['ielts_cm_timer_minutes'])) {
+                $timer_minutes = intval($_POST['ielts_cm_timer_minutes']);
+                if ($timer_minutes > 0) {
+                    update_post_meta($post_id, '_ielts_cm_timer_minutes', $timer_minutes);
+                } else {
+                    delete_post_meta($post_id, '_ielts_cm_timer_minutes');
                 }
             }
             
