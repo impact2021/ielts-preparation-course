@@ -368,10 +368,11 @@
                     
                     var closestQuestion = null;
                     var closestDistance = Infinity;
+                    var columnOffset = questionsColumn.offset().top;
                     
                     $('.quiz-question').each(function() {
                         var $question = $(this);
-                        var questionTop = $question.position().top + columnScrollTop;
+                        var questionTop = $question.offset().top - columnOffset + columnScrollTop;
                         var questionCenter = questionTop + ($question.height() / 2);
                         var distance = Math.abs(questionCenter - viewportCenter);
                         

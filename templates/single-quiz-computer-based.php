@@ -104,7 +104,7 @@ if (!$reading_texts) {
                 <div class="questions-column">
                     <div class="questions-content">
                         <?php foreach ($questions as $index => $question): ?>
-                            <div class="quiz-question" id="question-<?php echo $index; ?>" data-reading-text-id="<?php echo isset($question['reading_text_id']) && $question['reading_text_id'] !== null ? esc_attr($question['reading_text_id']) : ''; ?>">
+                            <div class="quiz-question" id="question-<?php echo $index; ?>" data-reading-text-id="<?php echo esc_attr($question['reading_text_id'] ?? ''); ?>">
                                 <h4 class="question-number">
                                     <?php printf(__('Question %d', 'ielts-course-manager'), $index + 1); ?>
                                     <span class="question-points">(<?php echo $question['points']; ?> <?php _e('points', 'ielts-course-manager'); ?>)</span>

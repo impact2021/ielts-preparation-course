@@ -745,11 +745,14 @@ class IELTS_CM_Admin {
                 updateReadingTextSelectors();
             });
             
+            // Localized reading text label for fallback
+            var readingTextLabel = <?php echo json_encode(__('Reading Text', 'ielts-course-manager')); ?>;
+            
             // Function to build reading text selector HTML
             function buildReadingTextSelector(questionIdx) {
                 var readingTexts = [];
                 $('.reading-text-item').each(function(idx) {
-                    var title = $(this).find('input[name*="[title]"]').val() || '<?php _e('Reading Text', 'ielts-course-manager'); ?> ' + (idx + 1);
+                    var title = $(this).find('input[name*="[title]"]').val() || (readingTextLabel + ' ' + (idx + 1));
                     readingTexts.push({index: idx, title: title});
                 });
                 
