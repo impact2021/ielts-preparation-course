@@ -274,49 +274,53 @@ You have one hour for the complete test (including transferring your answers).</
             return null;
         }
         
-        // Parse questions
+        // Parse questions - state machine approach
         $questions = array();
+        $state = 'WAITING_FOR_QUESTION'; // States: WAITING_FOR_QUESTION, COLLECTING_OPTIONS, COLLECTING_FEEDBACK, MAYBE_FEEDBACK
         $current_question = null;
         $current_options = array();
-        $collecting_feedback = false;
         $feedback_lines = array();
         
         for ($i = $start_index; $i < count($lines); $i++) {
             $line = $lines[$i];
             
-            // Skip empty lines - they separate questions
+            // Empty line transitions state
             if (empty($line)) {
-                // Save current question if exists
-                if ($current_question !== null) {
-                    // Add feedback if collected
-                    if (!empty($feedback_lines)) {
-                        $current_question['incorrect_feedback'] = implode("\n", $feedback_lines);
-                    }
-                    
-                    // Find correct option
-                    $correct_index = -1;
-                    foreach ($current_options as $idx => $opt) {
-                        if ($opt['is_correct']) {
-                            $correct_index = $idx;
-                            break;
+                if ($state === 'COLLECTING_OPTIONS') {
+                    // Check if next non-empty line is feedback (not a new question)
+                    $state = 'MAYBE_FEEDBACK';
+                } elseif ($state === 'COLLECTING_FEEDBACK' || $state === 'MAYBE_FEEDBACK') {
+                    // Save current question
+                    if ($current_question !== null && !empty($current_options)) {
+                        if (!empty($feedback_lines)) {
+                            $current_question['incorrect_feedback'] = implode("\n", $feedback_lines);
                         }
+                        
+                        // Find correct option
+                        $correct_index = -1;
+                        foreach ($current_options as $idx => $opt) {
+                            if ($opt['is_correct']) {
+                                $correct_index = $idx;
+                                break;
+                            }
+                        }
+                        
+                        $current_question['correct_answer'] = $correct_index >= 0 ? (string)$correct_index : '0';
+                        $current_question['mc_options'] = $current_options;
+                        
+                        $questions[] = $current_question;
+                        
+                        // Reset
+                        $current_question = null;
+                        $current_options = array();
+                        $feedback_lines = array();
                     }
-                    
-                    $current_question['correct_answer'] = $correct_index >= 0 ? (string)$correct_index : '0';
-                    $current_question['mc_options'] = $current_options;
-                    
-                    $questions[] = $current_question;
-                    
-                    // Reset for next question
-                    $current_question = null;
-                    $current_options = array();
-                    $collecting_feedback = false;
-                    $feedback_lines = array();
+                    $state = 'WAITING_FOR_QUESTION';
                 }
                 continue;
             }
             
-            // Check if this is an option line
+            // Check for option lines
             if (preg_match('/^This is (TRUE|FALSE)$/i', $line, $matches)) {
                 $option_text = $matches[0];
                 $is_correct = false;
@@ -339,61 +343,18 @@ You have one hour for the complete test (including transferring your answers).</
                     'feedback' => ''
                 );
                 
+                $state = 'COLLECTING_OPTIONS';
                 continue;
             }
             
-            // Check if this is a status line (skip it if standalone)
+            // Skip standalone status lines
             if (preg_match('/^(Correct answer|Incorrect)$/i', $line)) {
                 continue;
             }
             
-            // Check if we're starting to collect options
-            if ($current_question !== null && empty($current_options)) {
-                // This might be the start of options or feedback
-                // If it looks like feedback (longer text), start collecting feedback
-                if (strlen($line) > 50 || preg_match('/^(It\'s|This is|The|Because)/i', $line)) {
-                    $collecting_feedback = true;
-                    $feedback_lines[] = $line;
-                }
-                continue;
-            }
-            
-            // If collecting feedback, add to feedback lines
-            if ($collecting_feedback) {
-                $feedback_lines[] = $line;
-                continue;
-            }
-            
-            // Check if this might be a new question text
-            // Questions usually don't start with "This is" or "Correct" or "Incorrect"
-            if ($current_question === null || !empty($current_options)) {
-                // Start new question if we have options already or no question yet
-                if ($current_question !== null && !empty($current_options)) {
-                    // Save previous question first
-                    if (!empty($feedback_lines)) {
-                        $current_question['incorrect_feedback'] = implode("\n", $feedback_lines);
-                    }
-                    
-                    $correct_index = -1;
-                    foreach ($current_options as $idx => $opt) {
-                        if ($opt['is_correct']) {
-                            $correct_index = $idx;
-                            break;
-                        }
-                    }
-                    
-                    $current_question['correct_answer'] = $correct_index >= 0 ? (string)$correct_index : '0';
-                    $current_question['mc_options'] = $current_options;
-                    
-                    $questions[] = $current_question;
-                    
-                    // Reset
-                    $current_options = array();
-                    $collecting_feedback = false;
-                    $feedback_lines = array();
-                }
-                
-                // Start new question
+            // Handle based on state
+            if ($state === 'WAITING_FOR_QUESTION') {
+                // This is a new question
                 $current_question = array(
                     'type' => 'true_false',
                     'question' => $line,
@@ -401,27 +362,80 @@ You have one hour for the complete test (including transferring your answers).</
                     'correct_feedback' => '',
                     'incorrect_feedback' => ''
                 );
+                $state = 'COLLECTING_OPTIONS';
+            } elseif ($state === 'MAYBE_FEEDBACK') {
+                // Determine if this is feedback or a new question
+                // Feedback often starts with "It's", "This is", "The", has punctuation, or is longer
+                // A question is typically a statement without explanation markers
+                if (preg_match('/^(It\'s|This is because|The |Because |In |Although |However )/i', $line) || 
+                    strlen($line) > 100 ||
+                    preg_match('/–|—/', $line)) {
+                    // This looks like feedback
+                    $feedback_lines[] = $line;
+                    $state = 'COLLECTING_FEEDBACK';
+                } else {
+                    // This looks like a new question - save previous question first
+                    if ($current_question !== null && !empty($current_options)) {
+                        if (!empty($feedback_lines)) {
+                            $current_question['incorrect_feedback'] = implode("\n", $feedback_lines);
+                        }
+                        
+                        $correct_index = -1;
+                        foreach ($current_options as $idx => $opt) {
+                            if ($opt['is_correct']) {
+                                $correct_index = $idx;
+                                break;
+                            }
+                        }
+                        
+                        $current_question['correct_answer'] = $correct_index >= 0 ? (string)$correct_index : '0';
+                        $current_question['mc_options'] = $current_options;
+                        
+                        $questions[] = $current_question;
+                        
+                        // Reset
+                        $current_options = array();
+                        $feedback_lines = array();
+                    }
+                    
+                    // Start new question
+                    $current_question = array(
+                        'type' => 'true_false',
+                        'question' => $line,
+                        'points' => 1,
+                        'correct_feedback' => '',
+                        'incorrect_feedback' => ''
+                    );
+                    $state = 'COLLECTING_OPTIONS';
+                }
+            } elseif ($state === 'COLLECTING_OPTIONS') {
+                // After we have options, any text is feedback
+                if (!empty($current_options)) {
+                    $feedback_lines[] = $line;
+                    $state = 'COLLECTING_FEEDBACK';
+                }
+            } elseif ($state === 'COLLECTING_FEEDBACK') {
+                // Continue collecting feedback
+                $feedback_lines[] = $line;
             }
         }
         
         // Save last question if exists
-        if ($current_question !== null) {
+        if ($current_question !== null && !empty($current_options)) {
             if (!empty($feedback_lines)) {
                 $current_question['incorrect_feedback'] = implode("\n", $feedback_lines);
             }
             
-            if (!empty($current_options)) {
-                $correct_index = -1;
-                foreach ($current_options as $idx => $opt) {
-                    if ($opt['is_correct']) {
-                        $correct_index = $idx;
-                        break;
-                    }
+            $correct_index = -1;
+            foreach ($current_options as $idx => $opt) {
+                if ($opt['is_correct']) {
+                    $correct_index = $idx;
+                    break;
                 }
-                
-                $current_question['correct_answer'] = $correct_index >= 0 ? (string)$correct_index : '0';
-                $current_question['mc_options'] = $current_options;
             }
+            
+            $current_question['correct_answer'] = $correct_index >= 0 ? (string)$correct_index : '0';
+            $current_question['mc_options'] = $current_options;
             
             $questions[] = $current_question;
         }
