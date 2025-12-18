@@ -26,7 +26,22 @@ if (!$reading_texts) {
 
 <div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>">
     <div class="quiz-header">
-        <h2><?php echo esc_html($quiz->post_title); ?></h2>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 style="margin: 0;"><?php echo esc_html($quiz->post_title); ?></h2>
+            <?php 
+            // Show fullscreen button if not already in fullscreen mode
+            $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
+            if (!$is_fullscreen): 
+            ?>
+                <a href="<?php echo add_query_arg('fullscreen', '1', get_permalink($quiz->ID)); ?>" 
+                   class="button button-secondary"
+                   onclick="window.open(this.href, '_blank', 'fullscreen=yes,width=' + screen.width + ',height=' + screen.height); return false;"
+                   style="white-space: nowrap;">
+                    <span class="dashicons dashicons-fullscreen-alt" style="vertical-align: middle;"></span>
+                    <?php _e('Open Fullscreen', 'ielts-course-manager'); ?>
+                </a>
+            <?php endif; ?>
+        </div>
         
         <?php if ($course_id): ?>
             <div class="quiz-breadcrumb">
