@@ -4,6 +4,14 @@ All notable changes to the IELTS Course Manager plugin will be documented in thi
 
 ## [2.3] - 2025-12-18
 
+### Added
+- **Recursive Content Sync**: When pushing a course, all associated content is now automatically synced
+  - Pushing a course now syncs all its lessons
+  - All sublessons (resources) within those lessons are synced
+  - All exercises (quizzes) within those lessons are synced
+  - Detailed sync statistics shown after push (lesson count, sublesson count, exercise count)
+  - Eliminates need to manually push each piece of content individually
+
 ### Fixed
 - **Lesson Meta Box Error**: Fixed critical error "Uncaught TypeError: in_array(): Argument #2 ($haystack) must be of type array, string given"
   - Issue occurred when retrieving lesson course assignments that were stored as serialized strings

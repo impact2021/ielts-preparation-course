@@ -2232,7 +2232,12 @@ class IELTS_CM_Admin {
         }
         
         // Push content to all subsites
-        $results = $sync_manager->push_content_to_subsites($post_id, $content_type);
+        // For courses, push all child content (lessons, sublessons, exercises)
+        if ($content_type === 'course') {
+            $results = $sync_manager->push_content_with_children($post_id, $content_type);
+        } else {
+            $results = $sync_manager->push_content_to_subsites($post_id, $content_type);
+        }
         
         if (is_wp_error($results)) {
             wp_send_json_error(array('message' => $results->get_error_message()));
@@ -2247,18 +2252,64 @@ class IELTS_CM_Admin {
         
         // Format results with site names
         $formatted_results = array();
-        foreach ($results as $site_id => $result) {
-            $formatted_results[$site_id] = array(
-                'site_name' => $subsite_names[$site_id] ?? 'Unknown Site',
-                'success' => !is_wp_error($result) && isset($result['success']) && $result['success'],
-                'message' => is_wp_error($result) ? $result->get_error_message() : ($result['message'] ?? 'Success'),
-                'error' => is_wp_error($result) ? $result->get_error_message() : null
-            );
-        }
         
-        wp_send_json_success(array(
-            'message' => sprintf(__('Content pushed to %d subsite(s)', 'ielts-course-manager'), count($results)),
-            'results' => $formatted_results
-        ));
+        // Handle course results with children
+        if ($content_type === 'course' && isset($results['main'])) {
+            // Format main course results
+            foreach ($results['main'] as $site_id => $result) {
+                $formatted_results[$site_id] = array(
+                    'site_name' => $subsite_names[$site_id] ?? 'Unknown Site',
+                    'success' => !is_wp_error($result) && isset($result['success']) && $result['success'],
+                    'message' => is_wp_error($result) ? $result->get_error_message() : ($result['message'] ?? 'Success'),
+                    'error' => is_wp_error($result) ? $result->get_error_message() : null
+                );
+            }
+            
+            // Count synced items
+            $lesson_count = isset($results['lessons']) ? count($results['lessons']) : 0;
+            $resource_count = 0;
+            $exercise_count = 0;
+            
+            if (isset($results['lessons'])) {
+                foreach ($results['lessons'] as $lesson_data) {
+                    if (isset($lesson_data['resources'])) {
+                        $resource_count += count($lesson_data['resources']);
+                    }
+                    if (isset($lesson_data['exercises'])) {
+                        $exercise_count += count($lesson_data['exercises']);
+                    }
+                }
+            }
+            
+            wp_send_json_success(array(
+                'message' => sprintf(
+                    __('Course and all child content pushed successfully: %d lesson(s), %d sublesson(s), %d exercise(s)', 'ielts-course-manager'),
+                    $lesson_count,
+                    $resource_count,
+                    $exercise_count
+                ),
+                'results' => $formatted_results,
+                'stats' => array(
+                    'lessons' => $lesson_count,
+                    'resources' => $resource_count,
+                    'exercises' => $exercise_count
+                )
+            ));
+        } else {
+            // Handle regular content results
+            foreach ($results as $site_id => $result) {
+                $formatted_results[$site_id] = array(
+                    'site_name' => $subsite_names[$site_id] ?? 'Unknown Site',
+                    'success' => !is_wp_error($result) && isset($result['success']) && $result['success'],
+                    'message' => is_wp_error($result) ? $result->get_error_message() : ($result['message'] ?? 'Success'),
+                    'error' => is_wp_error($result) ? $result->get_error_message() : null
+                );
+            }
+            
+            wp_send_json_success(array(
+                'message' => sprintf(__('Content pushed to %d subsite(s)', 'ielts-course-manager'), count($results)),
+                'results' => $formatted_results
+            ));
+        }
     }
 }
