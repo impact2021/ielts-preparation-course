@@ -114,11 +114,16 @@ class IELTS_CM_Quiz_Handler {
             // Get next item URL for navigation
             $next_url = $this->get_next_item_url($quiz_id, $course_id, $lesson_id);
             
+            // Get display score (band score or percentage)
+            $display_score = $this->get_display_score($quiz_id, $score, $percentage);
+            
             wp_send_json_success(array(
                 'message' => 'Quiz submitted successfully',
                 'score' => $score,
                 'max_score' => $max_score,
                 'percentage' => round($percentage, 2),
+                'display_score' => $display_score['display'],
+                'display_type' => $display_score['type'],
                 'question_results' => $question_results,
                 'next_url' => $next_url
             ));
@@ -377,6 +382,112 @@ class IELTS_CM_Quiz_Handler {
             'fill_blank' => __('Fill in the Blank', 'ielts-course-manager'),
             'summary_completion' => __('Summary Completion', 'ielts-course-manager'),
             'essay' => __('Essay', 'ielts-course-manager')
+        );
+    }
+    
+    /**
+     * Convert correct answers to IELTS band score
+     * 
+     * @param int $correct_answers Number of correct answers
+     * @param string $scoring_type Type of scoring (ielts_general_reading, ielts_academic_reading, ielts_listening)
+     * @return float Band score (0-9)
+     */
+    public function convert_to_band_score($correct_answers, $scoring_type) {
+        // IELTS Academic Reading conversion table
+        $academic_table = array(
+            39 => 9.0, 38 => 8.5, 37 => 8.5, 36 => 8.0, 35 => 8.0,
+            34 => 7.5, 33 => 7.5, 32 => 7.0, 31 => 7.0, 30 => 7.0,
+            29 => 6.5, 28 => 6.5, 27 => 6.5, 26 => 6.0, 25 => 6.0,
+            24 => 6.0, 23 => 6.0, 22 => 5.5, 21 => 5.5, 20 => 5.5,
+            19 => 5.5, 18 => 5.0, 17 => 5.0, 16 => 5.0, 15 => 5.0,
+            14 => 4.5, 13 => 4.5, 12 => 4.0, 11 => 4.0, 10 => 4.0,
+            9 => 3.5, 8 => 3.5, 7 => 3.0, 6 => 3.0, 5 => 2.5,
+            4 => 2.5, 3 => 2.0, 2 => 2.0, 1 => 1.5, 0 => 1.0
+        );
+        
+        // IELTS General Training Reading conversion table
+        $general_table = array(
+            40 => 9.0, 39 => 8.5, 38 => 8.0, 37 => 8.0, 36 => 7.5,
+            35 => 7.5, 34 => 7.0, 33 => 7.0, 32 => 6.5, 31 => 6.5,
+            30 => 6.0, 29 => 6.0, 28 => 5.5, 27 => 5.5, 26 => 5.5,
+            25 => 5.0, 24 => 5.0, 23 => 5.0, 22 => 4.5, 21 => 4.5,
+            20 => 4.5, 19 => 4.5, 18 => 4.0, 17 => 4.0, 16 => 4.0,
+            15 => 4.0, 14 => 3.5, 13 => 3.5, 12 => 3.5, 11 => 3.0,
+            10 => 3.0, 9 => 3.0, 8 => 2.5, 7 => 2.5, 6 => 2.5,
+            5 => 2.0, 4 => 2.0, 3 => 2.0, 2 => 1.5, 1 => 1.5,
+            0 => 1.0
+        );
+        
+        // IELTS Listening conversion table
+        $listening_table = array(
+            39 => 9.0, 38 => 8.5, 37 => 8.5, 36 => 8.0, 35 => 8.0,
+            34 => 7.5, 33 => 7.5, 32 => 7.5, 31 => 7.0, 30 => 7.0,
+            29 => 6.5, 28 => 6.5, 27 => 6.5, 26 => 6.5, 25 => 6.0,
+            24 => 6.0, 23 => 6.0, 22 => 5.5, 21 => 5.5, 20 => 5.5,
+            19 => 5.5, 18 => 5.5, 17 => 5.0, 16 => 5.0, 15 => 4.5,
+            14 => 4.5, 13 => 4.5, 12 => 4.0, 11 => 4.0, 10 => 4.0,
+            9 => 3.5, 8 => 3.5, 7 => 3.0, 6 => 3.0, 5 => 2.5,
+            4 => 2.5, 3 => 2.0, 2 => 2.0, 1 => 1.5, 0 => 1.0
+        );
+        
+        // Select the appropriate table
+        $table = array();
+        switch ($scoring_type) {
+            case 'ielts_academic_reading':
+                $table = $academic_table;
+                break;
+            case 'ielts_general_reading':
+                $table = $general_table;
+                break;
+            case 'ielts_listening':
+                $table = $listening_table;
+                break;
+            default:
+                return 0; // Invalid scoring type
+        }
+        
+        // Look up the band score
+        if (isset($table[$correct_answers])) {
+            return $table[$correct_answers];
+        }
+        
+        // If exact match not found, use the highest available score for scores above max
+        $max_score = max(array_keys($table));
+        if ($correct_answers > $max_score) {
+            return $table[$max_score];
+        }
+        
+        // Default to lowest score
+        return 1.0;
+    }
+    
+    /**
+     * Get display score for quiz result
+     * Returns band score for IELTS exercises, percentage for others
+     * 
+     * @param int $quiz_id Quiz ID
+     * @param int $score Number of correct answers
+     * @param float $percentage Score percentage
+     * @return array Array with 'display' (formatted string) and 'value' (numeric)
+     */
+    public function get_display_score($quiz_id, $score, $percentage) {
+        $scoring_type = get_post_meta($quiz_id, '_ielts_cm_scoring_type', true);
+        
+        if (empty($scoring_type) || $scoring_type === 'percentage') {
+            // Standard percentage display
+            return array(
+                'display' => round($percentage, 1) . '%',
+                'value' => $percentage,
+                'type' => 'percentage'
+            );
+        }
+        
+        // IELTS band score display
+        $band_score = $this->convert_to_band_score($score, $scoring_type);
+        return array(
+            'display' => 'Band ' . number_format($band_score, 1),
+            'value' => $band_score,
+            'type' => 'band'
         );
     }
 }

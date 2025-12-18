@@ -150,7 +150,12 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                                 <td class="content-score">
                                     <?php if ($item_type === 'quiz'): ?>
                                         <?php if (isset($best_result) && $best_result): ?>
-                                            <strong><?php echo round($best_result->percentage, 1); ?>%</strong>
+                                            <?php
+                                            // Get display score (band score or percentage)
+                                            $quiz_handler = new IELTS_CM_Quiz_Handler();
+                                            $display_score_data = $quiz_handler->get_display_score($post_item->ID, $best_result->score, $best_result->percentage);
+                                            ?>
+                                            <strong><?php echo esc_html($display_score_data['display']); ?></strong>
                                             <br>
                                             <small>(<?php echo $best_result->score; ?> / <?php echo $best_result->max_score; ?>)</small>
                                         <?php else: ?>

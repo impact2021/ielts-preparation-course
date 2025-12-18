@@ -2,6 +2,33 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.6] - 2025-12-18
+
+### Added
+- **IELTS Band Score Conversion**: Exercises can now display results as IELTS band scores instead of percentages
+  - New "Scoring Type" field in exercise settings with options for:
+    - Percentage (Standard) - default behavior
+    - IELTS General Training Reading - converts correct answers to band scores (0-9)
+    - IELTS Academic Reading - converts correct answers to band scores (0-9)
+    - IELTS Listening - converts correct answers to band scores (0-9)
+  - Band score conversion tables match official IELTS scoring rubrics
+  - Results displayed as "Band X.X" instead of percentage where applicable
+  - Progress tables show band scores for IELTS-type exercises
+  - Lesson tables show band scores for best quiz results
+  - Quiz submission displays band score prominently
+
+### Fixed
+- **Fullscreen CSS Issue**: Fixed styling loss when opening CBT exercises in fullscreen mode
+  - Fullscreen mode now properly loads all WordPress styles and scripts
+  - Complete HTML document structure created for fullscreen mode
+  - All formatting, fonts, and styles now preserved in fullscreen
+  - Maintains consistent appearance between regular and fullscreen modes
+
+### Changed
+- Updated plugin version to 2.6
+- Progress table column header changed from "Percentage" to "Result" to accommodate both percentages and band scores
+- Quiz result displays adapt based on scoring type (band score or percentage)
+
 ## [2.5] - 2025-12-18
 
 ### Added

@@ -632,6 +632,23 @@ class IELTS_CM_Admin {
             <small><?php _e('Computer-Based layout displays reading text on the left and questions on the right, similar to the actual IELTS computer test.', 'ielts-course-manager'); ?></small>
         </p>
         
+        <?php
+        $scoring_type = get_post_meta($post->ID, '_ielts_cm_scoring_type', true);
+        if (!$scoring_type) {
+            $scoring_type = 'percentage';
+        }
+        ?>
+        <p>
+            <label for="ielts_cm_scoring_type"><?php _e('Scoring Type', 'ielts-course-manager'); ?></label><br>
+            <select id="ielts_cm_scoring_type" name="ielts_cm_scoring_type" style="width: 100%;">
+                <option value="percentage" <?php selected($scoring_type, 'percentage'); ?>><?php _e('Percentage (Standard)', 'ielts-course-manager'); ?></option>
+                <option value="ielts_general_reading" <?php selected($scoring_type, 'ielts_general_reading'); ?>><?php _e('IELTS General Training Reading (Band Score)', 'ielts-course-manager'); ?></option>
+                <option value="ielts_academic_reading" <?php selected($scoring_type, 'ielts_academic_reading'); ?>><?php _e('IELTS Academic Reading (Band Score)', 'ielts-course-manager'); ?></option>
+                <option value="ielts_listening" <?php selected($scoring_type, 'ielts_listening'); ?>><?php _e('IELTS Listening (Band Score)', 'ielts-course-manager'); ?></option>
+            </select>
+            <small><?php _e('Choose how results are displayed. For IELTS Reading and Listening exercises, results will show as band scores (0-9) instead of percentages.', 'ielts-course-manager'); ?></small>
+        </p>
+        
         <div id="reading-texts-section" style="<?php echo ($layout_type !== 'computer_based') ? 'display:none;' : ''; ?>">
             <h3><?php _e('Reading Texts', 'ielts-course-manager'); ?></h3>
             <p><small><?php _e('Add reading passages that will be displayed in the left column. You can link specific questions to each reading text.', 'ielts-course-manager'); ?></small></p>
@@ -1406,6 +1423,11 @@ class IELTS_CM_Admin {
             // Save layout type
             if (isset($_POST['ielts_cm_layout_type'])) {
                 update_post_meta($post_id, '_ielts_cm_layout_type', sanitize_text_field($_POST['ielts_cm_layout_type']));
+            }
+            
+            // Save scoring type
+            if (isset($_POST['ielts_cm_scoring_type'])) {
+                update_post_meta($post_id, '_ielts_cm_scoring_type', sanitize_text_field($_POST['ielts_cm_scoring_type']));
             }
             
             // Save reading texts
