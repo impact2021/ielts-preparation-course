@@ -2,6 +2,50 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [1.14] - 2024-12-18
+
+### Fixed
+- **LearnDash XML Import - Question Import**: Enhanced quiz question import from LearnDash XML exports
+  - Fixed question-to-quiz linking with multiple meta key fallbacks (`quiz_id`, `_quiz_id`)
+  - Fixed options storage format (now stores as newline-separated string instead of array)
+  - Added extraction of correct/incorrect answer feedback from question meta
+  - Added comprehensive logging to track question import process with skip counters
+  - Added warnings for quizzes that end up with no questions after import
+
+- **LearnDash XML Import - Relationship Linking**: Fixed critical relationship linking issues
+  - Fixed lessons not linking to courses automatically
+  - Fixed lesson pages (topics) not linking to lessons automatically
+  - Fixed quizzes not linking to courses and lessons automatically
+  - Root cause: `map_meta_key()` was mapping `course_id` inconsistently across post types
+  - Now all relationship IDs are stored with `_ld_original_` prefix for consistent lookup
+  - Added multiple fallback meta key lookups in `update_relationships()`
+  - No longer need to manually open and save items to establish relationships
+
+### Enhanced
+- **Import UI Feedback**: Improved user experience for LearnDash XML imports
+  - Added detailed import results display showing counts for all imported items
+  - Added question count to import summary
+  - Added expandable log viewer with color-coded messages (info, warning, error)
+  - Added helpful error messages for common import failures
+  - Updated import instructions to emphasize exporting `sfwd-question` post types
+  - Added XML verification step to guide users
+
+- **Import Logging**: Comprehensive relationship logging
+  - Shows count of lessons linked to courses
+  - Shows count of lesson pages linked to lessons
+  - Shows count of quizzes linked to courses and lessons
+  - Individual warnings for items that couldn't be linked with reasons
+  - Helps troubleshoot import issues quickly
+
+### Documentation
+- **New Guide**: Added `QUIZ_QUESTIONS_IMPORT_GUIDE.md`
+  - Comprehensive troubleshooting guide for quiz question import issues
+  - Step-by-step solutions for common problems
+  - XML structure reference for advanced users
+  - Import log interpretation guide
+  - Success verification methods
+  - Covers both question import and relationship linking issues
+
 ## [1.13] - 2024-12-17
 
 ### Fixed
