@@ -1248,9 +1248,9 @@ body.ielts-course-archive .content-area {
 }
 
 .question-feedback-message.feedback-correct {
-    border-left-color: #46b450;
+    border-left-color: #4caf50;
 }
 
 .question-feedback-message.feedback-incorrect {
-    border-left-color: #dc3232;
+    border-left-color: #f44336;
 }

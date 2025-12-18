@@ -390,7 +390,8 @@
                                 var feedbackDiv = $('<div>')
                                     .addClass('question-feedback-message')
                                     .addClass(feedbackClass)
-                                    .html(questionResult.feedback); // feedback is already sanitized server-side with wp_kses_post()
+                                    .html(questionResult.feedback); // Using .html() because feedback explicitly supports HTML formatting
+                                                                     // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
                                 
                                 questionElement.append(feedbackDiv);
                             }
