@@ -1,15 +1,30 @@
 # Quiz Questions Import Guide
 
-## Problem: Exercises Created But No Questions
+## Problems: Questions Not Importing & Relationships Not Working
 
-If you've imported LearnDash content and your quizzes (exercises) were created but have no questions, this guide will help you fix the issue.
+If you've imported LearnDash content and encountered any of these issues:
+- Quizzes (exercises) were created but have no questions
+- Lessons are not showing up in courses
+- Lesson pages (topics) are not showing up in lessons
+- Quizzes are not linking to courses/lessons
 
-## Understanding the Issue
+This guide will help you fix these issues.
 
-When importing from LearnDash XML exports, quiz questions are stored as separate items (`sfwd-question` post type) that need to be:
+## Understanding the Issues
+
+### Question Import Issue
+Quiz questions are stored as separate items (`sfwd-question` post type) that need to be:
 1. Included in the XML export
 2. Properly linked to their parent quizzes
 3. Converted to IELTS Course Manager format
+
+### Relationship Linking Issue  
+Courses, lessons, lesson pages, and quizzes form a hierarchy that must be preserved:
+- Lessons must link to their parent course
+- Lesson pages must link to their parent lesson
+- Quizzes must link to their course and/or lesson
+
+**Note:** Version 1.14+ includes enhanced relationship linking and question import that fixes most common issues automatically. If you're using an older version, update to the latest version first.
 
 ## Solution: Proper XML Export
 
@@ -262,7 +277,7 @@ If you're still having issues after following this guide:
 ## Version Requirements
 
 This enhanced question import system was introduced in:
-- IELTS Course Manager v1.13 (current version with enhanced question import)
+- IELTS Course Manager v1.14 (current version with enhanced question import and relationship linking)
 - LearnDash 3.x or 4.x (for export)
 - PHP 7.4 or later
 - WordPress 5.8 or later
