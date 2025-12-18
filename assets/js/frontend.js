@@ -307,6 +307,50 @@
                 });
             }, 5000);
         }
+        
+        // Computer-Based Quiz Layout: Question Navigation
+        $('.question-nav-btn').on('click', function(e) {
+            e.preventDefault();
+            var questionIndex = $(this).data('question');
+            var questionElement = $('#question-' + questionIndex);
+            
+            if (questionElement.length) {
+                // Scroll to the question in the right column
+                var questionsColumn = $('.questions-column');
+                var questionOffset = questionElement.position().top;
+                var columnScrollTop = questionsColumn.scrollTop();
+                
+                questionsColumn.animate({
+                    scrollTop: columnScrollTop + questionOffset - 20
+                }, 300);
+                
+                // Highlight the question briefly
+                questionElement.addClass('highlight-question');
+                setTimeout(function() {
+                    questionElement.removeClass('highlight-question');
+                }, 1000);
+            }
+        });
+        
+        // Track answered questions in computer-based layout
+        $('.ielts-computer-based-quiz input[type="radio"], .ielts-computer-based-quiz input[type="text"], .ielts-computer-based-quiz textarea').on('change input', function() {
+            var questionIndex = $(this).attr('name').replace('answer_', '');
+            var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"]');
+            
+            // Mark as answered if it has a value
+            var hasAnswer = false;
+            if ($(this).is(':radio')) {
+                hasAnswer = $('input[name="answer_' + questionIndex + '"]:checked').length > 0;
+            } else {
+                hasAnswer = $(this).val().trim().length > 0;
+            }
+            
+            if (hasAnswer) {
+                navButton.addClass('answered');
+            } else {
+                navButton.removeClass('answered');
+            }
+        });
     });
     
 })(jQuery);
