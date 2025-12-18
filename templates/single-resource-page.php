@@ -107,7 +107,11 @@ body.ielts-resource-single .content-area {
                 </div>
                 
                 <div class="resource-content">
-                    <?php echo wpautop($resource->post_content); ?>
+                    <?php 
+                    // Apply WordPress content filters to process embeds and shortcodes
+                    $content = apply_filters('the_content', $resource->post_content);
+                    echo $content;
+                    ?>
                 </div>
                 
                 <?php

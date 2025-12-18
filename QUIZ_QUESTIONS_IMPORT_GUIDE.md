@@ -24,9 +24,9 @@ Courses, lessons, lesson pages, and quizzes form a hierarchy that must be preser
 - Lesson pages must link to their parent lesson
 - Quizzes must link to their course and/or lesson
 
-**Note:** Version 1.14+ includes enhanced relationship linking and question import that fixes most common issues automatically. If you're using an older version, update to the latest version first.
+**Note:** Version 1.14+ includes enhanced relationship linking and question import that fixes most common issues automatically. Version 1.15+ adds XML conversion tools for LearnDash exports. If you're using an older version, update to the latest version first.
 
-## Solution: Proper XML Export
+## Solution: Proper XML Export and Conversion
 
 ### Step 1: Export Questions with Your Content
 
@@ -41,33 +41,61 @@ The most common cause is that questions weren't included in the XML export. To f
    - **☑ Questions (sfwd-question)** ← **Critical!**
 3. Download the XML file
 
-### Step 2: Verify Questions Are In The XML
+### Step 2: Convert XML Format (NEW in v1.15)
 
-Before importing, verify your XML contains questions:
+**IMPORTANT:** LearnDash exports questions as `sfwd-question`, but IELTS Course Manager uses `ielts_quiz`. You must convert the format:
 
-1. Open the XML file in a text editor (Notepad++, VS Code, etc.)
-2. Search for `<wp:post_type>sfwd-question</wp:post_type>`
+1. Place the XML file in the plugin directory
+2. Run the conversion script:
+   ```bash
+   cd /path/to/ielts-preparation-course
+   php convert-xml.php
+   ```
+3. The script will:
+   - Convert all `sfwd-question` to `ielts_quiz`
+   - Update URLs and GUIDs automatically
+   - Create a backup of the original file
+   - Generate a new file ready for import
+
+See [XML_CONVERSION_README.md](XML_CONVERSION_README.md) for detailed conversion instructions.
+
+### Step 3: Verify Questions Are In The Converted XML
+
+Before importing, verify your converted XML contains questions in the correct format:
+
+1. Open the **converted** XML file in a text editor (Notepad++, VS Code, etc.)
+2. Search for `<wp:post_type>ielts_quiz</wp:post_type>`
 3. You should find multiple occurrences (one per question)
-4. If you don't find any, go back to Step 1 and re-export
+4. If you find `sfwd-question` instead, you forgot to run the conversion script (Step 2)
 
-**Example of what you should see:**
+**Example of what you should see in the CONVERTED file:**
 ```xml
 <item>
     <title>Question 1 Title</title>
-    <wp:post_type>sfwd-question</wp:post_type>
+    <wp:post_type>ielts_quiz</wp:post_type>
+    <link>https://yoursite.com/ielts-quiz/question-1-title/</link>
     <wp:postmeta>
         <wp:meta_key>quiz_id</wp:meta_key>
         <wp:meta_value>123</wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
-        <wp:meta_key>_question_type</wp:meta_key>
+        <wp:meta_key>question_type</wp:meta_key>
         <wp:meta_value>single</wp:meta_value>
     </wp:postmeta>
     <!-- More meta data -->
 </item>
 ```
 
-### Step 3: Import With Enhanced Logging
+You can also verify with command line:
+```bash
+# Should return number of questions (e.g., 4547)
+grep -c "<wp:post_type>ielts_quiz</wp:post_type>" your-converted-file.xml
+
+# Should return 0 (no sfwd-question should remain)
+grep -c "<wp:post_type>sfwd-question</wp:post_type>" your-converted-file.xml
+```
+
+### Step 4: Import With Enhanced Logging
 
 1. Go to **IELTS Courses > Import from LearnDash**
 2. Upload your corrected XML file
@@ -277,7 +305,7 @@ If you're still having issues after following this guide:
 ## Version Requirements
 
 This enhanced question import system was introduced in:
-- IELTS Course Manager v1.14 (current version with enhanced question import and relationship linking)
+- IELTS Course Manager v1.15 (current version with XML conversion tools and enhanced question import)
 - LearnDash 3.x or 4.x (for export)
 - PHP 7.4 or later
 - WordPress 5.8 or later
