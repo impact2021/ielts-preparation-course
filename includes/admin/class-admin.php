@@ -32,6 +32,11 @@ class IELTS_CM_Admin {
         add_action('wp_ajax_ielts_cm_update_content_order', array($this, 'ajax_update_content_order'));
         add_action('wp_ajax_ielts_cm_push_to_subsites', array($this, 'ajax_push_to_subsites'));
         add_action('wp_ajax_ielts_cm_get_lessons_by_courses', array($this, 'ajax_get_lessons_by_courses'));
+        add_action('wp_ajax_ielts_cm_add_lesson_to_course', array($this, 'ajax_add_lesson_to_course'));
+        add_action('wp_ajax_ielts_cm_remove_lesson_from_course', array($this, 'ajax_remove_lesson_from_course'));
+        add_action('wp_ajax_ielts_cm_remove_content_from_lesson', array($this, 'ajax_remove_content_from_lesson'));
+        add_action('wp_ajax_ielts_cm_get_available_exercises', array($this, 'ajax_get_available_exercises'));
+        add_action('wp_ajax_ielts_cm_add_content_to_lesson', array($this, 'ajax_add_content_to_lesson'));
         
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
@@ -179,9 +184,37 @@ class IELTS_CM_Admin {
         }
         ?>
         <div id="ielts-cm-course-lessons">
+            <div style="margin-bottom: 15px;">
+                <h4><?php _e('Add Lessons to Course', 'ielts-course-manager'); ?></h4>
+                <input type="text" id="course-lesson-search" placeholder="<?php _e('Search lessons...', 'ielts-course-manager'); ?>" style="width: 100%; margin-bottom: 10px;">
+                <select id="course-lesson-selector" style="width: 100%; height: 100px;" size="5">
+                    <?php
+                    // Get all lessons not already in this course
+                    $all_lessons = get_posts(array(
+                        'post_type' => 'ielts_lesson',
+                        'posts_per_page' => -1,
+                        'orderby' => 'title',
+                        'order' => 'ASC',
+                        'post_status' => array('publish', 'draft')
+                    ));
+                    
+                    $current_lesson_ids = array_map(function($l) { return $l->ID; }, $lessons);
+                    foreach ($all_lessons as $all_lesson):
+                        if (!in_array($all_lesson->ID, $current_lesson_ids)):
+                    ?>
+                        <option value="<?php echo esc_attr($all_lesson->ID); ?>"><?php echo esc_html($all_lesson->post_title); ?></option>
+                    <?php
+                        endif;
+                    endforeach;
+                    ?>
+                </select>
+                <button type="button" class="button" id="add-lesson-to-course" style="margin-top: 5px;"><?php _e('Add Selected Lesson', 'ielts-course-manager'); ?></button>
+            </div>
+            
             <?php if (empty($lessons)): ?>
-                <p><?php _e('No lessons have been assigned to this course yet. Create lessons and assign them to this course in the Lesson Settings.', 'ielts-course-manager'); ?></p>
+                <p><?php _e('No lessons have been assigned to this course yet.', 'ielts-course-manager'); ?></p>
             <?php else: ?>
+                <h4><?php _e('Course Lessons', 'ielts-course-manager'); ?></h4>
                 <p><?php _e('Drag and drop lessons to reorder them:', 'ielts-course-manager'); ?></p>
                 <ul id="course-lessons-sortable" class="course-lessons-list">
                     <?php foreach ($lessons as $lesson): ?>
@@ -192,6 +225,9 @@ class IELTS_CM_Admin {
                             <a href="<?php echo get_edit_post_link($lesson->ID); ?>" class="button button-small" target="_blank">
                                 <?php _e('Edit', 'ielts-course-manager'); ?>
                             </a>
+                            <button type="button" class="button button-small remove-lesson-from-course" data-lesson-id="<?php echo esc_attr($lesson->ID); ?>">
+                                <?php _e('Remove', 'ielts-course-manager'); ?>
+                            </button>
                         </li>
                     <?php endforeach; ?>
                 </ul>
@@ -373,9 +409,49 @@ class IELTS_CM_Admin {
         
         ?>
         <div id="ielts-cm-lesson-content">
+            <div style="margin-bottom: 15px;">
+                <h4><?php _e('Add Content to Lesson', 'ielts-course-manager'); ?></h4>
+                <label>
+                    <input type="radio" name="content-type-selector" value="sublesson" checked> <?php _e('Sub Lessons', 'ielts-course-manager'); ?>
+                </label>
+                <label style="margin-left: 15px;">
+                    <input type="radio" name="content-type-selector" value="exercise"> <?php _e('Exercises', 'ielts-course-manager'); ?>
+                </label>
+                
+                <div style="margin-top: 10px;">
+                    <input type="text" id="lesson-content-search" placeholder="<?php _e('Search...', 'ielts-course-manager'); ?>" style="width: 100%; margin-bottom: 10px;">
+                    <select id="lesson-content-selector" style="width: 100%; height: 100px;" size="5">
+                        <?php
+                        // Get all resources (sublessons) not already in this lesson
+                        $all_resources = get_posts(array(
+                            'post_type' => 'ielts_resource',
+                            'posts_per_page' => -1,
+                            'orderby' => 'title',
+                            'order' => 'ASC',
+                            'post_status' => array('publish', 'draft')
+                        ));
+                        
+                        $current_resource_ids = array_filter(array_map(function($i) { 
+                            return $i['type'] === 'resource' ? $i['id'] : null; 
+                        }, $content_items));
+                        
+                        foreach ($all_resources as $resource):
+                            if (!in_array($resource->ID, $current_resource_ids)):
+                        ?>
+                            <option value="<?php echo esc_attr($resource->ID); ?>" data-type="sublesson"><?php echo esc_html($resource->post_title); ?></option>
+                        <?php
+                            endif;
+                        endforeach;
+                        ?>
+                    </select>
+                    <button type="button" class="button" id="add-content-to-lesson" style="margin-top: 5px;"><?php _e('Add Selected Content', 'ielts-course-manager'); ?></button>
+                </div>
+            </div>
+            
             <?php if (empty($content_items)): ?>
-                <p><?php _e('No lesson pages or exercises have been assigned to this lesson yet. Create lesson pages and assign them to this lesson in the Lesson Page Settings, or create exercises and assign them in the Exercise Settings.', 'ielts-course-manager'); ?></p>
+                <p><?php _e('No lesson pages or exercises have been assigned to this lesson yet.', 'ielts-course-manager'); ?></p>
             <?php else: ?>
+                <h4><?php _e('Lesson Content', 'ielts-course-manager'); ?></h4>
                 <p><?php _e('Drag and drop items to reorder them. You can mix lesson pages and exercises in any order:', 'ielts-course-manager'); ?></p>
                 <ul id="lesson-content-sortable" class="lesson-content-list">
                     <?php foreach ($content_items as $item): ?>
@@ -391,12 +467,54 @@ class IELTS_CM_Admin {
                             <a href="<?php echo get_edit_post_link($item['id']); ?>" class="button button-small" target="_blank">
                                 <?php _e('Edit', 'ielts-course-manager'); ?>
                             </a>
+                            <button type="button" class="button button-small remove-content-from-lesson" data-content-id="<?php echo esc_attr($item['id']); ?>" data-content-type="<?php echo esc_attr($item['type']); ?>">
+                                <?php _e('Remove', 'ielts-course-manager'); ?>
+                            </button>
                         </li>
                     <?php endforeach; ?>
                 </ul>
                 <div class="content-order-status"></div>
             <?php endif; ?>
         </div>
+        
+        <script>
+        jQuery(document).ready(function($) {
+            // Load exercises when radio button is changed
+            $('input[name="content-type-selector"]').on('change', function() {
+                var contentType = $(this).val();
+                var lessonId = $('#post_ID').val();
+                
+                if (contentType === 'exercise') {
+                    // Load exercises via AJAX
+                    $.ajax({
+                        url: ajaxurl,
+                        type: 'POST',
+                        data: {
+                            action: 'ielts_cm_get_available_exercises',
+                            nonce: '<?php echo wp_create_nonce('ielts_cm_lesson_content'); ?>',
+                            lesson_id: lessonId
+                        },
+                        success: function(response) {
+                            if (response.success) {
+                                $('#lesson-content-selector').empty();
+                                $.each(response.data.exercises, function(i, exercise) {
+                                    $('#lesson-content-selector').append(
+                                        $('<option></option>')
+                                            .attr('value', exercise.id)
+                                            .attr('data-type', 'exercise')
+                                            .text(exercise.title)
+                                    );
+                                });
+                            }
+                        }
+                    });
+                } else {
+                    // Load sublessons (resources) - already loaded on page load
+                    location.reload();
+                }
+            });
+        });
+        </script>
         
         <style>
         #ielts-cm-lesson-content .lesson-content-list {
@@ -2630,5 +2748,223 @@ class IELTS_CM_Admin {
         }
         
         wp_send_json_success(array('lessons' => $lessons_data));
+    }
+    
+    /**
+     * AJAX handler to add a lesson to a course
+     */
+    public function ajax_add_lesson_to_course() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_course_lessons')) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        // Check user capabilities
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(array('message' => __('You do not have permission to do this', 'ielts-course-manager')));
+        }
+        
+        $course_id = isset($_POST['course_id']) ? intval($_POST['course_id']) : 0;
+        $lesson_id = isset($_POST['lesson_id']) ? intval($_POST['lesson_id']) : 0;
+        
+        if (!$course_id || !$lesson_id) {
+            wp_send_json_error(array('message' => __('Invalid data', 'ielts-course-manager')));
+        }
+        
+        // Get current course IDs for the lesson
+        $course_ids = get_post_meta($lesson_id, '_ielts_cm_course_ids', true);
+        if (!is_array($course_ids)) {
+            $course_ids = array();
+        }
+        
+        // Add course to lesson if not already added
+        if (!in_array($course_id, $course_ids)) {
+            $course_ids[] = $course_id;
+            update_post_meta($lesson_id, '_ielts_cm_course_ids', $course_ids);
+        }
+        
+        // Get lesson details
+        $lesson = get_post($lesson_id);
+        
+        wp_send_json_success(array(
+            'message' => __('Lesson added successfully', 'ielts-course-manager'),
+            'lesson' => array(
+                'id' => $lesson->ID,
+                'title' => $lesson->post_title,
+                'order' => $lesson->menu_order,
+                'edit_link' => get_edit_post_link($lesson->ID)
+            )
+        ));
+    }
+    
+    /**
+     * AJAX handler to remove a lesson from a course
+     */
+    public function ajax_remove_lesson_from_course() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_course_lessons')) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        // Check user capabilities
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(array('message' => __('You do not have permission to do this', 'ielts-course-manager')));
+        }
+        
+        $course_id = isset($_POST['course_id']) ? intval($_POST['course_id']) : 0;
+        $lesson_id = isset($_POST['lesson_id']) ? intval($_POST['lesson_id']) : 0;
+        
+        if (!$course_id || !$lesson_id) {
+            wp_send_json_error(array('message' => __('Invalid data', 'ielts-course-manager')));
+        }
+        
+        // Get current course IDs for the lesson
+        $course_ids = get_post_meta($lesson_id, '_ielts_cm_course_ids', true);
+        if (!is_array($course_ids)) {
+            $course_ids = array();
+        }
+        
+        // Remove course from lesson
+        $course_ids = array_diff($course_ids, array($course_id));
+        update_post_meta($lesson_id, '_ielts_cm_course_ids', array_values($course_ids));
+        
+        wp_send_json_success(array('message' => __('Lesson removed successfully', 'ielts-course-manager')));
+    }
+    
+    /**
+     * AJAX handler to remove content (sublesson or exercise) from a lesson
+     */
+    public function ajax_remove_content_from_lesson() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_lesson_content')) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        // Check user capabilities
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(array('message' => __('You do not have permission to do this', 'ielts-course-manager')));
+        }
+        
+        $lesson_id = isset($_POST['lesson_id']) ? intval($_POST['lesson_id']) : 0;
+        $content_id = isset($_POST['content_id']) ? intval($_POST['content_id']) : 0;
+        
+        if (!$lesson_id || !$content_id) {
+            wp_send_json_error(array('message' => __('Invalid data', 'ielts-course-manager')));
+        }
+        
+        // Get current lesson IDs for the content
+        $lesson_ids = get_post_meta($content_id, '_ielts_cm_lesson_ids', true);
+        if (!is_array($lesson_ids)) {
+            $lesson_ids = array();
+        }
+        
+        // Remove lesson from content
+        $lesson_ids = array_diff($lesson_ids, array($lesson_id));
+        update_post_meta($content_id, '_ielts_cm_lesson_ids', array_values($lesson_ids));
+        
+        wp_send_json_success(array('message' => __('Content removed successfully', 'ielts-course-manager')));
+    }
+    
+    /**
+     * AJAX handler to get available exercises not already in a lesson
+     */
+    public function ajax_get_available_exercises() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_lesson_content')) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        // Check user capabilities
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(array('message' => __('You do not have permission to do this', 'ielts-course-manager')));
+        }
+        
+        $lesson_id = isset($_POST['lesson_id']) ? intval($_POST['lesson_id']) : 0;
+        
+        if (!$lesson_id) {
+            wp_send_json_error(array('message' => __('Invalid data', 'ielts-course-manager')));
+        }
+        
+        // Get exercises not already in this lesson
+        global $wpdb;
+        $quiz_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT post_id 
+            FROM {$wpdb->postmeta} 
+            WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+               OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
+        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+        
+        $args = array(
+            'post_type' => 'ielts_quiz',
+            'posts_per_page' => -1,
+            'orderby' => 'title',
+            'order' => 'ASC',
+            'post_status' => array('publish', 'draft')
+        );
+        
+        if (!empty($quiz_ids)) {
+            $args['post__not_in'] = $quiz_ids;
+        }
+        
+        $exercises = get_posts($args);
+        
+        $exercises_data = array();
+        foreach ($exercises as $exercise) {
+            $exercises_data[] = array(
+                'id' => $exercise->ID,
+                'title' => $exercise->post_title
+            );
+        }
+        
+        wp_send_json_success(array('exercises' => $exercises_data));
+    }
+    
+    /**
+     * AJAX handler to add content (sublesson or exercise) to a lesson
+     */
+    public function ajax_add_content_to_lesson() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_lesson_content')) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        // Check user capabilities
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(array('message' => __('You do not have permission to do this', 'ielts-course-manager')));
+        }
+        
+        $lesson_id = isset($_POST['lesson_id']) ? intval($_POST['lesson_id']) : 0;
+        $content_id = isset($_POST['content_id']) ? intval($_POST['content_id']) : 0;
+        $content_type = isset($_POST['content_type']) ? sanitize_text_field($_POST['content_type']) : '';
+        
+        if (!$lesson_id || !$content_id || !$content_type) {
+            wp_send_json_error(array('message' => __('Invalid data', 'ielts-course-manager')));
+        }
+        
+        // Get current lesson IDs for the content
+        $lesson_ids = get_post_meta($content_id, '_ielts_cm_lesson_ids', true);
+        if (!is_array($lesson_ids)) {
+            $lesson_ids = array();
+        }
+        
+        // Add lesson to content if not already added
+        if (!in_array($lesson_id, $lesson_ids)) {
+            $lesson_ids[] = $lesson_id;
+            update_post_meta($content_id, '_ielts_cm_lesson_ids', $lesson_ids);
+        }
+        
+        // Get content details
+        $content = get_post($content_id);
+        
+        wp_send_json_success(array(
+            'message' => __('Content added successfully', 'ielts-course-manager'),
+            'content' => array(
+                'id' => $content->ID,
+                'title' => $content->post_title,
+                'type' => $content_type,
+                'order' => $content->menu_order,
+                'edit_link' => get_edit_post_link($content->ID)
+            )
+        ));
     }
 }

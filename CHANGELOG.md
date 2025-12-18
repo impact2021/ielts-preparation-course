@@ -2,6 +2,45 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.11] - 2025-12-18
+
+### Added
+- **Collapsible Questions**: Exercise questions now collapse by default with expandable caret icons
+  - Questions in exercise editor start collapsed for easier navigation
+  - Click on question header to expand/collapse individual questions
+  - Smooth animation for better user experience
+  
+- **Course-Based Lesson Filtering**: Dynamic lesson filtering in exercise editor
+  - "Assign to Lessons" dropdown now filters based on selected courses
+  - Only shows lessons that belong to the selected course(s)
+  - Maintains selected lessons when filtering
+  - AJAX-powered for instant updates
+  
+- **Remove Buttons**: Added remove functionality for better content management
+  - Remove lessons from courses directly in the Course Lessons meta box
+  - Remove sublessons and exercises from lessons in the Lesson Content meta box
+  - Confirmation dialogs prevent accidental deletions
+  - Removed content can be re-added using search functionality
+  
+- **Search Functionality**: Enhanced content assignment with search capabilities
+  - Search for lessons when adding to courses
+  - Search for sublessons when adding to lessons
+  - Search for exercises when adding to lessons
+  - Real-time filtering as you type
+  - Separate selectors for different content types
+
+### Changed
+- **Version Update**: Updated plugin version to 2.11
+- **Course Lessons UI**: Improved UI with add/remove/search section above lesson list
+- **Lesson Content UI**: Enhanced UI with content type selector and search functionality
+- **Content Management**: More intuitive workflow for managing course and lesson relationships
+
+### Technical
+- Added AJAX handlers for dynamic lesson filtering
+- Added AJAX handlers for adding/removing content relationships
+- Enhanced JavaScript for search and content management
+- Improved nonce security for all new AJAX operations
+
 ## [2.10] - 2025-12-18
 
 ### Fixed
