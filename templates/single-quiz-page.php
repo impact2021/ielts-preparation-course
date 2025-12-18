@@ -60,7 +60,7 @@ body .ielts-computer-based-quiz {
     flex-direction: column !important;
 }
 body .ielts-computer-based-quiz .quiz-header {
-    flex-shrink: 0 !important;
+    display: none !important;
 }
 body .ielts-computer-based-quiz .quiz-form {
     flex: 1 !important;

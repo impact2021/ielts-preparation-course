@@ -379,6 +379,17 @@
                                     questionElement.find('input[type="text"], textarea').addClass('answer-incorrect');
                                 }
                             }
+                            
+                            // Add feedback message below the question if available (for CBT quizzes)
+                            if (isCBT && questionResult.feedback) {
+                                // Remove any existing feedback first
+                                questionElement.find('.question-feedback-message').remove();
+                                
+                                var feedbackHtml = '<div class="question-feedback-message" style="margin-top: 10px; padding: 10px; background: #f0f0f1; border-left: 4px solid ' + (questionResult.correct ? '#46b450' : '#dc3232') + '; border-radius: 3px;">';
+                                feedbackHtml += questionResult.feedback;
+                                feedbackHtml += '</div>';
+                                questionElement.append(feedbackHtml);
+                            }
                         });
                         
                         if (isCBT) {
