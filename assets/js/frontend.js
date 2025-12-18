@@ -159,6 +159,60 @@
                                 html += '<span class="feedback-status">' + statusText + '</span>';
                                 html += '</div>';
                                 
+                                // Show question text
+                                if (questionResult.question_text) {
+                                    html += '<div class="feedback-question">' + questionResult.question_text + '</div>';
+                                }
+                                
+                                // Show user answer and correct answer
+                                if (questionResult.question_type === 'multiple_choice' && questionResult.options) {
+                                    var options = questionResult.options.split('\n').filter(function(opt) { return opt.trim(); });
+                                    var userAnswerIndex = parseInt(questionResult.user_answer);
+                                    var correctAnswerIndex = parseInt(questionResult.correct_answer);
+                                    
+                                    html += '<div class="feedback-answers">';
+                                    html += '<p><strong>Your answer:</strong> ';
+                                    if (!isNaN(userAnswerIndex) && options[userAnswerIndex]) {
+                                        html += options[userAnswerIndex].trim();
+                                    } else {
+                                        html += '(No answer provided)';
+                                    }
+                                    html += '</p>';
+                                    
+                                    if (!questionResult.correct) {
+                                        html += '<p><strong>Correct answer:</strong> ';
+                                        if (!isNaN(correctAnswerIndex) && options[correctAnswerIndex]) {
+                                            html += options[correctAnswerIndex].trim();
+                                        }
+                                        html += '</p>';
+                                    }
+                                    html += '</div>';
+                                } else if (questionResult.question_type === 'true_false') {
+                                    var tfLabels = {
+                                        'true': 'True',
+                                        'false': 'False',
+                                        'not_given': 'Not Given'
+                                    };
+                                    html += '<div class="feedback-answers">';
+                                    html += '<p><strong>Your answer:</strong> ' + (tfLabels[questionResult.user_answer] || '(No answer provided)') + '</p>';
+                                    if (!questionResult.correct) {
+                                        html += '<p><strong>Correct answer:</strong> ' + (tfLabels[questionResult.correct_answer] || questionResult.correct_answer) + '</p>';
+                                    }
+                                    html += '</div>';
+                                } else if (questionResult.question_type === 'fill_blank') {
+                                    html += '<div class="feedback-answers">';
+                                    html += '<p><strong>Your answer:</strong> ' + (questionResult.user_answer || '(No answer provided)') + '</p>';
+                                    if (!questionResult.correct) {
+                                        html += '<p><strong>Correct answer:</strong> ' + questionResult.correct_answer + '</p>';
+                                    }
+                                    html += '</div>';
+                                } else if (questionResult.question_type === 'essay') {
+                                    html += '<div class="feedback-answers">';
+                                    html += '<p><strong>Your answer:</strong></p>';
+                                    html += '<div class="essay-answer">' + (questionResult.user_answer || '(No answer provided)') + '</div>';
+                                    html += '</div>';
+                                }
+                                
                                 if (questionResult.feedback) {
                                     html += '<div class="feedback-message">' + questionResult.feedback + '</div>';
                                 }
@@ -170,7 +224,12 @@
                             html += '</div>';
                         }
                         
+                        html += '<div class="quiz-actions">';
                         html += '<button class="button button-primary quiz-retake-btn">Take Quiz Again</button>';
+                        if (result.next_url) {
+                            html += ' <a href="' + result.next_url + '" class="button button-primary">Continue</a>';
+                        }
+                        html += '</div>';
                         html += '</div>';
                         
                         form.hide();
@@ -180,6 +239,13 @@
                         $('html, body').animate({
                             scrollTop: $('#quiz-result').offset().top - 100
                         }, 500);
+                        
+                        // Auto-navigate to next item after 3 seconds if available
+                        if (result.next_url) {
+                            setTimeout(function() {
+                                window.location.href = result.next_url;
+                            }, 3000);
+                        }
                     } else {
                         showMessage('error', response.data.message || 'Failed to submit quiz');
                         form.find('button[type="submit"]').prop('disabled', false).text('Submit Quiz');

@@ -55,10 +55,6 @@ if (!$pass_percentage) {
         
         <div class="quiz-info">
             <p>
-                <strong><?php _e('Passing Score:', 'ielts-course-manager'); ?></strong>
-                <?php echo $pass_percentage; ?>%
-            </p>
-            <p>
                 <strong><?php _e('Number of Questions:', 'ielts-course-manager'); ?></strong>
                 <?php echo count($questions); ?>
             </p>
