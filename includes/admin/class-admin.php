@@ -899,8 +899,11 @@ class IELTS_CM_Admin {
                     $option_feedback = array();
                     if ($question['type'] === 'multiple_choice' && isset($question['option_feedback_raw']) && !empty($question['option_feedback_raw'])) {
                         $feedback_lines = explode("\n", $question['option_feedback_raw']);
+                        // Preserve array indices - empty lines remain empty to match option positions
                         foreach ($feedback_lines as $line) {
-                            $option_feedback[] = wp_kses_post(trim($line));
+                            $trimmed = trim($line);
+                            // Store empty string for blank lines to maintain option index alignment
+                            $option_feedback[] = wp_kses_post($trimmed);
                         }
                     }
                     

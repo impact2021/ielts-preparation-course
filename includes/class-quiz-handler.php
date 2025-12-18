@@ -63,7 +63,10 @@ class IELTS_CM_Quiz_Handler {
                     // For multiple choice, check if there's specific feedback for this option
                     if ($question['type'] === 'multiple_choice' && isset($question['option_feedback']) && is_array($question['option_feedback'])) {
                         $user_answer_index = intval($answers[$index]);
-                        if (isset($question['option_feedback'][$user_answer_index]) && !empty($question['option_feedback'][$user_answer_index])) {
+                        // Validate array bounds before accessing
+                        if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
+                            && isset($question['option_feedback'][$user_answer_index]) 
+                            && !empty($question['option_feedback'][$user_answer_index])) {
                             $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
                         } elseif (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
                             $feedback = wp_kses_post($question['incorrect_feedback']);
