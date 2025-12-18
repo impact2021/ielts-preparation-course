@@ -2,6 +2,47 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [1.17] - 2025-12-18
+
+### Enhanced
+- **Exercise Results Display**: Complete question feedback now shown after submission
+  - Shows full question text for each question
+  - Displays user's answer alongside the question
+  - Shows correct answer when user answered incorrectly
+  - Displays configured feedback for each question/option
+  - Supports all question types: multiple choice, true/false, fill-in-blank, essay
+
+- **Auto-Navigation**: Automatic progression to next content after exercise completion
+  - 5-second countdown with visual indicator
+  - "Continue" button for immediate navigation
+  - "Cancel" button to stop auto-redirect and review results
+  - Intelligently determines next item: quiz, resource page, lesson, or course
+  - Improves learning flow and user experience
+
+- **Multiple Choice Backend Redesign**: New structured interface for creating options
+  - Individual input field for each option text
+  - Checkbox to mark correct answer for each option
+  - Dedicated feedback field for each option
+  - Add/Remove option buttons with minimum 2 options enforced
+  - More intuitive than previous textarea-based approach
+  - Maintains backward compatibility with existing questions
+
+### Changed
+- **Passing Score**: Removed passing score display from exercise frontend
+  - Exercises no longer show "Passing Score: XX%" to students
+  - Focus on learning and feedback rather than pass/fail
+  - Passing percentage still configurable in admin for future features
+
+### Fixed
+- Improved operator precedence in multiple choice field visibility logic
+- Fixed JavaScript string concatenation in dynamic option generation
+- Enhanced auto-redirect accessibility with cancel option
+
+### Removed
+- **Documentation Cleanup**: Removed 37 unnecessary .md documentation files
+  - Kept only essential files: README.md, CHANGELOG.md, SECURITY_SUMMARY.md
+  - Cleaner repository structure
+
 ## [1.16] - 2025-12-18
 
 ### Enhanced
