@@ -30,6 +30,7 @@ class IELTS_CM_Admin {
         add_action('wp_ajax_ielts_cm_update_lesson_order', array($this, 'ajax_update_lesson_order'));
         add_action('wp_ajax_ielts_cm_update_page_order', array($this, 'ajax_update_page_order'));
         add_action('wp_ajax_ielts_cm_update_content_order', array($this, 'ajax_update_content_order'));
+        add_action('wp_ajax_ielts_cm_push_to_subsites', array($this, 'ajax_push_to_subsites'));
         
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
@@ -125,6 +126,19 @@ class IELTS_CM_Admin {
             'normal',
             'high'
         );
+        
+        // Multi-site sync meta box (only for primary sites)
+        $sync_manager = new IELTS_CM_Multi_Site_Sync();
+        if ($sync_manager->is_primary_site()) {
+            add_meta_box(
+                'ielts_cm_sync_meta',
+                __('Push to Subsites', 'ielts-course-manager'),
+                array($this, 'sync_meta_box'),
+                array('ielts_course', 'ielts_lesson', 'ielts_resource', 'ielts_quiz'),
+                'side',
+                'default'
+            );
+        }
     }
     
     /**
@@ -1747,5 +1761,203 @@ class IELTS_CM_Admin {
         }
         </style>
         <?php
+    }
+    
+    /**
+     * Multi-site sync meta box
+     */
+    public function sync_meta_box($post) {
+        $sync_manager = new IELTS_CM_Multi_Site_Sync();
+        $subsites = $sync_manager->get_connected_subsites();
+        
+        // Determine content type
+        $content_type_map = array(
+            'ielts_course' => 'course',
+            'ielts_lesson' => 'lesson',
+            'ielts_resource' => 'resource',
+            'ielts_quiz' => 'quiz'
+        );
+        $content_type = $content_type_map[$post->post_type] ?? '';
+        
+        // Get sync history
+        $sync_history = $sync_manager->get_sync_history($post->ID, $content_type);
+        $last_sync = !empty($sync_history) ? $sync_history[0] : null;
+        
+        wp_nonce_field('ielts_cm_sync_content', 'ielts_cm_sync_nonce');
+        ?>
+        <div class="ielts-cm-sync-meta">
+            <?php if (empty($subsites)): ?>
+                <p class="description">
+                    <?php _e('No subsites connected. ', 'ielts-course-manager'); ?>
+                    <a href="<?php echo admin_url('edit.php?post_type=ielts_course&page=ielts-cm-sync-settings'); ?>">
+                        <?php _e('Add subsites', 'ielts-course-manager'); ?>
+                    </a>
+                </p>
+            <?php else: ?>
+                <p class="description">
+                    <?php printf(__('Push this %s to %d connected subsite(s).', 'ielts-course-manager'), $content_type, count($subsites)); ?>
+                </p>
+                
+                <?php if ($last_sync): ?>
+                    <p class="last-sync-info" style="font-size: 12px; color: #666;">
+                        <strong><?php _e('Last synced:', 'ielts-course-manager'); ?></strong>
+                        <?php echo human_time_diff(strtotime($last_sync->sync_date), current_time('timestamp')); ?> ago
+                        <br>
+                        <strong><?php _e('Status:', 'ielts-course-manager'); ?></strong>
+                        <span class="sync-status-<?php echo esc_attr($last_sync->sync_status); ?>">
+                            <?php echo esc_html($last_sync->sync_status); ?>
+                        </span>
+                    </p>
+                <?php endif; ?>
+                
+                <button type="button" class="button button-primary button-large" 
+                        id="ielts-cm-push-content"
+                        data-post-id="<?php echo esc_attr($post->ID); ?>"
+                        data-content-type="<?php echo esc_attr($content_type); ?>">
+                    <span class="dashicons dashicons-update"></span>
+                    <?php _e('Push to Subsites', 'ielts-course-manager'); ?>
+                </button>
+                
+                <div id="ielts-cm-sync-status" style="margin-top: 10px;"></div>
+            <?php endif; ?>
+        </div>
+        
+        <script>
+        jQuery(document).ready(function($) {
+            $('#ielts-cm-push-content').on('click', function(e) {
+                e.preventDefault();
+                
+                var button = $(this);
+                var postId = button.data('post-id');
+                var contentType = button.data('content-type');
+                var statusDiv = $('#ielts-cm-sync-status');
+                
+                // Confirm action
+                if (!confirm('<?php _e('Are you sure you want to push this content to all connected subsites? This will update content on all subsites while preserving student progress.', 'ielts-course-manager'); ?>')) {
+                    return;
+                }
+                
+                // Disable button and show loading
+                button.prop('disabled', true);
+                statusDiv.html('<p class="sync-loading"><span class="spinner is-active" style="float: none;"></span> <?php _e('Pushing content to subsites...', 'ielts-course-manager'); ?></p>');
+                
+                // Make AJAX request
+                $.ajax({
+                    url: ajaxurl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_push_to_subsites',
+                        post_id: postId,
+                        content_type: contentType,
+                        nonce: $('#ielts_cm_sync_nonce').val()
+                    },
+                    success: function(response) {
+                        button.prop('disabled', false);
+                        
+                        if (response.success) {
+                            var html = '<div class="notice notice-success inline"><p><strong><?php _e('Success!', 'ielts-course-manager'); ?></strong> ' + response.data.message + '</p>';
+                            
+                            if (response.data.results) {
+                                html += '<ul style="margin: 10px 0 0 20px;">';
+                                $.each(response.data.results, function(siteId, result) {
+                                    var icon = result.success ? '✓' : '✗';
+                                    var color = result.success ? 'green' : 'red';
+                                    html += '<li style="color: ' + color + ';">' + icon + ' ' + result.site_name + ': ' + (result.message || result.error) + '</li>';
+                                });
+                                html += '</ul>';
+                            }
+                            
+                            html += '</div>';
+                            statusDiv.html(html);
+                        } else {
+                            statusDiv.html('<div class="notice notice-error inline"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> ' + response.data.message + '</p></div>');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        button.prop('disabled', false);
+                        statusDiv.html('<div class="notice notice-error inline"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> ' + error + '</p></div>');
+                    }
+                });
+            });
+        });
+        </script>
+        
+        <style>
+        .ielts-cm-sync-meta .button-large {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .ielts-cm-sync-meta .button-large .dashicons {
+            line-height: inherit;
+        }
+        .sync-status-success {
+            color: green;
+        }
+        .sync-status-failed {
+            color: red;
+        }
+        #ielts-cm-sync-status .notice {
+            margin: 0;
+            padding: 8px 12px;
+        }
+        </style>
+        <?php
+    }
+    
+    /**
+     * AJAX handler for pushing content to subsites
+     */
+    public function ajax_push_to_subsites() {
+        check_ajax_referer('ielts_cm_sync_content', 'nonce');
+        
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(array('message' => 'Insufficient permissions'));
+        }
+        
+        $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
+        $content_type = isset($_POST['content_type']) ? sanitize_text_field($_POST['content_type']) : '';
+        
+        if (!$post_id || !$content_type) {
+            wp_send_json_error(array('message' => 'Invalid parameters'));
+        }
+        
+        $sync_manager = new IELTS_CM_Multi_Site_Sync();
+        
+        // Check if this is a primary site
+        if (!$sync_manager->is_primary_site()) {
+            wp_send_json_error(array('message' => 'Only primary sites can push content'));
+        }
+        
+        // Push content to all subsites
+        $results = $sync_manager->push_content_to_subsites($post_id, $content_type);
+        
+        if (is_wp_error($results)) {
+            wp_send_json_error(array('message' => $results->get_error_message()));
+        }
+        
+        // Get subsite names for detailed results
+        $subsites = $sync_manager->get_connected_subsites();
+        $subsite_names = array();
+        foreach ($subsites as $subsite) {
+            $subsite_names[$subsite->id] = $subsite->site_name;
+        }
+        
+        // Format results with site names
+        $formatted_results = array();
+        foreach ($results as $site_id => $result) {
+            $formatted_results[$site_id] = array(
+                'site_name' => $subsite_names[$site_id] ?? 'Unknown Site',
+                'success' => !is_wp_error($result) && isset($result['success']) && $result['success'],
+                'message' => is_wp_error($result) ? $result->get_error_message() : ($result['message'] ?? 'Success'),
+                'error' => is_wp_error($result) ? $result->get_error_message() : null
+            );
+        }
+        
+        wp_send_json_success(array(
+            'message' => sprintf(__('Content pushed to %d subsite(s)', 'ielts-course-manager'), count($results)),
+            'results' => $formatted_results
+        ));
     }
 }

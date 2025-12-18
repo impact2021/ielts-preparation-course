@@ -22,6 +22,9 @@ class IELTS_Course_Manager {
     protected $xml_exercises_creator;
     protected $text_exercises_creator;
     protected $frontend;
+    protected $sync_manager;
+    protected $sync_api;
+    protected $sync_settings_page;
     
     public function __construct() {
         $this->load_dependencies();
@@ -46,6 +49,9 @@ class IELTS_Course_Manager {
         $this->xml_exercises_creator = new IELTS_CM_XML_Exercises_Creator();
         $this->text_exercises_creator = new IELTS_CM_Text_Exercises_Creator();
         $this->frontend = new IELTS_CM_Frontend();
+        $this->sync_manager = new IELTS_CM_Multi_Site_Sync();
+        $this->sync_api = new IELTS_CM_Sync_API();
+        $this->sync_settings_page = new IELTS_CM_Sync_Settings_Page();
     }
     
     public function run() {
@@ -55,6 +61,9 @@ class IELTS_Course_Manager {
         // Check for version update and flush permalinks if needed
         add_action('init', array($this, 'check_version_update'));
         
+        // Register REST API routes
+        add_action('rest_api_init', array($this->sync_api, 'register_routes'));
+        
         // Initialize admin
         if (is_admin()) {
             $this->admin->init();
@@ -63,6 +72,10 @@ class IELTS_Course_Manager {
             $this->enrollment_page->init();
             $this->xml_exercises_creator->init();
             $this->text_exercises_creator->init();
+            
+            // Initialize sync settings page
+            add_action('admin_menu', array($this->sync_settings_page, 'add_menu_page'));
+            add_action('admin_init', array($this->sync_settings_page, 'handle_form_submit'));
         }
         
         // Initialize frontend

@@ -2,6 +2,59 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.0] - 2025-12-18
+
+### Added - Multi-Site Content Sync
+- **Primary/Subsite Architecture**: New multi-site content synchronization system
+  - Configure sites as primary (content source) or subsite (content receiver)
+  - Primary sites can push content updates to multiple subsites
+  - Standalone mode available for sites not using sync features
+
+- **Site Connection Management**: New admin page for managing site connections
+  - Navigate to "IELTS Courses > Multi-Site Sync" to configure
+  - Add/remove subsite connections with authentication tokens
+  - Test connections to verify subsite availability
+  - View last sync time and status for each connected subsite
+
+- **Content Push Functionality**: Push content from primary to subsites
+  - "Push to Subsites" button on course, lesson, lesson page, and exercise edit pages
+  - One-click push to all connected subsites
+  - Real-time sync status display with per-subsite results
+  - Automatic content change detection using hash comparison
+
+- **Progress Preservation**: Student progress protected during content updates
+  - Completed items remain marked as complete after content updates
+  - Completion percentages automatically recalculated when new content added
+  - Quiz results preserved and linked to updated content
+  - User enrollment data maintained across syncs
+
+- **REST API for Sync**: New REST API endpoints for inter-site communication
+  - `/wp-json/ielts-cm/v1/sync-content` - Receive content from primary site
+  - `/wp-json/ielts-cm/v1/test-connection` - Test connectivity and authentication
+  - `/wp-json/ielts-cm/v1/site-info` - Get site information and configuration
+  - Token-based authentication for secure communication
+
+- **Database Tables**: New tables for sync management
+  - `ielts_cm_site_connections` - Store connected subsite information
+  - `ielts_cm_content_sync` - Track sync history and content hashes
+
+- **Sync Logging and History**: Track all sync operations
+  - View sync history for each content item
+  - Per-subsite sync status (success/failed)
+  - Content hash tracking for change detection
+  - Last sync timestamp for each subsite
+
+### Changed
+- Updated plugin version to 2.0
+- Enhanced database schema with multi-site sync tables
+
+### Use Cases Supported
+1. **Update Existing Content**: When you update a course, lesson, or exercise on the primary site, push changes to subsites. Student completion status is preserved.
+
+2. **Add New Content**: When you add new lessons or exercises to an existing course, push updates to subsites. Completion percentages automatically adjust for both master and subsites.
+
+3. **Centralized Content Management**: Manage all course content from a single primary site and distribute to multiple learning sites.
+
 ## [1.18] - 2025-12-18
 
 ### Added
