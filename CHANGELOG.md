@@ -2,6 +2,27 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [1.13] - 2024-12-17
+
+### Fixed
+- **Exercise Validation**: Added validation to prevent publishing exercises without questions
+  - Exercises without questions are automatically saved as drafts instead of being published
+  - Added admin notice explaining why an exercise was not published
+  - Added inline warning in quiz meta box when no questions exist
+  - Dynamic UI updates warning visibility when questions are added/removed
+  - Prevents creation of empty exercises that display "No questions available" to students
+
+### Enhanced
+- **Course Listing Shortcode**: Enhanced [ielts_courses] shortcode with new parameters
+  - Added `columns` parameter to control grid layout (1-6 columns, default 5)
+  - Existing `category` parameter now filters by category slug
+  - Existing `limit` parameter controls number of courses shown
+  - Example: `[ielts_courses category="beginner" columns="3" limit="9"]`
+  - Responsive design automatically adjusts columns on smaller screens
+- **Admin Course List**: Added Category column to courses admin list
+  - Displays course categories with clickable links to filter by category
+  - Shows "—" when no category is assigned
+
 ## [1.11] - 2024-12-17
 
 ### Fixed

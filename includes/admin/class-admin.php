@@ -9,6 +9,8 @@ if (!defined('ABSPATH')) {
 
 class IELTS_CM_Admin {
     
+    private $processing_quiz_save = false;
+    
     public function init() {
         // Add meta boxes
         add_action('add_meta_boxes', array($this, 'add_meta_boxes'));
@@ -36,6 +38,28 @@ class IELTS_CM_Admin {
         add_filter('manage_sfwd-quiz_posts_columns', array($this, 'learndash_quiz_columns'));
         add_action('manage_sfwd-quiz_posts_custom_column', array($this, 'learndash_quiz_column_content'), 10, 2);
         add_action('admin_footer', array($this, 'learndash_quiz_conversion_scripts'));
+        
+        // Add admin notices
+        add_action('admin_notices', array($this, 'quiz_validation_notices'));
+    }
+    
+    /**
+     * Display admin notices for quiz validation
+     */
+    public function quiz_validation_notices() {
+        // Check for validation notice transient
+        $user_id = get_current_user_id();
+        if (get_transient('ielts_cm_no_questions_' . $user_id)) {
+            delete_transient('ielts_cm_no_questions_' . $user_id);
+            ?>
+            <div class="notice notice-error is-dismissible">
+                <p>
+                    <strong><?php _e('Exercise not published:', 'ielts-course-manager'); ?></strong>
+                    <?php _e('You must add at least one question before publishing an exercise. The exercise has been saved as a draft.', 'ielts-course-manager'); ?>
+                </p>
+            </div>
+            <?php
+        }
     }
     
     /**
@@ -537,6 +561,16 @@ class IELTS_CM_Admin {
         
         <div id="ielts-cm-questions">
             <h3><?php _e('Questions', 'ielts-course-manager'); ?></h3>
+            
+            <?php if (empty($questions)): ?>
+                <div class="notice notice-warning inline" style="margin: 15px 0; padding: 10px;">
+                    <p>
+                        <strong><?php _e('Important:', 'ielts-course-manager'); ?></strong>
+                        <?php _e('You must add at least one question before this exercise can be published. Click "Add Question" below to get started.', 'ielts-course-manager'); ?>
+                    </p>
+                </div>
+            <?php endif; ?>
+            
             <div id="questions-container">
                 <?php if (!empty($questions)): ?>
                     <?php foreach ($questions as $index => $question): ?>
@@ -561,15 +595,36 @@ class IELTS_CM_Admin {
         jQuery(document).ready(function($) {
             var questionIndex = <?php echo intval(count($questions)); ?>;
             
+            // Function to check and update warning visibility
+            function updateQuestionWarning() {
+                var questionCount = $('#questions-container .question-item').length;
+                var $warning = $('#ielts-cm-questions .notice-warning');
+                
+                if (questionCount === 0) {
+                    if ($warning.length === 0) {
+                        $('#questions-container').before(
+                            '<div class="notice notice-warning inline" style="margin: 15px 0; padding: 10px;">' +
+                            '<p><strong><?php _e('Important:', 'ielts-course-manager'); ?></strong> ' +
+                            '<?php _e('You must add at least one question before this exercise can be published. Click "Add Question" below to get started.', 'ielts-course-manager'); ?>' +
+                            '</p></div>'
+                        );
+                    }
+                } else {
+                    $warning.remove();
+                }
+            }
+            
             $('#add-question').on('click', function() {
                 var template = <?php echo json_encode($this->get_question_template()); ?>;
                 var html = template.replace(/QUESTION_INDEX/g, questionIndex);
                 $('#questions-container').append(html);
                 questionIndex++;
+                updateQuestionWarning();
             });
             
             $(document).on('click', '.remove-question', function() {
                 $(this).closest('.question-item').remove();
+                updateQuestionWarning();
             });
             
             $(document).on('change', '.question-type', function() {
@@ -579,12 +634,15 @@ class IELTS_CM_Admin {
                 if (type === 'multiple_choice') {
                     container.find('.options-field').show();
                     container.find('.correct-answer-field label').text('<?php _e('Correct Answer (Option number)', 'ielts-course-manager'); ?>');
+                    container.find('.correct-answer-field').show();
                 } else if (type === 'true_false') {
                     container.find('.options-field').hide();
                     container.find('.correct-answer-field label').text('<?php _e('Correct Answer (true/false/not_given)', 'ielts-course-manager'); ?>');
+                    container.find('.correct-answer-field').show();
                 } else if (type === 'fill_blank') {
                     container.find('.options-field').hide();
                     container.find('.correct-answer-field label').text('<?php _e('Correct Answer', 'ielts-course-manager'); ?>');
+                    container.find('.correct-answer-field').show();
                 } else if (type === 'essay') {
                     container.find('.options-field').hide();
                     container.find('.correct-answer-field').hide();
@@ -781,6 +839,26 @@ class IELTS_CM_Admin {
                 }
             }
             update_post_meta($post_id, '_ielts_cm_questions', $questions);
+            
+            // Validate that quiz has at least one question before publishing
+            $post = get_post($post_id);
+            if ($post && $post->post_type === 'ielts_quiz' && $post->post_status === 'publish' && empty($questions)) {
+                // Use flag to prevent infinite loop instead of removing/re-adding hook
+                if (!$this->processing_quiz_save) {
+                    $this->processing_quiz_save = true;
+                    
+                    // Change status to draft if no questions
+                    wp_update_post(array(
+                        'ID' => $post_id,
+                        'post_status' => 'draft'
+                    ));
+                    
+                    $this->processing_quiz_save = false;
+                    
+                    // Set admin notice via transient to avoid multiple filter calls
+                    set_transient('ielts_cm_no_questions_' . get_current_user_id(), '1', 60);
+                }
+            }
         }
     }
     
@@ -974,6 +1052,7 @@ class IELTS_CM_Admin {
      * Course columns
      */
     public function course_columns($columns) {
+        $columns['category'] = __('Category', 'ielts-course-manager');
         $columns['lessons'] = __('Lessons', 'ielts-course-manager');
         $columns['enrolled'] = __('Enrolled', 'ielts-course-manager');
         return $columns;
@@ -983,7 +1062,18 @@ class IELTS_CM_Admin {
      * Course column content
      */
     public function course_column_content($column, $post_id) {
-        if ($column === 'lessons') {
+        if ($column === 'category') {
+            $terms = get_the_terms($post_id, 'ielts_course_category');
+            if (!empty($terms) && !is_wp_error($terms)) {
+                $category_names = array();
+                foreach ($terms as $term) {
+                    $category_names[] = '<a href="' . esc_url(admin_url('edit.php?post_type=ielts_course&ielts_course_category=' . $term->slug)) . '">' . esc_html($term->name) . '</a>';
+                }
+                echo implode(', ', $category_names);
+            } else {
+                echo '—';
+            }
+        } elseif ($column === 'lessons') {
             global $wpdb;
             $lesson_ids = $wpdb->get_col($wpdb->prepare("
                 SELECT DISTINCT pm.post_id 
@@ -1115,8 +1205,13 @@ class IELTS_CM_Admin {
                 
                 <h3><?php _e('Display All Courses', 'ielts-course-manager'); ?></h3>
                 <p><code>[ielts_courses]</code></p>
-                <p><?php _e('With category filter:', 'ielts-course-manager'); ?></p>
-                <p><code>[ielts_courses category="beginner" limit="10"]</code></p>
+                <p><?php _e('With options:', 'ielts-course-manager'); ?></p>
+                <ul style="list-style: disc; margin-left: 20px;">
+                    <li><code>[ielts_courses category="beginner"]</code> - <?php _e('Filter by category slug', 'ielts-course-manager'); ?></li>
+                    <li><code>[ielts_courses limit="10"]</code> - <?php _e('Limit number of courses displayed', 'ielts-course-manager'); ?></li>
+                    <li><code>[ielts_courses columns="3"]</code> - <?php _e('Set number of columns (1-6, default is 5)', 'ielts-course-manager'); ?></li>
+                    <li><code>[ielts_courses category="advanced" columns="4" limit="8"]</code> - <?php _e('Combine multiple options', 'ielts-course-manager'); ?></li>
+                </ul>
                 
                 <h3><?php _e('Display Single Course', 'ielts-course-manager'); ?></h3>
                 <p><code>[ielts_course id="123"]</code></p>

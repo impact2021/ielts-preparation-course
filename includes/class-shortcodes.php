@@ -25,7 +25,8 @@ class IELTS_CM_Shortcodes {
     public function display_courses($atts) {
         $atts = shortcode_atts(array(
             'category' => '',
-            'limit' => -1
+            'limit' => -1,
+            'columns' => 5  // Default to 5 columns
         ), $atts);
         
         $args = array(
@@ -45,6 +46,14 @@ class IELTS_CM_Shortcodes {
         }
         
         $courses = get_posts($args);
+        
+        // Pass columns setting to template
+        $columns = intval($atts['columns']);
+        if ($columns < 1) {
+            $columns = 1;
+        } elseif ($columns > 6) {
+            $columns = 6;
+        }
         
         ob_start();
         include IELTS_CM_PLUGIN_DIR . 'templates/courses-list.php';
