@@ -20,6 +20,7 @@ class IELTS_Course_Manager {
     protected $export_page;
     protected $enrollment_page;
     protected $xml_exercises_creator;
+    protected $text_exercises_creator;
     protected $frontend;
     
     public function __construct() {
@@ -43,6 +44,7 @@ class IELTS_Course_Manager {
         $this->export_page = new IELTS_CM_Export_Page();
         $this->enrollment_page = new IELTS_CM_Enrollment_Page();
         $this->xml_exercises_creator = new IELTS_CM_XML_Exercises_Creator();
+        $this->text_exercises_creator = new IELTS_CM_Text_Exercises_Creator();
         $this->frontend = new IELTS_CM_Frontend();
     }
     
@@ -60,6 +62,7 @@ class IELTS_Course_Manager {
             $this->export_page->init();
             $this->enrollment_page->init();
             $this->xml_exercises_creator->init();
+            $this->text_exercises_creator->init();
         }
         
         // Initialize frontend
