@@ -54,3 +54,48 @@
 .column-resources {
     width: 120px;
 }
+
+/* Question collapsible styles */
+.question-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.question-header h4 {
+    margin: 0;
+    flex: 1;
+}
+
+.question-toggle {
+    color: #666;
+    margin-right: 8px;
+    transition: transform 0.2s;
+}
+
+.question-content {
+    display: none;
+}
+
+/* Course lessons and lesson content management */
+.lesson-content-search,
+.course-lesson-search {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.content-type-selector {
+    margin-bottom: 10px;
+}
+
+.lesson-content-selector,
+.course-lesson-selector {
+    width: 100%;
+    height: 100px;
+}
+
+/* Hidden utility class */
+.ielts-cm-hidden {
+    display: none;
+}

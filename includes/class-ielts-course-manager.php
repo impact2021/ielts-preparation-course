@@ -140,6 +140,7 @@ class IELTS_Course_Manager {
                 wp_localize_script('ielts-cm-admin', 'ieltsCMAdmin', array(
                     'ajaxUrl' => admin_url('admin-ajax.php'),
                     'lessonOrderNonce' => wp_create_nonce('ielts_cm_lesson_order'),
+                    'courseLessonsNonce' => wp_create_nonce('ielts_cm_course_lessons'),
                     'courseId' => $post->ID,
                     'i18n' => array(
                         'orderUpdated' => __('Lesson order updated successfully!', 'ielts-course-manager'),
@@ -153,6 +154,7 @@ class IELTS_Course_Manager {
                     'ajaxUrl' => admin_url('admin-ajax.php'),
                     'pageOrderNonce' => wp_create_nonce('ielts_cm_page_order'),
                     'contentOrderNonce' => wp_create_nonce('ielts_cm_content_order'),
+                    'lessonContentNonce' => wp_create_nonce('ielts_cm_lesson_content'),
                     'lessonId' => $post->ID,
                     'i18n' => array(
                         'pageOrderUpdated' => __('Lesson page order updated successfully!', 'ielts-course-manager'),
