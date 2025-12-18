@@ -2,6 +2,18 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.3] - 2025-12-18
+
+### Fixed
+- **Lesson Meta Box Error**: Fixed critical error "Uncaught TypeError: in_array(): Argument #2 ($haystack) must be of type array, string given"
+  - Issue occurred when retrieving lesson course assignments that were stored as serialized strings
+  - Added proper unserialization handling for `_ielts_cm_course_ids`, `_ielts_cm_lesson_ids` metadata
+  - Applied fix to lesson_meta_box, resource_meta_box, and quiz_meta_box functions
+  - Maintains backward compatibility with both array and serialized string formats
+
+### Changed
+- Updated plugin version to 2.3
+
 ## [2.2] - 2025-12-18
 
 ### Added

@@ -266,6 +266,16 @@ class IELTS_CM_Admin {
         
         // Support for multiple courses - store as array
         $course_ids = get_post_meta($post->ID, '_ielts_cm_course_ids', true);
+        
+        // Ensure we have an array - handle serialized strings
+        if (is_string($course_ids) && !empty($course_ids)) {
+            // If it's a serialized string, unserialize it
+            $unserialized = @maybe_unserialize($course_ids);
+            $course_ids = is_array($unserialized) ? $unserialized : array();
+        } elseif (!is_array($course_ids)) {
+            $course_ids = array();
+        }
+        
         if (empty($course_ids)) {
             // Backward compatibility - check old single course_id
             $old_course_id = get_post_meta($post->ID, '_ielts_cm_course_id', true);
@@ -470,6 +480,16 @@ class IELTS_CM_Admin {
         
         // Support for multiple lessons - store as array
         $lesson_ids = get_post_meta($post->ID, '_ielts_cm_lesson_ids', true);
+        
+        // Ensure we have an array - handle serialized strings
+        if (is_string($lesson_ids) && !empty($lesson_ids)) {
+            // If it's a serialized string, unserialize it
+            $unserialized = @maybe_unserialize($lesson_ids);
+            $lesson_ids = is_array($unserialized) ? $unserialized : array();
+        } elseif (!is_array($lesson_ids)) {
+            $lesson_ids = array();
+        }
+        
         if (empty($lesson_ids)) {
             // Backward compatibility - check old single lesson_id
             $old_lesson_id = get_post_meta($post->ID, '_ielts_cm_lesson_id', true);
@@ -511,6 +531,16 @@ class IELTS_CM_Admin {
         
         // Support for multiple courses - store as array
         $course_ids = get_post_meta($post->ID, '_ielts_cm_course_ids', true);
+        
+        // Ensure we have an array - handle serialized strings
+        if (is_string($course_ids) && !empty($course_ids)) {
+            // If it's a serialized string, unserialize it
+            $unserialized = @maybe_unserialize($course_ids);
+            $course_ids = is_array($unserialized) ? $unserialized : array();
+        } elseif (!is_array($course_ids)) {
+            $course_ids = array();
+        }
+        
         if (empty($course_ids)) {
             // Backward compatibility - check old single course_id
             $old_course_id = get_post_meta($post->ID, '_ielts_cm_course_id', true);
@@ -519,6 +549,16 @@ class IELTS_CM_Admin {
         
         // Support for multiple lessons - store as array
         $lesson_ids = get_post_meta($post->ID, '_ielts_cm_lesson_ids', true);
+        
+        // Ensure we have an array - handle serialized strings
+        if (is_string($lesson_ids) && !empty($lesson_ids)) {
+            // If it's a serialized string, unserialize it
+            $unserialized = @maybe_unserialize($lesson_ids);
+            $lesson_ids = is_array($unserialized) ? $unserialized : array();
+        } elseif (!is_array($lesson_ids)) {
+            $lesson_ids = array();
+        }
+        
         if (empty($lesson_ids)) {
             // Backward compatibility - check old single lesson_id
             $old_lesson_id = get_post_meta($post->ID, '_ielts_cm_lesson_id', true);
