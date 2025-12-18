@@ -42,6 +42,20 @@ class IELTS_CM_Import_Page {
             wp_die(__('You do not have sufficient permissions to access this page.', 'ielts-course-manager'));
         }
         
+        // Check for import results
+        if (isset($_GET['imported']) && $_GET['imported'] === '1') {
+            $results = get_transient('ielts_cm_import_results');
+            if ($results) {
+                $this->display_import_results($results);
+                delete_transient('ielts_cm_import_results');
+            }
+        }
+        
+        // Check for errors
+        if (isset($_GET['error'])) {
+            $this->display_error($_GET['error']);
+        }
+        
         ?>
         <div class="wrap">
             <h1><?php _e('Import from LearnDash', 'ielts-course-manager'); ?></h1>
@@ -49,7 +63,7 @@ class IELTS_CM_Import_Page {
             <div class="notice notice-info">
                 <p>
                     <strong><?php _e('About LearnDash Import:', 'ielts-course-manager'); ?></strong><br>
-                    <?php _e('This tool allows you to import courses, lessons, lesson pages (topics), and quizzes from LearnDash XML export files.', 'ielts-course-manager'); ?>
+                    <?php _e('This tool allows you to import courses, lessons, lesson pages (topics), quizzes, and quiz questions from LearnDash XML export files.', 'ielts-course-manager'); ?>
                 </p>
             </div>
             
@@ -59,15 +73,17 @@ class IELTS_CM_Import_Page {
                 <h3><?php _e('Step 1: Export from LearnDash', 'ielts-course-manager'); ?></h3>
                 <ol>
                     <li><?php _e('In your LearnDash site, go to <strong>Tools > Export</strong>', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Select the content types you want to export:', 'ielts-course-manager'); ?>
+                    <li><?php _e('<strong>Important:</strong> Select <strong>ALL</strong> of the following content types together to export with questions:', 'ielts-course-manager'); ?>
                         <ul>
-                            <li><?php _e('Courses (sfwd-courses)', 'ielts-course-manager'); ?></li>
-                            <li><?php _e('Lessons (sfwd-lessons)', 'ielts-course-manager'); ?></li>
-                            <li><?php _e('Topics (sfwd-topic) - these become Lesson pages', 'ielts-course-manager'); ?></li>
-                            <li><?php _e('Quizzes (sfwd-quiz)', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('<strong>Courses</strong> (sfwd-courses)', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('<strong>Lessons</strong> (sfwd-lessons)', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('<strong>Topics</strong> (sfwd-topic) - these become Lesson pages', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('<strong>Quizzes</strong> (sfwd-quiz)', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('<strong>Questions</strong> (sfwd-question) - <em>Critical for quiz questions!</em>', 'ielts-course-manager'); ?></li>
                         </ul>
                     </li>
                     <li><?php _e('Click <strong>Download Export File</strong> to save the XML file', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('Verify the XML file contains <code>sfwd-question</code> items by opening it in a text editor and searching for this term.', 'ielts-course-manager'); ?></li>
                 </ol>
                 
                 <h3><?php _e('Step 2: Import to IELTS Course Manager', 'ielts-course-manager'); ?></h3>
@@ -80,9 +96,10 @@ class IELTS_CM_Import_Page {
                 
                 <h3><?php _e('Important Notes:', 'ielts-course-manager'); ?></h3>
                 <ul>
-                    <li><?php _e('<strong>Large Imports:</strong> For sites with 25 courses and hundreds of lessons, consider splitting your export into smaller files (e.g., 5-10 courses per file).', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('<strong>Quiz Questions:</strong> LearnDash quiz questions may need manual review after import due to different quiz systems.', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('<strong>Course Structure:</strong> The importer automatically maintains the relationships between courses, lessons, and lesson pages.', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('<strong>Large Imports:</strong> For sites with 25+ courses and hundreds of lessons, consider splitting your export into smaller files (e.g., 5-10 courses per file).', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('<strong>Questions in XML:</strong> Make sure your LearnDash XML export includes <code>sfwd-question</code> post types. The importer will automatically extract and convert quiz questions.', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('<strong>Question Format:</strong> Multiple choice options will be converted automatically. After import, review quiz questions to ensure they display correctly.', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('<strong>Course Structure:</strong> The importer automatically maintains the relationships between courses, lessons, lesson pages, quizzes, and questions.', 'ielts-course-manager'); ?></li>
                     <li><?php _e('<strong>Backup First:</strong> Always backup your database before importing to ensure you can rollback if needed.', 'ielts-course-manager'); ?></li>
                     <li><?php _e('<strong>Progress Data:</strong> User progress and enrollment data from LearnDash is not imported. Students will need to re-enroll.', 'ielts-course-manager'); ?></li>
                 </ul>
@@ -171,6 +188,91 @@ set_time_limit(300); // 5 minutes</pre>
             border-radius: 3px;
         }
         </style>
+        <?php
+    }
+    
+    /**
+     * Display import results
+     */
+    private function display_import_results($results) {
+        ?>
+        <div class="notice notice-success is-dismissible">
+            <h2><?php _e('Import Completed Successfully!', 'ielts-course-manager'); ?></h2>
+            <p><strong><?php _e('Import Summary:', 'ielts-course-manager'); ?></strong></p>
+            <ul style="list-style: disc; margin-left: 20px;">
+                <li><?php echo sprintf(__('<strong>%d</strong> Courses imported', 'ielts-course-manager'), $results['courses']); ?></li>
+                <li><?php echo sprintf(__('<strong>%d</strong> Lessons imported', 'ielts-course-manager'), $results['lessons']); ?></li>
+                <li><?php echo sprintf(__('<strong>%d</strong> Lesson pages imported', 'ielts-course-manager'), $results['topics']); ?></li>
+                <li><?php echo sprintf(__('<strong>%d</strong> Quizzes imported', 'ielts-course-manager'), $results['quizzes']); ?></li>
+                <li><?php echo sprintf(__('<strong>%d</strong> Quiz questions processed', 'ielts-course-manager'), $results['questions']); ?></li>
+            </ul>
+            
+            <?php if (!empty($results['log'])): ?>
+            <details style="margin-top: 15px;">
+                <summary style="cursor: pointer; font-weight: 600;">
+                    <?php _e('View Detailed Import Log', 'ielts-course-manager'); ?>
+                </summary>
+                <div style="max-height: 400px; overflow-y: auto; margin-top: 10px; padding: 10px; background: #fff; border: 1px solid #ccc;">
+                    <?php
+                    foreach ($results['log'] as $log_entry) {
+                        $level_class = 'info';
+                        $level_icon = 'ℹ️';
+                        
+                        if ($log_entry['level'] === 'error') {
+                            $level_class = 'error';
+                            $level_icon = '❌';
+                        } elseif ($log_entry['level'] === 'warning') {
+                            $level_class = 'warning';
+                            $level_icon = '⚠️';
+                        } elseif ($log_entry['level'] === 'success') {
+                            $level_class = 'success';
+                            $level_icon = '✓';
+                        }
+                        
+                        echo '<div class="log-entry log-' . esc_attr($level_class) . '" style="padding: 5px 0; border-bottom: 1px solid #eee;">';
+                        echo '<span class="log-icon">' . $level_icon . '</span> ';
+                        echo '<span class="log-message">' . esc_html($log_entry['message']) . '</span>';
+                        echo '</div>';
+                    }
+                    ?>
+                </div>
+            </details>
+            <?php endif; ?>
+            
+            <p style="margin-top: 15px;">
+                <a href="<?php echo admin_url('edit.php?post_type=ielts_course'); ?>" class="button button-primary">
+                    <?php _e('View Imported Courses', 'ielts-course-manager'); ?>
+                </a>
+                <a href="<?php echo admin_url('edit.php?post_type=ielts_quiz'); ?>" class="button">
+                    <?php _e('View Imported Quizzes', 'ielts-course-manager'); ?>
+                </a>
+            </p>
+        </div>
+        
+        <style>
+        .log-entry.log-error { color: #d63638; }
+        .log-entry.log-warning { color: #dba617; }
+        .log-entry.log-success { color: #00a32a; }
+        </style>
+        <?php
+    }
+    
+    /**
+     * Display error message
+     */
+    private function display_error($error_code) {
+        $messages = array(
+            'upload_failed' => __('File upload failed. Please try again.', 'ielts-course-manager'),
+            'invalid_file_type' => __('Invalid file type. Please upload an XML file.', 'ielts-course-manager'),
+            'file_move_failed' => __('Failed to move uploaded file. Please check file permissions.', 'ielts-course-manager'),
+        );
+        
+        $message = isset($messages[$error_code]) ? $messages[$error_code] : __('An unknown error occurred.', 'ielts-course-manager');
+        
+        ?>
+        <div class="notice notice-error is-dismissible">
+            <p><strong><?php _e('Import Error:', 'ielts-course-manager'); ?></strong> <?php echo esc_html($message); ?></p>
+        </div>
         <?php
     }
     
