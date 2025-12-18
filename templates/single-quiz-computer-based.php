@@ -113,7 +113,7 @@ if (!$reading_texts) {
                             <div class="quiz-question" id="question-<?php echo $index; ?>" data-reading-text-id="<?php echo esc_attr($question['reading_text_id'] ?? ''); ?>">
                                 <h4 class="question-number">
                                     <?php printf(__('Question %d', 'ielts-course-manager'), $index + 1); ?>
-                                    <span class="question-points">(<?php echo $question['points']; ?> <?php echo ($question['points'] == 1) ? __('point', 'ielts-course-manager') : __('points', 'ielts-course-manager'); ?>)</span>
+                                    <span class="question-points">(<?php printf(_n('%s point', '%s points', $question['points'], 'ielts-course-manager'), $question['points']); ?>)</span>
                                 </h4>
                                 
                                 <div class="question-text"><?php echo wp_kses_post($question['question']); ?></div>
