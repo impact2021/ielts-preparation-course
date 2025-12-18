@@ -227,7 +227,10 @@
                         html += '<div class="quiz-actions">';
                         html += '<button class="button button-primary quiz-retake-btn">Take Quiz Again</button>';
                         if (result.next_url) {
-                            html += ' <a href="' + result.next_url + '" class="button button-primary">Continue</a>';
+                            html += ' <a href="' + result.next_url + '" class="button button-primary quiz-continue-btn">Continue</a>';
+                            html += '<div id="quiz-auto-redirect" style="margin-top: 15px; padding: 10px; background: #f0f0f1; border-left: 4px solid #72aee6;">';
+                            html += '<p style="margin: 0;">Automatically continuing in <strong id="quiz-countdown">5</strong> seconds... <button type="button" id="quiz-cancel-redirect" class="button button-link" style="text-decoration: underline;">Cancel</button></p>';
+                            html += '</div>';
                         }
                         html += '</div>';
                         html += '</div>';
@@ -240,11 +243,29 @@
                             scrollTop: $('#quiz-result').offset().top - 100
                         }, 500);
                         
-                        // Auto-navigate to next item after 3 seconds if available
+                        // Auto-navigate to next item after 5 seconds if available
                         if (result.next_url) {
-                            setTimeout(function() {
-                                window.location.href = result.next_url;
-                            }, 3000);
+                            var countdown = 5;
+                            var redirectTimer = null;
+                            var countdownInterval = setInterval(function() {
+                                countdown--;
+                                $('#quiz-countdown').text(countdown);
+                                if (countdown <= 0) {
+                                    clearInterval(countdownInterval);
+                                    window.location.href = result.next_url;
+                                }
+                            }, 1000);
+                            
+                            // Allow user to cancel redirect
+                            $(document).on('click', '#quiz-cancel-redirect, .quiz-retake-btn', function(e) {
+                                clearInterval(countdownInterval);
+                                $('#quiz-auto-redirect').fadeOut();
+                            });
+                            
+                            // Also cancel on continue button click (let it navigate naturally)
+                            $(document).on('click', '.quiz-continue-btn', function() {
+                                clearInterval(countdownInterval);
+                            });
                         }
                     } else {
                         showMessage('error', response.data.message || 'Failed to submit quiz');

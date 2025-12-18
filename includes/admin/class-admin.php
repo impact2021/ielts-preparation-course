@@ -667,7 +667,7 @@ class IELTS_CM_Admin {
                     '</label>' +
                     '</div>' +
                     '<div style="flex: 1;">' +
-                    '<label><?php printf(__('Option %d', 'ielts-course-manager'), ''); ?>' + (optionIndex + 1) + '</label>' +
+                    '<label><?php _e('Option', 'ielts-course-manager'); ?> ' + (optionIndex + 1) + '</label>' +
                     '<input type="text" name="questions[' + questionIndex + '][mc_options][' + optionIndex + '][text]" placeholder="<?php _e('Enter option text', 'ielts-course-manager'); ?>" style="width: 100%; margin-bottom: 5px;">' +
                     '<label><?php _e('Feedback (optional)', 'ielts-course-manager'); ?></label>' +
                     '<textarea name="questions[' + questionIndex + '][mc_options][' + optionIndex + '][feedback]" rows="2" placeholder="<?php _e('Feedback shown when this option is selected', 'ielts-course-manager'); ?>" style="width: 100%;"></textarea>' +
@@ -805,7 +805,7 @@ class IELTS_CM_Admin {
                 <textarea name="questions[<?php echo $index; ?>][options]" rows="4" style="width: 100%;"><?php echo esc_textarea(isset($question['options']) ? $question['options'] : ''); ?></textarea>
             </p>
             
-            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && $question['type'] === 'essay' || $question['type'] === 'multiple_choice') ? 'display:none;' : ''; ?>">
+            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && ($question['type'] === 'essay' || $question['type'] === 'multiple_choice')) ? 'display:none;' : ''; ?>">
                 <label><?php _e('Correct Answer', 'ielts-course-manager'); ?></label><br>
                 <input type="text" name="questions[<?php echo $index; ?>][correct_answer]" value="<?php echo esc_attr(isset($question['correct_answer']) ? $question['correct_answer'] : ''); ?>" style="width: 100%;">
             </p>

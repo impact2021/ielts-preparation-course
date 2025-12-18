@@ -61,18 +61,32 @@ class IELTS_CM_Quiz_Handler {
                     }
                 } else {
                     // For multiple choice, check if there's specific feedback for this option
-                    if ($question['type'] === 'multiple_choice' && isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                    if ($question['type'] === 'multiple_choice') {
                         $user_answer_index = intval($answers[$index]);
-                        // Validate array bounds before accessing
-                        if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
-                            && isset($question['option_feedback'][$user_answer_index]) 
-                            && !empty($question['option_feedback'][$user_answer_index])) {
-                            $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
-                        } elseif (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                        
+                        // Try new structured format first
+                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                            // New format with mc_options
+                            if ($user_answer_index >= 0 && $user_answer_index < count($question['mc_options']) 
+                                && isset($question['mc_options'][$user_answer_index]['feedback']) 
+                                && !empty($question['mc_options'][$user_answer_index]['feedback'])) {
+                                $feedback = wp_kses_post($question['mc_options'][$user_answer_index]['feedback']);
+                            }
+                        } elseif (isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                            // Legacy format
+                            if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
+                                && isset($question['option_feedback'][$user_answer_index]) 
+                                && !empty($question['option_feedback'][$user_answer_index])) {
+                                $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
+                            }
+                        }
+                        
+                        // Fallback to general incorrect feedback if no specific feedback found
+                        if (empty($feedback) && isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
                             $feedback = wp_kses_post($question['incorrect_feedback']);
                         }
                     } else {
-                        // Get general incorrect answer feedback
+                        // Get general incorrect answer feedback for non-MC questions
                         if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
                             $feedback = wp_kses_post($question['incorrect_feedback']);
                         }
