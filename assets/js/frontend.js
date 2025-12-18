@@ -147,11 +147,6 @@
             quizStartTime = Date.now();
         }
         
-        // For fullscreen mode, ensure start time is set when page loads
-        if ($('.ielts-quiz-fullscreen').length > 0 && $('#ielts-quiz-form:visible').length > 0) {
-            quizStartTime = Date.now();
-        }
-        
         // Quiz submission (using event delegation to handle both static and modal forms)
         $(document).on('submit', '#ielts-quiz-form', function(e) {
             e.preventDefault();

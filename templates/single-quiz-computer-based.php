@@ -77,10 +77,10 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
             <p style="font-size: 1.2em; margin-bottom: 20px; color: #333;">
                 <?php _e('This computer-based test must be viewed in fullscreen mode for the best experience.', 'ielts-course-manager'); ?>
             </p>
-            <button type="button" class="button button-primary button-large ielts-fullscreen-btn" id="open-modal-btn" style="font-size: 1.1em; padding: 12px 30px;">
+            <a href="<?php echo add_query_arg('fullscreen', '1', get_permalink($quiz->ID)); ?>" class="button button-primary button-large ielts-fullscreen-btn" style="font-size: 1.1em; padding: 12px 30px; text-decoration: none;">
                 <span class="dashicons dashicons-fullscreen-alt" style="vertical-align: middle; font-size: 1.2em;"></span>
                 <?php _e('Open in Fullscreen', 'ielts-course-manager'); ?>
-            </button>
+            </a>
         </div>
     <?php endif; ?>
     
