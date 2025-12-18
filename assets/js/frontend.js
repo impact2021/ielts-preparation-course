@@ -199,7 +199,7 @@
                                         html += '<p><strong>Correct answer:</strong> ' + (tfLabels[questionResult.correct_answer] || questionResult.correct_answer) + '</p>';
                                     }
                                     html += '</div>';
-                                } else if (questionResult.question_type === 'fill_blank') {
+                                } else if (questionResult.question_type === 'fill_blank' || questionResult.question_type === 'summary_completion') {
                                     html += '<div class="feedback-answers">';
                                     html += '<p><strong>Your answer:</strong> ' + (questionResult.user_answer || '(No answer provided)') + '</p>';
                                     if (!questionResult.correct) {
