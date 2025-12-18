@@ -332,20 +332,18 @@
             }
         });
         
-        // Track answered questions in computer-based layout
-        $('.ielts-computer-based-quiz input[type="radio"], .ielts-computer-based-quiz input[type="text"], .ielts-computer-based-quiz textarea').on('change input', function() {
+        // Track answered questions in computer-based layout using event delegation
+        $('.ielts-computer-based-quiz').on('change', 'input[type="radio"]', function() {
+            var questionIndex = $(this).attr('name').replace('answer_', '');
+            var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"]');
+            navButton.addClass('answered');
+        });
+        
+        $('.ielts-computer-based-quiz').on('input', 'input[type="text"], textarea', function() {
             var questionIndex = $(this).attr('name').replace('answer_', '');
             var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"]');
             
-            // Mark as answered if it has a value
-            var hasAnswer = false;
-            if ($(this).is(':radio')) {
-                hasAnswer = $('input[name="answer_' + questionIndex + '"]:checked').length > 0;
-            } else {
-                hasAnswer = $(this).val().trim().length > 0;
-            }
-            
-            if (hasAnswer) {
+            if ($(this).val().trim().length > 0) {
                 navButton.addClass('answered');
             } else {
                 navButton.removeClass('answered');

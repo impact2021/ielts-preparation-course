@@ -643,6 +643,15 @@ class IELTS_CM_Admin {
             var questionIndex = <?php echo intval(count($questions)); ?>;
             var readingTextIndex = <?php echo intval(count($reading_texts)); ?>;
             
+            // Localized strings
+            var i18n = {
+                readingText: <?php echo json_encode(__('Reading Text', 'ielts-course-manager')); ?>,
+                titleOptional: <?php echo json_encode(__('Title (Optional)', 'ielts-course-manager')); ?>,
+                placeholderPassage: <?php echo json_encode(__('e.g., Passage 1', 'ielts-course-manager')); ?>,
+                placeholderEnterText: <?php echo json_encode(__('Enter the reading passage here...', 'ielts-course-manager')); ?>,
+                removeReadingText: <?php echo json_encode(__('Remove Reading Text', 'ielts-course-manager')); ?>
+            };
+            
             // Layout type change handler
             $('#ielts_cm_layout_type').on('change', function() {
                 if ($(this).val() === 'computer_based') {
@@ -655,16 +664,16 @@ class IELTS_CM_Admin {
             // Add reading text
             $('#add-reading-text').on('click', function() {
                 var html = '<div class="reading-text-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9;">' +
-                    '<h4><?php _e('Reading Text', 'ielts-course-manager'); ?> ' + (readingTextIndex + 1) + '</h4>' +
+                    '<h4>' + i18n.readingText + ' ' + (readingTextIndex + 1) + '</h4>' +
                     '<p>' +
-                    '<label><?php _e('Title (Optional)', 'ielts-course-manager'); ?></label><br>' +
-                    '<input type="text" name="reading_texts[' + readingTextIndex + '][title]" style="width: 100%;" placeholder="<?php _e('e.g., Passage 1', 'ielts-course-manager'); ?>">' +
+                    '<label>' + i18n.titleOptional + '</label><br>' +
+                    '<input type="text" name="reading_texts[' + readingTextIndex + '][title]" style="width: 100%;" placeholder="' + i18n.placeholderPassage + '">' +
                     '</p>' +
                     '<p>' +
-                    '<label><?php _e('Reading Text', 'ielts-course-manager'); ?></label><br>' +
-                    '<textarea name="reading_texts[' + readingTextIndex + '][content]" rows="10" style="width: 100%;" placeholder="<?php _e('Enter the reading passage here...', 'ielts-course-manager'); ?>"></textarea>' +
+                    '<label>' + i18n.readingText + '</label><br>' +
+                    '<textarea name="reading_texts[' + readingTextIndex + '][content]" rows="10" style="width: 100%;" placeholder="' + i18n.placeholderEnterText + '"></textarea>' +
                     '</p>' +
-                    '<button type="button" class="button remove-reading-text"><?php _e('Remove Reading Text', 'ielts-course-manager'); ?></button>' +
+                    '<button type="button" class="button remove-reading-text">' + i18n.removeReadingText + '</button>' +
                     '</div>';
                 $('#reading-texts-container').append(html);
                 readingTextIndex++;
