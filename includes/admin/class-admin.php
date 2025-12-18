@@ -578,7 +578,7 @@ class IELTS_CM_Admin {
             </select>
             <small><?php _e('Hold Ctrl (Cmd on Mac) to select multiple lessons', 'ielts-course-manager'); ?></small>
         </p>
-        <p>
+        <p style="display: none;">
             <label for="ielts_cm_pass_percentage"><?php _e('Pass Percentage', 'ielts-course-manager'); ?></label><br>
             <input type="number" id="ielts_cm_pass_percentage" name="ielts_cm_pass_percentage" value="<?php echo esc_attr($pass_percentage ? $pass_percentage : 70); ?>" min="0" max="100" style="width: 100%;">
         </p>
@@ -618,6 +618,8 @@ class IELTS_CM_Admin {
                 </div>
             <?php endif; ?>
             
+            <p><small><?php _e('Drag and drop questions to reorder them:', 'ielts-course-manager'); ?></small></p>
+            
             <div id="questions-container">
                 <?php if (!empty($questions)): ?>
                     <?php foreach ($questions as $index => $question): ?>
@@ -637,6 +639,23 @@ class IELTS_CM_Admin {
                 </ul>
             </div>
         </div>
+        
+        <style>
+        #questions-container .ui-sortable-placeholder {
+            background: #e0e0e0;
+            border: 2px dashed #999;
+            visibility: visible !important;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+        #questions-container .question-item.ui-sortable-helper {
+            opacity: 0.8;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .question-drag-handle:hover {
+            color: #555 !important;
+        }
+        </style>
         
         <script>
         jQuery(document).ready(function($) {
@@ -778,6 +797,110 @@ class IELTS_CM_Admin {
                     alert('<?php _e('You must have at least 2 options for a multiple choice question.', 'ielts-course-manager'); ?>');
                 }
             });
+            
+            // Initialize drag and drop for questions
+            $('#questions-container').sortable({
+                handle: '.question-drag-handle',
+                placeholder: 'ui-sortable-placeholder',
+                update: function(event, ui) {
+                    // Update question numbers
+                    $('#questions-container .question-item').each(function(index) {
+                        $(this).find('h4').text('<?php _e('Question', 'ielts-course-manager'); ?> ' + (index + 1));
+                        
+                        // Update all input/select/textarea names to reflect new index
+                        var nameMatch = $(this).find('select[name^="questions["]').first().attr('name');
+                        if (!nameMatch) {
+                            return; // Skip if no match found
+                        }
+                        
+                        var matches = nameMatch.match(/questions\[(\d+)\]/);
+                        if (!matches || !matches[1]) {
+                            return; // Skip if regex doesn't match
+                        }
+                        
+                        var oldIndex = matches[1];
+                        var newIndex = index;
+                        
+                        if (oldIndex != newIndex) {
+                            $(this).find('input, select, textarea').each(function() {
+                                var name = $(this).attr('name');
+                                if (name && name.indexOf('questions[' + oldIndex + ']') === 0) {
+                                    $(this).attr('name', name.replace('questions[' + oldIndex + ']', 'questions[' + newIndex + ']'));
+                                }
+                            });
+                            
+                            // Update data-question-index attributes
+                            $(this).find('[data-question-index]').attr('data-question-index', newIndex);
+                            
+                            // Update editor IDs if they exist
+                            var editorId = 'question_' + oldIndex;
+                            var newEditorId = 'question_' + newIndex;
+                            if (typeof tinymce !== 'undefined' && tinymce.get(editorId)) {
+                                var editorContent = tinymce.get(editorId).getContent();
+                                tinymce.get(editorId).remove();
+                                var $textarea = $(this).find('textarea[id="' + editorId + '"]');
+                                $textarea.attr('id', newEditorId);
+                                $textarea.val(editorContent); // Restore content to textarea
+                            }
+                        }
+                    });
+                }
+            });
+            
+            // Duplicate question
+            $(document).on('click', '.duplicate-question', function() {
+                var $question = $(this).closest('.question-item');
+                var $clone = $question.clone(true);
+                
+                // Get the next available question index
+                var nextIndex = questionIndex;
+                questionIndex++;
+                
+                // Update cloned question names and IDs
+                $clone.find('input, select, textarea').each(function() {
+                    var name = $(this).attr('name');
+                    if (name && name.indexOf('questions[') === 0) {
+                        // Extract current index and replace with next index
+                        var newName = name.replace(/questions\[\d+\]/, 'questions[' + nextIndex + ']');
+                        $(this).attr('name', newName);
+                        
+                        // Clear file inputs and some specific fields
+                        if ($(this).attr('type') === 'file') {
+                            $(this).val('');
+                        }
+                    }
+                    
+                    // Update editor IDs
+                    var id = $(this).attr('id');
+                    if (id && id.indexOf('question_') === 0) {
+                        $(this).attr('id', 'question_' + nextIndex);
+                    }
+                });
+                
+                // Update data-question-index attributes
+                $clone.find('[data-question-index]').attr('data-question-index', nextIndex);
+                
+                // Update heading
+                $clone.find('h4').text('<?php _e('Question', 'ielts-course-manager'); ?> ' + (nextIndex + 1) + ' (<?php _e('Duplicated', 'ielts-course-manager'); ?>)');
+                
+                // Handle TinyMCE instances in cloned element
+                var oldEditorId = 'question_' + $question.find('select[name^="questions["]').first().attr('name').match(/questions\[(\d+)\]/)[1];
+                if (typeof tinymce !== 'undefined' && tinymce.get(oldEditorId)) {
+                    // Get content from original editor
+                    var content = tinymce.get(oldEditorId).getContent();
+                    // Set content to cloned textarea
+                    $clone.find('textarea[id^="question_"]').val(content);
+                }
+                
+                // Remove TinyMCE UI elements from clone and show textarea
+                $clone.find('.mce-tinymce').remove();
+                $clone.find('textarea[id^="question_"]').show();
+                
+                // Insert after current question
+                $question.after($clone);
+                
+                updateQuestionWarning();
+            });
         });
         </script>
         <?php
@@ -796,12 +919,25 @@ class IELTS_CM_Admin {
                 <input type="text" name="reading_texts[<?php echo $index; ?>][title]" value="<?php echo esc_attr(isset($text['title']) ? $text['title'] : ''); ?>" style="width: 100%;" placeholder="<?php _e('e.g., Passage 1', 'ielts-course-manager'); ?>">
             </p>
             
-            <p>
-                <label><?php _e('Reading Text', 'ielts-course-manager'); ?></label><br>
-                <textarea name="reading_texts[<?php echo $index; ?>][content]" rows="10" style="width: 100%;" placeholder="<?php _e('Enter the reading passage here...', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($text['content']) ? $text['content'] : ''); ?></textarea>
-            </p>
+            <div>
+                <label><?php _e('Reading Text', 'ielts-course-manager'); ?></label>
+                <?php
+                $editor_id = 'reading_text_' . $index;
+                $content = isset($text['content']) ? $text['content'] : '';
+                wp_editor($content, $editor_id, array(
+                    'textarea_name' => 'reading_texts[' . $index . '][content]',
+                    'textarea_rows' => 10,
+                    'media_buttons' => true,
+                    'teeny' => false,
+                    'tinymce' => array(
+                        'toolbar1' => 'bold,italic,underline,strikethrough,bullist,numlist,blockquote,hr,alignleft,aligncenter,alignright,link,unlink,wp_more,spellchecker,fullscreen,wp_adv',
+                        'toolbar2' => 'formatselect,forecolor,pastetext,removeformat,charmap,outdent,indent,undo,redo,wp_help'
+                    )
+                ));
+                ?>
+            </div>
             
-            <button type="button" class="button remove-reading-text"><?php _e('Remove Reading Text', 'ielts-course-manager'); ?></button>
+            <button type="button" class="button remove-reading-text" style="margin-top: 10px;"><?php _e('Remove Reading Text', 'ielts-course-manager'); ?></button>
         </div>
         <?php
     }
@@ -811,8 +947,9 @@ class IELTS_CM_Admin {
      */
     private function render_question_field($index, $question) {
         ?>
-        <div class="question-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9;">
-            <h4><?php printf(__('Question %d', 'ielts-course-manager'), $index + 1); ?></h4>
+        <div class="question-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9; position: relative;">
+            <span class="dashicons dashicons-menu question-drag-handle" style="position: absolute; top: 15px; left: 15px; color: #999; cursor: move;"></span>
+            <h4 style="margin-left: 30px;"><?php printf(__('Question %d', 'ielts-course-manager'), $index + 1); ?></h4>
             
             <p>
                 <label><?php _e('Question Type', 'ielts-course-manager'); ?></label><br>
@@ -943,7 +1080,10 @@ class IELTS_CM_Admin {
                 </p>
             </div>
             
-            <button type="button" class="button remove-question"><?php _e('Remove Question', 'ielts-course-manager'); ?></button>
+            <div style="margin-top: 10px;">
+                <button type="button" class="button duplicate-question"><?php _e('Duplicate Question', 'ielts-course-manager'); ?></button>
+                <button type="button" class="button remove-question"><?php _e('Remove Question', 'ielts-course-manager'); ?></button>
+            </div>
         </div>
         <?php
     }
@@ -954,8 +1094,9 @@ class IELTS_CM_Admin {
     private function get_question_template() {
         ob_start();
         ?>
-        <div class="question-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9;">
-            <h4><?php _e('New Question', 'ielts-course-manager'); ?></h4>
+        <div class="question-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9; position: relative;">
+            <span class="dashicons dashicons-menu question-drag-handle" style="position: absolute; top: 15px; left: 15px; color: #999; cursor: move;"></span>
+            <h4 style="margin-left: 30px;"><?php _e('New Question', 'ielts-course-manager'); ?></h4>
             
             <p>
                 <label><?php _e('Question Type', 'ielts-course-manager'); ?></label><br>
@@ -1040,7 +1181,10 @@ class IELTS_CM_Admin {
                 </p>
             </div>
             
-            <button type="button" class="button remove-question"><?php _e('Remove Question', 'ielts-course-manager'); ?></button>
+            <div style="margin-top: 10px;">
+                <button type="button" class="button duplicate-question"><?php _e('Duplicate Question', 'ielts-course-manager'); ?></button>
+                <button type="button" class="button remove-question"><?php _e('Remove Question', 'ielts-course-manager'); ?></button>
+            </div>
         </div>
         <?php
         return ob_get_clean();
