@@ -131,6 +131,19 @@ if (!$pass_percentage) {
                                 <?php
                                 break;
                                 
+                            case 'summary_completion':
+                                // Summary completion - similar to fill in the blank but for paragraph/summary contexts
+                                // The question text should contain the paragraph with a blank indicated
+                                ?>
+                                <div class="question-answer">
+                                    <input type="text" 
+                                           name="answer_<?php echo $index; ?>" 
+                                           class="answer-input" 
+                                           required>
+                                </div>
+                                <?php
+                                break;
+                                
                             case 'essay':
                                 ?>
                                 <div class="question-answer">

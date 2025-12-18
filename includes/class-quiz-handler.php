@@ -139,14 +139,30 @@ class IELTS_CM_Quiz_Handler {
                 return isset($question['correct_answer']) && $question['correct_answer'] == $user_answer;
                 
             case 'fill_blank':
-                $correct = isset($question['correct_answer']) ? strtolower(trim($question['correct_answer'])) : '';
+            case 'summary_completion':
+                // Support multiple accepted answers separated by pipe |
+                $correct_answers = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+                
+                // Split by pipe if multiple answers provided
+                $accepted_answers = array_map('trim', explode('|', $correct_answers));
+                
                 $user = strtolower(trim($user_answer));
                 // Remove extra whitespace and punctuation for more flexible matching
-                $correct = preg_replace('/[^\w\s]/', '', $correct);
                 $user = preg_replace('/[^\w\s]/', '', $user);
-                $correct = preg_replace('/\s+/', ' ', $correct);
                 $user = preg_replace('/\s+/', ' ', $user);
-                return $correct === $user;
+                
+                // Check if user answer matches any of the accepted answers
+                foreach ($accepted_answers as $correct) {
+                    $correct = strtolower(trim($correct));
+                    $correct = preg_replace('/[^\w\s]/', '', $correct);
+                    $correct = preg_replace('/\s+/', ' ', $correct);
+                    
+                    if ($correct === $user) {
+                        return true;
+                    }
+                }
+                
+                return false;
                 
             case 'essay':
                 // Essay questions need manual grading
@@ -359,6 +375,7 @@ class IELTS_CM_Quiz_Handler {
             'multiple_choice' => __('Multiple Choice', 'ielts-course-manager'),
             'true_false' => __('True/False/Not Given', 'ielts-course-manager'),
             'fill_blank' => __('Fill in the Blank', 'ielts-course-manager'),
+            'summary_completion' => __('Summary Completion', 'ielts-course-manager'),
             'essay' => __('Essay', 'ielts-course-manager')
         );
     }

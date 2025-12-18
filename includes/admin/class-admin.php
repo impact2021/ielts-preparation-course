@@ -791,7 +791,12 @@ class IELTS_CM_Admin {
                 } else if (type === 'fill_blank') {
                     container.find('.mc-options-field').hide();
                     container.find('.general-feedback-field').show();
-                    container.find('.correct-answer-field label').text('<?php _e('Correct Answer', 'ielts-course-manager'); ?>');
+                    container.find('.correct-answer-field label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
+                    container.find('.correct-answer-field').show();
+                } else if (type === 'summary_completion') {
+                    container.find('.mc-options-field').hide();
+                    container.find('.general-feedback-field').show();
+                    container.find('.correct-answer-field label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
                     container.find('.correct-answer-field').show();
                 } else if (type === 'essay') {
                     container.find('.mc-options-field').hide();

@@ -2,6 +2,33 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.4] - 2025-12-18
+
+### Added
+- **Multiple Accepted Answers for Fill in the Blank**: Fill in the blank questions now support multiple correct answers
+  - Use pipe character `|` to separate multiple accepted answers (e.g., "The British Council|British Council")
+  - Flexible matching still applies (case-insensitive, punctuation removed)
+  - Works with both standard and computer-based quiz layouts
+  
+- **Summary Completion Question Type**: New question type for embedding blanks within paragraphs
+  - Similar to fill in the blank but designed for summary/paragraph completion
+  - Supports multiple accepted answers using pipe separator
+  - Available in quiz creation admin interface
+  - Works with both standard and computer-based quiz layouts
+  
+- **Feedback Button Feature**: Added minimizable feedback button on all course content pages
+  - Appears on course, lesson, resource (sublesson), and quiz pages
+  - Also appears on LearnDash pages (sfwd-courses, sfwd-lessons, sfwd-topic)
+  - Button minimizes to icon instead of closing completely
+  - State persists across page loads using localStorage
+  - Integrates with Contact Form 7 for feedback submission
+  - Auto-fills page title, URL, and user information
+  - Only visible to logged-in users
+
+### Changed
+- Updated plugin version to 2.4
+- Enhanced fill in the blank answer checking to support multiple answers
+
 ## [2.3] - 2025-12-18
 
 ### Added
