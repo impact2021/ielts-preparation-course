@@ -163,8 +163,8 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                                 <?php if ($item_type === 'quiz' && isset($is_cbt) && $is_cbt): ?>
                                     <!-- CBT Exercise with fullscreen option -->
                                     <a href="<?php echo add_query_arg('fullscreen', '1', get_permalink($post_item->ID)); ?>" 
-                                       class="button button-primary button-small"
-                                       onclick="window.open(this.href, '_blank', 'fullscreen=yes,width=' + screen.width + ',height=' + screen.height); return false;">
+                                       class="button button-primary button-small ielts-cbt-fullscreen-btn"
+                                       data-fullscreen-url="<?php echo esc_url(add_query_arg('fullscreen', '1', get_permalink($post_item->ID))); ?>">
                                         <?php echo isset($best_result) && $best_result ? __('Retake (Fullscreen)', 'ielts-course-manager') : __('Start CBT Exercise', 'ielts-course-manager'); ?>
                                     </a>
                                 <?php else: ?>
@@ -248,6 +248,22 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
             color: #f57c00;
         }
         </style>
+        
+        <script>
+        // Safe fullscreen launcher for CBT exercises
+        jQuery(document).ready(function($) {
+            $('.ielts-cbt-fullscreen-btn').on('click', function(e) {
+                e.preventDefault();
+                var url = $(this).data('fullscreen-url');
+                if (url) {
+                    var width = Math.max(800, window.screen.availWidth || window.screen.width);
+                    var height = Math.max(600, window.screen.availHeight || window.screen.height);
+                    var features = 'width=' + width + ',height=' + height + ',fullscreen=yes,scrollbars=yes';
+                    window.open(url, '_blank', features);
+                }
+            });
+        });
+        </script>
     <?php endif; ?>
     
     <?php

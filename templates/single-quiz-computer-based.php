@@ -34,8 +34,8 @@ if (!$reading_texts) {
             if (!$is_fullscreen): 
             ?>
                 <a href="<?php echo add_query_arg('fullscreen', '1', get_permalink($quiz->ID)); ?>" 
-                   class="button button-secondary"
-                   onclick="window.open(this.href, '_blank', 'fullscreen=yes,width=' + screen.width + ',height=' + screen.height); return false;"
+                   class="button button-secondary ielts-fullscreen-btn"
+                   data-fullscreen-url="<?php echo esc_url(add_query_arg('fullscreen', '1', get_permalink($quiz->ID))); ?>"
                    style="white-space: nowrap;">
                     <span class="dashicons dashicons-fullscreen-alt" style="vertical-align: middle;"></span>
                     <?php _e('Open Fullscreen', 'ielts-course-manager'); ?>
@@ -286,3 +286,19 @@ if (!$reading_texts) {
         <?php endif; ?>
     <?php } ?>
 </div>
+
+<script>
+// Safe fullscreen launcher for CBT exercises
+jQuery(document).ready(function($) {
+    $('.ielts-fullscreen-btn').on('click', function(e) {
+        e.preventDefault();
+        var url = $(this).data('fullscreen-url');
+        if (url) {
+            var width = Math.max(800, window.screen.availWidth || window.screen.width);
+            var height = Math.max(600, window.screen.availHeight || window.screen.height);
+            var features = 'width=' + width + ',height=' + height + ',fullscreen=yes,scrollbars=yes';
+            window.open(url, '_blank', features);
+        }
+    });
+});
+</script>

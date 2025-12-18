@@ -270,7 +270,7 @@ class IELTS_CM_Admin {
         // Ensure we have an array - handle serialized strings
         if (is_string($course_ids) && !empty($course_ids)) {
             // If it's a serialized string, unserialize it
-            $unserialized = @maybe_unserialize($course_ids);
+            $unserialized = maybe_unserialize($course_ids);
             $course_ids = is_array($unserialized) ? $unserialized : array();
         } elseif (!is_array($course_ids)) {
             $course_ids = array();
@@ -484,7 +484,7 @@ class IELTS_CM_Admin {
         // Ensure we have an array - handle serialized strings
         if (is_string($lesson_ids) && !empty($lesson_ids)) {
             // If it's a serialized string, unserialize it
-            $unserialized = @maybe_unserialize($lesson_ids);
+            $unserialized = maybe_unserialize($lesson_ids);
             $lesson_ids = is_array($unserialized) ? $unserialized : array();
         } elseif (!is_array($lesson_ids)) {
             $lesson_ids = array();
@@ -535,7 +535,7 @@ class IELTS_CM_Admin {
         // Ensure we have an array - handle serialized strings
         if (is_string($course_ids) && !empty($course_ids)) {
             // If it's a serialized string, unserialize it
-            $unserialized = @maybe_unserialize($course_ids);
+            $unserialized = maybe_unserialize($course_ids);
             $course_ids = is_array($unserialized) ? $unserialized : array();
         } elseif (!is_array($course_ids)) {
             $course_ids = array();
@@ -553,7 +553,7 @@ class IELTS_CM_Admin {
         // Ensure we have an array - handle serialized strings
         if (is_string($lesson_ids) && !empty($lesson_ids)) {
             // If it's a serialized string, unserialize it
-            $unserialized = @maybe_unserialize($lesson_ids);
+            $unserialized = maybe_unserialize($lesson_ids);
             $lesson_ids = is_array($unserialized) ? $unserialized : array();
         } elseif (!is_array($lesson_ids)) {
             $lesson_ids = array();
