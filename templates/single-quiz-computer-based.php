@@ -83,7 +83,7 @@ if (!$reading_texts) {
                     <div class="reading-content">
                         <?php if (!empty($reading_texts)): ?>
                             <?php foreach ($reading_texts as $index => $text): ?>
-                                <div class="reading-text-section" id="reading-text-<?php echo $index; ?>">
+                                <div class="reading-text-section" id="reading-text-<?php echo $index; ?>" style="<?php echo $index > 0 ? 'display:none;' : ''; ?>">
                                     <?php if (!empty($text['title'])): ?>
                                         <h3 class="reading-title"><?php echo esc_html($text['title']); ?></h3>
                                     <?php endif; ?>
@@ -104,7 +104,7 @@ if (!$reading_texts) {
                 <div class="questions-column">
                     <div class="questions-content">
                         <?php foreach ($questions as $index => $question): ?>
-                            <div class="quiz-question" id="question-<?php echo $index; ?>">
+                            <div class="quiz-question" id="question-<?php echo $index; ?>" data-reading-text-id="<?php echo isset($question['reading_text_id']) && $question['reading_text_id'] !== null ? esc_attr($question['reading_text_id']) : ''; ?>">
                                 <h4 class="question-number">
                                     <?php printf(__('Question %d', 'ielts-course-manager'), $index + 1); ?>
                                     <span class="question-points">(<?php echo $question['points']; ?> <?php _e('points', 'ielts-course-manager'); ?>)</span>

@@ -2,6 +2,30 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.5] - 2025-12-18
+
+### Added
+- **Question-to-Passage Linking for CBT Layout**: Questions can now be linked to specific reading texts in computer-based exercises
+  - New "Linked Reading Text" dropdown in question editor for computer-based layout exercises
+  - Automatically shows corresponding reading text when user scrolls to linked questions
+  - Smooth transitions when switching between reading passages
+  - Example: Questions 1-12 linked to Passage 1, Questions 13-23 linked to Passage 2
+  - Reading text automatically switches when scrolling through questions
+  - Click navigation also triggers reading text switching
+  - Initially only first reading text is visible; others shown on demand
+  
+### Changed
+- Updated plugin version to 2.5
+- Enhanced computer-based quiz layout with intelligent reading text display
+- Reading texts now initially hidden except the first one for cleaner interface
+- Improved scroll detection to automatically show relevant reading passages
+
+### Technical
+- Added `reading_text_id` field to question data structure
+- Dynamic admin UI updates reading text selectors when texts are added/removed
+- Debounced scroll event handling for smooth performance
+- Fade transitions for reading text switching
+
 ## [2.4] - 2025-12-18
 
 ### Added

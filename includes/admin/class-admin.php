@@ -736,11 +736,68 @@ class IELTS_CM_Admin {
                     '</div>';
                 $('#reading-texts-container').append(html);
                 readingTextIndex++;
+                updateReadingTextSelectors();
             });
             
             // Remove reading text
             $(document).on('click', '.remove-reading-text', function() {
                 $(this).closest('.reading-text-item').remove();
+                updateReadingTextSelectors();
+            });
+            
+            // Function to build reading text selector HTML
+            function buildReadingTextSelector(questionIdx) {
+                var readingTexts = [];
+                $('.reading-text-item').each(function(idx) {
+                    var title = $(this).find('input[name*="[title]"]').val() || '<?php _e('Reading Text', 'ielts-course-manager'); ?> ' + (idx + 1);
+                    readingTexts.push({index: idx, title: title});
+                });
+                
+                if (readingTexts.length === 0) {
+                    return '';
+                }
+                
+                var html = '<p class="reading-text-link-field">' +
+                    '<label><?php _e('Linked Reading Text (Optional)', 'ielts-course-manager'); ?></label><br>' +
+                    '<select name="questions[' + questionIdx + '][reading_text_id]" style="width: 100%;">' +
+                    '<option value=""><?php _e('-- No specific reading text --', 'ielts-course-manager'); ?></option>';
+                
+                $.each(readingTexts, function(i, rt) {
+                    html += '<option value="' + rt.index + '">' + rt.title + '</option>';
+                });
+                
+                html += '</select>' +
+                    '<small><?php _e('When this question is scrolled into view, the selected reading text will be displayed on the left.', 'ielts-course-manager'); ?></small>' +
+                    '</p>';
+                
+                return html;
+            }
+            
+            // Function to update all reading text selectors
+            function updateReadingTextSelectors() {
+                $('.question-item').each(function(idx) {
+                    var $question = $(this);
+                    var $existingSelector = $question.find('.reading-text-link-field');
+                    var currentValue = $existingSelector.find('select').val();
+                    
+                    // Remove existing selector
+                    $existingSelector.remove();
+                    
+                    // Add new selector after question type
+                    var newSelector = buildReadingTextSelector(idx);
+                    if (newSelector) {
+                        $question.find('select.question-type').closest('p').after(newSelector);
+                        // Restore previous value if it still exists
+                        if (currentValue) {
+                            $question.find('.reading-text-link-field select').val(currentValue);
+                        }
+                    }
+                });
+            }
+            
+            // Update selectors when reading text titles change
+            $(document).on('input', '.reading-text-item input[name*="[title]"]', function() {
+                updateReadingTextSelectors();
             });
             
             // Function to check and update warning visibility
@@ -766,6 +823,13 @@ class IELTS_CM_Admin {
                 var template = <?php echo json_encode($this->get_question_template()); ?>;
                 var html = template.replace(/QUESTION_INDEX/g, questionIndex);
                 $('#questions-container').append(html);
+                
+                // Add reading text selector if reading texts exist
+                var readingTextSelector = buildReadingTextSelector(questionIndex);
+                if (readingTextSelector) {
+                    $('#questions-container .question-item:last').find('select.question-type').closest('p').after(readingTextSelector);
+                }
+                
                 questionIndex++;
                 updateQuestionWarning();
             });
@@ -991,6 +1055,11 @@ class IELTS_CM_Admin {
      * Render question field
      */
     private function render_question_field($index, $question) {
+        global $post;
+        $reading_texts = get_post_meta($post->ID, '_ielts_cm_reading_texts', true);
+        if (!$reading_texts) {
+            $reading_texts = array();
+        }
         ?>
         <div class="question-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9; position: relative;">
             <span class="dashicons dashicons-menu question-drag-handle" style="position: absolute; top: 15px; left: 15px; color: #999; cursor: move;"></span>
@@ -1006,6 +1075,21 @@ class IELTS_CM_Admin {
                     <?php endforeach; ?>
                 </select>
             </p>
+            
+            <?php if (!empty($reading_texts)): ?>
+            <p class="reading-text-link-field">
+                <label><?php _e('Linked Reading Text (Optional)', 'ielts-course-manager'); ?></label><br>
+                <select name="questions[<?php echo $index; ?>][reading_text_id]" style="width: 100%;">
+                    <option value=""><?php _e('-- No specific reading text --', 'ielts-course-manager'); ?></option>
+                    <?php foreach ($reading_texts as $rt_index => $text): ?>
+                        <option value="<?php echo esc_attr($rt_index); ?>" <?php selected(isset($question['reading_text_id']) ? $question['reading_text_id'] : '', $rt_index); ?>>
+                            <?php echo esc_html(!empty($text['title']) ? $text['title'] : sprintf(__('Reading Text %d', 'ielts-course-manager'), $rt_index + 1)); ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+                <small><?php _e('When this question is scrolled into view, the selected reading text will be displayed on the left.', 'ielts-course-manager'); ?></small>
+            </p>
+            <?php endif; ?>
             
             <div>
                 <label><?php _e('Question Text', 'ielts-course-manager'); ?></label>
@@ -1348,7 +1432,8 @@ class IELTS_CM_Admin {
                         'question' => wp_kses_post($question['question']), // Allow HTML with images
                         'points' => isset($question['points']) ? floatval($question['points']) : 1,
                         'correct_feedback' => isset($question['correct_feedback']) ? wp_kses_post($question['correct_feedback']) : '',
-                        'incorrect_feedback' => isset($question['incorrect_feedback']) ? wp_kses_post($question['incorrect_feedback']) : ''
+                        'incorrect_feedback' => isset($question['incorrect_feedback']) ? wp_kses_post($question['incorrect_feedback']) : '',
+                        'reading_text_id' => isset($question['reading_text_id']) && $question['reading_text_id'] !== '' ? intval($question['reading_text_id']) : null
                     );
                     
                     // Handle multiple choice with new structured format

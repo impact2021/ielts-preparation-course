@@ -787,6 +787,7 @@ body.ielts-course-archive .content-area {
 
 .reading-text-section {
     margin-bottom: 30px;
+    transition: opacity 0.3s ease;
 }
 
 .reading-text-section:last-child {

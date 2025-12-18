@@ -218,10 +218,64 @@ All existing exercises continue to work with the standard layout. The computer-b
 - New exercises: Choose between standard and computer-based
 - No migration required
 
+## Question-to-Passage Linking (Version 2.5+)
+
+### Overview
+
+Starting in version 2.5, you can link specific questions to specific reading texts. When students scroll to a linked question, the corresponding reading text automatically appears on the left.
+
+### How to Link Questions to Reading Texts
+
+1. **Create Reading Texts First**
+   - In the exercise editor, add your reading passages using "Add Reading Text"
+   - Give each passage a descriptive title (e.g., "Passage 1: Climate Change")
+
+2. **Link Questions**
+   - For each question, you'll see a "Linked Reading Text (Optional)" dropdown
+   - Select which reading text this question relates to
+   - Questions without a selection won't trigger automatic switching
+
+3. **Example Setup**
+   ```
+   Reading Text 0: Passage 1 - Ancient Civilizations
+   Reading Text 1: Passage 2 - Modern Technology
+   
+   Questions 1-12: Linked to Reading Text 0
+   Questions 13-23: Linked to Reading Text 1
+   ```
+
+### Student Experience
+
+1. **Initial View**
+   - First reading text is displayed by default
+   - Questions column shows all questions
+
+2. **Automatic Switching**
+   - As student scrolls through questions, reading text updates automatically
+   - When Question 13 comes into view, Passage 2 displays
+   - Smooth fade transition between passages
+
+3. **Navigation Buttons**
+   - Clicking a question number also triggers reading text switch
+   - Reading column scrolls to top when switching passages
+
+### Benefits
+
+- **Clearer Context**: Students see the relevant passage for each question
+- **Reduced Scrolling**: No need to scroll through multiple passages to find the right one
+- **Realistic Testing**: Mimics actual IELTS computer test behavior
+- **Flexible Setup**: Works with any number of passages and questions
+
+### Tips
+
+1. **Consistent Grouping**: Group related questions together and link them to the same passage
+2. **Descriptive Titles**: Use clear titles for passages (e.g., "Passage 1", "Text A", "Article 1")
+3. **Optional Feature**: You can still use computer-based layout without linking questions
+4. **Test Your Setup**: Preview the exercise to ensure passages switch as expected
+
 ## Future Enhancements
 
 Potential improvements for future versions:
-- Question-to-passage linking (specify which questions go with which passages)
 - Highlighting text in reading passages
 - Note-taking functionality
 - Timer display
@@ -237,5 +291,5 @@ For questions or issues with the computer-based layout:
 
 ---
 
-**Version**: 2.1  
+**Version**: 2.5  
 **Last Updated**: 2025-12-18
