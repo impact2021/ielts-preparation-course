@@ -2,6 +2,38 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [1.18] - 2025-12-18
+
+### Added
+- **Text-Based Exercise Import**: New admin page for creating exercises from pasted text
+  - Navigate to "IELTS Courses > Create Exercises from Text"
+  - Paste specially formatted text with questions, options, and feedback
+  - Automatically parses True/False questions with correct/incorrect indicators
+  - Supports multi-question exercises in a single paste
+  - Extracts question text, answer options, correct answers, and feedback
+  - Creates exercises as drafts or published posts
+  - Ideal for quickly importing exercises from formatted documents
+  - Example format supported:
+    ```
+    Exercise Title/Instructions
+    
+    Question 1 text
+    This is TRUE
+    Correct answer
+    This is FALSE
+    Incorrect
+    
+    Optional feedback text
+    
+    Question 2 text
+    This is TRUE
+    This is FALSE
+    Correct answer
+    ```
+
+### Changed
+- Updated plugin version to 1.18
+
 ## [1.17] - 2025-12-18
 
 ### Enhanced
