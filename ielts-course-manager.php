@@ -37,6 +37,7 @@ require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-admin.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-converter-page.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-export-page.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-enrollment-page.php';
+require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-xml-exercises-creator.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/frontend/class-frontend.php';
 
 /**

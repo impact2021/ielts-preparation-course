@@ -58,6 +58,14 @@ See [PLUGIN_README.md](PLUGIN_README.md) for detailed documentation on:
 - See [XML_CONVERSION_README.md](XML_CONVERSION_README.md) for conversion details
 - Perfect for migrating between different servers or sites
 
+**NEW: XML Exercises Creator** - See [XML_EXERCISES_CREATOR_GUIDE.md](XML_EXERCISES_CREATOR_GUIDE.md)
+- Automatically create exercise pages from converted XML
+- Navigate to "IELTS Courses > Create Exercises from XML"
+- Process all 4,547 exercises or test with a smaller batch
+- Auto-detects True/False questions and maps question types
+- Creates exercises as drafts for review and completion
+- Manual step: Add answer options and correct answers to each exercise
+
 ## Requirements
 
 - WordPress 5.0+
