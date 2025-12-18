@@ -202,6 +202,9 @@
                         var result = response.data;
                         var isPassing = result.percentage >= 70;
                         
+                        // Check if this is a CBT quiz
+                        var isCBT = quizContainer.hasClass('ielts-computer-based-quiz');
+                        
                         var html = '<div class="quiz-result ' + (isPassing ? 'pass' : 'fail') + '">';
                         html += '<h3>' + (isPassing ? 'Congratulations! You Passed!' : 'Quiz Completed') + '</h3>';
                         
@@ -225,8 +228,8 @@
                             html += '<p>Keep studying and try again to improve your score!</p>';
                         }
                         
-                        // Show question-by-question feedback if available
-                        if (result.question_results && Object.keys(result.question_results).length > 0) {
+                        // Show question-by-question feedback only for non-CBT quizzes
+                        if (!isCBT && result.question_results && Object.keys(result.question_results).length > 0) {
                             html += '<div class="quiz-feedback-section">';
                             html += '<h4>Question Feedback</h4>';
                             html += '<div class="quiz-feedback-list">';
@@ -310,13 +313,26 @@
                         }
                         
                         html += '<div class="quiz-actions">';
-                        html += '<button class="button button-primary quiz-retake-btn">Take Quiz Again</button>';
-                        if (result.next_url) {
+                        
+                        // For CBT quizzes, add "Review my answers" button
+                        if (isCBT) {
+                            html += '<button class="button button-primary cbt-review-answers-btn">Review my answers</button>';
+                            html += ' <button class="button quiz-retake-btn">Take Quiz Again</button>';
+                        } else {
+                            html += '<button class="button button-primary quiz-retake-btn">Take Quiz Again</button>';
+                        }
+                        
+                        // Only add auto-redirect for non-CBT quizzes
+                        if (!isCBT && result.next_url) {
                             html += ' <a href="' + result.next_url + '" class="button button-primary quiz-continue-btn">Continue</a>';
                             html += '<div id="quiz-auto-redirect" style="margin-top: 15px; padding: 10px; background: #f0f0f1; border-left: 4px solid #72aee6;">';
                             html += '<p style="margin: 0;">Automatically continuing in <strong id="quiz-countdown">5</strong> seconds... <button type="button" id="quiz-cancel-redirect" class="button button-link" style="text-decoration: underline;">Cancel</button></p>';
                             html += '</div>';
+                        } else if (isCBT && result.next_url) {
+                            // For CBT, just add continue button without auto-redirect
+                            html += ' <a href="' + result.next_url + '" class="button button-primary quiz-continue-btn">Continue</a>';
                         }
+                        
                         html += '</div>';
                         html += '</div>';
                         
@@ -359,12 +375,20 @@
                             }
                         });
                         
-                        // Check if this is a CBT quiz
-                        var isCBT = quizContainer.hasClass('ielts-computer-based-quiz');
-                        
                         if (isCBT) {
-                            // For CBT quizzes, show results in a modal
+                            // For CBT quizzes, show results in a modal and hide submit button
                             showCBTResultModal(html, result.next_url);
+                            form.find('button[type="submit"]').hide();
+                            
+                            // Update timer display to show band score instead of time remaining
+                            var timerElement = form.find('#quiz-timer-fullscreen, .quiz-timer-fullscreen');
+                            if (timerElement.length > 0) {
+                                if (result.display_type === 'band') {
+                                    timerElement.html('<strong>Band Score:</strong> <span>' + result.display_score + '</span>');
+                                } else {
+                                    timerElement.html('<strong>Score:</strong> <span>' + result.percentage + '%</span>');
+                                }
+                            }
                         } else {
                             // For regular quizzes, show inline
                             form.hide();
@@ -376,8 +400,8 @@
                             }, 500);
                         }
                         
-                        // Auto-navigate to next item after 5 seconds if available
-                        if (result.next_url) {
+                        // Auto-navigate to next item after 5 seconds if available (only for non-CBT)
+                        if (!isCBT && result.next_url) {
                             var countdown = 5;
                             var redirectTimer = null;
                             var countdownInterval = setInterval(function() {
@@ -571,6 +595,14 @@
                 $('#cbt-result-modal').fadeOut(300);
                 $('body').css('overflow', '');
                 forceReload();
+            });
+            
+            // Handle "Review my answers" button (use event delegation)
+            $(document).on('click', '.cbt-review-answers-btn', function(e) {
+                e.preventDefault();
+                $('#cbt-result-modal').fadeOut(300);
+                $('body').css('overflow', '');
+                // Modal closes and user can see the highlighted answers in the form
             });
         }
     });
