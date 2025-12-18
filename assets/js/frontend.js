@@ -385,10 +385,14 @@
                                 // Remove any existing feedback first
                                 questionElement.find('.question-feedback-message').remove();
                                 
-                                var feedbackHtml = '<div class="question-feedback-message" style="margin-top: 10px; padding: 10px; background: #f0f0f1; border-left: 4px solid ' + (questionResult.correct ? '#46b450' : '#dc3232') + '; border-radius: 3px;">';
-                                feedbackHtml += questionResult.feedback;
-                                feedbackHtml += '</div>';
-                                questionElement.append(feedbackHtml);
+                                // Create feedback element with proper CSS classes
+                                var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
+                                var feedbackDiv = $('<div>')
+                                    .addClass('question-feedback-message')
+                                    .addClass(feedbackClass)
+                                    .html(questionResult.feedback); // feedback is already sanitized server-side with wp_kses_post()
+                                
+                                questionElement.append(feedbackDiv);
                             }
                         });
                         
