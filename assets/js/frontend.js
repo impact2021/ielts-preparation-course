@@ -381,7 +381,7 @@
                             form.find('button[type="submit"]').hide();
                             
                             // Update timer display to show band score instead of time remaining
-                            var timerElement = form.find('#quiz-timer-fullscreen, .quiz-timer-fullscreen');
+                            var timerElement = form.find('.quiz-timer-fullscreen');
                             if (timerElement.length > 0) {
                                 if (result.display_type === 'band') {
                                     timerElement.html('<strong>Band Score:</strong> <span>' + result.display_score + '</span>');
