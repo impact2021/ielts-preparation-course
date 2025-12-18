@@ -633,6 +633,19 @@ class IELTS_CM_Admin {
         </p>
         
         <?php
+        $open_as_popup = get_post_meta($post->ID, '_ielts_cm_open_as_popup', true);
+        ?>
+        <div id="cbt-popup-option" style="<?php echo ($layout_type !== 'computer_based') ? 'display:none;' : ''; ?>">
+            <p>
+                <label>
+                    <input type="checkbox" id="ielts_cm_open_as_popup" name="ielts_cm_open_as_popup" value="1" <?php checked($open_as_popup, '1'); ?>>
+                    <?php _e('Open as Popup/Fullscreen Modal', 'ielts-course-manager'); ?>
+                </label><br>
+                <small><?php _e('When checked, the CBT exercise will open in a fullscreen popup modal. When unchecked, it opens in the same window.', 'ielts-course-manager'); ?></small>
+            </p>
+        </div>
+        
+        <?php
         $scoring_type = get_post_meta($post->ID, '_ielts_cm_scoring_type', true);
         if (!$scoring_type) {
             $scoring_type = 'percentage';
@@ -741,8 +754,10 @@ class IELTS_CM_Admin {
             $('#ielts_cm_layout_type').on('change', function() {
                 if ($(this).val() === 'computer_based') {
                     $('#reading-texts-section').show();
+                    $('#cbt-popup-option').show();
                 } else {
                     $('#reading-texts-section').hide();
+                    $('#cbt-popup-option').hide();
                 }
             });
             
@@ -1432,6 +1447,13 @@ class IELTS_CM_Admin {
             // Save layout type
             if (isset($_POST['ielts_cm_layout_type'])) {
                 update_post_meta($post_id, '_ielts_cm_layout_type', sanitize_text_field($_POST['ielts_cm_layout_type']));
+            }
+            
+            // Save open as popup option (only for CBT layout)
+            if (isset($_POST['ielts_cm_open_as_popup'])) {
+                update_post_meta($post_id, '_ielts_cm_open_as_popup', '1');
+            } else {
+                delete_post_meta($post_id, '_ielts_cm_open_as_popup');
             }
             
             // Save scoring type with validation

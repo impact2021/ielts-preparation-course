@@ -362,7 +362,9 @@ class IELTS_CM_Multi_Site_Sync {
             'post_type' => 'ielts_lesson',
             'posts_per_page' => -1,
             'post__in' => $lesson_ids,
-            'post_status' => 'any'
+            'post_status' => 'any',
+            'orderby' => 'menu_order',
+            'order' => 'ASC'
         ));
     }
     
@@ -399,7 +401,9 @@ class IELTS_CM_Multi_Site_Sync {
             'post_type' => 'ielts_resource',
             'posts_per_page' => -1,
             'post__in' => $resource_ids,
-            'post_status' => 'any'
+            'post_status' => 'any',
+            'orderby' => 'menu_order',
+            'order' => 'ASC'
         ));
     }
     
@@ -436,7 +440,9 @@ class IELTS_CM_Multi_Site_Sync {
             'post_type' => 'ielts_quiz',
             'posts_per_page' => -1,
             'post__in' => $quiz_ids,
-            'post_status' => 'any'
+            'post_status' => 'any',
+            'orderby' => 'menu_order',
+            'order' => 'ASC'
         ));
     }
     

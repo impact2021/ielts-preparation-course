@@ -2,6 +2,33 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.9] - 2025-12-18
+
+### Added
+- **CBT Popup Control**: New checkbox in exercise settings for computer-based tests
+  - "Open as Popup/Fullscreen Modal" option in Quiz Settings
+  - When checked: Opens CBT exercise in fullscreen popup modal (previous default behavior)
+  - When unchecked: Opens CBT exercise in the same window without modal
+  - Provides flexibility for different testing scenarios
+  - Only visible when "Computer-Based IELTS Layout" is selected
+
+### Fixed
+- **CBT Fullscreen Modal Improvements**: Enhanced fullscreen modal for computer-based tests
+  - Radio buttons now properly display vertically (stacked) in fullscreen mode
+  - Reading text remains visible and doesn't disappear on scroll
+  - Timer displays correctly in fullscreen mode
+  - Question navigation numbers properly highlight when answered (green background)
+  - All CSS styling properly applied within modal
+  - Improved modal styling for better user experience
+
+### Changed
+- **Multi-Site Content Sync Order Preservation**: Course push now maintains correct order
+  - Lessons sync in correct menu_order
+  - Sublessons (resources) sync in correct menu_order
+  - Exercises (quizzes) sync in correct menu_order
+  - Ensures consistent content structure across primary and subsites
+- Updated plugin version to 2.9
+
 ## [2.8] - 2025-12-18
 
 ### Changed
