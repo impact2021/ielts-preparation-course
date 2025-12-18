@@ -316,28 +316,197 @@ class IELTS_CM_XML_Exercises_Creator {
         // Register namespaces
         $namespaces = $xml->getNamespaces(true);
         
-        // Process items
+        // First pass: Group questions by quiz ID
         $items = $xml->channel->item;
-        $processed = 0;
-        $limit = isset($options['limit']) ? $options['limit'] : null;
+        $quizzes_by_id = array();
+        $standalone_questions = array();
         
         foreach ($items as $item) {
-            // Check limit
-            if ($limit && $processed >= $limit) {
-                break;
-            }
-            
             // Only process ielts_quiz items
             $post_type = (string)$item->children($namespaces['wp'])->post_type;
             if ($post_type !== 'ielts_quiz') {
                 continue;
             }
             
+            // Extract quiz ID from metadata
+            $quiz_id = null;
+            foreach ($item->children($namespaces['wp'])->postmeta as $meta) {
+                $key = (string)$meta->meta_key;
+                if (strpos($key, 'ld_quiz_') === 0) {
+                    $quiz_id = (string)$meta->meta_value;
+                    break;
+                }
+            }
+            
+            // Group by quiz ID or keep standalone
+            if ($quiz_id) {
+                if (!isset($quizzes_by_id[$quiz_id])) {
+                    $quizzes_by_id[$quiz_id] = array();
+                }
+                $quizzes_by_id[$quiz_id][] = $item;
+            } else {
+                $standalone_questions[] = $item;
+            }
+        }
+        
+        // Second pass: Create exercises
+        $processed = 0;
+        $limit = isset($options['limit']) ? $options['limit'] : null;
+        
+        // Process grouped quizzes (multi-question exercises)
+        foreach ($quizzes_by_id as $quiz_id => $questions) {
+            if ($limit && $processed >= $limit) {
+                break;
+            }
+            $this->process_grouped_exercise($questions, $quiz_id, $namespaces, $options);
+            $processed++;
+        }
+        
+        // Process standalone questions (single-question exercises)
+        foreach ($standalone_questions as $item) {
+            if ($limit && $processed >= $limit) {
+                break;
+            }
             $this->process_exercise_item($item, $namespaces, $options);
             $processed++;
         }
         
         return $this->get_results();
+    }
+    
+    /**
+     * Process a grouped exercise with multiple questions from XML
+     */
+    private function process_grouped_exercise($items, $quiz_id, $namespaces, $options) {
+        // Use the first item's title as the exercise title
+        $first_item = $items[0];
+        $title = (string)$first_item->title;
+        
+        // Try to extract a more meaningful title by finding common patterns
+        // Many questions have format like "Quiz Name Q1", "Quiz Name Q2", etc.
+        // We want to extract just "Quiz Name"
+        $base_title = $title;
+        if (preg_match('/^(.+?)\s+[Qq]\d+$/', $title, $matches)) {
+            $base_title = $matches[1];
+        } elseif (preg_match('/^(.+?)\s+[Qq]uestion\s+\d+$/i', $title, $matches)) {
+            $base_title = $matches[1];
+        }
+        
+        // Check if already exists
+        if ($options['skip_existing']) {
+            global $wpdb;
+            $existing = $wpdb->get_var($wpdb->prepare(
+                "SELECT ID FROM {$wpdb->posts} WHERE post_title = %s AND post_type = 'ielts_quiz' AND post_status != 'trash' LIMIT 1",
+                $base_title
+            ));
+            
+            if ($existing) {
+                $this->skipped_exercises[] = array(
+                    'title' => $base_title,
+                    'reason' => 'Already exists (ID: ' . $existing . ')'
+                );
+                return;
+            }
+        }
+        
+        // Create the exercise post
+        $post_data = array(
+            'post_title' => $base_title,
+            'post_content' => '', // Empty content, questions go in meta
+            'post_status' => $options['post_status'],
+            'post_type' => 'ielts_quiz',
+            'post_date' => (string)$first_item->children($namespaces['wp'])->post_date,
+            'menu_order' => (int)$first_item->children($namespaces['wp'])->menu_order
+        );
+        
+        $new_id = wp_insert_post($post_data);
+        
+        if (is_wp_error($new_id)) {
+            $this->error_log[] = 'Error creating exercise "' . $base_title . '": ' . $new_id->get_error_message();
+            return;
+        }
+        
+        // Process each question
+        $question_data = array();
+        $total_points = 0;
+        
+        foreach ($items as $item) {
+            $content = (string)$item->children($namespaces['content'])->encoded;
+            
+            // Extract metadata
+            $metadata = array();
+            foreach ($item->children($namespaces['wp'])->postmeta as $meta) {
+                $key = (string)$meta->meta_key;
+                $value = (string)$meta->meta_value;
+                $metadata[$key] = $value;
+            }
+            
+            // Get question type and points
+            $question_type = isset($metadata['question_type']) ? $metadata['question_type'] : 'single';
+            $question_points = isset($metadata['question_points']) ? floatval($metadata['question_points']) : 1;
+            $total_points += $question_points;
+            
+            // Map LearnDash question types to IELTS CM types
+            $type_map = array(
+                'single' => 'multiple_choice',
+                'multiple' => 'multiple_choice',
+                'free_answer' => 'fill_blank',
+                'essay' => 'essay',
+                'cloze_answer' => 'fill_blank',
+                'assessment_answer' => 'essay',
+                'matrix_sort_answer' => 'multiple_choice',
+                'sort_answer' => 'multiple_choice'
+            );
+            
+            $ielts_type = isset($type_map[$question_type]) ? $type_map[$question_type] : 'multiple_choice';
+            
+            // Detect True/False questions from title or content
+            $question_title = (string)$item->title;
+            if ($this->is_true_false_question($question_title, $content)) {
+                $ielts_type = 'true_false';
+            }
+            
+            // Add helpful placeholders based on question type
+            $options = '';
+            $correct_answer = '';
+            
+            if ($ielts_type === 'multiple_choice') {
+                $options = "Option A\nOption B\nOption C\nOption D";
+                $correct_answer = '0';
+            } elseif ($ielts_type === 'true_false') {
+                $correct_answer = 'true';
+            } elseif ($ielts_type === 'fill_blank') {
+                $correct_answer = '[Enter the expected answer here]';
+            }
+            
+            // Clean and preserve HTML in content
+            $question_text = $this->clean_content($content);
+            
+            $question_data[] = array(
+                'type' => $ielts_type,
+                'question' => $question_text,
+                'options' => $options,
+                'correct_answer' => $correct_answer,
+                'points' => $question_points
+            );
+        }
+        
+        // Save question data
+        update_post_meta($new_id, '_ielts_cm_questions', $question_data);
+        
+        // Save default pass percentage
+        update_post_meta($new_id, '_ielts_cm_pass_percentage', 70);
+        
+        // Save reference to original LearnDash quiz
+        update_post_meta($new_id, '_ielts_cm_ld_quiz_id', $quiz_id);
+        
+        $this->created_exercises[] = array(
+            'id' => $new_id,
+            'title' => $base_title,
+            'type' => 'multiple_questions',
+            'question_count' => count($question_data),
+            'points' => $total_points
+        );
     }
     
     /**
@@ -583,7 +752,7 @@ class IELTS_CM_XML_Exercises_Creator {
                     <thead>
                         <tr>
                             <th><?php _e('Title', 'ielts-course-manager'); ?></th>
-                            <th><?php _e('Type', 'ielts-course-manager'); ?></th>
+                            <th><?php _e('Questions', 'ielts-course-manager'); ?></th>
                             <th><?php _e('Points', 'ielts-course-manager'); ?></th>
                             <th><?php _e('Actions', 'ielts-course-manager'); ?></th>
                         </tr>
@@ -592,7 +761,15 @@ class IELTS_CM_XML_Exercises_Creator {
                         <?php foreach ($results['created'] as $exercise): ?>
                             <tr>
                                 <td><?php echo esc_html($exercise['title']); ?></td>
-                                <td><?php echo esc_html($exercise['type']); ?></td>
+                                <td>
+                                    <?php 
+                                    if (isset($exercise['question_count'])) {
+                                        echo esc_html($exercise['question_count']) . ' ' . _n('question', 'questions', $exercise['question_count'], 'ielts-course-manager');
+                                    } else {
+                                        echo '1 ' . __('question', 'ielts-course-manager');
+                                    }
+                                    ?>
+                                </td>
                                 <td><?php echo esc_html($exercise['points']); ?></td>
                                 <td>
                                     <a href="<?php echo esc_url(get_edit_post_link($exercise['id'])); ?>" class="button button-small">
