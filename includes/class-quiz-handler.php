@@ -57,12 +57,22 @@ class IELTS_CM_Quiz_Handler {
                     $score += isset($question['points']) ? floatval($question['points']) : 1;
                     // Get correct answer feedback
                     if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
-                        $feedback = $question['correct_feedback'];
+                        $feedback = wp_kses_post($question['correct_feedback']);
                     }
                 } else {
-                    // Get incorrect answer feedback
-                    if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
-                        $feedback = $question['incorrect_feedback'];
+                    // For multiple choice, check if there's specific feedback for this option
+                    if ($question['type'] === 'multiple_choice' && isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                        $user_answer_index = intval($answers[$index]);
+                        if (isset($question['option_feedback'][$user_answer_index]) && !empty($question['option_feedback'][$user_answer_index])) {
+                            $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
+                        } elseif (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                            $feedback = wp_kses_post($question['incorrect_feedback']);
+                        }
+                    } else {
+                        // Get general incorrect answer feedback
+                        if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                            $feedback = wp_kses_post($question['incorrect_feedback']);
+                        }
                     }
                 }
             }
