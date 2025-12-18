@@ -173,8 +173,7 @@ $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
                                         <div class="question-answer">
                                             <input type="text" 
                                                    name="answer_<?php echo $index; ?>" 
-                                                   class="answer-input" 
-                                                   required>
+                                                   class="answer-input">
                                         </div>
                                         <?php
                                         break;
@@ -493,6 +492,11 @@ jQuery(document).ready(function($) {
         
         // Disable body scroll
         $('body').css('overflow', 'hidden');
+        
+        // Set quiz start time when modal opens
+        if (typeof quizStartTime !== 'undefined') {
+            quizStartTime = Date.now();
+        }
         
         // Initialize timer if present
         var timerMinutes = $('.ielts-computer-based-quiz').data('timer-minutes');

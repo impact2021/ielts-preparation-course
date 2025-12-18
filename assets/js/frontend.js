@@ -133,8 +133,13 @@
             });
         });
         
-        // Store quiz start time
-        var quizStartTime = Date.now();
+        // Store quiz start time (set when quiz form is first shown)
+        var quizStartTime = null;
+        
+        // Initialize quiz start time when form is first visible
+        if ($('#ielts-quiz-form:visible').length > 0) {
+            quizStartTime = Date.now();
+        }
         
         // Quiz submission (using event delegation to handle both static and modal forms)
         $(document).on('submit', '#ielts-quiz-form', function(e) {
@@ -154,11 +159,14 @@
             var timerMinutes = quizContainer.data('timer-minutes');
             
             // Calculate time taken
-            var timeTakenMs = Date.now() - quizStartTime;
-            var timeTakenSeconds = Math.floor(timeTakenMs / 1000);
-            var timeTakenMinutes = Math.floor(timeTakenSeconds / 60);
-            var timeTakenSecondsRemainder = timeTakenSeconds % 60;
-            var timeTakenFormatted = timeTakenMinutes + ':' + (timeTakenSecondsRemainder < 10 ? '0' : '') + timeTakenSecondsRemainder;
+            var timeTakenFormatted = 'N/A';
+            if (quizStartTime) {
+                var timeTakenMs = Date.now() - quizStartTime;
+                var timeTakenSeconds = Math.floor(timeTakenMs / 1000);
+                var timeTakenMinutes = Math.floor(timeTakenSeconds / 60);
+                var timeTakenSecondsRemainder = timeTakenSeconds % 60;
+                timeTakenFormatted = timeTakenMinutes + ':' + (timeTakenSecondsRemainder < 10 ? '0' : '') + timeTakenSecondsRemainder;
+            }
             
             // Collect answers
             var answers = {};
@@ -551,14 +559,14 @@
             $('#cbt-result-modal').fadeIn(300);
             $('body').css('overflow', 'hidden');
             
-            // Handle modal close
-            $('.cbt-result-modal-close, .cbt-result-modal-overlay').off('click').on('click', function() {
+            // Handle modal close (use event delegation)
+            $(document).on('click', '.cbt-result-modal-close, .cbt-result-modal-overlay', function() {
                 $('#cbt-result-modal').fadeOut(300);
                 $('body').css('overflow', '');
             });
             
-            // Handle retake button
-            $(document).off('click', '#cbt-result-modal .quiz-retake-btn').on('click', '#cbt-result-modal .quiz-retake-btn', function(e) {
+            // Handle retake button (use event delegation)
+            $(document).on('click', '#cbt-result-modal .quiz-retake-btn', function(e) {
                 e.preventDefault();
                 $('#cbt-result-modal').fadeOut(300);
                 $('body').css('overflow', '');
