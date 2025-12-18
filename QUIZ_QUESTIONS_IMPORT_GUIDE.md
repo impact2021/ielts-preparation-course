@@ -261,8 +261,8 @@ If you're still having issues after following this guide:
 
 ## Version Requirements
 
-This enhanced question import system requires:
-- IELTS Course Manager v1.13 or later
+This enhanced question import system was introduced in:
+- IELTS Course Manager v1.13 (current version with enhanced question import)
 - LearnDash 3.x or 4.x (for export)
 - PHP 7.4 or later
 - WordPress 5.8 or later

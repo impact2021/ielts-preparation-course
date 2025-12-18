@@ -83,7 +83,7 @@ class IELTS_CM_Import_Page {
                         </ul>
                     </li>
                     <li><?php _e('Click <strong>Download Export File</strong> to save the XML file', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Verify the XML file contains <code>sfwd-question</code> items by opening it in a text editor and searching for this term.', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('Verify the XML file contains', 'ielts-course-manager'); ?> <code>sfwd-question</code> <?php _e('items by opening it in a text editor and searching for this term.', 'ielts-course-manager'); ?></li>
                 </ol>
                 
                 <h3><?php _e('Step 2: Import to IELTS Course Manager', 'ielts-course-manager'); ?></h3>
@@ -97,7 +97,7 @@ class IELTS_CM_Import_Page {
                 <h3><?php _e('Important Notes:', 'ielts-course-manager'); ?></h3>
                 <ul>
                     <li><?php _e('<strong>Large Imports:</strong> For sites with 25+ courses and hundreds of lessons, consider splitting your export into smaller files (e.g., 5-10 courses per file).', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('<strong>Questions in XML:</strong> Make sure your LearnDash XML export includes <code>sfwd-question</code> post types. The importer will automatically extract and convert quiz questions.', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Questions in XML:', 'ielts-course-manager'); ?></strong> <?php _e('Make sure your LearnDash XML export includes', 'ielts-course-manager'); ?> <code>sfwd-question</code> <?php _e('post types. The importer will automatically extract and convert quiz questions.', 'ielts-course-manager'); ?></li>
                     <li><?php _e('<strong>Question Format:</strong> Multiple choice options will be converted automatically. After import, review quiz questions to ensure they display correctly.', 'ielts-course-manager'); ?></li>
                     <li><?php _e('<strong>Course Structure:</strong> The importer automatically maintains the relationships between courses, lessons, lesson pages, quizzes, and questions.', 'ielts-course-manager'); ?></li>
                     <li><?php _e('<strong>Backup First:</strong> Always backup your database before importing to ensure you can rollback if needed.', 'ielts-course-manager'); ?></li>

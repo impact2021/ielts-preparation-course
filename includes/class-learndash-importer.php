@@ -434,8 +434,8 @@ class IELTS_CM_LearnDash_Importer {
                     }
                     
                     // Store options as newline-separated string for template compatibility
-                    // The single-quiz.php template expects options as a string that gets split by newlines
-                    // (see templates/single-quiz.php line 80: $options = array_filter(explode("\n", $question['options']));)
+                    // The single-quiz.php template expects options as a newline-separated string
+                    // that gets split into an array using explode("\n", $question['options'])
                     $converted['options'] = implode("\n", $options_array);
                     $converted['correct_answer'] = $correct_index;
                 } else {
