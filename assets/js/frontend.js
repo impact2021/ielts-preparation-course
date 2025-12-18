@@ -19,9 +19,12 @@
         var timerMinutes = quizContainer.data('timer-minutes');
         var quizTimerInterval = null;
         
-        if (timerMinutes && timerMinutes > 0 && $('#quiz-timer').length) {
+        // Check for both standard and computer-based quiz timers
+        var timerElement = $('#quiz-timer').length ? $('#quiz-timer') : $('#quiz-timer-fullscreen');
+        var timerDisplay = $('#timer-display').length ? $('#timer-display') : $('#timer-display-fullscreen');
+        
+        if (timerMinutes && timerMinutes > 0 && timerElement.length && timerDisplay.length) {
             var totalSeconds = timerMinutes * 60;
-            var timerDisplay = $('#timer-display');
             
             quizTimerInterval = setInterval(function() {
                 totalSeconds--;
@@ -32,19 +35,22 @@
                 
                 // Warning at 5 minutes
                 if (totalSeconds === 300) {
-                    $('#quiz-timer').css('color', 'orange');
+                    timerElement.css('color', 'orange');
+                    timerDisplay.css('color', 'orange');
                 }
                 
                 // Critical at 1 minute
                 if (totalSeconds === 60) {
-                    $('#quiz-timer').css('color', 'red');
+                    timerElement.css('color', 'red');
+                    timerDisplay.css('color', 'red');
                 }
                 
                 if (totalSeconds <= 0) {
                     clearInterval(quizTimerInterval);
                     quizTimerInterval = null;
                     timerDisplay.text('0:00');
-                    $('#quiz-timer').css('color', 'red');
+                    timerElement.css('color', 'red');
+                    timerDisplay.css('color', 'red');
                     
                     // Auto-submit the form
                     alert('Time is up! The exercise will be submitted automatically.');
@@ -136,8 +142,13 @@
         // Store quiz start time (set when quiz form is first shown)
         var quizStartTime = null;
         
-        // Initialize quiz start time when form is first visible
+        // Initialize quiz start time when form is first visible (not hidden by fullscreen notice)
         if ($('#ielts-quiz-form:visible').length > 0) {
+            quizStartTime = Date.now();
+        }
+        
+        // For fullscreen mode, ensure start time is set when page loads
+        if ($('.ielts-quiz-fullscreen').length > 0 && $('#ielts-quiz-form:visible').length > 0) {
             quizStartTime = Date.now();
         }
         

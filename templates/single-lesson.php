@@ -111,9 +111,11 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                             $is_completed = $best_result ? true : false;
                             $type_label = __('Exercise', 'ielts-course-manager');
                             $type_badge_class = 'quiz';
-                            // Check if this is a computer-based quiz
+                            // Check if this is a computer-based quiz with popup enabled
                             $layout_type = get_post_meta($post_item->ID, '_ielts_cm_layout_type', true);
+                            $open_as_popup = get_post_meta($post_item->ID, '_ielts_cm_open_as_popup', true);
                             $is_cbt = ($layout_type === 'computer_based');
+                            $use_fullscreen = $is_cbt && $open_as_popup;
                         }
                         ?>
                         <tr class="content-row <?php echo $is_completed ? 'completed' : ''; ?>">
@@ -133,7 +135,15 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                             </td>
                             <td class="content-title">
                                 <strong>
-                                    <a href="<?php echo get_permalink($post_item->ID); ?>">
+                                    <?php 
+                                    // For CBT quizzes with popup enabled, link should go to fullscreen mode
+                                    if ($item_type === 'quiz' && isset($use_fullscreen) && $use_fullscreen) {
+                                        $quiz_url = add_query_arg('fullscreen', '1', get_permalink($post_item->ID));
+                                    } else {
+                                        $quiz_url = get_permalink($post_item->ID);
+                                    }
+                                    ?>
+                                    <a href="<?php echo esc_url($quiz_url); ?>">
                                         <?php echo esc_html($post_item->post_title); ?>
                                     </a>
                                 </strong>
@@ -165,11 +175,10 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                                 </td>
                             <?php endif; ?>
                             <td class="content-action">
-                                <?php if ($item_type === 'quiz' && isset($is_cbt) && $is_cbt): ?>
-                                    <!-- CBT Exercise with fullscreen option -->
+                                <?php if ($item_type === 'quiz' && isset($use_fullscreen) && $use_fullscreen): ?>
+                                    <!-- CBT Exercise with fullscreen mode -->
                                     <a href="<?php echo add_query_arg('fullscreen', '1', get_permalink($post_item->ID)); ?>" 
-                                       class="button button-primary button-small ielts-cbt-fullscreen-btn"
-                                       data-fullscreen-url="<?php echo esc_url(add_query_arg('fullscreen', '1', get_permalink($post_item->ID))); ?>">
+                                       class="button button-primary button-small">
                                         <?php echo isset($best_result) && $best_result ? __('Retake (Fullscreen)', 'ielts-course-manager') : __('Start CBT Exercise', 'ielts-course-manager'); ?>
                                     </a>
                                 <?php else: ?>
@@ -253,22 +262,6 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
             color: #f57c00;
         }
         </style>
-        
-        <script>
-        // Safe fullscreen launcher for CBT exercises
-        jQuery(document).ready(function($) {
-            $('.ielts-cbt-fullscreen-btn').on('click', function(e) {
-                e.preventDefault();
-                var url = $(this).data('fullscreen-url');
-                if (url) {
-                    var width = Math.max(800, window.screen.availWidth || window.screen.width);
-                    var height = Math.max(600, window.screen.availHeight || window.screen.height);
-                    var features = 'width=' + width + ',height=' + height + ',fullscreen=yes,scrollbars=yes';
-                    window.open(url, '_blank', features);
-                }
-            });
-        });
-        </script>
     <?php endif; ?>
     
     <?php
