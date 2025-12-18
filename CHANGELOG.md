@@ -2,6 +2,50 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.1] - 2025-12-18
+
+### Added - Computer-Based IELTS Test Layout
+- **New Layout Type**: Added computer-based IELTS test layout option for exercises
+  - Two-column full-width design mimicking actual IELTS computer test
+  - Left column displays reading passages with scrollable content
+  - Right column shows questions with answer inputs
+  - Bottom navigation bar for quick question jumping
+  - Smooth scrolling and question highlighting
+  
+- **Reading Text Management**: New reading text fields for exercises
+  - Support for multiple reading passages per exercise
+  - Optional titles for each reading text (e.g., "Passage 1")
+  - Rich text content support with proper formatting
+  - Reading texts displayed in left column of computer-based layout
+  
+- **Question Navigation**: Interactive question navigation system
+  - Navigation buttons for all questions at bottom of page
+  - Click any button to jump directly to that question
+  - Visual indication when questions are answered (green highlight)
+  - Smooth scrolling animation to selected question
+  - Question highlight animation on navigation
+  
+- **Layout Selection**: Exercise can use either standard or computer-based layout
+  - Default layout remains unchanged (backward compatible)
+  - Computer-based layout selected via dropdown in exercise settings
+  - Separate templates for each layout type
+  
+- **Responsive Design**: Computer-based layout adapts to different screen sizes
+  - Desktop: Side-by-side columns with fixed heights and scrollbars
+  - Tablet: Vertical stacking with separate scroll areas
+  - Mobile: Optimized column heights and navigation layout
+  
+### Changed
+- Updated plugin version to 2.1
+- Enhanced quiz meta box with layout type selection
+- Modified single quiz page template to support multiple layouts
+
+### Technical Details
+- New template: `templates/single-quiz-computer-based.php`
+- New CSS styles for two-column layout and navigation
+- JavaScript handlers for question navigation and answer tracking
+- New meta fields: `_ielts_cm_layout_type` and `_ielts_cm_reading_texts`
+
 ## [2.0] - 2025-12-18
 
 ### Added - Multi-Site Content Sync
