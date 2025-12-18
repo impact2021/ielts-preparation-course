@@ -87,7 +87,8 @@ class IELTS_CM_Sync_Settings_Page {
         if ($role === 'subsite') {
             $existing_token = get_option('ielts_cm_subsite_auth_token', '');
             if (empty($existing_token)) {
-                $token = wp_generate_password(32, false);
+                // Generate cryptographically secure token
+                $token = wp_generate_password(32, true, true);
                 update_option('ielts_cm_subsite_auth_token', $token);
             }
         }
@@ -185,7 +186,8 @@ class IELTS_CM_Sync_Settings_Page {
      * Generate new auth token for subsite
      */
     private function handle_generate_token() {
-        $token = wp_generate_password(32, false);
+        // Generate cryptographically secure token
+        $token = wp_generate_password(32, true, true);
         update_option('ielts_cm_subsite_auth_token', $token);
         add_settings_error('ielts_cm_sync', 'token_generated', 'New authentication token generated', 'success');
     }

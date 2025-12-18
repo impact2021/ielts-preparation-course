@@ -54,7 +54,8 @@ class IELTS_CM_Sync_API {
             return new WP_Error('no_token', 'No authentication token configured', array('status' => 401));
         }
         
-        if ($token !== $stored_token) {
+        // Use hash_equals to prevent timing attacks
+        if (!hash_equals($stored_token, $token)) {
             return new WP_Error('invalid_token', 'Invalid authentication token', array('status' => 403));
         }
         
@@ -99,6 +100,11 @@ class IELTS_CM_Sync_API {
         $content_data = $params['content_data'];
         $content_type = $params['content_type'];
         $content_hash = $params['content_hash'] ?? '';
+        
+        // Validate content hash format (64-character hexadecimal for SHA-256)
+        if (!empty($content_hash) && !preg_match('/^[a-f0-9]{64}$/i', $content_hash)) {
+            return new WP_Error('invalid_hash', 'Invalid content hash format', array('status' => 400));
+        }
         
         // Process content based on type
         $result = $this->process_incoming_content($content_data, $content_type, $content_hash);
@@ -309,6 +315,25 @@ class IELTS_CM_Sync_API {
      * Set featured image from URL
      */
     private function set_featured_image_from_url($post_id, $image_url) {
+        // Validate URL to prevent SSRF attacks
+        $parsed_url = wp_parse_url($image_url);
+        if (!$parsed_url || empty($parsed_url['scheme']) || empty($parsed_url['host'])) {
+            return false;
+        }
+        
+        // Block localhost and internal IP addresses
+        $host = $parsed_url['host'];
+        if (in_array($host, array('localhost', '127.0.0.1', '0.0.0.0', '::1'))) {
+            return false;
+        }
+        
+        // Block internal IP ranges
+        if (filter_var($host, FILTER_VALIDATE_IP)) {
+            if (filter_var($host, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) === false) {
+                return false;
+            }
+        }
+        
         // Check if image already exists in media library
         $attachment_id = attachment_url_to_postid($image_url);
         

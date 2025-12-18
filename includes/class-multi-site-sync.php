@@ -149,7 +149,8 @@ class IELTS_CM_Multi_Site_Sync {
                 break;
         }
         
-        return hash('sha256', serialize($signature));
+        // Use json_encode instead of serialize for safer serialization
+        return hash('sha256', wp_json_encode($signature));
     }
     
     /**
