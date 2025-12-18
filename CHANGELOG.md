@@ -2,6 +2,54 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.10] - 2025-12-18
+
+### Fixed
+- **CBT Fullscreen Navigation**: Removed broken `?fullscreen=1` parameter navigation
+  - Clicking quiz title link now works the same as "Start CBT Exercise" button
+  - Always shows proper quiz header and content
+  - Popup/modal only triggers via "Open in Fullscreen" button
+  
+- **Scoring System**: Fixed quiz submission for computer-based tests
+  - Quiz form submission now properly detects CBT layout container
+  - Score calculation works correctly for both percentage and band score modes
+  - Fixed 0/0 scoring issue where answers weren't being registered
+  
+- **Submit Button State**: Button no longer stuck showing "Submitting..."
+  - Button is properly disabled during submission
+  - Form is hidden after successful submission (for inline results)
+  - Modal displays results without form visibility issues
+
+### Added
+- **CBT Score Display Modal**: Results now show in popup for computer-based tests
+  - Results display in centered modal overlay for CBT exercises
+  - Modal includes close button and retake functionality
+  - Prevents page navigation while reviewing results
+  
+- **Timer Information in Results**: Enhanced result display with timing details
+  - Shows time limit (if set) in quiz results
+  - Shows actual time taken to complete the quiz
+  - Time formatted as MM:SS for easy reading
+  
+- **Visual Answer Feedback**: Correct and wrong answers now highlighted
+  - Correct answers: Green background in navigation and answer areas
+  - Wrong answers: Red background in navigation and answer areas
+  - Correct answer also highlighted in green when user answer is wrong
+  - Applies to both navigation buttons and question/answer sections
+  
+- **Partial Quiz Submission**: Removed requirement to answer all questions sitewide
+  - Removed `required` attribute from all question input fields
+  - Students can now submit quizzes with partial answers
+  - Applies to all question types: multiple choice, true/false, fill-in-blank, essay
+  - Affects both standard quiz layout and computer-based test layout
+
+### Changed
+- **Version Update**: Updated plugin version to 2.10
+- **Quiz Submission Handler**: Enhanced to use event delegation
+  - Works with both static forms and dynamically created modal forms
+  - Properly tracks quiz start time for duration calculation
+  - Better detection of quiz container type (standard vs CBT)
+
 ## [2.9] - 2025-12-18
 
 ### Added

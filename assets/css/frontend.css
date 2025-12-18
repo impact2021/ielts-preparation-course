@@ -1112,3 +1112,122 @@ body.ielts-course-archive .content-area {
     font-weight: bold;
     color: #0073aa;
 }
+
+/* Correct/Incorrect Answer Highlighting */
+.question-nav-btn.nav-correct {
+    background: #4caf50 !important;
+    border-color: #4caf50 !important;
+    color: #fff !important;
+}
+
+.question-nav-btn.nav-incorrect {
+    background: #f44336 !important;
+    border-color: #f44336 !important;
+    color: #fff !important;
+}
+
+.quiz-question.question-correct {
+    border-left: 4px solid #4caf50 !important;
+    background: #f1f8f4 !important;
+}
+
+.quiz-question.question-incorrect {
+    border-left: 4px solid #f44336 !important;
+    background: #fef5f5 !important;
+}
+
+.option-label.answer-correct {
+    background: #4caf50 !important;
+    border-color: #4caf50 !important;
+    color: #fff !important;
+}
+
+.option-label.answer-incorrect {
+    background: #f44336 !important;
+    border-color: #f44336 !important;
+    color: #fff !important;
+}
+
+.option-label.answer-correct-highlight {
+    background: #c8e6c9 !important;
+    border-color: #4caf50 !important;
+    border-width: 3px !important;
+}
+
+input.answer-correct,
+textarea.answer-correct {
+    border: 3px solid #4caf50 !important;
+    background: #f1f8f4 !important;
+}
+
+input.answer-incorrect,
+textarea.answer-incorrect {
+    border: 3px solid #f44336 !important;
+    background: #fef5f5 !important;
+}
+
+/* CBT Result Modal */
+.cbt-result-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+}
+
+.cbt-result-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.cbt-result-modal-content {
+    position: relative;
+    max-width: 800px;
+    max-height: 90vh;
+    margin: 5vh auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    z-index: 1000000;
+}
+
+.cbt-result-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    line-height: 1;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    z-index: 1;
+}
+
+.cbt-result-modal-close:hover {
+    color: #000;
+}
+
+.cbt-result-modal-body {
+    padding: 40px 30px 30px;
+}
+
+.cbt-result-modal-body .quiz-result {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.cbt-result-modal-body .quiz-result h3 {
+    margin-top: 0;
+}

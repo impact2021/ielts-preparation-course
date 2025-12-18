@@ -133,15 +133,32 @@
             });
         });
         
-        // Quiz submission
-        $('#ielts-quiz-form').on('submit', function(e) {
+        // Store quiz start time
+        var quizStartTime = Date.now();
+        
+        // Quiz submission (using event delegation to handle both static and modal forms)
+        $(document).on('submit', '#ielts-quiz-form', function(e) {
             e.preventDefault();
             
             var form = $(this);
-            var quizContainer = form.closest('.ielts-single-quiz');
+            var quizContainer = form.closest('.ielts-single-quiz, .ielts-computer-based-quiz');
+            
+            // If form is inside modal, get data from the original quiz container
+            if (quizContainer.length === 0) {
+                quizContainer = $('.ielts-computer-based-quiz');
+            }
+            
             var quizId = quizContainer.data('quiz-id');
             var courseId = quizContainer.data('course-id');
             var lessonId = quizContainer.data('lesson-id');
+            var timerMinutes = quizContainer.data('timer-minutes');
+            
+            // Calculate time taken
+            var timeTakenMs = Date.now() - quizStartTime;
+            var timeTakenSeconds = Math.floor(timeTakenMs / 1000);
+            var timeTakenMinutes = Math.floor(timeTakenSeconds / 60);
+            var timeTakenSecondsRemainder = timeTakenSeconds % 60;
+            var timeTakenFormatted = timeTakenMinutes + ':' + (timeTakenSecondsRemainder < 10 ? '0' : '') + timeTakenSecondsRemainder;
             
             // Collect answers
             var answers = {};
@@ -187,6 +204,12 @@
                         } else {
                             html += '<p><strong>Your Score:</strong> ' + result.score + ' / ' + result.max_score + ' (' + result.percentage + '%)</p>';
                         }
+                        
+                        // Show time information
+                        if (timerMinutes && timerMinutes > 0) {
+                            html += '<p><strong>Time Limit:</strong> ' + timerMinutes + ' minutes</p>';
+                        }
+                        html += '<p><strong>Time Taken:</strong> ' + timeTakenFormatted + '</p>';
                         
                         if (isPassing) {
                             html += '<p>Great job! You have passed this quiz.</p>';
@@ -289,13 +312,61 @@
                         html += '</div>';
                         html += '</div>';
                         
-                        form.hide();
-                        $('#quiz-result').html(html).show();
+                        // Add visual feedback for correct/wrong answers in the form
+                        $.each(result.question_results, function(index, questionResult) {
+                            var questionNum = parseInt(index) + 1;
+                            var questionElement = form.find('#question-' + index);
+                            var navButton = $('.question-nav-btn[data-question="' + index + '"]');
+                            
+                            if (questionResult.correct) {
+                                // Mark correct answers in green
+                                questionElement.addClass('question-correct');
+                                navButton.addClass('nav-correct').removeClass('answered');
+                                
+                                // Highlight the correct answer option
+                                if (questionResult.question_type === 'multiple_choice' || questionResult.question_type === 'true_false') {
+                                    questionElement.find('input[type="radio"]:checked').closest('.option-label').addClass('answer-correct');
+                                } else {
+                                    questionElement.find('input[type="text"], textarea').addClass('answer-correct');
+                                }
+                            } else {
+                                // Mark incorrect answers in red
+                                questionElement.addClass('question-incorrect');
+                                navButton.addClass('nav-incorrect').removeClass('answered');
+                                
+                                // Highlight the user's wrong answer
+                                if (questionResult.question_type === 'multiple_choice' || questionResult.question_type === 'true_false') {
+                                    questionElement.find('input[type="radio"]:checked').closest('.option-label').addClass('answer-incorrect');
+                                    
+                                    // Also highlight the correct answer in green
+                                    if (questionResult.question_type === 'multiple_choice') {
+                                        var correctIndex = parseInt(questionResult.correct_answer);
+                                        questionElement.find('input[type="radio"][value="' + correctIndex + '"]').closest('.option-label').addClass('answer-correct-highlight');
+                                    } else if (questionResult.question_type === 'true_false') {
+                                        questionElement.find('input[type="radio"][value="' + questionResult.correct_answer + '"]').closest('.option-label').addClass('answer-correct-highlight');
+                                    }
+                                } else {
+                                    questionElement.find('input[type="text"], textarea').addClass('answer-incorrect');
+                                }
+                            }
+                        });
                         
-                        // Scroll to result
-                        $('html, body').animate({
-                            scrollTop: $('#quiz-result').offset().top - 100
-                        }, 500);
+                        // Check if this is a CBT quiz
+                        var isCBT = quizContainer.hasClass('ielts-computer-based-quiz');
+                        
+                        if (isCBT) {
+                            // For CBT quizzes, show results in a modal
+                            showCBTResultModal(html, result.next_url);
+                        } else {
+                            // For regular quizzes, show inline
+                            form.hide();
+                            $('#quiz-result').html(html).show();
+                            
+                            // Scroll to result
+                            $('html, body').animate({
+                                scrollTop: $('#quiz-result').offset().top - 100
+                            }, 500);
+                        }
                         
                         // Auto-navigate to next item after 5 seconds if available
                         if (result.next_url) {
@@ -460,6 +531,40 @@
                 navButton.removeClass('answered');
             }
         });
+        
+        // Function to show CBT result modal
+        function showCBTResultModal(resultHtml, nextUrl) {
+            // Create modal if it doesn't exist
+            if ($('#cbt-result-modal').length === 0) {
+                var modalHtml = '<div id="cbt-result-modal" class="cbt-result-modal">';
+                modalHtml += '<div class="cbt-result-modal-overlay"></div>';
+                modalHtml += '<div class="cbt-result-modal-content">';
+                modalHtml += '<button type="button" class="cbt-result-modal-close">&times;</button>';
+                modalHtml += '<div class="cbt-result-modal-body"></div>';
+                modalHtml += '</div>';
+                modalHtml += '</div>';
+                $('body').append(modalHtml);
+            }
+            
+            // Show the modal with results
+            $('#cbt-result-modal .cbt-result-modal-body').html(resultHtml);
+            $('#cbt-result-modal').fadeIn(300);
+            $('body').css('overflow', 'hidden');
+            
+            // Handle modal close
+            $('.cbt-result-modal-close, .cbt-result-modal-overlay').off('click').on('click', function() {
+                $('#cbt-result-modal').fadeOut(300);
+                $('body').css('overflow', '');
+            });
+            
+            // Handle retake button
+            $(document).off('click', '#cbt-result-modal .quiz-retake-btn').on('click', '#cbt-result-modal .quiz-retake-btn', function(e) {
+                e.preventDefault();
+                $('#cbt-result-modal').fadeOut(300);
+                $('body').css('overflow', '');
+                forceReload();
+            });
+        }
     });
     
 })(jQuery);

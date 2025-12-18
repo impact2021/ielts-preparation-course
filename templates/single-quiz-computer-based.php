@@ -28,13 +28,10 @@ $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
 
 <div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>">
     <?php 
-    // Check if in fullscreen mode
-    $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
-    // Determine if we should show the fullscreen notice (only if popup is enabled and not already in fullscreen)
-    $show_fullscreen_notice = $open_as_popup && !$is_fullscreen;
+    // Determine if we should show the fullscreen notice (only if popup is enabled)
+    $show_fullscreen_notice = $open_as_popup;
     ?>
     
-    <?php if (!$is_fullscreen): ?>
     <div class="quiz-header">
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <h2 style="margin: 0;"><?php echo esc_html($quiz->post_title); ?></h2>
@@ -71,7 +68,6 @@ $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
             ?>
         </div>
     </div>
-    <?php endif; ?>
     
     <?php if ($show_fullscreen_notice): ?>
         <!-- Force fullscreen mode for CBT tests (when popup is enabled) -->
@@ -88,7 +84,7 @@ $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
     
     <?php if (!empty($questions) && is_user_logged_in()): ?>
         <form id="ielts-quiz-form" class="quiz-form" style="<?php echo $show_fullscreen_notice ? 'display:none;' : ''; ?>">
-            <?php if ($is_fullscreen && $timer_minutes > 0): ?>
+            <?php if ($timer_minutes > 0): ?>
             <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
                 <strong><?php _e('Time Remaining:', 'ielts-course-manager'); ?></strong>
                 <span id="timer-display-fullscreen">--:--</span>
@@ -139,8 +135,7 @@ $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
                                                 <label class="option-label">
                                                     <input type="radio" 
                                                            name="answer_<?php echo $index; ?>" 
-                                                           value="<?php echo $opt_index; ?>" 
-                                                           required>
+                                                           value="<?php echo $opt_index; ?>">
                                                     <span><?php echo esc_html(trim($option)); ?></span>
                                                 </label>
                                             <?php endforeach; ?>
@@ -154,22 +149,19 @@ $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
                                             <label class="option-label">
                                                 <input type="radio" 
                                                        name="answer_<?php echo $index; ?>" 
-                                                       value="true" 
-                                                       required>
+                                                       value="true">
                                                 <span><?php _e('True', 'ielts-course-manager'); ?></span>
                                             </label>
                                             <label class="option-label">
                                                 <input type="radio" 
                                                        name="answer_<?php echo $index; ?>" 
-                                                       value="false" 
-                                                       required>
+                                                       value="false">
                                                 <span><?php _e('False', 'ielts-course-manager'); ?></span>
                                             </label>
                                             <label class="option-label">
                                                 <input type="radio" 
                                                        name="answer_<?php echo $index; ?>" 
-                                                       value="not_given" 
-                                                       required>
+                                                       value="not_given">
                                                 <span><?php _e('Not Given', 'ielts-course-manager'); ?></span>
                                             </label>
                                         </div>
@@ -194,8 +186,7 @@ $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
                                         <div class="question-answer">
                                             <input type="text" 
                                                    name="answer_<?php echo $index; ?>" 
-                                                   class="answer-input" 
-                                                   required>
+                                                   class="answer-input">
                                         </div>
                                         <?php
                                         break;
@@ -205,8 +196,7 @@ $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
                                         <div class="question-answer">
                                             <textarea name="answer_<?php echo $index; ?>" 
                                                       class="answer-textarea" 
-                                                      rows="6" 
-                                                      required></textarea>
+                                                      rows="6"></textarea>
                                             <p class="essay-note">
                                                 <?php _e('Note: Essay questions will be reviewed manually.', 'ielts-course-manager'); ?>
                                             </p>
@@ -488,19 +478,7 @@ $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
 jQuery(document).ready(function($) {
     var modal = $('#cbt-fullscreen-modal');
     var form = $('#ielts-quiz-form');
-    var isFullscreenMode = <?php echo $is_fullscreen ? 'true' : 'false'; ?>;
     var modalTimerInterval = null;
-    
-    if (isFullscreenMode) {
-        // Already in fullscreen, show the form
-        form.show();
-        
-        // Initialize timer for fullscreen mode
-        var timerMinutes = $('.ielts-computer-based-quiz').data('timer-minutes');
-        if (timerMinutes && timerMinutes > 0) {
-            initializeTimer(timerMinutes, form);
-        }
-    }
     
     $('#open-modal-btn').on('click', function(e) {
         e.preventDefault();
