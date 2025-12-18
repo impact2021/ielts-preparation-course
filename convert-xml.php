@@ -22,7 +22,8 @@ echo "Input file: {$input_file}\n";
 echo "Output file: {$output_file}\n\n";
 
 // Load the XML file
-libxml_use_internal_errors(true);
+// Store previous error handling state and enable internal errors
+$previous_error_setting = libxml_use_internal_errors(true);
 $xml = simplexml_load_file($input_file);
 
 if ($xml === false) {
@@ -31,6 +32,8 @@ if ($xml === false) {
         echo "  - {$error->message}\n";
     }
     libxml_clear_errors();
+    // Restore previous error handling state
+    libxml_use_internal_errors($previous_error_setting);
     die("Failed to load XML file.\n");
 }
 
@@ -66,8 +69,9 @@ foreach ($items as $item) {
     // Change the post type to ielts_quiz
     $wp_children->post_type = 'ielts_quiz';
     
-    // Update the slug to match new format
-    $wp_children->post_name = sanitize_title_for_slug($wp_children->post_name);
+    // Note: post_name (slug) is kept as-is from the export
+    // WordPress will handle any necessary sanitization during import
+    // We only update the path in URLs, not the slug itself
     
     // Update the link to use new slug pattern
     $old_link = (string)$item->link;
@@ -104,19 +108,11 @@ if (file_put_contents($output_file, $xml_string)) {
     die("Error: Failed to save output file.\n");
 }
 
+// Restore previous error handling state
+libxml_use_internal_errors($previous_error_setting);
+
 echo "\n✓ Conversion successful!\n";
 echo "\nYou can now import '{$output_file}' into IELTS Course Manager.\n";
-
-/**
- * Helper function to sanitize title for slug
- */
-function sanitize_title_for_slug($title) {
-    $title = strtolower($title);
-    $title = preg_replace('/[^a-z0-9\-]/', '-', $title);
-    $title = preg_replace('/-+/', '-', $title);
-    $title = trim($title, '-');
-    return $title;
-}
 
 /**
  * Helper function to format bytes
