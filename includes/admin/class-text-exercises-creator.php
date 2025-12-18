@@ -53,7 +53,7 @@ class IELTS_CM_Text_Exercises_Creator {
         
         // Check for errors
         if (isset($_GET['error'])) {
-            $this->display_error($_GET['error']);
+            $this->display_error(sanitize_key($_GET['error']));
         }
         
         ?>
@@ -170,7 +170,7 @@ You have one hour for the complete test (including transferring your answers).</
         }
         
         // Get options
-        $exercise_text = isset($_POST['exercise_text']) ? wp_kses_post($_POST['exercise_text']) : '';
+        $exercise_text = isset($_POST['exercise_text']) ? sanitize_textarea_field($_POST['exercise_text']) : '';
         $post_status = isset($_POST['post_status']) ? sanitize_text_field($_POST['post_status']) : 'draft';
         
         // Validate post status
