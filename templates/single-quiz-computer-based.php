@@ -84,7 +84,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     <?php endif; ?>
     
     <?php if (!empty($questions) && is_user_logged_in()): ?>
-        <form id="ielts-quiz-form" class="quiz-form" style="<?php echo $is_fullscreen ? 'display:none;' : ''; ?>">
+        <form id="ielts-quiz-form" class="quiz-form" style="<?php echo !$is_fullscreen ? 'display:none;' : ''; ?>">
             <?php if ($is_fullscreen && $timer_minutes > 0): ?>
             <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
                 <strong><?php _e('Time Remaining:', 'ielts-course-manager'); ?></strong>
@@ -214,12 +214,6 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 ?>
                             </div>
                         <?php endforeach; ?>
-                        
-                        <div class="quiz-submit">
-                            <button type="submit" class="button button-primary">
-                                <?php _e('Submit Quiz', 'ielts-course-manager'); ?>
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -234,6 +228,9 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                         </button>
                     <?php endforeach; ?>
                 </div>
+                <button type="submit" class="button button-primary quiz-submit-btn">
+                    <?php _e('Submit Quiz', 'ielts-course-manager'); ?>
+                </button>
             </div>
         </form>
         
@@ -344,6 +341,34 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
 }
 #cbt-fullscreen-modal .modal-close-btn:hover {
     background: #a00;
+}
+#cbt-fullscreen-modal #modal-content {
+    padding: 60px 20px 20px;
+}
+#cbt-fullscreen-modal .computer-based-container {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+#cbt-fullscreen-modal .reading-column,
+#cbt-fullscreen-modal .questions-column {
+    flex: 1 1 50%;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+}
+#cbt-fullscreen-modal .reading-column {
+    border-right: 2px solid #e0e0e0;
+}
+#cbt-fullscreen-modal .question-navigation {
+    position: sticky;
+    bottom: 0;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px 0 0 0;
+    padding: 15px 20px;
 }
 </style>
 

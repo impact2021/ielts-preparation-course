@@ -982,8 +982,17 @@ body.ielts-course-archive .content-area {
 }
 
 .question-navigation .question-nav-btn.answered {
-    background: #e8f5e9;
+    background: #4caf50;
     border-color: #4caf50;
+    color: #fff;
+}
+
+.question-navigation .quiz-submit-btn {
+    margin-left: auto;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 /* Responsive design for computer-based layout */
@@ -1022,6 +1031,11 @@ body.ielts-course-archive .content-area {
     
     .question-navigation .question-buttons {
         width: 100%;
+    }
+    
+    .question-navigation .quiz-submit-btn {
+        width: 100%;
+        margin-left: 0;
     }
 }
 
