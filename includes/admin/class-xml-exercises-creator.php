@@ -111,11 +111,19 @@ class IELTS_CM_XML_Exercises_Creator {
                     <ul>
                         <li><?php _e('Each ielts_quiz item in the XML will become an exercise post', 'ielts-course-manager'); ?></li>
                         <li><?php _e('The question content will be extracted and added as a single question', 'ielts-course-manager'); ?></li>
-                        <li><?php _e('Question type will be preserved (single choice, multiple choice, etc.)', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('Question type will be auto-detected and mapped (single choice → multiple choice, true/false, etc.)', 'ielts-course-manager'); ?></li>
                         <li><?php _e('Points will be preserved from the XML metadata', 'ielts-course-manager'); ?></li>
                         <li><?php _e('Exercises will be created as drafts for review and editing', 'ielts-course-manager'); ?></li>
                         <li><?php _e('You will need to manually add answer options and correct answers', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('You can add different feedback for correct and incorrect answers in the quiz handler', 'ielts-course-manager'); ?></li>
                     </ul>
+                    
+                    <div class="notice notice-info inline" style="margin-top: 15px;">
+                        <p>
+                            <strong><?php _e('Note:', 'ielts-course-manager'); ?></strong>
+                            <?php _e('The XML export does not contain answer options or feedback. These must be added manually after creation by editing each exercise.', 'ielts-course-manager'); ?>
+                        </p>
+                    </div>
                     
                     <div class="notice notice-warning inline">
                         <p>
@@ -179,9 +187,27 @@ class IELTS_CM_XML_Exercises_Creator {
                     <li><?php _e('Wait for the process to complete (do not close the browser)', 'ielts-course-manager'); ?></li>
                     <li><?php _e('Review the results and any errors', 'ielts-course-manager'); ?></li>
                     <li><?php _e('Go to IELTS Courses > Exercises to view and edit the created exercises', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('For each exercise, add answer options and correct answers as needed', 'ielts-course-manager'); ?></li>
+                    <li>
+                        <?php _e('For each exercise:', 'ielts-course-manager'); ?>
+                        <ul style="list-style-type: disc; margin-left: 20px; margin-top: 5px;">
+                            <li><?php _e('Add answer options (for multiple choice questions, one option per line)', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Set the correct answer (for multiple choice: option number starting from 0; for true/false: "true", "false", or "not_given")', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('The quiz handler will automatically provide feedback based on whether the answer is correct or incorrect', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Assign the exercise to appropriate courses and/or lessons', 'ielts-course-manager'); ?></li>
+                        </ul>
+                    </li>
                     <li><?php _e('Publish the exercises when ready', 'ielts-course-manager'); ?></li>
                 </ol>
+                
+                <h3><?php _e('About Feedback', 'ielts-course-manager'); ?></h3>
+                <p>
+                    <?php _e('The IELTS Course Manager quiz handler automatically provides appropriate feedback when students answer questions:', 'ielts-course-manager'); ?>
+                </p>
+                <ul style="list-style-type: disc; margin-left: 20px;">
+                    <li><?php _e('Correct answers: Display a success message', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('Incorrect answers: Show what the correct answer should have been', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('Score and percentage are calculated and displayed at the end', 'ielts-course-manager'); ?></li>
+                </ul>
             </div>
         </div>
         <?php
@@ -337,10 +363,17 @@ class IELTS_CM_XML_Exercises_Creator {
             'free_answer' => 'fill_blank',
             'essay' => 'essay',
             'cloze_answer' => 'fill_blank',
-            'assessment_answer' => 'essay'
+            'assessment_answer' => 'essay',
+            'matrix_sort_answer' => 'multiple_choice',
+            'sort_answer' => 'multiple_choice'
         );
         
         $ielts_type = isset($type_map[$question_type]) ? $type_map[$question_type] : 'multiple_choice';
+        
+        // Detect True/False questions from title or content
+        if ($this->is_true_false_question($title, $content)) {
+            $ielts_type = 'true_false';
+        }
         
         // Create the exercise post
         $post_data = array(
@@ -360,12 +393,21 @@ class IELTS_CM_XML_Exercises_Creator {
         }
         
         // Create a single question from the content
+        $options = '';
+        $correct_answer = '';
+        
+        // Pre-fill True/False questions with default options
+        if ($ielts_type === 'true_false') {
+            // For true/false questions, we set a default but user still needs to set the correct answer
+            $correct_answer = ''; // User must specify which is correct
+        }
+        
         $question_data = array(
             array(
                 'type' => $ielts_type,
                 'question' => $this->clean_content($content),
-                'options' => '', // To be filled in manually
-                'correct_answer' => '', // To be filled in manually
+                'options' => $options,
+                'correct_answer' => $correct_answer,
                 'points' => $question_points
             )
         );
@@ -396,9 +438,37 @@ class IELTS_CM_XML_Exercises_Creator {
     }
     
     /**
+     * Check if question appears to be a True/False question
+     */
+    private function is_true_false_question($title, $content) {
+        $indicators = array(
+            'true or false',
+            'true/false',
+            't or f',
+            't/f/ng',
+            'true false not given',
+            'true, false, or not given'
+        );
+        
+        $search_text = strtolower($title . ' ' . $content);
+        
+        foreach ($indicators as $indicator) {
+            if (strpos($search_text, $indicator) !== false) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    /**
      * Clean HTML content for question text
      */
     private function clean_content($content) {
+        // Remove wpProQuiz wrapper divs but keep content
+        $content = str_replace('<div class="wpProQuiz_question_text">', '', $content);
+        $content = str_replace('</div>', '', $content);
+        
         // Remove wrapping CDATA if present
         $content = strip_tags($content, '<p><br><strong><em><ul><ol><li><img><a><span><div>');
         $content = trim($content);
