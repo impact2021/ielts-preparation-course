@@ -56,9 +56,31 @@ body .site-main {
 }
 body .ielts-computer-based-quiz {
     height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+body .ielts-computer-based-quiz .quiz-header {
+    flex-shrink: 0 !important;
+}
+body .ielts-computer-based-quiz .quiz-form {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
 }
 body .computer-based-container {
-    height: calc(100vh - 200px) !important;
+    flex: 1 !important;
+    margin-bottom: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+}
+body .question-navigation {
+    flex-shrink: 0 !important;
+    margin-bottom: 0 !important;
+}
+body .reading-column,
+body .questions-column {
+    max-height: 100% !important;
 }
 <?php else: ?>
 body.ielts-quiz-single #main.site-main {

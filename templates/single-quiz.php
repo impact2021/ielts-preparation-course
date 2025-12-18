@@ -68,7 +68,7 @@ if (!$pass_percentage) {
                     <div class="quiz-question">
                         <h4>
                             <?php printf(__('Question %d', 'ielts-course-manager'), $index + 1); ?>
-                            <span class="question-points">(<?php echo $question['points']; ?> <?php _e('points', 'ielts-course-manager'); ?>)</span>
+                            <span class="question-points">(<?php echo $question['points']; ?> <?php echo ($question['points'] == 1) ? __('point', 'ielts-course-manager') : __('points', 'ielts-course-manager'); ?>)</span>
                         </h4>
                         
                         <div class="question-text"><?php echo wp_kses_post($question['question']); ?></div>
