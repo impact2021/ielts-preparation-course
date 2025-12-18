@@ -24,12 +24,14 @@ if (!$reading_texts) {
 }
 $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
 $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
+// Check if we're in fullscreen mode
+$is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
 ?>
 
 <div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>">
     <?php 
-    // Determine if we should show the fullscreen notice (only if popup is enabled)
-    $show_fullscreen_notice = $open_as_popup;
+    // Show fullscreen notice only if popup is enabled AND we're not already in fullscreen mode
+    $show_fullscreen_notice = $open_as_popup && !$is_fullscreen;
     ?>
     
     <div class="quiz-header">
@@ -75,10 +77,10 @@ $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
             <p style="font-size: 1.2em; margin-bottom: 20px; color: #333;">
                 <?php _e('This computer-based test must be viewed in fullscreen mode for the best experience.', 'ielts-course-manager'); ?>
             </p>
-            <button type="button" class="button button-primary button-large ielts-fullscreen-btn" id="open-modal-btn" style="font-size: 1.1em; padding: 12px 30px;">
+            <a href="<?php echo add_query_arg('fullscreen', '1', get_permalink($quiz->ID)); ?>" class="button button-primary button-large ielts-fullscreen-btn" style="font-size: 1.1em; padding: 12px 30px; text-decoration: none;">
                 <span class="dashicons dashicons-fullscreen-alt" style="vertical-align: middle; font-size: 1.2em;"></span>
                 <?php _e('Open in Fullscreen', 'ielts-course-manager'); ?>
-            </button>
+            </a>
         </div>
     <?php endif; ?>
     
@@ -302,258 +304,3 @@ $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
         <?php endif; ?>
     <?php } ?>
 </div>
-
-<style>
-#cbt-fullscreen-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    z-index: 999999;
-    overflow: auto;
-}
-#cbt-fullscreen-modal.active {
-    display: block;
-}
-#cbt-fullscreen-modal .modal-close-btn {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1000000;
-    background: #dc3232;
-    color: #fff;
-    border: none;
-    padding: 6px 12px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 13px;
-    line-height: 1.4;
-}
-#cbt-fullscreen-modal .modal-close-btn:hover {
-    background: #a00;
-}
-#cbt-fullscreen-modal #modal-content {
-    padding: 50px 20px 20px;
-}
-#cbt-fullscreen-modal .computer-based-container {
-    display: flex;
-    gap: 20px;
-    margin: 20px 0 0 0;
-}
-#cbt-fullscreen-modal .reading-column,
-#cbt-fullscreen-modal .questions-column {
-    flex: 1 1 50%;
-    max-height: calc(100vh - 200px);
-    overflow-y: auto;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    position: relative;
-}
-#cbt-fullscreen-modal .reading-column {
-    border-right: 2px solid #e0e0e0;
-}
-#cbt-fullscreen-modal .quiz-timer-fullscreen {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    background: #fff;
-    border-bottom: 2px solid #0073aa;
-    padding: 10px 20px;
-    text-align: center;
-    margin: -20px -20px 20px -20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-#cbt-fullscreen-modal .question-navigation {
-    position: sticky;
-    bottom: 0;
-    background: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 20px 0 0 0;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-#cbt-fullscreen-modal .question-navigation .nav-label {
-    font-weight: 600;
-    color: #333;
-    white-space: nowrap;
-}
-#cbt-fullscreen-modal .question-navigation .question-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    flex: 1;
-}
-#cbt-fullscreen-modal .question-navigation .question-nav-btn {
-    min-width: 40px;
-    height: 40px;
-    padding: 8px;
-    background: #fff;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-    color: #333;
-    transition: all 0.2s ease;
-}
-#cbt-fullscreen-modal .question-navigation .question-nav-btn:hover {
-    background: #0073aa;
-    color: #fff;
-    border-color: #0073aa;
-    transform: translateY(-2px);
-}
-#cbt-fullscreen-modal .question-navigation .question-nav-btn.answered {
-    background: #4caf50 !important;
-    border-color: #4caf50 !important;
-    color: #fff !important;
-}
-#cbt-fullscreen-modal .question-navigation .quiz-submit-btn {
-    margin-left: auto;
-    padding: 10px 30px;
-    font-size: 16px;
-    font-weight: 600;
-    white-space: nowrap;
-}
-#cbt-fullscreen-modal .quiz-question {
-    padding: 20px;
-    margin-bottom: 25px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-#cbt-fullscreen-modal .question-options {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 10px;
-    margin: 15px 0;
-}
-#cbt-fullscreen-modal .option-label {
-    display: block !important;
-    padding: 12px 15px;
-    margin-bottom: 8px;
-    background: #fff;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    width: 100%;
-    box-sizing: border-box;
-}
-#cbt-fullscreen-modal .option-label:hover {
-    background: #f0f7ff;
-    border-color: #0073aa;
-}
-#cbt-fullscreen-modal .option-label input[type="radio"] {
-    margin-right: 10px;
-    vertical-align: middle;
-}
-#cbt-fullscreen-modal .reading-text {
-    color: #333;
-    line-height: 1.8;
-    font-size: 1em;
-}
-#cbt-fullscreen-modal .reading-title {
-    color: #0073aa;
-    margin-bottom: 15px;
-    font-size: 1.2em;
-}
-</style>
-
-<div id="cbt-fullscreen-modal">
-    <button type="button" class="modal-close-btn" id="close-modal-btn"><?php _e('Exit Fullscreen', 'ielts-course-manager'); ?></button>
-    <div id="modal-content"></div>
-</div>
-
-<script>
-// Modal fullscreen for CBT exercises
-jQuery(document).ready(function($) {
-    var modal = $('#cbt-fullscreen-modal');
-    var form = $('#ielts-quiz-form');
-    var modalTimerInterval = null;
-    
-    $('#open-modal-btn').on('click', function(e) {
-        e.preventDefault();
-        
-        // Clone the form into modal
-        var formClone = form.clone(true, true);
-        formClone.show();
-        $('#modal-content').html(formClone);
-        
-        // Show modal
-        modal.addClass('active');
-        
-        // Disable body scroll
-        $('body').css('overflow', 'hidden');
-        
-        // Set quiz start time when modal opens
-        if (typeof quizStartTime !== 'undefined') {
-            quizStartTime = Date.now();
-        }
-        
-        // Initialize timer if present
-        var timerMinutes = $('.ielts-computer-based-quiz').data('timer-minutes');
-        if (timerMinutes && timerMinutes > 0) {
-            modalTimerInterval = initializeTimer(timerMinutes, formClone);
-        }
-    });
-    
-    $('#close-modal-btn').on('click', function() {
-        if (confirm('<?php _e('Are you sure you want to exit? Your progress will be lost.', 'ielts-course-manager'); ?>')) {
-            // Clean up timer
-            if (modalTimerInterval) {
-                clearInterval(modalTimerInterval);
-                modalTimerInterval = null;
-            }
-            modal.removeClass('active');
-            $('body').css('overflow', '');
-            $('#modal-content').html('');
-        }
-    });
-    
-    function initializeTimer(minutes, targetForm) {
-        var totalSeconds = minutes * 60;
-        var timerDisplay = targetForm.find('#timer-display-fullscreen');
-        
-        if (timerDisplay.length === 0) {
-            return null;
-        }
-        
-        var timerInterval = setInterval(function() {
-            totalSeconds--;
-            
-            var mins = Math.floor(totalSeconds / 60);
-            var secs = totalSeconds % 60;
-            timerDisplay.text(mins + ':' + (secs < 10 ? '0' : '') + secs);
-            
-            // Warning at 5 minutes
-            if (totalSeconds === 300) {
-                timerDisplay.css('color', 'orange');
-            }
-            
-            // Critical at 1 minute
-            if (totalSeconds === 60) {
-                timerDisplay.css('color', 'red');
-            }
-            
-            if (totalSeconds <= 0) {
-                clearInterval(timerInterval);
-                timerDisplay.text('0:00').css('color', 'red');
-                
-                // Auto-submit
-                alert('<?php _e('Time is up! The exercise will be submitted automatically.', 'ielts-course-manager'); ?>');
-                targetForm.submit();
-            }
-        }, 1000);
-        
-        return timerInterval;
-    }
-});
-</script>
