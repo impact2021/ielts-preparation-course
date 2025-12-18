@@ -97,8 +97,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                         <label class="option-label">
                                             <input type="radio" 
                                                    name="answer_<?php echo $index; ?>" 
-                                                   value="<?php echo $opt_index; ?>" 
-                                                   required>
+                                                   value="<?php echo $opt_index; ?>">
                                             <span><?php echo esc_html(trim($option)); ?></span>
                                         </label>
                                     <?php endforeach; ?>
@@ -112,22 +111,19 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                     <label class="option-label">
                                         <input type="radio" 
                                                name="answer_<?php echo $index; ?>" 
-                                               value="true" 
-                                               required>
+                                               value="true">
                                         <span><?php _e('True', 'ielts-course-manager'); ?></span>
                                     </label>
                                     <label class="option-label">
                                         <input type="radio" 
                                                name="answer_<?php echo $index; ?>" 
-                                               value="false" 
-                                               required>
+                                               value="false">
                                         <span><?php _e('False', 'ielts-course-manager'); ?></span>
                                     </label>
                                     <label class="option-label">
                                         <input type="radio" 
                                                name="answer_<?php echo $index; ?>" 
-                                               value="not_given" 
-                                               required>
+                                               value="not_given">
                                         <span><?php _e('Not Given', 'ielts-course-manager'); ?></span>
                                     </label>
                                 </div>
@@ -139,8 +135,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 <div class="question-answer">
                                     <input type="text" 
                                            name="answer_<?php echo $index; ?>" 
-                                           class="answer-input" 
-                                           required>
+                                           class="answer-input">
                                 </div>
                                 <?php
                                 break;
@@ -152,8 +147,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 <div class="question-answer">
                                     <input type="text" 
                                            name="answer_<?php echo $index; ?>" 
-                                           class="answer-input" 
-                                           required>
+                                           class="answer-input">
                                 </div>
                                 <?php
                                 break;
@@ -163,8 +157,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 <div class="question-answer">
                                     <textarea name="answer_<?php echo $index; ?>" 
                                               class="answer-textarea" 
-                                              rows="6" 
-                                              required></textarea>
+                                              rows="6"></textarea>
                                     <p class="essay-note">
                                         <?php _e('Note: Essay questions will be reviewed manually.', 'ielts-course-manager'); ?>
                                     </p>
