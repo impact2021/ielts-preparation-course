@@ -349,7 +349,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
 #cbt-fullscreen-modal .computer-based-container {
     display: flex;
     gap: 20px;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
 }
 #cbt-fullscreen-modal .reading-column,
 #cbt-fullscreen-modal .questions-column {
@@ -359,6 +359,9 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     padding: 20px;
     border: 1px solid #e0e0e0;
     position: relative;
+}
+#cbt-fullscreen-modal .reading-column {
+    border-right: 2px solid #e0e0e0;
 }
 #cbt-fullscreen-modal .quiz-timer-fullscreen {
     position: sticky;
@@ -372,12 +375,6 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     text-align: center;
     margin: -20px -20px 20px -20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-#cbt-fullscreen-modal .computer-based-container {
-    margin-top: 0;
-}
-#cbt-fullscreen-modal .reading-column {
-    border-right: 2px solid #e0e0e0;
 }
 #cbt-fullscreen-modal .question-navigation {
     position: sticky;
