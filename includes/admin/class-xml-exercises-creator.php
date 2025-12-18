@@ -17,6 +17,14 @@ class IELTS_CM_XML_Exercises_Creator {
     const MAX_CONTENT_LENGTH = 5000;
     
     /**
+     * Placeholder values for different question types
+     */
+    const PLACEHOLDER_MULTIPLE_CHOICE_OPTIONS = "Option A\nOption B\nOption C\nOption D";
+    const PLACEHOLDER_MULTIPLE_CHOICE_ANSWER = '0';
+    const PLACEHOLDER_TRUE_FALSE_ANSWER = 'true';
+    const PLACEHOLDER_FILL_BLANK_ANSWER = '[Enter the expected answer here]';
+    
+    /**
      * Track created exercises
      */
     private $created_exercises = array();
@@ -471,12 +479,12 @@ class IELTS_CM_XML_Exercises_Creator {
             $correct_answer = '';
             
             if ($ielts_type === 'multiple_choice') {
-                $options = "Option A\nOption B\nOption C\nOption D";
-                $correct_answer = '0';
+                $options = self::PLACEHOLDER_MULTIPLE_CHOICE_OPTIONS;
+                $correct_answer = self::PLACEHOLDER_MULTIPLE_CHOICE_ANSWER;
             } elseif ($ielts_type === 'true_false') {
-                $correct_answer = 'true';
+                $correct_answer = self::PLACEHOLDER_TRUE_FALSE_ANSWER;
             } elseif ($ielts_type === 'fill_blank') {
-                $correct_answer = '[Enter the expected answer here]';
+                $correct_answer = self::PLACEHOLDER_FILL_BLANK_ANSWER;
             }
             
             // Clean and preserve HTML in content
@@ -589,14 +597,14 @@ class IELTS_CM_XML_Exercises_Creator {
         // Add helpful placeholders based on question type
         if ($ielts_type === 'multiple_choice') {
             // Add placeholder options to help user understand the format
-            $options = "Option A\nOption B\nOption C\nOption D";
-            $correct_answer = '0'; // Placeholder - user needs to change this to the correct option number
+            $options = self::PLACEHOLDER_MULTIPLE_CHOICE_OPTIONS;
+            $correct_answer = self::PLACEHOLDER_MULTIPLE_CHOICE_ANSWER; // Placeholder - user needs to change this to the correct option number
         } elseif ($ielts_type === 'true_false') {
             // For true/false questions, provide clear instructions
-            $correct_answer = 'true'; // Placeholder - user must change to: true, false, or not_given
+            $correct_answer = self::PLACEHOLDER_TRUE_FALSE_ANSWER; // Placeholder - user must change to: true, false, or not_given
         } elseif ($ielts_type === 'fill_blank') {
             // For fill in the blank, add a helpful placeholder
-            $correct_answer = '[Enter the expected answer here]';
+            $correct_answer = self::PLACEHOLDER_FILL_BLANK_ANSWER;
         }
         // Essay type needs no correct answer
         
