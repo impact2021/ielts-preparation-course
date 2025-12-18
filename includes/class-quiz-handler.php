@@ -61,18 +61,32 @@ class IELTS_CM_Quiz_Handler {
                     }
                 } else {
                     // For multiple choice, check if there's specific feedback for this option
-                    if ($question['type'] === 'multiple_choice' && isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                    if ($question['type'] === 'multiple_choice') {
                         $user_answer_index = intval($answers[$index]);
-                        // Validate array bounds before accessing
-                        if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
-                            && isset($question['option_feedback'][$user_answer_index]) 
-                            && !empty($question['option_feedback'][$user_answer_index])) {
-                            $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
-                        } elseif (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                        
+                        // Try new structured format first
+                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                            // New format with mc_options
+                            if ($user_answer_index >= 0 && $user_answer_index < count($question['mc_options']) 
+                                && isset($question['mc_options'][$user_answer_index]['feedback']) 
+                                && !empty($question['mc_options'][$user_answer_index]['feedback'])) {
+                                $feedback = wp_kses_post($question['mc_options'][$user_answer_index]['feedback']);
+                            }
+                        } elseif (isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                            // Legacy format
+                            if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
+                                && isset($question['option_feedback'][$user_answer_index]) 
+                                && !empty($question['option_feedback'][$user_answer_index])) {
+                                $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
+                            }
+                        }
+                        
+                        // Fallback to general incorrect feedback if no specific feedback found
+                        if (empty($feedback) && isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
                             $feedback = wp_kses_post($question['incorrect_feedback']);
                         }
                     } else {
-                        // Get general incorrect answer feedback
+                        // Get general incorrect answer feedback for non-MC questions
                         if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
                             $feedback = wp_kses_post($question['incorrect_feedback']);
                         }
@@ -84,7 +98,10 @@ class IELTS_CM_Quiz_Handler {
                 'correct' => $is_correct,
                 'feedback' => $feedback,
                 'user_answer' => isset($answers[$index]) ? $answers[$index] : null,
-                'correct_answer' => isset($question['correct_answer']) ? $question['correct_answer'] : null
+                'correct_answer' => isset($question['correct_answer']) ? $question['correct_answer'] : null,
+                'question_text' => isset($question['question']) ? $question['question'] : '',
+                'question_type' => isset($question['type']) ? $question['type'] : '',
+                'options' => isset($question['options']) ? $question['options'] : ''
             );
         }
         
@@ -94,12 +111,16 @@ class IELTS_CM_Quiz_Handler {
         $result = $this->save_quiz_result($user_id, $quiz_id, $course_id, $lesson_id, $score, $max_score, $percentage, $answers);
         
         if ($result) {
+            // Get next item URL for navigation
+            $next_url = $this->get_next_item_url($quiz_id, $course_id, $lesson_id);
+            
             wp_send_json_success(array(
                 'message' => 'Quiz submitted successfully',
                 'score' => $score,
                 'max_score' => $max_score,
                 'percentage' => round($percentage, 2),
-                'question_results' => $question_results
+                'question_results' => $question_results,
+                'next_url' => $next_url
             ));
         } else {
             wp_send_json_error(array('message' => 'Failed to save quiz result'));
@@ -210,6 +231,124 @@ class IELTS_CM_Quiz_Handler {
         $results = $this->get_quiz_results($user_id, $course_id);
         
         wp_send_json_success(array('results' => $results));
+    }
+    
+    /**
+     * Get the next item URL after completing a quiz
+     */
+    private function get_next_item_url($quiz_id, $course_id, $lesson_id) {
+        global $wpdb;
+        
+        // If we have a lesson, find next item in the lesson
+        if ($lesson_id) {
+            // Get all resources and quizzes for this lesson
+            $resource_ids = $wpdb->get_col($wpdb->prepare("
+                SELECT DISTINCT post_id 
+                FROM {$wpdb->postmeta} 
+                WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+                   OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
+            ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+            
+            $quiz_ids = $wpdb->get_col($wpdb->prepare("
+                SELECT DISTINCT post_id 
+                FROM {$wpdb->postmeta} 
+                WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+                   OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
+            ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+            
+            // Combine all content items
+            $all_items = array();
+            
+            if (!empty($resource_ids)) {
+                $resources = get_posts(array(
+                    'post_type' => 'ielts_resource',
+                    'posts_per_page' => -1,
+                    'post__in' => $resource_ids,
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
+                    'post_status' => 'publish'
+                ));
+                foreach ($resources as $resource) {
+                    $all_items[] = array('post' => $resource, 'order' => $resource->menu_order);
+                }
+            }
+            
+            if (!empty($quiz_ids)) {
+                $quizzes = get_posts(array(
+                    'post_type' => 'ielts_quiz',
+                    'posts_per_page' => -1,
+                    'post__in' => $quiz_ids,
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
+                    'post_status' => 'publish'
+                ));
+                foreach ($quizzes as $quiz) {
+                    $all_items[] = array('post' => $quiz, 'order' => $quiz->menu_order);
+                }
+            }
+            
+            // Sort by menu order
+            usort($all_items, function($a, $b) {
+                return $a['order'] - $b['order'];
+            });
+            
+            // Find current quiz and get next item
+            $current_index = -1;
+            foreach ($all_items as $index => $item) {
+                if ($item['post']->ID == $quiz_id) {
+                    $current_index = $index;
+                    break;
+                }
+            }
+            
+            // If there's a next item in this lesson, return its URL
+            if ($current_index >= 0 && $current_index < count($all_items) - 1) {
+                return get_permalink($all_items[$current_index + 1]['post']->ID);
+            }
+            
+            // If no more items in lesson, return to lesson page
+            return get_permalink($lesson_id);
+        }
+        
+        // If no lesson, try to find next quiz in the course
+        if ($course_id) {
+            $quiz_ids = $wpdb->get_col($wpdb->prepare("
+                SELECT DISTINCT post_id 
+                FROM {$wpdb->postmeta} 
+                WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
+                   OR (meta_key = '_ielts_cm_course_ids' AND meta_value LIKE %s)
+            ", $course_id, '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%'));
+            
+            if (!empty($quiz_ids)) {
+                $quizzes = get_posts(array(
+                    'post_type' => 'ielts_quiz',
+                    'posts_per_page' => -1,
+                    'post__in' => $quiz_ids,
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
+                    'post_status' => 'publish'
+                ));
+                
+                $current_index = -1;
+                foreach ($quizzes as $index => $quiz) {
+                    if ($quiz->ID == $quiz_id) {
+                        $current_index = $index;
+                        break;
+                    }
+                }
+                
+                // If there's a next quiz, return its URL
+                if ($current_index >= 0 && $current_index < count($quizzes) - 1) {
+                    return get_permalink($quizzes[$current_index + 1]->ID);
+                }
+            }
+            
+            // Return to course page
+            return get_permalink($course_id);
+        }
+        
+        // Default: return null (no navigation)
+        return null;
     }
     
     /**
