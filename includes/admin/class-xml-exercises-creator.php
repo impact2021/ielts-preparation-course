@@ -12,6 +12,11 @@ if (!defined('ABSPATH')) {
 class IELTS_CM_XML_Exercises_Creator {
     
     /**
+     * Maximum length for question content
+     */
+    const MAX_CONTENT_LENGTH = 5000;
+    
+    /**
      * Track created exercises
      */
     private $created_exercises = array();
@@ -63,8 +68,11 @@ class IELTS_CM_XML_Exercises_Creator {
             $this->display_error($_GET['error']);
         }
         
-        // Find the XML file
-        $xml_file = IELTS_CM_PLUGIN_DIR . 'ieltstestonline.WordPress.2025-12-17.xml';
+        // Find the XML file (configurable via constant or default)
+        if (!defined('IELTS_CM_XML_FILE')) {
+            define('IELTS_CM_XML_FILE', 'ieltstestonline.WordPress.2025-12-17.xml');
+        }
+        $xml_file = IELTS_CM_PLUGIN_DIR . IELTS_CM_XML_FILE;
         $xml_exists = file_exists($xml_file);
         
         ?>
@@ -238,8 +246,11 @@ class IELTS_CM_XML_Exercises_Creator {
             $post_status = 'draft';
         }
         
-        // Find XML file
-        $xml_file = IELTS_CM_PLUGIN_DIR . 'ieltstestonline.WordPress.2025-12-17.xml';
+        // Find XML file (use the same constant/default as render page)
+        if (!defined('IELTS_CM_XML_FILE')) {
+            define('IELTS_CM_XML_FILE', 'ieltstestonline.WordPress.2025-12-17.xml');
+        }
+        $xml_file = IELTS_CM_PLUGIN_DIR . IELTS_CM_XML_FILE;
         
         if (!file_exists($xml_file)) {
             wp_redirect(add_query_arg(array(
@@ -250,8 +261,17 @@ class IELTS_CM_XML_Exercises_Creator {
         }
         
         // Increase limits for large imports
-        @ini_set('memory_limit', '512M');
-        @ini_set('max_execution_time', '600');
+        // Note: These may not work if PHP is in safe mode or if limits are set via php.ini
+        $memory_set = ini_set('memory_limit', '512M');
+        $time_set = ini_set('max_execution_time', '600');
+        
+        // Log if limits couldn't be set (for debugging)
+        if ($memory_set === false) {
+            error_log('IELTS CM: Could not increase memory limit for XML import');
+        }
+        if ($time_set === false) {
+            error_log('IELTS CM: Could not increase execution time for XML import');
+        }
         
         // Process XML
         $results = $this->create_exercises_from_xml($xml_file, array(
@@ -469,13 +489,42 @@ class IELTS_CM_XML_Exercises_Creator {
         $content = str_replace('<div class="wpProQuiz_question_text">', '', $content);
         $content = str_replace('</div>', '', $content);
         
-        // Remove wrapping CDATA if present
-        $content = strip_tags($content, '<p><br><strong><em><ul><ol><li><img><a><span><div>');
+        // Use wp_kses for safe HTML filtering instead of strip_tags
+        $allowed_tags = array(
+            'p' => array(),
+            'br' => array(),
+            'strong' => array(),
+            'em' => array(),
+            'ul' => array(),
+            'ol' => array(),
+            'li' => array(),
+            'img' => array(
+                'src' => array(),
+                'alt' => array(),
+                'width' => array(),
+                'height' => array(),
+                'class' => array()
+            ),
+            'a' => array(
+                'href' => array(),
+                'title' => array(),
+                'target' => array()
+            ),
+            'span' => array(
+                'style' => array(),
+                'class' => array()
+            ),
+            'div' => array(
+                'class' => array()
+            )
+        );
+        
+        $content = wp_kses($content, $allowed_tags);
         $content = trim($content);
         
         // Limit length to avoid overly long questions
-        if (strlen($content) > 5000) {
-            $content = substr($content, 0, 5000) . '...';
+        if (strlen($content) > self::MAX_CONTENT_LENGTH) {
+            $content = substr($content, 0, self::MAX_CONTENT_LENGTH) . '...';
         }
         
         return $content;
