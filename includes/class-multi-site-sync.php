@@ -72,7 +72,11 @@ class IELTS_CM_Multi_Site_Sync {
         );
         
         if ($result === false) {
-            return new WP_Error('db_error', 'Failed to add subsite connection');
+            $error_message = 'Failed to add subsite connection';
+            if (!empty($wpdb->last_error)) {
+                $error_message .= ': ' . $wpdb->last_error;
+            }
+            return new WP_Error('db_error', $error_message);
         }
         
         return $wpdb->insert_id;
