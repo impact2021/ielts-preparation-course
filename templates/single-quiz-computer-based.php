@@ -343,7 +343,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     background: #a00;
 }
 #cbt-fullscreen-modal #modal-content {
-    padding: 60px 20px 20px 20px;
+    padding: 60px 20px 20px;
 }
 #cbt-fullscreen-modal .computer-based-container {
     display: flex;
