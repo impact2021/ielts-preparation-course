@@ -91,16 +91,21 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
             // This ensures the return to course link is always visible when available
             if ($timer_minutes > 0 || $course_id): ?>
             <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
+                <div class="timer-left-section">
+                    <button type="submit" class="button button-primary quiz-submit-btn-top">
+                        <?php _e('Submit Quiz', 'ielts-course-manager'); ?>
+                    </button>
+                    <?php if ($course_id): ?>
+                    <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="return-to-course-link" id="return-to-course-link">
+                        <?php _e('Return to course', 'ielts-course-manager'); ?>
+                    </a>
+                    <?php endif; ?>
+                </div>
                 <?php if ($timer_minutes > 0): ?>
                 <div class="timer-content">
                     <strong><?php _e('Time Remaining:', 'ielts-course-manager'); ?></strong>
                     <span id="timer-display-fullscreen">--:--</span>
                 </div>
-                <?php endif; ?>
-                <?php if ($course_id): ?>
-                <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="return-to-course-link">
-                    <?php _e('Return to course', 'ielts-course-manager'); ?>
-                </a>
                 <?php endif; ?>
             </div>
             <?php endif; ?>
@@ -249,9 +254,6 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                         </button>
                     <?php endforeach; ?>
                 </div>
-                <button type="submit" class="button button-primary quiz-submit-btn">
-                    <?php _e('Submit Quiz', 'ielts-course-manager'); ?>
-                </button>
             </div>
         </form>
         

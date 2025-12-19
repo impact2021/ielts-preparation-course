@@ -2,6 +2,37 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.19] - 2025-12-19
+
+### Added
+- **Unsaved Progress Warnings**: Added two-layer protection against accidental data loss
+  - Warning dialog when clicking "Return to course" before submitting quiz
+  - Browser warning when trying to close tab or navigate away without submitting
+  - Warnings only appear before submission, not after
+  - Prevents accidental loss of quiz answers and student work
+
+- **Multiple Text Highlights Support**: Enhanced text highlighting to support multiple independent highlight blocks
+  - Users can now highlight multiple separate sections of reading text
+  - All highlights persist during the quiz session
+  - Fixed issue where only one highlight block could be added at a time
+  - Improved highlight restoration logic to properly handle multiple highlights
+
+### Changed
+- **Submit Quiz Button Repositioned**: Moved "Submit Quiz" button from bottom navigation to top timer bar
+  - Button now appears on the left side of the top bar
+  - Same size and styling as "Return to course" button
+  - Always visible without scrolling
+  - Bottom navigation now only contains question number buttons
+  - Cleaner, more professional interface design
+
+- **Improved Question Navigation Scroll**: Enhanced scroll position when clicking question numbers
+  - Increased scroll offset from 20px to 50px above question
+  - Ensures full question text and title are visible
+  - Reduces need for manual scrolling adjustments
+  - Better reading experience when reviewing questions
+
+- **Version Update**: Updated plugin version to 2.19
+
 ## [2.18] - 2025-12-19
 
 ### Fixed
