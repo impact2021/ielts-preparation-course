@@ -117,6 +117,12 @@ class IELTS_CM_Quiz_Handler {
             // Get display score (band score or percentage)
             $display_score = $this->get_display_score($quiz_id, $score, $percentage);
             
+            // Get course URL if course_id is provided
+            $course_url = '';
+            if ($course_id) {
+                $course_url = get_permalink($course_id);
+            }
+            
             wp_send_json_success(array(
                 'message' => 'Quiz submitted successfully',
                 'score' => $score,
@@ -125,7 +131,8 @@ class IELTS_CM_Quiz_Handler {
                 'display_score' => $display_score['display'],
                 'display_type' => $display_score['type'],
                 'question_results' => $question_results,
-                'next_url' => $next_url
+                'next_url' => $next_url,
+                'course_url' => $course_url
             ));
         } else {
             wp_send_json_error(array('message' => 'Failed to save quiz result'));
