@@ -50,11 +50,20 @@ class IELTS_CM_Quiz_Handler {
             
             $is_correct = false;
             $feedback = '';
+            $points_earned = 0;
             
-            if (isset($answers[$index])) {
+            // Special handling for multi-select questions
+            if ($question['type'] === 'multi_select') {
+                $result = $this->check_multi_select_answer($question, isset($answers[$index]) ? $answers[$index] : array());
+                $points_earned = $result['points_earned'];
+                $is_correct = $result['is_correct'];
+                $feedback = $result['feedback'];
+                $score += $points_earned;
+            } elseif (isset($answers[$index])) {
                 $is_correct = $this->check_answer($question, $answers[$index]);
                 if ($is_correct) {
-                    $score += isset($question['points']) ? floatval($question['points']) : 1;
+                    $points_earned = isset($question['points']) ? floatval($question['points']) : 1;
+                    $score += $points_earned;
                     // Get correct answer feedback
                     if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
                         $feedback = wp_kses_post($question['correct_feedback']);
@@ -188,6 +197,57 @@ class IELTS_CM_Quiz_Handler {
             default:
                 return false;
         }
+    }
+    
+    /**
+     * Check multi-select answer and calculate points
+     * Users get 1 point for each correct selection
+     */
+    private function check_multi_select_answer($question, $user_answers) {
+        $points_earned = 0;
+        $feedback = '';
+        
+        // Ensure user_answers is an array
+        if (!is_array($user_answers)) {
+            $user_answers = array();
+        }
+        
+        // Get correct answers from mc_options
+        $correct_indices = array();
+        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+            foreach ($question['mc_options'] as $idx => $option) {
+                if (!empty($option['is_correct'])) {
+                    $correct_indices[] = $idx;
+                }
+            }
+        }
+        
+        // Calculate points: 1 point for each correct selection
+        // Check if user selected any incorrect options
+        $has_incorrect_selections = false;
+        foreach ($user_answers as $selected_index) {
+            if (in_array($selected_index, $correct_indices)) {
+                $points_earned += 1;
+            } else {
+                $has_incorrect_selections = true;
+            }
+        }
+        
+        // Determine if fully correct (all correct answers selected, no incorrect ones)
+        $is_correct = (!$has_incorrect_selections && count($user_answers) === count($correct_indices) && $points_earned === count($correct_indices));
+        
+        // Get feedback
+        if ($is_correct && isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
+            $feedback = wp_kses_post($question['correct_feedback']);
+        } elseif (!$is_correct && isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+            $feedback = wp_kses_post($question['incorrect_feedback']);
+        }
+        
+        return array(
+            'points_earned' => $points_earned,
+            'is_correct' => $is_correct,
+            'feedback' => $feedback
+        );
     }
     
     /**
@@ -390,6 +450,7 @@ class IELTS_CM_Quiz_Handler {
     public static function get_quiz_types() {
         return array(
             'multiple_choice' => __('Multiple Choice', 'ielts-course-manager'),
+            'multi_select' => __('Multi Select', 'ielts-course-manager'),
             'true_false' => __('True/False/Not Given', 'ielts-course-manager'),
             'fill_blank' => __('Fill in the Blank', 'ielts-course-manager'),
             'summary_completion' => __('Summary Completion', 'ielts-course-manager'),
