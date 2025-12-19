@@ -650,7 +650,8 @@
                     if (savedHighlights) {
                         var highlights = JSON.parse(savedHighlights);
                         highlights.forEach(function(highlight) {
-                            highlightTextNode(highlight.textContent, highlight.parentIndex);
+                            highlightTextNode(highlight.textContent, highlight.parentIndex, 
+                                highlight.contextBefore, highlight.contextAfter);
                         });
                         updateClearButtonVisibility();
                     }
@@ -666,9 +667,19 @@
                     $('.reading-text .highlighted').each(function(index) {
                         var $parent = $(this).closest('.reading-text');
                         var parentIndex = $('.reading-text').index($parent);
+                        // Get context before and after for better restoration accuracy
+                        var $prev = $(this).prev();
+                        var $next = $(this).next();
+                        var contextBefore = $prev.length && $prev[0].nodeType === Node.TEXT_NODE 
+                            ? $prev[0].nodeValue.slice(-20) : '';
+                        var contextAfter = $next.length && $next[0].nodeType === Node.TEXT_NODE 
+                            ? $next[0].nodeValue.slice(0, 20) : '';
+                        
                         highlights.push({
                             textContent: $(this).text(),
-                            parentIndex: parentIndex
+                            parentIndex: parentIndex,
+                            contextBefore: contextBefore,
+                            contextAfter: contextAfter
                         });
                     });
                     sessionStorage.setItem(highlightStorageKey, JSON.stringify(highlights));
@@ -679,33 +690,47 @@
             }
             
             // Function to highlight text in a specific parent
-            function highlightTextNode(textToHighlight, parentIndex) {
+            // Note: If the same text appears multiple times, only the first occurrence will be highlighted
+            // This is acceptable for temporary quiz session highlighting
+            function highlightTextNode(textToHighlight, parentIndex, contextBefore, contextAfter) {
                 var $targetParent = $('.reading-text').eq(parentIndex);
                 if ($targetParent.length === 0) return;
                 
-                // Walk through text nodes and find matching text
+                // Walk through text nodes and find matching text with context
                 var found = false;
                 $targetParent.find('*').addBack().contents().each(function() {
-                    if (this.nodeType === 3 && !found) { // Text node
+                    if (this.nodeType === Node.TEXT_NODE && !found) { // Text node
                         var text = this.nodeValue;
                         var index = text.indexOf(textToHighlight);
                         if (index !== -1) {
-                            var before = text.substring(0, index);
-                            var highlighted = text.substring(index, index + textToHighlight.length);
-                            var after = text.substring(index + textToHighlight.length);
+                            // Verify context if provided
+                            var validContext = true;
+                            if (contextBefore || contextAfter) {
+                                var before = text.substring(Math.max(0, index - 20), index);
+                                var after = text.substring(index + textToHighlight.length, 
+                                    index + textToHighlight.length + 20);
+                                validContext = (!contextBefore || before.includes(contextBefore)) &&
+                                              (!contextAfter || after.includes(contextAfter));
+                            }
                             
-                            var span = document.createElement('span');
-                            span.className = 'highlighted';
-                            span.textContent = highlighted;
-                            
-                            var parent = this.parentNode;
-                            parent.insertBefore(document.createTextNode(before), this);
-                            parent.insertBefore(span, this);
-                            parent.insertBefore(document.createTextNode(after), this);
-                            parent.removeChild(this);
-                            
-                            found = true;
-                            return false;
+                            if (validContext) {
+                                var before = text.substring(0, index);
+                                var highlighted = text.substring(index, index + textToHighlight.length);
+                                var after = text.substring(index + textToHighlight.length);
+                                
+                                var span = document.createElement('span');
+                                span.className = 'highlighted';
+                                span.textContent = highlighted;
+                                
+                                var parent = this.parentNode;
+                                parent.insertBefore(document.createTextNode(before), this);
+                                parent.insertBefore(span, this);
+                                parent.insertBefore(document.createTextNode(after), this);
+                                parent.removeChild(this);
+                                
+                                found = true;
+                                return false;
+                            }
                         }
                     }
                 });
@@ -770,7 +795,7 @@
                 // Check if selection is within reading text
                 var $container = $(range.commonAncestorContainer);
                 if ($container.closest('.reading-text').length === 0) {
-                    if ($container[0].nodeType !== 3 && $container.find('.reading-text').length === 0) {
+                    if ($container[0].nodeType !== Node.TEXT_NODE && $container.find('.reading-text').length === 0) {
                         return;
                     }
                 }
