@@ -32,7 +32,7 @@ class IELTS_CM_Shortcodes {
         ), $atts);
         
         // Validate orderby parameter against allowed values
-        $allowed_orderby = array('date', 'title', 'menu_order', 'ID', 'rand', 'name', 'modified');
+        $allowed_orderby = array('date', 'title', 'menu_order', 'ID', 'rand', 'modified');
         $orderby = sanitize_text_field($atts['orderby']);
         if (!in_array($orderby, $allowed_orderby)) {
             $orderby = 'date';
