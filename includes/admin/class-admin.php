@@ -1027,30 +1027,60 @@ class IELTS_CM_Admin {
             $(document).on('change', '.question-type', function() {
                 var type = $(this).val();
                 var container = $(this).closest('.question-item');
+                var correctAnswerField = container.find('.correct-answer-field');
+                var correctAnswerInput = correctAnswerField.find('input, select');
+                var currentValue = correctAnswerInput.val() || '';
                 
                 if (type === 'multiple_choice') {
                     container.find('.mc-options-field').show();
                     container.find('.general-feedback-field').hide();
-                    container.find('.correct-answer-field').hide();
+                    correctAnswerField.hide();
                 } else if (type === 'true_false') {
                     container.find('.mc-options-field').hide();
                     container.find('.general-feedback-field').show();
-                    container.find('.correct-answer-field label').text('<?php _e('Correct Answer (true/false/not_given)', 'ielts-course-manager'); ?>');
-                    container.find('.correct-answer-field').show();
+                    correctAnswerField.find('label').text('<?php _e('Correct Answer', 'ielts-course-manager'); ?>');
+                    
+                    // Convert to dropdown if it's currently an input
+                    if (correctAnswerInput.is('input')) {
+                        var fieldName = correctAnswerInput.attr('name');
+                        var selectHtml = '<select name="' + fieldName + '" style="width: 100%;">' +
+                            '<option value=""><?php _e('-- Select correct answer --', 'ielts-course-manager'); ?></option>' +
+                            '<option value="true"><?php _e('True', 'ielts-course-manager'); ?></option>' +
+                            '<option value="false"><?php _e('False', 'ielts-course-manager'); ?></option>' +
+                            '<option value="not_given"><?php _e('Not Given', 'ielts-course-manager'); ?></option>' +
+                            '</select>';
+                        correctAnswerInput.replaceWith(selectHtml);
+                        correctAnswerField.find('select').val(currentValue);
+                    }
+                    correctAnswerField.show();
                 } else if (type === 'fill_blank') {
                     container.find('.mc-options-field').hide();
                     container.find('.general-feedback-field').show();
-                    container.find('.correct-answer-field label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
-                    container.find('.correct-answer-field').show();
+                    correctAnswerField.find('label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
+                    
+                    // Convert to input if it's currently a dropdown
+                    if (correctAnswerInput.is('select')) {
+                        var fieldName = correctAnswerInput.attr('name');
+                        var inputHtml = '<input type="text" name="' + fieldName + '" value="' + currentValue + '" style="width: 100%;">';
+                        correctAnswerInput.replaceWith(inputHtml);
+                    }
+                    correctAnswerField.show();
                 } else if (type === 'summary_completion') {
                     container.find('.mc-options-field').hide();
                     container.find('.general-feedback-field').show();
-                    container.find('.correct-answer-field label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
-                    container.find('.correct-answer-field').show();
+                    correctAnswerField.find('label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
+                    
+                    // Convert to input if it's currently a dropdown
+                    if (correctAnswerInput.is('select')) {
+                        var fieldName = correctAnswerInput.attr('name');
+                        var inputHtml = '<input type="text" name="' + fieldName + '" value="' + currentValue + '" style="width: 100%;">';
+                        correctAnswerInput.replaceWith(inputHtml);
+                    }
+                    correctAnswerField.show();
                 } else if (type === 'essay') {
                     container.find('.mc-options-field').hide();
                     container.find('.general-feedback-field').show();
-                    container.find('.correct-answer-field').hide();
+                    correctAnswerField.hide();
                 }
             });
             
@@ -1453,7 +1483,16 @@ class IELTS_CM_Admin {
             
             <p class="correct-answer-field" style="<?php echo (isset($question['type']) && ($question['type'] === 'essay' || $question['type'] === 'multiple_choice')) ? 'display:none;' : ''; ?>">
                 <label><?php _e('Correct Answer', 'ielts-course-manager'); ?></label><br>
-                <input type="text" name="questions[<?php echo $index; ?>][correct_answer]" value="<?php echo esc_attr(isset($question['correct_answer']) ? $question['correct_answer'] : ''); ?>" style="width: 100%;">
+                <?php if (isset($question['type']) && $question['type'] === 'true_false'): ?>
+                    <select name="questions[<?php echo $index; ?>][correct_answer]" style="width: 100%;">
+                        <option value=""><?php _e('-- Select correct answer --', 'ielts-course-manager'); ?></option>
+                        <option value="true" <?php selected(isset($question['correct_answer']) ? $question['correct_answer'] : '', 'true'); ?>><?php _e('True', 'ielts-course-manager'); ?></option>
+                        <option value="false" <?php selected(isset($question['correct_answer']) ? $question['correct_answer'] : '', 'false'); ?>><?php _e('False', 'ielts-course-manager'); ?></option>
+                        <option value="not_given" <?php selected(isset($question['correct_answer']) ? $question['correct_answer'] : '', 'not_given'); ?>><?php _e('Not Given', 'ielts-course-manager'); ?></option>
+                    </select>
+                <?php else: ?>
+                    <input type="text" name="questions[<?php echo $index; ?>][correct_answer]" value="<?php echo esc_attr(isset($question['correct_answer']) ? $question['correct_answer'] : ''); ?>" style="width: 100%;">
+                <?php endif; ?>
             </p>
             
             <p>

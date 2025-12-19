@@ -216,7 +216,23 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
             <div class="question-navigation">
                 <div class="nav-label"><?php _e('Jump to Question:', 'ielts-course-manager'); ?></div>
                 <div class="question-buttons">
-                    <?php foreach ($questions as $index => $question): ?>
+                    <?php 
+                    // Group questions by reading passage
+                    $last_reading_text_id = null;
+                    foreach ($questions as $index => $question): 
+                        $current_reading_text_id = isset($question['reading_text_id']) ? $question['reading_text_id'] : null;
+                        
+                        // If reading text changed, show passage label
+                        if ($current_reading_text_id !== $last_reading_text_id && $current_reading_text_id !== null && !empty($reading_texts)):
+                            $passage_title = !empty($reading_texts[$current_reading_text_id]['title']) 
+                                ? esc_html($reading_texts[$current_reading_text_id]['title']) 
+                                : sprintf(__('Reading Passage %d', 'ielts-course-manager'), $current_reading_text_id + 1);
+                    ?>
+                        <span class="reading-passage-label"><?php echo $passage_title; ?></span>
+                    <?php 
+                        endif;
+                        $last_reading_text_id = $current_reading_text_id;
+                    ?>
                         <button type="button" class="question-nav-btn" data-question="<?php echo $index; ?>">
                             <?php echo $index + 1; ?>
                         </button>

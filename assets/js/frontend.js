@@ -399,7 +399,7 @@
                         
                         if (isCBT) {
                             // For CBT quizzes, show results in a modal and hide submit button
-                            showCBTResultModal(html, result.next_url);
+                            showCBTResultModal(html, result.next_url, result.course_url);
                             form.find('button[type="submit"]').hide();
                             
                             // Update timer display to show band score instead of time remaining
@@ -587,7 +587,7 @@
         });
         
         // Function to show CBT result modal
-        function showCBTResultModal(resultHtml, nextUrl) {
+        function showCBTResultModal(resultHtml, nextUrl, courseUrl) {
             // Create modal if it doesn't exist
             if ($('#cbt-result-modal').length === 0) {
                 var modalHtml = '<div id="cbt-result-modal" class="cbt-result-modal">';
@@ -598,6 +598,17 @@
                 modalHtml += '</div>';
                 modalHtml += '</div>';
                 $('body').append(modalHtml);
+            }
+            
+            // Add "Return to course" button if courseUrl is available
+            $('#cbt-result-modal .cbt-result-modal-content').find('.cbt-return-to-course-btn').remove();
+            if (courseUrl) {
+                // Create button using jQuery to properly escape attributes
+                var returnButton = $('<a></a>')
+                    .attr('href', courseUrl)
+                    .addClass('cbt-return-to-course-btn button')
+                    .text('Return to course');
+                $('#cbt-result-modal .cbt-result-modal-close').after(returnButton);
             }
             
             // Show the modal with results
