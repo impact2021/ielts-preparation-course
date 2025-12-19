@@ -120,7 +120,7 @@ class IELTS_CM_Quiz_Handler {
                 }
                 
                 // Set correct_answer for non-multi-select questions  
-                if (!isset($correct_answer) && isset($question['correct_answer'])) {
+                if ($correct_answer === null && isset($question['correct_answer'])) {
                     $correct_answer = $question['correct_answer'];
                 }
             } else {

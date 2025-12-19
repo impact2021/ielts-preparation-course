@@ -388,9 +388,11 @@
                                     }
                                     
                                     // Count how many correct answers were selected
+                                    // Use Set for O(1) lookup performance
+                                    var correctAnswersSet = new Set(correctAnswers.map(function(idx) { return parseInt(idx); }));
                                     var correctSelectionsCount = 0;
                                     $.each(userAnswers, function(i, answerIndex) {
-                                        if (correctAnswers.indexOf(parseInt(answerIndex)) !== -1) {
+                                        if (correctAnswersSet.has(parseInt(answerIndex))) {
                                             correctSelectionsCount++;
                                         }
                                     });
@@ -433,9 +435,12 @@
                                         correctAnswers = [correctAnswers];
                                     }
                                     
+                                    // Convert correctAnswers to a Set for O(1) lookup performance
+                                    var correctAnswersSet = new Set(correctAnswers.map(function(idx) { return parseInt(idx); }));
+                                    
                                     // First, mark user's incorrect selections in red
                                     $.each(userAnswers, function(i, answerIndex) {
-                                        if (correctAnswers.indexOf(parseInt(answerIndex)) === -1) {
+                                        if (!correctAnswersSet.has(parseInt(answerIndex))) {
                                             questionElement.find('input[type="checkbox"][value="' + answerIndex + '"]').closest('.option-label').addClass('answer-incorrect');
                                         }
                                     });
@@ -764,8 +769,12 @@
             // Load saved font size from localStorage
             var savedFontSize = localStorage.getItem('ielts_quiz_font_size');
             if (savedFontSize) {
-                currentFontSize = parseInt(savedFontSize);
-                applyFontSize(currentFontSize);
+                var parsedSize = parseInt(savedFontSize);
+                // Validate the parsed value is within bounds
+                if (!isNaN(parsedSize) && parsedSize >= minFontSize && parsedSize <= maxFontSize) {
+                    currentFontSize = parsedSize;
+                    applyFontSize(currentFontSize);
+                }
             }
             
             function applyFontSize(size) {
