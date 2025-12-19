@@ -92,12 +92,9 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
             if ($timer_minutes > 0 || $course_id): ?>
             <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
                 <div class="timer-left-section">
-                    <button type="submit" class="button button-primary quiz-submit-btn-top">
-                        <?php _e('Submit Quiz', 'ielts-course-manager'); ?>
-                    </button>
                     <?php if ($course_id): ?>
                     <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="return-to-course-link" id="return-to-course-link">
-                        <?php _e('Return to course', 'ielts-course-manager'); ?>
+                        <?php _e('< Return to course', 'ielts-course-manager'); ?>
                     </a>
                     <?php endif; ?>
                 </div>
@@ -107,6 +104,11 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                     <span id="timer-display-fullscreen">--:--</span>
                 </div>
                 <?php endif; ?>
+                <div class="timer-right-section">
+                    <button type="submit" class="button button-primary quiz-submit-btn-top">
+                        <?php _e('Submit for grading', 'ielts-course-manager'); ?>
+                    </button>
+                </div>
             </div>
             <?php endif; ?>
             <div class="computer-based-container">
