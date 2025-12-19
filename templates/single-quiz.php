@@ -80,6 +80,10 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
             <?php if (!empty($questions)): ?>
                 <?php foreach ($questions as $index => $question): ?>
                     <div class="quiz-question">
+                        <?php if (!empty($question['instructions'])): ?>
+                            <div class="question-instructions"><?php echo wp_kses_post(wpautop($question['instructions'])); ?></div>
+                        <?php endif; ?>
+                        
                         <h4>
                             <?php printf(__('Question %d', 'ielts-course-manager'), $index + 1); ?>
                             <span class="question-points">(<?php printf(_n('%s point', '%s points', $question['points'], 'ielts-course-manager'), $question['points']); ?>)</span>

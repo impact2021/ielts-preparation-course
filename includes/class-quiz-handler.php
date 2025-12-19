@@ -102,8 +102,10 @@ class IELTS_CM_Quiz_Handler {
                     }
                 }
             } else {
-                // No answer provided - show incorrect feedback
-                if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                // No answer provided - show no_answer_feedback if available, otherwise incorrect feedback
+                if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
+                    $feedback = wp_kses_post($question['no_answer_feedback']);
+                } elseif (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
                     $feedback = wp_kses_post($question['incorrect_feedback']);
                 }
             }

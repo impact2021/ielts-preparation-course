@@ -140,6 +140,10 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                     <div class="questions-content">
                         <?php foreach ($questions as $index => $question): ?>
                             <div class="quiz-question" id="question-<?php echo $index; ?>" data-reading-text-id="<?php echo esc_attr($question['reading_text_id'] ?? ''); ?>">
+                                <?php if (!empty($question['instructions'])): ?>
+                                    <div class="question-instructions"><?php echo wp_kses_post(wpautop($question['instructions'])); ?></div>
+                                <?php endif; ?>
+                                
                                 <h4 class="question-number">
                                     <?php printf(__('Question %d', 'ielts-course-manager'), $index + 1); ?>
                                     <span class="question-points">(<?php printf(_n('%s point', '%s points', $question['points'], 'ielts-course-manager'), $question['points']); ?>)</span>
