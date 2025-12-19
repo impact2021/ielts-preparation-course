@@ -1049,6 +1049,7 @@ class IELTS_CM_Admin {
                     correctAnswerField.hide();
                 } else if (type === 'true_false') {
                     container.find('.mc-options-field').hide();
+                    container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
                     correctAnswerField.find('label').text('<?php _e('Correct Answer', 'ielts-course-manager'); ?>');
                     
@@ -1067,6 +1068,7 @@ class IELTS_CM_Admin {
                     correctAnswerField.show();
                 } else if (type === 'fill_blank') {
                     container.find('.mc-options-field').hide();
+                    container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
                     correctAnswerField.find('label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
                     
@@ -1079,6 +1081,7 @@ class IELTS_CM_Admin {
                     correctAnswerField.show();
                 } else if (type === 'summary_completion') {
                     container.find('.mc-options-field').hide();
+                    container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
                     correctAnswerField.find('label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
                     
@@ -1091,6 +1094,7 @@ class IELTS_CM_Admin {
                     correctAnswerField.show();
                 } else if (type === 'essay') {
                     container.find('.mc-options-field').hide();
+                    container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
                     correctAnswerField.hide();
                 }

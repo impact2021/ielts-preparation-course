@@ -656,7 +656,7 @@
                 if (checkedCount > maxSelections) {
                     // Uncheck this box and show warning
                     $(this).prop('checked', false);
-                    alert('You can only select up to ' + maxSelections + ' options.');
+                    showMessage('error', 'You can only select up to ' + maxSelections + ' options.');
                 } else if (checkedCount === maxSelections) {
                     // Disable unchecked boxes
                     $container.find('.multi-select-checkbox:not(:checked)').prop('disabled', true);

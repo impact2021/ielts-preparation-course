@@ -119,6 +119,12 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 $options = array();
                                 if (isset($question['mc_options']) && is_array($question['mc_options'])) {
                                     $options = $question['mc_options'];
+                                } elseif (isset($question['options']) && !empty($question['options'])) {
+                                    // Fallback for legacy format
+                                    $option_lines = array_filter(explode("\n", $question['options']));
+                                    foreach ($option_lines as $opt_text) {
+                                        $options[] = array('text' => trim($opt_text), 'is_correct' => false);
+                                    }
                                 }
                                 $max_selections = isset($question['max_selections']) ? intval($question['max_selections']) : 2;
                                 ?>

@@ -223,14 +223,18 @@ class IELTS_CM_Quiz_Handler {
         }
         
         // Calculate points: 1 point for each correct selection
+        // Check if user selected any incorrect options
+        $has_incorrect_selections = false;
         foreach ($user_answers as $selected_index) {
             if (in_array($selected_index, $correct_indices)) {
                 $points_earned += 1;
+            } else {
+                $has_incorrect_selections = true;
             }
         }
         
-        // Determine if fully correct
-        $is_correct = (count($user_answers) === count($correct_indices) && $points_earned === count($correct_indices));
+        // Determine if fully correct (all correct answers selected, no incorrect ones)
+        $is_correct = (!$has_incorrect_selections && count($user_answers) === count($correct_indices) && $points_earned === count($correct_indices));
         
         // Get feedback
         if ($is_correct && isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
