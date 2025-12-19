@@ -690,7 +690,8 @@
             }
             
             // Function to highlight text in a specific parent
-            // Supports multiple highlights by searching through all text nodes
+            // Supports multiple highlights by being called once per highlight to restore
+            // Each call highlights the first matching occurrence with context validation
             function highlightTextNode(textToHighlight, parentIndex, contextBefore, contextAfter) {
                 var $targetParent = $('.reading-text').eq(parentIndex);
                 if ($targetParent.length === 0) return;
@@ -699,7 +700,7 @@
                 // Skip text nodes that are already inside a highlighted span
                 var found = false;
                 $targetParent.find('*').addBack().contents().each(function() {
-                    if (found) return false; // Stop after first match
+                    if (found) return false; // Stop after first match for this highlight restoration
                     
                     // Skip if this is inside a highlighted span
                     if ($(this).closest('.highlighted').length > 0) {
@@ -888,7 +889,7 @@
             
             // Warn when leaving page/closing tab before submitting
             $(window).on('beforeunload', function(e) {
-                if (!quizSubmitted && quizFormExists) {
+                if (!quizSubmitted) {
                     var message = 'You have not submitted your test yet. Are you sure you want to leave?';
                     e.returnValue = message; // For older browsers
                     return message;
