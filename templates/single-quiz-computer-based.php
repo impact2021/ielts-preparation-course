@@ -105,6 +105,11 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                 </div>
                 <?php endif; ?>
                 <div class="timer-right-section">
+                    <div class="font-size-controls">
+                        <button type="button" class="font-size-btn font-decrease" title="<?php _e('Decrease font size', 'ielts-course-manager'); ?>">A-</button>
+                        <button type="button" class="font-size-btn font-reset" title="<?php _e('Reset font size', 'ielts-course-manager'); ?>">A</button>
+                        <button type="button" class="font-size-btn font-increase" title="<?php _e('Increase font size', 'ielts-course-manager'); ?>">A+</button>
+                    </div>
                     <button type="submit" class="button button-primary quiz-submit-btn-top">
                         <?php _e('Submit for grading', 'ielts-course-manager'); ?>
                     </button>

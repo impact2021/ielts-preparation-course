@@ -354,23 +354,60 @@
                         $.each(result.question_results, function(index, questionResult) {
                             var questionNum = parseInt(index) + 1;
                             var questionElement = form.find('#question-' + index);
-                            var navButton = $('.question-nav-btn[data-question="' + index + '"]');
+                            var navButtons = $('.question-nav-btn[data-question="' + index + '"]');
                             
                             if (questionResult.correct) {
                                 // Mark correct answers in green
                                 questionElement.addClass('question-correct');
-                                navButton.addClass('nav-correct').removeClass('answered');
+                                navButtons.addClass('nav-correct').removeClass('answered');
                                 
                                 // Highlight the correct answer option
                                 if (questionResult.question_type === 'multiple_choice' || questionResult.question_type === 'true_false') {
                                     questionElement.find('input[type="radio"]:checked').closest('.option-label').addClass('answer-correct');
+                                } else if (questionResult.question_type === 'multi_select') {
+                                    // For multi-select, highlight all checked options in green (they're all correct if question is correct)
+                                    questionElement.find('input[type="checkbox"]:checked').closest('.option-label').addClass('answer-correct');
                                 } else {
                                     questionElement.find('input[type="text"], textarea').addClass('answer-correct');
                                 }
                             } else {
                                 // Mark incorrect answers in red
                                 questionElement.addClass('question-incorrect');
-                                navButton.addClass('nav-incorrect').removeClass('answered');
+                                
+                                // For multi-select, we need to mark nav buttons progressively based on correct selections
+                                if (questionResult.question_type === 'multi_select') {
+                                    var userAnswers = questionResult.user_answer || [];
+                                    var correctAnswers = questionResult.correct_answer || [];
+                                    
+                                    // Convert to arrays if needed
+                                    if (!Array.isArray(userAnswers)) {
+                                        userAnswers = [userAnswers];
+                                    }
+                                    if (!Array.isArray(correctAnswers)) {
+                                        correctAnswers = [correctAnswers];
+                                    }
+                                    
+                                    // Count how many correct answers were selected
+                                    // Use Set for O(1) lookup performance
+                                    var correctAnswersSet = new Set(correctAnswers.map(function(idx) { return parseInt(idx); }));
+                                    var correctSelectionsCount = 0;
+                                    $.each(userAnswers, function(i, answerIndex) {
+                                        if (correctAnswersSet.has(parseInt(answerIndex))) {
+                                            correctSelectionsCount++;
+                                        }
+                                    });
+                                    
+                                    // Mark nav buttons: first N as correct, rest as incorrect
+                                    navButtons.removeClass('answered').each(function(btnIndex) {
+                                        if (btnIndex < correctSelectionsCount) {
+                                            $(this).addClass('nav-correct');
+                                        } else {
+                                            $(this).addClass('nav-incorrect');
+                                        }
+                                    });
+                                } else {
+                                    navButtons.addClass('nav-incorrect').removeClass('answered');
+                                }
                                 
                                 // Highlight the user's wrong answer
                                 if (questionResult.question_type === 'multiple_choice' || questionResult.question_type === 'true_false') {
@@ -383,6 +420,42 @@
                                     } else if (questionResult.question_type === 'true_false') {
                                         questionElement.find('input[type="radio"][value="' + questionResult.correct_answer + '"]').closest('.option-label').addClass('answer-correct-highlight');
                                     }
+                                } else if (questionResult.question_type === 'multi_select') {
+                                    // For multi-select questions:
+                                    // 1. Highlight user's selections (some may be correct, some incorrect)
+                                    // 2. Highlight all correct answers in green
+                                    var userAnswers = questionResult.user_answer || [];
+                                    var correctAnswers = questionResult.correct_answer || [];
+                                    
+                                    // Convert to arrays if needed
+                                    if (!Array.isArray(userAnswers)) {
+                                        userAnswers = [userAnswers];
+                                    }
+                                    if (!Array.isArray(correctAnswers)) {
+                                        correctAnswers = [correctAnswers];
+                                    }
+                                    
+                                    // Convert correctAnswers to a Set for O(1) lookup performance
+                                    var correctAnswersSet = new Set(correctAnswers.map(function(idx) { return parseInt(idx); }));
+                                    
+                                    // First, mark user's incorrect selections in red
+                                    $.each(userAnswers, function(i, answerIndex) {
+                                        if (!correctAnswersSet.has(parseInt(answerIndex))) {
+                                            questionElement.find('input[type="checkbox"][value="' + answerIndex + '"]').closest('.option-label').addClass('answer-incorrect');
+                                        }
+                                    });
+                                    
+                                    // Then, mark all correct answers in green (highlight style)
+                                    $.each(correctAnswers, function(i, correctIndex) {
+                                        var checkbox = questionElement.find('input[type="checkbox"][value="' + correctIndex + '"]');
+                                        if (checkbox.is(':checked')) {
+                                            // User selected this correct answer - use solid green
+                                            checkbox.closest('.option-label').addClass('answer-correct');
+                                        } else {
+                                            // User missed this correct answer - use highlight green
+                                            checkbox.closest('.option-label').addClass('answer-correct-highlight');
+                                        }
+                                    });
                                 } else {
                                     questionElement.find('input[type="text"], textarea').addClass('answer-incorrect');
                                 }
@@ -645,7 +718,7 @@
             });
         }
         
-        // Multi-select max selections enforcement
+        // Multi-select max selections enforcement and progressive nav button marking
         $('.multi-select-options').each(function() {
             var $container = $(this);
             var maxSelections = parseInt($container.data('max-selections')) || 2;
@@ -661,23 +734,76 @@
                     // Uncheck this box and show warning
                     $(this).prop('checked', false);
                     showMessage('error', 'You can only select up to ' + maxSelections + ' options.');
-                } else if (checkedCount === maxSelections) {
-                    // Disable unchecked boxes
-                    $container.find('.multi-select-checkbox:not(:checked)').prop('disabled', true);
-                    // Mark all nav buttons for this question as answered
-                    navButtons.addClass('answered');
                 } else {
-                    // Enable all boxes
-                    $container.find('.multi-select-checkbox').prop('disabled', false);
-                    // Mark/unmark nav buttons based on whether any are checked
+                    // Progressive marking: mark nav buttons based on number of selections
+                    navButtons.removeClass('answered answered-partial');
+                    
                     if (checkedCount > 0) {
-                        navButtons.addClass('answered');
+                        // Mark the first N buttons as answered (green) where N = checkedCount
+                        navButtons.each(function(index) {
+                            if (index < checkedCount) {
+                                $(this).addClass('answered');
+                            }
+                        });
+                    }
+                    
+                    // Disable/enable checkboxes based on max selections
+                    if (checkedCount === maxSelections) {
+                        $container.find('.multi-select-checkbox:not(:checked)').prop('disabled', true);
                     } else {
-                        navButtons.removeClass('answered');
+                        $container.find('.multi-select-checkbox').prop('disabled', false);
                     }
                 }
             });
         });
+        
+        // Font size controls for CBT quizzes
+        if ($('.ielts-computer-based-quiz').length) {
+            var $quizContent = $('.computer-based-container');
+            var baseFontSize = 16; // Default base font size in pixels
+            var currentFontSize = baseFontSize;
+            var minFontSize = 12;
+            var maxFontSize = 24;
+            var fontSizeStep = 2;
+            
+            // Load saved font size from localStorage
+            var savedFontSize = localStorage.getItem('ielts_quiz_font_size');
+            if (savedFontSize) {
+                var parsedSize = parseInt(savedFontSize);
+                // Validate the parsed value is within bounds
+                if (!isNaN(parsedSize) && parsedSize >= minFontSize && parsedSize <= maxFontSize) {
+                    currentFontSize = parsedSize;
+                    applyFontSize(currentFontSize);
+                }
+            }
+            
+            function applyFontSize(size) {
+                $quizContent.css('font-size', size + 'px');
+                currentFontSize = size;
+                localStorage.setItem('ielts_quiz_font_size', size);
+            }
+            
+            $('.font-decrease').on('click', function(e) {
+                e.preventDefault();
+                var newSize = Math.max(minFontSize, currentFontSize - fontSizeStep);
+                if (newSize !== currentFontSize) {
+                    applyFontSize(newSize);
+                }
+            });
+            
+            $('.font-increase').on('click', function(e) {
+                e.preventDefault();
+                var newSize = Math.min(maxFontSize, currentFontSize + fontSizeStep);
+                if (newSize !== currentFontSize) {
+                    applyFontSize(newSize);
+                }
+            });
+            
+            $('.font-reset').on('click', function(e) {
+                e.preventDefault();
+                applyFontSize(baseFontSize);
+            });
+        }
         
         // Text Highlighting Feature for CBT Reading Texts
         if ($('.ielts-computer-based-quiz').length && $('.reading-text').length) {
