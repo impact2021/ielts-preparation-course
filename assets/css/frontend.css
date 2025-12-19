@@ -1103,6 +1103,31 @@ body.ielts-course-archive .content-area {
     margin-bottom: 20px;
 }
 
+.quiz-timer-fullscreen .timer-left-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quiz-timer-fullscreen .quiz-submit-btn-top {
+    padding: 8px 16px;
+    background: #0073aa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+}
+
+.quiz-timer-fullscreen .quiz-submit-btn-top:hover {
+    background: #005a87;
+    color: #fff;
+}
+
 .quiz-timer-fullscreen .timer-content {
     display: flex;
     align-items: center;

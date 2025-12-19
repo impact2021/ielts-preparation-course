@@ -506,7 +506,7 @@
                 var columnScrollTop = questionsColumn.scrollTop();
                 
                 questionsColumn.animate({
-                    scrollTop: columnScrollTop + questionOffset - 20
+                    scrollTop: columnScrollTop + questionOffset - 50
                 }, 300);
                 
                 // Highlight the question briefly
@@ -690,16 +690,23 @@
             }
             
             // Function to highlight text in a specific parent
-            // Note: If the same text appears multiple times, only the first occurrence will be highlighted
-            // This is acceptable for temporary quiz session highlighting
+            // Supports multiple highlights by searching through all text nodes
             function highlightTextNode(textToHighlight, parentIndex, contextBefore, contextAfter) {
                 var $targetParent = $('.reading-text').eq(parentIndex);
                 if ($targetParent.length === 0) return;
                 
                 // Walk through text nodes and find matching text with context
+                // Skip text nodes that are already inside a highlighted span
                 var found = false;
                 $targetParent.find('*').addBack().contents().each(function() {
-                    if (this.nodeType === Node.TEXT_NODE && !found) { // Text node
+                    if (found) return false; // Stop after first match
+                    
+                    // Skip if this is inside a highlighted span
+                    if ($(this).closest('.highlighted').length > 0) {
+                        return; // continue to next node
+                    }
+                    
+                    if (this.nodeType === Node.TEXT_NODE) { // Text node
                         var text = this.nodeValue;
                         var index = text.indexOf(textToHighlight);
                         if (index !== -1) {
@@ -855,6 +862,37 @@
             // Clear highlights when quiz is submitted
             $(document).on('submit', '#ielts-quiz-form', function() {
                 sessionStorage.removeItem(highlightStorageKey);
+            });
+        }
+        
+        // Warning when leaving quiz without submitting
+        var quizSubmitted = false;
+        var quizFormExists = $('#ielts-quiz-form').length > 0;
+        
+        if (quizFormExists) {
+            // Mark quiz as submitted when form is submitted
+            $(document).on('submit', '#ielts-quiz-form', function() {
+                quizSubmitted = true;
+            });
+            
+            // Warn when clicking "Return to course" link before submitting
+            $(document).on('click', '#return-to-course-link', function(e) {
+                if (!quizSubmitted) {
+                    var confirmLeave = confirm('Are you sure you want to return to the course? Your progress will be lost if you have not submitted your test.');
+                    if (!confirmLeave) {
+                        e.preventDefault();
+                        return false;
+                    }
+                }
+            });
+            
+            // Warn when leaving page/closing tab before submitting
+            $(window).on('beforeunload', function(e) {
+                if (!quizSubmitted && quizFormExists) {
+                    var message = 'You have not submitted your test yet. Are you sure you want to leave?';
+                    e.returnValue = message; // For older browsers
+                    return message;
+                }
             });
         }
     });
