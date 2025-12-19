@@ -2335,7 +2335,9 @@ class IELTS_CM_Admin {
                     <li><code>[ielts_courses category="beginner"]</code> - <?php _e('Filter by category slug', 'ielts-course-manager'); ?></li>
                     <li><code>[ielts_courses limit="10"]</code> - <?php _e('Limit number of courses displayed', 'ielts-course-manager'); ?></li>
                     <li><code>[ielts_courses columns="3"]</code> - <?php _e('Set number of columns (1-6, default is 5)', 'ielts-course-manager'); ?></li>
-                    <li><code>[ielts_courses category="advanced" columns="4" limit="8"]</code> - <?php _e('Combine multiple options', 'ielts-course-manager'); ?></li>
+                    <li><code>[ielts_courses orderby="title"]</code> - <?php _e('Sort by title, date, menu_order, etc.', 'ielts-course-manager'); ?></li>
+                    <li><code>[ielts_courses order="ASC"]</code> - <?php _e('Sort order: ASC (ascending) or DESC (descending)', 'ielts-course-manager'); ?></li>
+                    <li><code>[ielts_courses category="academic" columns="5" orderby="title" order="ASC"]</code> - <?php _e('Combine multiple options', 'ielts-course-manager'); ?></li>
                 </ul>
                 
                 <h3><?php _e('Display Single Course', 'ielts-course-manager'); ?></h3>
