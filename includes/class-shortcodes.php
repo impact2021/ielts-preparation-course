@@ -31,18 +31,26 @@ class IELTS_CM_Shortcodes {
             'order' => 'DESC'  // Default order
         ), $atts);
         
+        // Validate orderby parameter against allowed values
+        $allowed_orderby = array('date', 'title', 'menu_order', 'ID', 'rand', 'name', 'modified');
+        $orderby = sanitize_text_field($atts['orderby']);
+        if (!in_array($orderby, $allowed_orderby)) {
+            $orderby = 'date';
+        }
+        
+        // Validate order parameter
+        $order = strtoupper(sanitize_text_field($atts['order']));
+        if (!in_array($order, array('ASC', 'DESC'))) {
+            $order = 'DESC';
+        }
+        
         $args = array(
             'post_type' => 'ielts_course',
             'posts_per_page' => intval($atts['limit']),
             'post_status' => 'publish',
-            'orderby' => sanitize_text_field($atts['orderby']),
-            'order' => strtoupper(sanitize_text_field($atts['order']))
+            'orderby' => $orderby,
+            'order' => $order
         );
-        
-        // Validate order parameter
-        if (!in_array($args['order'], array('ASC', 'DESC'))) {
-            $args['order'] = 'DESC';
-        }
         
         if (!empty($atts['category'])) {
             $args['tax_query'] = array(
