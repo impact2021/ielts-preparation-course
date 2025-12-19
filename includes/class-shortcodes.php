@@ -26,13 +26,30 @@ class IELTS_CM_Shortcodes {
         $atts = shortcode_atts(array(
             'category' => '',
             'limit' => -1,
-            'columns' => 5  // Default to 5 columns
+            'columns' => 5,  // Default to 5 columns
+            'orderby' => 'date',  // Default orderby
+            'order' => 'DESC'  // Default order
         ), $atts);
+        
+        // Validate orderby parameter against allowed values
+        $allowed_orderby = array('date', 'title', 'menu_order', 'ID', 'rand', 'modified');
+        $orderby = sanitize_text_field($atts['orderby']);
+        if (!in_array($orderby, $allowed_orderby)) {
+            $orderby = 'date';
+        }
+        
+        // Validate order parameter
+        $order = strtoupper(sanitize_text_field($atts['order']));
+        if (!in_array($order, array('ASC', 'DESC'))) {
+            $order = 'DESC';
+        }
         
         $args = array(
             'post_type' => 'ielts_course',
             'posts_per_page' => intval($atts['limit']),
-            'post_status' => 'publish'
+            'post_status' => 'publish',
+            'orderby' => $orderby,
+            'order' => $order
         );
         
         if (!empty($atts['category'])) {
