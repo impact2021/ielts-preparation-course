@@ -340,8 +340,9 @@ class IELTS_CM_Exercise_Import_Export {
             wp_die(__('Failed to generate export file. Please try again.', 'ielts-course-manager'));
         }
         
-        // Clean (erase) the output buffer and turn off output buffering
-        if (ob_get_level()) {
+        // Clean (erase) all output buffers and turn off output buffering
+        // WordPress may have multiple nested buffers, so we need to clear them all
+        while (ob_get_level()) {
             ob_end_clean();
         }
         
