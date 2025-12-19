@@ -76,7 +76,7 @@ body .computer-based-container {
 }
 body .question-navigation {
     flex-shrink: 0 !important;
-    margin-bottom: 0 !important;
+    margin-bottom: 20px !important;
 }
 body .reading-column,
 body .questions-column {
