@@ -464,7 +464,7 @@ class IELTS_CM_Admin {
                     return;
                 }
                 
-                var courseId = <?php echo $post->ID; ?>;
+                var courseId = <?php echo intval($post->ID); ?>;
                 
                 $.ajax({
                     url: ajaxurl,
@@ -3412,8 +3412,18 @@ class IELTS_CM_Admin {
         
         // Update menu order for each exercise
         foreach ($exercise_order as $item) {
+            // Validate item structure
+            if (!is_array($item) || !isset($item['id']) || !isset($item['order'])) {
+                continue;
+            }
+            
             $exercise_id = intval($item['id']);
             $order = intval($item['order']);
+            
+            // Skip invalid IDs
+            if ($exercise_id <= 0) {
+                continue;
+            }
             
             wp_update_post(array(
                 'ID' => $exercise_id,
