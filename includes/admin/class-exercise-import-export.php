@@ -340,11 +340,18 @@ class IELTS_CM_Exercise_Import_Export {
             wp_die(__('Failed to generate export file. Please try again.', 'ielts-course-manager'));
         }
         
+        // Clean (erase) the output buffer and turn off output buffering
+        if (ob_get_level()) {
+            ob_end_clean();
+        }
+        
         // Set headers for download
         $filename = sanitize_file_name('exercise-' . sanitize_title($exercise->post_title) . '-' . gmdate('Y-m-d') . '.json');
+        nocache_headers();
         header('Content-Description: File Transfer');
-        header('Content-Disposition: attachment; filename="' . esc_attr($filename) . '"');
         header('Content-Type: application/json; charset=utf-8');
+        header('Content-Disposition: attachment; filename="' . esc_attr($filename) . '"');
+        header('Content-Length: ' . mb_strlen($json, '8bit'));
         
         // Output JSON
         echo $json;
