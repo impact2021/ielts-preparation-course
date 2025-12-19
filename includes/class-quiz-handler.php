@@ -64,6 +64,7 @@ class IELTS_CM_Quiz_Handler {
             $is_correct = false;
             $feedback = '';
             $points_earned = 0;
+            $correct_answer = null;
             
             // Special handling for multi-select questions
             if ($question['type'] === 'multi_select') {
@@ -72,6 +73,9 @@ class IELTS_CM_Quiz_Handler {
                 $is_correct = $result['is_correct'];
                 $feedback = $result['feedback'];
                 $score += $points_earned;
+                
+                // Store correct indices for multi-select so frontend can highlight them
+                $correct_answer = isset($result['correct_indices']) ? $result['correct_indices'] : array();
             } elseif (isset($answers[$index])) {
                 $is_correct = $this->check_answer($question, $answers[$index]);
                 if ($is_correct) {
@@ -114,6 +118,11 @@ class IELTS_CM_Quiz_Handler {
                         }
                     }
                 }
+                
+                // Set correct_answer for non-multi-select questions  
+                if (!isset($correct_answer) && isset($question['correct_answer'])) {
+                    $correct_answer = $question['correct_answer'];
+                }
             } else {
                 // No answer provided - show no_answer_feedback if available, otherwise incorrect feedback
                 if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
@@ -127,7 +136,7 @@ class IELTS_CM_Quiz_Handler {
                 'correct' => $is_correct,
                 'feedback' => $feedback,
                 'user_answer' => isset($answers[$index]) ? $answers[$index] : null,
-                'correct_answer' => isset($question['correct_answer']) ? $question['correct_answer'] : null,
+                'correct_answer' => $correct_answer,
                 'question_text' => isset($question['question']) ? $question['question'] : '',
                 'question_type' => isset($question['type']) ? $question['type'] : '',
                 'options' => isset($question['options']) ? $question['options'] : ''
@@ -261,7 +270,8 @@ class IELTS_CM_Quiz_Handler {
         return array(
             'points_earned' => $points_earned,
             'is_correct' => $is_correct,
-            'feedback' => $feedback
+            'feedback' => $feedback,
+            'correct_indices' => $correct_indices
         );
     }
     

@@ -1201,6 +1201,47 @@ body.ielts-course-archive .content-area {
     color: #fff;
 }
 
+/* Font Size Controls */
+.font-size-controls {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.font-size-btn {
+    padding: 6px 10px;
+    background: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.font-size-btn:hover {
+    background: #e0e0e0;
+    border-color: #999;
+}
+
+.font-size-btn:active {
+    background: #d0d0d0;
+}
+
+.font-size-btn.font-decrease {
+    font-size: 12px;
+}
+
+.font-size-btn.font-reset {
+    font-size: 14px;
+}
+
+.font-size-btn.font-increase {
+    font-size: 16px;
+}
+
 /* Correct/Incorrect Answer Highlighting */
 .question-navigation .question-nav-btn.nav-correct,
 #cbt-fullscreen-modal .question-navigation .question-nav-btn.nav-correct {
