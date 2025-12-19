@@ -109,7 +109,27 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                         } else {
                             $best_result = $user_id ? $quiz_handler->get_best_quiz_result($user_id, $post_item->ID) : null;
                             $is_completed = $best_result ? true : false;
-                            $type_label = __('Exercise', 'ielts-course-manager');
+                            
+                            // Get exercise label from meta or default to 'exercise'
+                            $exercise_label = get_post_meta($post_item->ID, '_ielts_cm_exercise_label', true);
+                            if (!$exercise_label) {
+                                $exercise_label = 'exercise';
+                            }
+                            
+                            // Convert label to display text
+                            switch ($exercise_label) {
+                                case 'end_of_lesson_test':
+                                    $type_label = __('End of lesson test', 'ielts-course-manager');
+                                    break;
+                                case 'practice_test':
+                                    $type_label = __('Practice test', 'ielts-course-manager');
+                                    break;
+                                case 'exercise':
+                                default:
+                                    $type_label = __('Exercise', 'ielts-course-manager');
+                                    break;
+                            }
+                            
                             $type_badge_class = 'quiz';
                             // Check if this is a computer-based quiz with popup enabled
                             $layout_type = get_post_meta($post_item->ID, '_ielts_cm_layout_type', true);
@@ -229,7 +249,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
             width: 110px;
         }
         .ielts-content-table .content-score-col {
-            width: 120px;
+            width: 360px;
             text-align: center;
         }
         .ielts-content-table .content-score {
