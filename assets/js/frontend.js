@@ -636,6 +636,227 @@
                 // Modal closes and user can see the highlighted answers in the form
             });
         }
+        
+        // Text Highlighting Feature for CBT Reading Texts
+        if ($('.ielts-computer-based-quiz').length && $('.reading-text').length) {
+            var quizId = $('.ielts-computer-based-quiz').data('quiz-id');
+            var highlightStorageKey = 'ielts_cbt_highlights_' + quizId;
+            var customMenu = null;
+            
+            // Load highlights from sessionStorage
+            function loadHighlights() {
+                try {
+                    var savedHighlights = sessionStorage.getItem(highlightStorageKey);
+                    if (savedHighlights) {
+                        var highlights = JSON.parse(savedHighlights);
+                        highlights.forEach(function(highlight) {
+                            highlightTextNode(highlight.textContent, highlight.parentIndex, 
+                                highlight.contextBefore, highlight.contextAfter);
+                        });
+                        updateClearButtonVisibility();
+                    }
+                } catch (e) {
+                    console.error('Error loading highlights:', e);
+                }
+            }
+            
+            // Save highlights to sessionStorage
+            function saveHighlights() {
+                try {
+                    var highlights = [];
+                    $('.reading-text .highlighted').each(function(index) {
+                        var $parent = $(this).closest('.reading-text');
+                        var parentIndex = $('.reading-text').index($parent);
+                        // Get context before and after for better restoration accuracy
+                        var $prev = $(this).prev();
+                        var $next = $(this).next();
+                        var contextBefore = $prev.length && $prev[0].nodeType === Node.TEXT_NODE 
+                            ? $prev[0].nodeValue.slice(-20) : '';
+                        var contextAfter = $next.length && $next[0].nodeType === Node.TEXT_NODE 
+                            ? $next[0].nodeValue.slice(0, 20) : '';
+                        
+                        highlights.push({
+                            textContent: $(this).text(),
+                            parentIndex: parentIndex,
+                            contextBefore: contextBefore,
+                            contextAfter: contextAfter
+                        });
+                    });
+                    sessionStorage.setItem(highlightStorageKey, JSON.stringify(highlights));
+                    updateClearButtonVisibility();
+                } catch (e) {
+                    console.error('Error saving highlights:', e);
+                }
+            }
+            
+            // Function to highlight text in a specific parent
+            // Note: If the same text appears multiple times, only the first occurrence will be highlighted
+            // This is acceptable for temporary quiz session highlighting
+            function highlightTextNode(textToHighlight, parentIndex, contextBefore, contextAfter) {
+                var $targetParent = $('.reading-text').eq(parentIndex);
+                if ($targetParent.length === 0) return;
+                
+                // Walk through text nodes and find matching text with context
+                var found = false;
+                $targetParent.find('*').addBack().contents().each(function() {
+                    if (this.nodeType === Node.TEXT_NODE && !found) { // Text node
+                        var text = this.nodeValue;
+                        var index = text.indexOf(textToHighlight);
+                        if (index !== -1) {
+                            // Verify context if provided
+                            var validContext = true;
+                            if (contextBefore || contextAfter) {
+                                var before = text.substring(Math.max(0, index - 20), index);
+                                var after = text.substring(index + textToHighlight.length, 
+                                    index + textToHighlight.length + 20);
+                                validContext = (!contextBefore || before.includes(contextBefore)) &&
+                                              (!contextAfter || after.includes(contextAfter));
+                            }
+                            
+                            if (validContext) {
+                                var before = text.substring(0, index);
+                                var highlighted = text.substring(index, index + textToHighlight.length);
+                                var after = text.substring(index + textToHighlight.length);
+                                
+                                var span = document.createElement('span');
+                                span.className = 'highlighted';
+                                span.textContent = highlighted;
+                                
+                                var parent = this.parentNode;
+                                parent.insertBefore(document.createTextNode(before), this);
+                                parent.insertBefore(span, this);
+                                parent.insertBefore(document.createTextNode(after), this);
+                                parent.removeChild(this);
+                                
+                                found = true;
+                                return false;
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // Update Clear button visibility
+            function updateClearButtonVisibility() {
+                var hasHighlights = $('.reading-text .highlighted').length > 0;
+                if (hasHighlights) {
+                    $('.clear-highlights-btn').show();
+                } else {
+                    $('.clear-highlights-btn').hide();
+                }
+            }
+            
+            // Show custom context menu
+            function showContextMenu(e) {
+                e.preventDefault();
+                
+                var selection = window.getSelection();
+                var selectedText = selection.toString().trim();
+                
+                if (selectedText.length === 0) {
+                    return;
+                }
+                
+                // Remove existing menu if any
+                if (customMenu) {
+                    $(customMenu).remove();
+                }
+                
+                // Create menu
+                customMenu = $('<div class="text-highlight-menu"></div>');
+                var highlightItem = $('<div class="text-highlight-menu-item highlight-option">Highlight</div>');
+                
+                highlightItem.on('click', function() {
+                    highlightSelection();
+                    $(customMenu).remove();
+                    customMenu = null;
+                });
+                
+                customMenu.append(highlightItem);
+                $('body').append(customMenu);
+                
+                // Position menu
+                customMenu.css({
+                    top: e.pageY + 'px',
+                    left: e.pageX + 'px'
+                });
+            }
+            
+            // Highlight selected text
+            function highlightSelection() {
+                var selection = window.getSelection();
+                if (selection.rangeCount === 0) return;
+                
+                var range = selection.getRangeAt(0);
+                var selectedText = selection.toString().trim();
+                
+                if (selectedText.length === 0) return;
+                
+                // Check if selection is within reading text
+                var $container = $(range.commonAncestorContainer);
+                if ($container.closest('.reading-text').length === 0) {
+                    if ($container[0].nodeType !== Node.TEXT_NODE && $container.find('.reading-text').length === 0) {
+                        return;
+                    }
+                }
+                
+                // Create highlighted span
+                var span = document.createElement('span');
+                span.className = 'highlighted';
+                
+                try {
+                    range.surroundContents(span);
+                    selection.removeAllRanges();
+                    saveHighlights();
+                } catch (e) {
+                    // If surroundContents fails (e.g., selection spans multiple elements),
+                    // extract contents and wrap them
+                    try {
+                        var contents = range.extractContents();
+                        span.appendChild(contents);
+                        range.insertNode(span);
+                        selection.removeAllRanges();
+                        saveHighlights();
+                    } catch (err) {
+                        console.error('Error highlighting text:', err);
+                    }
+                }
+            }
+            
+            // Clear all highlights
+            $('.clear-highlights-btn').on('click', function() {
+                $('.reading-text .highlighted').each(function() {
+                    var text = $(this).text();
+                    $(this).replaceWith(text);
+                });
+                sessionStorage.removeItem(highlightStorageKey);
+                updateClearButtonVisibility();
+            });
+            
+            // Handle right-click on reading text
+            $('.reading-text').on('contextmenu', function(e) {
+                var selection = window.getSelection();
+                if (selection.toString().trim().length > 0) {
+                    showContextMenu(e);
+                }
+            });
+            
+            // Close context menu when clicking elsewhere
+            $(document).on('click', function(e) {
+                if (customMenu && !$(e.target).closest('.text-highlight-menu').length) {
+                    $(customMenu).remove();
+                    customMenu = null;
+                }
+            });
+            
+            // Load highlights on page load
+            loadHighlights();
+            
+            // Clear highlights when quiz is submitted
+            $(document).on('submit', '#ielts-quiz-form', function() {
+                sessionStorage.removeItem(highlightStorageKey);
+            });
+        }
     });
     
 })(jQuery);

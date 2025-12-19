@@ -14,11 +14,14 @@ This plugin provides a complete course management system with:
 - **Student Dashboard** - Comprehensive progress and quiz results page
 - **Manual Enrollment System** - Admin tools for creating users and managing course enrollments
 - **User Account Page** - Students can view their enrollments, access dates, and progress
+- **Computer-Based Test Layout** - Authentic IELTS CBT interface with text highlighting feature
 
 ## Key Features
 
 ✅ **Flexible Course Structure** - More flexible than LearnDash with customizable course organization  
 ✅ **Multiple Quiz Types** - IELTS-friendly quiz types (Multiple Choice, True/False/Not Given, Fill in the Blank with flexible matching, Essay)  
+✅ **Computer-Based Test Layout** - Authentic IELTS CBT interface with two-column layout, question navigation, and text highlighting  
+✅ **Text Highlighting (v2.17)** - Select and highlight reading text with right-click menu, just like the real IELTS CBT  
 ✅ **Progress Tracking** - Automatic tracking of lesson completion and quiz results  
 ✅ **Student Progress Page** - Consolidated view of all progress and quiz results  
 ✅ **Manual Enrollment System** - Create users and enroll them in courses with 1-year access duration  

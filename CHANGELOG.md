@@ -2,6 +2,20 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.17] - 2025-12-19
+
+### Added
+- **Text Highlighting Feature for CBT Reading Texts**: Reading texts in computer-based tests now support text highlighting
+  - Select text, right-click, and choose "Highlight" to add yellow background highlighting
+  - "Clear" button appears when highlights exist to remove all highlighting
+  - Highlights persist during the quiz session using browser storage
+  - Highlights automatically clear when quiz is submitted
+  - Mimics the actual IELTS computer-delivered test highlighting feature
+  - Only available in CBT (Computer-Based Test) layout exercises
+
+### Changed
+- **Version Update**: Updated plugin version to 2.17
+
 ## [2.16] - 2025-12-19
 
 ### Changed
