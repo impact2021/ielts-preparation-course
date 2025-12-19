@@ -351,7 +351,7 @@ class IELTS_CM_Exercise_Import_Export {
         header('Content-Description: File Transfer');
         header('Content-Type: application/json; charset=utf-8');
         header('Content-Disposition: attachment; filename="' . esc_attr($filename) . '"');
-        header('Content-Length: ' . strlen($json));
+        header('Content-Length: ' . mb_strlen($json, '8bit'));
         
         // Output JSON
         echo $json;
