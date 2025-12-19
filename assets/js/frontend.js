@@ -601,12 +601,13 @@
             }
             
             // Add "Return to course" button if courseUrl is available
-            var returnButton = '';
-            if (courseUrl) {
-                returnButton = '<a href="' + courseUrl + '" class="cbt-return-to-course-btn button">Return to course</a>';
-            }
             $('#cbt-result-modal .cbt-result-modal-content').find('.cbt-return-to-course-btn').remove();
-            if (returnButton) {
+            if (courseUrl) {
+                // Create button using jQuery to properly escape attributes
+                var returnButton = $('<a></a>')
+                    .attr('href', courseUrl)
+                    .addClass('cbt-return-to-course-btn button')
+                    .text('Return to course');
                 $('#cbt-result-modal .cbt-result-modal-close').after(returnButton);
             }
             
