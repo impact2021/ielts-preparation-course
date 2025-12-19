@@ -600,16 +600,8 @@
                 $('body').append(modalHtml);
             }
             
-            // Add "Return to course" button if courseUrl is available
+            // Remove any old "Return to course" button from modal (no longer used in v2.15)
             $('#cbt-result-modal .cbt-result-modal-content').find('.cbt-return-to-course-btn').remove();
-            if (courseUrl) {
-                // Create button using jQuery to properly escape attributes
-                var returnButton = $('<a></a>')
-                    .attr('href', courseUrl)
-                    .addClass('cbt-return-to-course-btn button')
-                    .text('Return to course');
-                $('#cbt-result-modal .cbt-result-modal-close').after(returnButton);
-            }
             
             // Show the modal with results
             $('#cbt-result-modal .cbt-result-modal-body').html(resultHtml);

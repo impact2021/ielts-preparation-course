@@ -85,7 +85,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                             <span class="question-points">(<?php printf(_n('%s point', '%s points', $question['points'], 'ielts-course-manager'), $question['points']); ?>)</span>
                         </h4>
                         
-                        <div class="question-text"><?php echo wp_kses_post($question['question']); ?></div>
+                        <div class="question-text"><?php echo wp_kses_post(wpautop($question['question'])); ?></div>
                         
                         <?php
                         switch ($question['type']) {
