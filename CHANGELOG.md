@@ -2,6 +2,37 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.14] - 2025-12-19
+
+### Added
+- **Return to Course Button**: Added "Return to course" button in top right of CBT results modal
+  - Button appears next to the close button when quiz is linked to a course
+  - Allows students to quickly navigate back to the course page after completing a quiz
+  - Styled consistently with WordPress button design
+  
+- **Reading Passage Labels**: Enhanced bottom navigation with reading passage labels
+  - Passage labels (e.g., "Reading Passage 1") now appear before question number groups
+  - Questions are visually grouped by their linked reading passage
+  - Uses custom passage titles when configured, or falls back to "Reading Passage N"
+  - Improves navigation clarity for multi-passage reading exercises
+  
+- **True/False/Not Given Dropdown**: Changed correct answer field to dropdown for better UX
+  - Replaces text input with a dropdown containing three options: True, False, Not Given
+  - Prevents typos and ensures consistent answer format
+  - Dynamically converts between input types when question type changes
+  - Preserves existing values when editing saved questions
+
+### Changed
+- **Quiz Submission Response**: Extended AJAX response to include course URL
+  - Enables "Return to course" functionality
+  - No impact on existing functionality
+
+### Security
+- **XSS Prevention**: Improved output escaping in dynamic content
+  - Course URLs are properly escaped using jQuery .attr() method
+  - Reading passage labels use esc_html() for safe output
+  - All user inputs properly sanitized and validated
+
 ## [2.13] - 2025-12-18
 
 ### Changed
