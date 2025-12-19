@@ -108,6 +108,9 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                 <!-- Left Column: Reading Texts -->
                 <div class="reading-column">
                     <div class="reading-content">
+                        <button type="button" class="clear-highlights-btn" style="display:none;">
+                            <?php _e('Clear', 'ielts-course-manager'); ?>
+                        </button>
                         <?php if (!empty($reading_texts)): ?>
                             <?php foreach ($reading_texts as $index => $text): ?>
                                 <div class="reading-text-section" id="reading-text-<?php echo $index; ?>" style="<?php echo $index > 0 ? 'display:none;' : ''; ?>">
