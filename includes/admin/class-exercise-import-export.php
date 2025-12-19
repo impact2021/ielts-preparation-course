@@ -275,6 +275,7 @@ class IELTS_CM_Exercise_Import_Export {
             'invalid_json' => __('Invalid JSON file. Please check the file format.', 'ielts-course-manager'),
             'no_exercise' => __('Please select a target exercise.', 'ielts-course-manager'),
             'import_failed' => __('Import failed. Please check the file and try again.', 'ielts-course-manager'),
+            'file_too_large' => __('File is too large. Maximum size is 10MB.', 'ielts-course-manager'),
         );
         
         $message = isset($messages[$error_code]) ? $messages[$error_code] : __('An unknown error occurred.', 'ielts-course-manager');
@@ -333,6 +334,11 @@ class IELTS_CM_Exercise_Import_Export {
         // Convert to JSON
         $json = wp_json_encode($export_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
         
+        // Check for encoding errors
+        if ($json === false) {
+            wp_die(__('Failed to generate export file. Please try again.', 'ielts-course-manager'));
+        }
+        
         // Set headers for download
         $filename = sanitize_file_name('exercise-' . sanitize_title($exercise->post_title) . '-' . gmdate('Y-m-d') . '.json');
         header('Content-Description: File Transfer');
@@ -353,8 +359,8 @@ class IELTS_CM_Exercise_Import_Export {
             wp_die(__('Security check failed', 'ielts-course-manager'));
         }
         
-        // Check user capability
-        if (!current_user_can('edit_posts')) {
+        // Check user capability - require manage_options for security
+        if (!current_user_can('manage_options')) {
             wp_die(__('You do not have sufficient permissions to perform this action.', 'ielts-course-manager'));
         }
         
@@ -398,6 +404,16 @@ class IELTS_CM_Exercise_Import_Export {
             exit;
         }
         
+        // Validate file size (limit to 10MB)
+        $max_size = 10 * 1024 * 1024; // 10MB in bytes
+        if ($_FILES['import_file']['size'] > $max_size) {
+            wp_redirect(add_query_arg(array(
+                'page' => 'ielts-import-exercise',
+                'error' => 'file_too_large'
+            ), admin_url('edit.php?post_type=ielts_course')));
+            exit;
+        }
+        
         // Read file contents
         $json_content = file_get_contents($_FILES['import_file']['tmp_name']);
         
@@ -420,10 +436,54 @@ class IELTS_CM_Exercise_Import_Export {
             exit;
         }
         
-        // Import settings
+        // Validate JSON structure - ensure it's an exercise export
+        if (!isset($import_data['version']) || !isset($import_data['questions'])) {
+            wp_redirect(add_query_arg(array(
+                'page' => 'ielts-import-exercise',
+                'error' => 'invalid_json'
+            ), admin_url('edit.php?post_type=ielts_course')));
+            exit;
+        }
+        
+        // Whitelist of allowed setting keys for security
+        $allowed_settings = array(
+            'pass_percentage',
+            'layout_type',
+            'open_as_popup',
+            'scoring_type',
+            'timer_minutes',
+            'exercise_label'
+        );
+        
+        // Import settings with validation
         if (isset($import_data['settings']) && is_array($import_data['settings'])) {
             foreach ($import_data['settings'] as $key => $value) {
-                if ($value !== '' && $value !== null) {
+                // Only allow whitelisted keys
+                if (in_array($key, $allowed_settings, true) && $value !== '' && $value !== null) {
+                    // Additional validation based on key
+                    switch ($key) {
+                        case 'pass_percentage':
+                        case 'timer_minutes':
+                            $value = intval($value);
+                            break;
+                        case 'layout_type':
+                            $value = sanitize_text_field($value);
+                            break;
+                        case 'scoring_type':
+                            $valid_types = array('percentage', 'ielts_general_reading', 'ielts_academic_reading', 'ielts_listening');
+                            if (!in_array($value, $valid_types, true)) {
+                                continue 2; // Skip this setting
+                            }
+                            break;
+                        case 'exercise_label':
+                            $valid_labels = array('exercise', 'end_of_lesson_test', 'practice_test');
+                            if (!in_array($value, $valid_labels, true)) {
+                                continue 2; // Skip this setting
+                            }
+                            break;
+                        default:
+                            $value = sanitize_text_field($value);
+                    }
                     update_post_meta($target_exercise_id, '_ielts_cm_' . $key, $value);
                 }
             }
