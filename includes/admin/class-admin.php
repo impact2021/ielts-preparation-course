@@ -327,7 +327,7 @@ class IELTS_CM_Admin {
                 'post_type' => 'ielts_quiz',
                 'posts_per_page' => -1,
                 'post__in' => $exercise_ids,
-                'orderby' => 'menu_order',
+                'orderby' => 'post__in',
                 'order' => 'ASC'
             ));
         }
@@ -370,11 +370,14 @@ class IELTS_CM_Admin {
                 <h4><?php _e('Course Exercises', 'ielts-course-manager'); ?></h4>
                 <p><?php _e('Drag and drop exercises to reorder them:', 'ielts-course-manager'); ?></p>
                 <ul id="course-exercises-sortable" class="course-exercises-list">
-                    <?php foreach ($exercises as $exercise): ?>
+                    <?php 
+                    $order_num = 1;
+                    foreach ($exercises as $exercise): 
+                    ?>
                         <li class="exercise-item" data-exercise-id="<?php echo esc_attr($exercise->ID); ?>">
                             <span class="dashicons dashicons-menu"></span>
                             <span class="exercise-title"><?php echo esc_html($exercise->post_title); ?></span>
-                            <span class="exercise-order"><?php printf(__('Order: %d', 'ielts-course-manager'), $exercise->menu_order); ?></span>
+                            <span class="exercise-order"><?php printf(__('Order: %d', 'ielts-course-manager'), $order_num++); ?></span>
                             <a href="<?php echo get_edit_post_link($exercise->ID); ?>" class="button button-small" target="_blank">
                                 <?php _e('Edit', 'ielts-course-manager'); ?>
                             </a>
@@ -489,7 +492,7 @@ class IELTS_CM_Admin {
                 }
                 
                 var exerciseId = $(this).data('exercise-id');
-                var courseId = <?php echo $post->ID; ?>;
+                var courseId = <?php echo intval($post->ID); ?>;
                 
                 $.ajax({
                     url: ajaxurl,
@@ -528,7 +531,7 @@ class IELTS_CM_Admin {
                             type: 'POST',
                             data: {
                                 action: 'ielts_cm_update_course_exercise_order',
-                                course_id: <?php echo $post->ID; ?>,
+                                course_id: <?php echo intval($post->ID); ?>,
                                 exercise_order: exerciseOrder,
                                 nonce: '<?php echo wp_create_nonce('ielts_cm_update_course_exercise_order'); ?>'
                             },
@@ -542,7 +545,7 @@ class IELTS_CM_Admin {
                                     
                                     // Update order numbers in UI
                                     $('#course-exercises-sortable .exercise-item').each(function(index) {
-                                        $(this).find('.exercise-order').text('<?php _e('Order:', 'ielts-course-manager'); ?> ' + index);
+                                        $(this).find('.exercise-order').text('<?php _e('Order:', 'ielts-course-manager'); ?> ' + (index + 1));
                                     });
                                 }
                             }
