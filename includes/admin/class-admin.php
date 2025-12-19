@@ -710,6 +710,7 @@ class IELTS_CM_Admin {
         $pass_percentage = get_post_meta($post->ID, '_ielts_cm_pass_percentage', true);
         $layout_type = get_post_meta($post->ID, '_ielts_cm_layout_type', true);
         $reading_texts = get_post_meta($post->ID, '_ielts_cm_reading_texts', true);
+        $exercise_label = get_post_meta($post->ID, '_ielts_cm_exercise_label', true);
         
         if (!$questions) {
             $questions = array();
@@ -759,6 +760,17 @@ class IELTS_CM_Admin {
             </select>
             <small><?php _e('Hold Ctrl (Cmd on Mac) to select multiple lessons', 'ielts-course-manager'); ?></small>
         </p>
+        
+        <p>
+            <label for="ielts_cm_exercise_label"><?php _e('Display Label for Students', 'ielts-course-manager'); ?></label><br>
+            <select id="ielts_cm_exercise_label" name="ielts_cm_exercise_label" style="width: 100%;">
+                <option value="exercise" <?php selected($exercise_label, 'exercise'); ?>><?php _e('Exercise', 'ielts-course-manager'); ?></option>
+                <option value="end_of_lesson_test" <?php selected($exercise_label, 'end_of_lesson_test'); ?>><?php _e('End of lesson test', 'ielts-course-manager'); ?></option>
+                <option value="practice_test" <?php selected($exercise_label, 'practice_test'); ?>><?php _e('Practice test', 'ielts-course-manager'); ?></option>
+            </select>
+            <small><?php _e('Choose how this exercise will be labeled on the frontend for students. This does not change the backend label.', 'ielts-course-manager'); ?></small>
+        </p>
+        
         <p style="display: none;">
             <label for="ielts_cm_pass_percentage"><?php _e('Pass Percentage', 'ielts-course-manager'); ?></label><br>
             <input type="number" id="ielts_cm_pass_percentage" name="ielts_cm_pass_percentage" value="<?php echo esc_attr($pass_percentage ? $pass_percentage : 70); ?>" min="0" max="100" style="width: 100%;">
@@ -1855,6 +1867,17 @@ class IELTS_CM_Admin {
                     update_post_meta($post_id, '_ielts_cm_timer_minutes', $timer_minutes);
                 } else {
                     delete_post_meta($post_id, '_ielts_cm_timer_minutes');
+                }
+            }
+            
+            // Save exercise label with validation
+            if (isset($_POST['ielts_cm_exercise_label'])) {
+                $exercise_label = sanitize_text_field($_POST['ielts_cm_exercise_label']);
+                $valid_labels = array('exercise', 'end_of_lesson_test', 'practice_test');
+                if (in_array($exercise_label, $valid_labels)) {
+                    update_post_meta($post_id, '_ielts_cm_exercise_label', $exercise_label);
+                } else {
+                    update_post_meta($post_id, '_ielts_cm_exercise_label', 'exercise');
                 }
             }
             
