@@ -150,7 +150,16 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                 <?php
                                 switch ($question['type']) {
                                     case 'multiple_choice':
-                                        $options = array_filter(explode("\n", $question['options']));
+                                        // Support both new mc_options format and legacy options format
+                                        $options = array();
+                                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                                            $options = $question['mc_options'];
+                                        } elseif (isset($question['options']) && !empty($question['options'])) {
+                                            $option_lines = array_filter(explode("\n", $question['options']));
+                                            foreach ($option_lines as $opt_text) {
+                                                $options[] = array('text' => trim($opt_text));
+                                            }
+                                        }
                                         ?>
                                         <div class="question-options">
                                             <?php foreach ($options as $opt_index => $option): ?>
@@ -158,10 +167,33 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                                     <input type="radio" 
                                                            name="answer_<?php echo $index; ?>" 
                                                            value="<?php echo $opt_index; ?>">
-                                                    <span><?php echo esc_html(trim($option)); ?></span>
+                                                    <span><?php echo esc_html(isset($option['text']) ? $option['text'] : $option); ?></span>
                                                 </label>
                                             <?php endforeach; ?>
                                         </div>
+                                        <?php
+                                        break;
+                                        
+                                    case 'multi_select':
+                                        // Multi-select question type
+                                        $options = array();
+                                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                                            $options = $question['mc_options'];
+                                        }
+                                        $max_selections = isset($question['max_selections']) ? intval($question['max_selections']) : 2;
+                                        ?>
+                                        <div class="question-options multi-select-options" data-max-selections="<?php echo $max_selections; ?>">
+                                            <?php foreach ($options as $opt_index => $option): ?>
+                                                <label class="option-label">
+                                                    <input type="checkbox" 
+                                                           name="answer_<?php echo $index; ?>[]" 
+                                                           value="<?php echo $opt_index; ?>"
+                                                           class="multi-select-checkbox">
+                                                    <span><?php echo esc_html($option['text']); ?></span>
+                                                </label>
+                                            <?php endforeach; ?>
+                                        </div>
+                                        <small class="multi-select-hint"><?php printf(__('Select up to %d options', 'ielts-course-manager'), $max_selections); ?></small>
                                         <?php
                                         break;
                                         

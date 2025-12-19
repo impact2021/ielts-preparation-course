@@ -178,11 +178,19 @@
             var answers = {};
             form.find('[name^="answer_"]').each(function() {
                 var name = $(this).attr('name');
-                var index = name.replace('answer_', '');
+                var index = name.replace('answer_', '').replace('[]', '');
                 
                 if ($(this).attr('type') === 'radio') {
                     if ($(this).is(':checked')) {
                         answers[index] = $(this).val();
+                    }
+                } else if ($(this).attr('type') === 'checkbox') {
+                    // Handle multi-select checkboxes
+                    if ($(this).is(':checked')) {
+                        if (!answers[index]) {
+                            answers[index] = [];
+                        }
+                        answers[index].push($(this).val());
                     }
                 } else {
                     answers[index] = $(this).val();
@@ -637,6 +645,28 @@
             });
         }
         
+        // Multi-select max selections enforcement
+        $('.multi-select-options').each(function() {
+            var $container = $(this);
+            var maxSelections = parseInt($container.data('max-selections')) || 2;
+            
+            $container.find('.multi-select-checkbox').on('change', function() {
+                var checkedCount = $container.find('.multi-select-checkbox:checked').length;
+                
+                if (checkedCount > maxSelections) {
+                    // Uncheck this box and show warning
+                    $(this).prop('checked', false);
+                    alert('You can only select up to ' + maxSelections + ' options.');
+                } else if (checkedCount === maxSelections) {
+                    // Disable unchecked boxes
+                    $container.find('.multi-select-checkbox:not(:checked)').prop('disabled', true);
+                } else {
+                    // Enable all boxes
+                    $container.find('.multi-select-checkbox').prop('disabled', false);
+                }
+            });
+        });
+        
         // Text Highlighting Feature for CBT Reading Texts
         if ($('.ielts-computer-based-quiz').length && $('.reading-text').length) {
             var quizId = $('.ielts-computer-based-quiz').data('quiz-id');
@@ -846,6 +876,7 @@
                 var selection = window.getSelection();
                 if (selection.toString().trim().length > 0) {
                     showContextMenu(e);
+                    return false;
                 }
             });
             

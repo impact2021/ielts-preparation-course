@@ -853,6 +853,7 @@ class IELTS_CM_Admin {
                 <h4 style="margin-top: 0;"><?php _e('Question Type Guidelines:', 'ielts-course-manager'); ?></h4>
                 <ul style="margin-bottom: 0;">
                     <li><strong><?php _e('Multiple Choice:', 'ielts-course-manager'); ?></strong> <?php _e('Enter options one per line. Correct answer is the option number (0 for first, 1 for second, etc.)', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Multi Select:', 'ielts-course-manager'); ?></strong> <?php _e('Students can select multiple answers. Mark all correct options. Students earn 1 point for each correct selection. Set the maximum number of selections and total points accordingly.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('True/False/Not Given:', 'ielts-course-manager'); ?></strong> <?php _e('Enter correct answer as "true", "false", or "not_given" (lowercase)', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Fill in the Blank:', 'ielts-course-manager'); ?></strong> <?php _e('Enter the expected answer. Matching is case-insensitive and ignores punctuation/extra spaces.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Essay:', 'ielts-course-manager'); ?></strong> <?php _e('No correct answer needed - requires manual grading.', 'ielts-course-manager'); ?></li>
@@ -1038,7 +1039,13 @@ class IELTS_CM_Admin {
                 
                 if (type === 'multiple_choice') {
                     container.find('.mc-options-field').show();
+                    container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').hide();
+                    correctAnswerField.hide();
+                } else if (type === 'multi_select') {
+                    container.find('.mc-options-field').show();
+                    container.find('.multi-select-settings').show();
+                    container.find('.general-feedback-field').show();
                     correctAnswerField.hide();
                 } else if (type === 'true_false') {
                     container.find('.mc-options-field').hide();
@@ -1442,8 +1449,21 @@ class IELTS_CM_Admin {
                 ?>
             </div>
             
+            <!-- Multi-select settings -->
+            <div class="multi-select-settings" style="<?php echo (isset($question['type']) && $question['type'] !== 'multi_select') ? 'display:none;' : ''; ?>padding: 10px; background: #f0f0f1; margin-bottom: 15px; border-left: 4px solid #72aee6;">
+                <p>
+                    <label><?php _e('Maximum Number of Selections', 'ielts-course-manager'); ?></label><br>
+                    <input type="number" 
+                           name="questions[<?php echo $index; ?>][max_selections]" 
+                           value="<?php echo esc_attr(isset($question['max_selections']) ? $question['max_selections'] : 2); ?>" 
+                           min="1" 
+                           style="width: 100px;">
+                    <small><?php _e('Number of options students can select. This should equal the number of correct answers marked below.', 'ielts-course-manager'); ?></small>
+                </p>
+            </div>
+            
             <!-- New structured options for multiple choice -->
-            <div class="mc-options-field" style="<?php echo (isset($question['type']) && $question['type'] !== 'multiple_choice') ? 'display:none;' : ''; ?>">
+            <div class="mc-options-field" style="<?php echo (isset($question['type']) && $question['type'] !== 'multiple_choice' && $question['type'] !== 'multi_select') ? 'display:none;' : ''; ?>">
                 <h5><?php _e('Answer Options', 'ielts-course-manager'); ?></h5>
                 <div class="mc-options-container" data-question-index="<?php echo $index; ?>">
                     <?php
@@ -1588,6 +1608,19 @@ class IELTS_CM_Admin {
                 <textarea name="questions[QUESTION_INDEX][question]" rows="8" style="width: 100%;"></textarea>
                 <small><?php _e('HTML is supported. You can paste HTML with images and formatting. Save the post to enable the visual editor for this question.', 'ielts-course-manager'); ?></small>
             </p>
+            
+            <!-- Multi-select settings -->
+            <div class="multi-select-settings" style="display:none; padding: 10px; background: #f0f0f1; margin-bottom: 15px; border-left: 4px solid #72aee6;">
+                <p>
+                    <label><?php _e('Maximum Number of Selections', 'ielts-course-manager'); ?></label><br>
+                    <input type="number" 
+                           name="questions[QUESTION_INDEX][max_selections]" 
+                           value="2" 
+                           min="1" 
+                           style="width: 100px;">
+                    <small><?php _e('Number of options students can select. This should equal the number of correct answers marked below.', 'ielts-course-manager'); ?></small>
+                </p>
+            </div>
             
             <!-- New structured options for multiple choice -->
             <div class="mc-options-field">
