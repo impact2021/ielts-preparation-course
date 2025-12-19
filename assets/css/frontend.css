@@ -1285,3 +1285,9 @@ body.ielts-course-archive .content-area {
 .question-feedback-message.feedback-incorrect {
     border-left-color: #f44336;
 }
+
+/* Return to course link on fullscreen page */
+.cbt-return-to-course-link {
+    margin-top: 20px;
+    text-align: center;
+}

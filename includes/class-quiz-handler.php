@@ -92,6 +92,11 @@ class IELTS_CM_Quiz_Handler {
                         }
                     }
                 }
+            } else {
+                // No answer provided - show incorrect feedback
+                if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                    $feedback = wp_kses_post($question['incorrect_feedback']);
+                }
             }
             
             $question_results[$index] = array(

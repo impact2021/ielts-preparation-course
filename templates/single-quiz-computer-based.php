@@ -125,7 +125,7 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                     <span class="question-points">(<?php printf(_n('%s point', '%s points', $question['points'], 'ielts-course-manager'), $question['points']); ?>)</span>
                                 </h4>
                                 
-                                <div class="question-text"><?php echo wp_kses_post($question['question']); ?></div>
+                                <div class="question-text"><?php echo wp_kses_post(wpautop($question['question'])); ?></div>
                                 
                                 <?php
                                 switch ($question['type']) {
@@ -245,6 +245,14 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
         </form>
         
         <div id="quiz-result" class="quiz-result" style="display: none;"></div>
+        
+        <?php if ($is_fullscreen && $course_id): ?>
+        <div class="cbt-return-to-course-link">
+            <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="button">
+                <?php _e('Return to course', 'ielts-course-manager'); ?>
+            </a>
+        </div>
+        <?php endif; ?>
         
     <?php elseif (!empty($questions) && !is_user_logged_in()): ?>
         <div class="quiz-login-notice">
