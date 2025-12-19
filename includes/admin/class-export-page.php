@@ -225,11 +225,18 @@ class IELTS_CM_Export_Page {
         // Generate XML
         $xml = $this->generate_export_xml($export_types, $include_drafts);
         
+        // Clear any output buffers to prevent header issues
+        while (ob_get_level()) {
+            ob_end_clean();
+        }
+        
         // Set headers for download
         $filename = sanitize_file_name('ielts-export-' . gmdate('Y-m-d') . '.xml');
+        nocache_headers();
         header('Content-Description: File Transfer');
         header('Content-Disposition: attachment; filename="' . esc_attr($filename) . '"');
         header('Content-Type: text/xml; charset=' . get_option('blog_charset'), true);
+        header('Content-Length: ' . strlen($xml));
         
         // Output XML
         echo $xml;
