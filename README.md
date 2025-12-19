@@ -9,7 +9,7 @@ This plugin provides a complete course management system with:
 - **Course Management** - Create and organize up to 25+ courses
 - **Lesson Structure** - Build structured lessons within each course
 - **Lesson pages** - Attach lesson pages with optional resource URLs to lessons
-- **Quiz System** - Multiple quiz types (Multiple Choice, True/False/Not Given, Fill in the Blank, Essay)
+- **Quiz System** - Multiple quiz types (Multiple Choice, Multi Select, True/False/Not Given, Fill in the Blank, Essay)
 - **Progress Tracking** - Per-course progress tracking for students
 - **Student Dashboard** - Comprehensive progress and quiz results page
 - **Manual Enrollment System** - Admin tools for creating users and managing course enrollments
@@ -19,7 +19,7 @@ This plugin provides a complete course management system with:
 ## Key Features
 
 ✅ **Flexible Course Structure** - More flexible than LearnDash with customizable course organization  
-✅ **Multiple Quiz Types** - IELTS-friendly quiz types (Multiple Choice, True/False/Not Given, Fill in the Blank with flexible matching, Essay)  
+✅ **Multiple Quiz Types** - IELTS-friendly quiz types (Multiple Choice, Multi Select, True/False/Not Given, Fill in the Blank with flexible matching, Essay)  
 ✅ **Computer-Based Test Layout** - Authentic IELTS CBT interface with two-column layout, question navigation, and text highlighting  
 ✅ **Text Highlighting (v2.17)** - Select and highlight reading text with right-click menu, just like the real IELTS CBT  
 ✅ **Progress Tracking** - Automatic tracking of lesson completion and quiz results  
