@@ -1436,6 +1436,24 @@ class IELTS_CM_Admin {
             <?php endif; ?>
             
             <div>
+                <label><?php _e('Instructions (Optional)', 'ielts-course-manager'); ?></label>
+                <?php
+                $instructions_editor_id = 'question_instructions_' . $index;
+                $instructions_content = isset($question['instructions']) ? $question['instructions'] : '';
+                wp_editor($instructions_content, $instructions_editor_id, array(
+                    'textarea_name' => 'questions[' . $index . '][instructions]',
+                    'textarea_rows' => 4,
+                    'media_buttons' => false,
+                    'teeny' => true,
+                    'tinymce' => array(
+                        'toolbar1' => 'bold,italic,underline,bullist,numlist,link,unlink'
+                    )
+                ));
+                ?>
+                <small><?php _e('Optional introductory instructions or explanation shown above the question. Use this for grouping instructions like "Questions 14-20: Choose the most suitable headings..."', 'ielts-course-manager'); ?></small>
+            </div>
+            
+            <div>
                 <label><?php _e('Question Text', 'ielts-course-manager'); ?></label>
                 <?php
                 $editor_id = 'question_' . $index;
@@ -1573,6 +1591,12 @@ class IELTS_CM_Admin {
                     <textarea name="questions[<?php echo $index; ?>][incorrect_feedback]" rows="3" style="width: 100%;"><?php echo esc_textarea(isset($question['incorrect_feedback']) ? $question['incorrect_feedback'] : ''); ?></textarea>
                     <small><?php _e('Shown when the student answers incorrectly. HTML is supported.', 'ielts-course-manager'); ?></small>
                 </p>
+                
+                <p class="no-answer-feedback-field">
+                    <label><?php _e('No Answer Selected Feedback', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="questions[<?php echo $index; ?>][no_answer_feedback]" rows="3" style="width: 100%;"><?php echo esc_textarea(isset($question['no_answer_feedback']) ? $question['no_answer_feedback'] : ''); ?></textarea>
+                    <small><?php _e('Shown when the student submits without selecting an answer. HTML is supported.', 'ielts-course-manager'); ?></small>
+                </p>
             </div>
             
             <div style="margin-top: 10px;">
@@ -1605,6 +1629,12 @@ class IELTS_CM_Admin {
                         <option value="<?php echo esc_attr($value); ?>"><?php echo esc_html($label); ?></option>
                     <?php endforeach; ?>
                 </select>
+            </p>
+            
+            <p>
+                <label><?php _e('Instructions (Optional)', 'ielts-course-manager'); ?></label><br>
+                <textarea name="questions[QUESTION_INDEX][instructions]" rows="4" style="width: 100%;"></textarea>
+                <small><?php _e('Optional introductory instructions or explanation shown above the question. Use this for grouping instructions like "Questions 14-20: Choose the most suitable headings..."', 'ielts-course-manager'); ?></small>
             </p>
             
             <p>
@@ -1691,6 +1721,12 @@ class IELTS_CM_Admin {
                     <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>
                     <textarea name="questions[QUESTION_INDEX][incorrect_feedback]" rows="3" style="width: 100%;"></textarea>
                     <small><?php _e('Shown when the student answers incorrectly. HTML is supported.', 'ielts-course-manager'); ?></small>
+                </p>
+                
+                <p class="no-answer-feedback-field">
+                    <label><?php _e('No Answer Selected Feedback', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="questions[QUESTION_INDEX][no_answer_feedback]" rows="3" style="width: 100%;"></textarea>
+                    <small><?php _e('Shown when the student submits without selecting an answer. HTML is supported.', 'ielts-course-manager'); ?></small>
                 </p>
             </div>
             
@@ -1840,10 +1876,12 @@ class IELTS_CM_Admin {
                     
                     $question_data = array(
                         'type' => sanitize_text_field($question['type']),
+                        'instructions' => isset($question['instructions']) ? wp_kses_post($question['instructions']) : '',
                         'question' => wp_kses_post($question['question']), // Allow HTML with images
                         'points' => isset($question['points']) ? floatval($question['points']) : 1,
                         'correct_feedback' => isset($question['correct_feedback']) ? wp_kses_post($question['correct_feedback']) : '',
                         'incorrect_feedback' => isset($question['incorrect_feedback']) ? wp_kses_post($question['incorrect_feedback']) : '',
+                        'no_answer_feedback' => isset($question['no_answer_feedback']) ? wp_kses_post($question['no_answer_feedback']) : '',
                         'reading_text_id' => isset($question['reading_text_id']) && $question['reading_text_id'] !== '' ? intval($question['reading_text_id']) : null
                     );
                     
