@@ -2,6 +2,30 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.18] - 2025-12-19
+
+### Fixed
+- **Text Highlighting Background Color**: Fixed highlight background color not applying properly
+  - Added `!important` to background-color CSS to ensure highlighting is always visible
+  - Resolves issue where highlighted text didn't show yellow background
+
+### Changed
+- **Compact Navigation Buttons**: Reduced navigation button size to fit more questions on one line
+  - Button size reduced from 40px to 32px (height and width)
+  - Padding reduced from 8px to 4px
+  - Font size set to 13px for better readability at smaller size
+  - Gap between buttons reduced from 8px to 5px
+  - Can now fit 40+ question buttons on one line
+  - Improves navigation for quizzes with many questions
+
+- **Simplified Navigation Separators**: Replaced "Reading Passage X" labels with simple "|" separators
+  - Reading passage sections now separated by a simple vertical bar "|"
+  - Saves significant horizontal space in navigation bar
+  - Cleaner, more compact visual design
+  - Only shows separator between passages, not before first passage
+
+- **Version Update**: Updated plugin version to 2.18
+
 ## [2.17] - 2025-12-19
 
 ### Added

@@ -957,30 +957,28 @@ body.ielts-course-archive .content-area {
 .question-navigation .question-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 5px;
     flex: 1;
     align-items: center;
 }
 
-.question-navigation .reading-passage-label {
-    font-weight: 600;
-    color: #0073aa;
-    padding: 8px 12px;
-    background: #f0f6fc;
-    border-radius: 4px;
-    font-size: 14px;
-    white-space: nowrap;
+.question-navigation .passage-separator {
+    font-weight: 400;
+    color: #999;
+    padding: 0 4px;
+    font-size: 16px;
 }
 
 .question-navigation .question-nav-btn {
-    min-width: 40px;
-    height: 40px;
-    padding: 8px;
+    min-width: 32px;
+    height: 32px;
+    padding: 4px;
     background: #fff;
     border: 2px solid #ddd;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
+    font-size: 13px;
     color: #333;
     transition: all 0.2s ease;
 }
@@ -1311,7 +1309,7 @@ body.ielts-course-archive .content-area {
 
 /* Text Highlighting Feature for CBT Reading Texts */
 .reading-text .highlighted {
-    background-color: #ffff00;
+    background-color: #ffff00 !important;
     cursor: pointer;
 }
 

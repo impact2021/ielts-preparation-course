@@ -236,13 +236,10 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                     foreach ($questions as $index => $question): 
                         $current_reading_text_id = isset($question['reading_text_id']) ? $question['reading_text_id'] : null;
                         
-                        // If reading text changed, show passage label
-                        if ($current_reading_text_id !== $last_reading_text_id && $current_reading_text_id !== null && !empty($reading_texts)):
-                            $passage_title = !empty($reading_texts[$current_reading_text_id]['title']) 
-                                ? esc_html($reading_texts[$current_reading_text_id]['title']) 
-                                : sprintf(__('Reading Passage %d', 'ielts-course-manager'), $current_reading_text_id + 1);
+                        // If reading text changed, show separator
+                        if ($current_reading_text_id !== $last_reading_text_id && $current_reading_text_id !== null && !empty($reading_texts) && $index > 0):
                     ?>
-                        <span class="reading-passage-label"><?php echo $passage_title; ?></span>
+                        <span class="passage-separator">|</span>
                     <?php 
                         endif;
                         $last_reading_text_id = $current_reading_text_id;
