@@ -53,14 +53,24 @@ class IELTS_CM_Exercise_Import_Export {
      * Render export meta box on exercise edit page
      */
     public function render_export_meta_box($post) {
+        $export_url = wp_nonce_url(
+            add_query_arg(
+                array(
+                    'action' => 'ielts_cm_export_exercise',
+                    'exercise_id' => $post->ID
+                ),
+                admin_url('admin-post.php')
+            ),
+            'ielts_cm_export_exercise_' . $post->ID,
+            'nonce'
+        );
         ?>
         <p><?php _e('Export this exercise to a JSON file that can be imported into another exercise.', 'ielts-course-manager'); ?></p>
-        <form method="post" action="<?php echo admin_url('admin-post.php'); ?>">
-            <?php wp_nonce_field('ielts_cm_export_exercise', 'ielts_cm_export_nonce'); ?>
-            <input type="hidden" name="action" value="ielts_cm_export_exercise">
-            <input type="hidden" name="exercise_id" value="<?php echo esc_attr($post->ID); ?>">
-            <?php submit_button(__('Export Exercise', 'ielts-course-manager'), 'secondary', 'submit', false); ?>
-        </form>
+        <p>
+            <a href="<?php echo esc_url($export_url); ?>" class="button button-secondary">
+                <?php _e('Export Exercise', 'ielts-course-manager'); ?>
+            </a>
+        </p>
         <p class="description">
             <?php _e('This will download a JSON file containing all questions, settings, and reading texts.', 'ielts-course-manager'); ?>
         </p>
@@ -292,20 +302,21 @@ class IELTS_CM_Exercise_Import_Export {
      * Handle exercise export
      */
     public function handle_export() {
+        // Get exercise ID from request
+        $exercise_id = isset($_GET['exercise_id']) ? intval($_GET['exercise_id']) : 0;
+        
+        if (!$exercise_id) {
+            wp_die(__('Invalid exercise ID', 'ielts-course-manager'));
+        }
+        
         // Verify nonce
-        if (!isset($_POST['ielts_cm_export_nonce']) || !wp_verify_nonce($_POST['ielts_cm_export_nonce'], 'ielts_cm_export_exercise')) {
+        if (!isset($_GET['nonce']) || !wp_verify_nonce($_GET['nonce'], 'ielts_cm_export_exercise_' . $exercise_id)) {
             wp_die(__('Security check failed', 'ielts-course-manager'));
         }
         
         // Check user capability
         if (!current_user_can('edit_posts')) {
             wp_die(__('You do not have sufficient permissions to perform this action.', 'ielts-course-manager'));
-        }
-        
-        $exercise_id = isset($_POST['exercise_id']) ? intval($_POST['exercise_id']) : 0;
-        
-        if (!$exercise_id) {
-            wp_die(__('Invalid exercise ID', 'ielts-course-manager'));
         }
         
         // Get exercise data
@@ -340,8 +351,9 @@ class IELTS_CM_Exercise_Import_Export {
             wp_die(__('Failed to generate export file. Please try again.', 'ielts-course-manager'));
         }
         
-        // Clean (erase) the output buffer and turn off output buffering
-        if (ob_get_level()) {
+        // Clean (erase) all output buffers and turn off output buffering
+        // WordPress may have multiple nested buffers, so we need to clear them all
+        while (ob_get_level()) {
             ob_end_clean();
         }
         
