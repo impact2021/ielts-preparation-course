@@ -86,7 +86,10 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
     
     <?php if (!empty($questions) && is_user_logged_in()): ?>
         <form id="ielts-quiz-form" class="quiz-form" style="<?php echo $show_fullscreen_notice ? 'display:none;' : ''; ?>">
-            <?php if ($timer_minutes > 0 || $course_id): ?>
+            <?php 
+            // Show timer bar if there's a timer OR a course link (or both)
+            // This ensures the return to course link is always visible when available
+            if ($timer_minutes > 0 || $course_id): ?>
             <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
                 <?php if ($timer_minutes > 0): ?>
                 <div class="timer-content">
