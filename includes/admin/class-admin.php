@@ -2996,6 +2996,10 @@ class IELTS_CM_Admin {
         if (!in_array($course_id, $course_ids)) {
             $course_ids[] = $course_id;
             update_post_meta($lesson_id, '_ielts_cm_course_ids', $course_ids);
+            // Keep first course for backward compatibility
+            if (!empty($course_ids)) {
+                update_post_meta($lesson_id, '_ielts_cm_course_id', $course_ids[0]);
+            }
         }
         
         // Get lesson details
@@ -3041,7 +3045,15 @@ class IELTS_CM_Admin {
         
         // Remove course from lesson
         $course_ids = array_diff($course_ids, array($course_id));
-        update_post_meta($lesson_id, '_ielts_cm_course_ids', array_values($course_ids));
+        $course_ids = array_values($course_ids); // Re-index array
+        update_post_meta($lesson_id, '_ielts_cm_course_ids', $course_ids);
+        
+        // Update backward compatibility field
+        if (!empty($course_ids)) {
+            update_post_meta($lesson_id, '_ielts_cm_course_id', $course_ids[0]);
+        } else {
+            delete_post_meta($lesson_id, '_ielts_cm_course_id');
+        }
         
         wp_send_json_success(array('message' => __('Lesson removed successfully', 'ielts-course-manager')));
     }
