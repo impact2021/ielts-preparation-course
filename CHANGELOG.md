@@ -2,6 +2,28 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.16] - 2025-12-19
+
+### Changed
+- **Return to Course Link Location**: Moved "Return to course" link to top right corner of timer bar
+  - Link now appears in the same row as the timer and band score
+  - Shows during the test AND after submission
+  - Replaces previous bottom-centered link that only showed in fullscreen mode
+  - Better UX with always-visible access to course navigation
+  
+- **Question Navigation Simplification**: Removed "Jump to Question:" label from navigation bar
+  - Cleaner, more streamlined navigation interface
+  - Question buttons are now more prominent
+  - Reduces visual clutter in the bottom navigation area
+
+### Added
+- **Collapsible Reading Texts**: Reading texts in exercise editor now collapse by default with expandable caret icons
+  - Reading texts start collapsed for easier navigation in the admin panel
+  - Click on reading text header to expand/collapse individual texts
+  - Smooth animation for better user experience
+  - Matches existing question collapse/expand behavior
+  - New reading texts added are shown expanded by default for immediate editing
+
 ## [2.15] - 2025-12-19
 
 ### Changed

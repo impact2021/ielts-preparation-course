@@ -405,11 +405,17 @@
                             // Update timer display to show band score instead of time remaining
                             var timerElement = form.find('.quiz-timer-fullscreen');
                             if (timerElement.length > 0) {
+                                // Preserve the return to course link
+                                var returnLink = timerElement.find('.return-to-course-link').prop('outerHTML') || '';
+                                
+                                var scoreHtml = '';
                                 if (result.display_type === 'band') {
-                                    timerElement.html('<strong>Band Score:</strong> <span>' + result.display_score + '</span>');
+                                    scoreHtml = '<div class="timer-content"><strong>Band Score:</strong> <span>' + result.display_score + '</span></div>';
                                 } else {
-                                    timerElement.html('<strong>Score:</strong> <span>' + result.percentage + '%</span>');
+                                    scoreHtml = '<div class="timer-content"><strong>Score:</strong> <span>' + result.percentage + '%</span></div>';
                                 }
+                                
+                                timerElement.html(scoreHtml + returnLink);
                             }
                         } else {
                             // For regular quizzes, show inline
