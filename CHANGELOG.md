@@ -2,6 +2,25 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.14] - 2025-12-19
+
+### Added
+- **Direct Course-to-Exercise Assignment**: New ability to assign exercises directly to courses without requiring lessons
+  - New "Course Exercises (Direct Assignment)" meta box on course edit pages
+  - Search functionality to find and add exercises to courses
+  - Drag-and-drop reordering of directly assigned exercises
+  - Remove button to unassign exercises from courses
+  - Exercises can now be added to courses with or without lessons
+
+### Changed
+- **Version Update**: Updated plugin version to 2.14
+- **Course Management**: Enhanced course management with flexible content structure
+
+### Technical
+- Added `_ielts_cm_direct_course_id` post meta for direct course-to-exercise relationships
+- Added AJAX handlers: `ielts_cm_add_exercise_to_course`, `ielts_cm_remove_exercise_from_course`, `ielts_cm_update_course_exercise_order`
+- Enhanced admin UI with new meta box for course exercise management
+
 ## [2.13] - 2025-12-18
 
 ### Changed

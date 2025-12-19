@@ -38,6 +38,9 @@ class IELTS_CM_Admin {
         add_action('wp_ajax_ielts_cm_get_available_exercises', array($this, 'ajax_get_available_exercises'));
         add_action('wp_ajax_ielts_cm_get_available_sublessons', array($this, 'ajax_get_available_sublessons'));
         add_action('wp_ajax_ielts_cm_add_content_to_lesson', array($this, 'ajax_add_content_to_lesson'));
+        add_action('wp_ajax_ielts_cm_add_exercise_to_course', array($this, 'ajax_add_exercise_to_course'));
+        add_action('wp_ajax_ielts_cm_remove_exercise_from_course', array($this, 'ajax_remove_exercise_from_course'));
+        add_action('wp_ajax_ielts_cm_update_course_exercise_order', array($this, 'ajax_update_course_exercise_order'));
         
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
@@ -89,6 +92,16 @@ class IELTS_CM_Admin {
             'ielts_cm_course_lessons',
             __('Course Lessons', 'ielts-course-manager'),
             array($this, 'course_lessons_meta_box'),
+            'ielts_course',
+            'normal',
+            'high'
+        );
+        
+        // Course exercises meta box
+        add_meta_box(
+            'ielts_cm_course_exercises',
+            __('Course Exercises (Direct Assignment)', 'ielts-course-manager'),
+            array($this, 'course_exercises_meta_box'),
             'ielts_course',
             'normal',
             'high'
@@ -293,6 +306,252 @@ class IELTS_CM_Admin {
             display: block;
         }
         </style>
+        <?php
+    }
+    
+    /**
+     * Course exercises meta box - display and manage exercises directly assigned to course
+     */
+    public function course_exercises_meta_box($post) {
+        // Get exercises for this course
+        global $wpdb;
+        $exercise_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT post_id 
+            FROM {$wpdb->postmeta} 
+            WHERE meta_key = '_ielts_cm_direct_course_id' AND meta_value = %d
+        ", $post->ID));
+        
+        $exercises = array();
+        if (!empty($exercise_ids)) {
+            $exercises = get_posts(array(
+                'post_type' => 'ielts_quiz',
+                'posts_per_page' => -1,
+                'post__in' => $exercise_ids,
+                'orderby' => 'menu_order',
+                'order' => 'ASC'
+            ));
+        }
+        ?>
+        <div id="ielts-cm-course-exercises">
+            <p class="description">
+                <?php _e('Assign exercises directly to this course without requiring a lesson. These exercises will appear in the course alongside lessons.', 'ielts-course-manager'); ?>
+            </p>
+            
+            <div style="margin-bottom: 15px; margin-top: 15px;">
+                <h4><?php _e('Add Exercises to Course', 'ielts-course-manager'); ?></h4>
+                <input type="text" id="course-exercise-search" placeholder="<?php _e('Search exercises...', 'ielts-course-manager'); ?>" style="width: 100%; margin-bottom: 10px;">
+                <select id="course-exercise-selector" style="width: 100%; height: 100px;" size="5">
+                    <?php
+                    // Get all exercises not already directly assigned to this course
+                    $all_exercises = get_posts(array(
+                        'post_type' => 'ielts_quiz',
+                        'posts_per_page' => -1,
+                        'orderby' => 'title',
+                        'order' => 'ASC',
+                        'post_status' => array('publish', 'draft')
+                    ));
+                    
+                    $current_exercise_ids = array_map(function($e) { return $e->ID; }, $exercises);
+                    foreach ($all_exercises as $all_exercise):
+                        if (!in_array($all_exercise->ID, $current_exercise_ids)):
+                    ?>
+                        <option value="<?php echo esc_attr($all_exercise->ID); ?>"><?php echo esc_html($all_exercise->post_title); ?></option>
+                    <?php
+                        endif;
+                    endforeach;
+                    ?>
+                </select>
+                <button type="button" class="button" id="add-exercise-to-course" style="margin-top: 5px;"><?php _e('Add Selected Exercise', 'ielts-course-manager'); ?></button>
+            </div>
+            
+            <?php if (empty($exercises)): ?>
+                <p><?php _e('No exercises have been directly assigned to this course yet.', 'ielts-course-manager'); ?></p>
+            <?php else: ?>
+                <h4><?php _e('Course Exercises', 'ielts-course-manager'); ?></h4>
+                <p><?php _e('Drag and drop exercises to reorder them:', 'ielts-course-manager'); ?></p>
+                <ul id="course-exercises-sortable" class="course-exercises-list">
+                    <?php foreach ($exercises as $exercise): ?>
+                        <li class="exercise-item" data-exercise-id="<?php echo esc_attr($exercise->ID); ?>">
+                            <span class="dashicons dashicons-menu"></span>
+                            <span class="exercise-title"><?php echo esc_html($exercise->post_title); ?></span>
+                            <span class="exercise-order"><?php printf(__('Order: %d', 'ielts-course-manager'), $exercise->menu_order); ?></span>
+                            <a href="<?php echo get_edit_post_link($exercise->ID); ?>" class="button button-small" target="_blank">
+                                <?php _e('Edit', 'ielts-course-manager'); ?>
+                            </a>
+                            <button type="button" class="button button-small remove-exercise-from-course" data-exercise-id="<?php echo esc_attr($exercise->ID); ?>">
+                                <?php _e('Remove', 'ielts-course-manager'); ?>
+                            </button>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <div class="exercise-order-status"></div>
+            <?php endif; ?>
+        </div>
+        
+        <style>
+        #ielts-cm-course-exercises .course-exercises-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        #ielts-cm-course-exercises .exercise-item {
+            padding: 12px;
+            margin-bottom: 8px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: move;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        #ielts-cm-course-exercises .exercise-item:hover {
+            background: #f0f0f0;
+        }
+        #ielts-cm-course-exercises .exercise-item .dashicons-menu {
+            color: #999;
+        }
+        #ielts-cm-course-exercises .exercise-title {
+            flex-grow: 1;
+            font-weight: 500;
+        }
+        #ielts-cm-course-exercises .exercise-order {
+            color: #666;
+            font-size: 12px;
+        }
+        #ielts-cm-course-exercises .ui-sortable-helper {
+            opacity: 0.6;
+        }
+        #ielts-cm-course-exercises .ui-sortable-placeholder {
+            background: #e0e0e0;
+            border: 2px dashed #999;
+            visibility: visible !important;
+            height: 50px;
+        }
+        #ielts-cm-course-exercises .exercise-order-status {
+            margin-top: 10px;
+            padding: 8px;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+            display: none;
+        }
+        </style>
+        
+        <script>
+        jQuery(document).ready(function($) {
+            // Search functionality
+            $('#course-exercise-search').on('input', function() {
+                var searchTerm = $(this).val().toLowerCase();
+                $('#course-exercise-selector option').each(function() {
+                    var optionText = $(this).text().toLowerCase();
+                    if (optionText.indexOf(searchTerm) !== -1) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+            
+            // Add exercise to course
+            $('#add-exercise-to-course').on('click', function() {
+                var exerciseId = $('#course-exercise-selector').val();
+                if (!exerciseId) {
+                    alert('<?php _e('Please select an exercise to add.', 'ielts-course-manager'); ?>');
+                    return;
+                }
+                
+                var courseId = <?php echo $post->ID; ?>;
+                
+                $.ajax({
+                    url: ajaxurl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_add_exercise_to_course',
+                        exercise_id: exerciseId,
+                        course_id: courseId,
+                        nonce: '<?php echo wp_create_nonce('ielts_cm_add_exercise_to_course'); ?>'
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            location.reload();
+                        } else {
+                            alert(response.data || '<?php _e('Error adding exercise to course.', 'ielts-course-manager'); ?>');
+                        }
+                    }
+                });
+            });
+            
+            // Remove exercise from course
+            $('.remove-exercise-from-course').on('click', function() {
+                if (!confirm('<?php _e('Are you sure you want to remove this exercise from the course?', 'ielts-course-manager'); ?>')) {
+                    return;
+                }
+                
+                var exerciseId = $(this).data('exercise-id');
+                var courseId = <?php echo $post->ID; ?>;
+                
+                $.ajax({
+                    url: ajaxurl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_remove_exercise_from_course',
+                        exercise_id: exerciseId,
+                        course_id: courseId,
+                        nonce: '<?php echo wp_create_nonce('ielts_cm_remove_exercise_from_course'); ?>'
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            location.reload();
+                        } else {
+                            alert(response.data || '<?php _e('Error removing exercise from course.', 'ielts-course-manager'); ?>');
+                        }
+                    }
+                });
+            });
+            
+            // Make exercises sortable
+            if ($('#course-exercises-sortable').length) {
+                $('#course-exercises-sortable').sortable({
+                    handle: '.dashicons-menu',
+                    update: function(event, ui) {
+                        var exerciseOrder = [];
+                        $('#course-exercises-sortable .exercise-item').each(function(index) {
+                            exerciseOrder.push({
+                                id: $(this).data('exercise-id'),
+                                order: index
+                            });
+                        });
+                        
+                        $.ajax({
+                            url: ajaxurl,
+                            type: 'POST',
+                            data: {
+                                action: 'ielts_cm_update_course_exercise_order',
+                                course_id: <?php echo $post->ID; ?>,
+                                exercise_order: exerciseOrder,
+                                nonce: '<?php echo wp_create_nonce('ielts_cm_update_course_exercise_order'); ?>'
+                            },
+                            success: function(response) {
+                                if (response.success) {
+                                    $('.exercise-order-status')
+                                        .text('<?php _e('Exercise order updated successfully!', 'ielts-course-manager'); ?>')
+                                        .fadeIn()
+                                        .delay(2000)
+                                        .fadeOut();
+                                    
+                                    // Update order numbers in UI
+                                    $('#course-exercises-sortable .exercise-item').each(function(index) {
+                                        $(this).find('.exercise-order').text('<?php _e('Order:', 'ielts-course-manager'); ?> ' + index);
+                                    });
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+        });
+        </script>
         <?php
     }
     
@@ -3049,6 +3308,118 @@ class IELTS_CM_Admin {
                 'order' => $content->menu_order,
                 'edit_link' => get_edit_post_link($content->ID)
             )
+        ));
+    }
+    
+    /**
+     * AJAX handler to add exercise to course
+     */
+    public function ajax_add_exercise_to_course() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_add_exercise_to_course')) {
+            wp_send_json_error(__('Security check failed', 'ielts-course-manager'));
+        }
+        
+        // Check user capabilities
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(__('You do not have permission to do this', 'ielts-course-manager'));
+        }
+        
+        $course_id = isset($_POST['course_id']) ? intval($_POST['course_id']) : 0;
+        $exercise_id = isset($_POST['exercise_id']) ? intval($_POST['exercise_id']) : 0;
+        
+        if (!$course_id || !$exercise_id) {
+            wp_send_json_error(__('Invalid data', 'ielts-course-manager'));
+        }
+        
+        // Add the direct course assignment
+        update_post_meta($exercise_id, '_ielts_cm_direct_course_id', $course_id);
+        
+        // Get the highest menu order for exercises in this course
+        global $wpdb;
+        $max_order = $wpdb->get_var($wpdb->prepare("
+            SELECT MAX(p.menu_order)
+            FROM {$wpdb->posts} p
+            INNER JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id
+            WHERE pm.meta_key = '_ielts_cm_direct_course_id' 
+            AND pm.meta_value = %d
+        ", $course_id));
+        
+        // Set menu order for the new exercise
+        $new_order = $max_order !== null ? intval($max_order) + 1 : 0;
+        wp_update_post(array(
+            'ID' => $exercise_id,
+            'menu_order' => $new_order
+        ));
+        
+        wp_send_json_success(array(
+            'message' => __('Exercise added to course successfully', 'ielts-course-manager')
+        ));
+    }
+    
+    /**
+     * AJAX handler to remove exercise from course
+     */
+    public function ajax_remove_exercise_from_course() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_remove_exercise_from_course')) {
+            wp_send_json_error(__('Security check failed', 'ielts-course-manager'));
+        }
+        
+        // Check user capabilities
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(__('You do not have permission to do this', 'ielts-course-manager'));
+        }
+        
+        $course_id = isset($_POST['course_id']) ? intval($_POST['course_id']) : 0;
+        $exercise_id = isset($_POST['exercise_id']) ? intval($_POST['exercise_id']) : 0;
+        
+        if (!$course_id || !$exercise_id) {
+            wp_send_json_error(__('Invalid data', 'ielts-course-manager'));
+        }
+        
+        // Remove the direct course assignment
+        delete_post_meta($exercise_id, '_ielts_cm_direct_course_id', $course_id);
+        
+        wp_send_json_success(array(
+            'message' => __('Exercise removed from course successfully', 'ielts-course-manager')
+        ));
+    }
+    
+    /**
+     * AJAX handler to update course exercise order
+     */
+    public function ajax_update_course_exercise_order() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_update_course_exercise_order')) {
+            wp_send_json_error(__('Security check failed', 'ielts-course-manager'));
+        }
+        
+        // Check user capabilities
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(__('You do not have permission to do this', 'ielts-course-manager'));
+        }
+        
+        $course_id = isset($_POST['course_id']) ? intval($_POST['course_id']) : 0;
+        $exercise_order = isset($_POST['exercise_order']) ? $_POST['exercise_order'] : array();
+        
+        if (!$course_id || empty($exercise_order)) {
+            wp_send_json_error(__('Invalid data', 'ielts-course-manager'));
+        }
+        
+        // Update menu order for each exercise
+        foreach ($exercise_order as $item) {
+            $exercise_id = intval($item['id']);
+            $order = intval($item['order']);
+            
+            wp_update_post(array(
+                'ID' => $exercise_id,
+                'menu_order' => $order
+            ));
+        }
+        
+        wp_send_json_success(array(
+            'message' => __('Exercise order updated successfully', 'ielts-course-manager')
         ));
     }
 }
