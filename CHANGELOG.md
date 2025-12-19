@@ -2,6 +2,18 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.26] - 2025-12-19
+
+### Fixed
+- **Export Download Issue**: Fixed bug where XML export wasn't downloading and instead redirected back to the previous page
+  - Added output buffer clearing before sending headers to prevent interference
+  - Added `nocache_headers()` to ensure proper download behavior
+  - Added Content-Length header for better browser compatibility
+  - Export now properly initiates file download in all browsers
+
+### Changed
+- **Version Update**: Updated plugin version to 2.26
+
 ## [2.25] - 2025-12-19
 
 ### Added
