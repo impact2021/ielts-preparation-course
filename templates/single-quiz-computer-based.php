@@ -183,8 +183,10 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                     } else {
                                         printf(__('Questions %d and %d', 'ielts-course-manager'), $display_nums['start'], $display_nums['end']);
                                     }
+                                    // For multi-select, show the actual number of correct answers as points
+                                    $display_points = $display_nums['count'];
                                     ?>
-                                    <span class="question-points">(<?php printf(_n('%s point', '%s points', $question['points'], 'ielts-course-manager'), $question['points']); ?>)</span>
+                                    <span class="question-points">(<?php printf(_n('%s point', '%s points', $display_points, 'ielts-course-manager'), $display_points); ?>)</span>
                                 </h4>
                                 
                                 <div class="question-text"><?php echo wp_kses_post(wpautop($question['question'])); ?></div>

@@ -46,7 +46,20 @@ class IELTS_CM_Quiz_Handler {
         $question_results = array();
         
         foreach ($questions as $index => $question) {
-            $max_score += isset($question['points']) ? floatval($question['points']) : 1;
+            // For multi-select, max score is the number of correct answers (1 point each)
+            if ($question['type'] === 'multi_select') {
+                $correct_count = 0;
+                if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                    foreach ($question['mc_options'] as $option) {
+                        if (!empty($option['is_correct'])) {
+                            $correct_count++;
+                        }
+                    }
+                }
+                $max_score += max(1, $correct_count); // At least 1 point
+            } else {
+                $max_score += isset($question['points']) ? floatval($question['points']) : 1;
+            }
             
             $is_correct = false;
             $feedback = '';
