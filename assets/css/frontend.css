@@ -954,12 +954,6 @@ body.ielts-course-archive .content-area {
     margin-bottom: 20px;
 }
 
-.question-navigation .nav-label {
-    font-weight: 600;
-    color: #333;
-    white-space: nowrap;
-}
-
 .question-navigation .question-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -1042,10 +1036,6 @@ body.ielts-course-archive .content-area {
         gap: 10px;
     }
     
-    .question-navigation .nav-label {
-        width: 100%;
-    }
-    
     .question-navigation .question-buttons {
         width: 100%;
     }
@@ -1106,22 +1096,49 @@ body.ielts-course-archive .content-area {
     background: #fff;
     border-bottom: 2px solid #0073aa;
     padding: 12px 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 16px;
     z-index: 100;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin-bottom: 20px;
 }
 
+.quiz-timer-fullscreen .timer-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
 .quiz-timer-fullscreen strong {
     margin-right: 10px;
 }
 
-.quiz-timer-fullscreen #timer-display-fullscreen {
+.quiz-timer-fullscreen #timer-display-fullscreen,
+.quiz-timer-fullscreen .timer-content span {
     font-family: monospace;
     font-size: 24px;
     font-weight: bold;
     color: #0073aa;
+}
+
+.quiz-timer-fullscreen .return-to-course-link {
+    padding: 8px 16px;
+    background: #0073aa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+}
+
+.quiz-timer-fullscreen .return-to-course-link:hover {
+    background: #005a87;
+    color: #fff;
 }
 
 /* Correct/Incorrect Answer Highlighting */

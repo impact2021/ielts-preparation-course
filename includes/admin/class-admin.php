@@ -904,8 +904,12 @@ class IELTS_CM_Admin {
             
             // Add reading text
             $('#add-reading-text').on('click', function() {
-                var html = '<div class="reading-text-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9;">' +
-                    '<h4>' + i18n.readingText + ' ' + (readingTextIndex + 1) + '</h4>' +
+                var html = '<div class="reading-text-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9; position: relative;">' +
+                    '<div class="reading-text-header" style="display: flex; align-items: center; cursor: pointer; margin-bottom: 15px;">' +
+                    '<span class="dashicons dashicons-arrow-down-alt2 reading-text-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>' +
+                    '<h4 style="margin: 0; flex: 1;">' + i18n.readingText + ' ' + (readingTextIndex + 1) + '</h4>' +
+                    '</div>' +
+                    '<div class="reading-text-content">' +
                     '<p>' +
                     '<label>' + i18n.titleOptional + '</label><br>' +
                     '<input type="text" name="reading_texts[' + readingTextIndex + '][title]" style="width: 100%;" placeholder="' + i18n.placeholderPassage + '">' +
@@ -915,6 +919,7 @@ class IELTS_CM_Admin {
                     '<textarea name="reading_texts[' + readingTextIndex + '][content]" rows="10" style="width: 100%;" placeholder="' + i18n.placeholderEnterText + '"></textarea>' +
                     '</p>' +
                     '<button type="button" class="button remove-reading-text">' + i18n.removeReadingText + '</button>' +
+                    '</div>' +
                     '</div>';
                 $('#reading-texts-container').append(html);
                 readingTextIndex++;
@@ -1201,6 +1206,31 @@ class IELTS_CM_Admin {
                 }
             });
             
+            // Handle reading text expand/collapse
+            $(document).on('click', '.reading-text-header', function(e) {
+                var $readingTextItem = $(this).closest('.reading-text-item');
+                var $content = $readingTextItem.find('.reading-text-content');
+                var $toggle = $(this).find('.reading-text-toggle');
+                
+                if ($content.is(':visible')) {
+                    $content.slideUp(200);
+                    $toggle.removeClass('dashicons-arrow-down-alt2').addClass('dashicons-arrow-right-alt2');
+                } else {
+                    $content.slideDown(200);
+                    $toggle.removeClass('dashicons-arrow-right-alt2').addClass('dashicons-arrow-down-alt2');
+                }
+            });
+            
+            // Collapse all reading texts by default on page load
+            $('.reading-text-item').each(function() {
+                var $content = $(this).find('.reading-text-content');
+                var $toggle = $(this).find('.reading-text-toggle');
+                if ($content.length && $toggle.length) {
+                    $content.hide();
+                    $toggle.removeClass('dashicons-arrow-down-alt2').addClass('dashicons-arrow-right-alt2');
+                }
+            });
+            
             // Duplicate question
             $(document).on('click', '.duplicate-question', function() {
                 var $question = $(this).closest('.question-item');
@@ -1314,33 +1344,38 @@ class IELTS_CM_Admin {
      */
     private function render_reading_text_field($index, $text) {
         ?>
-        <div class="reading-text-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9;">
-            <h4><?php printf(__('Reading Text %d', 'ielts-course-manager'), $index + 1); ?></h4>
-            
-            <p>
-                <label><?php _e('Title (Optional)', 'ielts-course-manager'); ?></label><br>
-                <input type="text" name="reading_texts[<?php echo $index; ?>][title]" value="<?php echo esc_attr(isset($text['title']) ? $text['title'] : ''); ?>" style="width: 100%;" placeholder="<?php _e('e.g., Passage 1', 'ielts-course-manager'); ?>">
-            </p>
-            
-            <div>
-                <label><?php _e('Reading Text', 'ielts-course-manager'); ?></label>
-                <?php
-                $editor_id = 'reading_text_' . $index;
-                $content = isset($text['content']) ? $text['content'] : '';
-                wp_editor($content, $editor_id, array(
-                    'textarea_name' => 'reading_texts[' . $index . '][content]',
-                    'textarea_rows' => 10,
-                    'media_buttons' => true,
-                    'teeny' => false,
-                    'tinymce' => array(
-                        'toolbar1' => 'bold,italic,underline,strikethrough,bullist,numlist,blockquote,hr,alignleft,aligncenter,alignright,link,unlink,wp_more,spellchecker,fullscreen,wp_adv',
-                        'toolbar2' => 'formatselect,forecolor,pastetext,removeformat,charmap,outdent,indent,undo,redo,wp_help'
-                    )
-                ));
-                ?>
+        <div class="reading-text-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9; position: relative;">
+            <div class="reading-text-header" style="display: flex; align-items: center; cursor: pointer; margin-bottom: 15px;">
+                <span class="dashicons dashicons-arrow-right-alt2 reading-text-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>
+                <h4 style="margin: 0; flex: 1;"><?php printf(__('Reading Text %d', 'ielts-course-manager'), $index + 1); ?></h4>
             </div>
             
-            <button type="button" class="button remove-reading-text" style="margin-top: 10px;"><?php _e('Remove Reading Text', 'ielts-course-manager'); ?></button>
+            <div class="reading-text-content">
+                <p>
+                    <label><?php _e('Title (Optional)', 'ielts-course-manager'); ?></label><br>
+                    <input type="text" name="reading_texts[<?php echo $index; ?>][title]" value="<?php echo esc_attr(isset($text['title']) ? $text['title'] : ''); ?>" style="width: 100%;" placeholder="<?php _e('e.g., Passage 1', 'ielts-course-manager'); ?>">
+                </p>
+                
+                <div>
+                    <label><?php _e('Reading Text', 'ielts-course-manager'); ?></label>
+                    <?php
+                    $editor_id = 'reading_text_' . $index;
+                    $content = isset($text['content']) ? $text['content'] : '';
+                    wp_editor($content, $editor_id, array(
+                        'textarea_name' => 'reading_texts[' . $index . '][content]',
+                        'textarea_rows' => 10,
+                        'media_buttons' => true,
+                        'teeny' => false,
+                        'tinymce' => array(
+                            'toolbar1' => 'bold,italic,underline,strikethrough,bullist,numlist,blockquote,hr,alignleft,aligncenter,alignright,link,unlink,wp_more,spellchecker,fullscreen,wp_adv',
+                            'toolbar2' => 'formatselect,forecolor,pastetext,removeformat,charmap,outdent,indent,undo,redo,wp_help'
+                        )
+                    ));
+                    ?>
+                </div>
+                
+                <button type="button" class="button remove-reading-text" style="margin-top: 10px;"><?php _e('Remove Reading Text', 'ielts-course-manager'); ?></button>
+            </div>
         </div>
         <?php
     }

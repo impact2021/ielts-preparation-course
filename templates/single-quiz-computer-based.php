@@ -86,10 +86,19 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
     
     <?php if (!empty($questions) && is_user_logged_in()): ?>
         <form id="ielts-quiz-form" class="quiz-form" style="<?php echo $show_fullscreen_notice ? 'display:none;' : ''; ?>">
-            <?php if ($timer_minutes > 0): ?>
+            <?php if ($timer_minutes > 0 || $course_id): ?>
             <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
-                <strong><?php _e('Time Remaining:', 'ielts-course-manager'); ?></strong>
-                <span id="timer-display-fullscreen">--:--</span>
+                <?php if ($timer_minutes > 0): ?>
+                <div class="timer-content">
+                    <strong><?php _e('Time Remaining:', 'ielts-course-manager'); ?></strong>
+                    <span id="timer-display-fullscreen">--:--</span>
+                </div>
+                <?php endif; ?>
+                <?php if ($course_id): ?>
+                <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="return-to-course-link">
+                    <?php _e('Return to course', 'ielts-course-manager'); ?>
+                </a>
+                <?php endif; ?>
             </div>
             <?php endif; ?>
             <div class="computer-based-container">
@@ -214,7 +223,6 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
             
             <!-- Bottom Navigation: Jump to Questions -->
             <div class="question-navigation">
-                <div class="nav-label"><?php _e('Jump to Question:', 'ielts-course-manager'); ?></div>
                 <div class="question-buttons">
                     <?php 
                     // Group questions by reading passage
@@ -245,14 +253,6 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
         </form>
         
         <div id="quiz-result" class="quiz-result" style="display: none;"></div>
-        
-        <?php if ($is_fullscreen && $course_id): ?>
-        <div class="cbt-return-to-course-link">
-            <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="button">
-                <?php _e('Return to course', 'ielts-course-manager'); ?>
-            </a>
-        </div>
-        <?php endif; ?>
         
     <?php elseif (!empty($questions) && !is_user_logged_in()): ?>
         <div class="quiz-login-notice">
