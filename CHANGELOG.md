@@ -2,6 +2,26 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.15] - 2025-12-19
+
+### Changed
+- **Return to Course Link Location**: Moved "Return to course" link from quiz completion modal to the main fullscreen page
+  - Link now appears below the quiz result area on the fullscreen page
+  - Provides better UX as it's always visible without needing to close the modal
+  - Only appears when quiz is in fullscreen mode and linked to a course
+
+### Fixed
+- **Feedback for Unanswered Questions**: Question feedback now displays even when no answer is provided
+  - Students see incorrect_feedback for questions they skipped
+  - Helps with learning by showing what they missed
+  - Unanswered questions still marked as incorrect as expected
+  
+- **Question Text Paragraph Breaks**: Fixed paragraph breaks in question text not displaying
+  - Applied wpautop() function to properly format line breaks
+  - Double line breaks now create visual paragraph spacing
+  - Applies to both CBT and regular quiz layouts
+  - Improves readability of multi-paragraph questions
+
 ## [2.14] - 2025-12-19
 
 ### Added

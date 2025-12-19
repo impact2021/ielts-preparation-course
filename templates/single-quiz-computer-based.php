@@ -247,7 +247,7 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
         <div id="quiz-result" class="quiz-result" style="display: none;"></div>
         
         <?php if ($is_fullscreen && $course_id): ?>
-        <div class="cbt-return-to-course-link" style="margin-top: 20px; text-align: center;">
+        <div class="cbt-return-to-course-link">
             <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="button">
                 <?php _e('Return to course', 'ielts-course-manager'); ?>
             </a>
