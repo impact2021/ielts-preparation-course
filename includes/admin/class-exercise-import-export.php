@@ -194,11 +194,12 @@ class IELTS_CM_Exercise_Import_Export {
                                 <select name="target_exercise_id" id="target_exercise_id" required style="width: 100%;">
                                     <option value=""><?php _e('-- Select an Exercise --', 'ielts-course-manager'); ?></option>
                                     <?php
+                                    // Limit to 500 most recent exercises for performance
                                     $exercises = get_posts(array(
                                         'post_type' => 'ielts_quiz',
-                                        'posts_per_page' => -1,
-                                        'orderby' => 'title',
-                                        'order' => 'ASC',
+                                        'posts_per_page' => 500,
+                                        'orderby' => 'modified',
+                                        'order' => 'DESC',
                                         'post_status' => array('publish', 'draft')
                                     ));
                                     
@@ -489,14 +490,52 @@ class IELTS_CM_Exercise_Import_Export {
             }
         }
         
-        // Import reading texts
-        if (isset($import_data['reading_texts'])) {
-            update_post_meta($target_exercise_id, '_ielts_cm_reading_texts', $import_data['reading_texts']);
+        // Import reading texts with sanitization
+        if (isset($import_data['reading_texts']) && is_array($import_data['reading_texts'])) {
+            $sanitized_texts = array();
+            foreach ($import_data['reading_texts'] as $text) {
+                if (is_array($text)) {
+                    $sanitized_texts[] = array(
+                        'title' => isset($text['title']) ? sanitize_text_field($text['title']) : '',
+                        'content' => isset($text['content']) ? wp_kses_post($text['content']) : ''
+                    );
+                }
+            }
+            update_post_meta($target_exercise_id, '_ielts_cm_reading_texts', $sanitized_texts);
         }
         
-        // Import questions
-        if (isset($import_data['questions'])) {
-            update_post_meta($target_exercise_id, '_ielts_cm_questions', $import_data['questions']);
+        // Import questions with sanitization
+        if (isset($import_data['questions']) && is_array($import_data['questions'])) {
+            $sanitized_questions = array();
+            foreach ($import_data['questions'] as $question) {
+                if (is_array($question)) {
+                    $sanitized_question = array(
+                        'type' => isset($question['type']) ? sanitize_text_field($question['type']) : 'multiple_choice',
+                        'question_text' => isset($question['question_text']) ? wp_kses_post($question['question_text']) : '',
+                        'points' => isset($question['points']) ? intval($question['points']) : 1,
+                        'correct_answer' => isset($question['correct_answer']) ? sanitize_text_field($question['correct_answer']) : '',
+                        'correct_feedback' => isset($question['correct_feedback']) ? sanitize_text_field($question['correct_feedback']) : '',
+                        'incorrect_feedback' => isset($question['incorrect_feedback']) ? sanitize_text_field($question['incorrect_feedback']) : '',
+                    );
+                    
+                    // Sanitize options array if present
+                    if (isset($question['options'])) {
+                        if (is_array($question['options'])) {
+                            $sanitized_question['options'] = array_map('sanitize_text_field', $question['options']);
+                        } else {
+                            $sanitized_question['options'] = sanitize_textarea_field($question['options']);
+                        }
+                    }
+                    
+                    // Sanitize reading_text_id if present
+                    if (isset($question['reading_text_id'])) {
+                        $sanitized_question['reading_text_id'] = intval($question['reading_text_id']);
+                    }
+                    
+                    $sanitized_questions[] = $sanitized_question;
+                }
+            }
+            update_post_meta($target_exercise_id, '_ielts_cm_questions', $sanitized_questions);
         }
         
         // Redirect with success
