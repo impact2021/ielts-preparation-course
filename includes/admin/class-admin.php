@@ -1206,6 +1206,16 @@ class IELTS_CM_Admin {
                 }
             });
             
+            // Collapse all reading texts by default on page load
+            $('.reading-text-item').each(function() {
+                var $content = $(this).find('.reading-text-content');
+                var $toggle = $(this).find('.reading-text-toggle');
+                if ($content.length && $toggle.length) {
+                    $content.hide();
+                    $toggle.removeClass('dashicons-arrow-down-alt2').addClass('dashicons-arrow-right-alt2');
+                }
+            });
+            
             // Handle reading text expand/collapse
             $(document).on('click', '.reading-text-header', function(e) {
                 var $readingTextItem = $(this).closest('.reading-text-item');
@@ -1218,16 +1228,6 @@ class IELTS_CM_Admin {
                 } else {
                     $content.slideDown(200);
                     $toggle.removeClass('dashicons-arrow-right-alt2').addClass('dashicons-arrow-down-alt2');
-                }
-            });
-            
-            // Collapse all reading texts by default on page load
-            $('.reading-text-item').each(function() {
-                var $content = $(this).find('.reading-text-content');
-                var $toggle = $(this).find('.reading-text-toggle');
-                if ($content.length && $toggle.length) {
-                    $content.hide();
-                    $toggle.removeClass('dashicons-arrow-down-alt2').addClass('dashicons-arrow-right-alt2');
                 }
             });
             
