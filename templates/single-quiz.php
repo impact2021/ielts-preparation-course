@@ -79,7 +79,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
         <div class="quiz-questions">
             <?php if (!empty($questions)): ?>
                 <?php foreach ($questions as $index => $question): ?>
-                    <div class="quiz-question">
+                    <div class="quiz-question" id="question-<?php echo $index; ?>">
                         <?php if (!empty($question['instructions'])): ?>
                             <div class="question-instructions"><?php echo wp_kses_post(wpautop($question['instructions'])); ?></div>
                         <?php endif; ?>
