@@ -653,6 +653,10 @@
             $container.find('.multi-select-checkbox').on('change', function() {
                 var checkedCount = $container.find('.multi-select-checkbox:checked').length;
                 
+                // Get question index and mark navigation buttons
+                var questionIndex = $(this).attr('name').replace('answer_', '').replace('[]', '');
+                var navButtons = $('.question-nav-btn[data-question="' + questionIndex + '"]');
+                
                 if (checkedCount > maxSelections) {
                     // Uncheck this box and show warning
                     $(this).prop('checked', false);
@@ -660,9 +664,17 @@
                 } else if (checkedCount === maxSelections) {
                     // Disable unchecked boxes
                     $container.find('.multi-select-checkbox:not(:checked)').prop('disabled', true);
+                    // Mark all nav buttons for this question as answered
+                    navButtons.addClass('answered');
                 } else {
                     // Enable all boxes
                     $container.find('.multi-select-checkbox').prop('disabled', false);
+                    // Mark/unmark nav buttons based on whether any are checked
+                    if (checkedCount > 0) {
+                        navButtons.addClass('answered');
+                    } else {
+                        navButtons.removeClass('answered');
+                    }
                 }
             });
         });

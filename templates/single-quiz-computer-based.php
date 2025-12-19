@@ -92,12 +92,9 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
             if ($timer_minutes > 0 || $course_id): ?>
             <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
                 <div class="timer-left-section">
-                    <button type="submit" class="button button-primary quiz-submit-btn-top">
-                        <?php _e('Submit Quiz', 'ielts-course-manager'); ?>
-                    </button>
                     <?php if ($course_id): ?>
                     <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="return-to-course-link" id="return-to-course-link">
-                        <?php _e('Return to course', 'ielts-course-manager'); ?>
+                        <?php _e('< Return to course', 'ielts-course-manager'); ?>
                     </a>
                     <?php endif; ?>
                 </div>
@@ -107,6 +104,11 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                     <span id="timer-display-fullscreen">--:--</span>
                 </div>
                 <?php endif; ?>
+                <div class="timer-right-section">
+                    <button type="submit" class="button button-primary quiz-submit-btn-top">
+                        <?php _e('Submit for grading', 'ielts-course-manager'); ?>
+                    </button>
+                </div>
             </div>
             <?php endif; ?>
             <div class="computer-based-container">
@@ -138,15 +140,53 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                 <!-- Right Column: Questions -->
                 <div class="questions-column">
                     <div class="questions-content">
-                        <?php foreach ($questions as $index => $question): ?>
-                            <div class="quiz-question" id="question-<?php echo $index; ?>" data-reading-text-id="<?php echo esc_attr($question['reading_text_id'] ?? ''); ?>">
+                        <?php 
+                        // Calculate display question numbers for multi-select questions
+                        $display_question_number = 1;
+                        $question_display_numbers = array();
+                        foreach ($questions as $idx => $q) {
+                            $start_num = $display_question_number;
+                            // For multi-select, count number of correct answers
+                            if ($q['type'] === 'multi_select' && isset($q['mc_options']) && is_array($q['mc_options'])) {
+                                $correct_count = 0;
+                                foreach ($q['mc_options'] as $opt) {
+                                    if (!empty($opt['is_correct'])) {
+                                        $correct_count++;
+                                    }
+                                }
+                                // Multi-select counts as multiple questions based on correct answers
+                                $question_count = max(1, $correct_count);
+                            } else {
+                                $question_count = 1;
+                            }
+                            $end_num = $start_num + $question_count - 1;
+                            $question_display_numbers[$idx] = array(
+                                'start' => $start_num,
+                                'end' => $end_num,
+                                'count' => $question_count
+                            );
+                            $display_question_number += $question_count;
+                        }
+                        
+                        foreach ($questions as $index => $question): 
+                            $display_nums = $question_display_numbers[$index];
+                        ?>
+                            <div class="quiz-question" id="question-<?php echo $index; ?>" data-reading-text-id="<?php echo esc_attr($question['reading_text_id'] ?? ''); ?>" data-display-start="<?php echo $display_nums['start']; ?>" data-display-end="<?php echo $display_nums['end']; ?>">
                                 <?php if (!empty($question['instructions'])): ?>
                                     <div class="question-instructions"><?php echo wp_kses_post(wpautop($question['instructions'])); ?></div>
                                 <?php endif; ?>
                                 
                                 <h4 class="question-number">
-                                    <?php printf(__('Question %d', 'ielts-course-manager'), $index + 1); ?>
-                                    <span class="question-points">(<?php printf(_n('%s point', '%s points', $question['points'], 'ielts-course-manager'), $question['points']); ?>)</span>
+                                    <?php 
+                                    if ($display_nums['start'] === $display_nums['end']) {
+                                        printf(__('Question %d', 'ielts-course-manager'), $display_nums['start']);
+                                    } else {
+                                        printf(__('Questions %d and %d', 'ielts-course-manager'), $display_nums['start'], $display_nums['end']);
+                                    }
+                                    // For multi-select, show the actual number of correct answers as points
+                                    $display_points = $display_nums['count'];
+                                    ?>
+                                    <span class="question-points">(<?php printf(_n('%s point', '%s points', $display_points, 'ielts-course-manager'), $display_points); ?>)</span>
                                 </h4>
                                 
                                 <div class="question-text"><?php echo wp_kses_post(wpautop($question['question'])); ?></div>
@@ -290,11 +330,20 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                     <?php 
                         endif;
                         $last_reading_text_id = $current_reading_text_id;
+                        
+                        // Get display numbers for this question
+                        $display_nums = $question_display_numbers[$index];
+                        
+                        // For multi-select with multiple correct answers, show multiple buttons
+                        for ($btn_num = $display_nums['start']; $btn_num <= $display_nums['end']; $btn_num++):
                     ?>
-                        <button type="button" class="question-nav-btn" data-question="<?php echo $index; ?>">
-                            <?php echo $index + 1; ?>
+                        <button type="button" class="question-nav-btn" data-question="<?php echo $index; ?>" data-display-number="<?php echo $btn_num; ?>">
+                            <?php echo $btn_num; ?>
                         </button>
-                    <?php endforeach; ?>
+                    <?php 
+                        endfor;
+                    endforeach; 
+                    ?>
                 </div>
             </div>
         </form>

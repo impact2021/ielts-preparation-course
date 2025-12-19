@@ -1885,8 +1885,8 @@ class IELTS_CM_Admin {
                         'reading_text_id' => isset($question['reading_text_id']) && $question['reading_text_id'] !== '' ? intval($question['reading_text_id']) : null
                     );
                     
-                    // Handle multiple choice with new structured format
-                    if ($question['type'] === 'multiple_choice' && isset($question['mc_options']) && is_array($question['mc_options'])) {
+                    // Handle multiple choice and multi-select with new structured format
+                    if (($question['type'] === 'multiple_choice' || $question['type'] === 'multi_select') && isset($question['mc_options']) && is_array($question['mc_options'])) {
                         $mc_options = array();
                         $options_text = array();
                         $option_feedback = array();
@@ -1907,7 +1907,7 @@ class IELTS_CM_Admin {
                             $options_text[] = sanitize_text_field($option['text']);
                             $option_feedback[] = isset($option['feedback']) ? wp_kses_post($option['feedback']) : '';
                             
-                            // Track first correct answer for legacy format
+                            // Track first correct answer for legacy format (for multiple_choice)
                             if (!empty($option['is_correct']) && $correct_answer === null) {
                                 $correct_answer = count($options_text) - 1;
                             }
@@ -1920,6 +1920,11 @@ class IELTS_CM_Admin {
                         $question_data['options'] = implode("\n", $options_text);
                         $question_data['correct_answer'] = ($correct_answer !== null) ? strval($correct_answer) : '0';
                         $question_data['option_feedback'] = $option_feedback;
+                        
+                        // For multi_select, also save max_selections
+                        if ($question['type'] === 'multi_select' && isset($question['max_selections'])) {
+                            $question_data['max_selections'] = intval($question['max_selections']);
+                        }
                     } else {
                         // Non-multiple choice questions
                         $question_data['options'] = isset($question['options']) ? sanitize_textarea_field($question['options']) : '';
