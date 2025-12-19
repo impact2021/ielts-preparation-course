@@ -2,6 +2,30 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.25] - 2025-12-19
+
+### Added
+- **Exercise Import/Export Functionality**: New feature to export and import individual exercises
+  - Export exercises to JSON format from exercise edit pages
+  - New "Export Exercise" meta box in sidebar of exercise edit pages
+  - Import JSON files into existing or new exercises
+  - New "Import Exercise" admin page under IELTS Courses menu
+  - Comprehensive step-by-step documentation included in import page
+  - Exports include all questions, settings, reading texts, and feedback
+  - Perfect for creating practice test variations by modifying exported JSON
+  - Saves hours when creating similar exercises
+
+### Fixed
+- **Lesson Save Issue**: Fixed bug where adding lessons to courses from course edit page didn't properly save
+  - Added backward compatibility field update in AJAX handler
+  - Lessons added via course page now properly appear in lesson lists
+  - Removed need to manually open lesson and add it to course
+  - Both `_ielts_cm_course_ids` and `_ielts_cm_course_id` meta fields now updated correctly
+  - Also fixed lesson removal to properly update backward compatibility field
+
+### Changed
+- **Version Update**: Updated plugin version to 2.25
+
 ## [2.19] - 2025-12-19
 
 ### Added
