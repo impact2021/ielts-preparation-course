@@ -16,7 +16,7 @@
             var button = $(this);
             
             // Check if file is selected
-            if (!fileInput[0].files || !fileInput[0].files[0]) {
+            if (fileInput.length === 0 || !fileInput.prop('files') || fileInput.prop('files').length === 0) {
                 statusDiv.html('<div class="notice notice-error inline"><p>' + ieltsCMImport.i18n.noFile + '</p></div>');
                 return;
             }

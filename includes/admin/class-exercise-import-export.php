@@ -445,100 +445,12 @@ class IELTS_CM_Exercise_Import_Export {
     }
     
     /**
-     * Handle exercise import
+     * Import exercise settings from validated import data
+     * 
+     * @param int $exercise_id The exercise ID to import into
+     * @param array $import_data The validated import data array
      */
-    public function handle_import() {
-        // Verify nonce
-        if (!isset($_POST['ielts_cm_import_nonce']) || !wp_verify_nonce($_POST['ielts_cm_import_nonce'], 'ielts_cm_import_exercise')) {
-            wp_die(__('Security check failed', 'ielts-course-manager'));
-        }
-        
-        // Check user capability - require manage_options for security
-        if (!current_user_can('manage_options')) {
-            wp_die(__('You do not have sufficient permissions to perform this action.', 'ielts-course-manager'));
-        }
-        
-        // Get target exercise ID
-        $target_exercise_id = isset($_POST['target_exercise_id']) ? intval($_POST['target_exercise_id']) : 0;
-        
-        if (!$target_exercise_id) {
-            wp_redirect(add_query_arg(array(
-                'page' => 'ielts-import-exercise',
-                'error' => 'no_exercise'
-            ), admin_url('edit.php?post_type=ielts_course')));
-            exit;
-        }
-        
-        // Verify target exercise exists
-        $target_exercise = get_post($target_exercise_id);
-        if (!$target_exercise || $target_exercise->post_type !== 'ielts_quiz') {
-            wp_redirect(add_query_arg(array(
-                'page' => 'ielts-import-exercise',
-                'error' => 'no_exercise'
-            ), admin_url('edit.php?post_type=ielts_course')));
-            exit;
-        }
-        
-        // Check if file was uploaded
-        if (!isset($_FILES['import_file']) || $_FILES['import_file']['error'] !== UPLOAD_ERR_OK) {
-            wp_redirect(add_query_arg(array(
-                'page' => 'ielts-import-exercise',
-                'error' => 'upload_failed'
-            ), admin_url('edit.php?post_type=ielts_course')));
-            exit;
-        }
-        
-        // Validate file type
-        $file_info = pathinfo($_FILES['import_file']['name']);
-        if (!isset($file_info['extension']) || strtolower($file_info['extension']) !== 'json') {
-            wp_redirect(add_query_arg(array(
-                'page' => 'ielts-import-exercise',
-                'error' => 'invalid_file_type'
-            ), admin_url('edit.php?post_type=ielts_course')));
-            exit;
-        }
-        
-        // Validate file size (limit to 10MB)
-        $max_size = 10 * 1024 * 1024; // 10MB in bytes
-        if ($_FILES['import_file']['size'] > $max_size) {
-            wp_redirect(add_query_arg(array(
-                'page' => 'ielts-import-exercise',
-                'error' => 'file_too_large'
-            ), admin_url('edit.php?post_type=ielts_course')));
-            exit;
-        }
-        
-        // Read file contents
-        $json_content = file_get_contents($_FILES['import_file']['tmp_name']);
-        
-        if ($json_content === false) {
-            wp_redirect(add_query_arg(array(
-                'page' => 'ielts-import-exercise',
-                'error' => 'upload_failed'
-            ), admin_url('edit.php?post_type=ielts_course')));
-            exit;
-        }
-        
-        // Parse JSON
-        $import_data = json_decode($json_content, true);
-        
-        if ($import_data === null || json_last_error() !== JSON_ERROR_NONE) {
-            wp_redirect(add_query_arg(array(
-                'page' => 'ielts-import-exercise',
-                'error' => 'invalid_json'
-            ), admin_url('edit.php?post_type=ielts_course')));
-            exit;
-        }
-        
-        // Validate JSON structure - ensure it's an exercise export
-        if (!isset($import_data['version']) || !isset($import_data['questions'])) {
-            wp_redirect(add_query_arg(array(
-                'page' => 'ielts-import-exercise',
-                'error' => 'invalid_json'
-            ), admin_url('edit.php?post_type=ielts_course')));
-            exit;
-        }
-        
+    private function import_exercise_settings($exercise_id, $import_data) {
         // Whitelist of allowed setting keys for security
         $allowed_settings = array(
             'pass_percentage',
@@ -560,231 +472,8 @@ class IELTS_CM_Exercise_Import_Export {
                         case 'timer_minutes':
                             $value = intval($value);
                             break;
-                        case 'layout_type':
-                            $value = sanitize_text_field($value);
-                            break;
-                        case 'scoring_type':
-                            $valid_types = array('percentage', 'ielts_general_reading', 'ielts_academic_reading', 'ielts_listening');
-                            if (!in_array($value, $valid_types, true)) {
-                                continue 2; // Skip this setting
-                            }
-                            break;
-                        case 'exercise_label':
-                            $valid_labels = array('exercise', 'end_of_lesson_test', 'practice_test');
-                            if (!in_array($value, $valid_labels, true)) {
-                                continue 2; // Skip this setting
-                            }
-                            break;
-                        default:
-                            $value = sanitize_text_field($value);
-                    }
-                    update_post_meta($target_exercise_id, '_ielts_cm_' . $key, $value);
-                }
-            }
-        }
-        
-        // Import reading texts with sanitization
-        if (isset($import_data['reading_texts']) && is_array($import_data['reading_texts'])) {
-            $sanitized_texts = array();
-            foreach ($import_data['reading_texts'] as $text) {
-                if (is_array($text)) {
-                    $sanitized_texts[] = array(
-                        'title' => isset($text['title']) ? sanitize_text_field($text['title']) : '',
-                        'content' => isset($text['content']) ? wp_kses_post($text['content']) : ''
-                    );
-                }
-            }
-            update_post_meta($target_exercise_id, '_ielts_cm_reading_texts', $sanitized_texts);
-        }
-        
-        // Import questions with sanitization
-        if (isset($import_data['questions']) && is_array($import_data['questions'])) {
-            $sanitized_questions = array();
-            foreach ($import_data['questions'] as $question) {
-                if (is_array($question)) {
-                    $sanitized_question = array(
-                        'type' => isset($question['type']) ? sanitize_text_field($question['type']) : 'multiple_choice',
-                        'question_text' => isset($question['question_text']) ? wp_kses_post($question['question_text']) : '',
-                        'points' => isset($question['points']) ? intval($question['points']) : 1,
-                        'correct_answer' => isset($question['correct_answer']) ? sanitize_text_field($question['correct_answer']) : '',
-                        'correct_feedback' => isset($question['correct_feedback']) ? sanitize_text_field($question['correct_feedback']) : '',
-                        'incorrect_feedback' => isset($question['incorrect_feedback']) ? sanitize_text_field($question['incorrect_feedback']) : '',
-                    );
-                    
-                    // Sanitize instructions if present
-                    if (isset($question['instructions'])) {
-                        $sanitized_question['instructions'] = wp_kses_post($question['instructions']);
-                    }
-                    
-                    // Sanitize question field (alternative to question_text) if present
-                    if (isset($question['question'])) {
-                        $sanitized_question['question'] = wp_kses_post($question['question']);
-                    }
-                    
-                    // Sanitize options array if present
-                    if (isset($question['options'])) {
-                        if (is_array($question['options'])) {
-                            $sanitized_question['options'] = array_map('sanitize_text_field', $question['options']);
-                        } else {
-                            $sanitized_question['options'] = sanitize_textarea_field($question['options']);
-                        }
-                    }
-                    
-                    // Sanitize options_key object if present (for multiple choice matching)
-                    if (isset($question['options_key']) && is_array($question['options_key'])) {
-                        $sanitized_options_key = array();
-                        foreach ($question['options_key'] as $key => $value) {
-                            $sanitized_options_key[sanitize_text_field($key)] = sanitize_text_field($value);
-                        }
-                        $sanitized_question['options_key'] = $sanitized_options_key;
-                    }
-                    
-                    // Sanitize headings object if present (for heading matching)
-                    if (isset($question['headings']) && is_array($question['headings'])) {
-                        $sanitized_headings = array();
-                        foreach ($question['headings'] as $key => $value) {
-                            $sanitized_headings[sanitize_text_field($key)] = sanitize_text_field($value);
-                        }
-                        $sanitized_question['headings'] = $sanitized_headings;
-                    }
-                    
-                    // Sanitize matches array if present (for matching questions)
-                    if (isset($question['matches']) && is_array($question['matches'])) {
-                        $sanitized_matches = array();
-                        foreach ($question['matches'] as $match) {
-                            if (is_array($match)) {
-                                $sanitized_match = array();
-                                // Preserve all fields in match
-                                if (isset($match['question_id'])) {
-                                    $sanitized_match['question_id'] = intval($match['question_id']);
-                                }
-                                if (isset($match['id'])) {
-                                    $sanitized_match['id'] = intval($match['id']);
-                                }
-                                if (isset($match['text'])) {
-                                    $sanitized_match['text'] = wp_kses_post($match['text']);
-                                }
-                                if (isset($match['correct_answer'])) {
-                                    $sanitized_match['correct_answer'] = sanitize_text_field($match['correct_answer']);
-                                }
-                                if (isset($match['correct_heading'])) {
-                                    $sanitized_match['correct_heading'] = sanitize_text_field($match['correct_heading']);
-                                }
-                                if (isset($match['correct_paragraph'])) {
-                                    $sanitized_match['correct_paragraph'] = sanitize_text_field($match['correct_paragraph']);
-                                }
-                                if (isset($match['paragraph'])) {
-                                    $sanitized_match['paragraph'] = sanitize_text_field($match['paragraph']);
-                                }
-                                $sanitized_matches[] = $sanitized_match;
-                            }
-                        }
-                        $sanitized_question['matches'] = $sanitized_matches;
-                    }
-                    
-                    // Sanitize reading_text_id if present
-                    if (isset($question['reading_text_id'])) {
-                        $sanitized_question['reading_text_id'] = intval($question['reading_text_id']);
-                    }
-                    
-                    $sanitized_questions[] = $sanitized_question;
-                }
-            }
-            update_post_meta($target_exercise_id, '_ielts_cm_questions', $sanitized_questions);
-        }
-        
-        // Redirect with success
-        wp_redirect(add_query_arg(array(
-            'page' => 'ielts-import-exercise',
-            'imported' => '1',
-            'exercise_id' => $target_exercise_id
-        ), admin_url('edit.php?post_type=ielts_course')));
-        exit;
-    }
-    
-    /**
-     * Handle direct exercise import via AJAX (from exercise edit page)
-     */
-    public function handle_import_direct() {
-        // Verify nonce
-        if (!isset($_POST['nonce']) || !isset($_POST['exercise_id'])) {
-            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
-        }
-        
-        $exercise_id = intval($_POST['exercise_id']);
-        
-        if (!wp_verify_nonce($_POST['nonce'], 'ielts_cm_import_exercise_direct_' . $exercise_id)) {
-            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
-        }
-        
-        // Check user capability - require manage_options for security
-        if (!current_user_can('manage_options')) {
-            wp_send_json_error(array('message' => __('You do not have sufficient permissions to perform this action.', 'ielts-course-manager')));
-        }
-        
-        // Verify target exercise exists
-        $target_exercise = get_post($exercise_id);
-        if (!$target_exercise || $target_exercise->post_type !== 'ielts_quiz') {
-            wp_send_json_error(array('message' => __('Exercise not found', 'ielts-course-manager')));
-        }
-        
-        // Check if file was uploaded
-        if (!isset($_FILES['import_file']) || $_FILES['import_file']['error'] !== UPLOAD_ERR_OK) {
-            wp_send_json_error(array('message' => __('File upload failed. Please try again.', 'ielts-course-manager')));
-        }
-        
-        // Validate file type
-        $file_info = pathinfo($_FILES['import_file']['name']);
-        if (!isset($file_info['extension']) || strtolower($file_info['extension']) !== 'json') {
-            wp_send_json_error(array('message' => __('Invalid file type. Please upload a JSON file.', 'ielts-course-manager')));
-        }
-        
-        // Validate file size (limit to 10MB)
-        $max_size = 10 * 1024 * 1024; // 10MB in bytes
-        if ($_FILES['import_file']['size'] > $max_size) {
-            wp_send_json_error(array('message' => __('File is too large. Maximum size is 10MB.', 'ielts-course-manager')));
-        }
-        
-        // Read file contents
-        $json_content = file_get_contents($_FILES['import_file']['tmp_name']);
-        
-        if ($json_content === false) {
-            wp_send_json_error(array('message' => __('Failed to read file. Please try again.', 'ielts-course-manager')));
-        }
-        
-        // Parse JSON
-        $import_data = json_decode($json_content, true);
-        
-        if ($import_data === null || json_last_error() !== JSON_ERROR_NONE) {
-            wp_send_json_error(array('message' => __('Invalid JSON file. Please check the file format.', 'ielts-course-manager')));
-        }
-        
-        // Validate JSON structure - ensure it's an exercise export
-        if (!isset($import_data['version']) || !isset($import_data['questions'])) {
-            wp_send_json_error(array('message' => __('Invalid exercise JSON file. Please check the file format.', 'ielts-course-manager')));
-        }
-        
-        // Perform the import using the same logic as handle_import
-        // Whitelist of allowed setting keys for security
-        $allowed_settings = array(
-            'pass_percentage',
-            'layout_type',
-            'open_as_popup',
-            'scoring_type',
-            'timer_minutes',
-            'exercise_label'
-        );
-        
-        // Import settings with validation
-        if (isset($import_data['settings']) && is_array($import_data['settings'])) {
-            foreach ($import_data['settings'] as $key => $value) {
-                // Only allow whitelisted keys
-                if (in_array($key, $allowed_settings, true) && $value !== '' && $value !== null) {
-                    // Additional validation based on key
-                    switch ($key) {
-                        case 'pass_percentage':
-                        case 'timer_minutes':
-                            $value = intval($value);
+                        case 'open_as_popup':
+                            $value = $value ? '1' : '0';
                             break;
                         case 'layout_type':
                             $value = sanitize_text_field($value);
@@ -808,8 +497,15 @@ class IELTS_CM_Exercise_Import_Export {
                 }
             }
         }
-        
-        // Import reading texts with sanitization
+    }
+    
+    /**
+     * Import reading texts from validated import data
+     * 
+     * @param int $exercise_id The exercise ID to import into
+     * @param array $import_data The validated import data array
+     */
+    private function import_reading_texts($exercise_id, $import_data) {
         if (isset($import_data['reading_texts']) && is_array($import_data['reading_texts'])) {
             $sanitized_texts = array();
             foreach ($import_data['reading_texts'] as $text) {
@@ -822,8 +518,15 @@ class IELTS_CM_Exercise_Import_Export {
             }
             update_post_meta($exercise_id, '_ielts_cm_reading_texts', $sanitized_texts);
         }
-        
-        // Import questions with sanitization
+    }
+    
+    /**
+     * Import questions from validated import data
+     * 
+     * @param int $exercise_id The exercise ID to import into
+     * @param array $import_data The validated import data array
+     */
+    private function import_questions($exercise_id, $import_data) {
         if (isset($import_data['questions']) && is_array($import_data['questions'])) {
             $sanitized_questions = array();
             foreach ($import_data['questions'] as $question) {
@@ -918,6 +621,183 @@ class IELTS_CM_Exercise_Import_Export {
             }
             update_post_meta($exercise_id, '_ielts_cm_questions', $sanitized_questions);
         }
+    }
+    
+    /**
+     * Handle exercise import
+     */
+    public function handle_import() {
+        // Verify nonce
+        if (!isset($_POST['ielts_cm_import_nonce']) || !wp_verify_nonce($_POST['ielts_cm_import_nonce'], 'ielts_cm_import_exercise')) {
+            wp_die(__('Security check failed', 'ielts-course-manager'));
+        }
+        
+        // Check user capability - require manage_options for security
+        if (!current_user_can('manage_options')) {
+            wp_die(__('You do not have sufficient permissions to perform this action.', 'ielts-course-manager'));
+        }
+        
+        // Get target exercise ID
+        $target_exercise_id = isset($_POST['target_exercise_id']) ? intval($_POST['target_exercise_id']) : 0;
+        
+        if (!$target_exercise_id) {
+            wp_redirect(add_query_arg(array(
+                'page' => 'ielts-import-exercise',
+                'error' => 'no_exercise'
+            ), admin_url('edit.php?post_type=ielts_course')));
+            exit;
+        }
+        
+        // Verify target exercise exists
+        $target_exercise = get_post($target_exercise_id);
+        if (!$target_exercise || $target_exercise->post_type !== 'ielts_quiz') {
+            wp_redirect(add_query_arg(array(
+                'page' => 'ielts-import-exercise',
+                'error' => 'no_exercise'
+            ), admin_url('edit.php?post_type=ielts_course')));
+            exit;
+        }
+        
+        // Check if file was uploaded
+        if (!isset($_FILES['import_file']) || $_FILES['import_file']['error'] !== UPLOAD_ERR_OK) {
+            wp_redirect(add_query_arg(array(
+                'page' => 'ielts-import-exercise',
+                'error' => 'upload_failed'
+            ), admin_url('edit.php?post_type=ielts_course')));
+            exit;
+        }
+        
+        // Validate file type
+        $file_info = pathinfo($_FILES['import_file']['name']);
+        if (!isset($file_info['extension']) || strtolower($file_info['extension']) !== 'json') {
+            wp_redirect(add_query_arg(array(
+                'page' => 'ielts-import-exercise',
+                'error' => 'invalid_file_type'
+            ), admin_url('edit.php?post_type=ielts_course')));
+            exit;
+        }
+        
+        // Validate file size (limit to 10MB)
+        $max_size = 10 * 1024 * 1024; // 10MB in bytes
+        if ($_FILES['import_file']['size'] > $max_size) {
+            wp_redirect(add_query_arg(array(
+                'page' => 'ielts-import-exercise',
+                'error' => 'file_too_large'
+            ), admin_url('edit.php?post_type=ielts_course')));
+            exit;
+        }
+        
+        // Read file contents
+        $json_content = file_get_contents($_FILES['import_file']['tmp_name']);
+        
+        if ($json_content === false) {
+            wp_redirect(add_query_arg(array(
+                'page' => 'ielts-import-exercise',
+                'error' => 'upload_failed'
+            ), admin_url('edit.php?post_type=ielts_course')));
+            exit;
+        }
+        
+        // Parse JSON
+        $import_data = json_decode($json_content, true);
+        
+        if ($import_data === null || json_last_error() !== JSON_ERROR_NONE) {
+            wp_redirect(add_query_arg(array(
+                'page' => 'ielts-import-exercise',
+                'error' => 'invalid_json'
+            ), admin_url('edit.php?post_type=ielts_course')));
+            exit;
+        }
+        
+        // Validate JSON structure - ensure it's an exercise export
+        if (!isset($import_data['version']) || !isset($import_data['questions'])) {
+            wp_redirect(add_query_arg(array(
+                'page' => 'ielts-import-exercise',
+                'error' => 'invalid_json'
+            ), admin_url('edit.php?post_type=ielts_course')));
+            exit;
+        }
+        
+        // Import settings, reading texts, and questions using helper methods
+        $this->import_exercise_settings($target_exercise_id, $import_data);
+        $this->import_reading_texts($target_exercise_id, $import_data);
+        $this->import_questions($target_exercise_id, $import_data);
+        
+        // Redirect with success
+        wp_redirect(add_query_arg(array(
+            'page' => 'ielts-import-exercise',
+            'imported' => '1',
+            'exercise_id' => $target_exercise_id
+        ), admin_url('edit.php?post_type=ielts_course')));
+        exit;
+    }
+    
+    /**
+     * Handle direct exercise import via AJAX (from exercise edit page)
+     */
+    public function handle_import_direct() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !isset($_POST['exercise_id'])) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        $exercise_id = intval($_POST['exercise_id']);
+        
+        if (!wp_verify_nonce($_POST['nonce'], 'ielts_cm_import_exercise_direct_' . $exercise_id)) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        // Check user capability - require manage_options for security
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error(array('message' => __('You do not have sufficient permissions to perform this action.', 'ielts-course-manager')));
+        }
+        
+        // Verify target exercise exists
+        $target_exercise = get_post($exercise_id);
+        if (!$target_exercise || $target_exercise->post_type !== 'ielts_quiz') {
+            wp_send_json_error(array('message' => __('Exercise not found', 'ielts-course-manager')));
+        }
+        
+        // Check if file was uploaded
+        if (!isset($_FILES['import_file']) || $_FILES['import_file']['error'] !== UPLOAD_ERR_OK) {
+            wp_send_json_error(array('message' => __('File upload failed. Please try again.', 'ielts-course-manager')));
+        }
+        
+        // Validate file type
+        $file_info = pathinfo($_FILES['import_file']['name']);
+        if (!isset($file_info['extension']) || strtolower($file_info['extension']) !== 'json') {
+            wp_send_json_error(array('message' => __('Invalid file type. Please upload a JSON file.', 'ielts-course-manager')));
+        }
+        
+        // Validate file size (limit to 10MB)
+        $max_size = 10 * 1024 * 1024; // 10MB in bytes
+        if ($_FILES['import_file']['size'] > $max_size) {
+            wp_send_json_error(array('message' => __('File is too large. Maximum size is 10MB.', 'ielts-course-manager')));
+        }
+        
+        // Read file contents
+        $json_content = file_get_contents($_FILES['import_file']['tmp_name']);
+        
+        if ($json_content === false) {
+            wp_send_json_error(array('message' => __('Failed to read file. Please try again.', 'ielts-course-manager')));
+        }
+        
+        // Parse JSON
+        $import_data = json_decode($json_content, true);
+        
+        if ($import_data === null || json_last_error() !== JSON_ERROR_NONE) {
+            wp_send_json_error(array('message' => __('Invalid JSON file. Please check the file format.', 'ielts-course-manager')));
+        }
+        
+        // Validate JSON structure - ensure it's an exercise export
+        if (!isset($import_data['version']) || !isset($import_data['questions'])) {
+            wp_send_json_error(array('message' => __('Invalid exercise JSON file. Please check the file format.', 'ielts-course-manager')));
+        }
+        
+        // Import settings, reading texts, and questions using helper methods
+        $this->import_exercise_settings($exercise_id, $import_data);
+        $this->import_reading_texts($exercise_id, $import_data);
+        $this->import_questions($exercise_id, $import_data);
         
         // Return success
         wp_send_json_success(array(
