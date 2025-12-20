@@ -60,6 +60,16 @@ class IELTS_CM_Quiz_Handler {
             } elseif ($question['type'] === 'summary_completion' && isset($question['summary_fields']) && is_array($question['summary_fields'])) {
                 // Summary completion with fields - each field counts as 1 point
                 $max_score += count($question['summary_fields']);
+            } elseif ($question['type'] === 'dropdown_paragraph') {
+                // Dropdown paragraph - count each dropdown as 1 point
+                // Parse question text to count dropdowns
+                $paragraph_text = isset($question['question']) ? $question['question'] : '';
+                preg_match_all('/(\d+)\.\[([^\]]+)\]/i', $paragraph_text, $matches);
+                $dropdown_count = !empty($matches[0]) ? count($matches[0]) : 1;
+                $max_score += $dropdown_count;
+            } elseif ($question['type'] === 'table_completion' && isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+                // Table completion with fields - each field counts as 1 point (same as summary completion)
+                $max_score += count($question['summary_fields']);
             } elseif ($question['type'] === 'headings') {
                 // Headings questions - independent implementation
                 $max_score += isset($question['points']) ? floatval($question['points']) : 1;
@@ -90,6 +100,128 @@ class IELTS_CM_Quiz_Handler {
                 $correct_answer = isset($result['correct_indices']) ? $result['correct_indices'] : array();
             } elseif ($question['type'] === 'summary_completion' && isset($question['summary_fields']) && is_array($question['summary_fields'])) {
                 // Summary completion with fields - check each field separately
+                $field_results = array();
+                $all_correct = true;
+                $any_answered = false;
+                
+                foreach ($question['summary_fields'] as $field_num => $field_data) {
+                    $field_answer_key = $index . '_field_' . $field_num;
+                    $user_field_answer = isset($answers[$field_answer_key]) ? trim($answers[$field_answer_key]) : '';
+                    
+                    $field_correct = false;
+                    $field_feedback = '';
+                    
+                    if (!empty($user_field_answer)) {
+                        $any_answered = true;
+                        // Check if answer is correct
+                        $accepted_answers = isset($field_data['answer']) ? explode('|', $field_data['answer']) : array();
+                        foreach ($accepted_answers as $accepted) {
+                            if (strcasecmp(trim($accepted), $user_field_answer) === 0) {
+                                $field_correct = true;
+                                break;
+                            }
+                        }
+                        
+                        if ($field_correct) {
+                            $points_earned += 1;
+                            $field_feedback = isset($field_data['correct_feedback']) && !empty($field_data['correct_feedback']) 
+                                ? wp_kses_post($field_data['correct_feedback']) 
+                                : '';
+                        } else {
+                            $all_correct = false;
+                            $field_feedback = isset($field_data['incorrect_feedback']) && !empty($field_data['incorrect_feedback']) 
+                                ? wp_kses_post($field_data['incorrect_feedback']) 
+                                : '';
+                        }
+                    } else {
+                        // No answer provided for this field
+                        $all_correct = false;
+                        $field_feedback = isset($field_data['no_answer_feedback']) && !empty($field_data['no_answer_feedback']) 
+                            ? wp_kses_post($field_data['no_answer_feedback']) 
+                            : '';
+                    }
+                    
+                    $field_results[$field_num] = array(
+                        'correct' => $field_correct,
+                        'feedback' => $field_feedback,
+                        'user_answer' => $user_field_answer
+                    );
+                }
+                
+                $score += $points_earned;
+                $is_correct = $all_correct && $any_answered;
+                
+                // Build combined feedback
+                $feedback_parts = array();
+                foreach ($field_results as $field_num => $field_result) {
+                    if (!empty($field_result['feedback'])) {
+                        $feedback_parts[] = '<strong>' . sprintf(__('Field %s:', 'ielts-course-manager'), $field_num) . '</strong> ' . $field_result['feedback'];
+                    }
+                }
+                $feedback = !empty($feedback_parts) ? implode('<br>', $feedback_parts) : '';
+                
+                // Store field results for display
+                $correct_answer = array('field_results' => $field_results);
+            } elseif ($question['type'] === 'dropdown_paragraph') {
+                // Dropdown paragraph - score each dropdown separately (1 point each)
+                $user_answer = isset($answers[$index]) ? $answers[$index] : array();
+                
+                // Ensure user_answer is an array
+                if (!is_array($user_answer)) {
+                    $user_answer = array();
+                }
+                
+                // Parse correct answers from question's correct_answer field
+                $correct_answers = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+                $answer_map = array();
+                $parts = explode('|', $correct_answers);
+                foreach ($parts as $part) {
+                    $part = trim($part);
+                    $parts_split = explode(':', $part, 2);
+                    if (count($parts_split) === 2) {
+                        $num = trim($parts_split[0]);
+                        $letter = strtoupper(trim($parts_split[1]));
+                        $answer_map[$num] = $letter;
+                    }
+                }
+                
+                // Check each dropdown and award 1 point for each correct answer
+                $all_correct = true;
+                $any_answered = false;
+                foreach ($answer_map as $dropdown_num => $correct_letter) {
+                    if (isset($user_answer[$dropdown_num])) {
+                        $user_letter = strtoupper(trim($user_answer[$dropdown_num]));
+                        if (!empty($user_letter)) {
+                            $any_answered = true;
+                            if ($user_letter === $correct_letter) {
+                                $points_earned += 1;
+                            } else {
+                                $all_correct = false;
+                            }
+                        } else {
+                            $all_correct = false;
+                        }
+                    } else {
+                        $all_correct = false;
+                    }
+                }
+                
+                $score += $points_earned;
+                $is_correct = $all_correct && $any_answered;
+                
+                // Get feedback
+                if ($is_correct && isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
+                    $feedback = wp_kses_post($question['correct_feedback']);
+                } elseif (!$is_correct && isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                    $feedback = wp_kses_post($question['incorrect_feedback']);
+                }
+                
+                // Store correct answer for display
+                if ($correct_answer === null && isset($question['correct_answer'])) {
+                    $correct_answer = $question['correct_answer'];
+                }
+            } elseif ($question['type'] === 'table_completion' && isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+                // Table completion with fields - score each field separately (same as summary completion)
                 $field_results = array();
                 $all_correct = true;
                 $any_answered = false;

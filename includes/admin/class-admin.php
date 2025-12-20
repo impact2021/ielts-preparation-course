@@ -1105,8 +1105,8 @@ class IELTS_CM_Admin {
                     container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
-                    // Clear placeholder for other types
-                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
+                    // Set placeholder for all types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', ieltsPlaceholder);
                 } else if (type === 'multi_select') {
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').show();
@@ -1131,8 +1131,8 @@ class IELTS_CM_Admin {
                     container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
-                    // Clear placeholder for other types
-                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
+                    // Set placeholder for all types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', ieltsPlaceholder);
                 } else if (type === 'matching') {
                     // Matching - independent implementation
                     container.find('.mc-options-field').show();
@@ -1140,8 +1140,8 @@ class IELTS_CM_Admin {
                     container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
-                    // Clear placeholder for other types
-                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
+                    // Set placeholder for all types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', ieltsPlaceholder);
                 } else if (type === 'locating_information') {
                     // Locating Information - independent implementation
                     container.find('.mc-options-field').show();
@@ -1149,16 +1149,16 @@ class IELTS_CM_Admin {
                     container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
-                    // Clear placeholder for other types
-                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
+                    // Set placeholder for all types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', ieltsPlaceholder);
                 } else if (type === 'true_false') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.find('label').text('<?php _e('Correct Answer', 'ielts-course-manager'); ?>');
-                    // Clear placeholder for other types
-                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
+                    // Set placeholder for all types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', ieltsPlaceholder);
                     
                     // Convert to dropdown if it's currently an input
                     if (correctAnswerInput.is('input')) {
@@ -1179,8 +1179,8 @@ class IELTS_CM_Admin {
                     container.find('.general-feedback-field').show();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.find('label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
-                    // Clear placeholder for other types
-                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
+                    // Set placeholder for all types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', ieltsPlaceholder);
                     
                     // Convert to input if it's currently a dropdown
                     if (correctAnswerInput.is('select')) {
@@ -1196,16 +1196,16 @@ class IELTS_CM_Admin {
                     container.find('.dropdown-paragraph-field').hide();
                     container.find('.summary-completion-field').show();
                     correctAnswerField.hide();
-                    // Clear placeholder for other types
-                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
+                    // Set placeholder for all types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', ieltsPlaceholder);
                 } else if (type === 'dropdown_paragraph') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
                     container.find('.dropdown-paragraph-field').show();
                     correctAnswerField.hide();
-                    // Clear placeholder for other types
-                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
+                    // Set placeholder for all types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', ieltsPlaceholder);
                 }
             });
             

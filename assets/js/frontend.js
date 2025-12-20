@@ -606,7 +606,23 @@
         });
         
         $('.ielts-computer-based-quiz').on('input', 'input[type="text"], textarea', function() {
-            var questionIndex = $(this).attr('name').replace('answer_', '');
+            var name = $(this).attr('name');
+            // Extract question index from name (handle both answer_X and answer_X_field_Y formats)
+            var questionIndex = name.replace('answer_', '').split('_')[0];
+            var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"]');
+            
+            if ($(this).val().trim().length > 0) {
+                navButton.addClass('answered');
+            } else {
+                navButton.removeClass('answered');
+            }
+        });
+        
+        // Track dropdown selections in computer-based layout
+        $('.ielts-computer-based-quiz').on('change', 'select.answer-select-inline', function() {
+            var name = $(this).attr('name');
+            // Extract question index from name (format: answer_X_Y where X is question index, Y is dropdown number)
+            var questionIndex = name.replace('answer_', '').split('_')[0];
             var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"]');
             
             if ($(this).val().trim().length > 0) {
