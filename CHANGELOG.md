@@ -2,6 +2,20 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.32] - 2025-12-20
+
+### Changed
+- **Version Update**: Updated plugin version to 2.32
+- **Auto-Continue Removed**: Removed auto-continue countdown from ALL exercises
+  - Previously, standard exercises would automatically redirect to the next exercise after 5 seconds
+  - Users must now manually click the "Continue" button to proceed
+  - CBT exercises already had this behavior and remain unchanged
+  - Improves user control and prevents accidental navigation
+- **Quiz Feedback Styling**: Updated standard quiz feedback box to match CBT feedback style
+  - Removed colored background borders from pass/fail states
+  - Changed to clean, minimal design consistent with CBT modal feedback
+  - Maintains all functionality while improving visual consistency
+
 ## [2.31] - 2025-12-20
 
 ### Fixed

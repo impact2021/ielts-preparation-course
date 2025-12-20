@@ -439,21 +439,22 @@ body.ielts-course-archive .content-area {
 }
 
 .ielts-single-quiz .quiz-result {
-    padding: 20px;
     margin-top: 20px;
-    border-radius: 5px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
 }
 
 .ielts-single-quiz .quiz-result.pass {
-    background: #f0f9f0;
-    border: 1px solid #4caf50;
-    color: #2e7d32;
+    background: transparent;
+    border: none;
+    color: inherit;
 }
 
 .ielts-single-quiz .quiz-result.fail {
-    background: #fff3e0;
-    border: 1px solid #ff9800;
-    color: #e65100;
+    background: transparent;
+    border: none;
+    color: inherit;
 }
 
 .ielts-single-quiz .quiz-feedback-section {
