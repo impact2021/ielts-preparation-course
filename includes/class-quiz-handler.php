@@ -202,9 +202,9 @@ class IELTS_CM_Quiz_Handler {
         
         switch ($type) {
             case 'multiple_choice':
+            case 'matching_classifying':
             case 'true_false':
             case 'headings':
-            case 'classifying_matching':
             case 'matching':
                 // These all use the same logic - match the selected option
                 return isset($question['correct_answer']) && $question['correct_answer'] == $user_answer;
@@ -576,6 +576,7 @@ class IELTS_CM_Quiz_Handler {
     public static function get_quiz_types() {
         return array(
             'multiple_choice' => __('Multiple Choice', 'ielts-course-manager'),
+            'matching_classifying' => __('Matching and classifying questions', 'ielts-course-manager'),
             'multi_select' => __('Multi Select', 'ielts-course-manager'),
             'true_false' => __('True/False/Not Given', 'ielts-course-manager'),
             'headings' => __('Headings Questions', 'ielts-course-manager'),
@@ -584,7 +585,6 @@ class IELTS_CM_Quiz_Handler {
             'summary_completion' => __('Summary Completion Questions', 'ielts-course-manager'),
             'table_completion' => __('Table Completion Questions', 'ielts-course-manager'),
             'labelling' => __('Labelling Style Questions', 'ielts-course-manager'),
-            'classifying_matching' => __('Classifying and Matching Questions', 'ielts-course-manager'),
             'locating_information' => __('Locating Information Questions', 'ielts-course-manager'),
             'fill_blank' => __('Fill in the Blank (Legacy)', 'ielts-course-manager'),
             'essay' => __('Essay', 'ielts-course-manager')

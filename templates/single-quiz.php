@@ -238,7 +238,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 break;
                             
                             case 'headings':
-                            case 'classifying_matching':
+                            case 'matching_classifying':
                                 // These use multiple choice format
                                 if (isset($question['mc_options']) && is_array($question['mc_options'])) {
                                     $mc_options = $question['mc_options'];
@@ -281,7 +281,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 
                             case 'matching':
                                 // Matching question type - now uses multiple choice format (radio buttons)
-                                // Similar to classifying_matching, headings, and multiple_choice
+                                // Similar to matching_classifying, headings, and multiple_choice
                                 if (isset($question['mc_options']) && is_array($question['mc_options'])) {
                                     $mc_options = $question['mc_options'];
                                 } elseif (isset($question['options'])) {

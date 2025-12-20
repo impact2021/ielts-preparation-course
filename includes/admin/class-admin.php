@@ -1111,7 +1111,7 @@ class IELTS_CM_Admin {
                         correctAnswerInput.replaceWith(inputHtml);
                     }
                     correctAnswerField.show();
-                } else if (type === 'headings' || type === 'classifying_matching' || type === 'matching') {
+                } else if (type === 'headings' || type === 'matching_classifying' || type === 'matching') {
                     // These use multiple choice format
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').hide();
@@ -1510,7 +1510,7 @@ class IELTS_CM_Admin {
             </div>
             
             <!-- New structured options for multiple choice -->
-            <div class="mc-options-field" style="<?php echo (isset($question['type']) && !in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'classifying_matching', 'matching'))) ? 'display:none;' : ''; ?>">
+            <div class="mc-options-field" style="<?php echo (isset($question['type']) && !in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching'))) ? 'display:none;' : ''; ?>">
                 <h5><?php _e('Answer Options', 'ielts-course-manager'); ?></h5>
                 <div class="mc-options-container" data-question-index="<?php echo $index; ?>">
                     <?php
@@ -1583,7 +1583,7 @@ class IELTS_CM_Admin {
                 <textarea name="questions[<?php echo $index; ?>][options]" rows="4" style="width: 100%;"><?php echo esc_textarea(isset($question['options']) ? $question['options'] : ''); ?></textarea>
             </p>
             
-            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('essay', 'multiple_choice', 'multi_select', 'headings', 'classifying_matching', 'matching'))) ? 'display:none;' : ''; ?>">
+            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('essay', 'multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching'))) ? 'display:none;' : ''; ?>">
                 <label><?php _e('Correct Answer', 'ielts-course-manager'); ?></label><br>
                 <?php if (isset($question['type']) && $question['type'] === 'true_false'): ?>
                     <select name="questions[<?php echo $index; ?>][correct_answer]" style="width: 100%;">
