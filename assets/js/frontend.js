@@ -258,8 +258,8 @@
                         }
                         
                         // Question-by-question feedback is now shown via visual highlighting (green/red colors) in the form
-                        // for both standard and CBT layouts. This replaces the detailed inline feedback section that was
-                        // previously shown in the modal content for standard layout only.
+                        // for both standard and CBT layouts. This replaces the detailed inline feedback that was previously
+                        // displayed on the page (below the modal score) for standard layout only.
                         
                         html += '<div class="quiz-actions">';
                         
@@ -413,7 +413,7 @@
                                 }
                             }
                             
-                            // Add text feedback (CBT only): All layouts use visual highlighting, but CBT also supports per-question text messages
+                            // Add per-question text feedback messages (CBT only): All layouts use visual highlighting, but CBT also supports additional text feedback messages below each question
                             if (isCBT && questionResult.feedback) {
                                 // Remove any existing feedback first
                                 questionElement.find('.question-feedback-message').remove();
