@@ -189,9 +189,9 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                     if ($display_nums['start'] === $display_nums['end']) {
                                         printf(__('Question %d', 'ielts-course-manager'), $display_nums['start']);
                                     } else {
-                                        printf(__('Questions %d and %d', 'ielts-course-manager'), $display_nums['start'], $display_nums['end']);
+                                        printf(__('Questions %d – %d', 'ielts-course-manager'), $display_nums['start'], $display_nums['end']);
                                     }
-                                    // For multi-select, show the actual number of correct answers as points
+                                    // For multi-select and matching, show the actual number of sub-questions as points
                                     $display_points = $display_nums['count'];
                                     ?>
                                     <span class="question-points">(<?php printf(_n('%s point', '%s points', $display_points, 'ielts-course-manager'), $display_points); ?>)</span>
