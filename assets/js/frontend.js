@@ -282,7 +282,10 @@
                                 }
                                 
                                 // Show user answer and correct answer
-                                if (questionResult.question_type === 'multiple_choice' && questionResult.options) {
+                                if ((questionResult.question_type === 'multiple_choice' || 
+                                     questionResult.question_type === 'headings' || 
+                                     questionResult.question_type === 'matching' || 
+                                     questionResult.question_type === 'matching_classifying') && questionResult.options) {
                                     var options = questionResult.options.split('\n').filter(function(opt) { return opt.trim(); });
                                     var userAnswerIndex = parseInt(questionResult.user_answer);
                                     var correctAnswerIndex = parseInt(questionResult.correct_answer);
@@ -371,7 +374,10 @@
                                 navButtons.addClass('nav-correct').removeClass('answered');
                                 
                                 // Highlight the correct answer option
-                                if (questionResult.question_type === 'multiple_choice') {
+                                if (questionResult.question_type === 'multiple_choice' || 
+                                    questionResult.question_type === 'headings' || 
+                                    questionResult.question_type === 'matching' || 
+                                    questionResult.question_type === 'matching_classifying') {
                                     // Highlight by both checked state AND correct answer value to ensure visibility
                                     var correctIndex = parseInt(questionResult.correct_answer, 10);
                                     if (!isNaN(correctIndex)) {
@@ -383,8 +389,12 @@
                                     }
                                 }
                                 
-                                // Common highlighting for both multiple_choice and true_false: mark the checked answer
-                                if (questionResult.question_type === 'multiple_choice' || questionResult.question_type === 'true_false') {
+                                // Common highlighting for multiple choice variants and true_false: mark the checked answer
+                                if (questionResult.question_type === 'multiple_choice' || 
+                                    questionResult.question_type === 'headings' || 
+                                    questionResult.question_type === 'matching' || 
+                                    questionResult.question_type === 'matching_classifying' || 
+                                    questionResult.question_type === 'true_false') {
                                     questionElement.find('input[type="radio"]:checked').closest('.option-label').addClass('answer-correct');
                                 } else if (questionResult.question_type === 'multi_select') {
                                     // For multi-select, highlight all checked options in green (they're all correct if question is correct)
@@ -432,11 +442,18 @@
                                 }
                                 
                                 // Highlight the user's wrong answer
-                                if (questionResult.question_type === 'multiple_choice' || questionResult.question_type === 'true_false') {
+                                if (questionResult.question_type === 'multiple_choice' || 
+                                    questionResult.question_type === 'headings' || 
+                                    questionResult.question_type === 'matching' || 
+                                    questionResult.question_type === 'matching_classifying' || 
+                                    questionResult.question_type === 'true_false') {
                                     questionElement.find('input[type="radio"]:checked').closest('.option-label').addClass('answer-incorrect');
                                     
                                     // Also highlight the correct answer in green
-                                    if (questionResult.question_type === 'multiple_choice') {
+                                    if (questionResult.question_type === 'multiple_choice' || 
+                                        questionResult.question_type === 'headings' || 
+                                        questionResult.question_type === 'matching' || 
+                                        questionResult.question_type === 'matching_classifying') {
                                         var correctIndex = parseInt(questionResult.correct_answer);
                                         questionElement.find('input[type="radio"][value="' + correctIndex + '"]').closest('.option-label').addClass('answer-correct-highlight');
                                     } else if (questionResult.question_type === 'true_false') {

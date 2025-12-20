@@ -1110,6 +1110,27 @@ class IELTS_CM_Admin {
                     container.find('.general-feedback-field').show();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
+                } else if (type === 'headings') {
+                    // Headings - independent implementation
+                    container.find('.mc-options-field').show();
+                    container.find('.multi-select-settings').hide();
+                    container.find('.general-feedback-field').hide();
+                    container.find('.dropdown-paragraph-field').hide();
+                    correctAnswerField.hide();
+                } else if (type === 'matching_classifying') {
+                    // Matching/Classifying - independent implementation
+                    container.find('.mc-options-field').show();
+                    container.find('.multi-select-settings').hide();
+                    container.find('.general-feedback-field').hide();
+                    container.find('.dropdown-paragraph-field').hide();
+                    correctAnswerField.hide();
+                } else if (type === 'matching') {
+                    // Matching - independent implementation
+                    container.find('.mc-options-field').show();
+                    container.find('.multi-select-settings').hide();
+                    container.find('.general-feedback-field').hide();
+                    container.find('.dropdown-paragraph-field').hide();
+                    correctAnswerField.hide();
                 } else if (type === 'true_false') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
@@ -1158,13 +1179,6 @@ class IELTS_CM_Admin {
                         correctAnswerInput.replaceWith(inputHtml);
                     }
                     correctAnswerField.show();
-                } else if (type === 'headings' || type === 'matching_classifying' || type === 'matching') {
-                    // These use multiple choice format
-                    container.find('.mc-options-field').show();
-                    container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').hide();
-                    container.find('.dropdown-paragraph-field').hide();
-                    correctAnswerField.hide();
                 } else if (type === 'dropdown_paragraph') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
