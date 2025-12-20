@@ -117,6 +117,7 @@ class IELTS_CM_Text_Exercises_Creator {
                     <li><strong><?php _e('Question Format:', 'ielts-course-manager'); ?></strong> <?php _e('Number. Question text {ANSWER}', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Single Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Use {ANSWER} for one correct answer', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Multiple Alternatives:', 'ielts-course-manager'); ?></strong> <?php _e('Use {[ANSWER1][ANSWER2][ANSWER3]} for multiple accepted answers', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Optional Feedback:', 'ielts-course-manager'); ?></strong> <?php _e('Add explanation text on line(s) after the question (before next question)', 'ielts-course-manager'); ?></li>
                 </ul>
                 
                 <h3><?php _e('Format 2: True/False Questions', 'ielts-course-manager'); ?></h3>
@@ -149,7 +150,10 @@ Answer the questions below using NO MORE THAN THREE WORDS AND/OR A NUMBER from t
 
 17. Where will the successful applicants for the positions be based? {[IN THE UK][IN THE U.K.][THE UK][THE U.K.][UK][U.K.]}
 
-18. What is the most important part of Rayland Industries' business? {MANUFACTURING}</pre>
+18. What is the most important part of Rayland Industries' business? {MANUFACTURING}
+This can be found in the third paragraph which states "our main focus and the essential part of our business is in manufacturing."
+
+19. After how long are trainees entitled to join the company's medical scheme? {[6 MONTHS][SIX MONTHS]}</pre>
                 
                 <h3><?php _e('True/False Example', 'ielts-course-manager'); ?></h3>
                 <pre style="background: #f5f5f5; padding: 15px; border: 1px solid #ddd; overflow-x: auto; white-space: pre-wrap;">Decide whether these statements about the reading test are TRUE or FALSE. Select the correct answers.
@@ -305,6 +309,7 @@ You have one hour for the complete test (including transferring your answers).</
     /**
      * Parse short answer format questions
      * Format: "15. Question text? {ANSWER}" or "15. Question text? {[ANS1][ANS2][ANS3]}"
+     * Optional feedback can be added on the next line(s) before the next question
      */
     private function parse_short_answer_format($text) {
         // Extract title - everything before the first question number
@@ -337,31 +342,57 @@ You have one hour for the complete test (including transferring your answers).</
             return null;
         }
         
-        // Parse questions
+        // Parse questions with potential feedback
         $questions = array();
-        $remaining_text = implode("\n", array_slice($lines, $question_start_index));
+        $question_lines = array_slice($lines, $question_start_index);
         
-        // Match pattern: number. question text {answer(s)}
-        // Pattern supports both {ANSWER} and {[ANS1][ANS2][ANS3]}
-        preg_match_all('/(\d+)\.\s+(.+?)\s+\{([^}]+)\}/s', $remaining_text, $matches, PREG_SET_ORDER);
-        
-        foreach ($matches as $match) {
-            $question_num = $match[1];
-            $question_text = trim($match[2]);
-            $answer_part = $match[3];
+        $i = 0;
+        while ($i < count($question_lines)) {
+            $line = $question_lines[$i];
             
-            // Parse answers - handle both simple {ANSWER} and complex {[ANS1][ANS2]}
-            $answers = $this->parse_answer_alternatives($answer_part);
-            
-            // Create question
-            $questions[] = array(
-                'type' => 'short_answer',
-                'question' => $question_text,
-                'correct_answer' => implode('|', $answers), // Pipe-separated for multiple alternatives
-                'points' => 1,
-                'correct_feedback' => '',
-                'incorrect_feedback' => ''
-            );
+            // Check if this line is a question (starts with number. and has {ANSWER})
+            if (preg_match('/^(\d+)\.\s+(.+?)\s+\{([^}]+)\}/', $line, $match)) {
+                $question_num = $match[1];
+                $question_text = trim($match[2]);
+                $answer_part = $match[3];
+                
+                // Parse answers - handle both simple {ANSWER} and complex {[ANS1][ANS2]}
+                $answers = $this->parse_answer_alternatives($answer_part);
+                
+                // Look for optional feedback on following lines (before next question)
+                $feedback = '';
+                $j = $i + 1;
+                while ($j < count($question_lines)) {
+                    $next_line = $question_lines[$j];
+                    
+                    // Stop if we hit another question or empty line
+                    if (empty($next_line) || preg_match('/^\d+\.\s+.+?\s+\{[^}]+\}/', $next_line)) {
+                        break;
+                    }
+                    
+                    // Accumulate feedback
+                    if (!empty($feedback)) {
+                        $feedback .= "\n";
+                    }
+                    $feedback .= $next_line;
+                    $j++;
+                }
+                
+                // Create question
+                $questions[] = array(
+                    'type' => 'short_answer',
+                    'question' => $question_text,
+                    'correct_answer' => implode('|', $answers), // Pipe-separated for multiple alternatives
+                    'points' => 1,
+                    'correct_feedback' => '',
+                    'incorrect_feedback' => trim($feedback) // Feedback shows when answer is wrong
+                );
+                
+                // Skip past any feedback lines we consumed
+                $i = $j;
+            } else {
+                $i++;
+            }
         }
         
         return array(
