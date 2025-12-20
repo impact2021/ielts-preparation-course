@@ -1378,13 +1378,15 @@ body.ielts-course-archive .content-area {
 }
 
 .question-answer input.answer-correct,
-.question-answer textarea.answer-correct {
+.question-answer textarea.answer-correct,
+select.answer-select-inline.answer-correct {
     border: 3px solid #4caf50;
     background: #f1f8f4;
 }
 
 .question-answer input.answer-incorrect,
-.question-answer textarea.answer-incorrect {
+.question-answer textarea.answer-incorrect,
+select.answer-select-inline.answer-incorrect {
     border: 3px solid #f44336;
     background: #fef5f5;
 }
