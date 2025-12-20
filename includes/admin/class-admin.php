@@ -52,11 +52,6 @@ class IELTS_CM_Admin {
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
         
-        // Add LearnDash quiz conversion button
-        add_filter('manage_sfwd-quiz_posts_columns', array($this, 'learndash_quiz_columns'));
-        add_action('manage_sfwd-quiz_posts_custom_column', array($this, 'learndash_quiz_column_content'), 10, 2);
-        add_action('admin_footer', array($this, 'learndash_quiz_conversion_scripts'));
-        
         // Add admin notices
         add_action('admin_notices', array($this, 'quiz_validation_notices'));
     }
@@ -1135,7 +1130,7 @@ class IELTS_CM_Admin {
                         correctAnswerField.find('select').val(currentValue);
                     }
                     correctAnswerField.show();
-                } else if (type === 'fill_blank' || type === 'short_answer' || type === 'sentence_completion' || type === 'table_completion' || type === 'labelling' || type === 'locating_information') {
+                } else if (type === 'short_answer' || type === 'sentence_completion' || type === 'table_completion' || type === 'labelling' || type === 'locating_information') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
@@ -1168,12 +1163,6 @@ class IELTS_CM_Admin {
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').hide();
-                    container.find('.dropdown-paragraph-field').hide();
-                    correctAnswerField.hide();
-                } else if (type === 'essay') {
-                    container.find('.mc-options-field').hide();
-                    container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').show();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
                 } else if (type === 'dropdown_paragraph') {
@@ -1844,7 +1833,7 @@ class IELTS_CM_Admin {
                 <textarea name="questions[<?php echo $index; ?>][options]" rows="4" style="width: 100%;"><?php echo esc_textarea(isset($question['options']) ? $question['options'] : ''); ?></textarea>
             </p>
             
-            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('essay', 'multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph'))) ? 'display:none;' : ''; ?>">
+            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph'))) ? 'display:none;' : ''; ?>">
                 <label><?php _e('Correct Answer', 'ielts-course-manager'); ?></label><br>
                 <?php if (isset($question['type']) && $question['type'] === 'true_false'): ?>
                     <select name="questions[<?php echo $index; ?>][correct_answer]" style="width: 100%;">
@@ -2435,15 +2424,6 @@ class IELTS_CM_Admin {
     public function add_admin_menu() {
         add_submenu_page(
             'edit.php?post_type=ielts_course',
-            __('Progress Reports', 'ielts-course-manager'),
-            __('Progress Reports', 'ielts-course-manager'),
-            'manage_options',
-            'ielts-progress-reports',
-            array($this, 'progress_reports_page')
-        );
-        
-        add_submenu_page(
-            'edit.php?post_type=ielts_course',
             __('Documentation', 'ielts-course-manager'),
             __('Documentation', 'ielts-course-manager'),
             'manage_options',
@@ -2459,52 +2439,6 @@ class IELTS_CM_Admin {
             'ielts-settings',
             array($this, 'settings_page')
         );
-    }
-    
-    /**
-     * Progress reports page
-     */
-    public function progress_reports_page() {
-        ?>
-        <div class="wrap">
-            <h1><?php _e('Progress Reports', 'ielts-course-manager'); ?></h1>
-            <p><?php _e('View student progress and quiz results.', 'ielts-course-manager'); ?></p>
-            
-            <?php
-            // Get all users
-            $users = get_users();
-            
-            foreach ($users as $user) {
-                $enrollment = new IELTS_CM_Enrollment();
-                $enrolled_courses = $enrollment->get_user_courses($user->ID);
-                
-                if (!empty($enrolled_courses)) {
-                    echo '<h3>' . esc_html($user->display_name) . '</h3>';
-                    echo '<table class="wp-list-table widefat fixed striped">';
-                    echo '<thead><tr><th>Course</th><th>Progress</th><th>Quiz Results</th></tr></thead>';
-                    echo '<tbody>';
-                    
-                    foreach ($enrolled_courses as $enrollment_data) {
-                        $course = get_post($enrollment_data->course_id);
-                        $progress_tracker = new IELTS_CM_Progress_Tracker();
-                        $completion = $progress_tracker->get_course_completion_percentage($user->ID, $enrollment_data->course_id);
-                        
-                        $quiz_handler = new IELTS_CM_Quiz_Handler();
-                        $quiz_results = $quiz_handler->get_quiz_results($user->ID, $enrollment_data->course_id);
-                        
-                        echo '<tr>';
-                        echo '<td>' . esc_html($course->post_title) . '</td>';
-                        echo '<td>' . round($completion, 2) . '%</td>';
-                        echo '<td>' . count($quiz_results) . ' quizzes taken</td>';
-                        echo '</tr>';
-                    }
-                    
-                    echo '</tbody></table>';
-                }
-            }
-            ?>
-        </div>
-        <?php
     }
     
     /**
@@ -2817,27 +2751,6 @@ class IELTS_CM_Admin {
                     <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Enter "true", "false", or "not_given" (lowercase)', 'ielts-course-manager'); ?></li>
                 </ul>
                 
-                <h3><?php _e('Fill in the Blank', 'ielts-course-manager'); ?></h3>
-                <p><?php _e('Students type their answer directly. The system automatically compares answers with flexible matching.', 'ielts-course-manager'); ?></p>
-                <ul>
-                    <li><strong><?php _e('Question Text:', 'ielts-course-manager'); ?></strong> <?php _e('Include the blank in your question (e.g., "The capital of France is _____")', 'ielts-course-manager'); ?></li>
-                    <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Enter the expected answer. The system will ignore case, extra spaces, and punctuation when comparing.', 'ielts-course-manager'); ?></li>
-                    <li><strong><?php _e('Tips:', 'ielts-course-manager'); ?></strong>
-                        <ul>
-                            <li><?php _e('Be specific with your expected answer', 'ielts-course-manager'); ?></li>
-                            <li><?php _e('The matching is case-insensitive (Paris = PARIS = paris)', 'ielts-course-manager'); ?></li>
-                            <li><?php _e('Extra spaces and punctuation are ignored', 'ielts-course-manager'); ?></li>
-                            <li><?php _e('Consider using multiple choice if you need exact formatting', 'ielts-course-manager'); ?></li>
-                        </ul>
-                    </li>
-                </ul>
-                
-                <h3><?php _e('Essay', 'ielts-course-manager'); ?></h3>
-                <p><?php _e('Long-form written responses requiring manual grading by instructors.', 'ielts-course-manager'); ?></p>
-                <ul>
-                    <li><strong><?php _e('Note:', 'ielts-course-manager'); ?></strong> <?php _e('Essay questions are not automatically graded. They are saved for instructor review.', 'ielts-course-manager'); ?></li>
-                </ul>
-                
                 <h2><?php _e('Support', 'ielts-course-manager'); ?></h2>
                 <p><?php _e('For issues or feature requests, please visit:', 'ielts-course-manager'); ?></p>
                 <p><a href="https://github.com/impact2021/ielts-preparation-course" target="_blank">https://github.com/impact2021/ielts-preparation-course</a></p>
@@ -2936,131 +2849,6 @@ class IELTS_CM_Admin {
                 <?php submit_button(); ?>
             </form>
         </div>
-        <?php
-    }
-    
-    /**
-     * Add custom column to LearnDash quiz list
-     */
-    public function learndash_quiz_columns($columns) {
-        // Only add if LearnDash is active
-        if (!post_type_exists('sfwd-quiz')) {
-            return $columns;
-        }
-        
-        // Add conversion column before date
-        $new_columns = array();
-        foreach ($columns as $key => $value) {
-            if ($key === 'date') {
-                $new_columns['ielts_cm_convert'] = __('Convert to IELTS CM', 'ielts-course-manager');
-            }
-            $new_columns[$key] = $value;
-        }
-        
-        return $new_columns;
-    }
-    
-    /**
-     * Display content for custom column
-     */
-    public function learndash_quiz_column_content($column, $post_id) {
-        if ($column === 'ielts_cm_convert') {
-            require_once IELTS_CM_PLUGIN_DIR . 'includes/class-learndash-converter.php';
-            $converter = new IELTS_CM_LearnDash_Converter();
-            
-            // Check if already converted
-            $existing_id = $converter->find_existing_quiz($post_id);
-            
-            if ($existing_id) {
-                echo '<span style="color: #46b450;">✓ ' . esc_html__('Converted', 'ielts-course-manager') . '</span><br>';
-                echo '<a href="' . esc_url(get_edit_post_link($existing_id)) . '" target="_blank">' . esc_html__('Edit IELTS Quiz', 'ielts-course-manager') . '</a>';
-            } else {
-                echo '<button type="button" class="button button-small ielts-convert-quiz-btn" data-quiz-id="' . esc_attr($post_id) . '">';
-                echo esc_html__('Convert Quiz', 'ielts-course-manager');
-                echo '</button>';
-                echo '<span class="ielts-convert-status" style="display:none; margin-left: 10px;"></span>';
-            }
-        }
-    }
-    
-    /**
-     * Add JavaScript for quiz conversion on LearnDash quiz admin page
-     */
-    public function learndash_quiz_conversion_scripts() {
-        $screen = get_current_screen();
-        
-        // Only load on LearnDash quiz list page
-        if (!$screen || $screen->post_type !== 'sfwd-quiz' || $screen->base !== 'edit') {
-            return;
-        }
-        
-        ?>
-        <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            // Handle individual quiz conversion
-            $(document).on('click', '.ielts-convert-quiz-btn', function(e) {
-                e.preventDefault();
-                
-                var $btn = $(this);
-                var quizId = $btn.data('quiz-id');
-                var $status = $btn.siblings('.ielts-convert-status');
-                
-                if (!confirm('<?php echo esc_js(__('Convert this quiz to IELTS format?', 'ielts-course-manager')); ?>')) {
-                    return;
-                }
-                
-                $btn.prop('disabled', true).text('<?php echo esc_js(__('Converting...', 'ielts-course-manager')); ?>');
-                $status.show().text('⏳').css('color', '#666');
-                
-                $.ajax({
-                    url: ajaxurl,
-                    type: 'POST',
-                    data: {
-                        action: 'ielts_cm_convert_single_quiz',
-                        nonce: '<?php echo wp_create_nonce('ielts_cm_convert_quiz'); ?>',
-                        quiz_id: quizId
-                    },
-                    success: function(response) {
-                        if (response.success) {
-                            $status.html('✓ <span style="color: #46b450;"><?php echo esc_js(__('Converted!', 'ielts-course-manager')); ?></span>');
-                            $btn.remove();
-                            
-                            // Show link to edit the new quiz
-                            if (response.data.new_quiz_id) {
-                                var editUrl = '<?php echo admin_url('post.php?action=edit&post='); ?>' + response.data.new_quiz_id;
-                                $status.after('<br><a href="' + editUrl + '" target="_blank"><?php echo esc_js(__('Edit IELTS Quiz', 'ielts-course-manager')); ?></a>');
-                            }
-                            
-                            // Show success message
-                            if (response.data.message) {
-                                $status.after('<br><small>' + response.data.message + '</small>');
-                            }
-                        } else {
-                            $status.html('✗ <span style="color: #d63638;"><?php echo esc_js(__('Failed', 'ielts-course-manager')); ?></span>');
-                            $btn.prop('disabled', false).text('<?php echo esc_js(__('Convert Quiz', 'ielts-course-manager')); ?>');
-                            
-                            var errorMsg = response.data && response.data.message ? response.data.message : '<?php echo esc_js(__('Conversion failed', 'ielts-course-manager')); ?>';
-                            alert(errorMsg);
-                        }
-                    },
-                    error: function(xhr, status, error) {
-                        $status.html('✗ <span style="color: #d63638;"><?php echo esc_js(__('Error', 'ielts-course-manager')); ?></span>');
-                        $btn.prop('disabled', false).text('<?php echo esc_js(__('Convert Quiz', 'ielts-course-manager')); ?>');
-                        alert('<?php echo esc_js(__('AJAX error:', 'ielts-course-manager')); ?> ' + error);
-                    }
-                });
-            });
-        });
-        </script>
-        
-        <style>
-        .ielts-convert-quiz-btn {
-            font-size: 12px;
-            height: auto;
-            line-height: 1.5;
-            padding: 4px 8px;
-        }
-        </style>
         <?php
     }
     

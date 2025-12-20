@@ -209,7 +209,6 @@ class IELTS_CM_Quiz_Handler {
                 // These all use the same logic - match the selected option
                 return isset($question['correct_answer']) && $question['correct_answer'] == $user_answer;
                 
-            case 'fill_blank':
             case 'summary_completion':
             case 'short_answer':
             case 'sentence_completion':
@@ -344,10 +343,6 @@ class IELTS_CM_Quiz_Handler {
                 
                 return false;
             
-            case 'essay':
-                // Essay questions need manual grading
-                return false;
-                
             default:
                 return false;
         }
@@ -695,9 +690,7 @@ class IELTS_CM_Quiz_Handler {
             'dropdown_paragraph' => __('Dropdown Paragraph Questions', 'ielts-course-manager'),
             'table_completion' => __('Table Completion Questions', 'ielts-course-manager'),
             'labelling' => __('Labelling Style Questions', 'ielts-course-manager'),
-            'locating_information' => __('Locating Information Questions', 'ielts-course-manager'),
-            'fill_blank' => __('Fill in the Blank (Legacy)', 'ielts-course-manager'),
-            'essay' => __('Essay', 'ielts-course-manager')
+            'locating_information' => __('Locating Information Questions', 'ielts-course-manager')
         );
     }
     
