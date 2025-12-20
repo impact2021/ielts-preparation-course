@@ -326,7 +326,7 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                                 </div>
                                                 <div class="matching-answer">
                                                     <input type="text" 
-                                                           name="answer_<?php echo $index; ?>_<?php echo $match_index; ?>" 
+                                                           name="answer_match_<?php echo $index; ?>_<?php echo $match_index; ?>" 
                                                            class="answer-input"
                                                            style="width: 100px; text-transform: uppercase;"
                                                            maxlength="3"

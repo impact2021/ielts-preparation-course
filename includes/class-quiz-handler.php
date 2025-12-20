@@ -314,7 +314,8 @@ class IELTS_CM_Quiz_Handler {
         // Check each match item
         foreach ($question['matches'] as $match_index => $match) {
             // Build the answer key for this match item
-            $answer_key = $question_index . '_' . $match_index;
+            // Using 'match_' prefix to avoid potential conflicts with other answer types
+            $answer_key = 'match_' . $question_index . '_' . $match_index;
             
             // Store correct answer for this match
             $correct_answer_value = isset($match['correct_answer']) ? $match['correct_answer'] : '';
