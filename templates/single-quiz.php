@@ -219,7 +219,6 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                             case 'sentence_completion':
                             case 'table_completion':
                             case 'labelling':
-                            case 'locating_information':
                                 ?>
                                 <div class="question-answer">
                                     <input type="text" 
@@ -227,6 +226,35 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                            class="answer-input">
                                 </div>
                                 <?php
+                                break;
+                                
+                            case 'locating_information':
+                                // Locating Information question type - independent implementation
+                                $locating_options = array();
+                                if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                                    $locating_options = $question['mc_options'];
+                                } elseif (isset($question['options']) && !empty($question['options'])) {
+                                    $option_lines = array_filter(explode("\n", $question['options']));
+                                    foreach ($option_lines as $opt_text) {
+                                        $locating_options[] = array('text' => trim($opt_text));
+                                    }
+                                }
+                                
+                                if (!empty($locating_options)):
+                                ?>
+                                <div class="question-options locating-information-options">
+                                    <?php foreach ($locating_options as $opt_index => $option): ?>
+                                        <label class="option-label locating-information-option-label">
+                                            <input type="radio" 
+                                                   name="answer_<?php echo $index; ?>" 
+                                                   value="<?php echo $opt_index; ?>"
+                                                   class="locating-information-radio">
+                                            <span><?php echo wp_kses_post(isset($option['text']) ? $option['text'] : $option); ?></span>
+                                        </label>
+                                    <?php endforeach; ?>
+                                </div>
+                                <?php
+                                endif;
                                 break;
                                 
                             case 'summary_completion':

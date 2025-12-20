@@ -194,6 +194,20 @@ class IELTS_CM_Quiz_Handler {
                 }
                 
                 $score += $points_earned;
+            } elseif ($question['type'] === 'locating_information') {
+                // Locating Information - independent implementation
+                $user_answer = isset($answers[$index]) ? $answers[$index] : null;
+                $is_correct = $this->check_answer($question, $user_answer);
+                
+                if ($is_correct) {
+                    $points_earned = isset($question['points']) ? floatval($question['points']) : 1;
+                    $feedback = __('Correct!', 'ielts-course-manager');
+                } else {
+                    $points_earned = 0;
+                    $feedback = __('Incorrect', 'ielts-course-manager');
+                }
+                
+                $score += $points_earned;
             } elseif (isset($answers[$index])) {
                 $is_correct = $this->check_answer($question, $answers[$index]);
                 if ($is_correct) {
@@ -318,6 +332,10 @@ class IELTS_CM_Quiz_Handler {
                 // Matching - independent implementation
                 return isset($question['correct_answer']) && $question['correct_answer'] == $user_answer;
                 
+            case 'locating_information':
+                // Locating Information - independent implementation
+                return isset($question['correct_answer']) && $question['correct_answer'] == $user_answer;
+                
             case 'true_false':
                 // True/False - independent implementation
                 return isset($question['correct_answer']) && $question['correct_answer'] == $user_answer;
@@ -327,7 +345,6 @@ class IELTS_CM_Quiz_Handler {
             case 'sentence_completion':
             case 'table_completion':
             case 'labelling':
-            case 'locating_information':
                 // Check if this is a summary completion with multiple inline answers
                 if (is_array($user_answer) && $type === 'summary_completion') {
                     // Handle inline answers - correct_answer should be in format "1:answer1|answer1alt|2:answer2|answer2alt"

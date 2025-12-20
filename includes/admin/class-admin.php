@@ -916,7 +916,7 @@ class IELTS_CM_Admin {
                     <li><strong><?php _e('Table Completion:', 'ielts-course-manager'); ?></strong> <?php _e('Students fill in table cells. Matching is flexible and case-insensitive.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Labelling:', 'ielts-course-manager'); ?></strong> <?php _e('For diagram/image labelling. Students type the label text.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Classifying & Matching:', 'ielts-course-manager'); ?></strong> <?php _e('For categorizing items. Add category options and mark the correct one.', 'ielts-course-manager'); ?></li>
-                    <li><strong><?php _e('Locating Information:', 'ielts-course-manager'); ?></strong> <?php _e('Students identify paragraph/section. Answer format can be flexible (e.g., "A", "Paragraph A").', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Locating Information:', 'ielts-course-manager'); ?></strong> <?php _e('Students identify paragraph/section. Add paragraph options and mark the correct one.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Essay:', 'ielts-course-manager'); ?></strong> <?php _e('No correct answer needed - requires manual grading.', 'ielts-course-manager'); ?></li>
                 </ul>
             </div>
@@ -1131,6 +1131,13 @@ class IELTS_CM_Admin {
                     container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
+                } else if (type === 'locating_information') {
+                    // Locating Information - independent implementation
+                    container.find('.mc-options-field').show();
+                    container.find('.multi-select-settings').hide();
+                    container.find('.general-feedback-field').hide();
+                    container.find('.dropdown-paragraph-field').hide();
+                    correctAnswerField.hide();
                 } else if (type === 'true_false') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
@@ -1151,7 +1158,7 @@ class IELTS_CM_Admin {
                         correctAnswerField.find('select').val(currentValue);
                     }
                     correctAnswerField.show();
-                } else if (type === 'short_answer' || type === 'sentence_completion' || type === 'table_completion' || type === 'labelling' || type === 'locating_information') {
+                } else if (type === 'short_answer' || type === 'sentence_completion' || type === 'table_completion' || type === 'labelling') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
@@ -1727,7 +1734,7 @@ class IELTS_CM_Admin {
             </div>
             
             <!-- New structured options for multiple choice -->
-            <div class="mc-options-field" style="<?php echo (isset($question['type']) && !in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching'))) ? 'display:none;' : ''; ?>">
+            <div class="mc-options-field" style="<?php echo (isset($question['type']) && !in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'locating_information'))) ? 'display:none;' : ''; ?>">
                 <h5><?php _e('Answer Options', 'ielts-course-manager'); ?></h5>
                 <div class="mc-options-container" data-question-index="<?php echo $index; ?>">
                     <?php
@@ -2336,8 +2343,8 @@ class IELTS_CM_Admin {
                     );
                     
                     // Handle multiple choice and multi-select with new structured format
-                    // Also handle headings, matching_classifying, and matching which use the same mc_options format
-                    if (in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching')) && isset($question['mc_options']) && is_array($question['mc_options'])) {
+                    // Also handle headings, matching_classifying, matching, and locating_information which use the same mc_options format
+                    if (in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'locating_information')) && isset($question['mc_options']) && is_array($question['mc_options'])) {
                         $mc_options = array();
                         $options_text = array();
                         $option_feedback = array();
