@@ -124,6 +124,11 @@ class IELTS_CM_Progress_Tracker {
         global $wpdb;
         
         // Get all lessons in the course first
+        // Check for both integer and string serialization in course_ids array
+        // Integer: i:123; String: s:3:"123";
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%';
+        
         $lesson_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT pm.post_id 
             FROM {$wpdb->postmeta} pm
@@ -131,8 +136,8 @@ class IELTS_CM_Progress_Tracker {
             WHERE p.post_type = 'ielts_lesson'
               AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_course_id' AND pm.meta_value = %d)
-                OR (pm.meta_key = '_ielts_cm_course_ids' AND pm.meta_value LIKE %s))
-        ", $course_id, '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%'));
+                OR (pm.meta_key = '_ielts_cm_course_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $course_id, $int_pattern, $str_pattern));
         
         // Get all resources (sub lessons) for all lessons in this course
         // Using a single query to avoid N+1 problem
@@ -165,8 +170,8 @@ class IELTS_CM_Progress_Tracker {
             WHERE p.post_type = 'ielts_quiz'
               AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_course_id' AND pm.meta_value = %d)
-                OR (pm.meta_key = '_ielts_cm_course_ids' AND pm.meta_value LIKE %s))
-        ", $course_id, '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%'));
+                OR (pm.meta_key = '_ielts_cm_course_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $course_id, $int_pattern, $str_pattern));
         
         $total_quizzes = count($quiz_ids);
         

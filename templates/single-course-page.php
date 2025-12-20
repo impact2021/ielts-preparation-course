@@ -41,12 +41,17 @@ body.ielts-course-single .content-area {
             
             // Get lessons for this course - check both old and new meta keys
             global $wpdb;
+            // Check for both integer and string serialization in course_ids array
+            // Integer: i:123; String: s:3:"123";
+            $int_pattern = '%' . $wpdb->esc_like('i:' . $course->ID . ';') . '%';
+            $str_pattern = '%' . $wpdb->esc_like(serialize(strval($course->ID))) . '%';
+            
             $lesson_ids = $wpdb->get_col($wpdb->prepare("
                 SELECT DISTINCT post_id 
                 FROM {$wpdb->postmeta} 
                 WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
-                   OR (meta_key = '_ielts_cm_course_ids' AND meta_value LIKE %s)
-            ", $course->ID, '%' . $wpdb->esc_like(serialize(strval($course->ID))) . '%'));
+                   OR (meta_key = '_ielts_cm_course_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+            ", $course->ID, $int_pattern, $str_pattern));
             
             $lessons = array();
             if (!empty($lesson_ids)) {
