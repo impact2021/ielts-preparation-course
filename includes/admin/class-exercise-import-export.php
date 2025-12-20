@@ -600,8 +600,8 @@ class IELTS_CM_Exercise_Import_Export {
                 <div style="margin: 10px 0;">
                     <h4 style="margin: 15px 0 8px 0; color: #0969da;">4. Dropdown Paragraph</h4>
                     <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong> <?php _e('Inline dropdown selections within text.', 'ielts-course-manager'); ?></p>
-                    <p><?php _e('<strong>Admin Interface:</strong> When creating questions in the admin, use ___1___, ___2___, etc. as placeholders in the question text, then add dropdown options for each numbered position below the question field.', 'ielts-course-manager'); ?></p>
-                    <p><?php _e('<strong>JSON Format:</strong> In exported/imported JSON, the format uses numbered brackets:', 'ielts-course-manager'); ?></p>
+                    <p><strong><?php _e('Admin Interface:', 'ielts-course-manager'); ?></strong> <?php _e('When creating questions in the admin, use ___1___, ___2___, etc. as placeholders in the question text, then add dropdown options for each numbered position below the question field.', 'ielts-course-manager'); ?></p>
+                    <p><strong><?php _e('JSON Format:', 'ielts-course-manager'); ?></strong> <?php _e('In exported/imported JSON, the format uses numbered brackets:', 'ielts-course-manager'); ?></p>
                     <ul style="margin-left: 20px;">
                         <li><code>question</code>: <?php _e('Use placeholders like "1.[A: option1 B: option2]" in the text', 'ielts-course-manager'); ?></li>
                         <li><code>dropdown_options</code>: <?php _e('(Optional) Structured format with position numbers as keys and arrays of options', 'ielts-course-manager'); ?></li>

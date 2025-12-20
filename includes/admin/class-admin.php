@@ -11,6 +11,9 @@ class IELTS_CM_Admin {
     
     private $processing_quiz_save = false;
     
+    // Minimum number of options required for dropdown and multiple choice questions
+    const MIN_DROPDOWN_OPTIONS = 2;
+    
     public function init() {
         // Add meta boxes
         add_action('add_meta_boxes', array($this, 'add_meta_boxes'));
@@ -1212,11 +1215,12 @@ class IELTS_CM_Admin {
             // Remove multiple choice option
             $(document).on('click', '.remove-mc-option', function() {
                 var container = $(this).closest('.mc-options-container');
-                // Ensure at least 2 options remain
-                if (container.find('.mc-option-item').length > 2) {
+                var minOptions = <?php echo self::MIN_DROPDOWN_OPTIONS; ?>;
+                // Ensure at least minimum options remain
+                if (container.find('.mc-option-item').length > minOptions) {
                     $(this).closest('.mc-option-item').remove();
                 } else {
-                    alert('<?php _e('You must have at least 2 options for a multiple choice question.', 'ielts-course-manager'); ?>');
+                    alert('<?php printf(__('You must have at least %d options for a multiple choice question.', 'ielts-course-manager'), self::MIN_DROPDOWN_OPTIONS); ?>');
                 }
             });
             
@@ -1300,10 +1304,11 @@ class IELTS_CM_Admin {
             
             $(document).on('click', '.remove-dropdown-option', function() {
                 var container = $(this).closest('.dropdown-option-items');
-                if (container.find('.dropdown-option-item').length > 2) {
+                var minOptions = <?php echo self::MIN_DROPDOWN_OPTIONS; ?>;
+                if (container.find('.dropdown-option-item').length > minOptions) {
                     $(this).closest('.dropdown-option-item').remove();
                 } else {
-                    alert('<?php _e('You must have at least 2 options for each dropdown.', 'ielts-course-manager'); ?>');
+                    alert('<?php printf(__('You must have at least %d options for each dropdown.', 'ielts-course-manager'), self::MIN_DROPDOWN_OPTIONS); ?>');
                 }
             });
             
@@ -1792,7 +1797,7 @@ class IELTS_CM_Admin {
                     ?>
                         <div class="dropdown-option-group" data-position="<?php echo esc_attr($dd_num); ?>" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">
                             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                <h5 style="margin: 0;"><?php printf(__('Dropdown ___<span class="dropdown-position">%s</span>___', 'ielts-course-manager'), $dd_num); ?></h5>
+                                <h5 style="margin: 0;"><?php echo sprintf(__('Dropdown ___%s___', 'ielts-course-manager'), '<span class="dropdown-position">' . esc_html($dd_num) . '</span>'); ?></h5>
                                 <button type="button" class="button remove-dropdown-group"><?php _e('Remove Dropdown', 'ielts-course-manager'); ?></button>
                             </div>
                             
@@ -2256,12 +2261,18 @@ class IELTS_CM_Admin {
                                 );
                                 
                                 // Build correct answer in format "1:A|2:B|3:C"
+                                // Validate correct_index is within bounds (max 26 options: A-Z)
+                                $correct_index = min($correct_index, 25);
                                 $correct_letter = chr(ord('A') + $correct_index);
                                 $correct_answer_parts[] = $position . ':' . $correct_letter;
                                 
                                 // Convert ___N___ placeholders to N.[A: option1 B: option2] format for frontend
                                 $options_text_parts = array();
                                 foreach ($options_for_position as $opt_idx => $opt_data) {
+                                    // Only process first 26 options (A-Z)
+                                    if ($opt_idx > 25) {
+                                        break;
+                                    }
                                     $opt_letter = chr(ord('A') + $opt_idx);
                                     $options_text_parts[] = $opt_letter . ': ' . $opt_data['text'];
                                 }
