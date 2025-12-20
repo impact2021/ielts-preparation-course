@@ -281,7 +281,12 @@ if ($lesson_id) {
                                     <span class="question-points">(<?php printf(_n('%s point', '%s points', $display_points, 'ielts-course-manager'), $display_points); ?>)</span>
                                 </h4>
                                 
+                                <?php
+                                // Don't display question text for dropdown_paragraph - it renders its own formatted version
+                                if ($question['type'] !== 'dropdown_paragraph'):
+                                ?>
                                 <div class="question-text"><?php echo wp_kses_post(wpautop($question['question'])); ?></div>
+                                <?php endif; ?>
                                 
                                 <?php
                                 switch ($question['type']) {

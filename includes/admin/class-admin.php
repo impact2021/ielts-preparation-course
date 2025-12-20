@@ -1730,7 +1730,7 @@ class IELTS_CM_Admin {
             <div class="dropdown-paragraph-field" style="<?php echo (isset($question['type']) && $question['type'] === 'dropdown_paragraph') ? '' : 'display:none;'; ?>">
                 <div style="margin-bottom: 15px; padding: 15px; background: #f0f6fc; border-left: 4px solid #0969da;">
                     <h5 style="margin-top: 0;"><?php _e('How to Use Dropdown Paragraph', 'ielts-course-manager'); ?></h5>
-                    <p><?php _e('In the question text above, use numbered underscores like ___1___, ___2___, etc. to mark where dropdowns should appear.', 'ielts-course-manager'); ?></p>
+                    <p><?php _e('In the question text above, use numbered underscores like ___1___, ___2___, etc. (or __1__, __2__ with double underscores) to mark where dropdowns should appear.', 'ielts-course-manager'); ?></p>
                     <p><strong><?php _e('Example:', 'ielts-course-manager'); ?></strong> <?php _e('"I am writing to ___1___ that I will now be unable to meet with you as at ___2___ on March 25th."', 'ielts-course-manager'); ?></p>
                     <p><?php _e('Then, for each numbered position, add dropdown options below and select the correct answer.', 'ielts-course-manager'); ?></p>
                 </div>
@@ -2266,7 +2266,7 @@ class IELTS_CM_Admin {
                                 $correct_letter = chr(ord('A') + $correct_index);
                                 $correct_answer_parts[] = $position . ':' . $correct_letter;
                                 
-                                // Convert ___N___ placeholders to N.[A: option1 B: option2] format for frontend
+                                // Convert ___N___ or __N__ placeholders to N.[A: option1 B: option2] format for frontend
                                 $options_text_parts = array();
                                 foreach ($options_for_position as $opt_idx => $opt_data) {
                                     // Only process first 26 options (A-Z)
@@ -2277,7 +2277,9 @@ class IELTS_CM_Admin {
                                     $options_text_parts[] = $opt_letter . ': ' . $opt_data['text'];
                                 }
                                 $options_string = implode(' ', $options_text_parts);
-                                $placeholder_pattern = '/___' . preg_quote($position, '/') . '___/';
+                                // Support both ___N___ (triple underscores) and __N__ (double underscores)
+                                // Use alternation to match either format
+                                $placeholder_pattern = '/(___' . preg_quote($position, '/') . '___|__' . preg_quote($position, '/') . '__)/';
                                 $replacement = $position . '.[' . $options_string . ']';
                                 $question_text = preg_replace($placeholder_pattern, $replacement, $question_text);
                             }
