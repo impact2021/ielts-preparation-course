@@ -2,6 +2,55 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.43] - 2025-12-20
+
+### Fixed
+- **Dropdown Paragraph Rendering Bug**: Fixed critical bug where dropdown select elements were not displaying on the frontend
+  - The `wp_kses_post()` function was stripping out `<select>` and `<option>` HTML tags
+  - This made dropdown paragraph questions completely unusable - students saw no dropdowns at all
+  - Solution: Extended wp_kses allowed HTML to include select and option tags with whitelisted attributes
+  - Affected both standard and computer-based test (CBT) layouts
+
+### Changed
+- **Dropdown Option Display**: Removed letter prefix from dropdown option text for cleaner appearance
+  - Previous: Dropdown showed "A: great", "B: good", "C: excellent"
+  - Now: Dropdown shows "great", "good", "excellent"
+  - Letter values still used internally for answer validation
+- **Version Update**: Updated plugin version from 2.42 to 2.43
+
+### Technical Details
+- Modified `templates/single-quiz.php`
+  - Line 293: Removed letter prefix from option display (removed `$letter . ': '`)
+  - Lines 300-310: Added custom wp_kses allowed HTML configuration
+    - Extends `wp_kses_allowed_html('post')` with select and option tags
+    - Whitelists specific safe attributes: name, class, data-dropdown-num, value, selected
+- Modified `templates/single-quiz-computer-based.php`
+  - Line 447: Removed letter prefix from option display (removed `$letter . ': '`)
+  - Lines 454-464: Added custom wp_kses allowed HTML configuration
+    - Same allowed HTML configuration as standard template
+- Modified `ielts-course-manager.php`
+  - Line 6: Updated plugin version header from 2.42 to 2.43
+  - Line 23: Updated `IELTS_CM_VERSION` constant from 2.42 to 2.43
+
+### Documentation
+- **V2.43_IMPLEMENTATION_SUMMARY.md**: Comprehensive technical documentation of all changes
+- **V2.43_SECURITY_SUMMARY.md**: Complete security analysis confirming no vulnerabilities introduced
+
+### Security
+- ✅ No security vulnerabilities introduced
+- ✅ HTML sanitization maintained with wp_kses (extended, not disabled)
+- ✅ Only safe form elements added to allowed tags (select, option)
+- ✅ Attribute whitelisting prevents XSS attacks
+- ✅ All output escaping maintained (esc_attr, esc_html)
+- ✅ CodeQL analysis: No issues detected
+- ✅ Code review: Passed (minor code duplication noted, acceptable for minimal change)
+
+### Backward Compatibility
+- ✅ 100% backward compatible
+- ✅ All existing dropdown questions continue to work
+- ✅ No database migration required
+- ✅ No breaking changes
+
 ## [2.42] - 2025-12-20
 
 ### Fixed
