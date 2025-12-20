@@ -1640,6 +1640,49 @@ class IELTS_CM_Admin {
         <?php
     }
     
+    
+    /**
+     * Calculate the number of questions/points for a given question
+     * Used for displaying question number ranges in admin and frontend
+     * 
+     * @param array $question The question data
+     * @return int Number of questions/points this question represents
+     */
+    private function calculate_question_count($question) {
+        $question_type = isset($question['type']) ? $question['type'] : 'short_answer';
+        $question_count = 1;
+        
+        if ($question_type === 'multi_select') {
+            // Count correct answers for multi-select
+            $correct_count = 0;
+            if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                foreach ($question['mc_options'] as $option) {
+                    if (!empty($option['is_correct'])) {
+                        $correct_count++;
+                    }
+                }
+            }
+            $question_count = max(1, $correct_count);
+        } elseif ($question_type === 'summary_completion') {
+            // Count fields for summary completion
+            if (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+                $question_count = count($question['summary_fields']);
+            } else {
+                // Parse from question text
+                $question_text = isset($question['question']) ? $question['question'] : '';
+                preg_match_all('/\[field\s+(\d+)\]/i', $question_text, $field_matches);
+                preg_match_all('/\[ANSWER\s+(\d+)\]/i', $question_text, $answer_matches);
+                if (!empty($field_matches[1])) {
+                    $question_count = count(array_unique($field_matches[1]));
+                } elseif (!empty($answer_matches[1])) {
+                    $question_count = count(array_unique($answer_matches[1]));
+                }
+            }
+        }
+        
+        return $question_count;
+    }
+    
     /**
      * Render question field
      */
@@ -1665,34 +1708,7 @@ class IELTS_CM_Admin {
                     }
                     
                     // Calculate actual question count for this question
-                    $question_count = 1;
-                    if ($question_type === 'multi_select') {
-                        // Count correct answers for multi-select
-                        $correct_count = 0;
-                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
-                            foreach ($question['mc_options'] as $option) {
-                                if (!empty($option['is_correct'])) {
-                                    $correct_count++;
-                                }
-                            }
-                        }
-                        $question_count = max(1, $correct_count);
-                    } elseif ($question_type === 'summary_completion') {
-                        // Count fields for summary completion
-                        if (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
-                            $question_count = count($question['summary_fields']);
-                        } else {
-                            // Parse from question text
-                            $question_text = isset($question['question']) ? $question['question'] : '';
-                            preg_match_all('/\[field\s+(\d+)\]/i', $question_text, $field_matches);
-                            preg_match_all('/\[ANSWER\s+(\d+)\]/i', $question_text, $answer_matches);
-                            if (!empty($field_matches[1])) {
-                                $question_count = count(array_unique($field_matches[1]));
-                            } elseif (!empty($answer_matches[1])) {
-                                $question_count = count(array_unique($answer_matches[1]));
-                            }
-                        }
-                    }
+                    $question_count = $this->calculate_question_count($question);
                     
                     // Calculate display question numbers (need to count previous questions)
                     $display_start = 1;
@@ -1701,37 +1717,7 @@ class IELTS_CM_Admin {
                         if (is_array($all_questions)) {
                             for ($i = 0; $i < $index; $i++) {
                                 if (isset($all_questions[$i])) {
-                                    $prev_question = $all_questions[$i];
-                                    $prev_type = isset($prev_question['type']) ? $prev_question['type'] : 'short_answer';
-                                    
-                                    if ($prev_type === 'multi_select') {
-                                        $prev_correct_count = 0;
-                                        if (isset($prev_question['mc_options']) && is_array($prev_question['mc_options'])) {
-                                            foreach ($prev_question['mc_options'] as $option) {
-                                                if (!empty($option['is_correct'])) {
-                                                    $prev_correct_count++;
-                                                }
-                                            }
-                                        }
-                                        $display_start += max(1, $prev_correct_count);
-                                    } elseif ($prev_type === 'summary_completion') {
-                                        $prev_field_count = 1;
-                                        if (isset($prev_question['summary_fields']) && is_array($prev_question['summary_fields'])) {
-                                            $prev_field_count = count($prev_question['summary_fields']);
-                                        } else {
-                                            $prev_question_text = isset($prev_question['question']) ? $prev_question['question'] : '';
-                                            preg_match_all('/\[field\s+(\d+)\]/i', $prev_question_text, $prev_field_matches);
-                                            preg_match_all('/\[ANSWER\s+(\d+)\]/i', $prev_question_text, $prev_answer_matches);
-                                            if (!empty($prev_field_matches[1])) {
-                                                $prev_field_count = count(array_unique($prev_field_matches[1]));
-                                            } elseif (!empty($prev_answer_matches[1])) {
-                                                $prev_field_count = count(array_unique($prev_answer_matches[1]));
-                                            }
-                                        }
-                                        $display_start += $prev_field_count;
-                                    } else {
-                                        $display_start += 1;
-                                    }
+                                    $display_start += $this->calculate_question_count($all_questions[$i]);
                                 }
                             }
                         }
