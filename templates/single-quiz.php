@@ -78,15 +78,56 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     <form id="ielts-quiz-form" class="quiz-form">
         <div class="quiz-questions">
             <?php if (!empty($questions)): ?>
-                <?php foreach ($questions as $index => $question): ?>
+                <?php 
+                // Calculate display question numbers for multi-select and matching questions
+                $display_question_number = 1;
+                $question_display_numbers = array();
+                foreach ($questions as $idx => $q) {
+                    $start_num = $display_question_number;
+                    // For multi-select, count number of correct answers
+                    if ($q['type'] === 'multi_select' && isset($q['mc_options']) && is_array($q['mc_options'])) {
+                        $correct_count = 0;
+                        foreach ($q['mc_options'] as $opt) {
+                            if (!empty($opt['is_correct'])) {
+                                $correct_count++;
+                            }
+                        }
+                        // Multi-select counts as multiple questions based on correct answers
+                        $question_count = max(1, $correct_count);
+                    } elseif ($q['type'] === 'matching' && isset($q['matches']) && is_array($q['matches'])) {
+                        // For matching, count number of match items
+                        $question_count = count($q['matches']);
+                    } else {
+                        $question_count = 1;
+                    }
+                    $end_num = $start_num + $question_count - 1;
+                    $question_display_numbers[$idx] = array(
+                        'start' => $start_num,
+                        'end' => $end_num,
+                        'count' => $question_count
+                    );
+                    $display_question_number += $question_count;
+                }
+                
+                foreach ($questions as $index => $question): 
+                    $display_nums = $question_display_numbers[$index];
+                ?>
                     <div class="quiz-question" id="question-<?php echo $index; ?>">
                         <?php if (!empty($question['instructions'])): ?>
                             <div class="question-instructions"><?php echo wp_kses_post(wpautop($question['instructions'])); ?></div>
                         <?php endif; ?>
                         
                         <h4>
-                            <?php printf(__('Question %d', 'ielts-course-manager'), $index + 1); ?>
-                            <span class="question-points">(<?php printf(_n('%s point', '%s points', $question['points'], 'ielts-course-manager'), $question['points']); ?>)</span>
+                            <?php 
+                            if ($display_nums['start'] === $display_nums['end']) {
+                                printf(__('Question %d', 'ielts-course-manager'), $display_nums['start']);
+                            } else {
+                                printf(__('Questions %d – %d', 'ielts-course-manager'), $display_nums['start'], $display_nums['end']);
+                            }
+                            // For multi-select and matching, show the actual number of sub-questions as points
+                            $display_points = $display_nums['count'];
+                            ?>
+                            <span class="question-points">(<?php printf(_n('%s point', '%s points', $display_points, 'ielts-course-manager'), $display_points); ?>)</span>
                         </h4>
                         
                         <div class="question-text"><?php echo wp_kses_post(wpautop($question['question'])); ?></div>
@@ -244,9 +285,13 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                             case 'matching':
                                 // Matching question type - displays multiple sub-questions with individual answer inputs
                                 if (isset($question['matches']) && is_array($question['matches'])):
+                                    $match_question_num = $display_nums['start'];
                                     foreach ($question['matches'] as $match_index => $match):
                                 ?>
                                     <div class="matching-item" style="margin: 15px 0; padding-left: 20px;">
+                                        <div class="matching-question-number" style="font-weight: bold; margin-bottom: 5px;">
+                                            <?php printf(__('Question %d', 'ielts-course-manager'), $match_question_num); ?>
+                                        </div>
                                         <div class="matching-text" style="margin-bottom: 8px;">
                                             <?php echo wp_kses_post($match['text']); ?>
                                         </div>
@@ -260,6 +305,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                         </div>
                                     </div>
                                 <?php 
+                                        $match_question_num++;
                                     endforeach;
                                 endif;
                                 break;

@@ -352,9 +352,13 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                     case 'matching':
                                         // Matching question type - displays multiple sub-questions with individual answer inputs
                                         if (isset($question['matches']) && is_array($question['matches'])):
+                                            $match_question_num = $display_nums['start'];
                                             foreach ($question['matches'] as $match_index => $match):
                                         ?>
                                             <div class="matching-item" style="margin: 15px 0; padding-left: 20px;">
+                                                <div class="matching-question-number" style="font-weight: bold; margin-bottom: 5px;">
+                                                    <?php printf(__('Question %d', 'ielts-course-manager'), $match_question_num); ?>
+                                                </div>
                                                 <div class="matching-text" style="margin-bottom: 8px;">
                                                     <?php echo wp_kses_post($match['text']); ?>
                                                 </div>
@@ -368,6 +372,7 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                                 </div>
                                             </div>
                                         <?php 
+                                            $match_question_num++;
                                             endforeach;
                                         endif;
                                         break;
