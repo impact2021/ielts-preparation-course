@@ -2,6 +2,24 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.35] - 2025-12-20
+
+### Changed
+- **Version Update**: Updated plugin version to 2.35
+- **Enhanced Sublesson Navigation**: Bottom navigation on sublesson pages now includes exercises
+  - Navigation arrows at the bottom of sublesson (resource) pages now navigate through all lesson content in menu order
+  - Includes both sublessons and exercises in the navigation sequence
+  - Navigation labels dynamically change to indicate item type ("Previous/Next Sub Lesson" or "Previous/Next Exercise")
+  - Exercises with CBT fullscreen mode automatically link to fullscreen view
+  - Improves learning flow by allowing students to navigate directly from sublessons to exercises and vice versa
+  - Respects menu_order for proper sequencing of all content items
+
+### Technical Details
+- Modified `templates/single-resource-page.php` to combine resources and quizzes in navigation logic
+- Navigation now uses same approach as quiz-handler's `get_next_item_url()` method
+- Properly sorts all items by menu_order before determining previous/next items
+- Handles CBT quiz fullscreen parameter for seamless navigation
+
 ## [2.34] - 2025-12-20
 
 ### Added
