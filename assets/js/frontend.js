@@ -1042,9 +1042,10 @@
             // Warn when clicking "Return to course" link before submitting
             $(document).on('click', '#return-to-course-link', function(e) {
                 if (!quizSubmitted) {
-                    // Don't show warning if the link says "Next page >" (user is navigating to next item)
-                    var linkText = $(this).text().trim();
-                    if (linkText.indexOf('Next page') === -1) {
+                    // Don't show warning if there's a next URL (user is navigating to next item, not losing progress)
+                    var quizContainer = $('.ielts-computer-based-quiz');
+                    var nextUrl = quizContainer.data('next-url');
+                    if (!nextUrl) {
                         var confirmLeave = confirm('Are you sure you want to return to the course? Your progress will be lost if you have not submitted your test.');
                         if (!confirmLeave) {
                             e.preventDefault();
