@@ -2542,6 +2542,28 @@ class IELTS_CM_Admin {
                         $question_data['dropdown_options'] = $dropdown_options;
                         $question_data['correct_answer'] = implode('|', $correct_answer_parts);
                         $question_data['question'] = $question_text; // Update question text with converted format
+                    } elseif ($question['type'] === 'summary_completion' && isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+                        // Handle summary completion questions
+                        $summary_fields = array();
+                        
+                        foreach ($question['summary_fields'] as $field_num => $field_data) {
+                            // Skip empty fields
+                            if (empty($field_data['answer'])) {
+                                continue;
+                            }
+                            
+                            $summary_fields[$field_num] = array(
+                                'answer' => sanitize_text_field($field_data['answer']),
+                                'correct_feedback' => isset($field_data['correct_feedback']) ? wp_kses_post($field_data['correct_feedback']) : '',
+                                'incorrect_feedback' => isset($field_data['incorrect_feedback']) ? wp_kses_post($field_data['incorrect_feedback']) : '',
+                                'no_answer_feedback' => isset($field_data['no_answer_feedback']) ? wp_kses_post($field_data['no_answer_feedback']) : ''
+                            );
+                        }
+                        
+                        $question_data['summary_fields'] = $summary_fields;
+                        // Also set options and correct_answer for backward compatibility
+                        $question_data['options'] = isset($question['options']) ? sanitize_textarea_field($question['options']) : '';
+                        $question_data['correct_answer'] = isset($question['correct_answer']) ? sanitize_text_field($question['correct_answer']) : '';
                     } else {
                         // Non-multiple choice questions
                         $question_data['options'] = isset($question['options']) ? sanitize_textarea_field($question['options']) : '';
