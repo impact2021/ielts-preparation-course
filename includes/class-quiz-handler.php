@@ -227,8 +227,12 @@ class IELTS_CM_Quiz_Handler {
                     foreach ($parts as $part) {
                         $part = trim($part);
                         if (strpos($part, ':') !== false) {
-                            list($num, $ans) = explode(':', $part, 2);
-                            $answer_groups[trim($num)][] = trim($ans);
+                            $parts_split = explode(':', $part, 2);
+                            if (count($parts_split) === 2) {
+                                $num = trim($parts_split[0]);
+                                $ans = trim($parts_split[1]);
+                                $answer_groups[$num][] = $ans;
+                            }
                         } elseif (!empty($answer_groups)) {
                             // No colon means it's an alternative for the last number
                             end($answer_groups);

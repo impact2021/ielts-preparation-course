@@ -394,7 +394,7 @@ if ($lesson_id) {
                                             $processed_text = $summary_text;
                                             foreach ($matches[0] as $match_index => $placeholder) {
                                                 $answer_num = $matches[1][$match_index];
-                                                $input_field = '<input type="text" name="answer_' . $index . '_' . $answer_num . '" class="answer-input-inline" data-answer-num="' . $answer_num . '" />';
+                                                $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_' . esc_attr($answer_num) . '" class="answer-input-inline" data-answer-num="' . esc_attr($answer_num) . '" />';
                                                 $processed_text = str_replace($placeholder, $input_field, $processed_text);
                                             }
                                             echo '<div class="summary-completion-text">' . wp_kses_post(wpautop($processed_text)) . '</div>';

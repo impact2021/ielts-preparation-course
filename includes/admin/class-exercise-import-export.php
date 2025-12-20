@@ -921,6 +921,8 @@ class IELTS_CM_Exercise_Import_Export {
         }
         
         // Get JSON content from POST data
+        // Note: We use wp_unslash() but NOT sanitize_textarea_field() because that would corrupt the JSON
+        // The JSON content will be parsed and then each field will be sanitized by the import helper methods
         $json_content = wp_unslash($_POST['json_content']);
         
         if (empty($json_content)) {
