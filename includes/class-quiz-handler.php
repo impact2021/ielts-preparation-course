@@ -294,7 +294,20 @@ class IELTS_CM_Quiz_Handler {
     
     /**
      * Check matching answer and calculate points
-     * Users get 1 point for each correct match
+     * 
+     * Validates answers for matching-type questions where students match items
+     * from a list (e.g., A-J) to complete statements. Each match item is checked
+     * independently and awards 1 point if correct.
+     * 
+     * @param array $question The question data including 'matches' array with match items
+     * @param array $all_answers All user answers from the form submission, keyed by field name
+     * @param int $question_index The index of the question in the questions array
+     * @return array {
+     *     @type int $points_earned Number of points earned (1 per correct match)
+     *     @type bool $is_correct True if all matches are correct, false otherwise
+     *     @type string $feedback Feedback message based on correct/incorrect status
+     *     @type array $correct_answers Array of correct answers indexed by match_index
+     * }
      */
     private function check_matching_answer($question, $all_answers, $question_index) {
         $points_earned = 0;
