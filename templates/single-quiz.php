@@ -226,15 +226,34 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 break;
                                 
                             case 'summary_completion':
-                                // Summary completion - similar to fill in the blank but for paragraph/summary contexts
-                                // The question text should contain the paragraph with a blank indicated
-                                ?>
-                                <div class="question-answer">
-                                    <input type="text" 
-                                           name="answer_<?php echo $index; ?>" 
-                                           class="answer-input">
-                                </div>
-                                <?php
+                                // Summary completion - parse [ANSWER N] placeholders and replace with inline inputs
+                                // Question text should contain placeholders like [ANSWER 1], [ANSWER 2], etc.
+                                
+                                // Get the question text without wpautop processing for inline inputs
+                                $summary_text = isset($question['question']) ? $question['question'] : '';
+                                
+                                // Find all [ANSWER N] placeholders
+                                preg_match_all('/\[ANSWER\s+(\d+)\]/i', $summary_text, $matches);
+                                
+                                if (!empty($matches[0])) {
+                                    // Multiple inline answers - replace placeholders with input fields
+                                    $processed_text = $summary_text;
+                                    foreach ($matches[0] as $match_index => $placeholder) {
+                                        $answer_num = $matches[1][$match_index];
+                                        $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_' . esc_attr($answer_num) . '" class="answer-input-inline" data-answer-num="' . esc_attr($answer_num) . '" />';
+                                        $processed_text = str_replace($placeholder, $input_field, $processed_text);
+                                    }
+                                    echo '<div class="summary-completion-text">' . wp_kses_post(wpautop($processed_text)) . '</div>';
+                                } else {
+                                    // Legacy format - single answer input below question text
+                                    ?>
+                                    <div class="question-answer">
+                                        <input type="text" 
+                                               name="answer_<?php echo $index; ?>" 
+                                               class="answer-input">
+                                    </div>
+                                    <?php
+                                }
                                 break;
                             
                             case 'headings':

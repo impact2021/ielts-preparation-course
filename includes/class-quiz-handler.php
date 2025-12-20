@@ -216,6 +216,61 @@ class IELTS_CM_Quiz_Handler {
             case 'table_completion':
             case 'labelling':
             case 'locating_information':
+                // Check if this is a summary completion with multiple inline answers
+                if (is_array($user_answer) && $type === 'summary_completion') {
+                    // Handle inline answers - correct_answer should be in format "1:answer1|answer1alt|2:answer2|answer2alt"
+                    $correct_answers = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+                    
+                    // Parse correct answers by number (e.g., "1:paris|france|2:london|uk")
+                    $answer_groups = array();
+                    $parts = explode('|', $correct_answers);
+                    foreach ($parts as $part) {
+                        $part = trim($part);
+                        if (strpos($part, ':') !== false) {
+                            $parts_split = explode(':', $part, 2);
+                            if (count($parts_split) === 2) {
+                                $num = trim($parts_split[0]);
+                                $ans = trim($parts_split[1]);
+                                $answer_groups[$num][] = $ans;
+                            }
+                        } elseif (!empty($answer_groups)) {
+                            // No colon means it's an alternative for the last number
+                            end($answer_groups);
+                            $last_key = key($answer_groups);
+                            $answer_groups[$last_key][] = trim($part);
+                        }
+                    }
+                    
+                    // Check each user answer against its corresponding correct answers
+                    foreach ($user_answer as $answer_num => $user_ans) {
+                        if (!isset($answer_groups[$answer_num])) {
+                            return false; // Unknown answer number
+                        }
+                        
+                        $user = strtolower(trim($user_ans));
+                        $user = preg_replace('/[^\w\s]/', '', $user);
+                        $user = preg_replace('/\s+/', ' ', $user);
+                        
+                        $found_match = false;
+                        foreach ($answer_groups[$answer_num] as $correct) {
+                            $correct = strtolower(trim($correct));
+                            $correct = preg_replace('/[^\w\s]/', '', $correct);
+                            $correct = preg_replace('/\s+/', ' ', $correct);
+                            
+                            if ($correct === $user) {
+                                $found_match = true;
+                                break;
+                            }
+                        }
+                        
+                        if (!$found_match) {
+                            return false; // One of the answers was incorrect
+                        }
+                    }
+                    
+                    return true; // All answers were correct
+                }
+                
                 // Support multiple accepted answers separated by pipe |
                 $correct_answers = isset($question['correct_answer']) ? $question['correct_answer'] : '';
                 

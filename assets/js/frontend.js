@@ -178,6 +178,21 @@
             var answers = {};
             form.find('[name^="answer_"]').each(function() {
                 var name = $(this).attr('name');
+                
+                // Check if this is an inline summary completion input (e.g., answer_0_1, answer_0_2)
+                var inlineMatch = name.match(/^answer_(\d+)_(\d+)$/);
+                if (inlineMatch) {
+                    var questionIndex = inlineMatch[1];
+                    var answerNum = inlineMatch[2];
+                    
+                    if (!answers[questionIndex]) {
+                        answers[questionIndex] = {};
+                    }
+                    answers[questionIndex][answerNum] = $(this).val();
+                    return; // Continue to next iteration
+                }
+                
+                // Regular answer handling
                 var index = name.replace('answer_', '').replace('[]', '');
                 
                 if ($(this).attr('type') === 'radio') {

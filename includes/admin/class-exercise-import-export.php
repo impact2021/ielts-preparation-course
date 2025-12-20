@@ -21,6 +21,7 @@ class IELTS_CM_Exercise_Import_Export {
         add_action('admin_post_ielts_cm_export_exercise', array($this, 'handle_export'));
         add_action('admin_post_ielts_cm_import_exercise', array($this, 'handle_import'));
         add_action('wp_ajax_ielts_cm_import_exercise_direct', array($this, 'handle_import_direct'));
+        add_action('wp_ajax_ielts_cm_import_exercise_json_text', array($this, 'handle_import_json_text'));
         add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_scripts'));
     }
     
@@ -96,6 +97,7 @@ class IELTS_CM_Exercise_Import_Export {
                 'success' => __('Import successful! Reloading page...', 'ielts-course-manager'),
                 'error' => __('Import failed. Please try again.', 'ielts-course-manager'),
                 'noFile' => __('Please select a JSON file.', 'ielts-course-manager'),
+                'noJson' => __('Please paste JSON content.', 'ielts-course-manager'),
                 'confirmImport' => __('This will replace all current questions and settings. Are you sure you want to continue?', 'ielts-course-manager'),
             )
         ));
@@ -135,19 +137,59 @@ class IELTS_CM_Exercise_Import_Export {
     public function render_import_meta_box($post) {
         wp_nonce_field('ielts_cm_import_exercise_direct_' . $post->ID, 'ielts_cm_import_exercise_nonce');
         ?>
-        <p><?php _e('Upload a JSON file to import exercise content. This will overwrite the current exercise content.', 'ielts-course-manager'); ?></p>
-        <p>
-            <input type="file" id="ielts_cm_import_file_<?php echo esc_attr($post->ID); ?>" accept=".json" style="width: 100%; margin-bottom: 10px;">
-        </p>
-        <p>
-            <button type="button" class="button button-secondary" id="ielts_cm_import_btn_<?php echo esc_attr($post->ID); ?>" data-exercise-id="<?php echo esc_attr($post->ID); ?>">
-                <?php _e('Import from JSON', 'ielts-course-manager'); ?>
+        <p><?php _e('Import exercise content from JSON. This will overwrite the current exercise content.', 'ielts-course-manager'); ?></p>
+        
+        <!-- Tab navigation -->
+        <div class="ielts-import-tabs" style="margin-bottom: 15px; border-bottom: 1px solid #ddd;">
+            <button type="button" class="ielts-import-tab-btn active" data-tab="file" style="padding: 8px 12px; border: none; background: none; cursor: pointer; border-bottom: 2px solid #2271b1; font-weight: 600;">
+                <?php _e('Upload File', 'ielts-course-manager'); ?>
             </button>
-        </p>
+            <button type="button" class="ielts-import-tab-btn" data-tab="paste" style="padding: 8px 12px; border: none; background: none; cursor: pointer; border-bottom: 2px solid transparent;">
+                <?php _e('Paste JSON', 'ielts-course-manager'); ?>
+            </button>
+        </div>
+        
+        <!-- File upload tab -->
+        <div class="ielts-import-tab-content" data-tab-content="file">
+            <p>
+                <input type="file" id="ielts_cm_import_file_<?php echo esc_attr($post->ID); ?>" accept=".json" style="width: 100%; margin-bottom: 10px;">
+            </p>
+            <p>
+                <button type="button" class="button button-secondary" id="ielts_cm_import_btn_<?php echo esc_attr($post->ID); ?>" data-exercise-id="<?php echo esc_attr($post->ID); ?>">
+                    <?php _e('Import from JSON', 'ielts-course-manager'); ?>
+                </button>
+            </p>
+            <p class="description">
+                <?php _e('Select a JSON file exported from another exercise.', 'ielts-course-manager'); ?>
+            </p>
+        </div>
+        
+        <!-- JSON paste tab -->
+        <div class="ielts-import-tab-content" data-tab-content="paste" style="display: none;">
+            <p>
+                <textarea id="ielts_cm_import_json_<?php echo esc_attr($post->ID); ?>" rows="10" style="width: 100%; font-family: monospace; font-size: 12px;" placeholder='<?php esc_attr_e('Paste your JSON content here...', 'ielts-course-manager'); ?>'></textarea>
+            </p>
+            <p>
+                <button type="button" class="button button-secondary" id="ielts_cm_import_json_btn_<?php echo esc_attr($post->ID); ?>" data-exercise-id="<?php echo esc_attr($post->ID); ?>">
+                    <?php _e('Import from JSON Text', 'ielts-course-manager'); ?>
+                </button>
+            </p>
+            <p class="description">
+                <?php _e('Paste the JSON content directly into the textarea above.', 'ielts-course-manager'); ?>
+            </p>
+        </div>
+        
         <div id="ielts_cm_import_status_<?php echo esc_attr($post->ID); ?>" style="margin-top: 10px;"></div>
-        <p class="description">
-            <?php _e('Select a JSON file exported from another exercise. All current questions and settings will be replaced.', 'ielts-course-manager'); ?>
-        </p>
+        
+        <style>
+        .ielts-import-tab-btn.active {
+            border-bottom-color: #2271b1 !important;
+            font-weight: 600;
+        }
+        .ielts-import-tab-btn:hover {
+            color: #2271b1;
+        }
+        </style>
         <?php
     }
     
@@ -828,6 +870,82 @@ class IELTS_CM_Exercise_Import_Export {
         // Validate JSON structure - ensure it's an exercise export
         if (!isset($import_data['version']) || !isset($import_data['questions'])) {
             wp_send_json_error(array('message' => __('Invalid exercise JSON file. Please check the file format.', 'ielts-course-manager')));
+        }
+        
+        // Import settings, reading texts, and questions using helper methods
+        $this->import_exercise_settings($exercise_id, $import_data);
+        $this->import_reading_texts($exercise_id, $import_data);
+        $this->import_questions($exercise_id, $import_data);
+        
+        // Return success
+        wp_send_json_success(array(
+            'message' => __('Exercise imported successfully!', 'ielts-course-manager'),
+            'exercise_id' => $exercise_id
+        ));
+    }
+    
+    /**
+     * Handle JSON text import (paste)
+     * Similar to handle_import_direct but accepts JSON as POST data instead of file upload
+     */
+    public function handle_import_json_text() {
+        // Verify required parameters are present
+        if (!isset($_POST['exercise_id'])) {
+            wp_send_json_error(array('message' => __('Exercise ID is required', 'ielts-course-manager')));
+        }
+        
+        if (!isset($_POST['nonce'])) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        if (!isset($_POST['json_content'])) {
+            wp_send_json_error(array('message' => __('JSON content is required', 'ielts-course-manager')));
+        }
+        
+        $exercise_id = intval($_POST['exercise_id']);
+        
+        // Verify nonce
+        if (!wp_verify_nonce($_POST['nonce'], 'ielts_cm_import_exercise_direct_' . $exercise_id)) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        // Check user capability - require manage_options for security
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error(array('message' => __('You do not have sufficient permissions to perform this action.', 'ielts-course-manager')));
+        }
+        
+        // Verify target exercise exists
+        $target_exercise = get_post($exercise_id);
+        if (!$target_exercise || $target_exercise->post_type !== 'ielts_quiz') {
+            wp_send_json_error(array('message' => __('Exercise not found', 'ielts-course-manager')));
+        }
+        
+        // Get JSON content from POST data
+        // Note: We use wp_unslash() but NOT sanitize_textarea_field() because that would corrupt the JSON
+        // The JSON content will be parsed and then each field will be sanitized by the import helper methods
+        $json_content = wp_unslash($_POST['json_content']);
+        
+        if (empty($json_content)) {
+            wp_send_json_error(array('message' => __('JSON content is empty. Please paste valid JSON.', 'ielts-course-manager')));
+        }
+        
+        // Validate JSON size (limit to 10MB)
+        $max_size = 10 * 1024 * 1024; // 10MB in bytes
+        if (strlen($json_content) > $max_size) {
+            wp_send_json_error(array('message' => __('JSON content is too large. Maximum size is 10MB.', 'ielts-course-manager')));
+        }
+        
+        // Parse JSON
+        $import_data = json_decode($json_content, true);
+        
+        if ($import_data === null || json_last_error() !== JSON_ERROR_NONE) {
+            $error_msg = json_last_error_msg();
+            wp_send_json_error(array('message' => sprintf(__('Invalid JSON: %s', 'ielts-course-manager'), $error_msg)));
+        }
+        
+        // Validate JSON structure - ensure it's an exercise export
+        if (!isset($import_data['version']) || !isset($import_data['questions'])) {
+            wp_send_json_error(array('message' => __('Invalid exercise JSON. Please ensure you pasted a valid exercise export.', 'ielts-course-manager')));
         }
         
         // Import settings, reading texts, and questions using helper methods
