@@ -357,6 +357,282 @@ class IELTS_CM_Exercise_Import_Export {
                 </form>
             </div>
             
+            <div class="json-format-documentation" style="max-width: 900px; margin: 20px 0; padding: 20px; background: #f0f6fc; border-left: 4px solid #0969da;">
+                <h2><?php _e('JSON Format Documentation - All Question Types', 'ielts-course-manager'); ?></h2>
+                <p><?php _e('This is a comprehensive reference showing examples of all supported question types in the JSON format. Use this as a template when creating or modifying exercises.', 'ielts-course-manager'); ?></p>
+                
+                <details style="margin: 15px 0; padding: 10px; background: white; border: 1px solid #ddd; border-radius: 4px;">
+                    <summary style="cursor: pointer; font-weight: 600; padding: 5px;">
+                        <?php _e('Click to expand: Complete JSON Example with All Question Types', 'ielts-course-manager'); ?>
+                    </summary>
+                    <pre style="background: #f6f8fa; padding: 15px; overflow-x: auto; border: 1px solid #d0d7de; border-radius: 6px; margin-top: 10px; font-size: 12px; line-height: 1.6;"><code>{
+  "reading_passage_id": "PLACEHOLDER_PASSAGE_ID",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "instructions": "Choose the correct answer.",
+      "question": "What is the capital of France?",
+      "points": 1,
+      "reading_text_id": "1",
+      "mc_options": [
+        {"text": "London", "is_correct": false, "feedback": "Incorrect. London is the capital of the UK."},
+        {"text": "Paris", "is_correct": true, "feedback": "Correct! Paris is the capital of France."},
+        {"text": "Berlin", "is_correct": false, "feedback": "Incorrect. Berlin is the capital of Germany."},
+        {"text": "Madrid", "is_correct": false, "feedback": "Incorrect. Madrid is the capital of Spain."}
+      ],
+      "options": "London\nParis\nBerlin\nMadrid",
+      "correct_answer": "1",
+      "option_feedback": [
+        "Incorrect. London is the capital of the UK.",
+        "Correct! Paris is the capital of France.",
+        "Incorrect. Berlin is the capital of Germany.",
+        "Incorrect. Madrid is the capital of Spain."
+      ]
+    },
+    {
+      "type": "multi_select",
+      "instructions": "Select all that apply.",
+      "question": "Which of these are European countries?",
+      "points": 1,
+      "reading_text_id": "1",
+      "mc_options": [
+        {"text": "France", "is_correct": true, "feedback": "Correct!"},
+        {"text": "Japan", "is_correct": false, "feedback": "Incorrect. Japan is in Asia."},
+        {"text": "Germany", "is_correct": true, "feedback": "Correct!"},
+        {"text": "Brazil", "is_correct": false, "feedback": "Incorrect. Brazil is in South America."}
+      ],
+      "options": "France\nJapan\nGermany\nBrazil",
+      "correct_answer": "0,2"
+    },
+    {
+      "type": "true_false",
+      "instructions": "Read the statements and decide if they are TRUE, FALSE, or NOT GIVEN.",
+      "question": "The Eiffel Tower is located in Paris.",
+      "points": 1,
+      "reading_text_id": "1",
+      "tf_options": [
+        {"text": "TRUE", "is_correct": true, "feedback": "Correct! The Eiffel Tower is in Paris."},
+        {"text": "FALSE", "is_correct": false, "feedback": "Incorrect."},
+        {"text": "NOT GIVEN", "is_correct": false, "feedback": "Incorrect."}
+      ],
+      "correct_answer": "TRUE"
+    },
+    {
+      "type": "headings",
+      "instructions": "Match the headings to the paragraphs.",
+      "question": "Which heading best describes Paragraph A?",
+      "points": 1,
+      "reading_text_id": "1",
+      "mc_options": [
+        {"text": "Early History", "is_correct": true, "feedback": "Correct!"},
+        {"text": "Modern Developments", "is_correct": false, "feedback": "Incorrect."},
+        {"text": "Future Predictions", "is_correct": false, "feedback": "Incorrect."}
+      ],
+      "options": "Early History\nModern Developments\nFuture Predictions",
+      "correct_answer": "0"
+    },
+    {
+      "type": "matching_classifying",
+      "instructions": "Classify the following item.",
+      "question": "The process described in paragraph 2 is an example of:",
+      "points": 1,
+      "reading_text_id": "1",
+      "mc_options": [
+        {"text": "Physical change", "is_correct": false, "feedback": "Incorrect."},
+        {"text": "Chemical change", "is_correct": true, "feedback": "Correct!"},
+        {"text": "Nuclear change", "is_correct": false, "feedback": "Incorrect."}
+      ],
+      "options": "Physical change\nChemical change\nNuclear change",
+      "correct_answer": "1"
+    },
+    {
+      "type": "short_answer",
+      "instructions": "Answer the question in NO MORE THAN THREE WORDS.",
+      "question": "What does the author suggest is the main cause of climate change?",
+      "points": 1,
+      "reading_text_id": "1",
+      "correct_answer": "greenhouse gas emissions|carbon emissions|fossil fuels",
+      "correct_feedback": "Correct!",
+      "incorrect_feedback": "Incorrect. The answer should relate to greenhouse gases or fossil fuels."
+    },
+    {
+      "type": "sentence_completion",
+      "instructions": "Complete the sentence with words from the passage.",
+      "question": "The researchers discovered that the primary factor was ___.",
+      "points": 1,
+      "reading_text_id": "1",
+      "correct_answer": "temperature|heat|thermal conditions",
+      "correct_feedback": "Correct!",
+      "incorrect_feedback": "Review the passage for the key finding."
+    },
+    {
+      "type": "summary_completion",
+      "instructions": "Complete the summary using words from the passage. You can use inline format with [ANSWER N] placeholders.",
+      "question": "The study found that [ANSWER 1] was the main factor, while [ANSWER 2] played a secondary role.",
+      "points": 1,
+      "reading_text_id": "1",
+      "correct_answer": "1:temperature|heat|2:humidity|moisture",
+      "correct_feedback": "Correct!",
+      "incorrect_feedback": "Check the passage for the main and secondary factors."
+    },
+    {
+      "type": "dropdown_paragraph",
+      "instructions": "Select the correct option from each dropdown.",
+      "question": "I am writing to 1.[A: let you know B: inform you] that the meeting has been 2.[A: postponed B: delayed C: put off] until 3.[A: next week B: the following week].",
+      "points": 1,
+      "reading_text_id": "1",
+      "correct_answer": "1:B|2:A|3:B",
+      "correct_feedback": "Correct! You selected the most formal options.",
+      "incorrect_feedback": "Review the formal language choices."
+    },
+    {
+      "type": "table_completion",
+      "instructions": "Complete the table using information from the passage.",
+      "question": "Year of discovery: ___",
+      "points": 1,
+      "reading_text_id": "1",
+      "correct_answer": "1953|nineteen fifty-three",
+      "correct_feedback": "Correct!",
+      "incorrect_feedback": "Check the passage for the date."
+    },
+    {
+      "type": "labelling",
+      "instructions": "Label the diagram using words from the passage.",
+      "question": "Part A is called the ___.",
+      "points": 1,
+      "reading_text_id": "1",
+      "correct_answer": "nucleus|cell nucleus",
+      "correct_feedback": "Correct!",
+      "incorrect_feedback": "Look for the term used in the passage."
+    },
+    {
+      "type": "locating_information",
+      "instructions": "Which paragraph contains information about the following topic?",
+      "question": "In which paragraph is the author's conclusion mentioned?",
+      "points": 1,
+      "reading_text_id": "1",
+      "mc_options": [
+        {"text": "Paragraph A", "is_correct": false, "feedback": "Incorrect."},
+        {"text": "Paragraph B", "is_correct": false, "feedback": "Incorrect."},
+        {"text": "Paragraph C", "is_correct": true, "feedback": "Correct!"},
+        {"text": "Paragraph D", "is_correct": false, "feedback": "Incorrect."}
+      ],
+      "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D",
+      "correct_answer": "2"
+    },
+    {
+      "type": "fill_blank",
+      "instructions": "Fill in the blank (Legacy question type).",
+      "question": "The capital of France is ___.",
+      "points": 1,
+      "reading_text_id": "1",
+      "correct_answer": "Paris",
+      "correct_feedback": "Correct!",
+      "incorrect_feedback": "Incorrect. The answer is Paris."
+    },
+    {
+      "type": "essay",
+      "instructions": "Write a short essay (manually graded).",
+      "question": "Discuss the main themes presented in the passage.",
+      "points": 5,
+      "reading_text_id": "1",
+      "correct_answer": "",
+      "correct_feedback": "Thank you for your response.",
+      "incorrect_feedback": ""
+    }
+  ]
+}</code></pre>
+                </details>
+                
+                <h3 style="margin-top: 25px;"><?php _e('Question Type Explanations', 'ielts-course-manager'); ?></h3>
+                
+                <div style="margin: 10px 0;">
+                    <h4 style="margin: 15px 0 8px 0; color: #0969da;">1. Multiple Choice</h4>
+                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong> <?php _e('Single correct answer from multiple options.', 'ielts-course-manager'); ?></p>
+                    <ul style="margin-left: 20px;">
+                        <li><code>mc_options</code>: <?php _e('Array of options with text, is_correct flag, and feedback', 'ielts-course-manager'); ?></li>
+                        <li><code>correct_answer</code>: <?php _e('Index of correct option (0 for first, 1 for second, etc.)', 'ielts-course-manager'); ?></li>
+                    </ul>
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <h4 style="margin: 15px 0 8px 0; color: #0969da;">2. Multi Select</h4>
+                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong> <?php _e('Multiple correct answers (checkboxes).', 'ielts-course-manager'); ?></p>
+                    <ul style="margin-left: 20px;">
+                        <li><code>mc_options</code>: <?php _e('Array where multiple options can have is_correct: true', 'ielts-course-manager'); ?></li>
+                        <li><code>correct_answer</code>: <?php _e('Comma-separated indices (e.g., "0,2,3")', 'ielts-course-manager'); ?></li>
+                    </ul>
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <h4 style="margin: 15px 0 8px 0; color: #0969da;">3. True/False/Not Given</h4>
+                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong> <?php _e('IELTS-style True/False/Not Given questions.', 'ielts-course-manager'); ?></p>
+                    <ul style="margin-left: 20px;">
+                        <li><code>tf_options</code>: <?php _e('Three options: TRUE, FALSE, NOT GIVEN', 'ielts-course-manager'); ?></li>
+                        <li><code>correct_answer</code>: <?php _e('One of: "TRUE", "FALSE", or "NOT GIVEN"', 'ielts-course-manager'); ?></li>
+                    </ul>
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <h4 style="margin: 15px 0 8px 0; color: #0969da;">4. Dropdown Paragraph</h4>
+                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong> <?php _e('Inline dropdown selections within text.', 'ielts-course-manager'); ?></p>
+                    <ul style="margin-left: 20px;">
+                        <li><code>question</code>: <?php _e('Use placeholders like "1.[A: option1 B: option2]" in the text', 'ielts-course-manager'); ?></li>
+                        <li><code>correct_answer</code>: <?php _e('Format: "1:A|2:B|3:C" (dropdown number : correct letter)', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('Example: "I am writing to 1.[A: let you know B: inform you] that..."', 'ielts-course-manager'); ?></li>
+                    </ul>
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <h4 style="margin: 15px 0 8px 0; color: #0969da;">5. Summary Completion</h4>
+                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong> <?php _e('Fill-in-the-blank within paragraph text.', 'ielts-course-manager'); ?></p>
+                    <ul style="margin-left: 20px;">
+                        <li><code>question</code>: <?php _e('Use [ANSWER N] placeholders for inline inputs', 'ielts-course-manager'); ?></li>
+                        <li><code>correct_answer</code>: <?php _e('Format: "N:answer1|alt1|M:answer2|alt2" (supports multiple alternatives)', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('Example: "The study found [ANSWER 1] was important."', 'ielts-course-manager'); ?></li>
+                    </ul>
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <h4 style="margin: 15px 0 8px 0; color: #0969da;">6. Text-Based Questions</h4>
+                    <p><strong><?php _e('Types:', 'ielts-course-manager'); ?></strong> <?php _e('Short Answer, Sentence Completion, Table Completion, Labelling, Fill in Blank', 'ielts-course-manager'); ?></p>
+                    <ul style="margin-left: 20px;">
+                        <li><code>correct_answer</code>: <?php _e('Use pipe "|" to separate alternative answers', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('Example: "Paris|paris|PARIS" (case-insensitive matching)', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('Flexible matching: ignores case, punctuation, and extra spaces', 'ielts-course-manager'); ?></li>
+                    </ul>
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <h4 style="margin: 15px 0 8px 0; color: #0969da;">7. Selection-Based Questions</h4>
+                    <p><strong><?php _e('Types:', 'ielts-course-manager'); ?></strong> <?php _e('Headings, Matching/Classifying, Locating Information', 'ielts-course-manager'); ?></p>
+                    <ul style="margin-left: 20px;">
+                        <li><?php _e('Work like Multiple Choice questions', 'ielts-course-manager'); ?></li>
+                        <li><code>mc_options</code>: <?php _e('Array of options to choose from', 'ielts-course-manager'); ?></li>
+                        <li><code>correct_answer</code>: <?php _e('Index of correct option', 'ielts-course-manager'); ?></li>
+                    </ul>
+                </div>
+                
+                <div style="margin: 10px 0;">
+                    <h4 style="margin: 15px 0 8px 0; color: #0969da;">8. Essay</h4>
+                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong> <?php _e('Free-text response (manually graded).', 'ielts-course-manager'); ?></p>
+                    <ul style="margin-left: 20px;">
+                        <li><?php _e('No automatic grading', 'ielts-course-manager'); ?></li>
+                        <li><code>points</code>: <?php _e('Usually higher (e.g., 5 or 10 points)', 'ielts-course-manager'); ?></li>
+                        <li><code>correct_answer</code>: <?php _e('Leave empty or use for sample answer', 'ielts-course-manager'); ?></li>
+                    </ul>
+                </div>
+                
+                <h3 style="margin-top: 25px;"><?php _e('Important Notes', 'ielts-course-manager'); ?></h3>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li><strong><?php _e('reading_text_id:', 'ielts-course-manager'); ?></strong> <?php _e('Links question to specific reading passage (for computer-based layout)', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('points:', 'ielts-course-manager'); ?></strong> <?php _e('Weight of the question (usually 1, but can be higher for essays)', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Feedback:', 'ielts-course-manager'); ?></strong> <?php _e('correct_feedback and incorrect_feedback provide student guidance', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Alternative Answers:', 'ielts-course-manager'); ?></strong> <?php _e('Use "|" to separate acceptable variations', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Case Sensitivity:', 'ielts-course-manager'); ?></strong> <?php _e('Text answers are case-insensitive and ignore punctuation', 'ielts-course-manager'); ?></li>
+                </ul>
+            </div>
+            
             <div class="import-tips" style="max-width: 900px; margin: 20px 0; padding: 15px; background: #fff3cd; border-left: 4px solid #ffc107;">
                 <h3><?php _e('Tips for Success', 'ielts-course-manager'); ?></h3>
                 <ul>
@@ -387,6 +663,28 @@ class IELTS_CM_Exercise_Import_Export {
         .import-tips ul {
             margin-left: 20px;
             line-height: 1.8;
+        }
+        .json-format-documentation code {
+            background: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+        .json-format-documentation pre code {
+            background: transparent;
+            padding: 0;
+        }
+        .json-format-documentation details {
+            cursor: pointer;
+        }
+        .json-format-documentation details summary {
+            user-select: none;
+        }
+        .json-format-documentation details[open] summary {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
         }
         </style>
         <?php

@@ -2,6 +2,31 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.40] - 2025-12-20
+
+### Added
+- **Dropdown Paragraph Question Type**: Added `dropdown_paragraph` to the available question types in the admin interface
+  - Teachers can now select "Dropdown Paragraph Questions" from the question type dropdown
+  - Previously the functionality existed but was not available in the UI
+  - Allows creating questions with inline dropdown selections within paragraph text
+  
+- **Comprehensive JSON Format Documentation**: Added extensive documentation on the Import Exercise admin page
+  - Complete examples of all 14 supported question types in JSON format
+  - Detailed explanations for each question type including format requirements
+  - Expandable/collapsible section with full JSON example showing all question types
+  - Guidelines for alternative answers, case sensitivity, and special formats
+  - Helps teachers understand how to create and modify exercise JSON files
+  - Covers: Multiple Choice, Multi Select, True/False, Headings, Matching/Classifying, Short Answer, Sentence Completion, Summary Completion, Dropdown Paragraph, Table Completion, Labelling, Locating Information, Fill in Blank, and Essay
+
+### Changed
+- **Version Update**: Updated plugin version to 2.40
+
+### Technical Details
+- Modified `includes/class-quiz-handler.php` to add 'dropdown_paragraph' to `get_quiz_types()` array
+- Enhanced `includes/admin/class-exercise-import-export.php` with comprehensive JSON documentation section
+- Added styled documentation section with syntax highlighting and expandable code examples
+- Documentation includes format specifications, correct answer patterns, and usage examples for all question types
+
 ## [2.38] - 2025-12-20
 
 ### Added
