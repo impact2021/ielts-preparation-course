@@ -26,6 +26,12 @@ class IELTS_CM_Admin {
         add_filter('manage_ielts_lesson_posts_columns', array($this, 'lesson_columns'));
         add_action('manage_ielts_lesson_posts_custom_column', array($this, 'lesson_column_content'), 10, 2);
         
+        add_filter('manage_ielts_resource_posts_columns', array($this, 'resource_columns'));
+        add_action('manage_ielts_resource_posts_custom_column', array($this, 'resource_column_content'), 10, 2);
+        
+        add_filter('manage_ielts_quiz_posts_columns', array($this, 'quiz_columns'));
+        add_action('manage_ielts_quiz_posts_custom_column', array($this, 'quiz_column_content'), 10, 2);
+        
         // Add AJAX handlers
         add_action('wp_ajax_ielts_cm_update_lesson_order', array($this, 'ajax_update_lesson_order'));
         add_action('wp_ajax_ielts_cm_update_page_order', array($this, 'ajax_update_page_order'));
@@ -2317,6 +2323,78 @@ class IELTS_CM_Admin {
                     OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
             ", $post_id, '%' . $wpdb->esc_like(serialize(strval($post_id))) . '%'));
             echo count($resource_ids);
+        }
+    }
+    
+    /**
+     * Resource (Sub lesson) columns
+     */
+    public function resource_columns($columns) {
+        $columns['lesson'] = __('Lesson', 'ielts-course-manager');
+        return $columns;
+    }
+    
+    /**
+     * Resource (Sub lesson) column content
+     */
+    public function resource_column_content($column, $post_id) {
+        if ($column === 'lesson') {
+            // Check for multiple lessons
+            $lesson_ids = get_post_meta($post_id, '_ielts_cm_lesson_ids', true);
+            if (empty($lesson_ids)) {
+                // Backward compatibility - check old single lesson_id
+                $old_lesson_id = get_post_meta($post_id, '_ielts_cm_lesson_id', true);
+                $lesson_ids = $old_lesson_id ? array($old_lesson_id) : array();
+            }
+            
+            if (!empty($lesson_ids)) {
+                $lesson_links = array();
+                foreach ($lesson_ids as $lesson_id) {
+                    $lesson = get_post($lesson_id);
+                    if ($lesson) {
+                        $lesson_links[] = '<a href="' . get_edit_post_link($lesson_id) . '">' . esc_html($lesson->post_title) . '</a>';
+                    }
+                }
+                echo implode(', ', $lesson_links);
+            } else {
+                echo '—';
+            }
+        }
+    }
+    
+    /**
+     * Quiz (Exercise) columns
+     */
+    public function quiz_columns($columns) {
+        $columns['lesson'] = __('Lesson', 'ielts-course-manager');
+        return $columns;
+    }
+    
+    /**
+     * Quiz (Exercise) column content
+     */
+    public function quiz_column_content($column, $post_id) {
+        if ($column === 'lesson') {
+            // Check for multiple lessons
+            $lesson_ids = get_post_meta($post_id, '_ielts_cm_lesson_ids', true);
+            if (empty($lesson_ids)) {
+                // Backward compatibility - check old single lesson_id
+                $old_lesson_id = get_post_meta($post_id, '_ielts_cm_lesson_id', true);
+                $lesson_ids = $old_lesson_id ? array($old_lesson_id) : array();
+            }
+            
+            if (!empty($lesson_ids)) {
+                $lesson_links = array();
+                foreach ($lesson_ids as $lesson_id) {
+                    $lesson = get_post($lesson_id);
+                    if ($lesson) {
+                        $lesson_links[] = '<a href="' . get_edit_post_link($lesson_id) . '">' . esc_html($lesson->post_title) . '</a>';
+                    }
+                }
+                echo implode(', ', $lesson_links);
+            } else {
+                echo '—';
+            }
         }
     }
     
