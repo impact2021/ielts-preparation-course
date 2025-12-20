@@ -12,6 +12,12 @@ if (!defined('ABSPATH')) {
 class IELTS_CM_Text_Exercises_Creator {
     
     /**
+     * Regex pattern for matching short answer questions
+     * Format: number. question text {ANSWER}
+     */
+    const SHORT_ANSWER_PATTERN = '/^(\d+)\.\s+([^\n\r]+?)\s*\{([^}]+)\}/';
+    
+    /**
      * Initialize the creator
      */
     public function init() {
@@ -303,7 +309,7 @@ You have one hour for the complete test (including transferring your answers).</
      */
     private function is_short_answer_format($text) {
         // Look for pattern: number. question text {ANSWER}
-        return preg_match('/\d+\.\s+.+?\s+\{[^}]+\}/', $text) > 0;
+        return preg_match(self::SHORT_ANSWER_PATTERN, $text) > 0;
     }
     
     /**
@@ -329,7 +335,8 @@ You have one hour for the complete test (including transferring your answers).</
                 if (empty($title)) {
                     $title = $lines[$i];
                 } else {
-                    $title .= ' ' . $lines[$i];
+                    // Avoid excessive whitespace when concatenating
+                    $title .= ' ' . trim($lines[$i]);
                 }
             }
         }
@@ -350,8 +357,8 @@ You have one hour for the complete test (including transferring your answers).</
         while ($i < count($question_lines)) {
             $line = $question_lines[$i];
             
-            // Check if this line is a question (starts with number. and has {ANSWER})
-            if (preg_match('/^(\d+)\.\s+(.+?)\s+\{([^}]+)\}/', $line, $match)) {
+            // Check if this line is a question using the pattern constant
+            if (preg_match(self::SHORT_ANSWER_PATTERN, $line, $match)) {
                 $question_num = $match[1];
                 $question_text = trim($match[2]);
                 $answer_part = $match[3];
@@ -366,7 +373,7 @@ You have one hour for the complete test (including transferring your answers).</
                     $next_line = $question_lines[$j];
                     
                     // Stop if we hit another question or empty line
-                    if (empty($next_line) || preg_match('/^\d+\.\s+.+?\s+\{[^}]+\}/', $next_line)) {
+                    if (empty($next_line) || preg_match(self::SHORT_ANSWER_PATTERN, $next_line)) {
                         break;
                     }
                     
@@ -382,7 +389,9 @@ You have one hour for the complete test (including transferring your answers).</
                 $questions[] = array(
                     'type' => 'short_answer',
                     'question' => $question_text,
-                    'correct_answer' => implode('|', $answers), // Pipe-separated for multiple alternatives
+                    // Multiple correct answers separated by pipe (|) for flexible matching
+                    // The quiz handler checks user input against each alternative (case-insensitive)
+                    'correct_answer' => implode('|', $answers),
                     'points' => 1,
                     'correct_feedback' => '',
                     'incorrect_feedback' => trim($feedback) // Feedback shows when answer is wrong
