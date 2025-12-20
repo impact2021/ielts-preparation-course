@@ -1,0 +1,494 @@
+IELTS Reading Test - Complete
+
+Read the texts and answer the questions. Type your answers in the spaces provided.
+
+[READING PASSAGE] Reading Passage 1 - Driverless cars
+
+A: Could driving yourself soon be a thing of the past? Internet giant Google certainly thinks so. It started work on a driverless car back in 2010, and now the US state of Nevada has granted it a licence to trial them on public roads, bringing self-driving vehicles one step closer to reality. The car is based on a Toyota Prius, but it's fitted with a wide range of technologies that allows it to drive itself. The most notable is the large, roof-mounted LIDAR (light detection and ranging) unit, which spins around at high speed to give the computers a constant 360-degree view of the car's immediate surroundings. This combines with another radar in the grille (which detects objects in front of the car) and positioning sensors that pinpoint the Toyota's exact location, while a computer works out whether the car should brake, speed up or steer to avoid obstacles.
+
+B: Google themselves have stated that before any route is driven using automated technology, a manned vehicle is first driven along the roads to create a detailed digital map of all of the features on the way (much the same as Google Maps street view is recorded). By mapping things like lane markers and traffic signs, the software in the car becomes familiar with the environment and characteristics in advance. When the car later tackles the route without driver assistance, all previously recorded data is used, as well as current obstacles such as where other cars are and how fast they're moving. Acceleration and deceleration are controlled accordingly and can interpret traffic lights, sign and road signs. The challenge of how to get the right information to the cars at the right time has been made possible by Google's vase network of data centres, which can process enormous amounts of info gathered by these vehicles.
+
+C: The potential benefits of the driverless car are significant. The majority of road incidents are related to driver error – perhaps a lack of concentration or slower reflexes. In fact, driver error is responsible for over 60% of all traffic accidents. The use of computers making calculated decisions in microseconds means that reaction times are greatly reduced and collisions avoided – clearly a step in the right direction given that traffic accidents involving human error claim over one million fatalities annually. With the concept of the driver becoming the passenger, there are also personal benefits and advantages – the daily commute could be used in a much more productive manner as the people previously spending time slowly moving through morning traffic jams are now able to work as they are driven to the office. With people in larger urban areas often spending an hour or more simply in trying to get to work, this would mean a significant boost in productivity as well as reduction in stress. Road rage, where one driver becomes irritated and acts aggressively towards (or because of) the actions of another driver, would be reduced if not eliminated.
+
+D: Driverless cars would also mean a much greater level of mobility for people who previously were unable to operate a car. Those with disabilities or issues like epilepsy, as well as the visually impaired, would be independently mobile. Children would also benefit, as they could be driven to school without a parent or guardian having to drive them. But the gains aren't purely for the person being driven – there are also environmental gains. As driverless cars are controlled by highly sensitive computers, excess fuel that a human driver often wastes with over acceleration or heavy braking will be saved. The cars would be able to maintain a constant speed, again allowing for better fuel consumption and therefore fewer emissions.
+
+E: The idea for a vehicle that no longer needs a human driver is the brainchild of Sebastian Thrun, a professor at Stanford University who was also part of the team that developed Google Street View. In the early days of this developing technology, Thrun led a Stanford team to victory in the 2005 DARPA Challenge, a race for driverless vehicles sponsored by the US Department of Defence. He has used the knowledge gained in that event to develop the Google driverless car. During its development the self-driving Prius has clocked up more than 200,000 miles, traversed the Golden Gate Bridge and driven down San Francisco's notoriously tricky Lombard Street one of the steepest, twistiest urban roads in the world.
+
+F: There's been one accident, but Google claims the car was being driven manually at the time. It happened just outside company HQ in California, when another driver hit the back of the Prius at traffic lights. This shows the main impetus for driverless cars: taking humans out of the equation to improve safety. Thrun is naturally a strong supporter of driverless cars, but some people go even further – Google Chairman Eric Schmidt has commented that he thinks it's amazing humans were allowed to drive cars at all, and regards the need for a driver as a bug to be fixed. Driving enthusiasts may disagree with this view (the Hot Rod Association of Alberta, a group of car enthusiasts, have actually petitioned against further testing and development of the driverless car claiming that it would make car travel less interesting), but Tim Groesner, the director of the Nevada Department of Motor Vehicles, doesn't. He approved a driverless car licence for Google after riding in a Prius down the Las Vegas strip and seeing how much better it was than him at spotting hazards.
+
+G: There is still considerable work to be done, but the potential advantages make this a concept well worth pursuing, even if some of us will miss being behind the wheel!
+
+[END READING PASSAGE]
+
+[READING PASSAGE] Reading Passage 2 - Scandinavian Design
+
+The story behind the furniture from the Nordic countries.
+
+Traditionally, Scandinavia was recognised as the three kingdoms of Sweden, Norway and Denmark, but today that scope has widened to include both Finland and Iceland as well. With an impressive international reputation, designers and craftspeople from all five countries are often grouped under the collective name 'Scandinavian design', creating furniture with a unique and often simple appeal. It is claimed that the expression 'Scandinavian design' first came from a design exhibition which toured Canada and the United States in the mid-20th century, from 1954 to 1957, although there had been earlier exhibitions in Europe and North America showcasing the works of Scandinavian designers.
+
+To understand both the origins and the concepts of Scandinavian design it is perhaps best to look at the historical context with some of the major trends in art and manufacturing through the 19th and 20th centuries. During the Industrial Revolution, generally considered to have been at its height in the first half of the 19th century, design was focused purely on being useful and functional. At the same time, Realism, a form of art that sprang from the introduction of the photograph, was used as a way to capture 'reality', and was linked to the reality of the mass production of the Industrial Revolution.
+
+The late 19th century saw the beginning of the Art Nouveau movement, which was seen as a reaction against the functional style of the industrial revolution. This new form of art incorporated not only art, but also architecture, design, furniture and jewellery, and was strongly based on nature with its fluid and natural shapes. Art Nouveau continued through the turn of the century and led to the birth of Modernism, the new movement which had links to social movements and political activism at the beginning of the 20th century. Events such as the horrors of the First World War drove the movement on, and there was a growing ideal which saw a tremendous reaction against the existing norms, which resulted in a range of art movements forming, all sharing a similar reactionary bent.
+
+In 1914, a magazine was first published in Denmark called Skønvirke, which drew on the inspirations of traditional Danish, and by extension Scandinavian, design and local handicrafts. This design was seen as being functional, featuring simple lines and a minimalist element, while at the same time is was still designed to look appealing. It is noted that Scandinavian design is known as 'democratic design' because the masses are attracted to its affordability and accessibility, as well as the aesthetics (aesthetics being defined as the principle of nature and the appreciation of beauty). Wood was a major component in the construction of furniture from Scandinavian countries, and again this was driven by the constraining factors of the time: the difficulty in importing materials and economic issues leading to production problems. But, as a result, the finished products took on an identity of their own due to the signature wood design and the simplicity of the shape and the textures involved.
+
+In the 1920s and 1930s, other Art Movements in Europe began exploring new concepts and, interestingly, their work embraced not only the final product but also the manufacturing process. Bauhaus in Germany and Dadaism in Switzerland were two of the more notable movements exploring these new concepts, along with Italy's Futurists and De Stijl in the Netherlands, who saw everything reduced to the simplest forms of lines and colour. As these ideas spread throughout the world, artists and designers from outside the region started integrating Scandinavian concepts of art and construction. However, as the 20th century progressed, the mass production techniques that were enveloping much of the rest of the world was not as prevalent in the Nordic countries, which were working to preserve the traditions of their crafts. In fact, preservation of these traditions had been a consideration in Scandinavia as far back as 1845, when the Swedish Society of Industrial Design was founded to ensure the highest levels of quality were maintained, while keeping safe the tradition of hand crafts. However, even Scandinavia was not immune to the need for mass production, and it is claimed that this focus on the detail of craftwork and merging it with commercial production has given rise to the term 'industrial arts'.
+
+A number of Scandinavian designers have now become household names, at least within the international household of design. Denmark's Verner Panton created, in 1960, the famous single-molded plastic chair, symbolising the emerging Pop Art movement and exemplifying the famous simple lines and designs. Alvar Aalto, from Finland, worked with wood in his furniture manufacturing, and established a company which also championed other Finnish designers, and branched out into the production of accessories, such as lamps and textiles. The Danish architect Arne Jacobson began working with plywood in the 1950s, and although this material had been used for time, Jacobson perfected new techniques which allowed the plywood to be bent, while keeping its inherent strength, and in 1955 created a chair design which is still sold today. Eero Aarnio, from Finland, worked with fibreglass and came up with such simple but futuristic shapes that some of his designs have been utilized in science-fiction films as props.
+
+In addition to furniture, Scandinavian design has also been applied to crafts and accessories. Tappo Wirkkal, from Finland, and Sweden's Kosta Boda company both work with glass, and have created works which have drawn praise from art critics as well as withstanding the test of functional design criteria. Today, the design concepts of Scandinavia have progressed beyond product and furniture manufacture and production and now embrace environmental considerations as well. The iconic Swedish company IKEA, for example, is insistent on only using timber from certified forests – a guarantee that it has not been illegally logged – as well as supporting 14 projects run by the World Wildlife Federation.
+
+[END READING PASSAGE]
+
+[READING PASSAGE] Reading Passage 3 - The Nobel Prize
+
+A: The Nobel Prize was first introduced in 1895, and now, over a century later, they are still highly respected awards. Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine, they are named after Alfred Nobel, the man who initially pioneered the idea. Yet the Prizes had an unlikely start; Nobel's contribution to science was actually the creation of dynamite. It was only when a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the 'Merchant of Death', that Nobel realised the full impact of the legacy he was leaving behind. He decided that after his death, a significant portion of his wealth should be devoted to seeking out and acknowledging those who had made 'the greatest contribution to mankind'. However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.
+
+B: Each recipient received – and still receives – a medal, a diploma and a monetary award. As of 2010, 817 individuals and 23 organizations had been awarded a Nobel Prize. Yet not every winner, referred to as a 'laureate', has actually accepted the award. In the 1930s, three German winners were not permitted by their government to accept the Nobel Prize, and the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958. In 1964, Jean Paul Sartre, a French writer, also declined the award, although this was not politically motivated – he simply did not accept any official honour.
+
+C: Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times). Another interesting statistic is that less than 5 percent of Nobel prizes have been awarded to women, the first of whom was Marie Curie, who won the Nobel Prize in Physics in 1903. Also, since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942. This was largely due to the world war that was being waged at the time.
+
+D: In 1969, having been running for nearly seventy years, a sixth area was introduced to the Nobel Prizes – economics. This was not a category defined in Nobel's will, but was established by Sweden's central bank in 1968 on the Bank's 300th anniversary. Since this time, no categories have been added or removed from the prizegiving.
+
+E: There are of course certain rules governing who can be selected for a Nobel prize. You cannot nominate yourself, nor can a person be nominated after their death. However, it is possible to award a prize to someone who is dead as long as they were alive during the nomination process. Each year, between 100 and 250 people are nominated.
+
+F: Arguably the most well-known of the Nobel prizes is the Nobel Peace Prize. According to the terms of Nobel's will, it is not the Swedish Academy of Science nor the Academy of Arts (both of which select the recipient for the other prizes); instead, the Peace Prize is awarded by 5 people selected by the Norwegian parliament. But it is not just these 5 people who are carefully chosen – even those who have the right to nominate others are selected from a narrow selection of candidates. Members of national assemblies and governments, as well as selected international governmental bodies, university professors of history, political science, philosophy, law and theology, university presidents and directors of peace research and international affairs institutes, as well as former recipients are among the privileged few.
+
+G: For a nomination to be considered, only one acceptable nominator needs to suggest the name, but a shortlist of nominees, and the final recipient, is decided by the Nobel Institute, comprising of the 5 people selected by the Norwegian Parliament, as mentioned before.
+
+H: Although there is always the aim of reaching a unanimous verdict amongst those judging, there are times when this has not always been the case. In fact, some of the judging panel have resigned following a final decision that they felt was not correct; since its inception, the Peace Prize nominees have included people like Adolf Hitler, Joseph Stalin and Benito Mussolini (although they were not awarded the prize). On the other side, there are certain people who are in many ways synonymous with the struggle for peace yet have not been recognised – Mahatma Gandhi, for example, was nominated 5 times but never actually won an award.
+
+I: Unsurprisingly, there have been a number of controversial winners of the Nobel Peace prize over the last 100 years. In the 1940s, Cordell Hull won the Peace Prize for his efforts in putting together the United Nations, but this was in many respects overshadowed by allegations that he campaigned against allowing a boat of Jewish refugees fleeing the Nazi regime to seek asylum in America. Anti-Semitic allegations tarnished the prize awarded to John Forbes Nash, who was himself suffering from schizophrenia (a disease which is considered to have impacted on some of his more public comments). Rumours also surrounded Wangari Maathai, a scientist and the first African woman to receive the award, with some claiming that she had aimed certain aggressive remarks at non-African scientists. A claim was also publicly made against the successful nomination of Barack Obama, with the award being given for 'outstanding international diplomatic efforts' only 12 days after he took office, with many claiming that the nomination and award were politically motivated.
+
+J: But regardless of the controversies, allegations and history of Nobel, there is no doubt that for many countries, and many people, the Nobel Prizes are a welcome recognition of efforts in a wide range of fields. The award ceremony has, in recent years, become something of a global media event. There is a 'Peace Prize Concert' which is broadcast to over 450 million households in over 150 countries.
+
+[END READING PASSAGE]
+
+Reading Passage 1
+
+You should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.
+
+Questions 1 – 5 [HEADINGS]
+
+Reading Passage 1 has seven paragraphs A – G.
+
+For paragraphs B – F, choose the most suitable heading from the list of headings below.
+
+List of Headings:
+I. Early days of development
+II. The main computer controlling the driverless car
+III. Support and opposition for the driverless car
+IV. Reacting to traffic lights
+V. Processing the data in a live environment
+VI. Driverless car first developed by the Department of Defence
+VII. The benefits for the replaced drivers
+VIII. Technology hardware allowing a complete view of risks
+IX. Additional advantages for transport and the atmosphere
+X. Not used
+
+Example: Paragraph A - Answer: VIII
+
+1. Paragraph B
+A) I. Early days of development
+B) II. The main computer controlling the driverless car
+C) III. Support and opposition for the driverless car
+D) IV. Reacting to traffic lights
+E) V. Processing the data in a live environment [CORRECT]
+F) VI. Driverless car first developed by the Department of Defence
+G) VII. The benefits for the replaced drivers
+H) VIII. Technology hardware allowing a complete view of risks
+I) IX. Additional advantages for transport and the atmosphere
+[INCORRECT] Paragraph B refers to using data already collected as well as traffic lights and other vehicles to make decisions.
+
+2. Paragraph C
+A) I. Early days of development
+B) II. The main computer controlling the driverless car
+C) III. Support and opposition for the driverless car
+D) IV. Reacting to traffic lights
+E) V. Processing the data in a live environment
+F) VI. Driverless car first developed by the Department of Defence
+G) VII. The benefits for the replaced drivers [CORRECT]
+H) VIII. Technology hardware allowing a complete view of risks
+I) IX. Additional advantages for transport and the atmosphere
+[INCORRECT] Paragraph C refers to how commuting time can be used more productively, how people would be less stressed and the reduction of 'road rage'. Paragraph D is incorrect because it refers to children and those with issues preventing them from driving means – they are not 'replaced' drivers as they are not drivers now.
+
+3. Paragraph D
+A) I. Early days of development
+B) II. The main computer controlling the driverless car
+C) III. Support and opposition for the driverless car
+D) IV. Reacting to traffic lights
+E) V. Processing the data in a live environment
+F) VI. Driverless car first developed by the Department of Defence
+G) VII. The benefits for the replaced drivers
+H) VIII. Technology hardware allowing a complete view of risks
+I) IX. Additional advantages for transport and the atmosphere [CORRECT]
+[INCORRECT] Paragraph D refers to mobility for people who would otherwise not be able to drive, as well as the lower emissions into the environment.
+
+4. Paragraph E
+A) I. Early days of development [CORRECT]
+B) II. The main computer controlling the driverless car
+C) III. Support and opposition for the driverless car
+D) IV. Reacting to traffic lights
+E) V. Processing the data in a live environment
+F) VI. Driverless car first developed by the Department of Defence
+G) VII. The benefits for the replaced drivers
+H) VIII. Technology hardware allowing a complete view of risks
+I) IX. Additional advantages for transport and the atmosphere
+[INCORRECT] Paragraph E refers to how Professor Thrun first developed the idea for a 2005 competition sponsored by the US Department of Defence.
+
+5. Paragraph F
+A) I. Early days of development
+B) II. The main computer controlling the driverless car
+C) III. Support and opposition for the driverless car [CORRECT]
+D) IV. Reacting to traffic lights
+E) V. Processing the data in a live environment
+F) VI. Driverless car first developed by the Department of Defence
+G) VII. The benefits for the replaced drivers
+H) VIII. Technology hardware allowing a complete view of risks
+I) IX. Additional advantages for transport and the atmosphere
+[INCORRECT] Paragraph F refers to the people who think driverless cars should be allowed and those that feel it shouldn't be allowed.
+
+Questions 6 – 9
+
+Do the following statements agree with the information given in Reading Passage 1?
+Write TRUE if the statement is true according to the passage, FALSE if the statement is false according to the passage, or NOT GIVEN if the information is not given in the passage.
+
+6. Before the driverless car can navigate, a human driver must first drive the route.
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+
+Paragraph B: 'that before any route is driven using automated technology, a manned vehicle is first driven along the roads'.
+
+7. Cars driven by people cause nearly one million deaths per year.
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+
+Paragraph C states that 'traffic accidents involving human error claim OVER one million fatalities annually'.
+
+8. Driverless cars travel at a slower speed than manned cars.
+This is TRUE
+Incorrect
+This is NOT GIVEN
+Correct answer
+
+Paragraph D: 'The cars would be able to maintain a constant speed'. We are not given information about which is faster or slower.
+
+9. Driverless cars are expected to become mainstream in the next ten years.
+This is TRUE
+Incorrect
+This is NOT GIVEN
+Correct answer
+
+The only information we are given about the future is that it is 'a concept well worth pursuing' – Paragraph G.
+
+Questions 10 – 13 [MATCHING]
+
+Match the sentences below with a person from the list.
+
+A: Eric Schmidt
+B: Hot Rod Association of Alberta
+C: Sebastian Thrun
+D: Tim Groesner
+E: US Department of Defence
+
+10. Was responsible for encouraging the original inspiration for the idea of driverless cars
+A) Eric Schmidt
+B) Hot Rod Association of Alberta
+C) Sebastian Thrun
+D) Tim Groesner
+E) US Department of Defence [CORRECT]
+[INCORRECT] Although it was Sebastian Thrun's idea, the Department of Defence encouraged this idea with the 2005 race competition.
+
+11. Claimed that this would reduce the interest in driving
+A) Eric Schmidt
+B) Hot Rod Association of Alberta [CORRECT]
+C) Sebastian Thrun
+D) Tim Groesner
+E) US Department of Defence
+[INCORRECT] 'the Hot Rod Association of Alberta, a group of car enthusiasts, have actually petitioned against further testing and development of the driverless car claiming that it would be car travel less interesting'
+
+12. Felt that the driverless car was more observant than a human driver
+A) Eric Schmidt
+B) Hot Rod Association of Alberta
+C) Sebastian Thrun
+D) Tim Groesner [CORRECT]
+E) US Department of Defence
+[INCORRECT] 'He approved a driverless car licence for Google after riding in a Prius down the Las Vegas strip, where he saw how it was better than he was at spotting hazards'
+
+13. Believes that current driving conditions should not have come about in the first place
+A) Eric Schmidt [CORRECT]
+B) Hot Rod Association of Alberta
+C) Sebastian Thrun
+D) Tim Groesner
+E) US Department of Defence
+[INCORRECT] Eric Schmidt – 'he thinks it's amazing humans were allowed to drive cars at all'
+
+Reading Passage 2
+
+You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.
+
+Questions 14 – 17
+
+Do the following statements agree with the information given in Reading Passage 2?
+Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.
+
+14. The first exhibition of Scandinavian design in Canada and the United States was from 1954 to 1957.
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+
+The opening paragraph mentions a touring exhibition in Canada and the U.S. from 1954 to 1957, but further that there '…had been earlier exhibitions' there.
+
+15. The first ideas of a 'Scandinavian design' came about at the same time as new emerging movements in Art, such as Bauhaus and Dadaism.
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+
+The fifth para mentions Bauhaus and Dadaism, and "As these ideas spread throughout the world, artists and designers began working in tandem in the Scandinavian countries, with their view of a Scandinavian design…'.
+
+16. The term 'industrial arts' was coined by Scandinavian designers and artists in the Art Nouveau movement together.
+This is TRUE
+Incorrect
+This is NOT GIVEN
+Correct answer
+
+The term 'industrial arts' is mentioned, but there is no indication as to who first introduced it.
+
+17. As well as furniture and accessories, Scandinavian design philosophies now also include environmentalism.
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+
+The last para mentions that Scandinavian design philosophies have 'progressed beyond product… and now embrace environmental concerns…'.
+
+Questions 18 – 24 [MATCHING]
+
+The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 – 24 with the Art movement or designer A – J.
+
+A: Dadaism
+B: Alvar Aalto
+C: Tappo Wirkkal
+D: Modernism
+E: Skønvirke magazine
+F: democratic design
+G: Swedish Society of Industrial Design
+H: Verner Panton
+I: Arne Jacobson
+J: Pop Art
+
+18. has been praised by art critics for the artistic achievements as well as being functional.
+A) Dadaism
+B) Alvar Aalto
+C) Tappo Wirkkal [CORRECT]
+D) Modernism
+E) Skønvirke magazine
+F) democratic design
+G) Swedish Society of Industrial Design
+H) Verner Panton
+I) Arne Jacobson
+J) Pop Art
+[INCORRECT] The last para states that Tappo Wirkkal [has] drawn praise from art critics and [has withstood] the test of functional design…'.
+
+19. is now another name for 'Scandinavian design'.
+A) Dadaism
+B) Alvar Aalto
+C) Tappo Wirkkal
+D) Modernism
+E) Skønvirke magazine
+F) democratic design [CORRECT]
+G) Swedish Society of Industrial Design
+H) Verner Panton
+I) Arne Jacobson
+J) Pop Art
+[INCORRECT] The fourth para has the line 'It is noted that Scandinavian design is known as 'democratic design'…'.
+
+20. came up with new ways to shape and use a traditional construction material.
+A) Dadaism
+B) Alvar Aalto
+C) Tappo Wirkkal
+D) Modernism
+E) Skønvirke magazine
+F) democratic design
+G) Swedish Society of Industrial Design
+H) Verner Panton
+I) Arne Jacobson [CORRECT]
+J) Pop Art
+[INCORRECT] The sixth para mentions that Arne Jacobson began 'working with plywood…' and 'perfected new techniques which allowed this 'long-used material…' to be used in different ways.
+
+21. emerged in the 1920s and 1930s, along with other European movements.
+A) Dadaism [CORRECT]
+B) Alvar Aalto
+C) Tappo Wirkkal
+D) Modernism
+E) Skønvirke magazine
+F) democratic design
+G) Swedish Society of Industrial Design
+H) Verner Panton
+I) Arne Jacobson
+J) Pop Art
+[INCORRECT] The fifth para begins 'In the 1920s and 1930s…' and goes on to mention various new art movements, including Dadaism.
+
+22. was originally created to maintain standards of perfection.
+A) Dadaism
+B) Alvar Aalto
+C) Tappo Wirkkal
+D) Modernism
+E) Skønvirke magazine
+F) democratic design
+G) Swedish Society of Industrial Design [CORRECT]
+H) Verner Panton
+I) Arne Jacobson
+J) Pop Art
+[INCORRECT] The fifth para mentions the Swedish Society and that it '…was to ensure the highest levels of quality…'.
+
+23. moved from designing only furniture to accessories.
+A) Dadaism
+B) Alvar Aalto [CORRECT]
+C) Tappo Wirkkal
+D) Modernism
+E) Skønvirke magazine
+F) democratic design
+G) Swedish Society of Industrial Design
+H) Verner Panton
+I) Arne Jacobson
+J) Pop Art
+[INCORRECT] The sixth para states that Alvar Aalto '…branched out into the production of accessories…'.
+
+24. designed a chair based on a new movement in Art.
+A) Dadaism
+B) Alvar Aalto
+C) Tappo Wirkkal
+D) Modernism
+E) Skønvirke magazine
+F) democratic design
+G) Swedish Society of Industrial Design
+H) Verner Panton [CORRECT]
+I) Arne Jacobson
+J) Pop Art
+[INCORRECT] The sixth para has the states that Verner Panton designed a chair which '…[symbolized] the emerging Pop Art movement…'
+
+Questions 25 and 26
+
+Complete the following sentence using NO MORE THAN TWO WORDS.
+
+25. The modern interpretation of Scandinavian design means that it now includes {ENVIRONMENTAL} concerns related to where the raw materials are sourced from.
+[CORRECT] Excellent! The last para has the key word 'Today…', and states that Scandinavian design now includes '…environmental concerns as well…'.
+[INCORRECT] The last para has the key word 'Today…', and states that Scandinavian design now includes '…environmental concerns as well…'.
+
+26. IKEA, the global Swedish furniture company, claims to only use wood from {[CERTIFIED FORESTS][FORESTS]}.
+[CORRECT] Well done! The last para mentions 'IKEA, for example, is insistent on only using timber from certified forests'
+[INCORRECT] The last para mentions 'IKEA, for example, is insistent on only using timber from certified forests'
+
+Reading Passage 3
+
+You should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.
+
+Questions 27 – 32
+
+Complete the following sentences using NO MORE THAN THREE WORDS AND A NUMBER from the text.
+
+27. The Nobel prizes are awarded for {[AN OUTSTANDING CONTRIBUTION][OUTSTANDING CONTRIBUTION][OUTSTANDING CONTRIBUTIONS]} in a number of fields.
+[CORRECT] Excellent! Paragraph A: 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'.
+[INCORRECT] Check Paragraph A: 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'.
+
+28. Nobel was inspired to establish the Prizes following a section issued in {[A FRENCH NEWSPAPER][FRENCH NEWSPAPER]}.
+[CORRECT] Well done! Paragraph A: 'It was only when a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the 'Merchant of Death' … He decided that after his death, a significant portion of his wealth should be devoted to seeking out and acknowledging those who had made 'the greatest contribution to mankind'.
+[INCORRECT] Paragraph A: 'It was only when a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the 'Merchant of Death' … He decided that after his death, a significant portion of his wealth should be devoted to seeking out and acknowledging those who had made 'the greatest contribution to mankind'.
+
+29. Family arguments were part of the reason why there was a delay of {[5 YEARS][FIVE YEARS]} before the first prizes.
+[CORRECT] Correct! Paragraph A: 'it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'
+[INCORRECT] Paragraph A: 'it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'
+
+30. In the middle of the last century, a Russian nominee was compelled into {DECLINING} the award.
+[CORRECT] Excellent! Paragraph B: 'and the government of the Soviet Union pressured Boris Pasternak into declining his award his award in 1958'
+[INCORRECT] Paragraph B: 'and the government of the Soviet Union pressured Boris Pasternak into declining his award his award in 1958'
+
+31. {[THE RED CROSS][RED CROSS]} has earned a Prize on a number of occasions.
+[CORRECT] Well done! 'only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'
+[INCORRECT] 'only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'
+
+32. In the early 1940s, there was {[NO WINNER][NO WINNERS]} on two occasions.
+[CORRECT] Correct! Paragraph C: 'there have been two occasions where no winner was found for the prizes – in 1941 and 1942'
+[INCORRECT] Paragraph C: 'there have been two occasions where no winner was found for the prizes – in 1941 and 1942'
+
+Questions 33 – 37
+
+Are the following statements TRUE, FALSE, or NOT GIVEN according to the text.
+Write TRUE if the statement agrees with the text, FALSE if the statement does not agree with the text, or NOT GIVEN if the information is not given in the passage.
+
+33. Every winner of a Prize is referred to as a 'laureate'.
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+
+Paragraph B: 'Yet not every winner, referred to as a 'laureate', has actually accepted the award'. This question can cause some confusion as it begins with 'EVERY winner' while the text states 'NOT every winner', but the sentence is referring to not every winner accepting the award, not that winners are referred to as laureates.
+
+34. Marie Curie is the only female to have been awarded a Prize.
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+
+Paragraph C: 'less than 5 percent of Nobel prizes have been awarded to women, the first of whom was Marie Curie'. By using the phrase 'the first of whom', it can be concluded that more than one woman must have been awarded a Prize, hence the answer is FALSE, not NOT GIVEN.
+
+35. There are currently 6 categories for which Prizes are awarded.
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+
+Paragraph D: 'In 1969, having been running for nearly seventy years, a sixth area was introduced to the Nobel Prizes … Since this time, no categories have been added or removed from the prizegiving.'
+
+36. Prizes cannot be awarded to people who have died.
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+
+Paragraph E: 'it is possible to award a prize to someone who is dead as long as they were alive during the nomination process'
+
+37. Members of the panel that choose the winner of a Prize have left the position following some nominations.
+This is TRUE
+Incorrect
+This is NOT GIVEN
+Correct answer
+
+Paragraph H: This is tricky one. The text states that 'some of the judging panel have resigned following a final decision that they felt was not correct'. However, the question focuses on nominations causing some people to quit.
+
+Questions 38 – 40 [MATCHING]
+
+Match the following people with a statement.
+
+A: Wangari Maathai
+B: John Forbes Nash
+C: Cordell Hull
+D: Barack Obama
+
+38. Has been accused of not being sympathetic to refugees.
+A) Wangari Maathai
+B) John Forbes Nash
+C) Cordell Hull [CORRECT]
+D) Barack Obama
+[INCORRECT] 'Cordell Hull won the Peace Prize for his efforts in putting together the United Nations, but this was in many respects overshadowed by allegations that he campaigned against allowing a boat of Jewish refugees fleeing the Nazi regime to seek asylum in America. '
+
+39. Had a medical condition that could have influenced his decision making.
+A) Wangari Maathai
+B) John Forbes Nash [CORRECT]
+C) Cordell Hull
+D) Barack Obama
+[INCORRECT] 'John Forbes Nash, who was himself suffering from schizophrenia (a disease which is considered to have impacted on some of his more public comments).'
+
+40. May have been made a recipient of the award for ulterior motives.
+A) Wangari Maathai
+B) John Forbes Nash
+C) Cordell Hull
+D) Barack Obama [CORRECT]
+[INCORRECT] 'Barack Obama, with the award being given for 'outstanding international diplomatic efforts' only 12 days after he took office, with many claiming that the nomination and award were politically motivated.'
