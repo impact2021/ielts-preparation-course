@@ -692,6 +692,7 @@ class IELTS_CM_Quiz_Handler {
             'short_answer' => __('Short Answer Questions', 'ielts-course-manager'),
             'sentence_completion' => __('Sentence Completion Questions', 'ielts-course-manager'),
             'summary_completion' => __('Summary Completion Questions', 'ielts-course-manager'),
+            'dropdown_paragraph' => __('Dropdown Paragraph Questions', 'ielts-course-manager'),
             'table_completion' => __('Table Completion Questions', 'ielts-course-manager'),
             'labelling' => __('Labelling Style Questions', 'ielts-course-manager'),
             'locating_information' => __('Locating Information Questions', 'ielts-course-manager'),
