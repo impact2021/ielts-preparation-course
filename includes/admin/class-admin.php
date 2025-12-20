@@ -1104,12 +1104,16 @@ class IELTS_CM_Admin {
                     container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
+                    // Clear placeholder for other types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
                 } else if (type === 'multi_select') {
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').show();
-                    container.find('.general-feedback-field').show();
+                    container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
+                    // Update no answer feedback placeholder
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '<?php echo esc_attr__('In the IELTS test, you should always take a guess. You don\'t lose points for a wrong answer.', 'ielts-course-manager'); ?>');
                 } else if (type === 'headings') {
                     // Headings - independent implementation
                     container.find('.mc-options-field').show();
@@ -1117,6 +1121,8 @@ class IELTS_CM_Admin {
                     container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
+                    // Update no answer feedback placeholder
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '<?php echo esc_attr__('In the IELTS test, you should always take a guess. You don\'t lose points for a wrong answer.', 'ielts-course-manager'); ?>');
                 } else if (type === 'matching_classifying') {
                     // Matching/Classifying - independent implementation
                     container.find('.mc-options-field').show();
@@ -1124,6 +1130,8 @@ class IELTS_CM_Admin {
                     container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
+                    // Clear placeholder for other types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
                 } else if (type === 'matching') {
                     // Matching - independent implementation
                     container.find('.mc-options-field').show();
@@ -1131,6 +1139,8 @@ class IELTS_CM_Admin {
                     container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
+                    // Clear placeholder for other types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
                 } else if (type === 'locating_information') {
                     // Locating Information - independent implementation
                     container.find('.mc-options-field').show();
@@ -1138,12 +1148,16 @@ class IELTS_CM_Admin {
                     container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
+                    // Clear placeholder for other types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
                 } else if (type === 'true_false') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.find('label').text('<?php _e('Correct Answer', 'ielts-course-manager'); ?>');
+                    // Clear placeholder for other types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
                     
                     // Convert to dropdown if it's currently an input
                     if (correctAnswerInput.is('input')) {
@@ -1164,6 +1178,8 @@ class IELTS_CM_Admin {
                     container.find('.general-feedback-field').show();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.find('label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
+                    // Clear placeholder for other types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
                     
                     // Convert to input if it's currently a dropdown
                     if (correctAnswerInput.is('select')) {
@@ -1179,12 +1195,16 @@ class IELTS_CM_Admin {
                     container.find('.dropdown-paragraph-field').hide();
                     container.find('.summary-completion-field').show();
                     correctAnswerField.hide();
+                    // Clear placeholder for other types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
                 } else if (type === 'dropdown_paragraph') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
                     container.find('.dropdown-paragraph-field').show();
                     correctAnswerField.hide();
+                    // Clear placeholder for other types
+                    container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', '');
                 }
             });
             
@@ -2079,7 +2099,7 @@ class IELTS_CM_Admin {
                 <input type="number" name="questions[<?php echo $index; ?>][points]" value="<?php echo esc_attr(isset($question['points']) ? $question['points'] : 1); ?>" min="0" step="0.5" style="width: 100%;">
             </p>
             
-            <div class="general-feedback-field" style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc; <?php echo (isset($question['type']) && $question['type'] === 'multiple_choice') ? 'display:none;' : ''; ?>">
+            <div class="general-feedback-field" style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc; <?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings'))) ? 'display:none;' : ''; ?>">
                 <h5 style="margin-top: 0;"><?php _e('Feedback Messages', 'ielts-course-manager'); ?></h5>
                 
                 <p>
@@ -2099,7 +2119,7 @@ class IELTS_CM_Admin {
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
                 <p>
                     <label><?php _e('No Answer Selected Feedback', 'ielts-course-manager'); ?></label><br>
-                    <textarea name="questions[<?php echo $index; ?>][no_answer_feedback]" rows="3" style="width: 100%;"><?php echo esc_textarea(isset($question['no_answer_feedback']) ? $question['no_answer_feedback'] : ''); ?></textarea>
+                    <textarea name="questions[<?php echo $index; ?>][no_answer_feedback]" rows="3" style="width: 100%;" placeholder="<?php echo (isset($question['type']) && in_array($question['type'], array('multi_select', 'headings'))) ? esc_attr__('In the IELTS test, you should always take a guess. You don\'t lose points for a wrong answer.', 'ielts-course-manager') : ''; ?>"><?php echo esc_textarea(isset($question['no_answer_feedback']) ? $question['no_answer_feedback'] : ''); ?></textarea>
                     <small><?php _e('Shown when the student submits without selecting an answer. HTML is supported.', 'ielts-course-manager'); ?></small>
                 </p>
             </div>
