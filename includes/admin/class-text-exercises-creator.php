@@ -27,6 +27,32 @@ class IELTS_CM_Text_Exercises_Creator {
     const READING_PASSAGE_PATTERN = '/\[(READING PASSAGE|READING TEXT)\](?:\s+(.+?))?\s*\n?([\s\S]*?)\[END (?:READING PASSAGE|READING TEXT)\]/i';
     
     /**
+     * Regex pattern for multiple choice / multi select questions
+     * Format: number. question text
+     *         A) option text
+     *         B) option text [CORRECT]
+     */
+    const MULTIPLE_CHOICE_PATTERN = '/^(\d+)\.\s+([^\n\r]+)/m';
+    
+    /**
+     * Regex pattern for option lines
+     * Format: A) option text [CORRECT] [FEEDBACK: explanation]
+     */
+    const OPTION_PATTERN = '/^([A-Z])\)\s+(.+?)(?:\s*\[CORRECT\])?(?:\s*\[FEEDBACK:\s*(.+?)\])?$/i';
+    
+    /**
+     * Regex pattern for summary completion questions  
+     * Format: question text with [ANSWER 1], [ANSWER 2] placeholders
+     */
+    const SUMMARY_COMPLETION_PATTERN = '/\[ANSWER\s+(\d+)\]/i';
+    
+    /**
+     * Regex pattern for dropdown paragraph questions
+     * Format: question text with ___1___, ___2___ or __1__, __2__ placeholders
+     */
+    const DROPDOWN_PLACEHOLDER_PATTERN = '/(___\d+___|__\d+__)/';
+    
+    /**
      * Initialize the creator
      */
     public function init() {
@@ -123,25 +149,25 @@ class IELTS_CM_Text_Exercises_Creator {
             
             <div class="card" style="max-width: 900px; margin: 20px 0;">
                 <h2><?php _e('Text Format Guide - All Question Types', 'ielts-course-manager'); ?></h2>
-                <p><?php _e('This tool currently supports two text-based formats for automated parsing. For other question types, please use the Exercise Editor or JSON Import.', 'ielts-course-manager'); ?></p>
+                <p><?php _e('This tool supports ALL question types in text format for automated parsing. Choose the format that matches your question type below.', 'ielts-course-manager'); ?></p>
                 
                 <div class="notice notice-info inline" style="margin: 15px 0; padding: 10px; background: #e7f3ff; border-left: 4px solid #0969da;">
                     <p><strong><?php _e('Supported Question Types in the Plugin:', 'ielts-course-manager'); ?></strong></p>
                     <ul style="margin-left: 20px; column-count: 2; column-gap: 20px;">
-                        <li><?php _e('Multiple Choice', 'ielts-course-manager'); ?></li>
-                        <li><?php _e('Multi Select', 'ielts-course-manager'); ?></li>
-                        <li><?php _e('True/False/Not Given', 'ielts-course-manager'); ?> <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
-                        <li><?php _e('Short Answer Questions', 'ielts-course-manager'); ?> <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
-                        <li><?php _e('Sentence Completion', 'ielts-course-manager'); ?></li>
-                        <li><?php _e('Summary Completion', 'ielts-course-manager'); ?></li>
-                        <li><?php _e('Table Completion', 'ielts-course-manager'); ?></li>
-                        <li><?php _e('Labelling Style Questions', 'ielts-course-manager'); ?></li>
-                        <li><?php _e('Locating Information', 'ielts-course-manager'); ?></li>
-                        <li><?php _e('Headings Questions', 'ielts-course-manager'); ?></li>
-                        <li><?php _e('Matching/Classifying', 'ielts-course-manager'); ?></li>
-                        <li><?php _e('Dropdown Paragraph', 'ielts-course-manager'); ?></li>
-                        <li><?php _e('Essay', 'ielts-course-manager'); ?></li>
-                        <li><?php _e('Fill in the Blank (Legacy)', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('Multiple Choice', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
+                        <li><?php _e('Multi Select', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
+                        <li><?php _e('True/False/Not Given', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
+                        <li><?php _e('Short Answer Questions', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
+                        <li><?php _e('Sentence Completion', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Uses Short Answer format', 'ielts-course-manager'); ?>)</em></li>
+                        <li><?php _e('Summary Completion', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
+                        <li><?php _e('Table Completion', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Uses Short Answer format', 'ielts-course-manager'); ?>)</em></li>
+                        <li><?php _e('Labelling Style Questions', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Uses Short Answer format', 'ielts-course-manager'); ?>)</em></li>
+                        <li><?php _e('Locating Information', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
+                        <li><?php _e('Headings Questions', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
+                        <li><?php _e('Matching/Classifying', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
+                        <li><?php _e('Dropdown Paragraph', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
+                        <li><?php _e('Essay', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
+                        <li><?php _e('Fill in the Blank (Legacy)', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Uses Short Answer format', 'ielts-course-manager'); ?>)</em></li>
                     </ul>
                 </div>
                 
@@ -188,63 +214,142 @@ class IELTS_CM_Text_Exercises_Creator {
                 </ul>
                 
                 <h3><?php _e('Other Question Types', 'ielts-course-manager'); ?></h3>
-                <p><?php _e('The following question types are not currently supported in text format but can be created using the Exercise Editor or imported via JSON:', 'ielts-course-manager'); ?></p>
+                <p><?php _e('All question types are now supported in text format! Use the formats below:', 'ielts-course-manager'); ?></p>
                 
                 <div style="margin: 15px 0; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
                     <h4 style="margin-top: 0; color: #0969da;"><?php _e('Multiple Choice & Multi Select', 'ielts-course-manager'); ?></h4>
                     <p><?php _e('Students select one (Multiple Choice) or more (Multi Select) correct answers from a list of options.', 'ielts-course-manager'); ?></p>
-                    <p><em><?php _e('Use the Exercise Editor to add options with correct/incorrect flags and individual feedback.', 'ielts-course-manager'); ?></em></p>
+                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong></p>
+                    <ul style="margin-left: 20px;">
+                        <li><?php _e('Add [MULTIPLE CHOICE] or [MULTI SELECT] marker in the title to specify question type', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('Number. Question text?', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('A) Option text', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('B) Option text [CORRECT]', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('C) Option text [FEEDBACK: Explanation]', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('Blank line between questions', 'ielts-course-manager'); ?></li>
+                    </ul>
+                    <pre style="background: #f5f5f5; padding: 10px; margin-top: 10px; font-size: 12px;">Questions 1-2 [MULTIPLE CHOICE]
+
+1. What is the capital of France?
+A) London
+B) Paris [CORRECT]
+C) Berlin [FEEDBACK: Berlin is the capital of Germany]
+D) Madrid
+
+2. Which planet is known as the Red Planet?
+A) Venus
+B) Mars [CORRECT]
+C) Jupiter
+D) Saturn</pre>
                 </div>
                 
                 <div style="margin: 15px 0; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
                     <h4 style="margin-top: 0; color: #0969da;"><?php _e('Headings Questions', 'ielts-course-manager'); ?></h4>
                     <p><?php _e('Students match headings to paragraphs or sections. Presented as multiple choice selections.', 'ielts-course-manager'); ?></p>
-                    <p><em><?php _e('Use the Exercise Editor to create questions with heading options.', 'ielts-course-manager'); ?></em></p>
+                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong> <?php _e('Same as Multiple Choice but add [HEADINGS] marker in title', 'ielts-course-manager'); ?></p>
+                    <pre style="background: #f5f5f5; padding: 10px; margin-top: 10px; font-size: 12px;">Match each heading to the correct paragraph [HEADINGS]
+
+1. Paragraph A
+A) The benefits of exercise
+B) Diet and nutrition [CORRECT]
+C) Mental health strategies
+D) Sleep patterns</pre>
                 </div>
                 
                 <div style="margin: 15px 0; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
                     <h4 style="margin-top: 0; color: #0969da;"><?php _e('Matching and Classifying Questions', 'ielts-course-manager'); ?></h4>
                     <p><?php _e('Students classify items into categories or match related information.', 'ielts-course-manager'); ?></p>
-                    <p><em><?php _e('Use the Exercise Editor with multiple choice format to create classification options.', 'ielts-course-manager'); ?></em></p>
+                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong> <?php _e('Same as Multiple Choice but add [MATCHING] or [CLASSIFYING] marker in title', 'ielts-course-manager'); ?></p>
+                    <pre style="background: #f5f5f5; padding: 10px; margin-top: 10px; font-size: 12px;">Classify each animal [MATCHING]
+
+1. Lion
+A) Mammal [CORRECT]
+B) Reptile
+C) Bird
+D) Fish</pre>
                 </div>
                 
                 <div style="margin: 15px 0; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
                     <h4 style="margin-top: 0; color: #0969da;"><?php _e('Locating Information Questions', 'ielts-course-manager'); ?></h4>
                     <p><?php _e('Students identify which paragraph contains specific information.', 'ielts-course-manager'); ?></p>
-                    <p><em><?php _e('Use the Exercise Editor to create questions with paragraph options (A, B, C, D, etc.).', 'ielts-course-manager'); ?></em></p>
+                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong> <?php _e('Same as Multiple Choice but add [LOCATING INFORMATION] marker in title', 'ielts-course-manager'); ?></p>
+                    <pre style="background: #f5f5f5; padding: 10px; margin-top: 10px; font-size: 12px;">Which paragraph contains the following information? [LOCATING INFORMATION]
+
+1. Information about climate change
+A) Paragraph A
+B) Paragraph B [CORRECT]
+C) Paragraph C
+D) Paragraph D</pre>
                 </div>
                 
                 <div style="margin: 15px 0; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
                     <h4 style="margin-top: 0; color: #0969da;"><?php _e('Summary Completion Questions', 'ielts-course-manager'); ?></h4>
                     <p><?php _e('Fill-in-the-blank questions within a paragraph using [ANSWER N] placeholders.', 'ielts-course-manager'); ?></p>
-                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong> <?php _e('Use [ANSWER 1], [ANSWER 2], etc. in the question text.', 'ielts-course-manager'); ?></p>
-                    <p><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Use format "1:answer1|alt1|2:answer2|alt2"', 'ielts-course-manager'); ?></p>
-                    <p><em><?php _e('Example: "The study found [ANSWER 1] was important and [ANSWER 2] was secondary."', 'ielts-course-manager'); ?></em></p>
-                    <p><em><?php _e('Use the Exercise Editor or JSON Import for this question type.', 'ielts-course-manager'); ?></em></p>
+                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong></p>
+                    <ul style="margin-left: 20px;">
+                        <li><?php _e('Use [ANSWER 1], [ANSWER 2], etc. in the question text', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('Provide correct answers in format: {1:answer1|alt1|2:answer2|alt2}', 'ielts-course-manager'); ?></li>
+                    </ul>
+                    <pre style="background: #f5f5f5; padding: 10px; margin-top: 10px; font-size: 12px;">Summary Completion
+
+The study found that [ANSWER 1] was the most important factor and [ANSWER 2] was secondary.
+
+{1:education|learning|2:experience|practice}</pre>
                 </div>
                 
                 <div style="margin: 15px 0; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
                     <h4 style="margin-top: 0; color: #0969da;"><?php _e('Dropdown Paragraph Questions', 'ielts-course-manager'); ?></h4>
                     <p><?php _e('Inline dropdown selections within text for testing grammar, vocabulary, or formal language.', 'ielts-course-manager'); ?></p>
-                    <p><strong><?php _e('Admin Interface:', 'ielts-course-manager'); ?></strong> <?php _e('Use ___1___, ___2___ (or __1__, __2__) as placeholders, then configure dropdown options.', 'ielts-course-manager'); ?></p>
-                    <p><strong><?php _e('Display Format:', 'ielts-course-manager'); ?></strong> <?php _e('Automatically converts to numbered dropdown format: "1.[A: option1 B: option2]"', 'ielts-course-manager'); ?></p>
-                    <p><em><?php _e('Example: "I am writing to ___1___ that the meeting has been ___2___ until ___3___."', 'ielts-course-manager'); ?></em></p>
-                    <p><em><?php _e('Use the Exercise Editor to create dropdown options for each placeholder.', 'ielts-course-manager'); ?></em></p>
+                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong></p>
+                    <ul style="margin-left: 20px;">
+                        <li><?php _e('Use ___1___, ___2___ (or __1__, __2__) as placeholders in question text', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('Define dropdown options using "DROPDOWN N:" followed by lettered options', 'ielts-course-manager'); ?></li>
+                    </ul>
+                    <pre style="background: #f5f5f5; padding: 10px; margin-top: 10px; font-size: 12px;">Dropdown Paragraph
+
+I am writing to ___1___ that the meeting has been ___2___ until ___3___.
+
+DROPDOWN 1:
+A) inform you [CORRECT]
+B) let you know
+C) tell you
+
+DROPDOWN 2:
+A) postponed [CORRECT]
+B) delayed
+C) rescheduled
+
+DROPDOWN 3:
+A) next week [CORRECT]
+B) tomorrow
+C) next month</pre>
                 </div>
                 
                 <div style="margin: 15px 0; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
                     <h4 style="margin-top: 0; color: #0969da;"><?php _e('Essay Questions', 'ielts-course-manager'); ?></h4>
                     <p><?php _e('Free-text response questions that require manual grading by instructors.', 'ielts-course-manager'); ?></p>
-                    <p><?php _e('Typically worth more points (5-10) and used for writing practice.', 'ielts-course-manager'); ?></p>
-                    <p><em><?php _e('Use the Exercise Editor to create essay questions with instructions and point values.', 'ielts-course-manager'); ?></em></p>
+                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong></p>
+                    <ul style="margin-left: 20px;">
+                        <li><?php _e('Add [ESSAY] marker before the question text', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('Optionally specify points: {POINTS:10}', 'ielts-course-manager'); ?></li>
+                    </ul>
+                    <pre style="background: #f5f5f5; padding: 10px; margin-top: 10px; font-size: 12px;">Essay Writing Task
+
+[ESSAY]
+Some people believe that technology has made our lives easier, while others think it has made life more complicated. Discuss both views and give your opinion.
+
+Write at least 250 words.
+
+{POINTS:10}</pre>
                 </div>
                 
-                <div class="notice notice-warning inline" style="margin: 15px 0; padding: 10px; background: #fff3cd; border-left: 4px solid #ffc107;">
-                    <p><strong><?php _e('Alternative Methods:', 'ielts-course-manager'); ?></strong></p>
+                <div class="notice notice-success inline" style="margin: 15px 0; padding: 10px; background: #d4edda; border-left: 4px solid #28a745;">
+                    <p><strong><?php _e('All Question Types Supported!', 'ielts-course-manager'); ?></strong></p>
+                    <p><?php _e('As of version 2.44, ALL question types can now be created using text format. Choose the method that works best for you:', 'ielts-course-manager'); ?></p>
                     <ul style="margin-left: 20px;">
-                        <li><strong><?php _e('Exercise Editor:', 'ielts-course-manager'); ?></strong> <?php _e('Create any question type manually with full control', 'ielts-course-manager'); ?></li>
-                        <li><strong><?php _e('JSON Import:', 'ielts-course-manager'); ?></strong> <?php _e('Import exercises in JSON format with all question types supported', 'ielts-course-manager'); ?></li>
-                        <li><strong><?php _e('XML Import:', 'ielts-course-manager'); ?></strong> <?php _e('Convert LearnDash XML exports to IELTS exercises', 'ielts-course-manager'); ?></li>
+                        <li><strong><?php _e('Text Format:', 'ielts-course-manager'); ?></strong> <?php _e('Fast and efficient for bulk creation', 'ielts-course-manager'); ?></li>
+                        <li><strong><?php _e('Exercise Editor:', 'ielts-course-manager'); ?></strong> <?php _e('Visual interface with full control', 'ielts-course-manager'); ?></li>
+                        <li><strong><?php _e('JSON Import:', 'ielts-course-manager'); ?></strong> <?php _e('Programmatic creation and bulk imports', 'ielts-course-manager'); ?></li>
                     </ul>
                 </div>
                 
@@ -429,10 +534,32 @@ You have one hour for the complete test (including transferring your answers).</
      * Parse exercise text into structured data
      */
     private function parse_exercise_text($text) {
-        // Try to detect format type
-        // Short answer format has questions like "15. Question text {ANSWER}"
+        // Try to detect format type based on patterns in the text
+        
+        // Check for summary completion format (has [ANSWER N] placeholders)
+        if (preg_match(self::SUMMARY_COMPLETION_PATTERN, $text)) {
+            return $this->parse_summary_completion_format($text);
+        }
+        
+        // Check for dropdown paragraph format (has ___N___ or __N__ placeholders)
+        if (preg_match(self::DROPDOWN_PLACEHOLDER_PATTERN, $text)) {
+            return $this->parse_dropdown_paragraph_format($text);
+        }
+        
+        // Check for short answer format (has {ANSWER} markers)
         if ($this->is_short_answer_format($text)) {
             return $this->parse_short_answer_format($text);
+        }
+        
+        // Check for multiple choice / multi select / headings / matching / locating format
+        // (has numbered questions with lettered options like "A) option")
+        if ($this->is_multiple_choice_format($text)) {
+            return $this->parse_multiple_choice_format($text);
+        }
+        
+        // Check for essay format (single question with [ESSAY] marker)
+        if (preg_match('/\[ESSAY\]/i', $text)) {
+            return $this->parse_essay_format($text);
         }
         
         // Fall back to original true/false format parser
@@ -445,6 +572,16 @@ You have one hour for the complete test (including transferring your answers).</
     private function is_short_answer_format($text) {
         // Look for pattern: number. question text {ANSWER}
         return preg_match(self::SHORT_ANSWER_PATTERN, $text) > 0;
+    }
+    
+    /**
+     * Detect if text is in multiple choice format
+     */
+    private function is_multiple_choice_format($text) {
+        // Look for pattern: numbered questions followed by lettered options
+        // e.g., "1. Question?\nA) Option"
+        // Use non-greedy .+? to avoid performance issues with large inputs
+        return preg_match('/^\d+\.\s+.+?\n\s*[A-Z]\)\s+/m', $text) > 0;
     }
     
     /**
@@ -865,6 +1002,518 @@ You have one hour for the complete test (including transferring your answers).</
             $current_question['mc_options'] = $current_options;
             
             $questions[] = $current_question;
+        }
+        
+        return array(
+            'title' => $title,
+            'questions' => $questions,
+            'reading_texts' => $reading_texts
+        );
+    }
+    
+    /**
+     * Parse multiple choice / multi select format questions
+     * Format:
+     * Question Type: [MULTIPLE CHOICE] or [MULTI SELECT] or [HEADINGS] or [MATCHING] or [LOCATING INFORMATION]
+     * 
+     * 1. Question text?
+     * A) First option
+     * B) Second option [CORRECT]
+     * C) Third option [FEEDBACK: This is wrong because...]
+     * D) Fourth option [CORRECT] [FEEDBACK: Great choice!]
+     * 
+     * Multiple questions separated by blank lines
+     */
+    private function parse_multiple_choice_format($text) {
+        // Extract reading passages first
+        $reading_texts = $this->extract_reading_passages($text);
+        $text = $this->remove_reading_passages($text);
+        
+        $lines = explode("\n", $text);
+        $lines = array_map('trim', $lines);
+        
+        // Detect question type from marker
+        $question_type = 'multiple_choice'; // default
+        $type_markers = array(
+            'MULTI SELECT' => 'multi_select',
+            'MULTI-SELECT' => 'multi_select',
+            'MULTISELECT' => 'multi_select',
+            'HEADINGS' => 'headings',
+            'MATCHING' => 'matching_classifying',
+            'CLASSIFYING' => 'matching_classifying',
+            'LOCATING INFORMATION' => 'locating_information',
+            'LOCATING' => 'locating_information'
+        );
+        
+        // Extract title and detect question type
+        $title = '';
+        $start_index = 0;
+        for ($i = 0; $i < count($lines); $i++) {
+            if (empty($lines[$i])) {
+                continue;
+            }
+            
+            // Check for type marker
+            foreach ($type_markers as $marker => $type) {
+                if (preg_match('/\[' . preg_quote($marker, '/') . '\]/i', $lines[$i])) {
+                    $question_type = $type;
+                    // Remove marker from title
+                    $lines[$i] = trim(preg_replace('/\[' . preg_quote($marker, '/') . '\]/i', '', $lines[$i]));
+                    break;
+                }
+            }
+            
+            if (!empty($lines[$i]) && !preg_match('/^\d+\./', $lines[$i])) {
+                if (empty($title)) {
+                    $title = $lines[$i];
+                } else {
+                    $title .= ' ' . $lines[$i];
+                }
+            } else if (preg_match('/^\d+\./', $lines[$i])) {
+                $start_index = $i;
+                break;
+            }
+        }
+        
+        if (empty($title)) {
+            $title = 'Multiple Choice Questions';
+        }
+        
+        // Parse questions
+        $questions = array();
+        $current_question = null;
+        $current_options = array();
+        
+        for ($i = $start_index; $i < count($lines); $i++) {
+            $line = $lines[$i];
+            
+            if (empty($line)) {
+                // Blank line - save current question if exists
+                if ($current_question !== null && !empty($current_options)) {
+                    $current_question['mc_options'] = $current_options;
+                    
+                    // Determine correct answer(s)
+                    $correct_indices = array();
+                    foreach ($current_options as $idx => $opt) {
+                        if ($opt['is_correct']) {
+                            $correct_indices[] = $idx;
+                        }
+                    }
+                    
+                    if ($question_type === 'multi_select') {
+                        $current_question['correct_answer'] = implode(',', $correct_indices);
+                    } else {
+                        $current_question['correct_answer'] = !empty($correct_indices) ? (string)$correct_indices[0] : '0';
+                    }
+                    
+                    $questions[] = $current_question;
+                    $current_question = null;
+                    $current_options = array();
+                }
+                continue;
+            }
+            
+            // Check if this is a new question
+            if (preg_match('/^(\d+)\.\s+(.+)/', $line, $match)) {
+                // Save previous question if exists
+                if ($current_question !== null && !empty($current_options)) {
+                    $current_question['mc_options'] = $current_options;
+                    
+                    $correct_indices = array();
+                    foreach ($current_options as $idx => $opt) {
+                        if ($opt['is_correct']) {
+                            $correct_indices[] = $idx;
+                        }
+                    }
+                    
+                    if ($question_type === 'multi_select') {
+                        $current_question['correct_answer'] = implode(',', $correct_indices);
+                    } else {
+                        $current_question['correct_answer'] = !empty($correct_indices) ? (string)$correct_indices[0] : '0';
+                    }
+                    
+                    $questions[] = $current_question;
+                    $current_options = array();
+                }
+                
+                // Start new question
+                $current_question = array(
+                    'type' => $question_type,
+                    'question' => sanitize_text_field($match[2]),
+                    'points' => 1,
+                    'correct_feedback' => '',
+                    'incorrect_feedback' => '',
+                    'no_answer_feedback' => ''
+                );
+            }
+            // Check if this is an option line
+            else if (preg_match('/^([A-Z])\)\s+(.+)$/i', $line, $match)) {
+                $option_letter = strtoupper($match[1]);
+                $option_text = $match[2];
+                
+                // Check for [CORRECT] marker
+                $is_correct = false;
+                if (preg_match('/\[CORRECT\]/i', $option_text)) {
+                    $is_correct = true;
+                    $option_text = trim(preg_replace('/\[CORRECT\]/i', '', $option_text));
+                }
+                
+                // Check for [FEEDBACK: ...] marker
+                $feedback = '';
+                if (preg_match('/\[FEEDBACK:\s*(.+?)\]/i', $option_text, $fb_match)) {
+                    $feedback = $fb_match[1];
+                    $option_text = trim(preg_replace('/\[FEEDBACK:\s*.+?\]/i', '', $option_text));
+                }
+                
+                $current_options[] = array(
+                    'text' => sanitize_text_field($option_text),
+                    'is_correct' => $is_correct,
+                    'feedback' => sanitize_text_field($feedback)
+                );
+            }
+        }
+        
+        // Save last question if exists
+        if ($current_question !== null && !empty($current_options)) {
+            $current_question['mc_options'] = $current_options;
+            
+            $correct_indices = array();
+            foreach ($current_options as $idx => $opt) {
+                if ($opt['is_correct']) {
+                    $correct_indices[] = $idx;
+                }
+            }
+            
+            if ($question_type === 'multi_select') {
+                $current_question['correct_answer'] = implode(',', $correct_indices);
+            } else {
+                $current_question['correct_answer'] = !empty($correct_indices) ? (string)$correct_indices[0] : '0';
+            }
+            
+            $questions[] = $current_question;
+        }
+        
+        return array(
+            'title' => $title,
+            'questions' => $questions,
+            'reading_texts' => $reading_texts
+        );
+    }
+    
+    /**
+     * Parse summary completion format questions
+     * Format:
+     * Title/Instructions
+     * 
+     * Question text with [ANSWER 1] and [ANSWER 2] placeholders.
+     * More text with [ANSWER 3] here.
+     * 
+     * {1:correct1|alt1|2:correct2|alt2|3:correct3}
+     */
+    private function parse_summary_completion_format($text) {
+        // Extract reading passages first
+        $reading_texts = $this->extract_reading_passages($text);
+        $text = $this->remove_reading_passages($text);
+        
+        $lines = explode("\n", $text);
+        $lines = array_map('trim', $lines);
+        
+        // Extract title - first non-empty line
+        $title = '';
+        $content_start = 0;
+        for ($i = 0; $i < count($lines); $i++) {
+            if (!empty($lines[$i])) {
+                $title = $lines[$i];
+                $content_start = $i + 1;
+                break;
+            }
+        }
+        
+        if (empty($title)) {
+            $title = 'Summary Completion';
+        }
+        
+        // Find the question text (lines with [ANSWER N]) and answer key
+        $question_lines = array();
+        $answer_key = '';
+        
+        for ($i = $content_start; $i < count($lines); $i++) {
+            $line = $lines[$i];
+            
+            // Skip empty lines
+            if (empty($line)) {
+                continue;
+            }
+            
+            // Check if this is the answer key line (starts with { and contains :)
+            if (preg_match('/^\{(.+)\}$/', $line, $match)) {
+                $answer_key = $match[1];
+                continue;
+            }
+            
+            // Otherwise it's part of the question text
+            $question_lines[] = $line;
+        }
+        
+        $question_text = implode("\n", $question_lines);
+        
+        // Create the question
+        $questions = array();
+        if (!empty($question_text) && preg_match(self::SUMMARY_COMPLETION_PATTERN, $question_text)) {
+            $questions[] = array(
+                'type' => 'summary_completion',
+                'question' => sanitize_textarea_field($question_text),
+                'correct_answer' => sanitize_text_field($answer_key),
+                'points' => 1,
+                'correct_feedback' => '',
+                'incorrect_feedback' => '',
+                'no_answer_feedback' => ''
+            );
+        }
+        
+        return array(
+            'title' => $title,
+            'questions' => $questions,
+            'reading_texts' => $reading_texts
+        );
+    }
+    
+    /**
+     * Parse dropdown paragraph format questions
+     * Format:
+     * Title/Instructions
+     * 
+     * Question text with ___1___ and ___2___ placeholders.
+     * 
+     * DROPDOWN 1:
+     * A) option1 [CORRECT]
+     * B) option2
+     * 
+     * DROPDOWN 2:
+     * A) option3
+     * B) option4 [CORRECT]
+     */
+    private function parse_dropdown_paragraph_format($text) {
+        // Extract reading passages first
+        $reading_texts = $this->extract_reading_passages($text);
+        $text = $this->remove_reading_passages($text);
+        
+        $lines = explode("\n", $text);
+        $lines = array_map('trim', $lines);
+        
+        // Extract title
+        $title = '';
+        $content_start = 0;
+        for ($i = 0; $i < count($lines); $i++) {
+            if (!empty($lines[$i]) && !preg_match(self::DROPDOWN_PLACEHOLDER_PATTERN, $lines[$i])) {
+                $title = $lines[$i];
+                $content_start = $i + 1;
+                break;
+            } else if (preg_match(self::DROPDOWN_PLACEHOLDER_PATTERN, $lines[$i])) {
+                $content_start = $i;
+                break;
+            }
+        }
+        
+        if (empty($title)) {
+            $title = 'Dropdown Paragraph';
+        }
+        
+        // Find the question text (lines with ___N___ or __N__)
+        $question_lines = array();
+        $dropdown_start = -1;
+        
+        for ($i = $content_start; $i < count($lines); $i++) {
+            $line = $lines[$i];
+            
+            if (empty($line)) {
+                continue;
+            }
+            
+            // Check if we've reached the dropdown definitions
+            if (preg_match('/^DROPDOWN\s+(\d+):/i', $line)) {
+                $dropdown_start = $i;
+                break;
+            }
+            
+            // Part of question text
+            $question_lines[] = $line;
+        }
+        
+        $question_text = implode(' ', $question_lines);
+        
+        // Parse dropdown options
+        $dropdown_options = array();
+        $current_dropdown_num = null;
+        $current_options = array();
+        
+        if ($dropdown_start >= 0) {
+            for ($i = $dropdown_start; $i < count($lines); $i++) {
+                $line = $lines[$i];
+                
+                if (empty($line)) {
+                    // Save current dropdown if exists
+                    if ($current_dropdown_num !== null && !empty($current_options)) {
+                        $dropdown_options[$current_dropdown_num] = $current_options;
+                        $current_dropdown_num = null;
+                        $current_options = array();
+                    }
+                    continue;
+                }
+                
+                // Check for dropdown header
+                if (preg_match('/^DROPDOWN\s+(\d+):/i', $line, $match)) {
+                    // Save previous dropdown if exists
+                    if ($current_dropdown_num !== null && !empty($current_options)) {
+                        $dropdown_options[$current_dropdown_num] = $current_options;
+                        $current_options = array();
+                    }
+                    $current_dropdown_num = $match[1];
+                }
+                // Check for option line
+                else if (preg_match('/^([A-Z])\)\s+(.+)$/i', $line, $match)) {
+                    $option_text = $match[2];
+                    $is_correct = false;
+                    
+                    if (preg_match('/\[CORRECT\]/i', $option_text)) {
+                        $is_correct = true;
+                        $option_text = trim(preg_replace('/\[CORRECT\]/i', '', $option_text));
+                    }
+                    
+                    $current_options[] = array(
+                        'text' => sanitize_text_field($option_text),
+                        'letter' => strtoupper($match[1]),
+                        'is_correct' => $is_correct
+                    );
+                }
+            }
+            
+            // Save last dropdown
+            if ($current_dropdown_num !== null && !empty($current_options)) {
+                $dropdown_options[$current_dropdown_num] = $current_options;
+            }
+        }
+        
+        // Build the formatted question text and correct answer
+        if (!empty($dropdown_options)) {
+            // Convert ___N___ or __N__ to N.[A: option1 B: option2] format
+            $formatted_question = $question_text;
+            $correct_answer_parts = array();
+            
+            foreach ($dropdown_options as $num => $options) {
+                $option_parts = array();
+                $correct_letter = '';
+                
+                foreach ($options as $opt) {
+                    $option_parts[] = $opt['letter'] . ': ' . $opt['text'];
+                    if ($opt['is_correct']) {
+                        $correct_letter = $opt['letter'];
+                    }
+                }
+                
+                $dropdown_format = $num . '.[' . implode(' ', $option_parts) . ']';
+                
+                // Replace ___N___ or __N__ with the formatted dropdown
+                // Use preg_quote to prevent regex injection
+                $formatted_question = preg_replace('/(___' . preg_quote($num, '/') . '___|__' . preg_quote($num, '/') . '__)/', $dropdown_format, $formatted_question);
+                
+                if (!empty($correct_letter)) {
+                    $correct_answer_parts[] = $num . ':' . $correct_letter;
+                }
+            }
+            
+            $questions = array();
+            $questions[] = array(
+                'type' => 'dropdown_paragraph',
+                'question' => sanitize_textarea_field($formatted_question),
+                'correct_answer' => sanitize_text_field(implode('|', $correct_answer_parts)),
+                'dropdown_options' => $dropdown_options,
+                'points' => 1,
+                'correct_feedback' => '',
+                'incorrect_feedback' => '',
+                'no_answer_feedback' => ''
+            );
+            
+            return array(
+                'title' => $title,
+                'questions' => $questions,
+                'reading_texts' => $reading_texts
+            );
+        }
+        
+        return null;
+    }
+    
+    /**
+     * Parse essay format questions
+     * Format:
+     * Title/Instructions
+     * 
+     * [ESSAY]
+     * Essay question text or prompt
+     * 
+     * Optional: {POINTS:10} to specify point value
+     */
+    private function parse_essay_format($text) {
+        // Extract reading passages first
+        $reading_texts = $this->extract_reading_passages($text);
+        $text = $this->remove_reading_passages($text);
+        
+        $lines = explode("\n", $text);
+        $lines = array_map('trim', $lines);
+        
+        // Extract title
+        $title = '';
+        $essay_start = -1;
+        
+        for ($i = 0; $i < count($lines); $i++) {
+            if (preg_match('/\[ESSAY\]/i', $lines[$i])) {
+                $essay_start = $i;
+                break;
+            } else if (!empty($lines[$i]) && empty($title)) {
+                $title = $lines[$i];
+            }
+        }
+        
+        if (empty($title)) {
+            $title = 'Essay Question';
+        }
+        
+        // Extract essay question text
+        $question_lines = array();
+        $points = 5; // default points for essay
+        
+        if ($essay_start >= 0) {
+            for ($i = $essay_start + 1; $i < count($lines); $i++) {
+                $line = $lines[$i];
+                
+                if (empty($line)) {
+                    continue;
+                }
+                
+                // Check for points marker
+                if (preg_match('/\{POINTS:\s*(\d+)\}/i', $line, $match)) {
+                    $points = intval($match[1]);
+                    continue;
+                }
+                
+                $question_lines[] = $line;
+            }
+        }
+        
+        $question_text = implode("\n", $question_lines);
+        
+        $questions = array();
+        if (!empty($question_text)) {
+            $questions[] = array(
+                'type' => 'essay',
+                'question' => sanitize_textarea_field($question_text),
+                'correct_answer' => '', // No automatic grading for essays
+                'points' => $points,
+                'correct_feedback' => '',
+                'incorrect_feedback' => '',
+                'no_answer_feedback' => ''
+            );
         }
         
         return array(
