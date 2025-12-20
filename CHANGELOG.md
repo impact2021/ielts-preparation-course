@@ -2,6 +2,26 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.31] - 2025-12-20
+
+### Fixed
+- **Lesson Display in Multiple Courses**: Fixed issue where lessons added to multiple courses would only show in one course
+  - Root cause: Database queries were looking for string-serialized course IDs but arrays stored integer values
+  - When lesson is added to courses [123, 456], it's stored as `a:2:{i:0;i:123;i:1;i:456;}` (integers)
+  - Previous queries only looked for `s:3:"123";` pattern (strings)
+  - Updated all queries to check for both integer pattern `i:123;` and string pattern `s:3:"123";`
+  - Fixed in: shortcodes, templates (single-course-page, single-lesson), admin, progress tracker, and quiz handler
+  - Lessons now properly appear in all assigned courses
+
+### Changed
+- **Course Cloning Behavior**: Modified course cloning to reuse lessons instead of duplicating them
+  - Cloned course now links to the same lessons, sub-lessons, and exercises as the original
+  - Preserves course structure and lesson order without creating duplicate content
+  - Lessons are added to the cloned course's `_ielts_cm_course_ids` array
+  - Perfect for creating course variations that share the same content
+  - Significantly reduces database bloat and simplifies content management
+- **Version Update**: Updated plugin version to 2.31
+
 ## [2.30] - 2025-12-20
 
 ### Added

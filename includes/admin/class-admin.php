@@ -177,12 +177,17 @@ class IELTS_CM_Admin {
     public function course_lessons_meta_box($post) {
         // Get lessons for this course
         global $wpdb;
+        // Check for both integer and string serialization in course_ids array
+        // Integer: i:123; String: s:3:"123";
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $post->ID . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($post->ID))) . '%';
+        
         $lesson_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT post_id 
             FROM {$wpdb->postmeta} 
             WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_course_ids' AND meta_value LIKE %s)
-        ", $post->ID, '%' . $wpdb->esc_like(serialize(strval($post->ID))) . '%'));
+               OR (meta_key = '_ielts_cm_course_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+        ", $post->ID, $int_pattern, $str_pattern));
         
         $lessons = array();
         if (!empty($lesson_ids)) {
@@ -2246,6 +2251,11 @@ class IELTS_CM_Admin {
             }
         } elseif ($column === 'lessons') {
             global $wpdb;
+            // Check for both integer and string serialization in course_ids array
+            // Integer: i:123; String: s:3:"123";
+            $int_pattern = '%' . $wpdb->esc_like('i:' . $post_id . ';') . '%';
+            $str_pattern = '%' . $wpdb->esc_like(serialize(strval($post_id))) . '%';
+            
             $lesson_ids = $wpdb->get_col($wpdb->prepare("
                 SELECT DISTINCT pm.post_id 
                 FROM {$wpdb->postmeta} pm
@@ -2253,8 +2263,8 @@ class IELTS_CM_Admin {
                 WHERE p.post_type = 'ielts_lesson'
                   AND p.post_status = 'publish'
                   AND ((pm.meta_key = '_ielts_cm_course_id' AND pm.meta_value = %d)
-                    OR (pm.meta_key = '_ielts_cm_course_ids' AND pm.meta_value LIKE %s))
-            ", $post_id, '%' . $wpdb->esc_like(serialize(strval($post_id))) . '%'));
+                    OR (pm.meta_key = '_ielts_cm_course_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+            ", $post_id, $int_pattern, $str_pattern));
             echo count($lesson_ids);
         } elseif ($column === 'enrolled') {
             $enrollment = new IELTS_CM_Enrollment();
@@ -3331,82 +3341,50 @@ class IELTS_CM_Admin {
         
         // Get all lessons for this course
         global $wpdb;
+        // Check for both integer and string serialization in course_ids array
+        // Integer: i:123; String: s:3:"123";
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%';
+        
         $lesson_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT post_id 
             FROM {$wpdb->postmeta} 
             WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_course_ids' AND meta_value LIKE %s)
-        ", $course_id, '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%'));
+               OR (meta_key = '_ielts_cm_course_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+            ORDER BY post_id
+        ", $course_id, $int_pattern, $str_pattern));
         
-        $lesson_map = array(); // Map old lesson IDs to new ones
-        
-        // Clone each lesson
+        // Instead of cloning lessons, just add them to the new course
+        // This preserves the structure and order while reusing the same lessons
         if (!empty($lesson_ids)) {
-            foreach ($lesson_ids as $lesson_id) {
-                $original_lesson = get_post($lesson_id);
-                if ($original_lesson && $original_lesson->post_type === 'ielts_lesson') {
-                    $new_lesson_id = $this->clone_post($original_lesson);
+            // Get lessons with their menu order preserved
+            $lessons = get_posts(array(
+                'post_type' => 'ielts_lesson',
+                'posts_per_page' => -1,
+                'post__in' => $lesson_ids,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+                'post_status' => 'any'
+            ));
+            
+            foreach ($lessons as $lesson) {
+                // Get current course associations
+                $current_course_ids = get_post_meta($lesson->ID, '_ielts_cm_course_ids', true);
+                
+                // Ensure we have an array
+                if (!is_array($current_course_ids)) {
+                    $current_course_ids = array();
+                }
+                
+                // Add the new course ID if not already present
+                if (!in_array($new_course_id, $current_course_ids)) {
+                    $current_course_ids[] = $new_course_id;
+                    update_post_meta($lesson->ID, '_ielts_cm_course_ids', $current_course_ids);
                     
-                    if ($new_lesson_id) {
-                        $lesson_map[$lesson_id] = $new_lesson_id;
-                        
-                        // Update the lesson's course association
-                        update_post_meta($new_lesson_id, '_ielts_cm_course_id', $new_course_id);
-                        update_post_meta($new_lesson_id, '_ielts_cm_course_ids', array($new_course_id));
-                        
-                        // Get all sub-lessons (resources) for this lesson
-                        $resource_ids = get_post_meta($lesson_id, '_ielts_cm_lesson_pages', true);
-                        if (!is_array($resource_ids)) {
-                            $resource_ids = array();
-                        }
-                        
-                        $new_resource_ids = array();
-                        
-                        // Clone each sub-lesson/resource
-                        foreach ($resource_ids as $resource_id) {
-                            $original_resource = get_post($resource_id);
-                            if ($original_resource && $original_resource->post_type === 'ielts_resource') {
-                                $new_resource_id = $this->clone_post($original_resource);
-                                
-                                if ($new_resource_id) {
-                                    $new_resource_ids[] = $new_resource_id;
-                                    // Update resource's lesson association
-                                    update_post_meta($new_resource_id, '_ielts_cm_lesson_ids', array($new_lesson_id));
-                                }
-                            }
-                        }
-                        
-                        // Update lesson's resources
-                        if (!empty($new_resource_ids)) {
-                            update_post_meta($new_lesson_id, '_ielts_cm_lesson_pages', $new_resource_ids);
-                        }
-                        
-                        // Get all exercises for this lesson
-                        $exercise_ids = get_post_meta($lesson_id, '_ielts_cm_exercises', true);
-                        if (!is_array($exercise_ids)) {
-                            $exercise_ids = array();
-                        }
-                        
-                        $new_exercise_ids = array();
-                        
-                        // Clone each exercise/quiz
-                        foreach ($exercise_ids as $exercise_id) {
-                            $original_exercise = get_post($exercise_id);
-                            if ($original_exercise && $original_exercise->post_type === 'ielts_quiz') {
-                                $new_exercise_id = $this->clone_post($original_exercise);
-                                
-                                if ($new_exercise_id) {
-                                    $new_exercise_ids[] = $new_exercise_id;
-                                    // Update exercise's lesson association
-                                    update_post_meta($new_exercise_id, '_ielts_cm_lesson_ids', array($new_lesson_id));
-                                }
-                            }
-                        }
-                        
-                        // Update lesson's exercises
-                        if (!empty($new_exercise_ids)) {
-                            update_post_meta($new_lesson_id, '_ielts_cm_exercises', $new_exercise_ids);
-                        }
+                    // Update backward compatibility field if this is the first course
+                    $old_course_id = get_post_meta($lesson->ID, '_ielts_cm_course_id', true);
+                    if (empty($old_course_id)) {
+                        update_post_meta($lesson->ID, '_ielts_cm_course_id', $new_course_id);
                     }
                 }
             }
@@ -3420,7 +3398,7 @@ class IELTS_CM_Admin {
             'course_id' => $new_course_id,
             'edit_link' => $edit_link,
             'course_title' => get_the_title($new_course_id),
-            'lessons_cloned' => count($lesson_map)
+            'lessons_linked' => count($lesson_ids)
         ));
     }
     
