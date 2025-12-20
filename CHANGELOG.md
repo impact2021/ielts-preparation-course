@@ -2,6 +2,28 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.36] - 2025-12-20
+
+### Changed
+- **Version Update**: Updated plugin version to 2.36
+- **Improved Lesson Table Layout**: Fixed text wrapping issues in lesson content table
+  - Increased "Type" column width from 150px to 180px to prevent "End of lesson test" from wrapping
+  - Increased "Action" column width from 120px to 180px to prevent "Retake (Fullscreen)" from wrapping
+  - Improves readability and professional appearance of lesson tables
+- **Enhanced Exercise Navigation**: "Next page >" button now appears BEFORE submitting quiz
+  - Next URL is calculated on page load and displayed immediately
+  - Button changes from "< Return to course" to "Next page >" when there's a next item in the lesson
+  - No confirmation warning when clicking "Next page >" (only warns when returning to course mid-quiz)
+  - Improves learning flow by making next item navigation more discoverable
+  - Students no longer need to complete quiz to see if there's a next item
+
+### Technical Details
+- Modified `templates/single-quiz-computer-based.php` to calculate next_url on page load (reuses same logic as quiz-handler)
+- Added `data-next-url` attribute to quiz container for JavaScript access
+- Updated return-to-course link text and URL based on next_url availability
+- Modified `assets/js/frontend.js` to skip warning dialog when link text contains "Next page"
+- Enhanced `templates/single-lesson.php` with wider column widths for better text display
+
 ## [2.35] - 2025-12-20
 
 ### Changed
