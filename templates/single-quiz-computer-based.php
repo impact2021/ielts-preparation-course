@@ -281,6 +281,11 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                         break;
                                         
                                     case 'fill_blank':
+                                    case 'short_answer':
+                                    case 'sentence_completion':
+                                    case 'table_completion':
+                                    case 'labelling':
+                                    case 'locating_information':
                                         ?>
                                         <div class="question-answer">
                                             <input type="text" 
@@ -300,6 +305,35 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                                    class="answer-input">
                                         </div>
                                         <?php
+                                        break;
+                                    
+                                    case 'headings':
+                                    case 'classifying_matching':
+                                        // These use multiple choice format
+                                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                                            $mc_options = $question['mc_options'];
+                                        } elseif (isset($question['options'])) {
+                                            $options_array = explode("\n", $question['options']);
+                                            $mc_options = array();
+                                            foreach ($options_array as $idx => $option_text) {
+                                                $mc_options[] = array('text' => trim($option_text));
+                                            }
+                                        }
+                                        
+                                        if (!empty($mc_options)):
+                                        ?>
+                                        <div class="question-answer">
+                                            <?php foreach ($mc_options as $opt_index => $option): ?>
+                                                <label class="mc-option">
+                                                    <input type="radio" 
+                                                           name="answer_<?php echo $index; ?>" 
+                                                           value="<?php echo $opt_index; ?>">
+                                                    <?php echo wp_kses_post($option['text']); ?>
+                                                </label>
+                                            <?php endforeach; ?>
+                                        </div>
+                                        <?php
+                                        endif;
                                         break;
                                         
                                     case 'essay':
