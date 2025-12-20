@@ -166,13 +166,11 @@ class IELTS_CM_Text_Exercises_Creator {
                         <li><?php _e('Headings Questions', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
                         <li><?php _e('Matching/Classifying', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
                         <li><?php _e('Dropdown Paragraph', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
-                        <li><?php _e('Essay', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
-                        <li><?php _e('Fill in the Blank (Legacy)', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Uses Short Answer format', 'ielts-course-manager'); ?>)</em></li>
                     </ul>
                 </div>
                 
                 <h3><?php _e('Format 1: Short Answer Questions', 'ielts-course-manager'); ?></h3>
-                <p><?php _e('Best for IELTS Reading comprehension with fill-in-the-blank style answers. Also works for: Sentence Completion, Table Completion, Labelling, and Fill in the Blank questions.', 'ielts-course-manager'); ?></p>
+                <p><?php _e('Best for IELTS Reading comprehension with fill-in-the-blank style answers. Also works for: Sentence Completion, Table Completion, and Labelling questions.', 'ielts-course-manager'); ?></p>
                 <ul style="list-style-type: disc; margin-left: 20px;">
                     <li><strong><?php _e('Title/Instructions:', 'ielts-course-manager'); ?></strong> <?php _e('All text before the first numbered question', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Question Format:', 'ielts-course-manager'); ?></strong> <?php _e('Number. Question text {ANSWER}', 'ielts-course-manager'); ?></li>
@@ -325,31 +323,12 @@ B) tomorrow
 C) next month</pre>
                 </div>
                 
-                <div style="margin: 15px 0; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
-                    <h4 style="margin-top: 0; color: #0969da;"><?php _e('Essay Questions', 'ielts-course-manager'); ?></h4>
-                    <p><?php _e('Free-text response questions that require manual grading by instructors.', 'ielts-course-manager'); ?></p>
-                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong></p>
-                    <ul style="margin-left: 20px;">
-                        <li><?php _e('Add [ESSAY] marker before the question text', 'ielts-course-manager'); ?></li>
-                        <li><?php _e('Optionally specify points: {POINTS:10}', 'ielts-course-manager'); ?></li>
-                    </ul>
-                    <pre style="background: #f5f5f5; padding: 10px; margin-top: 10px; font-size: 12px;">Essay Writing Task
-
-[ESSAY]
-Some people believe that technology has made our lives easier, while others think it has made life more complicated. Discuss both views and give your opinion.
-
-Write at least 250 words.
-
-{POINTS:10}</pre>
-                </div>
-                
                 <div class="notice notice-success inline" style="margin: 15px 0; padding: 10px; background: #d4edda; border-left: 4px solid #28a745;">
                     <p><strong><?php _e('All Question Types Supported!', 'ielts-course-manager'); ?></strong></p>
-                    <p><?php _e('As of version 2.44, ALL question types can now be created using text format. Choose the method that works best for you:', 'ielts-course-manager'); ?></p>
+                    <p><?php _e('As of version 3.0, all current question types can be created using text format. Choose the method that works best for you:', 'ielts-course-manager'); ?></p>
                     <ul style="margin-left: 20px;">
                         <li><strong><?php _e('Text Format:', 'ielts-course-manager'); ?></strong> <?php _e('Fast and efficient for bulk creation', 'ielts-course-manager'); ?></li>
                         <li><strong><?php _e('Exercise Editor:', 'ielts-course-manager'); ?></strong> <?php _e('Visual interface with full control', 'ielts-course-manager'); ?></li>
-                        <li><strong><?php _e('JSON Import:', 'ielts-course-manager'); ?></strong> <?php _e('Programmatic creation and bulk imports', 'ielts-course-manager'); ?></li>
                     </ul>
                 </div>
                 
@@ -555,11 +534,6 @@ You have one hour for the complete test (including transferring your answers).</
         // (has numbered questions with lettered options like "A) option")
         if ($this->is_multiple_choice_format($text)) {
             return $this->parse_multiple_choice_format($text);
-        }
-        
-        // Check for essay format (single question with [ESSAY] marker)
-        if (preg_match('/\[ESSAY\]/i', $text)) {
-            return $this->parse_essay_format($text);
         }
         
         // Fall back to original true/false format parser
@@ -1442,85 +1416,6 @@ You have one hour for the complete test (including transferring your answers).</
         }
         
         return null;
-    }
-    
-    /**
-     * Parse essay format questions
-     * Format:
-     * Title/Instructions
-     * 
-     * [ESSAY]
-     * Essay question text or prompt
-     * 
-     * Optional: {POINTS:10} to specify point value
-     */
-    private function parse_essay_format($text) {
-        // Extract reading passages first
-        $reading_texts = $this->extract_reading_passages($text);
-        $text = $this->remove_reading_passages($text);
-        
-        $lines = explode("\n", $text);
-        $lines = array_map('trim', $lines);
-        
-        // Extract title
-        $title = '';
-        $essay_start = -1;
-        
-        for ($i = 0; $i < count($lines); $i++) {
-            if (preg_match('/\[ESSAY\]/i', $lines[$i])) {
-                $essay_start = $i;
-                break;
-            } else if (!empty($lines[$i]) && empty($title)) {
-                $title = $lines[$i];
-            }
-        }
-        
-        if (empty($title)) {
-            $title = 'Essay Question';
-        }
-        
-        // Extract essay question text
-        $question_lines = array();
-        $points = 5; // default points for essay
-        
-        if ($essay_start >= 0) {
-            for ($i = $essay_start + 1; $i < count($lines); $i++) {
-                $line = $lines[$i];
-                
-                if (empty($line)) {
-                    continue;
-                }
-                
-                // Check for points marker
-                if (preg_match('/\{POINTS:\s*(\d+)\}/i', $line, $match)) {
-                    $points = intval($match[1]);
-                    continue;
-                }
-                
-                $question_lines[] = $line;
-            }
-        }
-        
-        $question_text = implode("\n", $question_lines);
-        
-        $questions = array();
-        if (!empty($question_text)) {
-            $questions[] = array(
-                'type' => 'essay',
-                'question' => sanitize_textarea_field($question_text),
-                'correct_answer' => '', // No automatic grading for essays
-                'points' => $points,
-                'correct_feedback' => '',
-                'incorrect_feedback' => '',
-                'no_answer_feedback' => ''
-            );
-        }
-        
-        return array(
-            'title' => $title,
-            'questions' => $questions,
-            'reading_texts' => $reading_texts
-        );
     }
     
     /**
