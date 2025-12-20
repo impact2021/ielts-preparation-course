@@ -64,8 +64,7 @@ J: But regardless of the controversies, allegations and history of Nobel, there 
 
 [END READING PASSAGE]
 
-
-You should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.
+Questions 1 – 13 are based on Reading Passage 1
 
 Questions 1 – 5 [HEADINGS]
 
@@ -153,15 +152,11 @@ Correct answer
 This is FALSE
 Incorrect
 
-Paragraph B: 'that before any route is driven using automated technology, a manned vehicle is first driven along the roads'.
-
 7. Cars driven by people cause nearly one million deaths per year.
 This is TRUE
 Incorrect
 This is FALSE
 Correct answer
-
-Paragraph C states that 'traffic accidents involving human error claim OVER one million fatalities annually'.
 
 8. Driverless cars travel at a slower speed than manned cars.
 This is TRUE
@@ -169,15 +164,11 @@ Incorrect
 This is NOT GIVEN
 Correct answer
 
-Paragraph D: 'The cars would be able to maintain a constant speed'. We are not given information about which is faster or slower.
-
 9. Driverless cars are expected to become mainstream in the next ten years.
 This is TRUE
 Incorrect
 This is NOT GIVEN
 Correct answer
-
-The only information we are given about the future is that it is 'a concept well worth pursuing' – Paragraph G.
 
 Questions 10 – 13 [MATCHING]
 
@@ -217,7 +208,7 @@ C) Sebastian Thrun
 D) Tim Groesner
 E) US Department of Defence
 
-You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.
+Questions 14 – 26 are based on Reading Passage 2
 
 Questions 14 – 17
 
@@ -230,15 +221,11 @@ Incorrect
 This is FALSE
 Correct answer
 
-The opening paragraph mentions a touring exhibition in Canada and the U.S. from 1954 to 1957, but further that there '…had been earlier exhibitions' there.
-
 15. The first ideas of a 'Scandinavian design' came about at the same time as new emerging movements in Art, such as Bauhaus and Dadaism.
 This is TRUE
 Correct answer
 This is FALSE
 Incorrect
-
-The fifth para mentions Bauhaus and Dadaism, and "As these ideas spread throughout the world, artists and designers began working in tandem in the Scandinavian countries, with their view of a Scandinavian design…'.
 
 16. The term 'industrial arts' was coined by Scandinavian designers and artists in the Art Nouveau movement together.
 This is TRUE
@@ -246,15 +233,11 @@ Incorrect
 This is NOT GIVEN
 Correct answer
 
-The term 'industrial arts' is mentioned, but there is no indication as to who first introduced it.
-
 17. As well as furniture and accessories, Scandinavian design philosophies now also include environmentalism.
 This is TRUE
 Correct answer
 This is FALSE
 Incorrect
-
-The last para mentions that Scandinavian design philosophies have 'progressed beyond product… and now embrace environmental concerns…'.
 
 Questions 18 – 24 [MATCHING]
 
@@ -363,7 +346,7 @@ Complete the following sentence using NO MORE THAN TWO WORDS.
 
 26. IKEA, the global Swedish furniture company, claims to only use wood from {[CERTIFIED FORESTS][FORESTS]}.
 
-You should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.
+Questions 27 – 40 are based on Reading Passage 3
 
 Questions 27 – 32
 
@@ -392,15 +375,11 @@ Correct answer
 This is FALSE
 Incorrect
 
-Paragraph B: 'Yet not every winner, referred to as a 'laureate', has actually accepted the award'. This question can cause some confusion as it begins with 'EVERY winner' while the text states 'NOT every winner', but the sentence is referring to not every winner accepting the award, not that winners are referred to as laureates.
-
 34. Marie Curie is the only female to have been awarded a Prize.
 This is TRUE
 Incorrect
 This is FALSE
 Correct answer
-
-Paragraph C: 'less than 5 percent of Nobel prizes have been awarded to women, the first of whom was Marie Curie'. By using the phrase 'the first of whom', it can be concluded that more than one woman must have been awarded a Prize, hence the answer is FALSE, not NOT GIVEN.
 
 35. There are currently 6 categories for which Prizes are awarded.
 This is TRUE
@@ -408,23 +387,17 @@ Correct answer
 This is FALSE
 Incorrect
 
-Paragraph D: 'In 1969, having been running for nearly seventy years, a sixth area was introduced to the Nobel Prizes … Since this time, no categories have been added or removed from the prizegiving.'
-
 36. Prizes cannot be awarded to people who have died.
 This is TRUE
 Incorrect
 This is FALSE
 Correct answer
 
-Paragraph E: 'it is possible to award a prize to someone who is dead as long as they were alive during the nomination process'
-
 37. Members of the panel that choose the winner of a Prize have left the position following some nominations.
 This is TRUE
 Incorrect
 This is NOT GIVEN
 Correct answer
-
-Paragraph H: This is tricky one. The text states that 'some of the judging panel have resigned following a final decision that they felt was not correct'. However, the question focuses on nominations causing some people to quit.
 
 Questions 38 – 40 [MATCHING]
 

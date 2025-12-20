@@ -64,6 +64,7 @@ J: But regardless of the controversies, allegations and history of Nobel, there 
 
 [END READING PASSAGE]
 
+Reading Passage 1
 
 You should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.
 
@@ -97,6 +98,7 @@ F) VI. Driverless car first developed by the Department of Defence
 G) VII. The benefits for the replaced drivers
 H) VIII. Technology hardware allowing a complete view of risks
 I) IX. Additional advantages for transport and the atmosphere
+[INCORRECT] Paragraph B refers to using data already collected as well as traffic lights and other vehicles to make decisions.
 
 2. Paragraph C
 A) I. Early days of development
@@ -108,6 +110,7 @@ F) VI. Driverless car first developed by the Department of Defence
 G) VII. The benefits for the replaced drivers [CORRECT]
 H) VIII. Technology hardware allowing a complete view of risks
 I) IX. Additional advantages for transport and the atmosphere
+[INCORRECT] Paragraph C refers to how commuting time can be used more productively, how people would be less stressed and the reduction of 'road rage'. Paragraph D is incorrect because it refers to children and those with issues preventing them from driving means – they are not 'replaced' drivers as they are not drivers now.
 
 3. Paragraph D
 A) I. Early days of development
@@ -119,6 +122,7 @@ F) VI. Driverless car first developed by the Department of Defence
 G) VII. The benefits for the replaced drivers
 H) VIII. Technology hardware allowing a complete view of risks
 I) IX. Additional advantages for transport and the atmosphere [CORRECT]
+[INCORRECT] Paragraph D refers to mobility for people who would otherwise not be able to drive, as well as the lower emissions into the environment.
 
 4. Paragraph E
 A) I. Early days of development [CORRECT]
@@ -130,6 +134,7 @@ F) VI. Driverless car first developed by the Department of Defence
 G) VII. The benefits for the replaced drivers
 H) VIII. Technology hardware allowing a complete view of risks
 I) IX. Additional advantages for transport and the atmosphere
+[INCORRECT] Paragraph E refers to how Professor Thrun first developed the idea for a 2005 competition sponsored by the US Department of Defence.
 
 5. Paragraph F
 A) I. Early days of development
@@ -141,6 +146,7 @@ F) VI. Driverless car first developed by the Department of Defence
 G) VII. The benefits for the replaced drivers
 H) VIII. Technology hardware allowing a complete view of risks
 I) IX. Additional advantages for transport and the atmosphere
+[INCORRECT] Paragraph F refers to the people who think driverless cars should be allowed and those that feel it shouldn't be allowed.
 
 Questions 6 – 9
 
@@ -195,6 +201,7 @@ B) Hot Rod Association of Alberta
 C) Sebastian Thrun
 D) Tim Groesner
 E) US Department of Defence [CORRECT]
+[INCORRECT] Although it was Sebastian Thrun's idea, the Department of Defence encouraged this idea with the 2005 race competition.
 
 11. Claimed that this would reduce the interest in driving
 A) Eric Schmidt
@@ -202,6 +209,7 @@ B) Hot Rod Association of Alberta [CORRECT]
 C) Sebastian Thrun
 D) Tim Groesner
 E) US Department of Defence
+[INCORRECT] 'the Hot Rod Association of Alberta, a group of car enthusiasts, have actually petitioned against further testing and development of the driverless car claiming that it would be car travel less interesting'
 
 12. Felt that the driverless car was more observant than a human driver
 A) Eric Schmidt
@@ -209,6 +217,7 @@ B) Hot Rod Association of Alberta
 C) Sebastian Thrun
 D) Tim Groesner [CORRECT]
 E) US Department of Defence
+[INCORRECT] 'He approved a driverless car licence for Google after riding in a Prius down the Las Vegas strip, where he saw how it was better than he was at spotting hazards'
 
 13. Believes that current driving conditions should not have come about in the first place
 A) Eric Schmidt [CORRECT]
@@ -216,6 +225,9 @@ B) Hot Rod Association of Alberta
 C) Sebastian Thrun
 D) Tim Groesner
 E) US Department of Defence
+[INCORRECT] Eric Schmidt – 'he thinks it's amazing humans were allowed to drive cars at all'
+
+Reading Passage 2
 
 You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.
 
@@ -282,6 +294,7 @@ G) Swedish Society of Industrial Design
 H) Verner Panton
 I) Arne Jacobson
 J) Pop Art
+[INCORRECT] The last para states that Tappo Wirkkal [has] drawn praise from art critics and [has withstood] the test of functional design…'.
 
 19. is now another name for 'Scandinavian design'.
 A) Dadaism
@@ -294,6 +307,7 @@ G) Swedish Society of Industrial Design
 H) Verner Panton
 I) Arne Jacobson
 J) Pop Art
+[INCORRECT] The fourth para has the line 'It is noted that Scandinavian design is known as 'democratic design'…'.
 
 20. came up with new ways to shape and use a traditional construction material.
 A) Dadaism
@@ -306,6 +320,7 @@ G) Swedish Society of Industrial Design
 H) Verner Panton
 I) Arne Jacobson [CORRECT]
 J) Pop Art
+[INCORRECT] The sixth para mentions that Arne Jacobson began 'working with plywood…' and 'perfected new techniques which allowed this 'long-used material…' to be used in different ways.
 
 21. emerged in the 1920s and 1930s, along with other European movements.
 A) Dadaism [CORRECT]
@@ -318,6 +333,7 @@ G) Swedish Society of Industrial Design
 H) Verner Panton
 I) Arne Jacobson
 J) Pop Art
+[INCORRECT] The fifth para begins 'In the 1920s and 1930s…' and goes on to mention various new art movements, including Dadaism.
 
 22. was originally created to maintain standards of perfection.
 A) Dadaism
@@ -330,6 +346,7 @@ G) Swedish Society of Industrial Design [CORRECT]
 H) Verner Panton
 I) Arne Jacobson
 J) Pop Art
+[INCORRECT] The fifth para mentions the Swedish Society and that it '…was to ensure the highest levels of quality…'.
 
 23. moved from designing only furniture to accessories.
 A) Dadaism
@@ -342,6 +359,7 @@ G) Swedish Society of Industrial Design
 H) Verner Panton
 I) Arne Jacobson
 J) Pop Art
+[INCORRECT] The sixth para states that Alvar Aalto '…branched out into the production of accessories…'.
 
 24. designed a chair based on a new movement in Art.
 A) Dadaism
@@ -354,14 +372,21 @@ G) Swedish Society of Industrial Design
 H) Verner Panton [CORRECT]
 I) Arne Jacobson
 J) Pop Art
+[INCORRECT] The sixth para has the states that Verner Panton designed a chair which '…[symbolized] the emerging Pop Art movement…'
 
 Questions 25 and 26
 
 Complete the following sentence using NO MORE THAN TWO WORDS.
 
 25. The modern interpretation of Scandinavian design means that it now includes {ENVIRONMENTAL} concerns related to where the raw materials are sourced from.
+[CORRECT] Excellent! The last para has the key word 'Today…', and states that Scandinavian design now includes '…environmental concerns as well…'.
+[INCORRECT] The last para has the key word 'Today…', and states that Scandinavian design now includes '…environmental concerns as well…'.
 
 26. IKEA, the global Swedish furniture company, claims to only use wood from {[CERTIFIED FORESTS][FORESTS]}.
+[CORRECT] Well done! The last para mentions 'IKEA, for example, is insistent on only using timber from certified forests'
+[INCORRECT] The last para mentions 'IKEA, for example, is insistent on only using timber from certified forests'
+
+Reading Passage 3
 
 You should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.
 
@@ -370,16 +395,28 @@ Questions 27 – 32
 Complete the following sentences using NO MORE THAN THREE WORDS AND A NUMBER from the text.
 
 27. The Nobel prizes are awarded for {[AN OUTSTANDING CONTRIBUTION][OUTSTANDING CONTRIBUTION][OUTSTANDING CONTRIBUTIONS]} in a number of fields.
+[CORRECT] Excellent! Paragraph A: 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'.
+[INCORRECT] Check Paragraph A: 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'.
 
 28. Nobel was inspired to establish the Prizes following a section issued in {[A FRENCH NEWSPAPER][FRENCH NEWSPAPER]}.
+[CORRECT] Well done! Paragraph A: 'It was only when a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the 'Merchant of Death' … He decided that after his death, a significant portion of his wealth should be devoted to seeking out and acknowledging those who had made 'the greatest contribution to mankind'.
+[INCORRECT] Paragraph A: 'It was only when a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the 'Merchant of Death' … He decided that after his death, a significant portion of his wealth should be devoted to seeking out and acknowledging those who had made 'the greatest contribution to mankind'.
 
 29. Family arguments were part of the reason why there was a delay of {[5 YEARS][FIVE YEARS]} before the first prizes.
+[CORRECT] Correct! Paragraph A: 'it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'
+[INCORRECT] Paragraph A: 'it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'
 
 30. In the middle of the last century, a Russian nominee was compelled into {DECLINING} the award.
+[CORRECT] Excellent! Paragraph B: 'and the government of the Soviet Union pressured Boris Pasternak into declining his award his award in 1958'
+[INCORRECT] Paragraph B: 'and the government of the Soviet Union pressured Boris Pasternak into declining his award his award in 1958'
 
 31. {[THE RED CROSS][RED CROSS]} has earned a Prize on a number of occasions.
+[CORRECT] Well done! 'only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'
+[INCORRECT] 'only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'
 
 32. In the early 1940s, there was {[NO WINNER][NO WINNERS]} on two occasions.
+[CORRECT] Correct! Paragraph C: 'there have been two occasions where no winner was found for the prizes – in 1941 and 1942'
+[INCORRECT] Paragraph C: 'there have been two occasions where no winner was found for the prizes – in 1941 and 1942'
 
 Questions 33 – 37
 
@@ -440,15 +477,18 @@ A) Wangari Maathai
 B) John Forbes Nash
 C) Cordell Hull [CORRECT]
 D) Barack Obama
+[INCORRECT] 'Cordell Hull won the Peace Prize for his efforts in putting together the United Nations, but this was in many respects overshadowed by allegations that he campaigned against allowing a boat of Jewish refugees fleeing the Nazi regime to seek asylum in America. '
 
 39. Had a medical condition that could have influenced his decision making.
 A) Wangari Maathai
 B) John Forbes Nash [CORRECT]
 C) Cordell Hull
 D) Barack Obama
+[INCORRECT] 'John Forbes Nash, who was himself suffering from schizophrenia (a disease which is considered to have impacted on some of his more public comments).'
 
 40. May have been made a recipient of the award for ulterior motives.
 A) Wangari Maathai
 B) John Forbes Nash
 C) Cordell Hull
 D) Barack Obama [CORRECT]
+[INCORRECT] 'Barack Obama, with the award being given for 'outstanding international diplomatic efforts' only 12 days after he took office, with many claiming that the nomination and award were politically motivated.'
