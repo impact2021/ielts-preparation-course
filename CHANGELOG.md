@@ -2,6 +2,18 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.28] - 2025-12-20
+
+### Fixed
+- **Matching Questions Display**: Fixed display of matching questions to show individual question numbers
+  - Each match in a matching question now displays its own sequential question number (e.g., Question 7, Question 8, Question 9, etc.)
+  - Previously, all matches were grouped under a single question number without individual numbering
+  - Applied to both standard quiz layout and computer-based layout
+  - Improves clarity when exporting/importing exercises with matching questions
+
+### Changed
+- **Version Update**: Updated plugin version to 2.28
+
 ## [2.27] - 2025-12-20
 
 ### Added
