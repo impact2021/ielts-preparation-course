@@ -2331,7 +2331,7 @@ class IELTS_CM_Admin {
     /**
      * Helper method to display parent connections (courses or lessons)
      * 
-     * @param int $post_id The post ID to get parent connections for
+     * @param int|string $post_id The post ID to get parent connections for
      * @param string $meta_key_plural The meta key for multiple parents (e.g., '_ielts_cm_lesson_ids')
      * @param string $meta_key_singular The meta key for single parent (backward compatibility, e.g., '_ielts_cm_lesson_id')
      * @return void
@@ -2366,6 +2366,9 @@ class IELTS_CM_Admin {
     
     /**
      * Resource (Sub lesson) columns
+     * 
+     * @param array $columns Existing columns
+     * @return array Modified columns
      */
     public function resource_columns($columns) {
         $columns['lesson'] = __('Lesson', 'ielts-course-manager');
@@ -2374,6 +2377,10 @@ class IELTS_CM_Admin {
     
     /**
      * Resource (Sub lesson) column content
+     * 
+     * @param string $column Column name
+     * @param int $post_id Post ID
+     * @return void
      */
     public function resource_column_content($column, $post_id) {
         if ($column === 'lesson') {
@@ -2383,6 +2390,9 @@ class IELTS_CM_Admin {
     
     /**
      * Quiz (Exercise) columns
+     * 
+     * @param array $columns Existing columns
+     * @return array Modified columns
      */
     public function quiz_columns($columns) {
         $columns['lesson'] = __('Lesson', 'ielts-course-manager');
@@ -2391,6 +2401,10 @@ class IELTS_CM_Admin {
     
     /**
      * Quiz (Exercise) column content
+     * 
+     * @param string $column Column name
+     * @param int $post_id Post ID
+     * @return void
      */
     public function quiz_column_content($column, $post_id) {
         if ($column === 'lesson') {
