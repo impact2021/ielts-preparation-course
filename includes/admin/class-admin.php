@@ -865,9 +865,16 @@ class IELTS_CM_Admin {
                 <h4 style="margin-top: 0;"><?php _e('Question Type Guidelines:', 'ielts-course-manager'); ?></h4>
                 <ul style="margin-bottom: 0;">
                     <li><strong><?php _e('Multiple Choice:', 'ielts-course-manager'); ?></strong> <?php _e('Enter options one per line. Correct answer is the option number (0 for first, 1 for second, etc.)', 'ielts-course-manager'); ?></li>
-                    <li><strong><?php _e('Multi Select:', 'ielts-course-manager'); ?></strong> <?php _e('Students can select multiple answers. Mark all correct options. Students earn 1 point for each correct selection. Set the maximum number of selections and total points accordingly.', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Multi Select:', 'ielts-course-manager'); ?></strong> <?php _e('Students can select multiple answers. Mark all correct options. Students earn 1 point for each correct selection.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('True/False/Not Given:', 'ielts-course-manager'); ?></strong> <?php _e('Enter correct answer as "true", "false", or "not_given" (lowercase)', 'ielts-course-manager'); ?></li>
-                    <li><strong><?php _e('Fill in the Blank:', 'ielts-course-manager'); ?></strong> <?php _e('Enter the expected answer. Matching is case-insensitive and ignores punctuation/extra spaces.', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Headings Questions:', 'ielts-course-manager'); ?></strong> <?php _e('For matching headings to paragraphs. Add heading options and mark the correct one.', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Short Answer Questions:', 'ielts-course-manager'); ?></strong> <?php _e('Students type a brief answer. Use | to separate multiple accepted answers.', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Sentence Completion:', 'ielts-course-manager'); ?></strong> <?php _e('Students complete a sentence. Matching is case-insensitive and ignores punctuation.', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Summary Completion:', 'ielts-course-manager'); ?></strong> <?php _e('Students fill in blanks in a summary. Supports multiple accepted answers with |', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Table Completion:', 'ielts-course-manager'); ?></strong> <?php _e('Students fill in table cells. Matching is flexible and case-insensitive.', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Labelling:', 'ielts-course-manager'); ?></strong> <?php _e('For diagram/image labelling. Students type the label text.', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Classifying & Matching:', 'ielts-course-manager'); ?></strong> <?php _e('For categorizing items. Add category options and mark the correct one.', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Locating Information:', 'ielts-course-manager'); ?></strong> <?php _e('Students identify paragraph/section. Answer format can be flexible (e.g., "A", "Paragraph A").', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Essay:', 'ielts-course-manager'); ?></strong> <?php _e('No correct answer needed - requires manual grading.', 'ielts-course-manager'); ?></li>
                 </ul>
             </div>
@@ -1078,7 +1085,7 @@ class IELTS_CM_Admin {
                         correctAnswerField.find('select').val(currentValue);
                     }
                     correctAnswerField.show();
-                } else if (type === 'fill_blank') {
+                } else if (type === 'fill_blank' || type === 'short_answer' || type === 'sentence_completion' || type === 'table_completion' || type === 'labelling' || type === 'locating_information') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
@@ -1104,6 +1111,12 @@ class IELTS_CM_Admin {
                         correctAnswerInput.replaceWith(inputHtml);
                     }
                     correctAnswerField.show();
+                } else if (type === 'headings' || type === 'classifying_matching') {
+                    // These use multiple choice format
+                    container.find('.mc-options-field').show();
+                    container.find('.multi-select-settings').hide();
+                    container.find('.general-feedback-field').hide();
+                    correctAnswerField.hide();
                 } else if (type === 'essay') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
@@ -1497,7 +1510,7 @@ class IELTS_CM_Admin {
             </div>
             
             <!-- New structured options for multiple choice -->
-            <div class="mc-options-field" style="<?php echo (isset($question['type']) && $question['type'] !== 'multiple_choice' && $question['type'] !== 'multi_select') ? 'display:none;' : ''; ?>">
+            <div class="mc-options-field" style="<?php echo (isset($question['type']) && !in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'classifying_matching'))) ? 'display:none;' : ''; ?>">
                 <h5><?php _e('Answer Options', 'ielts-course-manager'); ?></h5>
                 <div class="mc-options-container" data-question-index="<?php echo $index; ?>">
                     <?php
@@ -1570,7 +1583,7 @@ class IELTS_CM_Admin {
                 <textarea name="questions[<?php echo $index; ?>][options]" rows="4" style="width: 100%;"><?php echo esc_textarea(isset($question['options']) ? $question['options'] : ''); ?></textarea>
             </p>
             
-            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && ($question['type'] === 'essay' || $question['type'] === 'multiple_choice')) ? 'display:none;' : ''; ?>">
+            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('essay', 'multiple_choice', 'multi_select', 'headings', 'classifying_matching'))) ? 'display:none;' : ''; ?>">
                 <label><?php _e('Correct Answer', 'ielts-course-manager'); ?></label><br>
                 <?php if (isset($question['type']) && $question['type'] === 'true_false'): ?>
                     <select name="questions[<?php echo $index; ?>][correct_answer]" style="width: 100%;">

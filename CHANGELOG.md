@@ -2,6 +2,27 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.27] - 2025-12-20
+
+### Added
+- **Extended IELTS Question Types**: Expanded question type options to better match authentic IELTS exam formats
+  - Added "Headings Questions" type for matching headings to paragraphs
+  - Added "Short Answer Questions" type for concise text answers
+  - Added "Sentence Completion Questions" type for completing sentences
+  - Added "Table Completion Questions" type for filling in table cells
+  - Added "Labelling Style Questions" type for diagram/image labelling
+  - Added "Classifying and Matching Questions" type for categorization tasks
+  - Added "Locating Information Questions" type for finding specific information
+  - Kept existing types: Multiple Choice, Multi Select, True/False/Not Given, Summary Completion, Essay
+  - "Fill in the Blank" retained as legacy option for backward compatibility
+
+### Changed
+- **Version Update**: Updated plugin version to 2.27
+- **Question Type Handling**: Updated backend and frontend to support all new question types
+  - Text-based questions (short answer, sentence completion, etc.) use flexible text matching
+  - Selection-based questions (headings, classifying) use multiple choice format
+  - All question types fully functional in both standard and computer-based layouts
+
 ## [2.26] - 2025-12-19
 
 ### Fixed

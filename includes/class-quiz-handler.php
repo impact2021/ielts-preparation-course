@@ -207,6 +207,11 @@ class IELTS_CM_Quiz_Handler {
                 
             case 'fill_blank':
             case 'summary_completion':
+            case 'short_answer':
+            case 'sentence_completion':
+            case 'table_completion':
+            case 'labelling':
+            case 'locating_information':
                 // Support multiple accepted answers separated by pipe |
                 $correct_answers = isset($question['correct_answer']) ? $question['correct_answer'] : '';
                 
@@ -230,6 +235,11 @@ class IELTS_CM_Quiz_Handler {
                 }
                 
                 return false;
+            
+            case 'headings':
+            case 'classifying_matching':
+                // These are similar to multiple choice - match the selected option
+                return isset($question['correct_answer']) && $question['correct_answer'] == $user_answer;
                 
             case 'essay':
                 // Essay questions need manual grading
@@ -566,8 +576,15 @@ class IELTS_CM_Quiz_Handler {
             'multiple_choice' => __('Multiple Choice', 'ielts-course-manager'),
             'multi_select' => __('Multi Select', 'ielts-course-manager'),
             'true_false' => __('True/False/Not Given', 'ielts-course-manager'),
-            'fill_blank' => __('Fill in the Blank', 'ielts-course-manager'),
-            'summary_completion' => __('Summary Completion', 'ielts-course-manager'),
+            'headings' => __('Headings Questions', 'ielts-course-manager'),
+            'short_answer' => __('Short Answer Questions', 'ielts-course-manager'),
+            'sentence_completion' => __('Sentence Completion Questions', 'ielts-course-manager'),
+            'summary_completion' => __('Summary Completion Questions', 'ielts-course-manager'),
+            'table_completion' => __('Table Completion Questions', 'ielts-course-manager'),
+            'labelling' => __('Labelling Style Questions', 'ielts-course-manager'),
+            'classifying_matching' => __('Classifying and Matching Questions', 'ielts-course-manager'),
+            'locating_information' => __('Locating Information Questions', 'ielts-course-manager'),
+            'fill_blank' => __('Fill in the Blank (Legacy)', 'ielts-course-manager'),
             'essay' => __('Essay', 'ielts-course-manager')
         );
     }
