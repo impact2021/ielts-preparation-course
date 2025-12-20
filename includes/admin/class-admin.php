@@ -2334,6 +2334,7 @@ class IELTS_CM_Admin {
      * @param int $post_id The post ID to get parent connections for
      * @param string $meta_key_plural The meta key for multiple parents (e.g., '_ielts_cm_lesson_ids')
      * @param string $meta_key_singular The meta key for single parent (backward compatibility, e.g., '_ielts_cm_lesson_id')
+     * @return void
      */
     private function display_parent_connections($post_id, $meta_key_plural, $meta_key_singular) {
         // Check for multiple parents
@@ -2352,7 +2353,12 @@ class IELTS_CM_Admin {
                     $parent_links[] = '<a href="' . get_edit_post_link($parent_id) . '">' . esc_html($parent->post_title) . '</a>';
                 }
             }
-            echo implode(', ', $parent_links);
+            
+            if (!empty($parent_links)) {
+                echo implode(', ', $parent_links);
+            } else {
+                echo '—';
+            }
         } else {
             echo '—';
         }
