@@ -444,7 +444,7 @@ if ($lesson_id) {
                                                     if (preg_match('/^([A-Z]):\s*(.+)$/i', trim($option_part), $opt_match)) {
                                                         $letter = $opt_match[1];
                                                         $option_text = trim($opt_match[2]);
-                                                        $select_field .= '<option value="' . esc_attr($letter) . '">' . esc_html($letter) . ': ' . esc_html($option_text) . '</option>';
+                                                        $select_field .= '<option value="' . esc_attr($letter) . '">' . esc_html($option_text) . '</option>';
                                                     }
                                                 }
                                                 
