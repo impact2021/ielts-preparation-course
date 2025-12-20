@@ -256,6 +256,47 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 }
                                 break;
                             
+                            case 'dropdown_paragraph':
+                                // Dropdown paragraph - parse N.[A: option1 B: option2] placeholders and replace with inline dropdowns
+                                // Example: "I am writing to 1.[A: let you know B: inform you] that I will be unable to meet."
+                                
+                                $paragraph_text = isset($question['question']) ? $question['question'] : '';
+                                
+                                // Find all N.[A: option1 B: option2 C: option3] placeholders
+                                // Pattern: number followed by period, then square bracket with options
+                                preg_match_all('/(\d+)\.\[([^\]]+)\]/i', $paragraph_text, $matches);
+                                
+                                if (!empty($matches[0])) {
+                                    // Multiple inline dropdowns - replace placeholders with select fields
+                                    $processed_text = $paragraph_text;
+                                    foreach ($matches[0] as $match_index => $placeholder) {
+                                        $dropdown_num = $matches[1][$match_index];
+                                        $options_text = $matches[2][$match_index];
+                                        
+                                        // Parse options: "A: option1 B: option2 C: option3"
+                                        preg_match_all('/([A-Z]):\s*([^A-Z]+?)(?=\s+[A-Z]:|$)/i', $options_text, $option_matches);
+                                        
+                                        // Build the select dropdown
+                                        $select_field = '<select name="answer_' . esc_attr($index) . '_' . esc_attr($dropdown_num) . '" class="answer-select-inline" data-dropdown-num="' . esc_attr($dropdown_num) . '">';
+                                        $select_field .= '<option value="">-</option>'; // Empty default option
+                                        
+                                        if (!empty($option_matches[1]) && !empty($option_matches[2])) {
+                                            foreach ($option_matches[1] as $opt_idx => $letter) {
+                                                $option_text = trim($option_matches[2][$opt_idx]);
+                                                $select_field .= '<option value="' . esc_attr($letter) . '">' . esc_html($letter) . ': ' . esc_html($option_text) . '</option>';
+                                            }
+                                        }
+                                        
+                                        $select_field .= '</select>';
+                                        $processed_text = str_replace($placeholder, $select_field, $processed_text);
+                                    }
+                                    echo '<div class="dropdown-paragraph-text">' . wp_kses_post(wpautop($processed_text)) . '</div>';
+                                } else {
+                                    // No valid placeholders found - show question text as-is
+                                    echo '<div class="dropdown-paragraph-text">' . wp_kses_post(wpautop($paragraph_text)) . '</div>';
+                                }
+                                break;
+                            
                             case 'headings':
                             case 'matching_classifying':
                                 // These use multiple choice format

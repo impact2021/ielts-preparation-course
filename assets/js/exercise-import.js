@@ -9,7 +9,12 @@
         // Handle tab switching
         $('.ielts-import-tab-btn').on('click', function() {
             var tab = $(this).data('tab');
-            var container = $(this).closest('.ielts_cm_exercise_import');
+            var container = $(this).closest('#ielts_cm_exercise_import');
+            
+            // If not found, try finding by parent meta box structure
+            if (!container.length) {
+                container = $(this).closest('.inside');
+            }
             
             // Update tab buttons
             container.find('.ielts-import-tab-btn').removeClass('active');

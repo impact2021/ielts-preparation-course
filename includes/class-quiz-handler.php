@@ -295,6 +295,46 @@ class IELTS_CM_Quiz_Handler {
                 
                 return false;
             
+            case 'dropdown_paragraph':
+                // Check if this is a dropdown paragraph with multiple inline dropdowns
+                if (is_array($user_answer)) {
+                    // Handle inline dropdowns - correct_answer format: "1:A|2:B|3:A"
+                    // where the number is the dropdown position and the letter is the correct option
+                    $correct_answers = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+                    
+                    // Parse correct answers by number (e.g., "1:A|2:B|3:C")
+                    $answer_map = array();
+                    $parts = explode('|', $correct_answers);
+                    foreach ($parts as $part) {
+                        $part = trim($part);
+                        if (strpos($part, ':') !== false) {
+                            $parts_split = explode(':', $part, 2);
+                            if (count($parts_split) === 2) {
+                                $num = trim($parts_split[0]);
+                                $letter = strtoupper(trim($parts_split[1]));
+                                $answer_map[$num] = $letter;
+                            }
+                        }
+                    }
+                    
+                    // Check each user answer against the correct answer
+                    foreach ($user_answer as $dropdown_num => $user_letter) {
+                        if (!isset($answer_map[$dropdown_num])) {
+                            return false; // Unknown dropdown number
+                        }
+                        
+                        $user_letter = strtoupper(trim($user_letter));
+                        
+                        if ($answer_map[$dropdown_num] !== $user_letter) {
+                            return false; // Wrong answer for this dropdown
+                        }
+                    }
+                    
+                    return true; // All answers were correct
+                }
+                
+                return false;
+            
             case 'essay':
                 // Essay questions need manual grading
                 return false;

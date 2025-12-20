@@ -436,6 +436,28 @@ body.ielts-course-archive .content-area {
     margin-bottom: 1.5em;
 }
 
+.ielts-single-quiz .answer-select-inline {
+    display: inline-block;
+    width: auto;
+    min-width: 150px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 0 5px;
+    vertical-align: middle;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.ielts-single-quiz .dropdown-paragraph-text {
+    line-height: 2.5;
+}
+
+.ielts-single-quiz .dropdown-paragraph-text p {
+    margin-bottom: 1.5em;
+}
+
 .ielts-single-quiz .answer-textarea {
     width: 100%;
     padding: 10px;
@@ -965,6 +987,34 @@ body.ielts-course-archive .content-area {
 }
 
 .ielts-computer-based-quiz .summary-completion-text p {
+    margin-bottom: 1.5em;
+}
+
+.ielts-computer-based-quiz .answer-select-inline {
+    display: inline-block;
+    width: auto;
+    min-width: 150px;
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 0 5px;
+    vertical-align: middle;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.ielts-computer-based-quiz .answer-select-inline:focus {
+    border-color: #0073aa;
+    outline: none;
+}
+
+.ielts-computer-based-quiz .dropdown-paragraph-text {
+    line-height: 2.5;
+}
+
+.ielts-computer-based-quiz .dropdown-paragraph-text p {
     margin-bottom: 1.5em;
 }
 
