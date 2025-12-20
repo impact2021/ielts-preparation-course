@@ -146,7 +146,7 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                 <div class="questions-column">
                     <div class="questions-content">
                         <?php 
-                        // Calculate display question numbers for multi-select questions
+                        // Calculate display question numbers for multi-select and matching questions
                         $display_question_number = 1;
                         $question_display_numbers = array();
                         foreach ($questions as $idx => $q) {
@@ -161,6 +161,9 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                 }
                                 // Multi-select counts as multiple questions based on correct answers
                                 $question_count = max(1, $correct_count);
+                            } elseif ($q['type'] === 'matching' && isset($q['matches']) && is_array($q['matches'])) {
+                                // For matching, count number of match items
+                                $question_count = count($q['matches']);
                             } else {
                                 $question_count = 1;
                             }
@@ -186,9 +189,9 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                     if ($display_nums['start'] === $display_nums['end']) {
                                         printf(__('Question %d', 'ielts-course-manager'), $display_nums['start']);
                                     } else {
-                                        printf(__('Questions %d and %d', 'ielts-course-manager'), $display_nums['start'], $display_nums['end']);
+                                        printf(__('Questions %d – %d', 'ielts-course-manager'), $display_nums['start'], $display_nums['end']);
                                     }
-                                    // For multi-select, show the actual number of correct answers as points
+                                    // For multi-select and matching, show the actual number of sub-questions as points
                                     $display_points = $display_nums['count'];
                                     ?>
                                     <span class="question-points">(<?php printf(_n('%s point', '%s points', $display_points, 'ielts-course-manager'), $display_points); ?>)</span>
@@ -310,6 +313,29 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                             </p>
                                         </div>
                                         <?php
+                                        break;
+                                        
+                                    case 'matching':
+                                        // Matching question type - displays multiple sub-questions with individual answer inputs
+                                        if (isset($question['matches']) && is_array($question['matches'])):
+                                            foreach ($question['matches'] as $match_index => $match):
+                                        ?>
+                                            <div class="matching-item" style="margin: 15px 0; padding-left: 20px;">
+                                                <div class="matching-text" style="margin-bottom: 8px;">
+                                                    <?php echo wp_kses_post($match['text']); ?>
+                                                </div>
+                                                <div class="matching-answer">
+                                                    <input type="text" 
+                                                           name="answer_match_<?php echo $index; ?>_<?php echo $match_index; ?>" 
+                                                           class="answer-input"
+                                                           style="width: 100px; text-transform: uppercase;"
+                                                           maxlength="3"
+                                                           placeholder="<?php _e('e.g. A', 'ielts-course-manager'); ?>">
+                                                </div>
+                                            </div>
+                                        <?php 
+                                            endforeach;
+                                        endif;
                                         break;
                                 }
                                 ?>

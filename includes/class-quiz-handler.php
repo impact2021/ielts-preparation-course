@@ -57,6 +57,13 @@ class IELTS_CM_Quiz_Handler {
                     }
                 }
                 $max_score += max(1, $correct_count); // At least 1 point
+            } elseif ($question['type'] === 'matching') {
+                // For matching, max score is the number of match items (1 point each)
+                if (isset($question['matches']) && is_array($question['matches'])) {
+                    $max_score += count($question['matches']);
+                } else {
+                    $max_score += isset($question['points']) ? floatval($question['points']) : 1;
+                }
             } else {
                 $max_score += isset($question['points']) ? floatval($question['points']) : 1;
             }
@@ -76,6 +83,16 @@ class IELTS_CM_Quiz_Handler {
                 
                 // Store correct indices for multi-select so frontend can highlight them
                 $correct_answer = isset($result['correct_indices']) ? $result['correct_indices'] : array();
+            } elseif ($question['type'] === 'matching') {
+                // Special handling for matching questions
+                $result = $this->check_matching_answer($question, $answers, $index);
+                $points_earned = $result['points_earned'];
+                $is_correct = $result['is_correct'];
+                $feedback = $result['feedback'];
+                $score += $points_earned;
+                
+                // Store correct answers for matching so frontend can highlight them
+                $correct_answer = isset($result['correct_answers']) ? $result['correct_answers'] : array();
             } elseif (isset($answers[$index])) {
                 $is_correct = $this->check_answer($question, $answers[$index]);
                 if ($is_correct) {
@@ -272,6 +289,78 @@ class IELTS_CM_Quiz_Handler {
             'is_correct' => $is_correct,
             'feedback' => $feedback,
             'correct_indices' => $correct_indices
+        );
+    }
+    
+    /**
+     * Check matching answer and calculate points
+     * 
+     * Validates answers for matching-type questions where students match items
+     * from a list (e.g., A-J) to complete statements. Each match item is checked
+     * independently and awards 1 point if correct.
+     * 
+     * @param array $question The question data including 'matches' array with match items
+     * @param array $all_answers All user answers from the form submission, keyed by field name
+     * @param int $question_index The index of the question in the questions array
+     * @return array {
+     *     @type int $points_earned Number of points earned (1 per correct match)
+     *     @type bool $is_correct True if all matches are correct, false otherwise
+     *     @type string $feedback Feedback message based on correct/incorrect status
+     *     @type array $correct_answers Array of correct answers indexed by match_index
+     * }
+     */
+    private function check_matching_answer($question, $all_answers, $question_index) {
+        $points_earned = 0;
+        $feedback = '';
+        $correct_answers = array();
+        
+        // Check if matches array exists
+        if (!isset($question['matches']) || !is_array($question['matches'])) {
+            return array(
+                'points_earned' => 0,
+                'is_correct' => false,
+                'feedback' => '',
+                'correct_answers' => array()
+            );
+        }
+        
+        // Check each match item
+        foreach ($question['matches'] as $match_index => $match) {
+            // Build the answer key for this match item
+            // Using 'match_' prefix to avoid potential conflicts with other answer types
+            $answer_key = 'match_' . $question_index . '_' . $match_index;
+            
+            // Store correct answer for this match
+            $correct_answer_value = isset($match['correct_answer']) ? $match['correct_answer'] : '';
+            $correct_answers[$match_index] = $correct_answer_value;
+            
+            // Check if user provided an answer for this match
+            if (isset($all_answers[$answer_key])) {
+                $user_answer = trim(strtoupper($all_answers[$answer_key]));
+                $correct = trim(strtoupper($correct_answer_value));
+                
+                if ($user_answer === $correct) {
+                    $points_earned += 1;
+                }
+            }
+        }
+        
+        // Determine if fully correct (all matches correct)
+        $total_matches = count($question['matches']);
+        $is_correct = ($points_earned === $total_matches);
+        
+        // Get feedback
+        if ($is_correct && isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
+            $feedback = wp_kses_post($question['correct_feedback']);
+        } elseif (!$is_correct && isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+            $feedback = wp_kses_post($question['incorrect_feedback']);
+        }
+        
+        return array(
+            'points_earned' => $points_earned,
+            'is_correct' => $is_correct,
+            'feedback' => $feedback,
+            'correct_answers' => $correct_answers
         );
     }
     

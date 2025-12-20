@@ -206,6 +206,29 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 </div>
                                 <?php
                                 break;
+                                
+                            case 'matching':
+                                // Matching question type - displays multiple sub-questions with individual answer inputs
+                                if (isset($question['matches']) && is_array($question['matches'])):
+                                    foreach ($question['matches'] as $match_index => $match):
+                                ?>
+                                    <div class="matching-item" style="margin: 15px 0; padding-left: 20px;">
+                                        <div class="matching-text" style="margin-bottom: 8px;">
+                                            <?php echo wp_kses_post($match['text']); ?>
+                                        </div>
+                                        <div class="matching-answer">
+                                            <input type="text" 
+                                                   name="answer_match_<?php echo $index; ?>_<?php echo $match_index; ?>" 
+                                                   class="answer-input"
+                                                   style="width: 100px; text-transform: uppercase;"
+                                                   maxlength="3"
+                                                   placeholder="<?php _e('e.g. A', 'ielts-course-manager'); ?>">
+                                        </div>
+                                    </div>
+                                <?php 
+                                    endforeach;
+                                endif;
+                                break;
                         }
                         ?>
                     </div>
