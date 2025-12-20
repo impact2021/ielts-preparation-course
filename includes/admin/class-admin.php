@@ -2899,33 +2899,106 @@ class IELTS_CM_Admin {
         <h2><?php _e('Available Question Types', 'ielts-course-manager'); ?></h2>
         
         <h3><?php _e('Multiple Choice', 'ielts-course-manager'); ?></h3>
-        <p><?php _e('Students select from predefined options.', 'ielts-course-manager'); ?></p>
+        <p><?php _e('Students select one correct answer from multiple predefined options.', 'ielts-course-manager'); ?></p>
         <ul>
-            <li><strong><?php _e('Options:', 'ielts-course-manager'); ?></strong> <?php _e('Enter each option on a new line', 'ielts-course-manager'); ?></li>
-            <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Enter the option number (0 for first option, 1 for second, etc.)', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('How to create:', 'ielts-course-manager'); ?></strong> <?php _e('Add answer options using the "Add Option" button. Mark the correct option with the checkbox.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Feedback:', 'ielts-course-manager'); ?></strong> <?php _e('You can add specific feedback for each option that will be shown when selected.', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Multi Select', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('Students select multiple correct answers from a list of options. Common in IELTS for "choose TWO letters" or "choose THREE letters" questions.', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><strong><?php _e('How to create:', 'ielts-course-manager'); ?></strong> <?php _e('Add answer options and mark multiple options as correct. Set the "Maximum Number of Selections" to match the number of correct answers.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Scoring:', 'ielts-course-manager'); ?></strong> <?php _e('Each correct selection earns 1 point. This question type will display as multiple question numbers in the navigation (e.g., "Questions 1-3").', 'ielts-course-manager'); ?></li>
         </ul>
         
         <h3><?php _e('Headings Questions', 'ielts-course-manager'); ?></h3>
-        <p><?php _e('For matching headings to paragraphs. Works exactly like multiple choice but with a different name for tracking purposes.', 'ielts-course-manager'); ?></p>
+        <p><?php _e('For matching headings to paragraphs. Students select which heading best summarizes each paragraph.', 'ielts-course-manager'); ?></p>
         <ul>
-            <li><strong><?php _e('Options:', 'ielts-course-manager'); ?></strong> <?php _e('Enter each heading option on a new line', 'ielts-course-manager'); ?></li>
-            <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Mark the correct heading option', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('How to create:', 'ielts-course-manager'); ?></strong> <?php _e('Add the heading options using the "Add Option" button. Mark the correct heading option with the checkbox.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Usage:', 'ielts-course-manager'); ?></strong> <?php _e('Works like multiple choice but with a different label for IELTS-specific tracking.', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Matching', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('Students match items from one list to items in another list, such as matching names to theories or statements to categories.', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><strong><?php _e('How to create:', 'ielts-course-manager'); ?></strong> <?php _e('Add the matching options using the "Add Option" button. Mark the correct match with the checkbox.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Best for:', 'ielts-course-manager'); ?></strong> <?php _e('Matching information questions in IELTS Reading.', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Matching/Classifying', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('Students classify items into categories. Similar to matching but specifically for classification tasks.', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><strong><?php _e('How to create:', 'ielts-course-manager'); ?></strong> <?php _e('Add the classification options using the "Add Option" button. Mark the correct classification with the checkbox.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Best for:', 'ielts-course-manager'); ?></strong> <?php _e('Classification questions where students categorize statements or items.', 'ielts-course-manager'); ?></li>
         </ul>
         
         <h3><?php _e('True/False/Not Given', 'ielts-course-manager'); ?></h3>
-        <p><?php _e('Common in IELTS Reading tests. Students choose whether a statement is True, False, or Not Given based on the passage.', 'ielts-course-manager'); ?></p>
+        <p><?php _e('Common in IELTS Reading tests. Students use radio buttons to choose whether a statement is True, False, or Not Given based on the passage.', 'ielts-course-manager'); ?></p>
         <ul>
-            <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Enter "true", "false", or "not_given" (lowercase)', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('How to create:', 'ielts-course-manager'); ?></strong> <?php _e('Select the correct answer from the dropdown: "True", "False", or "Not Given".', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Student view:', 'ielts-course-manager'); ?></strong> <?php _e('Students select their answer using radio buttons (not a text field).', 'ielts-course-manager'); ?></li>
         </ul>
         
         <h3><?php _e('Short Answer Questions', 'ielts-course-manager'); ?></h3>
-        <p><?php _e('Students type a brief answer. The system automatically compares answers with flexible matching.', 'ielts-course-manager'); ?></p>
+        <p><?php _e('Students type a brief answer in a text field. The system automatically compares answers with flexible matching.', 'ielts-course-manager'); ?></p>
         <ul>
-            <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Use | to separate multiple accepted answers', 'ielts-course-manager'); ?></li>
-            <li><?php _e('Matching is case-insensitive and ignores extra spaces and punctuation', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Use | (pipe) to separate multiple accepted answers (e.g., "car|automobile|vehicle").', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Matching:', 'ielts-course-manager'); ?></strong> <?php _e('Case-insensitive and ignores extra spaces and punctuation.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Best for:', 'ielts-course-manager'); ?></strong> <?php _e('Questions requiring one or two word answers.', 'ielts-course-manager'); ?></li>
         </ul>
         
-        <p><strong><?php _e('For more question types:', 'ielts-course-manager'); ?></strong> <?php _e('Sentence Completion, Summary Completion, Table Completion, Labelling, Locating Information, Dropdown Paragraph, Multi Select, and Matching questions are also available.', 'ielts-course-manager'); ?></p>
+        <h3><?php _e('Sentence Completion', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('Students complete a sentence by typing the missing word(s). Functions identically to Short Answer Questions.', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Use | (pipe) to separate multiple accepted answers.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Best for:', 'ielts-course-manager'); ?></strong> <?php _e('Fill-in-the-blank sentence questions.', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Summary Completion', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('Students fill in multiple blanks within a paragraph or summary. Each blank is treated as a separate question in scoring and navigation.', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><strong><?php _e('How to create:', 'ielts-course-manager'); ?></strong> <?php _e('In the question text, use placeholders like [field 1], [field 2], [field 3] where you want input fields to appear.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Example:', 'ielts-course-manager'); ?></strong> <?php _e('"There are lots of types of [field 1]. The most popular is [field 2] and the most expensive is [field 3]."', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Field setup:', 'ielts-course-manager'); ?></strong> <?php _e('Click "Refresh Fields from Question Text" to generate answer fields for each placeholder. Enter the correct answer(s) and custom feedback for each field.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Scoring:', 'ielts-course-manager'); ?></strong> <?php _e('Each field is scored independently. If you have 3 fields, this counts as "Questions 1-3" in the navigation.', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Table Completion', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('Students complete missing information in a table. Functions identically to Short Answer Questions.', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Use | (pipe) to separate multiple accepted answers.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Best for:', 'ielts-course-manager'); ?></strong> <?php _e('Questions where students fill in missing table cells.', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Labelling', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('Students label parts of a diagram, map, or illustration. Functions identically to Short Answer Questions.', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Use | (pipe) to separate multiple accepted answers.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Best for:', 'ielts-course-manager'); ?></strong> <?php _e('Diagram or map labeling questions. Include the diagram in the question text or as a linked reading text.', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Locating Information', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('Students identify which paragraph contains specific information. Functions identically to Short Answer Questions.', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Enter the paragraph letter or number (e.g., "A" or "1"). Use | (pipe) to accept multiple answers.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Best for:', 'ielts-course-manager'); ?></strong> <?php _e('Questions asking "Which paragraph contains information about..."', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Dropdown Paragraph', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('Students select words from dropdown menus to complete a paragraph. Multiple dropdowns can be embedded inline within the text.', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><strong><?php _e('How to create:', 'ielts-course-manager'); ?></strong> <?php _e('In the question text, use ___1___, ___2___, ___3___ (or __1__, __2__, __3__) to mark where dropdowns should appear.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Dropdown setup:', 'ielts-course-manager'); ?></strong> <?php _e('For each numbered position, add dropdown options and select the correct answer using the radio button.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Best for:', 'ielts-course-manager'); ?></strong> <?php _e('Cloze tests or gap-fill exercises with predefined answer choices.', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Essay', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('Students write longer text responses. This question type requires manual grading.', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><strong><?php _e('No correct answer needed:', 'ielts-course-manager'); ?></strong> <?php _e('Essays cannot be auto-graded and must be reviewed manually.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Best for:', 'ielts-course-manager'); ?></strong> <?php _e('IELTS Writing Task 1 and Task 2 practice questions.', 'ielts-course-manager'); ?></li>
+        </ul>
         <?php
     }
     
