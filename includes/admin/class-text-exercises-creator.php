@@ -580,7 +580,8 @@ You have one hour for the complete test (including transferring your answers).</
     private function is_multiple_choice_format($text) {
         // Look for pattern: numbered questions followed by lettered options
         // e.g., "1. Question?\nA) Option"
-        return preg_match('/^\d+\.\s+.+\n\s*[A-Z]\)\s+/m', $text) > 0;
+        // Use non-greedy .+? to avoid performance issues with large inputs
+        return preg_match('/^\d+\.\s+.+?\n\s*[A-Z]\)\s+/m', $text) > 0;
     }
     
     /**
@@ -1413,7 +1414,8 @@ You have one hour for the complete test (including transferring your answers).</
                 $dropdown_format = $num . '.[' . implode(' ', $option_parts) . ']';
                 
                 // Replace ___N___ or __N__ with the formatted dropdown
-                $formatted_question = preg_replace('/(___' . $num . '___|__' . $num . '__)/', $dropdown_format, $formatted_question);
+                // Use preg_quote to prevent regex injection
+                $formatted_question = preg_replace('/(___' . preg_quote($num, '/') . '___|__' . preg_quote($num, '/') . '__)/', $dropdown_format, $formatted_question);
                 
                 if (!empty($correct_letter)) {
                     $correct_answer_parts[] = $num . ':' . $correct_letter;
