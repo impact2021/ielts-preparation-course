@@ -2278,9 +2278,17 @@ class IELTS_CM_Admin {
                                 }
                                 $options_string = implode(' ', $options_text_parts);
                                 // Support both ___N___ (triple underscores) and __N__ (double underscores)
-                                $placeholder_pattern = '/_{2,3}' . preg_quote($position, '/') . '_{2,3}/';
+                                // Try triple underscores first, then double underscores
+                                $placeholder_pattern_triple = '/___' . preg_quote($position, '/') . '___/';
+                                $placeholder_pattern_double = '/__' . preg_quote($position, '/') . '__/';
                                 $replacement = $position . '.[' . $options_string . ']';
-                                $question_text = preg_replace($placeholder_pattern, $replacement, $question_text);
+                                
+                                // Replace triple underscores if found, otherwise try double underscores
+                                if (preg_match($placeholder_pattern_triple, $question_text)) {
+                                    $question_text = preg_replace($placeholder_pattern_triple, $replacement, $question_text);
+                                } else {
+                                    $question_text = preg_replace($placeholder_pattern_double, $replacement, $question_text);
+                                }
                             }
                         }
                         
