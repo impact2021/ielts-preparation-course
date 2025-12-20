@@ -2276,7 +2276,7 @@ class IELTS_CM_Admin {
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
                 <p>
                     <label><?php _e('No Answer Selected Feedback', 'ielts-course-manager'); ?></label><br>
-                    <textarea name="questions[QUESTION_INDEX][no_answer_feedback]" rows="3" style="width: 100%;"><?php echo esc_textarea__("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager'); ?></textarea>
+                    <textarea name="questions[QUESTION_INDEX][no_answer_feedback]" rows="3" style="width: 100%;"><?php echo esc_textarea(__("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager')); ?></textarea>
                     <small><?php _e('Shown when the student submits without selecting an answer. HTML is supported.', 'ielts-course-manager'); ?></small>
                 </p>
             </div>

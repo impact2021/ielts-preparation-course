@@ -301,7 +301,7 @@
                                 // For dropdown paragraph, mark each nav button individually
                                 if (questionResult.question_type === 'dropdown_paragraph') {
                                     var correctAnswerStr = questionResult.correct_answer || '';
-                                    var displayStart = parseInt(questionElement.data('display-start'));
+                                    var displayStart = parseInt(questionElement.data('display-start'), 10);
                                     
                                     // Parse correct answers to count dropdowns and mark each nav button
                                     var parts = correctAnswerStr.split('|');
@@ -309,7 +309,7 @@
                                         var subparts = part.trim().split(':');
                                         if (subparts.length === 2) {
                                             var dropdownNum = subparts[0].trim();
-                                            var displayNumber = displayStart + parseInt(dropdownNum) - 1;
+                                            var displayNumber = displayStart + parseInt(dropdownNum, 10) - 1;
                                             var navButton = $('.question-nav-btn[data-question="' + index + '"][data-display-number="' + displayNumber + '"]');
                                             navButton.addClass('nav-correct').removeClass('answered');
                                         }
@@ -403,7 +403,7 @@
                                     });
                                     
                                     // Get display start number for this question
-                                    var displayStart = parseInt(questionElement.data('display-start'));
+                                    var displayStart = parseInt(questionElement.data('display-start'), 10);
                                     
                                     // Check each dropdown and mark it and its nav button
                                     $.each(correctAnswersMap, function(dropdownNum, correctLetter) {
@@ -411,7 +411,7 @@
                                         var userAnswer = userAnswers[dropdownNum] ? userAnswers[dropdownNum].toString().trim().toUpperCase() : '';
                                         
                                         // Calculate which nav button this corresponds to
-                                        var displayNumber = displayStart + parseInt(dropdownNum) - 1;
+                                        var displayNumber = displayStart + parseInt(dropdownNum, 10) - 1;
                                         var navButton = $('.question-nav-btn[data-question="' + index + '"][data-display-number="' + displayNumber + '"]');
                                         
                                         if (userAnswer === correctLetter) {
@@ -691,12 +691,12 @@
             
             // Find the question element to get its display number range
             var questionElement = $(this).closest('.quiz-question');
-            var displayStart = parseInt(questionElement.data('display-start'));
-            var displayEnd = parseInt(questionElement.data('display-end'));
+            var displayStart = parseInt(questionElement.data('display-start'), 10);
+            var displayEnd = parseInt(questionElement.data('display-end'), 10);
             
             // Calculate which nav button corresponds to this dropdown
             // Dropdown numbers start from 1, so dropdown 1 = first button, dropdown 2 = second button, etc.
-            var displayNumber = displayStart + parseInt(dropdownNum) - 1;
+            var displayNumber = displayStart + parseInt(dropdownNum, 10) - 1;
             
             // Find the specific nav button for this dropdown
             var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"][data-display-number="' + displayNumber + '"]');
