@@ -2,6 +2,18 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.29] - 2025-12-20
+
+### Changed
+- **Matching Question Type Behavior**: Updated matching questions to work like multiple choice questions
+  - Matching questions now use radio button selection interface (same as multiple choice)
+  - Previously used text input fields for answers
+  - Simplified scoring: 1 point per question (not per match item)
+  - Updated admin interface to show multiple choice options for matching questions
+  - Applied to both standard quiz layout and computer-based layout
+  - Aligns matching questions with classifying_matching question type behavior
+- **Version Update**: Updated plugin version to 2.29
+
 ## [2.28] - 2025-12-20
 
 ### Fixed

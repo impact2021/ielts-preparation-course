@@ -161,9 +161,6 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                 }
                                 // Multi-select counts as multiple questions based on correct answers
                                 $question_count = max(1, $correct_count);
-                            } elseif ($q['type'] === 'matching' && isset($q['matches']) && is_array($q['matches'])) {
-                                // For matching, count number of match items
-                                $question_count = count($q['matches']);
                             } else {
                                 $question_count = 1;
                             }
@@ -350,30 +347,31 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                         break;
                                         
                                     case 'matching':
-                                        // Matching question type - displays multiple sub-questions with individual answer inputs
-                                        if (isset($question['matches']) && is_array($question['matches'])):
-                                            $match_question_num = $display_nums['start'];
-                                            foreach ($question['matches'] as $match_index => $match):
+                                        // Matching question type - now uses multiple choice format (radio buttons)
+                                        // Similar to classifying_matching, headings, and multiple_choice
+                                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                                            $mc_options = $question['mc_options'];
+                                        } elseif (isset($question['options'])) {
+                                            $options_array = explode("\n", $question['options']);
+                                            $mc_options = array();
+                                            foreach ($options_array as $idx => $option_text) {
+                                                $mc_options[] = array('text' => trim($option_text));
+                                            }
+                                        }
+                                        
+                                        if (!empty($mc_options)):
                                         ?>
-                                            <div class="matching-item" style="margin: 15px 0; padding-left: 20px;">
-                                                <div class="matching-question-number" style="font-weight: bold; margin-bottom: 5px;">
-                                                    <?php printf(__('Question %d', 'ielts-course-manager'), $match_question_num); ?>
-                                                </div>
-                                                <div class="matching-text" style="margin-bottom: 8px;">
-                                                    <?php echo wp_kses_post($match['text']); ?>
-                                                </div>
-                                                <div class="matching-answer">
-                                                    <input type="text" 
-                                                           name="answer_match_<?php echo $index; ?>_<?php echo $match_index; ?>" 
-                                                           class="answer-input"
-                                                           style="width: 100px; text-transform: uppercase;"
-                                                           maxlength="3"
-                                                           placeholder="<?php _e('e.g. A', 'ielts-course-manager'); ?>">
-                                                </div>
-                                            </div>
-                                        <?php 
-                                            $match_question_num++;
-                                            endforeach;
+                                        <div class="question-answer">
+                                            <?php foreach ($mc_options as $opt_index => $option): ?>
+                                                <label class="mc-option">
+                                                    <input type="radio" 
+                                                           name="answer_<?php echo $index; ?>" 
+                                                           value="<?php echo $opt_index; ?>">
+                                                    <?php echo wp_kses_post($option['text']); ?>
+                                                </label>
+                                            <?php endforeach; ?>
+                                        </div>
+                                        <?php
                                         endif;
                                         break;
                                 }
