@@ -215,7 +215,6 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 <?php
                                 break;
                                 
-                            case 'fill_blank':
                             case 'short_answer':
                             case 'sentence_completion':
                             case 'table_completion':
@@ -342,19 +341,6 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 </div>
                                 <?php
                                 endif;
-                                break;
-                                
-                            case 'essay':
-                                ?>
-                                <div class="question-answer">
-                                    <textarea name="answer_<?php echo $index; ?>" 
-                                              class="answer-textarea" 
-                                              rows="6"></textarea>
-                                    <p class="essay-note">
-                                        <?php _e('Note: Essay questions will be reviewed manually.', 'ielts-course-manager'); ?>
-                                    </p>
-                                </div>
-                                <?php
                                 break;
                                 
                             case 'matching':

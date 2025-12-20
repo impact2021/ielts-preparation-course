@@ -369,7 +369,6 @@ if ($lesson_id) {
                                         <?php
                                         break;
                                         
-                                    case 'fill_blank':
                                     case 'short_answer':
                                     case 'sentence_completion':
                                     case 'table_completion':
@@ -496,19 +495,6 @@ if ($lesson_id) {
                                         </div>
                                         <?php
                                         endif;
-                                        break;
-                                        
-                                    case 'essay':
-                                        ?>
-                                        <div class="question-answer">
-                                            <textarea name="answer_<?php echo $index; ?>" 
-                                                      class="answer-textarea" 
-                                                      rows="6"></textarea>
-                                            <p class="essay-note">
-                                                <?php _e('Note: Essay questions will be reviewed manually.', 'ielts-course-manager'); ?>
-                                            </p>
-                                        </div>
-                                        <?php
                                         break;
                                         
                                     case 'matching':
