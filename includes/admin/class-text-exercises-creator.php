@@ -19,6 +19,13 @@ class IELTS_CM_Text_Exercises_Creator {
     const SHORT_ANSWER_PATTERN = '/^(\d+)\.\s+([^\n\r]+?)\s*\{([^}]+)\}/m';
     
     /**
+     * Regex pattern for reading passage blocks
+     * Matches [READING PASSAGE] or [READING TEXT] with optional title and content
+     * Using [\s\S] instead of . to properly capture multiline content
+     */
+    const READING_PASSAGE_PATTERN = '/\[(READING PASSAGE|READING TEXT)\](?:\s+(.+?))?\s*\n([\s\S]*?)\[END (?:READING PASSAGE|READING TEXT)\]/i';
+    
+    /**
      * Initialize the creator
      */
     public function init() {
@@ -541,11 +548,7 @@ You have one hour for the complete test (including transferring your answers).</
     private function extract_reading_passages($text) {
         $reading_texts = array();
         
-        // Match reading passage blocks
-        // Pattern: [READING PASSAGE] or [READING TEXT] followed by optional title, then content, then [END...]
-        $pattern = '/\[(READING PASSAGE|READING TEXT)\](?:\s+(.+?))?\s*\n(.*?)\n\[END (?:READING PASSAGE|READING TEXT)\]/is';
-        
-        if (preg_match_all($pattern, $text, $matches, PREG_SET_ORDER)) {
+        if (preg_match_all(self::READING_PASSAGE_PATTERN, $text, $matches, PREG_SET_ORDER)) {
             foreach ($matches as $match) {
                 $title = !empty(trim($match[2])) ? trim($match[2]) : '';
                 $content = trim($match[3]);
@@ -565,8 +568,7 @@ You have one hour for the complete test (including transferring your answers).</
      */
     private function remove_reading_passages($text) {
         // Remove reading passage blocks to avoid interference with question parsing
-        $pattern = '/\[(READING PASSAGE|READING TEXT)\](?:\s+.+?)?\s*\n.*?\n\[END (?:READING PASSAGE|READING TEXT)\]\s*/is';
-        return preg_replace($pattern, '', $text);
+        return preg_replace(self::READING_PASSAGE_PATTERN, '', $text);
     }
     
     /**
@@ -612,6 +614,13 @@ You have one hour for the complete test (including transferring your answers).</
         $current_type = 'incorrect'; // Default for backward compatibility
         $current_text = array();
         
+        // Map of feedback markers to their internal type names
+        $feedback_markers = array(
+            'CORRECT' => 'correct',
+            'INCORRECT' => 'incorrect',
+            'NO ANSWER' => 'no_answer'
+        );
+        
         $j = $start_index;
         while ($j < count($lines)) {
             $line = $lines[$j];
@@ -621,42 +630,28 @@ You have one hour for the complete test (including transferring your answers).</
                 break;
             }
             
-            // Check for feedback type markers
-            if (preg_match('/^\[CORRECT\]:?\s*(.*)/i', $line, $match)) {
-                // Save previous feedback if any
-                if (!empty($current_text)) {
-                    $feedback[$current_type] = trim(implode("\n", $current_text));
-                    $current_text = array();
+            // Check for feedback type markers using a unified pattern
+            $marker_found = false;
+            foreach ($feedback_markers as $marker => $type) {
+                // Pattern matches [MARKER] or [MARKER]: followed by optional text
+                if (preg_match('/^\[' . preg_quote($marker, '/') . '\]:?\s*(.*)/i', $line, $match)) {
+                    // Save previous feedback if any
+                    if (!empty($current_text)) {
+                        $feedback[$current_type] = trim(implode("\n", $current_text));
+                        $current_text = array();
+                    }
+                    $current_type = $type;
+                    // If there's text after the marker on same line, include it
+                    if (!empty(trim($match[1]))) {
+                        $current_text[] = trim($match[1]);
+                    }
+                    $marker_found = true;
+                    break;
                 }
-                $current_type = 'correct';
-                // If there's text after the marker on same line, include it
-                if (!empty(trim($match[1]))) {
-                    $current_text[] = trim($match[1]);
-                }
-            } elseif (preg_match('/^\[INCORRECT\]:?\s*(.*)/i', $line, $match)) {
-                // Save previous feedback if any
-                if (!empty($current_text)) {
-                    $feedback[$current_type] = trim(implode("\n", $current_text));
-                    $current_text = array();
-                }
-                $current_type = 'incorrect';
-                // If there's text after the marker on same line, include it
-                if (!empty(trim($match[1]))) {
-                    $current_text[] = trim($match[1]);
-                }
-            } elseif (preg_match('/^\[NO ANSWER\]:?\s*(.*)/i', $line, $match)) {
-                // Save previous feedback if any
-                if (!empty($current_text)) {
-                    $feedback[$current_type] = trim(implode("\n", $current_text));
-                    $current_text = array();
-                }
-                $current_type = 'no_answer';
-                // If there's text after the marker on same line, include it
-                if (!empty(trim($match[1]))) {
-                    $current_text[] = trim($match[1]);
-                }
-            } else {
-                // Regular feedback line - add to current type
+            }
+            
+            // If no marker found, treat as regular feedback line
+            if (!$marker_found) {
                 $current_text[] = $line;
             }
             
