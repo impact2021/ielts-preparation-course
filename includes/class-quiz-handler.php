@@ -304,6 +304,9 @@ class IELTS_CM_Quiz_Handler {
     /**
      * Check matching answer and calculate points
      * 
+     * @deprecated 2.29 This method is no longer used for matching questions as they now work like multiple choice.
+     *                  Kept for backward compatibility with legacy data that may still use the 'matches' array format.
+     * 
      * Validates answers for matching-type questions where students match items
      * from a list (e.g., A-J) to complete statements. Each match item is checked
      * independently and awards 1 point if correct.
