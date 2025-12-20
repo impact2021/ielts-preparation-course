@@ -2,6 +2,30 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.38] - 2025-12-20
+
+### Added
+- **New Question Type: Dropdown Paragraph**: New question type that allows inline dropdown selections within paragraph text
+  - Teachers can use placeholders like `1.[A: option1 B: option2]`, `2.[A: option3 B: option4]`, etc. in the question text
+  - Placeholders are automatically replaced with inline dropdown select elements
+  - Example: "1.[A: Sincere apologies B: Really sorry], unfortunately I am writing to 2.[A: let you know B: inform you] that I will be unable to meet."
+  - Students select from dropdown options (A, B, C, etc.) inline with the text
+  - Provides an authentic IELTS-style testing experience for option selection in context
+  - Works in both standard and computer-based test layouts
+
+### Changed
+- **Version Update**: Updated plugin version to 2.38
+
+### Technical Details
+- Added `dropdown_paragraph` case in `templates/single-quiz.php` to parse `N.[A: option1 B: option2]` placeholders
+- Added `dropdown_paragraph` case in `templates/single-quiz-computer-based.php` with same parsing logic
+- Added CSS styling for `.answer-select-inline` class for inline dropdown display
+- Added `.dropdown-paragraph-text` wrapper with increased line-height for better readability
+- JavaScript answer collection (in `assets/js/frontend.js`) already handles inline inputs with format `answer_X_N`
+- Added `dropdown_paragraph` case in `includes/class-quiz-handler.php` to check answers with format `1:A|2:B|3:C`
+- Correct answer format uses numbers and letters (e.g., "1:A|2:B" means dropdown 1 should be A, dropdown 2 should be B)
+- Case-insensitive letter matching for dropdown selections
+
 ## [2.37] - 2025-12-20
 
 ### Added
