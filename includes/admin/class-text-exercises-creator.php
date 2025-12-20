@@ -22,8 +22,9 @@ class IELTS_CM_Text_Exercises_Creator {
      * Regex pattern for reading passage blocks
      * Matches [READING PASSAGE] or [READING TEXT] with optional title and content
      * Using [\s\S] instead of . to properly capture multiline content
+     * Newline after opening marker is optional to handle various formatting styles
      */
-    const READING_PASSAGE_PATTERN = '/\[(READING PASSAGE|READING TEXT)\](?:\s+(.+?))?\s*\n([\s\S]*?)\[END (?:READING PASSAGE|READING TEXT)\]/i';
+    const READING_PASSAGE_PATTERN = '/\[(READING PASSAGE|READING TEXT)\](?:\s+(.+?))?\s*\n?([\s\S]*?)\[END (?:READING PASSAGE|READING TEXT)\]/i';
     
     /**
      * Initialize the creator
@@ -550,7 +551,9 @@ You have one hour for the complete test (including transferring your answers).</
         
         if (preg_match_all(self::READING_PASSAGE_PATTERN, $text, $matches, PREG_SET_ORDER)) {
             foreach ($matches as $match) {
-                $title = !empty(trim($match[2])) ? trim($match[2]) : '';
+                // Trim title once and check if not empty
+                $title_trimmed = trim($match[2]);
+                $title = !empty($title_trimmed) ? $title_trimmed : '';
                 $content = trim($match[3]);
                 
                 $reading_texts[] = array(
