@@ -257,102 +257,15 @@
                             html += '<p>Keep studying and try again to improve your score!</p>';
                         }
                         
-                        // Show question-by-question feedback only for non-CBT quizzes
-                        if (!isCBT && result.question_results && Object.keys(result.question_results).length > 0) {
-                            html += '<div class="quiz-feedback-section">';
-                            html += '<h4>Question Feedback</h4>';
-                            html += '<div class="quiz-feedback-list">';
-                            
-                            $.each(result.question_results, function(index, questionResult) {
-                                var questionNum = parseInt(index) + 1;
-                                var statusClass = questionResult.correct ? 'correct' : 'incorrect';
-                                var statusIcon = questionResult.correct ? '✓' : '✗';
-                                var statusText = questionResult.correct ? 'Correct' : 'Incorrect';
-                                
-                                html += '<div class="feedback-item ' + statusClass + '">';
-                                html += '<div class="feedback-header">';
-                                html += '<span class="feedback-icon">' + statusIcon + '</span>';
-                                html += '<strong>Question ' + questionNum + ':</strong> ';
-                                html += '<span class="feedback-status">' + statusText + '</span>';
-                                html += '</div>';
-                                
-                                // Show question text
-                                if (questionResult.question_text) {
-                                    html += '<div class="feedback-question">' + questionResult.question_text + '</div>';
-                                }
-                                
-                                // Show user answer and correct answer
-                                if ((questionResult.question_type === 'multiple_choice' || 
-                                     questionResult.question_type === 'headings' || 
-                                     questionResult.question_type === 'matching' || 
-                                     questionResult.question_type === 'matching_classifying') && questionResult.options) {
-                                    var options = questionResult.options.split('\n').filter(function(opt) { return opt.trim(); });
-                                    var userAnswerIndex = parseInt(questionResult.user_answer);
-                                    var correctAnswerIndex = parseInt(questionResult.correct_answer);
-                                    
-                                    html += '<div class="feedback-answers">';
-                                    html += '<p><strong>Your answer:</strong> ';
-                                    if (!isNaN(userAnswerIndex) && options[userAnswerIndex]) {
-                                        html += options[userAnswerIndex].trim();
-                                    } else {
-                                        html += '(No answer provided)';
-                                    }
-                                    html += '</p>';
-                                    
-                                    if (!questionResult.correct) {
-                                        html += '<p><strong>Correct answer:</strong> ';
-                                        if (!isNaN(correctAnswerIndex) && options[correctAnswerIndex]) {
-                                            html += options[correctAnswerIndex].trim();
-                                        }
-                                        html += '</p>';
-                                    }
-                                    html += '</div>';
-                                } else if (questionResult.question_type === 'true_false') {
-                                    var tfLabels = {
-                                        'true': 'True',
-                                        'false': 'False',
-                                        'not_given': 'Not Given'
-                                    };
-                                    html += '<div class="feedback-answers">';
-                                    html += '<p><strong>Your answer:</strong> ' + (tfLabels[questionResult.user_answer] || '(No answer provided)') + '</p>';
-                                    if (!questionResult.correct) {
-                                        html += '<p><strong>Correct answer:</strong> ' + (tfLabels[questionResult.correct_answer] || questionResult.correct_answer) + '</p>';
-                                    }
-                                    html += '</div>';
-                                } else if (questionResult.question_type === 'fill_blank' || questionResult.question_type === 'summary_completion') {
-                                    html += '<div class="feedback-answers">';
-                                    html += '<p><strong>Your answer:</strong> ' + (questionResult.user_answer || '(No answer provided)') + '</p>';
-                                    if (!questionResult.correct) {
-                                        html += '<p><strong>Correct answer:</strong> ' + questionResult.correct_answer + '</p>';
-                                    }
-                                    html += '</div>';
-                                } else if (questionResult.question_type === 'essay') {
-                                    html += '<div class="feedback-answers">';
-                                    html += '<p><strong>Your answer:</strong></p>';
-                                    html += '<div class="essay-answer">' + (questionResult.user_answer || '(No answer provided)') + '</div>';
-                                    html += '</div>';
-                                }
-                                
-                                if (questionResult.feedback) {
-                                    html += '<div class="feedback-message">' + questionResult.feedback + '</div>';
-                                }
-                                
-                                html += '</div>';
-                            });
-                            
-                            html += '</div>';
-                            html += '</div>';
-                        }
+                        // Question-by-question feedback is now shown via visual highlighting (green/red colors) in the form
+                        // for both standard and CBT layouts. This replaces the detailed inline feedback that was previously
+                        // displayed on the page (below the modal score) for standard layout only.
                         
                         html += '<div class="quiz-actions">';
                         
-                        // For CBT quizzes, add "Review my answers" button
-                        if (isCBT) {
-                            html += '<button class="button button-primary cbt-review-answers-btn">Review my answers</button>';
-                            html += ' <button class="button quiz-retake-btn">Take Quiz Again</button>';
-                        } else {
-                            html += '<button class="button button-primary quiz-retake-btn">Take Quiz Again</button>';
-                        }
+                        // Add "Review my answers" button for all quiz types (both standard and CBT)
+                        html += '<button class="button button-primary cbt-review-answers-btn">Review my answers</button>';
+                        html += ' <button class="button quiz-retake-btn">Take Quiz Again</button>';
                         
                         // Add continue button without auto-redirect for both CBT and non-CBT
                         if (result.next_url) {
@@ -500,7 +413,7 @@
                                 }
                             }
                             
-                            // Add feedback message below the question if available (for CBT quizzes)
+                            // Add per-question text feedback messages (CBT only). All layouts use visual highlighting, but CBT layouts also support additional text feedback messages below each question.
                             if (isCBT && questionResult.feedback) {
                                 // Remove any existing feedback first
                                 questionElement.find('.question-feedback-message').remove();
@@ -517,12 +430,12 @@
                             }
                         });
                         
+                        // Show results in a modal for all quiz types (both standard and CBT)
+                        showCBTResultModal(html, result.next_url, result.course_url);
+                        form.find('button[type="submit"]').hide();
+                        
                         if (isCBT) {
-                            // For CBT quizzes, show results in a modal and hide submit button
-                            showCBTResultModal(html, result.next_url, result.course_url);
-                            form.find('button[type="submit"]').hide();
-                            
-                            // Update timer display to show band score instead of time remaining
+                            // Update the fullscreen timer UI component (CBT-specific feature - standard layout doesn't have this element)
                             var timerElement = form.find('.quiz-timer-fullscreen');
                             if (timerElement.length > 0) {
                                 // Preserve and update the return to course link
@@ -549,15 +462,6 @@
                                 
                                 timerElement.html(scoreHtml + returnLinkHtml);
                             }
-                        } else {
-                            // For regular quizzes, show inline
-                            form.hide();
-                            $('#quiz-result').html(html).show();
-                            
-                            // Scroll to result
-                            $('html, body').animate({
-                                scrollTop: $('#quiz-result').offset().top - 100
-                            }, 500);
                         }
                     } else {
                         showMessage('error', response.data.message || 'Failed to submit quiz');

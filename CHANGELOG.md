@@ -1,5 +1,22 @@
 # Changelog
 
+## [3.2] - 2025-12-20
+
+### Changed
+- **Standard Layout Feedback Enhancement**: Standard layout now shows the same feedback style as Computer-based IELTS layout
+  - Shows results in a popup modal with score
+  - Includes "Review my answers" button to dismiss modal and view highlighted answers
+  - Displays green/red highlighting on the quiz form for correct/incorrect answers
+  - Provides consistent user experience across both layout types
+  
+### Technical Details
+- **Files Modified**: `assets/js/frontend.js`
+- Updated quiz submission handler to use CBT-style modal for both layout types
+- Preserved existing question-by-question feedback display in the form through visual highlighting
+- **Backward Compatible**: Yes, all existing functionality maintained
+
+---
+
 ## [3.1] - 2025-12-20
 
 ### Fixed
