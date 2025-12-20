@@ -451,7 +451,18 @@ if ($lesson_id) {
                                                 $select_field .= '</select>';
                                                 $processed_text = str_replace($placeholder, $select_field, $processed_text);
                                             }
-                                            echo '<div class="dropdown-paragraph-text">' . wp_kses_post(wpautop($processed_text)) . '</div>';
+                                            // Allow select and option tags in addition to standard post tags
+                                            $allowed_html = wp_kses_allowed_html('post');
+                                            $allowed_html['select'] = array(
+                                                'name' => true,
+                                                'class' => true,
+                                                'data-dropdown-num' => true,
+                                            );
+                                            $allowed_html['option'] = array(
+                                                'value' => true,
+                                                'selected' => true,
+                                            );
+                                            echo '<div class="dropdown-paragraph-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
                                         } else {
                                             // No valid placeholders found - show question text as-is
                                             echo '<div class="dropdown-paragraph-text">' . wp_kses_post(wpautop($paragraph_text)) . '</div>';
