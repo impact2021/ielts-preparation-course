@@ -128,8 +128,8 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                         </h4>
                         
                         <?php
-                        // Don't display question text for dropdown_paragraph - it renders its own formatted version
-                        if ($question['type'] !== 'dropdown_paragraph'):
+                        // Don't display question text for dropdown_paragraph or summary_completion - they render their own formatted version
+                        if ($question['type'] !== 'dropdown_paragraph' && $question['type'] !== 'summary_completion'):
                         ?>
                         <div class="question-text"><?php echo wp_kses_post(wpautop($question['question'])); ?></div>
                         <?php endif; ?>
@@ -265,6 +265,16 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 // Get the question text without wpautop processing for inline inputs
                                 $summary_text = isset($question['question']) ? $question['question'] : '';
                                 
+                                // Allow input tags in addition to standard post tags
+                                $allowed_html = wp_kses_allowed_html('post');
+                                $allowed_html['input'] = array(
+                                    'type' => true,
+                                    'name' => true,
+                                    'class' => true,
+                                    'data-field-num' => true,
+                                    'data-answer-num' => true,
+                                );
+                                
                                 // Find all [field N] placeholders (new format)
                                 preg_match_all('/\[field\s+(\d+)\]/i', $summary_text, $field_matches);
                                 
@@ -279,7 +289,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                         $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_field_' . esc_attr($field_num) . '" class="answer-input-inline" data-field-num="' . esc_attr($field_num) . '" />';
                                         $processed_text = str_replace($placeholder, $input_field, $processed_text);
                                     }
-                                    echo '<div class="summary-completion-text">' . wp_kses_post(wpautop($processed_text)) . '</div>';
+                                    echo '<div class="summary-completion-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
                                 } elseif (!empty($answer_matches[0])) {
                                     // Legacy format - multiple inline answers with [ANSWER N] placeholders
                                     $processed_text = $summary_text;
@@ -288,7 +298,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                         $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_' . esc_attr($answer_num) . '" class="answer-input-inline" data-answer-num="' . esc_attr($answer_num) . '" />';
                                         $processed_text = str_replace($placeholder, $input_field, $processed_text);
                                     }
-                                    echo '<div class="summary-completion-text">' . wp_kses_post(wpautop($processed_text)) . '</div>';
+                                    echo '<div class="summary-completion-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
                                 } else {
                                     // No placeholders - single answer input below question text
                                     ?>
