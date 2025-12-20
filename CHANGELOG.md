@@ -2,6 +2,123 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.44] - 2025-12-20
+
+### Added
+- **Universal Text Format Support**: ALL question types can now be created using text format in the Text Exercises Creator
+  - Previously only Short Answer and True/False questions were supported in text format
+  - Now includes: Multiple Choice, Multi Select, Headings, Matching/Classifying, Locating Information, Summary Completion, Dropdown Paragraph, and Essay questions
+  - Makes bulk creation of exercises much faster and more efficient
+  
+- **Multiple Choice & Multi Select Text Format**: Create multiple choice and multi-select questions using simple text format
+  - Format: Numbered questions with lettered options (A, B, C, D)
+  - Use [CORRECT] marker to indicate correct answers
+  - Use [FEEDBACK: ...] to add option-specific feedback
+  - Add [MULTI SELECT] marker in title for multi-select questions
+  - Example:
+    ```
+    1. Question text?
+    A) Option one
+    B) Option two [CORRECT]
+    C) Option three [FEEDBACK: Explanation]
+    ```
+
+- **Headings Questions Text Format**: Create headings matching questions using text format
+  - Same format as Multiple Choice but add [HEADINGS] marker in title
+  - Students match headings to paragraphs or sections
+
+- **Matching/Classifying Text Format**: Create matching and classification questions using text format
+  - Same format as Multiple Choice but add [MATCHING] or [CLASSIFYING] marker in title
+  - Students classify items into categories
+
+- **Locating Information Text Format**: Create locating information questions using text format
+  - Same format as Multiple Choice but add [LOCATING INFORMATION] marker in title
+  - Students identify which paragraph contains specific information
+
+- **Summary Completion Text Format**: Create summary completion questions with inline blanks
+  - Use [ANSWER 1], [ANSWER 2], etc. as placeholders in the text
+  - Provide answers in format: {1:answer1|alt1|2:answer2|alt2}
+  - Example:
+    ```
+    The study found that [ANSWER 1] was important and [ANSWER 2] was secondary.
+    {1:education|learning|2:experience|practice}
+    ```
+
+- **Dropdown Paragraph Text Format**: Create dropdown paragraph questions using text format
+  - Use ___1___, ___2___ (or __1__, __2__) as placeholders in question text
+  - Define dropdown options using "DROPDOWN N:" followed by lettered options
+  - Example:
+    ```
+    I am writing to ___1___ that the meeting has been ___2___.
+    
+    DROPDOWN 1:
+    A) inform you [CORRECT]
+    B) let you know
+    
+    DROPDOWN 2:
+    A) postponed [CORRECT]
+    B) delayed
+    ```
+
+- **Essay Questions Text Format**: Create essay questions using text format
+  - Use [ESSAY] marker before the question text
+  - Optionally specify points: {POINTS:10}
+  - Example:
+    ```
+    [ESSAY]
+    Discuss both views and give your opinion.
+    Write at least 250 words.
+    {POINTS:10}
+    ```
+
+### Changed
+- **Version Update**: Updated plugin version from 2.43 to 2.44
+- **Text Exercises Creator Documentation**: Completely updated the documentation to show text format examples for all question types
+  - Removed "not currently supported" language
+  - Added comprehensive examples for each question type
+  - Added success notice highlighting that all types are now supported
+
+### Technical Details
+- Added new regex patterns in `class-text-exercises-creator.php`:
+  - `MULTIPLE_CHOICE_PATTERN` for numbered questions with options
+  - `OPTION_PATTERN` for parsing option lines with markers
+  - `SUMMARY_COMPLETION_PATTERN` for [ANSWER N] placeholders
+  - `DROPDOWN_PLACEHOLDER_PATTERN` for ___N___ and __N__ placeholders
+  
+- Enhanced `parse_exercise_text()` method with intelligent format detection:
+  - Checks for Summary Completion format (has [ANSWER N] placeholders)
+  - Checks for Dropdown Paragraph format (has ___N___ or __N__ placeholders)
+  - Checks for Short Answer format (has {ANSWER} markers)
+  - Checks for Multiple Choice format (has numbered questions with lettered options)
+  - Checks for Essay format (has [ESSAY] marker)
+  - Falls back to True/False format
+  
+- Added new parser functions:
+  - `is_multiple_choice_format()` - Detects numbered questions with lettered options
+  - `parse_multiple_choice_format()` - Handles Multiple Choice, Multi Select, Headings, Matching, and Locating Information
+  - `parse_summary_completion_format()` - Handles inline [ANSWER N] placeholders
+  - `parse_dropdown_paragraph_format()` - Handles ___N___ placeholders with dropdown definitions
+  - `parse_essay_format()` - Handles essay questions with [ESSAY] marker
+
+- Question type detection uses markers in title:
+  - [MULTI SELECT], [MULTI-SELECT], or [MULTISELECT] → multi_select
+  - [HEADINGS] → headings
+  - [MATCHING] or [CLASSIFYING] → matching_classifying
+  - [LOCATING INFORMATION] or [LOCATING] → locating_information
+  - [ESSAY] → essay
+
+### Backward Compatibility
+- ✅ 100% backward compatible
+- ✅ All existing text formats (Short Answer and True/False) continue to work
+- ✅ No changes to database schema
+- ✅ No changes to existing question rendering
+
+### Benefits
+- **Faster Exercise Creation**: Teachers can now create all question types using simple text format
+- **Bulk Import**: Easy to prepare exercises in a text editor and paste them in
+- **Flexibility**: Choose between text format, visual editor, or JSON import based on preference
+- **Consistency**: All question types now have the same level of support across creation methods
+
 ## [2.43] - 2025-12-20
 
 ### Fixed
