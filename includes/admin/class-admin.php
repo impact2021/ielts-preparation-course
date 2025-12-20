@@ -2192,7 +2192,8 @@ class IELTS_CM_Admin {
                     );
                     
                     // Handle multiple choice and multi-select with new structured format
-                    if (($question['type'] === 'multiple_choice' || $question['type'] === 'multi_select') && isset($question['mc_options']) && is_array($question['mc_options'])) {
+                    // Also handle headings, matching_classifying, and matching which use the same mc_options format
+                    if (in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching')) && isset($question['mc_options']) && is_array($question['mc_options'])) {
                         $mc_options = array();
                         $options_text = array();
                         $option_feedback = array();
