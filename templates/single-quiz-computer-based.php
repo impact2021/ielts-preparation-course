@@ -268,6 +268,29 @@ if ($lesson_id) {
                                     }
                                 }
                                 $question_count = max(1, $field_count);
+                            } elseif ($q['type'] === 'dropdown_paragraph') {
+                                // For dropdown paragraph, count number of dropdowns
+                                $dropdown_count = 0;
+                                $paragraph_text = isset($q['question']) ? $q['question'] : '';
+                                preg_match_all('/(\d+)\.\[([^\]]+)\]/i', $paragraph_text, $dropdown_matches);
+                                if (!empty($dropdown_matches[0])) {
+                                    $dropdown_count = count($dropdown_matches[0]);
+                                }
+                                $question_count = max(1, $dropdown_count);
+                            } elseif ($q['type'] === 'table_completion') {
+                                // For table completion, count number of fields
+                                $field_count = 0;
+                                if (isset($q['summary_fields']) && is_array($q['summary_fields'])) {
+                                    $field_count = count($q['summary_fields']);
+                                } else {
+                                    // Parse from question text
+                                    $question_text = isset($q['question']) ? $q['question'] : '';
+                                    preg_match_all('/\[field\s+(\d+)\]/i', $question_text, $field_matches);
+                                    if (!empty($field_matches[1])) {
+                                        $field_count = count(array_unique($field_matches[1]));
+                                    }
+                                }
+                                $question_count = max(1, $field_count);
                             } else {
                                 $question_count = 1;
                             }
@@ -392,6 +415,41 @@ if ($lesson_id) {
                                     case 'short_answer':
                                     case 'sentence_completion':
                                     case 'table_completion':
+                                        // Table completion - parse [field N] placeholders and replace with inline inputs (same as summary completion)
+                                        $table_text = isset($question['question']) ? $question['question'] : '';
+                                        
+                                        // Allow input tags in addition to standard post tags
+                                        $allowed_html = wp_kses_allowed_html('post');
+                                        $allowed_html['input'] = array(
+                                            'type' => true,
+                                            'name' => true,
+                                            'class' => true,
+                                            'data-field-num' => true,
+                                        );
+                                        
+                                        // Find all [field N] placeholders
+                                        preg_match_all('/\[field\s+(\d+)\]/i', $table_text, $field_matches);
+                                        
+                                        if (!empty($field_matches[0])) {
+                                            // Multiple inline answers with [field N] placeholders
+                                            $processed_text = $table_text;
+                                            foreach ($field_matches[0] as $match_index => $placeholder) {
+                                                $field_num = $field_matches[1][$match_index];
+                                                $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_field_' . esc_attr($field_num) . '" class="answer-input-inline" data-field-num="' . esc_attr($field_num) . '" />';
+                                                $processed_text = str_replace($placeholder, $input_field, $processed_text);
+                                            }
+                                            echo '<div class="table-completion-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
+                                        } else {
+                                            // No placeholders - single answer input below question text
+                                            ?>
+                                            <div class="question-answer">
+                                                <input type="text" 
+                                                       name="answer_<?php echo $index; ?>" 
+                                                       class="answer-input">
+                                            </div>
+                                            <?php
+                                        }
+                                        break;
                                     case 'labelling':
                                         ?>
                                         <div class="question-answer">
