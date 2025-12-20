@@ -315,27 +315,56 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 break;
                             
                             case 'headings':
-                            case 'matching_classifying':
-                                // These use multiple choice format
+                                // Headings question type - independent implementation
+                                $headings_options = array();
                                 if (isset($question['mc_options']) && is_array($question['mc_options'])) {
-                                    $mc_options = $question['mc_options'];
-                                } elseif (isset($question['options'])) {
-                                    $options_array = explode("\n", $question['options']);
-                                    $mc_options = array();
-                                    foreach ($options_array as $idx => $option_text) {
-                                        $mc_options[] = array('text' => trim($option_text));
+                                    $headings_options = $question['mc_options'];
+                                } elseif (isset($question['options']) && !empty($question['options'])) {
+                                    $option_lines = array_filter(explode("\n", $question['options']));
+                                    foreach ($option_lines as $opt_text) {
+                                        $headings_options[] = array('text' => trim($opt_text));
                                     }
                                 }
                                 
-                                if (!empty($mc_options)):
+                                if (!empty($headings_options)):
                                 ?>
-                                <div class="question-options">
-                                    <?php foreach ($mc_options as $opt_index => $option): ?>
-                                        <label class="option-label">
+                                <div class="question-options headings-options">
+                                    <?php foreach ($headings_options as $opt_index => $option): ?>
+                                        <label class="option-label headings-option-label">
                                             <input type="radio" 
                                                    name="answer_<?php echo $index; ?>" 
-                                                   value="<?php echo $opt_index; ?>">
-                                            <span><?php echo wp_kses_post($option['text']); ?></span>
+                                                   value="<?php echo $opt_index; ?>"
+                                                   class="headings-radio">
+                                            <span><?php echo wp_kses_post(isset($option['text']) ? $option['text'] : $option); ?></span>
+                                        </label>
+                                    <?php endforeach; ?>
+                                </div>
+                                <?php
+                                endif;
+                                break;
+                                
+                            case 'matching_classifying':
+                                // Matching/Classifying question type - independent implementation
+                                $classifying_options = array();
+                                if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                                    $classifying_options = $question['mc_options'];
+                                } elseif (isset($question['options']) && !empty($question['options'])) {
+                                    $option_lines = array_filter(explode("\n", $question['options']));
+                                    foreach ($option_lines as $opt_text) {
+                                        $classifying_options[] = array('text' => trim($opt_text));
+                                    }
+                                }
+                                
+                                if (!empty($classifying_options)):
+                                ?>
+                                <div class="question-options matching-classifying-options">
+                                    <?php foreach ($classifying_options as $opt_index => $option): ?>
+                                        <label class="option-label matching-classifying-option-label">
+                                            <input type="radio" 
+                                                   name="answer_<?php echo $index; ?>" 
+                                                   value="<?php echo $opt_index; ?>"
+                                                   class="matching-classifying-radio">
+                                            <span><?php echo wp_kses_post(isset($option['text']) ? $option['text'] : $option); ?></span>
                                         </label>
                                     <?php endforeach; ?>
                                 </div>
@@ -344,27 +373,27 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 break;
                                 
                             case 'matching':
-                                // Matching question type - now uses multiple choice format (radio buttons)
-                                // Similar to matching_classifying, headings, and multiple_choice
+                                // Matching question type - independent implementation
+                                $matching_options = array();
                                 if (isset($question['mc_options']) && is_array($question['mc_options'])) {
-                                    $mc_options = $question['mc_options'];
-                                } elseif (isset($question['options'])) {
-                                    $options_array = explode("\n", $question['options']);
-                                    $mc_options = array();
-                                    foreach ($options_array as $idx => $option_text) {
-                                        $mc_options[] = array('text' => trim($option_text));
+                                    $matching_options = $question['mc_options'];
+                                } elseif (isset($question['options']) && !empty($question['options'])) {
+                                    $option_lines = array_filter(explode("\n", $question['options']));
+                                    foreach ($option_lines as $opt_text) {
+                                        $matching_options[] = array('text' => trim($opt_text));
                                     }
                                 }
                                 
-                                if (!empty($mc_options)):
+                                if (!empty($matching_options)):
                                 ?>
-                                <div class="question-options">
-                                    <?php foreach ($mc_options as $opt_index => $option): ?>
-                                        <label class="option-label">
+                                <div class="question-options matching-options">
+                                    <?php foreach ($matching_options as $opt_index => $option): ?>
+                                        <label class="option-label matching-option-label">
                                             <input type="radio" 
                                                    name="answer_<?php echo $index; ?>" 
-                                                   value="<?php echo $opt_index; ?>">
-                                            <span><?php echo wp_kses_post($option['text']); ?></span>
+                                                   value="<?php echo $opt_index; ?>"
+                                                   class="matching-radio">
+                                            <span><?php echo wp_kses_post(isset($option['text']) ? $option['text'] : $option); ?></span>
                                         </label>
                                     <?php endforeach; ?>
                                 </div>

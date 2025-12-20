@@ -46,7 +46,7 @@ class IELTS_CM_Quiz_Handler {
         $question_results = array();
         
         foreach ($questions as $index => $question) {
-            // For multi-select, max score is the number of correct answers (1 point each)
+            // Calculate max score for each question type
             if ($question['type'] === 'multi_select') {
                 $correct_count = 0;
                 if (isset($question['mc_options']) && is_array($question['mc_options'])) {
@@ -57,8 +57,14 @@ class IELTS_CM_Quiz_Handler {
                     }
                 }
                 $max_score += max(1, $correct_count); // At least 1 point
+            } elseif ($question['type'] === 'headings') {
+                // Headings questions - independent implementation
+                $max_score += isset($question['points']) ? floatval($question['points']) : 1;
+            } elseif ($question['type'] === 'matching_classifying') {
+                // Matching/Classifying questions - independent implementation
+                $max_score += isset($question['points']) ? floatval($question['points']) : 1;
             } elseif ($question['type'] === 'matching') {
-                // For matching, now works like multiple choice - 1 point per question
+                // Matching questions - independent implementation
                 $max_score += isset($question['points']) ? floatval($question['points']) : 1;
             } else {
                 $max_score += isset($question['points']) ? floatval($question['points']) : 1;
@@ -69,7 +75,7 @@ class IELTS_CM_Quiz_Handler {
             $points_earned = 0;
             $correct_answer = null;
             
-            // Special handling for multi-select questions
+            // Handle each question type independently
             if ($question['type'] === 'multi_select') {
                 $result = $this->check_multi_select_answer($question, isset($answers[$index]) ? $answers[$index] : array());
                 $points_earned = $result['points_earned'];
@@ -79,8 +85,36 @@ class IELTS_CM_Quiz_Handler {
                 
                 // Store correct indices for multi-select so frontend can highlight them
                 $correct_answer = isset($result['correct_indices']) ? $result['correct_indices'] : array();
+            } elseif ($question['type'] === 'headings') {
+                // Headings - independent implementation
+                $user_answer = isset($answers[$index]) ? $answers[$index] : null;
+                $is_correct = $this->check_answer($question, $user_answer);
+                
+                if ($is_correct) {
+                    $points_earned = isset($question['points']) ? floatval($question['points']) : 1;
+                    $feedback = __('Correct!', 'ielts-course-manager');
+                } else {
+                    $points_earned = 0;
+                    $feedback = __('Incorrect', 'ielts-course-manager');
+                }
+                
+                $score += $points_earned;
+            } elseif ($question['type'] === 'matching_classifying') {
+                // Matching/Classifying - independent implementation
+                $user_answer = isset($answers[$index]) ? $answers[$index] : null;
+                $is_correct = $this->check_answer($question, $user_answer);
+                
+                if ($is_correct) {
+                    $points_earned = isset($question['points']) ? floatval($question['points']) : 1;
+                    $feedback = __('Correct!', 'ielts-course-manager');
+                } else {
+                    $points_earned = 0;
+                    $feedback = __('Incorrect', 'ielts-course-manager');
+                }
+                
+                $score += $points_earned;
             } elseif ($question['type'] === 'matching') {
-                // Matching now works like multiple choice
+                // Matching - independent implementation
                 $user_answer = isset($answers[$index]) ? $answers[$index] : null;
                 $is_correct = $this->check_answer($question, $user_answer);
                 
@@ -202,11 +236,23 @@ class IELTS_CM_Quiz_Handler {
         
         switch ($type) {
             case 'multiple_choice':
-            case 'matching_classifying':
-            case 'true_false':
+                // Multiple choice - independent implementation
+                return isset($question['correct_answer']) && $question['correct_answer'] == $user_answer;
+                
             case 'headings':
+                // Headings - independent implementation
+                return isset($question['correct_answer']) && $question['correct_answer'] == $user_answer;
+                
+            case 'matching_classifying':
+                // Matching/Classifying - independent implementation
+                return isset($question['correct_answer']) && $question['correct_answer'] == $user_answer;
+                
             case 'matching':
-                // These all use the same logic - match the selected option
+                // Matching - independent implementation
+                return isset($question['correct_answer']) && $question['correct_answer'] == $user_answer;
+                
+            case 'true_false':
+                // True/False - independent implementation
                 return isset($question['correct_answer']) && $question['correct_answer'] == $user_answer;
                 
             case 'summary_completion':
