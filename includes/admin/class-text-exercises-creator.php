@@ -1019,17 +1019,32 @@ You have one hour for the complete test (including transferring your answers).</
                             $current_question['incorrect_feedback'] = sanitize_textarea_field(implode("\n", $feedback_lines));
                         }
                         
-                        // Find correct option
-                        $correct_index = -1;
+                        // Find correct option and convert to proper format for true_false questions
+                        $correct_answer_value = '0';
                         foreach ($current_options as $idx => $opt) {
                             if ($opt['is_correct']) {
-                                $correct_index = $idx;
+                                // For true_false questions, convert option text to expected value
+                                if (stripos($opt['text'], 'TRUE') !== false) {
+                                    $correct_answer_value = 'true';
+                                } elseif (stripos($opt['text'], 'FALSE') !== false) {
+                                    $correct_answer_value = 'false';
+                                } elseif (stripos($opt['text'], 'NOT GIVEN') !== false) {
+                                    $correct_answer_value = 'not_given';
+                                } else {
+                                    $correct_answer_value = (string)$idx;
+                                }
                                 break;
                             }
                         }
                         
-                        $current_question['correct_answer'] = $correct_index >= 0 ? (string)$correct_index : '0';
-                        $current_question['mc_options'] = $current_options;
+                        $current_question['correct_answer'] = $correct_answer_value;
+                        // True/false questions don't need mc_options as they have fixed options in the template
+                        // Remove mc_options for true_false questions
+                        if ($correct_answer_value === 'true' || $correct_answer_value === 'false' || $correct_answer_value === 'not_given') {
+                            // Don't set mc_options for true_false questions
+                        } else {
+                            $current_question['mc_options'] = $current_options;
+                        }
                         
                         $questions[] = $current_question;
                         
@@ -1043,8 +1058,8 @@ You have one hour for the complete test (including transferring your answers).</
                 continue;
             }
             
-            // Check for option lines
-            if (preg_match('/^This is (TRUE|FALSE)$/i', $line, $matches)) {
+            // Check for option lines (TRUE, FALSE, or NOT GIVEN)
+            if (preg_match('/^This is (TRUE|FALSE|NOT GIVEN)$/i', $line, $matches)) {
                 $option_text = $matches[0];
                 $is_correct = false;
                 
@@ -1104,16 +1119,31 @@ You have one hour for the complete test (including transferring your answers).</
                             $current_question['incorrect_feedback'] = sanitize_textarea_field(implode("\n", $feedback_lines));
                         }
                         
-                        $correct_index = -1;
+                        // Find correct option and convert to proper format for true_false questions
+                        $correct_answer_value = '0';
                         foreach ($current_options as $idx => $opt) {
                             if ($opt['is_correct']) {
-                                $correct_index = $idx;
+                                // For true_false questions, convert option text to expected value
+                                if (stripos($opt['text'], 'TRUE') !== false && stripos($opt['text'], 'NOT GIVEN') === false) {
+                                    $correct_answer_value = 'true';
+                                } elseif (stripos($opt['text'], 'FALSE') !== false) {
+                                    $correct_answer_value = 'false';
+                                } elseif (stripos($opt['text'], 'NOT GIVEN') !== false) {
+                                    $correct_answer_value = 'not_given';
+                                } else {
+                                    $correct_answer_value = (string)$idx;
+                                }
                                 break;
                             }
                         }
                         
-                        $current_question['correct_answer'] = $correct_index >= 0 ? (string)$correct_index : '0';
-                        $current_question['mc_options'] = $current_options;
+                        $current_question['correct_answer'] = $correct_answer_value;
+                        // True/false questions don't need mc_options as they have fixed options in the template
+                        if ($correct_answer_value === 'true' || $correct_answer_value === 'false' || $correct_answer_value === 'not_given') {
+                            // Don't set mc_options for true_false questions
+                        } else {
+                            $current_question['mc_options'] = $current_options;
+                        }
                         
                         $questions[] = $current_question;
                         
@@ -1151,16 +1181,31 @@ You have one hour for the complete test (including transferring your answers).</
                 $current_question['incorrect_feedback'] = sanitize_textarea_field(implode("\n", $feedback_lines));
             }
             
-            $correct_index = -1;
+            // Find correct option and convert to proper format for true_false questions
+            $correct_answer_value = '0';
             foreach ($current_options as $idx => $opt) {
                 if ($opt['is_correct']) {
-                    $correct_index = $idx;
+                    // For true_false questions, convert option text to expected value
+                    if (stripos($opt['text'], 'TRUE') !== false && stripos($opt['text'], 'NOT GIVEN') === false) {
+                        $correct_answer_value = 'true';
+                    } elseif (stripos($opt['text'], 'FALSE') !== false) {
+                        $correct_answer_value = 'false';
+                    } elseif (stripos($opt['text'], 'NOT GIVEN') !== false) {
+                        $correct_answer_value = 'not_given';
+                    } else {
+                        $correct_answer_value = (string)$idx;
+                    }
                     break;
                 }
             }
             
-            $current_question['correct_answer'] = $correct_index >= 0 ? (string)$correct_index : '0';
-            $current_question['mc_options'] = $current_options;
+            $current_question['correct_answer'] = $correct_answer_value;
+            // True/false questions don't need mc_options as they have fixed options in the template
+            if ($correct_answer_value === 'true' || $correct_answer_value === 'false' || $correct_answer_value === 'not_given') {
+                // Don't set mc_options for true_false questions
+            } else {
+                $current_question['mc_options'] = $current_options;
+            }
             
             $questions[] = $current_question;
         }
