@@ -26,6 +26,12 @@ class IELTS_CM_Admin {
         add_filter('manage_ielts_lesson_posts_columns', array($this, 'lesson_columns'));
         add_action('manage_ielts_lesson_posts_custom_column', array($this, 'lesson_column_content'), 10, 2);
         
+        add_filter('manage_ielts_resource_posts_columns', array($this, 'resource_columns'));
+        add_action('manage_ielts_resource_posts_custom_column', array($this, 'resource_column_content'), 10, 2);
+        
+        add_filter('manage_ielts_quiz_posts_columns', array($this, 'quiz_columns'));
+        add_action('manage_ielts_quiz_posts_custom_column', array($this, 'quiz_column_content'), 10, 2);
+        
         // Add AJAX handlers
         add_action('wp_ajax_ielts_cm_update_lesson_order', array($this, 'ajax_update_lesson_order'));
         add_action('wp_ajax_ielts_cm_update_page_order', array($this, 'ajax_update_page_order'));
@@ -2304,6 +2310,8 @@ class IELTS_CM_Admin {
                     }
                 }
                 echo implode(', ', $course_links);
+            } else {
+                echo '—';
             }
         } elseif ($column === 'resources') {
             global $wpdb;
@@ -2317,6 +2325,90 @@ class IELTS_CM_Admin {
                     OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
             ", $post_id, '%' . $wpdb->esc_like(serialize(strval($post_id))) . '%'));
             echo count($resource_ids);
+        }
+    }
+    
+    /**
+     * Helper method to display parent connections (courses or lessons)
+     * 
+     * @param int|string $post_id The post ID to get parent connections for
+     * @param string $meta_key_plural The meta key for multiple parents (e.g., '_ielts_cm_lesson_ids')
+     * @param string $meta_key_singular The meta key for single parent (backward compatibility, e.g., '_ielts_cm_lesson_id')
+     * @return void
+     */
+    private function display_parent_connections($post_id, $meta_key_plural, $meta_key_singular) {
+        // Check for multiple parents
+        $parent_ids = get_post_meta($post_id, $meta_key_plural, true);
+        if (empty($parent_ids)) {
+            // Backward compatibility - check old single parent_id
+            $old_parent_id = get_post_meta($post_id, $meta_key_singular, true);
+            $parent_ids = $old_parent_id ? array($old_parent_id) : array();
+        }
+        
+        if (!empty($parent_ids)) {
+            $parent_links = array();
+            foreach ($parent_ids as $parent_id) {
+                $parent = get_post($parent_id);
+                if ($parent) {
+                    $parent_links[] = '<a href="' . get_edit_post_link($parent_id) . '">' . esc_html($parent->post_title) . '</a>';
+                }
+            }
+            
+            if (!empty($parent_links)) {
+                echo implode(', ', $parent_links);
+            } else {
+                echo '—';
+            }
+        } else {
+            echo '—';
+        }
+    }
+    
+    /**
+     * Resource (Sub lesson) columns
+     * 
+     * @param array $columns Existing columns
+     * @return array Modified columns
+     */
+    public function resource_columns($columns) {
+        $columns['lesson'] = __('Lesson', 'ielts-course-manager');
+        return $columns;
+    }
+    
+    /**
+     * Resource (Sub lesson) column content
+     * 
+     * @param string $column Column name
+     * @param int $post_id Post ID
+     * @return void
+     */
+    public function resource_column_content($column, $post_id) {
+        if ($column === 'lesson') {
+            $this->display_parent_connections($post_id, '_ielts_cm_lesson_ids', '_ielts_cm_lesson_id');
+        }
+    }
+    
+    /**
+     * Quiz (Exercise) columns
+     * 
+     * @param array $columns Existing columns
+     * @return array Modified columns
+     */
+    public function quiz_columns($columns) {
+        $columns['lesson'] = __('Lesson', 'ielts-course-manager');
+        return $columns;
+    }
+    
+    /**
+     * Quiz (Exercise) column content
+     * 
+     * @param string $column Column name
+     * @param int $post_id Post ID
+     * @return void
+     */
+    public function quiz_column_content($column, $post_id) {
+        if ($column === 'lesson') {
+            $this->display_parent_connections($post_id, '_ielts_cm_lesson_ids', '_ielts_cm_lesson_id');
         }
     }
     

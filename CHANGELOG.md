@@ -2,6 +2,20 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.34] - 2025-12-20
+
+### Added
+- **Lesson Connection Display for Sub Lessons and Exercises**: Added "Lesson" column to admin list views for both Sub lessons and Exercises
+  - Sub lessons now show which lesson(s) they are connected to in the admin interface
+  - Exercises now show which lesson(s) they are connected to in the admin interface
+  - Displays clickable links to parent lessons for easy navigation
+  - Shows multiple lessons when content is connected to more than one lesson
+  - Displays "—" when no lesson connection exists
+  - Matches existing functionality where lessons show their connected courses
+
+### Changed
+- **Version Update**: Updated plugin version to 2.34
+
 ## [2.33] - 2025-12-20
 
 ### Fixed
