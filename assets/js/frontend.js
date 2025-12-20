@@ -413,7 +413,7 @@
                                 }
                             }
                             
-                            // Add per-question text feedback messages (CBT only): All layouts use visual highlighting, but CBT also supports additional text feedback messages below each question
+                            // Add per-question text feedback messages (CBT only). All layouts use visual highlighting, but CBT layouts also support additional text feedback messages below each question.
                             if (isCBT && questionResult.feedback) {
                                 // Remove any existing feedback first
                                 questionElement.find('.question-feedback-message').remove();
@@ -434,8 +434,8 @@
                         showCBTResultModal(html, result.next_url, result.course_url);
                         form.find('button[type="submit"]').hide();
                         
-                        // Update the fullscreen timer UI component (CBT-specific feature - standard layout doesn't have this element)
                         if (isCBT) {
+                            // Update the fullscreen timer UI component (CBT-specific feature - standard layout doesn't have this element)
                             var timerElement = form.find('.quiz-timer-fullscreen');
                             if (timerElement.length > 0) {
                                 // Preserve and update the return to course link
