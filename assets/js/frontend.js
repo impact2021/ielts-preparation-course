@@ -413,8 +413,9 @@
                                 }
                             }
                             
-                            // Add feedback message below the question if available (for CBT quizzes only)
-                            // Standard layout quizzes rely on visual highlighting only
+                            // Add text feedback messages (CBT quizzes only)
+                            // Both standard and CBT layouts use visual highlighting (green/red colors)
+                            // But only CBT quizzes support additional per-question text feedback messages
                             if (isCBT && questionResult.feedback) {
                                 // Remove any existing feedback first
                                 questionElement.find('.question-feedback-message').remove();
@@ -435,7 +436,8 @@
                         showCBTResultModal(html, result.next_url, result.course_url);
                         form.find('button[type="submit"]').hide();
                         
-                        // Update timer display to show band score (only for CBT quizzes with fullscreen timer)
+                        // Update the fullscreen timer display to show score (CBT layout specific feature)
+                        // This is separate from the modal behavior - only CBT quizzes have a fullscreen timer element
                         if (isCBT) {
                             var timerElement = form.find('.quiz-timer-fullscreen');
                             if (timerElement.length > 0) {
