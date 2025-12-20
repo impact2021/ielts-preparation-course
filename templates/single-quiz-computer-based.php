@@ -319,13 +319,13 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                         
                                         if (!empty($mc_options)):
                                         ?>
-                                        <div class="question-answer">
+                                        <div class="question-options">
                                             <?php foreach ($mc_options as $opt_index => $option): ?>
-                                                <label class="mc-option">
+                                                <label class="option-label">
                                                     <input type="radio" 
                                                            name="answer_<?php echo $index; ?>" 
                                                            value="<?php echo $opt_index; ?>">
-                                                    <?php echo wp_kses_post($option['text']); ?>
+                                                    <span><?php echo wp_kses_post($option['text']); ?></span>
                                                 </label>
                                             <?php endforeach; ?>
                                         </div>
@@ -361,13 +361,13 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
                                         
                                         if (!empty($mc_options)):
                                         ?>
-                                        <div class="question-answer">
+                                        <div class="question-options">
                                             <?php foreach ($mc_options as $opt_index => $option): ?>
-                                                <label class="mc-option">
+                                                <label class="option-label">
                                                     <input type="radio" 
                                                            name="answer_<?php echo $index; ?>" 
                                                            value="<?php echo $opt_index; ?>">
-                                                    <?php echo wp_kses_post($option['text']); ?>
+                                                    <span><?php echo wp_kses_post($option['text']); ?></span>
                                                 </label>
                                             <?php endforeach; ?>
                                         </div>

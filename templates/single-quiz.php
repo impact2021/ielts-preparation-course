@@ -252,13 +252,13 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 
                                 if (!empty($mc_options)):
                                 ?>
-                                <div class="question-answer">
+                                <div class="question-options">
                                     <?php foreach ($mc_options as $opt_index => $option): ?>
-                                        <label class="mc-option">
+                                        <label class="option-label">
                                             <input type="radio" 
                                                    name="answer_<?php echo $index; ?>" 
                                                    value="<?php echo $opt_index; ?>">
-                                            <?php echo wp_kses_post($option['text']); ?>
+                                            <span><?php echo wp_kses_post($option['text']); ?></span>
                                         </label>
                                     <?php endforeach; ?>
                                 </div>
@@ -294,13 +294,13 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 
                                 if (!empty($mc_options)):
                                 ?>
-                                <div class="question-answer">
+                                <div class="question-options">
                                     <?php foreach ($mc_options as $opt_index => $option): ?>
-                                        <label class="mc-option">
+                                        <label class="option-label">
                                             <input type="radio" 
                                                    name="answer_<?php echo $index; ?>" 
                                                    value="<?php echo $opt_index; ?>">
-                                            <?php echo wp_kses_post($option['text']); ?>
+                                            <span><?php echo wp_kses_post($option['text']); ?></span>
                                         </label>
                                     <?php endforeach; ?>
                                 </div>
