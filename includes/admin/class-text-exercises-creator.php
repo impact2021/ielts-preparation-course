@@ -13,10 +13,11 @@ class IELTS_CM_Text_Exercises_Creator {
     
     /**
      * Regex pattern for matching short answer questions
-     * Format: number. question text {ANSWER}
+     * Format: number. question text with {ANSWER} anywhere in the line
      * The 'm' flag enables multiline mode where ^ matches start of any line, not just start of string
+     * Captures the full line including text before and after {ANSWER}
      */
-    const SHORT_ANSWER_PATTERN = '/^(\d+)\.\s+([^\n\r]+?)\s*\{([^}]+)\}/m';
+    const SHORT_ANSWER_PATTERN = '/^(\d+)\.\s+(.+)$/m';
     
     /**
      * Regex pattern for reading passage blocks
@@ -643,16 +644,22 @@ You have one hour for the complete test (including transferring your answers).</
             $line = $lines[$i];
             
             // Check if this is a section header like "Questions 1-5 [HEADINGS]"
-            if (preg_match('/^Questions\s+(\d+).*?(\[.+?\])?/i', $line, $match)) {
+            if (preg_match('/^Questions\s+\d+/i', $line)) {
                 // Save previous section if exists
                 if ($current_section !== null) {
                     $sections[] = $current_section;
                 }
                 
+                // Extract marker if present (e.g., [HEADINGS], [MATCHING])
+                $marker = '';
+                if (preg_match('/\[([^\]]+)\]/', $line, $marker_match)) {
+                    $marker = '[' . $marker_match[1] . ']';
+                }
+                
                 // Start new section
                 $current_section = array(
                     'header' => $line,
-                    'marker' => isset($match[2]) ? $match[2] : '',
+                    'marker' => $marker,
                     'lines' => array()
                 );
             } elseif ($current_section !== null) {
@@ -711,8 +718,8 @@ You have one hour for the complete test (including transferring your answers).</
      * Detect if text is in short answer format
      */
     private function is_short_answer_format($text) {
-        // Look for pattern: number. question text {ANSWER}
-        return preg_match(self::SHORT_ANSWER_PATTERN, $text) > 0;
+        // Look for pattern: number. text with {ANSWER} placeholder
+        return preg_match(self::SHORT_ANSWER_PATTERN, $text) > 0 && preg_match('/\{[^}]+\}/', $text) > 0;
     }
     
     /**
@@ -778,34 +785,45 @@ You have one hour for the complete test (including transferring your answers).</
             $line = $question_lines[$i];
             
             // Check if this line is a question using the pattern constant
-            if (preg_match(self::SHORT_ANSWER_PATTERN, $line, $match)) {
+            // Pattern now matches: "number. full line text"
+            // We need to check if the line contains {ANSWER} pattern
+            if (preg_match(self::SHORT_ANSWER_PATTERN, $line, $match) && preg_match('/\{([^}]+)\}/', $line)) {
                 $question_num = $match[1];
-                $question_text = trim($match[2]);
-                $answer_part = $match[3];
+                $full_line = trim($match[2]);
                 
-                // Parse answers - handle both simple {ANSWER} and complex {[ANS1][ANS2]}
-                $answers = $this->parse_answer_alternatives($answer_part);
-                
-                // Look for optional feedback on following lines (before next question)
-                // Feedback can be prefixed with [CORRECT], [INCORRECT], or [NO ANSWER] to specify type
-                $feedback_data = $this->parse_feedback_lines($question_lines, $i + 1);
-                $j = $feedback_data['next_index'];
-                
-                // Create question
-                $questions[] = array(
-                    'type' => 'short_answer',
-                    'question' => sanitize_text_field($question_text),
-                    // Multiple correct answers separated by pipe (|) for flexible matching
-                    // The quiz handler checks user input against each alternative (case-insensitive)
-                    'correct_answer' => sanitize_text_field(implode('|', $answers)),
-                    'points' => 1,
-                    'correct_feedback' => sanitize_textarea_field($feedback_data['correct']),
-                    'incorrect_feedback' => sanitize_textarea_field($feedback_data['incorrect']),
-                    'no_answer_feedback' => sanitize_textarea_field($feedback_data['no_answer'])
-                );
-                
-                // Skip past any feedback lines we consumed
-                $i = $j;
+                // Extract the answer part from within the curly braces
+                if (preg_match('/\{([^}]+)\}/', $full_line, $answer_match)) {
+                    $answer_part = $answer_match[1];
+                    
+                    // The question text is the full line (the answer placeholder will be replaced by a text box in the frontend)
+                    $question_text = $full_line;
+                    
+                    // Parse answers - handle both simple {ANSWER} and complex {[ANS1][ANS2]}
+                    $answers = $this->parse_answer_alternatives($answer_part);
+                    
+                    // Look for optional feedback on following lines (before next question)
+                    // Feedback can be prefixed with [CORRECT], [INCORRECT], or [NO ANSWER] to specify type
+                    $feedback_data = $this->parse_feedback_lines($question_lines, $i + 1);
+                    $j = $feedback_data['next_index'];
+                    
+                    // Create question
+                    $questions[] = array(
+                        'type' => 'short_answer',
+                        'question' => sanitize_text_field($question_text),
+                        // Multiple correct answers separated by pipe (|) for flexible matching
+                        // The quiz handler checks user input against each alternative (case-insensitive)
+                        'correct_answer' => sanitize_text_field(implode('|', $answers)),
+                        'points' => 1,
+                        'correct_feedback' => sanitize_textarea_field($feedback_data['correct']),
+                        'incorrect_feedback' => sanitize_textarea_field($feedback_data['incorrect']),
+                        'no_answer_feedback' => sanitize_textarea_field($feedback_data['no_answer'])
+                    );
+                    
+                    // Skip past any feedback lines we consumed
+                    $i = $j;
+                } else {
+                    $i++;
+                }
             } else {
                 $i++;
             }

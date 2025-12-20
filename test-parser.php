@@ -1,7 +1,24 @@
 <?php
 /**
- * Test script to verify the text file parses correctly
+ * Test script to verify the mixed format parser works correctly
  */
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Define WordPress constants
+define('ABSPATH', __DIR__ . '/');
+
+// Minimal WordPress functions stubs for testing
+if (!function_exists('sanitize_text_field')) {
+    function sanitize_text_field($str) { return trim(strip_tags($str)); }
+}
+if (!function_exists('sanitize_textarea_field')) {
+    function sanitize_textarea_field($str) { return trim(strip_tags($str)); }
+}
+if (!function_exists('wp_kses_post')) {
+    function wp_kses_post($str) { return $str; }
+}
 
 // Include the text exercises creator class
 require_once __DIR__ . '/includes/admin/class-text-exercises-creator.php';
@@ -21,13 +38,22 @@ echo "File lines: " . substr_count($text, "\n") . "\n\n";
 // Create an instance of the parser
 $creator = new IELTS_CM_Text_Exercises_Creator();
 
-// Use reflection to access the private parse method
+// Use reflection to access the private methods
 $reflection = new ReflectionClass($creator);
-$method = $reflection->getMethod('parse_exercise_text');
-$method->setAccessible(true);
+
+// Test mixed format detection
+$is_mixed_method = $reflection->getMethod('is_mixed_format');
+$is_mixed_method->setAccessible(true);
+$is_mixed = $is_mixed_method->invoke($creator, $text);
+
+echo "Mixed format detected: " . ($is_mixed ? "YES" : "NO") . "\n\n";
+
+// Parse the text
+$parse_method = $reflection->getMethod('parse_exercise_text');
+$parse_method->setAccessible(true);
 
 try {
-    $parsed = $method->invoke($creator, $text);
+    $parsed = $parse_method->invoke($creator, $text);
     
     if ($parsed === null) {
         echo "ERROR: Parser returned null\n";
@@ -70,37 +96,78 @@ try {
     
     // Check for headings questions
     $headings_count = 0;
+    $matching_count = 0;
+    $true_false_count = 0;
+    $short_answer_count = 0;
+    
     foreach ($parsed['questions'] as $q) {
         if ($q['type'] === 'headings') {
             $headings_count++;
+        } elseif ($q['type'] === 'matching_classifying') {
+            $matching_count++;
+        } elseif ($q['type'] === 'true_false') {
+            $true_false_count++;
+        } elseif ($q['type'] === 'short_answer') {
+            $short_answer_count++;
         }
     }
     
-    if ($headings_count > 0) {
-        echo "✓ Headings questions found: $headings_count\n";
-    } else {
-        echo "✗ WARNING: No headings questions found!\n";
-    }
+    echo "Question type breakdown:\n";
+    echo "  Headings: $headings_count\n";
+    echo "  Matching: $matching_count\n";
+    echo "  True/False: $true_false_count\n";
+    echo "  Short Answer: $short_answer_count\n";
+    echo "\n";
     
-    // Verify we have 40 questions
+    // Verify expectations
     $total = count($parsed['questions']);
+    $all_checks_passed = true;
+    
     if ($total === 40) {
         echo "✓ All 40 questions present!\n";
     } else {
         echo "✗ WARNING: Expected 40 questions, got $total\n";
+        $all_checks_passed = false;
     }
     
-    // Verify reading passages match questions
+    if ($headings_count === 5) {
+        echo "✓ All 5 headings questions found!\n";
+    } else {
+        echo "✗ WARNING: Expected 5 headings questions, got $headings_count\n";
+        $all_checks_passed = false;
+    }
+    
+    if ($matching_count === 14) {
+        echo "✓ All 14 matching questions found!\n";
+    } else {
+        echo "✗ WARNING: Expected 14 matching questions, got $matching_count\n";
+        $all_checks_passed = false;
+    }
+    
+    if ($true_false_count === 13) {
+        echo "✓ All 13 true/false questions found!\n";
+    } else {
+        echo "✗ WARNING: Expected 13 true/false questions, got $true_false_count\n";
+        $all_checks_passed = false;
+    }
+    
+    if ($short_answer_count === 8) {
+        echo "✓ All 8 short answer questions found!\n";
+    } else {
+        echo "✗ WARNING: Expected 8 short answer questions, got $short_answer_count\n";
+        $all_checks_passed = false;
+    }
+    
     if (count($parsed['reading_texts']) === 3) {
         echo "✓ All 3 reading passages present!\n";
     } else {
         echo "✗ WARNING: Expected 3 reading passages, got " . count($parsed['reading_texts']) . "\n";
+        $all_checks_passed = false;
     }
     
     echo "\n=== Test Complete ===\n";
     
-    // Exit with success if all checks passed
-    if ($total === 40 && $headings_count > 0 && count($parsed['reading_texts']) === 3) {
+    if ($all_checks_passed) {
         echo "RESULT: ALL CHECKS PASSED ✓\n";
         exit(0);
     } else {
