@@ -274,15 +274,17 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                         $options_text = $matches[2][$match_index];
                                         
                                         // Parse options: "A: option1 B: option2 C: option3"
-                                        preg_match_all('/([A-Z]):\s*([^A-Z]+?)(?=\s+[A-Z]:|$)/i', $options_text, $option_matches);
+                                        // Split by space followed by uppercase letter, colon, and space
+                                        $option_parts = preg_split('/\s+(?=[A-Z]:\s)/', $options_text);
                                         
                                         // Build the select dropdown
                                         $select_field = '<select name="answer_' . esc_attr($index) . '_' . esc_attr($dropdown_num) . '" class="answer-select-inline" data-dropdown-num="' . esc_attr($dropdown_num) . '">';
                                         $select_field .= '<option value="">-</option>'; // Empty default option
                                         
-                                        if (!empty($option_matches[1]) && !empty($option_matches[2])) {
-                                            foreach ($option_matches[1] as $opt_idx => $letter) {
-                                                $option_text = trim($option_matches[2][$opt_idx]);
+                                        foreach ($option_parts as $option_part) {
+                                            if (preg_match('/^([A-Z]):\s*(.+)$/i', trim($option_part), $opt_match)) {
+                                                $letter = $opt_match[1];
+                                                $option_text = trim($opt_match[2]);
                                                 $select_field .= '<option value="' . esc_attr($letter) . '">' . esc_html($letter) . ': ' . esc_html($option_text) . '</option>';
                                             }
                                         }

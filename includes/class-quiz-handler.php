@@ -307,14 +307,17 @@ class IELTS_CM_Quiz_Handler {
                     $parts = explode('|', $correct_answers);
                     foreach ($parts as $part) {
                         $part = trim($part);
-                        if (strpos($part, ':') !== false) {
-                            $parts_split = explode(':', $part, 2);
-                            if (count($parts_split) === 2) {
-                                $num = trim($parts_split[0]);
-                                $letter = strtoupper(trim($parts_split[1]));
-                                $answer_map[$num] = $letter;
-                            }
+                        $parts_split = explode(':', $part, 2);
+                        if (count($parts_split) === 2) {
+                            $num = trim($parts_split[0]);
+                            $letter = strtoupper(trim($parts_split[1]));
+                            $answer_map[$num] = $letter;
                         }
+                    }
+                    
+                    // Check that user has answered all required dropdowns
+                    if (count($user_answer) !== count($answer_map)) {
+                        return false; // Not all dropdowns answered
                     }
                     
                     // Check each user answer against the correct answer
@@ -323,7 +326,13 @@ class IELTS_CM_Quiz_Handler {
                             return false; // Unknown dropdown number
                         }
                         
-                        $user_letter = strtoupper(trim($user_letter));
+                        // Skip empty answers
+                        $user_letter = trim($user_letter);
+                        if (empty($user_letter)) {
+                            return false; // Empty answer
+                        }
+                        
+                        $user_letter = strtoupper($user_letter);
                         
                         if ($answer_map[$dropdown_num] !== $user_letter) {
                             return false; // Wrong answer for this dropdown
