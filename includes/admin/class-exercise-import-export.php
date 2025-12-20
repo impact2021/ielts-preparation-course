@@ -737,13 +737,18 @@ class IELTS_CM_Exercise_Import_Export {
      * Handle direct exercise import via AJAX (from exercise edit page)
      */
     public function handle_import_direct() {
-        // Verify nonce
-        if (!isset($_POST['nonce']) || !isset($_POST['exercise_id'])) {
+        // Verify required parameters are present
+        if (!isset($_POST['exercise_id'])) {
+            wp_send_json_error(array('message' => __('Exercise ID is required', 'ielts-course-manager')));
+        }
+        
+        if (!isset($_POST['nonce'])) {
             wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
         }
         
         $exercise_id = intval($_POST['exercise_id']);
         
+        // Verify nonce
         if (!wp_verify_nonce($_POST['nonce'], 'ielts_cm_import_exercise_direct_' . $exercise_id)) {
             wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
         }
