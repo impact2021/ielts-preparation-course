@@ -2310,6 +2310,8 @@ class IELTS_CM_Admin {
                     }
                 }
                 echo implode(', ', $course_links);
+            } else {
+                echo '—';
             }
         } elseif ($column === 'resources') {
             global $wpdb;
@@ -2327,6 +2329,36 @@ class IELTS_CM_Admin {
     }
     
     /**
+     * Helper method to display parent connections (courses or lessons)
+     * 
+     * @param int $post_id The post ID to get parent connections for
+     * @param string $meta_key_plural The meta key for multiple parents (e.g., '_ielts_cm_lesson_ids')
+     * @param string $meta_key_singular The meta key for single parent (backward compatibility, e.g., '_ielts_cm_lesson_id')
+     */
+    private function display_parent_connections($post_id, $meta_key_plural, $meta_key_singular) {
+        // Check for multiple parents
+        $parent_ids = get_post_meta($post_id, $meta_key_plural, true);
+        if (empty($parent_ids)) {
+            // Backward compatibility - check old single parent_id
+            $old_parent_id = get_post_meta($post_id, $meta_key_singular, true);
+            $parent_ids = $old_parent_id ? array($old_parent_id) : array();
+        }
+        
+        if (!empty($parent_ids)) {
+            $parent_links = array();
+            foreach ($parent_ids as $parent_id) {
+                $parent = get_post($parent_id);
+                if ($parent) {
+                    $parent_links[] = '<a href="' . get_edit_post_link($parent_id) . '">' . esc_html($parent->post_title) . '</a>';
+                }
+            }
+            echo implode(', ', $parent_links);
+        } else {
+            echo '—';
+        }
+    }
+    
+    /**
      * Resource (Sub lesson) columns
      */
     public function resource_columns($columns) {
@@ -2339,26 +2371,7 @@ class IELTS_CM_Admin {
      */
     public function resource_column_content($column, $post_id) {
         if ($column === 'lesson') {
-            // Check for multiple lessons
-            $lesson_ids = get_post_meta($post_id, '_ielts_cm_lesson_ids', true);
-            if (empty($lesson_ids)) {
-                // Backward compatibility - check old single lesson_id
-                $old_lesson_id = get_post_meta($post_id, '_ielts_cm_lesson_id', true);
-                $lesson_ids = $old_lesson_id ? array($old_lesson_id) : array();
-            }
-            
-            if (!empty($lesson_ids)) {
-                $lesson_links = array();
-                foreach ($lesson_ids as $lesson_id) {
-                    $lesson = get_post($lesson_id);
-                    if ($lesson) {
-                        $lesson_links[] = '<a href="' . get_edit_post_link($lesson_id) . '">' . esc_html($lesson->post_title) . '</a>';
-                    }
-                }
-                echo implode(', ', $lesson_links);
-            } else {
-                echo '—';
-            }
+            $this->display_parent_connections($post_id, '_ielts_cm_lesson_ids', '_ielts_cm_lesson_id');
         }
     }
     
@@ -2375,26 +2388,7 @@ class IELTS_CM_Admin {
      */
     public function quiz_column_content($column, $post_id) {
         if ($column === 'lesson') {
-            // Check for multiple lessons
-            $lesson_ids = get_post_meta($post_id, '_ielts_cm_lesson_ids', true);
-            if (empty($lesson_ids)) {
-                // Backward compatibility - check old single lesson_id
-                $old_lesson_id = get_post_meta($post_id, '_ielts_cm_lesson_id', true);
-                $lesson_ids = $old_lesson_id ? array($old_lesson_id) : array();
-            }
-            
-            if (!empty($lesson_ids)) {
-                $lesson_links = array();
-                foreach ($lesson_ids as $lesson_id) {
-                    $lesson = get_post($lesson_id);
-                    if ($lesson) {
-                        $lesson_links[] = '<a href="' . get_edit_post_link($lesson_id) . '">' . esc_html($lesson->post_title) . '</a>';
-                    }
-                }
-                echo implode(', ', $lesson_links);
-            } else {
-                echo '—';
-            }
+            $this->display_parent_connections($post_id, '_ielts_cm_lesson_ids', '_ielts_cm_lesson_id');
         }
     }
     
