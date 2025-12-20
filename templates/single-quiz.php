@@ -258,26 +258,39 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 break;
                                 
                             case 'summary_completion':
-                                // Summary completion - parse [ANSWER N] placeholders and replace with inline inputs
-                                // Question text should contain placeholders like [ANSWER 1], [ANSWER 2], etc.
+                                // Summary completion - parse [field N] or [ANSWER N] placeholders and replace with inline inputs
+                                // New format: [field 1], [field 2], etc.
+                                // Legacy format: [ANSWER 1], [ANSWER 2], etc.
                                 
                                 // Get the question text without wpautop processing for inline inputs
                                 $summary_text = isset($question['question']) ? $question['question'] : '';
                                 
-                                // Find all [ANSWER N] placeholders
-                                preg_match_all('/\[ANSWER\s+(\d+)\]/i', $summary_text, $matches);
+                                // Find all [field N] placeholders (new format)
+                                preg_match_all('/\[field\s+(\d+)\]/i', $summary_text, $field_matches);
                                 
-                                if (!empty($matches[0])) {
-                                    // Multiple inline answers - replace placeholders with input fields
+                                // Find all [ANSWER N] placeholders (legacy format)
+                                preg_match_all('/\[ANSWER\s+(\d+)\]/i', $summary_text, $answer_matches);
+                                
+                                if (!empty($field_matches[0])) {
+                                    // New format - multiple inline answers with [field N] placeholders
                                     $processed_text = $summary_text;
-                                    foreach ($matches[0] as $match_index => $placeholder) {
-                                        $answer_num = $matches[1][$match_index];
+                                    foreach ($field_matches[0] as $match_index => $placeholder) {
+                                        $field_num = $field_matches[1][$match_index];
+                                        $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_field_' . esc_attr($field_num) . '" class="answer-input-inline" data-field-num="' . esc_attr($field_num) . '" />';
+                                        $processed_text = str_replace($placeholder, $input_field, $processed_text);
+                                    }
+                                    echo '<div class="summary-completion-text">' . wp_kses_post(wpautop($processed_text)) . '</div>';
+                                } elseif (!empty($answer_matches[0])) {
+                                    // Legacy format - multiple inline answers with [ANSWER N] placeholders
+                                    $processed_text = $summary_text;
+                                    foreach ($answer_matches[0] as $match_index => $placeholder) {
+                                        $answer_num = $answer_matches[1][$match_index];
                                         $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_' . esc_attr($answer_num) . '" class="answer-input-inline" data-answer-num="' . esc_attr($answer_num) . '" />';
                                         $processed_text = str_replace($placeholder, $input_field, $processed_text);
                                     }
                                     echo '<div class="summary-completion-text">' . wp_kses_post(wpautop($processed_text)) . '</div>';
                                 } else {
-                                    // Legacy format - single answer input below question text
+                                    // No placeholders - single answer input below question text
                                     ?>
                                     <div class="question-answer">
                                         <input type="text" 
