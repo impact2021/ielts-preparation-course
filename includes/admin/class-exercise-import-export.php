@@ -537,8 +537,8 @@ class IELTS_CM_Exercise_Import_Export {
                         'question_text' => isset($question['question_text']) ? wp_kses_post($question['question_text']) : '',
                         'points' => isset($question['points']) ? intval($question['points']) : 1,
                         'correct_answer' => isset($question['correct_answer']) ? sanitize_text_field($question['correct_answer']) : '',
-                        'correct_feedback' => isset($question['correct_feedback']) ? sanitize_text_field($question['correct_feedback']) : '',
-                        'incorrect_feedback' => isset($question['incorrect_feedback']) ? sanitize_text_field($question['incorrect_feedback']) : '',
+                        'correct_feedback' => isset($question['correct_feedback']) ? wp_kses_post($question['correct_feedback']) : '',
+                        'incorrect_feedback' => isset($question['incorrect_feedback']) ? wp_kses_post($question['incorrect_feedback']) : '',
                     );
                     
                     // Sanitize instructions if present
@@ -549,6 +549,36 @@ class IELTS_CM_Exercise_Import_Export {
                     // Sanitize question field (alternative to question_text) if present
                     if (isset($question['question'])) {
                         $sanitized_question['question'] = wp_kses_post($question['question']);
+                    }
+                    
+                    // Sanitize no_answer_feedback if present
+                    if (isset($question['no_answer_feedback'])) {
+                        $sanitized_question['no_answer_feedback'] = wp_kses_post($question['no_answer_feedback']);
+                    }
+                    
+                    // Sanitize mc_options array if present (new structured format for multiple choice)
+                    if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                        $sanitized_mc_options = array();
+                        foreach ($question['mc_options'] as $option) {
+                            if (is_array($option)) {
+                                $sanitized_option = array(
+                                    'text' => isset($option['text']) ? sanitize_text_field($option['text']) : '',
+                                    'is_correct' => isset($option['is_correct']) ? (bool) $option['is_correct'] : false,
+                                    'feedback' => isset($option['feedback']) ? wp_kses_post($option['feedback']) : ''
+                                );
+                                $sanitized_mc_options[] = $sanitized_option;
+                            }
+                        }
+                        $sanitized_question['mc_options'] = $sanitized_mc_options;
+                    }
+                    
+                    // Sanitize option_feedback array if present (legacy format)
+                    if (isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                        $sanitized_option_feedback = array();
+                        foreach ($question['option_feedback'] as $feedback) {
+                            $sanitized_option_feedback[] = wp_kses_post($feedback);
+                        }
+                        $sanitized_question['option_feedback'] = $sanitized_option_feedback;
                     }
                     
                     // Sanitize options array if present
