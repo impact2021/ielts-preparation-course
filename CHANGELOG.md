@@ -2,6 +2,33 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.33] - 2025-12-20
+
+### Fixed
+- **Correct Answer Feedback in CBT Quizzes**: Fixed issue where correct answer highlighting was not consistently showing in computer-based test layout for multiple choice questions
+  - Enhanced highlighting logic to use dual approach: highlight by both checked state AND correct answer value
+  - Ensures correct answers are visible in all scenarios: correct answers, wrong answers, and no answers
+  - Added validation for parseInt() to handle invalid inputs gracefully
+  - Refactored code to eliminate duplication and improve maintainability
+  - When user gets answer CORRECT: Both solid green and light green highlights applied
+  - When user gets answer WRONG: Wrong answer shown in red, correct answer in light green
+  - When user provides NO answer: Correct answer shown in light green
+
+### Changed
+- **Smart "Next Page" Navigation for Exercises**: "Return to course" button now changes to "Next page >" when there are more items in the lesson
+  - Button dynamically uses `next_url` from backend to navigate to next sublesson or exercise
+  - Text changes to "Next page >" when there's a next item in the lesson
+  - Reverts to "< Return to course" when at the end of lesson/course
+  - Improves learning flow by guiding students through lesson content sequentially
+  - Backend already determined correct next URL; frontend now uses it properly
+- **Version Update**: Updated plugin version to 2.33
+
+### Technical Improvements
+- Added radix parameter (10) to parseInt() calls for consistent base-10 parsing
+- Added NaN validation before using parsed values
+- Improved variable naming for better code clarity
+- Enhanced security with proper input validation and output escaping
+
 ## [2.32] - 2025-12-20
 
 ### Changed
