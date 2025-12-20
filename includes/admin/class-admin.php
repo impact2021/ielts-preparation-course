@@ -916,7 +916,7 @@ class IELTS_CM_Admin {
                     <li><strong><?php _e('Table Completion:', 'ielts-course-manager'); ?></strong> <?php _e('Students fill in table cells. Matching is flexible and case-insensitive.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Labelling:', 'ielts-course-manager'); ?></strong> <?php _e('For diagram/image labelling. Students type the label text.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Classifying & Matching:', 'ielts-course-manager'); ?></strong> <?php _e('For categorizing items. Add category options and mark the correct one.', 'ielts-course-manager'); ?></li>
-                    <li><strong><?php _e('Locating Information:', 'ielts-course-manager'); ?></strong> <?php _e('Students identify paragraph/section. Answer format can be flexible (e.g., "A", "Paragraph A").', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Locating Information:', 'ielts-course-manager'); ?></strong> <?php _e('Students identify paragraph/section. Add paragraph options and mark the correct one.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Essay:', 'ielts-course-manager'); ?></strong> <?php _e('No correct answer needed - requires manual grading.', 'ielts-course-manager'); ?></li>
                 </ul>
             </div>
