@@ -58,12 +58,8 @@ class IELTS_CM_Quiz_Handler {
                 }
                 $max_score += max(1, $correct_count); // At least 1 point
             } elseif ($question['type'] === 'matching') {
-                // For matching, max score is the number of match items (1 point each)
-                if (isset($question['matches']) && is_array($question['matches'])) {
-                    $max_score += count($question['matches']);
-                } else {
-                    $max_score += isset($question['points']) ? floatval($question['points']) : 1;
-                }
+                // For matching, now works like multiple choice - 1 point per question
+                $max_score += isset($question['points']) ? floatval($question['points']) : 1;
             } else {
                 $max_score += isset($question['points']) ? floatval($question['points']) : 1;
             }
@@ -84,15 +80,19 @@ class IELTS_CM_Quiz_Handler {
                 // Store correct indices for multi-select so frontend can highlight them
                 $correct_answer = isset($result['correct_indices']) ? $result['correct_indices'] : array();
             } elseif ($question['type'] === 'matching') {
-                // Special handling for matching questions
-                $result = $this->check_matching_answer($question, $answers, $index);
-                $points_earned = $result['points_earned'];
-                $is_correct = $result['is_correct'];
-                $feedback = $result['feedback'];
-                $score += $points_earned;
+                // Matching now works like multiple choice
+                $user_answer = isset($answers[$index]) ? $answers[$index] : null;
+                $is_correct = $this->check_answer($question, $user_answer);
                 
-                // Store correct answers for matching so frontend can highlight them
-                $correct_answer = isset($result['correct_answers']) ? $result['correct_answers'] : array();
+                if ($is_correct) {
+                    $points_earned = isset($question['points']) ? floatval($question['points']) : 1;
+                    $feedback = __('Correct!', 'ielts-course-manager');
+                } else {
+                    $points_earned = 0;
+                    $feedback = __('Incorrect', 'ielts-course-manager');
+                }
+                
+                $score += $points_earned;
             } elseif (isset($answers[$index])) {
                 $is_correct = $this->check_answer($question, $answers[$index]);
                 if ($is_correct) {
@@ -203,6 +203,10 @@ class IELTS_CM_Quiz_Handler {
         switch ($type) {
             case 'multiple_choice':
             case 'true_false':
+            case 'headings':
+            case 'classifying_matching':
+            case 'matching':
+                // These all use the same logic - match the selected option
                 return isset($question['correct_answer']) && $question['correct_answer'] == $user_answer;
                 
             case 'fill_blank':
@@ -236,11 +240,6 @@ class IELTS_CM_Quiz_Handler {
                 
                 return false;
             
-            case 'headings':
-            case 'classifying_matching':
-                // These are similar to multiple choice - match the selected option
-                return isset($question['correct_answer']) && $question['correct_answer'] == $user_answer;
-                
             case 'essay':
                 // Essay questions need manual grading
                 return false;
