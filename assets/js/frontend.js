@@ -179,7 +179,20 @@
             form.find('[name^="answer_"]').each(function() {
                 var name = $(this).attr('name');
                 
-                // Check if this is an inline summary completion input (e.g., answer_0_1, answer_0_2)
+                // Check if this is an inline summary completion input with new format (e.g., answer_0_field_1, answer_0_field_2)
+                var fieldMatch = name.match(/^answer_(\d+)_field_(\d+)$/);
+                if (fieldMatch) {
+                    var questionIndex = fieldMatch[1];
+                    var fieldNum = fieldMatch[2];
+                    
+                    if (!answers[questionIndex]) {
+                        answers[questionIndex] = {};
+                    }
+                    answers[questionIndex][fieldNum] = $(this).val();
+                    return; // Continue to next iteration
+                }
+                
+                // Check if this is an inline summary completion input with legacy format (e.g., answer_0_1, answer_0_2)
                 var inlineMatch = name.match(/^answer_(\d+)_(\d+)$/);
                 if (inlineMatch) {
                     var questionIndex = inlineMatch[1];
