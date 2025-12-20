@@ -390,13 +390,13 @@ You have one hour for the complete test (including transferring your answers).</
                 // Create question
                 $questions[] = array(
                     'type' => 'short_answer',
-                    'question' => $question_text,
+                    'question' => sanitize_text_field($question_text),
                     // Multiple correct answers separated by pipe (|) for flexible matching
                     // The quiz handler checks user input against each alternative (case-insensitive)
-                    'correct_answer' => implode('|', $answers),
+                    'correct_answer' => sanitize_text_field(implode('|', $answers)),
                     'points' => 1,
                     'correct_feedback' => '',
-                    'incorrect_feedback' => trim($feedback) // Feedback shows when answer is wrong
+                    'incorrect_feedback' => sanitize_textarea_field(trim($feedback)) // Feedback shows when answer is wrong
                 );
                 
                 // Skip past any feedback lines we consumed
@@ -476,7 +476,7 @@ You have one hour for the complete test (including transferring your answers).</
                     // Save current question
                     if ($current_question !== null && !empty($current_options)) {
                         if (!empty($feedback_lines)) {
-                            $current_question['incorrect_feedback'] = implode("\n", $feedback_lines);
+                            $current_question['incorrect_feedback'] = sanitize_textarea_field(implode("\n", $feedback_lines));
                         }
                         
                         // Find correct option
@@ -521,7 +521,7 @@ You have one hour for the complete test (including transferring your answers).</
                 }
                 
                 $current_options[] = array(
-                    'text' => $option_text,
+                    'text' => sanitize_text_field($option_text),
                     'is_correct' => $is_correct,
                     'feedback' => ''
                 );
@@ -540,7 +540,7 @@ You have one hour for the complete test (including transferring your answers).</
                 // This is a new question
                 $current_question = array(
                     'type' => 'true_false',
-                    'question' => $line,
+                    'question' => sanitize_text_field($line),
                     'points' => 1,
                     'correct_feedback' => '',
                     'incorrect_feedback' => ''
@@ -560,7 +560,7 @@ You have one hour for the complete test (including transferring your answers).</
                     // This looks like a new question - save previous question first
                     if ($current_question !== null && !empty($current_options)) {
                         if (!empty($feedback_lines)) {
-                            $current_question['incorrect_feedback'] = implode("\n", $feedback_lines);
+                            $current_question['incorrect_feedback'] = sanitize_textarea_field(implode("\n", $feedback_lines));
                         }
                         
                         $correct_index = -1;
@@ -584,7 +584,7 @@ You have one hour for the complete test (including transferring your answers).</
                     // Start new question
                     $current_question = array(
                         'type' => 'true_false',
-                        'question' => $line,
+                        'question' => sanitize_text_field($line),
                         'points' => 1,
                         'correct_feedback' => '',
                         'incorrect_feedback' => ''
@@ -606,7 +606,7 @@ You have one hour for the complete test (including transferring your answers).</
         // Save last question if exists
         if ($current_question !== null && !empty($current_options)) {
             if (!empty($feedback_lines)) {
-                $current_question['incorrect_feedback'] = implode("\n", $feedback_lines);
+                $current_question['incorrect_feedback'] = sanitize_textarea_field(implode("\n", $feedback_lines));
             }
             
             $correct_index = -1;
