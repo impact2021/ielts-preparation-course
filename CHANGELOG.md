@@ -2,6 +2,30 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.37] - 2025-12-20
+
+### Added
+- **Inline Input Fields for Summary Completion Questions**: Summary completion questions now support inline input fields within the text
+  - Teachers can use placeholders like `[ANSWER 1]`, `[ANSWER 2]`, etc. in the question text
+  - Placeholders are automatically replaced with inline text input fields
+  - Example: "Many people believe that [ANSWER 1] because of the importance of [ANSWER 2]"
+  - Students type answers directly into the text where the blanks appear
+  - Provides a more authentic IELTS testing experience
+  - Backward compatible - existing summary completion questions with single input still work
+
+### Changed
+- **Version Update**: Updated plugin version to 2.37
+
+### Technical Details
+- Modified `templates/single-quiz.php` to parse `[ANSWER N]` placeholders using regex and replace with inline input fields
+- Modified `templates/single-quiz-computer-based.php` with same placeholder parsing logic
+- Added CSS styling for `.answer-input-inline` class for proper inline display
+- Added `.summary-completion-text` wrapper with increased line-height for better readability
+- Updated `assets/js/frontend.js` answer collection to handle inline inputs (name format: `answer_X_N`)
+- Enhanced `includes/class-quiz-handler.php` to check inline answers with format `N:answer1|alt1|M:answer2|alt2`
+- Supports multiple alternative answers per blank (e.g., `1:students|learners|2:education|learning`)
+- All existing flexible matching features preserved (case-insensitive, punctuation-agnostic)
+
 ## [2.36] - 2025-12-20
 
 ### Changed
