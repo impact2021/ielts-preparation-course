@@ -15,8 +15,8 @@
             var statusDiv = $('#ielts_cm_import_status_' + exerciseId);
             var button = $(this);
             
-            // Check if file is selected
-            if (fileInput.length === 0 || !fileInput.prop('files') || fileInput.prop('files').length === 0) {
+            // Check if file is selected using native DOM access for consistency
+            if (!fileInput.length || !fileInput[0].files || !fileInput[0].files.length) {
                 statusDiv.html('<div class="notice notice-error inline"><p>' + ieltsCMImport.i18n.noFile + '</p></div>');
                 return;
             }

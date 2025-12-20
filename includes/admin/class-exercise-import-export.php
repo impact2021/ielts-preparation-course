@@ -473,7 +473,8 @@ class IELTS_CM_Exercise_Import_Export {
                             $value = intval($value);
                             break;
                         case 'open_as_popup':
-                            $value = $value ? '1' : '0';
+                            // Convert to '1' or '0' for consistency with WordPress checkbox values
+                            $value = rest_sanitize_boolean($value) ? '1' : '0';
                             break;
                         case 'layout_type':
                             $value = sanitize_text_field($value);
