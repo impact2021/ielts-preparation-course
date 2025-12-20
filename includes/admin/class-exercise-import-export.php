@@ -537,6 +537,16 @@ class IELTS_CM_Exercise_Import_Export {
                         'incorrect_feedback' => isset($question['incorrect_feedback']) ? sanitize_text_field($question['incorrect_feedback']) : '',
                     );
                     
+                    // Sanitize instructions if present
+                    if (isset($question['instructions'])) {
+                        $sanitized_question['instructions'] = wp_kses_post($question['instructions']);
+                    }
+                    
+                    // Sanitize question field (alternative to question_text) if present
+                    if (isset($question['question'])) {
+                        $sanitized_question['question'] = wp_kses_post($question['question']);
+                    }
+                    
                     // Sanitize options array if present
                     if (isset($question['options'])) {
                         if (is_array($question['options'])) {
@@ -544,6 +554,58 @@ class IELTS_CM_Exercise_Import_Export {
                         } else {
                             $sanitized_question['options'] = sanitize_textarea_field($question['options']);
                         }
+                    }
+                    
+                    // Sanitize options_key object if present (for multiple choice matching)
+                    if (isset($question['options_key']) && is_array($question['options_key'])) {
+                        $sanitized_options_key = array();
+                        foreach ($question['options_key'] as $key => $value) {
+                            $sanitized_options_key[sanitize_text_field($key)] = sanitize_text_field($value);
+                        }
+                        $sanitized_question['options_key'] = $sanitized_options_key;
+                    }
+                    
+                    // Sanitize headings object if present (for heading matching)
+                    if (isset($question['headings']) && is_array($question['headings'])) {
+                        $sanitized_headings = array();
+                        foreach ($question['headings'] as $key => $value) {
+                            $sanitized_headings[sanitize_text_field($key)] = sanitize_text_field($value);
+                        }
+                        $sanitized_question['headings'] = $sanitized_headings;
+                    }
+                    
+                    // Sanitize matches array if present (for matching questions)
+                    if (isset($question['matches']) && is_array($question['matches'])) {
+                        $sanitized_matches = array();
+                        foreach ($question['matches'] as $match) {
+                            if (is_array($match)) {
+                                $sanitized_match = array();
+                                // Preserve all fields in match
+                                if (isset($match['question_id'])) {
+                                    $sanitized_match['question_id'] = intval($match['question_id']);
+                                }
+                                if (isset($match['id'])) {
+                                    $sanitized_match['id'] = intval($match['id']);
+                                }
+                                if (isset($match['text'])) {
+                                    $sanitized_match['text'] = wp_kses_post($match['text']);
+                                }
+                                if (isset($match['correct_answer'])) {
+                                    $sanitized_match['correct_answer'] = sanitize_text_field($match['correct_answer']);
+                                }
+                                if (isset($match['correct_heading'])) {
+                                    $sanitized_match['correct_heading'] = sanitize_text_field($match['correct_heading']);
+                                }
+                                if (isset($match['correct_paragraph'])) {
+                                    $sanitized_match['correct_paragraph'] = sanitize_text_field($match['correct_paragraph']);
+                                }
+                                if (isset($match['paragraph'])) {
+                                    $sanitized_match['paragraph'] = sanitize_text_field($match['paragraph']);
+                                }
+                                $sanitized_matches[] = $sanitized_match;
+                            }
+                        }
+                        $sanitized_question['matches'] = $sanitized_matches;
                     }
                     
                     // Sanitize reading_text_id if present
