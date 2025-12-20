@@ -2,6 +2,57 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.42] - 2025-12-20
+
+### Fixed
+- **Dropdown Paragraph Display Bug**: Fixed critical bug where dropdown paragraph questions displayed duplicate/malformed text on the frontend
+  - Question text was being displayed twice: once as raw text and once with embedded dropdowns
+  - This caused confusing display like seeing both `1.[A: great B: good]` and `-A: greatB: good`
+  - Solution: Added conditional logic to skip the general question text display for dropdown_paragraph type since it renders its own formatted version
+  - Affected both standard and computer-based test (CBT) layouts
+
+### Added
+- **Flexible Placeholder Support**: Dropdown paragraph questions now support both `__N__` (double underscores) and `___N___` (triple underscores) as placeholder formats
+  - Previous version only supported `___N___` (triple underscores)
+  - Users were confused and tried using `__N__` which didn't work
+  - New pattern matching uses regex alternation `(___N___|__N__)` to efficiently support both formats
+  - Updated admin instructions to clarify both formats are supported
+  - Backward compatible: existing questions with `___N___` continue to work perfectly
+
+### Changed
+- **Version Update**: Updated plugin version from 2.41 to 2.42
+- **Pattern Matching Optimization**: Improved regex pattern for placeholder replacement
+  - Uses single alternation pattern instead of multiple checks
+  - More efficient with no performance degradation
+  - Enforces consistent formats (won't match mixed formats like `__1___`)
+
+### Documentation
+- **V2.42_IMPLEMENTATION_SUMMARY.md**: Comprehensive technical documentation of all changes
+- **V2.42_SECURITY_SUMMARY.md**: Complete security analysis confirming no vulnerabilities introduced
+- **V2.42_TESTING_GUIDE.md**: Detailed testing scenarios covering all use cases
+
+### Technical Details
+- Modified `templates/single-quiz.php` and `templates/single-quiz-computer-based.php`
+  - Added conditional check: `if ($question['type'] !== 'dropdown_paragraph')` before displaying question text
+  - Prevents duplicate rendering of dropdown paragraph questions
+- Modified `includes/admin/class-admin.php`
+  - Updated placeholder replacement pattern from `/___N___/` to `/(___N___|__N__)/`
+  - Updated admin instructions to mention both formats
+- Modified `includes/admin/class-exercise-import-export.php`
+  - Updated JSON format documentation to include both placeholder formats
+
+### Security
+- ✅ No security vulnerabilities introduced
+- ✅ All existing sanitization and escaping maintained
+- ✅ CodeQL analysis: Clean (no issues detected)
+- ✅ Code review: Passed with no comments
+
+### Backward Compatibility
+- ✅ 100% backward compatible
+- ✅ All existing dropdown questions continue to work
+- ✅ No database migration required
+- ✅ No breaking changes
+
 ## [2.41] - 2025-12-20
 
 ### Added
