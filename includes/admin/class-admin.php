@@ -1654,7 +1654,99 @@ class IELTS_CM_Admin {
             <span class="dashicons dashicons-menu question-drag-handle" style="position: absolute; top: 15px; left: 15px; color: #999; cursor: move;"></span>
             <div class="question-header" style="display: flex; align-items: center; margin-left: 30px; cursor: pointer; margin-bottom: 15px;">
                 <span class="dashicons dashicons-arrow-right-alt2 question-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>
-                <h4 style="margin: 0; flex: 1;"><?php printf(__('Question %d', 'ielts-course-manager'), $index + 1); ?></h4>
+                <h4 style="margin: 0; flex: 1;">
+                    <?php 
+                    // Calculate question number range for multi-point questions
+                    $question_type = isset($question['type']) ? $question['type'] : 'short_answer';
+                    $question_type_label = '';
+                    $question_types = IELTS_CM_Quiz_Handler::get_quiz_types();
+                    if (isset($question_types[$question_type])) {
+                        $question_type_label = ' (' . $question_types[$question_type] . ')';
+                    }
+                    
+                    // Calculate actual question count for this question
+                    $question_count = 1;
+                    if ($question_type === 'multi_select') {
+                        // Count correct answers for multi-select
+                        $correct_count = 0;
+                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                            foreach ($question['mc_options'] as $option) {
+                                if (!empty($option['is_correct'])) {
+                                    $correct_count++;
+                                }
+                            }
+                        }
+                        $question_count = max(1, $correct_count);
+                    } elseif ($question_type === 'summary_completion') {
+                        // Count fields for summary completion
+                        if (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+                            $question_count = count($question['summary_fields']);
+                        } else {
+                            // Parse from question text
+                            $question_text = isset($question['question']) ? $question['question'] : '';
+                            preg_match_all('/\[field\s+(\d+)\]/i', $question_text, $field_matches);
+                            preg_match_all('/\[ANSWER\s+(\d+)\]/i', $question_text, $answer_matches);
+                            if (!empty($field_matches[1])) {
+                                $question_count = count(array_unique($field_matches[1]));
+                            } elseif (!empty($answer_matches[1])) {
+                                $question_count = count(array_unique($answer_matches[1]));
+                            }
+                        }
+                    }
+                    
+                    // Calculate display question numbers (need to count previous questions)
+                    $display_start = 1;
+                    if (isset($post->ID)) {
+                        $all_questions = get_post_meta($post->ID, '_ielts_cm_questions', true);
+                        if (is_array($all_questions)) {
+                            for ($i = 0; $i < $index; $i++) {
+                                if (isset($all_questions[$i])) {
+                                    $prev_question = $all_questions[$i];
+                                    $prev_type = isset($prev_question['type']) ? $prev_question['type'] : 'short_answer';
+                                    
+                                    if ($prev_type === 'multi_select') {
+                                        $prev_correct_count = 0;
+                                        if (isset($prev_question['mc_options']) && is_array($prev_question['mc_options'])) {
+                                            foreach ($prev_question['mc_options'] as $option) {
+                                                if (!empty($option['is_correct'])) {
+                                                    $prev_correct_count++;
+                                                }
+                                            }
+                                        }
+                                        $display_start += max(1, $prev_correct_count);
+                                    } elseif ($prev_type === 'summary_completion') {
+                                        $prev_field_count = 1;
+                                        if (isset($prev_question['summary_fields']) && is_array($prev_question['summary_fields'])) {
+                                            $prev_field_count = count($prev_question['summary_fields']);
+                                        } else {
+                                            $prev_question_text = isset($prev_question['question']) ? $prev_question['question'] : '';
+                                            preg_match_all('/\[field\s+(\d+)\]/i', $prev_question_text, $prev_field_matches);
+                                            preg_match_all('/\[ANSWER\s+(\d+)\]/i', $prev_question_text, $prev_answer_matches);
+                                            if (!empty($prev_field_matches[1])) {
+                                                $prev_field_count = count(array_unique($prev_field_matches[1]));
+                                            } elseif (!empty($prev_answer_matches[1])) {
+                                                $prev_field_count = count(array_unique($prev_answer_matches[1]));
+                                            }
+                                        }
+                                        $display_start += $prev_field_count;
+                                    } else {
+                                        $display_start += 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    $display_end = $display_start + $question_count - 1;
+                    
+                    if ($display_start === $display_end) {
+                        printf(__('Question %d', 'ielts-course-manager'), $display_start);
+                    } else {
+                        printf(__('Questions %d – %d', 'ielts-course-manager'), $display_start, $display_end);
+                    }
+                    echo $question_type_label;
+                    ?>
+                </h4>
             </div>
             
             <div class="question-content" style="display: none;">
