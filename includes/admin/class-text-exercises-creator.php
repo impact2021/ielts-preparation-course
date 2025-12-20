@@ -12,6 +12,12 @@ if (!defined('ABSPATH')) {
 class IELTS_CM_Text_Exercises_Creator {
     
     /**
+     * Regex pattern for matching short answer questions
+     * Format: number. question text {ANSWER}
+     */
+    const SHORT_ANSWER_PATTERN = '/^(\d+)\.\s+([^\n\r]+?)\s*\{([^}]+)\}/';
+    
+    /**
      * Initialize the creator
      */
     public function init() {
@@ -108,7 +114,20 @@ class IELTS_CM_Text_Exercises_Creator {
             
             <div class="card" style="max-width: 900px; margin: 20px 0;">
                 <h2><?php _e('Text Format Guide', 'ielts-course-manager'); ?></h2>
-                <p><?php _e('The text should be formatted with the following structure:', 'ielts-course-manager'); ?></p>
+                <p><?php _e('This tool supports two formats:', 'ielts-course-manager'); ?></p>
+                
+                <h3><?php _e('Format 1: Short Answer Questions', 'ielts-course-manager'); ?></h3>
+                <p><?php _e('Best for IELTS Reading comprehension with fill-in-the-blank style answers', 'ielts-course-manager'); ?></p>
+                <ul style="list-style-type: disc; margin-left: 20px;">
+                    <li><strong><?php _e('Title/Instructions:', 'ielts-course-manager'); ?></strong> <?php _e('All text before the first numbered question', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Question Format:', 'ielts-course-manager'); ?></strong> <?php _e('Number. Question text {ANSWER}', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Single Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Use {ANSWER} for one correct answer', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Multiple Alternatives:', 'ielts-course-manager'); ?></strong> <?php _e('Use {[ANSWER1][ANSWER2][ANSWER3]} for multiple accepted answers', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Optional Feedback:', 'ielts-course-manager'); ?></strong> <?php _e('Add explanation text on line(s) after the question (before next question)', 'ielts-course-manager'); ?></li>
+                </ul>
+                
+                <h3><?php _e('Format 2: True/False Questions', 'ielts-course-manager'); ?></h3>
+                <p><?php _e('The original format for true/false exercises:', 'ielts-course-manager'); ?></p>
                 <ul style="list-style-type: disc; margin-left: 20px;">
                     <li><strong><?php _e('First Line:', 'ielts-course-manager'); ?></strong> <?php _e('Exercise title/instructions', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Blank Line:', 'ielts-course-manager'); ?></strong> <?php _e('Separates title from questions', 'ielts-course-manager'); ?></li>
@@ -123,7 +142,26 @@ class IELTS_CM_Text_Exercises_Creator {
                     <li><strong><?php _e('Blank Line:', 'ielts-course-manager'); ?></strong> <?php _e('Separates questions', 'ielts-course-manager'); ?></li>
                 </ul>
                 
-                <h3><?php _e('Example Format', 'ielts-course-manager'); ?></h3>
+                <h3><?php _e('Short Answer Example', 'ielts-course-manager'); ?></h3>
+                <pre style="background: #f5f5f5; padding: 15px; border: 1px solid #ddd; overflow-x: auto; white-space: pre-wrap;">Reading Section 2
+
+Questions 15 – 22
+
+Look at the information given in the text about a Graduate Training Programme advertisement.
+Answer the questions below using NO MORE THAN THREE WORDS AND/OR A NUMBER from the text for each answer.
+
+15. What subject has the past entrant to the graduate training programme studied at university? {CHEMISTRY}
+
+16. In how many countries does the company have offices? {[25][TWENTY FIVE][TWENTY-FIVE]}
+
+17. Where will the successful applicants for the positions be based? {[IN THE UK][IN THE U.K.][THE UK][THE U.K.][UK][U.K.]}
+
+18. What is the most important part of Rayland Industries' business? {MANUFACTURING}
+This can be found in the third paragraph which states "our main focus and the essential part of our business is in manufacturing."
+
+19. After how long are trainees entitled to join the company's medical scheme? {[6 MONTHS][SIX MONTHS]}</pre>
+                
+                <h3><?php _e('True/False Example', 'ielts-course-manager'); ?></h3>
                 <pre style="background: #f5f5f5; padding: 15px; border: 1px solid #ddd; overflow-x: auto; white-space: pre-wrap;">Decide whether these statements about the reading test are TRUE or FALSE. Select the correct answers.
 
 You have to answer 40 questions
@@ -256,6 +294,149 @@ You have one hour for the complete test (including transferring your answers).</
      * Parse exercise text into structured data
      */
     private function parse_exercise_text($text) {
+        // Try to detect format type
+        // Short answer format has questions like "15. Question text {ANSWER}"
+        if ($this->is_short_answer_format($text)) {
+            return $this->parse_short_answer_format($text);
+        }
+        
+        // Fall back to original true/false format parser
+        return $this->parse_true_false_format($text);
+    }
+    
+    /**
+     * Detect if text is in short answer format
+     */
+    private function is_short_answer_format($text) {
+        // Look for pattern: number. question text {ANSWER}
+        return preg_match(self::SHORT_ANSWER_PATTERN, $text) > 0;
+    }
+    
+    /**
+     * Parse short answer format questions
+     * Format: "15. Question text? {ANSWER}" or "15. Question text? {[ANS1][ANS2][ANS3]}"
+     * Optional feedback can be added on the next line(s) before the next question
+     */
+    private function parse_short_answer_format($text) {
+        // Extract title - everything before the first question number
+        $lines = explode("\n", $text);
+        $lines = array_map('trim', $lines);
+        
+        $title = '';
+        $question_start_index = -1;
+        
+        for ($i = 0; $i < count($lines); $i++) {
+            if (preg_match('/^\d+\.\s+/', $lines[$i])) {
+                // Found first question
+                $question_start_index = $i;
+                break;
+            }
+            if (!empty($lines[$i])) {
+                if (empty($title)) {
+                    $title = $lines[$i];
+                } else {
+                    // Avoid excessive whitespace when concatenating
+                    $title .= ' ' . trim($lines[$i]);
+                }
+            }
+        }
+        
+        if (empty($title)) {
+            $title = 'Short Answer Questions';
+        }
+        
+        if ($question_start_index === -1) {
+            return null;
+        }
+        
+        // Parse questions with potential feedback
+        $questions = array();
+        $question_lines = array_slice($lines, $question_start_index);
+        
+        $i = 0;
+        while ($i < count($question_lines)) {
+            $line = $question_lines[$i];
+            
+            // Check if this line is a question using the pattern constant
+            if (preg_match(self::SHORT_ANSWER_PATTERN, $line, $match)) {
+                $question_num = $match[1];
+                $question_text = trim($match[2]);
+                $answer_part = $match[3];
+                
+                // Parse answers - handle both simple {ANSWER} and complex {[ANS1][ANS2]}
+                $answers = $this->parse_answer_alternatives($answer_part);
+                
+                // Look for optional feedback on following lines (before next question)
+                $feedback = '';
+                $j = $i + 1;
+                while ($j < count($question_lines)) {
+                    $next_line = $question_lines[$j];
+                    
+                    // Stop if we hit another question or empty line
+                    if (empty($next_line) || preg_match(self::SHORT_ANSWER_PATTERN, $next_line)) {
+                        break;
+                    }
+                    
+                    // Accumulate feedback
+                    if (!empty($feedback)) {
+                        $feedback .= "\n";
+                    }
+                    $feedback .= $next_line;
+                    $j++;
+                }
+                
+                // Create question
+                $questions[] = array(
+                    'type' => 'short_answer',
+                    'question' => $question_text,
+                    // Multiple correct answers separated by pipe (|) for flexible matching
+                    // The quiz handler checks user input against each alternative (case-insensitive)
+                    'correct_answer' => implode('|', $answers),
+                    'points' => 1,
+                    'correct_feedback' => '',
+                    'incorrect_feedback' => trim($feedback) // Feedback shows when answer is wrong
+                );
+                
+                // Skip past any feedback lines we consumed
+                $i = $j;
+            } else {
+                $i++;
+            }
+        }
+        
+        return array(
+            'title' => $title,
+            'questions' => $questions
+        );
+    }
+    
+    /**
+     * Parse answer alternatives from curly braces
+     * Handles: {ANSWER} or {[ANS1][ANS2][ANS3]}
+     */
+    private function parse_answer_alternatives($answer_part) {
+        $answers = array();
+        
+        // Check if it has bracket notation [ANS1][ANS2]
+        if (preg_match_all('/\[([^\]]+)\]/', $answer_part, $bracket_matches)) {
+            // Multiple alternatives in brackets
+            $answers = $bracket_matches[1];
+        } else {
+            // Single answer, no brackets
+            $answers = array(trim($answer_part));
+        }
+        
+        // Clean up answers
+        $answers = array_map('trim', $answers);
+        $answers = array_filter($answers);
+        
+        return $answers;
+    }
+    
+    /**
+     * Parse true/false format questions (original parser)
+     */
+    private function parse_true_false_format($text) {
         $lines = explode("\n", $text);
         $lines = array_map('trim', $lines);
         
