@@ -179,9 +179,11 @@ body.ielts-resource-single .content-area {
             </style>
             
             <?php
-            // Previous/Next resource navigation within the lesson
+            // Previous/Next navigation within the lesson (includes both resources and exercises)
             if ($lesson_id) {
                 global $wpdb;
+                
+                // Get all resources for this lesson
                 $resource_ids = $wpdb->get_col($wpdb->prepare("
                     SELECT DISTINCT post_id 
                     FROM {$wpdb->postmeta} 
@@ -189,9 +191,19 @@ body.ielts-resource-single .content-area {
                        OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
                 ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
                 
-                $all_resources = array();
+                // Get all quizzes for this lesson
+                $quiz_ids = $wpdb->get_col($wpdb->prepare("
+                    SELECT DISTINCT post_id 
+                    FROM {$wpdb->postmeta} 
+                    WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+                       OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
+                ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+                
+                // Combine all content items
+                $all_items = array();
+                
                 if (!empty($resource_ids)) {
-                    $all_resources = get_posts(array(
+                    $resources = get_posts(array(
                         'post_type' => 'ielts_resource',
                         'posts_per_page' => -1,
                         'post__in' => $resource_ids,
@@ -199,39 +211,110 @@ body.ielts-resource-single .content-area {
                         'order' => 'ASC',
                         'post_status' => 'publish'
                     ));
+                    foreach ($resources as $resource_item) {
+                        $all_items[] = array(
+                            'post' => $resource_item,
+                            'type' => 'resource',
+                            'order' => $resource_item->menu_order
+                        );
+                    }
                 }
                 
+                if (!empty($quiz_ids)) {
+                    $quizzes = get_posts(array(
+                        'post_type' => 'ielts_quiz',
+                        'posts_per_page' => -1,
+                        'post__in' => $quiz_ids,
+                        'orderby' => 'menu_order',
+                        'order' => 'ASC',
+                        'post_status' => 'publish'
+                    ));
+                    foreach ($quizzes as $quiz) {
+                        $all_items[] = array(
+                            'post' => $quiz,
+                            'type' => 'quiz',
+                            'order' => $quiz->menu_order
+                        );
+                    }
+                }
+                
+                // Sort by menu order
+                usort($all_items, function($a, $b) {
+                    return $a['order'] - $b['order'];
+                });
+                
+                // Find current resource and get previous/next items
                 $current_index = -1;
-                foreach ($all_resources as $index => $r) {
-                    if ($r->ID == $resource_id) {
+                foreach ($all_items as $index => $item) {
+                    if ($item['post']->ID == $resource_id) {
                         $current_index = $index;
                         break;
                     }
                 }
                 
-                $prev_resource = ($current_index > 0) ? $all_resources[$current_index - 1] : null;
-                $next_resource = ($current_index >= 0 && $current_index < count($all_resources) - 1) ? $all_resources[$current_index + 1] : null;
+                $prev_item = ($current_index > 0) ? $all_items[$current_index - 1] : null;
+                $next_item = ($current_index >= 0 && $current_index < count($all_items) - 1) ? $all_items[$current_index + 1] : null;
                 ?>
                 
-                <?php if ($prev_resource || $next_resource): ?>
+                <?php if ($prev_item || $next_item): ?>
                     <div class="ielts-navigation">
                         <div class="nav-prev">
-                            <?php if ($prev_resource): ?>
-                                <a href="<?php echo get_permalink($prev_resource->ID); ?>" class="nav-link">
+                            <?php if ($prev_item): ?>
+                                <?php
+                                // Get appropriate URL for the previous item
+                                if ($prev_item['type'] === 'quiz') {
+                                    // Check if quiz should open in fullscreen
+                                    $layout_type = get_post_meta($prev_item['post']->ID, '_ielts_cm_layout_type', true);
+                                    $open_as_popup = get_post_meta($prev_item['post']->ID, '_ielts_cm_open_as_popup', true);
+                                    $is_cbt = ($layout_type === 'computer_based');
+                                    $use_fullscreen = $is_cbt && $open_as_popup;
+                                    
+                                    if ($use_fullscreen) {
+                                        $prev_url = add_query_arg('fullscreen', '1', get_permalink($prev_item['post']->ID));
+                                    } else {
+                                        $prev_url = get_permalink($prev_item['post']->ID);
+                                    }
+                                    $prev_label = __('Previous Exercise', 'ielts-course-manager');
+                                } else {
+                                    $prev_url = get_permalink($prev_item['post']->ID);
+                                    $prev_label = __('Previous Sub Lesson', 'ielts-course-manager');
+                                }
+                                ?>
+                                <a href="<?php echo esc_url($prev_url); ?>" class="nav-link">
                                     <span class="nav-arrow">&laquo;</span>
                                     <span class="nav-label">
-                                        <small><?php _e('Previous Sub Lesson', 'ielts-course-manager'); ?></small>
-                                        <strong><?php echo esc_html($prev_resource->post_title); ?></strong>
+                                        <small><?php echo esc_html($prev_label); ?></small>
+                                        <strong><?php echo esc_html($prev_item['post']->post_title); ?></strong>
                                     </span>
                                 </a>
                             <?php endif; ?>
                         </div>
                         <div class="nav-next">
-                            <?php if ($next_resource): ?>
-                                <a href="<?php echo get_permalink($next_resource->ID); ?>" class="nav-link">
+                            <?php if ($next_item): ?>
+                                <?php
+                                // Get appropriate URL for the next item
+                                if ($next_item['type'] === 'quiz') {
+                                    // Check if quiz should open in fullscreen
+                                    $layout_type = get_post_meta($next_item['post']->ID, '_ielts_cm_layout_type', true);
+                                    $open_as_popup = get_post_meta($next_item['post']->ID, '_ielts_cm_open_as_popup', true);
+                                    $is_cbt = ($layout_type === 'computer_based');
+                                    $use_fullscreen = $is_cbt && $open_as_popup;
+                                    
+                                    if ($use_fullscreen) {
+                                        $next_url = add_query_arg('fullscreen', '1', get_permalink($next_item['post']->ID));
+                                    } else {
+                                        $next_url = get_permalink($next_item['post']->ID);
+                                    }
+                                    $next_label = __('Next Exercise', 'ielts-course-manager');
+                                } else {
+                                    $next_url = get_permalink($next_item['post']->ID);
+                                    $next_label = __('Next Sub Lesson', 'ielts-course-manager');
+                                }
+                                ?>
+                                <a href="<?php echo esc_url($next_url); ?>" class="nav-link">
                                     <span class="nav-label">
-                                        <small><?php _e('Next Sub Lesson', 'ielts-course-manager'); ?></small>
-                                        <strong><?php echo esc_html($next_resource->post_title); ?></strong>
+                                        <small><?php echo esc_html($next_label); ?></small>
+                                        <strong><?php echo esc_html($next_item['post']->post_title); ?></strong>
                                     </span>
                                     <span class="nav-arrow">&raquo;</span>
                                 </a>
