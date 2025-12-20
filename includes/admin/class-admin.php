@@ -1168,17 +1168,10 @@ class IELTS_CM_Admin {
                 } else if (type === 'summary_completion') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').show();
+                    container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
-                    correctAnswerField.find('label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
-                    
-                    // Convert to input if it's currently a dropdown
-                    if (correctAnswerInput.is('select')) {
-                        var fieldName = correctAnswerInput.attr('name');
-                        var inputHtml = '<input type="text" name="' + fieldName + '" value="' + currentValue + '" style="width: 100%;">';
-                        correctAnswerInput.replaceWith(inputHtml);
-                    }
-                    correctAnswerField.show();
+                    container.find('.summary-completion-field').show();
+                    correctAnswerField.hide();
                 } else if (type === 'dropdown_paragraph') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
@@ -1313,6 +1306,78 @@ class IELTS_CM_Admin {
                 } else {
                     alert('<?php printf(__('You must have at least %d options for each dropdown.', 'ielts-course-manager'), self::MIN_DROPDOWN_OPTIONS); ?>');
                 }
+            });
+            
+            // Summary completion field refresh handler
+            $(document).on('click', '.refresh-summary-fields', function() {
+                var questionIndex = $(this).data('question-index');
+                var container = $(this).siblings('.summary-fields-container');
+                var questionText = $(this).closest('.question-item').find('textarea[name*="[question]"]').val();
+                
+                // Parse [field N] placeholders from question text
+                var fieldPattern = /\[field\s+(\d+)\]/gi;
+                var matches = [];
+                var match;
+                while ((match = fieldPattern.exec(questionText)) !== null) {
+                    var fieldNum = parseInt(match[1]);
+                    if (matches.indexOf(fieldNum) === -1) {
+                        matches.push(fieldNum);
+                    }
+                }
+                
+                // Sort field numbers
+                matches.sort(function(a, b) { return a - b; });
+                
+                if (matches.length === 0) {
+                    alert('<?php _e('No [field N] placeholders found in question text. Add placeholders like [field 1], [field 2], etc.', 'ielts-course-manager'); ?>');
+                    return;
+                }
+                
+                // Get existing field data
+                var existingFields = {};
+                container.find('.summary-field-item').each(function() {
+                    var fieldNum = $(this).data('field-num');
+                    existingFields[fieldNum] = {
+                        answer: $(this).find('input[name*="[answer]"]').val() || '',
+                        correct_feedback: $(this).find('textarea[name*="[correct_feedback]"]').val() || '',
+                        incorrect_feedback: $(this).find('textarea[name*="[incorrect_feedback]"]').val() || '',
+                        no_answer_feedback: $(this).find('textarea[name*="[no_answer_feedback]"]').val() || ''
+                    };
+                });
+                
+                // Clear and rebuild
+                container.empty();
+                
+                matches.forEach(function(fieldNum) {
+                    var fieldData = existingFields[fieldNum] || {
+                        answer: '',
+                        correct_feedback: '',
+                        incorrect_feedback: '',
+                        no_answer_feedback: ''
+                    };
+                    
+                    var fieldHtml = '<div class="summary-field-item" data-field-num="' + fieldNum + '" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">' +
+                        '<h5 style="margin-top: 0;"><?php _e('Field', 'ielts-course-manager'); ?> ' + fieldNum + '</h5>' +
+                        '<p>' +
+                        '<label><?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?></label><br>' +
+                        '<input type="text" name="questions[' + questionIndex + '][summary_fields][' + fieldNum + '][answer]" value="' + fieldData.answer + '" style="width: 100%;" placeholder="<?php _e('e.g., cars|vehicles|automobiles', 'ielts-course-manager'); ?>">' +
+                        '</p>' +
+                        '<p>' +
+                        '<label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>' +
+                        '<textarea name="questions[' + questionIndex + '][summary_fields][' + fieldNum + '][correct_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers correctly', 'ielts-course-manager'); ?>">' + fieldData.correct_feedback + '</textarea>' +
+                        '</p>' +
+                        '<p>' +
+                        '<label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>' +
+                        '<textarea name="questions[' + questionIndex + '][summary_fields][' + fieldNum + '][incorrect_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers incorrectly', 'ielts-course-manager'); ?>">' + fieldData.incorrect_feedback + '</textarea>' +
+                        '</p>' +
+                        '<p>' +
+                        '<label><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></label><br>' +
+                        '<textarea name="questions[' + questionIndex + '][summary_fields][' + fieldNum + '][no_answer_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student leaves field blank', 'ielts-course-manager'); ?>">' + fieldData.no_answer_feedback + '</textarea>' +
+                        '</p>' +
+                        '</div>';
+                    
+                    container.append(fieldHtml);
+                });
             });
             
             // Initialize drag and drop for questions
@@ -1841,13 +1906,76 @@ class IELTS_CM_Admin {
                 <input type="hidden" class="dropdown-paragraph-correct-answer" name="questions[<?php echo $index; ?>][correct_answer]" value="<?php echo esc_attr(isset($question['correct_answer']) ? $question['correct_answer'] : ''); ?>">
             </div>
             
+            <!-- Summary Completion Fields -->
+            <div class="summary-completion-field" style="<?php echo (isset($question['type']) && $question['type'] === 'summary_completion') ? '' : 'display:none;'; ?>">
+                <div style="margin-bottom: 15px; padding: 15px; background: #f0f6fc; border-left: 4px solid #0969da;">
+                    <h5 style="margin-top: 0;"><?php _e('How to Use Summary Completion', 'ielts-course-manager'); ?></h5>
+                    <p><?php _e('In the question text above, use placeholders like [field 1], [field 2], [field 3], etc. to mark where input fields should appear.', 'ielts-course-manager'); ?></p>
+                    <p><strong><?php _e('Example:', 'ielts-course-manager'); ?></strong> <?php _e('"There are lots of types of [field 1]. The most popular is [field 2] and the most expensive is [field 3]."', 'ielts-course-manager'); ?></p>
+                    <p><?php _e('Then, for each numbered field, add the correct answer and feedback below. Each field will count as a separate question.', 'ielts-course-manager'); ?></p>
+                </div>
+                
+                <h5><?php _e('Field Answers', 'ielts-course-manager'); ?></h5>
+                <div class="summary-fields-container" data-question-index="<?php echo $index; ?>">
+                    <?php
+                    // Get existing summary fields or parse from question text
+                    $summary_fields = array();
+                    
+                    if (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+                        $summary_fields = $question['summary_fields'];
+                    } elseif (isset($question['question'])) {
+                        // Parse [field N] from question text
+                        preg_match_all('/\[field\s+(\d+)\]/i', $question['question'], $matches);
+                        if (!empty($matches[1])) {
+                            foreach ($matches[1] as $field_num) {
+                                if (!isset($summary_fields[$field_num])) {
+                                    $summary_fields[$field_num] = array(
+                                        'answer' => '',
+                                        'correct_feedback' => '',
+                                        'incorrect_feedback' => '',
+                                        'no_answer_feedback' => ''
+                                    );
+                                }
+                            }
+                        }
+                    }
+                    
+                    // Sort by field number
+                    ksort($summary_fields);
+                    
+                    foreach ($summary_fields as $field_num => $field_data):
+                    ?>
+                        <div class="summary-field-item" data-field-num="<?php echo esc_attr($field_num); ?>" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">
+                            <h5 style="margin-top: 0;"><?php printf(__('Field %s', 'ielts-course-manager'), $field_num); ?></h5>
+                            <p>
+                                <label><?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?></label><br>
+                                <input type="text" name="questions[<?php echo $index; ?>][summary_fields][<?php echo esc_attr($field_num); ?>][answer]" value="<?php echo esc_attr(isset($field_data['answer']) ? $field_data['answer'] : ''); ?>" style="width: 100%;" placeholder="<?php _e('e.g., cars|vehicles|automobiles', 'ielts-course-manager'); ?>">
+                            </p>
+                            <p>
+                                <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                                <textarea name="questions[<?php echo $index; ?>][summary_fields][<?php echo esc_attr($field_num); ?>][correct_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers correctly', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($field_data['correct_feedback']) ? $field_data['correct_feedback'] : ''); ?></textarea>
+                            </p>
+                            <p>
+                                <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                                <textarea name="questions[<?php echo $index; ?>][summary_fields][<?php echo esc_attr($field_num); ?>][incorrect_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers incorrectly', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($field_data['incorrect_feedback']) ? $field_data['incorrect_feedback'] : ''); ?></textarea>
+                            </p>
+                            <p>
+                                <label><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                                <textarea name="questions[<?php echo $index; ?>][summary_fields][<?php echo esc_attr($field_num); ?>][no_answer_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student leaves field blank', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($field_data['no_answer_feedback']) ? $field_data['no_answer_feedback'] : ''); ?></textarea>
+                            </p>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <button type="button" class="button refresh-summary-fields" data-question-index="<?php echo $index; ?>"><?php _e('Refresh Fields from Question Text', 'ielts-course-manager'); ?></button>
+            </div>
+            
             <!-- Legacy options field (hidden, kept for non-MC questions) -->
             <p class="options-field-legacy" style="display: none;">
                 <label><?php _e('Options (one per line)', 'ielts-course-manager'); ?></label><br>
                 <textarea name="questions[<?php echo $index; ?>][options]" rows="4" style="width: 100%;"><?php echo esc_textarea(isset($question['options']) ? $question['options'] : ''); ?></textarea>
             </p>
             
-            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph'))) ? 'display:none;' : ''; ?>">
+            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph', 'summary_completion'))) ? 'display:none;' : ''; ?>">
                 <label><?php _e('Correct Answer', 'ielts-course-manager'); ?></label><br>
                 <?php if (isset($question['type']) && $question['type'] === 'true_false'): ?>
                     <select name="questions[<?php echo $index; ?>][correct_answer]" style="width: 100%;">
@@ -1988,6 +2116,22 @@ class IELTS_CM_Admin {
                     </div>
                 </div>
                 <button type="button" class="button add-mc-option" data-question-index="QUESTION_INDEX"><?php _e('Add Option', 'ielts-course-manager'); ?></button>
+            </div>
+            
+            <!-- Summary Completion Fields -->
+            <div class="summary-completion-field" style="display: none;">
+                <div style="margin-bottom: 15px; padding: 15px; background: #f0f6fc; border-left: 4px solid #0969da;">
+                    <h5 style="margin-top: 0;"><?php _e('How to Use Summary Completion', 'ielts-course-manager'); ?></h5>
+                    <p><?php _e('In the question text above, use placeholders like [field 1], [field 2], [field 3], etc. to mark where input fields should appear.', 'ielts-course-manager'); ?></p>
+                    <p><strong><?php _e('Example:', 'ielts-course-manager'); ?></strong> <?php _e('"There are lots of types of [field 1]. The most popular is [field 2] and the most expensive is [field 3]."', 'ielts-course-manager'); ?></p>
+                    <p><?php _e('Then, for each numbered field, add the correct answer and feedback below. Each field will count as a separate question.', 'ielts-course-manager'); ?></p>
+                </div>
+                
+                <h5><?php _e('Field Answers', 'ielts-course-manager'); ?></h5>
+                <div class="summary-fields-container" data-question-index="QUESTION_INDEX">
+                    <!-- Fields will be dynamically added here based on question text -->
+                </div>
+                <button type="button" class="button refresh-summary-fields" data-question-index="QUESTION_INDEX"><?php _e('Refresh Fields from Question Text', 'ielts-course-manager'); ?></button>
             </div>
             
             <p class="correct-answer-field" style="display: none;">

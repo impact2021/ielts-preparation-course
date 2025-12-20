@@ -57,6 +57,9 @@ class IELTS_CM_Quiz_Handler {
                     }
                 }
                 $max_score += max(1, $correct_count); // At least 1 point
+            } elseif ($question['type'] === 'summary_completion' && isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+                // Summary completion with fields - each field counts as 1 point
+                $max_score += count($question['summary_fields']);
             } elseif ($question['type'] === 'headings') {
                 // Headings questions - independent implementation
                 $max_score += isset($question['points']) ? floatval($question['points']) : 1;
@@ -85,6 +88,70 @@ class IELTS_CM_Quiz_Handler {
                 
                 // Store correct indices for multi-select so frontend can highlight them
                 $correct_answer = isset($result['correct_indices']) ? $result['correct_indices'] : array();
+            } elseif ($question['type'] === 'summary_completion' && isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+                // Summary completion with fields - check each field separately
+                $field_results = array();
+                $all_correct = true;
+                $any_answered = false;
+                
+                foreach ($question['summary_fields'] as $field_num => $field_data) {
+                    $field_answer_key = $index . '_field_' . $field_num;
+                    $user_field_answer = isset($answers[$field_answer_key]) ? trim($answers[$field_answer_key]) : '';
+                    
+                    $field_correct = false;
+                    $field_feedback = '';
+                    
+                    if (!empty($user_field_answer)) {
+                        $any_answered = true;
+                        // Check if answer is correct
+                        $accepted_answers = isset($field_data['answer']) ? explode('|', $field_data['answer']) : array();
+                        foreach ($accepted_answers as $accepted) {
+                            if (strcasecmp(trim($accepted), $user_field_answer) === 0) {
+                                $field_correct = true;
+                                break;
+                            }
+                        }
+                        
+                        if ($field_correct) {
+                            $points_earned += 1;
+                            $field_feedback = isset($field_data['correct_feedback']) && !empty($field_data['correct_feedback']) 
+                                ? wp_kses_post($field_data['correct_feedback']) 
+                                : '';
+                        } else {
+                            $all_correct = false;
+                            $field_feedback = isset($field_data['incorrect_feedback']) && !empty($field_data['incorrect_feedback']) 
+                                ? wp_kses_post($field_data['incorrect_feedback']) 
+                                : '';
+                        }
+                    } else {
+                        // No answer provided for this field
+                        $all_correct = false;
+                        $field_feedback = isset($field_data['no_answer_feedback']) && !empty($field_data['no_answer_feedback']) 
+                            ? wp_kses_post($field_data['no_answer_feedback']) 
+                            : '';
+                    }
+                    
+                    $field_results[$field_num] = array(
+                        'correct' => $field_correct,
+                        'feedback' => $field_feedback,
+                        'user_answer' => $user_field_answer
+                    );
+                }
+                
+                $score += $points_earned;
+                $is_correct = $all_correct && $any_answered;
+                
+                // Build combined feedback
+                $feedback_parts = array();
+                foreach ($field_results as $field_num => $field_result) {
+                    if (!empty($field_result['feedback'])) {
+                        $feedback_parts[] = '<strong>' . sprintf(__('Field %s:', 'ielts-course-manager'), $field_num) . '</strong> ' . $field_result['feedback'];
+                    }
+                }
+                $feedback = !empty($feedback_parts) ? implode('<br>', $feedback_parts) : '';
+                
+                // Store field results for display
+                $correct_answer = array('field_results' => $field_results);
             } elseif ($question['type'] === 'headings') {
                 // Headings - independent implementation
                 $user_answer = isset($answers[$index]) ? $answers[$index] : null;
