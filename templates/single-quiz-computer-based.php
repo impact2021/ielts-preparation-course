@@ -26,9 +26,91 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
 $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
 // Check if we're in fullscreen mode
 $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
+
+// Calculate next URL for navigation (same logic as in quiz-handler)
+$next_url = '';
+if ($lesson_id) {
+    global $wpdb;
+    // Get all resources and quizzes for this lesson
+    $resource_ids = $wpdb->get_col($wpdb->prepare("
+        SELECT DISTINCT post_id 
+        FROM {$wpdb->postmeta} 
+        WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+           OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
+    ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+    
+    $quiz_ids = $wpdb->get_col($wpdb->prepare("
+        SELECT DISTINCT post_id 
+        FROM {$wpdb->postmeta} 
+        WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+           OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
+    ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+    
+    // Combine all content items
+    $all_items = array();
+    
+    if (!empty($resource_ids)) {
+        $resources = get_posts(array(
+            'post_type' => 'ielts_resource',
+            'posts_per_page' => -1,
+            'post__in' => $resource_ids,
+            'orderby' => 'menu_order',
+            'order' => 'ASC',
+            'post_status' => 'publish'
+        ));
+        foreach ($resources as $resource) {
+            $all_items[] = array('post' => $resource, 'order' => $resource->menu_order);
+        }
+    }
+    
+    if (!empty($quiz_ids)) {
+        $quizzes = get_posts(array(
+            'post_type' => 'ielts_quiz',
+            'posts_per_page' => -1,
+            'post__in' => $quiz_ids,
+            'orderby' => 'menu_order',
+            'order' => 'ASC',
+            'post_status' => 'publish'
+        ));
+        foreach ($quizzes as $q) {
+            $all_items[] = array('post' => $q, 'order' => $q->menu_order);
+        }
+    }
+    
+    // Sort by menu order
+    usort($all_items, function($a, $b) {
+        return $a['order'] - $b['order'];
+    });
+    
+    // Find current quiz and get next item
+    $current_index = -1;
+    foreach ($all_items as $index => $item) {
+        if ($item['post']->ID == $quiz->ID) {
+            $current_index = $index;
+            break;
+        }
+    }
+    
+    // If there's a next item in this lesson, get its URL
+    if ($current_index >= 0 && $current_index < count($all_items) - 1) {
+        $next_post = $all_items[$current_index + 1]['post'];
+        // For CBT quizzes with fullscreen enabled, add fullscreen parameter
+        if ($next_post->post_type === 'ielts_quiz') {
+            $next_layout_type = get_post_meta($next_post->ID, '_ielts_cm_layout_type', true);
+            $next_open_as_popup = get_post_meta($next_post->ID, '_ielts_cm_open_as_popup', true);
+            if ($next_layout_type === 'computer_based' && $next_open_as_popup) {
+                $next_url = add_query_arg('fullscreen', '1', get_permalink($next_post->ID));
+            } else {
+                $next_url = get_permalink($next_post->ID);
+            }
+        } else {
+            $next_url = get_permalink($next_post->ID);
+        }
+    }
+}
 ?>
 
-<div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>">
+<div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>" data-next-url="<?php echo esc_attr($next_url); ?>">
     <?php 
     // Show fullscreen notice only if popup is enabled AND we're not already in fullscreen mode
     $show_fullscreen_notice = $open_as_popup && !$is_fullscreen;
@@ -93,8 +175,13 @@ $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
             <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
                 <div class="timer-left-section">
                     <?php if ($course_id): ?>
-                    <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="return-to-course-link" id="return-to-course-link">
-                        <?php _e('< Return to course', 'ielts-course-manager'); ?>
+                    <?php 
+                    // Use next_url if available, otherwise return to course
+                    $return_link_url = $next_url ? $next_url : get_permalink($course_id);
+                    $return_link_text = $next_url ? __('Next page >', 'ielts-course-manager') : __('< Return to course', 'ielts-course-manager');
+                    ?>
+                    <a href="<?php echo esc_url($return_link_url); ?>" class="return-to-course-link" id="return-to-course-link">
+                        <?php echo esc_html($return_link_text); ?>
                     </a>
                     <?php endif; ?>
                 </div>

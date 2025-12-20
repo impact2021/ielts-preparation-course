@@ -246,7 +246,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
             text-align: center;
         }
         .ielts-content-table .content-type-col {
-            width: 150px;
+            width: 180px;
         }
         .ielts-content-table .content-score-col {
             width: 360px;
@@ -256,7 +256,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
             text-align: center;
         }
         .ielts-content-table .content-action-col {
-            width: 120px;
+            width: 180px;
             text-align: center;
         }
         .ielts-content-table .content-action {
