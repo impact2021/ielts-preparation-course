@@ -11,6 +11,9 @@ class IELTS_CM_Admin {
     
     private $processing_quiz_save = false;
     
+    // Minimum number of options required for dropdown and multiple choice questions
+    const MIN_DROPDOWN_OPTIONS = 2;
+    
     public function init() {
         // Add meta boxes
         add_action('add_meta_boxes', array($this, 'add_meta_boxes'));
@@ -1104,16 +1107,19 @@ class IELTS_CM_Admin {
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').hide();
+                    container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
                 } else if (type === 'multi_select') {
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').show();
                     container.find('.general-feedback-field').show();
+                    container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
                 } else if (type === 'true_false') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
+                    container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.find('label').text('<?php _e('Correct Answer', 'ielts-course-manager'); ?>');
                     
                     // Convert to dropdown if it's currently an input
@@ -1133,6 +1139,7 @@ class IELTS_CM_Admin {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
+                    container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.find('label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
                     
                     // Convert to input if it's currently a dropdown
@@ -1146,6 +1153,7 @@ class IELTS_CM_Admin {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
+                    container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.find('label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
                     
                     // Convert to input if it's currently a dropdown
@@ -1160,11 +1168,19 @@ class IELTS_CM_Admin {
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').hide();
+                    container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
                 } else if (type === 'essay') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
+                    container.find('.dropdown-paragraph-field').hide();
+                    correctAnswerField.hide();
+                } else if (type === 'dropdown_paragraph') {
+                    container.find('.mc-options-field').hide();
+                    container.find('.multi-select-settings').hide();
+                    container.find('.general-feedback-field').show();
+                    container.find('.dropdown-paragraph-field').show();
                     correctAnswerField.hide();
                 }
             });
@@ -1199,11 +1215,100 @@ class IELTS_CM_Admin {
             // Remove multiple choice option
             $(document).on('click', '.remove-mc-option', function() {
                 var container = $(this).closest('.mc-options-container');
-                // Ensure at least 2 options remain
-                if (container.find('.mc-option-item').length > 2) {
+                var minOptions = <?php echo self::MIN_DROPDOWN_OPTIONS; ?>;
+                // Ensure at least minimum options remain
+                if (container.find('.mc-option-item').length > minOptions) {
                     $(this).closest('.mc-option-item').remove();
                 } else {
-                    alert('<?php _e('You must have at least 2 options for a multiple choice question.', 'ielts-course-manager'); ?>');
+                    alert('<?php printf(__('You must have at least %d options for a multiple choice question.', 'ielts-course-manager'), self::MIN_DROPDOWN_OPTIONS); ?>');
+                }
+            });
+            
+            // Dropdown paragraph handlers
+            $(document).on('click', '.add-dropdown-group', function() {
+                var questionIndex = $(this).data('question-index');
+                var container = $(this).siblings('.dropdown-options-container');
+                
+                // Find next position number
+                var nextPosition = 1;
+                container.find('.dropdown-option-group').each(function() {
+                    var pos = parseInt($(this).data('position'));
+                    if (pos >= nextPosition) {
+                        nextPosition = pos + 1;
+                    }
+                });
+                
+                var dropdownHtml = '<div class="dropdown-option-group" data-position="' + nextPosition + '" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">' +
+                    '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">' +
+                    '<h5 style="margin: 0;"><?php _e('Dropdown ___', 'ielts-course-manager'); ?><span class="dropdown-position">' + nextPosition + '</span>___</h5>' +
+                    '<button type="button" class="button remove-dropdown-group"><?php _e('Remove Dropdown', 'ielts-course-manager'); ?></button>' +
+                    '</div>' +
+                    '<input type="hidden" name="questions[' + questionIndex + '][dropdown_options][' + nextPosition + '][position]" value="' + nextPosition + '">' +
+                    '<div class="dropdown-option-items">' +
+                    '<div class="dropdown-option-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">' +
+                    '<div style="flex: 0 0 30px;">' +
+                    '<label style="cursor: pointer; display: block;">' +
+                    '<input type="radio" name="questions[' + questionIndex + '][dropdown_options][' + nextPosition + '][correct]" value="0" checked style="margin: 5px 0 0 0;">' +
+                    '<small style="display: block; margin-top: 3px;"><?php _e('Correct', 'ielts-course-manager'); ?></small>' +
+                    '</label>' +
+                    '</div>' +
+                    '<div style="flex: 1;">' +
+                    '<input type="text" name="questions[' + questionIndex + '][dropdown_options][' + nextPosition + '][options][]" placeholder="<?php _e('Enter option text', 'ielts-course-manager'); ?>" style="width: 100%;">' +
+                    '</div>' +
+                    '<button type="button" class="button remove-dropdown-option"><?php _e('Remove', 'ielts-course-manager'); ?></button>' +
+                    '</div>' +
+                    '<div class="dropdown-option-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">' +
+                    '<div style="flex: 0 0 30px;">' +
+                    '<label style="cursor: pointer; display: block;">' +
+                    '<input type="radio" name="questions[' + questionIndex + '][dropdown_options][' + nextPosition + '][correct]" value="1" style="margin: 5px 0 0 0;">' +
+                    '<small style="display: block; margin-top: 3px;"><?php _e('Correct', 'ielts-course-manager'); ?></small>' +
+                    '</label>' +
+                    '</div>' +
+                    '<div style="flex: 1;">' +
+                    '<input type="text" name="questions[' + questionIndex + '][dropdown_options][' + nextPosition + '][options][]" placeholder="<?php _e('Enter option text', 'ielts-course-manager'); ?>" style="width: 100%;">' +
+                    '</div>' +
+                    '<button type="button" class="button remove-dropdown-option"><?php _e('Remove', 'ielts-course-manager'); ?></button>' +
+                    '</div>' +
+                    '</div>' +
+                    '<button type="button" class="button add-dropdown-option" data-question-index="' + questionIndex + '" data-dropdown-position="' + nextPosition + '"><?php _e('Add Option', 'ielts-course-manager'); ?></button>' +
+                    '</div>';
+                
+                container.append(dropdownHtml);
+            });
+            
+            $(document).on('click', '.remove-dropdown-group', function() {
+                $(this).closest('.dropdown-option-group').remove();
+            });
+            
+            $(document).on('click', '.add-dropdown-option', function() {
+                var questionIndex = $(this).data('question-index');
+                var dropdownPosition = $(this).data('dropdown-position');
+                var container = $(this).siblings('.dropdown-option-items');
+                var optionIndex = container.find('.dropdown-option-item').length;
+                
+                var optionHtml = '<div class="dropdown-option-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">' +
+                    '<div style="flex: 0 0 30px;">' +
+                    '<label style="cursor: pointer; display: block;">' +
+                    '<input type="radio" name="questions[' + questionIndex + '][dropdown_options][' + dropdownPosition + '][correct]" value="' + optionIndex + '" style="margin: 5px 0 0 0;">' +
+                    '<small style="display: block; margin-top: 3px;"><?php _e('Correct', 'ielts-course-manager'); ?></small>' +
+                    '</label>' +
+                    '</div>' +
+                    '<div style="flex: 1;">' +
+                    '<input type="text" name="questions[' + questionIndex + '][dropdown_options][' + dropdownPosition + '][options][]" placeholder="<?php _e('Enter option text', 'ielts-course-manager'); ?>" style="width: 100%;">' +
+                    '</div>' +
+                    '<button type="button" class="button remove-dropdown-option"><?php _e('Remove', 'ielts-course-manager'); ?></button>' +
+                    '</div>';
+                
+                container.append(optionHtml);
+            });
+            
+            $(document).on('click', '.remove-dropdown-option', function() {
+                var container = $(this).closest('.dropdown-option-items');
+                var minOptions = <?php echo self::MIN_DROPDOWN_OPTIONS; ?>;
+                if (container.find('.dropdown-option-item').length > minOptions) {
+                    $(this).closest('.dropdown-option-item').remove();
+                } else {
+                    alert('<?php printf(__('You must have at least %d options for each dropdown.', 'ielts-course-manager'), self::MIN_DROPDOWN_OPTIONS); ?>');
                 }
             });
             
@@ -1621,13 +1726,125 @@ class IELTS_CM_Admin {
                 <button type="button" class="button add-mc-option" data-question-index="<?php echo $index; ?>"><?php _e('Add Option', 'ielts-course-manager'); ?></button>
             </div>
             
+            <!-- Dropdown Paragraph Options -->
+            <div class="dropdown-paragraph-field" style="<?php echo (isset($question['type']) && $question['type'] === 'dropdown_paragraph') ? '' : 'display:none;'; ?>">
+                <div style="margin-bottom: 15px; padding: 15px; background: #f0f6fc; border-left: 4px solid #0969da;">
+                    <h5 style="margin-top: 0;"><?php _e('How to Use Dropdown Paragraph', 'ielts-course-manager'); ?></h5>
+                    <p><?php _e('In the question text above, use numbered underscores like ___1___, ___2___, etc. to mark where dropdowns should appear.', 'ielts-course-manager'); ?></p>
+                    <p><strong><?php _e('Example:', 'ielts-course-manager'); ?></strong> <?php _e('"I am writing to ___1___ that I will now be unable to meet with you as at ___2___ on March 25th."', 'ielts-course-manager'); ?></p>
+                    <p><?php _e('Then, for each numbered position, add dropdown options below and select the correct answer.', 'ielts-course-manager'); ?></p>
+                </div>
+                
+                <h5><?php _e('Dropdown Options', 'ielts-course-manager'); ?></h5>
+                <div class="dropdown-options-container" data-question-index="<?php echo $index; ?>">
+                    <?php
+                    // Parse existing dropdown options from question
+                    $dropdown_options = array();
+                    
+                    if (isset($question['dropdown_options']) && is_array($question['dropdown_options'])) {
+                        // New format
+                        $dropdown_options = $question['dropdown_options'];
+                    } elseif (isset($question['question'])) {
+                        // Try to parse from old format: 1.[A: option1 B: option2]
+                        $question_text = $question['question'];
+                        preg_match_all('/(\d+)\.\[([^\]]+)\]/i', $question_text, $matches);
+                        
+                        if (!empty($matches[0])) {
+                            foreach ($matches[0] as $match_index => $placeholder) {
+                                $dropdown_num = $matches[1][$match_index];
+                                $options_text = $matches[2][$match_index];
+                                
+                                // Parse options: "A: option1 B: option2"
+                                $option_parts = preg_split('/\s+(?=[A-Z]:\s)/', $options_text);
+                                $options_array = array();
+                                
+                                foreach ($option_parts as $option_part) {
+                                    if (preg_match('/^([A-Z]):\s*(.+)$/i', trim($option_part), $opt_match)) {
+                                        $options_array[] = array(
+                                            'text' => trim($opt_match[2]),
+                                            'is_correct' => false
+                                        );
+                                    }
+                                }
+                                
+                                // Check correct answer
+                                if (isset($question['correct_answer'])) {
+                                    $correct_parts = explode('|', $question['correct_answer']);
+                                    foreach ($correct_parts as $correct_part) {
+                                        if (preg_match('/^' . $dropdown_num . ':([A-Z])$/i', trim($correct_part), $correct_match)) {
+                                            $correct_letter = strtoupper($correct_match[1]);
+                                            $correct_index = ord($correct_letter) - ord('A');
+                                            if (isset($options_array[$correct_index])) {
+                                                $options_array[$correct_index]['is_correct'] = true;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                $dropdown_options[$dropdown_num] = array(
+                                    'position' => $dropdown_num,
+                                    'options' => $options_array
+                                );
+                            }
+                        }
+                    }
+                    
+                    // Sort by position
+                    ksort($dropdown_options);
+                    
+                    foreach ($dropdown_options as $dd_num => $dd_data):
+                        $dd_options = isset($dd_data['options']) ? $dd_data['options'] : array();
+                    ?>
+                        <div class="dropdown-option-group" data-position="<?php echo esc_attr($dd_num); ?>" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <h5 style="margin: 0;"><?php echo sprintf(__('Dropdown ___%s___', 'ielts-course-manager'), '<span class="dropdown-position">' . esc_html($dd_num) . '</span>'); ?></h5>
+                                <button type="button" class="button remove-dropdown-group"><?php _e('Remove Dropdown', 'ielts-course-manager'); ?></button>
+                            </div>
+                            
+                            <input type="hidden" name="questions[<?php echo $index; ?>][dropdown_options][<?php echo esc_attr($dd_num); ?>][position]" value="<?php echo esc_attr($dd_num); ?>">
+                            
+                            <div class="dropdown-option-items">
+                                <?php foreach ($dd_options as $opt_idx => $opt_data): ?>
+                                    <div class="dropdown-option-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                                        <div style="flex: 0 0 30px;">
+                                            <label style="cursor: pointer; display: block;">
+                                                <input type="radio" 
+                                                       name="questions[<?php echo $index; ?>][dropdown_options][<?php echo esc_attr($dd_num); ?>][correct]" 
+                                                       value="<?php echo $opt_idx; ?>"
+                                                       <?php checked(!empty($opt_data['is_correct'])); ?>
+                                                       style="margin: 5px 0 0 0;">
+                                                <small style="display: block; margin-top: 3px;"><?php _e('Correct', 'ielts-course-manager'); ?></small>
+                                            </label>
+                                        </div>
+                                        <div style="flex: 1;">
+                                            <input type="text" 
+                                                   name="questions[<?php echo $index; ?>][dropdown_options][<?php echo esc_attr($dd_num); ?>][options][]" 
+                                                   value="<?php echo esc_attr($opt_data['text']); ?>" 
+                                                   placeholder="<?php _e('Enter option text', 'ielts-course-manager'); ?>"
+                                                   style="width: 100%;">
+                                        </div>
+                                        <button type="button" class="button remove-dropdown-option"><?php _e('Remove', 'ielts-course-manager'); ?></button>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                            
+                            <button type="button" class="button add-dropdown-option" data-question-index="<?php echo $index; ?>" data-dropdown-position="<?php echo esc_attr($dd_num); ?>"><?php _e('Add Option', 'ielts-course-manager'); ?></button>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                
+                <button type="button" class="button add-dropdown-group" data-question-index="<?php echo $index; ?>"><?php _e('Add Dropdown', 'ielts-course-manager'); ?></button>
+                
+                <input type="hidden" class="dropdown-paragraph-correct-answer" name="questions[<?php echo $index; ?>][correct_answer]" value="<?php echo esc_attr(isset($question['correct_answer']) ? $question['correct_answer'] : ''); ?>">
+            </div>
+            
             <!-- Legacy options field (hidden, kept for non-MC questions) -->
             <p class="options-field-legacy" style="display: none;">
                 <label><?php _e('Options (one per line)', 'ielts-course-manager'); ?></label><br>
                 <textarea name="questions[<?php echo $index; ?>][options]" rows="4" style="width: 100%;"><?php echo esc_textarea(isset($question['options']) ? $question['options'] : ''); ?></textarea>
             </p>
             
-            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('essay', 'multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching'))) ? 'display:none;' : ''; ?>">
+            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('essay', 'multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph'))) ? 'display:none;' : ''; ?>">
                 <label><?php _e('Correct Answer', 'ielts-course-manager'); ?></label><br>
                 <?php if (isset($question['type']) && $question['type'] === 'true_false'): ?>
                     <select name="questions[<?php echo $index; ?>][correct_answer]" style="width: 100%;">
@@ -2011,6 +2228,64 @@ class IELTS_CM_Admin {
                         if ($question['type'] === 'multi_select' && isset($question['max_selections'])) {
                             $question_data['max_selections'] = intval($question['max_selections']);
                         }
+                    } elseif ($question['type'] === 'dropdown_paragraph' && isset($question['dropdown_options']) && is_array($question['dropdown_options'])) {
+                        // Handle dropdown paragraph questions
+                        // Store the structured dropdown_options data
+                        $dropdown_options = array();
+                        $correct_answer_parts = array();
+                        $question_text = $question['question'];
+                        
+                        foreach ($question['dropdown_options'] as $position => $dropdown_data) {
+                            if (!isset($dropdown_data['options']) || !is_array($dropdown_data['options'])) {
+                                continue;
+                            }
+                            
+                            $options_for_position = array();
+                            $correct_index = isset($dropdown_data['correct']) ? intval($dropdown_data['correct']) : 0;
+                            
+                            foreach ($dropdown_data['options'] as $idx => $option_text) {
+                                if (empty($option_text)) {
+                                    continue;
+                                }
+                                
+                                $options_for_position[] = array(
+                                    'text' => sanitize_text_field($option_text),
+                                    'is_correct' => ($idx == $correct_index)
+                                );
+                            }
+                            
+                            if (!empty($options_for_position)) {
+                                $dropdown_options[$position] = array(
+                                    'position' => intval($position),
+                                    'options' => $options_for_position
+                                );
+                                
+                                // Build correct answer in format "1:A|2:B|3:C"
+                                // Validate correct_index is within bounds (max 26 options: A-Z)
+                                $correct_index = min($correct_index, 25);
+                                $correct_letter = chr(ord('A') + $correct_index);
+                                $correct_answer_parts[] = $position . ':' . $correct_letter;
+                                
+                                // Convert ___N___ placeholders to N.[A: option1 B: option2] format for frontend
+                                $options_text_parts = array();
+                                foreach ($options_for_position as $opt_idx => $opt_data) {
+                                    // Only process first 26 options (A-Z)
+                                    if ($opt_idx > 25) {
+                                        break;
+                                    }
+                                    $opt_letter = chr(ord('A') + $opt_idx);
+                                    $options_text_parts[] = $opt_letter . ': ' . $opt_data['text'];
+                                }
+                                $options_string = implode(' ', $options_text_parts);
+                                $placeholder_pattern = '/___' . preg_quote($position, '/') . '___/';
+                                $replacement = $position . '.[' . $options_string . ']';
+                                $question_text = preg_replace($placeholder_pattern, $replacement, $question_text);
+                            }
+                        }
+                        
+                        $question_data['dropdown_options'] = $dropdown_options;
+                        $question_data['correct_answer'] = implode('|', $correct_answer_parts);
+                        $question_data['question'] = $question_text; // Update question text with converted format
                     } else {
                         // Non-multiple choice questions
                         $question_data['options'] = isset($question['options']) ? sanitize_textarea_field($question['options']) : '';

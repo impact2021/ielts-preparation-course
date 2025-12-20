@@ -2,6 +2,37 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.41] - 2025-12-20
+
+### Added
+- **Improved Dropdown Paragraph Admin Interface**: Completely redesigned the admin interface for creating dropdown paragraph questions
+  - Admins can now use simple ___1___, ___2___, ___3___ placeholders in the question text
+  - Visual interface to add dropdown options for each numbered position
+  - Radio buttons to select the correct answer for each dropdown
+  - Much more intuitive than the previous format requiring manual `1.[A: option1 B: option2]` syntax
+  - Automatic conversion from admin format (___N___) to internal format (N.[A: ... B: ...]) on save
+  - Backward compatible: existing dropdown paragraph questions continue to work
+
+- **Enhanced JSON Documentation**: Updated the Import Exercise page documentation
+  - Added explanation of admin interface format (___N___ placeholders)
+  - Documented the structured `dropdown_options` field in JSON format
+  - Clarified the relationship between admin UI and exported JSON format
+
+### Changed
+- **Version Update**: Updated plugin version to 2.41
+- **Dropdown Paragraph Storage**: Questions now store both `dropdown_options` (structured) and the converted question text format
+
+### Technical Details
+- Modified `includes/admin/class-admin.php` to add new dropdown-paragraph admin UI
+  - Added `.dropdown-paragraph-field` section with visual dropdown builder
+  - JavaScript handlers for dynamically adding/removing dropdown groups and options
+  - Radio button selection for correct answers
+  - Conversion logic in save_meta_boxes() to transform ___N___ format to N.[A: ... B: ...] format
+- Updated `includes/admin/class-exercise-import-export.php`
+  - Added sanitization for `dropdown_options` field during import
+  - Updated JSON documentation to explain both formats
+  - Added complete example with `dropdown_options` structure
+
 ## [2.40] - 2025-12-20
 
 ### Added
