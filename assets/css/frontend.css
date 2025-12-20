@@ -417,6 +417,25 @@ body.ielts-course-archive .content-area {
     font-size: 1em;
 }
 
+.ielts-single-quiz .answer-input-inline {
+    display: inline-block;
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.ielts-single-quiz .summary-completion-text {
+    line-height: 2.5;
+}
+
+.ielts-single-quiz .summary-completion-text p {
+    margin-bottom: 1.5em;
+}
+
 .ielts-single-quiz .answer-textarea {
     width: 100%;
     padding: 10px;
@@ -927,6 +946,26 @@ body.ielts-course-archive .content-area {
     border: 2px solid #ddd;
     border-radius: 5px;
     transition: border-color 0.2s ease;
+}
+
+.ielts-computer-based-quiz .answer-input-inline {
+    display: inline-block;
+    width: 200px;
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 0 5px;
+    vertical-align: middle;
+    transition: border-color 0.2s ease;
+}
+
+.ielts-computer-based-quiz .summary-completion-text {
+    line-height: 2.5;
+}
+
+.ielts-computer-based-quiz .summary-completion-text p {
+    margin-bottom: 1.5em;
 }
 
 .ielts-computer-based-quiz .answer-input:focus {
