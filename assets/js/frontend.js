@@ -257,9 +257,9 @@
                             html += '<p>Keep studying and try again to improve your score!</p>';
                         }
                         
-                        // Note: Question-by-question feedback is now shown via visual highlighting in the form
-                        // (green/red colors) for both standard and CBT layouts. The detailed feedback section
-                        // that was previously shown inline for standard layout has been removed to match CBT behavior.
+                        // Question-by-question feedback is now shown via visual highlighting (green/red colors) in the form
+                        // for both standard and CBT layouts. This replaces the detailed inline feedback section that was
+                        // previously shown in the modal content for standard layout only.
                         
                         html += '<div class="quiz-actions">';
                         
@@ -413,9 +413,7 @@
                                 }
                             }
                             
-                            // Add text feedback messages (CBT quizzes only)
-                            // Both standard and CBT layouts use visual highlighting (green/red colors)
-                            // But only CBT quizzes support additional per-question text feedback messages
+                            // Add text feedback (CBT only): All layouts use visual highlighting, but CBT also supports per-question text messages
                             if (isCBT && questionResult.feedback) {
                                 // Remove any existing feedback first
                                 questionElement.find('.question-feedback-message').remove();
@@ -436,8 +434,7 @@
                         showCBTResultModal(html, result.next_url, result.course_url);
                         form.find('button[type="submit"]').hide();
                         
-                        // Update the fullscreen timer display to show score (CBT layout specific feature)
-                        // This is separate from the modal behavior - only CBT quizzes have a fullscreen timer element
+                        // Update the fullscreen timer UI component (CBT-specific feature - standard layout doesn't have this element)
                         if (isCBT) {
                             var timerElement = form.find('.quiz-timer-fullscreen');
                             if (timerElement.length > 0) {
