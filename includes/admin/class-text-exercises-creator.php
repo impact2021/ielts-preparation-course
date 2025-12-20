@@ -682,19 +682,21 @@ You have one hour for the complete test (including transferring your answers).</
     private function parse_question_section($text, $marker) {
         // Determine format based on marker and content
         
-        // Check for type markers
+        // For multiple choice variants (headings, matching, etc.), prepend a title with the marker
+        // so the parser can detect the specific subtype
         if (stripos($marker, 'HEADINGS') !== false || 
             stripos($marker, 'MATCHING') !== false || 
             stripos($marker, 'LOCATING') !== false ||
             stripos($marker, 'MULTI SELECT') !== false ||
             stripos($marker, 'MULTIPLE CHOICE') !== false) {
-            // Multiple choice format
-            $parsed = $this->parse_multiple_choice_format($text);
+            // Prepend a title line with the marker so parse_multiple_choice_format can detect the type
+            $text_with_marker = "Questions " . $marker . "\n\n" . $text;
+            $parsed = $this->parse_multiple_choice_format($text_with_marker);
             return isset($parsed['questions']) ? $parsed['questions'] : array();
         }
         
-        // Check for short answer format
-        if (preg_match(self::SHORT_ANSWER_PATTERN, $text)) {
+        // Check for short answer format (must have both numbered questions AND {ANSWER} placeholders)
+        if ($this->is_short_answer_format($text)) {
             $parsed = $this->parse_short_answer_format($text);
             return isset($parsed['questions']) ? $parsed['questions'] : array();
         }
