@@ -14,8 +14,9 @@ class IELTS_CM_Text_Exercises_Creator {
     /**
      * Regex pattern for matching short answer questions
      * Format: number. question text {ANSWER}
+     * The 'm' flag enables multiline mode where ^ matches start of any line, not just start of string
      */
-    const SHORT_ANSWER_PATTERN = '/^(\d+)\.\s+([^\n\r]+?)\s*\{([^}]+)\}/';
+    const SHORT_ANSWER_PATTERN = '/^(\d+)\.\s+([^\n\r]+?)\s*\{([^}]+)\}/m';
     
     /**
      * Initialize the creator
@@ -208,7 +209,8 @@ You have one hour for the complete test (including transferring your answers).</
         }
         
         // Get options
-        $exercise_text = isset($_POST['exercise_text']) ? sanitize_textarea_field($_POST['exercise_text']) : '';
+        // Use wp_strip_all_tags to remove HTML while preserving newlines (sanitize_textarea_field removes newlines)
+        $exercise_text = isset($_POST['exercise_text']) ? wp_strip_all_tags($_POST['exercise_text']) : '';
         $post_status = isset($_POST['post_status']) ? sanitize_text_field($_POST['post_status']) : 'draft';
         
         // Validate post status
