@@ -38,6 +38,7 @@ class IELTS_CM_Admin {
         add_action('wp_ajax_ielts_cm_get_available_exercises', array($this, 'ajax_get_available_exercises'));
         add_action('wp_ajax_ielts_cm_get_available_sublessons', array($this, 'ajax_get_available_sublessons'));
         add_action('wp_ajax_ielts_cm_add_content_to_lesson', array($this, 'ajax_add_content_to_lesson'));
+        add_action('wp_ajax_ielts_cm_clone_course', array($this, 'ajax_clone_course'));
         
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
@@ -92,6 +93,16 @@ class IELTS_CM_Admin {
             'ielts_course',
             'normal',
             'high'
+        );
+        
+        // Clone course meta box (sidebar)
+        add_meta_box(
+            'ielts_cm_clone_course',
+            __('Clone Course', 'ielts-course-manager'),
+            array($this, 'clone_course_meta_box'),
+            'ielts_course',
+            'side',
+            'low'
         );
         
         // Lesson meta box
@@ -294,6 +305,28 @@ class IELTS_CM_Admin {
         }
         </style>
         <?php
+    }
+    
+    /**
+     * Clone course meta box
+     */
+    public function clone_course_meta_box($post) {
+        // Only show for existing courses (not new ones)
+        if ($post->ID && get_post_status($post->ID)) {
+            ?>
+            <div id="ielts-cm-clone-course-box">
+                <p><?php _e('Clone this course with all its lessons, sub-lessons, and exercises.', 'ielts-course-manager'); ?></p>
+                <button type="button" id="ielts-cm-clone-course-btn" class="button button-primary button-large" style="width: 100%;">
+                    <?php _e('Clone Course', 'ielts-course-manager'); ?>
+                </button>
+                <div id="ielts-cm-clone-status" style="margin-top: 10px; display: none;"></div>
+            </div>
+            <?php
+        } else {
+            ?>
+            <p><?php _e('Save the course first before cloning.', 'ielts-course-manager'); ?></p>
+            <?php
+        }
     }
     
     /**
@@ -1111,7 +1144,7 @@ class IELTS_CM_Admin {
                         correctAnswerInput.replaceWith(inputHtml);
                     }
                     correctAnswerField.show();
-                } else if (type === 'headings' || type === 'classifying_matching' || type === 'matching') {
+                } else if (type === 'headings' || type === 'matching_classifying' || type === 'matching') {
                     // These use multiple choice format
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').hide();
@@ -1510,7 +1543,7 @@ class IELTS_CM_Admin {
             </div>
             
             <!-- New structured options for multiple choice -->
-            <div class="mc-options-field" style="<?php echo (isset($question['type']) && !in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'classifying_matching', 'matching'))) ? 'display:none;' : ''; ?>">
+            <div class="mc-options-field" style="<?php echo (isset($question['type']) && !in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching'))) ? 'display:none;' : ''; ?>">
                 <h5><?php _e('Answer Options', 'ielts-course-manager'); ?></h5>
                 <div class="mc-options-container" data-question-index="<?php echo $index; ?>">
                     <?php
@@ -1583,7 +1616,7 @@ class IELTS_CM_Admin {
                 <textarea name="questions[<?php echo $index; ?>][options]" rows="4" style="width: 100%;"><?php echo esc_textarea(isset($question['options']) ? $question['options'] : ''); ?></textarea>
             </p>
             
-            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('essay', 'multiple_choice', 'multi_select', 'headings', 'classifying_matching', 'matching'))) ? 'display:none;' : ''; ?>">
+            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('essay', 'multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching'))) ? 'display:none;' : ''; ?>">
                 <label><?php _e('Correct Answer', 'ielts-course-manager'); ?></label><br>
                 <?php if (isset($question['type']) && $question['type'] === 'true_false'): ?>
                     <select name="questions[<?php echo $index; ?>][correct_answer]" style="width: 100%;">
@@ -3260,5 +3293,188 @@ class IELTS_CM_Admin {
                 'edit_link' => get_edit_post_link($content->ID)
             )
         ));
+    }
+    
+    /**
+     * AJAX handler for cloning a course
+     */
+    public function ajax_clone_course() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_course_meta')) {
+            wp_send_json_error(array('message' => __('Security check failed', 'ielts-course-manager')));
+        }
+        
+        // Check user capabilities
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(array('message' => __('You do not have permission to clone courses', 'ielts-course-manager')));
+        }
+        
+        $course_id = isset($_POST['course_id']) ? intval($_POST['course_id']) : 0;
+        
+        if (!$course_id) {
+            wp_send_json_error(array('message' => __('Invalid course ID', 'ielts-course-manager')));
+        }
+        
+        // Get the original course
+        $original_course = get_post($course_id);
+        
+        if (!$original_course || $original_course->post_type !== 'ielts_course') {
+            wp_send_json_error(array('message' => __('Course not found', 'ielts-course-manager')));
+        }
+        
+        // Clone the course
+        $new_course_id = $this->clone_post($original_course, ' (Copy)');
+        
+        if (!$new_course_id) {
+            wp_send_json_error(array('message' => __('Failed to clone course', 'ielts-course-manager')));
+        }
+        
+        // Get all lessons for this course
+        global $wpdb;
+        $lesson_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT post_id 
+            FROM {$wpdb->postmeta} 
+            WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
+               OR (meta_key = '_ielts_cm_course_ids' AND meta_value LIKE %s)
+        ", $course_id, '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%'));
+        
+        $lesson_map = array(); // Map old lesson IDs to new ones
+        
+        // Clone each lesson
+        if (!empty($lesson_ids)) {
+            foreach ($lesson_ids as $lesson_id) {
+                $original_lesson = get_post($lesson_id);
+                if ($original_lesson && $original_lesson->post_type === 'ielts_lesson') {
+                    $new_lesson_id = $this->clone_post($original_lesson);
+                    
+                    if ($new_lesson_id) {
+                        $lesson_map[$lesson_id] = $new_lesson_id;
+                        
+                        // Update the lesson's course association
+                        update_post_meta($new_lesson_id, '_ielts_cm_course_id', $new_course_id);
+                        update_post_meta($new_lesson_id, '_ielts_cm_course_ids', array($new_course_id));
+                        
+                        // Get all sub-lessons (resources) for this lesson
+                        $resource_ids = get_post_meta($lesson_id, '_ielts_cm_lesson_pages', true);
+                        if (!is_array($resource_ids)) {
+                            $resource_ids = array();
+                        }
+                        
+                        $new_resource_ids = array();
+                        
+                        // Clone each sub-lesson/resource
+                        foreach ($resource_ids as $resource_id) {
+                            $original_resource = get_post($resource_id);
+                            if ($original_resource && $original_resource->post_type === 'ielts_resource') {
+                                $new_resource_id = $this->clone_post($original_resource);
+                                
+                                if ($new_resource_id) {
+                                    $new_resource_ids[] = $new_resource_id;
+                                    // Update resource's lesson association
+                                    update_post_meta($new_resource_id, '_ielts_cm_lesson_ids', array($new_lesson_id));
+                                }
+                            }
+                        }
+                        
+                        // Update lesson's resources
+                        if (!empty($new_resource_ids)) {
+                            update_post_meta($new_lesson_id, '_ielts_cm_lesson_pages', $new_resource_ids);
+                        }
+                        
+                        // Get all exercises for this lesson
+                        $exercise_ids = get_post_meta($lesson_id, '_ielts_cm_exercises', true);
+                        if (!is_array($exercise_ids)) {
+                            $exercise_ids = array();
+                        }
+                        
+                        $new_exercise_ids = array();
+                        
+                        // Clone each exercise/quiz
+                        foreach ($exercise_ids as $exercise_id) {
+                            $original_exercise = get_post($exercise_id);
+                            if ($original_exercise && $original_exercise->post_type === 'ielts_quiz') {
+                                $new_exercise_id = $this->clone_post($original_exercise);
+                                
+                                if ($new_exercise_id) {
+                                    $new_exercise_ids[] = $new_exercise_id;
+                                    // Update exercise's lesson association
+                                    update_post_meta($new_exercise_id, '_ielts_cm_lesson_ids', array($new_lesson_id));
+                                }
+                            }
+                        }
+                        
+                        // Update lesson's exercises
+                        if (!empty($new_exercise_ids)) {
+                            update_post_meta($new_lesson_id, '_ielts_cm_exercises', $new_exercise_ids);
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Get the new course edit link
+        $edit_link = get_edit_post_link($new_course_id);
+        
+        wp_send_json_success(array(
+            'message' => __('Course cloned successfully!', 'ielts-course-manager'),
+            'course_id' => $new_course_id,
+            'edit_link' => $edit_link,
+            'course_title' => get_the_title($new_course_id),
+            'lessons_cloned' => count($lesson_map)
+        ));
+    }
+    
+    /**
+     * Helper function to clone a post with all its meta data
+     */
+    private function clone_post($original_post, $title_suffix = '') {
+        // Create the new post
+        $new_post = array(
+            'post_title'    => $original_post->post_title . $title_suffix,
+            'post_content'  => $original_post->post_content,
+            'post_status'   => 'draft',
+            'post_type'     => $original_post->post_type,
+            'post_author'   => get_current_user_id(),
+            'post_excerpt'  => $original_post->post_excerpt,
+            'menu_order'    => $original_post->menu_order,
+        );
+        
+        $new_post_id = wp_insert_post($new_post);
+        
+        if (is_wp_error($new_post_id)) {
+            return false;
+        }
+        
+        // Clone all post meta
+        $post_meta = get_post_meta($original_post->ID);
+        
+        if ($post_meta) {
+            foreach ($post_meta as $meta_key => $meta_values) {
+                // Skip course/lesson association meta as we'll set those separately
+                if (in_array($meta_key, array('_ielts_cm_course_id', '_ielts_cm_course_ids', '_ielts_cm_lesson_ids', '_ielts_cm_lesson_pages', '_ielts_cm_exercises'))) {
+                    continue;
+                }
+                
+                foreach ($meta_values as $meta_value) {
+                    // Unserialize if needed
+                    $meta_value = maybe_unserialize($meta_value);
+                    add_post_meta($new_post_id, $meta_key, $meta_value);
+                }
+            }
+        }
+        
+        // Clone taxonomies
+        $taxonomies = get_object_taxonomies($original_post->post_type);
+        
+        if ($taxonomies) {
+            foreach ($taxonomies as $taxonomy) {
+                $terms = wp_get_object_terms($original_post->ID, $taxonomy, array('fields' => 'ids'));
+                if ($terms && !is_wp_error($terms)) {
+                    wp_set_object_terms($new_post_id, $terms, $taxonomy);
+                }
+            }
+        }
+        
+        return $new_post_id;
     }
 }

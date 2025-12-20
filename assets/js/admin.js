@@ -487,4 +487,63 @@
         });
     });
     
+    /**
+     * Clone course functionality
+     */
+    $(document).on('click', '#ielts-cm-clone-course-btn', function(e) {
+        e.preventDefault();
+        
+        var $button = $(this);
+        var $status = $('#ielts-cm-clone-status');
+        
+        // Confirm with user
+        if (!confirm('Are you sure you want to clone this course? This will create a copy of the course with all its lessons, sub-lessons, and exercises.')) {
+            return;
+        }
+        
+        // Disable button and show loading
+        $button.prop('disabled', true).text('Cloning...');
+        $status.removeClass('success error').hide();
+        
+        // Get course ID from the page
+        var courseId = $('#post_ID').val();
+        
+        if (!courseId) {
+            $status.addClass('error').text('Error: Course ID not found').fadeIn();
+            $button.prop('disabled', false).text('Clone Course');
+            return;
+        }
+        
+        // Make AJAX request
+        $.ajax({
+            url: ieltsCMAdmin.ajaxUrl,
+            type: 'POST',
+            data: {
+                action: 'ielts_cm_clone_course',
+                nonce: ieltsCMAdmin.courseMetaNonce,
+                course_id: courseId
+            },
+            success: function(response) {
+                if (response.success) {
+                    $status
+                        .addClass('success')
+                        .html(response.data.message + '<br><a href="' + response.data.edit_link + '" target="_blank">Edit cloned course: ' + response.data.course_title + '</a>')
+                        .fadeIn();
+                    
+                    // Reset button after delay
+                    setTimeout(function() {
+                        $button.prop('disabled', false).text('Clone Course');
+                    }, 3000);
+                } else {
+                    $status.addClass('error').text('Error: ' + response.data.message).fadeIn();
+                    $button.prop('disabled', false).text('Clone Course');
+                }
+            },
+            error: function() {
+                $status.addClass('error').text('Error: Failed to clone course. Please try again.').fadeIn();
+                $button.prop('disabled', false).text('Clone Course');
+            }
+        });
+    });
+    
 })(jQuery);

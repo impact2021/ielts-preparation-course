@@ -2,6 +2,25 @@
 
 All notable changes to the IELTS Course Manager plugin will be documented in this file.
 
+## [2.30] - 2025-12-20
+
+### Added
+- **Course Cloning Feature**: New functionality to clone courses with all their content
+  - Added "Clone Course" meta box in the sidebar of course edit pages
+  - Clones the entire course including all lessons, sub-lessons (resources), and exercises
+  - Cloned courses are created as drafts with "(Copy)" suffix in the title
+  - All course meta data, taxonomies, and content are preserved in the clone
+  - Provides direct link to edit the newly cloned course
+  - Perfect for creating variations of existing courses
+
+### Changed
+- **Question Type Renaming**: Renamed "Classifying and Matching Questions" question type
+  - Changed from 'classifying_matching' to 'matching_classifying' for consistency
+  - Works exactly like multiple choice questions (radio button selection)
+  - Maintained for statistical tracking purposes
+  - Updated in quiz handler, admin interface, and both quiz templates
+- **Version Update**: Updated plugin version to 2.30
+
 ## [2.29] - 2025-12-20
 
 ### Changed
