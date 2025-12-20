@@ -16,12 +16,7 @@ class IELTS_Course_Manager {
     protected $shortcodes;
     protected $enrollment;
     protected $admin;
-    protected $converter_page;
-    protected $export_page;
-    protected $enrollment_page;
-    protected $xml_exercises_creator;
     protected $text_exercises_creator;
-    protected $exercise_import_export;
     protected $frontend;
     protected $sync_manager;
     protected $sync_api;
@@ -44,12 +39,7 @@ class IELTS_Course_Manager {
         $this->shortcodes = new IELTS_CM_Shortcodes();
         $this->enrollment = new IELTS_CM_Enrollment();
         $this->admin = new IELTS_CM_Admin();
-        $this->converter_page = new IELTS_CM_Converter_Page();
-        $this->export_page = new IELTS_CM_Export_Page();
-        $this->enrollment_page = new IELTS_CM_Enrollment_Page();
-        $this->xml_exercises_creator = new IELTS_CM_XML_Exercises_Creator();
         $this->text_exercises_creator = new IELTS_CM_Text_Exercises_Creator();
-        $this->exercise_import_export = new IELTS_CM_Exercise_Import_Export();
         $this->frontend = new IELTS_CM_Frontend();
         $this->sync_manager = new IELTS_CM_Multi_Site_Sync();
         $this->sync_api = new IELTS_CM_Sync_API();
@@ -69,12 +59,7 @@ class IELTS_Course_Manager {
         // Initialize admin
         if (is_admin()) {
             $this->admin->init();
-            $this->converter_page->init();
-            $this->export_page->init();
-            $this->enrollment_page->init();
-            $this->xml_exercises_creator->init();
             $this->text_exercises_creator->init();
-            $this->exercise_import_export->init();
             
             // Initialize sync settings page
             add_action('admin_menu', array($this->sync_settings_page, 'add_menu_page'));

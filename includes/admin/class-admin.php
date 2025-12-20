@@ -52,11 +52,6 @@ class IELTS_CM_Admin {
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
         
-        // Add LearnDash quiz conversion button
-        add_filter('manage_sfwd-quiz_posts_columns', array($this, 'learndash_quiz_columns'));
-        add_action('manage_sfwd-quiz_posts_custom_column', array($this, 'learndash_quiz_column_content'), 10, 2);
-        add_action('admin_footer', array($this, 'learndash_quiz_conversion_scripts'));
-        
         // Add admin notices
         add_action('admin_notices', array($this, 'quiz_validation_notices'));
     }
@@ -1135,7 +1130,7 @@ class IELTS_CM_Admin {
                         correctAnswerField.find('select').val(currentValue);
                     }
                     correctAnswerField.show();
-                } else if (type === 'fill_blank' || type === 'short_answer' || type === 'sentence_completion' || type === 'table_completion' || type === 'labelling' || type === 'locating_information') {
+                } else if (type === 'short_answer' || type === 'sentence_completion' || type === 'table_completion' || type === 'labelling' || type === 'locating_information') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
@@ -1168,12 +1163,6 @@ class IELTS_CM_Admin {
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').hide();
-                    container.find('.dropdown-paragraph-field').hide();
-                    correctAnswerField.hide();
-                } else if (type === 'essay') {
-                    container.find('.mc-options-field').hide();
-                    container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').show();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
                 } else if (type === 'dropdown_paragraph') {
@@ -1844,7 +1833,7 @@ class IELTS_CM_Admin {
                 <textarea name="questions[<?php echo $index; ?>][options]" rows="4" style="width: 100%;"><?php echo esc_textarea(isset($question['options']) ? $question['options'] : ''); ?></textarea>
             </p>
             
-            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('essay', 'multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph'))) ? 'display:none;' : ''; ?>">
+            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph'))) ? 'display:none;' : ''; ?>">
                 <label><?php _e('Correct Answer', 'ielts-course-manager'); ?></label><br>
                 <?php if (isset($question['type']) && $question['type'] === 'true_false'): ?>
                     <select name="questions[<?php echo $index; ?>][correct_answer]" style="width: 100%;">
@@ -2435,15 +2424,6 @@ class IELTS_CM_Admin {
     public function add_admin_menu() {
         add_submenu_page(
             'edit.php?post_type=ielts_course',
-            __('Progress Reports', 'ielts-course-manager'),
-            __('Progress Reports', 'ielts-course-manager'),
-            'manage_options',
-            'ielts-progress-reports',
-            array($this, 'progress_reports_page')
-        );
-        
-        add_submenu_page(
-            'edit.php?post_type=ielts_course',
             __('Documentation', 'ielts-course-manager'),
             __('Documentation', 'ielts-course-manager'),
             'manage_options',
@@ -2459,52 +2439,6 @@ class IELTS_CM_Admin {
             'ielts-settings',
             array($this, 'settings_page')
         );
-    }
-    
-    /**
-     * Progress reports page
-     */
-    public function progress_reports_page() {
-        ?>
-        <div class="wrap">
-            <h1><?php _e('Progress Reports', 'ielts-course-manager'); ?></h1>
-            <p><?php _e('View student progress and quiz results.', 'ielts-course-manager'); ?></p>
-            
-            <?php
-            // Get all users
-            $users = get_users();
-            
-            foreach ($users as $user) {
-                $enrollment = new IELTS_CM_Enrollment();
-                $enrolled_courses = $enrollment->get_user_courses($user->ID);
-                
-                if (!empty($enrolled_courses)) {
-                    echo '<h3>' . esc_html($user->display_name) . '</h3>';
-                    echo '<table class="wp-list-table widefat fixed striped">';
-                    echo '<thead><tr><th>Course</th><th>Progress</th><th>Quiz Results</th></tr></thead>';
-                    echo '<tbody>';
-                    
-                    foreach ($enrolled_courses as $enrollment_data) {
-                        $course = get_post($enrollment_data->course_id);
-                        $progress_tracker = new IELTS_CM_Progress_Tracker();
-                        $completion = $progress_tracker->get_course_completion_percentage($user->ID, $enrollment_data->course_id);
-                        
-                        $quiz_handler = new IELTS_CM_Quiz_Handler();
-                        $quiz_results = $quiz_handler->get_quiz_results($user->ID, $enrollment_data->course_id);
-                        
-                        echo '<tr>';
-                        echo '<td>' . esc_html($course->post_title) . '</td>';
-                        echo '<td>' . round($completion, 2) . '%</td>';
-                        echo '<td>' . count($quiz_results) . ' quizzes taken</td>';
-                        echo '</tr>';
-                    }
-                    
-                    echo '</tbody></table>';
-                }
-            }
-            ?>
-        </div>
-        <?php
     }
     
     /**
@@ -2697,182 +2631,306 @@ class IELTS_CM_Admin {
         <div class="wrap">
             <h1><?php _e('IELTS Course Manager Documentation', 'ielts-course-manager'); ?></h1>
             
-            <div class="documentation-content" style="max-width: 900px;">
+            <div class="ielts-docs-container">
+                <div class="ielts-docs-tabs">
+                    <button class="ielts-tab-btn active" data-tab="getting-started"><?php _e('Getting Started', 'ielts-course-manager'); ?></button>
+                    <button class="ielts-tab-btn" data-tab="content"><?php _e('Creating Content', 'ielts-course-manager'); ?></button>
+                    <button class="ielts-tab-btn" data-tab="question-types"><?php _e('Question Types', 'ielts-course-manager'); ?></button>
+                    <button class="ielts-tab-btn" data-tab="shortcodes"><?php _e('Shortcodes', 'ielts-course-manager'); ?></button>
+                    <button class="ielts-tab-btn" data-tab="enrollment"><?php _e('Enrollment & Progress', 'ielts-course-manager'); ?></button>
+                </div>
                 
-                <h2><?php _e('Getting Started', 'ielts-course-manager'); ?></h2>
-                <p><?php _e('Welcome to IELTS Course Manager! This plugin provides a complete learning management system for IELTS preparation courses.', 'ielts-course-manager'); ?></p>
-                
-                <h2><?php _e('Creating Content', 'ielts-course-manager'); ?></h2>
-                
-                <h3><?php _e('1. Create a Course', 'ielts-course-manager'); ?></h3>
-                <ol>
-                    <li><?php _e('Go to IELTS Courses > Add New Course', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Enter course title and description', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Add a featured image (optional)', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Publish the course', 'ielts-course-manager'); ?></li>
-                </ol>
-                
-                <h3><?php _e('2. Create Lessons', 'ielts-course-manager'); ?></h3>
-                <ol>
-                    <li><?php _e('Go to IELTS Courses > Lessons > Add New', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Enter lesson title and content', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Assign to one or more courses (use Ctrl/Cmd to select multiple)', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Publish the lesson', 'ielts-course-manager'); ?></li>
-                </ol>
-                <p><strong><?php _e('Reordering Lessons:', 'ielts-course-manager'); ?></strong> <?php _e('Go to the course edit page and use the "Course Lessons" meta box to drag and drop lessons into the desired order.', 'ielts-course-manager'); ?></p>
-                
-                <h3><?php _e('3. Add Lesson pages', 'ielts-course-manager'); ?></h3>
-                <ol>
-                    <li><?php _e('Go to IELTS Courses > Lesson pages > Add New', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Enter lesson page title and description', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Assign to one or more lessons (use Ctrl/Cmd to select multiple)', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Optionally add a resource URL for external resources', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Publish the lesson page', 'ielts-course-manager'); ?></li>
-                </ol>
-                
-                <h3><?php _e('4. Create Quizzes', 'ielts-course-manager'); ?></h3>
-                <ol>
-                    <li><?php _e('Go to IELTS Courses > Quizzes > Add New', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Enter quiz title and description', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Assign to one or more courses (use Ctrl/Cmd to select multiple)', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Optionally assign to one or more lessons', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Set passing percentage', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Click "Add Question" to add quiz questions', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Select question type, enter question text, add options, set correct answer, and assign points', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Publish the quiz', 'ielts-course-manager'); ?></li>
-                </ol>
-                
-                <h2><?php _e('Using Multiple Courses/Lessons', 'ielts-course-manager'); ?></h2>
-                <p><?php _e('The plugin now supports many-to-many relationships:', 'ielts-course-manager'); ?></p>
-                <ul>
-                    <li><?php _e('Lessons can be assigned to multiple courses', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Lesson pages can be assigned to multiple lessons', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Quizzes can be assigned to multiple courses and/or lessons', 'ielts-course-manager'); ?></li>
-                </ul>
-                <p><?php _e('This allows you to reuse content across different courses without duplicating it.', 'ielts-course-manager'); ?></p>
-                
-                <h2><?php _e('Available Shortcodes', 'ielts-course-manager'); ?></h2>
-                
-                <h3><?php _e('Display All Courses', 'ielts-course-manager'); ?></h3>
-                <p><code>[ielts_courses]</code></p>
-                <p><?php _e('With options:', 'ielts-course-manager'); ?></p>
-                <ul style="list-style: disc; margin-left: 20px;">
-                    <li><code>[ielts_courses category="beginner"]</code> - <?php _e('Filter by category slug', 'ielts-course-manager'); ?></li>
-                    <li><code>[ielts_courses limit="10"]</code> - <?php _e('Limit number of courses displayed', 'ielts-course-manager'); ?></li>
-                    <li><code>[ielts_courses columns="3"]</code> - <?php _e('Set number of columns (1-6, default is 5)', 'ielts-course-manager'); ?></li>
-                    <li><code>[ielts_courses orderby="title"]</code> - <?php _e('Sort by title, date, menu_order, etc.', 'ielts-course-manager'); ?></li>
-                    <li><code>[ielts_courses order="ASC"]</code> - <?php _e('Sort order: ASC (ascending) or DESC (descending)', 'ielts-course-manager'); ?></li>
-                    <li><code>[ielts_courses category="academic" columns="5" orderby="title" order="ASC"]</code> - <?php _e('Combine multiple options', 'ielts-course-manager'); ?></li>
-                </ul>
-                
-                <h3><?php _e('Display Single Course', 'ielts-course-manager'); ?></h3>
-                <p><code>[ielts_course id="123"]</code></p>
-                
-                <h3><?php _e('Display Progress Page (Admin View)', 'ielts-course-manager'); ?></h3>
-                <p><?php _e('All courses:', 'ielts-course-manager'); ?></p>
-                <p><code>[ielts_progress]</code></p>
-                <p><?php _e('Specific course:', 'ielts-course-manager'); ?></p>
-                <p><code>[ielts_progress course_id="123"]</code></p>
-                
-                <h3><?php _e('Display Student\'s Own Progress', 'ielts-course-manager'); ?></h3>
-                <p><?php _e('All enrolled courses:', 'ielts-course-manager'); ?></p>
-                <p><code>[ielts_my_progress]</code></p>
-                <p><?php _e('Specific course:', 'ielts-course-manager'); ?></p>
-                <p><code>[ielts_my_progress course_id="123"]</code></p>
-                
-                <h3><?php _e('Display Single Lesson', 'ielts-course-manager'); ?></h3>
-                <p><code>[ielts_lesson id="456"]</code></p>
-                
-                <h3><?php _e('Display Quiz', 'ielts-course-manager'); ?></h3>
-                <p><code>[ielts_quiz id="789"]</code></p>
-                
-                <h2><?php _e('Student Enrollment', 'ielts-course-manager'); ?></h2>
-                <p><?php _e('Students can enroll in courses by:', 'ielts-course-manager'); ?></p>
-                <ul>
-                    <li><?php _e('Clicking the "Enroll in this Course" button on course pages', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Administrators can manually enroll users through the backend', 'ielts-course-manager'); ?></li>
-                </ul>
-                
-                <h2><?php _e('Progress Tracking', 'ielts-course-manager'); ?></h2>
-                <p><?php _e('Progress is automatically tracked when:', 'ielts-course-manager'); ?></p>
-                <ul>
-                    <li><?php _e('Students view lessons', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Students mark lessons as complete', 'ielts-course-manager'); ?></li>
-                    <li><?php _e('Students submit quizzes', 'ielts-course-manager'); ?></li>
-                </ul>
-                <p><?php _e('View all progress reports in IELTS Courses > Progress Reports', 'ielts-course-manager'); ?></p>
-                
-                <h2><?php _e('Quiz Types', 'ielts-course-manager'); ?></h2>
-                
-                <h3><?php _e('Multiple Choice', 'ielts-course-manager'); ?></h3>
-                <p><?php _e('Students select from predefined options.', 'ielts-course-manager'); ?></p>
-                <ul>
-                    <li><strong><?php _e('Options:', 'ielts-course-manager'); ?></strong> <?php _e('Enter each option on a new line', 'ielts-course-manager'); ?></li>
-                    <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Enter the option number (0 for first option, 1 for second, etc.)', 'ielts-course-manager'); ?></li>
-                </ul>
-                
-                <h3><?php _e('True/False/Not Given', 'ielts-course-manager'); ?></h3>
-                <p><?php _e('Common in IELTS Reading tests. Students choose whether a statement is True, False, or Not Given based on the passage.', 'ielts-course-manager'); ?></p>
-                <ul>
-                    <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Enter "true", "false", or "not_given" (lowercase)', 'ielts-course-manager'); ?></li>
-                </ul>
-                
-                <h3><?php _e('Fill in the Blank', 'ielts-course-manager'); ?></h3>
-                <p><?php _e('Students type their answer directly. The system automatically compares answers with flexible matching.', 'ielts-course-manager'); ?></p>
-                <ul>
-                    <li><strong><?php _e('Question Text:', 'ielts-course-manager'); ?></strong> <?php _e('Include the blank in your question (e.g., "The capital of France is _____")', 'ielts-course-manager'); ?></li>
-                    <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Enter the expected answer. The system will ignore case, extra spaces, and punctuation when comparing.', 'ielts-course-manager'); ?></li>
-                    <li><strong><?php _e('Tips:', 'ielts-course-manager'); ?></strong>
+                <div class="ielts-docs-content">
+                    <!-- Getting Started Tab -->
+                    <div class="ielts-tab-content active" id="getting-started">
+                        <h2><?php _e('Getting Started', 'ielts-course-manager'); ?></h2>
+                        <p><?php _e('Welcome to IELTS Course Manager version 3.0! This plugin provides a complete learning management system for IELTS preparation courses.', 'ielts-course-manager'); ?></p>
+                        
+                        <h3><?php _e('What\'s New in Version 3.0', 'ielts-course-manager'); ?></h3>
                         <ul>
-                            <li><?php _e('Be specific with your expected answer', 'ielts-course-manager'); ?></li>
-                            <li><?php _e('The matching is case-insensitive (Paris = PARIS = paris)', 'ielts-course-manager'); ?></li>
-                            <li><?php _e('Extra spaces and punctuation are ignored', 'ielts-course-manager'); ?></li>
-                            <li><?php _e('Consider using multiple choice if you need exact formatting', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Streamlined interface - removed legacy features for a cleaner experience', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Enhanced documentation with tabbed navigation', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Improved question type management', 'ielts-course-manager'); ?></li>
                         </ul>
-                    </li>
-                </ul>
-                
-                <h3><?php _e('Essay', 'ielts-course-manager'); ?></h3>
-                <p><?php _e('Long-form written responses requiring manual grading by instructors.', 'ielts-course-manager'); ?></p>
-                <ul>
-                    <li><strong><?php _e('Note:', 'ielts-course-manager'); ?></strong> <?php _e('Essay questions are not automatically graded. They are saved for instructor review.', 'ielts-course-manager'); ?></li>
-                </ul>
-                
-                <h2><?php _e('Support', 'ielts-course-manager'); ?></h2>
-                <p><?php _e('For issues or feature requests, please visit:', 'ielts-course-manager'); ?></p>
-                <p><a href="https://github.com/impact2021/ielts-preparation-course" target="_blank">https://github.com/impact2021/ielts-preparation-course</a></p>
-                
+                        
+                        <h3><?php _e('Quick Start Guide', 'ielts-course-manager'); ?></h3>
+                        <ol>
+                            <li><?php _e('Create a course using the "IELTS Courses > Add New Course" menu', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Add lessons to your course', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Create lesson pages with content', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Build quizzes with various question types', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Students can enroll and track their progress', 'ielts-course-manager'); ?></li>
+                        </ol>
+                    </div>
+                    
+                    <!-- Creating Content Tab -->
+                    <div class="ielts-tab-content" id="content">
+                        <h2><?php _e('Creating Content', 'ielts-course-manager'); ?></h2>
+                        
+                        <h3><?php _e('1. Create a Course', 'ielts-course-manager'); ?></h3>
+                        <ol>
+                            <li><?php _e('Go to IELTS Courses > Add New Course', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Enter course title and description', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Add a featured image (optional)', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Publish the course', 'ielts-course-manager'); ?></li>
+                        </ol>
+                        
+                        <h3><?php _e('2. Create Lessons', 'ielts-course-manager'); ?></h3>
+                        <ol>
+                            <li><?php _e('Go to IELTS Courses > Lessons > Add New', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Enter lesson title and content', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Assign to one or more courses (use Ctrl/Cmd to select multiple)', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Publish the lesson', 'ielts-course-manager'); ?></li>
+                        </ol>
+                        <p><strong><?php _e('Reordering Lessons:', 'ielts-course-manager'); ?></strong> <?php _e('Go to the course edit page and use the "Course Lessons" meta box to drag and drop lessons into the desired order.', 'ielts-course-manager'); ?></p>
+                        
+                        <h3><?php _e('3. Add Lesson pages', 'ielts-course-manager'); ?></h3>
+                        <ol>
+                            <li><?php _e('Go to IELTS Courses > Lesson pages > Add New', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Enter lesson page title and description', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Assign to one or more lessons (use Ctrl/Cmd to select multiple)', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Optionally add a resource URL for external resources', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Publish the lesson page', 'ielts-course-manager'); ?></li>
+                        </ol>
+                        
+                        <h3><?php _e('4. Create Quizzes', 'ielts-course-manager'); ?></h3>
+                        <ol>
+                            <li><?php _e('Go to IELTS Courses > Quizzes > Add New', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Enter quiz title and description', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Assign to one or more courses (use Ctrl/Cmd to select multiple)', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Optionally assign to one or more lessons', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Set passing percentage', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Click "Add Question" to add quiz questions', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Select question type, enter question text, add options, set correct answer, and assign points', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Publish the quiz', 'ielts-course-manager'); ?></li>
+                        </ol>
+                        
+                        <h3><?php _e('Using Multiple Courses/Lessons', 'ielts-course-manager'); ?></h3>
+                        <p><?php _e('The plugin supports many-to-many relationships:', 'ielts-course-manager'); ?></p>
+                        <ul>
+                            <li><?php _e('Lessons can be assigned to multiple courses', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Lesson pages can be assigned to multiple lessons', 'ielts-course-manager'); ?></li>
+                            <li><?php _e('Quizzes can be assigned to multiple courses and/or lessons', 'ielts-course-manager'); ?></li>
+                        </ul>
+                        <p><?php _e('This allows you to reuse content across different courses without duplicating it.', 'ielts-course-manager'); ?></p>
+                    </div>
+                    
+                    <!-- Question Types Tab -->
+                    <div class="ielts-tab-content" id="question-types"><?php $this->render_question_types_tab(); ?></div>
+                    
+                    <!-- Shortcodes Tab -->
+                    <div class="ielts-tab-content" id="shortcodes"><?php $this->render_shortcodes_tab(); ?></div>
+                    
+                    <!-- Enrollment & Progress Tab -->
+                    <div class="ielts-tab-content" id="enrollment"><?php $this->render_enrollment_tab(); ?></div>
+                </div>
             </div>
             
-            <style>
-            .documentation-content h2 {
-                margin-top: 30px;
-                margin-bottom: 15px;
-                padding-bottom: 10px;
-                border-bottom: 2px solid #ddd;
-            }
-            .documentation-content h3 {
-                margin-top: 20px;
-                margin-bottom: 10px;
-            }
-            .documentation-content ol,
-            .documentation-content ul {
-                margin-left: 20px;
-                line-height: 1.8;
-            }
-            .documentation-content code {
-                background-color: #f4f4f4;
-                padding: 2px 6px;
-                border-radius: 3px;
-                font-family: monospace;
-                font-size: 14px;
-            }
-            .documentation-content p code {
-                display: inline-block;
-                margin: 5px 0;
-            }
-            </style>
+            <?php $this->documentation_styles(); ?>
+            <?php $this->documentation_scripts(); ?>
         </div>
+        <?php
+    }
+    
+    /**
+     * Render Question Types documentation tab
+     */
+    private function render_question_types_tab() {
+        ?>
+        <h2><?php _e('Available Question Types', 'ielts-course-manager'); ?></h2>
+        
+        <h3><?php _e('Multiple Choice', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('Students select from predefined options.', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><strong><?php _e('Options:', 'ielts-course-manager'); ?></strong> <?php _e('Enter each option on a new line', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Enter the option number (0 for first option, 1 for second, etc.)', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Headings Questions', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('For matching headings to paragraphs. Works exactly like multiple choice but with a different name for tracking purposes.', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><strong><?php _e('Options:', 'ielts-course-manager'); ?></strong> <?php _e('Enter each heading option on a new line', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Mark the correct heading option', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('True/False/Not Given', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('Common in IELTS Reading tests. Students choose whether a statement is True, False, or Not Given based on the passage.', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Enter "true", "false", or "not_given" (lowercase)', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Short Answer Questions', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('Students type a brief answer. The system automatically compares answers with flexible matching.', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Use | to separate multiple accepted answers', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Matching is case-insensitive and ignores extra spaces and punctuation', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <p><strong><?php _e('For more question types:', 'ielts-course-manager'); ?></strong> <?php _e('Sentence Completion, Summary Completion, Table Completion, Labelling, Locating Information, Dropdown Paragraph, Multi Select, and Matching questions are also available.', 'ielts-course-manager'); ?></p>
+        <?php
+    }
+    
+    /**
+     * Render Shortcodes documentation tab
+     */
+    private function render_shortcodes_tab() {
+        ?>
+        <h2><?php _e('Available Shortcodes', 'ielts-course-manager'); ?></h2>
+        
+        <h3><?php _e('Display All Courses', 'ielts-course-manager'); ?></h3>
+        <p><code>[ielts_courses]</code></p>
+        <p><?php _e('With options:', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><code>[ielts_courses category="beginner"]</code> - <?php _e('Filter by category slug', 'ielts-course-manager'); ?></li>
+            <li><code>[ielts_courses limit="10"]</code> - <?php _e('Limit number of courses displayed', 'ielts-course-manager'); ?></li>
+            <li><code>[ielts_courses columns="3"]</code> - <?php _e('Set number of columns (1-6, default is 5)', 'ielts-course-manager'); ?></li>
+            <li><code>[ielts_courses orderby="title"]</code> - <?php _e('Sort by title, date, menu_order, etc.', 'ielts-course-manager'); ?></li>
+            <li><code>[ielts_courses order="ASC"]</code> - <?php _e('Sort order: ASC or DESC', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Display Single Course', 'ielts-course-manager'); ?></h3>
+        <p><code>[ielts_course id="123"]</code></p>
+        
+        <h3><?php _e('Display Progress Page (Admin View)', 'ielts-course-manager'); ?></h3>
+        <p><code>[ielts_progress]</code> - <?php _e('All courses', 'ielts-course-manager'); ?></p>
+        <p><code>[ielts_progress course_id="123"]</code> - <?php _e('Specific course', 'ielts-course-manager'); ?></p>
+        
+        <h3><?php _e('Display Student\'s Own Progress', 'ielts-course-manager'); ?></h3>
+        <p><code>[ielts_my_progress]</code> - <?php _e('All enrolled courses', 'ielts-course-manager'); ?></p>
+        <p><code>[ielts_my_progress course_id="123"]</code> - <?php _e('Specific course', 'ielts-course-manager'); ?></p>
+        
+        <h3><?php _e('Display Single Lesson', 'ielts-course-manager'); ?></h3>
+        <p><code>[ielts_lesson id="456"]</code></p>
+        
+        <h3><?php _e('Display Quiz', 'ielts-course-manager'); ?></h3>
+        <p><code>[ielts_quiz id="789"]</code></p>
+        <?php
+    }
+    
+    /**
+     * Render Enrollment documentation tab
+     */
+    private function render_enrollment_tab() {
+        ?>
+        <h2><?php _e('Student Enrollment', 'ielts-course-manager'); ?></h2>
+        <p><?php _e('Students can enroll in courses by:', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><?php _e('Clicking the "Enroll in this Course" button on course pages', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Administrators can manually enroll users through the WordPress user management', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h2><?php _e('Progress Tracking', 'ielts-course-manager'); ?></h2>
+        <p><?php _e('Progress is automatically tracked when:', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><?php _e('Students view lessons', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Students mark lessons as complete', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Students submit quizzes', 'ielts-course-manager'); ?></li>
+        </ul>
+        <p><?php _e('Use the [ielts_progress] or [ielts_my_progress] shortcodes to display progress tracking.', 'ielts-course-manager'); ?></p>
+        
+        <h2><?php _e('Support', 'ielts-course-manager'); ?></h2>
+        <p><?php _e('For issues or feature requests, please visit:', 'ielts-course-manager'); ?></p>
+        <p><a href="https://github.com/impact2021/ielts-preparation-course" target="_blank">https://github.com/impact2021/ielts-preparation-course</a></p>
+        <?php
+    }
+    
+    /**
+     * Documentation page styles
+     */
+    private function documentation_styles() {
+        ?>
+        <style>
+        .ielts-docs-container {
+            max-width: 1000px;
+        }
+        .ielts-docs-tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 30px;
+        }
+        .ielts-tab-btn {
+            padding: 12px 20px;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .ielts-tab-btn:hover {
+            background: #e8e8e8;
+        }
+        .ielts-tab-btn.active {
+            background: #fff;
+            border-bottom: 2px solid #fff;
+            margin-bottom: -2px;
+            color: #0073aa;
+        }
+        .ielts-docs-content {
+            background: #fff;
+            padding: 20px;
+        }
+        .ielts-tab-content {
+            display: none;
+        }
+        .ielts-tab-content.active {
+            display: block;
+        }
+        .ielts-tab-content h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+            color: #0073aa;
+        }
+        .ielts-tab-content h3 {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .ielts-tab-content ol,
+        .ielts-tab-content ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+        .ielts-tab-content code {
+            background-color: #f4f4f4;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 13px;
+            color: #c7254e;
+        }
+        .ielts-tab-content p code {
+            display: inline-block;
+            margin: 5px 0;
+        }
+        </style>
+        <?php
+    }
+    
+    /**
+     * Documentation page scripts
+     */
+    private function documentation_scripts() {
+        ?>
+        <script>
+        jQuery(document).ready(function($) {
+            $('.ielts-tab-btn').on('click', function() {
+                var tabId = $(this).data('tab');
+                
+                // Remove active class from all tabs and content
+                $('.ielts-tab-btn').removeClass('active');
+                $('.ielts-tab-content').removeClass('active');
+                
+                // Add active class to clicked tab and corresponding content
+                $(this).addClass('active');
+                $('#' + tabId).addClass('active');
+            });
+        });
+        </script>
         <?php
     }
     
@@ -2936,131 +2994,6 @@ class IELTS_CM_Admin {
                 <?php submit_button(); ?>
             </form>
         </div>
-        <?php
-    }
-    
-    /**
-     * Add custom column to LearnDash quiz list
-     */
-    public function learndash_quiz_columns($columns) {
-        // Only add if LearnDash is active
-        if (!post_type_exists('sfwd-quiz')) {
-            return $columns;
-        }
-        
-        // Add conversion column before date
-        $new_columns = array();
-        foreach ($columns as $key => $value) {
-            if ($key === 'date') {
-                $new_columns['ielts_cm_convert'] = __('Convert to IELTS CM', 'ielts-course-manager');
-            }
-            $new_columns[$key] = $value;
-        }
-        
-        return $new_columns;
-    }
-    
-    /**
-     * Display content for custom column
-     */
-    public function learndash_quiz_column_content($column, $post_id) {
-        if ($column === 'ielts_cm_convert') {
-            require_once IELTS_CM_PLUGIN_DIR . 'includes/class-learndash-converter.php';
-            $converter = new IELTS_CM_LearnDash_Converter();
-            
-            // Check if already converted
-            $existing_id = $converter->find_existing_quiz($post_id);
-            
-            if ($existing_id) {
-                echo '<span style="color: #46b450;">✓ ' . esc_html__('Converted', 'ielts-course-manager') . '</span><br>';
-                echo '<a href="' . esc_url(get_edit_post_link($existing_id)) . '" target="_blank">' . esc_html__('Edit IELTS Quiz', 'ielts-course-manager') . '</a>';
-            } else {
-                echo '<button type="button" class="button button-small ielts-convert-quiz-btn" data-quiz-id="' . esc_attr($post_id) . '">';
-                echo esc_html__('Convert Quiz', 'ielts-course-manager');
-                echo '</button>';
-                echo '<span class="ielts-convert-status" style="display:none; margin-left: 10px;"></span>';
-            }
-        }
-    }
-    
-    /**
-     * Add JavaScript for quiz conversion on LearnDash quiz admin page
-     */
-    public function learndash_quiz_conversion_scripts() {
-        $screen = get_current_screen();
-        
-        // Only load on LearnDash quiz list page
-        if (!$screen || $screen->post_type !== 'sfwd-quiz' || $screen->base !== 'edit') {
-            return;
-        }
-        
-        ?>
-        <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            // Handle individual quiz conversion
-            $(document).on('click', '.ielts-convert-quiz-btn', function(e) {
-                e.preventDefault();
-                
-                var $btn = $(this);
-                var quizId = $btn.data('quiz-id');
-                var $status = $btn.siblings('.ielts-convert-status');
-                
-                if (!confirm('<?php echo esc_js(__('Convert this quiz to IELTS format?', 'ielts-course-manager')); ?>')) {
-                    return;
-                }
-                
-                $btn.prop('disabled', true).text('<?php echo esc_js(__('Converting...', 'ielts-course-manager')); ?>');
-                $status.show().text('⏳').css('color', '#666');
-                
-                $.ajax({
-                    url: ajaxurl,
-                    type: 'POST',
-                    data: {
-                        action: 'ielts_cm_convert_single_quiz',
-                        nonce: '<?php echo wp_create_nonce('ielts_cm_convert_quiz'); ?>',
-                        quiz_id: quizId
-                    },
-                    success: function(response) {
-                        if (response.success) {
-                            $status.html('✓ <span style="color: #46b450;"><?php echo esc_js(__('Converted!', 'ielts-course-manager')); ?></span>');
-                            $btn.remove();
-                            
-                            // Show link to edit the new quiz
-                            if (response.data.new_quiz_id) {
-                                var editUrl = '<?php echo admin_url('post.php?action=edit&post='); ?>' + response.data.new_quiz_id;
-                                $status.after('<br><a href="' + editUrl + '" target="_blank"><?php echo esc_js(__('Edit IELTS Quiz', 'ielts-course-manager')); ?></a>');
-                            }
-                            
-                            // Show success message
-                            if (response.data.message) {
-                                $status.after('<br><small>' + response.data.message + '</small>');
-                            }
-                        } else {
-                            $status.html('✗ <span style="color: #d63638;"><?php echo esc_js(__('Failed', 'ielts-course-manager')); ?></span>');
-                            $btn.prop('disabled', false).text('<?php echo esc_js(__('Convert Quiz', 'ielts-course-manager')); ?>');
-                            
-                            var errorMsg = response.data && response.data.message ? response.data.message : '<?php echo esc_js(__('Conversion failed', 'ielts-course-manager')); ?>';
-                            alert(errorMsg);
-                        }
-                    },
-                    error: function(xhr, status, error) {
-                        $status.html('✗ <span style="color: #d63638;"><?php echo esc_js(__('Error', 'ielts-course-manager')); ?></span>');
-                        $btn.prop('disabled', false).text('<?php echo esc_js(__('Convert Quiz', 'ielts-course-manager')); ?>');
-                        alert('<?php echo esc_js(__('AJAX error:', 'ielts-course-manager')); ?> ' + error);
-                    }
-                });
-            });
-        });
-        </script>
-        
-        <style>
-        .ielts-convert-quiz-btn {
-            font-size: 12px;
-            height: auto;
-            line-height: 1.5;
-            padding: 4px 8px;
-        }
-        </style>
         <?php
     }
     
