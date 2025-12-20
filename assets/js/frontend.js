@@ -356,6 +356,19 @@
                                 navButtons.addClass('nav-correct').removeClass('answered');
                                 
                                 // Highlight the correct answer option
+                                if (questionResult.question_type === 'multiple_choice') {
+                                    // Highlight by both checked state AND correct answer value to ensure visibility
+                                    var correctIndex = parseInt(questionResult.correct_answer, 10);
+                                    if (!isNaN(correctIndex)) {
+                                        questionElement.find('input[type="radio"][value="' + correctIndex + '"]').closest('.option-label').addClass('answer-correct-highlight');
+                                    }
+                                } else if (questionResult.question_type === 'true_false') {
+                                    if (questionResult.correct_answer) {
+                                        questionElement.find('input[type="radio"][value="' + questionResult.correct_answer + '"]').closest('.option-label').addClass('answer-correct-highlight');
+                                    }
+                                }
+                                
+                                // Common highlighting for both multiple_choice and true_false: mark the checked answer
                                 if (questionResult.question_type === 'multiple_choice' || questionResult.question_type === 'true_false') {
                                     questionElement.find('input[type="radio"]:checked').closest('.option-label').addClass('answer-correct');
                                 } else if (questionResult.question_type === 'multi_select') {
@@ -480,8 +493,20 @@
                             // Update timer display to show band score instead of time remaining
                             var timerElement = form.find('.quiz-timer-fullscreen');
                             if (timerElement.length > 0) {
-                                // Preserve the return to course link
-                                var returnLink = timerElement.find('.return-to-course-link').prop('outerHTML') || '';
+                                // Preserve and update the return to course link
+                                var returnLinkElement = timerElement.find('.return-to-course-link');
+                                
+                                // Update link URL to next_url if available, otherwise use course_url
+                                var linkUrl = result.next_url || result.course_url;
+                                if (returnLinkElement.length && linkUrl) {
+                                    returnLinkElement.attr('href', linkUrl);
+                                    // Change text to "Next page" for exercises that have a next item
+                                    if (result.next_url) {
+                                        returnLinkElement.text('Next page >');
+                                    }
+                                }
+                                
+                                var returnLinkHtml = returnLinkElement.length ? returnLinkElement.prop('outerHTML') : '';
                                 
                                 var scoreHtml = '';
                                 if (result.display_type === 'band') {
@@ -490,7 +515,7 @@
                                     scoreHtml = '<div class="timer-content"><strong>Score:</strong> <span>' + result.percentage + '%</span></div>';
                                 }
                                 
-                                timerElement.html(scoreHtml + returnLink);
+                                timerElement.html(scoreHtml + returnLinkHtml);
                             }
                         } else {
                             // For regular quizzes, show inline
