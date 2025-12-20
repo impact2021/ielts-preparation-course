@@ -513,6 +513,12 @@ You have one hour for the complete test (including transferring your answers).</
      * Parse exercise text into structured data
      */
     private function parse_exercise_text($text) {
+        // Check if this is a mixed format file (has multiple question types)
+        // Mixed format is detected by having multiple different question format patterns
+        if ($this->is_mixed_format($text)) {
+            return $this->parse_mixed_format($text);
+        }
+        
         // Try to detect format type based on patterns in the text
         
         // Check for summary completion format (has [ANSWER N] placeholders)
@@ -538,6 +544,167 @@ You have one hour for the complete test (including transferring your answers).</
         
         // Fall back to original true/false format parser
         return $this->parse_true_false_format($text);
+    }
+    
+    /**
+     * Detect if text contains multiple question format types (mixed format)
+     */
+    private function is_mixed_format($text) {
+        $format_count = 0;
+        
+        // Count different format types present
+        if ($this->is_multiple_choice_format($text)) {
+            $format_count++;
+        }
+        
+        if ($this->is_short_answer_format($text)) {
+            $format_count++;
+        }
+        
+        // Check for true/false format (has "This is TRUE" or "This is FALSE")
+        if (preg_match('/^This is (TRUE|FALSE)/m', $text)) {
+            $format_count++;
+        }
+        
+        // Mixed format is when we have 2 or more different format types
+        return $format_count >= 2;
+    }
+    
+    /**
+     * Parse mixed format text (contains multiple question types)
+     * This is common in IELTS tests where one test has headings, true/false, matching, and short answer questions
+     */
+    private function parse_mixed_format($text) {
+        // Extract reading passages first
+        $reading_texts = $this->extract_reading_passages($text);
+        
+        // Remove reading passages from text for question parsing
+        $text = $this->remove_reading_passages($text);
+        
+        // Extract title - everything before the first question section
+        $lines = explode("\n", $text);
+        $lines = array_map('trim', $lines);
+        
+        $title = '';
+        $questions_start_index = -1;
+        
+        for ($i = 0; $i < count($lines); $i++) {
+            // Look for question section markers like "Questions 1-5" or numbered questions
+            if (preg_match('/^Questions\s+\d+/', $lines[$i]) || preg_match('/^\d+\.\s+/', $lines[$i])) {
+                $questions_start_index = $i;
+                break;
+            }
+            if (!empty($lines[$i])) {
+                if (empty($title)) {
+                    $title = $lines[$i];
+                } else {
+                    $title .= ' ' . trim($lines[$i]);
+                }
+            }
+        }
+        
+        if (empty($title)) {
+            $title = 'Mixed Format Exercise';
+        }
+        
+        if ($questions_start_index === -1) {
+            return null;
+        }
+        
+        // Parse questions by sections
+        // Split the text into sections based on "Questions X-Y" headers
+        $all_questions = array();
+        $sections = $this->split_into_question_sections($lines, $questions_start_index);
+        
+        foreach ($sections as $section) {
+            $section_text = implode("\n", $section['lines']);
+            $section_questions = $this->parse_question_section($section_text, $section['marker']);
+            
+            if (!empty($section_questions)) {
+                $all_questions = array_merge($all_questions, $section_questions);
+            }
+        }
+        
+        return array(
+            'title' => $title,
+            'questions' => $all_questions,
+            'reading_texts' => $reading_texts
+        );
+    }
+    
+    /**
+     * Split text into question sections based on "Questions X-Y" headers
+     */
+    private function split_into_question_sections($lines, $start_index) {
+        $sections = array();
+        $current_section = null;
+        
+        for ($i = $start_index; $i < count($lines); $i++) {
+            $line = $lines[$i];
+            
+            // Check if this is a section header like "Questions 1-5 [HEADINGS]"
+            if (preg_match('/^Questions\s+(\d+).*?(\[.+?\])?/i', $line, $match)) {
+                // Save previous section if exists
+                if ($current_section !== null) {
+                    $sections[] = $current_section;
+                }
+                
+                // Start new section
+                $current_section = array(
+                    'header' => $line,
+                    'marker' => isset($match[2]) ? $match[2] : '',
+                    'lines' => array()
+                );
+            } elseif ($current_section !== null) {
+                // Add line to current section
+                $current_section['lines'][] = $line;
+            }
+        }
+        
+        // Save last section
+        if ($current_section !== null) {
+            $sections[] = $current_section;
+        }
+        
+        return $sections;
+    }
+    
+    /**
+     * Parse a single question section based on its format
+     */
+    private function parse_question_section($text, $marker) {
+        // Determine format based on marker and content
+        
+        // Check for type markers
+        if (stripos($marker, 'HEADINGS') !== false || 
+            stripos($marker, 'MATCHING') !== false || 
+            stripos($marker, 'LOCATING') !== false ||
+            stripos($marker, 'MULTI SELECT') !== false ||
+            stripos($marker, 'MULTIPLE CHOICE') !== false) {
+            // Multiple choice format
+            $parsed = $this->parse_multiple_choice_format($text);
+            return isset($parsed['questions']) ? $parsed['questions'] : array();
+        }
+        
+        // Check for short answer format
+        if (preg_match(self::SHORT_ANSWER_PATTERN, $text)) {
+            $parsed = $this->parse_short_answer_format($text);
+            return isset($parsed['questions']) ? $parsed['questions'] : array();
+        }
+        
+        // Check for true/false format
+        if (preg_match('/^This is (TRUE|FALSE)/m', $text)) {
+            $parsed = $this->parse_true_false_format($text);
+            return isset($parsed['questions']) ? $parsed['questions'] : array();
+        }
+        
+        // Default to multiple choice if it has the pattern
+        if ($this->is_multiple_choice_format($text)) {
+            $parsed = $this->parse_multiple_choice_format($text);
+            return isset($parsed['questions']) ? $parsed['questions'] : array();
+        }
+        
+        return array();
     }
     
     /**

@@ -1,5 +1,18 @@
 IELTS Reading Test - Complete
 
+NOTE: This file contains all 40 questions from a complete IELTS Reading Test for reference purposes.
+However, due to the mixed question formats (Headings, Matching, True/False, and Short Answer),
+this file cannot be imported as a single exercise using the text import tool.
+
+To import these questions, use the separate section files instead:
+- ielts-reading-section-1-headings-matching.txt (Questions 1-13 with Reading Passage 1)
+- ielts-reading-section-2-truefalse.txt (Questions 14-17 with Reading Passage 2)
+- ielts-reading-section-2-matching.txt (Questions 18-24 with Reading Passage 2)
+- ielts-reading-section-2-shortanswer.txt (Questions 25-26 with Reading Passage 2)
+- ielts-reading-section-3-shortanswer.txt (Questions 27-32 with Reading Passage 3)
+- ielts-reading-section-3-truefalse.txt (Questions 33-37 with Reading Passage 3)
+- ielts-reading-section-3-matching.txt (Questions 38-40 with Reading Passage 3)
+
 Read the texts and answer the questions. Type your answers in the spaces provided.
 
 [READING PASSAGE] Reading Passage 1 - Driverless cars
