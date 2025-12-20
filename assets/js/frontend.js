@@ -358,11 +358,18 @@
                                 // Highlight the correct answer option
                                 if (questionResult.question_type === 'multiple_choice') {
                                     // Highlight by both checked state AND correct answer value to ensure visibility
-                                    var correctIndex = parseInt(questionResult.correct_answer);
-                                    questionElement.find('input[type="radio"][value="' + correctIndex + '"]').closest('.option-label').addClass('answer-correct-highlight');
-                                    questionElement.find('input[type="radio"]:checked').closest('.option-label').addClass('answer-correct');
+                                    var correctIndex = parseInt(questionResult.correct_answer, 10);
+                                    if (!isNaN(correctIndex)) {
+                                        questionElement.find('input[type="radio"][value="' + correctIndex + '"]').closest('.option-label').addClass('answer-correct-highlight');
+                                    }
                                 } else if (questionResult.question_type === 'true_false') {
-                                    questionElement.find('input[type="radio"][value="' + questionResult.correct_answer + '"]').closest('.option-label').addClass('answer-correct-highlight');
+                                    if (questionResult.correct_answer) {
+                                        questionElement.find('input[type="radio"][value="' + questionResult.correct_answer + '"]').closest('.option-label').addClass('answer-correct-highlight');
+                                    }
+                                }
+                                
+                                // Common highlighting for both multiple_choice and true_false: mark the checked answer
+                                if (questionResult.question_type === 'multiple_choice' || questionResult.question_type === 'true_false') {
                                     questionElement.find('input[type="radio"]:checked').closest('.option-label').addClass('answer-correct');
                                 } else if (questionResult.question_type === 'multi_select') {
                                     // For multi-select, highlight all checked options in green (they're all correct if question is correct)
@@ -487,19 +494,19 @@
                             var timerElement = form.find('.quiz-timer-fullscreen');
                             if (timerElement.length > 0) {
                                 // Preserve and update the return to course link
-                                var returnLink = timerElement.find('.return-to-course-link');
+                                var returnLinkElement = timerElement.find('.return-to-course-link');
                                 
                                 // Update link URL to next_url if available, otherwise use course_url
                                 var linkUrl = result.next_url || result.course_url;
-                                if (returnLink.length && linkUrl) {
-                                    returnLink.attr('href', linkUrl);
+                                if (returnLinkElement.length && linkUrl) {
+                                    returnLinkElement.attr('href', linkUrl);
                                     // Change text to "Next page" for exercises that have a next item
                                     if (result.next_url) {
-                                        returnLink.text('Next page >');
+                                        returnLinkElement.text('Next page >');
                                     }
                                 }
                                 
-                                var returnLinkHtml = returnLink.length ? returnLink.prop('outerHTML') : '';
+                                var returnLinkHtml = returnLinkElement.length ? returnLinkElement.prop('outerHTML') : '';
                                 
                                 var scoreHtml = '';
                                 if (result.display_type === 'band') {
