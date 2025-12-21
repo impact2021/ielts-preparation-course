@@ -1188,12 +1188,107 @@ You have one hour for the complete test (including transferring your answers).</
                 continue;
             }
             
+            // Handle new clear marker format (=== QUESTION N ===, === CORRECT ANSWER ===, etc.)
+            if (preg_match('/^===\s*QUESTION\s+\d+\s*===$/i', $line)) {
+                // Save previous question if exists
+                if ($current_question !== null) {
+                    if (!empty($current_options)) {
+                        $correct_answer_value = $this->get_correct_answer_from_options($current_options);
+                        $current_question['correct_answer'] = $correct_answer_value;
+                    }
+                    $questions[] = $current_question;
+                }
+                
+                // Start new question
+                $current_question = array(
+                    'type' => 'true_false',
+                    'question' => '',
+                    'points' => 1,
+                    'correct_feedback' => '',
+                    'incorrect_feedback' => '',
+                    'no_answer_feedback' => ''
+                );
+                $current_options = array();
+                $feedback_lines = array();
+                $state = 'READING_NEW_FORMAT_QUESTION';
+                continue;
+            }
+            
+            if (preg_match('/^===\s*CORRECT ANSWER\s*===$/i', $line)) {
+                $state = 'READING_NEW_FORMAT_ANSWER';
+                continue;
+            }
+            
+            if (preg_match('/^===\s*FEEDBACK WHEN CORRECT\s*===$/i', $line)) {
+                $state = 'READING_NEW_FORMAT_CORRECT_FEEDBACK';
+                $feedback_lines = array();
+                continue;
+            }
+            
+            if (preg_match('/^===\s*FEEDBACK WHEN INCORRECT\s*===$/i', $line)) {
+                $state = 'READING_NEW_FORMAT_INCORRECT_FEEDBACK';
+                $feedback_lines = array();
+                continue;
+            }
+            
+            if (preg_match('/^===\s*FEEDBACK WHEN NO ANSWER\s*===$/i', $line)) {
+                $state = 'READING_NEW_FORMAT_NO_ANSWER_FEEDBACK';
+                $feedback_lines = array();
+                continue;
+            }
+            
+            // Handle content for new format states
+            if ($state === 'READING_NEW_FORMAT_QUESTION' && !empty($line)) {
+                $current_question['question'] = sanitize_text_field($line);
+                continue;
+            }
+            
+            if ($state === 'READING_NEW_FORMAT_ANSWER' && !empty($line)) {
+                // Parse answer (TRUE, FALSE, or NOT GIVEN) and set it directly
+                $answer_value = strtolower(str_replace(' ', '_', trim($line)));
+                $current_question['correct_answer'] = $answer_value;
+                $state = 'WAITING_FOR_FEEDBACK';
+                continue;
+            }
+            
+            if ($state === 'READING_NEW_FORMAT_CORRECT_FEEDBACK' && !empty($line)) {
+                $feedback_lines[] = $line;
+                continue;
+            }
+            
+            if ($state === 'READING_NEW_FORMAT_INCORRECT_FEEDBACK' && !empty($line)) {
+                $feedback_lines[] = $line;
+                continue;
+            }
+            
+            if ($state === 'READING_NEW_FORMAT_NO_ANSWER_FEEDBACK' && !empty($line)) {
+                $feedback_lines[] = $line;
+                continue;
+            }
+            
+            // Save accumulated feedback when hitting empty line in new format
+            if (empty($line) && ($state === 'READING_NEW_FORMAT_CORRECT_FEEDBACK' || 
+                                  $state === 'READING_NEW_FORMAT_INCORRECT_FEEDBACK' || 
+                                  $state === 'READING_NEW_FORMAT_NO_ANSWER_FEEDBACK')) {
+                $feedback_text = sanitize_textarea_field(implode("\n", $feedback_lines));
+                if ($state === 'READING_NEW_FORMAT_CORRECT_FEEDBACK') {
+                    $current_question['correct_feedback'] = $feedback_text;
+                } elseif ($state === 'READING_NEW_FORMAT_INCORRECT_FEEDBACK') {
+                    $current_question['incorrect_feedback'] = $feedback_text;
+                } elseif ($state === 'READING_NEW_FORMAT_NO_ANSWER_FEEDBACK') {
+                    $current_question['no_answer_feedback'] = $feedback_text;
+                }
+                $feedback_lines = array();
+                $state = 'WAITING_FOR_FEEDBACK';
+                continue;
+            }
+            
             // Skip "=== QUESTION TYPE: ... ===" header lines that appear in question section
             if (preg_match('/^===.*===$/i', $line)) {
                 continue;
             }
             
-            // Skip "CORRECT ANSWER:" metadata lines (from export format)
+            // Skip "CORRECT ANSWER:" metadata lines (from old export format)
             if (preg_match('/^CORRECT ANSWER:/i', $line)) {
                 continue;
             }
@@ -1500,34 +1595,51 @@ You have one hour for the complete test (including transferring your answers).</
         }
         
         // Save last question if exists
-        if ($current_question !== null && !empty($current_options)) {
-            // Save any remaining feedback lines to the appropriate feedback type
-            if (!empty($feedback_lines)) {
-                $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
-                if ($current_feedback_type === 'correct') {
-                    $current_question['correct_feedback'] = !empty($current_question['correct_feedback']) 
-                        ? $current_question['correct_feedback'] . " " . $feedback_text 
-                        : $feedback_text;
-                } elseif ($current_feedback_type === 'no_answer') {
-                    $current_question['no_answer_feedback'] = !empty($current_question['no_answer_feedback']) 
-                        ? $current_question['no_answer_feedback'] . " " . $feedback_text 
-                        : $feedback_text;
-                } else {
-                    $current_question['incorrect_feedback'] = !empty($current_question['incorrect_feedback']) 
-                        ? $current_question['incorrect_feedback'] . " " . $feedback_text 
-                        : $feedback_text;
+        if ($current_question !== null) {
+            // For new format, save any remaining feedback
+            if (!empty($feedback_lines) && ($state === 'READING_NEW_FORMAT_CORRECT_FEEDBACK' || 
+                                             $state === 'READING_NEW_FORMAT_INCORRECT_FEEDBACK' || 
+                                             $state === 'READING_NEW_FORMAT_NO_ANSWER_FEEDBACK')) {
+                $feedback_text = sanitize_textarea_field(implode("\n", $feedback_lines));
+                if ($state === 'READING_NEW_FORMAT_CORRECT_FEEDBACK') {
+                    $current_question['correct_feedback'] = $feedback_text;
+                } elseif ($state === 'READING_NEW_FORMAT_INCORRECT_FEEDBACK') {
+                    $current_question['incorrect_feedback'] = $feedback_text;
+                } elseif ($state === 'READING_NEW_FORMAT_NO_ANSWER_FEEDBACK') {
+                    $current_question['no_answer_feedback'] = $feedback_text;
                 }
             }
             
-            // Find correct option and convert to proper format for true_false questions
-            $correct_answer_value = $this->get_correct_answer_from_options($current_options);
+            // For old format, process options and feedback
+            if (!empty($current_options)) {
+                // Save any remaining feedback lines to the appropriate feedback type
+                if (!empty($feedback_lines)) {
+                    $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
+                    if ($current_feedback_type === 'correct') {
+                        $current_question['correct_feedback'] = !empty($current_question['correct_feedback']) 
+                            ? $current_question['correct_feedback'] . " " . $feedback_text 
+                            : $feedback_text;
+                    } elseif ($current_feedback_type === 'no_answer') {
+                        $current_question['no_answer_feedback'] = !empty($current_question['no_answer_feedback']) 
+                            ? $current_question['no_answer_feedback'] . " " . $feedback_text 
+                            : $feedback_text;
+                    } else {
+                        $current_question['incorrect_feedback'] = !empty($current_question['incorrect_feedback']) 
+                            ? $current_question['incorrect_feedback'] . " " . $feedback_text 
+                            : $feedback_text;
+                    }
+                }
+                
+                // Find correct option and convert to proper format for true_false questions
+                if (empty($current_question['correct_answer'])) {
+                    $correct_answer_value = $this->get_correct_answer_from_options($current_options);
+                    $current_question['correct_answer'] = $correct_answer_value;
+                }
+            }
             
-            $current_question['correct_answer'] = $correct_answer_value;
-            // True/false questions don't need mc_options as they have fixed options in the template
-            if ($correct_answer_value === 'true' || $correct_answer_value === 'false' || $correct_answer_value === 'not_given') {
-                // Don't set mc_options for true_false questions
-            } else {
-                $current_question['mc_options'] = $current_options;
+            // Ensure we have a correct answer
+            if (empty($current_question['correct_answer'])) {
+                $current_question['correct_answer'] = 'true'; // Default fallback
             }
             
             $questions[] = $current_question;
@@ -2467,35 +2579,29 @@ You have one hour for the complete test (including transferring your answers).</
                 }
             }
             
-            $output[] = $question_num . '. ' . $question_text;
+            $output[] = '=== QUESTION ' . $question_num . ' ===';
+            $output[] = $question_text;
             $output[] = '';
-            $output[] = 'CORRECT ANSWER: ' . strtoupper(str_replace('_', ' ', $correct_answer));
-            
-            // Add options based on correct answer (for reference)
-            $options = array('true', 'false', 'not_given');
-            foreach ($options as $option) {
-                $option_display = ucfirst(str_replace('_', ' ', $option));
-                if ($option === $correct_answer) {
-                    $output[] = 'This is ' . strtoupper($option_display);
-                    $output[] = 'Correct answer';
-                } else {
-                    $output[] = 'This is ' . strtoupper($option_display);
-                    $output[] = 'Incorrect';
-                }
-            }
+            $output[] = '=== CORRECT ANSWER ===';
+            $output[] = strtoupper(str_replace('_', ' ', $correct_answer));
             $output[] = '';
             
-            // Add feedback if present
+            // Add feedback with clear descriptive markers
             if (!empty($question['correct_feedback'])) {
-                $output[] = '[GENERAL CORRECT FEEDBACK] ' . strip_tags($question['correct_feedback']);
+                $output[] = '=== FEEDBACK WHEN CORRECT ===';
+                $output[] = strip_tags($question['correct_feedback']);
+                $output[] = '';
             }
             if (!empty($question['incorrect_feedback'])) {
-                $output[] = '[GENERAL INCORRECT FEEDBACK] ' . strip_tags($question['incorrect_feedback']);
+                $output[] = '=== FEEDBACK WHEN INCORRECT ===';
+                $output[] = strip_tags($question['incorrect_feedback']);
+                $output[] = '';
             }
             if (!empty($question['no_answer_feedback'])) {
-                $output[] = '[NO ANSWER FEEDBACK] ' . strip_tags($question['no_answer_feedback']);
+                $output[] = '=== FEEDBACK WHEN NO ANSWER ===';
+                $output[] = strip_tags($question['no_answer_feedback']);
+                $output[] = '';
             }
-            $output[] = '';
         }
         
         return implode("\n", $output);
@@ -2949,43 +3055,35 @@ You have one hour for the complete test (including transferring your answers).</
             }
         }
         
-        // Add questions
+        // Add questions with very clear descriptive markers
         foreach ($questions as $index => $question) {
             $question_num = $index + 1;
             $question_text = isset($question['question']) ? $question['question'] : '';
             $correct_answer = isset($question['correct_answer']) ? $question['correct_answer'] : '';
             
-            $output[] = $question_num . '. ' . $question_text;
+            $output[] = '=== QUESTION ' . $question_num . ' ===';
+            $output[] = $question_text;
+            $output[] = '';
+            $output[] = '=== CORRECT ANSWER ===';
+            $output[] = strtoupper(str_replace('_', ' ', $correct_answer));
             $output[] = '';
             
-            // Show which answer is correct
-            $output[] = 'CORRECT ANSWER: ' . strtoupper(str_replace('_', ' ', $correct_answer));
-            
-            // Add options based on correct answer (for reference)
-            $options = array('true', 'false', 'not_given');
-            foreach ($options as $option) {
-                $option_display = ucfirst(str_replace('_', ' ', $option));
-                if ($option === $correct_answer) {
-                    $output[] = 'This is ' . strtoupper($option_display);
-                    $output[] = 'Correct answer';
-                } else {
-                    $output[] = 'This is ' . strtoupper($option_display);
-                    $output[] = 'Incorrect';
-                }
-            }
-            $output[] = '';
-            
-            // Add feedback if present
+            // Add feedback with clear descriptive markers
             if (!empty($question['correct_feedback'])) {
-                $output[] = '[GENERAL CORRECT FEEDBACK] ' . strip_tags($question['correct_feedback']);
+                $output[] = '=== FEEDBACK WHEN CORRECT ===';
+                $output[] = strip_tags($question['correct_feedback']);
+                $output[] = '';
             }
             if (!empty($question['incorrect_feedback'])) {
-                $output[] = '[GENERAL INCORRECT FEEDBACK] ' . strip_tags($question['incorrect_feedback']);
+                $output[] = '=== FEEDBACK WHEN INCORRECT ===';
+                $output[] = strip_tags($question['incorrect_feedback']);
+                $output[] = '';
             }
             if (!empty($question['no_answer_feedback'])) {
-                $output[] = '[NO ANSWER FEEDBACK] ' . strip_tags($question['no_answer_feedback']);
+                $output[] = '=== FEEDBACK WHEN NO ANSWER ===';
+                $output[] = strip_tags($question['no_answer_feedback']);
+                $output[] = '';
             }
-            $output[] = '';
         }
         
         return implode("\n", $output);
