@@ -530,6 +530,35 @@ You have one hour for the complete test (including transferring your answers).</
     }
     
     /**
+     * Find reading text index by title (helper for parsing)
+     */
+    private function find_reading_text_by_title($title, $reading_texts) {
+        foreach ($reading_texts as $rt_idx => $rt) {
+            $rt_title = !empty($rt['title']) ? $rt['title'] : 'Reading Text ' . ($rt_idx + 1);
+            if (strcasecmp($rt_title, $title) === 0) {
+                return $rt_idx;
+            }
+        }
+        return null;
+    }
+    
+    /**
+     * Format reading text link for export (helper for text export)
+     */
+    private function format_reading_text_link($question, $reading_texts) {
+        if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
+            $reading_text_index = intval($question['reading_text_id']);
+            if (isset($reading_texts[$reading_text_index])) {
+                $linked_text_title = !empty($reading_texts[$reading_text_index]['title']) ? 
+                    $reading_texts[$reading_text_index]['title'] : 
+                    'Reading Text ' . ($reading_text_index + 1);
+                return '[LINKED TO: ' . $linked_text_title . ']';
+            }
+        }
+        return null;
+    }
+    
+    /**
      * Parse exercise text into structured data
      */
     public function parse_exercise_text($text) {
@@ -828,14 +857,7 @@ You have one hour for the complete test (including transferring your answers).</
                 $reading_text_id = null;
                 if ($i > 0 && preg_match('/\[LINKED TO:\s*(.+?)\]/i', $question_lines[$i - 1], $link_match)) {
                     $linked_title = trim($link_match[1]);
-                    // Find the reading text index by title
-                    foreach ($reading_texts as $rt_idx => $rt) {
-                        $rt_title = !empty($rt['title']) ? $rt['title'] : 'Reading Text ' . ($rt_idx + 1);
-                        if (strcasecmp($rt_title, $linked_title) === 0) {
-                            $reading_text_id = $rt_idx;
-                            break;
-                        }
-                    }
+                    $reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
                 }
                 
                 // Extract the answer part from within the curly braces
@@ -1439,14 +1461,7 @@ You have one hour for the complete test (including transferring your answers).</
                 $reading_text_id = null;
                 if ($i > 0 && preg_match('/\[LINKED TO:\s*(.+?)\]/i', $lines[$i - 1], $link_match)) {
                     $linked_title = trim($link_match[1]);
-                    // Find the reading text index by title
-                    foreach ($reading_texts as $rt_idx => $rt) {
-                        $rt_title = !empty($rt['title']) ? $rt['title'] : 'Reading Text ' . ($rt_idx + 1);
-                        if (strcasecmp($rt_title, $linked_title) === 0) {
-                            $reading_text_id = $rt_idx;
-                            break;
-                        }
-                    }
+                    $reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
                 }
                 
                 // Start new question
@@ -2599,14 +2614,9 @@ You have one hour for the complete test (including transferring your answers).</
             $options = isset($question['mc_options']) ? $question['mc_options'] : array();
             
             // Add linked reading text if present
-            if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
-                $reading_text_index = intval($question['reading_text_id']);
-                if (isset($reading_texts[$reading_text_index])) {
-                    $linked_text_title = !empty($reading_texts[$reading_text_index]['title']) ? 
-                        $reading_texts[$reading_text_index]['title'] : 
-                        'Reading Text ' . ($reading_text_index + 1);
-                    $output[] = '[LINKED TO: ' . $linked_text_title . ']';
-                }
+            $link_text = $this->format_reading_text_link($question, $reading_texts);
+            if ($link_text !== null) {
+                $output[] = $link_text;
             }
             
             $output[] = $question_num . '. ' . $question_text;
