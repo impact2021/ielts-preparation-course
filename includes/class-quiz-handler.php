@@ -45,6 +45,63 @@ class IELTS_CM_Quiz_Handler {
         $max_score = 0;
         $question_results = array();
         
+        // Calculate display question numbers for feedback (same logic as in template)
+        $question_display_numbers = array();
+        $display_question_number = 1;
+        foreach ($questions as $idx => $q) {
+            $start_num = $display_question_number;
+            $question_count = 1;
+            
+            if ($q['type'] === 'multi_select' && isset($q['mc_options']) && is_array($q['mc_options'])) {
+                $correct_count = 0;
+                foreach ($q['mc_options'] as $opt) {
+                    if (!empty($opt['is_correct'])) {
+                        $correct_count++;
+                    }
+                }
+                $question_count = max(1, $correct_count);
+            } elseif ($q['type'] === 'summary_completion') {
+                $field_count = 0;
+                if (isset($q['summary_fields']) && is_array($q['summary_fields'])) {
+                    $field_count = count($q['summary_fields']);
+                } else {
+                    $question_text = isset($q['question']) ? $q['question'] : '';
+                    preg_match_all('/\[field\s+(\d+)\]/i', $question_text, $field_matches);
+                    preg_match_all('/\[ANSWER\s+(\d+)\]/i', $question_text, $answer_matches);
+                    if (!empty($field_matches[1])) {
+                        $field_count = count(array_unique($field_matches[1]));
+                    } elseif (!empty($answer_matches[1])) {
+                        $field_count = count(array_unique($answer_matches[1]));
+                    }
+                }
+                $question_count = max(1, $field_count);
+            } elseif ($q['type'] === 'dropdown_paragraph') {
+                $paragraph_text = isset($q['question']) ? $q['question'] : '';
+                preg_match_all('/(\d+)\.\[([^\]]+)\]/i', $paragraph_text, $dropdown_matches);
+                $dropdown_count = !empty($dropdown_matches[0]) ? count($dropdown_matches[0]) : 1;
+                $question_count = max(1, $dropdown_count);
+            } elseif ($q['type'] === 'table_completion') {
+                $field_count = 0;
+                if (isset($q['summary_fields']) && is_array($q['summary_fields'])) {
+                    $field_count = count($q['summary_fields']);
+                } else {
+                    $question_text = isset($q['question']) ? $q['question'] : '';
+                    preg_match_all('/\[field\s+(\d+)\]/i', $question_text, $field_matches);
+                    if (!empty($field_matches[1])) {
+                        $field_count = count(array_unique($field_matches[1]));
+                    }
+                }
+                $question_count = max(1, $field_count);
+            }
+            
+            $question_display_numbers[$idx] = array(
+                'start' => $start_num,
+                'end' => $start_num + $question_count - 1,
+                'count' => $question_count
+            );
+            $display_question_number += $question_count;
+        }
+        
         foreach ($questions as $index => $question) {
             // Calculate max score for each question type
             if ($question['type'] === 'multi_select') {
@@ -167,9 +224,12 @@ class IELTS_CM_Quiz_Handler {
                 
                 // Build combined feedback
                 $feedback_parts = array();
+                $display_nums = $question_display_numbers[$index];
                 foreach ($field_results as $field_num => $field_result) {
                     if (!empty($field_result['feedback'])) {
-                        $feedback_parts[] = '<strong>' . sprintf(__('Field %s:', 'ielts-course-manager'), $field_num) . '</strong> ' . $field_result['feedback'];
+                        // Calculate the actual question number for this field
+                        $question_number = $display_nums['start'] + intval($field_num) - 1;
+                        $feedback_parts[] = '<strong>' . sprintf(__('Question %s:', 'ielts-course-manager'), $question_number) . '</strong> ' . $field_result['feedback'];
                     }
                 }
                 $feedback = !empty($feedback_parts) ? implode('<br>', $feedback_parts) : '';
@@ -303,9 +363,12 @@ class IELTS_CM_Quiz_Handler {
                 
                 // Build combined feedback
                 $feedback_parts = array();
+                $display_nums = $question_display_numbers[$index];
                 foreach ($field_results as $field_num => $field_result) {
                     if (!empty($field_result['feedback'])) {
-                        $feedback_parts[] = '<strong>' . sprintf(__('Field %s:', 'ielts-course-manager'), $field_num) . '</strong> ' . $field_result['feedback'];
+                        // Calculate the actual question number for this field
+                        $question_number = $display_nums['start'] + intval($field_num) - 1;
+                        $feedback_parts[] = '<strong>' . sprintf(__('Question %s:', 'ielts-course-manager'), $question_number) . '</strong> ' . $field_result['feedback'];
                     }
                 }
                 $feedback = !empty($feedback_parts) ? implode('<br>', $feedback_parts) : '';

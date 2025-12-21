@@ -428,6 +428,16 @@ body.ielts-course-archive .content-area {
     vertical-align: middle;
 }
 
+.ielts-single-quiz .answer-input-inline.answer-correct {
+    border: 3px solid #4caf50;
+    background: #f1f8f4;
+}
+
+.ielts-single-quiz .answer-input-inline.answer-incorrect {
+    border: 3px solid #f44336;
+    background: #fef5f5;
+}
+
 .ielts-single-quiz .summary-completion-text {
     line-height: 2.5;
 }
@@ -980,6 +990,16 @@ body.ielts-course-archive .content-area {
     margin: 0 5px;
     vertical-align: middle;
     transition: border-color 0.2s ease;
+}
+
+.ielts-computer-based-quiz .answer-input-inline.answer-correct {
+    border: 3px solid #4caf50;
+    background: #f1f8f4;
+}
+
+.ielts-computer-based-quiz .answer-input-inline.answer-incorrect {
+    border: 3px solid #f44336;
+    background: #fef5f5;
 }
 
 .ielts-computer-based-quiz .summary-completion-text {
