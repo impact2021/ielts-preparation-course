@@ -944,7 +944,7 @@ class IELTS_CM_Admin {
                     <li><strong><?php _e('Short Answer Questions:', 'ielts-course-manager'); ?></strong> <?php _e('Students type a brief answer. Use | to separate multiple accepted answers.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Sentence Completion:', 'ielts-course-manager'); ?></strong> <?php _e('Students complete a sentence. Matching is case-insensitive and ignores punctuation.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Summary Completion:', 'ielts-course-manager'); ?></strong> <?php _e('Students fill in blanks in a summary. Supports multiple accepted answers with |', 'ielts-course-manager'); ?></li>
-                    <li><strong><?php _e('Table Completion:', 'ielts-course-manager'); ?></strong> <?php _e('Students fill in table cells. Matching is flexible and case-insensitive.', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Table Completion:', 'ielts-course-manager'); ?></strong> <?php _e('Students fill in multiple table cells. Works like Summary Completion with [field N] placeholders.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Labelling:', 'ielts-course-manager'); ?></strong> <?php _e('For diagram/image labelling. Students type the label text.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Classifying & Matching:', 'ielts-course-manager'); ?></strong> <?php _e('For categorizing items. Add category options and mark the correct one.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Locating Information:', 'ielts-course-manager'); ?></strong> <?php _e('Students identify paragraph/section. Add paragraph options and mark the correct one.', 'ielts-course-manager'); ?></li>
@@ -1204,11 +1204,12 @@ class IELTS_CM_Admin {
                         correctAnswerField.find('select').val(currentValue);
                     }
                     correctAnswerField.show();
-                } else if (type === 'short_answer' || type === 'sentence_completion' || type === 'table_completion' || type === 'labelling') {
+                } else if (type === 'short_answer' || type === 'sentence_completion' || type === 'labelling') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').show();
                     container.find('.dropdown-paragraph-field').hide();
+                    container.find('.summary-completion-field').hide();
                     correctAnswerField.find('label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
                     // Set placeholder for all types
                     container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', ieltsPlaceholder);
@@ -1220,7 +1221,7 @@ class IELTS_CM_Admin {
                         correctAnswerInput.replaceWith(inputHtml);
                     }
                     correctAnswerField.show();
-                } else if (type === 'summary_completion') {
+                } else if (type === 'summary_completion' || type === 'table_completion') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
                     container.find('.general-feedback-field').hide();
@@ -2231,10 +2232,10 @@ class IELTS_CM_Admin {
                 <input type="hidden" class="dropdown-paragraph-correct-answer" name="questions[<?php echo $index; ?>][correct_answer]" value="<?php echo esc_attr(isset($question['correct_answer']) ? $question['correct_answer'] : ''); ?>">
             </div>
             
-            <!-- Summary Completion Fields -->
-            <div class="summary-completion-field" style="<?php echo (isset($question['type']) && $question['type'] === 'summary_completion') ? '' : 'display:none;'; ?>">
+            <!-- Summary Completion and Table Completion Fields -->
+            <div class="summary-completion-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('summary_completion', 'table_completion'))) ? '' : 'display:none;'; ?>">
                 <div style="margin-bottom: 15px; padding: 15px; background: #f0f6fc; border-left: 4px solid #0969da;">
-                    <h5 style="margin-top: 0;"><?php _e('How to Use Summary Completion', 'ielts-course-manager'); ?></h5>
+                    <h5 style="margin-top: 0;"><?php echo (isset($question['type']) && $question['type'] === 'table_completion') ? __('How to Use Table Completion', 'ielts-course-manager') : __('How to Use Summary Completion', 'ielts-course-manager'); ?></h5>
                     <p><?php _e('In the question text above, use placeholders like [field 1], [field 2], [field 3], etc. to mark where input fields should appear.', 'ielts-course-manager'); ?></p>
                     <p><strong><?php _e('Example:', 'ielts-course-manager'); ?></strong> <?php _e('"There are lots of types of [field 1]. The most popular is [field 2] and the most expensive is [field 3]."', 'ielts-course-manager'); ?></p>
                     <p><?php _e('Then, for each numbered field, add the correct answer and feedback below. Each field will count as a separate question.', 'ielts-course-manager'); ?></p>
@@ -2304,7 +2305,7 @@ class IELTS_CM_Admin {
                 <textarea name="questions[<?php echo $index; ?>][options]" rows="4" style="width: 100%;"><?php echo esc_textarea(isset($question['options']) ? $question['options'] : ''); ?></textarea>
             </p>
             
-            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph', 'summary_completion'))) ? 'display:none;' : ''; ?>">
+            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph', 'summary_completion', 'table_completion'))) ? 'display:none;' : ''; ?>">
                 <label><?php _e('Correct Answer', 'ielts-course-manager'); ?></label><br>
                 <?php if (isset($question['type']) && $question['type'] === 'true_false'): ?>
                     <select name="questions[<?php echo $index; ?>][correct_answer]" style="width: 100%;">
@@ -3316,10 +3317,12 @@ class IELTS_CM_Admin {
         </ul>
         
         <h3><?php _e('Table Completion', 'ielts-course-manager'); ?></h3>
-        <p><?php _e('Students complete missing information in a table. Functions identically to Short Answer Questions.', 'ielts-course-manager'); ?></p>
+        <p><?php _e('Students fill in multiple blanks within a table. Each blank is treated as a separate question in scoring and navigation.', 'ielts-course-manager'); ?></p>
         <ul>
-            <li><strong><?php _e('Correct Answer:', 'ielts-course-manager'); ?></strong> <?php _e('Use | (pipe) to separate multiple accepted answers.', 'ielts-course-manager'); ?></li>
-            <li><strong><?php _e('Best for:', 'ielts-course-manager'); ?></strong> <?php _e('Questions where students fill in missing table cells.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('How to create:', 'ielts-course-manager'); ?></strong> <?php _e('In the question text, use placeholders like [field 1], [field 2], [field 3] where you want input fields to appear.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Example:', 'ielts-course-manager'); ?></strong> <?php _e('"There are lots of types of [field 1]. The most popular is [field 2] and the most expensive is [field 3]."', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Field setup:', 'ielts-course-manager'); ?></strong> <?php _e('Click "Refresh Fields from Question Text" to generate answer fields for each placeholder. Enter the correct answer(s) and custom feedback for each field.', 'ielts-course-manager'); ?></li>
+            <li><strong><?php _e('Scoring:', 'ielts-course-manager'); ?></strong> <?php _e('Each field is scored independently. If you have 3 fields, this counts as "Questions 1-3" in the navigation.', 'ielts-course-manager'); ?></li>
         </ul>
         
         <h3><?php _e('Labelling', 'ielts-course-manager'); ?></h3>
