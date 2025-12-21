@@ -1130,21 +1130,27 @@ You have one hour for the complete test (including transferring your answers).</
                         }
                         
                         // Find correct option and convert to proper format for true_false questions
-                        $correct_answer_value = '0';
+                        $correct_answer_value = '';
                         foreach ($current_options as $idx => $opt) {
                             if ($opt['is_correct']) {
                                 // For true_false questions, convert option text to expected value
-                                if (stripos($opt['text'], 'TRUE') !== false) {
+                                // Check for NOT GIVEN first (more specific) before TRUE
+                                if (stripos($opt['text'], 'NOT GIVEN') !== false) {
+                                    $correct_answer_value = 'not_given';
+                                } elseif (stripos($opt['text'], 'TRUE') !== false) {
                                     $correct_answer_value = 'true';
                                 } elseif (stripos($opt['text'], 'FALSE') !== false) {
                                     $correct_answer_value = 'false';
-                                } elseif (stripos($opt['text'], 'NOT GIVEN') !== false) {
-                                    $correct_answer_value = 'not_given';
                                 } else {
                                     $correct_answer_value = (string)$idx;
                                 }
                                 break;
                             }
+                        }
+                        
+                        // Ensure we have a valid correct_answer value
+                        if (empty($correct_answer_value)) {
+                            $correct_answer_value = 'true'; // Default fallback
                         }
                         
                         $current_question['correct_answer'] = $correct_answer_value;
@@ -1336,21 +1342,27 @@ You have one hour for the complete test (including transferring your answers).</
                         }
                         
                         // Find correct option and convert to proper format for true_false questions
-                        $correct_answer_value = '0';
+                        $correct_answer_value = '';
                         foreach ($current_options as $idx => $opt) {
                             if ($opt['is_correct']) {
                                 // For true_false questions, convert option text to expected value
-                                if (stripos($opt['text'], 'TRUE') !== false && stripos($opt['text'], 'NOT GIVEN') === false) {
+                                // Check for NOT GIVEN first (more specific) before TRUE
+                                if (stripos($opt['text'], 'NOT GIVEN') !== false) {
+                                    $correct_answer_value = 'not_given';
+                                } elseif (stripos($opt['text'], 'TRUE') !== false) {
                                     $correct_answer_value = 'true';
                                 } elseif (stripos($opt['text'], 'FALSE') !== false) {
                                     $correct_answer_value = 'false';
-                                } elseif (stripos($opt['text'], 'NOT GIVEN') !== false) {
-                                    $correct_answer_value = 'not_given';
                                 } else {
                                     $correct_answer_value = (string)$idx;
                                 }
                                 break;
                             }
+                        }
+                        
+                        // Ensure we have a valid correct_answer value
+                        if (empty($correct_answer_value)) {
+                            $correct_answer_value = 'true'; // Default fallback
                         }
                         
                         $current_question['correct_answer'] = $correct_answer_value;
@@ -1516,21 +1528,27 @@ You have one hour for the complete test (including transferring your answers).</
             }
             
             // Find correct option and convert to proper format for true_false questions
-            $correct_answer_value = '0';
+            $correct_answer_value = '';
             foreach ($current_options as $idx => $opt) {
                 if ($opt['is_correct']) {
                     // For true_false questions, convert option text to expected value
-                    if (stripos($opt['text'], 'TRUE') !== false && stripos($opt['text'], 'NOT GIVEN') === false) {
+                    // Check for NOT GIVEN first (more specific) before TRUE
+                    if (stripos($opt['text'], 'NOT GIVEN') !== false) {
+                        $correct_answer_value = 'not_given';
+                    } elseif (stripos($opt['text'], 'TRUE') !== false) {
                         $correct_answer_value = 'true';
                     } elseif (stripos($opt['text'], 'FALSE') !== false) {
                         $correct_answer_value = 'false';
-                    } elseif (stripos($opt['text'], 'NOT GIVEN') !== false) {
-                        $correct_answer_value = 'not_given';
                     } else {
                         $correct_answer_value = (string)$idx;
                     }
                     break;
                 }
+            }
+            
+            // Ensure we have a valid correct_answer value
+            if (empty($correct_answer_value)) {
+                $correct_answer_value = 'true'; // Default fallback
             }
             
             $current_question['correct_answer'] = $correct_answer_value;
