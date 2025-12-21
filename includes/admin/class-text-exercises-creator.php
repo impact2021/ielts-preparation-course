@@ -1095,6 +1095,7 @@ You have one hour for the complete test (including transferring your answers).</
         $current_question = null;
         $current_options = array();
         $feedback_lines = array();
+        $current_feedback_type = 'incorrect'; // Track which feedback type we're collecting: 'correct', 'incorrect', 'no_answer'
         
         for ($i = $start_index; $i < count($lines); $i++) {
             $line = $lines[$i];
@@ -1107,8 +1108,25 @@ You have one hour for the complete test (including transferring your answers).</
                 } elseif ($state === 'COLLECTING_FEEDBACK' || $state === 'MAYBE_FEEDBACK') {
                     // Save current question
                     if ($current_question !== null && !empty($current_options)) {
+                        // Save any remaining feedback lines to the appropriate feedback type
                         if (!empty($feedback_lines)) {
-                            $current_question['incorrect_feedback'] = sanitize_textarea_field(implode("\n", $feedback_lines));
+                            $feedback_text = sanitize_textarea_field(implode("\n", $feedback_lines));
+                            if ($current_feedback_type === 'correct') {
+                                // Append to existing correct feedback if any
+                                $current_question['correct_feedback'] = !empty($current_question['correct_feedback']) 
+                                    ? $current_question['correct_feedback'] . "\n" . $feedback_text 
+                                    : $feedback_text;
+                            } elseif ($current_feedback_type === 'no_answer') {
+                                // Append to existing no answer feedback if any
+                                $current_question['no_answer_feedback'] = !empty($current_question['no_answer_feedback']) 
+                                    ? $current_question['no_answer_feedback'] . "\n" . $feedback_text 
+                                    : $feedback_text;
+                            } else {
+                                // Default to incorrect feedback
+                                $current_question['incorrect_feedback'] = !empty($current_question['incorrect_feedback']) 
+                                    ? $current_question['incorrect_feedback'] . "\n" . $feedback_text 
+                                    : $feedback_text;
+                            }
                         }
                         
                         // Find correct option and convert to proper format for true_false questions
@@ -1144,9 +1162,20 @@ You have one hour for the complete test (including transferring your answers).</
                         $current_question = null;
                         $current_options = array();
                         $feedback_lines = array();
+                        $current_feedback_type = 'incorrect';
                     }
                     $state = 'WAITING_FOR_QUESTION';
                 }
+                continue;
+            }
+            
+            // Skip "=== QUESTION TYPE: ... ===" header lines that appear in question section
+            if (preg_match('/^===.*===$/i', $line)) {
+                continue;
+            }
+            
+            // Skip "CORRECT ANSWER:" metadata lines (from export format)
+            if (preg_match('/^CORRECT ANSWER:/i', $line)) {
                 continue;
             }
             
@@ -1184,10 +1213,13 @@ You have one hour for the complete test (including transferring your answers).</
             
             // Handle based on state
             if ($state === 'WAITING_FOR_QUESTION') {
+                // Strip question number prefix if present (e.g., "1. Question text" -> "Question text")
+                $question_text = preg_replace('/^\d+\.\s+/', '', $line);
+                
                 // This is a new question
                 $current_question = array(
                     'type' => 'true_false',
-                    'question' => sanitize_text_field($line),
+                    'question' => sanitize_text_field($question_text),
                     'points' => 1,
                     'correct_feedback' => '',
                     'incorrect_feedback' => '',
@@ -1195,6 +1227,84 @@ You have one hour for the complete test (including transferring your answers).</
                 );
                 $state = 'COLLECTING_OPTIONS';
             } elseif ($state === 'MAYBE_FEEDBACK') {
+                // Check for feedback markers first
+                if (preg_match('/^\[GENERAL CORRECT FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                    // Save any previous feedback first
+                    if (!empty($feedback_lines)) {
+                        $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
+                        if ($current_feedback_type === 'correct') {
+                            $current_question['correct_feedback'] = !empty($current_question['correct_feedback']) 
+                                ? $current_question['correct_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        } elseif ($current_feedback_type === 'no_answer') {
+                            $current_question['no_answer_feedback'] = !empty($current_question['no_answer_feedback']) 
+                                ? $current_question['no_answer_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        } else {
+                            $current_question['incorrect_feedback'] = !empty($current_question['incorrect_feedback']) 
+                                ? $current_question['incorrect_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        }
+                    }
+                    $feedback_lines = array();
+                    $current_feedback_type = 'correct';
+                    if (!empty($fb_match[1])) {
+                        $current_question['correct_feedback'] = sanitize_textarea_field($fb_match[1]);
+                    }
+                    $state = 'COLLECTING_FEEDBACK';
+                    continue;
+                } else if (preg_match('/^\[GENERAL INCORRECT FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                    // Save any previous feedback first
+                    if (!empty($feedback_lines)) {
+                        $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
+                        if ($current_feedback_type === 'correct') {
+                            $current_question['correct_feedback'] = !empty($current_question['correct_feedback']) 
+                                ? $current_question['correct_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        } elseif ($current_feedback_type === 'no_answer') {
+                            $current_question['no_answer_feedback'] = !empty($current_question['no_answer_feedback']) 
+                                ? $current_question['no_answer_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        } else {
+                            $current_question['incorrect_feedback'] = !empty($current_question['incorrect_feedback']) 
+                                ? $current_question['incorrect_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        }
+                    }
+                    $feedback_lines = array();
+                    $current_feedback_type = 'incorrect';
+                    if (!empty($fb_match[1])) {
+                        $current_question['incorrect_feedback'] = sanitize_textarea_field($fb_match[1]);
+                    }
+                    $state = 'COLLECTING_FEEDBACK';
+                    continue;
+                } else if (preg_match('/^\[NO ANSWER FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                    // Save any previous feedback first
+                    if (!empty($feedback_lines)) {
+                        $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
+                        if ($current_feedback_type === 'correct') {
+                            $current_question['correct_feedback'] = !empty($current_question['correct_feedback']) 
+                                ? $current_question['correct_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        } elseif ($current_feedback_type === 'no_answer') {
+                            $current_question['no_answer_feedback'] = !empty($current_question['no_answer_feedback']) 
+                                ? $current_question['no_answer_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        } else {
+                            $current_question['incorrect_feedback'] = !empty($current_question['incorrect_feedback']) 
+                                ? $current_question['incorrect_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        }
+                    }
+                    $feedback_lines = array();
+                    $current_feedback_type = 'no_answer';
+                    if (!empty($fb_match[1])) {
+                        $current_question['no_answer_feedback'] = sanitize_textarea_field($fb_match[1]);
+                    }
+                    $state = 'COLLECTING_FEEDBACK';
+                    continue;
+                }
+                
                 // Determine if this is feedback or a new question
                 // Feedback often starts with "It's", "This is", "The", has punctuation, or is longer
                 // A question is typically a statement without explanation markers
@@ -1207,8 +1317,22 @@ You have one hour for the complete test (including transferring your answers).</
                 } else {
                     // This looks like a new question - save previous question first
                     if ($current_question !== null && !empty($current_options)) {
+                        // Save any remaining feedback
                         if (!empty($feedback_lines)) {
-                            $current_question['incorrect_feedback'] = sanitize_textarea_field(implode("\n", $feedback_lines));
+                            $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
+                            if ($current_feedback_type === 'correct') {
+                                $current_question['correct_feedback'] = !empty($current_question['correct_feedback']) 
+                                    ? $current_question['correct_feedback'] . " " . $feedback_text 
+                                    : $feedback_text;
+                            } elseif ($current_feedback_type === 'no_answer') {
+                                $current_question['no_answer_feedback'] = !empty($current_question['no_answer_feedback']) 
+                                    ? $current_question['no_answer_feedback'] . " " . $feedback_text 
+                                    : $feedback_text;
+                            } else {
+                                $current_question['incorrect_feedback'] = !empty($current_question['incorrect_feedback']) 
+                                    ? $current_question['incorrect_feedback'] . " " . $feedback_text 
+                                    : $feedback_text;
+                            }
                         }
                         
                         // Find correct option and convert to proper format for true_false questions
@@ -1242,12 +1366,14 @@ You have one hour for the complete test (including transferring your answers).</
                         // Reset
                         $current_options = array();
                         $feedback_lines = array();
+                        $current_feedback_type = 'incorrect';
                     }
                     
-                    // Start new question
+                    // Start new question - strip question number prefix if present
+                    $question_text = preg_replace('/^\d+\.\s+/', '', $line);
                     $current_question = array(
                         'type' => 'true_false',
-                        'question' => sanitize_text_field($line),
+                        'question' => sanitize_text_field($question_text),
                         'points' => 1,
                         'correct_feedback' => '',
                         'incorrect_feedback' => '',
@@ -1257,14 +1383,29 @@ You have one hour for the complete test (including transferring your answers).</
                 }
             } elseif ($state === 'COLLECTING_OPTIONS') {
                 // Check for feedback markers
-                if (preg_match('/^\[GENERAL CORRECT FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
-                    $current_question['correct_feedback'] = sanitize_textarea_field($fb_match[1]);
+                if (preg_match('/^\[GENERAL CORRECT FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                    $current_feedback_type = 'correct';
+                    if (!empty($fb_match[1])) {
+                        $current_question['correct_feedback'] = sanitize_textarea_field($fb_match[1]);
+                    }
+                    $feedback_lines = array();
+                    $state = 'COLLECTING_FEEDBACK';
                     continue;
-                } else if (preg_match('/^\[GENERAL INCORRECT FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
-                    $current_question['incorrect_feedback'] = sanitize_textarea_field($fb_match[1]);
+                } else if (preg_match('/^\[GENERAL INCORRECT FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                    $current_feedback_type = 'incorrect';
+                    if (!empty($fb_match[1])) {
+                        $current_question['incorrect_feedback'] = sanitize_textarea_field($fb_match[1]);
+                    }
+                    $feedback_lines = array();
+                    $state = 'COLLECTING_FEEDBACK';
                     continue;
-                } else if (preg_match('/^\[NO ANSWER FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
-                    $current_question['no_answer_feedback'] = sanitize_textarea_field($fb_match[1]);
+                } else if (preg_match('/^\[NO ANSWER FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                    $current_feedback_type = 'no_answer';
+                    if (!empty($fb_match[1])) {
+                        $current_question['no_answer_feedback'] = sanitize_textarea_field($fb_match[1]);
+                    }
+                    $feedback_lines = array();
+                    $state = 'COLLECTING_FEEDBACK';
                     continue;
                 }
                 
@@ -1274,24 +1415,104 @@ You have one hour for the complete test (including transferring your answers).</
                     $state = 'COLLECTING_FEEDBACK';
                 }
             } elseif ($state === 'COLLECTING_FEEDBACK') {
-                // Check for feedback markers
-                if (preg_match('/^\[GENERAL CORRECT FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
-                    $current_question['correct_feedback'] = sanitize_textarea_field($fb_match[1]);
-                } else if (preg_match('/^\[GENERAL INCORRECT FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
-                    $current_question['incorrect_feedback'] = sanitize_textarea_field($fb_match[1]);
-                } else if (preg_match('/^\[NO ANSWER FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
-                    $current_question['no_answer_feedback'] = sanitize_textarea_field($fb_match[1]);
-                } else {
-                    // Continue collecting feedback
-                    $feedback_lines[] = $line;
+                // Check for feedback markers - these can appear anywhere in feedback section
+                if (preg_match('/^\[GENERAL CORRECT FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                    // Save any previous feedback first
+                    if (!empty($feedback_lines)) {
+                        $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
+                        if ($current_feedback_type === 'correct') {
+                            $current_question['correct_feedback'] = !empty($current_question['correct_feedback']) 
+                                ? $current_question['correct_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        } elseif ($current_feedback_type === 'no_answer') {
+                            $current_question['no_answer_feedback'] = !empty($current_question['no_answer_feedback']) 
+                                ? $current_question['no_answer_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        } else {
+                            $current_question['incorrect_feedback'] = !empty($current_question['incorrect_feedback']) 
+                                ? $current_question['incorrect_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        }
+                    }
+                    $feedback_lines = array();
+                    $current_feedback_type = 'correct';
+                    if (!empty($fb_match[1])) {
+                        $current_question['correct_feedback'] = sanitize_textarea_field($fb_match[1]);
+                    }
+                    continue;
+                } else if (preg_match('/^\[GENERAL INCORRECT FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                    // Save any previous feedback first
+                    if (!empty($feedback_lines)) {
+                        $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
+                        if ($current_feedback_type === 'correct') {
+                            $current_question['correct_feedback'] = !empty($current_question['correct_feedback']) 
+                                ? $current_question['correct_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        } elseif ($current_feedback_type === 'no_answer') {
+                            $current_question['no_answer_feedback'] = !empty($current_question['no_answer_feedback']) 
+                                ? $current_question['no_answer_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        } else {
+                            $current_question['incorrect_feedback'] = !empty($current_question['incorrect_feedback']) 
+                                ? $current_question['incorrect_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        }
+                    }
+                    $feedback_lines = array();
+                    $current_feedback_type = 'incorrect';
+                    if (!empty($fb_match[1])) {
+                        $current_question['incorrect_feedback'] = sanitize_textarea_field($fb_match[1]);
+                    }
+                    continue;
+                } else if (preg_match('/^\[NO ANSWER FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                    // Save any previous feedback first
+                    if (!empty($feedback_lines)) {
+                        $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
+                        if ($current_feedback_type === 'correct') {
+                            $current_question['correct_feedback'] = !empty($current_question['correct_feedback']) 
+                                ? $current_question['correct_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        } elseif ($current_feedback_type === 'no_answer') {
+                            $current_question['no_answer_feedback'] = !empty($current_question['no_answer_feedback']) 
+                                ? $current_question['no_answer_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        } else {
+                            $current_question['incorrect_feedback'] = !empty($current_question['incorrect_feedback']) 
+                                ? $current_question['incorrect_feedback'] . " " . $feedback_text 
+                                : $feedback_text;
+                        }
+                    }
+                    $feedback_lines = array();
+                    $current_feedback_type = 'no_answer';
+                    if (!empty($fb_match[1])) {
+                        $current_question['no_answer_feedback'] = sanitize_textarea_field($fb_match[1]);
+                    }
+                    continue;
                 }
+                
+                // Continue collecting feedback - append to appropriate feedback buffer
+                $feedback_lines[] = $line;
             }
         }
         
         // Save last question if exists
         if ($current_question !== null && !empty($current_options)) {
+            // Save any remaining feedback lines to the appropriate feedback type
             if (!empty($feedback_lines)) {
-                $current_question['incorrect_feedback'] = sanitize_textarea_field(implode("\n", $feedback_lines));
+                $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
+                if ($current_feedback_type === 'correct') {
+                    $current_question['correct_feedback'] = !empty($current_question['correct_feedback']) 
+                        ? $current_question['correct_feedback'] . " " . $feedback_text 
+                        : $feedback_text;
+                } elseif ($current_feedback_type === 'no_answer') {
+                    $current_question['no_answer_feedback'] = !empty($current_question['no_answer_feedback']) 
+                        ? $current_question['no_answer_feedback'] . " " . $feedback_text 
+                        : $feedback_text;
+                } else {
+                    $current_question['incorrect_feedback'] = !empty($current_question['incorrect_feedback']) 
+                        ? $current_question['incorrect_feedback'] . " " . $feedback_text 
+                        : $feedback_text;
+                }
             }
             
             // Find correct option and convert to proper format for true_false questions
