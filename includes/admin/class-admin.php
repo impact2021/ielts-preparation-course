@@ -1701,6 +1701,24 @@ class IELTS_CM_Admin {
                     $question_count = count(array_unique($answer_matches[1]));
                 }
             }
+        } elseif ($question_type === 'dropdown_paragraph') {
+            // Count dropdowns for dropdown paragraph
+            $paragraph_text = isset($question['question']) ? $question['question'] : '';
+            preg_match_all('/(\d+)\.\[([^\]]+)\]/i', $paragraph_text, $dropdown_matches);
+            $dropdown_count = !empty($dropdown_matches[0]) ? count($dropdown_matches[0]) : 1;
+            $question_count = max(1, $dropdown_count);
+        } elseif ($question_type === 'table_completion') {
+            // Count fields for table completion
+            if (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+                $question_count = count($question['summary_fields']);
+            } else {
+                // Parse from question text
+                $question_text = isset($question['question']) ? $question['question'] : '';
+                preg_match_all('/\[field\s+(\d+)\]/i', $question_text, $field_matches);
+                if (!empty($field_matches[1])) {
+                    $question_count = count(array_unique($field_matches[1]));
+                }
+            }
         }
         
         return $question_count;
