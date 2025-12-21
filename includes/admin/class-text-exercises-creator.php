@@ -1187,14 +1187,35 @@ You have one hour for the complete test (including transferring your answers).</
                     $state = 'COLLECTING_OPTIONS';
                 }
             } elseif ($state === 'COLLECTING_OPTIONS') {
+                // Check for feedback markers
+                if (preg_match('/^\[GENERAL CORRECT FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
+                    $current_question['correct_feedback'] = sanitize_textarea_field($fb_match[1]);
+                    continue;
+                } else if (preg_match('/^\[GENERAL INCORRECT FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
+                    $current_question['incorrect_feedback'] = sanitize_textarea_field($fb_match[1]);
+                    continue;
+                } else if (preg_match('/^\[NO ANSWER FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
+                    $current_question['no_answer_feedback'] = sanitize_textarea_field($fb_match[1]);
+                    continue;
+                }
+                
                 // After we have options, any text is feedback
                 if (!empty($current_options)) {
                     $feedback_lines[] = $line;
                     $state = 'COLLECTING_FEEDBACK';
                 }
             } elseif ($state === 'COLLECTING_FEEDBACK') {
-                // Continue collecting feedback
-                $feedback_lines[] = $line;
+                // Check for feedback markers
+                if (preg_match('/^\[GENERAL CORRECT FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
+                    $current_question['correct_feedback'] = sanitize_textarea_field($fb_match[1]);
+                } else if (preg_match('/^\[GENERAL INCORRECT FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
+                    $current_question['incorrect_feedback'] = sanitize_textarea_field($fb_match[1]);
+                } else if (preg_match('/^\[NO ANSWER FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
+                    $current_question['no_answer_feedback'] = sanitize_textarea_field($fb_match[1]);
+                } else {
+                    // Continue collecting feedback
+                    $feedback_lines[] = $line;
+                }
             }
         }
         
@@ -1399,6 +1420,16 @@ You have one hour for the complete test (including transferring your answers).</
                     'is_correct' => $is_correct,
                     'feedback' => sanitize_text_field($feedback)
                 );
+            }
+            // Check for general feedback markers
+            else if ($current_question !== null) {
+                if (preg_match('/^\[GENERAL CORRECT FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
+                    $current_question['correct_feedback'] = sanitize_textarea_field($fb_match[1]);
+                } else if (preg_match('/^\[GENERAL INCORRECT FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
+                    $current_question['incorrect_feedback'] = sanitize_textarea_field($fb_match[1]);
+                } else if (preg_match('/^\[NO ANSWER FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
+                    $current_question['no_answer_feedback'] = sanitize_textarea_field($fb_match[1]);
+                }
             }
         }
         
@@ -2180,10 +2211,10 @@ You have one hour for the complete test (including transferring your answers).</
             
             // Add feedback if present
             if (!empty($question['correct_feedback'])) {
-                $output[] = '[CORRECT FEEDBACK] ' . strip_tags($question['correct_feedback']);
+                $output[] = '[GENERAL CORRECT FEEDBACK] ' . strip_tags($question['correct_feedback']);
             }
             if (!empty($question['incorrect_feedback'])) {
-                $output[] = '[INCORRECT FEEDBACK] ' . strip_tags($question['incorrect_feedback']);
+                $output[] = '[GENERAL INCORRECT FEEDBACK] ' . strip_tags($question['incorrect_feedback']);
             }
             if (!empty($question['no_answer_feedback'])) {
                 $output[] = '[NO ANSWER FEEDBACK] ' . strip_tags($question['no_answer_feedback']);
