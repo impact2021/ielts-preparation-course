@@ -1376,12 +1376,14 @@ class IELTS_CM_Admin {
                 // Clear and rebuild
                 container.empty();
                 
+                var defaultNoAnswerFeedback = '<?php echo esc_js(__("In the IELTS test, you should always take a guess. You don\'t lose points for a wrong answer.", "ielts-course-manager")); ?>';
+                
                 matches.forEach(function(fieldNum) {
                     var fieldData = existingFields[fieldNum] || {
                         answer: '',
                         correct_feedback: '',
                         incorrect_feedback: '',
-                        no_answer_feedback: ''
+                        no_answer_feedback: defaultNoAnswerFeedback
                     };
                     
                     var fieldHtml = '<div class="summary-field-item" data-field-num="' + fieldNum + '" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">' +
@@ -2039,7 +2041,7 @@ class IELTS_CM_Admin {
                                         'answer' => '',
                                         'correct_feedback' => '',
                                         'incorrect_feedback' => '',
-                                        'no_answer_feedback' => ''
+                                        'no_answer_feedback' => __("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager')
                                     );
                                 }
                             }
@@ -2050,6 +2052,10 @@ class IELTS_CM_Admin {
                     ksort($summary_fields);
                     
                     foreach ($summary_fields as $field_num => $field_data):
+                        // Set default no_answer_feedback if not set
+                        if (!isset($field_data['no_answer_feedback']) || $field_data['no_answer_feedback'] === '') {
+                            $field_data['no_answer_feedback'] = __("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager');
+                        }
                     ?>
                         <div class="summary-field-item" data-field-num="<?php echo esc_attr($field_num); ?>" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">
                             <h5 style="margin-top: 0;"><?php printf(__('Field %s', 'ielts-course-manager'), $field_num); ?></h5>
@@ -2067,7 +2073,7 @@ class IELTS_CM_Admin {
                             </p>
                             <p>
                                 <label><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></label><br>
-                                <textarea name="questions[<?php echo $index; ?>][summary_fields][<?php echo esc_attr($field_num); ?>][no_answer_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student leaves field blank', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($field_data['no_answer_feedback']) ? $field_data['no_answer_feedback'] : ''); ?></textarea>
+                                <textarea name="questions[<?php echo $index; ?>][summary_fields][<?php echo esc_attr($field_num); ?>][no_answer_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student leaves field blank', 'ielts-course-manager'); ?>"><?php echo esc_textarea($field_data['no_answer_feedback']); ?></textarea>
                             </p>
                         </div>
                     <?php endforeach; ?>
@@ -2270,7 +2276,7 @@ class IELTS_CM_Admin {
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
                 <p>
                     <label><?php _e('No Answer Selected Feedback', 'ielts-course-manager'); ?></label><br>
-                    <textarea name="questions[QUESTION_INDEX][no_answer_feedback]" rows="3" style="width: 100%;"></textarea>
+                    <textarea name="questions[QUESTION_INDEX][no_answer_feedback]" rows="3" style="width: 100%;"><?php echo esc_textarea(__("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager')); ?></textarea>
                     <small><?php _e('Shown when the student submits without selecting an answer. HTML is supported.', 'ielts-course-manager'); ?></small>
                 </p>
             </div>
@@ -2542,6 +2548,28 @@ class IELTS_CM_Admin {
                         $question_data['dropdown_options'] = $dropdown_options;
                         $question_data['correct_answer'] = implode('|', $correct_answer_parts);
                         $question_data['question'] = $question_text; // Update question text with converted format
+                    } elseif ($question['type'] === 'summary_completion' && isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+                        // Handle summary completion questions
+                        $sanitized_summary_fields = array();
+                        
+                        foreach ($question['summary_fields'] as $field_num => $field_data) {
+                            // Skip empty fields
+                            if (empty($field_data['answer'])) {
+                                continue;
+                            }
+                            
+                            $sanitized_summary_fields[$field_num] = array(
+                                'answer' => sanitize_text_field($field_data['answer']),
+                                'correct_feedback' => isset($field_data['correct_feedback']) ? wp_kses_post($field_data['correct_feedback']) : '',
+                                'incorrect_feedback' => isset($field_data['incorrect_feedback']) ? wp_kses_post($field_data['incorrect_feedback']) : '',
+                                'no_answer_feedback' => isset($field_data['no_answer_feedback']) ? wp_kses_post($field_data['no_answer_feedback']) : ''
+                            );
+                        }
+                        
+                        $question_data['summary_fields'] = $sanitized_summary_fields;
+                        // Also set options and correct_answer for backward compatibility
+                        $question_data['options'] = isset($question['options']) ? sanitize_textarea_field($question['options']) : '';
+                        $question_data['correct_answer'] = isset($question['correct_answer']) ? sanitize_text_field($question['correct_answer']) : '';
                     } else {
                         // Non-multiple choice questions
                         $question_data['options'] = isset($question['options']) ? sanitize_textarea_field($question['options']) : '';

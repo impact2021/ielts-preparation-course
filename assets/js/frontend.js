@@ -297,7 +297,26 @@
                             if (questionResult.correct) {
                                 // Mark correct answers in green
                                 questionElement.addClass('question-correct');
-                                navButtons.addClass('nav-correct').removeClass('answered');
+                                
+                                // For dropdown paragraph, mark each nav button individually
+                                if (questionResult.question_type === 'dropdown_paragraph') {
+                                    var correctAnswerStr = questionResult.correct_answer || '';
+                                    var displayStart = parseInt(questionElement.data('display-start'), 10);
+                                    
+                                    // Parse correct answers to count dropdowns and mark each nav button
+                                    var parts = correctAnswerStr.split('|');
+                                    $.each(parts, function(i, part) {
+                                        var subparts = part.trim().split(':');
+                                        if (subparts.length === 2) {
+                                            var dropdownNum = subparts[0].trim();
+                                            var displayNumber = displayStart + parseInt(dropdownNum, 10) - 1;
+                                            var navButton = $('.question-nav-btn[data-question="' + index + '"][data-display-number="' + displayNumber + '"]');
+                                            navButton.addClass('nav-correct').removeClass('answered');
+                                        }
+                                    });
+                                } else {
+                                    navButtons.addClass('nav-correct').removeClass('answered');
+                                }
                                 
                                 // Highlight the correct answer option
                                 if (questionResult.question_type === 'multiple_choice' || 
@@ -313,6 +332,9 @@
                                     if (questionResult.correct_answer) {
                                         questionElement.find('input[type="radio"][value="' + questionResult.correct_answer + '"]').closest('.option-label').addClass('answer-correct-highlight');
                                     }
+                                } else if (questionResult.question_type === 'dropdown_paragraph') {
+                                    // For dropdown paragraph, all dropdowns are correct - mark them all with green borders
+                                    questionElement.find('select.answer-select-inline').addClass('answer-correct');
                                 }
                                 
                                 // Common highlighting for multiple choice variants and true_false: mark the checked answer
@@ -325,7 +347,7 @@
                                 } else if (questionResult.question_type === 'multi_select') {
                                     // For multi-select, highlight all checked options in green (they're all correct if question is correct)
                                     questionElement.find('input[type="checkbox"]:checked').closest('.option-label').addClass('answer-correct');
-                                } else {
+                                } else if (questionResult.question_type !== 'dropdown_paragraph') {
                                     questionElement.find('input[type="text"], textarea').addClass('answer-correct');
                                 }
                             } else {
@@ -361,6 +383,45 @@
                                             $(this).addClass('nav-correct');
                                         } else {
                                             $(this).addClass('nav-incorrect');
+                                        }
+                                    });
+                                } else if (questionResult.question_type === 'dropdown_paragraph') {
+                                    // For dropdown paragraph, mark each dropdown and nav button individually
+                                    var userAnswers = questionResult.user_answer || {};
+                                    var correctAnswerStr = questionResult.correct_answer || '';
+                                    
+                                    // Parse correct answers from format "1:A|2:B|3:C"
+                                    var correctAnswersMap = {};
+                                    var parts = correctAnswerStr.split('|');
+                                    $.each(parts, function(i, part) {
+                                        var subparts = part.trim().split(':');
+                                        if (subparts.length === 2) {
+                                            var dropdownNum = subparts[0].trim();
+                                            var correctLetter = subparts[1].trim().toUpperCase();
+                                            correctAnswersMap[dropdownNum] = correctLetter;
+                                        }
+                                    });
+                                    
+                                    // Get display start number for this question
+                                    var displayStart = parseInt(questionElement.data('display-start'), 10);
+                                    
+                                    // Check each dropdown and mark it and its nav button
+                                    $.each(correctAnswersMap, function(dropdownNum, correctLetter) {
+                                        var dropdown = questionElement.find('select[name="answer_' + index + '_' + dropdownNum + '"]');
+                                        var userAnswer = userAnswers[dropdownNum] ? userAnswers[dropdownNum].toString().trim().toUpperCase() : '';
+                                        
+                                        // Calculate which nav button this corresponds to
+                                        var displayNumber = displayStart + parseInt(dropdownNum, 10) - 1;
+                                        var navButton = $('.question-nav-btn[data-question="' + index + '"][data-display-number="' + displayNumber + '"]');
+                                        
+                                        if (userAnswer === correctLetter) {
+                                            // Correct answer
+                                            dropdown.addClass('answer-correct');
+                                            navButton.removeClass('answered').addClass('nav-correct');
+                                        } else {
+                                            // Incorrect or not answered
+                                            dropdown.addClass('answer-incorrect');
+                                            navButton.removeClass('answered').addClass('nav-incorrect');
                                         }
                                     });
                                 } else {
@@ -421,7 +482,9 @@
                                             checkbox.closest('.option-label').addClass('answer-correct-highlight');
                                         }
                                     });
-                                } else {
+                                } else if (questionResult.question_type !== 'dropdown_paragraph') {
+                                    // Only mark text fields as incorrect if it's not a dropdown paragraph
+                                    // (dropdown paragraph is already handled above)
                                     questionElement.find('input[type="text"], textarea').addClass('answer-incorrect');
                                 }
                             }
@@ -621,9 +684,22 @@
         // Track dropdown selections in computer-based layout
         $('.ielts-computer-based-quiz').on('change', 'select.answer-select-inline', function() {
             var name = $(this).attr('name');
-            // Extract question index from name (format: answer_X_Y where X is question index, Y is dropdown number)
-            var questionIndex = name.replace('answer_', '').split('_')[0];
-            var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"]');
+            // Extract question index and dropdown number from name (format: answer_X_Y where X is question index, Y is dropdown number)
+            var parts = name.replace('answer_', '').split('_');
+            var questionIndex = parts[0];
+            var dropdownNum = parts[1];
+            
+            // Find the question element to get its display number range
+            var questionElement = $(this).closest('.quiz-question');
+            var displayStart = parseInt(questionElement.data('display-start'), 10);
+            var displayEnd = parseInt(questionElement.data('display-end'), 10);
+            
+            // Calculate which nav button corresponds to this dropdown
+            // Dropdown numbers start from 1, so dropdown 1 = first button, dropdown 2 = second button, etc.
+            var displayNumber = displayStart + parseInt(dropdownNum, 10) - 1;
+            
+            // Find the specific nav button for this dropdown
+            var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"][data-display-number="' + displayNumber + '"]');
             
             if ($(this).val().trim().length > 0) {
                 navButton.addClass('answered');
