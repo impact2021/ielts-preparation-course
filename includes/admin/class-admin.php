@@ -1692,15 +1692,35 @@ class IELTS_CM_Admin {
             
             $('#copy-text-format').on('click', function() {
                 var $textarea = $('#text-format-output');
-                $textarea.select();
-                document.execCommand('copy');
-                
+                var text = $textarea.val();
                 var $button = $(this);
                 var originalText = $button.text();
-                $button.text('<?php _e('Copied!', 'ielts-course-manager'); ?>');
-                setTimeout(function() {
-                    $button.text(originalText);
-                }, 2000);
+                
+                // Try modern Clipboard API first, fallback to execCommand
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(text).then(function() {
+                        $button.text('<?php _e('Copied!', 'ielts-course-manager'); ?>');
+                        setTimeout(function() {
+                            $button.text(originalText);
+                        }, 2000);
+                    }).catch(function() {
+                        // Fallback to execCommand
+                        $textarea.select();
+                        document.execCommand('copy');
+                        $button.text('<?php _e('Copied!', 'ielts-course-manager'); ?>');
+                        setTimeout(function() {
+                            $button.text(originalText);
+                        }, 2000);
+                    });
+                } else {
+                    // Fallback for older browsers
+                    $textarea.select();
+                    document.execCommand('copy');
+                    $button.text('<?php _e('Copied!', 'ielts-course-manager'); ?>');
+                    setTimeout(function() {
+                        $button.text(originalText);
+                    }, 2000);
+                }
             });
             
             $('#import-from-text').on('click', function() {
