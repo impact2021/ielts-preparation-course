@@ -1772,19 +1772,156 @@ class IELTS_CM_Admin {
                                     
                                     // Populate the question fields
                                     var $lastQuestion = $('#questions-container .question-item').last();
-                                    $lastQuestion.find('select[name*="[type]"]').val(question.type).trigger('change');
-                                    $lastQuestion.find('textarea[name*="[question]"]').val(question.question);
-                                    $lastQuestion.find('input[name*="[correct_answer]"]').val(question.correct_answer);
+                                    var currentQuestionIndex = questionIndex - 1;
                                     
-                                    if (question.options) {
-                                        $lastQuestion.find('textarea[name*="[options]"]').val(question.options);
+                                    // Set question type and trigger change to show/hide appropriate fields
+                                    $lastQuestion.find('select[name*="[type]"]').val(question.type).trigger('change');
+                                    
+                                    // Set basic question fields
+                                    $lastQuestion.find('textarea[name*="[question]"]').val(question.question || '');
+                                    $lastQuestion.find('input[name*="[points]"]').val(question.points || 1);
+                                    
+                                    // Set feedback fields
+                                    $lastQuestion.find('textarea[name*="[correct_feedback]"]').val(question.correct_feedback || '');
+                                    $lastQuestion.find('textarea[name*="[incorrect_feedback]"]').val(question.incorrect_feedback || '');
+                                    $lastQuestion.find('textarea[name*="[no_answer_feedback]"]').val(question.no_answer_feedback || '');
+                                    
+                                    // Set reading text link if present
+                                    if (question.reading_text_id !== undefined && question.reading_text_id !== null && question.reading_text_id !== '') {
+                                        $lastQuestion.find('select[name*="[reading_text_id]"]').val(question.reading_text_id);
                                     }
-                                    if (question.summary_fields) {
-                                        // Handle summary fields
-                                        $.each(question.summary_fields, function(fieldNum, answers) {
-                                            var answersStr = Array.isArray(answers) ? answers.join('|') : answers;
-                                            $lastQuestion.find('input[name*="[summary_fields][' + fieldNum + ']"]').val(answersStr);
-                                        });
+                                    
+                                    // Handle question type-specific fields
+                                    if (question.type === 'multiple_choice' || question.type === 'multi_select' || 
+                                        question.type === 'headings' || question.type === 'matching_classifying' || 
+                                        question.type === 'matching' || question.type === 'locating_information') {
+                                        // Handle mc_options
+                                        if (question.mc_options && question.mc_options.length > 0) {
+                                            var $mcContainer = $lastQuestion.find('.mc-options-container');
+                                            $mcContainer.empty();
+                                            
+                                            $.each(question.mc_options, function(optIdx, option) {
+                                                var isCorrect = option.is_correct ? 'checked' : '';
+                                                var optionText = $('<div>').text(option.text || '').html(); // Escape HTML
+                                                var feedback = $('<div>').text(option.feedback || '').html(); // Escape HTML
+                                                
+                                                var optionHtml = '<div class="mc-option-item" style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; background: #fff;">' +
+                                                    '<div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;">' +
+                                                    '<div style="flex: 0 0 30px;">' +
+                                                    '<label style="cursor: pointer; display: block;">' +
+                                                    '<input type="checkbox" name="questions[' + currentQuestionIndex + '][mc_options][' + optIdx + '][is_correct]" value="1" ' + isCorrect + ' style="margin: 5px 0 0 0;">' +
+                                                    '<small style="display: block; margin-top: 3px;"><?php _e('Correct', 'ielts-course-manager'); ?></small>' +
+                                                    '</label>' +
+                                                    '</div>' +
+                                                    '<div style="flex: 1;">' +
+                                                    '<label><?php _e('Option', 'ielts-course-manager'); ?> ' + (optIdx + 1) + '</label>' +
+                                                    '<input type="text" name="questions[' + currentQuestionIndex + '][mc_options][' + optIdx + '][text]" value="' + optionText + '" placeholder="<?php _e('Enter option text', 'ielts-course-manager'); ?>" style="width: 100%; margin-bottom: 5px;">' +
+                                                    '<label><?php _e('Feedback (optional)', 'ielts-course-manager'); ?></label>' +
+                                                    '<textarea name="questions[' + currentQuestionIndex + '][mc_options][' + optIdx + '][feedback]" rows="2" placeholder="<?php _e('Feedback shown when this option is selected', 'ielts-course-manager'); ?>" style="width: 100%;">' + feedback + '</textarea>' +
+                                                    '</div>' +
+                                                    '<button type="button" class="button remove-mc-option" style="flex: 0 0 auto;"><?php _e('Remove', 'ielts-course-manager'); ?></button>' +
+                                                    '</div>' +
+                                                    '</div>';
+                                                
+                                                $mcContainer.append(optionHtml);
+                                            });
+                                        }
+                                        
+                                        // Set max_selections for multi_select
+                                        if (question.type === 'multi_select' && question.max_selections) {
+                                            $lastQuestion.find('input[name*="[max_selections]"]').val(question.max_selections);
+                                        }
+                                    } else if (question.type === 'summary_completion' || question.type === 'table_completion') {
+                                        // Handle summary_fields
+                                        if (question.summary_fields) {
+                                            var $summaryContainer = $lastQuestion.find('.summary-fields-container');
+                                            $summaryContainer.empty();
+                                            
+                                            var defaultNoAnswerFeedback = '<?php echo esc_js(__("In the IELTS test, you should always take a guess. You don\'t lose points for a wrong answer.", "ielts-course-manager")); ?>';
+                                            
+                                            $.each(question.summary_fields, function(fieldNum, fieldData) {
+                                                var answer = $('<div>').text(fieldData.answer || '').html(); // Escape HTML
+                                                var correctFeedback = $('<div>').text(fieldData.correct_feedback || '').html(); // Escape HTML
+                                                var incorrectFeedback = $('<div>').text(fieldData.incorrect_feedback || '').html(); // Escape HTML
+                                                var noAnswerFeedback = $('<div>').text(fieldData.no_answer_feedback || defaultNoAnswerFeedback).html(); // Escape HTML
+                                                
+                                                var fieldHtml = '<div class="summary-field-item" data-field-num="' + fieldNum + '" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">' +
+                                                    '<h5 style="margin-top: 0;"><?php _e('Field', 'ielts-course-manager'); ?> ' + fieldNum + '</h5>' +
+                                                    '<p>' +
+                                                    '<label><?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?></label><br>' +
+                                                    '<input type="text" name="questions[' + currentQuestionIndex + '][summary_fields][' + fieldNum + '][answer]" value="' + answer + '" style="width: 100%;" placeholder="<?php _e('e.g., cars|vehicles|automobiles', 'ielts-course-manager'); ?>">' +
+                                                    '</p>' +
+                                                    '<p>' +
+                                                    '<label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>' +
+                                                    '<textarea name="questions[' + currentQuestionIndex + '][summary_fields][' + fieldNum + '][correct_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers correctly', 'ielts-course-manager'); ?>">' + correctFeedback + '</textarea>' +
+                                                    '</p>' +
+                                                    '<p>' +
+                                                    '<label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>' +
+                                                    '<textarea name="questions[' + currentQuestionIndex + '][summary_fields][' + fieldNum + '][incorrect_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers incorrectly', 'ielts-course-manager'); ?>">' + incorrectFeedback + '</textarea>' +
+                                                    '</p>' +
+                                                    '<p>' +
+                                                    '<label><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></label><br>' +
+                                                    '<textarea name="questions[' + currentQuestionIndex + '][summary_fields][' + fieldNum + '][no_answer_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student leaves field blank', 'ielts-course-manager'); ?>">' + noAnswerFeedback + '</textarea>' +
+                                                    '</p>' +
+                                                    '</div>';
+                                                
+                                                $summaryContainer.append(fieldHtml);
+                                            });
+                                        }
+                                    } else if (question.type === 'dropdown_paragraph') {
+                                        // Handle dropdown_options
+                                        if (question.dropdown_options) {
+                                            var $dropdownContainer = $lastQuestion.find('.dropdown-paragraph-container');
+                                            $dropdownContainer.empty();
+                                            
+                                            $.each(question.dropdown_options, function(ddNum, ddData) {
+                                                var ddOptions = ddData.options || ddData;
+                                                
+                                                var dropdownHtml = '<div class="dropdown-option-group" data-position="' + ddNum + '" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">' +
+                                                    '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">' +
+                                                    '<h5 style="margin: 0;"><?php _e('Dropdown', 'ielts-course-manager'); ?> ___<span class="dropdown-position">' + ddNum + '</span>___</h5>' +
+                                                    '<button type="button" class="button remove-dropdown-group"><?php _e('Remove Dropdown', 'ielts-course-manager'); ?></button>' +
+                                                    '</div>' +
+                                                    '<input type="hidden" name="questions[' + currentQuestionIndex + '][dropdown_options][' + ddNum + '][position]" value="' + ddNum + '">' +
+                                                    '<div class="dropdown-option-items">';
+                                                
+                                                $.each(ddOptions, function(optIdx, option) {
+                                                    var isCorrect = option.is_correct;
+                                                    var optionText = $('<div>').text(option.text || '').html(); // Escape HTML
+                                                    var checked = isCorrect ? 'checked' : '';
+                                                    
+                                                    dropdownHtml += '<div class="dropdown-option-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">' +
+                                                        '<div style="flex: 0 0 30px;">' +
+                                                        '<label style="cursor: pointer; display: block;">' +
+                                                        '<input type="radio" name="questions[' + currentQuestionIndex + '][dropdown_options][' + ddNum + '][correct]" value="' + optIdx + '" ' + checked + ' style="margin: 5px 0 0 0;">' +
+                                                        '<small style="display: block; margin-top: 3px;"><?php _e('Correct', 'ielts-course-manager'); ?></small>' +
+                                                        '</label>' +
+                                                        '</div>' +
+                                                        '<div style="flex: 1;">' +
+                                                        '<input type="text" name="questions[' + currentQuestionIndex + '][dropdown_options][' + ddNum + '][options][]" value="' + optionText + '" placeholder="<?php _e('Enter option text', 'ielts-course-manager'); ?>" style="width: 100%;">' +
+                                                        '</div>' +
+                                                        '<button type="button" class="button remove-dropdown-option"><?php _e('Remove', 'ielts-course-manager'); ?></button>' +
+                                                        '</div>';
+                                                });
+                                                
+                                                dropdownHtml += '</div>' +
+                                                    '<button type="button" class="button add-dropdown-option" data-question-index="' + currentQuestionIndex + '" data-dropdown-position="' + ddNum + '"><?php _e('Add Option', 'ielts-course-manager'); ?></button>' +
+                                                    '</div>';
+                                                
+                                                $dropdownContainer.append(dropdownHtml);
+                                            });
+                                        }
+                                        
+                                        // Set the hidden correct_answer field for dropdown_paragraph
+                                        if (question.correct_answer) {
+                                            $lastQuestion.find('.dropdown-paragraph-correct-answer').val(question.correct_answer);
+                                        }
+                                    } else if (question.type === 'true_false') {
+                                        // Handle true/false - use select dropdown
+                                        $lastQuestion.find('select[name*="[correct_answer]"]').val(question.correct_answer || '');
+                                    } else {
+                                        // Handle all other types - set correct_answer directly
+                                        $lastQuestion.find('input[name*="[correct_answer]"]').val(question.correct_answer || '');
                                     }
                                 });
                                 
