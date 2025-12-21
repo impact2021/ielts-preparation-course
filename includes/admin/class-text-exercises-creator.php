@@ -161,7 +161,7 @@ class IELTS_CM_Text_Exercises_Creator {
                         <li><?php _e('Short Answer Questions', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
                         <li><?php _e('Sentence Completion', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Uses Short Answer format', 'ielts-course-manager'); ?>)</em></li>
                         <li><?php _e('Summary Completion', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
-                        <li><?php _e('Table Completion', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Uses Short Answer format', 'ielts-course-manager'); ?>)</em></li>
+                        <li><?php _e('Table Completion', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available - uses Summary Completion format', 'ielts-course-manager'); ?>)</em></li>
                         <li><?php _e('Labelling Style Questions', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Uses Short Answer format', 'ielts-course-manager'); ?>)</em></li>
                         <li><?php _e('Locating Information', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
                         <li><?php _e('Headings Questions', 'ielts-course-manager'); ?> ✅ <em>(<?php _e('Text format available', 'ielts-course-manager'); ?>)</em></li>
@@ -171,7 +171,7 @@ class IELTS_CM_Text_Exercises_Creator {
                 </div>
                 
                 <h3><?php _e('Format 1: Short Answer Questions', 'ielts-course-manager'); ?></h3>
-                <p><?php _e('Best for IELTS Reading comprehension with fill-in-the-blank style answers. Also works for: Sentence Completion, Table Completion, and Labelling questions.', 'ielts-course-manager'); ?></p>
+                <p><?php _e('Best for IELTS Reading comprehension with fill-in-the-blank style answers. Also works for: Sentence Completion and Labelling questions.', 'ielts-course-manager'); ?></p>
                 <ul style="list-style-type: disc; margin-left: 20px;">
                     <li><strong><?php _e('Title/Instructions:', 'ielts-course-manager'); ?></strong> <?php _e('All text before the first numbered question', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Question Format:', 'ielts-course-manager'); ?></strong> <?php _e('Number. Question text {ANSWER}', 'ielts-course-manager'); ?></li>
@@ -294,6 +294,25 @@ D) Paragraph D</pre>
 The study found that [ANSWER 1] was the most important factor and [ANSWER 2] was secondary.
 
 {1:education|learning|2:experience|practice}</pre>
+                </div>
+                
+                <div style="margin: 15px 0; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
+                    <h4 style="margin-top: 0; color: #0969da;"><?php _e('Table Completion Questions', 'ielts-course-manager'); ?></h4>
+                    <p><?php _e('Fill-in-the-blank questions for table cells using [ANSWER N] placeholders. Works identically to Summary Completion.', 'ielts-course-manager'); ?></p>
+                    <p><strong><?php _e('Format:', 'ielts-course-manager'); ?></strong></p>
+                    <ul style="margin-left: 20px;">
+                        <li><?php _e('Add [TABLE COMPLETION] marker in the title to specify question type', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('Use [ANSWER 1], [ANSWER 2], etc. in the question text', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('Provide correct answers in format: {1:answer1|alt1|2:answer2|alt2}', 'ielts-course-manager'); ?></li>
+                    </ul>
+                    <pre style="background: #f5f5f5; padding: 10px; margin-top: 10px; font-size: 12px;">Table Completion [TABLE COMPLETION]
+
+| Animal | Type | Diet |
+|--------|------|------|
+| Lion | [ANSWER 1] | [ANSWER 2] |
+| Eagle | [ANSWER 3] | [ANSWER 4] |
+
+{1:mammal|2:carnivore|meat|3:bird|4:carnivore|meat}</pre>
                 </div>
                 
                 <div style="margin: 15px 0; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
@@ -522,8 +541,12 @@ You have one hour for the complete test (including transferring your answers).</
         
         // Try to detect format type based on patterns in the text
         
-        // Check for summary completion format (has [ANSWER N] placeholders)
+        // Check for summary completion or table completion format (has [ANSWER N] placeholders)
         if (preg_match(self::SUMMARY_COMPLETION_PATTERN, $text)) {
+            // Check if title contains [TABLE COMPLETION] marker
+            if (preg_match('/\[TABLE COMPLETION\]/i', $text)) {
+                return $this->parse_table_completion_format($text);
+            }
             return $this->parse_summary_completion_format($text);
         }
         
@@ -1417,6 +1440,22 @@ You have one hour for the complete test (including transferring your answers).</
      * {1:correct1|alt1|2:correct2|alt2|3:correct3}
      */
     private function parse_summary_completion_format($text) {
+        return $this->parse_summary_or_table_completion_format($text, 'summary_completion');
+    }
+    
+    /**
+     * Parse table completion format questions
+     * Format: Same as summary completion but with [TABLE COMPLETION] marker
+     */
+    private function parse_table_completion_format($text) {
+        return $this->parse_summary_or_table_completion_format($text, 'table_completion');
+    }
+    
+    /**
+     * Parse summary or table completion format questions
+     * Both use the same format with [ANSWER N] placeholders
+     */
+    private function parse_summary_or_table_completion_format($text, $question_type) {
         // Extract reading passages first
         $reading_texts = $this->extract_reading_passages($text);
         $text = $this->remove_reading_passages($text);
@@ -1424,19 +1463,22 @@ You have one hour for the complete test (including transferring your answers).</
         $lines = explode("\n", $text);
         $lines = array_map('trim', $lines);
         
-        // Extract title - first non-empty line
+        // Extract title - first non-empty line, remove type marker if present
         $title = '';
         $content_start = 0;
         for ($i = 0; $i < count($lines); $i++) {
             if (!empty($lines[$i])) {
                 $title = $lines[$i];
+                // Remove [TABLE COMPLETION] or [SUMMARY COMPLETION] marker if present
+                $title = preg_replace('/\[(TABLE COMPLETION|SUMMARY COMPLETION)\]/i', '', $title);
+                $title = trim($title);
                 $content_start = $i + 1;
                 break;
             }
         }
         
         if (empty($title)) {
-            $title = 'Summary Completion';
+            $title = ($question_type === 'table_completion') ? 'Table Completion' : 'Summary Completion';
         }
         
         // Find the question text (lines with [ANSWER N]) and answer key
@@ -1463,13 +1505,44 @@ You have one hour for the complete test (including transferring your answers).</
         
         $question_text = implode("\n", $question_lines);
         
+        // Parse answer key to extract summary_fields
+        // Format: {1:answer1|alt1|2:answer2|alt2|3:answer3}
+        $summary_fields = array();
+        if (!empty($answer_key)) {
+            // Split by number: pattern
+            $parts = preg_split('/(\d+):/', $answer_key, -1, PREG_SPLIT_DELIM_CAPTURE);
+            
+            // Process pairs of (number, answers)
+            for ($i = 1; $i < count($parts); $i += 2) {
+                if (isset($parts[$i]) && isset($parts[$i + 1])) {
+                    $field_num = $parts[$i];
+                    $answers_str = trim($parts[$i + 1], '| ');
+                    
+                    // Split answers by pipe
+                    $answers = explode('|', $answers_str);
+                    $answers = array_map('trim', $answers);
+                    $answers = array_filter($answers);
+                    
+                    $summary_fields[$field_num] = array(
+                        'answer' => implode('|', $answers),
+                        'correct_feedback' => '',
+                        'incorrect_feedback' => '',
+                        'no_answer_feedback' => __("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager')
+                    );
+                }
+            }
+        }
+        
+        // Convert [ANSWER N] to [field N] format for consistency with admin UI
+        $question_text = preg_replace('/\[ANSWER\s+(\d+)\]/i', '[field $1]', $question_text);
+        
         // Create the question
         $questions = array();
-        if (!empty($question_text) && preg_match(self::SUMMARY_COMPLETION_PATTERN, $question_text)) {
+        if (!empty($question_text) && preg_match('/\[field\s+\d+\]/i', $question_text)) {
             $questions[] = array(
-                'type' => 'summary_completion',
+                'type' => $question_type,
                 'question' => sanitize_textarea_field($question_text),
-                'correct_answer' => sanitize_text_field($answer_key),
+                'summary_fields' => $summary_fields,
                 'points' => 1,
                 'correct_feedback' => '',
                 'incorrect_feedback' => '',
@@ -1763,16 +1836,20 @@ You have one hour for the complete test (including transferring your answers).</
     }
     
     /**
-     * Convert summary completion questions to text format
+     * Convert summary completion or table completion questions to text format
      */
     private function convert_summary_completion_to_text($questions, $title, $reading_texts) {
         $output = array();
         
+        // Get question type
+        $question_type = isset($questions[0]['type']) ? $questions[0]['type'] : 'summary_completion';
+        $type_marker = ($question_type === 'table_completion') ? ' [TABLE COMPLETION]' : '';
+        
         // Add title
         if (!empty($title)) {
-            $output[] = $title;
+            $output[] = $title . $type_marker;
         } else {
-            $output[] = 'Summary Completion';
+            $output[] = ($question_type === 'table_completion' ? 'Table Completion' : 'Summary Completion') . $type_marker;
         }
         $output[] = '';
         
@@ -1795,20 +1872,27 @@ You have one hour for the complete test (including transferring your answers).</
             }
         }
         
-        // Get the question (usually just one for summary completion)
+        // Get the question (usually just one for summary/table completion)
         $question = $questions[0];
         $question_text = isset($question['question']) ? $question['question'] : '';
+        
+        // Convert [field N] back to [ANSWER N] for text format
+        $question_text = preg_replace('/\[field\s+(\d+)\]/i', '[ANSWER $1]', $question_text);
         $output[] = $question_text;
         $output[] = '';
         
         // Build answer key from summary_fields
         if (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
             $answer_parts = array();
-            foreach ($question['summary_fields'] as $field_num => $field_answers) {
-                $answers = is_array($field_answers) ? implode('|', $field_answers) : $field_answers;
-                $answer_parts[] = $field_num . ':' . $answers;
+            foreach ($question['summary_fields'] as $field_num => $field_data) {
+                $answer = isset($field_data['answer']) ? $field_data['answer'] : '';
+                if (!empty($answer)) {
+                    $answer_parts[] = $field_num . ':' . $answer;
+                }
             }
-            $output[] = '{' . implode('|', $answer_parts) . '}';
+            if (!empty($answer_parts)) {
+                $output[] = '{' . implode('|', $answer_parts) . '}';
+            }
         }
         
         return implode("\n", $output);
