@@ -2482,8 +2482,8 @@ You have one hour for the complete test (including transferring your answers).</
                     $output[] = 'This is ' . strtoupper($option_display);
                     $output[] = 'Incorrect';
                 }
-                $output[] = '';
             }
+            $output[] = '';
             
             // Add feedback if present
             if (!empty($question['correct_feedback'])) {
@@ -2972,8 +2972,8 @@ You have one hour for the complete test (including transferring your answers).</
                     $output[] = 'This is ' . strtoupper($option_display);
                     $output[] = 'Incorrect';
                 }
-                $output[] = '';
             }
+            $output[] = '';
             
             // Add feedback if present
             if (!empty($question['correct_feedback'])) {
