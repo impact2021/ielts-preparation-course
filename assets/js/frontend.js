@@ -314,6 +314,21 @@
                                             navButton.addClass('nav-correct').removeClass('answered');
                                         }
                                     });
+                                } else if (questionResult.question_type === 'summary_completion' || questionResult.question_type === 'table_completion') {
+                                    // For summary/table completion with multiple fields, mark each nav button individually
+                                    var fieldResults = questionResult.correct_answer && questionResult.correct_answer.field_results 
+                                        ? questionResult.correct_answer.field_results 
+                                        : {};
+                                    
+                                    // Get display start number for this question
+                                    var displayStart = parseInt(questionElement.data('display-start'), 10);
+                                    
+                                    // Mark each field's nav button as correct
+                                    $.each(fieldResults, function(fieldNum, fieldResult) {
+                                        var displayNumber = displayStart + parseInt(fieldNum, 10) - 1;
+                                        var navButton = $('.question-nav-btn[data-question="' + index + '"][data-display-number="' + displayNumber + '"]');
+                                        navButton.addClass('nav-correct').removeClass('answered');
+                                    });
                                 } else {
                                     navButtons.addClass('nav-correct').removeClass('answered');
                                 }
@@ -335,6 +350,9 @@
                                 } else if (questionResult.question_type === 'dropdown_paragraph') {
                                     // For dropdown paragraph, all dropdowns are correct - mark them all with green borders
                                     questionElement.find('select.answer-select-inline').addClass('answer-correct');
+                                } else if (questionResult.question_type === 'summary_completion' || questionResult.question_type === 'table_completion') {
+                                    // For summary/table completion with multiple fields, all fields are correct - mark them all with green borders
+                                    questionElement.find('input[type="text"].answer-input-inline').addClass('answer-correct');
                                 }
                                 
                                 // Common highlighting for multiple choice variants and true_false: mark the checked answer
@@ -347,7 +365,9 @@
                                 } else if (questionResult.question_type === 'multi_select') {
                                     // For multi-select, highlight all checked options in green (they're all correct if question is correct)
                                     questionElement.find('input[type="checkbox"]:checked').closest('.option-label').addClass('answer-correct');
-                                } else if (questionResult.question_type !== 'dropdown_paragraph') {
+                                } else if (questionResult.question_type !== 'dropdown_paragraph' && 
+                                           questionResult.question_type !== 'summary_completion' && 
+                                           questionResult.question_type !== 'table_completion') {
                                     questionElement.find('input[type="text"], textarea').addClass('answer-correct');
                                 }
                             } else {
@@ -424,6 +444,33 @@
                                             navButton.removeClass('answered').addClass('nav-incorrect');
                                         }
                                     });
+                                } else if (questionResult.question_type === 'summary_completion' || questionResult.question_type === 'table_completion') {
+                                    // For summary/table completion with multiple fields, mark each field and nav button individually
+                                    var fieldResults = questionResult.correct_answer && questionResult.correct_answer.field_results 
+                                        ? questionResult.correct_answer.field_results 
+                                        : {};
+                                    
+                                    // Get display start number for this question
+                                    var displayStart = parseInt(questionElement.data('display-start'), 10);
+                                    
+                                    // Check each field and mark it and its nav button
+                                    $.each(fieldResults, function(fieldNum, fieldResult) {
+                                        var inputField = questionElement.find('input[name="answer_' + index + '_field_' + fieldNum + '"]');
+                                        
+                                        // Calculate which nav button this corresponds to
+                                        var displayNumber = displayStart + parseInt(fieldNum, 10) - 1;
+                                        var navButton = $('.question-nav-btn[data-question="' + index + '"][data-display-number="' + displayNumber + '"]');
+                                        
+                                        if (fieldResult.correct) {
+                                            // Correct answer
+                                            inputField.addClass('answer-correct');
+                                            navButton.removeClass('answered').addClass('nav-correct');
+                                        } else {
+                                            // Incorrect or not answered
+                                            inputField.addClass('answer-incorrect');
+                                            navButton.removeClass('answered').addClass('nav-incorrect');
+                                        }
+                                    });
                                 } else {
                                     navButtons.addClass('nav-incorrect').removeClass('answered');
                                 }
@@ -482,9 +529,11 @@
                                             checkbox.closest('.option-label').addClass('answer-correct-highlight');
                                         }
                                     });
-                                } else if (questionResult.question_type !== 'dropdown_paragraph') {
-                                    // Only mark text fields as incorrect if it's not a dropdown paragraph
-                                    // (dropdown paragraph is already handled above)
+                                } else if (questionResult.question_type !== 'dropdown_paragraph' && 
+                                           questionResult.question_type !== 'summary_completion' && 
+                                           questionResult.question_type !== 'table_completion') {
+                                    // Only mark text fields as incorrect if it's not a dropdown paragraph, summary completion, or table completion
+                                    // (those types are already handled above with field-level marking)
                                     questionElement.find('input[type="text"], textarea').addClass('answer-incorrect');
                                 }
                             }
@@ -670,14 +719,39 @@
         
         $('.ielts-computer-based-quiz').on('input', 'input[type="text"], textarea', function() {
             var name = $(this).attr('name');
-            // Extract question index from name (handle both answer_X and answer_X_field_Y formats)
-            var questionIndex = name.replace('answer_', '').split('_')[0];
-            var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"]');
             
-            if ($(this).val().trim().length > 0) {
-                navButton.addClass('answered');
+            // Check if this is a summary completion or table completion field (format: answer_X_field_Y)
+            var fieldMatch = name.match(/^answer_(\d+)_field_(\d+)$/);
+            if (fieldMatch) {
+                var questionIndex = fieldMatch[1];
+                var fieldNum = parseInt(fieldMatch[2]);
+                
+                // Find the question element to get its display number range
+                var questionElement = $(this).closest('.quiz-question');
+                var displayStart = parseInt(questionElement.data('display-start'), 10);
+                
+                // Calculate which display number corresponds to this field
+                // Field numbers start from 1, so field 1 = first button, field 2 = second button, etc.
+                var displayNumber = displayStart + fieldNum - 1;
+                
+                // Find the specific nav button for this field
+                var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"][data-display-number="' + displayNumber + '"]');
+                
+                if ($(this).val().trim().length > 0) {
+                    navButton.addClass('answered');
+                } else {
+                    navButton.removeClass('answered');
+                }
             } else {
-                navButton.removeClass('answered');
+                // Regular text input or legacy format - mark all nav buttons for the question
+                var questionIndex = name.replace('answer_', '').split('_')[0];
+                var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"]');
+                
+                if ($(this).val().trim().length > 0) {
+                    navButton.addClass('answered');
+                } else {
+                    navButton.removeClass('answered');
+                }
             }
         });
         
