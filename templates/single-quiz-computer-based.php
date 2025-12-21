@@ -325,8 +325,8 @@ if ($lesson_id) {
                                 </h4>
                                 
                                 <?php
-                                // Don't display question text for dropdown_paragraph or summary_completion - they render their own formatted version
-                                if ($question['type'] !== 'dropdown_paragraph' && $question['type'] !== 'summary_completion'):
+                                // Don't display question text for dropdown_paragraph, summary_completion, or table_completion - they render their own formatted version
+                                if ($question['type'] !== 'dropdown_paragraph' && $question['type'] !== 'summary_completion' && $question['type'] !== 'table_completion'):
                                 ?>
                                 <div class="question-text"><?php echo wp_kses_post(wpautop($question['question'])); ?></div>
                                 <?php endif; ?>
