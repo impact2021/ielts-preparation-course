@@ -824,6 +824,20 @@ You have one hour for the complete test (including transferring your answers).</
                 $question_num = $match[1];
                 $full_line = trim($match[2]);
                 
+                // Check for linked reading text on previous line
+                $reading_text_id = null;
+                if ($i > 0 && preg_match('/\[LINKED TO:\s*(.+?)\]/i', $question_lines[$i - 1], $link_match)) {
+                    $linked_title = trim($link_match[1]);
+                    // Find the reading text index by title
+                    foreach ($reading_texts as $rt_idx => $rt) {
+                        $rt_title = !empty($rt['title']) ? $rt['title'] : 'Reading Text ' . ($rt_idx + 1);
+                        if (strcasecmp($rt_title, $linked_title) === 0) {
+                            $reading_text_id = $rt_idx;
+                            break;
+                        }
+                    }
+                }
+                
                 // Extract the answer part from within the curly braces
                 if (preg_match('/\{([^}]+)\}/', $full_line, $answer_match)) {
                     $answer_part = $answer_match[1];
@@ -840,7 +854,7 @@ You have one hour for the complete test (including transferring your answers).</
                     $j = $feedback_data['next_index'];
                     
                     // Create question
-                    $questions[] = array(
+                    $question_data = array(
                         'type' => 'short_answer',
                         'question' => sanitize_text_field($question_text),
                         // Multiple correct answers separated by pipe (|) for flexible matching
@@ -851,6 +865,13 @@ You have one hour for the complete test (including transferring your answers).</
                         'incorrect_feedback' => sanitize_textarea_field($feedback_data['incorrect']),
                         'no_answer_feedback' => sanitize_textarea_field($feedback_data['no_answer'])
                     );
+                    
+                    // Add reading text link if found
+                    if ($reading_text_id !== null) {
+                        $question_data['reading_text_id'] = $reading_text_id;
+                    }
+                    
+                    $questions[] = $question_data;
                     
                     // Skip past any feedback lines we consumed
                     $i = $j;
@@ -1403,6 +1424,20 @@ You have one hour for the complete test (including transferring your answers).</
                     $current_options = array();
                 }
                 
+                // Check for linked reading text on previous line
+                $reading_text_id = null;
+                if ($i > 0 && preg_match('/\[LINKED TO:\s*(.+?)\]/i', $lines[$i - 1], $link_match)) {
+                    $linked_title = trim($link_match[1]);
+                    // Find the reading text index by title
+                    foreach ($reading_texts as $rt_idx => $rt) {
+                        $rt_title = !empty($rt['title']) ? $rt['title'] : 'Reading Text ' . ($rt_idx + 1);
+                        if (strcasecmp($rt_title, $linked_title) === 0) {
+                            $reading_text_id = $rt_idx;
+                            break;
+                        }
+                    }
+                }
+                
                 // Start new question
                 $current_question = array(
                     'type' => $question_type,
@@ -1412,6 +1447,11 @@ You have one hour for the complete test (including transferring your answers).</
                     'incorrect_feedback' => '',
                     'no_answer_feedback' => ''
                 );
+                
+                // Add reading text link if found
+                if ($reading_text_id !== null) {
+                    $current_question['reading_text_id'] = $reading_text_id;
+                }
             }
             // Check if this is an option line
             else if (preg_match('/^([A-Z])\)\s+(.+)$/i', $line, $match)) {
@@ -1845,6 +1885,18 @@ You have one hour for the complete test (including transferring your answers).</
             return '';
         }
         
+        // Check if this is a mixed format exercise (multiple question types)
+        $question_types = array();
+        foreach ($questions as $q) {
+            $type = isset($q['type']) ? $q['type'] : 'short_answer';
+            $question_types[$type] = true;
+        }
+        
+        // If mixed format, use special mixed format converter
+        if (count($question_types) > 1) {
+            return $this->convert_mixed_format_to_text($questions, $title, $reading_texts);
+        }
+        
         $output = array();
         
         // Add title if provided
@@ -1889,6 +1941,403 @@ You have one hour for the complete test (including transferring your answers).</
             // Default: short answer format
             return $this->convert_short_answer_to_text($questions, $title, $reading_texts);
         }
+    }
+    
+    /**
+     * Convert mixed format questions (multiple question types) to text format
+     */
+    private function convert_mixed_format_to_text($questions, $title, $reading_texts) {
+        $output = array();
+        
+        // Add title
+        if (!empty($title)) {
+            $output[] = $title;
+        } else {
+            $output[] = 'Mixed Format Exercise';
+        }
+        $output[] = '';
+        
+        // Add reading texts
+        if (!empty($reading_texts)) {
+            foreach ($reading_texts as $text) {
+                $text_title = isset($text['title']) ? $text['title'] : '';
+                $text_content = isset($text['content']) ? $text['content'] : '';
+                
+                if (!empty($text_content)) {
+                    if (!empty($text_title)) {
+                        $output[] = '[READING PASSAGE] ' . $text_title;
+                    } else {
+                        $output[] = '[READING PASSAGE]';
+                    }
+                    $output[] = strip_tags($text_content);
+                    $output[] = '[END READING PASSAGE]';
+                    $output[] = '';
+                }
+            }
+        }
+        
+        // Group questions by type
+        $grouped_questions = array();
+        foreach ($questions as $question) {
+            $type = isset($question['type']) ? $question['type'] : 'short_answer';
+            if (!isset($grouped_questions[$type])) {
+                $grouped_questions[$type] = array();
+            }
+            $grouped_questions[$type][] = $question;
+        }
+        
+        // Convert each group
+        $question_num = 1;
+        foreach ($grouped_questions as $type => $type_questions) {
+            // Calculate question range for this section
+            $start_num = $question_num;
+            $question_count = count($type_questions);
+            
+            // For multi-point questions, calculate actual count
+            foreach ($type_questions as $q) {
+                if ($type === 'multi_select' && isset($q['mc_options'])) {
+                    $correct_count = 0;
+                    foreach ($q['mc_options'] as $opt) {
+                        if (!empty($opt['is_correct'])) {
+                            $correct_count++;
+                        }
+                    }
+                    $question_count += ($correct_count - 1);
+                } elseif (($type === 'summary_completion' || $type === 'table_completion') && isset($q['summary_fields'])) {
+                    $question_count += (count($q['summary_fields']) - 1);
+                } elseif ($type === 'dropdown_paragraph') {
+                    preg_match_all('/\d+\.\[([^\]]+)\]/i', $q['question'], $dropdown_matches);
+                    $dropdown_count = !empty($dropdown_matches[0]) ? count($dropdown_matches[0]) : 1;
+                    $question_count += ($dropdown_count - 1);
+                }
+            }
+            
+            $end_num = $start_num + $question_count - 1;
+            
+            // Add section header
+            $type_labels = array(
+                'multiple_choice' => 'MULTIPLE CHOICE',
+                'multi_select' => 'MULTI SELECT',
+                'headings' => 'HEADINGS',
+                'matching_classifying' => 'MATCHING',
+                'matching' => 'MATCHING',
+                'locating_information' => 'LOCATING INFORMATION',
+                'true_false' => 'TRUE/FALSE',
+                'short_answer' => 'SHORT ANSWER',
+                'sentence_completion' => 'SENTENCE COMPLETION',
+                'summary_completion' => 'SUMMARY COMPLETION',
+                'table_completion' => 'TABLE COMPLETION',
+                'dropdown_paragraph' => 'DROPDOWN PARAGRAPH',
+                'labelling' => 'LABELLING'
+            );
+            
+            $type_label = isset($type_labels[$type]) ? $type_labels[$type] : strtoupper(str_replace('_', ' ', $type));
+            
+            if ($start_num === $end_num) {
+                $output[] = 'Question ' . $start_num . ' [' . $type_label . ']';
+            } else {
+                $output[] = 'Questions ' . $start_num . '-' . $end_num . ' [' . $type_label . ']';
+            }
+            $output[] = '';
+            
+            // Convert questions of this type
+            if ($type === 'summary_completion' || $type === 'table_completion') {
+                $section_text = $this->convert_summary_completion_section($type_questions, $reading_texts, $question_num);
+            } elseif ($type === 'dropdown_paragraph') {
+                $section_text = $this->convert_dropdown_paragraph_section($type_questions, $reading_texts, $question_num);
+            } elseif ($type === 'multiple_choice' || $type === 'multi_select' || 
+                      $type === 'headings' || $type === 'matching_classifying' || 
+                      $type === 'matching' || $type === 'locating_information') {
+                $section_text = $this->convert_multiple_choice_section($type_questions, $reading_texts, $question_num);
+            } elseif ($type === 'true_false') {
+                $section_text = $this->convert_true_false_section($type_questions, $reading_texts, $question_num);
+            } else {
+                // Default: short answer format
+                $section_text = $this->convert_short_answer_section($type_questions, $reading_texts, $question_num);
+            }
+            
+            $output[] = $section_text;
+            $output[] = '';
+            
+            $question_num = $end_num + 1;
+        }
+        
+        return implode("\n", $output);
+    }
+    
+    /**
+     * Convert a section of short answer questions (for mixed format)
+     */
+    private function convert_short_answer_section($questions, $reading_texts, $start_num) {
+        $output = array();
+        
+        foreach ($questions as $index => $question) {
+            $question_num = $start_num + $index;
+            $question_text = isset($question['question']) ? $question['question'] : '';
+            $correct_answer = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+            
+            // Add linked reading text if present
+            if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
+                $reading_text_index = intval($question['reading_text_id']);
+                if (isset($reading_texts[$reading_text_index])) {
+                    $linked_text_title = !empty($reading_texts[$reading_text_index]['title']) ? 
+                        $reading_texts[$reading_text_index]['title'] : 
+                        'Reading Text ' . ($reading_text_index + 1);
+                    $output[] = '[LINKED TO: ' . $linked_text_title . ']';
+                }
+            }
+            
+            // Format: number. question text {ANSWER}
+            if (strpos($correct_answer, '|') !== false) {
+                // Multiple alternatives
+                $answers = explode('|', $correct_answer);
+                $answer_str = '{[' . implode('][', $answers) . ']}';
+                $output[] = $question_num . '. ' . $question_text . ' ' . $answer_str;
+            } else {
+                $output[] = $question_num . '. ' . $question_text . ' {' . $correct_answer . '}';
+            }
+            
+            // Add feedback if present
+            if (!empty($question['correct_feedback'])) {
+                $output[] = '[CORRECT] ' . strip_tags($question['correct_feedback']);
+            }
+            if (!empty($question['incorrect_feedback'])) {
+                $output[] = '[INCORRECT] ' . strip_tags($question['incorrect_feedback']);
+            }
+            if (!empty($question['no_answer_feedback'])) {
+                $output[] = '[NO ANSWER] ' . strip_tags($question['no_answer_feedback']);
+            }
+            
+            $output[] = '';
+        }
+        
+        return implode("\n", $output);
+    }
+    
+    /**
+     * Convert a section of multiple choice questions (for mixed format)
+     */
+    private function convert_multiple_choice_section($questions, $reading_texts, $start_num) {
+        $output = array();
+        
+        foreach ($questions as $index => $question) {
+            $question_num = $start_num + $index;
+            $question_text = isset($question['question']) ? $question['question'] : '';
+            $options = isset($question['mc_options']) ? $question['mc_options'] : array();
+            
+            // Add linked reading text if present
+            if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
+                $reading_text_index = intval($question['reading_text_id']);
+                if (isset($reading_texts[$reading_text_index])) {
+                    $linked_text_title = !empty($reading_texts[$reading_text_index]['title']) ? 
+                        $reading_texts[$reading_text_index]['title'] : 
+                        'Reading Text ' . ($reading_text_index + 1);
+                    $output[] = '[LINKED TO: ' . $linked_text_title . ']';
+                }
+            }
+            
+            $output[] = $question_num . '. ' . $question_text;
+            
+            // Add options with correct answer markers
+            if (is_array($options)) {
+                $letters = range('A', 'Z');
+                foreach ($options as $opt_index => $option) {
+                    $option_text = is_array($option) ? (isset($option['text']) ? $option['text'] : '') : $option;
+                    $is_correct = false;
+                    $feedback = '';
+                    
+                    if (is_array($option)) {
+                        $is_correct = isset($option['is_correct']) && $option['is_correct'];
+                        $feedback = isset($option['feedback']) ? strip_tags($option['feedback']) : '';
+                    }
+                    
+                    $line = $letters[$opt_index] . ') ' . $option_text;
+                    if ($is_correct) {
+                        $line .= ' [CORRECT]';
+                    }
+                    if (!empty($feedback)) {
+                        $line .= ' [FEEDBACK: ' . $feedback . ']';
+                    }
+                    $output[] = $line;
+                }
+            }
+            
+            // Add general question feedback if present
+            if (!empty($question['correct_feedback'])) {
+                $output[] = '';
+                $output[] = '[GENERAL CORRECT FEEDBACK] ' . strip_tags($question['correct_feedback']);
+            }
+            if (!empty($question['incorrect_feedback'])) {
+                $output[] = '[GENERAL INCORRECT FEEDBACK] ' . strip_tags($question['incorrect_feedback']);
+            }
+            if (!empty($question['no_answer_feedback'])) {
+                $output[] = '[NO ANSWER FEEDBACK] ' . strip_tags($question['no_answer_feedback']);
+            }
+            
+            $output[] = '';
+        }
+        
+        return implode("\n", $output);
+    }
+    
+    /**
+     * Convert a section of true/false questions (for mixed format)
+     */
+    private function convert_true_false_section($questions, $reading_texts, $start_num) {
+        $output = array();
+        
+        foreach ($questions as $index => $question) {
+            $question_num = $start_num + $index;
+            $question_text = isset($question['question']) ? $question['question'] : '';
+            $correct_answer = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+            
+            // Add linked reading text if present
+            if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
+                $reading_text_index = intval($question['reading_text_id']);
+                if (isset($reading_texts[$reading_text_index])) {
+                    $linked_text_title = !empty($reading_texts[$reading_text_index]['title']) ? 
+                        $reading_texts[$reading_text_index]['title'] : 
+                        'Reading Text ' . ($reading_text_index + 1);
+                    $output[] = '[LINKED TO: ' . $linked_text_title . ']';
+                }
+            }
+            
+            $output[] = $question_num . '. ' . $question_text;
+            $output[] = '';
+            $output[] = 'CORRECT ANSWER: ' . strtoupper(str_replace('_', ' ', $correct_answer));
+            
+            // Add options based on correct answer (for reference)
+            $options = array('true', 'false', 'not_given');
+            foreach ($options as $option) {
+                $option_display = ucfirst(str_replace('_', ' ', $option));
+                if ($option === $correct_answer) {
+                    $output[] = 'This is ' . strtoupper($option_display);
+                    $output[] = 'Correct answer';
+                } else {
+                    $output[] = 'This is ' . strtoupper($option_display);
+                    $output[] = 'Incorrect';
+                }
+                $output[] = '';
+            }
+            
+            // Add feedback if present
+            if (!empty($question['correct_feedback'])) {
+                $output[] = '[GENERAL CORRECT FEEDBACK] ' . strip_tags($question['correct_feedback']);
+            }
+            if (!empty($question['incorrect_feedback'])) {
+                $output[] = '[GENERAL INCORRECT FEEDBACK] ' . strip_tags($question['incorrect_feedback']);
+            }
+            if (!empty($question['no_answer_feedback'])) {
+                $output[] = '[NO ANSWER FEEDBACK] ' . strip_tags($question['no_answer_feedback']);
+            }
+            $output[] = '';
+        }
+        
+        return implode("\n", $output);
+    }
+    
+    /**
+     * Convert a section of summary/table completion questions (for mixed format)
+     */
+    private function convert_summary_completion_section($questions, $reading_texts, $start_num) {
+        $output = array();
+        
+        foreach ($questions as $index => $question) {
+            $question_text = isset($question['question']) ? $question['question'] : '';
+            
+            // Add linked reading text if present
+            if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
+                $reading_text_index = intval($question['reading_text_id']);
+                if (isset($reading_texts[$reading_text_index])) {
+                    $linked_text_title = !empty($reading_texts[$reading_text_index]['title']) ? 
+                        $reading_texts[$reading_text_index]['title'] : 
+                        'Reading Text ' . ($reading_text_index + 1);
+                    $output[] = '[LINKED TO: ' . $linked_text_title . ']';
+                }
+            }
+            
+            // Convert [field N] back to [ANSWER N]
+            $question_text = preg_replace('/\[field\s+(\d+)\]/i', '[ANSWER $1]', $question_text);
+            $output[] = $question_text;
+            $output[] = '';
+            
+            // Build answer key
+            if (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+                $answer_parts = array();
+                foreach ($question['summary_fields'] as $field_num => $field_data) {
+                    $answer = isset($field_data['answer']) ? $field_data['answer'] : '';
+                    if (!empty($answer)) {
+                        $answer_parts[] = $field_num . ':' . $answer;
+                    }
+                }
+                if (!empty($answer_parts)) {
+                    $output[] = '{' . implode('|', $answer_parts) . '}';
+                    $output[] = '';
+                }
+            }
+        }
+        
+        return implode("\n", $output);
+    }
+    
+    /**
+     * Convert a section of dropdown paragraph questions (for mixed format)
+     */
+    private function convert_dropdown_paragraph_section($questions, $reading_texts, $start_num) {
+        $output = array();
+        
+        foreach ($questions as $index => $question) {
+            $question_text = isset($question['question']) ? $question['question'] : '';
+            $dropdown_options = isset($question['dropdown_options']) ? $question['dropdown_options'] : array();
+            
+            // Add linked reading text if present
+            if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
+                $reading_text_index = intval($question['reading_text_id']);
+                if (isset($reading_texts[$reading_text_index])) {
+                    $linked_text_title = !empty($reading_texts[$reading_text_index]['title']) ? 
+                        $reading_texts[$reading_text_index]['title'] : 
+                        'Reading Text ' . ($reading_text_index + 1);
+                    $output[] = '[LINKED TO: ' . $linked_text_title . ']';
+                }
+            }
+            
+            // Convert formatted question text back to simple ___N___ placeholders
+            $simple_text = preg_replace('/(\d+)\.\[([^\]]+)\]/', '___$1___', $question_text);
+            $output[] = $simple_text;
+            $output[] = '';
+            
+            // Add dropdown definitions
+            if (is_array($dropdown_options)) {
+                ksort($dropdown_options);
+                foreach ($dropdown_options as $dropdown_num => $dropdown_data) {
+                    $output[] = 'DROPDOWN ' . $dropdown_num . ':';
+                    
+                    if (isset($dropdown_data) && is_array($dropdown_data)) {
+                        $options = isset($dropdown_data['options']) ? $dropdown_data['options'] : $dropdown_data;
+                        $letters = range('A', 'Z');
+                        
+                        foreach ($options as $opt_index => $option) {
+                            $option_text = is_array($option) ? (isset($option['text']) ? $option['text'] : '') : $option;
+                            $is_correct = false;
+                            
+                            if (is_array($option)) {
+                                $is_correct = isset($option['is_correct']) && $option['is_correct'];
+                            }
+                            
+                            $line = $letters[$opt_index] . ') ' . $option_text;
+                            if ($is_correct) {
+                                $line .= ' [CORRECT]';
+                            }
+                            $output[] = $line;
+                        }
+                    }
+                    
+                    $output[] = '';
+                }
+            }
+        }
+        
+        return implode("\n", $output);
     }
     
     /**
@@ -2029,6 +2478,17 @@ You have one hour for the complete test (including transferring your answers).</
             $question_text = isset($question['question']) ? $question['question'] : '';
             $correct_answer = isset($question['correct_answer']) ? $question['correct_answer'] : '';
             
+            // Add linked reading text if present
+            if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
+                $reading_text_index = intval($question['reading_text_id']);
+                if (isset($reading_texts[$reading_text_index])) {
+                    $linked_text_title = !empty($reading_texts[$reading_text_index]['title']) ? 
+                        $reading_texts[$reading_text_index]['title'] : 
+                        'Reading Text ' . ($reading_text_index + 1);
+                    $output[] = '[LINKED TO: ' . $linked_text_title . ']';
+                }
+            }
+            
             // Format: number. question text {ANSWER}
             if (strpos($correct_answer, '|') !== false) {
                 // Multiple alternatives
@@ -2126,6 +2586,17 @@ You have one hour for the complete test (including transferring your answers).</
             $question_num = $index + 1;
             $question_text = isset($question['question']) ? $question['question'] : '';
             $options = isset($question['mc_options']) ? $question['mc_options'] : array();
+            
+            // Add linked reading text if present
+            if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
+                $reading_text_index = intval($question['reading_text_id']);
+                if (isset($reading_texts[$reading_text_index])) {
+                    $linked_text_title = !empty($reading_texts[$reading_text_index]['title']) ? 
+                        $reading_texts[$reading_text_index]['title'] : 
+                        'Reading Text ' . ($reading_text_index + 1);
+                    $output[] = '[LINKED TO: ' . $linked_text_title . ']';
+                }
+            }
             
             $output[] = $question_num . '. ' . $question_text;
             
