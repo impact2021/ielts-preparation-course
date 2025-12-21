@@ -104,9 +104,23 @@ class IELTS_CM_Quiz_Handler {
                 $all_correct = true;
                 $any_answered = false;
                 
+                // Get user answers - handle both nested format (from JavaScript) and flat format
+                $user_answers = array();
+                if (isset($answers[$index]) && is_array($answers[$index])) {
+                    // Nested format from JavaScript: answers[0][1], answers[0][2]
+                    $user_answers = $answers[$index];
+                } else {
+                    // Flat format: answers['0_field_1'], answers['0_field_2']
+                    foreach ($question['summary_fields'] as $field_num => $field_data) {
+                        $field_answer_key = $index . '_field_' . $field_num;
+                        if (isset($answers[$field_answer_key])) {
+                            $user_answers[$field_num] = $answers[$field_answer_key];
+                        }
+                    }
+                }
+                
                 foreach ($question['summary_fields'] as $field_num => $field_data) {
-                    $field_answer_key = $index . '_field_' . $field_num;
-                    $user_field_answer = isset($answers[$field_answer_key]) ? trim($answers[$field_answer_key]) : '';
+                    $user_field_answer = isset($user_answers[$field_num]) ? trim($user_answers[$field_num]) : '';
                     
                     $field_correct = false;
                     $field_feedback = '';
@@ -226,9 +240,23 @@ class IELTS_CM_Quiz_Handler {
                 $all_correct = true;
                 $any_answered = false;
                 
+                // Get user answers - handle both nested format (from JavaScript) and flat format
+                $user_answers = array();
+                if (isset($answers[$index]) && is_array($answers[$index])) {
+                    // Nested format from JavaScript: answers[0][1], answers[0][2]
+                    $user_answers = $answers[$index];
+                } else {
+                    // Flat format: answers['0_field_1'], answers['0_field_2']
+                    foreach ($question['summary_fields'] as $field_num => $field_data) {
+                        $field_answer_key = $index . '_field_' . $field_num;
+                        if (isset($answers[$field_answer_key])) {
+                            $user_answers[$field_num] = $answers[$field_answer_key];
+                        }
+                    }
+                }
+                
                 foreach ($question['summary_fields'] as $field_num => $field_data) {
-                    $field_answer_key = $index . '_field_' . $field_num;
-                    $user_field_answer = isset($answers[$field_answer_key]) ? trim($answers[$field_answer_key]) : '';
+                    $user_field_answer = isset($user_answers[$field_num]) ? trim($user_answers[$field_num]) : '';
                     
                     $field_correct = false;
                     $field_feedback = '';
