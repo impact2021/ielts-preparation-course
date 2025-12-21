@@ -1844,13 +1844,18 @@ You have one hour for the complete test (including transferring your answers).</
         // Get question type
         $question_type = isset($questions[0]['type']) ? $questions[0]['type'] : 'summary_completion';
         $type_marker = ($question_type === 'table_completion') ? ' [TABLE COMPLETION]' : '';
+        $type_label = ($question_type === 'table_completion') ? 'Table Completion' : 'Summary Completion';
         
-        // Add title
+        // Add title with type information
         if (!empty($title)) {
             $output[] = $title . $type_marker;
         } else {
-            $output[] = ($question_type === 'table_completion' ? 'Table Completion' : 'Summary Completion') . $type_marker;
+            $output[] = $type_label . $type_marker;
         }
+        $output[] = '';
+        
+        // Add type header for clarity
+        $output[] = '=== QUESTION TYPE: ' . strtoupper($type_label) . ' ===';
         $output[] = '';
         
         // Add reading texts
@@ -1865,7 +1870,7 @@ You have one hour for the complete test (including transferring your answers).</
                     } else {
                         $output[] = '[READING PASSAGE]';
                     }
-                    $output[] = $text_content;
+                    $output[] = strip_tags($text_content);
                     $output[] = '[END READING PASSAGE]';
                     $output[] = '';
                 }
@@ -1881,7 +1886,7 @@ You have one hour for the complete test (including transferring your answers).</
         $output[] = $question_text;
         $output[] = '';
         
-        // Build answer key from summary_fields
+        // Build answer key from summary_fields and add feedback
         if (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
             $answer_parts = array();
             foreach ($question['summary_fields'] as $field_num => $field_data) {
@@ -1892,6 +1897,24 @@ You have one hour for the complete test (including transferring your answers).</
             }
             if (!empty($answer_parts)) {
                 $output[] = '{' . implode('|', $answer_parts) . '}';
+                $output[] = '';
+            }
+            
+            // Add field-specific feedback
+            $output[] = '=== CORRECT ANSWERS & FEEDBACK ===';
+            foreach ($question['summary_fields'] as $field_num => $field_data) {
+                $answer = isset($field_data['answer']) ? $field_data['answer'] : '';
+                $output[] = 'Field ' . $field_num . ': ' . $answer;
+                
+                if (!empty($field_data['correct_feedback'])) {
+                    $output[] = '  [CORRECT] ' . strip_tags($field_data['correct_feedback']);
+                }
+                if (!empty($field_data['incorrect_feedback'])) {
+                    $output[] = '  [INCORRECT] ' . strip_tags($field_data['incorrect_feedback']);
+                }
+                if (!empty($field_data['no_answer_feedback'])) {
+                    $output[] = '  [NO ANSWER] ' . strip_tags($field_data['no_answer_feedback']);
+                }
             }
         }
         
@@ -1904,12 +1927,25 @@ You have one hour for the complete test (including transferring your answers).</
     private function convert_short_answer_to_text($questions, $title, $reading_texts) {
         $output = array();
         
+        // Detect question type
+        $question_type = isset($questions[0]['type']) ? $questions[0]['type'] : 'short_answer';
+        $type_labels = array(
+            'short_answer' => 'Short Answer',
+            'sentence_completion' => 'Sentence Completion',
+            'labelling' => 'Labelling'
+        );
+        $type_label = isset($type_labels[$question_type]) ? $type_labels[$question_type] : 'Short Answer';
+        
         // Add title
         if (!empty($title)) {
             $output[] = $title;
         } else {
             $output[] = 'Questions ' . (count($questions) > 1 ? '1-' . count($questions) : '1');
         }
+        $output[] = '';
+        
+        // Add type header for clarity
+        $output[] = '=== QUESTION TYPE: ' . strtoupper($type_label) . ' ===';
         $output[] = '';
         
         // Add reading texts
@@ -1924,7 +1960,7 @@ You have one hour for the complete test (including transferring your answers).</
                     } else {
                         $output[] = '[READING PASSAGE]';
                     }
-                    $output[] = $text_content;
+                    $output[] = strip_tags($text_content);
                     $output[] = '[END READING PASSAGE]';
                     $output[] = '';
                 }
@@ -1941,7 +1977,7 @@ You have one hour for the complete test (including transferring your answers).</
             if (strpos($correct_answer, '|') !== false) {
                 // Multiple alternatives
                 $answers = explode('|', $correct_answer);
-                $answer_str = '{' . implode('][', $answers) . '}';
+                $answer_str = '{[' . implode('][', $answers) . ']}';
                 $output[] = $question_num . '. ' . $question_text . ' ' . $answer_str;
             } else {
                 $output[] = $question_num . '. ' . $question_text . ' {' . $correct_answer . '}';
@@ -1949,13 +1985,13 @@ You have one hour for the complete test (including transferring your answers).</
             
             // Add feedback if present
             if (!empty($question['correct_feedback'])) {
-                $output[] = '[CORRECT] ' . $question['correct_feedback'];
+                $output[] = '[CORRECT] ' . strip_tags($question['correct_feedback']);
             }
             if (!empty($question['incorrect_feedback'])) {
-                $output[] = '[INCORRECT] ' . $question['incorrect_feedback'];
+                $output[] = '[INCORRECT] ' . strip_tags($question['incorrect_feedback']);
             }
             if (!empty($question['no_answer_feedback'])) {
-                $output[] = '[NO ANSWER] ' . $question['no_answer_feedback'];
+                $output[] = '[NO ANSWER] ' . strip_tags($question['no_answer_feedback']);
             }
             
             $output[] = '';
@@ -1970,23 +2006,28 @@ You have one hour for the complete test (including transferring your answers).</
     private function convert_multiple_choice_to_text($questions, $title, $reading_texts) {
         $output = array();
         
-        // Determine type marker
+        // Determine type marker and label
         $type_marker = '';
+        $type_label = 'Multiple Choice';
         if (!empty($questions)) {
             $question_type = isset($questions[0]['type']) ? $questions[0]['type'] : '';
             switch ($question_type) {
                 case 'multi_select':
                     $type_marker = '[MULTI SELECT]';
+                    $type_label = 'Multi Select';
                     break;
                 case 'headings':
                     $type_marker = '[HEADINGS]';
+                    $type_label = 'Headings';
                     break;
                 case 'matching_classifying':
                 case 'matching':
                     $type_marker = '[MATCHING]';
+                    $type_label = 'Matching/Classifying';
                     break;
                 case 'locating_information':
                     $type_marker = '[LOCATING INFORMATION]';
+                    $type_label = 'Locating Information';
                     break;
                 default:
                     $type_marker = '[MULTIPLE CHOICE]';
@@ -2001,6 +2042,10 @@ You have one hour for the complete test (including transferring your answers).</
         }
         $output[] = '';
         
+        // Add type header for clarity
+        $output[] = '=== QUESTION TYPE: ' . strtoupper($type_label) . ' ===';
+        $output[] = '';
+        
         // Add reading texts
         if (!empty($reading_texts)) {
             foreach ($reading_texts as $text) {
@@ -2013,7 +2058,7 @@ You have one hour for the complete test (including transferring your answers).</
                     } else {
                         $output[] = '[READING PASSAGE]';
                     }
-                    $output[] = $text_content;
+                    $output[] = strip_tags($text_content);
                     $output[] = '[END READING PASSAGE]';
                     $output[] = '';
                 }
@@ -2024,11 +2069,11 @@ You have one hour for the complete test (including transferring your answers).</
         foreach ($questions as $index => $question) {
             $question_num = $index + 1;
             $question_text = isset($question['question']) ? $question['question'] : '';
-            $options = isset($question['options']) ? $question['options'] : array();
+            $options = isset($question['mc_options']) ? $question['mc_options'] : array();
             
             $output[] = $question_num . '. ' . $question_text;
             
-            // Add options
+            // Add options with correct answer markers and feedback
             if (is_array($options)) {
                 $letters = range('A', 'Z');
                 foreach ($options as $opt_index => $option) {
@@ -2038,7 +2083,7 @@ You have one hour for the complete test (including transferring your answers).</
                     
                     if (is_array($option)) {
                         $is_correct = isset($option['is_correct']) && $option['is_correct'];
-                        $feedback = isset($option['feedback']) ? $option['feedback'] : '';
+                        $feedback = isset($option['feedback']) ? strip_tags($option['feedback']) : '';
                     }
                     
                     $line = $letters[$opt_index] . ') ' . $option_text;
@@ -2050,6 +2095,18 @@ You have one hour for the complete test (including transferring your answers).</
                     }
                     $output[] = $line;
                 }
+            }
+            
+            // Add general question feedback if present
+            if (!empty($question['correct_feedback'])) {
+                $output[] = '';
+                $output[] = '[GENERAL CORRECT FEEDBACK] ' . strip_tags($question['correct_feedback']);
+            }
+            if (!empty($question['incorrect_feedback'])) {
+                $output[] = '[GENERAL INCORRECT FEEDBACK] ' . strip_tags($question['incorrect_feedback']);
+            }
+            if (!empty($question['no_answer_feedback'])) {
+                $output[] = '[NO ANSWER FEEDBACK] ' . strip_tags($question['no_answer_feedback']);
             }
             
             $output[] = '';
@@ -2072,6 +2129,10 @@ You have one hour for the complete test (including transferring your answers).</
         }
         $output[] = '';
         
+        // Add type header for clarity
+        $output[] = '=== QUESTION TYPE: TRUE/FALSE/NOT GIVEN ===';
+        $output[] = '';
+        
         // Add reading texts
         if (!empty($reading_texts)) {
             foreach ($reading_texts as $text) {
@@ -2084,7 +2145,7 @@ You have one hour for the complete test (including transferring your answers).</
                     } else {
                         $output[] = '[READING PASSAGE]';
                     }
-                    $output[] = $text_content;
+                    $output[] = strip_tags($text_content);
                     $output[] = '[END READING PASSAGE]';
                     $output[] = '';
                 }
@@ -2092,14 +2153,18 @@ You have one hour for the complete test (including transferring your answers).</
         }
         
         // Add questions
-        foreach ($questions as $question) {
+        foreach ($questions as $index => $question) {
+            $question_num = $index + 1;
             $question_text = isset($question['question']) ? $question['question'] : '';
             $correct_answer = isset($question['correct_answer']) ? $question['correct_answer'] : '';
             
-            $output[] = $question_text;
+            $output[] = $question_num . '. ' . $question_text;
             $output[] = '';
             
-            // Add options based on correct answer
+            // Show which answer is correct
+            $output[] = 'CORRECT ANSWER: ' . strtoupper(str_replace('_', ' ', $correct_answer));
+            
+            // Add options based on correct answer (for reference)
             $options = array('true', 'false', 'not_given');
             foreach ($options as $option) {
                 $option_display = ucfirst(str_replace('_', ' ', $option));
@@ -2112,6 +2177,18 @@ You have one hour for the complete test (including transferring your answers).</
                 }
                 $output[] = '';
             }
+            
+            // Add feedback if present
+            if (!empty($question['correct_feedback'])) {
+                $output[] = '[CORRECT FEEDBACK] ' . strip_tags($question['correct_feedback']);
+            }
+            if (!empty($question['incorrect_feedback'])) {
+                $output[] = '[INCORRECT FEEDBACK] ' . strip_tags($question['incorrect_feedback']);
+            }
+            if (!empty($question['no_answer_feedback'])) {
+                $output[] = '[NO ANSWER FEEDBACK] ' . strip_tags($question['no_answer_feedback']);
+            }
+            $output[] = '';
         }
         
         return implode("\n", $output);
@@ -2131,6 +2208,10 @@ You have one hour for the complete test (including transferring your answers).</
         }
         $output[] = '';
         
+        // Add type header for clarity
+        $output[] = '=== QUESTION TYPE: DROPDOWN PARAGRAPH ===';
+        $output[] = '';
+        
         // Add reading texts
         if (!empty($reading_texts)) {
             foreach ($reading_texts as $text) {
@@ -2143,7 +2224,7 @@ You have one hour for the complete test (including transferring your answers).</
                     } else {
                         $output[] = '[READING PASSAGE]';
                     }
-                    $output[] = $text_content;
+                    $output[] = strip_tags($text_content);
                     $output[] = '[END READING PASSAGE]';
                     $output[] = '';
                 }
@@ -2153,19 +2234,28 @@ You have one hour for the complete test (including transferring your answers).</
         // Get the question (usually just one for dropdown paragraph)
         $question = $questions[0];
         $question_text = isset($question['question']) ? $question['question'] : '';
-        $dropdowns = isset($question['dropdowns']) ? $question['dropdowns'] : array();
+        $dropdown_options = isset($question['dropdown_options']) ? $question['dropdown_options'] : array();
         
-        $output[] = $question_text;
+        // Convert formatted question text back to simple ___N___ placeholders
+        $simple_text = preg_replace('/\d+\.\[[^\]]+\]/', '___$0___', $question_text);
+        // More accurately, extract the dropdown number and replace
+        $simple_text = preg_replace('/(\d+)\.\[([^\]]+)\]/', '___$1___', $question_text);
+        
+        $output[] = $simple_text;
         $output[] = '';
         
-        // Add dropdown definitions
-        if (is_array($dropdowns)) {
-            foreach ($dropdowns as $dropdown_num => $dropdown) {
+        // Add dropdown definitions with correct answers
+        if (is_array($dropdown_options)) {
+            ksort($dropdown_options);
+            foreach ($dropdown_options as $dropdown_num => $dropdown_data) {
                 $output[] = 'DROPDOWN ' . $dropdown_num . ':';
                 
-                if (isset($dropdown['options']) && is_array($dropdown['options'])) {
+                if (isset($dropdown_data) && is_array($dropdown_data)) {
+                    $options = isset($dropdown_data['options']) ? $dropdown_data['options'] : $dropdown_data;
                     $letters = range('A', 'Z');
-                    foreach ($dropdown['options'] as $opt_index => $option) {
+                    $correct_option = '';
+                    
+                    foreach ($options as $opt_index => $option) {
                         $option_text = is_array($option) ? (isset($option['text']) ? $option['text'] : '') : $option;
                         $is_correct = false;
                         
@@ -2176,13 +2266,30 @@ You have one hour for the complete test (including transferring your answers).</
                         $line = $letters[$opt_index] . ') ' . $option_text;
                         if ($is_correct) {
                             $line .= ' [CORRECT]';
+                            $correct_option = $option_text;
                         }
                         $output[] = $line;
+                    }
+                    
+                    if (!empty($correct_option)) {
+                        $output[] = '';
+                        $output[] = 'CORRECT ANSWER: ' . $correct_option;
                     }
                 }
                 
                 $output[] = '';
             }
+        }
+        
+        // Add general question feedback if present
+        if (!empty($question['correct_feedback'])) {
+            $output[] = '[GENERAL CORRECT FEEDBACK] ' . strip_tags($question['correct_feedback']);
+        }
+        if (!empty($question['incorrect_feedback'])) {
+            $output[] = '[GENERAL INCORRECT FEEDBACK] ' . strip_tags($question['incorrect_feedback']);
+        }
+        if (!empty($question['no_answer_feedback'])) {
+            $output[] = '[NO ANSWER FEEDBACK] ' . strip_tags($question['no_answer_feedback']);
         }
         
         return implode("\n", $output);
