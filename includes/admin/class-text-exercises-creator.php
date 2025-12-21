@@ -531,6 +531,10 @@ You have one hour for the complete test (including transferring your answers).</
     
     /**
      * Find reading text index by title (helper for parsing)
+     * 
+     * @param string $title Title to search for
+     * @param array $reading_texts Array of reading text objects with 'title' field
+     * @return int|null Reading text array index if found, null otherwise
      */
     private function find_reading_text_by_title($title, $reading_texts) {
         foreach ($reading_texts as $rt_idx => $rt) {
@@ -544,6 +548,10 @@ You have one hour for the complete test (including transferring your answers).</
     
     /**
      * Format reading text link for export (helper for text export)
+     * 
+     * @param array $question Question array with potential reading_text_id field
+     * @param array $reading_texts Array of reading text objects
+     * @return string|null Formatted link string '[LINKED TO: ...]' or null if no link
      */
     private function format_reading_text_link($question, $reading_texts) {
         if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
@@ -1971,6 +1979,12 @@ You have one hour for the complete test (including transferring your answers).</
     
     /**
      * Convert mixed format questions (multiple question types) to text format
+     * Used when an exercise contains heterogeneous question types
+     * 
+     * @param array $questions Array of questions with mixed types
+     * @param string $title Exercise title
+     * @param array $reading_texts Array of reading text objects
+     * @return string Text format representation with section headers
      */
     private function convert_mixed_format_to_text($questions, $title, $reading_texts) {
         $output = array();
@@ -2093,6 +2107,11 @@ You have one hour for the complete test (including transferring your answers).</
     
     /**
      * Convert a section of short answer questions (for mixed format)
+     * 
+     * @param array $questions Array of short answer questions
+     * @param array $reading_texts Array of reading text objects
+     * @param int $start_num Starting question number for this section
+     * @return string Text format representation of this section
      */
     private function convert_short_answer_section($questions, $reading_texts, $start_num) {
         $output = array();
@@ -2142,6 +2161,11 @@ You have one hour for the complete test (including transferring your answers).</
     
     /**
      * Convert a section of multiple choice questions (for mixed format)
+     * 
+     * @param array $questions Array of multiple choice/headings/matching questions
+     * @param array $reading_texts Array of reading text objects
+     * @param int $start_num Starting question number for this section
+     * @return string Text format representation of this section
      */
     private function convert_multiple_choice_section($questions, $reading_texts, $start_num) {
         $output = array();
@@ -2208,6 +2232,11 @@ You have one hour for the complete test (including transferring your answers).</
     
     /**
      * Convert a section of true/false questions (for mixed format)
+     * 
+     * @param array $questions Array of true/false questions
+     * @param array $reading_texts Array of reading text objects
+     * @param int $start_num Starting question number for this section
+     * @return string Text format representation of this section
      */
     private function convert_true_false_section($questions, $reading_texts, $start_num) {
         $output = array();
@@ -2264,6 +2293,11 @@ You have one hour for the complete test (including transferring your answers).</
     
     /**
      * Convert a section of summary/table completion questions (for mixed format)
+     * 
+     * @param array $questions Array of summary/table completion questions
+     * @param array $reading_texts Array of reading text objects
+     * @param int $start_num Starting question number for this section
+     * @return string Text format representation of this section
      */
     private function convert_summary_completion_section($questions, $reading_texts, $start_num) {
         $output = array();
@@ -2308,6 +2342,11 @@ You have one hour for the complete test (including transferring your answers).</
     
     /**
      * Convert a section of dropdown paragraph questions (for mixed format)
+     * 
+     * @param array $questions Array of dropdown paragraph questions
+     * @param array $reading_texts Array of reading text objects
+     * @param int $start_num Starting question number for this section
+     * @return string Text format representation of this section
      */
     private function convert_dropdown_paragraph_section($questions, $reading_texts, $start_num) {
         $output = array();
