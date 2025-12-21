@@ -513,7 +513,7 @@ You have one hour for the complete test (including transferring your answers).</
     /**
      * Parse exercise text into structured data
      */
-    private function parse_exercise_text($text) {
+    public function parse_exercise_text($text) {
         // Check if this is a mixed format file (has multiple question types)
         // Mixed format is detected by having multiple different question format patterns
         if ($this->is_mixed_format($text)) {
@@ -1701,5 +1701,406 @@ You have one hour for the complete test (including transferring your answers).</
             <p><?php echo esc_html($message); ?></p>
         </div>
         <?php
+    }
+    
+    /**
+     * Convert questions array to text format (reverse conversion)
+     * 
+     * @param array $questions Array of questions from quiz meta
+     * @param string $title Exercise title
+     * @param array $reading_texts Optional reading texts
+     * @return string Text format representation
+     */
+    public function convert_to_text_format($questions, $title = '', $reading_texts = array()) {
+        if (empty($questions)) {
+            return '';
+        }
+        
+        $output = array();
+        
+        // Add title if provided
+        if (!empty($title)) {
+            $output[] = $title;
+            $output[] = '';
+        }
+        
+        // Add reading texts if any
+        if (!empty($reading_texts)) {
+            foreach ($reading_texts as $text) {
+                $text_title = isset($text['title']) ? $text['title'] : '';
+                $text_content = isset($text['content']) ? $text['content'] : '';
+                
+                if (!empty($text_content)) {
+                    if (!empty($text_title)) {
+                        $output[] = '[READING PASSAGE] ' . $text_title;
+                    } else {
+                        $output[] = '[READING PASSAGE]';
+                    }
+                    $output[] = $text_content;
+                    $output[] = '[END READING PASSAGE]';
+                    $output[] = '';
+                }
+            }
+        }
+        
+        // Detect question type and convert accordingly
+        $question_type = isset($questions[0]['type']) ? $questions[0]['type'] : '';
+        
+        if ($question_type === 'summary_completion' || $question_type === 'table_completion') {
+            return $this->convert_summary_completion_to_text($questions, $title, $reading_texts);
+        } elseif ($question_type === 'dropdown_paragraph') {
+            return $this->convert_dropdown_paragraph_to_text($questions, $title, $reading_texts);
+        } elseif ($question_type === 'multiple_choice' || $question_type === 'multi_select' || 
+                  $question_type === 'headings' || $question_type === 'matching_classifying' || 
+                  $question_type === 'matching' || $question_type === 'locating_information') {
+            return $this->convert_multiple_choice_to_text($questions, $title, $reading_texts);
+        } elseif ($question_type === 'true_false') {
+            return $this->convert_true_false_to_text($questions, $title, $reading_texts);
+        } else {
+            // Default: short answer format
+            return $this->convert_short_answer_to_text($questions, $title, $reading_texts);
+        }
+    }
+    
+    /**
+     * Convert summary completion questions to text format
+     */
+    private function convert_summary_completion_to_text($questions, $title, $reading_texts) {
+        $output = array();
+        
+        // Add title
+        if (!empty($title)) {
+            $output[] = $title;
+        } else {
+            $output[] = 'Summary Completion';
+        }
+        $output[] = '';
+        
+        // Add reading texts
+        if (!empty($reading_texts)) {
+            foreach ($reading_texts as $text) {
+                $text_title = isset($text['title']) ? $text['title'] : '';
+                $text_content = isset($text['content']) ? $text['content'] : '';
+                
+                if (!empty($text_content)) {
+                    if (!empty($text_title)) {
+                        $output[] = '[READING PASSAGE] ' . $text_title;
+                    } else {
+                        $output[] = '[READING PASSAGE]';
+                    }
+                    $output[] = $text_content;
+                    $output[] = '[END READING PASSAGE]';
+                    $output[] = '';
+                }
+            }
+        }
+        
+        // Get the question (usually just one for summary completion)
+        $question = $questions[0];
+        $question_text = isset($question['question']) ? $question['question'] : '';
+        $output[] = $question_text;
+        $output[] = '';
+        
+        // Build answer key from summary_fields
+        if (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+            $answer_parts = array();
+            foreach ($question['summary_fields'] as $field_num => $field_answers) {
+                $answers = is_array($field_answers) ? implode('|', $field_answers) : $field_answers;
+                $answer_parts[] = $field_num . ':' . $answers;
+            }
+            $output[] = '{' . implode('|', $answer_parts) . '}';
+        }
+        
+        return implode("\n", $output);
+    }
+    
+    /**
+     * Convert short answer questions to text format
+     */
+    private function convert_short_answer_to_text($questions, $title, $reading_texts) {
+        $output = array();
+        
+        // Add title
+        if (!empty($title)) {
+            $output[] = $title;
+        } else {
+            $output[] = 'Questions ' . (count($questions) > 1 ? '1-' . count($questions) : '1');
+        }
+        $output[] = '';
+        
+        // Add reading texts
+        if (!empty($reading_texts)) {
+            foreach ($reading_texts as $text) {
+                $text_title = isset($text['title']) ? $text['title'] : '';
+                $text_content = isset($text['content']) ? $text['content'] : '';
+                
+                if (!empty($text_content)) {
+                    if (!empty($text_title)) {
+                        $output[] = '[READING PASSAGE] ' . $text_title;
+                    } else {
+                        $output[] = '[READING PASSAGE]';
+                    }
+                    $output[] = $text_content;
+                    $output[] = '[END READING PASSAGE]';
+                    $output[] = '';
+                }
+            }
+        }
+        
+        // Add questions
+        foreach ($questions as $index => $question) {
+            $question_num = $index + 1;
+            $question_text = isset($question['question']) ? $question['question'] : '';
+            $correct_answer = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+            
+            // Format: number. question text {ANSWER}
+            if (strpos($correct_answer, '|') !== false) {
+                // Multiple alternatives
+                $answers = explode('|', $correct_answer);
+                $answer_str = '{' . implode('][', $answers) . '}';
+                $output[] = $question_num . '. ' . $question_text . ' ' . $answer_str;
+            } else {
+                $output[] = $question_num . '. ' . $question_text . ' {' . $correct_answer . '}';
+            }
+            
+            // Add feedback if present
+            if (!empty($question['correct_feedback'])) {
+                $output[] = '[CORRECT] ' . $question['correct_feedback'];
+            }
+            if (!empty($question['incorrect_feedback'])) {
+                $output[] = '[INCORRECT] ' . $question['incorrect_feedback'];
+            }
+            if (!empty($question['no_answer_feedback'])) {
+                $output[] = '[NO ANSWER] ' . $question['no_answer_feedback'];
+            }
+            
+            $output[] = '';
+        }
+        
+        return implode("\n", $output);
+    }
+    
+    /**
+     * Convert multiple choice questions to text format
+     */
+    private function convert_multiple_choice_to_text($questions, $title, $reading_texts) {
+        $output = array();
+        
+        // Determine type marker
+        $type_marker = '';
+        if (!empty($questions)) {
+            $question_type = isset($questions[0]['type']) ? $questions[0]['type'] : '';
+            switch ($question_type) {
+                case 'multi_select':
+                    $type_marker = '[MULTI SELECT]';
+                    break;
+                case 'headings':
+                    $type_marker = '[HEADINGS]';
+                    break;
+                case 'matching_classifying':
+                case 'matching':
+                    $type_marker = '[MATCHING]';
+                    break;
+                case 'locating_information':
+                    $type_marker = '[LOCATING INFORMATION]';
+                    break;
+                default:
+                    $type_marker = '[MULTIPLE CHOICE]';
+            }
+        }
+        
+        // Add title
+        if (!empty($title)) {
+            $output[] = $title . ' ' . $type_marker;
+        } else {
+            $output[] = 'Questions ' . (count($questions) > 1 ? '1-' . count($questions) : '1') . ' ' . $type_marker;
+        }
+        $output[] = '';
+        
+        // Add reading texts
+        if (!empty($reading_texts)) {
+            foreach ($reading_texts as $text) {
+                $text_title = isset($text['title']) ? $text['title'] : '';
+                $text_content = isset($text['content']) ? $text['content'] : '';
+                
+                if (!empty($text_content)) {
+                    if (!empty($text_title)) {
+                        $output[] = '[READING PASSAGE] ' . $text_title;
+                    } else {
+                        $output[] = '[READING PASSAGE]';
+                    }
+                    $output[] = $text_content;
+                    $output[] = '[END READING PASSAGE]';
+                    $output[] = '';
+                }
+            }
+        }
+        
+        // Add questions
+        foreach ($questions as $index => $question) {
+            $question_num = $index + 1;
+            $question_text = isset($question['question']) ? $question['question'] : '';
+            $options = isset($question['options']) ? $question['options'] : array();
+            
+            $output[] = $question_num . '. ' . $question_text;
+            
+            // Add options
+            if (is_array($options)) {
+                $letters = range('A', 'Z');
+                foreach ($options as $opt_index => $option) {
+                    $option_text = is_array($option) ? (isset($option['text']) ? $option['text'] : '') : $option;
+                    $is_correct = false;
+                    $feedback = '';
+                    
+                    if (is_array($option)) {
+                        $is_correct = isset($option['is_correct']) && $option['is_correct'];
+                        $feedback = isset($option['feedback']) ? $option['feedback'] : '';
+                    }
+                    
+                    $line = $letters[$opt_index] . ') ' . $option_text;
+                    if ($is_correct) {
+                        $line .= ' [CORRECT]';
+                    }
+                    if (!empty($feedback)) {
+                        $line .= ' [FEEDBACK: ' . $feedback . ']';
+                    }
+                    $output[] = $line;
+                }
+            }
+            
+            $output[] = '';
+        }
+        
+        return implode("\n", $output);
+    }
+    
+    /**
+     * Convert true/false questions to text format
+     */
+    private function convert_true_false_to_text($questions, $title, $reading_texts) {
+        $output = array();
+        
+        // Add title
+        if (!empty($title)) {
+            $output[] = $title;
+        } else {
+            $output[] = 'True/False Questions';
+        }
+        $output[] = '';
+        
+        // Add reading texts
+        if (!empty($reading_texts)) {
+            foreach ($reading_texts as $text) {
+                $text_title = isset($text['title']) ? $text['title'] : '';
+                $text_content = isset($text['content']) ? $text['content'] : '';
+                
+                if (!empty($text_content)) {
+                    if (!empty($text_title)) {
+                        $output[] = '[READING PASSAGE] ' . $text_title;
+                    } else {
+                        $output[] = '[READING PASSAGE]';
+                    }
+                    $output[] = $text_content;
+                    $output[] = '[END READING PASSAGE]';
+                    $output[] = '';
+                }
+            }
+        }
+        
+        // Add questions
+        foreach ($questions as $question) {
+            $question_text = isset($question['question']) ? $question['question'] : '';
+            $correct_answer = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+            
+            $output[] = $question_text;
+            $output[] = '';
+            
+            // Add options based on correct answer
+            $options = array('true', 'false', 'not_given');
+            foreach ($options as $option) {
+                $option_display = ucfirst(str_replace('_', ' ', $option));
+                if ($option === $correct_answer) {
+                    $output[] = 'This is ' . strtoupper($option_display);
+                    $output[] = 'Correct answer';
+                } else {
+                    $output[] = 'This is ' . strtoupper($option_display);
+                    $output[] = 'Incorrect';
+                }
+                $output[] = '';
+            }
+        }
+        
+        return implode("\n", $output);
+    }
+    
+    /**
+     * Convert dropdown paragraph questions to text format
+     */
+    private function convert_dropdown_paragraph_to_text($questions, $title, $reading_texts) {
+        $output = array();
+        
+        // Add title
+        if (!empty($title)) {
+            $output[] = $title;
+        } else {
+            $output[] = 'Dropdown Paragraph';
+        }
+        $output[] = '';
+        
+        // Add reading texts
+        if (!empty($reading_texts)) {
+            foreach ($reading_texts as $text) {
+                $text_title = isset($text['title']) ? $text['title'] : '';
+                $text_content = isset($text['content']) ? $text['content'] : '';
+                
+                if (!empty($text_content)) {
+                    if (!empty($text_title)) {
+                        $output[] = '[READING PASSAGE] ' . $text_title;
+                    } else {
+                        $output[] = '[READING PASSAGE]';
+                    }
+                    $output[] = $text_content;
+                    $output[] = '[END READING PASSAGE]';
+                    $output[] = '';
+                }
+            }
+        }
+        
+        // Get the question (usually just one for dropdown paragraph)
+        $question = $questions[0];
+        $question_text = isset($question['question']) ? $question['question'] : '';
+        $dropdowns = isset($question['dropdowns']) ? $question['dropdowns'] : array();
+        
+        $output[] = $question_text;
+        $output[] = '';
+        
+        // Add dropdown definitions
+        if (is_array($dropdowns)) {
+            foreach ($dropdowns as $dropdown_num => $dropdown) {
+                $output[] = 'DROPDOWN ' . $dropdown_num . ':';
+                
+                if (isset($dropdown['options']) && is_array($dropdown['options'])) {
+                    $letters = range('A', 'Z');
+                    foreach ($dropdown['options'] as $opt_index => $option) {
+                        $option_text = is_array($option) ? (isset($option['text']) ? $option['text'] : '') : $option;
+                        $is_correct = false;
+                        
+                        if (is_array($option)) {
+                            $is_correct = isset($option['is_correct']) && $option['is_correct'];
+                        }
+                        
+                        $line = $letters[$opt_index] . ') ' . $option_text;
+                        if ($is_correct) {
+                            $line .= ' [CORRECT]';
+                        }
+                        $output[] = $line;
+                    }
+                }
+                
+                $output[] = '';
+            }
+        }
+        
+        return implode("\n", $output);
     }
 }

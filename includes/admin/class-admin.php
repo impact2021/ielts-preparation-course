@@ -48,6 +48,8 @@ class IELTS_CM_Admin {
         add_action('wp_ajax_ielts_cm_get_available_sublessons', array($this, 'ajax_get_available_sublessons'));
         add_action('wp_ajax_ielts_cm_add_content_to_lesson', array($this, 'ajax_add_content_to_lesson'));
         add_action('wp_ajax_ielts_cm_clone_course', array($this, 'ajax_clone_course'));
+        add_action('wp_ajax_ielts_cm_convert_to_text_format', array($this, 'ajax_convert_to_text_format'));
+        add_action('wp_ajax_ielts_cm_parse_text_format', array($this, 'ajax_parse_text_format'));
         
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
@@ -903,6 +905,35 @@ class IELTS_CM_Admin {
             </div>
             <button type="button" class="button" id="add-question"><?php _e('Add Question', 'ielts-course-manager'); ?></button>
             
+            <div style="margin-top: 20px; padding: 15px; background: #fff3cd; border-left: 4px solid #ffc107;">
+                <h4 style="margin-top: 0;"><?php _e('Text Format Tools:', 'ielts-course-manager'); ?></h4>
+                <p><?php _e('Import questions from text or export to text format for easy editing and backup.', 'ielts-course-manager'); ?></p>
+                <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                    <button type="button" class="button" id="show-text-format"><?php _e('View as Text Format', 'ielts-course-manager'); ?></button>
+                    <button type="button" class="button" id="import-from-text"><?php _e('Import from Text', 'ielts-course-manager'); ?></button>
+                </div>
+                
+                <!-- Text format display modal -->
+                <div id="text-format-modal" style="display: none; margin-top: 15px; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
+                    <h4><?php _e('Text Format Representation', 'ielts-course-manager'); ?></h4>
+                    <p><small><?php _e('Copy this text to save your exercise in text format. You can paste it back using "Import from Text" to restore the questions.', 'ielts-course-manager'); ?></small></p>
+                    <textarea id="text-format-output" readonly style="width: 100%; height: 400px; font-family: monospace; font-size: 12px;"></textarea>
+                    <button type="button" class="button" id="copy-text-format"><?php _e('Copy to Clipboard', 'ielts-course-manager'); ?></button>
+                    <button type="button" class="button" id="close-text-format"><?php _e('Close', 'ielts-course-manager'); ?></button>
+                </div>
+                
+                <!-- Import from text modal -->
+                <div id="import-text-modal" style="display: none; margin-top: 15px; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
+                    <h4><?php _e('Import from Text Format', 'ielts-course-manager'); ?></h4>
+                    <p><small><?php _e('Paste exercise text in the supported format below. This will replace all existing questions!', 'ielts-course-manager'); ?></small></p>
+                    <textarea id="import-text-input" style="width: 100%; height: 300px; font-family: monospace; font-size: 12px;" placeholder="<?php esc_attr_e('Paste your exercise text here...', 'ielts-course-manager'); ?>"></textarea>
+                    <div style="margin-top: 10px;">
+                        <button type="button" class="button button-primary" id="process-import-text"><?php _e('Import Questions', 'ielts-course-manager'); ?></button>
+                        <button type="button" class="button" id="cancel-import-text"><?php _e('Cancel', 'ielts-course-manager'); ?></button>
+                    </div>
+                </div>
+            </div>
+            
             <div style="margin-top: 20px; padding: 15px; background: #f0f0f1; border-left: 4px solid #72aee6;">
                 <h4 style="margin-top: 0;"><?php _e('Question Type Guidelines:', 'ielts-course-manager'); ?></h4>
                 <ul style="margin-bottom: 0;">
@@ -1614,6 +1645,154 @@ class IELTS_CM_Admin {
                         $loading.remove();
                         $lessonSelect.prop('disabled', false);
                         alert('<?php _e('Failed to load lessons. Please try again.', 'ielts-course-manager'); ?>');
+                    }
+                });
+            });
+            
+            // Text format conversion handlers
+            $('#show-text-format').on('click', function() {
+                var postId = $('#post_ID').val();
+                if (!postId) {
+                    alert('<?php _e('Please save the exercise first.', 'ielts-course-manager'); ?>');
+                    return;
+                }
+                
+                // Show loading
+                var $button = $(this);
+                $button.prop('disabled', true).text('<?php _e('Generating...', 'ielts-course-manager'); ?>');
+                
+                // Call AJAX to convert to text format
+                $.ajax({
+                    url: ajaxurl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_convert_to_text_format',
+                        nonce: '<?php echo wp_create_nonce('ielts_cm_text_format'); ?>',
+                        post_id: postId
+                    },
+                    success: function(response) {
+                        if (response.success && response.data.text) {
+                            $('#text-format-output').val(response.data.text);
+                            $('#text-format-modal').slideDown();
+                        } else {
+                            alert(response.data.message || '<?php _e('Failed to generate text format.', 'ielts-course-manager'); ?>');
+                        }
+                        $button.prop('disabled', false).text('<?php _e('View as Text Format', 'ielts-course-manager'); ?>');
+                    },
+                    error: function() {
+                        alert('<?php _e('Failed to generate text format.', 'ielts-course-manager'); ?>');
+                        $button.prop('disabled', false).text('<?php _e('View as Text Format', 'ielts-course-manager'); ?>');
+                    }
+                });
+            });
+            
+            $('#close-text-format').on('click', function() {
+                $('#text-format-modal').slideUp();
+            });
+            
+            $('#copy-text-format').on('click', function() {
+                var $textarea = $('#text-format-output');
+                $textarea.select();
+                document.execCommand('copy');
+                
+                var $button = $(this);
+                var originalText = $button.text();
+                $button.text('<?php _e('Copied!', 'ielts-course-manager'); ?>');
+                setTimeout(function() {
+                    $button.text(originalText);
+                }, 2000);
+            });
+            
+            $('#import-from-text').on('click', function() {
+                if (!confirm('<?php _e('This will replace all existing questions. Are you sure?', 'ielts-course-manager'); ?>')) {
+                    return;
+                }
+                $('#import-text-modal').slideDown();
+            });
+            
+            $('#cancel-import-text').on('click', function() {
+                $('#import-text-modal').slideUp();
+                $('#import-text-input').val('');
+            });
+            
+            $('#process-import-text').on('click', function() {
+                var text = $('#import-text-input').val().trim();
+                if (!text) {
+                    alert('<?php _e('Please enter text to import.', 'ielts-course-manager'); ?>');
+                    return;
+                }
+                
+                var $button = $(this);
+                $button.prop('disabled', true).text('<?php _e('Processing...', 'ielts-course-manager'); ?>');
+                
+                // Call AJAX to parse text format
+                $.ajax({
+                    url: ajaxurl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_parse_text_format',
+                        nonce: '<?php echo wp_create_nonce('ielts_cm_text_format'); ?>',
+                        text: text
+                    },
+                    success: function(response) {
+                        if (response.success && response.data) {
+                            // Clear existing questions
+                            $('#questions-container').empty();
+                            questionIndex = 0;
+                            
+                            // Add parsed questions
+                            if (response.data.questions && response.data.questions.length > 0) {
+                                alert('<?php _e('Questions imported successfully! Please save the exercise to apply changes.', 'ielts-course-manager'); ?>');
+                                
+                                // Add questions to the form
+                                $.each(response.data.questions, function(index, question) {
+                                    // Use the existing add question mechanism
+                                    $('#add-question').trigger('click');
+                                    
+                                    // Populate the question fields
+                                    var $lastQuestion = $('#questions-container .question-item').last();
+                                    $lastQuestion.find('select[name*="[type]"]').val(question.type).trigger('change');
+                                    $lastQuestion.find('textarea[name*="[question]"]').val(question.question);
+                                    $lastQuestion.find('input[name*="[correct_answer]"]').val(question.correct_answer);
+                                    
+                                    if (question.options) {
+                                        $lastQuestion.find('textarea[name*="[options]"]').val(question.options);
+                                    }
+                                    if (question.summary_fields) {
+                                        // Handle summary fields
+                                        $.each(question.summary_fields, function(fieldNum, answers) {
+                                            var answersStr = Array.isArray(answers) ? answers.join('|') : answers;
+                                            $lastQuestion.find('input[name*="[summary_fields][' + fieldNum + ']"]').val(answersStr);
+                                        });
+                                    }
+                                });
+                                
+                                // Update reading texts if present
+                                if (response.data.reading_texts && response.data.reading_texts.length > 0) {
+                                    $('#reading-texts-container').empty();
+                                    readingTextIndex = 0;
+                                    
+                                    $.each(response.data.reading_texts, function(index, text) {
+                                        $('#add-reading-text').trigger('click');
+                                        var $lastText = $('#reading-texts-container .reading-text-item').last();
+                                        $lastText.find('input[name*="[title]"]').val(text.title || '');
+                                        $lastText.find('textarea[name*="[content]"]').val(text.content || '');
+                                    });
+                                }
+                                
+                                $('#import-text-modal').slideUp();
+                                $('#import-text-input').val('');
+                            } else {
+                                alert('<?php _e('No questions found in the text.', 'ielts-course-manager'); ?>');
+                            }
+                        } else {
+                            alert(response.data.message || '<?php _e('Failed to parse text format.', 'ielts-course-manager'); ?>');
+                        }
+                        $button.prop('disabled', false).text('<?php _e('Import Questions', 'ielts-course-manager'); ?>');
+                    },
+                    error: function() {
+                        alert('<?php _e('Failed to parse text format.', 'ielts-course-manager'); ?>');
+                        $button.prop('disabled', false).text('<?php _e('Import Questions', 'ielts-course-manager'); ?>');
                     }
                 });
             });
@@ -4140,5 +4319,97 @@ class IELTS_CM_Admin {
         }
         
         return $new_post_id;
+    }
+    
+    /**
+     * AJAX handler to convert exercise to text format
+     */
+    public function ajax_convert_to_text_format() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_text_format')) {
+            wp_send_json_error(array('message' => __('Security check failed.', 'ielts-course-manager')));
+            return;
+        }
+        
+        // Check user capability
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(array('message' => __('You do not have permission to do this.', 'ielts-course-manager')));
+            return;
+        }
+        
+        $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
+        if (!$post_id) {
+            wp_send_json_error(array('message' => __('Invalid post ID.', 'ielts-course-manager')));
+            return;
+        }
+        
+        // Get exercise data
+        $post = get_post($post_id);
+        if (!$post || $post->post_type !== 'ielts_quiz') {
+            wp_send_json_error(array('message' => __('Invalid exercise.', 'ielts-course-manager')));
+            return;
+        }
+        
+        $questions = get_post_meta($post_id, '_ielts_cm_questions', true);
+        $reading_texts = get_post_meta($post_id, '_ielts_cm_reading_texts', true);
+        
+        if (empty($questions)) {
+            wp_send_json_error(array('message' => __('No questions found in this exercise.', 'ielts-course-manager')));
+            return;
+        }
+        
+        // Convert to text format
+        require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-text-exercises-creator.php';
+        $text_creator = new IELTS_CM_Text_Exercises_Creator();
+        
+        $text_format = $text_creator->convert_to_text_format(
+            $questions,
+            $post->post_title,
+            $reading_texts ? $reading_texts : array()
+        );
+        
+        if (empty($text_format)) {
+            wp_send_json_error(array('message' => __('Failed to convert to text format.', 'ielts-course-manager')));
+            return;
+        }
+        
+        wp_send_json_success(array('text' => $text_format));
+    }
+    
+    /**
+     * AJAX handler to parse text format and return exercise data
+     */
+    public function ajax_parse_text_format() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_text_format')) {
+            wp_send_json_error(array('message' => __('Security check failed.', 'ielts-course-manager')));
+            return;
+        }
+        
+        // Check user capability
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(array('message' => __('You do not have permission to do this.', 'ielts-course-manager')));
+            return;
+        }
+        
+        $text = isset($_POST['text']) ? wp_unslash($_POST['text']) : '';
+        if (empty($text)) {
+            wp_send_json_error(array('message' => __('No text provided.', 'ielts-course-manager')));
+            return;
+        }
+        
+        // Parse text format
+        require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-text-exercises-creator.php';
+        $text_creator = new IELTS_CM_Text_Exercises_Creator();
+        
+        // Use the existing parsing method
+        $parsed = $text_creator->parse_exercise_text($text);
+        
+        if (empty($parsed) || empty($parsed['questions'])) {
+            wp_send_json_error(array('message' => __('Failed to parse text. Please check the format.', 'ielts-course-manager')));
+            return;
+        }
+        
+        wp_send_json_success($parsed);
     }
 }
