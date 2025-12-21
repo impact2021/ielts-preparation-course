@@ -23,9 +23,9 @@ class IELTS_CM_Text_Exercises_Creator {
      * Regex pattern for reading passage blocks
      * Matches [READING PASSAGE] or [READING TEXT] with optional title and content
      * Using [\s\S] instead of . to properly capture multiline content
-     * Newline after opening marker is optional to handle various formatting styles
+     * Title must be on same line as opening marker, otherwise content starts on next line
      */
-    const READING_PASSAGE_PATTERN = '/\[(READING PASSAGE|READING TEXT)\](?:\s+(.+?))?\s*\n?([\s\S]*?)\[END (?:READING PASSAGE|READING TEXT)\]/i';
+    const READING_PASSAGE_PATTERN = '/\[(READING PASSAGE|READING TEXT)\]([^\n\r]*?)[\r\n]+([\s\S]*?)\[END (?:READING PASSAGE|READING TEXT)\]/i';
     
     /**
      * Regex pattern for multiple choice / multi select questions
@@ -618,6 +618,10 @@ You have one hour for the complete test (including transferring your answers).</
                 $questions_start_index = $i;
                 break;
             }
+            // Skip "=== QUESTION TYPE: ... ===" header lines
+            if (preg_match('/^===.*===$/i', $lines[$i])) {
+                continue;
+            }
             if (!empty($lines[$i])) {
                 if (empty($title)) {
                     $title = $lines[$i];
@@ -782,6 +786,10 @@ You have one hour for the complete test (including transferring your answers).</
                 // Found first question
                 $question_start_index = $i;
                 break;
+            }
+            // Skip "=== QUESTION TYPE: ... ===" header lines
+            if (preg_match('/^===.*===$/i', $lines[$i])) {
+                continue;
             }
             if (!empty($lines[$i])) {
                 if (empty($title)) {
@@ -1009,6 +1017,10 @@ You have one hour for the complete test (including transferring your answers).</
         $title = '';
         $start_index = 0;
         for ($i = 0; $i < count($lines); $i++) {
+            // Skip "=== QUESTION TYPE: ... ===" header lines
+            if (preg_match('/^===.*===$/i', $lines[$i])) {
+                continue;
+            }
             if (!empty($lines[$i])) {
                 $title = $lines[$i];
                 $start_index = $i + 1;
@@ -1303,6 +1315,11 @@ You have one hour for the complete test (including transferring your answers).</
                 continue;
             }
             
+            // Skip "=== QUESTION TYPE: ... ===" header lines
+            if (preg_match('/^===.*===$/i', $lines[$i])) {
+                continue;
+            }
+            
             // Check for type marker
             foreach ($type_markers as $marker => $type) {
                 if (preg_match('/\[' . preg_quote($marker, '/') . '\]/i', $lines[$i])) {
@@ -1498,6 +1515,10 @@ You have one hour for the complete test (including transferring your answers).</
         $title = '';
         $content_start = 0;
         for ($i = 0; $i < count($lines); $i++) {
+            // Skip "=== QUESTION TYPE: ... ===" header lines
+            if (preg_match('/^===.*===$/i', $lines[$i])) {
+                continue;
+            }
             if (!empty($lines[$i])) {
                 $title = $lines[$i];
                 // Remove [TABLE COMPLETION] or [SUMMARY COMPLETION] marker if present
@@ -1615,6 +1636,10 @@ You have one hour for the complete test (including transferring your answers).</
         $title = '';
         $content_start = 0;
         for ($i = 0; $i < count($lines); $i++) {
+            // Skip "=== QUESTION TYPE: ... ===" header lines
+            if (preg_match('/^===.*===$/i', $lines[$i])) {
+                continue;
+            }
             if (!empty($lines[$i]) && !preg_match(self::DROPDOWN_PLACEHOLDER_PATTERN, $lines[$i])) {
                 $title = $lines[$i];
                 $content_start = $i + 1;
