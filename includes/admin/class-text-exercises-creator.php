@@ -978,6 +978,12 @@ You have one hour for the complete test (including transferring your answers).</
         while ($j < count($lines)) {
             $line = $lines[$j];
             
+            // Skip [LINKED TO: ...] marker lines
+            if (preg_match('/^\[LINKED TO:/i', $line)) {
+                $j++;
+                continue;
+            }
+            
             // Stop if we hit another question or empty line
             if (empty($line) || preg_match(self::SHORT_ANSWER_PATTERN, $line)) {
                 break;
@@ -1374,6 +1380,11 @@ You have one hour for the complete test (including transferring your answers).</
         
         for ($i = $start_index; $i < count($lines); $i++) {
             $line = $lines[$i];
+            
+            // Skip [LINKED TO: ...] marker lines
+            if (preg_match('/^\[LINKED TO:/i', $line)) {
+                continue;
+            }
             
             if (empty($line)) {
                 // Blank line - save current question if exists
