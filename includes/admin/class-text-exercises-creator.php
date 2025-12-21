@@ -1136,6 +1136,24 @@ You have one hour for the complete test (including transferring your answers).</
             
             // Empty line transitions state
             if (empty($line)) {
+                // Handle new format states - save accumulated feedback when hitting empty line
+                if ($state === 'READING_NEW_FORMAT_CORRECT_FEEDBACK' || 
+                    $state === 'READING_NEW_FORMAT_INCORRECT_FEEDBACK' || 
+                    $state === 'READING_NEW_FORMAT_NO_ANSWER_FEEDBACK') {
+                    $feedback_text = sanitize_textarea_field(implode("\n", $feedback_lines));
+                    if ($state === 'READING_NEW_FORMAT_CORRECT_FEEDBACK') {
+                        $current_question['correct_feedback'] = $feedback_text;
+                    } elseif ($state === 'READING_NEW_FORMAT_INCORRECT_FEEDBACK') {
+                        $current_question['incorrect_feedback'] = $feedback_text;
+                    } elseif ($state === 'READING_NEW_FORMAT_NO_ANSWER_FEEDBACK') {
+                        $current_question['no_answer_feedback'] = $feedback_text;
+                    }
+                    $feedback_lines = array();
+                    $state = 'WAITING_FOR_FEEDBACK';
+                    continue;
+                }
+                
+                // Handle old format states
                 if ($state === 'COLLECTING_OPTIONS') {
                     // Check if next non-empty line is feedback (not a new question)
                     $state = 'MAYBE_FEEDBACK';
@@ -1263,23 +1281,6 @@ You have one hour for the complete test (including transferring your answers).</
             
             if ($state === 'READING_NEW_FORMAT_NO_ANSWER_FEEDBACK' && !empty($line)) {
                 $feedback_lines[] = $line;
-                continue;
-            }
-            
-            // Save accumulated feedback when hitting empty line in new format
-            if (empty($line) && ($state === 'READING_NEW_FORMAT_CORRECT_FEEDBACK' || 
-                                  $state === 'READING_NEW_FORMAT_INCORRECT_FEEDBACK' || 
-                                  $state === 'READING_NEW_FORMAT_NO_ANSWER_FEEDBACK')) {
-                $feedback_text = sanitize_textarea_field(implode("\n", $feedback_lines));
-                if ($state === 'READING_NEW_FORMAT_CORRECT_FEEDBACK') {
-                    $current_question['correct_feedback'] = $feedback_text;
-                } elseif ($state === 'READING_NEW_FORMAT_INCORRECT_FEEDBACK') {
-                    $current_question['incorrect_feedback'] = $feedback_text;
-                } elseif ($state === 'READING_NEW_FORMAT_NO_ANSWER_FEEDBACK') {
-                    $current_question['no_answer_feedback'] = $feedback_text;
-                }
-                $feedback_lines = array();
-                $state = 'WAITING_FOR_FEEDBACK';
                 continue;
             }
             
