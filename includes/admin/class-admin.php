@@ -1802,8 +1802,8 @@ class IELTS_CM_Admin {
                                             
                                             $.each(question.mc_options, function(optIdx, option) {
                                                 var isCorrect = option.is_correct ? 'checked' : '';
-                                                var optionText = option.text || '';
-                                                var feedback = option.feedback || '';
+                                                var optionText = $('<div>').text(option.text || '').html(); // Escape HTML
+                                                var feedback = $('<div>').text(option.feedback || '').html(); // Escape HTML
                                                 
                                                 var optionHtml = '<div class="mc-option-item" style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; background: #fff;">' +
                                                     '<div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;">' +
@@ -1814,7 +1814,7 @@ class IELTS_CM_Admin {
                                                     '</label>' +
                                                     '</div>' +
                                                     '<div style="flex: 1;">' +
-                                                    '<label><?php printf(__('Option %d', 'ielts-course-manager'), ''); ?>' + (optIdx + 1) + '</label>' +
+                                                    '<label><?php _e('Option', 'ielts-course-manager'); ?> ' + (optIdx + 1) + '</label>' +
                                                     '<input type="text" name="questions[' + currentQuestionIndex + '][mc_options][' + optIdx + '][text]" value="' + optionText + '" placeholder="<?php _e('Enter option text', 'ielts-course-manager'); ?>" style="width: 100%; margin-bottom: 5px;">' +
                                                     '<label><?php _e('Feedback (optional)', 'ielts-course-manager'); ?></label>' +
                                                     '<textarea name="questions[' + currentQuestionIndex + '][mc_options][' + optIdx + '][feedback]" rows="2" placeholder="<?php _e('Feedback shown when this option is selected', 'ielts-course-manager'); ?>" style="width: 100%;">' + feedback + '</textarea>' +
@@ -1840,10 +1840,10 @@ class IELTS_CM_Admin {
                                             var defaultNoAnswerFeedback = '<?php echo esc_js(__("In the IELTS test, you should always take a guess. You don\'t lose points for a wrong answer.", "ielts-course-manager")); ?>';
                                             
                                             $.each(question.summary_fields, function(fieldNum, fieldData) {
-                                                var answer = fieldData.answer || '';
-                                                var correctFeedback = fieldData.correct_feedback || '';
-                                                var incorrectFeedback = fieldData.incorrect_feedback || '';
-                                                var noAnswerFeedback = fieldData.no_answer_feedback || defaultNoAnswerFeedback;
+                                                var answer = $('<div>').text(fieldData.answer || '').html(); // Escape HTML
+                                                var correctFeedback = $('<div>').text(fieldData.correct_feedback || '').html(); // Escape HTML
+                                                var incorrectFeedback = $('<div>').text(fieldData.incorrect_feedback || '').html(); // Escape HTML
+                                                var noAnswerFeedback = $('<div>').text(fieldData.no_answer_feedback || defaultNoAnswerFeedback).html(); // Escape HTML
                                                 
                                                 var fieldHtml = '<div class="summary-field-item" data-field-num="' + fieldNum + '" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">' +
                                                     '<h5 style="margin-top: 0;"><?php _e('Field', 'ielts-course-manager'); ?> ' + fieldNum + '</h5>' +
@@ -1879,7 +1879,7 @@ class IELTS_CM_Admin {
                                                 
                                                 var dropdownHtml = '<div class="dropdown-option-group" data-position="' + ddNum + '" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">' +
                                                     '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">' +
-                                                    '<h5 style="margin: 0;"><?php echo sprintf(__('Dropdown ___%s___', 'ielts-course-manager'), ''); ?><span class="dropdown-position">' + ddNum + '</span></h5>' +
+                                                    '<h5 style="margin: 0;"><?php _e('Dropdown', 'ielts-course-manager'); ?> ___<span class="dropdown-position">' + ddNum + '</span>___</h5>' +
                                                     '<button type="button" class="button remove-dropdown-group"><?php _e('Remove Dropdown', 'ielts-course-manager'); ?></button>' +
                                                     '</div>' +
                                                     '<input type="hidden" name="questions[' + currentQuestionIndex + '][dropdown_options][' + ddNum + '][position]" value="' + ddNum + '">' +
@@ -1887,7 +1887,7 @@ class IELTS_CM_Admin {
                                                 
                                                 $.each(ddOptions, function(optIdx, option) {
                                                     var isCorrect = option.is_correct;
-                                                    var optionText = option.text || '';
+                                                    var optionText = $('<div>').text(option.text || '').html(); // Escape HTML
                                                     var checked = isCorrect ? 'checked' : '';
                                                     
                                                     dropdownHtml += '<div class="dropdown-option-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">' +
