@@ -567,6 +567,40 @@ You have one hour for the complete test (including transferring your answers).</
     }
     
     /**
+     * Convert true/false option to correct answer value
+     * 
+     * @param array $options Array of options with 'text' and 'is_correct' fields
+     * @return string Correct answer value: 'true', 'false', 'not_given', or fallback
+     */
+    private function get_correct_answer_from_options($options) {
+        $correct_answer_value = '';
+        
+        foreach ($options as $idx => $opt) {
+            if ($opt['is_correct']) {
+                // For true_false questions, convert option text to expected value
+                // Check for NOT GIVEN first (more specific) before TRUE
+                if (stripos($opt['text'], 'NOT GIVEN') !== false) {
+                    $correct_answer_value = 'not_given';
+                } elseif (stripos($opt['text'], 'TRUE') !== false) {
+                    $correct_answer_value = 'true';
+                } elseif (stripos($opt['text'], 'FALSE') !== false) {
+                    $correct_answer_value = 'false';
+                } else {
+                    $correct_answer_value = (string)$idx;
+                }
+                break;
+            }
+        }
+        
+        // Ensure we have a valid correct_answer value
+        if (empty($correct_answer_value)) {
+            $correct_answer_value = 'true'; // Default fallback
+        }
+        
+        return $correct_answer_value;
+    }
+    
+    /**
      * Parse exercise text into structured data
      */
     public function parse_exercise_text($text) {
@@ -1130,28 +1164,7 @@ You have one hour for the complete test (including transferring your answers).</
                         }
                         
                         // Find correct option and convert to proper format for true_false questions
-                        $correct_answer_value = '';
-                        foreach ($current_options as $idx => $opt) {
-                            if ($opt['is_correct']) {
-                                // For true_false questions, convert option text to expected value
-                                // Check for NOT GIVEN first (more specific) before TRUE
-                                if (stripos($opt['text'], 'NOT GIVEN') !== false) {
-                                    $correct_answer_value = 'not_given';
-                                } elseif (stripos($opt['text'], 'TRUE') !== false) {
-                                    $correct_answer_value = 'true';
-                                } elseif (stripos($opt['text'], 'FALSE') !== false) {
-                                    $correct_answer_value = 'false';
-                                } else {
-                                    $correct_answer_value = (string)$idx;
-                                }
-                                break;
-                            }
-                        }
-                        
-                        // Ensure we have a valid correct_answer value
-                        if (empty($correct_answer_value)) {
-                            $correct_answer_value = 'true'; // Default fallback
-                        }
+                        $correct_answer_value = $this->get_correct_answer_from_options($current_options);
                         
                         $current_question['correct_answer'] = $correct_answer_value;
                         // True/false questions don't need mc_options as they have fixed options in the template
@@ -1342,28 +1355,7 @@ You have one hour for the complete test (including transferring your answers).</
                         }
                         
                         // Find correct option and convert to proper format for true_false questions
-                        $correct_answer_value = '';
-                        foreach ($current_options as $idx => $opt) {
-                            if ($opt['is_correct']) {
-                                // For true_false questions, convert option text to expected value
-                                // Check for NOT GIVEN first (more specific) before TRUE
-                                if (stripos($opt['text'], 'NOT GIVEN') !== false) {
-                                    $correct_answer_value = 'not_given';
-                                } elseif (stripos($opt['text'], 'TRUE') !== false) {
-                                    $correct_answer_value = 'true';
-                                } elseif (stripos($opt['text'], 'FALSE') !== false) {
-                                    $correct_answer_value = 'false';
-                                } else {
-                                    $correct_answer_value = (string)$idx;
-                                }
-                                break;
-                            }
-                        }
-                        
-                        // Ensure we have a valid correct_answer value
-                        if (empty($correct_answer_value)) {
-                            $correct_answer_value = 'true'; // Default fallback
-                        }
+                        $correct_answer_value = $this->get_correct_answer_from_options($current_options);
                         
                         $current_question['correct_answer'] = $correct_answer_value;
                         // True/false questions don't need mc_options as they have fixed options in the template
@@ -1528,28 +1520,7 @@ You have one hour for the complete test (including transferring your answers).</
             }
             
             // Find correct option and convert to proper format for true_false questions
-            $correct_answer_value = '';
-            foreach ($current_options as $idx => $opt) {
-                if ($opt['is_correct']) {
-                    // For true_false questions, convert option text to expected value
-                    // Check for NOT GIVEN first (more specific) before TRUE
-                    if (stripos($opt['text'], 'NOT GIVEN') !== false) {
-                        $correct_answer_value = 'not_given';
-                    } elseif (stripos($opt['text'], 'TRUE') !== false) {
-                        $correct_answer_value = 'true';
-                    } elseif (stripos($opt['text'], 'FALSE') !== false) {
-                        $correct_answer_value = 'false';
-                    } else {
-                        $correct_answer_value = (string)$idx;
-                    }
-                    break;
-                }
-            }
-            
-            // Ensure we have a valid correct_answer value
-            if (empty($correct_answer_value)) {
-                $correct_answer_value = 'true'; // Default fallback
-            }
+            $correct_answer_value = $this->get_correct_answer_from_options($current_options);
             
             $current_question['correct_answer'] = $correct_answer_value;
             // True/false questions don't need mc_options as they have fixed options in the template
