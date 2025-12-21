@@ -415,7 +415,11 @@ if ($lesson_id) {
                                     case 'short_answer':
                                     case 'sentence_completion':
                                     case 'table_completion':
-                                        // Table completion - parse [field N] placeholders and replace with inline inputs (same as summary completion)
+                                        // Table completion - parse [field N] or [ANSWER N] placeholders and replace with inline inputs (same as summary completion)
+                                        // New format: [field 1], [field 2], etc.
+                                        // Legacy format: [ANSWER 1], [ANSWER 2], etc.
+                                        
+                                        // Get the question text without wpautop processing for inline inputs
                                         $table_text = isset($question['question']) ? $question['question'] : '';
                                         
                                         // Allow input tags in addition to standard post tags
@@ -425,17 +429,30 @@ if ($lesson_id) {
                                             'name' => true,
                                             'class' => true,
                                             'data-field-num' => true,
+                                            'data-answer-num' => true,
                                         );
                                         
-                                        // Find all [field N] placeholders
+                                        // Find all [field N] placeholders (new format)
                                         preg_match_all('/\[field\s+(\d+)\]/i', $table_text, $field_matches);
                                         
+                                        // Find all [ANSWER N] placeholders (legacy format)
+                                        preg_match_all('/\[ANSWER\s+(\d+)\]/i', $table_text, $answer_matches);
+                                        
                                         if (!empty($field_matches[0])) {
-                                            // Multiple inline answers with [field N] placeholders
+                                            // New format - multiple inline answers with [field N] placeholders
                                             $processed_text = $table_text;
                                             foreach ($field_matches[0] as $match_index => $placeholder) {
                                                 $field_num = $field_matches[1][$match_index];
                                                 $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_field_' . esc_attr($field_num) . '" class="answer-input-inline" data-field-num="' . esc_attr($field_num) . '" />';
+                                                $processed_text = str_replace($placeholder, $input_field, $processed_text);
+                                            }
+                                            echo '<div class="table-completion-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
+                                        } elseif (!empty($answer_matches[0])) {
+                                            // Legacy format - multiple inline answers with [ANSWER N] placeholders
+                                            $processed_text = $table_text;
+                                            foreach ($answer_matches[0] as $match_index => $placeholder) {
+                                                $answer_num = $answer_matches[1][$match_index];
+                                                $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_' . esc_attr($answer_num) . '" class="answer-input-inline" data-answer-num="' . esc_attr($answer_num) . '" />';
                                                 $processed_text = str_replace($placeholder, $input_field, $processed_text);
                                             }
                                             echo '<div class="table-completion-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
