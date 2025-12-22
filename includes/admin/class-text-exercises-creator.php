@@ -1047,8 +1047,10 @@ You have one hour for the complete test (including transferring your answers).</
                 if (preg_match('/\{([^}]+)\}/', $full_line, $answer_match)) {
                     $answer_part = $answer_match[1];
                     
-                    // The question text is the full line (the answer placeholder will be replaced by a text box in the frontend)
-                    $question_text = $full_line;
+                    // Remove the curly braces and their content from the question text
+                    // The answer placeholder will be replaced by a text box in the frontend
+                    $question_text = preg_replace('/\{[^}]+\}/', '', $full_line);
+                    $question_text = trim($question_text);
                     
                     // Parse answers - handle both simple {ANSWER} and complex {[ANS1][ANS2]}
                     $answers = $this->parse_answer_alternatives($answer_part);
@@ -1533,7 +1535,8 @@ You have one hour for the complete test (including transferring your answers).</
                 $state = 'COLLECTING_OPTIONS';
             } elseif ($state === 'MAYBE_FEEDBACK') {
                 // Check for feedback markers first
-                if (preg_match('/^\[GENERAL CORRECT FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                // Support both [GENERAL CORRECT FEEDBACK] and [CORRECT] formats
+                if (preg_match('/^\[(?:GENERAL )?CORRECT(?: FEEDBACK)?\]\s*(.*)$/i', $line, $fb_match)) {
                     // Save any previous feedback first
                     if (!empty($feedback_lines)) {
                         $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
@@ -1558,7 +1561,7 @@ You have one hour for the complete test (including transferring your answers).</
                     }
                     $state = 'COLLECTING_FEEDBACK';
                     continue;
-                } else if (preg_match('/^\[GENERAL INCORRECT FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                } else if (preg_match('/^\[(?:GENERAL )?INCORRECT(?: FEEDBACK)?\]\s*(.*)$/i', $line, $fb_match)) {
                     // Save any previous feedback first
                     if (!empty($feedback_lines)) {
                         $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
@@ -1583,7 +1586,7 @@ You have one hour for the complete test (including transferring your answers).</
                     }
                     $state = 'COLLECTING_FEEDBACK';
                     continue;
-                } else if (preg_match('/^\[NO ANSWER FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                } else if (preg_match('/^\[NO ANSWER(?: FEEDBACK)?\]\s*(.*)$/i', $line, $fb_match)) {
                     // Save any previous feedback first
                     if (!empty($feedback_lines)) {
                         $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
@@ -1673,7 +1676,7 @@ You have one hour for the complete test (including transferring your answers).</
                 }
             } elseif ($state === 'COLLECTING_OPTIONS') {
                 // Check for feedback markers
-                if (preg_match('/^\[GENERAL CORRECT FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                if (preg_match('/^\[(?:GENERAL )?CORRECT(?: FEEDBACK)?\]\s*(.*)$/i', $line, $fb_match)) {
                     $current_feedback_type = 'correct';
                     if (!empty($fb_match[1])) {
                         $current_question['correct_feedback'] = sanitize_textarea_field($fb_match[1]);
@@ -1681,7 +1684,7 @@ You have one hour for the complete test (including transferring your answers).</
                     $feedback_lines = array();
                     $state = 'COLLECTING_FEEDBACK';
                     continue;
-                } else if (preg_match('/^\[GENERAL INCORRECT FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                } else if (preg_match('/^\[(?:GENERAL )?INCORRECT(?: FEEDBACK)?\]\s*(.*)$/i', $line, $fb_match)) {
                     $current_feedback_type = 'incorrect';
                     if (!empty($fb_match[1])) {
                         $current_question['incorrect_feedback'] = sanitize_textarea_field($fb_match[1]);
@@ -1689,7 +1692,7 @@ You have one hour for the complete test (including transferring your answers).</
                     $feedback_lines = array();
                     $state = 'COLLECTING_FEEDBACK';
                     continue;
-                } else if (preg_match('/^\[NO ANSWER FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                } else if (preg_match('/^\[NO ANSWER(?: FEEDBACK)?\]\s*(.*)$/i', $line, $fb_match)) {
                     $current_feedback_type = 'no_answer';
                     if (!empty($fb_match[1])) {
                         $current_question['no_answer_feedback'] = sanitize_textarea_field($fb_match[1]);
@@ -1706,7 +1709,7 @@ You have one hour for the complete test (including transferring your answers).</
                 }
             } elseif ($state === 'COLLECTING_FEEDBACK') {
                 // Check for feedback markers - these can appear anywhere in feedback section
-                if (preg_match('/^\[GENERAL CORRECT FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                if (preg_match('/^\[(?:GENERAL )?CORRECT(?: FEEDBACK)?\]\s*(.*)$/i', $line, $fb_match)) {
                     // Save any previous feedback first
                     if (!empty($feedback_lines)) {
                         $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
@@ -1730,7 +1733,7 @@ You have one hour for the complete test (including transferring your answers).</
                         $current_question['correct_feedback'] = sanitize_textarea_field($fb_match[1]);
                     }
                     continue;
-                } else if (preg_match('/^\[GENERAL INCORRECT FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                } else if (preg_match('/^\[(?:GENERAL )?INCORRECT(?: FEEDBACK)?\]\s*(.*)$/i', $line, $fb_match)) {
                     // Save any previous feedback first
                     if (!empty($feedback_lines)) {
                         $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
@@ -1754,7 +1757,7 @@ You have one hour for the complete test (including transferring your answers).</
                         $current_question['incorrect_feedback'] = sanitize_textarea_field($fb_match[1]);
                     }
                     continue;
-                } else if (preg_match('/^\[NO ANSWER FEEDBACK\]\s*(.*)$/i', $line, $fb_match)) {
+                } else if (preg_match('/^\[NO ANSWER(?: FEEDBACK)?\]\s*(.*)$/i', $line, $fb_match)) {
                     // Save any previous feedback first
                     if (!empty($feedback_lines)) {
                         $feedback_text = sanitize_textarea_field(implode(" ", $feedback_lines));
@@ -2041,11 +2044,11 @@ You have one hour for the complete test (including transferring your answers).</
             }
             // Check for general feedback markers
             else if ($current_question !== null) {
-                if (preg_match('/^\[GENERAL CORRECT FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
+                if (preg_match('/^\[(?:GENERAL )?CORRECT(?: FEEDBACK)?\]\s*(.+)$/i', $line, $fb_match)) {
                     $current_question['correct_feedback'] = sanitize_textarea_field($fb_match[1]);
-                } else if (preg_match('/^\[GENERAL INCORRECT FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
+                } else if (preg_match('/^\[(?:GENERAL )?INCORRECT(?: FEEDBACK)?\]\s*(.+)$/i', $line, $fb_match)) {
                     $current_question['incorrect_feedback'] = sanitize_textarea_field($fb_match[1]);
-                } else if (preg_match('/^\[NO ANSWER FEEDBACK\]\s*(.+)$/i', $line, $fb_match)) {
+                } else if (preg_match('/^\[NO ANSWER(?: FEEDBACK)?\]\s*(.+)$/i', $line, $fb_match)) {
                     $current_question['no_answer_feedback'] = sanitize_textarea_field($fb_match[1]);
                 }
             }
