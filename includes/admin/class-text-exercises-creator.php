@@ -1003,7 +1003,7 @@ You have one hour for the complete test (including transferring your answers).</
                 preg_match('/^DROPDOWN\s+\d+:/i', $line) ||                  // Dropdown definition
                 preg_match('/\[ANSWER\s+\d+\]/i', $line) ||                  // Summary/table completion
                 preg_match('/___\d+___/', $line) ||                          // Dropdown paragraph placeholders
-                preg_match('/^[A-Za-z]\)\s+/', $line)) {                     // Option line (uppercase or lowercase)
+                preg_match(self::OPTION_PATTERN, $line)) {                   // Option line (uses constant pattern)
                 // Found the start of actual content
                 $content_start_index = $i;
                 break;
