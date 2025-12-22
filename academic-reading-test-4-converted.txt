@@ -1,0 +1,9 @@
+IELTS Academic Reading Test 4 - Complete
+
+This file contains all 40 questions from a complete IELTS Reading Test.
+
+The file uses mixed question formats (Headings, Matching, True/False, Short Answer, and Multiple Choice)
+which are automatically detected and parsed correctly by the text import tool.
+
+Read the texts and answer the questions. Type your answers in the spaces provided.
+
