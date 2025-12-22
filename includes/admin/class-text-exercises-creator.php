@@ -967,7 +967,7 @@ You have one hour for the complete test (including transferring your answers).</
         if (stripos($marker, 'DROPDOWN PARAGRAPH') !== false || stripos($marker, 'DROPDOWN') !== false) {
             // Prepend a title line with the marker so the parser has a proper title
             $text_with_marker = "Questions " . $marker . "\n\n" . $text;
-            $parsed = $this->parse_dropdown_paragraph_format($text_with_marker);
+            $parsed = $this->parse_dropdown_paragraph_format($text_with_marker, $reading_texts);
             
             // Auto-link questions to reading passage if index provided
             if ($reading_passage_index !== null && isset($parsed['questions'])) {
@@ -987,7 +987,7 @@ You have one hour for the complete test (including transferring your answers).</
             
             // Prepend a title line with the marker so the parser has a proper title
             $text_with_marker = "Questions " . $marker . "\n\n" . $text;
-            $parsed = $this->parse_summary_or_table_completion_format($text_with_marker, $question_type);
+            $parsed = $this->parse_summary_or_table_completion_format($text_with_marker, $question_type, $reading_texts);
             
             // Auto-link questions to reading passage if index provided
             if ($reading_passage_index !== null && isset($parsed['questions'])) {
@@ -1003,7 +1003,7 @@ You have one hour for the complete test (including transferring your answers).</
         
         // Check for short answer or sentence completion markers (both use same format)
         if (stripos($marker, 'SHORT ANSWER') !== false || stripos($marker, 'SENTENCE COMPLETION') !== false) {
-            $parsed = $this->parse_short_answer_format($text);
+            $parsed = $this->parse_short_answer_format($text, $reading_texts);
             
             // Auto-link questions to reading passage if index provided
             if ($reading_passage_index !== null && isset($parsed['questions'])) {
@@ -1060,7 +1060,7 @@ You have one hour for the complete test (including transferring your answers).</
         
         // Check for short answer format (must have both numbered questions AND {ANSWER} placeholders)
         if ($this->is_short_answer_format($text)) {
-            $parsed = $this->parse_short_answer_format($text);
+            $parsed = $this->parse_short_answer_format($text, $reading_texts);
             
             // Auto-link questions to reading passage if index provided
             if ($reading_passage_index !== null && isset($parsed['questions'])) {
@@ -1117,11 +1117,11 @@ You have one hour for the complete test (including transferring your answers).</
      * Optional feedback can be added on the next line(s) before the next question
      * Reading passages can be added with [READING PASSAGE] or [READING TEXT] markers
      */
-    private function parse_short_answer_format($text) {
-        // Extract reading passages first
-        $reading_texts = $this->extract_reading_passages($text);
-        
-        // Remove reading passages from text for question parsing
+    private function parse_short_answer_format($text, $reading_texts = null) {
+        // Extract reading passages first (unless already provided by caller, e.g., in mixed format)
+        if ($reading_texts === null) {
+            $reading_texts = $this->extract_reading_passages($text);
+        }
         $text = $this->remove_reading_passages($text);
         
         // Remove metadata block from text for title/question parsing
@@ -2258,9 +2258,11 @@ You have one hour for the complete test (including transferring your answers).</
      * Parse summary or table completion format questions
      * Both use the same format with [ANSWER N] placeholders
      */
-    private function parse_summary_or_table_completion_format($text, $question_type) {
-        // Extract reading passages first
-        $reading_texts = $this->extract_reading_passages($text);
+    private function parse_summary_or_table_completion_format($text, $question_type, $reading_texts = null) {
+        // Extract reading passages first (unless already provided by caller, e.g., in mixed format)
+        if ($reading_texts === null) {
+            $reading_texts = $this->extract_reading_passages($text);
+        }
         $text = $this->remove_reading_passages($text);
         
         // Remove metadata block from text for title/question parsing
@@ -2408,9 +2410,11 @@ You have one hour for the complete test (including transferring your answers).</
      * A) option3
      * B) option4 [CORRECT]
      */
-    private function parse_dropdown_paragraph_format($text) {
-        // Extract reading passages first
-        $reading_texts = $this->extract_reading_passages($text);
+    private function parse_dropdown_paragraph_format($text, $reading_texts = null) {
+        // Extract reading passages first (unless already provided by caller, e.g., in mixed format)
+        if ($reading_texts === null) {
+            $reading_texts = $this->extract_reading_passages($text);
+        }
         $text = $this->remove_reading_passages($text);
         
         // Remove metadata block from text for title/question parsing
@@ -2462,6 +2466,11 @@ You have one hour for the complete test (including transferring your answers).</
             $line = $lines[$i];
             
             if (empty($line)) {
+                continue;
+            }
+            
+            // Skip [LINKED TO: ...] marker lines
+            if (preg_match('/^\[LINKED TO:\s*(.+?)\]/i', $line)) {
                 continue;
             }
             
