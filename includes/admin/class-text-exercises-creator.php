@@ -963,6 +963,24 @@ You have one hour for the complete test (including transferring your answers).</
     private function parse_question_section($text, $marker, $reading_texts = array(), $reading_passage_index = null) {
         // Determine format based on marker and content
         
+        // Check for dropdown paragraph
+        if (stripos($marker, 'DROPDOWN PARAGRAPH') !== false || stripos($marker, 'DROPDOWN') !== false) {
+            // Prepend a title line with the marker so the parser has a proper title
+            $text_with_marker = "Questions " . $marker . "\n\n" . $text;
+            $parsed = $this->parse_dropdown_paragraph_format($text_with_marker);
+            
+            // Auto-link questions to reading passage if index provided
+            if ($reading_passage_index !== null && isset($parsed['questions'])) {
+                foreach ($parsed['questions'] as &$question) {
+                    if (!isset($question['reading_text_id'])) {
+                        $question['reading_text_id'] = $reading_passage_index;
+                    }
+                }
+            }
+            
+            return isset($parsed['questions']) ? $parsed['questions'] : array();
+        }
+        
         // Check for summary completion or table completion
         if (stripos($marker, 'SUMMARY COMPLETION') !== false || stripos($marker, 'TABLE COMPLETION') !== false) {
             $question_type = stripos($marker, 'TABLE COMPLETION') !== false ? 'table_completion' : 'summary_completion';
@@ -2401,16 +2419,29 @@ You have one hour for the complete test (including transferring your answers).</
         $lines = explode("\n", $text_without_metadata);
         $lines = array_map('trim', $lines);
         
-        // Extract title
+        // Extract title and reading text link
         $title = '';
         $content_start = 0;
+        $reading_text_id = null;
+        
         for ($i = 0; $i < count($lines); $i++) {
             // Skip "=== QUESTION TYPE: ... ===" header lines
             if (preg_match('/^===.*===$/i', $lines[$i])) {
                 continue;
             }
+            
+            // Check for [LINKED TO: ...] marker lines and extract reading text ID
+            if (preg_match('/^\[LINKED TO:\s*(.+?)\]/i', $lines[$i], $link_match)) {
+                $linked_title = trim($link_match[1]);
+                $reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
+                continue;
+            }
+            
             if (!empty($lines[$i]) && !preg_match(self::DROPDOWN_PLACEHOLDER_PATTERN, $lines[$i])) {
                 $title = $lines[$i];
+                // Remove [DROPDOWN PARAGRAPH] or [DROPDOWN] marker if present
+                $title = preg_replace('/\[(DROPDOWN PARAGRAPH|DROPDOWN)\]/i', '', $title);
+                $title = trim($title);
                 $content_start = $i + 1;
                 break;
             } else if (preg_match(self::DROPDOWN_PLACEHOLDER_PATTERN, $lines[$i])) {
@@ -2527,7 +2558,7 @@ You have one hour for the complete test (including transferring your answers).</
             }
             
             $questions = array();
-            $questions[] = array(
+            $question_data = array(
                 'type' => 'dropdown_paragraph',
                 'question' => wp_kses_post($formatted_question),
                 'correct_answer' => sanitize_text_field(implode('|', $correct_answer_parts)),
@@ -2537,6 +2568,13 @@ You have one hour for the complete test (including transferring your answers).</
                 'incorrect_feedback' => '',
                 'no_answer_feedback' => ''
             );
+            
+            // Add reading text link if found
+            if ($reading_text_id !== null) {
+                $question_data['reading_text_id'] = $reading_text_id;
+            }
+            
+            $questions[] = $question_data;
             
             // Extract metadata from text
             $metadata = $this->extract_metadata_from_text($text);
