@@ -196,7 +196,7 @@ if ($lesson_id) {
                     <?php 
                     // Show Previous page button if there's a previous item
                     if ($prev_url): ?>
-                        <a href="<?php echo esc_url($prev_url); ?>" class="nav-page-link prev-page-link">
+                        <a href="<?php echo esc_url($prev_url); ?>" class="nav-page-link prev-page-link nav-link-clickable">
                             <?php _e('< Previous page', 'ielts-course-manager'); ?>
                         </a>
                     <?php endif; ?>
@@ -204,11 +204,11 @@ if ($lesson_id) {
                     <?php 
                     // Show Next page button if there's a next item, otherwise Return to course
                     if ($next_url): ?>
-                        <a href="<?php echo esc_url($next_url); ?>" class="nav-page-link next-page-link" id="return-to-course-link">
+                        <a href="<?php echo esc_url($next_url); ?>" class="nav-page-link next-page-link nav-link-clickable">
                             <?php _e('Next page >', 'ielts-course-manager'); ?>
                         </a>
                     <?php else: ?>
-                        <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-page-link return-to-course-link" id="return-to-course-link">
+                        <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-page-link return-course-link nav-link-clickable">
                             <?php _e('< Return to course', 'ielts-course-manager'); ?>
                         </a>
                     <?php endif; ?>

@@ -682,7 +682,7 @@
                             var timerElement = form.find('.quiz-timer-fullscreen');
                             if (timerElement.length > 0) {
                                 // Preserve and update the navigation links
-                                var nextLinkElement = timerElement.find('.next-page-link, .return-to-course-link');
+                                var nextLinkElement = timerElement.find('.next-page-link, .return-course-link');
                                 
                                 // Update link URL to next_url if available, otherwise use course_url
                                 var linkUrl = result.next_url || result.course_url;
@@ -1270,17 +1270,13 @@
             });
             
             // Warn when clicking navigation links before submitting
-            $(document).on('click', '#return-to-course-link, .prev-page-link, .next-page-link', function(e) {
+            $(document).on('click', '.nav-link-clickable', function(e) {
                 if (!quizSubmitted) {
-                    // Don't show warning if there's a next URL (user is navigating to next item, not losing progress)
-                    var quizContainer = $('.ielts-computer-based-quiz');
-                    var nextUrl = quizContainer.data('next-url');
-                    
-                    // Also don't show warning if clicking next-page-link (user is progressing forward)
+                    // Don't show warning if clicking next-page-link (user is progressing forward)
                     var isNextPageLink = $(this).hasClass('next-page-link');
                     
-                    if (!nextUrl && !isNextPageLink) {
-                        var confirmLeave = confirm('Are you sure you want to return to the course? Your progress will be lost if you have not submitted your test.');
+                    if (!isNextPageLink) {
+                        var confirmLeave = confirm('Are you sure you want to leave? Your progress will be lost if you have not submitted your test.');
                         if (!confirmLeave) {
                             e.preventDefault();
                             return false;
