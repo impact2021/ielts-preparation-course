@@ -160,18 +160,35 @@ Complete the flow chart below using NO MORE THAN TWO WORDS from the text.
 
 [READING PASSAGE] Reading Passage 2 - Virtual culture
 
+A
+
 Culture is defined as the 'socially transmitted behaviour patterns, arts, beliefs, and institutions that are the expression of a particular class, community or period' (www.dictionary.com). To most people, this is seen in terms of books, paintings, rituals and ceremonies, but recently there has been a new entrant in the field of what is considered to be 'culture' – the Internet.
+
+B
 
 On the Internet, science and art, media and mind combine to create a modern culture which is far more widespread than any of its predecessors. Not referring to the casual user who has no particular interest in the Internet, active supporters of the Internet as a culture have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets. A cyberpoet can be defined as 'one who makes frequent trips to the edge of technology, society and traditional culture and strives to be artful in their use of virtual space'.
 
+C
+
 Supporter or opponent of this new culture, there is little doubt that the Internet offers a lot to our traditional view of culture. In just a few minutes in front of a keyboard, we can read almost anything that has ever been written, yet no paper had to be made, no library had to stay open and thus the cost remains minimal. All of this encourages even the casual surfer to explore further than he or she otherwise would have. The same effect can be observed with works of art. Previously available to be viewed only in museums if they were not in the hands of private collectors, all but a few famous works are now replicated on the Internet.
+
+D
 
 Yet the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right. The medium of the Net allows for wider distribution and new platforms for most forms of art. 'Kinetic art' and other such computerised art forms occur with increasing regularity, both motivated by and generating an upsurge in popular and computer-mediated art.
 
+E
+
 In addition, if culture is said to be 'socially transmitted', then the Internet is remarkable in its ability to share, on an almost global scale, all the factors that constitute culture. We have only to hear the influence of jargon as we visit dub-dub-dub dot sites and surf the web to see how international the Internet has become to the majority.
+
+F
+
 Very few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture. What is not so certain is how far this will go, as the Internet continues to assimilate more and more forms of culture, rising to a point where it is not inconceivable that our entire perception of culture will soon become cyber-focused.
 
+G
+
 There is also a significant increase in transient imagery from photographs, videos and other media uploaded to many social networking sites. The rise of the term 'selfie', referring to a photograph taken by the person in the picture, is just one example – there are also applications for smartphones and tablet devices that allow instant video uploads, meaning that 'looped' videos lasting just a few seconds can be created to great effect. The problem, of course, is wading through the many millions of hours of footage that cannot be classified as having any cultural significance.
+
+H
 
 Reliance on the internet itself has inherent risks, as the authorship of online content is now far less moderated. It is possible to set up a website in as little as an hour, populated with content which may be presented as accurate, impartial information but is in reality an ill considered, poorly researched collection of opinions and incorrect facts. Even established websites which allow users to contribute content can quickly become unreliable sources. Not only is there wider room for error, there is now a heightened concern that web pages and social media can reduce popular culture into a series of illogical and often abusive arguments, which do not need to be supported with facts or even ascribed to a specific purpose. The anonymous nature of a large percentage of internet interactions means that even the most bigoted point of view can find a forum, even if reactions to it are negative.
 
@@ -193,9 +210,57 @@ E: In the 1970s and '80s some countries, particularly in Asia and South America,
 
 You should spend about 20 minutes on Questions 16 – 27 which are based on Reading Passage 2.
 
-Questions 16-27
+Questions 16 -21
 
-[Note: Questions for Reading Passage 2 to be provided]
+Do the following statements agree with the information given in reading passage 2?
+
+Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.
+
+16. The majority of people consider 'culture' to be represented by traditional forms of art and media.
+This is TRUE [CORRECT] [FEEDBACK: Correct! The first paragraph states "To most people, this is seen in terms of books, paintings, rituals and ceremonies" - these are traditional forms of art and media.]
+This is FALSE [FEEDBACK: The passage clearly states that "To most people, this is seen in terms of books, paintings, rituals and ceremonies."]
+This is NOT GIVEN [FEEDBACK: The information is provided in the first paragraph.]
+
+17. The internet as a culture is not extensive.
+This is TRUE [FEEDBACK: The passage states the opposite - that Internet culture is "far more widespread than any of its predecessors."]
+This is FALSE [CORRECT] [FEEDBACK: Correct! The second paragraph states that Internet culture "is far more widespread than any of its predecessors" - so it IS extensive, not "not extensive."]
+This is NOT GIVEN [FEEDBACK: The information is provided in the second paragraph about how widespread Internet culture is.]
+
+18. Through the Internet, every written word can be accessed.
+This is TRUE [FEEDBACK: The passage says "almost anything" not "everything" - this is an overstatement.]
+This is FALSE [FEEDBACK: The passage states "we can read almost anything that has ever been written" which is very close to "every written word."]
+This is NOT GIVEN [CORRECT] [FEEDBACK: Correct! The third paragraph says "we can read almost anything that has ever been written" - the word "almost" means not everything, so we cannot confirm that "every written word" can be accessed.]
+
+19. The Internet provides a stage for all forms of art.
+This is TRUE [FEEDBACK: The passage says "most forms of art" not "all forms of art."]
+This is FALSE [CORRECT] [FEEDBACK: Correct! The fourth paragraph states "The medium of the Net allows for wider distribution and new platforms for most forms of art" - the word "most" means not all, so saying "all forms" is incorrect.]
+This is NOT GIVEN [FEEDBACK: The information is provided in the fourth paragraph.]
+
+20. An insignificant number remain unaffected by the international nature of the Internet.
+This is TRUE [CORRECT] [FEEDBACK: Correct! The fifth paragraph states "how international the Internet has become to the majority" - if it affects "the majority," then only an insignificant number (the minority) remain unaffected.]
+This is FALSE [FEEDBACK: The passage indicates that the Internet has become international "to the majority," implying only a small minority remain unaffected.]
+This is NOT GIVEN [FEEDBACK: The information can be inferred from the fifth paragraph.]
+
+21. Only a few people believe that 'cyberpoets' are becoming part of our popular culture.
+This is TRUE [FEEDBACK: The passage states "Very few people would disagree" - meaning most people agree, not that only a few believe.]
+This is FALSE [CORRECT] [FEEDBACK: Correct! The sixth paragraph states "Very few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture" - this means most people agree/believe it, not "only a few people."]
+This is NOT GIVEN [FEEDBACK: The information is provided in the sixth paragraph.]
+
+Questions 22 – 27
+
+Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.
+
+22. The range of resources available online are far wider than traditional mediums {[C][PARAGRAPH C]} [FEEDBACK: Paragraph C (third paragraph) states "we can read almost anything that has ever been written" and discusses how works of art "Previously available to be viewed only in museums...are now replicated on the Internet" - showing the wider range online.]
+
+23. Lack of clarity regarding the person responsible has an effect on cultural value of some web based resources {[H][PARAGRAPH H]} [FEEDBACK: Paragraph H (eighth/last paragraph) discusses how "the authorship of online content is now far less moderated" and "The anonymous nature of a large percentage of internet interactions" affects the reliability and cultural value of web content.]
+
+24. Providing the ability to cross boundaries and be available worldwide {[E][PARAGRAPH E]} [FEEDBACK: Paragraph E (fifth paragraph) states "the Internet is remarkable in its ability to share, on an almost global scale, all the factors that constitute culture" - describing its ability to cross boundaries and be available worldwide.]
+
+25. The emergence of new forms of culture thanks to digital possibilities {[D][PARAGRAPH D]} [FEEDBACK: Paragraph D (fourth paragraph) states "the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right" and mentions "'Kinetic art' and other such computerised art forms" - new forms of culture from digital possibilities.]
+
+26. The wealth of online resources can mean difficulties in identifying areas of cultural significance {[G][PARAGRAPH G]} [FEEDBACK: Paragraph G (seventh paragraph) discusses "the many millions of hours of footage that cannot be classified as having any cultural significance" - the difficulty of identifying what has cultural significance among the wealth of online resources.]
+
+27. The self proclaimed title of supporters of internet culture {[B][PARAGRAPH B]} [FEEDBACK: Paragraph B (second paragraph) states "active supporters of the Internet as a culture have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets" - describing the self-proclaimed title "cyberpoets."]
 
 You should spend about 20 minutes on Questions 28 – 40 which are based on Reading Passage 3.
 
