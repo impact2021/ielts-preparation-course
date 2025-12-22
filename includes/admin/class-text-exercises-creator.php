@@ -791,8 +791,11 @@ You have one hour for the complete test (including transferring your answers).</
         // Remove reading passages from text for question parsing
         $text = $this->remove_reading_passages($text);
         
+        // Remove metadata block from text for title/question parsing
+        $text_without_metadata = $this->remove_metadata_block($text);
+        
         // Extract title - everything before the first question section
-        $lines = explode("\n", $text);
+        $lines = explode("\n", $text_without_metadata);
         $lines = array_map('trim', $lines);
         
         $title = '';
@@ -964,8 +967,11 @@ You have one hour for the complete test (including transferring your answers).</
         // Remove reading passages from text for question parsing
         $text = $this->remove_reading_passages($text);
         
+        // Remove metadata block from text for title/question parsing
+        $text_without_metadata = $this->remove_metadata_block($text);
+        
         // Extract title - everything before the first question number
-        $lines = explode("\n", $text);
+        $lines = explode("\n", $text_without_metadata);
         $lines = array_map('trim', $lines);
         
         $title = '';
@@ -1112,6 +1118,14 @@ You have one hour for the complete test (including transferring your answers).</
     }
     
     /**
+     * Remove metadata block from text for question/title parsing
+     */
+    private function remove_metadata_block($text) {
+        // Remove EXERCISE SETTINGS block to avoid interference with title/question parsing
+        return preg_replace('/===\s*EXERCISE SETTINGS\s*===\s*.*?\s*===\s*END EXERCISE SETTINGS\s*===/is', '', $text);
+    }
+    
+    /**
      * Parse answer alternatives from curly braces
      * Handles: {ANSWER} or {[ANS1][ANS2][ANS3]}
      */
@@ -1224,7 +1238,10 @@ You have one hour for the complete test (including transferring your answers).</
         // Remove reading passages from text for question parsing
         $text = $this->remove_reading_passages($text);
         
-        $lines = explode("\n", $text);
+        // Remove metadata block from text for title/question parsing
+        $text_without_metadata = $this->remove_metadata_block($text);
+        
+        $lines = explode("\n", $text_without_metadata);
         $lines = array_map('trim', $lines);
         
         // First non-empty line is the title
@@ -1798,7 +1815,10 @@ You have one hour for the complete test (including transferring your answers).</
         $reading_texts = $this->extract_reading_passages($text);
         $text = $this->remove_reading_passages($text);
         
-        $lines = explode("\n", $text);
+        // Remove metadata block from text for title/question parsing
+        $text_without_metadata = $this->remove_metadata_block($text);
+        
+        $lines = explode("\n", $text_without_metadata);
         $lines = array_map('trim', $lines);
         
         // Detect question type from marker
@@ -2036,7 +2056,10 @@ You have one hour for the complete test (including transferring your answers).</
         $reading_texts = $this->extract_reading_passages($text);
         $text = $this->remove_reading_passages($text);
         
-        $lines = explode("\n", $text);
+        // Remove metadata block from text for title/question parsing
+        $text_without_metadata = $this->remove_metadata_block($text);
+        
+        $lines = explode("\n", $text_without_metadata);
         $lines = array_map('trim', $lines);
         
         // Extract title - first non-empty line, remove type marker if present
@@ -2161,7 +2184,10 @@ You have one hour for the complete test (including transferring your answers).</
         $reading_texts = $this->extract_reading_passages($text);
         $text = $this->remove_reading_passages($text);
         
-        $lines = explode("\n", $text);
+        // Remove metadata block from text for title/question parsing
+        $text_without_metadata = $this->remove_metadata_block($text);
+        
+        $lines = explode("\n", $text_without_metadata);
         $lines = array_map('trim', $lines);
         
         // Extract title
