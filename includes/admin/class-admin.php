@@ -2491,7 +2491,7 @@ class IELTS_CM_Admin {
                 <input type="number" name="questions[<?php echo $index; ?>][points]" value="<?php echo esc_attr(isset($question['points']) ? $question['points'] : 1); ?>" min="0" step="0.5" style="width: 100%;">
             </p>
             
-            <div class="general-feedback-field" style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc; <?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings'))) ? 'display:none;' : ''; ?>">
+            <div class="general-feedback-field" style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc; <?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'locating_information'))) ? 'display:none;' : ''; ?>">
                 <h5 style="margin-top: 0;"><?php _e('Feedback Messages', 'ielts-course-manager'); ?></h5>
                 
                 <p>
@@ -2511,7 +2511,7 @@ class IELTS_CM_Admin {
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
                 <p>
                     <label><?php _e('No Answer Selected Feedback', 'ielts-course-manager'); ?></label><br>
-                    <textarea name="questions[<?php echo $index; ?>][no_answer_feedback]" rows="3" style="width: 100%;" placeholder="<?php echo (isset($question['type']) && in_array($question['type'], array('multi_select', 'headings'))) ? esc_attr__("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager') : ''; ?>"><?php echo esc_textarea(isset($question['no_answer_feedback']) ? $question['no_answer_feedback'] : ''); ?></textarea>
+                    <textarea name="questions[<?php echo $index; ?>][no_answer_feedback]" rows="3" style="width: 100%;" placeholder="<?php echo (isset($question['type']) && in_array($question['type'], array('multi_select', 'headings', 'matching_classifying', 'matching', 'locating_information'))) ? esc_attr__("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager') : ''; ?>"><?php echo esc_textarea(isset($question['no_answer_feedback']) ? $question['no_answer_feedback'] : ''); ?></textarea>
                     <small><?php _e('Shown when the student submits without selecting an answer. HTML is supported.', 'ielts-course-manager'); ?></small>
                 </p>
             </div>
