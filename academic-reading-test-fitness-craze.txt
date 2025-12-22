@@ -155,3 +155,168 @@ B) there was a revitalization in the interest of physical health. [CORRECT]
 C) it was recognized that the Greeks and Romans knew more about health than contemporary beliefs.
 D) European cultures argued with each other to establish the best fitness programs.
 [INCORRECT] The sixth paragraph states: 'following this golden period of physical awareness and achievement, there ensued a thousand-year period of relative ignorance of the needs of physical training... The Renaissance era, centering around the 1500s, saw a renewed interest in health, the anatomy and physical education'.
+
+[READING PASSAGE] Reading Passage 2 - The Story of the Bar Code
+
+The Story of the Bar Code
+
+The ingenious ideas and technological advances that have led to the modern bar code.
+
+A
+
+The modern bar code, or more correctly, the Universal Product Code (UPC), has a relatively short history in the consumer world of some 40 years since its first working use, but the ideas that drove its introduction have been around for more than a hundred and twenty years. Indeed, earlier concepts of automated counting and identifying systems began in the late 19th century with punch cards being used in the 1890 U.S. census. In the 1930s, a student at Harvard University's Graduate School of Business Administration headed a project designed to automate the shopping experience by using punch card technology from a catalogue to order items, which in turn would then see the items delivered from a storeroom with an accompanying 'automated bill'. The idea being thus to keep more accurate inventory records, and, it was envisaged, to save time. However, the Great Depression and the unwieldiness of the system combined to ensure the project never moved forward. But, the ideas were in place; it was just a case of when the technology would be available.
+
+B
+
+The first moves towards the modern bar code began in the late 1940s in Philadelphia, in the U.S., at the Drexel Institute of Technology, when there was a request from the president of a chain of grocery stores to come up with the technology for an automated system to record product information during the checkout stage. The Institute declined to embark on the research, but a graduate student and a teacher at the Institute were intrigued by the concept, and began toying with different ideas as to how best to capture the required information. In fact, so intrigued was the teacher, Norman Woodland, that he quit his teaching job and moved to Florida to further advance the idea, experimenting and building on the concept of the Morse Code, with its dots and dashes, and converting them into a series of narrow and wide lines. It is recorded that one idea came to him while sitting on the beach, with his fingers in the sand, and as he pulled his fingers towards him, lines were created that would come to represent the basics of the system. He then swept his fingers in a circle, creating a bulls-eye figure, which was to serve as the basis for the first bar code design.
+
+C
+
+Norman Woodland continued working with the graduate student, Bernard Silver, and they were granted a patent in 1952 for their idea of a 'Classifying Apparatus and Method', an automated system of identifying and numbering different items, using symbols. However, academic analysis and peer evaluation identified the concept as being about 20 years ahead of its time, as the technology was lacking to put in place what the mind had conceived. There were no computers capable of handling the procedures, and an extremely bright light was required to 'read' the lines of the black and white coding system. By now Woodland was working at IBM, and was trying to interest them in pursuing the project but, while interested, IBM acknowledged that it was a project for the future. Woodland and Silver in turn sold the patent to another electronics company in an effort to stimulate industry action and in the early 1970s the RCA company had acquired the patent and began serious advances in realising the concepts. Unfortunately, Bernard Silver passed away at a young age in 1963 and never saw his original ideas come to fruition.
+
+D
+
+At the same time, in the late 1950s, there was a big move in the American railroad industry for a system to identify railway cars, which were moved all across America, and exchanged between different railway lines, thus creating a complex problem of keeping track of them. In the 1960s an MIT masters student named David Collins began working on a system with the then-new computers and he came up with a coding system utilising colour-coded stripes which would identify the owner of the railway wagon and its number, although this had its limitations. He quickly realised the implications of such a system and tried to persuade the company he worked for to expand the project and to develop 'a little black-and-white-line equivalent for conveyor control and for everything that moves'. The company declined, instead choosing to focus on the railway system, so David Collins left and formed his own company, incorporating the new laser light system, one of the missing links that had bedevilled the earlier work of Woodland and Silver. In the late 1960s, some very basic systems were installed in motor car factories for General Motors and for a distribution company in New Jersey, to ensure shipments were sent to the right destination.
+
+E
+
+It was the grocery industry's requirements that really propelled the bar code into universal use in the consumer world. In the early 1970s there was growing interest in the possibilities of the bar code, interestingly, for the original reasons that were initially put forward: inventory control and speeding up the check-out procedures. It was a lengthy procedure, though, to get everything running smoothly, and much was proceeded on based on faith that there would be long-term savings. In the future. In order for the system to produce the savings envisaged, upwards of 80% of all products would need bar codes, and the full cooperation of the production and retailing industry would be required. But time-lines were produced, and nearly every link in the consumer chain bought into the concept, and though there were figures presented that nearly $500 million would be required to get a thorough system in place, the guarantee of massive savings within 'a few years' drove the project forward, which saw the early concepts finally being put in place.
+
+F
+
+In 1974, in Ohio, in the U.S., a package of chewing gum was scanned at a supermarket and became the first retail product purchased using scanner technology. Scanning technology was now a reality, and the first scanner and the original pack of chewing gum are now on display at the Smithsonian Institute in the United States. Scanning technology then moved forward at a rapid rate, and today, the technology is used to track the mating habits of insects, health patients' needs and identification, marathon runners in competitions, trees about to be cut down in forests, airline luggage and tickets, and an important tool in the reduction in fraud. Bar codes represent the ultimate in man's ability to conjure up ideas, and then patiently work through the emerging technology to see the ideas realised fully.
+
+[END READING PASSAGE]
+
+You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.
+
+Questions 14 – 19 [HEADINGS]
+
+Reading Passage 2 has six paragraphs A – F.
+
+For paragraphs A – F, choose the most suitable heading from the list of headings below.
+
+Write the appropriate numbers I - IX in boxes 14 – 19 on your answer sheet.
+
+NB There are more headings than paragraphs, so some headings will not be used.
+
+List of Headings:
+I. The original concept sees many modern applications
+II. Grocery stores worry about the costs
+III. Early ideas lead to modern concepts
+IV. A different industry provides a new stimulus
+V. Different Technological Institutes compete
+VI. Early setbacks
+VII. An old system inspires one man
+VIII. Railways lead the way
+IX. Theory becomes reality
+
+14. Paragraph A
+A) I. The original concept sees many modern applications
+B) II. Grocery stores worry about the costs
+C) III. Early ideas lead to modern concepts [CORRECT]
+D) IV. A different industry provides a new stimulus
+E) V. Different Technological Institutes compete
+F) VI. Early setbacks
+G) VII. An old system inspires one man
+H) VIII. Railways lead the way
+I) IX. Theory becomes reality
+[INCORRECT] Paragraph A discusses the early concepts of automated systems from the late 19th century with punch cards in the 1890 U.S. census and the 1930s Harvard project. These early ideas laid the foundation for the modern bar code concept.
+
+15. Paragraph B
+A) I. The original concept sees many modern applications
+B) II. Grocery stores worry about the costs
+C) III. Early ideas lead to modern concepts
+D) IV. A different industry provides a new stimulus
+E) V. Different Technological Institutes compete
+F) VI. Early setbacks
+G) VII. An old system inspires one man [CORRECT]
+H) VIII. Railways lead the way
+I) IX. Theory becomes reality
+[INCORRECT] Paragraph B describes how Norman Woodland was inspired by the Morse Code system with its dots and dashes, converting them into narrow and wide lines. He experimented with this old system to create the first bar code design.
+
+16. Paragraph C
+A) I. The original concept sees many modern applications
+B) II. Grocery stores worry about the costs
+C) III. Early ideas lead to modern concepts
+D) IV. A different industry provides a new stimulus
+E) V. Different Technological Institutes compete
+F) VI. Early setbacks [CORRECT]
+G) VII. An old system inspires one man
+H) VIII. Railways lead the way
+I) IX. Theory becomes reality
+[INCORRECT] Paragraph C discusses the setbacks faced: the concept was '20 years ahead of its time', there were no computers capable of handling the procedures, extremely bright light was required, IBM acknowledged it was a project for the future, and Bernard Silver passed away before seeing the ideas come to fruition.
+
+17. Paragraph D
+A) I. The original concept sees many modern applications
+B) II. Grocery stores worry about the costs
+C) III. Early ideas lead to modern concepts
+D) IV. A different industry provides a new stimulus [CORRECT]
+E) V. Different Technological Institutes compete
+F) VI. Early setbacks
+G) VII. An old system inspires one man
+H) VIII. Railways lead the way
+I) IX. Theory becomes reality
+[INCORRECT] Paragraph D describes how the railroad industry's need for a system to identify railway cars provided a new stimulus for bar code development. David Collins worked on a coding system for railways and then adapted it for other uses, incorporating laser light technology.
+
+18. Paragraph E
+A) I. The original concept sees many modern applications
+B) II. Grocery stores worry about the costs
+C) III. Early ideas lead to modern concepts
+D) IV. A different industry provides a new stimulus
+E) V. Different Technological Institutes compete
+F) VI. Early setbacks
+G) VII. An old system inspires one man
+H) VIII. Railways lead the way
+I) IX. Theory becomes reality [CORRECT]
+[INCORRECT] Paragraph E describes how the grocery industry's requirements turned the bar code concept into reality. Despite the high costs ($500 million), the industry moved forward and 'the early concepts finally being put in place' - theory becoming reality.
+
+19. Paragraph F
+A) I. The original concept sees many modern applications [CORRECT]
+B) II. Grocery stores worry about the costs
+C) III. Early ideas lead to modern concepts
+D) IV. A different industry provides a new stimulus
+E) V. Different Technological Institutes compete
+F) VI. Early setbacks
+G) VII. An old system inspires one man
+H) VIII. Railways lead the way
+I) IX. Theory becomes reality
+[INCORRECT] Paragraph F begins with the first retail product scanned in 1974, then describes the many modern applications: 'the technology is used to track the mating habits of insects, health patients' needs and identification, marathon runners in competitions, trees about to be cut down in forests, airline luggage and tickets, and an important tool in the reduction in fraud'.
+
+Questions 20 – 26
+
+Complete the summary of information below.
+
+Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.
+
+Write your answers in boxes 20 – 26 on your answer sheet.
+
+The History of the Bar Code
+
+20. The idea of the bar code began with the concept of {[PUNCH CARDS][PUNCH CARD]} which were used in the 1890 U.S. census, and experimented with in the 1930s.
+[CORRECT] Excellent! Paragraph A states: 'earlier concepts of automated counting and identifying systems began in the late 19th century with punch cards being used in the 1890 U.S. census'.
+[INCORRECT] Paragraph A states: 'earlier concepts of automated counting and identifying systems began in the late 19th century with punch cards being used in the 1890 U.S. census'.
+
+21. In the 1940s, grocery stores wanted an automated device that would capture {PRODUCT INFORMATION} for inventory records and to speed up the checkout process.
+[CORRECT] Well done! Paragraph B mentions: 'there was a request from the president of a chain of grocery stores to come up with the technology for an automated system to record product information during the checkout stage'.
+[INCORRECT] Paragraph B mentions: 'there was a request from the president of a chain of grocery stores to come up with the technology for an automated system to record product information during the checkout stage'.
+
+22. Two men worked on the concept and one came up with an idea based on the Morse Code, and the first barcode was actually a {[BULLS-EYE][BULLSEYE][BULLS EYE]} design, shaped in a circle.
+[CORRECT] Correct! Paragraph B describes: 'He then swept his fingers in a circle, creating a bulls-eye figure, which was to serve as the basis for the first bar code design'.
+[INCORRECT] Paragraph B describes: 'He then swept his fingers in a circle, creating a bulls-eye figure, which was to serve as the basis for the first bar code design'.
+
+23. At the same time, the Railroad companies were looking for an automated system to keep track of their {[RAILWAY CARS][RAILWAY CAR]}, and a colour-coded numbering system was introduced, with the designer looking for a way to simplify it to black-and-white lines.
+[CORRECT] Excellent! Paragraph D states: 'there was a big move in the American railroad industry for a system to identify railway cars, which were moved all across America'.
+[INCORRECT] Paragraph D states: 'there was a big move in the American railroad industry for a system to identify railway cars, which were moved all across America'.
+
+24. With the invention of the {[LASER][LASER LIGHT]} light, the final innovation was made and in the 1960s, early bar code systems for inventory were introduced in car companies.
+[CORRECT] Well done! Paragraph D mentions: 'David Collins left and formed his own company, incorporating the new laser light system, one of the missing links that had bedevilled the earlier work of Woodland and Silver. In the late 1960s, some very basic systems were installed in motor car factories'.
+[INCORRECT] Paragraph D mentions: 'David Collins left and formed his own company, incorporating the new laser light system, one of the missing links that had bedevilled the earlier work of Woodland and Silver. In the late 1960s, some very basic systems were installed in motor car factories'.
+
+25. The first retail product purchased using a bar code was in {1974}, and today bar codes are used for a wide range of purposes, as well as reducing {FRAUD}.
+[CORRECT] Correct! Paragraph F states: 'In 1974, in Ohio, in the U.S., a package of chewing gum was scanned at a supermarket and became the first retail product purchased using scanner technology'.
+[INCORRECT] Paragraph F states: 'In 1974, in Ohio, in the U.S., a package of chewing gum was scanned at a supermarket and became the first retail product purchased using scanner technology'.
+
+26. Today bar codes are used for a wide range of purposes, as well as reducing {FRAUD}.
+[CORRECT] Excellent! Paragraph F mentions: 'the technology is used to track the mating habits of insects, health patients' needs and identification, marathon runners in competitions, trees about to be cut down in forests, airline luggage and tickets, and an important tool in the reduction in fraud'.
+[INCORRECT] Paragraph F mentions: 'the technology is used to track the mating habits of insects, health patients' needs and identification, marathon runners in competitions, trees about to be cut down in forests, airline luggage and tickets, and an important tool in the reduction in fraud'.
