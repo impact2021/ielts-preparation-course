@@ -542,6 +542,11 @@ class IELTS_CM_Quiz_Handler {
                                 $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
                             }
                         }
+                    } elseif (in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false'))) {
+                        // For short answer, sentence completion, labelling, and true/false - use correct_feedback
+                        if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
+                            $feedback = wp_kses_post($question['correct_feedback']);
+                        }
                     }
                 } else {
                     // For multiple choice, check if there's specific feedback for this option
@@ -563,6 +568,11 @@ class IELTS_CM_Quiz_Handler {
                                 && !empty($question['option_feedback'][$user_answer_index])) {
                                 $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
                             }
+                        }
+                    } elseif (in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false'))) {
+                        // For short answer, sentence completion, labelling, and true/false - use incorrect_feedback
+                        if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                            $feedback = wp_kses_post($question['incorrect_feedback']);
                         }
                     }
                 }
