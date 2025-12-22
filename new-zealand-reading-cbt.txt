@@ -119,11 +119,14 @@ Questions 6 – 8
 
 Complete the following sentences using NO MORE THAN THREE WORDS.
 
-6. The field of study in which New Zealand excels is {[ENGLISH LANGUAGE TEACHING][ENGLISH LANGUAGE][LANGUAGE TEACHING]}. [FEEDBACK: Section A states "it has an excellent education system, especially in English language teaching."]
+6. The field of study in which New Zealand excels is {[ENGLISH LANGUAGE TEACHING][ENGLISH LANGUAGE][LANGUAGE TEACHING]}.
+[CORRECT] Section A states "it has an excellent education system, especially in English language teaching."
 
-7. Full immersion learning can only happen in an {[ENGLISH SPEAKING COUNTRY][ENGLISH-SPEAKING COUNTRY]}. [FEEDBACK: Section A states "This is only possible in a country where English is the spoken language."]
+7. Full immersion learning can only happen in an {[ENGLISH SPEAKING COUNTRY][ENGLISH-SPEAKING COUNTRY]}.
+[CORRECT] Section A states "This is only possible in a country where English is the spoken language."
 
-8. Educational standards are monitored by three {[GOVERNMENT BODIES][GOVERNMENT AGENCIES]}. [FEEDBACK: Section B states "it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office" - these are three government bodies.]
+8. Educational standards are monitored by three {[GOVERNMENT BODIES][GOVERNMENT AGENCIES]}.
+[CORRECT] Section B states "it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office" - these are three government bodies.
 
 Questions 9-11
 
@@ -150,13 +153,17 @@ Questions 12-15
 
 Complete the flow chart below using NO MORE THAN TWO WORDS from the text.
 
-12. {[BACHELORS DEGREE][BACHELOR'S DEGREE][BACHELORS][BACHELOR DEGREE]} [FEEDBACK: Section D states "The first degree a student is able to gain in New Zealand is, as elsewhere, a Bachelors degree." This is the starting point of the postgraduate pathway shown in the flow chart.]
+12. {[BACHELORS DEGREE][BACHELOR'S DEGREE][BACHELORS][BACHELOR DEGREE]}
+[CORRECT] Section D states "The first degree a student is able to gain in New Zealand is, as elsewhere, a Bachelors degree." This is the starting point of the postgraduate pathway shown in the flow chart.
 
-13. {[POSTGRADUATE DIPLOMA][POSTGRADUATE DIPLOMAS]} [FEEDBACK: Section D mentions "There are Postgraduate Diploma courses" as the first postgraduate option after a Bachelors degree. Section E provides more detail about this one-year programme.]
+13. {[POSTGRADUATE DIPLOMA][POSTGRADUATE DIPLOMAS]}
+[CORRECT] Section D mentions "There are Postgraduate Diploma courses" as the first postgraduate option after a Bachelors degree. Section E provides more detail about this one-year programme.
 
-14. {[MASTERS DEGREE][MASTER'S DEGREE][MASTERS][MASTER DEGREE]} [FEEDBACK: Section E states "The Masters degree, like the Postgraduate Diploma, builds on a Bachelors degree" and describes it as "the conventional pathway to the next level of education – the Doctorate."]
+14. {[MASTERS DEGREE][MASTER'S DEGREE][MASTERS][MASTER DEGREE]}
+[CORRECT] Section E states "The Masters degree, like the Postgraduate Diploma, builds on a Bachelors degree" and describes it as "the conventional pathway to the next level of education – the Doctorate."
 
-15. {[DOCTORATE][DOCTORATES]} [FEEDBACK: Section E describes the Doctorate as requiring "a research-based thesis as part of a course that takes a minimum of two years, and is by far the most challenging." This is the final level in the educational pathway.]
+15. {[DOCTORATE][DOCTORATES]}
+[CORRECT] Section E describes the Doctorate as requiring "a research-based thesis as part of a course that takes a minimum of two years, and is by far the most challenging." This is the final level in the educational pathway.
 
 [READING PASSAGE] Reading Passage 2 - Virtual culture
 
@@ -250,17 +257,23 @@ Questions 22 – 27
 
 Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.
 
-22. The range of resources available online are far wider than traditional mediums {[C][PARAGRAPH C]} [FEEDBACK: Paragraph C (third paragraph) states "we can read almost anything that has ever been written" and discusses how works of art "Previously available to be viewed only in museums...are now replicated on the Internet" - showing the wider range online.]
+22. The range of resources available online are far wider than traditional mediums {[C][PARAGRAPH C]}
+[CORRECT] Paragraph C (third paragraph) states "we can read almost anything that has ever been written" and discusses how works of art "Previously available to be viewed only in museums...are now replicated on the Internet" - showing the wider range online.
 
-23. Lack of clarity regarding the person responsible has an effect on cultural value of some web based resources {[H][PARAGRAPH H]} [FEEDBACK: Paragraph H (eighth/last paragraph) discusses how "the authorship of online content is now far less moderated" and "The anonymous nature of a large percentage of internet interactions" affects the reliability and cultural value of web content.]
+23. Lack of clarity regarding the person responsible has an effect on cultural value of some web based resources {[H][PARAGRAPH H]}
+[CORRECT] Paragraph H (eighth/last paragraph) discusses how "the authorship of online content is now far less moderated" and "The anonymous nature of a large percentage of internet interactions" affects the reliability and cultural value of web content.
 
-24. Providing the ability to cross boundaries and be available worldwide {[E][PARAGRAPH E]} [FEEDBACK: Paragraph E (fifth paragraph) states "the Internet is remarkable in its ability to share, on an almost global scale, all the factors that constitute culture" - describing its ability to cross boundaries and be available worldwide.]
+24. Providing the ability to cross boundaries and be available worldwide {[E][PARAGRAPH E]}
+[CORRECT] Paragraph E (fifth paragraph) states "the Internet is remarkable in its ability to share, on an almost global scale, all the factors that constitute culture" - describing its ability to cross boundaries and be available worldwide.
 
-25. The emergence of new forms of culture thanks to digital possibilities {[D][PARAGRAPH D]} [FEEDBACK: Paragraph D (fourth paragraph) states "the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right" and mentions "'Kinetic art' and other such computerised art forms" - new forms of culture from digital possibilities.]
+25. The emergence of new forms of culture thanks to digital possibilities {[D][PARAGRAPH D]}
+[CORRECT] Paragraph D (fourth paragraph) states "the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right" and mentions "'Kinetic art' and other such computerised art forms" - new forms of culture from digital possibilities.
 
-26. The wealth of online resources can mean difficulties in identifying areas of cultural significance {[G][PARAGRAPH G]} [FEEDBACK: Paragraph G (seventh paragraph) discusses "the many millions of hours of footage that cannot be classified as having any cultural significance" - the difficulty of identifying what has cultural significance among the wealth of online resources.]
+26. The wealth of online resources can mean difficulties in identifying areas of cultural significance {[G][PARAGRAPH G]}
+[CORRECT] Paragraph G (seventh paragraph) discusses "the many millions of hours of footage that cannot be classified as having any cultural significance" - the difficulty of identifying what has cultural significance among the wealth of online resources.
 
-27. The self proclaimed title of supporters of internet culture {[B][PARAGRAPH B]} [FEEDBACK: Paragraph B (second paragraph) states "active supporters of the Internet as a culture have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets" - describing the self-proclaimed title "cyberpoets."]
+27. The self proclaimed title of supporters of internet culture {[B][PARAGRAPH B]}
+[CORRECT] Paragraph B (second paragraph) states "active supporters of the Internet as a culture have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets" - describing the self-proclaimed title "cyberpoets."
 
 You should spend about 20 minutes on Questions 28 – 40 which are based on Reading Passage 3.
 
@@ -338,18 +351,30 @@ Questions 33 -37
 
 Answer the following questions using NO MORE THAN TWO WORDS.
 
-33. What was used to move parts around the factory under Ford's production techniques? {[CONVEYOR BELT][CONVEYOR-BELT][A CONVEYOR BELT]} [FEEDBACK: Paragraph A states "Ford's production-line techniques relied on machine parts being moved around the factory on a conveyor belt."]
+33. What was used to move parts around the factory under Ford's production techniques? {[CONVEYOR BELT][CONVEYOR-BELT][A CONVEYOR BELT]}
+[CORRECT] Paragraph A states "Ford's production-line techniques relied on machine parts being moved around the factory on a conveyor belt."
 
-34. What did Ford reduce by 90% compared with more traditional methods of the time? {[LABOUR COSTS][LABOR COSTS][TRADITIONAL LABOUR COSTS]} [FEEDBACK: Paragraph A states "Ford was able to mass produce the now famous Model-T car for only 10% of traditional labour costs" - meaning he reduced labour costs by 90%.]
+34. What did Ford reduce by 90% compared with more traditional methods of the time? {[LABOUR COSTS][LABOR COSTS][TRADITIONAL LABOUR COSTS]}
+[CORRECT] Paragraph A states "Ford was able to mass produce the now famous Model-T car for only 10% of traditional labour costs" - meaning he reduced labour costs by 90%.
 
-35. When was the last Model-T Ford produced? {1927} [FEEDBACK: Paragraph B states "Until 1927 when the last Model-T rolled off the production line."]
+35. When was the last Model-T Ford produced? {1927}
+[CORRECT] Paragraph B states "Until 1927 when the last Model-T rolled off the production line."
 
-36. What did Ford unsuccessfully oppose the organisation of? {[LABOUR UNIONS][LABOR UNIONS][UNIONS]} [FEEDBACK: Paragraph C states "Ford flatly refused to get involved" with Labour Unions and "employed spies in the workplace to sabotage any plans for a union within his factories."]
+36. What did Ford unsuccessfully oppose the organisation of? {[LABOUR UNIONS][LABOR UNIONS][UNIONS]}
+[CORRECT] Paragraph C states "Ford flatly refused to get involved" with Labour Unions and "employed spies in the workplace to sabotage any plans for a union within his factories."
 
-37. What is the name given to the principles of mass production and associated practices? {FORDISM} [FEEDBACK: Paragraph D states "Yet the legacy of Fordism lives on" - Fordism is the term for Ford's principles of mass production.]
+37. What is the name given to the principles of mass production and associated practices? {FORDISM}
+[CORRECT] Paragraph D states "Yet the legacy of Fordism lives on" - Fordism is the term for Ford's principles of mass production.
 
 Questions 38 – 40
 
 Complete the following summary using NO MORE THAN THREE WORDS FROM THE TEXT.
 
-One of the long-term effects of Ford's business practices was that many developing countries became industrialised as a result of (38) {OUTSOURCING} [FEEDBACK: Paragraph E states "Many large manufacturers in the United States and elsewhere therefore began 'outsourcing' – that is, having parts made or whole products assembled in developing nations."] . For those working in the factory, the skills for (39) {[ASSEMBLY-LINE TASKS][ASSEMBLY LINE TASKS][ASSEMBLY-LINE]} [FEEDBACK: Paragraph E states "The skills needed by workers on assembly-line tasks required little training."] were easily acquired and (40) {TRAINING} [FEEDBACK: Paragraph E states "The skills needed by workers on assembly-line tasks required little training" - so the training was minimal.]
+One of the long-term effects of Ford's business practices was that many developing countries became industrialised as a result of (38) {OUTSOURCING}
+[CORRECT] Paragraph E states "Many large manufacturers in the United States and elsewhere therefore began 'outsourcing' – that is, having parts made or whole products assembled in developing nations."
+
+For those working in the factory, the skills for (39) {[ASSEMBLY-LINE TASKS][ASSEMBLY LINE TASKS][ASSEMBLY-LINE]}
+[CORRECT] Paragraph E states "The skills needed by workers on assembly-line tasks required little training."
+
+were easily acquired and (40) {TRAINING}
+[CORRECT] Paragraph E states "The skills needed by workers on assembly-line tasks required little training" - so the training was minimal.
