@@ -3240,24 +3240,21 @@ You have one hour for the complete test (including transferring your answers).</
         
         // Check if all questions in this section have the same instructions
         $common_instructions = null;
-        $all_same = false; // Default to false, will be set to true if all instructions match
-        if (!empty($questions)) {
-            $first_instructions = isset($questions[0]['instructions']) ? $questions[0]['instructions'] : '';
-            $all_same = true;
-            foreach ($questions as $q) {
-                $q_instructions = isset($q['instructions']) ? $q['instructions'] : '';
-                if ($q_instructions !== $first_instructions) {
-                    $all_same = false;
-                    break;
-                }
+        $first_instructions = isset($questions[0]['instructions']) ? $questions[0]['instructions'] : '';
+        $all_same = true;
+        foreach ($questions as $q) {
+            $q_instructions = isset($q['instructions']) ? $q['instructions'] : '';
+            if ($q_instructions !== $first_instructions) {
+                $all_same = false;
+                break;
             }
-            
-            // If all questions have the same instructions, output them once at the section level
-            if ($all_same && !empty($first_instructions)) {
-                $common_instructions = $first_instructions;
-                $output[] = strip_tags($common_instructions);
-                $output[] = '';
-            }
+        }
+        
+        // If all questions have the same instructions, output them once at the section level
+        if ($all_same && !empty($first_instructions)) {
+            $common_instructions = $first_instructions;
+            $output[] = strip_tags($common_instructions);
+            $output[] = '';
         }
         
         foreach ($questions as $index => $question) {
@@ -3317,24 +3314,21 @@ You have one hour for the complete test (including transferring your answers).</
         
         // Check if all questions in this section have the same instructions
         $common_instructions = null;
-        $all_same = false; // Default to false, will be set to true if all instructions match
-        if (!empty($questions)) {
-            $first_instructions = isset($questions[0]['instructions']) ? $questions[0]['instructions'] : '';
-            $all_same = true;
-            foreach ($questions as $q) {
-                $q_instructions = isset($q['instructions']) ? $q['instructions'] : '';
-                if ($q_instructions !== $first_instructions) {
-                    $all_same = false;
-                    break;
-                }
+        $first_instructions = isset($questions[0]['instructions']) ? $questions[0]['instructions'] : '';
+        $all_same = true;
+        foreach ($questions as $q) {
+            $q_instructions = isset($q['instructions']) ? $q['instructions'] : '';
+            if ($q_instructions !== $first_instructions) {
+                $all_same = false;
+                break;
             }
-            
-            // If all questions have the same instructions, output them once at the section level
-            if ($all_same && !empty($first_instructions)) {
-                $common_instructions = $first_instructions;
-                $output[] = strip_tags($common_instructions);
-                $output[] = '';
-            }
+        }
+        
+        // If all questions have the same instructions, output them once at the section level
+        if ($all_same && !empty($first_instructions)) {
+            $common_instructions = $first_instructions;
+            $output[] = strip_tags($common_instructions);
+            $output[] = '';
         }
         
         foreach ($questions as $index => $question) {
