@@ -3263,7 +3263,7 @@ You have one hour for the complete test (including transferring your answers).</
             $question_text = isset($question['question']) ? $question['question'] : '';
             
             // Output per-question instructions if they differ from common instructions
-            if (!isset($common_instructions) && isset($question['instructions']) && !empty($question['instructions'])) {
+            if ($common_instructions === null && isset($question['instructions']) && !empty($question['instructions'])) {
                 $output[] = strip_tags($question['instructions']);
                 $output[] = '';
             }
@@ -3340,7 +3340,7 @@ You have one hour for the complete test (including transferring your answers).</
             $dropdown_options = isset($question['dropdown_options']) ? $question['dropdown_options'] : array();
             
             // Output per-question instructions if they differ from common instructions
-            if (!isset($common_instructions) && isset($question['instructions']) && !empty($question['instructions'])) {
+            if ($common_instructions === null && isset($question['instructions']) && !empty($question['instructions'])) {
                 $output[] = strip_tags($question['instructions']);
                 $output[] = '';
             }
