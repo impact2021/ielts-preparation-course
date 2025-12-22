@@ -38,8 +38,9 @@ class IELTS_CM_Text_Exercises_Creator {
     /**
      * Regex pattern for option lines
      * Format: A) option text [CORRECT] [FEEDBACK: explanation]
+     * Supports both uppercase and lowercase option letters
      */
-    const OPTION_PATTERN = '/^([A-Z])\)\s+(.+?)(?:\s*\[CORRECT\])?(?:\s*\[FEEDBACK:\s*(.+?)\])?$/i';
+    const OPTION_PATTERN = '/^([A-Za-z])\)\s+(.+?)(?:\s*\[CORRECT\])?(?:\s*\[FEEDBACK:\s*(.+?)\])?$/i';
     
     /**
      * Regex pattern for summary completion questions  
@@ -922,8 +923,9 @@ You have one hour for the complete test (including transferring your answers).</
             
             // Check if this is a section header like "Questions 1-5 [HEADINGS]" or "Question 1 [MULTIPLE CHOICE]"
             if (preg_match('/^Questions?\s+\d+/i', $line)) {
-                // Save previous section if exists
+                // Before starting a new section, process the previous section to extract instructions
                 if ($current_section !== null) {
+                    $this->extract_section_instructions($current_section);
                     $sections[] = $current_section;
                 }
                 
@@ -954,12 +956,81 @@ You have one hour for the complete test (including transferring your answers).</
             }
         }
         
-        // Save last section
+        // Save last section (and extract its instructions)
         if ($current_section !== null) {
+            $this->extract_section_instructions($current_section);
             $sections[] = $current_section;
         }
         
         return $sections;
+    }
+    
+    /**
+     * Extract instruction lines from the beginning of a section's lines
+     * Instructions are lines that appear after the section header but before the actual question content
+     * They are moved from the 'lines' array to the 'instructions' array
+     * 
+     * @param array &$section Section array with 'lines' and 'instructions' keys (passed by reference)
+     */
+    private function extract_section_instructions(&$section) {
+        if (empty($section['lines'])) {
+            return;
+        }
+        
+        $instruction_lines = array();
+        $content_start_index = -1;
+        
+        // Find where the actual question content starts
+        // Question content starts with patterns like:
+        // - Numbered question: "1. Question text"
+        // - [LINKED TO: ...] marker
+        // - === QUESTION N === (for true/false format)
+        // - DROPDOWN N: (for dropdown paragraph)
+        // - Answer format text (for summary/table completion)
+        
+        for ($i = 0; $i < count($section['lines']); $i++) {
+            $line = trim($section['lines'][$i]);
+            
+            // Skip empty lines at the beginning
+            if (empty($line)) {
+                continue;
+            }
+            
+            // Check if this line starts actual question content
+            if (preg_match('/^\d+\.\s+/', $line) ||                          // Numbered question
+                preg_match('/^\[LINKED TO:/i', $line) ||                     // Reading passage link
+                preg_match('/^===\s*QUESTION\s+\d+\s*===/i', $line) ||       // True/false format
+                preg_match('/^DROPDOWN\s+\d+:/i', $line) ||                  // Dropdown definition
+                preg_match('/\[ANSWER\s+\d+\]/i', $line) ||                  // Summary/table completion
+                preg_match('/___\d+___/', $line) ||                          // Dropdown paragraph placeholders
+                preg_match(self::OPTION_PATTERN, $line)) {                   // Option line (uses constant pattern)
+                // Found the start of actual content
+                $content_start_index = $i;
+                break;
+            }
+            
+            // This is an instruction line
+            $instruction_lines[] = $line;
+        }
+        
+        // If we found instruction lines, move them to the instructions array and remove from lines
+        if (!empty($instruction_lines)) {
+            // Prepend instruction lines to existing instructions (section-specific come first)
+            $section['instructions'] = array_merge($instruction_lines, $section['instructions']);
+            
+            // Remove instruction lines from the beginning of the lines array
+            // Three cases based on where content starts:
+            if ($content_start_index === -1) {
+                // Case 1: No content found - all lines are instructions, clear the array
+                $section['lines'] = array();
+            } elseif ($content_start_index > 0) {
+                // Case 2: Content found after some lines - remove instruction lines from beginning
+                $section['lines'] = array_slice($section['lines'], $content_start_index);
+            } else {
+                // Case 3: content_start_index === 0 - first line is content, nothing to remove
+                // (This case is implicit - no action needed, but documented for clarity)
+            }
+        }
     }
     
     /**
