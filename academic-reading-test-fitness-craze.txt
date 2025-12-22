@@ -320,3 +320,167 @@ The History of the Bar Code
 26. Today bar codes are used for a wide range of purposes, as well as reducing {FRAUD}.
 [CORRECT] Excellent! Paragraph F mentions: 'the technology is used to track the mating habits of insects, health patients' needs and identification, marathon runners in competitions, trees about to be cut down in forests, airline luggage and tickets, and an important tool in the reduction in fraud'.
 [INCORRECT] Paragraph F mentions: 'the technology is used to track the mating habits of insects, health patients' needs and identification, marathon runners in competitions, trees about to be cut down in forests, airline luggage and tickets, and an important tool in the reduction in fraud'.
+
+[READING PASSAGE] Reading Passage 3 - Dwarf Planet
+
+DWARF PLANET
+
+The Discovery, Classification and Exploration of Pluto
+
+A
+
+On the 14th of July, 2015, a NASA deep space probe called New Horizons flew through the Pluto system in the Kuiper belt, located almost 6 billion kilometres from our sun, gathering high resolution photographs of the dwarf planet and its moons. Scientifically, the aims of the New Horizons mission were to provide experts on Earth with greater detail regarding the geomorphology, atmosphere, magnetosphere and surface composition of Pluto. As well as cameras for high resolution imagery, the spacecraft used an array of on-board scientific equipment to obtain information, including remote sensors, radio transmitters, computer subsystems, a large satellite dish and a radioisotope thermoelectric generator.
+
+B
+
+Pluto was discovered in February, 1930, by the American Charles Tombaugh, a young self-taught astronomer working at the Lowell Observatory in Arizona. Tombaugh, then in his early twenties, detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope. His discovery soon made worldwide news headlines, and on the 25th of May, 1930, the members of the Lowell Observatory chose the name of Pluto for the ninth planet in the Solar System by unanimous vote. The name itself comes from that of the Roman god of the underworld, and was suggested by a schoolgirl living in England, whose uncle, a retired university librarian, had passed on her suggestion through academic acquaintances. It has been rumoured that Pluto's discovery served as inspiration for Walt Disney's canine character of the same name. There is, however, no question surrounding the naming of the element plutonium, which was named after the planet following the creation of the former by a team of scientists at the University of California in the early 1940s.
+
+C
+
+The estimated mass of Pluto was steadily revised downwards in the decades following its discovery, and was not accurately calculated until 1978, the same year in which Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy. While the original estimate of Pluto's mass had been seven times that of Earth, Christy and his colleague, Robert Harrington, compared Charon's orbital period and size with those of Pluto, estimating the planet's mass to be approximately 0.2 per cent that of the earth. A pair of smaller satellites, Nix and Hydra, was subsequently identified in 2005, with the final two of Pluto's known moons, named Kerberos and Styx, being discovered in 2011 and 2012 respectively.
+
+D
+
+However, in spite of having been regarded as the ninth planet in the solar system for more than fifty years, Pluto's status and classification began to come into question towards the close of the twentieth century. Initially, this was due to the fact that during the nineties a number of objects, made of rock and ice and of a similar size to Pluto, were discovered lying within the Kuiper belt, a circumstellar disc, in many ways resembling a gigantic asteroid belt, at the edge of the Solar System beyond Neptune. The first of these new Kuiper Belt Objects (KBOs) was identified in 1992 by a pair of astronomers, David Jewitt and Jane Luu, working out of the Mauna Kea Observatory in Hawaii. Many more Kuiper Belt Objects were found in the years that followed, making Pluto's official status as a planet increasingly controversial among many in the scientific community. While Pluto remains, at present, the largest of the known trans-Neptunian objects located in the Kuiper belt, the discovery in 2005 of a minor planet with a greater mass, Eris, in an outlying region of the Kuiper belt known as the scattered disc, prompted the International Astronomical Union (IAU) to create a formal definition of the term "planet" that excluded Pluto.
+
+E
+
+When the New Horizons interplanetary space probe was launched from Cape Canaveral in January, 2006, its primary mission was to voyage to Pluto, at that time the only remaining unexplored planet in the Solar System. However, in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic, Pluto was reclassified as a dwarf planet on account of the fact that it did not meet one of the three formal conditions required to be classed as a planet. According to the official definition of the IAU, a planet must be in orbit around the sun and have sufficient mass both for its own gravity to make it spherical in shape and to have cleared the area around its orbit of smaller objects. Failing to meet the third of these criteria, Pluto was classified as a "dwarf planet". While the decision of the IAU to reduce the number of planets in the Solar System from nine to eight has received its fair share of both praise and criticism, the definition of Pluto as a dwarf planet, while controversial, remains in use. Today, there are five known bodies in the Solar System that have been recognised by the IAU as dwarf planets. In addition to Pluto, these are Ceres, Haumea, Makemake and Eris. At the same time, it has been estimated that there may be hundreds more as yet undiscovered and unclassified dwarf planets throughout the Solar System.
+
+F
+
+The high resolution images of Pluto made during the New Horizons close flyby of the planet and beamed back to Earth from across the Solar System have revealed a unique terrain. Far from being a flat, dead world, the rocky dwarf planet's surface contains a multitude of varied, complex landscapes, ranging from oddly-textured ridges with the appearance of tree bark or dragon scales, ice cliffs, valleys and mountains and frozen lakes and oceans to heavily cratered and pitted plains. Experts theorise that, in addition to the impact of other space bodies colliding with the planet, the majority of its terrain has been shaped by a combination of ice sublimation and tectonic forces. While still awaiting official approval from the International Astronomical Union, names for a number of Pluto's regions and topographical features have already been proposed by the New Horizons discovery team in consultation with the general public, including Tombaugh Regio, the Brass Knuckles, Tartarus Dorsa and Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft.
+
+G
+
+Irrespective of its official present classification as a dwarf planet, the New Horizons reconnaissance of Pluto provides a wealth of knowledge and data regarding the last major body in the Solar System not previously visited by a space probe. While the planet, spacecraft and New Horizons team may be comparatively small, the mission to the Pluto system not only represents the culmination of more than a decade's worth of preparation on Earth, but also the beginning of a new chapter in space exploration at the edge of the Solar System and beyond.
+
+[END READING PASSAGE]
+
+You should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.
+
+Questions 27 – 32
+
+Do the following statements agree with the information given in Reading Passage 3?
+
+In boxes 27 – 32 on your answer sheet, write
+
+TRUE if the statement agrees with the information
+
+FALSE if the statement contradicts the information
+
+NOT GIVEN if there is no information on this
+
+27. The majority of Pluto's terrain was formed by collisions with other space bodies.
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+
+Paragraph F states: 'Experts theorise that, in addition to the impact of other space bodies colliding with the planet, the majority of its terrain has been shaped by a combination of ice sublimation and tectonic forces'. The majority was formed by ice sublimation and tectonic forces, not collisions.
+
+28. Pluto is the name of a Disney character.
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+
+Paragraph B mentions: 'It has been rumoured that Pluto's discovery served as inspiration for Walt Disney's canine character of the same name'.
+
+29. The New Horizons space probe has travelled beyond the Solar System.
+This is TRUE
+Incorrect
+This is NOT GIVEN
+Correct answer
+
+The passage mentions New Horizons flew through the Pluto system and discusses exploration 'at the edge of the Solar System and beyond' but does not explicitly state whether the probe has actually travelled beyond the Solar System.
+
+30. Styx was discovered in 2011.
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+
+Paragraph C states: 'the final two of Pluto's known moons, named Kerberos and Styx, being discovered in 2011 and 2012 respectively'. Styx was discovered in 2012, not 2011.
+
+31. Pluto lies within the Kuiper belt.
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+
+Paragraph A states: 'a NASA deep space probe called New Horizons flew through the Pluto system in the Kuiper belt'. Paragraph D also confirms that Pluto is 'located in the Kuiper belt'.
+
+32. Eris has insufficient mass to clear its orbit of smaller objects.
+This is TRUE
+Incorrect
+This is NOT GIVEN
+Correct answer
+
+While Paragraph D mentions that Eris has 'a greater mass' than Pluto and prompted the IAU to create a formal definition that excluded Pluto, there is no information about whether Eris itself can clear its orbit.
+
+Questions 33 – 37
+
+Complete the sentences below.
+
+Choose TWO WORDS from the passage for each answer.
+
+Write your answers in boxes 33 – 37 on your answer sheet.
+
+33. Charles Tombaugh used a piece of specialist equipment called a {BLINK MICROSCOPE}.
+[CORRECT] Excellent! Paragraph B states: 'Tombaugh, then in his early twenties, detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'.
+[INCORRECT] Paragraph B states: 'Tombaugh, then in his early twenties, detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'.
+
+34. Pluto's largest satellite was discovered by {[JAMES CHRISTY][CHRISTY][J CHRISTY]}.
+[CORRECT] Well done! Paragraph C mentions: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'.
+[INCORRECT] Paragraph C mentions: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'.
+
+35. Eris is located in an area of the Kuiper belt called the {[SCATTERED DISC][SCATTERED DISK]}.
+[CORRECT] Correct! Paragraph D states: 'the discovery in 2005 of a minor planet with a greater mass, Eris, in an outlying region of the Kuiper belt known as the scattered disc'.
+[INCORRECT] Paragraph D states: 'the discovery in 2005 of a minor planet with a greater mass, Eris, in an outlying region of the Kuiper belt known as the scattered disc'.
+
+36. The International Astronomical Union came up with a formal definition for planets at a meeting held in the {CZECH REPUBLIC}.
+[CORRECT] Excellent! Paragraph E mentions: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic, Pluto was reclassified as a dwarf planet'.
+[INCORRECT] Paragraph E mentions: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic, Pluto was reclassified as a dwarf planet'.
+
+37. The name of one area on the surface of Pluto, called {CTHULHU REGIO}, was inspired by the creation of a particular writer.
+[CORRECT] Well done! Paragraph F states: 'names for a number of Pluto's regions and topographical features have already been proposed by the New Horizons discovery team in consultation with the general public, including Tombaugh Regio, the Brass Knuckles, Tartarus Dorsa and Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'.
+[INCORRECT] Paragraph F states: 'names for a number of Pluto's regions and topographical features have already been proposed by the New Horizons discovery team in consultation with the general public, including Tombaugh Regio, the Brass Knuckles, Tartarus Dorsa and Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'.
+
+Questions 38 – 40
+
+Reading Passage 3 has seven paragraphs, A – G.
+
+Which paragraph contains the following information?
+
+Write the correct letter A – G in boxes 38 – 40 on your answer sheet.
+
+38. The significance of the New Horizons mission.
+A) A
+B) B
+C) C
+D) D
+E) E
+F) F
+G) G [CORRECT]
+[INCORRECT] Paragraph G discusses the significance of the mission: 'the New Horizons reconnaissance of Pluto provides a wealth of knowledge and data regarding the last major body in the Solar System not previously visited by a space probe' and 'the mission to the Pluto system not only represents the culmination of more than a decade's worth of preparation on Earth, but also the beginning of a new chapter in space exploration'.
+
+39. The technological equipment on board New Horizons.
+A) A [CORRECT]
+B) B
+C) C
+D) D
+E) E
+F) F
+G) G
+[INCORRECT] Paragraph A describes the equipment: 'the spacecraft used an array of on-board scientific equipment to obtain information, including remote sensors, radio transmitters, computer subsystems, a large satellite dish and a radioisotope thermoelectric generator'.
+
+40. The number of dwarf planets.
+A) A
+B) B
+C) C
+D) D
+E) E [CORRECT]
+F) F
+G) G
+[INCORRECT] Paragraph E states: 'Today, there are five known bodies in the Solar System that have been recognised by the IAU as dwarf planets. In addition to Pluto, these are Ceres, Haumea, Makemake and Eris'.
