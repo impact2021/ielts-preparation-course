@@ -1797,6 +1797,22 @@ class IELTS_CM_Admin {
                                     $lastQuestion.find('textarea[name*="[question]"]').val(question.question || '');
                                     $lastQuestion.find('input[name*="[points]"]').val(question.points || 1);
                                     
+                                    // Set instructions field if present
+                                    if (question.instructions) {
+                                        var instructionsTextarea = $lastQuestion.find('textarea[name*="[instructions]"]');
+                                        if (instructionsTextarea.length) {
+                                            instructionsTextarea.val(question.instructions);
+                                            // If TinyMCE editor exists, update it too
+                                            var instructionsEditorId = instructionsTextarea.attr('id');
+                                            if (instructionsEditorId && typeof tinymce !== 'undefined') {
+                                                var instructionsEditor = tinymce.get(instructionsEditorId);
+                                                if (instructionsEditor) {
+                                                    instructionsEditor.setContent(question.instructions);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
                                     // Set feedback fields
                                     $lastQuestion.find('textarea[name*="[no_answer_feedback]"]').val(question.no_answer_feedback || '');
                                     
