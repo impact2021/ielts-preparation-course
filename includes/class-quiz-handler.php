@@ -1010,7 +1010,7 @@ class IELTS_CM_Quiz_Handler {
      */
     private function check_multi_select_answer($question, $user_answers) {
         $points_earned = 0;
-        $option_feedback = array(); // Per-option feedback for selected options
+        $option_feedback = array(); // Per-option feedback for ALL options
         
         // Ensure user_answers is an array
         if (!is_array($user_answers)) {
@@ -1027,6 +1027,15 @@ class IELTS_CM_Quiz_Handler {
             }
         }
         
+        // Build feedback for ALL options, not just selected ones
+        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+            foreach ($question['mc_options'] as $idx => $option) {
+                if (isset($option['feedback']) && !empty($option['feedback'])) {
+                    $option_feedback[$idx] = wp_kses_post($option['feedback']);
+                }
+            }
+        }
+        
         // Check if no answer was provided
         if (empty($user_answers)) {
             // Use no_answer_feedback if available
@@ -1039,7 +1048,7 @@ class IELTS_CM_Quiz_Handler {
                 'points_earned' => 0,
                 'is_correct' => false,
                 'feedback' => $no_answer_feedback,
-                'option_feedback' => array(),
+                'option_feedback' => $option_feedback,
                 'correct_indices' => $correct_indices
             );
         }
@@ -1053,12 +1062,6 @@ class IELTS_CM_Quiz_Handler {
             } else {
                 $has_incorrect_selections = true;
             }
-            
-            // Get option-specific feedback for this selected option
-            if (isset($question['mc_options'][$selected_index]['feedback']) 
-                && !empty($question['mc_options'][$selected_index]['feedback'])) {
-                $option_feedback[$selected_index] = wp_kses_post($question['mc_options'][$selected_index]['feedback']);
-            }
         }
         
         // Determine if fully correct (all correct answers selected, no incorrect ones)
@@ -1068,7 +1071,7 @@ class IELTS_CM_Quiz_Handler {
             'points_earned' => $points_earned,
             'is_correct' => $is_correct,
             'feedback' => '', // No generic feedback for multi_select
-            'option_feedback' => $option_feedback, // Per-option feedback
+            'option_feedback' => $option_feedback, // Per-option feedback for ALL options
             'correct_indices' => $correct_indices
         );
     }
