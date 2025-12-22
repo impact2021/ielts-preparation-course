@@ -944,6 +944,7 @@ class IELTS_CM_Admin {
                     <li><strong><?php _e('Short Answer Questions:', 'ielts-course-manager'); ?></strong> <?php _e('Students type a brief answer. Use | to separate multiple accepted answers.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Sentence Completion:', 'ielts-course-manager'); ?></strong> <?php _e('Students complete a sentence. Matching is case-insensitive and ignores punctuation.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Summary Completion:', 'ielts-course-manager'); ?></strong> <?php _e('Students fill in blanks in a summary. Supports multiple accepted answers with |', 'ielts-course-manager'); ?></li>
+                    <li><strong><?php _e('Dropdown Paragraph:', 'ielts-course-manager'); ?></strong> <?php _e('Students select from dropdown menus within text. Use ___1___, ___2___, etc. as placeholders. Example: "I am writing to ___1___ that I will be unable to meet at ___2___"', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Table Completion:', 'ielts-course-manager'); ?></strong> <?php _e('Students fill in multiple table cells. Works like Summary Completion with [field N] placeholders.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Labelling:', 'ielts-course-manager'); ?></strong> <?php _e('For diagram/image labelling. Students type the label text.', 'ielts-course-manager'); ?></li>
                     <li><strong><?php _e('Classifying & Matching:', 'ielts-course-manager'); ?></strong> <?php _e('For categorizing items. Add category options and mark the correct one.', 'ielts-course-manager'); ?></li>
@@ -1327,6 +1328,21 @@ class IELTS_CM_Admin {
                     '</div>' +
                     '</div>' +
                     '<button type="button" class="button add-dropdown-option" data-question-index="' + questionIndex + '" data-dropdown-position="' + nextPosition + '"><?php _e('Add Option', 'ielts-course-manager'); ?></button>' +
+                    '<div style="margin-top: 15px; padding: 10px; background: #f9f9f9; border-left: 3px solid #0969da;">' +
+                    '<h6 style="margin-top: 0;"><?php _e('Dropdown Feedback', 'ielts-course-manager'); ?></h6>' +
+                    '<p>' +
+                    '<label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>' +
+                    '<textarea name="questions[' + questionIndex + '][dropdown_options][' + nextPosition + '][correct_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student selects the correct option', 'ielts-course-manager'); ?>"></textarea>' +
+                    '</p>' +
+                    '<p>' +
+                    '<label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>' +
+                    '<textarea name="questions[' + questionIndex + '][dropdown_options][' + nextPosition + '][incorrect_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student selects an incorrect option', 'ielts-course-manager'); ?>"></textarea>' +
+                    '</p>' +
+                    '<p>' +
+                    '<label><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></label><br>' +
+                    '<textarea name="questions[' + questionIndex + '][dropdown_options][' + nextPosition + '][no_answer_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student leaves this dropdown blank', 'ielts-course-manager'); ?>"></textarea>' +
+                    '</p>' +
+                    '</div>' +
                     '</div>';
                 
                 container.append(dropdownHtml);
@@ -2388,6 +2404,23 @@ class IELTS_CM_Admin {
                             </div>
                             
                             <button type="button" class="button add-dropdown-option" data-question-index="<?php echo $index; ?>" data-dropdown-position="<?php echo esc_attr($dd_num); ?>"><?php _e('Add Option', 'ielts-course-manager'); ?></button>
+                            
+                            <!-- Feedback fields for this dropdown -->
+                            <div style="margin-top: 15px; padding: 10px; background: #f9f9f9; border-left: 3px solid #0969da;">
+                                <h6 style="margin-top: 0;"><?php _e('Dropdown Feedback', 'ielts-course-manager'); ?></h6>
+                                <p>
+                                    <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                                    <textarea name="questions[<?php echo $index; ?>][dropdown_options][<?php echo esc_attr($dd_num); ?>][correct_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student selects the correct option', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($dd_data['correct_feedback']) ? $dd_data['correct_feedback'] : ''); ?></textarea>
+                                </p>
+                                <p>
+                                    <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                                    <textarea name="questions[<?php echo $index; ?>][dropdown_options][<?php echo esc_attr($dd_num); ?>][incorrect_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student selects an incorrect option', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($dd_data['incorrect_feedback']) ? $dd_data['incorrect_feedback'] : ''); ?></textarea>
+                                </p>
+                                <p>
+                                    <label><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                                    <textarea name="questions[<?php echo $index; ?>][dropdown_options][<?php echo esc_attr($dd_num); ?>][no_answer_feedback]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student leaves this dropdown blank', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($dd_data['no_answer_feedback']) ? $dd_data['no_answer_feedback'] : ''); ?></textarea>
+                                </p>
+                            </div>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -2488,6 +2521,20 @@ class IELTS_CM_Admin {
                 <label><?php _e('Points', 'ielts-course-manager'); ?></label><br>
                 <input type="number" name="questions[<?php echo $index; ?>][points]" value="<?php echo esc_attr(isset($question['points']) ? $question['points'] : 1); ?>" min="0" step="0.5" style="width: 100%;">
             </p>
+            
+            <div class="general-feedback-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false', 'dropdown_paragraph'))) ? '' : 'display:none;'; ?> margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
+                <h5 style="margin-top: 0;"><?php _e('Answer Feedback', 'ielts-course-manager'); ?></h5>
+                <p>
+                    <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="questions[<?php echo $index; ?>][correct_feedback]" rows="3" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers correctly', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($question['correct_feedback']) ? $question['correct_feedback'] : ''); ?></textarea>
+                    <small><?php _e('Shown when the student answers correctly. HTML is supported.', 'ielts-course-manager'); ?></small>
+                </p>
+                <p>
+                    <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="questions[<?php echo $index; ?>][incorrect_feedback]" rows="3" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers incorrectly', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($question['incorrect_feedback']) ? $question['incorrect_feedback'] : ''); ?></textarea>
+                    <small><?php _e('Shown when the student answers incorrectly. HTML is supported.', 'ielts-course-manager'); ?></small>
+                </p>
+            </div>
             
             <div class="no-answer-feedback-field" style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
@@ -2622,6 +2669,20 @@ class IELTS_CM_Admin {
                 <label><?php _e('Points', 'ielts-course-manager'); ?></label><br>
                 <input type="number" name="questions[QUESTION_INDEX][points]" value="1" min="0" step="0.5" style="width: 100%;">
             </p>
+            
+            <div class="general-feedback-field" style="display: none; margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
+                <h5 style="margin-top: 0;"><?php _e('Answer Feedback', 'ielts-course-manager'); ?></h5>
+                <p>
+                    <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="questions[QUESTION_INDEX][correct_feedback]" rows="3" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers correctly', 'ielts-course-manager'); ?>"></textarea>
+                    <small><?php _e('Shown when the student answers correctly. HTML is supported.', 'ielts-course-manager'); ?></small>
+                </p>
+                <p>
+                    <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="questions[QUESTION_INDEX][incorrect_feedback]" rows="3" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers incorrectly', 'ielts-course-manager'); ?>"></textarea>
+                    <small><?php _e('Shown when the student answers incorrectly. HTML is supported.', 'ielts-course-manager'); ?></small>
+                </p>
+            </div>
             
             <div class="no-answer-feedback-field" style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
@@ -2793,6 +2854,8 @@ class IELTS_CM_Admin {
                         'question' => wp_kses_post($question['question']), // Allow HTML with images
                         'points' => isset($question['points']) ? floatval($question['points']) : 1,
                         'no_answer_feedback' => isset($question['no_answer_feedback']) ? wp_kses_post($question['no_answer_feedback']) : '',
+                        'correct_feedback' => isset($question['correct_feedback']) ? wp_kses_post($question['correct_feedback']) : '',
+                        'incorrect_feedback' => isset($question['incorrect_feedback']) ? wp_kses_post($question['incorrect_feedback']) : '',
                         'reading_text_id' => isset($question['reading_text_id']) && $question['reading_text_id'] !== '' ? intval($question['reading_text_id']) : null
                     );
                     
@@ -2866,7 +2929,10 @@ class IELTS_CM_Admin {
                             if (!empty($options_for_position)) {
                                 $dropdown_options[$position] = array(
                                     'position' => intval($position),
-                                    'options' => $options_for_position
+                                    'options' => $options_for_position,
+                                    'correct_feedback' => isset($dropdown_data['correct_feedback']) ? wp_kses_post($dropdown_data['correct_feedback']) : '',
+                                    'incorrect_feedback' => isset($dropdown_data['incorrect_feedback']) ? wp_kses_post($dropdown_data['incorrect_feedback']) : '',
+                                    'no_answer_feedback' => isset($dropdown_data['no_answer_feedback']) ? wp_kses_post($dropdown_data['no_answer_feedback']) : ''
                                 );
                                 
                                 // Build correct answer in format "1:A|2:B|3:C"
