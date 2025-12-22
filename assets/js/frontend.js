@@ -300,7 +300,15 @@
                                 
                                 // For dropdown paragraph, mark each nav button individually
                                 if (questionResult.question_type === 'dropdown_paragraph') {
-                                    var correctAnswerStr = questionResult.correct_answer || '';
+                                    var correctAnswerStr = '';
+                                    
+                                    // Handle both object format and string format for correct_answer
+                                    if (questionResult.correct_answer && typeof questionResult.correct_answer === 'object' && questionResult.correct_answer.correct_answer) {
+                                        correctAnswerStr = questionResult.correct_answer.correct_answer;
+                                    } else if (typeof questionResult.correct_answer === 'string') {
+                                        correctAnswerStr = questionResult.correct_answer;
+                                    }
+                                    
                                     var displayStart = parseInt(questionElement.data('display-start'), 10);
                                     
                                     // Parse correct answers to count dropdowns and mark each nav button
@@ -337,7 +345,8 @@
                                 if (questionResult.question_type === 'multiple_choice' || 
                                     questionResult.question_type === 'headings' || 
                                     questionResult.question_type === 'matching' || 
-                                    questionResult.question_type === 'matching_classifying') {
+                                    questionResult.question_type === 'matching_classifying' ||
+                                    questionResult.question_type === 'locating_information') {
                                     // Highlight by both checked state AND correct answer value to ensure visibility
                                     var correctIndex = parseInt(questionResult.correct_answer, 10);
                                     if (!isNaN(correctIndex)) {
@@ -360,6 +369,7 @@
                                     questionResult.question_type === 'headings' || 
                                     questionResult.question_type === 'matching' || 
                                     questionResult.question_type === 'matching_classifying' || 
+                                    questionResult.question_type === 'locating_information' ||
                                     questionResult.question_type === 'true_false') {
                                     questionElement.find('input[type="radio"]:checked').closest('.option-label').addClass('answer-correct');
                                 } else if (questionResult.question_type === 'multi_select') {
@@ -413,7 +423,14 @@
                                 } else if (questionResult.question_type === 'dropdown_paragraph') {
                                     // For dropdown paragraph, mark each dropdown and nav button individually
                                     var userAnswers = questionResult.user_answer || {};
-                                    var correctAnswerStr = questionResult.correct_answer || '';
+                                    var correctAnswerStr = '';
+                                    
+                                    // Handle both object format and string format for correct_answer
+                                    if (questionResult.correct_answer && typeof questionResult.correct_answer === 'object' && questionResult.correct_answer.correct_answer) {
+                                        correctAnswerStr = questionResult.correct_answer.correct_answer;
+                                    } else if (typeof questionResult.correct_answer === 'string') {
+                                        correctAnswerStr = questionResult.correct_answer;
+                                    }
                                     
                                     // Parse correct answers from format "1:A|2:B|3:C"
                                     var correctAnswersMap = {};
@@ -480,19 +497,24 @@
                                     navButtons.addClass('nav-incorrect').removeClass('answered');
                                 }
                                 
-                                // Highlight the user's wrong answer
+                                // Highlight the user's wrong answer (if they selected one)
                                 if (questionResult.question_type === 'multiple_choice' || 
                                     questionResult.question_type === 'headings' || 
                                     questionResult.question_type === 'matching' || 
                                     questionResult.question_type === 'matching_classifying' || 
+                                    questionResult.question_type === 'locating_information' ||
                                     questionResult.question_type === 'true_false') {
-                                    questionElement.find('input[type="radio"]:checked').closest('.option-label').addClass('answer-incorrect');
+                                    var checkedRadio = questionElement.find('input[type="radio"]:checked');
+                                    if (checkedRadio.length > 0) {
+                                        checkedRadio.closest('.option-label').addClass('answer-incorrect');
+                                    }
                                     
-                                    // Also highlight the correct answer in green
+                                    // Always highlight the correct answer in green (even when no answer was selected)
                                     if (questionResult.question_type === 'multiple_choice' || 
                                         questionResult.question_type === 'headings' || 
                                         questionResult.question_type === 'matching' || 
-                                        questionResult.question_type === 'matching_classifying') {
+                                        questionResult.question_type === 'matching_classifying' ||
+                                        questionResult.question_type === 'locating_information') {
                                         var correctIndex = parseInt(questionResult.correct_answer);
                                         questionElement.find('input[type="radio"][value="' + correctIndex + '"]').closest('.option-label').addClass('answer-correct-highlight');
                                     } else if (questionResult.question_type === 'true_false') {
@@ -617,6 +639,22 @@
                                             .html(questionResult.feedback);
                                         questionElement.append(feedbackDiv);
                                     }
+                                }
+                            } else if (questionResult.question_type === 'dropdown_paragraph') {
+                                // For dropdown paragraph, show feedback at question level
+                                // Remove any existing feedback first
+                                questionElement.find('.question-feedback-message').remove();
+                                
+                                if (questionResult.feedback) {
+                                    // Create feedback element with proper CSS classes
+                                    var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
+                                    var feedbackDiv = $('<div>')
+                                        .addClass('question-feedback-message')
+                                        .addClass(feedbackClass)
+                                        .html(questionResult.feedback); // Using .html() because feedback explicitly supports HTML formatting
+                                                                         // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
+                                    
+                                    questionElement.append(feedbackDiv);
                                 }
                             } else if (questionResult.feedback) {
                                 // For other question types (text input, etc.), show general feedback
