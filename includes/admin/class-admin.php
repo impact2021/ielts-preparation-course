@@ -4536,7 +4536,7 @@ class IELTS_CM_Admin {
             array(
                 'exercise_label' => $exercise_label ? $exercise_label : 'exercise',
                 'layout_type' => $layout_type ? $layout_type : 'standard',
-                'open_as_popup' => $open_as_popup ? true : false,
+                'open_as_popup' => (bool) $open_as_popup,
                 'scoring_type' => $scoring_type ? $scoring_type : 'percentage',
                 'timer_minutes' => $timer_minutes ? $timer_minutes : ''
             )
