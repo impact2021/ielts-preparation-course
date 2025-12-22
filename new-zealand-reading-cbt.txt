@@ -134,20 +134,65 @@ Look at the following statements and decide if they are right or wrong according
 
 Write TRUE if the statement is true, FALSE if the statement is false, or NOT GIVEN if the information is not given in the passage.
 
+=== QUESTION 9 ===
+
 9. Most international students start their studies in a secondary school.
-This is TRUE [FEEDBACK: The passage states "Although a majority of international students spend some time in a language school" - not secondary school.]
-This is FALSE [CORRECT] [FEEDBACK: Correct! Section C states "Although a majority of international students spend some time in a language school" - so most start in language schools, not secondary schools.]
-This is NOT GIVEN [FEEDBACK: The information is given in Section C - it states where most international students start.]
+
+=== CORRECT ANSWER ===
+
+FALSE
+
+=== FEEDBACK WHEN CORRECT ===
+
+Correct! Section C states "Although a majority of international students spend some time in a language school" - so most start in language schools, not secondary schools.
+
+=== FEEDBACK WHEN INCORRECT ===
+
+The passage states "Although a majority of international students spend some time in a language school" - not secondary school.
+
+=== FEEDBACK WHEN NO ANSWER ===
+
+The information is given in Section C - it states where most international students start.
+
+=== QUESTION 10 ===
 
 10. Postgraduate students undertaking a diploma course extend what they have learned during their Bachelor's degree.
-This is TRUE [CORRECT] [FEEDBACK: Correct! Section E states "The Postgraduate Diploma course... is designed for graduates building on the academic field of their previous degree."]
-This is FALSE [FEEDBACK: Section E confirms this is true - the Postgraduate Diploma "is designed for graduates building on the academic field of their previous degree."]
-This is NOT GIVEN [FEEDBACK: The information is provided in Section E.]
+
+=== CORRECT ANSWER ===
+
+TRUE
+
+=== FEEDBACK WHEN CORRECT ===
+
+Correct! Section E states "The Postgraduate Diploma course... is designed for graduates building on the academic field of their previous degree."
+
+=== FEEDBACK WHEN INCORRECT ===
+
+Section E confirms this is true - the Postgraduate Diploma "is designed for graduates building on the academic field of their previous degree."
+
+=== FEEDBACK WHEN NO ANSWER ===
+
+The information is provided in Section E.
+
+=== QUESTION 11 ===
 
 11. All quality control at a tertiary level is done by the universities themselves.
-This is TRUE [FEEDBACK: The passage states there is "a centrally coordinated system of quality assurance audits" in addition to internal checks - so not all quality control is done by universities themselves.]
-This is FALSE [CORRECT] [FEEDBACK: Correct! Section C states "In addition to a centrally coordinated system of quality assurance audits at both institution and programme level, each university undertakes internal quality checks" - showing that external audits also occur, not just internal ones.]
-This is NOT GIVEN [FEEDBACK: The information is provided in Section C about quality control systems.]
+
+=== CORRECT ANSWER ===
+
+FALSE
+
+=== FEEDBACK WHEN CORRECT ===
+
+Correct! Section C states "In addition to a centrally coordinated system of quality assurance audits at both institution and programme level, each university undertakes internal quality checks" - showing that external audits also occur, not just internal ones.
+
+=== FEEDBACK WHEN INCORRECT ===
+
+The passage states there is "a centrally coordinated system of quality assurance audits" in addition to internal checks - so not all quality control is done by universities themselves.
+
+=== FEEDBACK WHEN NO ANSWER ===
+
+The information is provided in Section C about quality control systems.
 
 Questions 12-15
 
@@ -223,35 +268,125 @@ Do the following statements agree with the information given in reading passage 
 
 Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.
 
+=== QUESTION 16 ===
+
 16. The majority of people consider 'culture' to be represented by traditional forms of art and media.
-This is TRUE [CORRECT] [FEEDBACK: Correct! The first paragraph states "To most people, this is seen in terms of books, paintings, rituals and ceremonies" - these are traditional forms of art and media.]
-This is FALSE [FEEDBACK: The passage clearly states that "To most people, this is seen in terms of books, paintings, rituals and ceremonies."]
-This is NOT GIVEN [FEEDBACK: The information is provided in the first paragraph.]
+
+=== CORRECT ANSWER ===
+
+TRUE
+
+=== FEEDBACK WHEN CORRECT ===
+
+Correct! The first paragraph states "To most people, this is seen in terms of books, paintings, rituals and ceremonies" - these are traditional forms of art and media.
+
+=== FEEDBACK WHEN INCORRECT ===
+
+The passage clearly states that "To most people, this is seen in terms of books, paintings, rituals and ceremonies."
+
+=== FEEDBACK WHEN NO ANSWER ===
+
+The information is provided in the first paragraph.
+
+=== QUESTION 17 ===
 
 17. The internet as a culture is not extensive.
-This is TRUE [FEEDBACK: The passage states the opposite - that Internet culture is "far more widespread than any of its predecessors."]
-This is FALSE [CORRECT] [FEEDBACK: Correct! The second paragraph states that Internet culture "is far more widespread than any of its predecessors" - so it IS extensive, not "not extensive."]
-This is NOT GIVEN [FEEDBACK: The information is provided in the second paragraph about how widespread Internet culture is.]
+
+=== CORRECT ANSWER ===
+
+FALSE
+
+=== FEEDBACK WHEN CORRECT ===
+
+Correct! The second paragraph states that Internet culture "is far more widespread than any of its predecessors" - so it IS extensive, not "not extensive."
+
+=== FEEDBACK WHEN INCORRECT ===
+
+The passage states the opposite - that Internet culture is "far more widespread than any of its predecessors."
+
+=== FEEDBACK WHEN NO ANSWER ===
+
+The information is provided in the second paragraph about how widespread Internet culture is.
+
+=== QUESTION 18 ===
 
 18. Through the Internet, every written word can be accessed.
-This is TRUE [FEEDBACK: The passage says "almost anything" not "everything" - this is an overstatement.]
-This is FALSE [FEEDBACK: The passage states "we can read almost anything that has ever been written" which is very close to "every written word."]
-This is NOT GIVEN [CORRECT] [FEEDBACK: Correct! The third paragraph says "we can read almost anything that has ever been written" - the word "almost" means not everything, so we cannot confirm that "every written word" can be accessed.]
+
+=== CORRECT ANSWER ===
+
+NOT GIVEN
+
+=== FEEDBACK WHEN CORRECT ===
+
+Correct! The third paragraph says "we can read almost anything that has ever been written" - the word "almost" means not everything, so we cannot confirm that "every written word" can be accessed.
+
+=== FEEDBACK WHEN INCORRECT ===
+
+The passage states "we can read almost anything that has ever been written" which is very close to "every written word," but "almost" means not everything.
+
+=== FEEDBACK WHEN NO ANSWER ===
+
+Check the third paragraph for information about accessing written content.
+
+=== QUESTION 19 ===
 
 19. The Internet provides a stage for all forms of art.
-This is TRUE [FEEDBACK: The passage says "most forms of art" not "all forms of art."]
-This is FALSE [CORRECT] [FEEDBACK: Correct! The fourth paragraph states "The medium of the Net allows for wider distribution and new platforms for most forms of art" - the word "most" means not all, so saying "all forms" is incorrect.]
-This is NOT GIVEN [FEEDBACK: The information is provided in the fourth paragraph.]
+
+=== CORRECT ANSWER ===
+
+FALSE
+
+=== FEEDBACK WHEN CORRECT ===
+
+Correct! The fourth paragraph states "The medium of the Net allows for wider distribution and new platforms for most forms of art" - the word "most" means not all, so saying "all forms" is incorrect.
+
+=== FEEDBACK WHEN INCORRECT ===
+
+The passage says "most forms of art" not "all forms of art."
+
+=== FEEDBACK WHEN NO ANSWER ===
+
+The information is provided in the fourth paragraph.
+
+=== QUESTION 20 ===
 
 20. An insignificant number remain unaffected by the international nature of the Internet.
-This is TRUE [CORRECT] [FEEDBACK: Correct! The fifth paragraph states "how international the Internet has become to the majority" - if it affects "the majority," then only an insignificant number (the minority) remain unaffected.]
-This is FALSE [FEEDBACK: The passage indicates that the Internet has become international "to the majority," implying only a small minority remain unaffected.]
-This is NOT GIVEN [FEEDBACK: The information can be inferred from the fifth paragraph.]
+
+=== CORRECT ANSWER ===
+
+TRUE
+
+=== FEEDBACK WHEN CORRECT ===
+
+Correct! The fifth paragraph states "how international the Internet has become to the majority" - if it affects "the majority," then only an insignificant number (the minority) remain unaffected.
+
+=== FEEDBACK WHEN INCORRECT ===
+
+The passage indicates that the Internet has become international "to the majority," implying only a small minority remain unaffected.
+
+=== FEEDBACK WHEN NO ANSWER ===
+
+The information can be inferred from the fifth paragraph.
+
+=== QUESTION 21 ===
 
 21. Only a few people believe that 'cyberpoets' are becoming part of our popular culture.
-This is TRUE [FEEDBACK: The passage states "Very few people would disagree" - meaning most people agree, not that only a few believe.]
-This is FALSE [CORRECT] [FEEDBACK: Correct! The sixth paragraph states "Very few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture" - this means most people agree/believe it, not "only a few people."]
-This is NOT GIVEN [FEEDBACK: The information is provided in the sixth paragraph.]
+
+=== CORRECT ANSWER ===
+
+FALSE
+
+=== FEEDBACK WHEN CORRECT ===
+
+Correct! The sixth paragraph states "Very few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture" - this means most people agree/believe it, not "only a few people."
+
+=== FEEDBACK WHEN INCORRECT ===
+
+The passage states "Very few people would disagree" - meaning most people agree, not that only a few believe.
+
+=== FEEDBACK WHEN NO ANSWER ===
+
+The information is provided in the sixth paragraph.
 
 Questions 22 – 27
 
