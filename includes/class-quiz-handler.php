@@ -396,10 +396,26 @@ class IELTS_CM_Quiz_Handler {
                 
                 if ($is_correct) {
                     $points_earned = isset($question['points']) ? floatval($question['points']) : 1;
-                    $feedback = __('Correct!', 'ielts-course-manager');
+                    // Use custom correct feedback if available
+                    if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
+                        $feedback = wp_kses_post($question['correct_feedback']);
+                    }
                 } else {
                     $points_earned = 0;
-                    $feedback = __('Incorrect', 'ielts-course-manager');
+                    // Check if no answer was provided
+                    if ($user_answer === null || $user_answer === '') {
+                        // Use no_answer_feedback if available
+                        if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
+                            $feedback = wp_kses_post($question['no_answer_feedback']);
+                        } elseif (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                            $feedback = wp_kses_post($question['incorrect_feedback']);
+                        }
+                    } else {
+                        // Use incorrect_feedback for wrong answers
+                        if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                            $feedback = wp_kses_post($question['incorrect_feedback']);
+                        }
+                    }
                 }
                 
                 $score += $points_earned;
@@ -410,10 +426,26 @@ class IELTS_CM_Quiz_Handler {
                 
                 if ($is_correct) {
                     $points_earned = isset($question['points']) ? floatval($question['points']) : 1;
-                    $feedback = __('Correct!', 'ielts-course-manager');
+                    // Use custom correct feedback if available
+                    if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
+                        $feedback = wp_kses_post($question['correct_feedback']);
+                    }
                 } else {
                     $points_earned = 0;
-                    $feedback = __('Incorrect', 'ielts-course-manager');
+                    // Check if no answer was provided
+                    if ($user_answer === null || $user_answer === '') {
+                        // Use no_answer_feedback if available
+                        if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
+                            $feedback = wp_kses_post($question['no_answer_feedback']);
+                        } elseif (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                            $feedback = wp_kses_post($question['incorrect_feedback']);
+                        }
+                    } else {
+                        // Use incorrect_feedback for wrong answers
+                        if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                            $feedback = wp_kses_post($question['incorrect_feedback']);
+                        }
+                    }
                 }
                 
                 $score += $points_earned;
@@ -722,6 +754,23 @@ class IELTS_CM_Quiz_Handler {
                     $correct_indices[] = $idx;
                 }
             }
+        }
+        
+        // Check if no answer was provided
+        if (empty($user_answers)) {
+            // Use no_answer_feedback if available
+            if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
+                $feedback = wp_kses_post($question['no_answer_feedback']);
+            } elseif (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                $feedback = wp_kses_post($question['incorrect_feedback']);
+            }
+            
+            return array(
+                'points_earned' => 0,
+                'is_correct' => false,
+                'feedback' => $feedback,
+                'correct_indices' => $correct_indices
+            );
         }
         
         // Calculate points: 1 point for each correct selection
