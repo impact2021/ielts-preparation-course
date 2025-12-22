@@ -1,8 +1,8 @@
-IELTS Reading Test - Studying in New Zealand
+IELTS Reading Test - Complete Academic Reading Test
 
-This file contains a complete IELTS Academic Reading test with 15 questions based on one reading passage.
+This file contains a complete IELTS Academic Reading test with 40 questions based on three reading passages.
 
-Read the text and answer the questions. Type your answers in the spaces provided.
+Read the texts and answer the questions. Type your answers in the spaces provided.
 
 === EXERCISE SETTINGS ===
 Exercise Label: Computer Based Test
@@ -157,3 +157,134 @@ Complete the flow chart below using NO MORE THAN TWO WORDS from the text.
 14. {[MASTERS DEGREE][MASTER'S DEGREE][MASTERS][MASTER DEGREE]} [FEEDBACK: Section E states "The Masters degree, like the Postgraduate Diploma, builds on a Bachelors degree" and describes it as "the conventional pathway to the next level of education – the Doctorate."]
 
 15. {[DOCTORATE][DOCTORATES]} [FEEDBACK: Section E describes the Doctorate as requiring "a research-based thesis as part of a course that takes a minimum of two years, and is by far the most challenging." This is the final level in the educational pathway.]
+
+[READING PASSAGE] Reading Passage 2 - Virtual culture
+
+Culture is defined as the 'socially transmitted behaviour patterns, arts, beliefs, and institutions that are the expression of a particular class, community or period' (www.dictionary.com). To most people, this is seen in terms of books, paintings, rituals and ceremonies, but recently there has been a new entrant in the field of what is considered to be 'culture' – the Internet.
+
+On the Internet, science and art, media and mind combine to create a modern culture which is far more widespread than any of its predecessors. Not referring to the casual user who has no particular interest in the Internet, active supporters of the Internet as a culture have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets. A cyberpoet can be defined as 'one who makes frequent trips to the edge of technology, society and traditional culture and strives to be artful in their use of virtual space'.
+
+Supporter or opponent of this new culture, there is little doubt that the Internet offers a lot to our traditional view of culture. In just a few minutes in front of a keyboard, we can read almost anything that has ever been written, yet no paper had to be made, no library had to stay open and thus the cost remains minimal. All of this encourages even the casual surfer to explore further than he or she otherwise would have. The same effect can be observed with works of art. Previously available to be viewed only in museums if they were not in the hands of private collectors, all but a few famous works are now replicated on the Internet.
+
+Yet the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right. The medium of the Net allows for wider distribution and new platforms for most forms of art. 'Kinetic art' and other such computerised art forms occur with increasing regularity, both motivated by and generating an upsurge in popular and computer-mediated art.
+
+In addition, if culture is said to be 'socially transmitted', then the Internet is remarkable in its ability to share, on an almost global scale, all the factors that constitute culture. We have only to hear the influence of jargon as we visit dub-dub-dub dot sites and surf the web to see how international the Internet has become to the majority.
+Very few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture. What is not so certain is how far this will go, as the Internet continues to assimilate more and more forms of culture, rising to a point where it is not inconceivable that our entire perception of culture will soon become cyber-focused.
+
+There is also a significant increase in transient imagery from photographs, videos and other media uploaded to many social networking sites. The rise of the term 'selfie', referring to a photograph taken by the person in the picture, is just one example – there are also applications for smartphones and tablet devices that allow instant video uploads, meaning that 'looped' videos lasting just a few seconds can be created to great effect. The problem, of course, is wading through the many millions of hours of footage that cannot be classified as having any cultural significance.
+
+Reliance on the internet itself has inherent risks, as the authorship of online content is now far less moderated. It is possible to set up a website in as little as an hour, populated with content which may be presented as accurate, impartial information but is in reality an ill considered, poorly researched collection of opinions and incorrect facts. Even established websites which allow users to contribute content can quickly become unreliable sources. Not only is there wider room for error, there is now a heightened concern that web pages and social media can reduce popular culture into a series of illogical and often abusive arguments, which do not need to be supported with facts or even ascribed to a specific purpose. The anonymous nature of a large percentage of internet interactions means that even the most bigoted point of view can find a forum, even if reactions to it are negative.
+
+[END READING PASSAGE]
+
+[READING PASSAGE] Reading Passage 3 - Ford – driving innovation
+
+A: In 1913 an American industrialist named Henry Ford employed an innovative system in his factory that changed the nature of American industry forever – the production line. Instead of a group of workers constructing a complete product, Ford's production-line techniques relied on machine parts being moved around the factory on a conveyor belt, passing each employee who had a single task to perform before the component moved down the line. This saved time in that employees were not required to move around, collect materials or change tools; they simply stood in one place and repeated the same procedure over and over again until the end of their shift. In this way, Ford was able to mass produce the now famous Model-T car for only 10% of traditional labour costs.
+
+B: Working on a production line was monotonous work, undoubtedly, but it was not in the production line alone that Ford was something of a pioneer. In 1913 the average hourly rate for unskilled labour was under $2.50 and for such low wages and repetitive work, the labour turnover in Ford's factory was high, with many employees lasting less than a month. In order to combat this problem, he took a step that was condemned by other industrialists of the time, fearful that they would lose their own workforce – he raised wages to $5 an hour. The benefits were twofold. Not only did Ford now have a stable and eager workforce, he also had potential customers. It was his intention 'to build a motorcar for the great multitude', and the Model-T car was one of the cheapest cars on the market at the time. At $5 an hour, many of his employees now found themselves in a position to feasibly afford a car of their own. Ford's production practices meant that production time was reduced from 14 hours to a mere 93 minutes. In 1914 company profits were $30 million, yet just two years later this figure had doubled. Until 1927 when the last Model-T rolled off the production line, the company produced and sold about 15 million cars.
+
+C: Although Ford was without doubt successful, times changed and the company began losing its edge. One problem came from the labour force. Ford was a demanding employer who insisted that the majority of his staff remained on their feet during their shift. One error meant that the whole production line was often kept waiting, and Ford felt that workers were more attentive standing than sitting. Yet the 1930s saw some radical changes in the relationships between employer and employee, as an increasing number of industries were forming Labour Unions. Ford flatly refused to get involved, employing spies in the workplace to sabotage any plans for a union within his factories. Eventually a strike in the early 1940s forced Ford to deal with unions. Another example of Ford being unable to adapt came from his unwillingness to branch out. Ford's competitors began operating the same systems and practices, but also introduced the variety Ford was lacking. The Model-T had remained essentially the same, even down to the colour, and by the time he realised his error, he had already lost his pre-eminence in the industry. Subsequent involvement in aeroplane manufacturing, politics and publishing was a failure. Leaving the company to his grandson in 1945, he died two years later leaving an inheritance estimated at $700 million.
+
+D: Yet the legacy of Fordism lives on. The development of mass production transformed the organisation of work in a number of important ways. Tasks were minutely subdivided and performed by unskilled workers, or at least semiskilled workers, since much of the skill was built into the machine. Second, manufacturing concerns grew to such a size that a large hierarchy of supervisors and managers became necessary. Third, the increasing complexity of operations required employment of a large management staff of accountants, engineers, chemists, and, later, social psychologists, in addition to a large distribution and sales force. Mass production also heightened the trend towards an international division of labour. The huge new factories often needed raw materials from abroad, while saturation of national markets led to a search for customers overseas. Thus, some countries became exporters of raw materials and importers of finished goods, while others did the reverse.
+
+E: In the 1970s and '80s some countries, particularly in Asia and South America, that had hitherto been largely agricultural and that had imported manufactured goods, began industrialising. The skills needed by workers on assembly-line tasks required little training, and standards of living in these developing countries were so low that wages could be kept below those of the already industrialised nations. Many large manufacturers in the United States and elsewhere therefore began 'outsourcing' – that is, having parts made or whole products assembled in developing nations. Consequently, those countries are rapidly becoming integrated into the world economic community.
+
+[END READING PASSAGE]
+
+You should spend about 20 minutes on Questions 16 – 27 which are based on Reading Passage 2.
+
+Questions 16-27
+
+[Note: Questions for Reading Passage 2 to be provided]
+
+You should spend about 20 minutes on Questions 28 – 40 which are based on Reading Passage 3.
+
+Questions 28 -32 [HEADINGS]
+
+Choose the most suitable headings for Paragraphs A-E from the list below. Use each heading once only.
+
+List of headings
+i. Effect on modern industry
+ii. New payment procedures
+iii. Labour problems
+iv. The Model-T
+v. Creating a market
+vi. Revolutionary production techniques
+vii. The Ford family today
+viii. Impact on the global economy
+ix. Overseas competition
+
+28. Paragraph A
+A) i. Effect on modern industry [FEEDBACK: Paragraph A introduces Ford's production line but doesn't discuss its effect on modern industry - that's Paragraph D.]
+B) ii. New payment procedures [FEEDBACK: Paragraph A does not discuss payment or wages - that's Paragraph B.]
+C) iii. Labour problems [FEEDBACK: Paragraph A does not discuss labour problems - that's Paragraph C.]
+D) iv. The Model-T [FEEDBACK: While the Model-T is mentioned, the paragraph focuses on the production line technique rather than the car itself.]
+E) v. Creating a market [FEEDBACK: Paragraph A does not discuss creating a market - that's Paragraph B.]
+F) vi. Revolutionary production techniques [CORRECT] [FEEDBACK: Correct! Paragraph A describes Ford's innovative production line system that "changed the nature of American industry forever" - a revolutionary production technique.]
+G) vii. The Ford family today [FEEDBACK: Paragraph A does not discuss the Ford family.]
+H) viii. Impact on the global economy [FEEDBACK: Paragraph A does not discuss global economic impact - that's Paragraph E.]
+I) ix. Overseas competition [FEEDBACK: Paragraph A does not discuss overseas competition.]
+
+29. Paragraph B
+A) i. Effect on modern industry [FEEDBACK: Paragraph B does not discuss effects on modern industry - that's Paragraph D.]
+B) ii. New payment procedures [FEEDBACK: While wages are discussed, the main focus is on creating a market of employee-customers, not just payment procedures.]
+C) iii. Labour problems [FEEDBACK: Paragraph B mentions labour turnover but focuses on the solution and its market-creating effect, not the problems themselves.]
+D) iv. The Model-T [FEEDBACK: The Model-T is mentioned as part of the market creation strategy, but this is not the main focus.]
+E) v. Creating a market [CORRECT] [FEEDBACK: Correct! Paragraph B explains how Ford raised wages to $5/hour, creating both a stable workforce AND potential customers who could afford to buy his cars - "he also had potential customers."]
+F) vi. Revolutionary production techniques [FEEDBACK: Paragraph B does not focus on production techniques - that's Paragraph A.]
+G) vii. The Ford family today [FEEDBACK: Paragraph B does not discuss the Ford family.]
+H) viii. Impact on the global economy [FEEDBACK: Paragraph B does not discuss global impact - that's Paragraph E.]
+I) ix. Overseas competition [FEEDBACK: Paragraph B does not discuss overseas competition.]
+
+30. Paragraph C
+A) i. Effect on modern industry [FEEDBACK: Paragraph C does not discuss effects on modern industry - that's Paragraph D.]
+B) ii. New payment procedures [FEEDBACK: Paragraph C does not discuss payment procedures - that's Paragraph B.]
+C) iii. Labour problems [CORRECT] [FEEDBACK: Correct! Paragraph C describes Ford's problems with labour unions, his refusal to deal with them, the use of spies, and the eventual strike that forced him to negotiate - all labour problems.]
+D) iv. The Model-T [FEEDBACK: While the Model-T's lack of variety is mentioned, the paragraph's main focus is on labour and adaptation issues.]
+E) v. Creating a market [FEEDBACK: Paragraph C does not discuss creating a market - that's Paragraph B.]
+F) vi. Revolutionary production techniques [FEEDBACK: Paragraph C does not discuss production techniques - that's Paragraph A.]
+G) vii. The Ford family today [FEEDBACK: The paragraph mentions leaving the company to his grandson but does not focus on the family today.]
+H) viii. Impact on the global economy [FEEDBACK: Paragraph C does not discuss global impact - that's Paragraph E.]
+I) ix. Overseas competition [FEEDBACK: Paragraph C mentions competitors but not specifically overseas competition.]
+
+31. Paragraph D
+A) i. Effect on modern industry [CORRECT] [FEEDBACK: Correct! Paragraph D describes how "the legacy of Fordism lives on" and explains how mass production "transformed the organisation of work in a number of important ways" - the effect on modern industry.]
+B) ii. New payment procedures [FEEDBACK: Paragraph D does not discuss payment procedures - that's Paragraph B.]
+C) iii. Labour problems [FEEDBACK: Paragraph D does not discuss labour problems - that's Paragraph C.]
+D) iv. The Model-T [FEEDBACK: Paragraph D does not focus on the Model-T.]
+E) v. Creating a market [FEEDBACK: Paragraph D does not discuss creating a market - that's Paragraph B.]
+F) vi. Revolutionary production techniques [FEEDBACK: Paragraph D discusses the legacy and effects of the techniques, not the techniques themselves - that's Paragraph A.]
+G) vii. The Ford family today [FEEDBACK: Paragraph D does not discuss the Ford family.]
+H) viii. Impact on the global economy [FEEDBACK: While international division of labour is mentioned, the main focus is on industry organization, not global economy specifically - that's more Paragraph E.]
+I) ix. Overseas competition [FEEDBACK: Paragraph D does not discuss overseas competition.]
+
+32. Paragraph E
+A) i. Effect on modern industry [FEEDBACK: Paragraph E does not focus on effects on modern industry - that's Paragraph D.]
+B) ii. New payment procedures [FEEDBACK: Paragraph E does not discuss payment procedures - that's Paragraph B.]
+C) iii. Labour problems [FEEDBACK: Paragraph E does not discuss labour problems - that's Paragraph C.]
+D) iv. The Model-T [FEEDBACK: Paragraph E does not discuss the Model-T.]
+E) v. Creating a market [FEEDBACK: Paragraph E does not discuss creating a market - that's Paragraph B.]
+F) vi. Revolutionary production techniques [FEEDBACK: Paragraph E does not discuss production techniques - that's Paragraph A.]
+G) vii. The Ford family today [FEEDBACK: Paragraph E does not discuss the Ford family.]
+H) viii. Impact on the global economy [CORRECT] [FEEDBACK: Correct! Paragraph E describes how developing countries in Asia and South America became industrialised through outsourcing, and how they are "rapidly becoming integrated into the world economic community" - the global economic impact.]
+I) ix. Overseas competition [FEEDBACK: Paragraph E discusses outsourcing to developing nations, not competition from overseas.]
+
+Questions 33 -37
+
+Answer the following questions using NO MORE THAN TWO WORDS.
+
+33. What was used to move parts around the factory under Ford's production techniques? {[CONVEYOR BELT][CONVEYOR-BELT][A CONVEYOR BELT]} [FEEDBACK: Paragraph A states "Ford's production-line techniques relied on machine parts being moved around the factory on a conveyor belt."]
+
+34. What did Ford reduce by 90% compared with more traditional methods of the time? {[LABOUR COSTS][LABOR COSTS][TRADITIONAL LABOUR COSTS]} [FEEDBACK: Paragraph A states "Ford was able to mass produce the now famous Model-T car for only 10% of traditional labour costs" - meaning he reduced labour costs by 90%.]
+
+35. When was the last Model-T Ford produced? {1927} [FEEDBACK: Paragraph B states "Until 1927 when the last Model-T rolled off the production line."]
+
+36. What did Ford unsuccessfully oppose the organisation of? {[LABOUR UNIONS][LABOR UNIONS][UNIONS]} [FEEDBACK: Paragraph C states "Ford flatly refused to get involved" with Labour Unions and "employed spies in the workplace to sabotage any plans for a union within his factories."]
+
+37. What is the name given to the principles of mass production and associated practices? {FORDISM} [FEEDBACK: Paragraph D states "Yet the legacy of Fordism lives on" - Fordism is the term for Ford's principles of mass production.]
+
+Questions 38 – 40
+
+Complete the following summary using NO MORE THAN THREE WORDS FROM THE TEXT.
+
+One of the long-term effects of Ford's business practices was that many developing countries became industrialised as a result of (38) {OUTSOURCING} [FEEDBACK: Paragraph E states "Many large manufacturers in the United States and elsewhere therefore began 'outsourcing' – that is, having parts made or whole products assembled in developing nations."] . For those working in the factory, the skills for (39) {[ASSEMBLY-LINE TASKS][ASSEMBLY LINE TASKS][ASSEMBLY-LINE]} [FEEDBACK: Paragraph E states "The skills needed by workers on assembly-line tasks required little training."] were easily acquired and (40) {TRAINING} [FEEDBACK: Paragraph E states "The skills needed by workers on assembly-line tasks required little training" - so the training was minimal.]
