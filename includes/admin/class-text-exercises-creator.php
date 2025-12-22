@@ -1169,6 +1169,7 @@ You have one hour for the complete test (including transferring your answers).</
         
         $i = 0;
         $next_question_reading_text_id = null; // Store reading text ID for next question
+        $next_question_instructions = null; // Store instructions for next question
         while ($i < count($question_lines)) {
             $line = $question_lines[$i];
             
@@ -1180,6 +1181,25 @@ You have one hour for the complete test (including transferring your answers).</
                 continue;
             }
             
+            // Check for [INSTRUCTIONS] block and extract for next question
+            if (preg_match('/^\[INSTRUCTIONS\]/i', $line)) {
+                $instructions_lines = array();
+                $i++; // Move past [INSTRUCTIONS] line
+                
+                // Collect all lines until [END INSTRUCTIONS]
+                while ($i < count($question_lines) && !preg_match('/^\[END INSTRUCTIONS\]/i', $question_lines[$i])) {
+                    $instructions_lines[] = $question_lines[$i];
+                    $i++;
+                }
+                
+                if ($i < count($question_lines) && preg_match('/^\[END INSTRUCTIONS\]/i', $question_lines[$i])) {
+                    $i++; // Move past [END INSTRUCTIONS] line
+                }
+                
+                $next_question_instructions = implode("\n", $instructions_lines);
+                continue;
+            }
+            
             // Check if this line is a question using the pattern constant
             // Pattern now matches: "number. full line text"
             // We need to check if the line contains {ANSWER} pattern
@@ -1187,9 +1207,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $question_num = $match[1];
                 $full_line = trim($match[2]);
                 
-                // Use the stored reading text ID for this question
+                // Use the stored reading text ID and instructions for this question
                 $reading_text_id = $next_question_reading_text_id;
+                $instructions = $next_question_instructions;
                 $next_question_reading_text_id = null; // Reset for next question
+                $next_question_instructions = null; // Reset for next question
                 
                 // Extract the answer part from within the curly braces
                 if (preg_match('/\{([^}]+)\}/', $full_line, $answer_match)) {
@@ -1218,7 +1240,8 @@ You have one hour for the complete test (including transferring your answers).</
                         'points' => 1,
                         'correct_feedback' => sanitize_textarea_field($feedback_data['correct']),
                         'incorrect_feedback' => sanitize_textarea_field($feedback_data['incorrect']),
-                        'no_answer_feedback' => sanitize_textarea_field($feedback_data['no_answer'])
+                        'no_answer_feedback' => sanitize_textarea_field($feedback_data['no_answer']),
+                        'instructions' => !empty($instructions) ? wp_kses_post($instructions) : ''
                     );
                     
                     // Add reading text link if found
@@ -2988,6 +3011,13 @@ You have one hour for the complete test (including transferring your answers).</
                 }
             }
             
+            // Add instructions if present
+            if (!empty($question['instructions'])) {
+                $output[] = '[INSTRUCTIONS]';
+                $output[] = strip_tags($question['instructions']);
+                $output[] = '[END INSTRUCTIONS]';
+            }
+            
             // Format: number. question text {ANSWER}
             if (strpos($correct_answer, '|') !== false) {
                 // Multiple alternatives
@@ -3040,6 +3070,13 @@ You have one hour for the complete test (including transferring your answers).</
                         'Reading Text ' . ($reading_text_index + 1);
                     $output[] = '[LINKED TO: ' . $linked_text_title . ']';
                 }
+            }
+            
+            // Add instructions if present
+            if (!empty($question['instructions'])) {
+                $output[] = '[INSTRUCTIONS]';
+                $output[] = strip_tags($question['instructions']);
+                $output[] = '[END INSTRUCTIONS]';
             }
             
             $output[] = $question_num . '. ' . $question_text;
@@ -3113,6 +3150,14 @@ You have one hour for the complete test (including transferring your answers).</
                 }
             }
             
+            // Add instructions if present
+            if (!empty($question['instructions'])) {
+                $output[] = '[INSTRUCTIONS]';
+                $output[] = strip_tags($question['instructions']);
+                $output[] = '[END INSTRUCTIONS]';
+                $output[] = '';
+            }
+            
             $output[] = '=== QUESTION ' . $question_num . ' ===';
             $output[] = $question_text;
             $output[] = '';
@@ -3164,6 +3209,13 @@ You have one hour for the complete test (including transferring your answers).</
                         'Reading Text ' . ($reading_text_index + 1);
                     $output[] = '[LINKED TO: ' . $linked_text_title . ']';
                 }
+            }
+            
+            // Add instructions if present
+            if (!empty($question['instructions'])) {
+                $output[] = '[INSTRUCTIONS]';
+                $output[] = strip_tags($question['instructions']);
+                $output[] = '[END INSTRUCTIONS]';
             }
             
             // Convert [field N] back to [ANSWER N]
@@ -3350,6 +3402,14 @@ You have one hour for the complete test (including transferring your answers).</
         $question = $questions[0];
         $question_text = isset($question['question']) ? $question['question'] : '';
         
+        // Add instructions if present
+        if (!empty($question['instructions'])) {
+            $output[] = '[INSTRUCTIONS]';
+            $output[] = strip_tags($question['instructions']);
+            $output[] = '[END INSTRUCTIONS]';
+            $output[] = '';
+        }
+        
         // Convert [field N] back to [ANSWER N] for text format
         $question_text = preg_replace('/\[field\s+(\d+)\]/i', '[ANSWER $1]', $question_text);
         $output[] = $question_text;
@@ -3500,6 +3560,13 @@ You have one hour for the complete test (including transferring your answers).</
                         'Reading Text ' . ($reading_text_index + 1);
                     $output[] = '[LINKED TO: ' . $linked_text_title . ']';
                 }
+            }
+            
+            // Add instructions if present
+            if (!empty($question['instructions'])) {
+                $output[] = '[INSTRUCTIONS]';
+                $output[] = strip_tags($question['instructions']);
+                $output[] = '[END INSTRUCTIONS]';
             }
             
             // Format: number. question text {ANSWER}
@@ -3655,6 +3722,13 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = $link_text;
             }
             
+            // Add instructions if present
+            if (!empty($question['instructions'])) {
+                $output[] = '[INSTRUCTIONS]';
+                $output[] = strip_tags($question['instructions']);
+                $output[] = '[END INSTRUCTIONS]';
+            }
+            
             $output[] = $question_num . '. ' . $question_text;
             
             // Add options with correct answer markers and feedback
@@ -3791,6 +3865,14 @@ You have one hour for the complete test (including transferring your answers).</
             $question_text = isset($question['question']) ? $question['question'] : '';
             $correct_answer = isset($question['correct_answer']) ? $question['correct_answer'] : '';
             
+            // Add instructions if present
+            if (!empty($question['instructions'])) {
+                $output[] = '[INSTRUCTIONS]';
+                $output[] = strip_tags($question['instructions']);
+                $output[] = '[END INSTRUCTIONS]';
+                $output[] = '';
+            }
+            
             $output[] = '=== QUESTION ' . $question_num . ' ===';
             $output[] = $question_text;
             $output[] = '';
@@ -3909,6 +3991,14 @@ You have one hour for the complete test (including transferring your answers).</
         $question = $questions[0];
         $question_text = isset($question['question']) ? $question['question'] : '';
         $dropdown_options = isset($question['dropdown_options']) ? $question['dropdown_options'] : array();
+        
+        // Add instructions if present
+        if (!empty($question['instructions'])) {
+            $output[] = '[INSTRUCTIONS]';
+            $output[] = strip_tags($question['instructions']);
+            $output[] = '[END INSTRUCTIONS]';
+            $output[] = '';
+        }
         
         // Convert formatted question text back to simple ___N___ placeholders
         $simple_text = preg_replace('/\d+\.\[[^\]]+\]/', '___$0___', $question_text);
