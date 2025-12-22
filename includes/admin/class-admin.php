@@ -4518,6 +4518,13 @@ class IELTS_CM_Admin {
             return;
         }
         
+        // Get exercise metadata
+        $exercise_label = get_post_meta($post_id, '_ielts_cm_exercise_label', true);
+        $layout_type = get_post_meta($post_id, '_ielts_cm_layout_type', true);
+        $open_as_popup = get_post_meta($post_id, '_ielts_cm_open_as_popup', true);
+        $scoring_type = get_post_meta($post_id, '_ielts_cm_scoring_type', true);
+        $timer_minutes = get_post_meta($post_id, '_ielts_cm_timer_minutes', true);
+        
         // Convert to text format
         require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-text-exercises-creator.php';
         $text_creator = new IELTS_CM_Text_Exercises_Creator();
@@ -4525,7 +4532,14 @@ class IELTS_CM_Admin {
         $text_format = $text_creator->convert_to_text_format(
             $questions,
             $post->post_title,
-            $reading_texts ? $reading_texts : array()
+            $reading_texts ? $reading_texts : array(),
+            array(
+                'exercise_label' => $exercise_label ? $exercise_label : 'exercise',
+                'layout_type' => $layout_type ? $layout_type : 'standard',
+                'open_as_popup' => $open_as_popup ? true : false,
+                'scoring_type' => $scoring_type ? $scoring_type : 'percentage',
+                'timer_minutes' => $timer_minutes ? $timer_minutes : ''
+            )
         );
         
         if (empty($text_format)) {
