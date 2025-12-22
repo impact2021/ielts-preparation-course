@@ -1,0 +1,513 @@
+
+
+Read the texts and answer the questions. Type your answers in the spaces provided.
+
+Reading Passage 1
+
+Earthquakes and how we measure them
+In the year 1556, an earthquake occurred in China’s Shanxi province, and the records show that more than 800,000 people perished. City walls, government buildings, commercial premises, domestic dwellings and temples all collapsed. With the analysis of the quake by scholars at the time, scientists and historians today have estimated the power of the quake was particularly strong, registering a magnitude of 8.0. More recent earthquakes have had similarly devastating effects, with 2010’s Haiti earthquake killing more than 300,000 people, and the Indonesian quake in 2004 leading to the loss of more than 225,000 lives, with a magnitude of 9.1. The biggest earthquake to be measured occurred in 1960, in Chile, and registered 9.5 on the Richter Scale, as it was used then. This resulted in 1900 deaths and caused an estimated US$4 billion in damage. Until the last few hundred years, very little was known regarding the cause of these natural disasters. Early beliefs regarding the causes of earthquakes were put forward by Greek philosophers, who believed that earthquakes could be attributed to air escaping from cavities buried deep in the Earth’s centre, or to imbalances between levels of water under the earth. Other theories in other cultures revolved around religious beliefs, with ancient Norse, Japanese and Peruvian people believing that the earthquakes showed that the gods were unhappy with the Earth, and the people on it. Pliny the Elder, an ancient Roman philosopher, (32 AD) labelled earthquakes as ‘underground thunderstorms’, and, interestingly, he was probably not far from the truth. In the mid-19th century, Italian researchers developed what was called a seismograph, which was used to measure the motion of the ground during an earthquake. This device recorded what are known as ‘ground oscillations’ or movements of the earth, and research began to pick up pace. The sensitivity of seismographs improved considerably over the next 50 or so years, but the next major development came in the early 20th century with Charles Richter and Beno Gutenberg of the California Institute of Technology in the USA. They modified the seismograph and built what is now known as the Richter Scale, a measuring device used to record the energy released by an earthquake, and further, to compare earthquakes. With this accumulation of data, and further technological advances, British and American researchers put forward a theory in the 1960s to define the causes of earthquakes, a theory referred to as plate tectonics. Simply put, plate tectonics refers to movements gigantic continent-sized geological plates on the Earth’s outer shell moving, sometimes imperceptibly, over the layer of the Earth’s inner core. It is worth noting that in 1912 the German geophysicist and meteorologist Alfred Wegener presented a theory of ‘continental drift’ – that is, the movement of continents away from and towards each other – but he could not substantiate his theory with scientific proof. Tectonic plate movement provided that answer. All of this is based on the idea of the earth’s having a liquid centre (the molten core), with heat rising in various forms, through magma, sometimes erupting in volcanoes, and the plates sliding back and forth along boundaries, referred to as fault lines. Possibly one of the most famous is the San Andreas fault running through California, which is part of the greater ‘Ring of Fire’ fault, encircling the Pacific Ocean. The Richter Scale, the product of Richter and Gutenberg’s research, measures the level of energy released, garnering data from seismographs, and comparing them. The way that the scale is designed means that a level 6 earthquake is 10 times more powerful than a level 5 earthquake, and a level 7 earthquake is 10 times more powerful than a level 6, and so on. Using this scale of measurement, the 1960 Chile earthquake, measuring 9.5, was five times more powerful as the next highest recorded earthquake, the 1964 Prince William Sound earthquake in Alaska, which was recorded at 9.0. Many factors are involved in this calculation, including the depth of the earthquake and whether the quake is below the earth or under the ocean. With regards the depth of the earthquake, standards classify a shallow earthquake as between 9 and 70 kms deep, an intermediate quake is 70 to 300 kms below the earth’s surface, and deep earthquakes are 300 – 700 kms deep. Another scale used by scientists is the Mercalli scale, which measures the extent of damage, and is a much more subjective measurement. Mercalli measurements are given in Roman numerals from I to XII, with a II registering no noticeable property damage, and a XII recognising major property loss, significant physical alteration to the landscape such as slippages, and related natural disasters, including landslides and tsunamis. Mercalli levels, by their very nature, are determined well after earthquakes, as many other factors need to be included to determine levels which can be substantiated. Earthquakes measuring less than 2 on the Richter Scale are known as microquakes, and are often not felt by humans (although animals have a much more perceptive feel for earthquakes, both those that are occurring and those about to occur). Microquakes are frequent, with thousands occurring each year, and moderate earthquakes, those less than 6.0 on the measurable scales, happening less frequently. Major earthquakes occur on the average of once a year, and scientists have noted that an earthquake at the level of 10 or more, which would equate to the major fault lines rupturing simultaneously, would be catastrophic to a hugely disruptive degree, and would be the absolute upper limit. Work continues to both predict, and to understand, earthquakes, and for that, the general public are thankful.
+Reading Passage 1 You should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.
+Questions 1 – 5  Do the following statements agree with the information given in Reading Passage 1? In boxes 1 – 5 on your answer sheet write TRUE if the statement agrees with the information FALSE if the statement contradicts the information NOT GIVEN if there is no information on this in the passage 1. The 1556 China earthquake was determined to be the largest recorded earthquake. BLANK 1 of 13 2. There have been a range of theories as to the cause of earthquakes. BLANK 2 of 13 3. Alfred Wegener was involved in later developments of the seismograph. BLANK 3 of 13 4. The Prince William Sound earthquake was five times as powerful as the 1960 Chilean earthquake. BLANK 4 of 13 5. Microquakes are usually not detected by humans. BLANK 5 of 13 Questions 6 – 9   Choose the appropriate letters A – D and write them in boxes 6 – 9  on your answer sheet. 6   The earthquake in Haiti in 2010
+
+    was the biggest earthquake since the 1960 Chile earthquake.
+    measured a magnitude of 9.1.
+     saw more than 300,000 people perish.
+    was the largest quake ever to have occurred on the island.
+
+6. BLANK 6 of 13 7   The existence of plate tectonics
+
+    was first predicted by the Japanese.
+    proved that a theory from a German geophysicist was correct.
+    was discovered by researchers examining the ‘Ring of Fire’ fault.
+    was confirmed in 1912.
+
+7. BLANK 7 of 13 8   Measuring the magnitude of an earthquake by the Richter Scale
+
+    depends on how much energy is required to cause the earthquake.
+    becomes more difficult the deeper the earthquake is.
+    is not possible if the earthquake is below the ocean floor.
+    depends on a range of factors.
+
+8. BLANK 8 of 13 9   The Mercalli Scale
+
+     is used to assess financial loss.
+    is the measurement employed to determine physical damage.
+    can be used to predict levels of property damage.
+    compares the extent of energy release of different natural disasters.
+
+9. BLANK 9 of 13  Questions 10 – 13    The writer refers to various countries and regions and facts associated with them.  Match the country or region (A – H) with the information provided. NB:  Some letters might not be used. Write the appropriate letter A-H in boxes 10 – 13  on your answer sheet.
+
+    Greece
+    China
+    Alaska
+    The United States
+    Germany
+    Chile
+    Haiti
+    Peru
+
+  10. Scientists modified an existing measuring device to more accurately record energy levels BLANK 10 of 13 11   Early beliefs that Gods were the cause of earthquakes BLANK 11 of 13 12   Early analysis by academics helped modern researchers BLANK 12 of 13 13   Experienced the second most powerful recorded earthquake BLANK 13 of 13
+
+Reading Passage 1
+
+Earthquakes and how we measure them
+
+In the year 1556, an earthquake occurred in China’s Shanxi province, and the records show that more than 800,000 people perished. City walls, government buildings, commercial premises, domestic dwellings and temples all collapsed. With the analysis of the quake by scholars at the time, scientists and historians today have estimated the power of the quake was particularly strong, registering a magnitude of 8.0. More recent earthquakes have had similarly devastating effects, with 2010’s Haiti earthquake killing more than 300,000 people, and the Indonesian quake in 2004 leading to the loss of more than 225,000 lives, with a magnitude of 9.1. The biggest earthquake to be measured occurred in 1960, in Chile, and registered 9.5 on the Richter Scale, as it was used then. This resulted in 1900 deaths and caused an estimated US$4 billion in damage.
+
+Until the last few hundred years, very little was known regarding the cause of these natural disasters. Early beliefs regarding the causes of earthquakes were put forward by Greek philosophers, who believed that earthquakes could be attributed to air escaping from cavities buried deep in the Earth’s centre, or to imbalances between levels of water under the earth. Other theories in other cultures revolved around religious beliefs, with ancient Norse, Japanese and Peruvian people believing that the earthquakes showed that the gods were unhappy with the Earth, and the people on it. Pliny the Elder, an ancient Roman philosopher, (32 AD) labelled earthquakes as ‘underground thunderstorms’, and, interestingly, he was probably not far from the truth.
+
+In the mid-19th century, Italian researchers developed what was called a seismograph, which was used to measure the motion of the ground during an earthquake. This device recorded what are known as ‘ground oscillations’ or movements of the earth, and research began to pick up pace. The sensitivity of seismographs improved considerably over the next 50 or so years, but the next major development came in the early 20th century with Charles Richter and Beno Gutenberg of the California Institute of Technology in the USA. They modified the seismograph and built what is now known as the Richter Scale, a measuring device used to record the energy released by an earthquake, and further, to compare earthquakes.
+
+With this accumulation of data, and further technological advances, British and American researchers put forward a theory in the 1960s to define the causes of earthquakes, a theory referred to as plate tectonics. Simply put, plate tectonics refers to movements gigantic continent-sized geological plates on the Earth’s outer shell moving, sometimes imperceptibly, over the layer of the Earth’s inner core. It is worth noting that in 1912 the German geophysicist and meteorologist Alfred Wegener presented a theory of ‘continental drift’ – that is, the movement of continents away from and towards each other – but he could not substantiate his theory with scientific proof. Tectonic plate movement provided that answer. All of this is based on the idea of the earth’s having a liquid centre (the molten core), with heat rising in various forms, through magma, sometimes erupting in volcanoes, and the plates sliding back and forth along boundaries, referred to as fault lines. Possibly one of the most famous is the San Andreas fault running through California, which is part of the greater ‘Ring of Fire’ fault, encircling the Pacific Ocean.
+
+The Richter Scale, the product of Richter and Gutenberg’s research, measures the level of energy released, garnering data from seismographs, and comparing them. The way that the scale is designed means that a level 6 earthquake is 10 times more powerful than a level 5 earthquake, and a level 7 earthquake is 10 times more powerful than a level 6, and so on. Using this scale of measurement, the 1960 Chile earthquake, measuring 9.5, was five times more powerful as the next highest recorded earthquake, the 1964 Prince William Sound earthquake in Alaska, which was recorded at 9.0. Many factors are involved in this calculation, including the depth of the earthquake and whether the quake is below the earth or under the ocean. With regards the depth of the earthquake, standards classify a shallow earthquake as between 9 and 70 kms deep, an intermediate quake is 70 to 300 kms below the earth’s surface, and deep earthquakes are 300 – 700 kms deep.
+
+Another scale used by scientists is the Mercalli scale, which measures the extent of damage, and is a much more subjective measurement. Mercalli measurements are given in Roman numerals from I to XII, with a II registering no noticeable property damage, and a XII recognising major property loss, significant physical alteration to the landscape such as slippages, and related natural disasters, including landslides and tsunamis. Mercalli levels, by their very nature, are determined well after earthquakes, as many other factors need to be included to determine levels which can be substantiated.
+
+Earthquakes measuring less than 2 on the Richter Scale are known as microquakes, and are often not felt by humans (although animals have a much more perceptive feel for earthquakes, both those that are occurring and those about to occur). Microquakes are frequent, with thousands occurring each year, and moderate earthquakes, those less than 6.0 on the measurable scales, happening less frequently. Major earthquakes occur on the average of once a year, and scientists have noted that an earthquake at the level of 10 or more, which would equate to the major fault lines rupturing simultaneously, would be catastrophic to a hugely disruptive degree, and would be the absolute upper limit. Work continues to both predict, and to understand, earthquakes, and for that, the general public are thankful.
+
+Reading Passage 1
+
+You should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.
+
+Questions 1 – 5 
+
+Do the following statements agree with the information given in Reading Passage 1?
+
+In boxes 1 – 5 on your answer sheet write
+
+TRUE if the statement agrees with the information
+
+FALSE if the statement contradicts the information
+
+NOT GIVEN if there is no information on this in the passage
+
+1. The 1556 China earthquake was determined to be the largest recorded earthquake. Fill in the blank 1 of 13 (false)
+
+2. There have been a range of theories as to the cause of earthquakes. Fill in the blank 2 of 13 (true)
+
+3. Alfred Wegener was involved in later developments of the seismograph. Fill in the blank 3 of 13 (not given)
+
+4. The Prince William Sound earthquake was five times as powerful as the 1960 Chilean earthquake. Fill in the blank 4 of 13 (false)
+
+5. Microquakes are usually not detected by humans. Fill in the blank 5 of 13 (true)
+
+Questions 6 – 9  
+
+Choose the appropriate letters A – D and write them in boxes 6 – 9  on your answer sheet.
+
+6   The earthquake in Haiti in 2010
+
+    was the biggest earthquake since the 1960 Chile earthquake.
+    measured a magnitude of 9.1.
+     saw more than 300,000 people perish.
+    was the largest quake ever to have occurred on the island.
+
+6. Fill in the blank 6 of 13 (c)
+
+7   The existence of plate tectonics
+
+    was first predicted by the Japanese.
+    proved that a theory from a German geophysicist was correct.
+    was discovered by researchers examining the ‘Ring of Fire’ fault.
+    was confirmed in 1912.
+
+7. Fill in the blank 7 of 13 (b)
+
+8   Measuring the magnitude of an earthquake by the Richter Scale
+
+    depends on how much energy is required to cause the earthquake.
+    becomes more difficult the deeper the earthquake is.
+    is not possible if the earthquake is below the ocean floor.
+    depends on a range of factors.
+
+8. Fill in the blank 8 of 13 (d)
+
+9   The Mercalli Scale
+
+     is used to assess financial loss.
+    is the measurement employed to determine physical damage.
+    can be used to predict levels of property damage.
+    compares the extent of energy release of different natural disasters.
+
+9. Fill in the blank 9 of 13 (b)
+
+ Questions 10 – 13   
+
+The writer refers to various countries and regions and facts associated with them.  Match the country or region (A – H) with the information provided.
+
+NB:  Some letters might not be used.
+
+Write the appropriate letter A-H in boxes 10 – 13  on your answer sheet.
+
+    Greece
+    China
+    Alaska
+    The United States
+    Germany
+    Chile
+    Haiti
+    Peru
+
+ 
+
+10. Scientists modified an existing measuring device to more accurately record energy levels Fill in the blank 10 of 13 (d)
+
+11   Early beliefs that Gods were the cause of earthquakes Fill in the blank 11 of 13 (h)
+
+12   Early analysis by academics helped modern researchers Fill in the blank 12 of 13 (b)
+
+13   Experienced the second most powerful recorded earthquake Fill in the blank 13 of 13 (c)
+Incorrect
+
+1. FALSE – Para 1: “The biggest earthquake to be measured occurred in 1960, in Chile, and registered 9.5 on the Richter Scale”
+
+2. TRUE – Para 2: “Greek philosophers…air escaping from cavities / ancient Norse, Japanese and Peruvian people … the gods were / Pliny the Elder…’underground thunderstorms’”
+
+3. NOT GIVEN – Para 4 refers to Wegener, but there is no reference to his work on the seismograph.
+
+4. FALSE – Para 5: “the 1960 Chile earthquake… was five times more powerful as the … 1964 Prince William Sound earthquake”
+
+5. TRUE – Para 7: “microquakes, and are often not felt by humans”
+
+6. C – C is correct because the first para says that the ‘Haiti earthquake [killed] more than 300,000 people, and A is not correct because there is no mention in this paragraph about the second largest earthquake, while para 5 mentions that the Alaska earthquake was the ‘next highest recorded earthquake…’ B is not correct, because there is no mention of what the magnitude of the earthquake was. D is not right because there is no mention of the amount of damage, other than the number of people killed.
+
+7. B – Para 4 mentions plate tectonics and has the sentence ‘Tectonic plate movement provided that answer’ in reference to his theory of ‘continental drift’. C is not correct because there is no mention of a relationship in the research of the ‘Ring of Fire’ and earthquakes and plate tectonics. D is not correct because the text states that he could not substantiate his theory with scientific proof, so it was therefore not confirmed.
+
+8. D – The fifth para lists a number of factors that determine intensity of a quake. A is not correct because para 5 states that the measurement is based on the energy released, not needed to cause the earthquake. B is not correct because, although there is mention of the depth of earthquakes, there is no comment on whether the depth is a factor, and C is not correct because there is no mention of the magnitude of earthquakes beneath the ocean, although oceans are mentioned.
+
+9. B – The seventh para mentions the Mercalli Scale and states that it ‘…measures the extent of damage…’ and further mentions slippages and natural disasters. A is not correct because there is no mention of the financial loss. C is not right because para 7 states that ‘…Mercalli levels… are determined well after earthquakes…’ (therefore they cannot predict), and D is not correct because there is no mention of a comparison between different natural disasters, although they are mentioned.
+
+10. D – The third para mentions that the seismograph was modified by researchers at the California Institute of Technology in the U.S., used to ‘…record the energy released…’.
+
+11. H – The second para states ‘…Norse, Japanese and Peruvian … theories abounding that the Gods were unhappy with the Earth…’.
+
+12. B – The first para has the sentence ‘With the analysis of the quake by scholars at the time…’ and mentions that they helped ‘…scientist and historians today…’.
+
+13. C – Para 5 has the sentence ‘…the 1960 Chile earthquake… was twice as powerful as the next… earthquake, the 1964… earthquake in Alaska…’.
+
+Reading Passage 2
+
+The secrets of the beaver and their famous dams
+A: ‘Busy as a beaver.’ An expression used in English to indicate a person who is very industrious. But is the beaver, described as a ‘giant hyperactive stream-dwelling aquatic rodent’, really that busy? The answer is yes, and ingenious as well. The North American beaver (Castor canadensis) and its European cousin, the Eurasian beaver (Castor fiber), are what are known as keystone species – that is, animals that have a disproportionately profound effect on their environment compared to their numbers, playing a crucial role in the maintenance of their ecological habitat. Beavers are well-known for their habit of building barriers (known as dams) in waterways in order create a deep pool of water behind the dam in which to build their homes (known as lodges). Another common characteristic of the beaver is the use of its large flat tail, which is slaps loudly on the water as a warning to others, to ward off danger or when startled. B: Beavers, native to North America, can be found as far south as Mexico, and also in Europe. Beavers were introduced into South America to be farmed and hunted for their fur, but this was not successful as there were no natural predators of the beaver in the areas of South America where they were introduced. As a result, they multiplied and caused serious ecological damage. In total, worldwide numbers of beavers were estimated to once be as many as nearly 100 million. However, in North America, the beaver was hunted and trapped, by the indigenous people for its meat and by the settlers for its fur, so that in many areas the beaver was on the verge of extinction. Today, the numbers have recovered and conservationists put the current population at a healthy 10 to 15 million. C: Beavers build dams in order to create a pond of water large enough and deep enough to create a moat, to isolate their lodge, or home, from predators and to create an underwater entrance to their lodge. Working at night, beavers fell trees up to 30 or 40 centimetres in diameter, gnawing through the wood with sharp, strong front rodent teeth, breaking trees into smaller lengths and then dragging them to narrow stretches of a stream, forcing them into the stream bed. Then, all forms of natural materials are used to reinforce the structure, ranging from sticks and branches to rocks, mud, and leaves, creating a dam of up to two metres in height, and creating a pool of water up to metres in depth. D: The beaver’s lodge is usually built using the same materials as the dam, and each autumn, fresh mud is layered on to cover the lodge, which freezes in the colder climes, providing extra protection from predators. In locations where the river is too wide to build a suitable dam, beavers will build into the side of a riverbank to create a home, which is called a ‘den’, but this process is only used when the natural water level is deep enough to keep underwater entrances hidden from predators. Beavers mate for life and often live in large extended-family groups, with more than one lodge built close together in units to house the families. As well, beavers mark and protect their territories well, safeguarding their area and their lodges against others of the same species, as well as predators, using their large powerful front teeth to defend their well-built homes and dams. E: The benefits of the beavers’ dam-building skills are plentiful, and the most noticeable is the restoration of large areas of wetlands, which in turn creates more advantages. Flood control increases as a result of the creation of large ponds behind dams, with the dual action of water being released slowly through the dam during periods of heavy rain, and, equally, in dry stretches, stored water continues to flow, aiding irrigation. Other ecological benefits are the removal of various agricultural chemicals which seep into the water system from farmland runoff, chemicals such as excess nutrients like phosphates and nitrates in fertilizers, and toxins in pesticides and herbicides, the dam acting as a natural filter. In addition, there is a rich build-up of silt which aids farm productivity and becomes available when beavers abandon their dams. F: Animal life, in particular, benefits greatly from the role of the beaver as a keystone species. The increase in wetlands adds to the rich diversity of animal life, with one claim stating that almost half of North America’s endangered species are dependent on wetlands for their survival. Further, the water build-up behind dams acts as a nursery for fish species, such as trout and salmon, while frog and toad populations increase because beaver ponds create a protected environment for larva and tadpoles to mature in warm water rich in oxygen. Finally, birdlife prospers in a thriving environment full of plantlife, foodstocks and a protected habitat. G: However, the industriousness of the beaver does present some downsides. Beaver ponds which are created behind dams can actually cause flooding when the dam breaks, releasing a large amount of water in a very short space of time. This can result in property damage, commercial disruption with roads, railway tracks and bridges threatened, and the loss of farm crops and timber resources. One report for the U.S. timber industry estimated losses at more than US$22 million in a single year. Felled trees can also present hazards to power lines or lead to power outages. There is a fine line to be managed as governments and conservationists look to control beaver activities, not losing their beneficial outputs but at the same time limiting their damage, so various human trapping and re-location approaches are employed to allow the animal to work its environmental magic in the most efficient manner. H: Recognising the beaver as an important animal in the early days of Canada’s economic development through its integral part in the fur trade, 1975 saw the beaver adopted as Canada’s national animal, now appearing on the 5- cent coin. Various U.S. states have used the beaver as an organizational symbol and it is also used by many educational institutes in their logos and coats of arms, including the London School of Economics, with its Latin inscription: Rerum Cognoscere Causas, meaning, ‘To know the cause of things’. With the beaver, it is the cause of much good in the grand environmental scheme.
+Reading Passage 2 You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2. Questions 14 – 19 Reading Passage 2 has eight paragraphs A – H. For paragraphs B – G, choose the most suitable heading from the list of headings below. Write the appropriate numbers I – X in boxes 14 – 19 on your answer sheet. NB There are more headings than paragraphs, so some headings will not be used. List of Headings
+
+    Fashioning their environment
+    An animal explained
+    Details regarding their dwellings
+    Early facts
+    Beavers causing pollution
+    Recognition of an industrious nature
+    How keystone species contribute to the environment
+    The beaver as pest
+    Animals thrive through the beaver’s hard work
+    The beaver as conservationist
+
+Example: Paragraph A Answer: II 14. Paragraph B BLANK 1 of 13 15. Paragraph C BLANK 2 of 13 16. Paragraph D BLANK 3 of 13 17. Paragraph E BLANK 4 of 13 18. Paragraph F BLANK 5 of 13 19. Paragraph G BLANK 6 of 13 Example: Paragraph H Answer: VII Questions 20 – 22 Do the following statements agree with the information given in Reading Passage 2? In boxes 20 – 22 on your answer sheet write TRUE if the statement agrees with the information FALSE if the statement contradicts the information NOT GIVEN if there is no information on this in the passage 20. Beavers live in dams. BLANK 7 of 13 21. Beavers are native animals throughout the Americas. BLANK 8 of 13 22. The population of beavers is still at a worryingly low rate. BLANK 9 of 13 Questions 23 – 26 There are three possible statements which can correctly complete each of these sentences. Choose the correct letter A – C and write your answer in boxes 23 – 26 on your answer sheet. 23. Beavers have sharp front teeth, similar to a
+
+    lion.
+    rat.
+    human.
+
+23. BLANK 10 of 13 24. Beavers
+
+    mate for life.
+    defend their territory against extended-family groups.
+    build new homes every year.
+
+24. BLANK 11 of 13 25. The industriousness of the beaver is of great benefit to other animals because it
+
+    A reduces the frog and toad numbers.
+    B helps dry out the wetlands.
+    C adds to the variety of animal life.
+
+25. BLANK 12 of 13 26. There are some problems associated with the beaver’s activities, such as
+
+    their gnawing through wooden bridges.
+    the destruction of agriculture and timber.
+    governments and conservationists arguing over the best way to limit the damage.
+
+26. BLANK 13 of 13
+
+Reading Passage 2
+
+The secrets of the beaver and their famous dams
+
+A: ‘Busy as a beaver.’ An expression used in English to indicate a person who is very industrious. But is the beaver, described as a ‘giant hyperactive stream-dwelling aquatic rodent’, really that busy? The answer is yes, and ingenious as well. The North American beaver (Castor canadensis) and its European cousin, the Eurasian beaver (Castor fiber), are what are known as keystone species – that is, animals that have a disproportionately profound effect on their environment compared to their numbers, playing a crucial role in the maintenance of their ecological habitat. Beavers are well-known for their habit of building barriers (known as dams) in waterways in order create a deep pool of water behind the dam in which to build their homes (known as lodges). Another common characteristic of the beaver is the use of its large flat tail, which is slaps loudly on the water as a warning to others, to ward off danger or when startled.
+
+B: Beavers, native to North America, can be found as far south as Mexico, and also in Europe. Beavers were introduced into South America to be farmed and hunted for their fur, but this was not successful as there were no natural predators of the beaver in the areas of South America where they were introduced. As a result, they multiplied and caused serious ecological damage. In total, worldwide numbers of beavers were estimated to once be as many as nearly 100 million. However, in North America, the beaver was hunted and trapped, by the indigenous people for its meat and by the settlers for its fur, so that in many areas the beaver was on the verge of extinction. Today, the numbers have recovered and conservationists put the current population at a healthy 10 to 15 million.
+
+C: Beavers build dams in order to create a pond of water large enough and deep enough to create a moat, to isolate their lodge, or home, from predators and to create an underwater entrance to their lodge. Working at night, beavers fell trees up to 30 or 40 centimetres in diameter, gnawing through the wood with sharp, strong front rodent teeth, breaking trees into smaller lengths and then dragging them to narrow stretches of a stream, forcing them into the stream bed. Then, all forms of natural materials are used to reinforce the structure, ranging from sticks and branches to rocks, mud, and leaves, creating a dam of up to two metres in height, and creating a pool of water up to metres in depth.
+
+D: The beaver’s lodge is usually built using the same materials as the dam, and each autumn, fresh mud is layered on to cover the lodge, which freezes in the colder climes, providing extra protection from predators. In locations where the river is too wide to build a suitable dam, beavers will build into the side of a riverbank to create a home, which is called a ‘den’, but this process is only used when the natural water level is deep enough to keep underwater entrances hidden from predators. Beavers mate for life and often live in large extended-family groups, with more than one lodge built close together in units to house the families. As well, beavers mark and protect their territories well, safeguarding their area and their lodges against others of the same species, as well as predators, using their large powerful front teeth to defend their well-built homes and dams.
+
+E: The benefits of the beavers’ dam-building skills are plentiful, and the most noticeable is the restoration of large areas of wetlands, which in turn creates more advantages. Flood control increases as a result of the creation of large ponds behind dams, with the dual action of water being released slowly through the dam during periods of heavy rain, and, equally, in dry stretches, stored water continues to flow, aiding irrigation. Other ecological benefits are the removal of various agricultural chemicals which seep into the water system from farmland runoff, chemicals such as excess nutrients like phosphates and nitrates in fertilizers, and toxins in pesticides and herbicides, the dam acting as a natural filter. In addition, there is a rich build-up of silt which aids farm productivity and becomes available when beavers abandon their dams.
+
+F: Animal life, in particular, benefits greatly from the role of the beaver as a keystone species. The increase in wetlands adds to the rich diversity of animal life, with one claim stating that almost half of North America’s endangered species are dependent on wetlands for their survival. Further, the water build-up behind dams acts as a nursery for fish species, such as trout and salmon, while frog and toad populations increase because beaver ponds create a protected environment for larva and tadpoles to mature in warm water rich in oxygen. Finally, birdlife prospers in a thriving environment full of plantlife, foodstocks and a protected habitat.
+
+G: However, the industriousness of the beaver does present some downsides. Beaver ponds which are created behind dams can actually cause flooding when the dam breaks, releasing a large amount of water in a very short space of time. This can result in property damage, commercial disruption with roads, railway tracks and bridges threatened, and the loss of farm crops and timber resources. One report for the U.S. timber industry estimated losses at more than US$22 million in a single year. Felled trees can also present hazards to power lines or lead to power outages. There is a fine line to be managed as governments and conservationists look to control beaver activities, not losing their beneficial outputs but at the same time limiting their damage, so various human trapping and re-location approaches are employed to allow the animal to work its environmental magic in the most efficient manner.
+
+H: Recognising the beaver as an important animal in the early days of Canada’s economic development through its integral part in the fur trade, 1975 saw the beaver adopted as Canada’s national animal, now appearing on the 5- cent coin. Various U.S. states have used the beaver as an organizational symbol and it is also used by many educational institutes in their logos and coats of arms, including the London School of Economics, with its Latin inscription: Rerum Cognoscere Causas, meaning, ‘To know the cause of things’. With the beaver, it is the cause of much good in the grand environmental scheme.
+
+Reading Passage 2
+
+You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.
+
+Questions 14 – 19
+
+Reading Passage 2 has eight paragraphs A – H.
+
+For paragraphs B – G, choose the most suitable heading from the list of headings below.
+
+Write the appropriate numbers I – X in boxes 14 – 19 on your answer sheet.
+
+NB There are more headings than paragraphs, so some headings will not be used.
+
+List of Headings
+
+    Fashioning their environment
+    An animal explained
+    Details regarding their dwellings
+    Early facts
+    Beavers causing pollution
+    Recognition of an industrious nature
+    How keystone species contribute to the environment
+    The beaver as pest
+    Animals thrive through the beaver’s hard work
+    The beaver as conservationist
+
+Example: Paragraph A Answer: II
+
+14. Paragraph B Fill in the blank 1 of 13 (iv)
+
+15. Paragraph C Fill in the blank 2 of 13 (i)
+
+16. Paragraph D Fill in the blank 3 of 13 (iii)
+
+17. Paragraph E Fill in the blank 4 of 13 (x)
+
+18. Paragraph F Fill in the blank 5 of 13 (ix)
+
+19. Paragraph G Fill in the blank 6 of 13 (viii)
+
+Example: Paragraph H Answer: VII
+
+Questions 20 – 22
+
+Do the following statements agree with the information given in Reading Passage 2?
+
+In boxes 20 – 22 on your answer sheet write
+
+TRUE if the statement agrees with the information
+
+FALSE if the statement contradicts the information
+
+NOT GIVEN if there is no information on this in the passage
+
+20. Beavers live in dams. Fill in the blank 7 of 13 (false)
+
+21. Beavers are native animals throughout the Americas. Fill in the blank 8 of 13 (false)
+
+22. The population of beavers is still at a worryingly low rate. Fill in the blank 9 of 13 (false)
+
+Questions 23 – 26
+
+There are three possible statements which can correctly complete each of these sentences. Choose the correct letter A – C and write your answer in boxes 23 – 26 on your answer sheet.
+
+23. Beavers have sharp front teeth, similar to a
+
+    lion.
+    rat.
+    human.
+
+23. Fill in the blank 10 of 13 (b)
+
+24. Beavers
+
+    mate for life.
+    defend their territory against extended-family groups.
+    build new homes every year.
+
+24. Fill in the blank 11 of 13 (a)
+
+25. The industriousness of the beaver is of great benefit to other animals because it
+
+    A reduces the frog and toad numbers.
+    B helps dry out the wetlands.
+    C adds to the variety of animal life.
+
+25. Fill in the blank 12 of 13 (c)
+
+26. There are some problems associated with the beaver’s activities, such as
+
+    their gnawing through wooden bridges.
+    the destruction of agriculture and timber.
+    governments and conservationists arguing over the best way to limit the damage.
+
+26. Fill in the blank 13 of 13 (b)
+Incorrect
+
+14. IV – This paragraph gives historical facts and figures regarding beaver numbers and their habitats.
+
+15. I – Para C gives more information about the environment that beaver homes are built in, rather than information about the homes themselves.
+
+16. III – This para gives information about the actual beaver homes, or lodges.
+
+17. X – This para gives many examples of how the beaver’s work aids conservation, such as ‘…restoration of … wetlands’ and ‘Other ecological benefits…’.
+
+18. IX – This para begins with ‘Animal life …benefits greatly…’ and then gives examples of different animals that benefit from the beaver’s conservation efforts.
+
+19. VIII – The opening sentence of this para mentions ‘…some downsides…’ and then gives examples of some of the damage that beavers cause.
+
+20. FALSE – Para A states that ‘Beavers are well-known for their habit of building barriers (known as dams) in waterways in order create a deep pool of water behind the dam in which to build their homes (known as lodges). ’.
+
+21. FALSE – Para B opens with ‘Beavers are native to North America …[and] were introduced into South America…’.
+
+22. FALSE – Para B states that ‘Today, the numbers have recovered and conservationists put the current population at a healthy 10 to 15 million.’
+
+23. B – Para C states that beavers have ‘…strong front rodent teeth’
+
+24. A – Para D has the statement ‘Beavers mate for life…’, and monogamous means ‘having one partner’.
+
+25. C – Paras E and F give beneficial examples of the beaver’s work, and A and B are both contradicted in the text, so C is the answer, and para F gives examples of the increase in animal species.
+
+26. B – Para G states there is a ‘…loss of farm crops and timber resources.’
+
+Reading Passage 3
+
+Maritime Shipping’s Heavy Fuel Oil Debate
+In a world growing more and more concerned with pollution and the accompanying health issues, attention has turned to the heavy fuel oil (HFO) used by the world’s shipping industry. In a densely-populated port city such as Hong Kong, the shipping industry, from local tugs to ocean-going container and bulk cargo vessels, accounts for the largest amount of sulphur dioxide (SO2) emissions as well as the emission of particulate matter (PM), the mixture of minute particles and liquid droplets suspended in air. One estimate put forward is that PM emissions contributed to 87,000 global premature deaths in 2012 and these large port cities like Hong Kong and Busan in Asia, Rotterdam and Antwerp in Europe and Los Angeles/Long Beach in the Americas have borne the brunt of the health issues created by the growing volume of heavy emissions from the maritime industry. Globally, there are more than 90,000 vessels in the international marine fleet, handling over 90% of international trade. Heavy fuel oil has been the mainstay of energy and propulsion requirements through the second half of the 20th century as global trade has become the lifeblood of economic growth, but it is acknowledged that this same shipping now accounts for nearly 10% of the total emissions of SO2, which has been responsible for the environmentally devastating acid rain, and is a heavy contributor to respiratory problems and other illnesses in humans. In the United States alone, the Environmental Protection Agency estimates that there are 14,000 premature deaths annually owing to toxic emissions, and it is noted that the fuel used by ocean-plying vessels is 600 times dirtier than land transport diesel fuel. Once it was recognised that there was a strong causal relationship between pollutant emissions and health issues, the International Maritime Organisation, or IMO, a UN agency that sets and regulates industry standards for safety and the environment, began formulating guidelines to determine and control safe standards for emissions. Beginning in 2015, the IMO ruled that the first areas to be designated as Emission Control Areas, or ECAs, would be the Exclusive Economic Zones of North America and Northern Europe, where Marine Gas Oil with a permitted sulphur content of only 1,000 ppm (parts per million) would be allowed. This was a dramatic proposal, as the then-current sulphur content of what are called bunker fuels ranged as high as 35,000 ppm. Further, from the year 2020, the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm. But all this comes at a huge economic cost, not only for the commercial enterprises, but also the shipping companies and, by extension, their shippers, and the national economies of the countries involved. As a result, much research has gone into determining the best approach to ‘clean up’, or even change, the fuel, and ultimately there seems to be two main approaches to comply with the requirements. Firstly, the oil industry would have to drop the sulphur content of the fuel from 3.5% to 0.5%, which would achieve the required emissions levels, or vessels would have to be fitted with what are known as ‘scrubbers’, technology that can clean the emissions. However, it is recognised that the refining industry is not yet moving towards complying with the regulations regarding sulphur content, and as far as scrubbing is concerned, at an estimated US$4 million per engine fit out, the cost is often too high for many shipping countries. In addition, along with other industries such as land transport and airline companies, much research is being conducted into looking at alternative fuels. For shipping, this revolves around investigating alternative sources such as Liquid (or Liquefied) Natural Gas, solar fuel cells, wind (an ironic twist on where shipping originally began) and the controversial nuclear energy, used in many naval fleets. However, apart from the view that HFO is the cheapest alternative and that the merchant fleet is geared towards the continuing use of HFO, each alternative also presents some challenges. Natural gas takes up a large amount of storage on a vessel, thus reducing cargo-carrying capacity. Likewise, solar fuel cells, although effective, require huge amount of space and wind is not considered reliable enough. Nuclear energy remains a contentious issue, and many ports will restrict or deny entry to nuclear-powered vessels. At the same time, the international shipping trade is experiencing a serious down-turn in profits. In 2007, the average daily revenue of a merchant vessel was US$34,000 but in 2017 that same figure was just US$9800, according to Clarkson Research, a global shipping consultancy firm. Part of this decline in profits is due to an excess of shipping vessels, but it also relates to the 2008 global financial crisis, and changes in the oil and export markets. All this means there will be a reluctance on the part of ship-owners, national state carriers and major shippers to contribute towards a scheme that, while benefiting the global environment and national health interests, sees little direct economic return. But the way forward is appearing. Gas-powered vessels are now operating, with its cleaner and more efficient fuel. Which, interestingly, has given rise to what is known as the “fifth fuel”, that is energy efficiency. Because fuel traditionally accounts for up to half of all costs involved in shipping, there have always been innovative energy-saving approaches. One example is that during the 2008 global crisis in finance and costs, sailing speeds on ocean vessels were reduced by oftentimes up to half, which resulted in massive fuel savings. This has given rise to what is known as the Energy Efficiency Design Index, a compulsory outline of regulations that means that all new ships will be required to adhere to it from 2015. Heavy Fuel Oil, however, will be the backbone of energy for the foreseeable future. If engine scrubbers are deployed, and are as effective as engineered, they can capture more than 90% of exhaust sulphur and they will continue to be the main force in energy requirements. Lloyds Registry, the industry classification organisation, believes that HFO will still make up nearly half of all fuels used in the maritime industry in 2030, albeit with the agreed-upon restrictions set out.
+Reading Passage 3 You should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3. Questions 27 – 31 Complete each sentence with the correct ending, A – I, below. Write the correct letter, A – I, in boxes 27 – 31 on your answer sheet. 27. Populous port cities, such as Hong Kong, BLANK 1 of 14 28. Particulate matter emissions BLANK 2 of 14 29. The global merchant marine fleet BLANK 3 of 14 30. Guidelines to set safe standards of emissions BLANK 4 of 14 31. The sulphur content of bunker fuels BLANK 5 of 14
+
+    have been determined by the International Maritime Organisation.
+    must be capped at 5,000 ppm by 2020 in certain areas.
+    are 600 times more dangerous than other fuels.
+    suffer from high levels of sulphur.
+    has been as high as 1,000 ppm.
+    were not recognised by the Exclusive Economic Zones.
+    impact severely on large port cities.
+    accounts for 90% of all vessels in international waters.
+    relies heavily on HFO.
+
+Questions 32 – 38 Do the following statements agree with the information given in Reading Passage 3? In boxes 32 – 38 on your answer sheet write TRUE if the statement agrees with the information FALSE if the statement contradicts the information NOT GIVEN if there is no information on this in the passage 32. The costs involved with ‘cleaning up’ the heavy fuel oil will be met by only the shipping lines. BLANK 6 of 14 33. The easiest approach to reduce emissions is to drop the sulphur content of fuel. BLANK 7 of 14 34. One alternative fuel source would mean returning to a previous method of power. BLANK 8 of 14 35. Nuclear energy is used mostly in naval fleets of many countries. BLANK 9 of 14 36. With 90% of international trade being carried on ships, the shipping industry is experiencing huge growth and profit levels. BLANK 10 of 14 37. One factor that is slowing down the move to cleaner fuels is that there are no significant direct economic benefits to the parties concerned. BLANK 11 of 14 38. The 2008 financial crisis helped introduce cost-saving measures for shipping lines. BLANK 12 of 14 Questions 39 – 40 Complete the following sentences, using NO MORE THAN THREE WORDS from the passage. Write your answers in boxes 39 – 40 on your answer sheet.
+
+    39 In order to comply with regulations regarding lowering emissions, shipping companies have the option of installing BLANK 13 of 14 to clean emissions.
+    40 Even with all the restrictions and guidelines, most industry analysts, such as Lloyds Registry, feel that BLANK 14 of 14 will still be the shipping  industry’s main source of energy in the future.
+
+ 
+
+Reading Passage 3
+
+Maritime Shipping’s Heavy Fuel Oil Debate
+
+In a world growing more and more concerned with pollution and the accompanying health issues, attention has turned to the heavy fuel oil (HFO) used by the world’s shipping industry. In a densely-populated port city such as Hong Kong, the shipping industry, from local tugs to ocean-going container and bulk cargo vessels, accounts for the largest amount of sulphur dioxide (SO2) emissions as well as the emission of particulate matter (PM), the mixture of minute particles and liquid droplets suspended in air. One estimate put forward is that PM emissions contributed to 87,000 global premature deaths in 2012 and these large port cities like Hong Kong and Busan in Asia, Rotterdam and Antwerp in Europe and Los Angeles/Long Beach in the Americas have borne the brunt of the health issues created by the growing volume of heavy emissions from the maritime industry.
+
+Globally, there are more than 90,000 vessels in the international marine fleet, handling over 90% of international trade. Heavy fuel oil has been the mainstay of energy and propulsion requirements through the second half of the 20th century as global trade has become the lifeblood of economic growth, but it is acknowledged that this same shipping now accounts for nearly 10% of the total emissions of SO2, which has been responsible for the environmentally devastating acid rain, and is a heavy contributor to respiratory problems and other illnesses in humans. In the United States alone, the Environmental Protection Agency estimates that there are 14,000 premature deaths annually owing to toxic emissions, and it is noted that the fuel used by ocean-plying vessels is 600 times dirtier than land transport diesel fuel.
+
+Once it was recognised that there was a strong causal relationship between pollutant emissions and health issues, the International Maritime Organisation, or IMO, a UN agency that sets and regulates industry standards for safety and the environment, began formulating guidelines to determine and control safe standards for emissions. Beginning in 2015, the IMO ruled that the first areas to be designated as Emission Control Areas, or ECAs, would be the Exclusive Economic Zones of North America and Northern Europe, where Marine Gas Oil with a permitted sulphur content of only 1,000 ppm (parts per million) would be allowed. This was a dramatic proposal, as the then-current sulphur content of what are called bunker fuels ranged as high as 35,000 ppm. Further, from the year 2020, the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm.
+
+But all this comes at a huge economic cost, not only for the commercial enterprises, but also the shipping companies and, by extension, their shippers, and the national economies of the countries involved. As a result, much research has gone into determining the best approach to ‘clean up’, or even change, the fuel, and ultimately there seems to be two main approaches to comply with the requirements. Firstly, the oil industry would have to drop the sulphur content of the fuel from 3.5% to 0.5%, which would achieve the required emissions levels, or vessels would have to be fitted with what are known as ‘scrubbers’, technology that can clean the emissions. However, it is recognised that the refining industry is not yet moving towards complying with the regulations regarding sulphur content, and as far as scrubbing is concerned, at an estimated US$4 million per engine fit out, the cost is often too high for many shipping countries.
+
+In addition, along with other industries such as land transport and airline companies, much research is being conducted into looking at alternative fuels. For shipping, this revolves around investigating alternative sources such as Liquid (or Liquefied) Natural Gas, solar fuel cells, wind (an ironic twist on where shipping originally began) and the controversial nuclear energy, used in many naval fleets. However, apart from the view that HFO is the cheapest alternative and that the merchant fleet is geared towards the continuing use of HFO, each alternative also presents some challenges. Natural gas takes up a large amount of storage on a vessel, thus reducing cargo-carrying capacity. Likewise, solar fuel cells, although effective, require huge amount of space and wind is not considered reliable enough. Nuclear energy remains a contentious issue, and many ports will restrict or deny entry to nuclear-powered vessels.
+
+At the same time, the international shipping trade is experiencing a serious down-turn in profits. In 2007, the average daily revenue of a merchant vessel was US$34,000 but in 2017 that same figure was just US$9800, according to Clarkson Research, a global shipping consultancy firm. Part of this decline in profits is due to an excess of shipping vessels, but it also relates to the 2008 global financial crisis, and changes in the oil and export markets. All this means there will be a reluctance on the part of ship-owners, national state carriers and major shippers to contribute towards a scheme that, while benefiting the global environment and national health interests, sees little direct economic return.
+
+But the way forward is appearing. Gas-powered vessels are now operating, with its cleaner and more efficient fuel. Which, interestingly, has given rise to what is known as the “fifth fuel”, that is energy efficiency. Because fuel traditionally accounts for up to half of all costs involved in shipping, there have always been innovative energy-saving approaches. One example is that during the 2008 global crisis in finance and costs, sailing speeds on ocean vessels were reduced by oftentimes up to half, which resulted in massive fuel savings. This has given rise to what is known as the Energy Efficiency Design Index, a compulsory outline of regulations that means that all new ships will be required to adhere to it from 2015.
+
+Heavy Fuel Oil, however, will be the backbone of energy for the foreseeable future. If engine scrubbers are deployed, and are as effective as engineered, they can capture more than 90% of exhaust sulphur and they will continue to be the main force in energy requirements. Lloyds Registry, the industry classification organisation, believes that HFO will still make up nearly half of all fuels used in the maritime industry in 2030, albeit with the agreed-upon restrictions set out.
+
+Reading Passage 3
+
+You should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.
+
+Questions 27 – 31
+
+Complete each sentence with the correct ending, A – I, below.
+
+Write the correct letter, A – I, in boxes 27 – 31 on your answer sheet.
+
+27. Populous port cities, such as Hong Kong, Fill in the blank 1 of 14 (d)
+
+28. Particulate matter emissions Fill in the blank 2 of 14 (g)
+
+29. The global merchant marine fleet Fill in the blank 3 of 14 (i)
+
+30. Guidelines to set safe standards of emissions Fill in the blank 4 of 14 (a)
+
+31. The sulphur content of bunker fuels Fill in the blank 5 of 14 (b)
+
+    have been determined by the International Maritime Organisation.
+    must be capped at 5,000 ppm by 2020 in certain areas.
+    are 600 times more dangerous than other fuels.
+    suffer from high levels of sulphur.
+    has been as high as 1,000 ppm.
+    were not recognised by the Exclusive Economic Zones.
+    impact severely on large port cities.
+    accounts for 90% of all vessels in international waters.
+    relies heavily on HFO.
+
+Questions 32 – 38
+
+Do the following statements agree with the information given in Reading Passage 3?
+
+In boxes 32 – 38 on your answer sheet write
+
+TRUE if the statement agrees with the information
+
+FALSE if the statement contradicts the information
+
+NOT GIVEN if there is no information on this in the passage
+
+32. The costs involved with ‘cleaning up’ the heavy fuel oil will be met by only the shipping lines. Fill in the blank 6 of 14 (false)
+
+33. The easiest approach to reduce emissions is to drop the sulphur content of fuel. Fill in the blank 7 of 14 (not given)
+
+34. One alternative fuel source would mean returning to a previous method of power. Fill in the blank 8 of 14 (true)
+
+35. Nuclear energy is used mostly in naval fleets of many countries. Fill in the blank 9 of 14 (not given)
+
+36. With 90% of international trade being carried on ships, the shipping industry is experiencing huge growth and profit levels. Fill in the blank 10 of 14 (false)
+
+37. One factor that is slowing down the move to cleaner fuels is that there are no significant direct economic benefits to the parties concerned. Fill in the blank 11 of 14 (true)
+
+38. The 2008 financial crisis helped introduce cost-saving measures for shipping lines. Fill in the blank 12 of 14 (true)
+
+Questions 39 – 40
+
+Complete the following sentences, using NO MORE THAN THREE WORDS from the passage.
+
+Write your answers in boxes 39 – 40 on your answer sheet.
+
+    39 In order to comply with regulations regarding lowering emissions, shipping companies have the option of installing Fill in the blank 13 of 14 (scrubbers) to clean emissions.
+    40 Even with all the restrictions and guidelines, most industry analysts, such as Lloyds Registry, feel that Fill in the blank 14 of 14 (heavy fuel ol,hfo,hfos) will still be the shipping  industry’s main source of energy in the future.
+
+ 
+Incorrect
+
+27. D – The opening paragraph mentions Hong Kong, and has the phrase that vessels ‘…contribute the largest amount of sulfur dioxide (SO2) emissions…’, and then goes on to mention that there are a number of premature deaths from emissions.
+
+28. G – The last sentence of the first para mentions that ‘Large port cities… have borne the brunt of the health issues created by the growing volume of heavy emissions.’
+
+29. I – The second para mentions the ‘international marine fleet’ and the second sentence beings ‘Heavy fuel oil has been the mainstay of energy and propulsion requirements…’.
+
+30. A – The third para mentions the IMO and the fact that this UN agency ‘…sets and regulates industry standards… for …emissions.’
+
+31. B – The last sentence of para 3 mentions that ‘…from 2020, …all vessels sailing outside any ECA must cap [sulphur emissions] at 5,000 ppm.’
+
+32. FALSE – The first sentence in para 4 mentions there is a ‘…huge economic cost …for …shipping companies and… shippers …and the national economies…’.
+
+33. NOT GIVEN – More than one possible solution is given, but there is no mention which one is the ‘easiest’.
+
+34. TRUE – Para 5 gives information about alternative fuel sources, and mentions wind, with the phrase ‘…an ironic twist on where shipping originally began.’
+
+35. NOT GIVEN – Para 5 gives information on nuclear propulsion, and says it is used in ‘…many naval fleets’, but there is no information that it is used mostly in naval fleets.
+
+36. FALSE – The second para mentions 90% of trade, but the sixth para mentions that there is ‘…a depressing down-turn in profits…’.
+
+37. TRUE – The sixth para gives information on the economics of the shipping industry and concludes that the shipping industry ‘… sees little direct economic return…’ to cleaning up their fuel sources.
+
+38. TRUE – Para 7 gives information on the key words 2008 financial crisis and gives information about measures that were introduced that ‘…resulted in massive fuel savings.’
+
+39. SCRUBBERS – Para 4 gives information about efforts to ‘clean up’ fuel, and mentions that there are ‘two main approaches’ to ‘…drop the sulphur content’ and ‘…clean the emissions.’
+
+40. HEAVY FUEL OIL / HFO – The last para gives information on the key words ‘Lloyds Registry’ and has the phrase that it ‘…reckons that HFO will still make up nearly half of all fuels…’.
