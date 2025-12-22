@@ -699,68 +699,82 @@ class IELTS_CM_Quiz_Handler {
                 
                 $score += $points_earned;
             } elseif (isset($answers[$index])) {
-                $is_correct = $this->check_answer($question, $answers[$index]);
-                if ($is_correct) {
-                    $points_earned = isset($question['points']) ? floatval($question['points']) : 1;
-                    $score += $points_earned;
-                    
-                    // For multiple choice, check if there's specific feedback for this option
-                    if ($question['type'] === 'multiple_choice') {
-                        $user_answer_index = intval($answers[$index]);
-                        
-                        // Try new structured format first
-                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
-                            // New format with mc_options
-                            if ($user_answer_index >= 0 && $user_answer_index < count($question['mc_options']) 
-                                && isset($question['mc_options'][$user_answer_index]['feedback']) 
-                                && !empty($question['mc_options'][$user_answer_index]['feedback'])) {
-                                $feedback = wp_kses_post($question['mc_options'][$user_answer_index]['feedback']);
-                            }
-                        } elseif (isset($question['option_feedback']) && is_array($question['option_feedback'])) {
-                            // Legacy format
-                            if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
-                                && isset($question['option_feedback'][$user_answer_index]) 
-                                && !empty($question['option_feedback'][$user_answer_index])) {
-                                $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
-                            }
-                        }
-                    } elseif (in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false'))) {
-                        // For short answer, sentence completion, labelling, and true/false - use correct_feedback
-                        if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
-                            $feedback = wp_kses_post($question['correct_feedback']);
-                        } else {
-                            // Provide default feedback if none configured
-                            $feedback = __('Correct!', 'ielts-course-manager');
-                        }
+                // Check if the answer is effectively empty (for text-based questions)
+                $answer_is_empty = false;
+                if (in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling'))) {
+                    $trimmed_answer = is_string($answers[$index]) ? trim($answers[$index]) : $answers[$index];
+                    $answer_is_empty = ($trimmed_answer === '' || $trimmed_answer === null);
+                }
+                
+                if ($answer_is_empty) {
+                    // Treat empty text answers as no answer
+                    if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
+                        $feedback = wp_kses_post($question['no_answer_feedback']);
                     }
                 } else {
-                    // For multiple choice, check if there's specific feedback for this option
-                    if ($question['type'] === 'multiple_choice') {
-                        $user_answer_index = intval($answers[$index]);
+                    $is_correct = $this->check_answer($question, $answers[$index]);
+                    if ($is_correct) {
+                        $points_earned = isset($question['points']) ? floatval($question['points']) : 1;
+                        $score += $points_earned;
                         
-                        // Try new structured format first
-                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
-                            // New format with mc_options
-                            if ($user_answer_index >= 0 && $user_answer_index < count($question['mc_options']) 
-                                && isset($question['mc_options'][$user_answer_index]['feedback']) 
-                                && !empty($question['mc_options'][$user_answer_index]['feedback'])) {
-                                $feedback = wp_kses_post($question['mc_options'][$user_answer_index]['feedback']);
+                        // For multiple choice, check if there's specific feedback for this option
+                        if ($question['type'] === 'multiple_choice') {
+                            $user_answer_index = intval($answers[$index]);
+                            
+                            // Try new structured format first
+                            if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                                // New format with mc_options
+                                if ($user_answer_index >= 0 && $user_answer_index < count($question['mc_options']) 
+                                    && isset($question['mc_options'][$user_answer_index]['feedback']) 
+                                    && !empty($question['mc_options'][$user_answer_index]['feedback'])) {
+                                    $feedback = wp_kses_post($question['mc_options'][$user_answer_index]['feedback']);
+                                }
+                            } elseif (isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                                // Legacy format
+                                if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
+                                    && isset($question['option_feedback'][$user_answer_index]) 
+                                    && !empty($question['option_feedback'][$user_answer_index])) {
+                                    $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
+                                }
                             }
-                        } elseif (isset($question['option_feedback']) && is_array($question['option_feedback'])) {
-                            // Legacy format
-                            if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
-                                && isset($question['option_feedback'][$user_answer_index]) 
-                                && !empty($question['option_feedback'][$user_answer_index])) {
-                                $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
+                        } elseif (in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false'))) {
+                            // For short answer, sentence completion, labelling, and true/false - use correct_feedback
+                            if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
+                                $feedback = wp_kses_post($question['correct_feedback']);
+                            } else {
+                                // Provide default feedback if none configured
+                                $feedback = __('Correct!', 'ielts-course-manager');
                             }
                         }
-                    } elseif (in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false'))) {
-                        // For short answer, sentence completion, labelling, and true/false - use incorrect_feedback
-                        if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
-                            $feedback = wp_kses_post($question['incorrect_feedback']);
-                        } else {
-                            // Provide default feedback if none configured
-                            $feedback = __('Incorrect', 'ielts-course-manager');
+                    } else {
+                        // For multiple choice, check if there's specific feedback for this option
+                        if ($question['type'] === 'multiple_choice') {
+                            $user_answer_index = intval($answers[$index]);
+                            
+                            // Try new structured format first
+                            if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                                // New format with mc_options
+                                if ($user_answer_index >= 0 && $user_answer_index < count($question['mc_options']) 
+                                    && isset($question['mc_options'][$user_answer_index]['feedback']) 
+                                    && !empty($question['mc_options'][$user_answer_index]['feedback'])) {
+                                    $feedback = wp_kses_post($question['mc_options'][$user_answer_index]['feedback']);
+                                }
+                            } elseif (isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                                // Legacy format
+                                if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
+                                    && isset($question['option_feedback'][$user_answer_index]) 
+                                    && !empty($question['option_feedback'][$user_answer_index])) {
+                                    $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
+                                }
+                            }
+                        } elseif (in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false'))) {
+                            // For short answer, sentence completion, labelling, and true/false - use incorrect_feedback
+                            if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                                $feedback = wp_kses_post($question['incorrect_feedback']);
+                            } else {
+                                // Provide default feedback if none configured
+                                $feedback = __('Incorrect', 'ielts-course-manager');
+                            }
                         }
                     }
                 }
