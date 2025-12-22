@@ -836,7 +836,23 @@ You have one hour for the complete test (including transferring your answers).</
         
         foreach ($sections as $section) {
             $section_text = implode("\n", $section['lines']);
-            $section_questions = $this->parse_question_section($section_text, $section['marker']);
+            
+            // Prepend reading passages to section text so individual parsers can extract them
+            $section_text_with_reading = '';
+            foreach ($reading_texts as $rt) {
+                if (!empty($rt['title'])) {
+                    $section_text_with_reading .= '[READING PASSAGE] ' . $rt['title'] . "\n";
+                } else {
+                    $section_text_with_reading .= '[READING PASSAGE]' . "\n";
+                }
+                // Strip HTML tags from content for text format
+                $content = isset($rt['content']) ? strip_tags($rt['content']) : '';
+                $section_text_with_reading .= $content . "\n";
+                $section_text_with_reading .= '[END READING PASSAGE]' . "\n\n";
+            }
+            $section_text_with_reading .= $section_text;
+            
+            $section_questions = $this->parse_question_section($section_text_with_reading, $section['marker'], $reading_texts);
             
             if (!empty($section_questions)) {
                 $all_questions = array_merge($all_questions, $section_questions);
@@ -899,8 +915,13 @@ You have one hour for the complete test (including transferring your answers).</
     
     /**
      * Parse a single question section based on its format
+     * 
+     * @param string $text Section text to parse
+     * @param string $marker Section marker (e.g., [HEADINGS], [MULTIPLE CHOICE])
+     * @param array $reading_texts Optional array of reading texts (used in mixed format)
+     * @return array Array of questions
      */
-    private function parse_question_section($text, $marker) {
+    private function parse_question_section($text, $marker, $reading_texts = array()) {
         // Determine format based on marker and content
         
         // For multiple choice variants (headings, matching, etc.), prepend a title with the marker
@@ -1013,8 +1034,17 @@ You have one hour for the complete test (including transferring your answers).</
         $question_lines = array_slice($lines, $question_start_index);
         
         $i = 0;
+        $next_question_reading_text_id = null; // Store reading text ID for next question
         while ($i < count($question_lines)) {
             $line = $question_lines[$i];
+            
+            // Check for [LINKED TO: ...] marker lines and extract reading text ID for next question
+            if (preg_match('/^\[LINKED TO:\s*(.+?)\]/i', $line, $link_match)) {
+                $linked_title = trim($link_match[1]);
+                $next_question_reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
+                $i++;
+                continue;
+            }
             
             // Check if this line is a question using the pattern constant
             // Pattern now matches: "number. full line text"
@@ -1023,12 +1053,9 @@ You have one hour for the complete test (including transferring your answers).</
                 $question_num = $match[1];
                 $full_line = trim($match[2]);
                 
-                // Check for linked reading text on previous line
-                $reading_text_id = null;
-                if ($i > 0 && preg_match('/\[LINKED TO:\s*(.+?)\]/i', $question_lines[$i - 1], $link_match)) {
-                    $linked_title = trim($link_match[1]);
-                    $reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
-                }
+                // Use the stored reading text ID for this question
+                $reading_text_id = $next_question_reading_text_id;
+                $next_question_reading_text_id = null; // Reset for next question
                 
                 // Extract the answer part from within the curly braces
                 if (preg_match('/\{([^}]+)\}/', $full_line, $answer_match)) {
@@ -1273,9 +1300,17 @@ You have one hour for the complete test (including transferring your answers).</
         $current_options = array();
         $feedback_lines = array();
         $current_feedback_type = 'incorrect'; // Track which feedback type we're collecting: 'correct', 'incorrect', 'no_answer'
+        $next_question_reading_text_id = null; // Store reading text ID for next question
         
         for ($i = $start_index; $i < count($lines); $i++) {
             $line = $lines[$i];
+            
+            // Check for [LINKED TO: ...] marker lines and extract reading text ID for next question
+            if (preg_match('/^\[LINKED TO:\s*(.+?)\]/i', $line, $link_match)) {
+                $linked_title = trim($link_match[1]);
+                $next_question_reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
+                continue;
+            }
             
             // Empty line transitions state
             if (empty($line)) {
@@ -1360,6 +1395,10 @@ You have one hour for the complete test (including transferring your answers).</
                     $questions[] = $current_question;
                 }
                 
+                // Use the stored reading text ID for this question
+                $reading_text_id = $next_question_reading_text_id;
+                $next_question_reading_text_id = null; // Reset for next question
+                
                 // Start new question
                 $current_question = array(
                     'type' => 'true_false',
@@ -1369,6 +1408,12 @@ You have one hour for the complete test (including transferring your answers).</
                     'incorrect_feedback' => '',
                     'no_answer_feedback' => ''
                 );
+                
+                // Add reading text link if found
+                if ($reading_text_id !== null) {
+                    $current_question['reading_text_id'] = $reading_text_id;
+                }
+                
                 $current_options = array();
                 $feedback_lines = array();
                 $state = 'READING_NEW_FORMAT_QUESTION';
@@ -1880,12 +1925,15 @@ You have one hour for the complete test (including transferring your answers).</
         $questions = array();
         $current_question = null;
         $current_options = array();
+        $next_question_reading_text_id = null; // Store reading text ID for next question
         
         for ($i = $start_index; $i < count($lines); $i++) {
             $line = $lines[$i];
             
-            // Skip [LINKED TO: ...] marker lines
-            if (preg_match('/^\[LINKED TO:/i', $line)) {
+            // Check for [LINKED TO: ...] marker lines and extract reading text ID for next question
+            if (preg_match('/^\[LINKED TO:\s*(.+?)\]/i', $line, $link_match)) {
+                $linked_title = trim($link_match[1]);
+                $next_question_reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
                 continue;
             }
             
@@ -1938,12 +1986,9 @@ You have one hour for the complete test (including transferring your answers).</
                     $current_options = array();
                 }
                 
-                // Check for linked reading text on previous line
-                $reading_text_id = null;
-                if ($i > 0 && preg_match('/\[LINKED TO:\s*(.+?)\]/i', $lines[$i - 1], $link_match)) {
-                    $linked_title = trim($link_match[1]);
-                    $reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
-                }
+                // Use the stored reading text ID for this question
+                $reading_text_id = $next_question_reading_text_id;
+                $next_question_reading_text_id = null; // Reset for next question
                 
                 // Start new question
                 $current_question = array(
