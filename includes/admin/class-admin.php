@@ -2489,6 +2489,20 @@ class IELTS_CM_Admin {
                 <input type="number" name="questions[<?php echo $index; ?>][points]" value="<?php echo esc_attr(isset($question['points']) ? $question['points'] : 1); ?>" min="0" step="0.5" style="width: 100%;">
             </p>
             
+            <div class="general-feedback-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false', 'dropdown_paragraph'))) ? '' : 'display:none;'; ?>margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
+                <h5 style="margin-top: 0;"><?php _e('Answer Feedback', 'ielts-course-manager'); ?></h5>
+                <p>
+                    <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="questions[<?php echo $index; ?>][correct_feedback]" rows="3" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers correctly', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($question['correct_feedback']) ? $question['correct_feedback'] : ''); ?></textarea>
+                    <small><?php _e('Shown when the student answers correctly. HTML is supported.', 'ielts-course-manager'); ?></small>
+                </p>
+                <p>
+                    <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="questions[<?php echo $index; ?>][incorrect_feedback]" rows="3" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers incorrectly', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($question['incorrect_feedback']) ? $question['incorrect_feedback'] : ''); ?></textarea>
+                    <small><?php _e('Shown when the student answers incorrectly. HTML is supported.', 'ielts-course-manager'); ?></small>
+                </p>
+            </div>
+            
             <div class="no-answer-feedback-field" style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
                 <p>
@@ -2622,6 +2636,20 @@ class IELTS_CM_Admin {
                 <label><?php _e('Points', 'ielts-course-manager'); ?></label><br>
                 <input type="number" name="questions[QUESTION_INDEX][points]" value="1" min="0" step="0.5" style="width: 100%;">
             </p>
+            
+            <div class="general-feedback-field" style="display: none; margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
+                <h5 style="margin-top: 0;"><?php _e('Answer Feedback', 'ielts-course-manager'); ?></h5>
+                <p>
+                    <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="questions[QUESTION_INDEX][correct_feedback]" rows="3" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers correctly', 'ielts-course-manager'); ?>"></textarea>
+                    <small><?php _e('Shown when the student answers correctly. HTML is supported.', 'ielts-course-manager'); ?></small>
+                </p>
+                <p>
+                    <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="questions[QUESTION_INDEX][incorrect_feedback]" rows="3" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers incorrectly', 'ielts-course-manager'); ?>"></textarea>
+                    <small><?php _e('Shown when the student answers incorrectly. HTML is supported.', 'ielts-course-manager'); ?></small>
+                </p>
+            </div>
             
             <div class="no-answer-feedback-field" style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
@@ -2793,6 +2821,8 @@ class IELTS_CM_Admin {
                         'question' => wp_kses_post($question['question']), // Allow HTML with images
                         'points' => isset($question['points']) ? floatval($question['points']) : 1,
                         'no_answer_feedback' => isset($question['no_answer_feedback']) ? wp_kses_post($question['no_answer_feedback']) : '',
+                        'correct_feedback' => isset($question['correct_feedback']) ? wp_kses_post($question['correct_feedback']) : '',
+                        'incorrect_feedback' => isset($question['incorrect_feedback']) ? wp_kses_post($question['incorrect_feedback']) : '',
                         'reading_text_id' => isset($question['reading_text_id']) && $question['reading_text_id'] !== '' ? intval($question['reading_text_id']) : null
                     );
                     
