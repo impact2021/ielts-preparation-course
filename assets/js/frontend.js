@@ -572,7 +572,7 @@
                             
                             // Add per-question text feedback messages for all layouts
                             if (questionResult.question_type === 'multi_select') {
-                                // For multi_select, show individual feedback under each selected option
+                                // For multi_select, show individual feedback under ALL options
                                 // Remove any existing feedback first
                                 questionElement.find('.option-feedback-message').remove();
                                 questionElement.find('.question-feedback-message').remove();
@@ -582,7 +582,7 @@
                                     ? questionResult.correct_answer.option_feedback 
                                     : {};
                                 
-                                // Display feedback under each selected option that has feedback
+                                // Display feedback under ALL options that have feedback
                                 $.each(optionFeedback, function(optionIndex, feedbackText) {
                                     if (feedbackText) {
                                         var checkbox = questionElement.find('input[type="checkbox"][value="' + optionIndex + '"]');
