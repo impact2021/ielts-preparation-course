@@ -553,6 +553,7 @@
                                 // For multi_select, show individual feedback under each selected option
                                 // Remove any existing feedback first
                                 questionElement.find('.option-feedback-message').remove();
+                                questionElement.find('.question-feedback-message').remove();
                                 
                                 // Get option feedback from correct_answer object
                                 var optionFeedback = questionResult.correct_answer && questionResult.correct_answer.option_feedback 
@@ -578,15 +579,47 @@
                                 
                                 // Also show general no-answer feedback if provided and no options were selected
                                 if (questionResult.feedback && (!questionResult.user_answer || questionResult.user_answer.length === 0)) {
-                                    questionElement.find('.question-feedback-message').remove();
                                     var feedbackDiv = $('<div>')
                                         .addClass('question-feedback-message')
                                         .addClass('feedback-incorrect')
                                         .html(questionResult.feedback);
                                     questionElement.append(feedbackDiv);
                                 }
+                            } else if (questionResult.question_type === 'multiple_choice' || 
+                                       questionResult.question_type === 'matching' || 
+                                       questionResult.question_type === 'matching_classifying' ||
+                                       questionResult.question_type === 'headings' ||
+                                       questionResult.question_type === 'locating_information') {
+                                // For single-select question types with options, show feedback under the selected option
+                                // Remove any existing feedback first
+                                questionElement.find('.option-feedback-message').remove();
+                                questionElement.find('.question-feedback-message').remove();
+                                
+                                if (questionResult.feedback) {
+                                    // Find the selected radio button
+                                    var selectedRadio = questionElement.find('input[type="radio"]:checked');
+                                    if (selectedRadio.length > 0) {
+                                        var optionLabel = selectedRadio.closest('.option-label');
+                                        
+                                        // Create feedback element for this option
+                                        var feedbackDiv = $('<div>')
+                                            .addClass('option-feedback-message')
+                                            .html(questionResult.feedback); // Using .html() because feedback explicitly supports HTML formatting
+                                                                             // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
+                                        
+                                        // Append feedback after the option label
+                                        optionLabel.after(feedbackDiv);
+                                    } else {
+                                        // No option selected - show general no-answer feedback at question level
+                                        var feedbackDiv = $('<div>')
+                                            .addClass('question-feedback-message')
+                                            .addClass('feedback-incorrect')
+                                            .html(questionResult.feedback);
+                                        questionElement.append(feedbackDiv);
+                                    }
+                                }
                             } else if (questionResult.feedback) {
-                                // For other question types, show general feedback
+                                // For other question types (text input, etc.), show general feedback
                                 // Remove any existing feedback first
                                 questionElement.find('.question-feedback-message').remove();
                                 
