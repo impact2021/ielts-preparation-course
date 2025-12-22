@@ -922,8 +922,9 @@ You have one hour for the complete test (including transferring your answers).</
             
             // Check if this is a section header like "Questions 1-5 [HEADINGS]" or "Question 1 [MULTIPLE CHOICE]"
             if (preg_match('/^Questions?\s+\d+/i', $line)) {
-                // Save previous section if exists
+                // Before starting a new section, process the previous section to extract instructions
                 if ($current_section !== null) {
+                    $this->extract_section_instructions($current_section);
                     $sections[] = $current_section;
                 }
                 
@@ -954,12 +955,73 @@ You have one hour for the complete test (including transferring your answers).</
             }
         }
         
-        // Save last section
+        // Save last section (and extract its instructions)
         if ($current_section !== null) {
+            $this->extract_section_instructions($current_section);
             $sections[] = $current_section;
         }
         
         return $sections;
+    }
+    
+    /**
+     * Extract instruction lines from the beginning of a section's lines
+     * Instructions are lines that appear after the section header but before the actual question content
+     * They are moved from the 'lines' array to the 'instructions' array
+     * 
+     * @param array &$section Section array with 'lines' and 'instructions' keys (passed by reference)
+     */
+    private function extract_section_instructions(&$section) {
+        if (empty($section['lines'])) {
+            return;
+        }
+        
+        $instruction_lines = array();
+        $content_start_index = -1;
+        
+        // Find where the actual question content starts
+        // Question content starts with patterns like:
+        // - Numbered question: "1. Question text"
+        // - [LINKED TO: ...] marker
+        // - === QUESTION N === (for true/false format)
+        // - DROPDOWN N: (for dropdown paragraph)
+        // - Answer format text (for summary/table completion)
+        
+        for ($i = 0; $i < count($section['lines']); $i++) {
+            $line = trim($section['lines'][$i]);
+            
+            // Skip empty lines at the beginning
+            if (empty($line)) {
+                continue;
+            }
+            
+            // Check if this line starts actual question content
+            if (preg_match('/^\d+\.\s+/', $line) ||                          // Numbered question
+                preg_match('/^\[LINKED TO:/i', $line) ||                     // Reading passage link
+                preg_match('/^===\s*QUESTION\s+\d+\s*===/i', $line) ||       // True/false format
+                preg_match('/^DROPDOWN\s+\d+:/i', $line) ||                  // Dropdown definition
+                preg_match('/\[ANSWER\s+\d+\]/i', $line) ||                  // Summary/table completion
+                preg_match('/___\d+___/', $line) ||                          // Dropdown paragraph placeholders
+                preg_match('/^[A-Z]\)\s+/', $line)) {                        // Option line (for MC without numbered questions)
+                // Found the start of actual content
+                $content_start_index = $i;
+                break;
+            }
+            
+            // This is an instruction line
+            $instruction_lines[] = $line;
+        }
+        
+        // If we found instruction lines, move them to the instructions array and remove from lines
+        if (!empty($instruction_lines)) {
+            // Prepend section instructions to existing instructions
+            $section['instructions'] = array_merge($section['instructions'], $instruction_lines);
+            
+            // Remove instruction lines from the beginning of the lines array
+            if ($content_start_index > 0) {
+                $section['lines'] = array_slice($section['lines'], $content_start_index);
+            }
+        }
     }
     
     /**
