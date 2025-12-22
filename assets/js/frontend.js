@@ -538,8 +538,8 @@
                                 }
                             }
                             
-                            // Add per-question text feedback messages (CBT only). All layouts use visual highlighting, but CBT layouts also support additional text feedback messages below each question.
-                            if (isCBT && questionResult.feedback) {
+                            // Add per-question text feedback messages for all layouts
+                            if (questionResult.feedback) {
                                 // Remove any existing feedback first
                                 questionElement.find('.question-feedback-message').remove();
                                 
