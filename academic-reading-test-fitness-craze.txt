@@ -39,12 +39,10 @@ NOT GIVEN if there is no information on this in the passage
 1. Fitness centres can be found in many major cities.
 This is TRUE
 Incorrect
-
-The statement says 'many major cities' but the passage says 'In every corner of every major city there is a gym' - this is actually broader than 'many' cities. The passage indicates gyms are ubiquitous in every major city, not just many.
 This is FALSE
 Correct answer
 
-The passage states 'In every corner of every major city there is a gym' which contradicts the statement that they can be found in 'many' major cities - they are found in every major city.
+The passage states 'In every corner of every major city there is a gym' which contradicts the statement that they can be found in 'many' major cities - they are found in EVERY major city, not just many.
 
 2. The gym today also operates as a meeting place.
 This is TRUE
@@ -455,32 +453,14 @@ Which paragraph contains the following information?
 
 Write the correct letter A – G in boxes 38 – 40 on your answer sheet.
 
-38. The significance of the New Horizons mission.
-A) A
-B) B
-C) C
-D) D
-E) E
-F) F
-G) G [CORRECT]
+38. The significance of the New Horizons mission. {G}
+[CORRECT] Excellent! Paragraph G discusses the significance of the mission: 'the New Horizons reconnaissance of Pluto provides a wealth of knowledge and data regarding the last major body in the Solar System not previously visited by a space probe' and 'the mission to the Pluto system not only represents the culmination of more than a decade's worth of preparation on Earth, but also the beginning of a new chapter in space exploration'.
 [INCORRECT] Paragraph G discusses the significance of the mission: 'the New Horizons reconnaissance of Pluto provides a wealth of knowledge and data regarding the last major body in the Solar System not previously visited by a space probe' and 'the mission to the Pluto system not only represents the culmination of more than a decade's worth of preparation on Earth, but also the beginning of a new chapter in space exploration'.
 
-39. The technological equipment on board New Horizons.
-A) A [CORRECT]
-B) B
-C) C
-D) D
-E) E
-F) F
-G) G
+39. The technological equipment on board New Horizons. {A}
+[CORRECT] Well done! Paragraph A describes the equipment: 'the spacecraft used an array of on-board scientific equipment to obtain information, including remote sensors, radio transmitters, computer subsystems, a large satellite dish and a radioisotope thermoelectric generator'.
 [INCORRECT] Paragraph A describes the equipment: 'the spacecraft used an array of on-board scientific equipment to obtain information, including remote sensors, radio transmitters, computer subsystems, a large satellite dish and a radioisotope thermoelectric generator'.
 
-40. The number of dwarf planets.
-A) A
-B) B
-C) C
-D) D
-E) E [CORRECT]
-F) F
-G) G
+40. The number of dwarf planets. {G}
+[CORRECT] Correct! Paragraph E states: 'Today, there are five known bodies in the Solar System that have been recognised by the IAU as dwarf planets. In addition to Pluto, these are Ceres, Haumea, Makemake and Eris'.
 [INCORRECT] Paragraph E states: 'Today, there are five known bodies in the Solar System that have been recognised by the IAU as dwarf planets. In addition to Pluto, these are Ceres, Haumea, Makemake and Eris'.
