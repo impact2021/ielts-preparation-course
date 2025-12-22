@@ -1017,19 +1017,15 @@ class IELTS_CM_Quiz_Handler {
             $user_answers = array();
         }
         
-        // Get correct answers from mc_options
+        // Get correct answers and build feedback for ALL options in a single loop
         $correct_indices = array();
         if (isset($question['mc_options']) && is_array($question['mc_options'])) {
             foreach ($question['mc_options'] as $idx => $option) {
+                // Track correct answers
                 if (!empty($option['is_correct'])) {
                     $correct_indices[] = $idx;
                 }
-            }
-        }
-        
-        // Build feedback for ALL options, not just selected ones
-        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
-            foreach ($question['mc_options'] as $idx => $option) {
+                // Collect feedback for all options
                 if (isset($option['feedback']) && !empty($option['feedback'])) {
                     $option_feedback[$idx] = wp_kses_post($option['feedback']);
                 }
