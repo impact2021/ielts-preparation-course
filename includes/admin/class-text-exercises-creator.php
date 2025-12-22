@@ -803,21 +803,31 @@ You have one hour for the complete test (including transferring your answers).</
         $questions_start_index = -1;
         
         for ($i = 0; $i < count($lines); $i++) {
+            $line = $lines[$i];
+            
             // Look for question section markers like "Questions 1-5", "Question 1", or numbered questions
-            if (preg_match('/^Questions?\s+\d+/', $lines[$i]) || preg_match('/^\d+\.\s+/', $lines[$i])) {
+            if (preg_match('/^Questions?\s+\d+/', $line) || preg_match('/^\d+\.\s+/', $line)) {
                 $questions_start_index = $i;
                 break;
             }
             // Skip "=== QUESTION TYPE: ... ===" header lines
-            if (preg_match('/^===.*===$/i', $lines[$i])) {
+            if (preg_match('/^===.*===$/i', $line)) {
                 continue;
             }
-            if (!empty($lines[$i])) {
-                if (empty($title)) {
-                    $title = $lines[$i];
-                } else {
-                    $title .= ' ' . trim($lines[$i]);
-                }
+            // Skip empty lines
+            if (empty($line)) {
+                continue;
+            }
+            // Skip instruction lines (they will be captured by split_into_question_sections)
+            if (preg_match('/You should spend|based on Reading|Complete the|Choose|Answer the|Write|Match/i', $line)) {
+                continue;
+            }
+            
+            // This is a title line
+            if (empty($title)) {
+                $title = $line;
+            } else {
+                $title .= ' ' . $line;
             }
         }
         
@@ -832,20 +842,26 @@ You have one hour for the complete test (including transferring your answers).</
         // Parse questions by sections
         // Split the text into sections based on "Questions X-Y" headers
         $all_questions = array();
-        $sections = $this->split_into_question_sections($lines, $questions_start_index);
+        $sections = $this->split_into_question_sections($lines, $questions_start_index, $reading_texts);
         
         foreach ($sections as $section) {
             $section_text = implode("\n", $section['lines']);
-            
-            // Prepend instructions to section text if present
-            if (!empty($section['instructions'])) {
-                $section_text = implode("\n", $section['instructions']) . "\n\n" . $section_text;
-            }
             
             // Pass reading_texts to parser so it doesn't need to extract them again
             $section_questions = $this->parse_question_section($section_text, $section['marker'], $reading_texts, $section['reading_passage_index']);
             
             if (!empty($section_questions)) {
+                // Add instructions to each question in the section
+                if (!empty($section['instructions'])) {
+                    $instructions_text = implode("\n", $section['instructions']);
+                    foreach ($section_questions as &$q) {
+                        if (!isset($q['instructions']) || empty($q['instructions'])) {
+                            $q['instructions'] = $instructions_text;
+                        }
+                    }
+                    unset($q); // Break reference
+                }
+                
                 $all_questions = array_merge($all_questions, $section_questions);
             }
         }
@@ -864,7 +880,7 @@ You have one hour for the complete test (including transferring your answers).</
     /**
      * Split text into question sections based on "Questions X-Y" or "Question X" headers
      */
-    private function split_into_question_sections($lines, $start_index) {
+    private function split_into_question_sections($lines, $start_index, $reading_texts = array()) {
         $sections = array();
         $current_section = null;
         $pending_instructions = array();
@@ -874,8 +890,21 @@ You have one hour for the complete test (including transferring your answers).</
             $line = $lines[$i];
             
             // Check if this line references a reading passage (e.g., "based on Reading Passage 2")
-            if (preg_match('/based on Reading (?:Passage|Text)\s+(\d+)/i', $line, $passage_match)) {
-                $pending_reading_passage = intval($passage_match[1]) - 1; // Convert to 0-based index
+            if (preg_match('/based on (Reading (?:Passage|Text)\s+\d+)/i', $line, $passage_match)) {
+                $passage_ref = $passage_match[1]; // e.g., "Reading Passage 2"
+                
+                // Try to find matching reading text by title
+                $found_index = null;
+                foreach ($reading_texts as $rt_idx => $rt) {
+                    $rt_title = !empty($rt['title']) ? $rt['title'] : '';
+                    // Check if title contains the passage reference (case-insensitive)
+                    if (stripos($rt_title, $passage_ref) !== false) {
+                        $found_index = $rt_idx;
+                        break;
+                    }
+                }
+                
+                $pending_reading_passage = $found_index;
                 $pending_instructions[] = $line;
                 continue;
             }
