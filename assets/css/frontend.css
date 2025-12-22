@@ -1129,8 +1129,8 @@ body.ielts-course-archive .content-area {
 }
 
 .question-navigation .question-nav-btn.answered {
-    background: #4caf50 !important;
-    border-color: #4caf50 !important;
+    background: #0073aa !important;
+    border-color: #0073aa !important;
     color: #fff !important;
 }
 
@@ -1386,16 +1386,16 @@ body.ielts-course-archive .content-area {
 /* Correct/Incorrect Answer Highlighting */
 .question-navigation .question-nav-btn.nav-correct,
 #cbt-fullscreen-modal .question-navigation .question-nav-btn.nav-correct {
-    background: #4caf50;
-    border-color: #4caf50;
-    color: #fff;
+    background: #4caf50 !important;
+    border-color: #4caf50 !important;
+    color: #fff !important;
 }
 
 .question-navigation .question-nav-btn.nav-incorrect,
 #cbt-fullscreen-modal .question-navigation .question-nav-btn.nav-incorrect {
-    background: #f44336;
-    border-color: #f44336;
-    color: #fff;
+    background: #f44336 !important;
+    border-color: #f44336 !important;
+    color: #fff !important;
 }
 
 .computer-based-container .quiz-question.question-correct,
