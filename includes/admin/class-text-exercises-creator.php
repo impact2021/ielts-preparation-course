@@ -890,10 +890,11 @@ You have one hour for the complete test (including transferring your answers).</
             $line = $lines[$i];
             
             // Check if this line references a reading passage (e.g., "based on Reading Passage 2")
-            if (preg_match('/based on (Reading (?:Passage|Text)\s+\d+)/i', $line, $passage_match)) {
+            if (preg_match('/based on (Reading (?:Passage|Text)\s+(\d+))/i', $line, $passage_match)) {
                 $passage_ref = $passage_match[1]; // e.g., "Reading Passage 2"
+                $passage_num = intval($passage_match[2]); // Extract the number (e.g., 2)
                 
-                // Try to find matching reading text by title
+                // Try to find matching reading text by title first
                 $found_index = null;
                 foreach ($reading_texts as $rt_idx => $rt) {
                     $rt_title = !empty($rt['title']) ? $rt['title'] : '';
@@ -901,6 +902,16 @@ You have one hour for the complete test (including transferring your answers).</
                     if (stripos($rt_title, $passage_ref) !== false) {
                         $found_index = $rt_idx;
                         break;
+                    }
+                }
+                
+                // If not found by title, try matching by passage number
+                // "Reading Passage 1" or "Reading Text 1" should map to index 0
+                // "Reading Passage 2" or "Reading Text 2" should map to index 1, etc.
+                if ($found_index === null && $passage_num > 0) {
+                    $expected_index = $passage_num - 1;
+                    if (isset($reading_texts[$expected_index])) {
+                        $found_index = $expected_index;
                     }
                 }
                 
@@ -2039,6 +2050,7 @@ You have one hour for the complete test (including transferring your answers).</
         // Extract title and detect question type
         $title = '';
         $start_index = 0;
+        $next_question_reading_text_id = null; // Initialize for potential [LINKED TO] markers
         for ($i = 0; $i < count($lines); $i++) {
             if (empty($lines[$i])) {
                 continue;
@@ -2971,10 +2983,38 @@ You have one hour for the complete test (including transferring your answers).</
     private function convert_short_answer_section($questions, $reading_texts, $start_num) {
         $output = array();
         
+        // Check if all questions in this section have the same instructions
+        $common_instructions = null;
+        $all_same = false;
+        if (!empty($questions)) {
+            $first_instructions = isset($questions[0]['instructions']) ? $questions[0]['instructions'] : '';
+            $all_same = true;
+            foreach ($questions as $q) {
+                $q_instructions = isset($q['instructions']) ? $q['instructions'] : '';
+                if ($q_instructions !== $first_instructions) {
+                    $all_same = false;
+                    break;
+                }
+            }
+            
+            // If all questions have the same instructions, output them once at the section level
+            if ($all_same && !empty($first_instructions)) {
+                $common_instructions = $first_instructions;
+                $output[] = strip_tags($common_instructions);
+                $output[] = '';
+            }
+        }
+        
         foreach ($questions as $index => $question) {
             $question_num = $start_num + $index;
             $question_text = isset($question['question']) ? $question['question'] : '';
             $correct_answer = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+            
+            // Output per-question instructions if they differ from common instructions
+            if (!$all_same && isset($question['instructions']) && !empty($question['instructions'])) {
+                $output[] = strip_tags($question['instructions']);
+                $output[] = '';
+            }
             
             // Add linked reading text if present
             if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
@@ -3025,10 +3065,38 @@ You have one hour for the complete test (including transferring your answers).</
     private function convert_multiple_choice_section($questions, $reading_texts, $start_num) {
         $output = array();
         
+        // Check if all questions in this section have the same instructions
+        $common_instructions = null;
+        $all_same = false;
+        if (!empty($questions)) {
+            $first_instructions = isset($questions[0]['instructions']) ? $questions[0]['instructions'] : '';
+            $all_same = true;
+            foreach ($questions as $q) {
+                $q_instructions = isset($q['instructions']) ? $q['instructions'] : '';
+                if ($q_instructions !== $first_instructions) {
+                    $all_same = false;
+                    break;
+                }
+            }
+            
+            // If all questions have the same instructions, output them once at the section level
+            if ($all_same && !empty($first_instructions)) {
+                $common_instructions = $first_instructions;
+                $output[] = strip_tags($common_instructions);
+                $output[] = '';
+            }
+        }
+        
         foreach ($questions as $index => $question) {
             $question_num = $start_num + $index;
             $question_text = isset($question['question']) ? $question['question'] : '';
             $options = isset($question['mc_options']) ? $question['mc_options'] : array();
+            
+            // Output per-question instructions if they differ from common instructions
+            if (!$all_same && isset($question['instructions']) && !empty($question['instructions'])) {
+                $output[] = strip_tags($question['instructions']);
+                $output[] = '';
+            }
             
             // Add linked reading text if present
             if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
@@ -3096,10 +3164,38 @@ You have one hour for the complete test (including transferring your answers).</
     private function convert_true_false_section($questions, $reading_texts, $start_num) {
         $output = array();
         
+        // Check if all questions in this section have the same instructions
+        $common_instructions = null;
+        $all_same = false;
+        if (!empty($questions)) {
+            $first_instructions = isset($questions[0]['instructions']) ? $questions[0]['instructions'] : '';
+            $all_same = true;
+            foreach ($questions as $q) {
+                $q_instructions = isset($q['instructions']) ? $q['instructions'] : '';
+                if ($q_instructions !== $first_instructions) {
+                    $all_same = false;
+                    break;
+                }
+            }
+            
+            // If all questions have the same instructions, output them once at the section level
+            if ($all_same && !empty($first_instructions)) {
+                $common_instructions = $first_instructions;
+                $output[] = strip_tags($common_instructions);
+                $output[] = '';
+            }
+        }
+        
         foreach ($questions as $index => $question) {
             $question_num = $start_num + $index;
             $question_text = isset($question['question']) ? $question['question'] : '';
             $correct_answer = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+            
+            // Output per-question instructions if they differ from common instructions
+            if (!$all_same && isset($question['instructions']) && !empty($question['instructions'])) {
+                $output[] = strip_tags($question['instructions']);
+                $output[] = '';
+            }
             
             // Add linked reading text if present
             if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
@@ -3151,8 +3247,36 @@ You have one hour for the complete test (including transferring your answers).</
     private function convert_summary_completion_section($questions, $reading_texts, $start_num) {
         $output = array();
         
+        // Check if all questions in this section have the same instructions
+        $common_instructions = null;
+        $all_same = false;
+        if (!empty($questions)) {
+            $first_instructions = isset($questions[0]['instructions']) ? $questions[0]['instructions'] : '';
+            $all_same = true;
+            foreach ($questions as $q) {
+                $q_instructions = isset($q['instructions']) ? $q['instructions'] : '';
+                if ($q_instructions !== $first_instructions) {
+                    $all_same = false;
+                    break;
+                }
+            }
+            
+            // If all questions have the same instructions, output them once at the section level
+            if ($all_same && !empty($first_instructions)) {
+                $common_instructions = $first_instructions;
+                $output[] = strip_tags($common_instructions);
+                $output[] = '';
+            }
+        }
+        
         foreach ($questions as $index => $question) {
             $question_text = isset($question['question']) ? $question['question'] : '';
+            
+            // Output per-question instructions if they differ from common instructions
+            if (!$all_same && isset($question['instructions']) && !empty($question['instructions'])) {
+                $output[] = strip_tags($question['instructions']);
+                $output[] = '';
+            }
             
             // Add linked reading text if present
             if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
@@ -3200,9 +3324,37 @@ You have one hour for the complete test (including transferring your answers).</
     private function convert_dropdown_paragraph_section($questions, $reading_texts, $start_num) {
         $output = array();
         
+        // Check if all questions in this section have the same instructions
+        $common_instructions = null;
+        $all_same = false;
+        if (!empty($questions)) {
+            $first_instructions = isset($questions[0]['instructions']) ? $questions[0]['instructions'] : '';
+            $all_same = true;
+            foreach ($questions as $q) {
+                $q_instructions = isset($q['instructions']) ? $q['instructions'] : '';
+                if ($q_instructions !== $first_instructions) {
+                    $all_same = false;
+                    break;
+                }
+            }
+            
+            // If all questions have the same instructions, output them once at the section level
+            if ($all_same && !empty($first_instructions)) {
+                $common_instructions = $first_instructions;
+                $output[] = strip_tags($common_instructions);
+                $output[] = '';
+            }
+        }
+        
         foreach ($questions as $index => $question) {
             $question_text = isset($question['question']) ? $question['question'] : '';
             $dropdown_options = isset($question['dropdown_options']) ? $question['dropdown_options'] : array();
+            
+            // Output per-question instructions if they differ from common instructions
+            if (!$all_same && isset($question['instructions']) && !empty($question['instructions'])) {
+                $output[] = strip_tags($question['instructions']);
+                $output[] = '';
+            }
             
             // Add linked reading text if present
             if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
@@ -3484,11 +3636,41 @@ You have one hour for the complete test (including transferring your answers).</
             }
         }
         
+        // Check if questions have common instructions and add them once
+        $common_instructions = null;
+        $all_same = false;
+        if (!empty($questions)) {
+            $first_instructions = isset($questions[0]['instructions']) ? $questions[0]['instructions'] : '';
+            if (!empty($first_instructions)) {
+                $all_same = true;
+                foreach ($questions as $q) {
+                    $q_instructions = isset($q['instructions']) ? $q['instructions'] : '';
+                    if ($q_instructions !== $first_instructions) {
+                        $all_same = false;
+                        break;
+                    }
+                }
+                
+                // If all questions have the same instructions, output them once
+                if ($all_same) {
+                    $common_instructions = $first_instructions;
+                    $output[] = strip_tags($common_instructions);
+                    $output[] = '';
+                }
+            }
+        }
+        
         // Add questions
         foreach ($questions as $index => $question) {
             $question_num = $index + 1;
             $question_text = isset($question['question']) ? $question['question'] : '';
             $correct_answer = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+            
+            // Output per-question instructions if they differ from common instructions
+            if (!$all_same && isset($question['instructions']) && !empty($question['instructions'])) {
+                $output[] = strip_tags($question['instructions']);
+                $output[] = '';
+            }
             
             // Add linked reading text if present
             if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
