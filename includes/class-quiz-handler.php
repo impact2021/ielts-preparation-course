@@ -471,6 +471,9 @@ class IELTS_CM_Quiz_Handler {
                     // Get correct answer feedback
                     if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
                         $feedback = wp_kses_post($question['correct_feedback']);
+                    } else {
+                        // Provide default feedback for correct answers when no custom feedback is set
+                        $feedback = __('Correct!', 'ielts-course-manager');
                     }
                 } else {
                     // For multiple choice, check if there's specific feedback for this option
