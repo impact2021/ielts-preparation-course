@@ -1423,8 +1423,15 @@ body.ielts-course-archive .content-area {
 }
 
 .question-options .option-label.answer-correct-highlight {
-    background: #c8e6c9;
-    border: 3px solid #4caf50;
+    background: #c8e6c9 !important;
+    border: 3px solid #4caf50 !important;
+}
+
+/* Ensure green border is visible for both standard and computer-based quiz layouts */
+.ielts-single-quiz .question-options .option-label.answer-correct-highlight,
+.ielts-computer-based-quiz .question-options .option-label.answer-correct-highlight {
+    background: #c8e6c9 !important;
+    border: 3px solid #4caf50 !important;
 }
 
 .question-answer input.answer-correct,
