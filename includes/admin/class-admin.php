@@ -2979,8 +2979,8 @@ class IELTS_CM_Admin {
                         $question_data['dropdown_options'] = $dropdown_options;
                         $question_data['correct_answer'] = implode('|', $correct_answer_parts);
                         $question_data['question'] = $question_text; // Update question text with converted format
-                    } elseif ($question['type'] === 'summary_completion' && isset($question['summary_fields']) && is_array($question['summary_fields'])) {
-                        // Handle summary completion questions
+                    } elseif (($question['type'] === 'summary_completion' || $question['type'] === 'table_completion') && isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+                        // Handle summary completion and table completion questions
                         $sanitized_summary_fields = array();
                         
                         foreach ($question['summary_fields'] as $field_num => $field_data) {
