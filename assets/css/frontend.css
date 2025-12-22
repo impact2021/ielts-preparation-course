@@ -1424,8 +1424,7 @@ body.ielts-course-archive .content-area {
 
 .question-options .option-label.answer-correct-highlight {
     background: #c8e6c9;
-    border-color: #4caf50;
-    border-width: 3px;
+    border: 3px solid #4caf50;
 }
 
 .question-answer input.answer-correct,
