@@ -802,6 +802,7 @@ You have one hour for the complete test (including transferring your answers).</
         
         $title = '';
         $questions_start_index = -1;
+        $non_title_start_index = -1; // Track where instructions/questions start (before "Questions X-Y" header)
         
         for ($i = 0; $i < count($lines); $i++) {
             $line = $lines[$i];
@@ -819,16 +820,22 @@ You have one hour for the complete test (including transferring your answers).</
             if (empty($line)) {
                 continue;
             }
-            // Skip instruction lines (they will be captured by split_into_question_sections)
+            // Check if this is an instruction line (appears after title but before question sections)
             if (preg_match('/You should spend|based on Reading|Complete the|Choose|Answer the|Write|Match/i', $line)) {
-                continue;
+                // Track where non-title content starts (for passing to split_into_question_sections)
+                if ($non_title_start_index === -1) {
+                    $non_title_start_index = $i;
+                }
+                continue; // Skip adding this to title
             }
             
-            // This is a title line
-            if (empty($title)) {
-                $title = $line;
-            } else {
-                $title .= ' ' . $line;
+            // This is a title line (only if we haven't found non-title content yet)
+            if ($non_title_start_index === -1) {
+                if (empty($title)) {
+                    $title = $line;
+                } else {
+                    $title .= ' ' . $line;
+                }
             }
         }
         
@@ -842,8 +849,11 @@ You have one hour for the complete test (including transferring your answers).</
         
         // Parse questions by sections
         // Split the text into sections based on "Questions X-Y" headers
+        // Start from non_title_start_index if we found instruction lines before the first section,
+        // otherwise start from the first question section header
+        $split_start_index = ($non_title_start_index !== -1) ? $non_title_start_index : $questions_start_index;
         $all_questions = array();
-        $sections = $this->split_into_question_sections($lines, $questions_start_index, $reading_texts);
+        $sections = $this->split_into_question_sections($lines, $split_start_index, $reading_texts);
         
         foreach ($sections as $section) {
             $section_text = implode("\n", $section['lines']);
