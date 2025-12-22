@@ -379,6 +379,11 @@
                                     var userAnswers = questionResult.user_answer || [];
                                     var correctAnswers = questionResult.correct_answer || [];
                                     
+                                    // Handle both old array format and new object format
+                                    if (correctAnswers.correct_indices) {
+                                        correctAnswers = correctAnswers.correct_indices;
+                                    }
+                                    
                                     // Convert to arrays if needed
                                     if (!Array.isArray(userAnswers)) {
                                         userAnswers = [userAnswers];
@@ -500,6 +505,11 @@
                                     var userAnswers = questionResult.user_answer || [];
                                     var correctAnswers = questionResult.correct_answer || [];
                                     
+                                    // Handle both old array format and new object format
+                                    if (correctAnswers.correct_indices) {
+                                        correctAnswers = correctAnswers.correct_indices;
+                                    }
+                                    
                                     // Convert to arrays if needed
                                     if (!Array.isArray(userAnswers)) {
                                         userAnswers = [userAnswers];
@@ -539,7 +549,44 @@
                             }
                             
                             // Add per-question text feedback messages for all layouts
-                            if (questionResult.feedback) {
+                            if (questionResult.question_type === 'multi_select') {
+                                // For multi_select, show individual feedback under each selected option
+                                // Remove any existing feedback first
+                                questionElement.find('.option-feedback-message').remove();
+                                
+                                // Get option feedback from correct_answer object
+                                var optionFeedback = questionResult.correct_answer && questionResult.correct_answer.option_feedback 
+                                    ? questionResult.correct_answer.option_feedback 
+                                    : {};
+                                
+                                // Display feedback under each selected option that has feedback
+                                $.each(optionFeedback, function(optionIndex, feedbackText) {
+                                    if (feedbackText) {
+                                        var checkbox = questionElement.find('input[type="checkbox"][value="' + optionIndex + '"]');
+                                        var optionLabel = checkbox.closest('.option-label');
+                                        
+                                        // Create feedback element for this option
+                                        var feedbackDiv = $('<div>')
+                                            .addClass('option-feedback-message')
+                                            .html(feedbackText); // Using .html() because feedback explicitly supports HTML formatting
+                                                                 // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
+                                        
+                                        // Append feedback after the option label
+                                        optionLabel.after(feedbackDiv);
+                                    }
+                                });
+                                
+                                // Also show general no-answer feedback if provided and no options were selected
+                                if (questionResult.feedback && (!questionResult.user_answer || questionResult.user_answer.length === 0)) {
+                                    questionElement.find('.question-feedback-message').remove();
+                                    var feedbackDiv = $('<div>')
+                                        .addClass('question-feedback-message')
+                                        .addClass('feedback-incorrect')
+                                        .html(questionResult.feedback);
+                                    questionElement.append(feedbackDiv);
+                                }
+                            } else if (questionResult.feedback) {
+                                // For other question types, show general feedback
                                 // Remove any existing feedback first
                                 questionElement.find('.question-feedback-message').remove();
                                 
