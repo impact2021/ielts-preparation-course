@@ -642,6 +642,42 @@ You have one hour for the complete test (including transferring your answers).</
     }
     
     /**
+     * Parse instructions block and return instructions text and next index
+     * Helper function to extract [INSTRUCTIONS]...[END INSTRUCTIONS] blocks
+     * 
+     * @param array $lines Array of text lines
+     * @param int $current_index Current index in the lines array
+     * @return array Array with 'instructions' and 'next_index'
+     */
+    private function parse_instructions_block($lines, $current_index) {
+        $instructions = null;
+        $i = $current_index;
+        
+        // Check if current line is [INSTRUCTIONS]
+        if ($i < count($lines) && preg_match('/^\[INSTRUCTIONS\]/i', $lines[$i])) {
+            $instructions_lines = array();
+            $i++; // Move past [INSTRUCTIONS] line
+            
+            // Collect all lines until [END INSTRUCTIONS]
+            while ($i < count($lines) && !preg_match('/^\[END INSTRUCTIONS\]/i', $lines[$i])) {
+                $instructions_lines[] = $lines[$i];
+                $i++;
+            }
+            
+            if ($i < count($lines) && preg_match('/^\[END INSTRUCTIONS\]/i', $lines[$i])) {
+                $i++; // Move past [END INSTRUCTIONS] line
+            }
+            
+            $instructions = implode("\n", $instructions_lines);
+        }
+        
+        return array(
+            'instructions' => $instructions,
+            'next_index' => $i
+        );
+    }
+    
+    /**
      * Extract metadata from exercise settings block in text
      * 
      * @param string $text The exercise text
@@ -1182,21 +1218,10 @@ You have one hour for the complete test (including transferring your answers).</
             }
             
             // Check for [INSTRUCTIONS] block and extract for next question
-            if (preg_match('/^\[INSTRUCTIONS\]/i', $line)) {
-                $instructions_lines = array();
-                $i++; // Move past [INSTRUCTIONS] line
-                
-                // Collect all lines until [END INSTRUCTIONS]
-                while ($i < count($question_lines) && !preg_match('/^\[END INSTRUCTIONS\]/i', $question_lines[$i])) {
-                    $instructions_lines[] = $question_lines[$i];
-                    $i++;
-                }
-                
-                if ($i < count($question_lines) && preg_match('/^\[END INSTRUCTIONS\]/i', $question_lines[$i])) {
-                    $i++; // Move past [END INSTRUCTIONS] line
-                }
-                
-                $next_question_instructions = implode("\n", $instructions_lines);
+            $instructions_result = $this->parse_instructions_block($question_lines, $i);
+            if ($instructions_result['instructions'] !== null) {
+                $next_question_instructions = $instructions_result['instructions'];
+                $i = $instructions_result['next_index'];
                 continue;
             }
             
@@ -1477,6 +1502,7 @@ You have one hour for the complete test (including transferring your answers).</
         $current_options = array();
         $feedback_lines = array();
         $current_feedback_type = 'incorrect'; // Track which feedback type we're collecting: 'correct', 'incorrect', 'no_answer'
+        $next_question_instructions = null;
         for ($i = $start_index; $i < count($lines); $i++) {
             $line = $lines[$i];
             
@@ -1484,6 +1510,14 @@ You have one hour for the complete test (including transferring your answers).</
             if (preg_match('/^\[LINKED TO:\s*(.+?)\]/i', $line, $link_match)) {
                 $linked_title = trim($link_match[1]);
                 $next_question_reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
+                continue;
+            }
+            
+            // Check for [INSTRUCTIONS] block and extract for next question
+            $instructions_result = $this->parse_instructions_block($lines, $i);
+            if ($instructions_result['instructions'] !== null) {
+                $next_question_instructions = $instructions_result['instructions'];
+                $i = $instructions_result['next_index'] - 1; // -1 because loop will increment
                 continue;
             }
             
@@ -1570,9 +1604,11 @@ You have one hour for the complete test (including transferring your answers).</
                     $questions[] = $current_question;
                 }
                 
-                // Use the stored reading text ID for this question
+                // Use the stored reading text ID and instructions for this question
                 $reading_text_id = $next_question_reading_text_id;
+                $instructions = $next_question_instructions;
                 $next_question_reading_text_id = null; // Reset for next question
+                $next_question_instructions = null; // Reset for next question
                 
                 // Start new question
                 $current_question = array(
@@ -1581,7 +1617,8 @@ You have one hour for the complete test (including transferring your answers).</
                     'points' => 1,
                     'correct_feedback' => '',
                     'incorrect_feedback' => '',
-                    'no_answer_feedback' => ''
+                    'no_answer_feedback' => '',
+                    'instructions' => !empty($instructions) ? wp_kses_post($instructions) : ''
                 );
                 
                 // Add reading text link if found
@@ -1694,6 +1731,12 @@ You have one hour for the complete test (including transferring your answers).</
                 // Strip question number prefix if present (e.g., "1. Question text" -> "Question text")
                 $question_text = preg_replace('/^\d+\.\s+/', '', $line);
                 
+                // Use the stored reading text ID and instructions for this question
+                $reading_text_id = $next_question_reading_text_id;
+                $instructions = $next_question_instructions;
+                $next_question_reading_text_id = null; // Reset for next question
+                $next_question_instructions = null; // Reset for next question
+                
                 // This is a new question
                 $current_question = array(
                     'type' => 'true_false',
@@ -1701,8 +1744,15 @@ You have one hour for the complete test (including transferring your answers).</
                     'points' => 1,
                     'correct_feedback' => '',
                     'incorrect_feedback' => '',
-                    'no_answer_feedback' => ''
+                    'no_answer_feedback' => '',
+                    'instructions' => !empty($instructions) ? wp_kses_post($instructions) : ''
                 );
+                
+                // Add reading text link if found
+                if ($reading_text_id !== null) {
+                    $current_question['reading_text_id'] = $reading_text_id;
+                }
+                
                 $state = 'COLLECTING_OPTIONS';
             } elseif ($state === 'MAYBE_FEEDBACK') {
                 // Check for feedback markers first
@@ -1835,14 +1885,28 @@ You have one hour for the complete test (including transferring your answers).</
                     
                     // Start new question - strip question number prefix if present
                     $question_text = preg_replace('/^\d+\.\s+/', '', $line);
+                    
+                    // Use the stored reading text ID and instructions for this question
+                    $reading_text_id = $next_question_reading_text_id;
+                    $instructions = $next_question_instructions;
+                    $next_question_reading_text_id = null; // Reset for next question
+                    $next_question_instructions = null; // Reset for next question
+                    
                     $current_question = array(
                         'type' => 'true_false',
                         'question' => wp_kses_post($question_text),
                         'points' => 1,
                         'correct_feedback' => '',
                         'incorrect_feedback' => '',
-                        'no_answer_feedback' => ''
+                        'no_answer_feedback' => '',
+                        'instructions' => !empty($instructions) ? wp_kses_post($instructions) : ''
                     );
+                    
+                    // Add reading text link if found
+                    if ($reading_text_id !== null) {
+                        $current_question['reading_text_id'] = $reading_text_id;
+                    }
+                    
                     $state = 'COLLECTING_OPTIONS';
                 }
             } elseif ($state === 'COLLECTING_OPTIONS') {
@@ -2110,6 +2174,8 @@ You have one hour for the complete test (including transferring your answers).</
         $questions = array();
         $current_question = null;
         $current_options = array();
+        $next_question_reading_text_id = null;
+        $next_question_instructions = null;
         for ($i = $start_index; $i < count($lines); $i++) {
             $line = $lines[$i];
             
@@ -2117,6 +2183,14 @@ You have one hour for the complete test (including transferring your answers).</
             if (preg_match('/^\[LINKED TO:\s*(.+?)\]/i', $line, $link_match)) {
                 $linked_title = trim($link_match[1]);
                 $next_question_reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
+                continue;
+            }
+            
+            // Check for [INSTRUCTIONS] block and extract for next question
+            $instructions_result = $this->parse_instructions_block($lines, $i);
+            if ($instructions_result['instructions'] !== null) {
+                $next_question_instructions = $instructions_result['instructions'];
+                $i = $instructions_result['next_index'] - 1; // -1 because loop will increment
                 continue;
             }
             
@@ -2169,9 +2243,11 @@ You have one hour for the complete test (including transferring your answers).</
                     $current_options = array();
                 }
                 
-                // Use the stored reading text ID for this question
+                // Use the stored reading text ID and instructions for this question
                 $reading_text_id = $next_question_reading_text_id;
+                $instructions = $next_question_instructions;
                 $next_question_reading_text_id = null; // Reset for next question
+                $next_question_instructions = null; // Reset for next question
                 
                 // Start new question
                 $current_question = array(
@@ -2180,7 +2256,8 @@ You have one hour for the complete test (including transferring your answers).</
                     'points' => 1,
                     'correct_feedback' => '',
                     'incorrect_feedback' => '',
-                    'no_answer_feedback' => ''
+                    'no_answer_feedback' => '',
+                    'instructions' => !empty($instructions) ? wp_kses_post($instructions) : ''
                 );
                 
                 // Add reading text link if found
