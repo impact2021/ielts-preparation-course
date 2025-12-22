@@ -3240,6 +3240,7 @@ You have one hour for the complete test (including transferring your answers).</
         
         // Check if all questions in this section have the same instructions
         $common_instructions = null;
+        $all_same = false; // Default to false, will be set to true if all instructions match
         if (!empty($questions)) {
             $first_instructions = isset($questions[0]['instructions']) ? $questions[0]['instructions'] : '';
             $all_same = true;
@@ -3263,7 +3264,7 @@ You have one hour for the complete test (including transferring your answers).</
             $question_text = isset($question['question']) ? $question['question'] : '';
             
             // Output per-question instructions if they differ from common instructions
-            if ($common_instructions === null && isset($question['instructions']) && !empty($question['instructions'])) {
+            if (!$all_same && isset($question['instructions']) && !empty($question['instructions'])) {
                 $output[] = strip_tags($question['instructions']);
                 $output[] = '';
             }
@@ -3316,6 +3317,7 @@ You have one hour for the complete test (including transferring your answers).</
         
         // Check if all questions in this section have the same instructions
         $common_instructions = null;
+        $all_same = false; // Default to false, will be set to true if all instructions match
         if (!empty($questions)) {
             $first_instructions = isset($questions[0]['instructions']) ? $questions[0]['instructions'] : '';
             $all_same = true;
@@ -3340,7 +3342,7 @@ You have one hour for the complete test (including transferring your answers).</
             $dropdown_options = isset($question['dropdown_options']) ? $question['dropdown_options'] : array();
             
             // Output per-question instructions if they differ from common instructions
-            if ($common_instructions === null && isset($question['instructions']) && !empty($question['instructions'])) {
+            if (!$all_same && isset($question['instructions']) && !empty($question['instructions'])) {
                 $output[] = strip_tags($question['instructions']);
                 $output[] = '';
             }
