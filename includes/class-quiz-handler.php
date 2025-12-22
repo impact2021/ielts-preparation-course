@@ -227,12 +227,14 @@ class IELTS_CM_Quiz_Handler {
                 
                 // Build combined feedback
                 $feedback_parts = array();
-                $display_nums = $question_display_numbers[$index];
-                foreach ($field_results as $field_num => $field_result) {
-                    if (!empty($field_result['feedback'])) {
-                        // Calculate the actual question number for this field
-                        $question_number = $display_nums['start'] + intval($field_num) - 1;
-                        $feedback_parts[] = '<strong>' . sprintf(__('Question %s:', 'ielts-course-manager'), $question_number) . '</strong> ' . $field_result['feedback'];
+                if (isset($question_display_numbers[$index])) {
+                    $display_nums = $question_display_numbers[$index];
+                    foreach ($field_results as $field_num => $field_result) {
+                        if (!empty($field_result['feedback'])) {
+                            // Calculate the actual question number for this field
+                            $question_number = $display_nums['start'] + intval($field_num) - 1;
+                            $feedback_parts[] = '<strong>' . sprintf(__('Question %s:', 'ielts-course-manager'), $question_number) . '</strong> ' . $field_result['feedback'];
+                        }
                     }
                 }
                 $feedback = !empty($feedback_parts) ? implode('<br>', $feedback_parts) : '';
@@ -316,7 +318,7 @@ class IELTS_CM_Quiz_Handler {
                     );
                     
                     // Add to feedback parts if there's feedback for this dropdown
-                    if (!empty($dropdown_feedback)) {
+                    if (!empty($dropdown_feedback) && isset($question_display_numbers[$index])) {
                         // Calculate the actual question number for this dropdown
                         $display_nums = $question_display_numbers[$index];
                         $question_number = $display_nums['start'] + intval($dropdown_num) - 1;
@@ -418,12 +420,14 @@ class IELTS_CM_Quiz_Handler {
                 
                 // Build combined feedback
                 $feedback_parts = array();
-                $display_nums = $question_display_numbers[$index];
-                foreach ($field_results as $field_num => $field_result) {
-                    if (!empty($field_result['feedback'])) {
-                        // Calculate the actual question number for this field
-                        $question_number = $display_nums['start'] + intval($field_num) - 1;
-                        $feedback_parts[] = '<strong>' . sprintf(__('Question %s:', 'ielts-course-manager'), $question_number) . '</strong> ' . $field_result['feedback'];
+                if (isset($question_display_numbers[$index])) {
+                    $display_nums = $question_display_numbers[$index];
+                    foreach ($field_results as $field_num => $field_result) {
+                        if (!empty($field_result['feedback'])) {
+                            // Calculate the actual question number for this field
+                            $question_number = $display_nums['start'] + intval($field_num) - 1;
+                            $feedback_parts[] = '<strong>' . sprintf(__('Question %s:', 'ielts-course-manager'), $question_number) . '</strong> ' . $field_result['feedback'];
+                        }
                     }
                 }
                 $feedback = !empty($feedback_parts) ? implode('<br>', $feedback_parts) : '';
@@ -724,6 +728,9 @@ class IELTS_CM_Quiz_Handler {
                         // For short answer, sentence completion, labelling, and true/false - use correct_feedback
                         if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
                             $feedback = wp_kses_post($question['correct_feedback']);
+                        } else {
+                            // Provide default feedback if none configured
+                            $feedback = __('Correct!', 'ielts-course-manager');
                         }
                     }
                 } else {
@@ -751,6 +758,9 @@ class IELTS_CM_Quiz_Handler {
                         // For short answer, sentence completion, labelling, and true/false - use incorrect_feedback
                         if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
                             $feedback = wp_kses_post($question['incorrect_feedback']);
+                        } else {
+                            // Provide default feedback if none configured
+                            $feedback = __('Incorrect', 'ielts-course-manager');
                         }
                     }
                 }
@@ -847,8 +857,8 @@ class IELTS_CM_Quiz_Handler {
             case 'sentence_completion':
             case 'table_completion':
             case 'labelling':
-                // Check if this is a summary completion with multiple inline answers
-                if (is_array($user_answer) && $type === 'summary_completion') {
+                // Check if this is a summary completion or table completion with multiple inline answers
+                if (is_array($user_answer) && ($type === 'summary_completion' || $type === 'table_completion')) {
                     // Handle inline answers - correct_answer should be in format "1:answer1|answer1alt|2:answer2|answer2alt"
                     $correct_answers = isset($question['correct_answer']) ? $question['correct_answer'] : '';
                     
