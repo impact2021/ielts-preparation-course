@@ -240,13 +240,18 @@ class IELTS_CM_Quiz_Handler {
                 // Store field results for display
                 $correct_answer = array('field_results' => $field_results);
             } elseif ($question['type'] === 'dropdown_paragraph') {
-                // Dropdown paragraph - score each dropdown separately (1 point each)
+                // Dropdown paragraph - score each dropdown separately (1 point each) with individual feedback
                 $user_answer = isset($answers[$index]) ? $answers[$index] : array();
                 
                 // Ensure user_answer is an array
                 if (!is_array($user_answer)) {
                     $user_answer = array();
                 }
+                
+                // Get dropdown options to access feedback for each dropdown
+                $dropdown_options = isset($question['dropdown_options']) && is_array($question['dropdown_options']) 
+                    ? $question['dropdown_options'] 
+                    : array();
                 
                 // Parse correct answers from question's correct_answer field
                 $correct_answers = isset($question['correct_answer']) ? $question['correct_answer'] : '';
@@ -262,41 +267,88 @@ class IELTS_CM_Quiz_Handler {
                     }
                 }
                 
-                // Check each dropdown and award 1 point for each correct answer
+                // Check each dropdown and collect individual feedback
+                $dropdown_results = array();
                 $all_correct = true;
                 $any_answered = false;
+                $feedback_parts = array();
+                
                 foreach ($answer_map as $dropdown_num => $correct_letter) {
+                    $user_letter = '';
                     if (isset($user_answer[$dropdown_num])) {
                         $user_letter = strtoupper(trim($user_answer[$dropdown_num]));
-                        if (!empty($user_letter)) {
-                            $any_answered = true;
-                            if ($user_letter === $correct_letter) {
-                                $points_earned += 1;
-                            } else {
-                                $all_correct = false;
+                    }
+                    
+                    $dropdown_correct = false;
+                    $dropdown_feedback = '';
+                    
+                    if (!empty($user_letter)) {
+                        $any_answered = true;
+                        if ($user_letter === $correct_letter) {
+                            $dropdown_correct = true;
+                            $points_earned += 1;
+                            
+                            // Get correct feedback for this dropdown
+                            if (isset($dropdown_options[$dropdown_num]['correct_feedback']) && !empty($dropdown_options[$dropdown_num]['correct_feedback'])) {
+                                $dropdown_feedback = wp_kses_post($dropdown_options[$dropdown_num]['correct_feedback']);
                             }
                         } else {
                             $all_correct = false;
+                            
+                            // Get incorrect feedback for this dropdown
+                            if (isset($dropdown_options[$dropdown_num]['incorrect_feedback']) && !empty($dropdown_options[$dropdown_num]['incorrect_feedback'])) {
+                                $dropdown_feedback = wp_kses_post($dropdown_options[$dropdown_num]['incorrect_feedback']);
+                            }
                         }
                     } else {
                         $all_correct = false;
+                        
+                        // Get no answer feedback for this dropdown
+                        if (isset($dropdown_options[$dropdown_num]['no_answer_feedback']) && !empty($dropdown_options[$dropdown_num]['no_answer_feedback'])) {
+                            $dropdown_feedback = wp_kses_post($dropdown_options[$dropdown_num]['no_answer_feedback']);
+                        }
+                    }
+                    
+                    // Store result for this dropdown
+                    $dropdown_results[$dropdown_num] = array(
+                        'correct' => $dropdown_correct,
+                        'feedback' => $dropdown_feedback
+                    );
+                    
+                    // Add to feedback parts if there's feedback for this dropdown
+                    if (!empty($dropdown_feedback)) {
+                        // Calculate the actual question number for this dropdown
+                        $display_nums = $question_display_numbers[$index];
+                        $question_number = $display_nums['start'] + intval($dropdown_num) - 1;
+                        $feedback_parts[] = '<strong>' . sprintf(__('Dropdown %s:', 'ielts-course-manager'), $dropdown_num) . '</strong> ' . $dropdown_feedback;
                     }
                 }
                 
                 $score += $points_earned;
                 $is_correct = $all_correct && $any_answered;
                 
-                // Get feedback
-                if ($is_correct && isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
-                    $feedback = wp_kses_post($question['correct_feedback']);
-                } elseif (!$is_correct && isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
-                    $feedback = wp_kses_post($question['incorrect_feedback']);
+                // Combine individual dropdown feedback
+                $feedback = !empty($feedback_parts) ? implode('<br>', $feedback_parts) : '';
+                
+                // If no individual feedback, fall back to general feedback
+                if (empty($feedback)) {
+                    if ($is_correct && isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
+                        $feedback = wp_kses_post($question['correct_feedback']);
+                    } elseif (!$is_correct && isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                        $feedback = wp_kses_post($question['incorrect_feedback']);
+                    }
                 }
                 
-                // Store correct answer for display
+                // Store correct answer and dropdown results for display
                 if ($correct_answer === null && isset($question['correct_answer'])) {
                     $correct_answer = $question['correct_answer'];
                 }
+                
+                // Store dropdown results for potential use in display
+                $correct_answer = array(
+                    'correct_answer' => isset($question['correct_answer']) ? $question['correct_answer'] : '',
+                    'dropdown_results' => $dropdown_results
+                );
             } elseif ($question['type'] === 'table_completion' && isset($question['summary_fields']) && is_array($question['summary_fields'])) {
                 // Table completion with fields - score each field separately (same as summary completion)
                 $field_results = array();
