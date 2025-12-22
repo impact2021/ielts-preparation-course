@@ -211,75 +211,123 @@ IX. Theory becomes reality
 
 14. Paragraph A
 A) I. The original concept sees many modern applications
+Incorrect - this describes Paragraph F which discusses modern applications of bar codes
 B) II. Grocery stores worry about the costs
+Incorrect - while costs are mentioned in Paragraph E, this is not the main focus of Paragraph A
 C) III. Early ideas lead to modern concepts [CORRECT]
+Correct - Paragraph A discusses the early concepts of automated systems from the late 19th century with punch cards in the 1890 U.S. census and the 1930s Harvard project. These early ideas laid the foundation for the modern bar code concept.
 D) IV. A different industry provides a new stimulus
+Incorrect - this describes Paragraph D which discusses the railroad industry
 E) V. Different Technological Institutes compete
+Incorrect - Paragraph A mentions only one institution (Harvard University), not competition between institutes
 F) VI. Early setbacks
+Incorrect - this describes Paragraph C which discusses setbacks in development
 G) VII. An old system inspires one man
+Incorrect - this describes Paragraph B where Norman Woodland was inspired by Morse Code
 H) VIII. Railways lead the way
+Incorrect - this describes Paragraph D
 I) IX. Theory becomes reality
-[INCORRECT] Paragraph A discusses the early concepts of automated systems from the late 19th century with punch cards in the 1890 U.S. census and the 1930s Harvard project. These early ideas laid the foundation for the modern bar code concept.
+Incorrect - this describes Paragraph E where the grocery industry implemented the bar code system
 
 15. Paragraph B
 A) I. The original concept sees many modern applications
+Incorrect - this describes Paragraph F
 B) II. Grocery stores worry about the costs
+Incorrect - costs are mentioned in Paragraph E, not B
 C) III. Early ideas lead to modern concepts
+Incorrect - this describes Paragraph A
 D) IV. A different industry provides a new stimulus
+Incorrect - this describes Paragraph D
 E) V. Different Technological Institutes compete
+Incorrect - the Drexel Institute is mentioned but there's no competition between institutes
 F) VI. Early setbacks
+Incorrect - this describes Paragraph C
 G) VII. An old system inspires one man [CORRECT]
+Correct - Paragraph B describes how Norman Woodland was inspired by the Morse Code system with its dots and dashes, converting them into narrow and wide lines. He experimented with this old system to create the first bar code design.
 H) VIII. Railways lead the way
+Incorrect - this describes Paragraph D
 I) IX. Theory becomes reality
-[INCORRECT] Paragraph B describes how Norman Woodland was inspired by the Morse Code system with its dots and dashes, converting them into narrow and wide lines. He experimented with this old system to create the first bar code design.
+Incorrect - this describes Paragraph E
 
 16. Paragraph C
 A) I. The original concept sees many modern applications
+Incorrect - this describes Paragraph F
 B) II. Grocery stores worry about the costs
+Incorrect - costs are mentioned in Paragraph E
 C) III. Early ideas lead to modern concepts
+Incorrect - this describes Paragraph A
 D) IV. A different industry provides a new stimulus
+Incorrect - this describes Paragraph D
 E) V. Different Technological Institutes compete
+Incorrect - no competition between institutes is mentioned
 F) VI. Early setbacks [CORRECT]
+Correct - Paragraph C discusses the setbacks faced: the concept was '20 years ahead of its time', there were no computers capable of handling the procedures, extremely bright light was required, IBM acknowledged it was a project for the future, and Bernard Silver passed away before seeing the ideas come to fruition.
 G) VII. An old system inspires one man
+Incorrect - this describes Paragraph B
 H) VIII. Railways lead the way
+Incorrect - this describes Paragraph D
 I) IX. Theory becomes reality
-[INCORRECT] Paragraph C discusses the setbacks faced: the concept was '20 years ahead of its time', there were no computers capable of handling the procedures, extremely bright light was required, IBM acknowledged it was a project for the future, and Bernard Silver passed away before seeing the ideas come to fruition.
+Incorrect - this describes Paragraph E
 
 17. Paragraph D
 A) I. The original concept sees many modern applications
+Incorrect - this describes Paragraph F
 B) II. Grocery stores worry about the costs
+Incorrect - costs are mentioned in Paragraph E
 C) III. Early ideas lead to modern concepts
+Incorrect - this describes Paragraph A
 D) IV. A different industry provides a new stimulus [CORRECT]
+Correct - Paragraph D describes how the railroad industry's need for a system to identify railway cars provided a new stimulus for bar code development. David Collins worked on a coding system for railways and then adapted it for other uses, incorporating laser light technology.
 E) V. Different Technological Institutes compete
+Incorrect - no competition between institutes is mentioned
 F) VI. Early setbacks
+Incorrect - this describes Paragraph C
 G) VII. An old system inspires one man
+Incorrect - this describes Paragraph B
 H) VIII. Railways lead the way
+Incorrect - while railways are mentioned, the heading suggests they led the entire development, whereas Paragraph D shows railways as one stimulus among others
 I) IX. Theory becomes reality
-[INCORRECT] Paragraph D describes how the railroad industry's need for a system to identify railway cars provided a new stimulus for bar code development. David Collins worked on a coding system for railways and then adapted it for other uses, incorporating laser light technology.
+Incorrect - this describes Paragraph E
 
 18. Paragraph E
 A) I. The original concept sees many modern applications
+Incorrect - this describes Paragraph F
 B) II. Grocery stores worry about the costs
+Incorrect - while costs ($500 million) are mentioned, the main focus is on implementation, not worries about costs
 C) III. Early ideas lead to modern concepts
+Incorrect - this describes Paragraph A
 D) IV. A different industry provides a new stimulus
+Incorrect - this describes Paragraph D
 E) V. Different Technological Institutes compete
+Incorrect - no competition between institutes is mentioned
 F) VI. Early setbacks
+Incorrect - this describes Paragraph C
 G) VII. An old system inspires one man
+Incorrect - this describes Paragraph B
 H) VIII. Railways lead the way
+Incorrect - this describes Paragraph D
 I) IX. Theory becomes reality [CORRECT]
-[INCORRECT] Paragraph E describes how the grocery industry's requirements turned the bar code concept into reality. Despite the high costs ($500 million), the industry moved forward and 'the early concepts finally being put in place' - theory becoming reality.
+Correct - Paragraph E describes how the grocery industry's requirements turned the bar code concept into reality. Despite the high costs ($500 million), the industry moved forward and 'the early concepts finally being put in place' - theory becoming reality.
 
 19. Paragraph F
 A) I. The original concept sees many modern applications [CORRECT]
+Correct - Paragraph F begins with the first retail product scanned in 1974, then describes the many modern applications: 'the technology is used to track the mating habits of insects, health patients' needs and identification, marathon runners in competitions, trees about to be cut down in forests, airline luggage and tickets, and an important tool in the reduction in fraud'.
 B) II. Grocery stores worry about the costs
+Incorrect - costs are mentioned in Paragraph E
 C) III. Early ideas lead to modern concepts
+Incorrect - this describes Paragraph A
 D) IV. A different industry provides a new stimulus
+Incorrect - this describes Paragraph D
 E) V. Different Technological Institutes compete
+Incorrect - no competition between institutes is mentioned
 F) VI. Early setbacks
+Incorrect - this describes Paragraph C
 G) VII. An old system inspires one man
+Incorrect - this describes Paragraph B
 H) VIII. Railways lead the way
+Incorrect - this describes Paragraph D
 I) IX. Theory becomes reality
-[INCORRECT] Paragraph F begins with the first retail product scanned in 1974, then describes the many modern applications: 'the technology is used to track the mating habits of insects, health patients' needs and identification, marathon runners in competitions, trees about to be cut down in forests, airline luggage and tickets, and an important tool in the reduction in fraud'.
+Incorrect - this describes Paragraph E
 
 Questions 20 – 26
 
