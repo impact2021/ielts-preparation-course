@@ -937,7 +937,10 @@ You have one hour for the complete test (including transferring your answers).</
         // Check for summary completion or table completion
         if (stripos($marker, 'SUMMARY COMPLETION') !== false || stripos($marker, 'TABLE COMPLETION') !== false) {
             $question_type = stripos($marker, 'TABLE COMPLETION') !== false ? 'table_completion' : 'summary_completion';
-            $parsed = $this->parse_summary_or_table_completion_format($text, $question_type);
+            
+            // Prepend a title line with the marker so the parser has a proper title
+            $text_with_marker = "Questions " . $marker . "\n\n" . $text;
+            $parsed = $this->parse_summary_or_table_completion_format($text_with_marker, $question_type);
             
             // Auto-link questions to reading passage if index provided
             if ($reading_passage_index !== null && isset($parsed['questions'])) {
