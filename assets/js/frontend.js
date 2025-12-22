@@ -516,9 +516,13 @@
                                         questionResult.question_type === 'matching_classifying' ||
                                         questionResult.question_type === 'locating_information') {
                                         var correctIndex = parseInt(questionResult.correct_answer);
-                                        questionElement.find('input[type="radio"][value="' + correctIndex + '"]').closest('.option-label').addClass('answer-correct-highlight');
+                                        if (!isNaN(correctIndex)) {
+                                            questionElement.find('input[type="radio"][value="' + correctIndex + '"]').closest('.option-label').addClass('answer-correct-highlight');
+                                        }
                                     } else if (questionResult.question_type === 'true_false') {
-                                        questionElement.find('input[type="radio"][value="' + questionResult.correct_answer + '"]').closest('.option-label').addClass('answer-correct-highlight');
+                                        if (questionResult.correct_answer) {
+                                            questionElement.find('input[type="radio"][value="' + questionResult.correct_answer + '"]').closest('.option-label').addClass('answer-correct-highlight');
+                                        }
                                     }
                                 } else if (questionResult.question_type === 'multi_select') {
                                     // For multi-select questions:

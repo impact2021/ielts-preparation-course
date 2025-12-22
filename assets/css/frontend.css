@@ -1412,13 +1412,13 @@ body.ielts-course-archive .content-area {
 
 .question-options .option-label.answer-correct {
     background: #4caf50;
-    border-color: #4caf50;
+    border: 3px solid #4caf50;
     color: #fff;
 }
 
 .question-options .option-label.answer-incorrect {
     background: #f44336;
-    border-color: #f44336;
+    border: 3px solid #f44336;
     color: #fff;
 }
 
@@ -1426,8 +1426,9 @@ body.ielts-course-archive .content-area {
 .question-options .option-label.answer-correct-highlight,
 .ielts-single-quiz .question-options .option-label.answer-correct-highlight,
 .ielts-computer-based-quiz .question-options .option-label.answer-correct-highlight {
-    background: #c8e6c9 !important;
+    background: #4caf50 !important;
     border: 3px solid #4caf50 !important;
+    color: #fff !important;
 }
 
 .question-answer input.answer-correct,
