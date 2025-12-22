@@ -837,22 +837,8 @@ You have one hour for the complete test (including transferring your answers).</
         foreach ($sections as $section) {
             $section_text = implode("\n", $section['lines']);
             
-            // Prepend reading passages to section text so individual parsers can extract them
-            $section_text_with_reading = '';
-            foreach ($reading_texts as $rt) {
-                if (!empty($rt['title'])) {
-                    $section_text_with_reading .= '[READING PASSAGE] ' . $rt['title'] . "\n";
-                } else {
-                    $section_text_with_reading .= '[READING PASSAGE]' . "\n";
-                }
-                // Strip HTML tags from content for text format
-                $content = isset($rt['content']) ? strip_tags($rt['content']) : '';
-                $section_text_with_reading .= $content . "\n";
-                $section_text_with_reading .= '[END READING PASSAGE]' . "\n\n";
-            }
-            $section_text_with_reading .= $section_text;
-            
-            $section_questions = $this->parse_question_section($section_text_with_reading, $section['marker'], $reading_texts);
+            // Pass reading_texts to parser so it doesn't need to extract them again
+            $section_questions = $this->parse_question_section($section_text, $section['marker'], $reading_texts);
             
             if (!empty($section_questions)) {
                 $all_questions = array_merge($all_questions, $section_questions);
@@ -933,7 +919,7 @@ You have one hour for the complete test (including transferring your answers).</
             stripos($marker, 'MULTIPLE CHOICE') !== false) {
             // Prepend a title line with the marker so parse_multiple_choice_format can detect the type
             $text_with_marker = "Questions " . $marker . "\n\n" . $text;
-            $parsed = $this->parse_multiple_choice_format($text_with_marker);
+            $parsed = $this->parse_multiple_choice_format($text_with_marker, $reading_texts);
             return isset($parsed['questions']) ? $parsed['questions'] : array();
         }
         
@@ -941,7 +927,7 @@ You have one hour for the complete test (including transferring your answers).</
         if (stripos($marker, 'TRUE/FALSE') !== false || 
             preg_match('/^This is (TRUE|FALSE)/m', $text) || 
             preg_match('/^===\s*QUESTION\s+\d+\s*===/m', $text)) {
-            $parsed = $this->parse_true_false_format($text);
+            $parsed = $this->parse_true_false_format($text, $reading_texts);
             return isset($parsed['questions']) ? $parsed['questions'] : array();
         }
         
@@ -953,7 +939,7 @@ You have one hour for the complete test (including transferring your answers).</
         
         // Default to multiple choice if it has the pattern
         if ($this->is_multiple_choice_format($text)) {
-            $parsed = $this->parse_multiple_choice_format($text);
+            $parsed = $this->parse_multiple_choice_format($text, $reading_texts);
             return isset($parsed['questions']) ? $parsed['questions'] : array();
         }
         
@@ -1261,9 +1247,11 @@ You have one hour for the complete test (including transferring your answers).</
     /**
      * Parse true/false format questions (original parser)
      */
-    private function parse_true_false_format($text) {
-        // Extract reading passages first
-        $reading_texts = $this->extract_reading_passages($text);
+    private function parse_true_false_format($text, $reading_texts = null) {
+        // Extract reading passages first (unless already provided by caller, e.g., in mixed format)
+        if ($reading_texts === null) {
+            $reading_texts = $this->extract_reading_passages($text);
+        }
         
         // Remove reading passages from text for question parsing
         $text = $this->remove_reading_passages($text);
@@ -1277,9 +1265,25 @@ You have one hour for the complete test (including transferring your answers).</
         // First non-empty line is the title
         $title = '';
         $start_index = 0;
+        $next_question_reading_text_id = null; // Store reading text ID for next question
+        
         for ($i = 0; $i < count($lines); $i++) {
+            // Check for [LINKED TO: ...] marker and store for next question
+            if (preg_match('/^\[LINKED TO:\s*(.+?)\]/i', $lines[$i], $link_match)) {
+                $linked_title = trim($link_match[1]);
+                $next_question_reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
+                continue; // Skip this line, don't use as title
+            }
             // Skip "=== QUESTION TYPE: ... ===" header lines
             if (preg_match('/^===.*===$/i', $lines[$i])) {
+                // But if it's a "=== QUESTION N ===" marker, use default title and stop
+                if (preg_match('/^===\s*QUESTION\s+\d+\s*===/i', $lines[$i])) {
+                    if (empty($title)) {
+                        $title = 'True/False Questions';
+                    }
+                    $start_index = $i;
+                    break;
+                }
                 continue;
             }
             if (!empty($lines[$i])) {
@@ -1300,8 +1304,6 @@ You have one hour for the complete test (including transferring your answers).</
         $current_options = array();
         $feedback_lines = array();
         $current_feedback_type = 'incorrect'; // Track which feedback type we're collecting: 'correct', 'incorrect', 'no_answer'
-        $next_question_reading_text_id = null; // Store reading text ID for next question
-        
         for ($i = $start_index; $i < count($lines); $i++) {
             $line = $lines[$i];
             
@@ -1858,9 +1860,11 @@ You have one hour for the complete test (including transferring your answers).</
      * 
      * Multiple questions separated by blank lines
      */
-    private function parse_multiple_choice_format($text) {
-        // Extract reading passages first
-        $reading_texts = $this->extract_reading_passages($text);
+    private function parse_multiple_choice_format($text, $reading_texts = null) {
+        // Extract reading passages first (unless already provided by caller, e.g., in mixed format)
+        if ($reading_texts === null) {
+            $reading_texts = $this->extract_reading_passages($text);
+        }
         $text = $this->remove_reading_passages($text);
         
         // Remove metadata block from text for title/question parsing
@@ -1895,6 +1899,13 @@ You have one hour for the complete test (including transferring your answers).</
                 continue;
             }
             
+            
+            // Check for [LINKED TO: ...] marker and extract for next question
+            if (preg_match('/^\[LINKED TO:\s*(.+?)\]/i', $lines[$i], $link_match)) {
+                $linked_title = trim($link_match[1]);
+                $next_question_reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
+                continue; // Skip this line, don't add to title
+            }
             // Check for type marker
             foreach ($type_markers as $marker => $type) {
                 if (preg_match('/\[' . preg_quote($marker, '/') . '\]/i', $lines[$i])) {
@@ -1925,8 +1936,6 @@ You have one hour for the complete test (including transferring your answers).</
         $questions = array();
         $current_question = null;
         $current_options = array();
-        $next_question_reading_text_id = null; // Store reading text ID for next question
-        
         for ($i = $start_index; $i < count($lines); $i++) {
             $line = $lines[$i];
             
