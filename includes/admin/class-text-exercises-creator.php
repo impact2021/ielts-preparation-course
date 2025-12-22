@@ -38,8 +38,9 @@ class IELTS_CM_Text_Exercises_Creator {
     /**
      * Regex pattern for option lines
      * Format: A) option text [CORRECT] [FEEDBACK: explanation]
+     * Supports both uppercase and lowercase option letters
      */
-    const OPTION_PATTERN = '/^([A-Z])\)\s+(.+?)(?:\s*\[CORRECT\])?(?:\s*\[FEEDBACK:\s*(.+?)\])?$/i';
+    const OPTION_PATTERN = '/^([A-Za-z])\)\s+(.+?)(?:\s*\[CORRECT\])?(?:\s*\[FEEDBACK:\s*(.+?)\])?$/i';
     
     /**
      * Regex pattern for summary completion questions  
@@ -1018,16 +1019,17 @@ You have one hour for the complete test (including transferring your answers).</
             $section['instructions'] = array_merge($instruction_lines, $section['instructions']);
             
             // Remove instruction lines from the beginning of the lines array
-            // If content_start_index is -1, all lines are instructions, so remove all
-            // If content_start_index is > 0, remove lines up to that index
+            // Three cases based on where content starts:
             if ($content_start_index === -1) {
-                // All lines are instructions, clear the array
+                // Case 1: No content found - all lines are instructions, clear the array
                 $section['lines'] = array();
             } elseif ($content_start_index > 0) {
-                // Remove instruction lines from the beginning
+                // Case 2: Content found after some lines - remove instruction lines from beginning
                 $section['lines'] = array_slice($section['lines'], $content_start_index);
+            } else {
+                // Case 3: content_start_index === 0 - first line is content, nothing to remove
+                // (This case is implicit - no action needed, but documented for clarity)
             }
-            // If content_start_index is 0, first line is content, nothing to remove
         }
     }
     
