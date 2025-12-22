@@ -2050,6 +2050,7 @@ You have one hour for the complete test (including transferring your answers).</
         // Extract title and detect question type
         $title = '';
         $start_index = 0;
+        $next_question_reading_text_id = null; // Initialize for potential [LINKED TO] markers
         for ($i = 0; $i < count($lines); $i++) {
             if (empty($lines[$i])) {
                 continue;
