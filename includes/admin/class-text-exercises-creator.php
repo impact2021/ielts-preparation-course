@@ -518,7 +518,7 @@ You have one hour for the complete test (including transferring your answers).</
         if (!empty($parsed['reading_texts'])) {
             update_post_meta($exercise_id, '_ielts_cm_reading_texts', $parsed['reading_texts']);
             // Set layout to computer_based if reading texts are included (unless already set in metadata)
-            if (empty($parsed['metadata']['layout_type'])) {
+            if (!isset($parsed['metadata']['layout_type'])) {
                 update_post_meta($exercise_id, '_ielts_cm_layout_type', 'computer_based');
             }
         }
@@ -537,9 +537,9 @@ You have one hour for the complete test (including transferring your answers).</
                 update_post_meta($exercise_id, '_ielts_cm_layout_type', $metadata['layout_type']);
             }
             
-            // Save open as popup
+            // Save open as popup - use explicit boolean check
             if (isset($metadata['open_as_popup'])) {
-                if ($metadata['open_as_popup']) {
+                if ($metadata['open_as_popup'] === true) {
                     update_post_meta($exercise_id, '_ielts_cm_open_as_popup', '1');
                 } else {
                     delete_post_meta($exercise_id, '_ielts_cm_open_as_popup');
@@ -551,9 +551,9 @@ You have one hour for the complete test (including transferring your answers).</
                 update_post_meta($exercise_id, '_ielts_cm_scoring_type', $metadata['scoring_type']);
             }
             
-            // Save timer
+            // Save timer - validate it's numeric before saving
             if (isset($metadata['timer_minutes'])) {
-                if ($metadata['timer_minutes'] !== '') {
+                if (!empty($metadata['timer_minutes']) && is_numeric($metadata['timer_minutes'])) {
                     update_post_meta($exercise_id, '_ielts_cm_timer_minutes', intval($metadata['timer_minutes']));
                 } else {
                     delete_post_meta($exercise_id, '_ielts_cm_timer_minutes');
@@ -1786,7 +1786,7 @@ You have one hour for the complete test (including transferring your answers).</
             $questions[] = $current_question;
         }
         
-        // Extract metadata from text (preserving original text before reading passage removal)
+        // Extract metadata from original text (before reading passage and metadata block removal)
         $metadata = $this->extract_metadata_from_text($text);
         
         return array(
