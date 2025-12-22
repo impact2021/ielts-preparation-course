@@ -594,7 +594,8 @@ You have one hour for the complete test (including transferring your answers).</
      * @return string|null Formatted link string '[LINKED TO: ...]' or null if no link
      */
     private function format_reading_text_link($question, $reading_texts) {
-        if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
+        // Check if reading_text_id is set and is a valid value (including 0)
+        if (isset($question['reading_text_id']) && $question['reading_text_id'] !== null && $question['reading_text_id'] !== '') {
             $reading_text_index = intval($question['reading_text_id']);
             if (isset($reading_texts[$reading_text_index])) {
                 $linked_text_title = !empty($reading_texts[$reading_text_index]['title']) ? 
