@@ -2235,9 +2235,10 @@ You have one hour for the complete test (including transferring your answers).</
      * @param array $questions Array of questions from quiz meta
      * @param string $title Exercise title
      * @param array $reading_texts Optional reading texts
+     * @param array $metadata Optional exercise metadata (exercise_label, layout_type, open_as_popup, scoring_type, timer_minutes)
      * @return string Text format representation
      */
-    public function convert_to_text_format($questions, $title = '', $reading_texts = array()) {
+    public function convert_to_text_format($questions, $title = '', $reading_texts = array(), $metadata = array()) {
         if (empty($questions)) {
             return '';
         }
@@ -2251,7 +2252,7 @@ You have one hour for the complete test (including transferring your answers).</
         
         // If mixed format, use special mixed format converter
         if (count($question_types) > 1) {
-            return $this->convert_mixed_format_to_text($questions, $title, $reading_texts);
+            return $this->convert_mixed_format_to_text($questions, $title, $reading_texts, $metadata);
         }
         
         $output = array();
@@ -2259,6 +2260,60 @@ You have one hour for the complete test (including transferring your answers).</
         // Add title if provided
         if (!empty($title)) {
             $output[] = $title;
+            $output[] = '';
+        }
+        
+        // Add metadata section if provided
+        if (!empty($metadata)) {
+            $output[] = '=== EXERCISE SETTINGS ===';
+            
+            // Display Label for Students
+            if (isset($metadata['exercise_label'])) {
+                $label_map = array(
+                    'exercise' => 'Exercise',
+                    'end_of_lesson_test' => 'End of lesson test',
+                    'practice_test' => 'Practice test'
+                );
+                $label_display = isset($label_map[$metadata['exercise_label']]) ? $label_map[$metadata['exercise_label']] : ucfirst($metadata['exercise_label']);
+                $output[] = 'Display Label: ' . $label_display;
+            }
+            
+            // Layout Type
+            if (isset($metadata['layout_type'])) {
+                $layout_map = array(
+                    'standard' => 'Standard Layout',
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                );
+                $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
+                $output[] = 'Layout Type: ' . $layout_display;
+            }
+            
+            // Open as Popup/Fullscreen Modal
+            if (isset($metadata['open_as_popup'])) {
+                $popup_display = $metadata['open_as_popup'] ? 'Yes' : 'No';
+                $output[] = 'Open as Popup/Fullscreen Modal: ' . $popup_display;
+            }
+            
+            // Scoring Type
+            if (isset($metadata['scoring_type'])) {
+                $scoring_map = array(
+                    'percentage' => 'Percentage (Standard)',
+                    'ielts_general_reading' => 'IELTS General Training Reading (Band Score)',
+                    'ielts_academic_reading' => 'IELTS Academic Reading (Band Score)',
+                    'ielts_listening' => 'IELTS Listening (Band Score)'
+                );
+                $scoring_display = isset($scoring_map[$metadata['scoring_type']]) ? $scoring_map[$metadata['scoring_type']] : ucfirst($metadata['scoring_type']);
+                $output[] = 'Scoring Type: ' . $scoring_display;
+            }
+            
+            // Timer
+            if (isset($metadata['timer_minutes']) && $metadata['timer_minutes'] !== '') {
+                $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
+            } else {
+                $output[] = 'Timer: No timer';
+            }
+            
+            $output[] = '=== END EXERCISE SETTINGS ===';
             $output[] = '';
         }
         
@@ -2285,18 +2340,18 @@ You have one hour for the complete test (including transferring your answers).</
         $question_type = isset($questions[0]['type']) ? $questions[0]['type'] : '';
         
         if ($question_type === 'summary_completion' || $question_type === 'table_completion') {
-            return $this->convert_summary_completion_to_text($questions, $title, $reading_texts);
+            return $this->convert_summary_completion_to_text($questions, $title, $reading_texts, $metadata);
         } elseif ($question_type === 'dropdown_paragraph') {
-            return $this->convert_dropdown_paragraph_to_text($questions, $title, $reading_texts);
+            return $this->convert_dropdown_paragraph_to_text($questions, $title, $reading_texts, $metadata);
         } elseif ($question_type === 'multiple_choice' || $question_type === 'multi_select' || 
                   $question_type === 'headings' || $question_type === 'matching_classifying' || 
                   $question_type === 'matching' || $question_type === 'locating_information') {
-            return $this->convert_multiple_choice_to_text($questions, $title, $reading_texts);
+            return $this->convert_multiple_choice_to_text($questions, $title, $reading_texts, $metadata);
         } elseif ($question_type === 'true_false') {
-            return $this->convert_true_false_to_text($questions, $title, $reading_texts);
+            return $this->convert_true_false_to_text($questions, $title, $reading_texts, $metadata);
         } else {
             // Default: short answer format
-            return $this->convert_short_answer_to_text($questions, $title, $reading_texts);
+            return $this->convert_short_answer_to_text($questions, $title, $reading_texts, $metadata);
         }
     }
     
@@ -2309,7 +2364,7 @@ You have one hour for the complete test (including transferring your answers).</
      * @param array $reading_texts Array of reading text objects
      * @return string Text format representation with section headers
      */
-    private function convert_mixed_format_to_text($questions, $title, $reading_texts) {
+    private function convert_mixed_format_to_text($questions, $title, $reading_texts, $metadata = array()) {
         $output = array();
         
         // Add title
@@ -2319,6 +2374,60 @@ You have one hour for the complete test (including transferring your answers).</
             $output[] = 'Mixed Format Exercise';
         }
         $output[] = '';
+        
+        // Add metadata section if provided
+        if (!empty($metadata)) {
+            $output[] = '=== EXERCISE SETTINGS ===';
+            
+            // Display Label for Students
+            if (isset($metadata['exercise_label'])) {
+                $label_map = array(
+                    'exercise' => 'Exercise',
+                    'end_of_lesson_test' => 'End of lesson test',
+                    'practice_test' => 'Practice test'
+                );
+                $label_display = isset($label_map[$metadata['exercise_label']]) ? $label_map[$metadata['exercise_label']] : ucfirst($metadata['exercise_label']);
+                $output[] = 'Display Label: ' . $label_display;
+            }
+            
+            // Layout Type
+            if (isset($metadata['layout_type'])) {
+                $layout_map = array(
+                    'standard' => 'Standard Layout',
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                );
+                $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
+                $output[] = 'Layout Type: ' . $layout_display;
+            }
+            
+            // Open as Popup/Fullscreen Modal
+            if (isset($metadata['open_as_popup'])) {
+                $popup_display = $metadata['open_as_popup'] ? 'Yes' : 'No';
+                $output[] = 'Open as Popup/Fullscreen Modal: ' . $popup_display;
+            }
+            
+            // Scoring Type
+            if (isset($metadata['scoring_type'])) {
+                $scoring_map = array(
+                    'percentage' => 'Percentage (Standard)',
+                    'ielts_general_reading' => 'IELTS General Training Reading (Band Score)',
+                    'ielts_academic_reading' => 'IELTS Academic Reading (Band Score)',
+                    'ielts_listening' => 'IELTS Listening (Band Score)'
+                );
+                $scoring_display = isset($scoring_map[$metadata['scoring_type']]) ? $scoring_map[$metadata['scoring_type']] : ucfirst($metadata['scoring_type']);
+                $output[] = 'Scoring Type: ' . $scoring_display;
+            }
+            
+            // Timer
+            if (isset($metadata['timer_minutes']) && $metadata['timer_minutes'] !== '') {
+                $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
+            } else {
+                $output[] = 'Timer: No timer';
+            }
+            
+            $output[] = '=== END EXERCISE SETTINGS ===';
+            $output[] = '';
+        }
         
         // Add reading texts
         if (!empty($reading_texts)) {
@@ -2725,7 +2834,7 @@ You have one hour for the complete test (including transferring your answers).</
     /**
      * Convert summary completion or table completion questions to text format
      */
-    private function convert_summary_completion_to_text($questions, $title, $reading_texts) {
+    private function convert_summary_completion_to_text($questions, $title, $reading_texts, $metadata = array()) {
         $output = array();
         
         // Get question type
@@ -2744,6 +2853,55 @@ You have one hour for the complete test (including transferring your answers).</
         // Add type header for clarity
         $output[] = '=== QUESTION TYPE: ' . strtoupper($type_label) . ' ===';
         $output[] = '';
+        
+        // Add metadata section if provided
+        if (!empty($metadata)) {
+            $output[] = '=== EXERCISE SETTINGS ===';
+            
+            if (isset($metadata['exercise_label'])) {
+                $label_map = array(
+                    'exercise' => 'Exercise',
+                    'end_of_lesson_test' => 'End of lesson test',
+                    'practice_test' => 'Practice test'
+                );
+                $label_display = isset($label_map[$metadata['exercise_label']]) ? $label_map[$metadata['exercise_label']] : ucfirst($metadata['exercise_label']);
+                $output[] = 'Display Label: ' . $label_display;
+            }
+            
+            if (isset($metadata['layout_type'])) {
+                $layout_map = array(
+                    'standard' => 'Standard Layout',
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                );
+                $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
+                $output[] = 'Layout Type: ' . $layout_display;
+            }
+            
+            if (isset($metadata['open_as_popup'])) {
+                $popup_display = $metadata['open_as_popup'] ? 'Yes' : 'No';
+                $output[] = 'Open as Popup/Fullscreen Modal: ' . $popup_display;
+            }
+            
+            if (isset($metadata['scoring_type'])) {
+                $scoring_map = array(
+                    'percentage' => 'Percentage (Standard)',
+                    'ielts_general_reading' => 'IELTS General Training Reading (Band Score)',
+                    'ielts_academic_reading' => 'IELTS Academic Reading (Band Score)',
+                    'ielts_listening' => 'IELTS Listening (Band Score)'
+                );
+                $scoring_display = isset($scoring_map[$metadata['scoring_type']]) ? $scoring_map[$metadata['scoring_type']] : ucfirst($metadata['scoring_type']);
+                $output[] = 'Scoring Type: ' . $scoring_display;
+            }
+            
+            if (isset($metadata['timer_minutes']) && $metadata['timer_minutes'] !== '') {
+                $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
+            } else {
+                $output[] = 'Timer: No timer';
+            }
+            
+            $output[] = '=== END EXERCISE SETTINGS ===';
+            $output[] = '';
+        }
         
         // Add reading texts
         if (!empty($reading_texts)) {
@@ -2811,7 +2969,7 @@ You have one hour for the complete test (including transferring your answers).</
     /**
      * Convert short answer questions to text format
      */
-    private function convert_short_answer_to_text($questions, $title, $reading_texts) {
+    private function convert_short_answer_to_text($questions, $title, $reading_texts, $metadata = array()) {
         $output = array();
         
         // Detect question type
@@ -2834,6 +2992,55 @@ You have one hour for the complete test (including transferring your answers).</
         // Add type header for clarity
         $output[] = '=== QUESTION TYPE: ' . strtoupper($type_label) . ' ===';
         $output[] = '';
+        
+        // Add metadata section if provided
+        if (!empty($metadata)) {
+            $output[] = '=== EXERCISE SETTINGS ===';
+            
+            if (isset($metadata['exercise_label'])) {
+                $label_map = array(
+                    'exercise' => 'Exercise',
+                    'end_of_lesson_test' => 'End of lesson test',
+                    'practice_test' => 'Practice test'
+                );
+                $label_display = isset($label_map[$metadata['exercise_label']]) ? $label_map[$metadata['exercise_label']] : ucfirst($metadata['exercise_label']);
+                $output[] = 'Display Label: ' . $label_display;
+            }
+            
+            if (isset($metadata['layout_type'])) {
+                $layout_map = array(
+                    'standard' => 'Standard Layout',
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                );
+                $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
+                $output[] = 'Layout Type: ' . $layout_display;
+            }
+            
+            if (isset($metadata['open_as_popup'])) {
+                $popup_display = $metadata['open_as_popup'] ? 'Yes' : 'No';
+                $output[] = 'Open as Popup/Fullscreen Modal: ' . $popup_display;
+            }
+            
+            if (isset($metadata['scoring_type'])) {
+                $scoring_map = array(
+                    'percentage' => 'Percentage (Standard)',
+                    'ielts_general_reading' => 'IELTS General Training Reading (Band Score)',
+                    'ielts_academic_reading' => 'IELTS Academic Reading (Band Score)',
+                    'ielts_listening' => 'IELTS Listening (Band Score)'
+                );
+                $scoring_display = isset($scoring_map[$metadata['scoring_type']]) ? $scoring_map[$metadata['scoring_type']] : ucfirst($metadata['scoring_type']);
+                $output[] = 'Scoring Type: ' . $scoring_display;
+            }
+            
+            if (isset($metadata['timer_minutes']) && $metadata['timer_minutes'] !== '') {
+                $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
+            } else {
+                $output[] = 'Timer: No timer';
+            }
+            
+            $output[] = '=== END EXERCISE SETTINGS ===';
+            $output[] = '';
+        }
         
         // Add reading texts
         if (!empty($reading_texts)) {
@@ -2901,7 +3108,7 @@ You have one hour for the complete test (including transferring your answers).</
     /**
      * Convert multiple choice questions to text format
      */
-    private function convert_multiple_choice_to_text($questions, $title, $reading_texts) {
+    private function convert_multiple_choice_to_text($questions, $title, $reading_texts, $metadata = array()) {
         $output = array();
         
         // Determine type marker and label
@@ -2943,6 +3150,55 @@ You have one hour for the complete test (including transferring your answers).</
         // Add type header for clarity
         $output[] = '=== QUESTION TYPE: ' . strtoupper($type_label) . ' ===';
         $output[] = '';
+        
+        // Add metadata section if provided
+        if (!empty($metadata)) {
+            $output[] = '=== EXERCISE SETTINGS ===';
+            
+            if (isset($metadata['exercise_label'])) {
+                $label_map = array(
+                    'exercise' => 'Exercise',
+                    'end_of_lesson_test' => 'End of lesson test',
+                    'practice_test' => 'Practice test'
+                );
+                $label_display = isset($label_map[$metadata['exercise_label']]) ? $label_map[$metadata['exercise_label']] : ucfirst($metadata['exercise_label']);
+                $output[] = 'Display Label: ' . $label_display;
+            }
+            
+            if (isset($metadata['layout_type'])) {
+                $layout_map = array(
+                    'standard' => 'Standard Layout',
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                );
+                $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
+                $output[] = 'Layout Type: ' . $layout_display;
+            }
+            
+            if (isset($metadata['open_as_popup'])) {
+                $popup_display = $metadata['open_as_popup'] ? 'Yes' : 'No';
+                $output[] = 'Open as Popup/Fullscreen Modal: ' . $popup_display;
+            }
+            
+            if (isset($metadata['scoring_type'])) {
+                $scoring_map = array(
+                    'percentage' => 'Percentage (Standard)',
+                    'ielts_general_reading' => 'IELTS General Training Reading (Band Score)',
+                    'ielts_academic_reading' => 'IELTS Academic Reading (Band Score)',
+                    'ielts_listening' => 'IELTS Listening (Band Score)'
+                );
+                $scoring_display = isset($scoring_map[$metadata['scoring_type']]) ? $scoring_map[$metadata['scoring_type']] : ucfirst($metadata['scoring_type']);
+                $output[] = 'Scoring Type: ' . $scoring_display;
+            }
+            
+            if (isset($metadata['timer_minutes']) && $metadata['timer_minutes'] !== '') {
+                $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
+            } else {
+                $output[] = 'Timer: No timer';
+            }
+            
+            $output[] = '=== END EXERCISE SETTINGS ===';
+            $output[] = '';
+        }
         
         // Add reading texts
         if (!empty($reading_texts)) {
@@ -3022,7 +3278,7 @@ You have one hour for the complete test (including transferring your answers).</
     /**
      * Convert true/false questions to text format
      */
-    private function convert_true_false_to_text($questions, $title, $reading_texts) {
+    private function convert_true_false_to_text($questions, $title, $reading_texts, $metadata = array()) {
         $output = array();
         
         // Add title
@@ -3036,6 +3292,55 @@ You have one hour for the complete test (including transferring your answers).</
         // Add type header for clarity
         $output[] = '=== QUESTION TYPE: TRUE/FALSE/NOT GIVEN ===';
         $output[] = '';
+        
+        // Add metadata section if provided
+        if (!empty($metadata)) {
+            $output[] = '=== EXERCISE SETTINGS ===';
+            
+            if (isset($metadata['exercise_label'])) {
+                $label_map = array(
+                    'exercise' => 'Exercise',
+                    'end_of_lesson_test' => 'End of lesson test',
+                    'practice_test' => 'Practice test'
+                );
+                $label_display = isset($label_map[$metadata['exercise_label']]) ? $label_map[$metadata['exercise_label']] : ucfirst($metadata['exercise_label']);
+                $output[] = 'Display Label: ' . $label_display;
+            }
+            
+            if (isset($metadata['layout_type'])) {
+                $layout_map = array(
+                    'standard' => 'Standard Layout',
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                );
+                $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
+                $output[] = 'Layout Type: ' . $layout_display;
+            }
+            
+            if (isset($metadata['open_as_popup'])) {
+                $popup_display = $metadata['open_as_popup'] ? 'Yes' : 'No';
+                $output[] = 'Open as Popup/Fullscreen Modal: ' . $popup_display;
+            }
+            
+            if (isset($metadata['scoring_type'])) {
+                $scoring_map = array(
+                    'percentage' => 'Percentage (Standard)',
+                    'ielts_general_reading' => 'IELTS General Training Reading (Band Score)',
+                    'ielts_academic_reading' => 'IELTS Academic Reading (Band Score)',
+                    'ielts_listening' => 'IELTS Listening (Band Score)'
+                );
+                $scoring_display = isset($scoring_map[$metadata['scoring_type']]) ? $scoring_map[$metadata['scoring_type']] : ucfirst($metadata['scoring_type']);
+                $output[] = 'Scoring Type: ' . $scoring_display;
+            }
+            
+            if (isset($metadata['timer_minutes']) && $metadata['timer_minutes'] !== '') {
+                $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
+            } else {
+                $output[] = 'Timer: No timer';
+            }
+            
+            $output[] = '=== END EXERCISE SETTINGS ===';
+            $output[] = '';
+        }
         
         // Add reading texts
         if (!empty($reading_texts)) {
@@ -3093,7 +3398,7 @@ You have one hour for the complete test (including transferring your answers).</
     /**
      * Convert dropdown paragraph questions to text format
      */
-    private function convert_dropdown_paragraph_to_text($questions, $title, $reading_texts) {
+    private function convert_dropdown_paragraph_to_text($questions, $title, $reading_texts, $metadata = array()) {
         $output = array();
         
         // Add title
@@ -3107,6 +3412,55 @@ You have one hour for the complete test (including transferring your answers).</
         // Add type header for clarity
         $output[] = '=== QUESTION TYPE: DROPDOWN PARAGRAPH ===';
         $output[] = '';
+        
+        // Add metadata section if provided
+        if (!empty($metadata)) {
+            $output[] = '=== EXERCISE SETTINGS ===';
+            
+            if (isset($metadata['exercise_label'])) {
+                $label_map = array(
+                    'exercise' => 'Exercise',
+                    'end_of_lesson_test' => 'End of lesson test',
+                    'practice_test' => 'Practice test'
+                );
+                $label_display = isset($label_map[$metadata['exercise_label']]) ? $label_map[$metadata['exercise_label']] : ucfirst($metadata['exercise_label']);
+                $output[] = 'Display Label: ' . $label_display;
+            }
+            
+            if (isset($metadata['layout_type'])) {
+                $layout_map = array(
+                    'standard' => 'Standard Layout',
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                );
+                $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
+                $output[] = 'Layout Type: ' . $layout_display;
+            }
+            
+            if (isset($metadata['open_as_popup'])) {
+                $popup_display = $metadata['open_as_popup'] ? 'Yes' : 'No';
+                $output[] = 'Open as Popup/Fullscreen Modal: ' . $popup_display;
+            }
+            
+            if (isset($metadata['scoring_type'])) {
+                $scoring_map = array(
+                    'percentage' => 'Percentage (Standard)',
+                    'ielts_general_reading' => 'IELTS General Training Reading (Band Score)',
+                    'ielts_academic_reading' => 'IELTS Academic Reading (Band Score)',
+                    'ielts_listening' => 'IELTS Listening (Band Score)'
+                );
+                $scoring_display = isset($scoring_map[$metadata['scoring_type']]) ? $scoring_map[$metadata['scoring_type']] : ucfirst($metadata['scoring_type']);
+                $output[] = 'Scoring Type: ' . $scoring_display;
+            }
+            
+            if (isset($metadata['timer_minutes']) && $metadata['timer_minutes'] !== '') {
+                $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
+            } else {
+                $output[] = 'Timer: No timer';
+            }
+            
+            $output[] = '=== END EXERCISE SETTINGS ===';
+            $output[] = '';
+        }
         
         // Add reading texts
         if (!empty($reading_texts)) {
