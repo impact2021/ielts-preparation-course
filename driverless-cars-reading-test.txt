@@ -120,7 +120,7 @@ Incorrect
 This is FALSE
 Correct answer
 
-Paragraph C states that 'traffic accidents involving human error claim OVER one million fatalities annually', not 'nearly one million'.
+Paragraph C states that 'traffic accidents involving human error claim OVER one million fatalities annually'.
 
 8. Driverless cars travel at a slower speed than manned cars.
 This is TRUE
@@ -162,7 +162,7 @@ B) Hot Rod Association of Alberta [CORRECT]
 C) Sebastian Thrun
 D) Tim Groesner
 E) US Department of Defence
-[INCORRECT] Paragraph F: 'the Hot Rod Association of Alberta, a group of car enthusiasts, have actually petitioned against further testing and development of the driverless car claiming that it would make car travel less interesting'.
+[INCORRECT] 'the Hot Rod Association of Alberta, a group of car enthusiasts, have actually petitioned against further testing and development of the driverless car claiming that it would make car travel less interesting'.
 
 12. Felt that the driverless car was more observant than a human driver
 A) Eric Schmidt
