@@ -1311,6 +1311,28 @@ body.ielts-course-archive .content-area {
     color: #fff;
 }
 
+/* Navigation page links (Previous/Next page) */
+.quiz-timer-fullscreen .nav-page-link {
+    padding: 8px 16px;
+    background: #0073aa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+}
+
+.quiz-timer-fullscreen .nav-page-link:hover {
+    background: #005a87;
+    color: #fff;
+}
+
+.quiz-timer-fullscreen .prev-page-link {
+    margin-right: 8px;
+}
+
 /* Font Size Controls */
 .font-size-controls {
     display: flex;
