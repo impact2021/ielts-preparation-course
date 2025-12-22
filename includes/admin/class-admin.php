@@ -1938,6 +1938,36 @@ class IELTS_CM_Admin {
                                     });
                                 }
                                 
+                                // Update metadata if present
+                                if (response.data.metadata) {
+                                    var metadata = response.data.metadata;
+                                    
+                                    // Update exercise label
+                                    if (metadata.exercise_label) {
+                                        $('#ielts_cm_exercise_label').val(metadata.exercise_label);
+                                    }
+                                    
+                                    // Update layout type
+                                    if (metadata.layout_type) {
+                                        $('#ielts_cm_layout_type').val(metadata.layout_type).trigger('change');
+                                    }
+                                    
+                                    // Update open as popup
+                                    if (metadata.open_as_popup !== undefined) {
+                                        $('#ielts_cm_open_as_popup').prop('checked', metadata.open_as_popup);
+                                    }
+                                    
+                                    // Update scoring type
+                                    if (metadata.scoring_type) {
+                                        $('#ielts_cm_scoring_type').val(metadata.scoring_type);
+                                    }
+                                    
+                                    // Update timer
+                                    if (metadata.timer_minutes !== undefined) {
+                                        $('#ielts_cm_timer_minutes').val(metadata.timer_minutes);
+                                    }
+                                }
+                                
                                 $('#import-text-modal').slideUp();
                                 $('#import-text-input').val('');
                             } else {

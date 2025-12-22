@@ -517,8 +517,48 @@ You have one hour for the complete test (including transferring your answers).</
         // Save reading texts if present
         if (!empty($parsed['reading_texts'])) {
             update_post_meta($exercise_id, '_ielts_cm_reading_texts', $parsed['reading_texts']);
-            // Set layout to computer_based if reading texts are included
-            update_post_meta($exercise_id, '_ielts_cm_layout_type', 'computer_based');
+            // Set layout to computer_based if reading texts are included (unless already set in metadata)
+            if (!isset($parsed['metadata']['layout_type'])) {
+                update_post_meta($exercise_id, '_ielts_cm_layout_type', 'computer_based');
+            }
+        }
+        
+        // Save metadata if present
+        if (!empty($parsed['metadata'])) {
+            $metadata = $parsed['metadata'];
+            
+            // Save exercise label
+            if (isset($metadata['exercise_label'])) {
+                update_post_meta($exercise_id, '_ielts_cm_exercise_label', $metadata['exercise_label']);
+            }
+            
+            // Save layout type
+            if (isset($metadata['layout_type'])) {
+                update_post_meta($exercise_id, '_ielts_cm_layout_type', $metadata['layout_type']);
+            }
+            
+            // Save open as popup - use explicit boolean check
+            if (isset($metadata['open_as_popup'])) {
+                if ($metadata['open_as_popup'] === true) {
+                    update_post_meta($exercise_id, '_ielts_cm_open_as_popup', '1');
+                } else {
+                    delete_post_meta($exercise_id, '_ielts_cm_open_as_popup');
+                }
+            }
+            
+            // Save scoring type
+            if (isset($metadata['scoring_type'])) {
+                update_post_meta($exercise_id, '_ielts_cm_scoring_type', $metadata['scoring_type']);
+            }
+            
+            // Save timer - validate it's numeric before saving
+            if (isset($metadata['timer_minutes'])) {
+                if (!empty($metadata['timer_minutes']) && is_numeric($metadata['timer_minutes'])) {
+                    update_post_meta($exercise_id, '_ielts_cm_timer_minutes', intval($metadata['timer_minutes']));
+                } else {
+                    delete_post_meta($exercise_id, '_ielts_cm_timer_minutes');
+                }
+            }
         }
         
         $results['success'] = true;
@@ -601,6 +641,81 @@ You have one hour for the complete test (including transferring your answers).</
     }
     
     /**
+     * Extract metadata from exercise settings block in text
+     * 
+     * @param string $text The exercise text
+     * @return array Metadata array with exercise_label, layout_type, open_as_popup, scoring_type, timer_minutes
+     */
+    private function extract_metadata_from_text($text) {
+        $metadata = array();
+        
+        // Look for the EXERCISE SETTINGS block
+        if (preg_match('/===\s*EXERCISE SETTINGS\s*===\s*(.*?)\s*===\s*END EXERCISE SETTINGS\s*===/is', $text, $matches)) {
+            $settings_block = $matches[1];
+            
+            // Parse Display Label
+            if (preg_match('/Display Label:\s*(.+?)(?:\n|$)/i', $settings_block, $label_match)) {
+                $label_text = trim($label_match[1]);
+                // Map display text back to value
+                $label_map = array(
+                    'Exercise' => 'exercise',
+                    'End of lesson test' => 'end_of_lesson_test',
+                    'Practice test' => 'practice_test'
+                );
+                foreach ($label_map as $display => $value) {
+                    if (stripos($label_text, $display) !== false) {
+                        $metadata['exercise_label'] = $value;
+                        break;
+                    }
+                }
+            }
+            
+            // Parse Layout Type
+            if (preg_match('/Layout Type:\s*(.+?)(?:\n|$)/i', $settings_block, $layout_match)) {
+                $layout_text = trim($layout_match[1]);
+                if (stripos($layout_text, 'Computer-Based') !== false || stripos($layout_text, 'Two Columns') !== false) {
+                    $metadata['layout_type'] = 'computer_based';
+                } else {
+                    $metadata['layout_type'] = 'standard';
+                }
+            }
+            
+            // Parse Open as Popup/Fullscreen Modal
+            if (preg_match('/Open as Popup\/Fullscreen Modal:\s*(.+?)(?:\n|$)/i', $settings_block, $popup_match)) {
+                $popup_text = trim($popup_match[1]);
+                $metadata['open_as_popup'] = (stripos($popup_text, 'Yes') !== false);
+            }
+            
+            // Parse Scoring Type
+            if (preg_match('/Scoring Type:\s*(.+?)(?:\n|$)/i', $settings_block, $scoring_match)) {
+                $scoring_text = trim($scoring_match[1]);
+                // Map display text back to value
+                if (stripos($scoring_text, 'General Training Reading') !== false) {
+                    $metadata['scoring_type'] = 'ielts_general_reading';
+                } elseif (stripos($scoring_text, 'Academic Reading') !== false) {
+                    $metadata['scoring_type'] = 'ielts_academic_reading';
+                } elseif (stripos($scoring_text, 'Listening') !== false) {
+                    $metadata['scoring_type'] = 'ielts_listening';
+                } else {
+                    $metadata['scoring_type'] = 'percentage';
+                }
+            }
+            
+            // Parse Timer
+            if (preg_match('/Timer:\s*(.+?)(?:\n|$)/i', $settings_block, $timer_match)) {
+                $timer_text = trim($timer_match[1]);
+                if (preg_match('/(\d+)\s*minutes?/i', $timer_text, $minutes_match)) {
+                    $metadata['timer_minutes'] = intval($minutes_match[1]);
+                } elseif (stripos($timer_text, 'No timer') !== false) {
+                    $metadata['timer_minutes'] = '';
+                }
+            }
+        }
+        
+        return $metadata;
+    }
+    
+    /**
      * Parse exercise text into structured data
      */
     public function parse_exercise_text($text) {
@@ -676,8 +791,11 @@ You have one hour for the complete test (including transferring your answers).</
         // Remove reading passages from text for question parsing
         $text = $this->remove_reading_passages($text);
         
+        // Remove metadata block from text for title/question parsing
+        $text_without_metadata = $this->remove_metadata_block($text);
+        
         // Extract title - everything before the first question section
-        $lines = explode("\n", $text);
+        $lines = explode("\n", $text_without_metadata);
         $lines = array_map('trim', $lines);
         
         $title = '';
@@ -724,10 +842,14 @@ You have one hour for the complete test (including transferring your answers).</
             }
         }
         
+        // Extract metadata from text
+        $metadata = $this->extract_metadata_from_text($text);
+        
         return array(
             'title' => $title,
             'questions' => $all_questions,
-            'reading_texts' => $reading_texts
+            'reading_texts' => $reading_texts,
+            'metadata' => $metadata
         );
     }
     
@@ -845,8 +967,11 @@ You have one hour for the complete test (including transferring your answers).</
         // Remove reading passages from text for question parsing
         $text = $this->remove_reading_passages($text);
         
+        // Remove metadata block from text for title/question parsing
+        $text_without_metadata = $this->remove_metadata_block($text);
+        
         // Extract title - everything before the first question number
-        $lines = explode("\n", $text);
+        $lines = explode("\n", $text_without_metadata);
         $lines = array_map('trim', $lines);
         
         $title = '';
@@ -947,10 +1072,14 @@ You have one hour for the complete test (including transferring your answers).</
             }
         }
         
+        // Extract metadata from text
+        $metadata = $this->extract_metadata_from_text($text);
+        
         return array(
             'title' => $title,
             'questions' => $questions,
-            'reading_texts' => $reading_texts
+            'reading_texts' => $reading_texts,
+            'metadata' => $metadata
         );
     }
     
@@ -986,6 +1115,14 @@ You have one hour for the complete test (including transferring your answers).</
     private function remove_reading_passages($text) {
         // Remove reading passage blocks to avoid interference with question parsing
         return preg_replace(self::READING_PASSAGE_PATTERN, '', $text);
+    }
+    
+    /**
+     * Remove metadata block from text for question/title parsing
+     */
+    private function remove_metadata_block($text) {
+        // Remove EXERCISE SETTINGS block to avoid interference with title/question parsing
+        return preg_replace('/===\s*EXERCISE SETTINGS\s*===\s*.*?\s*===\s*END EXERCISE SETTINGS\s*===/is', '', $text);
     }
     
     /**
@@ -1101,7 +1238,10 @@ You have one hour for the complete test (including transferring your answers).</
         // Remove reading passages from text for question parsing
         $text = $this->remove_reading_passages($text);
         
-        $lines = explode("\n", $text);
+        // Remove metadata block from text for title/question parsing
+        $text_without_metadata = $this->remove_metadata_block($text);
+        
+        $lines = explode("\n", $text_without_metadata);
         $lines = array_map('trim', $lines);
         
         // First non-empty line is the title
@@ -1646,10 +1786,14 @@ You have one hour for the complete test (including transferring your answers).</
             $questions[] = $current_question;
         }
         
+        // Extract metadata from original text (before reading passage and metadata block removal)
+        $metadata = $this->extract_metadata_from_text($text);
+        
         return array(
             'title' => $title,
             'questions' => $questions,
-            'reading_texts' => $reading_texts
+            'reading_texts' => $reading_texts,
+            'metadata' => $metadata
         );
     }
     
@@ -1671,7 +1815,10 @@ You have one hour for the complete test (including transferring your answers).</
         $reading_texts = $this->extract_reading_passages($text);
         $text = $this->remove_reading_passages($text);
         
-        $lines = explode("\n", $text);
+        // Remove metadata block from text for title/question parsing
+        $text_without_metadata = $this->remove_metadata_block($text);
+        
+        $lines = explode("\n", $text_without_metadata);
         $lines = array_map('trim', $lines);
         
         // Detect question type from marker
@@ -1867,10 +2014,14 @@ You have one hour for the complete test (including transferring your answers).</
             $questions[] = $current_question;
         }
         
+        // Extract metadata from text
+        $metadata = $this->extract_metadata_from_text($text);
+        
         return array(
             'title' => $title,
             'questions' => $questions,
-            'reading_texts' => $reading_texts
+            'reading_texts' => $reading_texts,
+            'metadata' => $metadata
         );
     }
     
@@ -1905,7 +2056,10 @@ You have one hour for the complete test (including transferring your answers).</
         $reading_texts = $this->extract_reading_passages($text);
         $text = $this->remove_reading_passages($text);
         
-        $lines = explode("\n", $text);
+        // Remove metadata block from text for title/question parsing
+        $text_without_metadata = $this->remove_metadata_block($text);
+        
+        $lines = explode("\n", $text_without_metadata);
         $lines = array_map('trim', $lines);
         
         // Extract title - first non-empty line, remove type marker if present
@@ -1999,10 +2153,14 @@ You have one hour for the complete test (including transferring your answers).</
             );
         }
         
+        // Extract metadata from text
+        $metadata = $this->extract_metadata_from_text($text);
+        
         return array(
             'title' => $title,
             'questions' => $questions,
-            'reading_texts' => $reading_texts
+            'reading_texts' => $reading_texts,
+            'metadata' => $metadata
         );
     }
     
@@ -2026,7 +2184,10 @@ You have one hour for the complete test (including transferring your answers).</
         $reading_texts = $this->extract_reading_passages($text);
         $text = $this->remove_reading_passages($text);
         
-        $lines = explode("\n", $text);
+        // Remove metadata block from text for title/question parsing
+        $text_without_metadata = $this->remove_metadata_block($text);
+        
+        $lines = explode("\n", $text_without_metadata);
         $lines = array_map('trim', $lines);
         
         // Extract title
@@ -2166,10 +2327,14 @@ You have one hour for the complete test (including transferring your answers).</
                 'no_answer_feedback' => ''
             );
             
+            // Extract metadata from text
+            $metadata = $this->extract_metadata_from_text($text);
+            
             return array(
                 'title' => $title,
                 'questions' => $questions,
-                'reading_texts' => $reading_texts
+                'reading_texts' => $reading_texts,
+                'metadata' => $metadata
             );
         }
         
