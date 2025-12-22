@@ -3623,6 +3623,7 @@ You have one hour for the complete test (including transferring your answers).</
         
         // Check if questions have common instructions and add them once
         $common_instructions = null;
+        $all_same = false;
         if (!empty($questions)) {
             $first_instructions = isset($questions[0]['instructions']) ? $questions[0]['instructions'] : '';
             if (!empty($first_instructions)) {
@@ -3649,6 +3650,12 @@ You have one hour for the complete test (including transferring your answers).</
             $question_num = $index + 1;
             $question_text = isset($question['question']) ? $question['question'] : '';
             $correct_answer = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+            
+            // Output per-question instructions if they differ from common instructions
+            if (!$all_same && isset($question['instructions']) && !empty($question['instructions'])) {
+                $output[] = strip_tags($question['instructions']);
+                $output[] = '';
+            }
             
             // Add linked reading text if present
             if (isset($question['reading_text_id']) && $question['reading_text_id'] !== '' && $question['reading_text_id'] !== null) {
