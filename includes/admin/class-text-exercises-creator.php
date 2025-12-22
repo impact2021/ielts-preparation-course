@@ -771,8 +771,9 @@ You have one hour for the complete test (including transferring your answers).</
             $format_count++;
         }
         
-        // Check for true/false format (has "This is TRUE" or "This is FALSE")
-        if (preg_match('/^This is (TRUE|FALSE)/m', $text)) {
+        // Check for true/false format (has "This is TRUE" or "This is FALSE" - old format)
+        // OR has "=== QUESTION N ===" markers (new format)
+        if (preg_match('/^This is (TRUE|FALSE)/m', $text) || preg_match('/^===\s*QUESTION\s+\d+\s*===/m', $text)) {
             $format_count++;
         }
         
@@ -802,8 +803,8 @@ You have one hour for the complete test (including transferring your answers).</
         $questions_start_index = -1;
         
         for ($i = 0; $i < count($lines); $i++) {
-            // Look for question section markers like "Questions 1-5" or numbered questions
-            if (preg_match('/^Questions\s+\d+/', $lines[$i]) || preg_match('/^\d+\.\s+/', $lines[$i])) {
+            // Look for question section markers like "Questions 1-5", "Question 1", or numbered questions
+            if (preg_match('/^Questions?\s+\d+/', $lines[$i]) || preg_match('/^\d+\.\s+/', $lines[$i])) {
                 $questions_start_index = $i;
                 break;
             }
@@ -854,7 +855,7 @@ You have one hour for the complete test (including transferring your answers).</
     }
     
     /**
-     * Split text into question sections based on "Questions X-Y" headers
+     * Split text into question sections based on "Questions X-Y" or "Question X" headers
      */
     private function split_into_question_sections($lines, $start_index) {
         $sections = array();
@@ -863,14 +864,14 @@ You have one hour for the complete test (including transferring your answers).</
         for ($i = $start_index; $i < count($lines); $i++) {
             $line = $lines[$i];
             
-            // Check if this is a section header like "Questions 1-5 [HEADINGS]"
-            if (preg_match('/^Questions\s+\d+/i', $line)) {
+            // Check if this is a section header like "Questions 1-5 [HEADINGS]" or "Question 1 [MULTIPLE CHOICE]"
+            if (preg_match('/^Questions?\s+\d+/i', $line)) {
                 // Save previous section if exists
                 if ($current_section !== null) {
                     $sections[] = $current_section;
                 }
                 
-                // Extract marker if present (e.g., [HEADINGS], [MATCHING])
+                // Extract marker if present (e.g., [HEADINGS], [MATCHING], [MULTIPLE CHOICE], [TRUE/FALSE])
                 $marker = '';
                 if (preg_match('/\[([^\]]+)\]/', $line, $marker_match)) {
                     $marker = '[' . $marker_match[1] . ']';
@@ -915,15 +916,17 @@ You have one hour for the complete test (including transferring your answers).</
             return isset($parsed['questions']) ? $parsed['questions'] : array();
         }
         
-        // Check for short answer format (must have both numbered questions AND {ANSWER} placeholders)
-        if ($this->is_short_answer_format($text)) {
-            $parsed = $this->parse_short_answer_format($text);
+        // Check for true/false format (old format or new format with marker)
+        if (stripos($marker, 'TRUE/FALSE') !== false || 
+            preg_match('/^This is (TRUE|FALSE)/m', $text) || 
+            preg_match('/^===\s*QUESTION\s+\d+\s*===/m', $text)) {
+            $parsed = $this->parse_true_false_format($text);
             return isset($parsed['questions']) ? $parsed['questions'] : array();
         }
         
-        // Check for true/false format
-        if (preg_match('/^This is (TRUE|FALSE)/m', $text)) {
-            $parsed = $this->parse_true_false_format($text);
+        // Check for short answer format (must have both numbered questions AND {ANSWER} placeholders)
+        if ($this->is_short_answer_format($text)) {
+            $parsed = $this->parse_short_answer_format($text);
             return isset($parsed['questions']) ? $parsed['questions'] : array();
         }
         
@@ -1045,7 +1048,7 @@ You have one hour for the complete test (including transferring your answers).</
                     // Create question
                     $question_data = array(
                         'type' => 'short_answer',
-                        'question' => sanitize_text_field($question_text),
+                        'question' => wp_kses_post($question_text),
                         // Multiple correct answers separated by pipe (|) for flexible matching
                         // The quiz handler checks user input against each alternative (case-insensitive)
                         'correct_answer' => sanitize_text_field(implode('|', $answers)),
@@ -1397,7 +1400,7 @@ You have one hour for the complete test (including transferring your answers).</
             
             // Handle content for new format states
             if ($state === 'READING_NEW_FORMAT_QUESTION' && !empty($line)) {
-                $current_question['question'] = sanitize_text_field($line);
+                $current_question['question'] = wp_kses_post($line);
                 continue;
             }
             
@@ -1474,7 +1477,7 @@ You have one hour for the complete test (including transferring your answers).</
                 // This is a new question
                 $current_question = array(
                     'type' => 'true_false',
-                    'question' => sanitize_text_field($question_text),
+                    'question' => wp_kses_post($question_text),
                     'points' => 1,
                     'correct_feedback' => '',
                     'incorrect_feedback' => '',
@@ -1613,7 +1616,7 @@ You have one hour for the complete test (including transferring your answers).</
                     $question_text = preg_replace('/^\d+\.\s+/', '', $line);
                     $current_question = array(
                         'type' => 'true_false',
-                        'question' => sanitize_text_field($question_text),
+                        'question' => wp_kses_post($question_text),
                         'points' => 1,
                         'correct_feedback' => '',
                         'incorrect_feedback' => '',
@@ -1945,7 +1948,7 @@ You have one hour for the complete test (including transferring your answers).</
                 // Start new question
                 $current_question = array(
                     'type' => $question_type,
-                    'question' => sanitize_text_field($match[2]),
+                    'question' => wp_kses_post($match[2]),
                     'points' => 1,
                     'correct_feedback' => '',
                     'incorrect_feedback' => '',
@@ -2144,7 +2147,7 @@ You have one hour for the complete test (including transferring your answers).</
         if (!empty($question_text) && preg_match('/\[field\s+\d+\]/i', $question_text)) {
             $questions[] = array(
                 'type' => $question_type,
-                'question' => sanitize_textarea_field($question_text),
+                'question' => wp_kses_post($question_text),
                 'summary_fields' => $summary_fields,
                 'points' => 1,
                 'correct_feedback' => '',
@@ -2318,7 +2321,7 @@ You have one hour for the complete test (including transferring your answers).</
             $questions = array();
             $questions[] = array(
                 'type' => 'dropdown_paragraph',
-                'question' => sanitize_textarea_field($formatted_question),
+                'question' => wp_kses_post($formatted_question),
                 'correct_answer' => sanitize_text_field(implode('|', $correct_answer_parts)),
                 'dropdown_options' => $dropdown_options,
                 'points' => 1,
