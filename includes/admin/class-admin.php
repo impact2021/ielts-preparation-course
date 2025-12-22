@@ -974,7 +974,8 @@ class IELTS_CM_Admin {
         <script>
         jQuery(document).ready(function($) {
             var questionIndex = <?php echo intval(count($questions)); ?>;
-            var readingTextIndex = <?php echo intval(count($reading_texts)); ?>;
+            // Use max key + 1 instead of count to handle arrays with gaps (e.g., [0, 2] after deleting index 1)
+            var readingTextIndex = <?php echo !empty($reading_texts) ? (max(array_keys($reading_texts)) + 1) : 0; ?>;
             
             // Localized strings
             var i18n = {
@@ -2843,11 +2844,12 @@ class IELTS_CM_Admin {
             }
             
             // Save reading texts
+            // IMPORTANT: Preserve array keys to maintain reading_text_id references in questions
             $reading_texts = array();
             if (isset($_POST['reading_texts']) && is_array($_POST['reading_texts'])) {
-                foreach ($_POST['reading_texts'] as $text) {
+                foreach ($_POST['reading_texts'] as $index => $text) {
                     if (!empty($text['content'])) {
-                        $reading_texts[] = array(
+                        $reading_texts[$index] = array(
                             'title' => sanitize_text_field($text['title']),
                             'content' => wp_kses_post($text['content'])
                         );
