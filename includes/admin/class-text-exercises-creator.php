@@ -1002,7 +1002,7 @@ You have one hour for the complete test (including transferring your answers).</
                 preg_match('/^DROPDOWN\s+\d+:/i', $line) ||                  // Dropdown definition
                 preg_match('/\[ANSWER\s+\d+\]/i', $line) ||                  // Summary/table completion
                 preg_match('/___\d+___/', $line) ||                          // Dropdown paragraph placeholders
-                preg_match('/^[A-Z]\)\s+/', $line)) {                        // Option line (for MC without numbered questions)
+                preg_match('/^[A-Za-z]\)\s+/', $line)) {                     // Option line (uppercase or lowercase)
                 // Found the start of actual content
                 $content_start_index = $i;
                 break;
@@ -1014,11 +1014,11 @@ You have one hour for the complete test (including transferring your answers).</
         
         // If we found instruction lines, move them to the instructions array and remove from lines
         if (!empty($instruction_lines)) {
-            // Prepend section instructions to existing instructions
-            $section['instructions'] = array_merge($section['instructions'], $instruction_lines);
+            // Prepend instruction lines to existing instructions (section-specific come first)
+            $section['instructions'] = array_merge($instruction_lines, $section['instructions']);
             
             // Remove instruction lines from the beginning of the lines array
-            if ($content_start_index > 0) {
+            if ($content_start_index >= 0) {
                 $section['lines'] = array_slice($section['lines'], $content_start_index);
             }
         }
