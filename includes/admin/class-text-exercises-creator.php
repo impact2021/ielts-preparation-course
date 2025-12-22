@@ -1018,9 +1018,16 @@ You have one hour for the complete test (including transferring your answers).</
             $section['instructions'] = array_merge($instruction_lines, $section['instructions']);
             
             // Remove instruction lines from the beginning of the lines array
-            if ($content_start_index >= 0) {
+            // If content_start_index is -1, all lines are instructions, so remove all
+            // If content_start_index is > 0, remove lines up to that index
+            if ($content_start_index === -1) {
+                // All lines are instructions, clear the array
+                $section['lines'] = array();
+            } elseif ($content_start_index > 0) {
+                // Remove instruction lines from the beginning
                 $section['lines'] = array_slice($section['lines'], $content_start_index);
             }
+            // If content_start_index is 0, first line is content, nothing to remove
         }
     }
     
