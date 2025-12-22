@@ -771,8 +771,9 @@ You have one hour for the complete test (including transferring your answers).</
             $format_count++;
         }
         
-        // Check for true/false format (has "This is TRUE" or "This is FALSE")
-        if (preg_match('/^This is (TRUE|FALSE)/m', $text)) {
+        // Check for true/false format (has "This is TRUE" or "This is FALSE" - old format)
+        // OR has "=== QUESTION N ===" markers (new format)
+        if (preg_match('/^This is (TRUE|FALSE)/m', $text) || preg_match('/^===\s*QUESTION\s+\d+\s*===/m', $text)) {
             $format_count++;
         }
         
@@ -802,8 +803,8 @@ You have one hour for the complete test (including transferring your answers).</
         $questions_start_index = -1;
         
         for ($i = 0; $i < count($lines); $i++) {
-            // Look for question section markers like "Questions 1-5" or numbered questions
-            if (preg_match('/^Questions\s+\d+/', $lines[$i]) || preg_match('/^\d+\.\s+/', $lines[$i])) {
+            // Look for question section markers like "Questions 1-5", "Question 1", or numbered questions
+            if (preg_match('/^Questions?\s+\d+/', $lines[$i]) || preg_match('/^\d+\.\s+/', $lines[$i])) {
                 $questions_start_index = $i;
                 break;
             }
@@ -835,7 +836,9 @@ You have one hour for the complete test (including transferring your answers).</
         
         foreach ($sections as $section) {
             $section_text = implode("\n", $section['lines']);
-            $section_questions = $this->parse_question_section($section_text, $section['marker']);
+            
+            // Pass reading_texts to parser so it doesn't need to extract them again
+            $section_questions = $this->parse_question_section($section_text, $section['marker'], $reading_texts);
             
             if (!empty($section_questions)) {
                 $all_questions = array_merge($all_questions, $section_questions);
@@ -854,7 +857,7 @@ You have one hour for the complete test (including transferring your answers).</
     }
     
     /**
-     * Split text into question sections based on "Questions X-Y" headers
+     * Split text into question sections based on "Questions X-Y" or "Question X" headers
      */
     private function split_into_question_sections($lines, $start_index) {
         $sections = array();
@@ -863,14 +866,14 @@ You have one hour for the complete test (including transferring your answers).</
         for ($i = $start_index; $i < count($lines); $i++) {
             $line = $lines[$i];
             
-            // Check if this is a section header like "Questions 1-5 [HEADINGS]"
-            if (preg_match('/^Questions\s+\d+/i', $line)) {
+            // Check if this is a section header like "Questions 1-5 [HEADINGS]" or "Question 1 [MULTIPLE CHOICE]"
+            if (preg_match('/^Questions?\s+\d+/i', $line)) {
                 // Save previous section if exists
                 if ($current_section !== null) {
                     $sections[] = $current_section;
                 }
                 
-                // Extract marker if present (e.g., [HEADINGS], [MATCHING])
+                // Extract marker if present (e.g., [HEADINGS], [MATCHING], [MULTIPLE CHOICE], [TRUE/FALSE])
                 $marker = '';
                 if (preg_match('/\[([^\]]+)\]/', $line, $marker_match)) {
                     $marker = '[' . $marker_match[1] . ']';
@@ -898,8 +901,13 @@ You have one hour for the complete test (including transferring your answers).</
     
     /**
      * Parse a single question section based on its format
+     * 
+     * @param string $text Section text to parse
+     * @param string $marker Section marker (e.g., [HEADINGS], [MULTIPLE CHOICE])
+     * @param array $reading_texts Optional array of reading texts (used in mixed format)
+     * @return array Array of questions
      */
-    private function parse_question_section($text, $marker) {
+    private function parse_question_section($text, $marker, $reading_texts = array()) {
         // Determine format based on marker and content
         
         // For multiple choice variants (headings, matching, etc.), prepend a title with the marker
@@ -911,7 +919,15 @@ You have one hour for the complete test (including transferring your answers).</
             stripos($marker, 'MULTIPLE CHOICE') !== false) {
             // Prepend a title line with the marker so parse_multiple_choice_format can detect the type
             $text_with_marker = "Questions " . $marker . "\n\n" . $text;
-            $parsed = $this->parse_multiple_choice_format($text_with_marker);
+            $parsed = $this->parse_multiple_choice_format($text_with_marker, $reading_texts);
+            return isset($parsed['questions']) ? $parsed['questions'] : array();
+        }
+        
+        // Check for true/false format (old format or new format with marker)
+        if (stripos($marker, 'TRUE/FALSE') !== false || 
+            preg_match('/^This is (TRUE|FALSE)/m', $text) || 
+            preg_match('/^===\s*QUESTION\s+\d+\s*===/m', $text)) {
+            $parsed = $this->parse_true_false_format($text, $reading_texts);
             return isset($parsed['questions']) ? $parsed['questions'] : array();
         }
         
@@ -921,15 +937,9 @@ You have one hour for the complete test (including transferring your answers).</
             return isset($parsed['questions']) ? $parsed['questions'] : array();
         }
         
-        // Check for true/false format
-        if (preg_match('/^This is (TRUE|FALSE)/m', $text)) {
-            $parsed = $this->parse_true_false_format($text);
-            return isset($parsed['questions']) ? $parsed['questions'] : array();
-        }
-        
         // Default to multiple choice if it has the pattern
         if ($this->is_multiple_choice_format($text)) {
-            $parsed = $this->parse_multiple_choice_format($text);
+            $parsed = $this->parse_multiple_choice_format($text, $reading_texts);
             return isset($parsed['questions']) ? $parsed['questions'] : array();
         }
         
@@ -1010,8 +1020,17 @@ You have one hour for the complete test (including transferring your answers).</
         $question_lines = array_slice($lines, $question_start_index);
         
         $i = 0;
+        $next_question_reading_text_id = null; // Store reading text ID for next question
         while ($i < count($question_lines)) {
             $line = $question_lines[$i];
+            
+            // Check for [LINKED TO: ...] marker lines and extract reading text ID for next question
+            if (preg_match('/^\[LINKED TO:\s*(.+?)\]/i', $line, $link_match)) {
+                $linked_title = trim($link_match[1]);
+                $next_question_reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
+                $i++;
+                continue;
+            }
             
             // Check if this line is a question using the pattern constant
             // Pattern now matches: "number. full line text"
@@ -1020,12 +1039,9 @@ You have one hour for the complete test (including transferring your answers).</
                 $question_num = $match[1];
                 $full_line = trim($match[2]);
                 
-                // Check for linked reading text on previous line
-                $reading_text_id = null;
-                if ($i > 0 && preg_match('/\[LINKED TO:\s*(.+?)\]/i', $question_lines[$i - 1], $link_match)) {
-                    $linked_title = trim($link_match[1]);
-                    $reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
-                }
+                // Use the stored reading text ID for this question
+                $reading_text_id = $next_question_reading_text_id;
+                $next_question_reading_text_id = null; // Reset for next question
                 
                 // Extract the answer part from within the curly braces
                 if (preg_match('/\{([^}]+)\}/', $full_line, $answer_match)) {
@@ -1045,7 +1061,7 @@ You have one hour for the complete test (including transferring your answers).</
                     // Create question
                     $question_data = array(
                         'type' => 'short_answer',
-                        'question' => sanitize_text_field($question_text),
+                        'question' => wp_kses_post($question_text),
                         // Multiple correct answers separated by pipe (|) for flexible matching
                         // The quiz handler checks user input against each alternative (case-insensitive)
                         'correct_answer' => sanitize_text_field(implode('|', $answers)),
@@ -1231,9 +1247,11 @@ You have one hour for the complete test (including transferring your answers).</
     /**
      * Parse true/false format questions (original parser)
      */
-    private function parse_true_false_format($text) {
-        // Extract reading passages first
-        $reading_texts = $this->extract_reading_passages($text);
+    private function parse_true_false_format($text, $reading_texts = null) {
+        // Extract reading passages first (unless already provided by caller, e.g., in mixed format)
+        if ($reading_texts === null) {
+            $reading_texts = $this->extract_reading_passages($text);
+        }
         
         // Remove reading passages from text for question parsing
         $text = $this->remove_reading_passages($text);
@@ -1247,9 +1265,25 @@ You have one hour for the complete test (including transferring your answers).</
         // First non-empty line is the title
         $title = '';
         $start_index = 0;
+        $next_question_reading_text_id = null; // Store reading text ID for next question
+        
         for ($i = 0; $i < count($lines); $i++) {
+            // Check for [LINKED TO: ...] marker and store for next question
+            if (preg_match('/^\[LINKED TO:\s*(.+?)\]/i', $lines[$i], $link_match)) {
+                $linked_title = trim($link_match[1]);
+                $next_question_reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
+                continue; // Skip this line, don't use as title
+            }
             // Skip "=== QUESTION TYPE: ... ===" header lines
             if (preg_match('/^===.*===$/i', $lines[$i])) {
+                // But if it's a "=== QUESTION N ===" marker, use default title and stop
+                if (preg_match('/^===\s*QUESTION\s+\d+\s*===/i', $lines[$i])) {
+                    if (empty($title)) {
+                        $title = 'True/False Questions';
+                    }
+                    $start_index = $i;
+                    break;
+                }
                 continue;
             }
             if (!empty($lines[$i])) {
@@ -1270,9 +1304,15 @@ You have one hour for the complete test (including transferring your answers).</
         $current_options = array();
         $feedback_lines = array();
         $current_feedback_type = 'incorrect'; // Track which feedback type we're collecting: 'correct', 'incorrect', 'no_answer'
-        
         for ($i = $start_index; $i < count($lines); $i++) {
             $line = $lines[$i];
+            
+            // Check for [LINKED TO: ...] marker lines and extract reading text ID for next question
+            if (preg_match('/^\[LINKED TO:\s*(.+?)\]/i', $line, $link_match)) {
+                $linked_title = trim($link_match[1]);
+                $next_question_reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
+                continue;
+            }
             
             // Empty line transitions state
             if (empty($line)) {
@@ -1357,6 +1397,10 @@ You have one hour for the complete test (including transferring your answers).</
                     $questions[] = $current_question;
                 }
                 
+                // Use the stored reading text ID for this question
+                $reading_text_id = $next_question_reading_text_id;
+                $next_question_reading_text_id = null; // Reset for next question
+                
                 // Start new question
                 $current_question = array(
                     'type' => 'true_false',
@@ -1366,6 +1410,12 @@ You have one hour for the complete test (including transferring your answers).</
                     'incorrect_feedback' => '',
                     'no_answer_feedback' => ''
                 );
+                
+                // Add reading text link if found
+                if ($reading_text_id !== null) {
+                    $current_question['reading_text_id'] = $reading_text_id;
+                }
+                
                 $current_options = array();
                 $feedback_lines = array();
                 $state = 'READING_NEW_FORMAT_QUESTION';
@@ -1397,7 +1447,7 @@ You have one hour for the complete test (including transferring your answers).</
             
             // Handle content for new format states
             if ($state === 'READING_NEW_FORMAT_QUESTION' && !empty($line)) {
-                $current_question['question'] = sanitize_text_field($line);
+                $current_question['question'] = wp_kses_post($line);
                 continue;
             }
             
@@ -1474,7 +1524,7 @@ You have one hour for the complete test (including transferring your answers).</
                 // This is a new question
                 $current_question = array(
                     'type' => 'true_false',
-                    'question' => sanitize_text_field($question_text),
+                    'question' => wp_kses_post($question_text),
                     'points' => 1,
                     'correct_feedback' => '',
                     'incorrect_feedback' => '',
@@ -1613,7 +1663,7 @@ You have one hour for the complete test (including transferring your answers).</
                     $question_text = preg_replace('/^\d+\.\s+/', '', $line);
                     $current_question = array(
                         'type' => 'true_false',
-                        'question' => sanitize_text_field($question_text),
+                        'question' => wp_kses_post($question_text),
                         'points' => 1,
                         'correct_feedback' => '',
                         'incorrect_feedback' => '',
@@ -1810,9 +1860,11 @@ You have one hour for the complete test (including transferring your answers).</
      * 
      * Multiple questions separated by blank lines
      */
-    private function parse_multiple_choice_format($text) {
-        // Extract reading passages first
-        $reading_texts = $this->extract_reading_passages($text);
+    private function parse_multiple_choice_format($text, $reading_texts = null) {
+        // Extract reading passages first (unless already provided by caller, e.g., in mixed format)
+        if ($reading_texts === null) {
+            $reading_texts = $this->extract_reading_passages($text);
+        }
         $text = $this->remove_reading_passages($text);
         
         // Remove metadata block from text for title/question parsing
@@ -1847,6 +1899,13 @@ You have one hour for the complete test (including transferring your answers).</
                 continue;
             }
             
+            
+            // Check for [LINKED TO: ...] marker and extract for next question
+            if (preg_match('/^\[LINKED TO:\s*(.+?)\]/i', $lines[$i], $link_match)) {
+                $linked_title = trim($link_match[1]);
+                $next_question_reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
+                continue; // Skip this line, don't add to title
+            }
             // Check for type marker
             foreach ($type_markers as $marker => $type) {
                 if (preg_match('/\[' . preg_quote($marker, '/') . '\]/i', $lines[$i])) {
@@ -1877,12 +1936,13 @@ You have one hour for the complete test (including transferring your answers).</
         $questions = array();
         $current_question = null;
         $current_options = array();
-        
         for ($i = $start_index; $i < count($lines); $i++) {
             $line = $lines[$i];
             
-            // Skip [LINKED TO: ...] marker lines
-            if (preg_match('/^\[LINKED TO:/i', $line)) {
+            // Check for [LINKED TO: ...] marker lines and extract reading text ID for next question
+            if (preg_match('/^\[LINKED TO:\s*(.+?)\]/i', $line, $link_match)) {
+                $linked_title = trim($link_match[1]);
+                $next_question_reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
                 continue;
             }
             
@@ -1935,17 +1995,14 @@ You have one hour for the complete test (including transferring your answers).</
                     $current_options = array();
                 }
                 
-                // Check for linked reading text on previous line
-                $reading_text_id = null;
-                if ($i > 0 && preg_match('/\[LINKED TO:\s*(.+?)\]/i', $lines[$i - 1], $link_match)) {
-                    $linked_title = trim($link_match[1]);
-                    $reading_text_id = $this->find_reading_text_by_title($linked_title, $reading_texts);
-                }
+                // Use the stored reading text ID for this question
+                $reading_text_id = $next_question_reading_text_id;
+                $next_question_reading_text_id = null; // Reset for next question
                 
                 // Start new question
                 $current_question = array(
                     'type' => $question_type,
-                    'question' => sanitize_text_field($match[2]),
+                    'question' => wp_kses_post($match[2]),
                     'points' => 1,
                     'correct_feedback' => '',
                     'incorrect_feedback' => '',
@@ -2144,7 +2201,7 @@ You have one hour for the complete test (including transferring your answers).</
         if (!empty($question_text) && preg_match('/\[field\s+\d+\]/i', $question_text)) {
             $questions[] = array(
                 'type' => $question_type,
-                'question' => sanitize_textarea_field($question_text),
+                'question' => wp_kses_post($question_text),
                 'summary_fields' => $summary_fields,
                 'points' => 1,
                 'correct_feedback' => '',
@@ -2318,7 +2375,7 @@ You have one hour for the complete test (including transferring your answers).</
             $questions = array();
             $questions[] = array(
                 'type' => 'dropdown_paragraph',
-                'question' => sanitize_textarea_field($formatted_question),
+                'question' => wp_kses_post($formatted_question),
                 'correct_answer' => sanitize_text_field(implode('|', $correct_answer_parts)),
                 'dropdown_options' => $dropdown_options,
                 'points' => 1,
