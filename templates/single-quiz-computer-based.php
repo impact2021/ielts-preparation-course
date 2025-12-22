@@ -27,8 +27,9 @@ $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
 // Check if we're in fullscreen mode
 $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
 
-// Calculate next URL for navigation (same logic as in quiz-handler)
+// Calculate next and previous URLs for navigation
 $next_url = '';
+$prev_url = '';
 if ($lesson_id) {
     global $wpdb;
     // Get all resources and quizzes for this lesson
@@ -82,7 +83,7 @@ if ($lesson_id) {
         return $a['order'] - $b['order'];
     });
     
-    // Find current quiz and get next item
+    // Find current quiz and get next/previous items
     $current_index = -1;
     foreach ($all_items as $index => $item) {
         if ($item['post']->ID == $quiz->ID) {
@@ -105,6 +106,23 @@ if ($lesson_id) {
             }
         } else {
             $next_url = get_permalink($next_post->ID);
+        }
+    }
+    
+    // If there's a previous item in this lesson, get its URL
+    if ($current_index > 0) {
+        $prev_post = $all_items[$current_index - 1]['post'];
+        // For CBT quizzes with fullscreen enabled, add fullscreen parameter
+        if ($prev_post->post_type === 'ielts_quiz') {
+            $prev_layout_type = get_post_meta($prev_post->ID, '_ielts_cm_layout_type', true);
+            $prev_open_as_popup = get_post_meta($prev_post->ID, '_ielts_cm_open_as_popup', true);
+            if ($prev_layout_type === 'computer_based' && $prev_open_as_popup) {
+                $prev_url = add_query_arg('fullscreen', '1', get_permalink($prev_post->ID));
+            } else {
+                $prev_url = get_permalink($prev_post->ID);
+            }
+        } else {
+            $prev_url = get_permalink($prev_post->ID);
         }
     }
 }
@@ -176,13 +194,24 @@ if ($lesson_id) {
                 <div class="timer-left-section">
                     <?php if ($course_id): ?>
                     <?php 
-                    // Use next_url if available, otherwise return to course
-                    $return_link_url = $next_url ? $next_url : get_permalink($course_id);
-                    $return_link_text = $next_url ? __('Next page >', 'ielts-course-manager') : __('< Return to course', 'ielts-course-manager');
-                    ?>
-                    <a href="<?php echo esc_url($return_link_url); ?>" class="return-to-course-link" id="return-to-course-link">
-                        <?php echo esc_html($return_link_text); ?>
-                    </a>
+                    // Show Previous page button if there's a previous item
+                    if ($prev_url): ?>
+                        <a href="<?php echo esc_url($prev_url); ?>" class="nav-page-link prev-page-link nav-link-clickable">
+                            <?php _e('< Previous page', 'ielts-course-manager'); ?>
+                        </a>
+                    <?php endif; ?>
+                    
+                    <?php 
+                    // Show Next page button if there's a next item, otherwise Return to course
+                    if ($next_url): ?>
+                        <a href="<?php echo esc_url($next_url); ?>" class="nav-page-link next-page-link nav-link-clickable">
+                            <?php _e('Next page >', 'ielts-course-manager'); ?>
+                        </a>
+                    <?php else: ?>
+                        <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-page-link return-course-link nav-link-clickable">
+                            <?php _e('< Return to course', 'ielts-course-manager'); ?>
+                        </a>
+                    <?php endif; ?>
                     <?php endif; ?>
                 </div>
                 <?php if ($timer_minutes > 0): ?>
@@ -754,67 +783,4 @@ if ($lesson_id) {
     <?php else: ?>
         <p><?php _e('No questions available for this quiz.', 'ielts-course-manager'); ?></p>
     <?php endif; ?>
-    
-    <?php
-    // Previous/Next quiz navigation within the lesson
-    if ($lesson_id) {
-        global $wpdb;
-        $quiz_ids = $wpdb->get_col($wpdb->prepare("
-            SELECT DISTINCT post_id 
-            FROM {$wpdb->postmeta} 
-            WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
-        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
-        
-        $all_quizzes = array();
-        if (!empty($quiz_ids)) {
-            $all_quizzes = get_posts(array(
-                'post_type' => 'ielts_quiz',
-                'posts_per_page' => -1,
-                'post__in' => $quiz_ids,
-                'orderby' => 'menu_order',
-                'order' => 'ASC',
-                'post_status' => 'publish'
-            ));
-        }
-        
-        $current_index = -1;
-        foreach ($all_quizzes as $index => $q) {
-            if ($q->ID == $quiz->ID) {
-                $current_index = $index;
-                break;
-            }
-        }
-        
-        $prev_quiz = ($current_index > 0) ? $all_quizzes[$current_index - 1] : null;
-        $next_quiz = ($current_index >= 0 && $current_index < count($all_quizzes) - 1) ? $all_quizzes[$current_index + 1] : null;
-        ?>
-        
-        <?php if ($prev_quiz || $next_quiz): ?>
-            <div class="ielts-navigation">
-                <div class="nav-prev">
-                    <?php if ($prev_quiz): ?>
-                        <a href="<?php echo get_permalink($prev_quiz->ID); ?>" class="nav-link">
-                            <span class="nav-arrow">&laquo;</span>
-                            <span class="nav-label">
-                                <small><?php _e('Previous Exercise', 'ielts-course-manager'); ?></small>
-                                <strong><?php echo esc_html($prev_quiz->post_title); ?></strong>
-                            </span>
-                        </a>
-                    <?php endif; ?>
-                </div>
-                <div class="nav-next">
-                    <?php if ($next_quiz): ?>
-                        <a href="<?php echo get_permalink($next_quiz->ID); ?>" class="nav-link">
-                            <span class="nav-label">
-                                <small><?php _e('Next Exercise', 'ielts-course-manager'); ?></small>
-                                <strong><?php echo esc_html($next_quiz->post_title); ?></strong>
-                            </span>
-                            <span class="nav-arrow">&raquo;</span>
-                        </a>
-                    <?php endif; ?>
-                </div>
-            </div>
-        <?php endif; ?>
-    <?php } ?>
 </div>

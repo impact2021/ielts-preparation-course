@@ -681,20 +681,17 @@
                             // Update the fullscreen timer UI component (CBT-specific feature - standard layout doesn't have this element)
                             var timerElement = form.find('.quiz-timer-fullscreen');
                             if (timerElement.length > 0) {
-                                // Preserve and update the return to course link
-                                var returnLinkElement = timerElement.find('.return-to-course-link');
+                                // Preserve and update the navigation links
+                                var nextLinkElement = timerElement.find('.next-page-link, .return-course-link');
                                 
                                 // Update link URL to next_url if available, otherwise use course_url
                                 var linkUrl = result.next_url || result.course_url;
-                                if (returnLinkElement.length && linkUrl) {
-                                    returnLinkElement.attr('href', linkUrl);
-                                    // Change text to "Next page" for exercises that have a next item
-                                    if (result.next_url) {
-                                        returnLinkElement.text('Next page >');
-                                    }
+                                if (nextLinkElement.length && linkUrl) {
+                                    nextLinkElement.attr('href', linkUrl);
+                                    // The text is already set correctly in the template
                                 }
                                 
-                                var returnLinkHtml = returnLinkElement.length ? returnLinkElement.prop('outerHTML') : '';
+                                var navLinksHtml = timerElement.find('.timer-left-section').html() || '';
                                 
                                 var scoreHtml = '';
                                 if (result.display_type === 'band') {
@@ -703,7 +700,7 @@
                                     scoreHtml = '<div class="timer-content"><strong>Score:</strong> <span>' + result.percentage + '%</span></div>';
                                 }
                                 
-                                timerElement.html(scoreHtml + returnLinkHtml);
+                                timerElement.html('<div class="timer-left-section">' + navLinksHtml + '</div>' + scoreHtml);
                             }
                         }
                     } else {
@@ -1272,14 +1269,14 @@
                 quizSubmitted = true;
             });
             
-            // Warn when clicking "Return to course" link before submitting
-            $(document).on('click', '#return-to-course-link', function(e) {
+            // Warn when clicking navigation links before submitting
+            $(document).on('click', '.nav-link-clickable', function(e) {
                 if (!quizSubmitted) {
-                    // Don't show warning if there's a next URL (user is navigating to next item, not losing progress)
-                    var quizContainer = $('.ielts-computer-based-quiz');
-                    var nextUrl = quizContainer.data('next-url');
-                    if (!nextUrl) {
-                        var confirmLeave = confirm('Are you sure you want to return to the course? Your progress will be lost if you have not submitted your test.');
+                    // Don't show warning if clicking next-page-link (user is progressing forward)
+                    var isNextPageLink = $(this).hasClass('next-page-link');
+                    
+                    if (!isNextPageLink) {
+                        var confirmLeave = confirm('Are you sure you want to leave? Your progress will be lost if you have not submitted your test.');
                         if (!confirmLeave) {
                             e.preventDefault();
                             return false;

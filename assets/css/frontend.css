@@ -1311,6 +1311,37 @@ body.ielts-course-archive .content-area {
     color: #fff;
 }
 
+/* Navigation page links (Previous/Next page) */
+.quiz-timer-fullscreen .nav-page-link {
+    padding: 8px 16px;
+    background: #0073aa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+}
+
+.quiz-timer-fullscreen .nav-page-link:hover {
+    background: #005a87;
+    color: #fff;
+}
+
+.quiz-timer-fullscreen .prev-page-link {
+    margin-right: 8px;
+}
+
+/* Return to course link - red background to indicate going back */
+.quiz-timer-fullscreen .return-course-link {
+    background: #dc3545;
+}
+
+.quiz-timer-fullscreen .return-course-link:hover {
+    background: #c82333;
+}
+
 /* Font Size Controls */
 .font-size-controls {
     display: flex;
