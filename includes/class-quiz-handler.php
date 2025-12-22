@@ -385,10 +385,73 @@ class IELTS_CM_Quiz_Handler {
                 
                 if ($is_correct) {
                     $points_earned = isset($question['points']) ? floatval($question['points']) : 1;
-                    $feedback = __('Correct!', 'ielts-course-manager');
+                    // Get option-specific feedback if available
+                    $user_answer_index = intval($user_answer);
+                    
+                    if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                        if ($user_answer_index >= 0 && $user_answer_index < count($question['mc_options']) 
+                            && isset($question['mc_options'][$user_answer_index]['feedback']) 
+                            && !empty($question['mc_options'][$user_answer_index]['feedback'])) {
+                            $feedback = wp_kses_post($question['mc_options'][$user_answer_index]['feedback']);
+                        }
+                    } elseif (isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                        if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
+                            && isset($question['option_feedback'][$user_answer_index]) 
+                            && !empty($question['option_feedback'][$user_answer_index])) {
+                            $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
+                        }
+                    }
+                    
+                    // If no option-specific feedback, use general correct_feedback
+                    if (empty($feedback) && isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
+                        $feedback = wp_kses_post($question['correct_feedback']);
+                    }
+                    
+                    // Fall back to generic message if still no feedback
+                    if (empty($feedback)) {
+                        $feedback = __('Correct!', 'ielts-course-manager');
+                    }
                 } else {
                     $points_earned = 0;
-                    $feedback = __('Incorrect', 'ielts-course-manager');
+                    // Check if no answer was provided
+                    if ($user_answer === null || $user_answer === '') {
+                        // Use no_answer_feedback if available
+                        if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
+                            $feedback = wp_kses_post($question['no_answer_feedback']);
+                        } else {
+                            $feedback = __('No answer provided', 'ielts-course-manager');
+                        }
+                    } else {
+                        // Check if there's specific feedback for this option
+                        $user_answer_index = intval($user_answer);
+                        
+                        // Try new structured format first
+                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                            // New format with mc_options
+                            if ($user_answer_index >= 0 && $user_answer_index < count($question['mc_options']) 
+                                && isset($question['mc_options'][$user_answer_index]['feedback']) 
+                                && !empty($question['mc_options'][$user_answer_index]['feedback'])) {
+                                $feedback = wp_kses_post($question['mc_options'][$user_answer_index]['feedback']);
+                            }
+                        } elseif (isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                            // Legacy format
+                            if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
+                                && isset($question['option_feedback'][$user_answer_index]) 
+                                && !empty($question['option_feedback'][$user_answer_index])) {
+                                $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
+                            }
+                        }
+                        
+                        // If no option-specific feedback, use general incorrect_feedback
+                        if (empty($feedback) && isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                            $feedback = wp_kses_post($question['incorrect_feedback']);
+                        }
+                        
+                        // Fall back to generic message if still no feedback
+                        if (empty($feedback)) {
+                            $feedback = __('Incorrect', 'ielts-course-manager');
+                        }
+                    }
                 }
                 
                 $score += $points_earned;
@@ -509,10 +572,73 @@ class IELTS_CM_Quiz_Handler {
                 
                 if ($is_correct) {
                     $points_earned = isset($question['points']) ? floatval($question['points']) : 1;
-                    $feedback = __('Correct!', 'ielts-course-manager');
+                    // Get option-specific feedback if available
+                    $user_answer_index = intval($user_answer);
+                    
+                    if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                        if ($user_answer_index >= 0 && $user_answer_index < count($question['mc_options']) 
+                            && isset($question['mc_options'][$user_answer_index]['feedback']) 
+                            && !empty($question['mc_options'][$user_answer_index]['feedback'])) {
+                            $feedback = wp_kses_post($question['mc_options'][$user_answer_index]['feedback']);
+                        }
+                    } elseif (isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                        if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
+                            && isset($question['option_feedback'][$user_answer_index]) 
+                            && !empty($question['option_feedback'][$user_answer_index])) {
+                            $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
+                        }
+                    }
+                    
+                    // If no option-specific feedback, use general correct_feedback
+                    if (empty($feedback) && isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
+                        $feedback = wp_kses_post($question['correct_feedback']);
+                    }
+                    
+                    // Fall back to generic message if still no feedback
+                    if (empty($feedback)) {
+                        $feedback = __('Correct!', 'ielts-course-manager');
+                    }
                 } else {
                     $points_earned = 0;
-                    $feedback = __('Incorrect', 'ielts-course-manager');
+                    // Check if no answer was provided
+                    if ($user_answer === null || $user_answer === '') {
+                        // Use no_answer_feedback if available
+                        if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
+                            $feedback = wp_kses_post($question['no_answer_feedback']);
+                        } else {
+                            $feedback = __('No answer provided', 'ielts-course-manager');
+                        }
+                    } else {
+                        // Check if there's specific feedback for this option
+                        $user_answer_index = intval($user_answer);
+                        
+                        // Try new structured format first
+                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                            // New format with mc_options
+                            if ($user_answer_index >= 0 && $user_answer_index < count($question['mc_options']) 
+                                && isset($question['mc_options'][$user_answer_index]['feedback']) 
+                                && !empty($question['mc_options'][$user_answer_index]['feedback'])) {
+                                $feedback = wp_kses_post($question['mc_options'][$user_answer_index]['feedback']);
+                            }
+                        } elseif (isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                            // Legacy format
+                            if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
+                                && isset($question['option_feedback'][$user_answer_index]) 
+                                && !empty($question['option_feedback'][$user_answer_index])) {
+                                $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
+                            }
+                        }
+                        
+                        // If no option-specific feedback, use general incorrect_feedback
+                        if (empty($feedback) && isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                            $feedback = wp_kses_post($question['incorrect_feedback']);
+                        }
+                        
+                        // Fall back to generic message if still no feedback
+                        if (empty($feedback)) {
+                            $feedback = __('Incorrect', 'ielts-course-manager');
+                        }
+                    }
                 }
                 
                 $score += $points_earned;
