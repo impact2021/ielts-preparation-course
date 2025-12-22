@@ -153,8 +153,11 @@ class IELTS_CM_Quiz_Handler {
                 $feedback = $result['feedback'];
                 $score += $points_earned;
                 
-                // Store correct indices for multi-select so frontend can highlight them
-                $correct_answer = isset($result['correct_indices']) ? $result['correct_indices'] : array();
+                // Store correct indices and option feedback for multi-select
+                $correct_answer = array(
+                    'correct_indices' => isset($result['correct_indices']) ? $result['correct_indices'] : array(),
+                    'option_feedback' => isset($result['option_feedback']) ? $result['option_feedback'] : array()
+                );
             } elseif ($question['type'] === 'summary_completion' && isset($question['summary_fields']) && is_array($question['summary_fields'])) {
                 // Summary completion with fields - check each field separately
                 $field_results = array();
@@ -396,9 +399,21 @@ class IELTS_CM_Quiz_Handler {
                 
                 if ($is_correct) {
                     $points_earned = isset($question['points']) ? floatval($question['points']) : 1;
-                    // Use custom correct feedback if available
-                    if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
-                        $feedback = wp_kses_post($question['correct_feedback']);
+                    // Get option-specific feedback if available
+                    $user_answer_index = intval($user_answer);
+                    
+                    if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                        if ($user_answer_index >= 0 && $user_answer_index < count($question['mc_options']) 
+                            && isset($question['mc_options'][$user_answer_index]['feedback']) 
+                            && !empty($question['mc_options'][$user_answer_index]['feedback'])) {
+                            $feedback = wp_kses_post($question['mc_options'][$user_answer_index]['feedback']);
+                        }
+                    } elseif (isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                        if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
+                            && isset($question['option_feedback'][$user_answer_index]) 
+                            && !empty($question['option_feedback'][$user_answer_index])) {
+                            $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
+                        }
                     }
                 } else {
                     $points_earned = 0;
@@ -407,8 +422,6 @@ class IELTS_CM_Quiz_Handler {
                         // Use no_answer_feedback if available
                         if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
                             $feedback = wp_kses_post($question['no_answer_feedback']);
-                        } elseif (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
-                            $feedback = wp_kses_post($question['incorrect_feedback']);
                         }
                     } else {
                         // Check if there's specific feedback for this option
@@ -429,11 +442,6 @@ class IELTS_CM_Quiz_Handler {
                                 && !empty($question['option_feedback'][$user_answer_index])) {
                                 $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
                             }
-                        }
-                        
-                        // Fallback to general incorrect feedback if no specific feedback found
-                        if (empty($feedback) && isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
-                            $feedback = wp_kses_post($question['incorrect_feedback']);
                         }
                     }
                 }
@@ -446,9 +454,21 @@ class IELTS_CM_Quiz_Handler {
                 
                 if ($is_correct) {
                     $points_earned = isset($question['points']) ? floatval($question['points']) : 1;
-                    // Use custom correct feedback if available
-                    if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
-                        $feedback = wp_kses_post($question['correct_feedback']);
+                    // Get option-specific feedback if available
+                    $user_answer_index = intval($user_answer);
+                    
+                    if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                        if ($user_answer_index >= 0 && $user_answer_index < count($question['mc_options']) 
+                            && isset($question['mc_options'][$user_answer_index]['feedback']) 
+                            && !empty($question['mc_options'][$user_answer_index]['feedback'])) {
+                            $feedback = wp_kses_post($question['mc_options'][$user_answer_index]['feedback']);
+                        }
+                    } elseif (isset($question['option_feedback']) && is_array($question['option_feedback'])) {
+                        if ($user_answer_index >= 0 && $user_answer_index < count($question['option_feedback']) 
+                            && isset($question['option_feedback'][$user_answer_index]) 
+                            && !empty($question['option_feedback'][$user_answer_index])) {
+                            $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
+                        }
                     }
                 } else {
                     $points_earned = 0;
@@ -457,8 +477,6 @@ class IELTS_CM_Quiz_Handler {
                         // Use no_answer_feedback if available
                         if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
                             $feedback = wp_kses_post($question['no_answer_feedback']);
-                        } elseif (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
-                            $feedback = wp_kses_post($question['incorrect_feedback']);
                         }
                     } else {
                         // Check if there's specific feedback for this option
@@ -479,11 +497,6 @@ class IELTS_CM_Quiz_Handler {
                                 && !empty($question['option_feedback'][$user_answer_index])) {
                                 $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
                             }
-                        }
-                        
-                        // Fallback to general incorrect feedback if no specific feedback found
-                        if (empty($feedback) && isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
-                            $feedback = wp_kses_post($question['incorrect_feedback']);
                         }
                     }
                 }
@@ -529,19 +542,6 @@ class IELTS_CM_Quiz_Handler {
                                 $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
                             }
                         }
-                        
-                        // Fallback to general correct feedback if no specific feedback found
-                        if (empty($feedback) && isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
-                            $feedback = wp_kses_post($question['correct_feedback']);
-                        }
-                    } else {
-                        // Get correct answer feedback for non-MC questions
-                        if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
-                            $feedback = wp_kses_post($question['correct_feedback']);
-                        } else {
-                            // Provide default feedback for correct answers when no custom feedback is set
-                            $feedback = __('Correct!', 'ielts-course-manager');
-                        }
                     }
                 } else {
                     // For multiple choice, check if there's specific feedback for this option
@@ -564,16 +564,6 @@ class IELTS_CM_Quiz_Handler {
                                 $feedback = wp_kses_post($question['option_feedback'][$user_answer_index]);
                             }
                         }
-                        
-                        // Fallback to general incorrect feedback if no specific feedback found
-                        if (empty($feedback) && isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
-                            $feedback = wp_kses_post($question['incorrect_feedback']);
-                        }
-                    } else {
-                        // Get general incorrect answer feedback for non-MC questions
-                        if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
-                            $feedback = wp_kses_post($question['incorrect_feedback']);
-                        }
                     }
                 }
                 
@@ -582,11 +572,9 @@ class IELTS_CM_Quiz_Handler {
                     $correct_answer = $question['correct_answer'];
                 }
             } else {
-                // No answer provided - show no_answer_feedback if available, otherwise incorrect feedback
+                // No answer provided - show no_answer_feedback if available
                 if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
                     $feedback = wp_kses_post($question['no_answer_feedback']);
-                } elseif (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
-                    $feedback = wp_kses_post($question['incorrect_feedback']);
                 }
             }
             
@@ -810,7 +798,7 @@ class IELTS_CM_Quiz_Handler {
      */
     private function check_multi_select_answer($question, $user_answers) {
         $points_earned = 0;
-        $feedback = '';
+        $option_feedback = array(); // Per-option feedback for selected options
         
         // Ensure user_answers is an array
         if (!is_array($user_answers)) {
@@ -830,16 +818,16 @@ class IELTS_CM_Quiz_Handler {
         // Check if no answer was provided
         if (empty($user_answers)) {
             // Use no_answer_feedback if available
+            $no_answer_feedback = '';
             if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
-                $feedback = wp_kses_post($question['no_answer_feedback']);
-            } elseif (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
-                $feedback = wp_kses_post($question['incorrect_feedback']);
+                $no_answer_feedback = wp_kses_post($question['no_answer_feedback']);
             }
             
             return array(
                 'points_earned' => 0,
                 'is_correct' => false,
-                'feedback' => $feedback,
+                'feedback' => $no_answer_feedback,
+                'option_feedback' => array(),
                 'correct_indices' => $correct_indices
             );
         }
@@ -853,22 +841,22 @@ class IELTS_CM_Quiz_Handler {
             } else {
                 $has_incorrect_selections = true;
             }
+            
+            // Get option-specific feedback for this selected option
+            if (isset($question['mc_options'][$selected_index]['feedback']) 
+                && !empty($question['mc_options'][$selected_index]['feedback'])) {
+                $option_feedback[$selected_index] = wp_kses_post($question['mc_options'][$selected_index]['feedback']);
+            }
         }
         
         // Determine if fully correct (all correct answers selected, no incorrect ones)
         $is_correct = (!$has_incorrect_selections && count($user_answers) === count($correct_indices) && $points_earned === count($correct_indices));
         
-        // Get feedback
-        if ($is_correct && isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
-            $feedback = wp_kses_post($question['correct_feedback']);
-        } elseif (!$is_correct && isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
-            $feedback = wp_kses_post($question['incorrect_feedback']);
-        }
-        
         return array(
             'points_earned' => $points_earned,
             'is_correct' => $is_correct,
-            'feedback' => $feedback,
+            'feedback' => '', // No generic feedback for multi_select
+            'option_feedback' => $option_feedback, // Per-option feedback
             'correct_indices' => $correct_indices
         );
     }

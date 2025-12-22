@@ -1782,8 +1782,6 @@ class IELTS_CM_Admin {
                                     $lastQuestion.find('input[name*="[points]"]').val(question.points || 1);
                                     
                                     // Set feedback fields
-                                    $lastQuestion.find('textarea[name*="[correct_feedback]"]').val(question.correct_feedback || '');
-                                    $lastQuestion.find('textarea[name*="[incorrect_feedback]"]').val(question.incorrect_feedback || '');
                                     $lastQuestion.find('textarea[name*="[no_answer_feedback]"]').val(question.no_answer_feedback || '');
                                     
                                     // Set reading text link if present
@@ -2491,22 +2489,6 @@ class IELTS_CM_Admin {
                 <input type="number" name="questions[<?php echo $index; ?>][points]" value="<?php echo esc_attr(isset($question['points']) ? $question['points'] : 1); ?>" min="0" step="0.5" style="width: 100%;">
             </p>
             
-            <div class="general-feedback-field" style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc; <?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'locating_information'))) ? 'display:none;' : ''; ?>">
-                <h5 style="margin-top: 0;"><?php _e('Feedback Messages', 'ielts-course-manager'); ?></h5>
-                
-                <p>
-                    <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
-                    <textarea name="questions[<?php echo $index; ?>][correct_feedback]" rows="3" style="width: 100%;"><?php echo esc_textarea(isset($question['correct_feedback']) ? $question['correct_feedback'] : ''); ?></textarea>
-                    <small><?php _e('Shown when the student answers correctly. HTML is supported.', 'ielts-course-manager'); ?></small>
-                </p>
-                
-                <p class="incorrect-feedback-field">
-                    <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>
-                    <textarea name="questions[<?php echo $index; ?>][incorrect_feedback]" rows="3" style="width: 100%;"><?php echo esc_textarea(isset($question['incorrect_feedback']) ? $question['incorrect_feedback'] : ''); ?></textarea>
-                    <small><?php _e('Shown when the student answers incorrectly. HTML is supported.', 'ielts-course-manager'); ?></small>
-                </p>
-            </div>
-            
             <div class="no-answer-feedback-field" style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
                 <p>
@@ -2640,22 +2622,6 @@ class IELTS_CM_Admin {
                 <label><?php _e('Points', 'ielts-course-manager'); ?></label><br>
                 <input type="number" name="questions[QUESTION_INDEX][points]" value="1" min="0" step="0.5" style="width: 100%;">
             </p>
-            
-            <div class="general-feedback-field" style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc; display: none;">
-                <h5 style="margin-top: 0;"><?php _e('Feedback Messages', 'ielts-course-manager'); ?></h5>
-                
-                <p>
-                    <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
-                    <textarea name="questions[QUESTION_INDEX][correct_feedback]" rows="3" style="width: 100%;"></textarea>
-                    <small><?php _e('Shown when the student answers correctly. HTML is supported.', 'ielts-course-manager'); ?></small>
-                </p>
-                
-                <p class="incorrect-feedback-field">
-                    <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>
-                    <textarea name="questions[QUESTION_INDEX][incorrect_feedback]" rows="3" style="width: 100%;"></textarea>
-                    <small><?php _e('Shown when the student answers incorrectly. HTML is supported.', 'ielts-course-manager'); ?></small>
-                </p>
-            </div>
             
             <div class="no-answer-feedback-field" style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
@@ -2826,8 +2792,6 @@ class IELTS_CM_Admin {
                         'instructions' => isset($question['instructions']) ? wp_kses_post($question['instructions']) : '',
                         'question' => wp_kses_post($question['question']), // Allow HTML with images
                         'points' => isset($question['points']) ? floatval($question['points']) : 1,
-                        'correct_feedback' => isset($question['correct_feedback']) ? wp_kses_post($question['correct_feedback']) : '',
-                        'incorrect_feedback' => isset($question['incorrect_feedback']) ? wp_kses_post($question['incorrect_feedback']) : '',
                         'no_answer_feedback' => isset($question['no_answer_feedback']) ? wp_kses_post($question['no_answer_feedback']) : '',
                         'reading_text_id' => isset($question['reading_text_id']) && $question['reading_text_id'] !== '' ? intval($question['reading_text_id']) : null
                     );
