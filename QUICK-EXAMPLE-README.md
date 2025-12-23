@@ -90,6 +90,21 @@ Once imported, you can:
 - Make sure the IELTS Course Manager plugin is active
 - Check that custom fields were imported (edit the post and look for custom fields)
 
+## Regenerating the Quick Example
+
+If you need to regenerate the `quick-example.xml` file (e.g., to modify questions or fix issues), use the included script:
+
+```bash
+php create-quick-example.php
+```
+
+This script:
+- Properly serializes all question data using PHP's `serialize()` function
+- Validates that the generated XML can be unserialized correctly
+- Ensures all 5 questions are included with correct data
+
+**Note**: The `quick-example.xml` file is generated using this script to ensure proper PHP serialization. Manual editing of the XML file's serialized data is not recommended as it can lead to unserialization errors.
+
 ## Next Steps
 
 Once you've successfully imported this example:
