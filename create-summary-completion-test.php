@@ -23,22 +23,22 @@ Summary:
 Electric vehicles use (1) ___________ instead of gasoline and produce no direct emissions.',
         'question' => 'Electric vehicles use [field 1] instead of gasoline. Battery costs have fallen by [field 2] percent since 2010.',
         'points' => 1,
-        'no_answer_feedback' => '',
-        'correct_feedback' => '',
-        'incorrect_feedback' => '',
+        'no_answer_feedback' => 'Please answer all questions to get feedback on your performance.',
+        'correct_feedback' => 'Excellent! You got all the answers correct.',
+        'incorrect_feedback' => 'Some answers are incorrect. Please review the passage.',
         'reading_text_id' => 0,
         'summary_fields' => [
             1 => [
                 'answer' => 'RECHARGEABLE BATTERIES|BATTERIES',
-                'correct_feedback' => '',
-                'incorrect_feedback' => '',
-                'no_answer_feedback' => ''
+                'correct_feedback' => 'Correct! The passage clearly states that EVs use rechargeable batteries.',
+                'incorrect_feedback' => 'Incorrect. Look for what EVs use instead of gasoline in the first sentence.',
+                'no_answer_feedback' => 'You need to answer this question. Hint: What type of batteries do electric vehicles use?'
             ],
             2 => [
                 'answer' => '80',
-                'correct_feedback' => '',
-                'incorrect_feedback' => '',
-                'no_answer_feedback' => ''
+                'correct_feedback' => 'Well done! The battery costs have decreased by 80% since 2010.',
+                'incorrect_feedback' => 'Not quite. Check the passage for the percentage decrease in battery costs.',
+                'no_answer_feedback' => 'Please provide an answer. Hint: Look for the percentage mentioned about battery cost reduction.'
             ]
         ]
     ]]

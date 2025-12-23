@@ -4,7 +4,7 @@
 <title>IELTStestONLINE</title>
 <link>https://www.ieltstestonline.com</link>
 <description>Online IELTS preparation</description>
-<pubDate>Tue, 23 Dec 2025 22:47:21 +0000</pubDate>
+<pubDate>Tue, 23 Dec 2025 23:07:02 +0000</pubDate>
 <language>en-NZ</language>
 <wp:wxr_version>1.2</wp:wxr_version>
 <wp:base_site_url>https://www.ieltstestonline.com</wp:base_site_url>
@@ -14,17 +14,17 @@
 <item>
 <title><![CDATA[summary-completion-test - Demo Summary Completion Questions (CBT)]]></title>
 <link>https://www.ieltstestonline.com/ielts-quiz/summary-completion-test-demo-cbt/</link>
-<pubDate>Tue, 23 Dec 2025 22:47:21 +0000</pubDate>
+<pubDate>Tue, 23 Dec 2025 23:07:02 +0000</pubDate>
 <dc:creator><![CDATA[impact]]></dc:creator>
 <guid isPermaLink="false">https://www.ieltstestonline.com/?post_type=ielts_quiz&amp;p=9999990</guid>
 <description/>
 <content:encoded><![CDATA[]]></content:encoded>
 <excerpt:encoded><![CDATA[]]></excerpt:encoded>
 <wp:post_id>9999990</wp:post_id>
-<wp:post_date><![CDATA[2025-12-23 22:47:21]]></wp:post_date>
-<wp:post_date_gmt><![CDATA[2025-12-23 22:47:21]]></wp:post_date_gmt>
-<wp:post_modified><![CDATA[2025-12-23 22:47:21]]></wp:post_modified>
-<wp:post_modified_gmt><![CDATA[2025-12-23 22:47:21]]></wp:post_modified_gmt>
+<wp:post_date><![CDATA[2025-12-23 23:07:02]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-12-23 23:07:02]]></wp:post_date_gmt>
+<wp:post_modified><![CDATA[2025-12-23 23:07:02]]></wp:post_modified>
+<wp:post_modified_gmt><![CDATA[2025-12-23 23:07:02]]></wp:post_modified_gmt>
 <wp:comment_status><![CDATA[closed]]></wp:comment_status>
 <wp:ping_status><![CDATA[closed]]></wp:ping_status>
 <wp:post_name><![CDATA[summary-completion-test-demo-cbt]]></wp:post_name>
@@ -41,7 +41,7 @@
 Choose NO MORE THAN TWO WORDS from the passage for each answer.
 
 Summary:
-Electric vehicles use (1) ___________ instead of gasoline and produce no direct emissions.";s:8:"question";s:111:"Electric vehicles use [field 1] instead of gasoline. Battery costs have fallen by [field 2] percent since 2010.";s:6:"points";i:1;s:18:"no_answer_feedback";s:0:"";s:16:"correct_feedback";s:0:"";s:18:"incorrect_feedback";s:0:"";s:15:"reading_text_id";i:0;s:14:"summary_fields";a:2:{i:1;a:4:{s:6:"answer";s:32:"RECHARGEABLE BATTERIES|BATTERIES";s:16:"correct_feedback";s:0:"";s:18:"incorrect_feedback";s:0:"";s:18:"no_answer_feedback";s:0:"";}i:2;a:4:{s:6:"answer";s:2:"80";s:16:"correct_feedback";s:0:"";s:18:"incorrect_feedback";s:0:"";s:18:"no_answer_feedback";s:0:"";}}}}]]></wp:meta_value>
+Electric vehicles use (1) ___________ instead of gasoline and produce no direct emissions.";s:8:"question";s:111:"Electric vehicles use [field 1] instead of gasoline. Battery costs have fallen by [field 2] percent since 2010.";s:6:"points";i:1;s:18:"no_answer_feedback";s:64:"Please answer all questions to get feedback on your performance.";s:16:"correct_feedback";s:43:"Excellent! You got all the answers correct.";s:18:"incorrect_feedback";s:54:"Some answers are incorrect. Please review the passage.";s:15:"reading_text_id";i:0;s:14:"summary_fields";a:2:{i:1;a:4:{s:6:"answer";s:32:"RECHARGEABLE BATTERIES|BATTERIES";s:16:"correct_feedback";s:72:"Correct! The passage clearly states that EVs use rechargeable batteries.";s:18:"incorrect_feedback";s:75:"Incorrect. Look for what EVs use instead of gasoline in the first sentence.";s:18:"no_answer_feedback";s:88:"You need to answer this question. Hint: What type of batteries do electric vehicles use?";}i:2;a:4:{s:6:"answer";s:2:"80";s:16:"correct_feedback";s:62:"Well done! The battery costs have decreased by 80% since 2010.";s:18:"incorrect_feedback";s:74:"Not quite. Check the passage for the percentage decrease in battery costs.";s:18:"no_answer_feedback";s:95:"Please provide an answer. Hint: Look for the percentage mentioned about battery cost reduction.";}}}}]]></wp:meta_value>
 </wp:postmeta>
 <wp:postmeta>
 <wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
