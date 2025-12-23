@@ -35,6 +35,9 @@ class IELTS_CM_Admin {
         add_filter('manage_ielts_quiz_posts_columns', array($this, 'quiz_columns'));
         add_action('manage_ielts_quiz_posts_custom_column', array($this, 'quiz_column_content'), 10, 2);
         
+        // Add row actions for exercises
+        add_filter('post_row_actions', array($this, 'quiz_row_actions'), 10, 2);
+        
         // Add AJAX handlers
         add_action('wp_ajax_ielts_cm_update_lesson_order', array($this, 'ajax_update_lesson_order'));
         add_action('wp_ajax_ielts_cm_update_page_order', array($this, 'ajax_update_page_order'));
@@ -50,6 +53,7 @@ class IELTS_CM_Admin {
         add_action('wp_ajax_ielts_cm_clone_course', array($this, 'ajax_clone_course'));
         add_action('wp_ajax_ielts_cm_convert_to_text_format', array($this, 'ajax_convert_to_text_format'));
         add_action('wp_ajax_ielts_cm_parse_text_format', array($this, 'ajax_parse_text_format'));
+        add_action('wp_ajax_ielts_cm_export_exercise_xml', array($this, 'ajax_export_exercise_xml'));
         
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
@@ -4663,5 +4667,232 @@ class IELTS_CM_Admin {
         }
         
         wp_send_json_success($parsed);
+    }
+    
+    /**
+     * Add export to XML action to quiz row actions
+     * 
+     * @param array $actions Row actions
+     * @param WP_Post $post Post object
+     * @return array Modified actions
+     */
+    public function quiz_row_actions($actions, $post) {
+        if ($post->post_type === 'ielts_quiz' && current_user_can('edit_post', $post->ID)) {
+            $nonce = wp_create_nonce('ielts_cm_export_xml_' . $post->ID);
+            $export_url = admin_url('admin-ajax.php?action=ielts_cm_export_exercise_xml&post_id=' . $post->ID . '&nonce=' . $nonce);
+            $actions['export_xml'] = '<a href="' . esc_url($export_url) . '" target="_blank">' . __('Export to XML', 'ielts-course-manager') . '</a>';
+        }
+        return $actions;
+    }
+    
+    /**
+     * AJAX handler to export exercise to XML format
+     */
+    public function ajax_export_exercise_xml() {
+        // Get post ID
+        $post_id = isset($_GET['post_id']) ? intval($_GET['post_id']) : 0;
+        if (!$post_id) {
+            wp_die(__('Invalid post ID.', 'ielts-course-manager'));
+        }
+        
+        // Verify nonce
+        if (!isset($_GET['nonce']) || !wp_verify_nonce($_GET['nonce'], 'ielts_cm_export_xml_' . $post_id)) {
+            wp_die(__('Security check failed.', 'ielts-course-manager'));
+        }
+        
+        // Check user capability
+        if (!current_user_can('edit_post', $post_id)) {
+            wp_die(__('You do not have permission to export this exercise.', 'ielts-course-manager'));
+        }
+        
+        // Get post
+        $post = get_post($post_id);
+        if (!$post || $post->post_type !== 'ielts_quiz') {
+            wp_die(__('Invalid exercise.', 'ielts-course-manager'));
+        }
+        
+        // Generate XML
+        $xml = $this->generate_exercise_xml($post);
+        
+        // Set headers for download
+        header('Content-Type: application/xml; charset=utf-8');
+        header('Content-Disposition: attachment; filename="exercise-' . $post->post_name . '-' . date('Y-m-d') . '.xml"');
+        header('Cache-Control: no-cache, must-revalidate');
+        header('Expires: Sat, 26 Jul 1997 05:00:00 GMT');
+        
+        echo $xml;
+        exit;
+    }
+    
+    /**
+     * Generate WordPress WXR XML for a single exercise
+     * Includes ALL fields even if empty
+     * 
+     * @param WP_Post $post Post object
+     * @return string XML content
+     */
+    private function generate_exercise_xml($post) {
+        // Get all metadata (including empty fields)
+        $questions = get_post_meta($post->ID, '_ielts_cm_questions', true);
+        $reading_texts = get_post_meta($post->ID, '_ielts_cm_reading_texts', true);
+        $pass_percentage = get_post_meta($post->ID, '_ielts_cm_pass_percentage', true);
+        $layout_type = get_post_meta($post->ID, '_ielts_cm_layout_type', true);
+        $exercise_label = get_post_meta($post->ID, '_ielts_cm_exercise_label', true);
+        $open_as_popup = get_post_meta($post->ID, '_ielts_cm_open_as_popup', true);
+        $scoring_type = get_post_meta($post->ID, '_ielts_cm_scoring_type', true);
+        $timer_minutes = get_post_meta($post->ID, '_ielts_cm_timer_minutes', true);
+        $course_ids = get_post_meta($post->ID, '_ielts_cm_course_ids', true);
+        $lesson_ids = get_post_meta($post->ID, '_ielts_cm_lesson_ids', true);
+        $course_id = get_post_meta($post->ID, '_ielts_cm_course_id', true);
+        $lesson_id = get_post_meta($post->ID, '_ielts_cm_lesson_id', true);
+        
+        // Ensure arrays are initialized even if empty
+        if (!is_array($questions)) {
+            $questions = array();
+        }
+        if (!is_array($reading_texts)) {
+            $reading_texts = array();
+        }
+        if (!is_array($course_ids)) {
+            $course_ids = array();
+        }
+        if (!is_array($lesson_ids)) {
+            $lesson_ids = array();
+        }
+        
+        // Get author info
+        $author = get_userdata($post->post_author);
+        
+        // Start XML
+        $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+        $xml .= '<!-- This is a WordPress eXtended RSS file for IELTS Course Manager exercise export -->' . "\n";
+        $xml .= '<!-- Generated by IELTS Course Manager on ' . date('Y-m-d H:i:s') . ' -->' . "\n";
+        $xml .= '<rss xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/" version="2.0">' . "\n";
+        $xml .= '<channel>' . "\n";
+        $xml .= "\t" . '<title>' . $this->esc_xml(get_bloginfo('name')) . '</title>' . "\n";
+        $xml .= "\t" . '<link>' . $this->esc_xml(get_bloginfo('url')) . '</link>' . "\n";
+        $xml .= "\t" . '<description>' . $this->esc_xml(get_bloginfo('description')) . '</description>' . "\n";
+        $xml .= "\t" . '<pubDate>' . date('r') . '</pubDate>' . "\n";
+        $xml .= "\t" . '<language>' . get_bloginfo('language') . '</language>' . "\n";
+        $xml .= "\t" . '<wp:wxr_version>1.2</wp:wxr_version>' . "\n";
+        $xml .= "\t" . '<wp:base_site_url>' . $this->esc_xml(get_site_url()) . '</wp:base_site_url>' . "\n";
+        $xml .= "\t" . '<wp:base_blog_url>' . $this->esc_xml(get_bloginfo('url')) . '</wp:base_blog_url>' . "\n\n";
+        
+        // Author info
+        if ($author) {
+            $xml .= "\t" . '<wp:author>';
+            $xml .= '<wp:author_id>' . $author->ID . '</wp:author_id>';
+            $xml .= '<wp:author_login><![CDATA[' . $author->user_login . ']]></wp:author_login>';
+            $xml .= '<wp:author_email><![CDATA[' . $author->user_email . ']]></wp:author_email>';
+            $xml .= '<wp:author_display_name><![CDATA[' . $author->display_name . ']]></wp:author_display_name>';
+            $xml .= '<wp:author_first_name><![CDATA[' . $author->first_name . ']]></wp:author_first_name>';
+            $xml .= '<wp:author_last_name><![CDATA[' . $author->last_name . ']]></wp:author_last_name>';
+            $xml .= '</wp:author>' . "\n\n";
+        }
+        
+        $xml .= "\t" . '<generator>IELTS Course Manager</generator>' . "\n\n";
+        
+        // Start item
+        $xml .= "\t" . '<item>' . "\n";
+        $xml .= "\t\t" . '<title><![CDATA[' . $post->post_title . ']]></title>' . "\n";
+        $xml .= "\t\t" . '<link>' . $this->esc_xml(get_permalink($post->ID)) . '</link>' . "\n";
+        $xml .= "\t\t" . '<pubDate>' . mysql2date('D, d M Y H:i:s +0000', $post->post_date_gmt, false) . '</pubDate>' . "\n";
+        $xml .= "\t\t" . '<dc:creator><![CDATA[' . ($author ? $author->user_login : '') . ']]></dc:creator>' . "\n";
+        $xml .= "\t\t" . '<guid isPermaLink="false">' . $this->esc_xml(get_the_guid($post->ID)) . '</guid>' . "\n";
+        $xml .= "\t\t" . '<description/>' . "\n";
+        $xml .= "\t\t" . '<content:encoded><![CDATA[' . $post->post_content . ']]></content:encoded>' . "\n";
+        $xml .= "\t\t" . '<excerpt:encoded><![CDATA[' . $post->post_excerpt . ']]></excerpt:encoded>' . "\n";
+        $xml .= "\t\t" . '<wp:post_id>' . $post->ID . '</wp:post_id>' . "\n";
+        $xml .= "\t\t" . '<wp:post_date><![CDATA[' . $post->post_date . ']]></wp:post_date>' . "\n";
+        $xml .= "\t\t" . '<wp:post_date_gmt><![CDATA[' . $post->post_date_gmt . ']]></wp:post_date_gmt>' . "\n";
+        $xml .= "\t\t" . '<wp:post_modified><![CDATA[' . $post->post_modified . ']]></wp:post_modified>' . "\n";
+        $xml .= "\t\t" . '<wp:post_modified_gmt><![CDATA[' . $post->post_modified_gmt . ']]></wp:post_modified_gmt>' . "\n";
+        $xml .= "\t\t" . '<wp:comment_status><![CDATA[' . $post->comment_status . ']]></wp:comment_status>' . "\n";
+        $xml .= "\t\t" . '<wp:ping_status><![CDATA[' . $post->ping_status . ']]></wp:ping_status>' . "\n";
+        $xml .= "\t\t" . '<wp:post_name><![CDATA[' . $post->post_name . ']]></wp:post_name>' . "\n";
+        $xml .= "\t\t" . '<wp:status><![CDATA[' . $post->post_status . ']]></wp:status>' . "\n";
+        $xml .= "\t\t" . '<wp:post_parent>' . $post->post_parent . '</wp:post_parent>' . "\n";
+        $xml .= "\t\t" . '<wp:menu_order>' . $post->menu_order . '</wp:menu_order>' . "\n";
+        $xml .= "\t\t" . '<wp:post_type><![CDATA[' . $post->post_type . ']]></wp:post_type>' . "\n";
+        $xml .= "\t\t" . '<wp:post_password><![CDATA[' . $post->post_password . ']]></wp:post_password>' . "\n";
+        $xml .= "\t\t" . '<wp:is_sticky>' . (is_sticky($post->ID) ? '1' : '0') . '</wp:is_sticky>' . "\n";
+        
+        // Add all metadata fields (even if empty)
+        // Questions
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_questions', $questions);
+        
+        // Reading texts
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_reading_texts', $reading_texts);
+        
+        // Pass percentage
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_pass_percentage', $pass_percentage !== false ? $pass_percentage : '');
+        
+        // Layout type
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_layout_type', $layout_type !== false ? $layout_type : '');
+        
+        // Exercise label
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_exercise_label', $exercise_label !== false ? $exercise_label : '');
+        
+        // Open as popup
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_open_as_popup', $open_as_popup !== false ? $open_as_popup : '');
+        
+        // Scoring type
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_scoring_type', $scoring_type !== false ? $scoring_type : '');
+        
+        // Timer minutes
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_timer_minutes', $timer_minutes !== false ? $timer_minutes : '');
+        
+        // Course IDs (array)
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_course_ids', $course_ids);
+        
+        // Lesson IDs (array)
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_lesson_ids', $lesson_ids);
+        
+        // Legacy single course ID
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_course_id', $course_id !== false ? $course_id : '');
+        
+        // Legacy single lesson ID
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_lesson_id', $lesson_id !== false ? $lesson_id : '');
+        
+        // Close item
+        $xml .= "\t" . '</item>' . "\n";
+        
+        // Close channel and rss
+        $xml .= '</channel>' . "\n";
+        $xml .= '</rss>' . "\n";
+        
+        return $xml;
+    }
+    
+    /**
+     * Generate postmeta XML element
+     * 
+     * @param string $key Meta key
+     * @param mixed $value Meta value
+     * @return string XML fragment
+     */
+    private function generate_postmeta_xml($key, $value) {
+        $xml = "\t\t" . '<wp:postmeta>' . "\n";
+        $xml .= "\t\t\t" . '<wp:meta_key><![CDATA[' . $key . ']]></wp:meta_key>' . "\n";
+        
+        // Serialize arrays and objects
+        if (is_array($value) || is_object($value)) {
+            $value = serialize($value);
+        }
+        
+        $xml .= "\t\t\t" . '<wp:meta_value><![CDATA[' . $value . ']]></wp:meta_value>' . "\n";
+        $xml .= "\t\t" . '</wp:postmeta>' . "\n";
+        
+        return $xml;
+    }
+    
+    /**
+     * Escape XML special characters
+     * 
+     * @param string $str String to escape
+     * @return string Escaped string
+     */
+    private function esc_xml($str) {
+        return htmlspecialchars($str, ENT_XML1, 'UTF-8');
     }
 }
