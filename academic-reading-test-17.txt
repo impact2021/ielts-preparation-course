@@ -329,14 +329,20 @@ Choose NO MORE THAN THREE WORDS from the passage for each answer.
 Write your answers in boxes 24 – 26 on your answer sheet.
 
 24. According to the passage, color can increase {BRAND RECOGNITION} by up to 80%.
+[CORRECT]
+[INCORRECT]
 
 Paragraph A: "color increases brand recognition by up to 80%"
 
 25. High contrast color combinations such as black and white are described as highly {[READABLE][ATTENTION-GRABBING][ATTENTION GRABBING]}.
+[CORRECT]
+[INCORRECT]
 
 Paragraph F: "High contrast combinations, such as black and white or blue and orange, tend to be highly readable and attention-grabbing"
 
 26. In ancient times, purple was associated with royalty because purple dye was {[RARE][EXPENSIVE][RARE AND EXPENSIVE]}.
+[CORRECT]
+[INCORRECT]
 
 Paragraph G: "Purple has historically been associated with royalty and luxury due to the rarity and expense of purple dye in ancient times"
 
@@ -504,13 +510,19 @@ Choose NO MORE THAN TWO WORDS from the passage for each answer.
 Write your answers in boxes 38 – 40 on your answer sheet.
 
 38. Urban farms can help cities manage {STORMWATER RUNOFF} and reduce the urban heat island effect.
+[CORRECT]
+[INCORRECT]
 
 Paragraph D: "Additionally, urban farms can help manage stormwater runoff, improve air quality, reduce the urban heat island effect"
 
 39. {SOIL CONTAMINATION} is a serious concern in older industrial cities where harmful substances may be present in the ground.
+[CORRECT]
+[INCORRECT]
 
 Paragraph F: "Soil contamination is another serious issue, particularly in older industrial cities where soil may contain heavy metals or other pollutants"
 
 40. Singapore aims to produce 30% of its nutritional needs locally by {2030}.
+[CORRECT]
+[INCORRECT]
 
 Paragraph I: "Singapore, for example, aims to produce 30% of its nutritional needs locally by 2030"
