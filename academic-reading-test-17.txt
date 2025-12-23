@@ -29,44 +29,62 @@ Do the following statements agree with the information given in Reading Passage 
 Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.
 
 1. The discovery of coffee is attributed to an Ethiopian goat herder named Kaldi.
-This is TRUE [CORRECT]
-This is FALSE [INCORRECT]
-This is NOT GIVEN [INCORRECT]
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
 
 Paragraph A: "legend tells of a goat herder named Kaldi who discovered the energizing effects of coffee beans"
 
 2. Coffee houses in the Middle East were called "Schools of the Wise" because they offered formal education.
-This is TRUE [INCORRECT]
-This is FALSE [CORRECT]
-This is NOT GIVEN [INCORRECT]
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+This is NOT GIVEN
+Incorrect
 
 Paragraph B: "Coffee houses were often referred to as 'Schools of the Wise' because of the intellectual discussions that took place within their walls" - they were informal centers of learning through discussion, not formal education institutions.
 
 3. Pope Clement VIII initially rejected coffee as unsuitable for Christians.
-This is TRUE [INCORRECT]
-This is FALSE [CORRECT]
-This is NOT GIVEN [INCORRECT]
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+This is NOT GIVEN
+Incorrect
 
 Paragraph C: "Pope Clement VIII, upon tasting coffee, is said to have given it papal approval, declaring it a Christian beverage" - he approved it, not rejected it.
 
 4. English coffee houses were nicknamed "penny universities."
-This is TRUE [CORRECT]
-This is FALSE [INCORRECT]
-This is NOT GIVEN [INCORRECT]
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
 
 Paragraph C: "In England, these establishments became known as 'penny universities' because for the price of a penny, one could purchase a cup of coffee and engage in stimulating conversation."
 
 5. The Dutch were the first Europeans to successfully cultivate coffee outside Arabia.
-This is TRUE [CORRECT]
-This is FALSE [INCORRECT]
-This is NOT GIVEN [INCORRECT]
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
 
 Paragraph D: "The Dutch were among the first to succeed, establishing coffee plantations in their colonies in Indonesia in the late 17th century."
 
 6. Fair trade coffee was introduced in the 1960s.
-This is TRUE [INCORRECT]
-This is FALSE [INCORRECT]
-This is NOT GIVEN [CORRECT]
+This is TRUE
+Incorrect
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Correct answer
 
 Paragraph E mentions the specialty coffee movement began in the 1960s and that fair trade is now a concept within specialty coffee, but it doesn't state when fair trade was specifically introduced.
 
@@ -293,30 +311,42 @@ Do the following statements agree with the information given in Reading Passage 
 Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.
 
 20. Color can account for up to 90% of initial product assessments.
-This is TRUE [CORRECT]
-This is FALSE [INCORRECT]
-This is NOT GIVEN [INCORRECT]
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
 
 Paragraph A: "Research has shown that up to 90% of snap judgments made about products can be based on color alone"
 
 21. Red increases appetite, which is why it is commonly used in restaurant branding.
-This is TRUE [CORRECT]
-This is FALSE [INCORRECT]
-This is NOT GIVEN [INCORRECT]
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
 
 Paragraph B: "It can increase heart rate and create a sense of excitement, which is why it is frequently used in clearance sales and fast-food restaurants to stimulate quick decision-making and appetite."
 
 22. Blue is the most popular color worldwide.
-This is TRUE [INCORRECT]
-This is FALSE [INCORRECT]
-This is NOT GIVEN [CORRECT]
+This is TRUE
+Incorrect
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Correct answer
 
 Paragraph C states that blue is "one of the most universally favored colors" but does not claim it is definitively the most popular color worldwide.
 
 23. The human eye can detect more variations of green than any other color.
-This is TRUE [CORRECT]
-This is FALSE [INCORRECT]
-This is NOT GIVEN [INCORRECT]
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
 
 Paragraph D: "The human eye can distinguish more shades of green than any other color"
 
@@ -467,37 +497,52 @@ Do the following statements agree with the information given in Reading Passage 
 Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.
 
 33. Urban agriculture is an entirely modern phenomenon with no historical precedent.
-This is TRUE [INCORRECT]
-This is FALSE [CORRECT]
-This is NOT GIVEN [INCORRECT]
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+This is NOT GIVEN
+Incorrect
 
 Paragraph B: "The concept of growing food in cities is not new. Throughout history, urban dwellers have maintained gardens and kept livestock within city limits."
 
 34. The COVID-19 pandemic demonstrated the resilience of urban farms when traditional supply chains were disrupted.
-This is TRUE [CORRECT]
-This is FALSE [INCORRECT]
-This is NOT GIVEN [INCORRECT]
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
 
 Paragraph C: "During the COVID-19 pandemic, for instance, urban farms in many cities proved resilient when conventional food supply chains were disrupted"
 
 35. Urban farms always require less water than traditional agricultural operations.
-This is TRUE [INCORRECT]
-This is FALSE [INCORRECT]
-This is NOT GIVEN [CORRECT]
+This is TRUE
+Incorrect
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Correct answer
 
 The passage does not make a direct comparison between water usage in urban vs. traditional agriculture.
 
 36. Schools with gardens have reported improved student performance in science subjects.
-This is TRUE [CORRECT]
-This is FALSE [INCORRECT]
-This is NOT GIVEN [INCORRECT]
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
 
 Paragraph E: "Schools with gardens have reported improved student engagement, better understanding of nutrition and food systems, and enhanced academic performance in science subjects."
 
 37. Most urban farms operate as profitable commercial businesses.
-This is TRUE [INCORRECT]
-This is FALSE [CORRECT]
-This is NOT GIVEN [INCORRECT]
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+This is NOT GIVEN
+Incorrect
 
 Paragraph G: "While some urban farms operate as successful commercial enterprises, many rely on volunteers, grants, or subsidies to remain operational" - this indicates that most are not commercially profitable on their own.
 
