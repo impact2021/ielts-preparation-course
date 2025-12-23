@@ -139,7 +139,7 @@ D: high maintenance costs',
             'option_feedback' => ['', '', '', '']
         ],
         
-        // Question 6-7: Multi-select
+        // Question 6: Multi-select
         [
             'type' => 'multi_select',
             'instructions' => 'Choose TWO letters, A-E.
@@ -168,7 +168,7 @@ E: increasing property values',
             'max_selections' => 2
         ],
         
-        // Question 8: Short Answer
+        // Question 7: Short Answer
         [
             'type' => 'short_answer',
             'instructions' => 'Answer the question below.
@@ -184,7 +184,7 @@ Choose NO MORE THAN TWO WORDS from the passage for your answer.',
             'correct_answer' => 'NEW YORK|NEW YORK CITY'
         ],
         
-        // Question 9-11: Headings (Passage 2)
+        // Question 8-10: Headings (Passage 2)
         [
             'type' => 'headings',
             'instructions' => 'Reading Passage 2 has six paragraphs A – F.
@@ -274,7 +274,7 @@ VI. Coffeehouses as social centers',
             'option_feedback' => ['', '', '', '', '', '']
         ],
         
-        // Question 12-13: Short Answer (Passage 2)
+        // Question 11-12: Short Answer (Passage 2)
         [
             'type' => 'short_answer',
             'instructions' => 'Answer the questions below.
@@ -479,7 +479,7 @@ if (preg_match('/<wp:meta_key><!\[CDATA\[_ielts_cm_questions\]\]><\/wp:meta_key>
 echo "\n✓ All checks passed! The comprehensive-example.xml file is ready to use.\n";
 echo "\nFile details:\n";
 echo "  - Size: " . number_format(filesize($output_filename)) . " bytes\n";
-echo "  - Questions: 13 total\n";
+echo "  - Questions: 12 total\n";
 echo "  - Timer: 20 minutes\n";
 echo "  - Pass percentage: 65%\n";
 echo "  - Reading passages: 2\n";
