@@ -20,22 +20,22 @@ $test_data = [
 Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
         'question' => 'World population in 1950: [field 1] Current population of Africa: [field 2]',
         'points' => 1,
-        'no_answer_feedback' => '',
-        'correct_feedback' => '',
-        'incorrect_feedback' => '',
+        'no_answer_feedback' => 'Please answer all questions to get feedback on your performance.',
+        'correct_feedback' => 'Excellent! You got all the answers correct.',
+        'incorrect_feedback' => 'Some answers are incorrect. Please review the passage.',
         'reading_text_id' => 0,
         'summary_fields' => [
             1 => [
                 'answer' => '2.5 BILLION',
-                'correct_feedback' => '',
-                'incorrect_feedback' => '',
-                'no_answer_feedback' => ''
+                'correct_feedback' => 'Correct! The passage states the world population was 2.5 billion in 1950.',
+                'incorrect_feedback' => 'Incorrect. Look for the world population figure mentioned for 1950 in the passage.',
+                'no_answer_feedback' => 'You need to answer this question. Hint: What was the global population in 1950?'
             ],
             2 => [
                 'answer' => '1.4 BILLION',
-                'correct_feedback' => '',
-                'incorrect_feedback' => '',
-                'no_answer_feedback' => ''
+                'correct_feedback' => 'Well done! Africa currently has a population of 1.4 billion.',
+                'incorrect_feedback' => 'Not quite. Check the passage for Africa\'s current population figure.',
+                'no_answer_feedback' => 'Please provide an answer. Hint: Look for the current population of Africa in the passage.'
             ]
         ]
     ]]
