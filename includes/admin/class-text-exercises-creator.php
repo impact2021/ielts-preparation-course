@@ -2980,8 +2980,9 @@ You have one hour for the complete test (including transferring your answers).</
         $question_num = 1;
         foreach ($grouped_questions as $type => $type_questions) {
             // Calculate question range for this section based on original indices if available
-            $first_q = reset($type_questions);
-            $last_q = end($type_questions);
+            $question_keys = array_keys($type_questions);
+            $first_q = $type_questions[$question_keys[0]];
+            $last_q = $type_questions[$question_keys[count($question_keys) - 1]];
             
             if (isset($first_q['_original_index']) && isset($last_q['_original_index'])) {
                 // Use original indices to determine actual question numbers
@@ -2989,7 +2990,6 @@ You have one hour for the complete test (including transferring your answers).</
                 $end_num = $last_q['_original_index'] + 1;
                 
                 // For multi-point questions, adjust end number
-                $last_index = count($type_questions) - 1;
                 if ($type === 'multi_select' && isset($last_q['mc_options'])) {
                     $correct_count = 0;
                     foreach ($last_q['mc_options'] as $opt) {
