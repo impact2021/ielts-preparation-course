@@ -376,19 +376,50 @@ Complete each sentence with the correct ending, A – J, below.
 
 Write the correct letter, A – J, in boxes 27 – 32 on your answer sheet.
 
-27. The United Nations projects that {B}
-
-28. During World War II, victory gardens {E}
-
-29. Food deserts are areas where {G}
-
-30. Urban agriculture can help reduce {A}
-
-31. Community gardens have been found to {H}
-
-32. Vertical farming systems {F}
-
+27. The United Nations projects that
 A) the carbon footprint of food through reduced transportation.
+B) the majority of people will live in cities by 2050. [CORRECT]
+C) many urban residents lack access to vehicles.
+D) schools have improved science education programs.
+E) provided a significant portion of vegetables consumed.
+F) can produce crops throughout the year using controlled environments.
+G) residents have limited access to healthy, affordable food.
+H) encourage social interaction among diverse community members.
+I) require large amounts of land and water.
+J) were first developed in ancient Rome.
+
+Paragraph A: "the United Nations projecting that 68% of people will live in cities by 2050"
+
+28. During World War II, victory gardens
+A) the carbon footprint of food through reduced transportation.
+B) the majority of people will live in cities by 2050.
+C) many urban residents lack access to vehicles.
+D) schools have improved science education programs.
+E) provided a significant portion of vegetables consumed. [CORRECT]
+F) can produce crops throughout the year using controlled environments.
+G) residents have limited access to healthy, affordable food.
+H) encourage social interaction among diverse community members.
+I) require large amounts of land and water.
+J) were first developed in ancient Rome.
+
+Paragraph B: "During World War II, 'victory gardens' in cities across Europe and North America produced a significant portion of the vegetables consumed domestically"
+
+29. Food deserts are areas where
+A) the carbon footprint of food through reduced transportation.
+B) the majority of people will live in cities by 2050.
+C) many urban residents lack access to vehicles.
+D) schools have improved science education programs.
+E) provided a significant portion of vegetables consumed.
+F) can produce crops throughout the year using controlled environments.
+G) residents have limited access to healthy, affordable food. [CORRECT]
+H) encourage social interaction among diverse community members.
+I) require large amounts of land and water.
+J) were first developed in ancient Rome.
+
+Paragraph C: "These are typically low-income neighborhoods where residents have limited access to affordable, healthy food options"
+
+30. Urban agriculture can help reduce
+A) the carbon footprint of food through reduced transportation. [CORRECT]
 B) the majority of people will live in cities by 2050.
 C) many urban residents lack access to vehicles.
 D) schools have improved science education programs.
@@ -399,12 +430,35 @@ H) encourage social interaction among diverse community members.
 I) require large amounts of land and water.
 J) were first developed in ancient Rome.
 
-27. B - Paragraph A: "the United Nations projecting that 68% of people will live in cities by 2050"
-28. E - Paragraph B: "During World War II, 'victory gardens' in cities across Europe and North America produced a significant portion of the vegetables consumed domestically"
-29. G - Paragraph C: "These are typically low-income neighborhoods where residents have limited access to affordable, healthy food options"
-30. A - Paragraph D: "Urban agriculture reduces these food miles dramatically... reducing the carbon footprint"
-31. H - Paragraph E: "Community gardens bring together diverse groups of people, fostering social cohesion"
-32. F - Paragraph H: "enable year-round production regardless of external weather conditions"
+Paragraph D: "Urban agriculture reduces these food miles dramatically... reducing the carbon footprint"
+
+31. Community gardens have been found to
+A) the carbon footprint of food through reduced transportation.
+B) the majority of people will live in cities by 2050.
+C) many urban residents lack access to vehicles.
+D) schools have improved science education programs.
+E) provided a significant portion of vegetables consumed.
+F) can produce crops throughout the year using controlled environments.
+G) residents have limited access to healthy, affordable food.
+H) encourage social interaction among diverse community members. [CORRECT]
+I) require large amounts of land and water.
+J) were first developed in ancient Rome.
+
+Paragraph E: "Community gardens bring together diverse groups of people, fostering social cohesion"
+
+32. Vertical farming systems
+A) the carbon footprint of food through reduced transportation.
+B) the majority of people will live in cities by 2050.
+C) many urban residents lack access to vehicles.
+D) schools have improved science education programs.
+E) provided a significant portion of vegetables consumed.
+F) can produce crops throughout the year using controlled environments. [CORRECT]
+G) residents have limited access to healthy, affordable food.
+H) encourage social interaction among diverse community members.
+I) require large amounts of land and water.
+J) were first developed in ancient Rome.
+
+Paragraph H: "enable year-round production regardless of external weather conditions"
 
 Questions 33 – 37 [TRUE/FALSE/NOT GIVEN]
 
