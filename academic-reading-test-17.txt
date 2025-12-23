@@ -1,5 +1,10 @@
 IELTS Reading Test - Complete
 
+This file contains all 40 questions from a complete IELTS Reading Test.
+
+The file uses mixed question formats (Headings, Matching, True/False, and Short Answer)
+which are automatically detected and parsed correctly by the text import tool.
+
 Read the texts and answer the questions. Type your answers in the spaces provided.
 
 [READING PASSAGE] Reading Passage 1 - The History and Evolution of Coffee Culture
@@ -120,8 +125,7 @@ F) VI. The economic importance of coffee today
 G) VII. The role of religion in coffee's spread
 H) VIII. Climate change threatens coffee production
 I) IX. Coffee's influence on the slave trade
-
-Paragraph C discusses how coffee came to Europe, initial reactions to it, and the development of European coffee houses.
+[INCORRECT] Paragraph C discusses how coffee came to Europe, initial reactions to it, and the development of European coffee houses.
 
 8. Paragraph D
 A) I. The origins of coffee in Africa
@@ -133,8 +137,7 @@ F) VI. The economic importance of coffee today
 G) VII. The role of religion in coffee's spread
 H) VIII. Climate change threatens coffee production
 I) IX. Coffee's influence on the slave trade
-
-Paragraph D discusses how coffee cultivation spread from Arabia to Indonesia, the Caribbean, and the Americas.
+[INCORRECT] Paragraph D discusses how coffee cultivation spread from Arabia to Indonesia, the Caribbean, and the Americas.
 
 9. Paragraph E
 A) I. The origins of coffee in Africa
@@ -146,8 +149,7 @@ F) VI. The economic importance of coffee today
 G) VII. The role of religion in coffee's spread
 H) VIII. Climate change threatens coffee production
 I) IX. Coffee's influence on the slave trade
-
-Paragraph E discusses 20th century developments including instant coffee, espresso machines, international chains, and the specialty coffee movement.
+[INCORRECT] Paragraph E discusses 20th century developments including instant coffee, espresso machines, international chains, and the specialty coffee movement.
 
 10. Paragraph F
 A) I. The origins of coffee in Africa
@@ -159,8 +161,7 @@ F) VI. The economic importance of coffee today [CORRECT]
 G) VII. The role of religion in coffee's spread
 H) VIII. Climate change threatens coffee production
 I) IX. Coffee's influence on the slave trade
-
-Paragraph F discusses the global coffee industry, its economic importance as the second most traded commodity, and challenges it faces including climate change and sustainability.
+[INCORRECT] Paragraph F discusses the global coffee industry, its economic importance as the second most traded commodity, and challenges it faces including climate change and sustainability.
 
 Questions 11 – 13 [MULTIPLE CHOICE]
 
@@ -226,8 +227,7 @@ H) VIII. Future applications of color psychology
 I) IX. The history of color theory
 J) X. Personal preferences in color selection
 K) XI. Color in digital technology
-
-Paragraph B focuses primarily on the psychological effects of red and how it is used in marketing contexts.
+[INCORRECT] Paragraph B focuses primarily on the psychological effects of red and how it is used in marketing contexts.
 
 15. Paragraph C
 A) I. The significance of color in branding
@@ -241,8 +241,7 @@ H) VIII. Future applications of color psychology
 I) IX. The history of color theory
 J) X. Personal preferences in color selection
 K) XI. Color in digital technology
-
-Paragraph C discusses blue's association with trust and stability, explaining why it is used in corporate branding.
+[INCORRECT] Paragraph C discusses blue's association with trust and stability, explaining why it is used in corporate branding.
 
 16. Paragraph D
 A) I. The significance of color in branding
@@ -256,8 +255,7 @@ H) VIII. Future applications of color psychology
 I) IX. The history of color theory
 J) X. Personal preferences in color selection
 K) XI. Color in digital technology
-
-Paragraph D focuses on green's associations with nature, health, and environmental friendliness.
+[INCORRECT] Paragraph D focuses on green's associations with nature, health, and environmental friendliness.
 
 17. Paragraph E
 A) I. The significance of color in branding
@@ -271,8 +269,7 @@ H) VIII. Future applications of color psychology
 I) IX. The history of color theory
 J) X. Personal preferences in color selection
 K) XI. Color in digital technology
-
-Paragraph E discusses yellow's high visibility and the potential drawbacks of its excessive use.
+[INCORRECT] Paragraph E discusses yellow's high visibility and the potential drawbacks of its excessive use.
 
 18. Paragraph F
 A) I. The significance of color in branding
@@ -286,8 +283,7 @@ H) VIII. Future applications of color psychology
 I) IX. The history of color theory
 J) X. Personal preferences in color selection
 K) XI. Color in digital technology
-
-Paragraph F discusses how colors work together, including color harmony and contrast.
+[INCORRECT] Paragraph F discusses how colors work together, including color harmony and contrast.
 
 19. Paragraph G
 A) I. The significance of color in branding
@@ -301,8 +297,7 @@ H) VIII. Future applications of color psychology
 I) IX. The history of color theory
 J) X. Personal preferences in color selection
 K) XI. Color in digital technology
-
-Paragraph G discusses how color meanings vary across different cultures and the implications for global brands.
+[INCORRECT] Paragraph G discusses how color meanings vary across different cultures and the implications for global brands.
 
 Questions 20 – 23 [TRUE/FALSE/NOT GIVEN]
 
