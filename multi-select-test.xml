@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- multi-select-test Demo - Multi-Select Questions (CBT Layout) -->
+<rss xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/" version="2.0">
+<channel>
+	<title>IELTStestONLINE</title>
+	<link>https://www.ieltstestonline.com</link>
+	<description>Online IELTS preparation</description>
+	<pubDate>Tue, 23 Dec 2025 21:48:20 +0000</pubDate>
+	<language>en-NZ</language>
+	<wp:wxr_version>1.2</wp:wxr_version>
+	<wp:base_site_url>https://www.ieltstestonline.com</wp:base_site_url>
+	<wp:base_blog_url>https://www.ieltstestonline.com</wp:base_blog_url>
+
+	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[impact]]></wp:author_login><wp:author_email><![CDATA[impact@ieltstestonline.com]]></wp:author_email><wp:author_display_name><![CDATA[impact]]></wp:author_display_name><wp:author_first_name><![CDATA[Patrick]]></wp:author_first_name><wp:author_last_name><![CDATA[Bourne]]></wp:author_last_name></wp:author>
+
+	<generator>IELTS Test XML Creator</generator>
+
+	<item>
+		<title><![CDATA[multi-select-test - Demo Multi-Select Questions (CBT)]]></title>
+		<link>https://www.ieltstestonline.com/ielts-quiz/multi-select-test-demo-cbt/</link>
+		<pubDate>Tue, 23 Dec 2025 21:48:20 +0000</pubDate>
+		<dc:creator><![CDATA[impact]]></dc:creator>
+		<guid isPermaLink="false">https://www.ieltstestonline.com/?post_type=ielts_quiz&amp;p=9999995</guid>
+		<description/>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>9999995</wp:post_id>
+		<wp:post_date><![CDATA[2025-12-23 21:48:20]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-12-23 21:48:20]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2025-12-23 21:48:20]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-12-23 21:48:20]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[multi-select-test-demo-cbt]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[ielts_quiz]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:2:{i:0;a:13:{s:4:"type";s:12:"multi_select";s:12:"instructions";s:95:"Choose TWO letters, A-E.
+
+Which TWO practices are mentioned as part of sustainable agriculture?";s:8:"question";s:26:"Select TWO letters (A–E)";s:6:"points";i:1;s:18:"no_answer_feedback";s:61:"Look for specific farming practices mentioned in the passage.";s:16:"correct_feedback";s:87:"Correct! Both crop rotation and drip irrigation are mentioned as sustainable practices.";s:18:"incorrect_feedback";s:105:"The passage specifically mentions crop rotation and drip irrigation as sustainable agriculture practices.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:5:{i:0;a:3:{s:4:"text";s:16:"A: Crop rotation";s:10:"is_correct";b:1;s:8:"feedback";s:50:"Correct! This is mentioned in the first paragraph.";}i:1;a:3:{s:4:"text";s:23:"B: Genetic modification";s:10:"is_correct";b:0;s:8:"feedback";s:37:"This is not mentioned in the passage.";}i:2;a:3:{s:4:"text";s:18:"C: Drip irrigation";s:10:"is_correct";b:1;s:8:"feedback";s:56:"Correct! This water conservation technique is mentioned.";}i:3;a:3:{s:4:"text";s:23:"D: Chemical fertilizers";s:10:"is_correct";b:0;s:8:"feedback";s:62:"The passage mentions reducing chemical inputs, not using them.";}i:4;a:3:{s:4:"text";s:22:"E: Monoculture farming";s:10:"is_correct";b:0;s:8:"feedback";s:61:"This contradicts the crop diversity mentioned in the passage.";}}s:7:"options";s:106:"A: Crop rotation
+B: Genetic modification
+C: Drip irrigation
+D: Chemical fertilizers
+E: Monoculture farming";s:14:"correct_answer";s:0:"";s:15:"option_feedback";a:5:{i:0;s:50:"Correct! This is mentioned in the first paragraph.";i:1;s:37:"This is not mentioned in the passage.";i:2;s:56:"Correct! This water conservation technique is mentioned.";i:3;s:62:"The passage mentions reducing chemical inputs, not using them.";i:4;s:61:"This contradicts the crop diversity mentioned in the passage.";}s:14:"max_selections";i:2;}i:1;a:13:{s:4:"type";s:12:"multi_select";s:12:"instructions";s:0:"";s:8:"question";s:103:"Which TWO benefits of sustainable agriculture are mentioned in the passage?
+
+Select TWO letters (A–E)";s:6:"points";i:1;s:18:"no_answer_feedback";s:66:"Check the final paragraph for benefits of sustainable agriculture.";s:16:"correct_feedback";s:86:"Excellent! The passage mentions both improved profitability and enhanced biodiversity.";s:18:"incorrect_feedback";s:95:"The passage states that sustainable farming can improve profitability and enhance biodiversity.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:5:{i:0;a:3:{s:4:"text";s:21:"A: Higher crop yields";s:10:"is_correct";b:0;s:8:"feedback";s:41:"The passage does not claim higher yields.";}i:1;a:3:{s:4:"text";s:25:"B: Improved profitability";s:10:"is_correct";b:1;s:8:"feedback";s:54:"Correct! This is mentioned due to reduced input costs.";}i:2;a:3:{s:4:"text";s:24:"C: Enhanced biodiversity";s:10:"is_correct";b:1;s:8:"feedback";s:50:"Correct! This is mentioned in the final paragraph.";}i:3;a:3:{s:4:"text";s:21:"D: Faster crop growth";s:10:"is_correct";b:0;s:8:"feedback";s:37:"This is not mentioned in the passage.";}i:4;a:3:{s:4:"text";s:22:"E: Reduced labor costs";s:10:"is_correct";b:0;s:8:"feedback";s:45:"Labor costs are not discussed in the passage.";}}s:7:"options";s:117:"A: Higher crop yields
+B: Improved profitability
+C: Enhanced biodiversity
+D: Faster crop growth
+E: Reduced labor costs";s:14:"correct_answer";s:0:"";s:15:"option_feedback";a:5:{i:0;s:41:"The passage does not claim higher yields.";i:1;s:54:"Correct! This is mentioned due to reduced input costs.";i:2;s:50:"Correct! This is mentioned in the final paragraph.";i:3;s:37:"This is not mentioned in the passage.";i:4;s:45:"Labor costs are not discussed in the passage.";}s:14:"max_selections";i:2;}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;a:2:{s:5:"title";s:46:"Demo Reading Passage - Sustainable Agriculture";s:7:"content";s:1129:"Sustainable agriculture focuses on meeting society's food needs while preserving environmental quality for future generations. This approach incorporates several key practices. Crop rotation helps maintain soil fertility by alternating different crops in the same field across seasons. Cover crops prevent soil erosion and improve soil structure when planted between harvest and planting seasons.
+
+Integrated pest management reduces reliance on chemical pesticides by using biological controls and crop diversity. Water conservation techniques, such as drip irrigation, minimize water waste while maintaining crop productivity. Farmers also use precision agriculture technology to optimize fertilizer application, reducing environmental impact.
+
+The benefits of sustainable agriculture extend beyond environmental protection. Studies show that sustainable farming can improve farm profitability through reduced input costs. It also enhances biodiversity by creating habitats for beneficial insects and wildlife. Additionally, sustainable practices help build resilience against climate change impacts such as droughts and floods.";}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[60]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[computer_based]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_exercise_label]]></wp:meta_key>
+			<wp:meta_value><![CDATA[exercise]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_open_as_popup]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_scoring_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[percentage]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_course_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_lesson_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_course_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_lesson_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+</channel>
+</rss>
