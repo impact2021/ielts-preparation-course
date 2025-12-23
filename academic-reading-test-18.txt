@@ -1,0 +1,577 @@
+Academic IELTS Reading Test 18
+
+=== EXERCISE SETTINGS ===
+Display Label: Practice test
+Layout Type: Computer-Based IELTS Layout (Two Columns)
+Open as Popup/Fullscreen Modal: Yes
+Scoring Type: IELTS Academic Reading (Band Score)
+Timer: 60 minutes
+=== END EXERCISE SETTINGS ===
+
+This file contains all 40 questions from a complete IELTS Reading Test.
+
+The file uses mixed question formats (Headings, Matching, True/False, and Short Answer)
+which are automatically detected and parsed correctly by the text import tool.
+
+Read the texts and answer the questions. Type your answers in the spaces provided.
+
+[READING PASSAGE] Reading Passage 1 - The Evolution of Renewable Energy
+
+A: The quest for renewable energy sources has become one of the defining challenges of the 21st century. As concerns about climate change, energy security, and environmental sustainability intensify, nations around the world are increasingly turning to renewable energy technologies. Unlike fossil fuels, which release carbon dioxide and other greenhouse gases when burned, renewable energy sources such as solar, wind, hydroelectric, and geothermal power offer the promise of clean, sustainable energy that can meet human needs without depleting natural resources or damaging the environment for future generations.
+
+B: Solar power has emerged as one of the most promising renewable energy technologies. The fundamental principle behind solar energy is straightforward: photovoltaic cells convert sunlight directly into electricity. The first practical solar cell was developed in 1954 at Bell Laboratories, achieving an efficiency of just 6%. Since then, technological advances have dramatically improved solar panel efficiency, with modern commercial panels typically converting 15-22% of sunlight into electricity, and experimental cells achieving efficiencies above 40%. The cost of solar panels has also plummeted – falling by more than 90% since 2010 – making solar power increasingly competitive with traditional energy sources in many parts of the world.
+
+C: Wind energy represents another major pillar of the renewable energy revolution. Modern wind turbines are marvels of engineering, with the largest models standing over 200 meters tall and featuring blade spans exceeding 150 meters. These giants can generate up to 12 megawatts of electricity – enough to power thousands of homes. Wind farms, both onshore and offshore, have proliferated across the globe. Offshore wind farms, in particular, benefit from stronger and more consistent winds, though they face unique challenges including higher construction and maintenance costs, as well as potential impacts on marine ecosystems. Despite these obstacles, wind energy capacity has grown exponentially, with global installed capacity exceeding 700 gigawatts by 2020.
+
+D: Hydroelectric power, while not a new technology, continues to play a vital role in renewable energy generation. Approximately 16% of global electricity comes from hydroelectric sources, making it the largest source of renewable electricity worldwide. Large-scale hydroelectric dams can generate enormous amounts of power and provide valuable benefits such as flood control, irrigation, and water storage. However, these projects also face significant criticism due to their environmental and social impacts, including habitat destruction, displacement of local communities, and disruption of river ecosystems. Consequently, there has been growing interest in smaller-scale "run-of-river" hydroelectric systems that minimize environmental disruption while still harnessing the power of flowing water.
+
+E: Geothermal energy taps into the Earth's internal heat to generate electricity and provide heating. This energy source is particularly advantageous in regions with high geothermal activity, such as Iceland, where geothermal power provides approximately 25% of the nation's electricity and heats 90% of buildings. Enhanced geothermal systems, which involve drilling deep into the Earth's crust to access hot rocks, could potentially make geothermal energy viable in a much wider range of locations. However, this technology remains in its early stages and faces challenges including high upfront costs, technical complexities, and concerns about induced seismic activity.
+
+F: Energy storage represents perhaps the greatest challenge facing renewable energy adoption. Unlike conventional power plants that can be ramped up or down to meet demand, solar and wind power are inherently variable – dependent on weather conditions and time of day. This intermittency creates significant challenges for grid operators attempting to maintain a stable electricity supply. Battery technology, particularly lithium-ion batteries, has made substantial progress in recent years, with costs falling and storage capacity increasing. Large-scale battery installations, often called "grid-scale" or "utility-scale" batteries, are increasingly being deployed alongside renewable energy facilities to store excess energy during periods of high production and release it when demand exceeds supply.
+
+G: The transition to renewable energy is not merely a technological challenge but also an economic and political one. Government policies play a crucial role in accelerating renewable energy adoption through mechanisms such as feed-in tariffs, renewable portfolio standards, carbon pricing, and direct subsidies. Many countries have set ambitious renewable energy targets, with some aiming for 100% renewable electricity by 2030 or 2050. However, the fossil fuel industry remains politically powerful in many nations, and the transition faces resistance from vested interests concerned about job losses and economic disruption in traditional energy sectors.
+
+[END READING PASSAGE]
+
+[READING PASSAGE] Reading Passage 2 - The Psychology of Decision Making
+
+A: Every day, humans make thousands of decisions, from trivial choices about what to eat for breakfast to life-changing decisions about careers, relationships, and financial investments. While we like to think of ourselves as rational beings who carefully weigh evidence and make logical choices, psychological research reveals that human decision-making is far more complex and often irrational. Understanding the psychological mechanisms that influence our choices can help us make better decisions and avoid common pitfalls that lead to poor outcomes.
+
+B: One of the most fundamental concepts in decision-making psychology is bounded rationality, a term coined by Nobel laureate Herbert Simon. Simon argued that humans do not have the cognitive capacity to process all available information and consider all possible alternatives when making decisions. Instead, we use mental shortcuts, or "heuristics," to simplify complex decisions. While these shortcuts are often useful and allow us to make quick decisions with limited information, they can also lead to systematic errors in judgment. For example, the availability heuristic causes people to overestimate the likelihood of events that are easily recalled from memory, such as plane crashes or terrorist attacks, while underestimating more common but less memorable risks like heart disease.
+
+C: Confirmation bias represents another powerful influence on decision-making. This cognitive bias leads people to seek out information that confirms their existing beliefs while ignoring or dismissing contradictory evidence. In the age of social media and personalized news feeds, confirmation bias has become increasingly problematic, as algorithms tend to show users content that aligns with their existing views, creating "echo chambers" that reinforce pre-existing opinions. This can lead to polarization and make it difficult for people to change their minds even when confronted with compelling evidence.
+
+D: Loss aversion, identified by psychologists Daniel Kahneman and Amos Tversky, describes the tendency for people to feel the pain of losses more acutely than the pleasure of equivalent gains. Studies have shown that the psychological impact of losing £100 is roughly twice as powerful as the joy of gaining £100. This asymmetry has profound implications for decision-making, often causing people to avoid risks even when the potential benefits outweigh the potential costs. Loss aversion can lead to poor financial decisions, such as holding onto losing investments too long in the hope of recovering losses, or refusing to sell a house at a fair market price because it's below the original purchase price.
+
+E: The framing effect demonstrates how the way information is presented can dramatically influence decisions, even when the underlying facts remain the same. For instance, people respond very differently to a medical treatment described as having a "90% survival rate" compared to one with a "10% mortality rate," despite these being mathematically identical. Marketers and politicians exploit framing effects routinely, presenting information in ways designed to nudge people toward particular choices. Understanding framing effects can help individuals recognize when they're being manipulated and make more objective decisions based on facts rather than presentation.
+
+F: Anchoring is another cognitive bias that affects decision-making, particularly in negotiations and purchases. The anchoring effect occurs when an initial piece of information disproportionately influences subsequent judgments. For example, when shopping for a car, the first price mentioned by the salesperson serves as an "anchor" that affects how we evaluate all subsequent prices, even if that initial price was arbitrary. Real estate agents exploit this by showing expensive properties first, making subsequent properties seem more affordable by comparison. Being aware of anchoring can help consumers resist these tactics and make more independent assessments of value.
+
+G: The sunk cost fallacy describes the tendency to continue investing in a failing endeavor because of resources already committed, rather than making a rational assessment of future costs and benefits. People will sit through a terrible movie because they've paid for the ticket, or continue a failing business venture because of years already invested, even when the rational choice would be to cut losses and move on. Economists argue that sunk costs should be irrelevant to decision-making – only future costs and benefits matter – but psychologically, people find it very difficult to "waste" past investments.
+
+H: Despite these cognitive biases and limitations, humans are not helplessly subject to irrational decision-making. Research suggests several strategies for improving decision quality. Taking time to deliberate reduces the influence of emotional reactions and allows for more careful analysis. Seeking diverse perspectives can counter confirmation bias by exposing us to alternative viewpoints. Using systematic decision-making frameworks, such as creating lists of pros and cons or using formal decision matrices, can help structure thinking and reduce reliance on intuition alone. Additionally, simply being aware of common cognitive biases can help individuals recognize when they might be falling prey to these mental shortcuts and adjust their thinking accordingly.
+
+[END READING PASSAGE]
+
+[READING PASSAGE] Reading Passage 3 - The History of Writing Systems
+
+A: Writing is one of humanity's most transformative inventions, fundamentally altering the course of civilization. Before the development of writing systems, human knowledge was limited to what could be remembered and transmitted orally from generation to generation. Writing allowed information to be recorded, preserved, and shared across vast distances and periods of time, enabling the accumulation of knowledge, the administration of complex societies, and the development of literature, science, and philosophy. The emergence of writing marked the transition from prehistory to history, as written records provide the foundation for understanding past events and cultures.
+
+B: The earliest known writing system emerged in ancient Mesopotamia around 3200 BCE. This system, known as cuneiform, began as a series of pictographic symbols pressed into clay tablets using a reed stylus. Initially used primarily for record-keeping and administrative purposes – tracking grain stores, recording transactions, and documenting property ownership – cuneiform gradually evolved to become more abstract and phonetic, eventually capable of expressing complex ideas and literary works. The Epic of Gilgamesh, one of the world's oldest known literary works, was written in cuneiform. Over time, cuneiform spread throughout the ancient Near East and was adapted to write various languages including Akkadian, Babylonian, and Assyrian.
+
+C: Around the same time that cuneiform was developing in Mesopotamia, another writing system emerged independently in ancient Egypt. Egyptian hieroglyphics combined logographic and phonetic elements, using pictorial symbols to represent both words and sounds. While often associated with monumental inscriptions on temple walls and tombs, hieroglyphics were also written on papyrus, an early form of paper made from the papyrus plant. For everyday purposes, Egyptians developed simpler scripts called hieratic and later demotic, which were faster to write than formal hieroglyphics. Egyptian writing remained in use for over 3,000 years before being replaced by Coptic and eventually Arabic scripts.
+
+D: Chinese writing, which emerged around 1200 BCE during the Shang Dynasty, represents the oldest continuously used writing system in the world. Unlike alphabetic writing systems, Chinese uses logographic characters where each symbol represents a word or morpheme rather than a sound. The complexity of Chinese characters – some requiring dozens of strokes – means that achieving literacy requires learning thousands of different characters. However, this system has the advantage of being relatively independent of pronunciation, allowing speakers of mutually unintelligible Chinese dialects to communicate through writing. Chinese characters have also influenced the writing systems of neighboring countries including Japan, Korea, and Vietnam, though these nations have since developed or adopted alternative scripts.
+
+E: The development of alphabetic writing represented a revolutionary simplification in how written language could be encoded. The first alphabet is generally credited to the Phoenicians, a seafaring civilization based in the eastern Mediterranean around 1050 BCE. The Phoenician alphabet consisted of 22 consonant letters and no vowels, making it much simpler to learn than the hundreds or thousands of symbols required for logographic systems. This alphabet spread throughout the Mediterranean world through Phoenician trade networks and was adapted by the Greeks, who made the crucial innovation of adding vowel letters. The Greek alphabet, in turn, influenced the development of numerous other writing systems, including Latin, Cyrillic, and many others used today.
+
+F: The spread of writing systems was closely tied to cultural, religious, and political expansion. The Latin alphabet spread throughout Europe with the expansion of the Roman Empire and later through Christian missionary activity. Arabic script spread across North Africa, the Middle East, and parts of Asia with the Islamic conquests. The development of printing technology in the 15th century, particularly Johannes Gutenberg's invention of the movable-type printing press, dramatically accelerated the spread of literacy and standardized writing systems. Books, which had previously been rare and expensive items produced by hand, could now be mass-produced, making written knowledge accessible to a much broader population.
+
+G: In the modern era, writing systems continue to evolve and adapt. The digital age has introduced new forms of written communication, from email and text messaging to social media posts and emojis. Some languages that previously existed only in oral form are being written down for the first time, often using adapted versions of existing alphabets. Conversely, some minority languages face the threat of their writing systems becoming extinct as younger generations adopt dominant languages. Efforts to preserve and revitalize endangered writing systems are ongoing in many parts of the world, recognizing that these scripts represent not just tools for communication but also important cultural heritage.
+
+H: The future of writing remains uncertain in an age of voice-controlled devices, artificial intelligence, and advanced translation software. Some speculate that writing might become less central to human communication as speech recognition and translation technologies improve. However, writing's unique properties – its permanence, precision, and ability to convey complex ideas – suggest that it will remain a vital human technology for the foreseeable future. Whether through traditional ink on paper or pixels on screens, the written word continues to shape how we think, communicate, and preserve knowledge for future generations.
+
+[END READING PASSAGE]
+
+
+You should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.
+
+Questions 1 – 7 [TRUE/FALSE/NOT GIVEN]
+
+Do the following statements agree with the information given in Reading Passage 1?
+
+Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.
+
+1. The first practical solar cell achieved an efficiency of over 10%.
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+This is NOT GIVEN
+Incorrect
+
+Paragraph B states the first practical solar cell "achieved an efficiency of just 6%", not over 10%.
+
+2. Solar panel costs have decreased by more than 90% since 2010.
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
+
+Paragraph B: "The cost of solar panels has also plummeted – falling by more than 90% since 2010"
+
+3. The largest wind turbines can generate enough electricity to power an entire city.
+This is TRUE
+Incorrect
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Correct answer
+
+Paragraph C states they can power "thousands of homes" but doesn't claim they can power an entire city.
+
+4. Offshore wind farms face higher construction costs than onshore wind farms.
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
+
+Paragraph C: "Offshore wind farms...face unique challenges including higher construction and maintenance costs"
+
+5. Hydroelectric power is the largest source of renewable electricity worldwide.
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
+
+Paragraph D: "making it the largest source of renewable electricity worldwide"
+
+6. Iceland generates 90% of its electricity from geothermal sources.
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+This is NOT GIVEN
+Incorrect
+
+Paragraph E states geothermal provides "approximately 25% of the nation's electricity", not 90%.
+
+7. Grid-scale batteries are being deployed alongside renewable energy facilities.
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
+
+Paragraph F: "Large-scale battery installations...are increasingly being deployed alongside renewable energy facilities"
+
+Questions 8 – 13 [MATCHING HEADINGS]
+
+Reading Passage 1 has seven paragraphs A – G.
+
+For paragraphs B – G, choose the most suitable heading from the list of headings below.
+
+List of Headings:
+I. The challenge of storing renewable energy
+II. Solar power technology and cost improvements
+III. The political and economic dimensions of energy transition
+IV. Geothermal energy potential and limitations
+V. Hydroelectric power benefits and drawbacks
+VI. Wind energy growth and engineering advances
+VII. Introduction to renewable energy challenges
+VIII. Future predictions for energy markets
+IX. Nuclear energy alternatives
+
+Example: Paragraph A - Answer: VII
+
+8. Paragraph B
+A) I. The challenge of storing renewable energy
+B) II. Solar power technology and cost improvements [CORRECT]
+C) III. The political and economic dimensions of energy transition
+D) IV. Geothermal energy potential and limitations
+E) V. Hydroelectric power benefits and drawbacks
+F) VI. Wind energy growth and engineering advances
+G) VII. Introduction to renewable energy challenges
+H) VIII. Future predictions for energy markets
+I) IX. Nuclear energy alternatives
+[INCORRECT] Paragraph B discusses solar power development, efficiency improvements, and dramatic cost reductions.
+
+9. Paragraph C
+A) I. The challenge of storing renewable energy
+B) II. Solar power technology and cost improvements
+C) III. The political and economic dimensions of energy transition
+D) IV. Geothermal energy potential and limitations
+E) V. Hydroelectric power benefits and drawbacks
+F) VI. Wind energy growth and engineering advances [CORRECT]
+G) VII. Introduction to renewable energy challenges
+H) VIII. Future predictions for energy markets
+I) IX. Nuclear energy alternatives
+[INCORRECT] Paragraph C focuses on wind turbine technology, wind farm development, and capacity growth.
+
+10. Paragraph D
+A) I. The challenge of storing renewable energy
+B) II. Solar power technology and cost improvements
+C) III. The political and economic dimensions of energy transition
+D) IV. Geothermal energy potential and limitations
+E) V. Hydroelectric power benefits and drawbacks [CORRECT]
+F) VI. Wind energy growth and engineering advances
+G) VII. Introduction to renewable energy challenges
+H) VIII. Future predictions for energy markets
+I) IX. Nuclear energy alternatives
+[INCORRECT] Paragraph D discusses hydroelectric power's role, benefits like flood control, and criticisms about environmental impacts.
+
+11. Paragraph E
+A) I. The challenge of storing renewable energy
+B) II. Solar power technology and cost improvements
+C) III. The political and economic dimensions of energy transition
+D) IV. Geothermal energy potential and limitations [CORRECT]
+E) V. Hydroelectric power benefits and drawbacks
+F) VI. Wind energy growth and engineering advances
+G) VII. Introduction to renewable energy challenges
+H) VIII. Future predictions for energy markets
+I) IX. Nuclear energy alternatives
+[INCORRECT] Paragraph E discusses geothermal energy use in Iceland, enhanced geothermal systems, and associated challenges.
+
+12. Paragraph F
+A) I. The challenge of storing renewable energy [CORRECT]
+B) II. Solar power technology and cost improvements
+C) III. The political and economic dimensions of energy transition
+D) IV. Geothermal energy potential and limitations
+E) V. Hydroelectric power benefits and drawbacks
+F) VI. Wind energy growth and engineering advances
+G) VII. Introduction to renewable energy challenges
+H) VIII. Future predictions for energy markets
+I) IX. Nuclear energy alternatives
+[INCORRECT] Paragraph F focuses on energy storage challenges, intermittency issues, and battery technology development.
+
+13. Paragraph G
+A) I. The challenge of storing renewable energy
+B) II. Solar power technology and cost improvements
+C) III. The political and economic dimensions of energy transition [CORRECT]
+D) IV. Geothermal energy potential and limitations
+E) V. Hydroelectric power benefits and drawbacks
+F) VI. Wind energy growth and engineering advances
+G) VII. Introduction to renewable energy challenges
+H) VIII. Future predictions for energy markets
+I) IX. Nuclear energy alternatives
+[INCORRECT] Paragraph G discusses government policies, renewable energy targets, and political resistance from fossil fuel interests.
+
+
+You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.
+
+Questions 14 – 19 [MATCHING]
+
+Match each psychological concept with its correct description below.
+
+Write the correct letter A – H in boxes 14 – 19 on your answer sheet.
+
+Psychological Concepts:
+14. Bounded rationality
+15. Confirmation bias
+16. Loss aversion
+17. Framing effect
+18. Anchoring
+19. Sunk cost fallacy
+
+Descriptions:
+A) The tendency to seek information that supports existing beliefs
+B) The difficulty of abandoning investments despite poor outcomes
+C) The limited cognitive capacity to process all available information
+D) The disproportionate influence of initial information on judgments
+E) The stronger psychological impact of losses compared to gains
+F) The way presentation of information affects decision-making
+G) The tendency to make decisions based on group consensus
+H) The preference for immediate rewards over delayed benefits
+
+14. {C}
+[CORRECT]
+[INCORRECT]
+
+Paragraph B: "Simon argued that humans do not have the cognitive capacity to process all available information"
+
+15. {A}
+[CORRECT]
+[INCORRECT]
+
+Paragraph C: "This cognitive bias leads people to seek out information that confirms their existing beliefs"
+
+16. {E}
+[CORRECT]
+[INCORRECT]
+
+Paragraph D: "describes the tendency for people to feel the pain of losses more acutely than the pleasure of equivalent gains"
+
+17. {F}
+[CORRECT]
+[INCORRECT]
+
+Paragraph E: "demonstrates how the way information is presented can dramatically influence decisions"
+
+18. {D}
+[CORRECT]
+[INCORRECT]
+
+Paragraph F: "The anchoring effect occurs when an initial piece of information disproportionately influences subsequent judgments"
+
+19. {B}
+[CORRECT]
+[INCORRECT]
+
+Paragraph G: "the tendency to continue investing in a failing endeavor because of resources already committed"
+
+Questions 20 – 23 [MULTIPLE CHOICE]
+
+Choose the appropriate letters A – D and write them in boxes 20 – 23 on your answer sheet.
+
+20. According to the passage, the availability heuristic causes people to
+A) make decisions too quickly without enough information.
+B) overestimate risks that are easily remembered.
+C) ignore statistical evidence in favor of personal experience.
+D) seek advice from readily available sources.
+
+A) make decisions too quickly without enough information.
+B) overestimate risks that are easily remembered. [CORRECT]
+C) ignore statistical evidence in favor of personal experience.
+D) seek advice from readily available sources.
+
+Paragraph B: "the availability heuristic causes people to overestimate the likelihood of events that are easily recalled from memory"
+
+21. The passage suggests that confirmation bias has become more problematic because
+A) people are exposed to more information than ever before.
+B) social media algorithms create echo chambers.
+C) education systems fail to teach critical thinking.
+D) news organizations have become less reliable.
+
+A) people are exposed to more information than ever before.
+B) social media algorithms create echo chambers. [CORRECT]
+C) education systems fail to teach critical thinking.
+D) news organizations have become less reliable.
+
+Paragraph C: "In the age of social media and personalized news feeds, confirmation bias has become increasingly problematic, as algorithms tend to show users content that aligns with their existing views, creating 'echo chambers'"
+
+22. The example of medical treatment survival rates demonstrates
+A) that doctors should always present information positively.
+B) how identical information can be perceived differently based on presentation.
+C) why patients struggle to understand medical statistics.
+D) that mortality rates are more accurate than survival rates.
+
+A) that doctors should always present information positively.
+B) how identical information can be perceived differently based on presentation. [CORRECT]
+C) why patients struggle to understand medical statistics.
+D) that mortality rates are more accurate than survival rates.
+
+Paragraph E: "people respond very differently to a medical treatment described as having a '90% survival rate' compared to one with a '10% mortality rate,' despite these being mathematically identical"
+
+23. According to the passage, which strategy can help improve decision-making?
+A) Making decisions quickly to avoid overthinking
+B) Relying on intuition and gut feelings
+C) Seeking diverse perspectives to counter bias
+D) Ignoring past experiences when evaluating options
+
+A) Making decisions quickly to avoid overthinking
+B) Relying on intuition and gut feelings
+C) Seeking diverse perspectives to counter bias [CORRECT]
+D) Ignoring past experiences when evaluating options
+
+Paragraph H: "Seeking diverse perspectives can counter confirmation bias by exposing us to alternative viewpoints"
+
+Questions 24 – 26 [SENTENCE COMPLETION]
+
+Complete the sentences below.
+
+Choose NO MORE THAN THREE WORDS from the passage for each answer.
+
+Write your answers in boxes 24 – 26 on your answer sheet.
+
+24. Herbert Simon, who developed the concept of bounded rationality, was awarded a {[NOBEL PRIZE][NOBEL]}.
+[CORRECT]
+[INCORRECT]
+
+Paragraph B: "bounded rationality, a term coined by Nobel laureate Herbert Simon"
+
+25. Studies show that losing £100 has approximately {[TWICE][DOUBLE][TWO TIMES]} the psychological impact of gaining the same amount.
+[CORRECT]
+[INCORRECT]
+
+Paragraph D: "the psychological impact of losing £100 is roughly twice as powerful as the joy of gaining £100"
+
+26. Being aware of common cognitive biases can help individuals {[ADJUST THEIR THINKING][ADJUST THINKING][RECOGNIZE]}.
+[CORRECT]
+[INCORRECT]
+
+Paragraph H: "simply being aware of common cognitive biases can help individuals recognize when they might be falling prey to these mental shortcuts and adjust their thinking accordingly"
+
+
+You should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.
+
+Questions 27 – 32 [TRUE/FALSE/NOT GIVEN]
+
+Do the following statements agree with the information given in Reading Passage 3?
+
+Write TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.
+
+27. Writing systems allowed human societies to preserve knowledge across generations.
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
+
+Paragraph A: "Writing allowed information to be recorded, preserved, and shared across vast distances and periods of time"
+
+28. Cuneiform was initially developed for literary purposes.
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+This is NOT GIVEN
+Incorrect
+
+Paragraph B states cuneiform was "Initially used primarily for record-keeping and administrative purposes", not literary purposes.
+
+29. Egyptian hieroglyphics could only be written on stone surfaces.
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+This is NOT GIVEN
+Incorrect
+
+Paragraph C: "hieroglyphics were also written on papyrus, an early form of paper"
+
+30. Chinese is the oldest continuously used writing system in the world.
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
+
+Paragraph D: "Chinese writing...represents the oldest continuously used writing system in the world"
+
+31. The Phoenician alphabet included vowel letters.
+This is TRUE
+Incorrect
+This is FALSE
+Correct answer
+This is NOT GIVEN
+Incorrect
+
+Paragraph E: "The Phoenician alphabet consisted of 22 consonant letters and no vowels"
+
+32. Gutenberg invented the printing press in the 15th century.
+This is TRUE
+Correct answer
+This is FALSE
+Incorrect
+This is NOT GIVEN
+Incorrect
+
+Paragraph F: "the 15th century, particularly Johannes Gutenberg's invention of the movable-type printing press"
+
+Questions 33 – 37 [MATCHING SENTENCE ENDINGS]
+
+Complete each sentence with the correct ending, A – J, below.
+
+Write the correct letter, A – J, in boxes 33 – 37 on your answer sheet.
+
+33. The Epic of Gilgamesh
+34. Egyptian hieratic and demotic scripts
+35. Chinese characters
+36. The Greek alphabet
+37. The Latin alphabet
+
+A) spread throughout Europe with the Roman Empire.
+B) were faster to write than formal hieroglyphics.
+C) have influenced writing systems in neighboring Asian countries.
+D) was one of the earliest known literary works.
+E) consisted entirely of consonant sounds.
+F) emerged during the Shang Dynasty.
+G) added vowel letters to the writing system.
+H) required learning thousands of different symbols.
+I) was used primarily for religious texts.
+J) replaced all other ancient writing systems.
+
+33. The Epic of Gilgamesh
+A) spread throughout Europe with the Roman Empire.
+B) were faster to write than formal hieroglyphics.
+C) have influenced writing systems in neighboring Asian countries.
+D) was one of the earliest known literary works. [CORRECT]
+E) consisted entirely of consonant sounds.
+F) emerged during the Shang Dynasty.
+G) added vowel letters to the writing system.
+H) required learning thousands of different symbols.
+I) was used primarily for religious texts.
+J) replaced all other ancient writing systems.
+
+Paragraph B: "The Epic of Gilgamesh, one of the world's oldest known literary works, was written in cuneiform"
+
+34. Egyptian hieratic and demotic scripts
+A) spread throughout Europe with the Roman Empire.
+B) were faster to write than formal hieroglyphics. [CORRECT]
+C) have influenced writing systems in neighboring Asian countries.
+D) was one of the earliest known literary works.
+E) consisted entirely of consonant sounds.
+F) emerged during the Shang Dynasty.
+G) added vowel letters to the writing system.
+H) required learning thousands of different symbols.
+I) was used primarily for religious texts.
+J) replaced all other ancient writing systems.
+
+Paragraph C: "For everyday purposes, Egyptians developed simpler scripts called hieratic and later demotic, which were faster to write than formal hieroglyphics"
+
+35. Chinese characters
+A) spread throughout Europe with the Roman Empire.
+B) were faster to write than formal hieroglyphics.
+C) have influenced writing systems in neighboring Asian countries. [CORRECT]
+D) was one of the earliest known literary works.
+E) consisted entirely of consonant sounds.
+F) emerged during the Shang Dynasty.
+G) added vowel letters to the writing system.
+H) required learning thousands of different symbols.
+I) was used primarily for religious texts.
+J) replaced all other ancient writing systems.
+
+Paragraph D: "Chinese characters have also influenced the writing systems of neighboring countries including Japan, Korea, and Vietnam"
+
+36. The Greek alphabet
+A) spread throughout Europe with the Roman Empire.
+B) were faster to write than formal hieroglyphics.
+C) have influenced writing systems in neighboring Asian countries.
+D) was one of the earliest known literary works.
+E) consisted entirely of consonant sounds.
+F) emerged during the Shang Dynasty.
+G) added vowel letters to the writing system. [CORRECT]
+H) required learning thousands of different symbols.
+I) was used primarily for religious texts.
+J) replaced all other ancient writing systems.
+
+Paragraph E: "adapted by the Greeks, who made the crucial innovation of adding vowel letters"
+
+37. The Latin alphabet
+A) spread throughout Europe with the Roman Empire. [CORRECT]
+B) were faster to write than formal hieroglyphics.
+C) have influenced writing systems in neighboring Asian countries.
+D) was one of the earliest known literary works.
+E) consisted entirely of consonant sounds.
+F) emerged during the Shang Dynasty.
+G) added vowel letters to the writing system.
+H) required learning thousands of different symbols.
+I) was used primarily for religious texts.
+J) replaced all other ancient writing systems.
+
+Paragraph F: "The Latin alphabet spread throughout Europe with the expansion of the Roman Empire"
+
+Questions 38 – 40 [SENTENCE COMPLETION]
+
+Complete the sentences below.
+
+Choose NO MORE THAN TWO WORDS from the passage for each answer.
+
+Write your answers in boxes 38 – 40 on your answer sheet.
+
+38. Cuneiform symbols were pressed into {[CLAY TABLETS][CLAY]} using a reed stylus.
+[CORRECT]
+[INCORRECT]
+
+Paragraph B: "cuneiform, began as a series of pictographic symbols pressed into clay tablets using a reed stylus"
+
+39. Egyptian papyrus was an early form of {PAPER} made from a plant.
+[CORRECT]
+[INCORRECT]
+
+Paragraph C: "papyrus, an early form of paper made from the papyrus plant"
+
+40. In modern times, some {[MINORITY LANGUAGES][MINORITY]} face the threat of their writing systems becoming extinct.
+[CORRECT]
+[INCORRECT]
+
+Paragraph G: "some minority languages face the threat of their writing systems becoming extinct"
