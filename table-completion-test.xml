@@ -4,7 +4,7 @@
 <title>IELTStestONLINE</title>
 <link>https://www.ieltstestonline.com</link>
 <description>Online IELTS preparation</description>
-<pubDate>Tue, 23 Dec 2025 22:31:11 +0000</pubDate>
+<pubDate>Tue, 23 Dec 2025 22:36:00 +0000</pubDate>
 <language>en-NZ</language>
 <wp:wxr_version>1.2</wp:wxr_version>
 <wp:base_site_url>https://www.ieltstestonline.com</wp:base_site_url>
@@ -14,17 +14,17 @@
 <item>
 <title><![CDATA[table-completion-test - Demo Table Completion Questions (CBT)]]></title>
 <link>https://www.ieltstestonline.com/ielts-quiz/table-completion-test-demo-cbt/</link>
-<pubDate>Tue, 23 Dec 2025 22:31:11 +0000</pubDate>
+<pubDate>Tue, 23 Dec 2025 22:36:00 +0000</pubDate>
 <dc:creator><![CDATA[impact]]></dc:creator>
 <guid isPermaLink="false">https://www.ieltstestonline.com/?post_type=ielts_quiz&amp;p=9999989</guid>
 <description/>
 <content:encoded><![CDATA[]]></content:encoded>
 <excerpt:encoded><![CDATA[]]></excerpt:encoded>
 <wp:post_id>9999989</wp:post_id>
-<wp:post_date><![CDATA[2025-12-23 22:31:11]]></wp:post_date>
-<wp:post_date_gmt><![CDATA[2025-12-23 22:31:11]]></wp:post_date_gmt>
-<wp:post_modified><![CDATA[2025-12-23 22:31:11]]></wp:post_modified>
-<wp:post_modified_gmt><![CDATA[2025-12-23 22:31:11]]></wp:post_modified_gmt>
+<wp:post_date><![CDATA[2025-12-23 22:36:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-12-23 22:36:00]]></wp:post_date_gmt>
+<wp:post_modified><![CDATA[2025-12-23 22:36:00]]></wp:post_modified>
+<wp:post_modified_gmt><![CDATA[2025-12-23 22:36:00]]></wp:post_modified_gmt>
 <wp:comment_status><![CDATA[closed]]></wp:comment_status>
 <wp:ping_status><![CDATA[closed]]></wp:ping_status>
 <wp:post_name><![CDATA[table-completion-test-demo-cbt]]></wp:post_name>
@@ -36,9 +36,9 @@
 <wp:is_sticky>0</wp:is_sticky>
 <wp:postmeta>
 <wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
-<wp:meta_value><![CDATA[a:2:{i:0;a:10:{s:4:"type";s:16:"table_completion";s:12:"instructions";s:106:"Complete the table below.
+<wp:meta_value><![CDATA[a:1:{i:0;a:9:{s:4:"type";s:16:"table_completion";s:12:"instructions";s:106:"Complete the table below.
 
-Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.";s:8:"question";s:37:"World population in 1950: ___________";s:6:"points";i:1;s:18:"no_answer_feedback";s:0:"";s:16:"correct_feedback";s:0:"";s:18:"incorrect_feedback";s:0:"";s:15:"reading_text_id";i:0;s:7:"options";s:0:"";s:14:"correct_answer";s:11:"2.5 BILLION";}i:1;a:10:{s:4:"type";s:16:"table_completion";s:12:"instructions";s:0:"";s:8:"question";s:41:"Current population of Africa: ___________";s:6:"points";i:1;s:18:"no_answer_feedback";s:0:"";s:16:"correct_feedback";s:0:"";s:18:"incorrect_feedback";s:0:"";s:15:"reading_text_id";i:0;s:7:"options";s:0:"";s:14:"correct_answer";s:11:"1.4 BILLION";}}]]></wp:meta_value>
+Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.";s:8:"question";s:75:"World population in 1950: [field 1] Current population of Africa: [field 2]";s:6:"points";i:1;s:18:"no_answer_feedback";s:0:"";s:16:"correct_feedback";s:0:"";s:18:"incorrect_feedback";s:0:"";s:15:"reading_text_id";i:0;s:14:"summary_fields";a:2:{i:1;a:4:{s:6:"answer";s:11:"2.5 BILLION";s:16:"correct_feedback";s:0:"";s:18:"incorrect_feedback";s:0:"";s:18:"no_answer_feedback";s:0:"";}i:2;a:4:{s:6:"answer";s:11:"1.4 BILLION";s:16:"correct_feedback";s:0:"";s:18:"incorrect_feedback";s:0:"";s:18:"no_answer_feedback";s:0:"";}}}}]]></wp:meta_value>
 </wp:postmeta>
 <wp:postmeta>
 <wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>

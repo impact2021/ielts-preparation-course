@@ -21,25 +21,26 @@ Choose NO MORE THAN TWO WORDS from the passage for each answer.
 
 Summary:
 Electric vehicles use (1) ___________ instead of gasoline and produce no direct emissions.',
-        'question' => 'Electric vehicles use ___________ instead of gasoline.',
+        'question' => 'Electric vehicles use [field 1] instead of gasoline. Battery costs have fallen by [field 2] percent since 2010.',
         'points' => 1,
         'no_answer_feedback' => '',
         'correct_feedback' => '',
         'incorrect_feedback' => '',
         'reading_text_id' => 0,
-        'options' => '',
-        'correct_answer' => 'RECHARGEABLE BATTERIES|BATTERIES'
-    ], [
-        'type' => 'summary_completion',
-        'instructions' => '',
-        'question' => 'Battery costs have fallen by ___________ percent since 2010.',
-        'points' => 1,
-        'no_answer_feedback' => '',
-        'correct_feedback' => '',
-        'incorrect_feedback' => '',
-        'reading_text_id' => 0,
-        'options' => '',
-        'correct_answer' => '80'
+        'summary_fields' => [
+            1 => [
+                'answer' => 'RECHARGEABLE BATTERIES|BATTERIES',
+                'correct_feedback' => '',
+                'incorrect_feedback' => '',
+                'no_answer_feedback' => ''
+            ],
+            2 => [
+                'answer' => '80',
+                'correct_feedback' => '',
+                'incorrect_feedback' => '',
+                'no_answer_feedback' => ''
+            ]
+        ]
     ]]
 ];
 $post_id = 9999990;
@@ -140,4 +141,4 @@ $xml = <<<XML
 </rss>
 XML;
 file_put_contents('summary-completion-test.xml', $xml);
-echo "\n✓ Successfully generated: summary-completion-test.xml\n✓ Reading passages: 1\n✓ Questions: 2\n\n";
+echo "\n✓ Successfully generated: summary-completion-test.xml\n✓ Reading passages: 1\n✓ Questions: 1 (with 2 fields)\n\n";

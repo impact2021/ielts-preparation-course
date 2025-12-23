@@ -18,25 +18,26 @@ $test_data = [
         'instructions' => 'Complete the table below.
 
 Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
-        'question' => 'World population in 1950: ___________',
+        'question' => 'World population in 1950: [field 1] Current population of Africa: [field 2]',
         'points' => 1,
         'no_answer_feedback' => '',
         'correct_feedback' => '',
         'incorrect_feedback' => '',
         'reading_text_id' => 0,
-        'options' => '',
-        'correct_answer' => '2.5 BILLION'
-    ], [
-        'type' => 'table_completion',
-        'instructions' => '',
-        'question' => 'Current population of Africa: ___________',
-        'points' => 1,
-        'no_answer_feedback' => '',
-        'correct_feedback' => '',
-        'incorrect_feedback' => '',
-        'reading_text_id' => 0,
-        'options' => '',
-        'correct_answer' => '1.4 BILLION'
+        'summary_fields' => [
+            1 => [
+                'answer' => '2.5 BILLION',
+                'correct_feedback' => '',
+                'incorrect_feedback' => '',
+                'no_answer_feedback' => ''
+            ],
+            2 => [
+                'answer' => '1.4 BILLION',
+                'correct_feedback' => '',
+                'incorrect_feedback' => '',
+                'no_answer_feedback' => ''
+            ]
+        ]
     ]]
 ];
 $post_id = 9999989;
@@ -137,4 +138,4 @@ $xml = <<<XML
 </rss>
 XML;
 file_put_contents('table-completion-test.xml', $xml);
-echo "\n✓ Successfully generated: table-completion-test.xml\n✓ Reading passages: 1\n✓ Questions: 2\n\n";
+echo "\n✓ Successfully generated: table-completion-test.xml\n✓ Reading passages: 1\n✓ Questions: 1 (with 2 fields)\n\n";

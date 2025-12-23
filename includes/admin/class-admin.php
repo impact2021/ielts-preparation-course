@@ -4817,6 +4817,9 @@ class IELTS_CM_Admin {
         $xml .= "\t\t" . '<wp:post_password><![CDATA[' . $post->post_password . ']]></wp:post_password>' . "\n";
         $xml .= "\t\t" . '<wp:is_sticky>' . (is_sticky($post->ID) ? '1' : '0') . '</wp:is_sticky>' . "\n";
         
+        // Transform questions to proper export format
+        $questions = $this->transform_questions_for_export($questions);
+        
         // Add all metadata fields (even if empty)
         // Questions
         $xml .= $this->generate_postmeta_xml('_ielts_cm_questions', $questions);
@@ -4884,6 +4887,209 @@ class IELTS_CM_Admin {
         $xml .= "\t\t" . '</wp:postmeta>' . "\n";
         
         return $xml;
+    }
+    
+    /**
+     * Transform questions for export
+     * Combines consecutive dropdown_paragraph, summary_completion, and table_completion questions
+     * into single questions with numbered placeholders
+     * 
+     * @param array $questions Array of questions
+     * @return array Transformed questions
+     */
+    private function transform_questions_for_export($questions) {
+        if (!is_array($questions) || empty($questions)) {
+            return $questions;
+        }
+        
+        $transformed = array();
+        $i = 0;
+        
+        while ($i < count($questions)) {
+            $question = $questions[$i];
+            $type = isset($question['type']) ? $question['type'] : '';
+            
+            // Check if this is a question type that needs transformation
+            if (in_array($type, array('dropdown_paragraph', 'summary_completion', 'table_completion'))) {
+                // Check if already in correct format (has dropdown_options or summary_fields)
+                if (isset($question['dropdown_options']) || isset($question['summary_fields'])) {
+                    // Already in correct format, keep as is
+                    $transformed[] = $question;
+                    $i++;
+                    continue;
+                }
+                
+                // Collect consecutive questions of the same type
+                $group = array($question);
+                $j = $i + 1;
+                while ($j < count($questions)) {
+                    $next_q = $questions[$j];
+                    $next_type = isset($next_q['type']) ? $next_q['type'] : '';
+                    
+                    // Same type and no dropdown_options/summary_fields
+                    if ($next_type === $type && !isset($next_q['dropdown_options']) && !isset($next_q['summary_fields'])) {
+                        $group[] = $next_q;
+                        $j++;
+                    } else {
+                        break;
+                    }
+                }
+                
+                // Transform the group
+                if ($type === 'dropdown_paragraph') {
+                    $transformed[] = $this->transform_dropdown_paragraph_group($group);
+                } elseif ($type === 'summary_completion' || $type === 'table_completion') {
+                    $transformed[] = $this->transform_summary_table_group($group, $type);
+                }
+                
+                $i = $j;
+            } else {
+                // Not a transformable type, keep as is
+                $transformed[] = $question;
+                $i++;
+            }
+        }
+        
+        return $transformed;
+    }
+    
+    /**
+     * Transform a group of dropdown_paragraph questions into a single question
+     * 
+     * @param array $group Array of dropdown_paragraph questions
+     * @return array Transformed question
+     */
+    private function transform_dropdown_paragraph_group($group) {
+        if (count($group) === 1 && isset($group[0]['dropdown_options'])) {
+            // Already in correct format
+            return $group[0];
+        }
+        
+        // Build the combined question
+        $first = $group[0];
+        $instructions = isset($first['instructions']) ? $first['instructions'] : '';
+        $question_parts = array();
+        $dropdown_options = array();
+        $correct_answer_parts = array();
+        
+        foreach ($group as $index => $q) {
+            $gap_num = $index + 1;
+            $q_text = isset($q['question']) ? $q['question'] : '';
+            
+            // Replace blank with numbered placeholder ___N___
+            $q_text = preg_replace('/_+/', '___' . $gap_num . '___', $q_text, 1);
+            $question_parts[] = $q_text;
+            
+            // Build dropdown options
+            $options = array();
+            if (isset($q['mc_options']) && is_array($q['mc_options'])) {
+                foreach ($q['mc_options'] as $opt) {
+                    $options[] = array(
+                        'text' => isset($opt['text']) ? $opt['text'] : '',
+                        'is_correct' => isset($opt['is_correct']) ? $opt['is_correct'] : false
+                    );
+                }
+            } elseif (isset($q['options']) && !empty($q['options'])) {
+                // Parse options string
+                $option_list = array_filter(array_map('trim', explode("\n", $q['options'])));
+                $correct_idx = isset($q['correct_answer']) ? intval($q['correct_answer']) : 0;
+                
+                foreach ($option_list as $opt_idx => $opt_text) {
+                    $options[] = array(
+                        'text' => $opt_text,
+                        'is_correct' => $opt_idx === $correct_idx
+                    );
+                }
+            }
+            
+            if (!empty($options)) {
+                $dropdown_options[$gap_num] = array(
+                    'position' => $gap_num,
+                    'options' => $options,
+                    'correct_feedback' => isset($q['correct_feedback']) ? $q['correct_feedback'] : '',
+                    'incorrect_feedback' => isset($q['incorrect_feedback']) ? $q['incorrect_feedback'] : '',
+                    'no_answer_feedback' => isset($q['no_answer_feedback']) ? $q['no_answer_feedback'] : ''
+                );
+                
+                // Find correct letter
+                foreach ($options as $opt_idx => $opt) {
+                    if ($opt['is_correct']) {
+                        $letter = chr(65 + $opt_idx); // A, B, C, etc.
+                        $correct_answer_parts[] = $gap_num . ':' . $letter;
+                        break;
+                    }
+                }
+            }
+        }
+        
+        // Combine question parts
+        $combined_question = implode(' ', $question_parts);
+        
+        return array(
+            'type' => 'dropdown_paragraph',
+            'instructions' => $instructions,
+            'question' => $combined_question,
+            'dropdown_options' => $dropdown_options,
+            'correct_answer' => implode('|', $correct_answer_parts),
+            'points' => isset($first['points']) ? $first['points'] : 1,
+            'correct_feedback' => isset($first['correct_feedback']) ? $first['correct_feedback'] : '',
+            'incorrect_feedback' => isset($first['incorrect_feedback']) ? $first['incorrect_feedback'] : '',
+            'no_answer_feedback' => isset($first['no_answer_feedback']) ? $first['no_answer_feedback'] : '',
+            'reading_text_id' => isset($first['reading_text_id']) ? $first['reading_text_id'] : 0
+        );
+    }
+    
+    /**
+     * Transform a group of summary/table completion questions into a single question
+     * 
+     * @param array $group Array of summary/table completion questions
+     * @param string $type Question type
+     * @return array Transformed question
+     */
+    private function transform_summary_table_group($group, $type) {
+        if (count($group) === 1 && isset($group[0]['summary_fields'])) {
+            // Already in correct format
+            return $group[0];
+        }
+        
+        // Build the combined question
+        $first = $group[0];
+        $instructions = isset($first['instructions']) ? $first['instructions'] : '';
+        $question_parts = array();
+        $summary_fields = array();
+        
+        foreach ($group as $index => $q) {
+            $field_num = $index + 1;
+            $q_text = isset($q['question']) ? $q['question'] : '';
+            
+            // Replace blank with numbered placeholder [field N]
+            $q_text = preg_replace('/_+/', '[field ' . $field_num . ']', $q_text, 1);
+            $question_parts[] = $q_text;
+            
+            // Build summary field
+            $answer = isset($q['correct_answer']) ? $q['correct_answer'] : '';
+            $summary_fields[$field_num] = array(
+                'answer' => $answer,
+                'correct_feedback' => isset($q['correct_feedback']) ? $q['correct_feedback'] : '',
+                'incorrect_feedback' => isset($q['incorrect_feedback']) ? $q['incorrect_feedback'] : '',
+                'no_answer_feedback' => isset($q['no_answer_feedback']) ? $q['no_answer_feedback'] : ''
+            );
+        }
+        
+        // Combine question parts
+        $combined_question = implode(' ', $question_parts);
+        
+        return array(
+            'type' => $type,
+            'instructions' => $instructions,
+            'question' => $combined_question,
+            'summary_fields' => $summary_fields,
+            'points' => isset($first['points']) ? $first['points'] : 1,
+            'correct_feedback' => isset($first['correct_feedback']) ? $first['correct_feedback'] : '',
+            'incorrect_feedback' => isset($first['incorrect_feedback']) ? $first['incorrect_feedback'] : '',
+            'no_answer_feedback' => isset($first['no_answer_feedback']) ? $first['no_answer_feedback'] : '',
+            'reading_text_id' => isset($first['reading_text_id']) ? $first['reading_text_id'] : 0
+        );
     }
     
     /**
