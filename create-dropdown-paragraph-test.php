@@ -18,41 +18,37 @@ $test_data = [
         'instructions' => 'Complete the paragraph below by selecting the correct word from the dropdown for each gap.
 
 The water cycle involves water (1) ___________ from oceans into the atmosphere.',
-        'question' => 'Select the correct word for gap (1)',
+        'question' => 'The water cycle involves water ___1___ from oceans into the atmosphere. Vapor cools and ___2___ into clouds.',
         'points' => 1,
         'no_answer_feedback' => '',
         'correct_feedback' => '',
         'incorrect_feedback' => '',
         'reading_text_id' => 0,
-        'mc_options' => [
-            ['text' => 'evaporating', 'is_correct' => true, 'feedback' => ''],
-            ['text' => 'freezing', 'is_correct' => false, 'feedback' => ''],
-            ['text' => 'flowing', 'is_correct' => false, 'feedback' => '']
+        'dropdown_options' => [
+            1 => [
+                'position' => 1,
+                'options' => [
+                    ['text' => 'evaporating', 'is_correct' => true],
+                    ['text' => 'freezing', 'is_correct' => false],
+                    ['text' => 'flowing', 'is_correct' => false]
+                ],
+                'correct_feedback' => '',
+                'incorrect_feedback' => '',
+                'no_answer_feedback' => ''
+            ],
+            2 => [
+                'position' => 2,
+                'options' => [
+                    ['text' => 'evaporates', 'is_correct' => false],
+                    ['text' => 'condenses', 'is_correct' => true],
+                    ['text' => 'precipitates', 'is_correct' => false]
+                ],
+                'correct_feedback' => '',
+                'incorrect_feedback' => '',
+                'no_answer_feedback' => ''
+            ]
         ],
-        'options' => 'evaporating
-freezing
-flowing',
-        'correct_answer' => '0',
-        'option_feedback' => ['', '', '']
-    ], [
-        'type' => 'dropdown_paragraph',
-        'instructions' => '',
-        'question' => 'Vapor cools and (2) ___________ into clouds.',
-        'points' => 1,
-        'no_answer_feedback' => '',
-        'correct_feedback' => '',
-        'incorrect_feedback' => '',
-        'reading_text_id' => 0,
-        'mc_options' => [
-            ['text' => 'evaporates', 'is_correct' => false, 'feedback' => ''],
-            ['text' => 'condenses', 'is_correct' => true, 'feedback' => ''],
-            ['text' => 'precipitates', 'is_correct' => false, 'feedback' => '']
-        ],
-        'options' => 'evaporates
-condenses
-precipitates',
-        'correct_answer' => '1',
-        'option_feedback' => ['', '', '']
+        'correct_answer' => '1:A|2:B'
     ]]
 ];
 $post_id = 9999988;
@@ -153,4 +149,4 @@ $xml = <<<XML
 </rss>
 XML;
 file_put_contents('dropdown-paragraph-test.xml', $xml);
-echo "\n✓ Successfully generated: dropdown-paragraph-test.xml\n✓ Reading passages: 1\n✓ Questions: 2\n\n";
+echo "\n✓ Successfully generated: dropdown-paragraph-test.xml\n✓ Reading passages: 1\n✓ Questions: 1 (with 2 dropdown gaps)\n\n";
