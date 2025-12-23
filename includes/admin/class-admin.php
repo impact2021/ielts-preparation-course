@@ -5043,12 +5043,12 @@ class IELTS_CM_Admin {
     /**
      * Get default feedback message if value is empty
      * 
-     * @param string $feedback Feedback value to check
+     * @param string|null $feedback Feedback value to check
      * @param string $default Default value to use if empty
      * @return string Original feedback or default if empty
      */
     private function get_default_feedback_if_empty($feedback, $default) {
-        return (isset($feedback) && $feedback !== '') ? $feedback : $default;
+        return ($feedback !== '' && $feedback !== null) ? $feedback : $default;
     }
     
     /**
@@ -5068,7 +5068,7 @@ class IELTS_CM_Admin {
             
             // Set default no_answer_feedback at question level if empty
             $question['no_answer_feedback'] = $this->get_default_feedback_if_empty(
-                isset($question['no_answer_feedback']) ? $question['no_answer_feedback'] : '',
+                $question['no_answer_feedback'] ?? '',
                 $default_no_answer_feedback
             );
             
@@ -5076,7 +5076,7 @@ class IELTS_CM_Admin {
             if (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
                 foreach ($question['summary_fields'] as $field_num => $field_data) {
                     $question['summary_fields'][$field_num]['no_answer_feedback'] = $this->get_default_feedback_if_empty(
-                        isset($field_data['no_answer_feedback']) ? $field_data['no_answer_feedback'] : '',
+                        $field_data['no_answer_feedback'] ?? '',
                         $default_no_answer_feedback
                     );
                     // Ensure other feedback fields exist (even if empty)
@@ -5094,13 +5094,13 @@ class IELTS_CM_Admin {
         
         // Build the combined question
         $first = $group[0];
-        $instructions = isset($first['instructions']) ? $first['instructions'] : '';
+        $instructions = $first['instructions'] ?? '';
         $question_parts = array();
         $summary_fields = array();
         
         foreach ($group as $index => $q) {
             $field_num = $index + 1;
-            $q_text = isset($q['question']) ? $q['question'] : '';
+            $q_text = $q['question'] ?? '';
             
             // Replace blank with numbered placeholder [field N]
             // Use pattern that matches 3+ underscores to avoid matching single/double underscores
@@ -5109,17 +5109,11 @@ class IELTS_CM_Admin {
             
             // Build summary field with defaults for empty feedback
             $summary_fields[$field_num] = array(
-                'answer' => isset($q['correct_answer']) ? $q['correct_answer'] : '',
-                'correct_feedback' => $this->get_default_feedback_if_empty(
-                    isset($q['correct_feedback']) ? $q['correct_feedback'] : '', 
-                    ''
-                ),
-                'incorrect_feedback' => $this->get_default_feedback_if_empty(
-                    isset($q['incorrect_feedback']) ? $q['incorrect_feedback'] : '', 
-                    ''
-                ),
+                'answer' => $q['correct_answer'] ?? '',
+                'correct_feedback' => $q['correct_feedback'] ?? '',
+                'incorrect_feedback' => $q['incorrect_feedback'] ?? '',
                 'no_answer_feedback' => $this->get_default_feedback_if_empty(
-                    isset($q['no_answer_feedback']) ? $q['no_answer_feedback'] : '', 
+                    $q['no_answer_feedback'] ?? '', 
                     $default_no_answer_feedback
                 )
             );
@@ -5133,14 +5127,14 @@ class IELTS_CM_Admin {
             'instructions' => $instructions,
             'question' => $combined_question,
             'summary_fields' => $summary_fields,
-            'points' => isset($first['points']) ? $first['points'] : 1,
-            'correct_feedback' => isset($first['correct_feedback']) ? $first['correct_feedback'] : '',
-            'incorrect_feedback' => isset($first['incorrect_feedback']) ? $first['incorrect_feedback'] : '',
+            'points' => $first['points'] ?? 1,
+            'correct_feedback' => $first['correct_feedback'] ?? '',
+            'incorrect_feedback' => $first['incorrect_feedback'] ?? '',
             'no_answer_feedback' => $this->get_default_feedback_if_empty(
-                isset($first['no_answer_feedback']) ? $first['no_answer_feedback'] : '',
+                $first['no_answer_feedback'] ?? '',
                 $default_no_answer_feedback
             ),
-            'reading_text_id' => isset($first['reading_text_id']) ? $first['reading_text_id'] : 0
+            'reading_text_id' => $first['reading_text_id'] ?? 0
         );
     }
     
