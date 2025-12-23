@@ -20,9 +20,9 @@ $test_data = [
 The water cycle involves water (1) ___________ from oceans into the atmosphere.',
         'question' => 'The water cycle involves water ___1___ from oceans into the atmosphere. Vapor cools and ___2___ into clouds.',
         'points' => 1,
-        'no_answer_feedback' => '',
-        'correct_feedback' => '',
-        'incorrect_feedback' => '',
+        'no_answer_feedback' => 'Please select an answer for all dropdown questions.',
+        'correct_feedback' => 'Well done! You have correctly completed the paragraph.',
+        'incorrect_feedback' => 'Some answers are incorrect. Review the water cycle process.',
         'reading_text_id' => 0,
         'dropdown_options' => [
             1 => [
@@ -32,9 +32,9 @@ The water cycle involves water (1) ___________ from oceans into the atmosphere.'
                     ['text' => 'freezing', 'is_correct' => false],
                     ['text' => 'flowing', 'is_correct' => false]
                 ],
-                'correct_feedback' => '',
-                'incorrect_feedback' => '',
-                'no_answer_feedback' => ''
+                'correct_feedback' => 'Correct! Water evaporates from the ocean.',
+                'incorrect_feedback' => 'Incorrect. Water evaporates, not freezes or flows at this stage.',
+                'no_answer_feedback' => 'Please select an option for gap 1.'
             ],
             2 => [
                 'position' => 2,
@@ -43,14 +43,47 @@ The water cycle involves water (1) ___________ from oceans into the atmosphere.'
                     ['text' => 'condenses', 'is_correct' => true],
                     ['text' => 'precipitates', 'is_correct' => false]
                 ],
-                'correct_feedback' => '',
-                'incorrect_feedback' => '',
-                'no_answer_feedback' => ''
+                'correct_feedback' => 'Correct! Water vapor condenses to form clouds.',
+                'incorrect_feedback' => 'Incorrect. Water vapor condenses when it cools.',
+                'no_answer_feedback' => 'Please select an option for gap 2.'
             ]
         ],
         'correct_answer' => '1:A|2:B'
     ]]
 ];
+
+// Convert dropdown_options format to inline format in question text for proper rendering
+foreach ($test_data['questions'] as &$question) {
+    if ($question['type'] === 'dropdown_paragraph' && isset($question['dropdown_options'])) {
+        $question_text = $question['question'];
+        
+        foreach ($question['dropdown_options'] as $position => $dropdown_data) {
+            if (!isset($dropdown_data['options']) || !is_array($dropdown_data['options'])) {
+                continue;
+            }
+            
+            // Build inline format: N.[A: option1 B: option2 C: option3]
+            $options_text_parts = [];
+            foreach ($dropdown_data['options'] as $opt_idx => $opt_data) {
+                // Only process first 26 options (A-Z)
+                if ($opt_idx > 25) {
+                    break;
+                }
+                $opt_letter = chr(ord('A') + $opt_idx);
+                $options_text_parts[] = $opt_letter . ': ' . $opt_data['text'];
+            }
+            $options_string = implode(' ', $options_text_parts);
+            $replacement = $position . '.[' . $options_string . ']';
+            
+            // Replace ___N___ or __N__ placeholders with inline format
+            $placeholder_pattern = '/(___' . preg_quote($position, '/') . '___|__' . preg_quote($position, '/') . '__)/';
+            $question_text = preg_replace($placeholder_pattern, $replacement, $question_text);
+        }
+        
+        $question['question'] = $question_text;
+    }
+}
+unset($question);
 $post_id = 9999988;
 $now = new DateTime();
 $pub_date = $now->format('D, d M Y H:i:s') . ' +0000';
