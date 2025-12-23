@@ -97,6 +97,14 @@ Test-takers must answer 40 questions in total. Question types include multiple c
 			<wp:meta_key><![CDATA[_ielts_cm_lesson_ids]]></wp:meta_key>
 			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_course_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_lesson_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 </channel>
 </rss>

@@ -58,6 +58,7 @@ The XML file imports:
 - ✅ Question feedback
 - ✅ Exercise settings (timer, layout, scoring, etc.)
 - ✅ Custom metadata (pass percentage, exercise label, etc.)
+- ✅ Course/Lesson association fields (including legacy fields for backward compatibility)
 
 ## After Import
 

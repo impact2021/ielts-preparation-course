@@ -52,7 +52,8 @@ The XML export includes **ALL fields** for the exercise, even if they are curren
 ### Associations
 - **Course IDs** (`_ielts_cm_course_ids`) - Array of associated courses
 - **Lesson IDs** (`_ielts_cm_lesson_ids`) - Array of associated lessons
-- Legacy single course/lesson IDs for backward compatibility
+- **Course ID** (`_ielts_cm_course_id`) - Single course ID (legacy field for backward compatibility)
+- **Lesson ID** (`_ielts_cm_lesson_id`) - Single lesson ID (legacy field for backward compatibility)
 
 ## XML Format
 

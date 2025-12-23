@@ -338,6 +338,8 @@ $course_ids_serialized = serialize($test_data['course_ids'] ?? []);
 $lesson_ids_serialized = serialize($test_data['lesson_ids'] ?? []);
 ```
 
+**Note:** The script also includes legacy single course/lesson ID fields (`_ielts_cm_course_id` and `_ielts_cm_lesson_id`) for backward compatibility. These are automatically set to empty values in the generated XML.
+
 ### Custom Post IDs
 
 The script auto-generates post IDs. If you need specific IDs:
