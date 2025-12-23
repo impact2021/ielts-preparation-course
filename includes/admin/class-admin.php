@@ -4977,7 +4977,8 @@ class IELTS_CM_Admin {
             $q_text = isset($q['question']) ? $q['question'] : '';
             
             // Replace blank with numbered placeholder ___N___
-            $q_text = preg_replace('/_+/', '___' . $gap_num . '___', $q_text, 1);
+            // Use pattern that matches 3+ underscores to avoid matching single/double underscores
+            $q_text = preg_replace('/_{3,}/', '___' . $gap_num . '___', $q_text, 1);
             $question_parts[] = $q_text;
             
             // Build dropdown options
@@ -4992,12 +4993,12 @@ class IELTS_CM_Admin {
             } elseif (isset($q['options']) && !empty($q['options'])) {
                 // Parse options string
                 $option_list = array_filter(array_map('trim', explode("\n", $q['options'])));
-                $correct_idx = isset($q['correct_answer']) ? intval($q['correct_answer']) : 0;
+                $correct_idx = isset($q['correct_answer']) ? (int)$q['correct_answer'] : 0;
                 
                 foreach ($option_list as $opt_idx => $opt_text) {
                     $options[] = array(
                         'text' => $opt_text,
-                        'is_correct' => $opt_idx === $correct_idx
+                        'is_correct' => $opt_idx == $correct_idx
                     );
                 }
             }
@@ -5063,7 +5064,8 @@ class IELTS_CM_Admin {
             $q_text = isset($q['question']) ? $q['question'] : '';
             
             // Replace blank with numbered placeholder [field N]
-            $q_text = preg_replace('/_+/', '[field ' . $field_num . ']', $q_text, 1);
+            // Use pattern that matches 3+ underscores to avoid matching single/double underscores
+            $q_text = preg_replace('/_{3,}/', '[field ' . $field_num . ']', $q_text, 1);
             $question_parts[] = $q_text;
             
             // Build summary field
