@@ -5048,9 +5048,35 @@ class IELTS_CM_Admin {
      * @return array Transformed question
      */
     private function transform_summary_table_group($group, $type) {
+        // Default feedback message
+        $default_no_answer_feedback = __("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager');
+        
         if (count($group) === 1 && isset($group[0]['summary_fields'])) {
-            // Already in correct format
-            return $group[0];
+            // Already in correct format - ensure all feedback fields have defaults if empty
+            $question = $group[0];
+            
+            // Set default no_answer_feedback at question level if empty
+            if (!isset($question['no_answer_feedback']) || $question['no_answer_feedback'] === '') {
+                $question['no_answer_feedback'] = $default_no_answer_feedback;
+            }
+            
+            // Set defaults for each summary field if empty
+            if (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+                foreach ($question['summary_fields'] as $field_num => $field_data) {
+                    if (!isset($field_data['no_answer_feedback']) || $field_data['no_answer_feedback'] === '') {
+                        $question['summary_fields'][$field_num]['no_answer_feedback'] = $default_no_answer_feedback;
+                    }
+                    // Ensure other feedback fields exist (even if empty)
+                    if (!isset($field_data['correct_feedback'])) {
+                        $question['summary_fields'][$field_num]['correct_feedback'] = '';
+                    }
+                    if (!isset($field_data['incorrect_feedback'])) {
+                        $question['summary_fields'][$field_num]['incorrect_feedback'] = '';
+                    }
+                }
+            }
+            
+            return $question;
         }
         
         // Build the combined question
@@ -5070,16 +5096,25 @@ class IELTS_CM_Admin {
             
             // Build summary field
             $answer = isset($q['correct_answer']) ? $q['correct_answer'] : '';
+            $correct_feedback = isset($q['correct_feedback']) && $q['correct_feedback'] !== '' ? $q['correct_feedback'] : '';
+            $incorrect_feedback = isset($q['incorrect_feedback']) && $q['incorrect_feedback'] !== '' ? $q['incorrect_feedback'] : '';
+            $no_answer_feedback = isset($q['no_answer_feedback']) && $q['no_answer_feedback'] !== '' ? $q['no_answer_feedback'] : $default_no_answer_feedback;
+            
             $summary_fields[$field_num] = array(
                 'answer' => $answer,
-                'correct_feedback' => isset($q['correct_feedback']) ? $q['correct_feedback'] : '',
-                'incorrect_feedback' => isset($q['incorrect_feedback']) ? $q['incorrect_feedback'] : '',
-                'no_answer_feedback' => isset($q['no_answer_feedback']) ? $q['no_answer_feedback'] : ''
+                'correct_feedback' => $correct_feedback,
+                'incorrect_feedback' => $incorrect_feedback,
+                'no_answer_feedback' => $no_answer_feedback
             );
         }
         
         // Combine question parts
         $combined_question = implode(' ', $question_parts);
+        
+        // Get question-level no_answer_feedback with default
+        $question_no_answer_feedback = isset($first['no_answer_feedback']) && $first['no_answer_feedback'] !== '' 
+            ? $first['no_answer_feedback'] 
+            : $default_no_answer_feedback;
         
         return array(
             'type' => $type,
@@ -5089,7 +5124,7 @@ class IELTS_CM_Admin {
             'points' => isset($first['points']) ? $first['points'] : 1,
             'correct_feedback' => isset($first['correct_feedback']) ? $first['correct_feedback'] : '',
             'incorrect_feedback' => isset($first['incorrect_feedback']) ? $first['incorrect_feedback'] : '',
-            'no_answer_feedback' => isset($first['no_answer_feedback']) ? $first['no_answer_feedback'] : '',
+            'no_answer_feedback' => $question_no_answer_feedback,
             'reading_text_id' => isset($first['reading_text_id']) ? $first['reading_text_id'] : 0
         );
     }
