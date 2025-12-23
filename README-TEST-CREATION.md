@@ -241,14 +241,6 @@ With this tool, you can:
 - Ensure consistent, error-free imports
 - Easily update and modify tests
 
-## Success Stories
-
-> "I converted 15 existing tests in one afternoon. Previously, each test took 2-3 hours to import manually!" 
-
-> "The import interface kept corrupting my feedback text. With this tool, everything imports perfectly every time."
-
-> "I can now create a complete test in under 10 minutes. Game changer!"
-
 ## Next Steps
 
 1. **Read** HOW-TO-CREATE-TESTS.md to understand the format

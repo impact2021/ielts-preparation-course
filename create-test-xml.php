@@ -623,7 +623,8 @@ function generate_test_xml($test_data) {
     
     $title = $test_data['title'];
     $slug = $test_data['slug'];
-    $post_id = abs(crc32($slug));
+    // Generate a unique post ID using SHA-256 hash to avoid collisions
+    $post_id = abs(hexdec(substr(hash('sha256', $slug), 0, 8)));
     
     // Serialize questions and reading texts using PHP serialize
     $questions_serialized = serialize($test_data['questions']);
@@ -652,7 +653,7 @@ function generate_test_xml($test_data) {
     $xml .= "\t\t<link>https://www.ieltstestonline.com/2026/ielts-quiz/$slug/</link>\n";
     $xml .= "\t\t<pubDate>$pub_date</pubDate>\n";
     $xml .= "\t\t<dc:creator><![CDATA[impact]]></dc:creator>\n";
-    $xml .= "\t\t<guid isPermaLink=\"false\">https://www.ieltstestonline.com/2026/?post_type=ielts_quiz&amp;#038;p=$post_id</guid>\n";
+    $xml .= "\t\t<guid isPermaLink=\"false\">https://www.ieltstestonline.com/2026/?post_type=ielts_quiz&amp;p=$post_id</guid>\n";
     $xml .= "\t\t<description/>\n";
     $xml .= "\t\t<content:encoded><![CDATA[]]></content:encoded>\n";
     $xml .= "\t\t<excerpt:encoded><![CDATA[]]></excerpt:encoded>\n";
@@ -742,7 +743,13 @@ function generate_test_xml($test_data) {
 // Generate and save the XML
 $xml_content = generate_test_xml($test_data);
 $output_filename = 'exercise-' . $test_data['slug'] . '-' . date('Y-m-d') . '.xml';
-file_put_contents($output_filename, $xml_content);
+
+// Attempt to write file with error handling
+if (file_put_contents($output_filename, $xml_content) === false) {
+    echo "✗ Error: Failed to write file '$output_filename'\n";
+    echo "  Check directory permissions and disk space.\n";
+    exit(1);
+}
 
 echo "✓ Successfully generated: $output_filename\n";
 echo "✓ Reading passages: " . count($test_data['reading_texts']) . "\n";
