@@ -53,6 +53,9 @@ class IELTS_Course_Manager {
         // Check for version update and flush permalinks if needed
         add_action('init', array($this, 'check_version_update'));
         
+        // Register shortcodes on init hook
+        add_action('init', array($this->shortcodes, 'register'));
+        
         // Register REST API routes
         add_action('rest_api_init', array($this->sync_api, 'register_routes'));
         
@@ -68,9 +71,6 @@ class IELTS_Course_Manager {
         
         // Initialize frontend
         $this->frontend->init();
-        
-        // Register shortcodes
-        $this->shortcodes->register();
         
         // Enqueue scripts and styles
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
