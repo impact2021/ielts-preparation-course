@@ -4872,15 +4872,15 @@ class IELTS_CM_Admin {
      * @return string XML fragment
      */
     private function generate_postmeta_xml($key, $value) {
-        $xml = "\t\t\t\t\t\t" . '<wp:postmeta>' . "\n";
-        $xml .= "\t\t" . '<wp:meta_key><![CDATA[' . $key . ']]></wp:meta_key>' . "\n";
+        $xml = "\t\t" . '<wp:postmeta>' . "\n";
+        $xml .= "\t\t\t" . '<wp:meta_key><![CDATA[' . $key . ']]></wp:meta_key>' . "\n";
         
         // Serialize arrays and objects
         if (is_array($value) || is_object($value)) {
             $value = serialize($value);
         }
         
-        $xml .= "\t\t" . '<wp:meta_value><![CDATA[' . $value . ']]></wp:meta_value>' . "\n";
+        $xml .= "\t\t\t" . '<wp:meta_value><![CDATA[' . $value . ']]></wp:meta_value>' . "\n";
         $xml .= "\t\t" . '</wp:postmeta>' . "\n";
         
         return $xml;
