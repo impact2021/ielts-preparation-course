@@ -2636,13 +2636,20 @@ You have one hour for the complete test (including transferring your answers).</
             // Convert ___N___ or __N__ to N.[A: option1 B: option2] format
             $formatted_question = $question_text;
             $correct_answer_parts = array();
+            $structured_dropdown_options = array();
             
             foreach ($dropdown_options as $num => $options) {
                 $option_parts = array();
                 $correct_letter = '';
+                $structured_options = array();
                 
                 foreach ($options as $opt) {
                     $option_parts[] = $opt['letter'] . ': ' . $opt['text'];
+                    // Convert to the structure expected by admin interface
+                    $structured_options[] = array(
+                        'text' => $opt['text'],
+                        'is_correct' => $opt['is_correct']
+                    );
                     if ($opt['is_correct']) {
                         $correct_letter = $opt['letter'];
                     }
@@ -2657,6 +2664,15 @@ You have one hour for the complete test (including transferring your answers).</
                 if (!empty($correct_letter)) {
                     $correct_answer_parts[] = $num . ':' . $correct_letter;
                 }
+                
+                // Build the structured dropdown_options format expected by admin interface
+                $structured_dropdown_options[$num] = array(
+                    'position' => intval($num),
+                    'options' => $structured_options,
+                    'correct_feedback' => '',
+                    'incorrect_feedback' => '',
+                    'no_answer_feedback' => ''
+                );
             }
             
             $questions = array();
@@ -2664,7 +2680,7 @@ You have one hour for the complete test (including transferring your answers).</
                 'type' => 'dropdown_paragraph',
                 'question' => wp_kses_post($formatted_question),
                 'correct_answer' => sanitize_text_field(implode('|', $correct_answer_parts)),
-                'dropdown_options' => $dropdown_options,
+                'dropdown_options' => $structured_dropdown_options,
                 'points' => 1,
                 'correct_feedback' => '',
                 'incorrect_feedback' => '',
