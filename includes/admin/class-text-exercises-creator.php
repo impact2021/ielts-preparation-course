@@ -2964,43 +2964,73 @@ You have one hour for the complete test (including transferring your answers).</
             }
         }
         
-        // Group questions by type
+        // Group questions by type, preserving original indices
         $grouped_questions = array();
-        foreach ($questions as $question) {
+        foreach ($questions as $original_index => $question) {
             $type = isset($question['type']) ? $question['type'] : 'short_answer';
             if (!isset($grouped_questions[$type])) {
                 $grouped_questions[$type] = array();
             }
+            // Store question with its original index
+            $question['_original_index'] = $original_index;
             $grouped_questions[$type][] = $question;
         }
         
         // Convert each group
         $question_num = 1;
         foreach ($grouped_questions as $type => $type_questions) {
-            // Calculate question range for this section
-            $start_num = $question_num;
-            $question_count = count($type_questions);
+            // Calculate question range for this section based on original indices if available
+            $first_q = reset($type_questions);
+            $last_q = end($type_questions);
             
-            // For multi-point questions, calculate actual count
-            foreach ($type_questions as $q) {
-                if ($type === 'multi_select' && isset($q['mc_options'])) {
+            if (isset($first_q['_original_index']) && isset($last_q['_original_index'])) {
+                // Use original indices to determine actual question numbers
+                $start_num = $first_q['_original_index'] + 1;
+                $end_num = $last_q['_original_index'] + 1;
+                
+                // For multi-point questions, adjust end number
+                $last_index = count($type_questions) - 1;
+                if ($type === 'multi_select' && isset($last_q['mc_options'])) {
                     $correct_count = 0;
-                    foreach ($q['mc_options'] as $opt) {
+                    foreach ($last_q['mc_options'] as $opt) {
                         if (!empty($opt['is_correct'])) {
                             $correct_count++;
                         }
                     }
-                    $question_count += ($correct_count - 1);
-                } elseif (($type === 'summary_completion' || $type === 'table_completion') && isset($q['summary_fields'])) {
-                    $question_count += (count($q['summary_fields']) - 1);
+                    $end_num += ($correct_count - 1);
+                } elseif (($type === 'summary_completion' || $type === 'table_completion') && isset($last_q['summary_fields'])) {
+                    $end_num += (count($last_q['summary_fields']) - 1);
                 } elseif ($type === 'dropdown_paragraph') {
-                    preg_match_all('/\d+\.\[([^\]]+)\]/i', $q['question'], $dropdown_matches);
+                    preg_match_all('/\d+\.\[([^\]]+)\]/i', $last_q['question'], $dropdown_matches);
                     $dropdown_count = !empty($dropdown_matches[0]) ? count($dropdown_matches[0]) : 1;
-                    $question_count += ($dropdown_count - 1);
+                    $end_num += ($dropdown_count - 1);
                 }
+            } else {
+                // Fallback to sequential numbering
+                $start_num = $question_num;
+                $question_count = count($type_questions);
+                
+                // For multi-point questions, calculate actual count
+                foreach ($type_questions as $q) {
+                    if ($type === 'multi_select' && isset($q['mc_options'])) {
+                        $correct_count = 0;
+                        foreach ($q['mc_options'] as $opt) {
+                            if (!empty($opt['is_correct'])) {
+                                $correct_count++;
+                            }
+                        }
+                        $question_count += ($correct_count - 1);
+                    } elseif (($type === 'summary_completion' || $type === 'table_completion') && isset($q['summary_fields'])) {
+                        $question_count += (count($q['summary_fields']) - 1);
+                    } elseif ($type === 'dropdown_paragraph') {
+                        preg_match_all('/\d+\.\[([^\]]+)\]/i', $q['question'], $dropdown_matches);
+                        $dropdown_count = !empty($dropdown_matches[0]) ? count($dropdown_matches[0]) : 1;
+                        $question_count += ($dropdown_count - 1);
+                    }
+                }
+                
+                $end_num = $start_num + $question_count - 1;
             }
-            
-            $end_num = $start_num + $question_count - 1;
             
             // Add section header
             $type_labels = array(
@@ -3087,7 +3117,8 @@ You have one hour for the complete test (including transferring your answers).</
         }
         
         foreach ($questions as $index => $question) {
-            $question_num = $start_num + $index;
+            // Use original index if available, otherwise fall back to sequential numbering
+            $question_num = isset($question['_original_index']) ? ($question['_original_index'] + 1) : ($start_num + $index);
             $question_text = isset($question['question']) ? $question['question'] : '';
             $correct_answer = isset($question['correct_answer']) ? $question['correct_answer'] : '';
             
@@ -3169,7 +3200,8 @@ You have one hour for the complete test (including transferring your answers).</
         }
         
         foreach ($questions as $index => $question) {
-            $question_num = $start_num + $index;
+            // Use original index if available, otherwise fall back to sequential numbering
+            $question_num = isset($question['_original_index']) ? ($question['_original_index'] + 1) : ($start_num + $index);
             $question_text = isset($question['question']) ? $question['question'] : '';
             $options = isset($question['mc_options']) ? $question['mc_options'] : array();
             
@@ -3268,7 +3300,8 @@ You have one hour for the complete test (including transferring your answers).</
         }
         
         foreach ($questions as $index => $question) {
-            $question_num = $start_num + $index;
+            // Use original index if available, otherwise fall back to sequential numbering
+            $question_num = isset($question['_original_index']) ? ($question['_original_index'] + 1) : ($start_num + $index);
             $question_text = isset($question['question']) ? $question['question'] : '';
             $correct_answer = isset($question['correct_answer']) ? $question['correct_answer'] : '';
             
