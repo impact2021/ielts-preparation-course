@@ -81,152 +81,98 @@ List of headings
 [LINKED TO: Reading Passage 1 - A brief history of the Olympics]
 === QUESTION 1 ===
 Paragraph A
-A) Re-emergence of the Games
-B) Traditional discrimination
-C) The end of a peaceful period
-D) Origins
-E) The contemporary Olympiad
-F) Recognition for the organisers
-G) Dissolution through conquest
-H) A feeling of animosity
-I) Harmony through competition
 
 === CORRECT ANSWER ===
-D
+Origins
 
 === FEEDBACK WHEN CORRECT ===
 Excellent! Paragraph A discusses the origins of the Olympics, explaining how it "first began in Ancient Greece nearly 2700 years ago as a religious occasion" dedicated to Zeus.
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is D (Origins). Paragraph A focuses on how the Olympics started in Ancient Greece as a religious festival celebrating Zeus, making "Origins" the most suitable heading.
+The correct answer is "Origins". Paragraph A focuses on how the Olympics started in Ancient Greece as a religious festival celebrating Zeus, making "Origins" the most suitable heading.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is D (Origins). Paragraph A describes the beginning of the Olympics in Ancient Greece.
+The correct answer is "Origins". Paragraph A describes the beginning of the Olympics in Ancient Greece.
 
 [LINKED TO: Reading Passage 1 - A brief history of the Olympics]
 === QUESTION 2 ===
 Paragraph B
-A) Re-emergence of the Games
-B) Traditional discrimination
-C) The end of a peaceful period
-D) Origins
-E) The contemporary Olympiad
-F) Recognition for the organisers
-G) Dissolution through conquest
-H) A feeling of animosity
-I) Harmony through competition
 
 === CORRECT ANSWER ===
-I
+Harmony through competition
 
 === FEEDBACK WHEN CORRECT ===
 Correct! Paragraph B emphasizes how the Olympics created peace during the festival, with wars suspended and conflicts halted, making "Harmony through competition" the perfect heading.
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is I (Harmony through competition). Paragraph B describes how "for the duration of the festival, there was peace" and "All wars – domestic and international – had to be suspended."
+The correct answer is "Harmony through competition". Paragraph B describes how "for the duration of the festival, there was peace" and "All wars – domestic and international – had to be suspended."
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is I (Harmony through competition). Paragraph B focuses on the peaceful period during the Olympic Games.
+The correct answer is "Harmony through competition". Paragraph B focuses on the peaceful period during the Olympic Games.
 
 [LINKED TO: Reading Passage 1 - A brief history of the Olympics]
 === QUESTION 3 ===
 Paragraph C
-A) Re-emergence of the Games
-B) Traditional discrimination
-C) The end of a peaceful period
-D) Origins
-E) The contemporary Olympiad
-F) Recognition for the organisers
-G) Dissolution through conquest
-H) A feeling of animosity
-I) Harmony through competition
 
 === CORRECT ANSWER ===
-B
+Traditional discrimination
 
 === FEEDBACK WHEN CORRECT ===
 Well done! Paragraph C discusses how "women and slaves, who were not allowed within the stadium," showing the traditional discrimination of the ancient Games.
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is B (Traditional discrimination). Paragraph C explains the exclusion of women and slaves from the Olympics, which was a form of traditional discrimination.
+The correct answer is "Traditional discrimination". Paragraph C explains the exclusion of women and slaves from the Olympics, which was a form of traditional discrimination.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is B (Traditional discrimination). Paragraph C describes the exclusion of certain groups from the ancient Olympics.
+The correct answer is "Traditional discrimination". Paragraph C describes the exclusion of certain groups from the ancient Olympics.
 
 [LINKED TO: Reading Passage 1 - A brief history of the Olympics]
 === QUESTION 4 ===
 Paragraph D
-A) Re-emergence of the Games
-B) Traditional discrimination
-C) The end of a peaceful period
-D) Origins
-E) The contemporary Olympiad
-F) Recognition for the organisers
-G) Dissolution through conquest
-H) A feeling of animosity
-I) Harmony through competition
 
 === CORRECT ANSWER ===
-G
+Dissolution through conquest
 
 === FEEDBACK WHEN CORRECT ===
 Excellent! Paragraph D explains how "the original Games were abolished after the Roman invasion in AD356," which is a dissolution through conquest.
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is G (Dissolution through conquest). Paragraph D states that "the original Games were abolished after the Roman invasion," ending the ancient Olympics.
+The correct answer is "Dissolution through conquest". Paragraph D states that "the original Games were abolished after the Roman invasion," ending the ancient Olympics.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is G (Dissolution through conquest). Paragraph D describes how the Romans ended the ancient Olympic Games.
+The correct answer is "Dissolution through conquest". Paragraph D describes how the Romans ended the ancient Olympic Games.
 
 [LINKED TO: Reading Passage 1 - A brief history of the Olympics]
 === QUESTION 5 ===
 Paragraph E
-A) Re-emergence of the Games
-B) Traditional discrimination
-C) The end of a peaceful period
-D) Origins
-E) The contemporary Olympiad
-F) Recognition for the organisers
-G) Dissolution through conquest
-H) A feeling of animosity
-I) Harmony through competition
 
 === CORRECT ANSWER ===
-A
+Re-emergence of the Games
 
 === FEEDBACK WHEN CORRECT ===
 Correct! Paragraph E describes how "in 1896 that Baron Pierre de Coubertin...and Dimitrios Vikelas...revived the games," marking the re-emergence of the Olympics.
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is A (Re-emergence of the Games). Paragraph E explains how the Olympics were revived in 1896 after being abolished for over 1,500 years.
+The correct answer is "Re-emergence of the Games". Paragraph E explains how the Olympics were revived in 1896 after being abolished for over 1,500 years.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is A (Re-emergence of the Games). Paragraph E discusses the revival of the Olympic Games in the modern era.
+The correct answer is "Re-emergence of the Games". Paragraph E discusses the revival of the Olympic Games in the modern era.
 
 [LINKED TO: Reading Passage 1 - A brief history of the Olympics]
 === QUESTION 6 ===
 Paragraph F
-A) Re-emergence of the Games
-B) Traditional discrimination
-C) The end of a peaceful period
-D) Origins
-E) The contemporary Olympiad
-F) Recognition for the organisers
-G) Dissolution through conquest
-H) A feeling of animosity
-I) Harmony through competition
 
 === CORRECT ANSWER ===
-E
+The contemporary Olympiad
 
 === FEEDBACK WHEN CORRECT ===
 Well done! Paragraph F discusses the modern Olympics with "nearly 200 nationalities," the Winter Olympics, and Paralympics, perfectly described by "The contemporary Olympiad."
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is E (The contemporary Olympiad). Paragraph F focuses on today's Olympics, including its expansion to Winter Olympics and Paralympics.
+The correct answer is "The contemporary Olympiad". Paragraph F focuses on today's Olympics, including its expansion to Winter Olympics and Paralympics.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is E (The contemporary Olympiad). Paragraph F describes the modern Olympic Games as they exist today.
+The correct answer is "The contemporary Olympiad". Paragraph F describes the modern Olympic Games as they exist today.
 
 Questions 7-11 [SHORT ANSWER]
 
@@ -338,102 +284,66 @@ Example: Paragraph A - Answer: Government planning
 [LINKED TO: Reading Passage 2 - Tapping the depths]
 === QUESTION 12 ===
 Paragraph B
-A) The science of geothermal energy
-B) Water heating
-C) Government planning
-D) The search for perfect solutions
-E) Looking at alternatives
-F) Global use
-G) In comparison
-H) Unresolved drawbacks
-I) Problems overcome
 
 === CORRECT ANSWER ===
-E
+Looking at alternatives
 
 === FEEDBACK WHEN CORRECT ===
 Excellent! Paragraph B discusses various energy options like solar and wind, then introduces geothermal as "a viable alternative to fossil fuels," making "Looking at alternatives" the perfect heading.
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is E (Looking at alternatives). Paragraph B explores different renewable energy options before focusing on geothermal energy as an alternative.
+The correct answer is "Looking at alternatives". Paragraph B explores different renewable energy options before focusing on geothermal energy as an alternative.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is E (Looking at alternatives). Paragraph B examines various energy alternatives.
+The correct answer is "Looking at alternatives". Paragraph B examines various energy alternatives.
 
 [LINKED TO: Reading Passage 2 - Tapping the depths]
 === QUESTION 13 ===
 Paragraph C
-A) The science of geothermal energy
-B) Water heating
-C) Government planning
-D) The search for perfect solutions
-E) Looking at alternatives
-F) Global use
-G) In comparison
-H) Unresolved drawbacks
-I) Problems overcome
 
 === CORRECT ANSWER ===
-A
+The science of geothermal energy
 
 === FEEDBACK WHEN CORRECT ===
 Correct! Paragraph C explains the scientific process of geothermal energy, describing temperatures at different depths, pressure, steam turbines, and heat exchangers.
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is A (The science of geothermal energy). Paragraph C provides technical details about how geothermal energy works underground.
+The correct answer is "The science of geothermal energy". Paragraph C provides technical details about how geothermal energy works underground.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is A (The science of geothermal energy). Paragraph C explains the scientific mechanism of geothermal energy extraction.
+The correct answer is "The science of geothermal energy". Paragraph C explains the scientific mechanism of geothermal energy extraction.
 
 [LINKED TO: Reading Passage 2 - Tapping the depths]
 === QUESTION 14 ===
 Paragraph D
-A) The science of geothermal energy
-B) Water heating
-C) Government planning
-D) The search for perfect solutions
-E) Looking at alternatives
-F) Global use
-G) In comparison
-H) Unresolved drawbacks
-I) Problems overcome
 
 === CORRECT ANSWER ===
-F
+Global use
 
 === FEEDBACK WHEN CORRECT ===
 Well done! Paragraph D discusses geothermal use globally, mentioning multiple countries and including a table showing international generating capacity.
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is F (Global use). Paragraph D lists various countries using geothermal energy and provides comparative data in a table.
+The correct answer is "Global use". Paragraph D lists various countries using geothermal energy and provides comparative data in a table.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is F (Global use). Paragraph D covers worldwide adoption of geothermal energy.
+The correct answer is "Global use". Paragraph D covers worldwide adoption of geothermal energy.
 
 [LINKED TO: Reading Passage 2 - Tapping the depths]
 === QUESTION 15 ===
 Paragraph E
-A) The science of geothermal energy
-B) Water heating
-C) Government planning
-D) The search for perfect solutions
-E) Looking at alternatives
-F) Global use
-G) In comparison
-H) Unresolved drawbacks
-I) Problems overcome
 
 === CORRECT ANSWER ===
-H
+Unresolved drawbacks
 
 === FEEDBACK WHEN CORRECT ===
 Excellent! Paragraph E discusses problems like sites needing recovery time, corrosion, radioactive gases requiring "further research," and geological effects - all unresolved drawbacks.
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is H (Unresolved drawbacks). Paragraph E details various problems with geothermal energy that remain unsolved.
+The correct answer is "Unresolved drawbacks". Paragraph E details various problems with geothermal energy that remain unsolved.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is H (Unresolved drawbacks). Paragraph E lists several issues with geothermal energy.
+The correct answer is "Unresolved drawbacks". Paragraph E lists several issues with geothermal energy.
 
 Questions 16-21 [SENTENCE COMPLETION]
 
@@ -630,158 +540,98 @@ Example: Paragraph A - Answer: First signs
 [LINKED TO: Reading Passage 3 - Poison rain]
 === QUESTION 26 ===
 Paragraph B
-A) Impact on the urban landscape
-B) Higher dispersal creates a global problem
-C) Recent changes in Europe
-D) Artificial causes of acid rain
-E) Metals in acid rain
-F) International reactions
-G) Secondary impact on flora and fauna
-H) First signs
-I) Acid rain in Asia
-J) Effects of the natural environment
 
 === CORRECT ANSWER ===
-D
+Artificial causes of acid rain
 
 === FEEDBACK WHEN CORRECT ===
 Excellent! Paragraph B discusses "the principal chemicals" causing acid rain and explains "the majority is unsurprisingly manmade," detailing artificial/manmade sources.
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is D (Artificial causes of acid rain). Paragraph B focuses on manmade sources like transportation, power plants, and industry.
+The correct answer is "Artificial causes of acid rain". Paragraph B focuses on manmade sources like transportation, power plants, and industry.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is D (Artificial causes of acid rain). Paragraph B explains manmade sources of acid rain.
+The correct answer is "Artificial causes of acid rain". Paragraph B explains manmade sources of acid rain.
 
 [LINKED TO: Reading Passage 3 - Poison rain]
 === QUESTION 27 ===
 Paragraph C
-A) Impact on the urban landscape
-B) Higher dispersal creates a global problem
-C) Recent changes in Europe
-D) Artificial causes of acid rain
-E) Metals in acid rain
-F) International reactions
-G) Secondary impact on flora and fauna
-H) First signs
-I) Acid rain in Asia
-J) Effects of the natural environment
 
 === CORRECT ANSWER ===
-J
+Effects of the natural environment
 
 === FEEDBACK WHEN CORRECT ===
 Correct! Paragraph C discusses how "naturally occurring substances such as limestone" can neutralize acid rain, showing effects of the natural environment.
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is J (Effects of the natural environment). Paragraph C explains how natural geology either protects against or worsens acid rain effects.
+The correct answer is "Effects of the natural environment". Paragraph C explains how natural geology either protects against or worsens acid rain effects.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is J (Effects of the natural environment). Paragraph C discusses natural filters and geological impacts.
+The correct answer is "Effects of the natural environment". Paragraph C discusses natural filters and geological impacts.
 
 [LINKED TO: Reading Passage 3 - Poison rain]
 === QUESTION 28 ===
 Paragraph D
-A) Impact on the urban landscape
-B) Higher dispersal creates a global problem
-C) Recent changes in Europe
-D) Artificial causes of acid rain
-E) Metals in acid rain
-F) International reactions
-G) Secondary impact on flora and fauna
-H) First signs
-I) Acid rain in Asia
-J) Effects of the natural environment
 
 === CORRECT ANSWER ===
-G
+Secondary impact on flora and fauna
 
 === FEEDBACK WHEN CORRECT ===
 Well done! Paragraph D discusses environmental impact on lakes, animals like otters, and farmland with reduced crop yields - all secondary impacts on flora and fauna.
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is G (Secondary impact on flora and fauna). Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage.
+The correct answer is "Secondary impact on flora and fauna". Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is G (Secondary impact on flora and fauna). Paragraph D covers impacts on animals and crops.
+The correct answer is "Secondary impact on flora and fauna". Paragraph D covers impacts on animals and crops.
 
 [LINKED TO: Reading Passage 3 - Poison rain]
 === QUESTION 29 ===
 Paragraph E
-A) Impact on the urban landscape
-B) Higher dispersal creates a global problem
-C) Recent changes in Europe
-D) Artificial causes of acid rain
-E) Metals in acid rain
-F) International reactions
-G) Secondary impact on flora and fauna
-H) First signs
-I) Acid rain in Asia
-J) Effects of the natural environment
 
 === CORRECT ANSWER ===
-A
+Impact on the urban landscape
 
 === FEEDBACK WHEN CORRECT ===
 Excellent! Paragraph E focuses on cities, discussing monuments, structures, pipes, drinking water, visibility, and smog - all urban landscape impacts.
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is A (Impact on the urban landscape). Paragraph E describes how acid rain affects cities and urban infrastructure.
+The correct answer is "Impact on the urban landscape". Paragraph E describes how acid rain affects cities and urban infrastructure.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is A (Impact on the urban landscape). Paragraph E discusses acid rain's effects on urban areas.
+The correct answer is "Impact on the urban landscape". Paragraph E discusses acid rain's effects on urban areas.
 
 [LINKED TO: Reading Passage 3 - Poison rain]
 === QUESTION 30 ===
 Paragraph F
-A) Impact on the urban landscape
-B) Higher dispersal creates a global problem
-C) Recent changes in Europe
-D) Artificial causes of acid rain
-E) Metals in acid rain
-F) International reactions
-G) Secondary impact on flora and fauna
-H) First signs
-I) Acid rain in Asia
-J) Effects of the natural environment
 
 === CORRECT ANSWER ===
-B
+Higher dispersal creates a global problem
 
 === FEEDBACK WHEN CORRECT ===
 Correct! Paragraph F explains how "tall chimneys dispersing pollutants high into the atmosphere" allow wind to blow acid rain "hundreds of miles" creating a global problem.
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is B (Higher dispersal creates a global problem). Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions.
+The correct answer is "Higher dispersal creates a global problem". Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is B (Higher dispersal creates a global problem). Paragraph F discusses long-distance transport of acid rain.
+The correct answer is "Higher dispersal creates a global problem". Paragraph F discusses long-distance transport of acid rain.
 
 [LINKED TO: Reading Passage 3 - Poison rain]
 === QUESTION 31 ===
 Paragraph G
-A) Impact on the urban landscape
-B) Higher dispersal creates a global problem
-C) Recent changes in Europe
-D) Artificial causes of acid rain
-E) Metals in acid rain
-F) International reactions
-G) Secondary impact on flora and fauna
-H) First signs
-I) Acid rain in Asia
-J) Effects of the natural environment
 
 === CORRECT ANSWER ===
-F
+International reactions
 
 === FEEDBACK WHEN CORRECT ===
 Well done! Paragraph G discusses "transboundary pollution" prompting "international responses" and "International legislation during the 1980s and 1990s."
 
 === FEEDBACK WHEN INCORRECT ===
-The correct answer is F (International reactions). Paragraph G focuses on global legislative responses to acid rain pollution.
+The correct answer is "International reactions". Paragraph G focuses on global legislative responses to acid rain pollution.
 
 === FEEDBACK WHEN NO ANSWER ===
-The correct answer is F (International reactions). Paragraph G describes international cooperation to address acid rain.
+The correct answer is "International reactions". Paragraph G describes international cooperation to address acid rain.
 
 Questions 32-40 [SENTENCE COMPLETION]
 
