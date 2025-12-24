@@ -32,6 +32,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
         <?php endif; ?>
         
         <?php if ($user_id): ?>
+        <div class="lesson-meta">
             <div class="lesson-progress-stats">
                 <?php
                 // Get lesson completion percentage
@@ -78,6 +79,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                     <?php endif; ?>
                 </div>
             </div>
+        </div>
         <?php endif; ?>
         
         <?php if ($is_completed): ?>
@@ -128,7 +130,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
         $quiz_handler = new IELTS_CM_Quiz_Handler();
     ?>
         <div class="lesson-content-items">
-            <h3><?php _e('Lesson Content', 'ielts-course-manager'); ?></h3>
+            <h3 style="margin-top: 30px;"><?php _e('Lesson Content', 'ielts-course-manager'); ?></h3>
             
             <table class="ielts-content-table">
                 <thead>
