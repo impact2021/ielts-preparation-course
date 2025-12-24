@@ -155,7 +155,14 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                         if ($item_type === 'resource') {
                             $resource_url = get_post_meta($post_item->ID, '_ielts_cm_resource_url', true);
                             $is_completed = $user_id ? $progress_tracker->is_resource_completed($user_id, $lesson->ID, $post_item->ID) : false;
-                            $type_label = __('Sub lesson', 'ielts-course-manager');
+                            
+                            // Check if resource has a video
+                            $video_url = get_post_meta($post_item->ID, '_ielts_cm_video_url', true);
+                            if (!empty($video_url)) {
+                                $type_label = __('Video', 'ielts-course-manager');
+                            } else {
+                                $type_label = __('Sub lesson', 'ielts-course-manager');
+                            }
                             $type_badge_class = 'resource';
                         } else {
                             $best_result = $user_id ? $quiz_handler->get_best_quiz_result($user_id, $post_item->ID) : null;

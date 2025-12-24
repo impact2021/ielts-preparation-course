@@ -853,6 +853,16 @@ class IELTS_CM_Admin {
                 <small><?php _e('Add vocabulary words, definitions, and example sentences', 'ielts-course-manager'); ?></small>
             </div>
             
+            <!-- Bulk Import Section -->
+            <div style="margin-bottom: 20px; padding: 15px; background: #f0f7ff; border: 1px solid #0073aa; border-radius: 4px;">
+                <label><strong><?php _e('Bulk Import from Text', 'ielts-course-manager'); ?></strong></label><br>
+                <small><?php _e('Paste vocabulary items below. Each line should contain: Word/Phrase | Definition | Example Sentence', 'ielts-course-manager'); ?></small><br>
+                <small><?php _e('Use the pipe character (|) or tab to separate columns. Lines with only a word will have empty definition and example.', 'ielts-course-manager'); ?></small>
+                <textarea id="vocabulary_bulk_import" rows="6" style="width: 100%; margin-top: 10px; font-family: monospace;" placeholder="INSTRUCTIONS | Detailed information on how to do something | Read the instructions carefully&#10;VOCABULARY | A set of words used in a particular language | She has an extensive vocabulary"></textarea>
+                <button type="button" id="import_vocabulary_button" class="button button-primary" style="margin-top: 10px;"><?php _e('Import Vocabulary', 'ielts-course-manager'); ?></button>
+                <button type="button" id="clear_vocabulary_button" class="button" style="margin-top: 10px; color: #b32d2e;"><?php _e('Clear All Items', 'ielts-course-manager'); ?></button>
+            </div>
+            
             <div id="vocabulary_items_container">
                 <?php if (!empty($vocabulary_items)): ?>
                     <?php foreach ($vocabulary_items as $index => $item): ?>
@@ -890,8 +900,25 @@ class IELTS_CM_Admin {
                 definitionPlaceholder: <?php echo json_encode(__('Detailed information on how to do something...', 'ielts-course-manager')); ?>,
                 exampleLabel: <?php echo json_encode(__('Example Sentence:', 'ielts-course-manager')); ?>,
                 examplePlaceholder: <?php echo json_encode(__('Read the instructions carefully...', 'ielts-course-manager')); ?>,
-                removeButton: <?php echo json_encode(__('Remove Item', 'ielts-course-manager')); ?>
+                removeButton: <?php echo json_encode(__('Remove Item', 'ielts-course-manager')); ?>,
+                pasteVocab: <?php echo json_encode(__('Please paste vocabulary items in the text area.', 'ielts-course-manager')); ?>,
+                importSuccess1: <?php echo json_encode(__('Successfully imported 1 vocabulary item.', 'ielts-course-manager')); ?>,
+                importSuccessMulti: <?php echo json_encode(__('Successfully imported %d vocabulary items.', 'ielts-course-manager')); ?>,
+                noValidItems: <?php echo json_encode(__('No valid vocabulary items found to import.', 'ielts-course-manager')); ?>,
+                confirmClear: <?php echo json_encode(__('Are you sure you want to remove all vocabulary items? This action cannot be undone.', 'ielts-course-manager')); ?>
             };
+            
+            // Helper function to escape HTML
+            function escapeHtml(text) {
+                var map = {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#039;'
+                };
+                return String(text).replace(/[&<>"']/g, function(m) { return map[m]; });
+            }
             
             // Show/hide vocabulary fields based on checkbox
             $('#ielts_cm_is_vocabulary').on('change', function() {
@@ -927,6 +954,74 @@ class IELTS_CM_Admin {
             // Remove vocabulary item
             $(document).on('click', '.remove-vocabulary-item', function() {
                 $(this).closest('.vocabulary-item').remove();
+            });
+            
+            // Bulk import vocabulary
+            $('#import_vocabulary_button').on('click', function() {
+                var text = $('#vocabulary_bulk_import').val().trim();
+                if (!text) {
+                    alert(i18n.pasteVocab);
+                    return;
+                }
+                
+                var lines = text.split('\n');
+                var imported = 0;
+                
+                // Use standard for loop for better browser compatibility
+                for (var i = 0; i < lines.length; i++) {
+                    var line = lines[i].trim();
+                    if (!line) continue; // Skip empty lines
+                    
+                    // Try to split by pipe first, then by tab
+                    var parts = line.split('|');
+                    if (parts.length === 1) {
+                        parts = line.split('\t');
+                    }
+                    
+                    // Trim each part
+                    var word = (parts[0] || '').trim();
+                    var definition = (parts[1] || '').trim();
+                    var example = (parts[2] || '').trim();
+                    
+                    if (!word) continue; // Skip if no word
+                    
+                    // Create new vocabulary item with proper escaping
+                    var html = '<div class="vocabulary-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; background: #f9f9f9;">' +
+                        '<div style="margin-bottom: 10px;">' +
+                        '<label><strong>' + i18n.wordLabel + '</strong></label><br>' +
+                        '<input type="text" name="vocabulary_items[' + vocabularyIndex + '][word]" value="' + escapeHtml(word) + '" style="width: 100%;" placeholder="' + i18n.wordPlaceholder + '">' +
+                        '</div>' +
+                        '<div style="margin-bottom: 10px;">' +
+                        '<label><strong>' + i18n.definitionLabel + '</strong></label><br>' +
+                        '<textarea name="vocabulary_items[' + vocabularyIndex + '][definition]" rows="2" style="width: 100%;" placeholder="' + i18n.definitionPlaceholder + '">' + escapeHtml(definition) + '</textarea>' +
+                        '</div>' +
+                        '<div style="margin-bottom: 10px;">' +
+                        '<label><strong>' + i18n.exampleLabel + '</strong></label><br>' +
+                        '<textarea name="vocabulary_items[' + vocabularyIndex + '][example]" rows="2" style="width: 100%;" placeholder="' + i18n.examplePlaceholder + '">' + escapeHtml(example) + '</textarea>' +
+                        '</div>' +
+                        '<button type="button" class="button remove-vocabulary-item">' + i18n.removeButton + '</button>' +
+                        '</div>';
+                    
+                    $('#vocabulary_items_container').append(html);
+                    vocabularyIndex++;
+                    imported++;
+                }
+                
+                if (imported > 0) {
+                    var message = (imported === 1) ? i18n.importSuccess1 : i18n.importSuccessMulti.replace('%d', imported);
+                    alert(message);
+                    $('#vocabulary_bulk_import').val(''); // Clear the textarea
+                } else {
+                    alert(i18n.noValidItems);
+                }
+            });
+            
+            // Clear all vocabulary items
+            $('#clear_vocabulary_button').on('click', function() {
+                if (confirm(i18n.confirmClear)) {
+                    $('#vocabulary_items_container').empty();
+                    // Don't reset vocabularyIndex to avoid potential naming conflicts
+                }
             });
         });
         </script>
