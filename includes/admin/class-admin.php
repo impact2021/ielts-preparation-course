@@ -860,7 +860,7 @@ class IELTS_CM_Admin {
                 <small><?php _e('Use the pipe character (|) or tab to separate columns. Lines with only a word will have empty definition and example.', 'ielts-course-manager'); ?></small>
                 <textarea id="vocabulary_bulk_import" rows="6" style="width: 100%; margin-top: 10px; font-family: monospace;" placeholder="INSTRUCTIONS | Detailed information on how to do something | Read the instructions carefully&#10;VOCABULARY | A set of words used in a particular language | She has an extensive vocabulary"></textarea>
                 <button type="button" id="import_vocabulary_button" class="button button-primary" style="margin-top: 10px;"><?php _e('Import Vocabulary', 'ielts-course-manager'); ?></button>
-                <button type="button" id="clear_vocabulary_button" class="button" style="margin-top: 10px;"><?php _e('Clear All Items', 'ielts-course-manager'); ?></button>
+                <button type="button" id="clear_vocabulary_button" class="button" style="margin-top: 10px; color: #b32d2e;"><?php _e('Clear All Items', 'ielts-course-manager'); ?></button>
             </div>
             
             <div id="vocabulary_items_container">
