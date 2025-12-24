@@ -119,6 +119,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
         <style>
         /* Course progress stats styling */
         .course-progress-stats {
+            width: 100%;
             margin: 20px 0;
             padding: 20px;
             background: #f8f9fa;
