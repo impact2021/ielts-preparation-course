@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TEMPLATE - Headings Question Type (2 passages, 4 questions) -->
+<!-- TEMPLATE - Multi-Select Question Type (2 passages, 4 questions) -->
 <rss xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/" version="2.0">
 <channel>
 	<title>IELTStestONLINE</title>
@@ -16,7 +16,7 @@
 	<generator>IELTS Test XML Creator</generator>
 
 	<item>
-		<title><![CDATA[TEMPLATE - Headings Question Type]]></title>
+		<title><![CDATA[TEMPLATE - Multi-Select Question Type]]></title>
 		<link>https://www.ieltstestonline.com/ielts-quiz/template-headings/</link>
 		<pubDate>Tue, 23 Dec 2025 23:52:39 +0000</pubDate>
 		<dc:creator><![CDATA[impact]]></dc:creator>
