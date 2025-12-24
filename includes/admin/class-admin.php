@@ -138,7 +138,7 @@ class IELTS_CM_Admin {
         // Lesson page meta box
         add_meta_box(
             'ielts_cm_resource_meta',
-            __('Lesson page Settings', 'ielts-course-manager'),
+            __('Sub Lesson Settings', 'ielts-course-manager'),
             array($this, 'resource_meta_box'),
             'ielts_resource',
             'normal',
@@ -694,8 +694,8 @@ class IELTS_CM_Admin {
             'order' => 'ASC'
         ));
         ?>
-        <p>
-            <label for="ielts_cm_lesson_ids"><?php _e('Assign to Lessons', 'ielts-course-manager'); ?></label><br>
+        <div style="margin-bottom: 15px;">
+            <label for="ielts_cm_lesson_ids"><strong><?php _e('Assign to Lessons', 'ielts-course-manager'); ?></strong></label><br>
             <select id="ielts_cm_lesson_ids" name="ielts_cm_lesson_ids[]" multiple style="width: 100%; height: 150px;">
                 <?php foreach ($lessons as $lesson): ?>
                     <option value="<?php echo esc_attr($lesson->ID); ?>" <?php echo in_array($lesson->ID, $lesson_ids) ? 'selected' : ''; ?>>
@@ -704,17 +704,22 @@ class IELTS_CM_Admin {
                 <?php endforeach; ?>
             </select>
             <small><?php _e('Hold Ctrl (Cmd on Mac) to select multiple lessons', 'ielts-course-manager'); ?></small>
-        </p>
-        <p>
-            <label for="ielts_cm_video_url"><?php _e('Video URL (Optional)', 'ielts-course-manager'); ?></label><br>
-            <input type="url" id="ielts_cm_video_url" name="ielts_cm_video_url" value="<?php echo esc_attr($video_url); ?>" style="width: 100%;">
-            <small><?php _e('Add a video URL (YouTube, Vimeo, etc.) to display in a two-column layout. Supports WordPress auto-embeds. Remove the URL to return to normal width.', 'ielts-course-manager'); ?></small>
-        </p>
-        <p>
-            <label for="ielts_cm_resource_url"><?php _e('Resource URL (Optional)', 'ielts-course-manager'); ?></label><br>
-            <input type="url" id="ielts_cm_resource_url" name="ielts_cm_resource_url" value="<?php echo esc_attr($resource_url); ?>" style="width: 100%;">
-            <small><?php _e('Add a URL for external resources if needed', 'ielts-course-manager'); ?></small>
-        </p>
+        </div>
+        
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ddd;">
+        <h4 style="margin-top: 0;"><?php _e('Media & Resources', 'ielts-course-manager'); ?></h4>
+        
+        <div style="margin-bottom: 15px;">
+            <label for="ielts_cm_video_url"><strong><?php _e('Video URL (Optional)', 'ielts-course-manager'); ?></strong></label><br>
+            <input type="url" id="ielts_cm_video_url" name="ielts_cm_video_url" value="<?php echo esc_attr($video_url); ?>" style="width: 100%;" placeholder="https://www.youtube.com/watch?v=...">
+            <small><?php _e('Add a video URL (YouTube, Vimeo, etc.) to display alongside the content. Supports WordPress auto-embeds. Leave empty for text-only layout.', 'ielts-course-manager'); ?></small>
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label for="ielts_cm_resource_url"><strong><?php _e('Additional Resource URL', 'ielts-course-manager'); ?></strong></label><br>
+            <input type="url" id="ielts_cm_resource_url" name="ielts_cm_resource_url" value="<?php echo esc_attr($resource_url); ?>" style="width: 100%;" placeholder="https://example.com/resource">
+            <small><?php _e('Optional: Add a URL for external resources or downloads', 'ielts-course-manager'); ?></small>
+        </div>
         <?php
     }
     
