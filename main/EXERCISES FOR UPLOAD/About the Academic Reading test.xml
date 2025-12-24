@@ -44,15 +44,7 @@
 </wp:postmeta>
 <wp:postmeta>
 <wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
-<wp:meta_value><![CDATA[a:1:{i:0;a:2:{s:5:"title";s:39:"About the IELTS Academic Reading Test";s:7:"content";s:876:"The IELTS Academic Reading test is designed to assess your ability to read and understand academic texts. The test lasts 60 minutes and contains three reading passages with a total of 40 questions.
-
-Each passage is approximately 800-900 words long and is taken from books, journals, magazines, and newspapers. The passages are written for a non-specialist audience but deal with academic topics suitable for anyone entering undergraduate or postgraduate courses or seeking professional registration.
-
-The three passages increase in difficulty throughout the test, with Passage 1 being the easiest and Passage 3 being the most challenging. At least one passage will contain a detailed logical argument.
-
-The test may include a variety of question types, such as multiple choice, matching headings, sentence completion, summary completion, and True/False/Not Given questions. Each question carries one mark, and all 40 questions contribute equally to your band score.
-
-It is important to note that unlike the Listening test, you do NOT receive extra time to transfer your answers in the Reading test. You must write your answers directly on the answer sheet during the 60 minutes.";}}]]></wp:meta_value>
+<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
 </wp:postmeta>
 <wp:postmeta>
 <wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
@@ -60,7 +52,7 @@ It is important to note that unlike the Listening test, you do NOT receive extra
 </wp:postmeta>
 <wp:postmeta>
 <wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
-<wp:meta_value><![CDATA[computer_based]]></wp:meta_value>
+<wp:meta_value><![CDATA[standard]]></wp:meta_value>
 </wp:postmeta>
 <wp:postmeta>
 <wp:meta_key><![CDATA[_ielts_cm_exercise_label]]></wp:meta_key>
