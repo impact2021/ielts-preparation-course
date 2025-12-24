@@ -270,6 +270,20 @@ body.ielts-course-archive .content-area {
     color: #0073aa;
 }
 
+.ielts-single-lesson .lesson-meta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.ielts-single-lesson .lesson-content-items h3 {
+    margin-top: 30px;
+}
+
 .ielts-single-lesson .lesson-completed-badge {
     display: inline-flex;
     align-items: center;
@@ -744,6 +758,10 @@ body.ielts-course-archive .content-area {
     }
     
     .ielts-single-course .course-meta {
+        flex-direction: column;
+    }
+    
+    .ielts-single-lesson .lesson-meta {
         flex-direction: column;
     }
     

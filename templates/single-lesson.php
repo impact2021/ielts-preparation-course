@@ -130,7 +130,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
         $quiz_handler = new IELTS_CM_Quiz_Handler();
     ?>
         <div class="lesson-content-items">
-            <h3 style="margin-top: 30px;"><?php _e('Lesson Content', 'ielts-course-manager'); ?></h3>
+            <h3><?php _e('Lesson Content', 'ielts-course-manager'); ?></h3>
             
             <table class="ielts-content-table">
                 <thead>
