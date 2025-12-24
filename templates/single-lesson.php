@@ -32,6 +32,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
         <?php endif; ?>
         
         <?php if ($user_id): ?>
+        <div class="lesson-meta">
             <div class="lesson-progress-stats">
                 <?php
                 // Get lesson completion percentage
@@ -78,6 +79,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                     <?php endif; ?>
                 </div>
             </div>
+        </div>
         <?php endif; ?>
         
         <?php if ($is_completed): ?>

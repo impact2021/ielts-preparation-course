@@ -110,9 +110,42 @@ body.ielts-resource-single .content-area {
                 // Get video URL for two-column layout
                 $video_url = get_post_meta($resource_id, '_ielts_cm_video_url', true);
                 $has_video = !empty($video_url);
+                
+                // Check if this is a vocabulary page
+                $is_vocabulary = get_post_meta($resource_id, '_ielts_cm_is_vocabulary', true);
+                $vocabulary_items = get_post_meta($resource_id, '_ielts_cm_vocabulary_items', true);
+                if (!is_array($vocabulary_items)) {
+                    $vocabulary_items = array();
+                }
                 ?>
                 
-                <?php if ($has_video): ?>
+                <?php if ($is_vocabulary && !empty($vocabulary_items)): ?>
+                    <!-- Vocabulary page layout -->
+                    <div class="resource-vocabulary-content">
+                        <p><?php _e('To complete this lesson, you will need to know the following vocabulary. When you are sure you know all the words, continue to the next page.', 'ielts-course-manager'); ?></p>
+                        
+                        <table class="vocabulary-table">
+                            <thead>
+                                <tr>
+                                    <th><?php _e('Vocabulary', 'ielts-course-manager'); ?></th>
+                                    <th><?php _e('Description', 'ielts-course-manager'); ?></th>
+                                    <th><?php _e('Example Sentence', 'ielts-course-manager'); ?></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($vocabulary_items as $item): ?>
+                                    <?php if (is_array($item) && !empty($item['word'])): ?>
+                                        <tr>
+                                            <td><strong><?php echo esc_html($item['word']); ?></strong></td>
+                                            <td><?php echo isset($item['definition']) ? esc_html($item['definition']) : ''; ?></td>
+                                            <td><?php echo isset($item['example']) ? esc_html($item['example']) : ''; ?></td>
+                                        </tr>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                <?php elseif ($has_video): ?>
                     <!-- Two-column layout when video is present -->
                     <div class="resource-two-column-layout">
                         <div class="resource-video-column">
@@ -274,6 +307,60 @@ body.ielts-resource-single .content-area {
             }
             .resource-actions {
                 margin-top: 30px;
+            }
+            
+            /* Vocabulary table styling */
+            .resource-vocabulary-content {
+                margin-bottom: 30px;
+                line-height: 1.8;
+            }
+            .resource-vocabulary-content p {
+                margin-bottom: 20px;
+                font-size: 16px;
+                color: #333;
+            }
+            .vocabulary-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            .vocabulary-table th,
+            .vocabulary-table td {
+                padding: 12px 15px;
+                text-align: left;
+                border: 1px solid #ddd;
+            }
+            .vocabulary-table th {
+                background-color: #f8f9fa;
+                font-weight: bold;
+                color: #333;
+            }
+            .vocabulary-table tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .vocabulary-table tr:hover {
+                background-color: #f0f7ff;
+            }
+            .vocabulary-table td:first-child {
+                font-weight: 600;
+                color: #0073aa;
+                width: 20%;
+            }
+            .vocabulary-table td:nth-child(2) {
+                width: 40%;
+            }
+            .vocabulary-table td:nth-child(3) {
+                width: 40%;
+                font-style: italic;
+            }
+            @media (max-width: 768px) {
+                .vocabulary-table {
+                    font-size: 14px;
+                }
+                .vocabulary-table th,
+                .vocabulary-table td {
+                    padding: 8px 10px;
+                }
             }
             </style>
             

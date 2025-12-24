@@ -826,6 +826,110 @@ class IELTS_CM_Admin {
             <input type="url" id="ielts_cm_resource_url" name="ielts_cm_resource_url" value="<?php echo esc_attr($resource_url); ?>" style="width: 100%;" placeholder="https://example.com/resource">
             <small><?php _e('Optional: Add a URL for external resources or downloads', 'ielts-course-manager'); ?></small>
         </div>
+        
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ddd;">
+        <h4 style="margin-top: 0;"><?php _e('Vocabulary Page Settings', 'ielts-course-manager'); ?></h4>
+        
+        <?php
+        $is_vocabulary = get_post_meta($post->ID, '_ielts_cm_is_vocabulary', true);
+        $vocabulary_items = get_post_meta($post->ID, '_ielts_cm_vocabulary_items', true);
+        if (!is_array($vocabulary_items)) {
+            $vocabulary_items = array();
+        }
+        ?>
+        
+        <div style="margin-bottom: 15px;">
+            <label>
+                <input type="checkbox" id="ielts_cm_is_vocabulary" name="ielts_cm_is_vocabulary" value="1" <?php checked($is_vocabulary, '1'); ?>>
+                <strong><?php _e('This is a vocabulary page', 'ielts-course-manager'); ?></strong>
+            </label>
+            <br>
+            <small><?php _e('Check this to display vocabulary in a table format instead of regular content', 'ielts-course-manager'); ?></small>
+        </div>
+        
+        <div id="vocabulary_fields" style="<?php echo $is_vocabulary ? '' : 'display:none;'; ?>">
+            <div style="margin-bottom: 15px;">
+                <label><strong><?php _e('Vocabulary Items', 'ielts-course-manager'); ?></strong></label><br>
+                <small><?php _e('Add vocabulary words, definitions, and example sentences', 'ielts-course-manager'); ?></small>
+            </div>
+            
+            <div id="vocabulary_items_container">
+                <?php if (!empty($vocabulary_items)): ?>
+                    <?php foreach ($vocabulary_items as $index => $item): ?>
+                        <div class="vocabulary-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; background: #f9f9f9;">
+                            <div style="margin-bottom: 10px;">
+                                <label><strong><?php _e('Word/Phrase:', 'ielts-course-manager'); ?></strong></label><br>
+                                <input type="text" name="vocabulary_items[<?php echo $index; ?>][word]" value="<?php echo esc_attr($item['word']); ?>" style="width: 100%;" placeholder="e.g., INSTRUCTIONS">
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <label><strong><?php _e('Definition:', 'ielts-course-manager'); ?></strong></label><br>
+                                <textarea name="vocabulary_items[<?php echo $index; ?>][definition]" rows="2" style="width: 100%;" placeholder="Detailed information on how to do something..."><?php echo esc_textarea($item['definition']); ?></textarea>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <label><strong><?php _e('Example Sentence:', 'ielts-course-manager'); ?></strong></label><br>
+                                <textarea name="vocabulary_items[<?php echo $index; ?>][example]" rows="2" style="width: 100%;" placeholder="Read the instructions carefully..."><?php echo esc_textarea($item['example']); ?></textarea>
+                            </div>
+                            <button type="button" class="button remove-vocabulary-item"><?php _e('Remove Item', 'ielts-course-manager'); ?></button>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
+            
+            <button type="button" id="add_vocabulary_item" class="button button-secondary"><?php _e('Add Vocabulary Item', 'ielts-course-manager'); ?></button>
+        </div>
+        
+        <script>
+        jQuery(document).ready(function($) {
+            var vocabularyIndex = <?php echo count($vocabulary_items); ?>;
+            
+            // Translatable strings
+            var i18n = {
+                wordLabel: <?php echo json_encode(__('Word/Phrase:', 'ielts-course-manager')); ?>,
+                wordPlaceholder: <?php echo json_encode(__('e.g., INSTRUCTIONS', 'ielts-course-manager')); ?>,
+                definitionLabel: <?php echo json_encode(__('Definition:', 'ielts-course-manager')); ?>,
+                definitionPlaceholder: <?php echo json_encode(__('Detailed information on how to do something...', 'ielts-course-manager')); ?>,
+                exampleLabel: <?php echo json_encode(__('Example Sentence:', 'ielts-course-manager')); ?>,
+                examplePlaceholder: <?php echo json_encode(__('Read the instructions carefully...', 'ielts-course-manager')); ?>,
+                removeButton: <?php echo json_encode(__('Remove Item', 'ielts-course-manager')); ?>
+            };
+            
+            // Show/hide vocabulary fields based on checkbox
+            $('#ielts_cm_is_vocabulary').on('change', function() {
+                if ($(this).is(':checked')) {
+                    $('#vocabulary_fields').slideDown();
+                } else {
+                    $('#vocabulary_fields').slideUp();
+                }
+            });
+            
+            // Add vocabulary item
+            $('#add_vocabulary_item').on('click', function() {
+                var html = '<div class="vocabulary-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; background: #f9f9f9;">' +
+                    '<div style="margin-bottom: 10px;">' +
+                    '<label><strong>' + i18n.wordLabel + '</strong></label><br>' +
+                    '<input type="text" name="vocabulary_items[' + vocabularyIndex + '][word]" style="width: 100%;" placeholder="' + i18n.wordPlaceholder + '">' +
+                    '</div>' +
+                    '<div style="margin-bottom: 10px;">' +
+                    '<label><strong>' + i18n.definitionLabel + '</strong></label><br>' +
+                    '<textarea name="vocabulary_items[' + vocabularyIndex + '][definition]" rows="2" style="width: 100%;" placeholder="' + i18n.definitionPlaceholder + '"></textarea>' +
+                    '</div>' +
+                    '<div style="margin-bottom: 10px;">' +
+                    '<label><strong>' + i18n.exampleLabel + '</strong></label><br>' +
+                    '<textarea name="vocabulary_items[' + vocabularyIndex + '][example]" rows="2" style="width: 100%;" placeholder="' + i18n.examplePlaceholder + '"></textarea>' +
+                    '</div>' +
+                    '<button type="button" class="button remove-vocabulary-item">' + i18n.removeButton + '</button>' +
+                    '</div>';
+                
+                $('#vocabulary_items_container').append(html);
+                vocabularyIndex++;
+            });
+            
+            // Remove vocabulary item
+            $(document).on('click', '.remove-vocabulary-item', function() {
+                $(this).closest('.vocabulary-item').remove();
+            });
+        });
+        </script>
         <?php
     }
     
@@ -2965,6 +3069,34 @@ class IELTS_CM_Admin {
             }
             if (isset($_POST['ielts_cm_video_url'])) {
                 update_post_meta($post_id, '_ielts_cm_video_url', esc_url_raw($_POST['ielts_cm_video_url']));
+            }
+            
+            // Save vocabulary page checkbox
+            if (isset($_POST['ielts_cm_is_vocabulary'])) {
+                update_post_meta($post_id, '_ielts_cm_is_vocabulary', '1');
+            } else {
+                delete_post_meta($post_id, '_ielts_cm_is_vocabulary');
+            }
+            
+            // Save vocabulary items
+            if (isset($_POST['vocabulary_items']) && is_array($_POST['vocabulary_items'])) {
+                $vocabulary_items = array();
+                foreach ($_POST['vocabulary_items'] as $item) {
+                    // Validate that item is an array and has required keys
+                    if (is_array($item) && isset($item['word'])) {
+                        // Require at least the word field to be non-empty
+                        if (!empty($item['word'])) {
+                            $vocabulary_items[] = array(
+                                'word' => sanitize_text_field($item['word']),
+                                'definition' => isset($item['definition']) ? sanitize_textarea_field($item['definition']) : '',
+                                'example' => isset($item['example']) ? sanitize_textarea_field($item['example']) : ''
+                            );
+                        }
+                    }
+                }
+                update_post_meta($post_id, '_ielts_cm_vocabulary_items', $vocabulary_items);
+            } else {
+                update_post_meta($post_id, '_ielts_cm_vocabulary_items', array());
             }
         }
         
