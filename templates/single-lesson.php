@@ -41,6 +41,19 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                 $lesson_score_data = $progress_tracker->get_lesson_average_score($user_id, $lesson->ID);
                 $average_score = $lesson_score_data['average_percentage'];
                 $quiz_count = $lesson_score_data['quiz_count'];
+                
+                // Check if this is a practice test lesson (should show band scores)
+                $is_practice_test = get_post_meta($lesson->ID, '_ielts_cm_is_practice_test', true);
+                
+                // If this is a practice test lesson, try to get average band score
+                $average_band_score = null;
+                if ($is_practice_test && $quiz_count > 0) {
+                    // Get average band score for this lesson
+                    $band_score_data = $progress_tracker->get_lesson_average_band_score($user_id, $lesson->ID);
+                    if ($band_score_data['has_band_scores']) {
+                        $average_band_score = $band_score_data['average_band_score'];
+                    }
+                }
                 ?>
                 <div class="lesson-stats-container">
                     <div class="lesson-stat-item">
@@ -52,9 +65,15 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                     </div>
                     <?php if ($quiz_count > 0): ?>
                         <div class="lesson-stat-item">
-                            <span class="stat-label"><?php _e('Average Score:', 'ielts-course-manager'); ?></span>
-                            <span class="stat-value"><?php echo number_format($average_score, 1); ?>%</span>
-                            <small class="stat-description">(<?php printf(_n('%d test taken', '%d tests taken', $quiz_count, 'ielts-course-manager'), $quiz_count); ?>)</small>
+                            <?php if ($average_band_score !== null): ?>
+                                <span class="stat-label"><?php _e('Average Band Score:', 'ielts-course-manager'); ?></span>
+                                <span class="stat-value"><?php echo number_format($average_band_score, 1); ?></span>
+                                <small class="stat-description">(<?php printf(_n('%d test taken', '%d tests taken', $quiz_count, 'ielts-course-manager'), $quiz_count); ?>)</small>
+                            <?php else: ?>
+                                <span class="stat-label"><?php _e('Average Score:', 'ielts-course-manager'); ?></span>
+                                <span class="stat-value"><?php echo number_format($average_score, 1); ?>%</span>
+                                <small class="stat-description">(<?php printf(_n('%d test taken', '%d tests taken', $quiz_count, 'ielts-course-manager'), $quiz_count); ?>)</small>
+                            <?php endif; ?>
                         </div>
                     <?php endif; ?>
                 </div>

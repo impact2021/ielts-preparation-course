@@ -17,6 +17,7 @@ class IELTS_CM_Shortcodes {
         add_shortcode('ielts_my_account', array($this, 'display_my_account'));
         add_shortcode('ielts_lesson', array($this, 'display_lesson'));
         add_shortcode('ielts_quiz', array($this, 'display_quiz'));
+        add_shortcode('ielts_category_progress', array($this, 'display_category_progress'));
     }
     
     /**
@@ -727,6 +728,176 @@ class IELTS_CM_Shortcodes {
         
         ob_start();
         include IELTS_CM_PLUGIN_DIR . 'templates/single-quiz.php';
+        return ob_get_clean();
+    }
+    
+    /**
+     * Display category progress - shows progress for all courses in a category
+     */
+    public function display_category_progress($atts) {
+        $atts = shortcode_atts(array(
+            'category' => ''
+        ), $atts);
+        
+        $user_id = get_current_user_id();
+        
+        if (!$user_id) {
+            return '<p>' . __('Please log in to view your progress.', 'ielts-course-manager') . '</p>';
+        }
+        
+        if (empty($atts['category'])) {
+            return '<p>' . __('Please specify a category.', 'ielts-course-manager') . '</p>';
+        }
+        
+        // Get courses in the specified category
+        $args = array(
+            'post_type' => 'ielts_course',
+            'posts_per_page' => -1,
+            'post_status' => 'publish',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'ielts_course_category',
+                    'field' => 'slug',
+                    'terms' => $atts['category']
+                )
+            ),
+            'orderby' => 'menu_order',
+            'order' => 'ASC'
+        );
+        
+        $courses = get_posts($args);
+        
+        if (empty($courses)) {
+            return '<p>' . __('No courses found in this category.', 'ielts-course-manager') . '</p>';
+        }
+        
+        $enrollment = new IELTS_CM_Enrollment();
+        $progress_tracker = new IELTS_CM_Progress_Tracker();
+        
+        ob_start();
+        ?>
+        <div class="ielts-category-progress">
+            <div class="category-courses-list">
+                <?php foreach ($courses as $course): ?>
+                    <?php
+                    $is_enrolled = $enrollment->is_enrolled($user_id, $course->ID);
+                    if (!$is_enrolled) {
+                        continue; // Only show enrolled courses
+                    }
+                    
+                    $completion = $progress_tracker->get_course_completion_percentage($user_id, $course->ID);
+                    $score_data = $progress_tracker->get_course_average_score($user_id, $course->ID);
+                    $average_score = $score_data['average_percentage'];
+                    $quiz_count = $score_data['quiz_count'];
+                    ?>
+                    <div class="category-course-item">
+                        <div class="course-header">
+                            <h3>
+                                <a href="<?php echo get_permalink($course->ID); ?>">
+                                    <?php echo esc_html($course->post_title); ?>
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="course-progress-stats">
+                            <div class="course-stats-container">
+                                <div class="course-stat-item">
+                                    <span class="stat-label"><?php _e('Progress:', 'ielts-course-manager'); ?></span>
+                                    <span class="stat-value"><?php echo number_format($completion, 1); ?>%</span>
+                                    <div class="stat-progress-bar">
+                                        <div class="stat-progress-fill" style="width: <?php echo min(100, $completion); ?>%;"></div>
+                                    </div>
+                                </div>
+                                <?php if ($quiz_count > 0): ?>
+                                    <div class="course-stat-item">
+                                        <span class="stat-label"><?php _e('Avg Score:', 'ielts-course-manager'); ?></span>
+                                        <span class="stat-value"><?php echo number_format($average_score, 1); ?>%</span>
+                                        <small class="stat-description">(<?php printf(_n('%d test', '%d tests', $quiz_count, 'ielts-course-manager'), $quiz_count); ?>)</small>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        
+        <style>
+        .ielts-category-progress {
+            margin: 20px 0;
+        }
+        .category-courses-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .category-course-item {
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .category-course-item .course-header h3 {
+            margin: 0 0 15px 0;
+            font-size: 20px;
+        }
+        .category-course-item .course-header h3 a {
+            text-decoration: none;
+            color: #0073aa;
+        }
+        .category-course-item .course-header h3 a:hover {
+            color: #005177;
+        }
+        .category-course-item .course-progress-stats {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        .category-course-item .course-stats-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .category-course-item .course-stat-item {
+            flex: 1;
+            min-width: 200px;
+        }
+        .category-course-item .course-stat-item .stat-label {
+            display: block;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .category-course-item .course-stat-item .stat-value {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+            color: #0073aa;
+            margin-bottom: 6px;
+        }
+        .category-course-item .course-stat-item .stat-description {
+            display: block;
+            font-size: 11px;
+            color: #999;
+            margin-top: 3px;
+        }
+        .category-course-item .stat-progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 6px;
+        }
+        .category-course-item .stat-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #0073aa 0%, #46b450 100%);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+        </style>
+        <?php
         return ob_get_clean();
     }
 }

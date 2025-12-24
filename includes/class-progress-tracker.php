@@ -493,4 +493,137 @@ class IELTS_CM_Progress_Tracker {
             'quiz_count' => $count
         );
     }
+    
+    /**
+     * Get average band score from all tests/quizzes with band scoring in a lesson
+     * Returns array with 'average_band_score', 'quiz_count', and 'has_band_scores'
+     */
+    public function get_lesson_average_band_score($user_id, $lesson_id) {
+        global $wpdb;
+        
+        // Get all quizzes for this lesson
+        $quiz_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_quiz'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
+        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+        
+        if (empty($quiz_ids)) {
+            return array(
+                'average_band_score' => 0,
+                'quiz_count' => 0,
+                'has_band_scores' => false
+            );
+        }
+        
+        // Get best results for each quiz that uses band scoring
+        $quiz_results_table = $this->db->get_quiz_results_table();
+        $quiz_handler = new IELTS_CM_Quiz_Handler();
+        
+        $band_scores = array();
+        foreach ($quiz_ids as $quiz_id) {
+            // Check if this quiz uses band scoring
+            $scoring_type = get_post_meta($quiz_id, '_ielts_cm_scoring_type', true);
+            if (empty($scoring_type) || $scoring_type === 'percentage') {
+                continue; // Skip percentage-based quizzes
+            }
+            
+            // Get best result for this quiz
+            $best_result = $quiz_handler->get_best_quiz_result($user_id, $quiz_id);
+            if ($best_result) {
+                // Convert to band score
+                $band_score = $quiz_handler->convert_to_band_score($best_result->score, $scoring_type);
+                $band_scores[] = $band_score;
+            }
+        }
+        
+        if (empty($band_scores)) {
+            return array(
+                'average_band_score' => 0,
+                'quiz_count' => 0,
+                'has_band_scores' => false
+            );
+        }
+        
+        // Calculate average
+        $total = array_sum($band_scores);
+        $average = round($total / count($band_scores), 1);
+        
+        return array(
+            'average_band_score' => $average,
+            'quiz_count' => count($band_scores),
+            'has_band_scores' => true
+        );
+    }
+    
+    /**
+     * Get average score from all tests/quizzes taken in a course
+     * Returns array with 'average_percentage' and 'quiz_count'
+     */
+    public function get_course_average_score($user_id, $course_id) {
+        global $wpdb;
+        
+        // Get all quizzes in the course
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%';
+        
+        $quiz_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_quiz'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_course_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_course_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $course_id, $int_pattern, $str_pattern));
+        
+        if (empty($quiz_ids)) {
+            return array(
+                'average_percentage' => 0,
+                'quiz_count' => 0
+            );
+        }
+        
+        // Get best results for each quiz in this course
+        $quiz_results_table = $this->db->get_quiz_results_table();
+        $quiz_ids = array_map('intval', $quiz_ids);
+        $quiz_placeholders = implode(',', array_fill(0, count($quiz_ids), '%d'));
+        
+        // Get best percentage for each quiz
+        $query = $wpdb->prepare("
+            SELECT quiz_id, MAX(percentage) as best_percentage
+            FROM $quiz_results_table 
+            WHERE user_id = %d 
+              AND quiz_id IN ($quiz_placeholders)
+            GROUP BY quiz_id
+        ", array_merge(array($user_id), $quiz_ids));
+        
+        $results = $wpdb->get_results($query);
+        
+        if (empty($results)) {
+            return array(
+                'average_percentage' => 0,
+                'quiz_count' => 0
+            );
+        }
+        
+        // Calculate average of best percentages
+        $total_percentage = 0;
+        $count = 0;
+        foreach ($results as $result) {
+            $total_percentage += $result->best_percentage;
+            $count++;
+        }
+        
+        $average = $count > 0 ? round($total_percentage / $count, 1) : 0;
+        
+        return array(
+            'average_percentage' => $average,
+            'quiz_count' => $count
+        );
+    }
 }
