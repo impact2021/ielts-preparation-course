@@ -17,8 +17,8 @@ if (php_sapi_name() !== 'cli') {
     die("This script must be run from the command line.\n");
 }
 
-$file = $argv[1] ?? null;
-$fix = in_array('--fix', $argv);
+$file = $argc > 1 ? $argv[1] : null;
+$fix = $argc > 2 && in_array('--fix', array_slice($argv, 1));
 
 if (!$file) {
     echo "Usage: php validate-xml.php <file.xml> [--fix]\n";
@@ -139,7 +139,13 @@ if (!empty($warnings)) {
 }
 
 if ($fix && !empty($issues)) {
-    $output_file = preg_replace('/\.xml$/', '-fixed.xml', $file);
+    // Generate output filename
+    if (preg_match('/\.xml$/i', $file)) {
+        $output_file = preg_replace('/\.xml$/i', '-fixed.xml', $file);
+    } else {
+        $output_file = $file . '-fixed.xml';
+    }
+    
     file_put_contents($output_file, $fixed_content);
     echo "✓ FIXED VERSION SAVED TO: $output_file\n";
     echo "\nPlease re-run validation on the fixed file to confirm all issues are resolved.\n";
