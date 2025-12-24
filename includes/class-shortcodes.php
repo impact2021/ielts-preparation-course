@@ -849,6 +849,7 @@ class IELTS_CM_Shortcodes {
             color: #005177;
         }
         .category-course-item .course-progress-stats {
+            width: 100%;
             padding: 15px;
             background: #f8f9fa;
             border-radius: 6px;
