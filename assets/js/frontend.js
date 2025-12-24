@@ -1038,6 +1038,7 @@
             var quizId = $('.ielts-computer-based-quiz').data('quiz-id');
             var highlightStorageKey = 'ielts_cbt_highlights_' + quizId;
             var customMenu = null;
+            var savedRange = null; // Save the selection range before menu interaction
             
             // Load highlights from sessionStorage
             function loadHighlights() {
@@ -1187,6 +1188,11 @@
                     return;
                 }
                 
+                // Save the range before showing the menu (critical: selection may be lost on menu interaction)
+                if (selection.rangeCount > 0) {
+                    savedRange = selection.getRangeAt(0).cloneRange();
+                }
+                
                 // Remove existing menu if any
                 if (customMenu) {
                     $(customMenu).remove();
@@ -1200,6 +1206,7 @@
                     highlightSelection();
                     $(customMenu).remove();
                     customMenu = null;
+                    savedRange = null;
                 });
                 
                 customMenu.append(highlightItem);
@@ -1214,11 +1221,16 @@
             
             // Highlight selected text
             function highlightSelection() {
-                var selection = window.getSelection();
-                if (selection.rangeCount === 0) return;
+                // Use the saved range instead of current selection (which may be cleared)
+                var range = savedRange;
+                if (!range) {
+                    // Fallback: try to get current selection if savedRange is not available
+                    var selection = window.getSelection();
+                    if (selection.rangeCount === 0) return;
+                    range = selection.getRangeAt(0);
+                }
                 
-                var range = selection.getRangeAt(0);
-                var selectedText = selection.toString().trim();
+                var selectedText = range.toString().trim();
                 
                 if (selectedText.length === 0) return;
                 
@@ -1239,7 +1251,6 @@
                     // Don't allow highlighting within already highlighted text
                     if ($(startContainer).closest('.highlighted').length > 0 || 
                         $(endContainer).closest('.highlighted').length > 0) {
-                        selection.removeAllRanges();
                         return;
                     }
                     
@@ -1256,7 +1267,6 @@
                         return;
                     }
                     
-                    selection.removeAllRanges();
                     saveHighlights();
                 } catch (err) {
                     console.error('Error highlighting text:', err);
@@ -1265,8 +1275,6 @@
             
             // Handle complex selections that span multiple elements
             function highlightComplexSelection(range) {
-                var selection = window.getSelection();
-                
                 // Walk through all text nodes in the selection
                 var walker = document.createTreeWalker(
                     range.commonAncestorContainer,
@@ -1349,7 +1357,6 @@
                     parent.removeChild(textNode);
                 });
                 
-                selection.removeAllRanges();
                 saveHighlights();
             }
             
@@ -1377,6 +1384,7 @@
                 if (customMenu && !$(e.target).closest('.text-highlight-menu').length) {
                     $(customMenu).remove();
                     customMenu = null;
+                    savedRange = null; // Clear saved range when menu is closed
                 }
             });
             
