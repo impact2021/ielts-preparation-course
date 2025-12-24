@@ -741,6 +741,8 @@ class IELTS_CM_Shortcodes {
         ob_start();
         if (file_exists($template)) {
             include $template;
+        } else {
+            echo '<p>' . __('Quiz template not found.', 'ielts-course-manager') . '</p>';
         }
         return ob_get_clean();
     }
