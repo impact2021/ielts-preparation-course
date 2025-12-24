@@ -1273,12 +1273,17 @@
                     NodeFilter.SHOW_TEXT,
                     {
                         acceptNode: function(node) {
-                            // Only accept nodes that intersect with our range
+                            // Accept nodes that intersect with our range
+                            // A node intersects if: range.end >= node.start AND range.start <= node.end
                             var nodeRange = document.createRange();
                             nodeRange.selectNodeContents(node);
                             
-                            if (range.compareBoundaryPoints(Range.END_TO_START, nodeRange) >= 0 &&
-                                range.compareBoundaryPoints(Range.START_TO_END, nodeRange) <= 0) {
+                            // Check if range ends at or after node starts
+                            var endsAfterStart = range.compareBoundaryPoints(Range.END_TO_START, nodeRange) >= 0;
+                            // Check if range starts before or at node ends
+                            var startsBeforeEnd = range.compareBoundaryPoints(Range.START_TO_END, nodeRange) <= 0;
+                            
+                            if (endsAfterStart && startsBeforeEnd) {
                                 return NodeFilter.FILTER_ACCEPT;
                             }
                             return NodeFilter.FILTER_REJECT;
@@ -1323,8 +1328,7 @@
                     var textAfter = textNode.nodeValue.substring(endOffset);
                     
                     if (textToHighlight.trim().length === 0) {
-                        // Skip empty or whitespace-only text nodes
-                        // (return in forEach skips current iteration and continues with next)
+                        // Exit this iteration; forEach continues with next node automatically
                         return;
                     }
                     
