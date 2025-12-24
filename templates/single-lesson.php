@@ -57,7 +57,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                 }
                 ?>
                 <div class="lesson-stats-container">
-                    <div class="lesson-stat-item">
+                    <div class="lesson-stat-item lesson-stat-progress">
                         <span class="stat-label"><?php _e('Percent Complete:', 'ielts-course-manager'); ?></span>
                         <span class="stat-value"><?php echo number_format($lesson_completion, 1); ?>%</span>
                         <div class="stat-progress-bar">
@@ -295,7 +295,8 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
             flex: 1;
             min-width: 250px;
         }
-        .lesson-stat-item:has(.stat-progress-bar) {
+        /* Make progress bar stat item full width for better visibility */
+        .lesson-stat-item.lesson-stat-progress {
             flex: 0 0 100%;
         }
         .lesson-stat-item .stat-label {
