@@ -725,26 +725,8 @@ class IELTS_CM_Shortcodes {
         $course_id = get_post_meta($quiz_id, '_ielts_cm_course_id', true);
         $lesson_id = get_post_meta($quiz_id, '_ielts_cm_lesson_id', true);
         
-        // Get layout type to determine which template to use
-        $layout_type = get_post_meta($quiz_id, '_ielts_cm_layout_type', true);
-        if (!$layout_type) {
-            $layout_type = 'standard';
-        }
-        
-        // Select the appropriate template based on layout type
-        if ($layout_type === 'computer_based') {
-            $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-computer-based.php';
-        } else {
-            $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz.php';
-        }
-        
         ob_start();
-        if (file_exists($template)) {
-            include $template;
-        } else {
-            // Show error message for missing template (better UX than silent failure)
-            echo '<p>' . __('Quiz template not found.', 'ielts-course-manager') . '</p>';
-        }
+        include IELTS_CM_PLUGIN_DIR . 'templates/single-quiz.php';
         return ob_get_clean();
     }
 }
