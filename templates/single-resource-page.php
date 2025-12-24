@@ -120,7 +120,8 @@ body.ielts-resource-single .content-area {
                                 <?php
                                 // Use WordPress auto-embed functionality
                                 global $wp_embed;
-                                echo $wp_embed->autoembed($video_url);
+                                // Process shortcodes that autoembed might generate (e.g., [video] for direct MP4 files)
+                                echo do_shortcode($wp_embed->autoembed($video_url));
                                 ?>
                             </div>
                         </div>
