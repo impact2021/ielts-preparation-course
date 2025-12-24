@@ -59,6 +59,9 @@ class IELTS_Course_Manager {
         // Register REST API routes
         add_action('rest_api_init', array($this->sync_api, 'register_routes'));
         
+        // Fix serialized data during WordPress import
+        add_filter('wp_import_post_meta', array($this, 'fix_imported_serialized_data'), 10, 3);
+        
         // Initialize admin
         if (is_admin()) {
             $this->admin->init();
@@ -157,5 +160,83 @@ class IELTS_Course_Manager {
                 ));
             }
         }
+    }
+    
+    /**
+     * Fix broken serialized data during WordPress import
+     * 
+     * This fixes a common issue where serialized PHP data in XML imports has
+     * incorrect string lengths due to line ending differences (LF vs CRLF).
+     * 
+     * @param array $postmeta Array of post meta data
+     * @param int $post_id Post ID
+     * @param WP_Post $post Post object
+     * @return array Fixed post meta data
+     */
+    public function fix_imported_serialized_data($postmeta, $post_id, $post) {
+        // Only process IELTS quiz post types
+        // $post is an array in the wp_import_post_meta filter
+        if (!isset($post['post_type']) || $post['post_type'] !== 'ielts_quiz') {
+            return $postmeta;
+        }
+        
+        foreach ($postmeta as $index => $meta) {
+            $meta_key = $meta['key'];
+            $meta_value = $meta['value'];
+            
+            // Only fix our plugin's serialized fields
+            if (in_array($meta_key, array('_ielts_cm_questions', '_ielts_cm_reading_texts', '_ielts_cm_course_ids', '_ielts_cm_lesson_ids'))) {
+                // Check if this looks like serialized data
+                if (is_string($meta_value) && (substr($meta_value, 0, 2) === 'a:' || substr($meta_value, 0, 2) === 'O:')) {
+                    // Try to unserialize it
+                    $test = @unserialize($meta_value);
+                    
+                    if ($test === false && $meta_value !== serialize(false)) {
+                        // Serialization is broken - try to fix it
+                        $fixed_value = $this->fix_serialized_string_lengths($meta_value);
+                        
+                        // Test if the fix worked
+                        $test_fixed = @unserialize($fixed_value);
+                        if ($test_fixed !== false || $fixed_value === serialize(false)) {
+                            // Fix worked - update the meta value
+                            $postmeta[$index]['value'] = $fixed_value;
+                        }
+                    }
+                }
+            }
+        }
+        
+        return $postmeta;
+    }
+    
+    /**
+     * Fix string lengths in serialized data
+     * 
+     * Recalculates and fixes string length declarations in serialized PHP data.
+     * This handles the case where line endings have been modified during export/import.
+     * 
+     * @param string $data Serialized data
+     * @return string Fixed serialized data
+     */
+    private function fix_serialized_string_lengths($data) {
+        // Fix string length declarations using non-greedy matching with DOTALL modifier
+        // Pattern matches: s:123:"string content"; where string content can span multiple lines
+        $fixed = preg_replace_callback(
+            '/s:(\d+):"(.*?)";/s',  // 's' modifier allows . to match newlines
+            function($matches) {
+                $declared_length = (int)$matches[1];
+                $string_content = $matches[2];
+                $actual_length = strlen($string_content);
+                
+                if ($declared_length !== $actual_length) {
+                    // Length mismatch - return corrected version
+                    return 's:' . $actual_length . ':"' . $string_content . '";';
+                }
+                return $matches[0];
+            },
+            $data
+        );
+        
+        return $fixed;
     }
 }

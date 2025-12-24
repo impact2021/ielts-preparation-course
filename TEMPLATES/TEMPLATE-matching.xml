@@ -40,7 +40,7 @@
 <wp:is_sticky>0</wp:is_sticky>
 <wp:postmeta>
 <wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
-<wp:meta_value><![CDATA[a:4:{i:0;a:12:{s:4:"type";s:8:"matching";s:12:"instructions";s:143:"Match each item to the correct option.
+<wp:meta_value><![CDATA[a:4:{i:0;a:12:{s:4:"type";s:8:"matching";s:12:"instructions";s:104:"Match each item to the correct option.
 
 Options:
 A. [Option A]
@@ -52,7 +52,7 @@ C. [Option C]
 D. [Option D]";s:14:"correct_answer";s:1:"0";s:15:"option_feedback";a:4:{i:0;s:16:"[Feedback for A]";i:1;s:16:"[Feedback for B]";i:2;s:16:"[Feedback for C]";i:3;s:16:"[Feedback for D]";}}i:1;a:12:{s:4:"type";s:8:"matching";s:12:"instructions";s:0:"";s:8:"question";s:17:"[Item to match 2]";s:6:"points";i:1;s:18:"no_answer_feedback";s:18:"[Provide guidance]";s:16:"correct_feedback";s:23:"[Explain correct match]";s:18:"incorrect_feedback";s:24:"[Provide correct answer]";s:15:"reading_text_id";i:0;s:10:"mc_options";a:4:{i:0;a:3:{s:4:"text";s:13:"A. [Option A]";s:10:"is_correct";b:0;s:8:"feedback";s:16:"[Feedback for A]";}i:1;a:3:{s:4:"text";s:13:"B. [Option B]";s:10:"is_correct";b:1;s:8:"feedback";s:16:"[Feedback for B]";}i:2;a:3:{s:4:"text";s:13:"C. [Option C]";s:10:"is_correct";b:0;s:8:"feedback";s:16:"[Feedback for C]";}i:3;a:3:{s:4:"text";s:13:"D. [Option D]";s:10:"is_correct";b:0;s:8:"feedback";s:16:"[Feedback for D]";}}s:7:"options";s:55:"A. [Option A]
 B. [Option B]
 C. [Option C]
-D. [Option D]";s:14:"correct_answer";s:1:"1";s:15:"option_feedback";a:4:{i:0;s:16:"[Feedback for A]";i:1;s:16:"[Feedback for B]";i:2;s:16:"[Feedback for C]";i:3;s:16:"[Feedback for D]";}}i:2;a:12:{s:4:"type";s:8:"matching";s:12:"instructions";s:199:"Match each item to the correct option.
+D. [Option D]";s:14:"correct_answer";s:1:"1";s:15:"option_feedback";a:4:{i:0;s:16:"[Feedback for A]";i:1;s:16:"[Feedback for B]";i:2;s:16:"[Feedback for C]";i:3;s:16:"[Feedback for D]";}}i:2;a:12:{s:4:"type";s:8:"matching";s:12:"instructions";s:160:"Match each item to the correct option.
 
 Options:
 A. [Option A for passage 2]
