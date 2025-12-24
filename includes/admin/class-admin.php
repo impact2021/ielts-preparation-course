@@ -685,6 +685,7 @@ class IELTS_CM_Admin {
             $lesson_ids = $old_lesson_id ? array($old_lesson_id) : array();
         }
         $resource_url = get_post_meta($post->ID, '_ielts_cm_resource_url', true);
+        $video_url = get_post_meta($post->ID, '_ielts_cm_video_url', true);
         
         $lessons = get_posts(array(
             'post_type' => 'ielts_lesson',
@@ -703,6 +704,11 @@ class IELTS_CM_Admin {
                 <?php endforeach; ?>
             </select>
             <small><?php _e('Hold Ctrl (Cmd on Mac) to select multiple lessons', 'ielts-course-manager'); ?></small>
+        </p>
+        <p>
+            <label for="ielts_cm_video_url"><?php _e('Video URL (Optional)', 'ielts-course-manager'); ?></label><br>
+            <input type="url" id="ielts_cm_video_url" name="ielts_cm_video_url" value="<?php echo esc_attr($video_url); ?>" style="width: 100%;">
+            <small><?php _e('Add a video URL (YouTube, Vimeo, etc.) to display in a two-column layout. Supports WordPress auto-embeds. Remove the URL to return to normal width.', 'ielts-course-manager'); ?></small>
         </p>
         <p>
             <label for="ielts_cm_resource_url"><?php _e('Resource URL (Optional)', 'ielts-course-manager'); ?></label><br>
@@ -2770,6 +2776,9 @@ class IELTS_CM_Admin {
             }
             if (isset($_POST['ielts_cm_resource_url'])) {
                 update_post_meta($post_id, '_ielts_cm_resource_url', esc_url_raw($_POST['ielts_cm_resource_url']));
+            }
+            if (isset($_POST['ielts_cm_video_url'])) {
+                update_post_meta($post_id, '_ielts_cm_video_url', esc_url_raw($_POST['ielts_cm_video_url']));
             }
         }
         

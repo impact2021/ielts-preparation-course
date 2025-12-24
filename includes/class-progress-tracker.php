@@ -357,4 +357,140 @@ class IELTS_CM_Progress_Tracker {
         // Mark as complete automatically
         return $this->record_progress($user_id, $course_id, $lesson_id, null, true);
     }
+    
+    /**
+     * Calculate lesson completion percentage
+     * Based on sub lessons (resources) and quizzes only
+     */
+    public function get_lesson_completion_percentage($user_id, $lesson_id) {
+        global $wpdb;
+        
+        // Get all resources (sub lessons) for this lesson
+        $resource_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_resource'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
+        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+        
+        $total_resources = count($resource_ids);
+        
+        // Get all quizzes for this lesson
+        $quiz_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_quiz'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
+        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+        
+        $total_quizzes = count($quiz_ids);
+        
+        // Total items needed for 100% completion (resources + quizzes)
+        $total_items = $total_resources + $total_quizzes;
+        
+        if ($total_items == 0) {
+            return 0;
+        }
+        
+        // Get completed resources
+        $table = $this->db->get_progress_table();
+        $completed_resources = 0;
+        if (!empty($resource_ids)) {
+            $resource_ids = array_map('intval', $resource_ids);
+            $resource_placeholders = implode(',', array_fill(0, count($resource_ids), '%d'));
+            $query = $wpdb->prepare(
+                "SELECT COUNT(DISTINCT resource_id) FROM $table WHERE user_id = %d AND lesson_id = %d AND resource_id IN ($resource_placeholders) AND completed = 1",
+                array_merge(array($user_id, $lesson_id), $resource_ids)
+            );
+            $completed_resources = $wpdb->get_var($query);
+        }
+        
+        // Get attempted quizzes (any quiz taken counts, regardless of score)
+        $quiz_results_table = $this->db->get_quiz_results_table();
+        $attempted_quizzes = 0;
+        if (!empty($quiz_ids)) {
+            $quiz_ids = array_map('intval', $quiz_ids);
+            $quiz_placeholders = implode(',', array_fill(0, count($quiz_ids), '%d'));
+            $query = $wpdb->prepare(
+                "SELECT COUNT(DISTINCT quiz_id) FROM $quiz_results_table WHERE user_id = %d AND lesson_id = %d AND quiz_id IN ($quiz_placeholders)",
+                array_merge(array($user_id, $lesson_id), $quiz_ids)
+            );
+            $attempted_quizzes = $wpdb->get_var($query);
+        }
+        
+        $completed_items = $completed_resources + $attempted_quizzes;
+        
+        return round(($completed_items / $total_items) * 100, 1);
+    }
+    
+    /**
+     * Get average score from all tests/quizzes taken in a lesson
+     * Returns array with 'average_percentage' and 'quiz_count'
+     */
+    public function get_lesson_average_score($user_id, $lesson_id) {
+        global $wpdb;
+        
+        // Get all quizzes for this lesson
+        $quiz_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_quiz'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
+        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+        
+        if (empty($quiz_ids)) {
+            return array(
+                'average_percentage' => 0,
+                'quiz_count' => 0
+            );
+        }
+        
+        // Get best results for each quiz in this lesson
+        $quiz_results_table = $this->db->get_quiz_results_table();
+        $quiz_ids = array_map('intval', $quiz_ids);
+        $quiz_placeholders = implode(',', array_fill(0, count($quiz_ids), '%d'));
+        
+        // Get best percentage for each quiz
+        $query = $wpdb->prepare("
+            SELECT quiz_id, MAX(percentage) as best_percentage
+            FROM $quiz_results_table 
+            WHERE user_id = %d 
+              AND lesson_id = %d 
+              AND quiz_id IN ($quiz_placeholders)
+            GROUP BY quiz_id
+        ", array_merge(array($user_id, $lesson_id), $quiz_ids));
+        
+        $results = $wpdb->get_results($query);
+        
+        if (empty($results)) {
+            return array(
+                'average_percentage' => 0,
+                'quiz_count' => 0
+            );
+        }
+        
+        // Calculate average of best percentages
+        $total_percentage = 0;
+        $count = 0;
+        foreach ($results as $result) {
+            $total_percentage += $result->best_percentage;
+            $count++;
+        }
+        
+        $average = $count > 0 ? round($total_percentage / $count, 1) : 0;
+        
+        return array(
+            'average_percentage' => $average,
+            'quiz_count' => $count
+        );
+    }
 }
