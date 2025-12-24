@@ -882,6 +882,17 @@ class IELTS_CM_Admin {
         jQuery(document).ready(function($) {
             var vocabularyIndex = <?php echo count($vocabulary_items); ?>;
             
+            // Translatable strings
+            var i18n = {
+                wordLabel: <?php echo json_encode(__('Word/Phrase:', 'ielts-course-manager')); ?>,
+                wordPlaceholder: 'e.g., INSTRUCTIONS',
+                definitionLabel: <?php echo json_encode(__('Definition:', 'ielts-course-manager')); ?>,
+                definitionPlaceholder: 'Detailed information on how to do something...',
+                exampleLabel: <?php echo json_encode(__('Example Sentence:', 'ielts-course-manager')); ?>,
+                examplePlaceholder: 'Read the instructions carefully...',
+                removeButton: <?php echo json_encode(__('Remove Item', 'ielts-course-manager')); ?>
+            };
+            
             // Show/hide vocabulary fields based on checkbox
             $('#ielts_cm_is_vocabulary').on('change', function() {
                 if ($(this).is(':checked')) {
@@ -895,18 +906,18 @@ class IELTS_CM_Admin {
             $('#add_vocabulary_item').on('click', function() {
                 var html = '<div class="vocabulary-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; background: #f9f9f9;">' +
                     '<div style="margin-bottom: 10px;">' +
-                    '<label><strong><?php _e('Word/Phrase:', 'ielts-course-manager'); ?></strong></label><br>' +
-                    '<input type="text" name="vocabulary_items[' + vocabularyIndex + '][word]" style="width: 100%;" placeholder="e.g., INSTRUCTIONS">' +
+                    '<label><strong>' + i18n.wordLabel + '</strong></label><br>' +
+                    '<input type="text" name="vocabulary_items[' + vocabularyIndex + '][word]" style="width: 100%;" placeholder="' + i18n.wordPlaceholder + '">' +
                     '</div>' +
                     '<div style="margin-bottom: 10px;">' +
-                    '<label><strong><?php _e('Definition:', 'ielts-course-manager'); ?></strong></label><br>' +
-                    '<textarea name="vocabulary_items[' + vocabularyIndex + '][definition]" rows="2" style="width: 100%;" placeholder="Detailed information on how to do something..."></textarea>' +
+                    '<label><strong>' + i18n.definitionLabel + '</strong></label><br>' +
+                    '<textarea name="vocabulary_items[' + vocabularyIndex + '][definition]" rows="2" style="width: 100%;" placeholder="' + i18n.definitionPlaceholder + '"></textarea>' +
                     '</div>' +
                     '<div style="margin-bottom: 10px;">' +
-                    '<label><strong><?php _e('Example Sentence:', 'ielts-course-manager'); ?></strong></label><br>' +
-                    '<textarea name="vocabulary_items[' + vocabularyIndex + '][example]" rows="2" style="width: 100%;" placeholder="Read the instructions carefully..."></textarea>' +
+                    '<label><strong>' + i18n.exampleLabel + '</strong></label><br>' +
+                    '<textarea name="vocabulary_items[' + vocabularyIndex + '][example]" rows="2" style="width: 100%;" placeholder="' + i18n.examplePlaceholder + '"></textarea>' +
                     '</div>' +
-                    '<button type="button" class="button remove-vocabulary-item"><?php _e('Remove Item', 'ielts-course-manager'); ?></button>' +
+                    '<button type="button" class="button remove-vocabulary-item">' + i18n.removeButton + '</button>' +
                     '</div>';
                 
                 $('#vocabulary_items_container').append(html);
@@ -3071,7 +3082,8 @@ class IELTS_CM_Admin {
             if (isset($_POST['vocabulary_items']) && is_array($_POST['vocabulary_items'])) {
                 $vocabulary_items = array();
                 foreach ($_POST['vocabulary_items'] as $item) {
-                    if (!empty($item['word']) || !empty($item['definition']) || !empty($item['example'])) {
+                    // Require at least the word field to be non-empty
+                    if (!empty($item['word'])) {
                         $vocabulary_items[] = array(
                             'word' => sanitize_text_field($item['word']),
                             'definition' => sanitize_textarea_field($item['definition']),
