@@ -1063,13 +1063,39 @@
                     $('.reading-text .highlighted').each(function(index) {
                         var $parent = $(this).closest('.reading-text');
                         var parentIndex = $('.reading-text').index($parent);
+                        
                         // Get context before and after for better restoration accuracy
-                        var $prev = $(this).prev();
-                        var $next = $(this).next();
-                        var contextBefore = $prev.length && $prev[0].nodeType === Node.TEXT_NODE 
-                            ? $prev[0].nodeValue.slice(-20) : '';
-                        var contextAfter = $next.length && $next[0].nodeType === Node.TEXT_NODE 
-                            ? $next[0].nodeValue.slice(0, 20) : '';
+                        // Walk siblings to find text nodes (skip other highlighted spans)
+                        var contextBefore = '';
+                        var contextAfter = '';
+                        
+                        var prevSibling = this.previousSibling;
+                        while (prevSibling && contextBefore.length < 20) {
+                            if (prevSibling.nodeType === Node.TEXT_NODE) {
+                                contextBefore = prevSibling.nodeValue.slice(-20) + contextBefore;
+                                break;
+                            } else if (prevSibling.nodeType === Node.ELEMENT_NODE && !$(prevSibling).hasClass('highlighted')) {
+                                // Get text from element
+                                var text = $(prevSibling).text();
+                                contextBefore = text.slice(-20) + contextBefore;
+                                break;
+                            }
+                            prevSibling = prevSibling.previousSibling;
+                        }
+                        
+                        var nextSibling = this.nextSibling;
+                        while (nextSibling && contextAfter.length < 20) {
+                            if (nextSibling.nodeType === Node.TEXT_NODE) {
+                                contextAfter += nextSibling.nodeValue.slice(0, 20);
+                                break;
+                            } else if (nextSibling.nodeType === Node.ELEMENT_NODE && !$(nextSibling).hasClass('highlighted')) {
+                                // Get text from element
+                                var text = $(nextSibling).text();
+                                contextAfter += text.slice(0, 20);
+                                break;
+                            }
+                            nextSibling = nextSibling.nextSibling;
+                        }
                         
                         highlights.push({
                             textContent: $(this).text(),
@@ -1204,27 +1230,122 @@
                     }
                 }
                 
-                // Create highlighted span
-                var span = document.createElement('span');
-                span.className = 'highlighted';
-                
+                // Use a more robust highlighting approach that works with complex selections
                 try {
-                    range.surroundContents(span);
+                    // Check if we're trying to highlight already highlighted text
+                    var startContainer = range.startContainer;
+                    var endContainer = range.endContainer;
+                    
+                    // Don't allow highlighting within already highlighted text
+                    if ($(startContainer).closest('.highlighted').length > 0 || 
+                        $(endContainer).closest('.highlighted').length > 0) {
+                        selection.removeAllRanges();
+                        return;
+                    }
+                    
+                    // Try simple surroundContents first (works for simple selections)
+                    var span = document.createElement('span');
+                    span.className = 'highlighted';
+                    
+                    try {
+                        range.surroundContents(span);
+                    } catch (e) {
+                        // If surroundContents fails, use a more complex approach
+                        // This handles selections that span multiple elements
+                        highlightComplexSelection(range);
+                        return;
+                    }
+                    
                     selection.removeAllRanges();
                     saveHighlights();
-                } catch (e) {
-                    // If surroundContents fails (e.g., selection spans multiple elements),
-                    // extract contents and wrap them
-                    try {
-                        var contents = range.extractContents();
-                        span.appendChild(contents);
-                        range.insertNode(span);
-                        selection.removeAllRanges();
-                        saveHighlights();
-                    } catch (err) {
-                        console.error('Error highlighting text:', err);
-                    }
+                } catch (err) {
+                    console.error('Error highlighting text:', err);
                 }
+            }
+            
+            // Handle complex selections that span multiple elements
+            function highlightComplexSelection(range) {
+                var selection = window.getSelection();
+                
+                // Walk through all text nodes in the selection
+                var walker = document.createTreeWalker(
+                    range.commonAncestorContainer,
+                    NodeFilter.SHOW_TEXT,
+                    {
+                        acceptNode: function(node) {
+                            // Only accept nodes that intersect with our range
+                            var nodeRange = document.createRange();
+                            nodeRange.selectNodeContents(node);
+                            
+                            if (range.compareBoundaryPoints(Range.END_TO_START, nodeRange) >= 0 &&
+                                range.compareBoundaryPoints(Range.START_TO_END, nodeRange) <= 0) {
+                                return NodeFilter.FILTER_ACCEPT;
+                            }
+                            return NodeFilter.FILTER_REJECT;
+                        }
+                    }
+                );
+                
+                var nodesToHighlight = [];
+                var node;
+                
+                while (node = walker.nextNode()) {
+                    // Skip if already highlighted
+                    if ($(node).closest('.highlighted').length > 0) {
+                        continue;
+                    }
+                    
+                    nodesToHighlight.push(node);
+                }
+                
+                // Highlight each text node
+                nodesToHighlight.forEach(function(textNode) {
+                    var nodeRange = document.createRange();
+                    nodeRange.selectNodeContents(textNode);
+                    
+                    // Determine the start and end positions for this node
+                    var startOffset = 0;
+                    var endOffset = textNode.length;
+                    
+                    // If this is the start node, use the range's start offset
+                    if (textNode === range.startContainer) {
+                        startOffset = range.startOffset;
+                    }
+                    
+                    // If this is the end node, use the range's end offset
+                    if (textNode === range.endContainer) {
+                        endOffset = range.endOffset;
+                    }
+                    
+                    // Extract the text to highlight
+                    var textBefore = textNode.nodeValue.substring(0, startOffset);
+                    var textToHighlight = textNode.nodeValue.substring(startOffset, endOffset);
+                    var textAfter = textNode.nodeValue.substring(endOffset);
+                    
+                    if (textToHighlight.trim().length === 0) {
+                        return; // Skip empty or whitespace-only nodes
+                    }
+                    
+                    // Create the highlighted span
+                    var span = document.createElement('span');
+                    span.className = 'highlighted';
+                    span.textContent = textToHighlight;
+                    
+                    // Replace the text node with our highlighted version
+                    var parent = textNode.parentNode;
+                    
+                    if (textBefore) {
+                        parent.insertBefore(document.createTextNode(textBefore), textNode);
+                    }
+                    parent.insertBefore(span, textNode);
+                    if (textAfter) {
+                        parent.insertBefore(document.createTextNode(textAfter), textNode);
+                    }
+                    parent.removeChild(textNode);
+                });
+                
+                selection.removeAllRanges();
+                saveHighlights();
             }
             
             // Clear all highlights
