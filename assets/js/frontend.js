@@ -1289,7 +1289,7 @@
                 var nodesToHighlight = [];
                 var node;
                 
-                while (node = walker.nextNode()) {
+                while ((node = walker.nextNode()) !== null) {
                     // Skip if already highlighted
                     if ($(node).closest('.highlighted').length > 0) {
                         continue;
@@ -1305,7 +1305,7 @@
                     
                     // Determine the start and end positions for this node
                     var startOffset = 0;
-                    var endOffset = textNode.length;
+                    var endOffset = textNode.nodeValue.length;
                     
                     // If this is the start node, use the range's start offset
                     if (textNode === range.startContainer) {
