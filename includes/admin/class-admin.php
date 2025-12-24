@@ -710,7 +710,7 @@ class IELTS_CM_Admin {
         <h4 style="margin-top: 0;"><?php _e('Media & Resources', 'ielts-course-manager'); ?></h4>
         
         <div style="margin-bottom: 15px;">
-            <label for="ielts_cm_video_url"><strong><?php _e('Video URL', 'ielts-course-manager'); ?></strong></label><br>
+            <label for="ielts_cm_video_url"><strong><?php _e('Video URL (Optional)', 'ielts-course-manager'); ?></strong></label><br>
             <input type="url" id="ielts_cm_video_url" name="ielts_cm_video_url" value="<?php echo esc_attr($video_url); ?>" style="width: 100%;" placeholder="https://www.youtube.com/watch?v=...">
             <small><?php _e('Add a video URL (YouTube, Vimeo, etc.) to display alongside the content. Supports WordPress auto-embeds. Leave empty for text-only layout.', 'ielts-course-manager'); ?></small>
         </div>
