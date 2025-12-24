@@ -3082,13 +3082,16 @@ class IELTS_CM_Admin {
             if (isset($_POST['vocabulary_items']) && is_array($_POST['vocabulary_items'])) {
                 $vocabulary_items = array();
                 foreach ($_POST['vocabulary_items'] as $item) {
-                    // Require at least the word field to be non-empty
-                    if (!empty($item['word'])) {
-                        $vocabulary_items[] = array(
-                            'word' => sanitize_text_field($item['word']),
-                            'definition' => sanitize_textarea_field($item['definition']),
-                            'example' => sanitize_textarea_field($item['example'])
-                        );
+                    // Validate that item is an array and has required keys
+                    if (is_array($item) && isset($item['word'])) {
+                        // Require at least the word field to be non-empty
+                        if (!empty($item['word'])) {
+                            $vocabulary_items[] = array(
+                                'word' => sanitize_text_field($item['word']),
+                                'definition' => isset($item['definition']) ? sanitize_textarea_field($item['definition']) : '',
+                                'example' => isset($item['example']) ? sanitize_textarea_field($item['example']) : ''
+                            );
+                        }
                     }
                 }
                 update_post_meta($post_id, '_ielts_cm_vocabulary_items', $vocabulary_items);
