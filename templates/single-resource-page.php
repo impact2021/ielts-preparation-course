@@ -215,7 +215,30 @@ body.ielts-resource-single .content-area {
                 width: 100%;
                 max-width: 100%;
                 height: auto;
-                aspect-ratio: 16/9;
+            }
+            /* Modern browsers with aspect-ratio support */
+            @supports (aspect-ratio: 16/9) {
+                .resource-video-wrapper iframe,
+                .resource-video-wrapper video {
+                    aspect-ratio: 16/9;
+                }
+            }
+            /* Fallback for older browsers using padding technique */
+            @supports not (aspect-ratio: 16/9) {
+                .resource-video-wrapper {
+                    position: relative;
+                    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+                    height: 0;
+                    overflow: hidden;
+                }
+                .resource-video-wrapper iframe,
+                .resource-video-wrapper video {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
             }
             .resource-content-column {
                 flex: 1;
