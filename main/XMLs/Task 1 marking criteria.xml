@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Task 1 Marking Criteria - Multiple Choice Question Type -->
+<rss xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/" version="2.0">
+<channel>
+	<title>IELTStestONLINE</title>
+	<link>https://www.ieltstestonline.com</link>
+	<description>Online IELTS preparation</description>
+	<pubDate>Tue, 24 Dec 2025 04:27:39 +0000</pubDate>
+	<language>en-NZ</language>
+	<wp:wxr_version>1.2</wp:wxr_version>
+	<wp:base_site_url>https://www.ieltstestonline.com</wp:base_site_url>
+	<wp:base_blog_url>https://www.ieltstestonline.com</wp:base_blog_url>
+
+	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[impact]]></wp:author_login><wp:author_email><![CDATA[impact@ieltstestonline.com]]></wp:author_email><wp:author_display_name><![CDATA[impact]]></wp:author_display_name><wp:author_first_name><![CDATA[Patrick]]></wp:author_first_name><wp:author_last_name><![CDATA[Bourne]]></wp:author_last_name></wp:author>
+
+	<generator>IELTS Test XML Creator</generator>
+
+	<item>
+		<title><![CDATA[Task 1 Marking Criteria]]></title>
+		<link>https://www.ieltstestonline.com/ielts-quiz/task-1-marking-criteria/</link>
+		<pubDate>Tue, 24 Dec 2025 04:27:39 +0000</pubDate>
+		<dc:creator><![CDATA[impact]]></dc:creator>
+		<guid isPermaLink="false">https://www.ieltstestonline.com/?post_type=ielts_quiz&amp;p=9000001</guid>
+		<description/>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>9000001</wp:post_id>
+		<wp:post_date><![CDATA[2025-12-24 04:27:39]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-12-24 04:27:39]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2025-12-24 04:27:39]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-12-24 04:27:39]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[task-1-marking-criteria]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[ielts_quiz]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:4:{i:0;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:144:"Which of the 4 marking categories do the following points relate to? Select the correct answers.
+
+Instructions will appear before each question.";s:8:"question";s:18:"Linking your ideas";s:6:"points";i:1;s:18:"no_answer_feedback";s:100:"Please select an answer. Consider which marking criterion assesses how ideas are connected together.";s:16:"correct_feedback";s:81:"Correct! How you link your ideas will be assessed under 'Coherence and cohesion'.";s:18:"incorrect_feedback";s:72:"How you link your ideas will be assessed under 'Coherence and cohesion'.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:4:{i:0;a:3:{s:4:"text";s:32:"This relates to LEXICAL RESOURCE";s:10:"is_correct";b:0;s:8:"feedback";s:115:"Lexical Resource focuses on vocabulary range and accuracy, not on how ideas are linked. Try Cohesion and Coherence.";}i:1;a:3:{s:4:"text";s:46:"This relates to GRAMMATICAL RANGE AND ACCURACY";s:10:"is_correct";b:0;s:8:"feedback";s:113:"Grammatical Range and Accuracy assesses sentence structures and grammar, not linking. Try Cohesion and Coherence.";}i:2;a:3:{s:4:"text";s:38:"This relates to COHESION AND COHERENCE";s:10:"is_correct";b:1;s:8:"feedback";s:167:"Correct! Cohesion and Coherence assesses how well you link and organize your ideas using cohesive devices (e.g., however, furthermore) and logical paragraph structure.";}i:3;a:3:{s:4:"text";s:32:"This relates to TASK ACHIEVEMENT";s:10:"is_correct";b:0;s:8:"feedback";s:139:"Task Achievement focuses on addressing all parts of the task and presenting key features, not on linking ideas. Try Cohesion and Coherence.";}}s:7:"options";s:151:"This relates to LEXICAL RESOURCE
+This relates to GRAMMATICAL RANGE AND ACCURACY
+This relates to COHESION AND COHERENCE
+This relates to TASK ACHIEVEMENT";s:14:"correct_answer";s:1:"2";s:15:"option_feedback";a:4:{i:0;s:115:"Lexical Resource focuses on vocabulary range and accuracy, not on how ideas are linked. Try Cohesion and Coherence.";i:1;s:113:"Grammatical Range and Accuracy assesses sentence structures and grammar, not linking. Try Cohesion and Coherence.";i:2;s:167:"Correct! Cohesion and Coherence assesses how well you link and organize your ideas using cohesive devices (e.g., however, furthermore) and logical paragraph structure.";i:3;s:139:"Task Achievement focuses on addressing all parts of the task and presenting key features, not on linking ideas. Try Cohesion and Coherence.";}}i:1;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:38:"Avoiding using words from the question";s:6:"points";i:1;s:18:"no_answer_feedback";s:112:"Please select an answer. Think about which criterion rewards using your own words instead of copying the prompt.";s:16:"correct_feedback";s:132:"Correct! Avoiding using words from the question will improve your result for 'Lexical Resource' by demonstrating vocabulary variety.";s:18:"incorrect_feedback";s:115:"Avoiding using words from the question will improve your result for 'Lexical Resource' by showing vocabulary range.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:4:{i:0;a:3:{s:4:"text";s:32:"This relates to LEXICAL RESOURCE";s:10:"is_correct";b:1;s:8:"feedback";s:184:"Correct! Lexical Resource assesses your vocabulary range and ability to paraphrase. Using synonyms and your own words instead of copying from the question demonstrates this skill well.";}i:1;a:3:{s:4:"text";s:46:"This relates to GRAMMATICAL RANGE AND ACCURACY";s:10:"is_correct";b:0;s:8:"feedback";s:119:"Grammatical Range and Accuracy is about sentence structures and grammar accuracy, not vocabulary. Try Lexical Resource.";}i:2;a:3:{s:4:"text";s:38:"This relates to COHESION AND COHERENCE";s:10:"is_correct";b:0;s:8:"feedback";s:108:"Cohesion and Coherence is about linking ideas and organization, not vocabulary choice. Try Lexical Resource.";}i:3;a:3:{s:4:"text";s:32:"This relates to TASK ACHIEVEMENT";s:10:"is_correct";b:0;s:8:"feedback";s:118:"Task Achievement focuses on completing the task requirements, not on vocabulary variety. Try Lexical Resource instead.";}}s:7:"options";s:151:"This relates to LEXICAL RESOURCE
+This relates to GRAMMATICAL RANGE AND ACCURACY
+This relates to COHESION AND COHERENCE
+This relates to TASK ACHIEVEMENT";s:14:"correct_answer";s:1:"0";s:15:"option_feedback";a:4:{i:0;s:184:"Correct! Lexical Resource assesses your vocabulary range and ability to paraphrase. Using synonyms and your own words instead of copying from the question demonstrates this skill well.";i:1;s:119:"Grammatical Range and Accuracy is about sentence structures and grammar accuracy, not vocabulary. Try Lexical Resource.";i:2;s:108:"Cohesion and Coherence is about linking ideas and organization, not vocabulary choice. Try Lexical Resource.";i:3;s:118:"Task Achievement focuses on completing the task requirements, not on vocabulary variety. Try Lexical Resource instead.";}}i:2;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:48:"Using a variety of different sentence structures";s:6:"points";i:1;s:18:"no_answer_feedback";s:117:"Please select an answer. Consider which criterion evaluates your ability to use different types of sentence patterns.";s:16:"correct_feedback";s:120:"Correct! Using a variety of different sentence structures will improve your result for 'Grammatical Range and Accuracy'.";s:18:"incorrect_feedback";s:111:"Using a variety of different sentence structures will improve your result for 'Grammatical Range and Accuracy'.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:4:{i:0;a:3:{s:4:"text";s:32:"This relates to LEXICAL RESOURCE";s:10:"is_correct";b:0;s:8:"feedback";s:131:"Lexical Resource focuses on vocabulary, not sentence structures. Sentence variety is assessed under Grammatical Range and Accuracy.";}i:1;a:3:{s:4:"text";s:46:"This relates to GRAMMATICAL RANGE AND ACCURACY";s:10:"is_correct";b:1;s:8:"feedback";s:224:"Correct! Grammatical Range and Accuracy assesses your ability to use a variety of sentence structures (simple, compound, complex) accurately. Using different sentence patterns demonstrates your grammatical range and control.";}i:2;a:3:{s:4:"text";s:38:"This relates to COHESION AND COHERENCE";s:10:"is_correct";b:0;s:8:"feedback";s:137:"Cohesion and Coherence is about linking ideas and organization, not sentence variety. Try Grammatical Range and Accuracy for this aspect.";}i:3;a:3:{s:4:"text";s:32:"This relates to TASK ACHIEVEMENT";s:10:"is_correct";b:0;s:8:"feedback";s:136:"Task Achievement focuses on addressing the task requirements, not on grammar or sentence structures. Try Grammatical Range and Accuracy.";}}s:7:"options";s:151:"This relates to LEXICAL RESOURCE
+This relates to GRAMMATICAL RANGE AND ACCURACY
+This relates to COHESION AND COHERENCE
+This relates to TASK ACHIEVEMENT";s:14:"correct_answer";s:1:"1";s:15:"option_feedback";a:4:{i:0;s:131:"Lexical Resource focuses on vocabulary, not sentence structures. Sentence variety is assessed under Grammatical Range and Accuracy.";i:1;s:224:"Correct! Grammatical Range and Accuracy assesses your ability to use a variety of sentence structures (simple, compound, complex) accurately. Using different sentence patterns demonstrates your grammatical range and control.";i:2;s:137:"Cohesion and Coherence is about linking ideas and organization, not sentence variety. Try Grammatical Range and Accuracy for this aspect.";i:3;s:136:"Task Achievement focuses on addressing the task requirements, not on grammar or sentence structures. Try Grammatical Range and Accuracy.";}}i:3;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:26:"Writing at least 150 words";s:6:"points";i:1;s:18:"no_answer_feedback";s:106:"Please select an answer. Think about which criterion includes the basic requirement of meeting word count.";s:16:"correct_feedback";s:100:"Correct! Writing at least 150 words is essential for getting a good result under 'Task Achievement'.";s:18:"incorrect_feedback";s:91:"Writing at least 150 words is essential for getting a good result under 'Task Achievement'.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:4:{i:0;a:3:{s:4:"text";s:32:"This relates to LEXICAL RESOURCE";s:10:"is_correct";b:0;s:8:"feedback";s:111:"Lexical Resource is about vocabulary range, not word count. Meeting the minimum word count is Task Achievement.";}i:1;a:3:{s:4:"text";s:46:"This relates to GRAMMATICAL RANGE AND ACCURACY";s:10:"is_correct";b:0;s:8:"feedback";s:114:"Grammatical Range and Accuracy assesses grammar and sentence structures, not word count. This is Task Achievement.";}i:2;a:3:{s:4:"text";s:38:"This relates to COHESION AND COHERENCE";s:10:"is_correct";b:0;s:8:"feedback";s:103:"Cohesion and Coherence is about organization and linking, not word count. Try Task Achievement instead.";}i:3;a:3:{s:4:"text";s:32:"This relates to TASK ACHIEVEMENT";s:10:"is_correct";b:1;s:8:"feedback";s:253:"Correct! Task Achievement assesses whether you have met all the task requirements, including writing at least 150 words for Task 1. Writing fewer than 150 words will negatively impact your Task Achievement score as you haven't met the basic requirement.";}}s:7:"options";s:151:"This relates to LEXICAL RESOURCE
+This relates to GRAMMATICAL RANGE AND ACCURACY
+This relates to COHESION AND COHERENCE
+This relates to TASK ACHIEVEMENT";s:14:"correct_answer";s:1:"3";s:15:"option_feedback";a:4:{i:0;s:111:"Lexical Resource is about vocabulary range, not word count. Meeting the minimum word count is Task Achievement.";i:1;s:114:"Grammatical Range and Accuracy assesses grammar and sentence structures, not word count. This is Task Achievement.";i:2;s:103:"Cohesion and Coherence is about organization and linking, not word count. Try Task Achievement instead.";i:3;s:253:"Correct! Task Achievement assesses whether you have met all the task requirements, including writing at least 150 words for Task 1. Writing fewer than 150 words will negatively impact your Task Achievement score as you haven't met the basic requirement.";}}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;a:2:{s:5:"title";s:47:"Task 1 Writing - Understanding Marking Criteria";s:7:"content";s:793:"<strong>IELTS Task 1 Writing is assessed using four marking criteria:</strong>
+
+<strong>1. Task Achievement</strong> - This assesses whether you have addressed all parts of the task, presented an overview, highlighted key features, and written at least 150 words.
+
+<strong>2. Coherence and Cohesion</strong> - This evaluates how well you organize and link your ideas using paragraphs and cohesive devices (e.g., however, furthermore, in addition).
+
+<strong>3. Lexical Resource</strong> - This examines your vocabulary range, the accuracy of word choice, and your ability to paraphrase rather than copying words from the question.
+
+<strong>4. Grammatical Range and Accuracy</strong> - This assesses your use of different sentence structures (simple, compound, complex) and grammatical accuracy.";}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[75]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[computer_based]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_exercise_label]]></wp:meta_key>
+			<wp:meta_value><![CDATA[exercise]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_open_as_popup]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_scoring_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[percentage]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_course_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_lesson_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_course_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_lesson_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+</channel>
+</rss>
