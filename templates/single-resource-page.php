@@ -134,11 +134,11 @@ body.ielts-resource-single .content-area {
                             </thead>
                             <tbody>
                                 <?php foreach ($vocabulary_items as $item): ?>
-                                    <?php if (!empty($item['word'])): ?>
+                                    <?php if (is_array($item) && !empty($item['word'])): ?>
                                         <tr>
                                             <td><strong><?php echo esc_html($item['word']); ?></strong></td>
-                                            <td><?php echo esc_html($item['definition']); ?></td>
-                                            <td><?php echo esc_html($item['example']); ?></td>
+                                            <td><?php echo isset($item['definition']) ? esc_html($item['definition']) : ''; ?></td>
+                                            <td><?php echo isset($item['example']) ? esc_html($item['example']) : ''; ?></td>
                                         </tr>
                                     <?php endif; ?>
                                 <?php endforeach; ?>
