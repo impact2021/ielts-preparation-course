@@ -106,13 +106,42 @@ body.ielts-resource-single .content-area {
                     <?php endif; ?>
                 </div>
                 
-                <div class="resource-content">
-                    <?php 
-                    // Apply WordPress content filters to process embeds and shortcodes
-                    $content = apply_filters('the_content', $resource->post_content);
-                    echo $content;
-                    ?>
-                </div>
+                <?php 
+                // Get video URL for two-column layout
+                $video_url = get_post_meta($resource_id, '_ielts_cm_video_url', true);
+                $has_video = !empty($video_url);
+                ?>
+                
+                <?php if ($has_video): ?>
+                    <!-- Two-column layout when video is present -->
+                    <div class="resource-two-column-layout">
+                        <div class="resource-video-column">
+                            <div class="resource-video-wrapper">
+                                <?php
+                                // Use WordPress auto-embed functionality
+                                global $wp_embed;
+                                echo $wp_embed->autoembed($video_url);
+                                ?>
+                            </div>
+                        </div>
+                        <div class="resource-content-column">
+                            <?php 
+                            // Apply WordPress content filters to process embeds and shortcodes
+                            $content = apply_filters('the_content', $resource->post_content);
+                            echo $content;
+                            ?>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <!-- Standard full-width layout when no video -->
+                    <div class="resource-content">
+                        <?php 
+                        // Apply WordPress content filters to process embeds and shortcodes
+                        $content = apply_filters('the_content', $resource->post_content);
+                        echo $content;
+                        ?>
+                    </div>
+                <?php endif; ?>
                 
                 <?php
                 $resource_url = get_post_meta($resource_id, '_ielts_cm_resource_url', true);
@@ -166,10 +195,79 @@ body.ielts-resource-single .content-area {
                 vertical-align: middle;
                 margin-right: 4px;
             }
+            
+            /* Two-column layout for desktop when video is present */
+            .resource-two-column-layout {
+                display: flex;
+                gap: 30px;
+                margin-bottom: 30px;
+            }
+            .resource-video-column {
+                flex: 0 0 45%;
+                min-width: 0;
+            }
+            .resource-video-wrapper {
+                position: sticky;
+                top: 20px;
+            }
+            .resource-video-wrapper iframe,
+            .resource-video-wrapper video {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+            /* Modern browsers with aspect-ratio support */
+            @supports (aspect-ratio: 16/9) {
+                .resource-video-wrapper iframe,
+                .resource-video-wrapper video {
+                    aspect-ratio: 16/9;
+                }
+            }
+            /* Fallback for older browsers using padding technique */
+            @supports not (aspect-ratio: 16/9) {
+                .resource-video-wrapper {
+                    position: relative;
+                    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+                    height: 0;
+                    overflow: hidden;
+                }
+                .resource-video-wrapper iframe,
+                .resource-video-wrapper video {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .resource-content-column {
+                flex: 1;
+                min-width: 0;
+                line-height: 1.8;
+            }
+            
+            /* Mobile: Stack columns vertically */
+            @media (max-width: 768px) {
+                .resource-two-column-layout {
+                    flex-direction: column;
+                }
+                .resource-video-column {
+                    flex: 1 1 100%;
+                }
+                .resource-video-wrapper {
+                    position: static;
+                }
+                .resource-content-column {
+                    flex: 1 1 100%;
+                }
+            }
+            
+            /* Standard full-width layout when no video */
             .resource-content {
                 margin-bottom: 30px;
                 line-height: 1.8;
             }
+            
             .resource-external-link {
                 margin-bottom: 30px;
             }

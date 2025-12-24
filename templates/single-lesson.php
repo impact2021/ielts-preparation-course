@@ -31,6 +31,36 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
             </div>
         <?php endif; ?>
         
+        <?php if ($user_id): ?>
+            <div class="lesson-progress-stats">
+                <?php
+                // Get lesson completion percentage
+                $lesson_completion = $progress_tracker->get_lesson_completion_percentage($user_id, $lesson->ID);
+                
+                // Get lesson average score
+                $lesson_score_data = $progress_tracker->get_lesson_average_score($user_id, $lesson->ID);
+                $average_score = $lesson_score_data['average_percentage'];
+                $quiz_count = $lesson_score_data['quiz_count'];
+                ?>
+                <div class="lesson-stats-container">
+                    <div class="lesson-stat-item">
+                        <span class="stat-label"><?php _e('Percent Complete:', 'ielts-course-manager'); ?></span>
+                        <span class="stat-value"><?php echo number_format($lesson_completion, 1); ?>%</span>
+                        <div class="stat-progress-bar">
+                            <div class="stat-progress-fill" style="width: <?php echo min(100, $lesson_completion); ?>%;"></div>
+                        </div>
+                    </div>
+                    <?php if ($quiz_count > 0): ?>
+                        <div class="lesson-stat-item">
+                            <span class="stat-label"><?php _e('Average Score:', 'ielts-course-manager'); ?></span>
+                            <span class="stat-value"><?php echo number_format($average_score, 1); ?>%</span>
+                            <small class="stat-description">(<?php printf(_n('%d test taken', '%d tests taken', $quiz_count, 'ielts-course-manager'), $quiz_count); ?>)</small>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        <?php endif; ?>
+        
         <?php if ($is_completed): ?>
             <div class="lesson-completed-badge">
                 <span class="dashicons dashicons-yes-alt"></span>
@@ -220,6 +250,58 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
         </div>
         
         <style>
+        /* Lesson progress stats styling */
+        .lesson-progress-stats {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        .lesson-stats-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .lesson-stat-item {
+            flex: 1;
+            min-width: 250px;
+        }
+        .lesson-stat-item .stat-label {
+            display: block;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .lesson-stat-item .stat-value {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+            color: #0073aa;
+            margin-bottom: 8px;
+        }
+        .lesson-stat-item .stat-description {
+            display: block;
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+        .stat-progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        .stat-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #0073aa 0%, #46b450 100%);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        
         .ielts-content-table {
             width: 100%;
             border-collapse: collapse;
