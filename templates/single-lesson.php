@@ -57,7 +57,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                 }
                 ?>
                 <div class="lesson-stats-container">
-                    <div class="lesson-stat-item">
+                    <div class="lesson-stat-item lesson-stat-progress">
                         <span class="stat-label"><?php _e('Percent Complete:', 'ielts-course-manager'); ?></span>
                         <span class="stat-value"><?php echo number_format($lesson_completion, 1); ?>%</span>
                         <div class="stat-progress-bar">
@@ -161,7 +161,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                             if (!empty($video_url)) {
                                 $type_label = __('Video', 'ielts-course-manager');
                             } else {
-                                $type_label = __('Sub lesson', 'ielts-course-manager');
+                                $type_label = __('Sublesson', 'ielts-course-manager');
                             }
                             $type_badge_class = 'resource';
                         } else {
@@ -294,6 +294,10 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
         .lesson-stat-item {
             flex: 1;
             min-width: 250px;
+        }
+        /* Make progress bar stat item full width for better visibility */
+        .lesson-stat-item.lesson-stat-progress {
+            flex: 0 0 100%;
         }
         .lesson-stat-item .stat-label {
             display: block;

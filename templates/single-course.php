@@ -37,7 +37,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
             ?>
             <div class="course-progress-stats">
                 <div class="course-stats-container">
-                    <div class="course-stat-item">
+                    <div class="course-stat-item course-stat-progress">
                         <span class="stat-label"><?php _e('Course Progress:', 'ielts-course-manager'); ?></span>
                         <span class="stat-value"><?php echo number_format($completion, 1); ?>%</span>
                         <div class="stat-progress-bar">
@@ -133,6 +133,10 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
         .course-stat-item {
             flex: 1;
             min-width: 250px;
+        }
+        /* Make progress bar stat item full width for better visibility */
+        .course-stat-item.course-stat-progress {
+            flex: 0 0 100%;
         }
         .course-stat-item .stat-label {
             display: block;
