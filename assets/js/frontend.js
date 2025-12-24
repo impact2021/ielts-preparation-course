@@ -1328,8 +1328,7 @@
                     var textAfter = textNode.nodeValue.substring(endOffset);
                     
                     if (textToHighlight.trim().length === 0) {
-                        // Exit this iteration; forEach continues with next node automatically
-                        return;
+                        return; // Skip empty/whitespace-only nodes
                     }
                     
                     // Create the highlighted span
