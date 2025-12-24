@@ -856,11 +856,18 @@ class IELTS_CM_Shortcodes {
         .category-course-item .course-stats-container {
             display: flex;
             gap: 30px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
         .category-course-item .course-stat-item {
             flex: 1;
-            min-width: 200px;
+            min-width: 180px;
+        }
+        
+        /* Mobile: stack items vertically */
+        @media (max-width: 768px) {
+            .category-course-item .course-stats-container {
+                flex-wrap: wrap;
+            }
         }
         .category-course-item .course-stat-item .stat-label {
             display: block;

@@ -289,15 +289,25 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
         .lesson-stats-container {
             display: flex;
             gap: 30px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
         .lesson-stat-item {
             flex: 1;
-            min-width: 250px;
+            min-width: 200px;
         }
-        /* Make progress bar stat item full width for better visibility */
+        /* Make progress bar stat item take more space on desktop */
         .lesson-stat-item.lesson-stat-progress {
-            flex: 0 0 100%;
+            flex: 2;
+        }
+        
+        /* Mobile: stack items vertically */
+        @media (max-width: 768px) {
+            .lesson-stats-container {
+                flex-wrap: wrap;
+            }
+            .lesson-stat-item.lesson-stat-progress {
+                flex: 0 0 100%;
+            }
         }
         .lesson-stat-item .stat-label {
             display: block;
