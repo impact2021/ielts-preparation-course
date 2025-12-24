@@ -125,6 +125,16 @@ class IELTS_CM_Admin {
             'high'
         );
         
+        // Practice test lesson sidebar meta box
+        add_meta_box(
+            'ielts_cm_lesson_practice_test',
+            __('Practice Test Settings', 'ielts-course-manager'),
+            array($this, 'lesson_practice_test_meta_box'),
+            'ielts_lesson',
+            'side',
+            'default'
+        );
+        
         // Lesson pages and exercises meta box
         add_meta_box(
             'ielts_cm_lesson_content',
@@ -385,6 +395,24 @@ class IELTS_CM_Admin {
                 <?php endforeach; ?>
             </select>
             <small><?php _e('Hold Ctrl (Cmd on Mac) to select multiple courses', 'ielts-course-manager'); ?></small>
+        </p>
+        <?php
+    }
+    
+    /**
+     * Practice test lesson meta box (sidebar)
+     */
+    public function lesson_practice_test_meta_box($post) {
+        $is_practice_test = get_post_meta($post->ID, '_ielts_cm_is_practice_test', true);
+        ?>
+        <div style="margin-bottom: 10px;">
+            <label>
+                <input type="checkbox" name="ielts_cm_is_practice_test" value="1" <?php checked($is_practice_test, '1'); ?>>
+                <?php _e('This is a practice test lesson page', 'ielts-course-manager'); ?>
+            </label>
+        </div>
+        <p style="margin: 0; padding: 10px; background: #f0f0f1; border-left: 4px solid #0073aa; font-size: 12px;">
+            <?php _e('When enabled, exercise scores will be displayed as IELTS band scores instead of percentages on this lesson page (only for exercises with band score scoring type configured).', 'ielts-course-manager'); ?>
         </p>
         <?php
     }
@@ -2762,6 +2790,13 @@ class IELTS_CM_Admin {
             } else {
                 update_post_meta($post_id, '_ielts_cm_course_ids', array());
                 delete_post_meta($post_id, '_ielts_cm_course_id');
+            }
+            
+            // Save practice test checkbox
+            if (isset($_POST['ielts_cm_is_practice_test'])) {
+                update_post_meta($post_id, '_ielts_cm_is_practice_test', '1');
+            } else {
+                delete_post_meta($post_id, '_ielts_cm_is_practice_test');
             }
         }
         

@@ -24,14 +24,37 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
         
         <h2><?php echo esc_html($course->post_title); ?></h2>
         
-        <?php if ($is_enrolled): ?>
+        <?php if ($is_enrolled && $user_id): ?>
         <div class="course-meta">
-            <span class="course-progress">
-                <?php echo round($completion, 1); ?>% <?php _e('Complete', 'ielts-course-manager'); ?>
-            </span>
+            <?php
+            // Get course completion percentage
+            $completion = $progress_tracker->get_course_completion_percentage($user_id, $course->ID);
+            
+            // Get course average score
+            $course_score_data = $progress_tracker->get_course_average_score($user_id, $course->ID);
+            $average_score = $course_score_data['average_percentage'];
+            $quiz_count = $course_score_data['quiz_count'];
+            ?>
+            <div class="course-progress-stats">
+                <div class="course-stats-container">
+                    <div class="course-stat-item">
+                        <span class="stat-label"><?php _e('Course Progress:', 'ielts-course-manager'); ?></span>
+                        <span class="stat-value"><?php echo number_format($completion, 1); ?>%</span>
+                        <div class="stat-progress-bar">
+                            <div class="stat-progress-fill" style="width: <?php echo min(100, $completion); ?>%;"></div>
+                        </div>
+                    </div>
+                    <?php if ($quiz_count > 0): ?>
+                        <div class="course-stat-item">
+                            <span class="stat-label"><?php _e('Average Score:', 'ielts-course-manager'); ?></span>
+                            <span class="stat-value"><?php echo number_format($average_score, 1); ?>%</span>
+                            <small class="stat-description">(<?php printf(_n('%d test taken', '%d tests taken', $quiz_count, 'ielts-course-manager'), $quiz_count); ?>)</small>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
         </div>
         <?php endif; ?>
-        
 
     </div>
     
@@ -94,6 +117,58 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
         </div>
         
         <style>
+        /* Course progress stats styling */
+        .course-progress-stats {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        .course-stats-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .course-stat-item {
+            flex: 1;
+            min-width: 250px;
+        }
+        .course-stat-item .stat-label {
+            display: block;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .course-stat-item .stat-value {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+            color: #0073aa;
+            margin-bottom: 8px;
+        }
+        .course-stat-item .stat-description {
+            display: block;
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+        .stat-progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        .stat-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #0073aa 0%, #46b450 100%);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        
         .ielts-lessons-table {
             width: 100%;
             border-collapse: collapse;
