@@ -128,15 +128,25 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
         .course-stats-container {
             display: flex;
             gap: 30px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
         .course-stat-item {
             flex: 1;
-            min-width: 250px;
+            min-width: 200px;
         }
-        /* Make progress bar stat item full width for better visibility */
+        /* Make progress bar stat item take more space on desktop */
         .course-stat-item.course-stat-progress {
-            flex: 0 0 100%;
+            flex: 2;
+        }
+        
+        /* Mobile: stack items vertically */
+        @media (max-width: 768px) {
+            .course-stats-container {
+                flex-wrap: wrap;
+            }
+            .course-stat-item.course-stat-progress {
+                flex: 0 0 100%;
+            }
         }
         .course-stat-item .stat-label {
             display: block;
