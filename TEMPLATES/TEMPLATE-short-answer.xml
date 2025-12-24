@@ -5,7 +5,7 @@
 	<title>IELTStestONLINE</title>
 	<link>https://www.ieltstestonline.com</link>
 	<description>Online IELTS preparation</description>
-	<pubDate>Tue, 23 Dec 2025 23:57:02 +0000</pubDate>
+	<pubDate>Wed, 24 Dec 2025 00:16:13 +0000</pubDate>
 	<language>en-NZ</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>https://www.ieltstestonline.com</wp:base_site_url>
@@ -18,17 +18,17 @@
 	<item>
 		<title><![CDATA[TEMPLATE - Short Answer Question Type]]></title>
 		<link>https://www.ieltstestonline.com/ielts-quiz/template-short-answer/</link>
-		<pubDate>Tue, 23 Dec 2025 23:57:02 +0000</pubDate>
+		<pubDate>Wed, 24 Dec 2025 00:16:13 +0000</pubDate>
 		<dc:creator><![CDATA[impact]]></dc:creator>
-		<guid isPermaLink="false">https://www.ieltstestonline.com/?post_type=ielts_quiz&amp;p=8000010</guid>
+		<guid isPermaLink="false">https://www.ieltstestonline.com/?post_type=ielts_quiz&amp;p=9999994</guid>
 		<description/>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>8000010</wp:post_id>
-		<wp:post_date><![CDATA[2025-12-23 23:57:02]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2025-12-23 23:57:02]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2025-12-23 23:57:02]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2025-12-23 23:57:02]]></wp:post_modified_gmt>
+		<wp:post_id>9999994</wp:post_id>
+		<wp:post_date><![CDATA[2025-12-24 00:16:13]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-12-24 00:16:13]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2025-12-24 00:16:13]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-12-24 00:16:13]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[template-short-answer]]></wp:post_name>
@@ -40,11 +40,19 @@
 		<wp:is_sticky>0</wp:is_sticky>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:4:{i:0;a:10:{s:4:"type";s:12:"short_answer";;s:12:"instructions";s:161:"Answer the questions below.\n\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\n\nQuestions 1-2 are based on Reading Passage 1.";;s:8:"question";s:28:"[Question 1 about passage 1]";;s:6:"points";i:1;;s:18:"no_answer_feedback";s:35:"[Provide guidance on where to look]";;s:16:"correct_feedback";s:28:"[Explain the correct answer]";;s:18:"incorrect_feedback";s:45:"[Provide the correct answer with explanation]";;s:15:"reading_text_id";i:0;;s:7:"options";s:0:"";;s:14:"correct_answer";s:30:"[ANSWER1]|[answer1]|[Answer 1]";};i:1;a:10:{s:4:"type";s:12:"short_answer";;s:12:"instructions";s:0:"";;s:8:"question";s:28:"[Question 2 about passage 1]";;s:6:"points";i:1;;s:18:"no_answer_feedback";s:18:"[Provide guidance]";;s:16:"correct_feedback";s:28:"[Explain the correct answer]";;s:18:"incorrect_feedback";s:45:"[Provide the correct answer with explanation]";;s:15:"reading_text_id";i:0;;s:7:"options";s:0:"";;s:14:"correct_answer";s:19:"[ANSWER2]|[answer2]";};i:2;a:10:{s:4:"type";s:12:"short_answer";;s:12:"instructions";s:161:"Answer the questions below.\n\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\n\nQuestions 3-4 are based on Reading Passage 2.";;s:8:"question";s:28:"[Question 3 about passage 2]";;s:6:"points";i:1;;s:18:"no_answer_feedback";s:18:"[Provide guidance]";;s:16:"correct_feedback";s:28:"[Explain the correct answer]";;s:18:"incorrect_feedback";s:45:"[Provide the correct answer with explanation]";;s:15:"reading_text_id";i:1;;s:7:"options";s:0:"";;s:14:"correct_answer";s:19:"[ANSWER3]|[answer3]";};i:3;a:10:{s:4:"type";s:12:"short_answer";;s:12:"instructions";s:0:"";;s:8:"question";s:28:"[Question 4 about passage 2]";;s:6:"points";i:1;;s:18:"no_answer_feedback";s:18:"[Provide guidance]";;s:16:"correct_feedback";s:28:"[Explain the correct answer]";;s:18:"incorrect_feedback";s:45:"[Provide the correct answer with explanation]";;s:15:"reading_text_id";i:1;;s:7:"options";s:0:"";;s:14:"correct_answer";s:19:"[ANSWER4]|[answer4]";}}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:2:{i:0;a:10:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:164:"Answer the questions below.
+
+Choose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.
+
+Questions 1-2 are based on the Demo Reading Passage.";s:8:"question";s:83:"In what year was the Great Barrier Reef designated as a UNESCO World Heritage Site?";s:6:"points";i:1;s:18:"no_answer_feedback";s:66:"Look for information about UNESCO World Heritage Site designation.";s:16:"correct_feedback";s:52:"Correct! The passage states it was selected in 1981.";s:18:"incorrect_feedback";s:89:"The passage clearly states the reef was selected as a UNESCO World Heritage Site in 1981.";s:15:"reading_text_id";i:0;s:7:"options";s:0:"";s:14:"correct_answer";s:4:"1981";}i:1;a:10:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:0:"";s:8:"question";s:63:"How many jobs does the Great Barrier Reef support in Australia?";s:6:"points";i:1;s:18:"no_answer_feedback";s:53:"Find the information about employment in the passage.";s:16:"correct_feedback";s:49:"Excellent! The passage mentions over 64,000 jobs.";s:18:"incorrect_feedback";s:54:"The passage states the reef supports over 64,000 jobs.";s:15:"reading_text_id";i:0;s:7:"options";s:0:"";s:14:"correct_answer";s:35:"64,000|64000|OVER 64,000|OVER 64000";}}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:2:{i:0;a:2:{s:5:"title";s:37:"Reading Passage 1 - [Your Title Here]";;s:7:"content";s:112:"[Content for reading passage 1. This passage should contain the information needed to answer questions 1 and 2.]";};i:1;a:2:{s:5:"title";s:44:"Reading Passage 2 - [Your Second Title Here]";;s:7:"content";s:112:"[Content for reading passage 2. This passage should contain the information needed to answer questions 3 and 4.]";}}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;a:2:{s:5:"title";s:45:"Demo Reading Passage - The Great Barrier Reef";s:7:"content";s:982:"The Great Barrier Reef, located off the coast of Queensland, Australia, is the world's largest coral reef system. Stretching over 2,300 kilometers, it comprises approximately 2,900 individual reefs and 900 islands. The reef was selected as a UNESCO World Heritage Site in 1981 due to its exceptional natural beauty and biological diversity.
+
+Marine biologists estimate that the Great Barrier Reef is home to around 1,500 species of fish, 400 types of coral, and numerous other marine creatures including sea turtles, dolphins, and sharks. The reef generates approximately $6.4 billion annually for the Australian economy through tourism and fishing industries, supporting over 64,000 jobs.
+
+However, the reef faces significant environmental challenges. Rising ocean temperatures have caused coral bleaching events, with the most severe occurring in 2016 and 2017. Scientists warn that without immediate action to reduce carbon emissions, up to 90% of the reef could be lost by 2050.";}}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
@@ -68,7 +76,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
-			<wp:meta_value><![CDATA[10]]></wp:meta_value>
+			<wp:meta_value><![CDATA[5]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_ielts_cm_course_ids]]></wp:meta_key>

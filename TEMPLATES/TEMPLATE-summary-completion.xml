@@ -1,91 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TEMPLATE - Short Answer Question Type (2 passages, 4 questions) -->
 <rss xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/" version="2.0">
 <channel>
-	<title>IELTStestONLINE</title>
-	<link>https://www.ieltstestonline.com</link>
-	<description>Online IELTS preparation</description>
-	<pubDate>Tue, 23 Dec 2025 23:57:02 +0000</pubDate>
-	<language>en-NZ</language>
-	<wp:wxr_version>1.2</wp:wxr_version>
-	<wp:base_site_url>https://www.ieltstestonline.com</wp:base_site_url>
-	<wp:base_blog_url>https://www.ieltstestonline.com</wp:base_blog_url>
+<title>IELTStestONLINE</title>
+<link>https://www.ieltstestonline.com</link>
+<description>Online IELTS preparation</description>
+<pubDate>Wed, 24 Dec 2025 00:16:38 +0000</pubDate>
+<language>en-NZ</language>
+<wp:wxr_version>1.2</wp:wxr_version>
+<wp:base_site_url>https://www.ieltstestonline.com</wp:base_site_url>
+<wp:base_blog_url>https://www.ieltstestonline.com</wp:base_blog_url>
+<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[impact]]></wp:author_login><wp:author_email><![CDATA[impact@ieltstestonline.com]]></wp:author_email><wp:author_display_name><![CDATA[impact]]></wp:author_display_name><wp:author_first_name><![CDATA[Patrick]]></wp:author_first_name><wp:author_last_name><![CDATA[Bourne]]></wp:author_last_name></wp:author>
+<generator>IELTS Test XML Creator</generator>
+<item>
+<title><![CDATA[TEMPLATE - Summary Completion Question Type]]></title>
+<link>https://www.ieltstestonline.com/ielts-quiz/template-summary-completion/</link>
+<pubDate>Wed, 24 Dec 2025 00:16:38 +0000</pubDate>
+<dc:creator><![CDATA[impact]]></dc:creator>
+<guid isPermaLink="false">https://www.ieltstestonline.com/?post_type=ielts_quiz&amp;p=8000008</guid>
+<description/>
+<content:encoded><![CDATA[]]></content:encoded>
+<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+<wp:post_id>8000008</wp:post_id>
+<wp:post_date><![CDATA[2025-12-24 00:16:38]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-12-24 00:16:38]]></wp:post_date_gmt>
+<wp:post_modified><![CDATA[2025-12-24 00:16:38]]></wp:post_modified>
+<wp:post_modified_gmt><![CDATA[2025-12-24 00:16:38]]></wp:post_modified_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_name><![CDATA[template-summary-completion]]></wp:post_name>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:post_type><![CDATA[ielts_quiz]]></wp:post_type>
+<wp:post_password><![CDATA[]]></wp:post_password>
+<wp:is_sticky>0</wp:is_sticky>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:1:{i:0;a:9:{s:4:"type";s:18:"summary_completion";s:12:"instructions";s:193:"Complete the summary below.
 
-	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[impact]]></wp:author_login><wp:author_email><![CDATA[impact@ieltstestonline.com]]></wp:author_email><wp:author_display_name><![CDATA[impact]]></wp:author_display_name><wp:author_first_name><![CDATA[Patrick]]></wp:author_first_name><wp:author_last_name><![CDATA[Bourne]]></wp:author_last_name></wp:author>
+Choose NO MORE THAN TWO WORDS from the passage for each answer.
 
-	<generator>IELTS Test XML Creator</generator>
-
-	<item>
-		<title><![CDATA[TEMPLATE - Short Answer Question Type]]></title>
-		<link>https://www.ieltstestonline.com/ielts-quiz/template-short-answer/</link>
-		<pubDate>Tue, 23 Dec 2025 23:57:02 +0000</pubDate>
-		<dc:creator><![CDATA[impact]]></dc:creator>
-		<guid isPermaLink="false">https://www.ieltstestonline.com/?post_type=ielts_quiz&amp;p=8000010</guid>
-		<description/>
-		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>8000010</wp:post_id>
-		<wp:post_date><![CDATA[2025-12-23 23:57:02]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2025-12-23 23:57:02]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2025-12-23 23:57:02]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2025-12-23 23:57:02]]></wp:post_modified_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[template-short-answer]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[ielts_quiz]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:4:{i:0;a:10:{s:4:"type";s:12:"short_answer";;s:12:"instructions";s:161:"Answer the questions below.\n\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\n\nQuestions 1-2 are based on Reading Passage 1.";;s:8:"question";s:28:"[Question 1 about passage 1]";;s:6:"points";i:1;;s:18:"no_answer_feedback";s:35:"[Provide guidance on where to look]";;s:16:"correct_feedback";s:28:"[Explain the correct answer]";;s:18:"incorrect_feedback";s:45:"[Provide the correct answer with explanation]";;s:15:"reading_text_id";i:0;;s:7:"options";s:0:"";;s:14:"correct_answer";s:30:"[ANSWER1]|[answer1]|[Answer 1]";};i:1;a:10:{s:4:"type";s:12:"short_answer";;s:12:"instructions";s:0:"";;s:8:"question";s:28:"[Question 2 about passage 1]";;s:6:"points";i:1;;s:18:"no_answer_feedback";s:18:"[Provide guidance]";;s:16:"correct_feedback";s:28:"[Explain the correct answer]";;s:18:"incorrect_feedback";s:45:"[Provide the correct answer with explanation]";;s:15:"reading_text_id";i:0;;s:7:"options";s:0:"";;s:14:"correct_answer";s:19:"[ANSWER2]|[answer2]";};i:2;a:10:{s:4:"type";s:12:"short_answer";;s:12:"instructions";s:161:"Answer the questions below.\n\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\n\nQuestions 3-4 are based on Reading Passage 2.";;s:8:"question";s:28:"[Question 3 about passage 2]";;s:6:"points";i:1;;s:18:"no_answer_feedback";s:18:"[Provide guidance]";;s:16:"correct_feedback";s:28:"[Explain the correct answer]";;s:18:"incorrect_feedback";s:45:"[Provide the correct answer with explanation]";;s:15:"reading_text_id";i:1;;s:7:"options";s:0:"";;s:14:"correct_answer";s:19:"[ANSWER3]|[answer3]";};i:3;a:10:{s:4:"type";s:12:"short_answer";;s:12:"instructions";s:0:"";;s:8:"question";s:28:"[Question 4 about passage 2]";;s:6:"points";i:1;;s:18:"no_answer_feedback";s:18:"[Provide guidance]";;s:16:"correct_feedback";s:28:"[Explain the correct answer]";;s:18:"incorrect_feedback";s:45:"[Provide the correct answer with explanation]";;s:15:"reading_text_id";i:1;;s:7:"options";s:0:"";;s:14:"correct_answer";s:19:"[ANSWER4]|[answer4]";}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:2:{i:0;a:2:{s:5:"title";s:37:"Reading Passage 1 - [Your Title Here]";;s:7:"content";s:112:"[Content for reading passage 1. This passage should contain the information needed to answer questions 1 and 2.]";};i:1;a:2:{s:5:"title";s:44:"Reading Passage 2 - [Your Second Title Here]";;s:7:"content";s:112:"[Content for reading passage 2. This passage should contain the information needed to answer questions 3 and 4.]";}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
-			<wp:meta_value><![CDATA[60]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[computer_based]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_exercise_label]]></wp:meta_key>
-			<wp:meta_value><![CDATA[exercise]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_open_as_popup]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_scoring_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[percentage]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
-			<wp:meta_value><![CDATA[10]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_course_ids]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_lesson_ids]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_course_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_lesson_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
+Summary:
+Electric vehicles use (1) ___________ instead of gasoline and produce no direct emissions.";s:8:"question";s:111:"Electric vehicles use [field 1] instead of gasoline. Battery costs have fallen by [field 2] percent since 2010.";s:6:"points";i:1;s:18:"no_answer_feedback";s:64:"Please answer all questions to get feedback on your performance.";s:16:"correct_feedback";s:43:"Excellent! You got all the answers correct.";s:18:"incorrect_feedback";s:54:"Some answers are incorrect. Please review the passage.";s:15:"reading_text_id";i:0;s:14:"summary_fields";a:2:{i:1;a:4:{s:6:"answer";s:32:"RECHARGEABLE BATTERIES|BATTERIES";s:16:"correct_feedback";s:72:"Correct! The passage clearly states that EVs use rechargeable batteries.";s:18:"incorrect_feedback";s:75:"Incorrect. Look for what EVs use instead of gasoline in the first sentence.";s:18:"no_answer_feedback";s:88:"You need to answer this question. Hint: What type of batteries do electric vehicles use?";}i:2;a:4:{s:6:"answer";s:2:"80";s:16:"correct_feedback";s:62:"Well done! The battery costs have decreased by 80% since 2010.";s:18:"incorrect_feedback";s:74:"Not quite. Check the passage for the percentage decrease in battery costs.";s:18:"no_answer_feedback";s:95:"Please provide an answer. Hint: Look for the percentage mentioned about battery cost reduction.";}}}}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:1:{i:0;a:2:{s:5:"title";s:40:"Demo Reading Passage - Electric Vehicles";s:7:"content";s:433:"Electric vehicles (EVs) are transforming the automotive industry. They use rechargeable batteries instead of gasoline, producing zero direct emissions. Modern EVs can travel over 300 miles on a single charge, making them practical for daily use. The cost of batteries has decreased by 80% since 2010, making EVs more affordable. Governments worldwide offer incentives to encourage EV adoption, including tax credits and free parking.";}}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
+<wp:meta_value><![CDATA[60]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
+<wp:meta_value><![CDATA[computer_based]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_exercise_label]]></wp:meta_key>
+<wp:meta_value><![CDATA[exercise]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_open_as_popup]]></wp:meta_key>
+<wp:meta_value><![CDATA[0]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_scoring_type]]></wp:meta_key>
+<wp:meta_value><![CDATA[percentage]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
+<wp:meta_value><![CDATA[5]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_course_ids]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_lesson_ids]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_course_id]]></wp:meta_key>
+<wp:meta_value><![CDATA[]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_lesson_id]]></wp:meta_key>
+<wp:meta_value><![CDATA[]]></wp:meta_value>
+</wp:postmeta>
+</item>
 </channel>
 </rss>
