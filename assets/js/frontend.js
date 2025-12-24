@@ -775,21 +775,32 @@
             }
         });
         
+        // Track currently visible reading text to avoid unnecessary scrolling
+        var currentReadingTextId = null;
+        
         // Function to switch reading text based on question
         function switchReadingText(questionElement) {
             var readingTextId = questionElement.data('reading-text-id');
             
             // Only switch if the question has a linked reading text
             if (readingTextId !== '' && readingTextId !== undefined) {
+                // Check if we're switching to a different passage
+                var isDifferentPassage = (currentReadingTextId !== readingTextId);
+                
                 // Hide all reading texts
                 $('.reading-text-section').hide();
                 // Show the linked reading text
                 $('#reading-text-' + readingTextId).fadeIn(300);
                 
-                // Scroll reading column to top
-                $('.reading-column').animate({
-                    scrollTop: 0
-                }, 300);
+                // Only scroll to top when switching to a different passage
+                if (isDifferentPassage) {
+                    $('.reading-column').animate({
+                        scrollTop: 0
+                    }, 300);
+                }
+                
+                // Update the current reading text ID
+                currentReadingTextId = readingTextId;
             }
         }
         
