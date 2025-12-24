@@ -134,6 +134,9 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
             flex: 1;
             min-width: 250px;
         }
+        .course-stat-item:has(.stat-progress-bar) {
+            flex: 0 0 100%;
+        }
         .course-stat-item .stat-label {
             display: block;
             font-size: 13px;
