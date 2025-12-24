@@ -1305,7 +1305,7 @@
                     
                     // Determine the start and end positions for this node
                     var startOffset = 0;
-                    var endOffset = textNode.length;
+                    var endOffset = textNode.nodeValue.length;
                     
                     // If this is the start node, use the range's start offset
                     if (textNode === range.startContainer) {
@@ -1323,7 +1323,9 @@
                     var textAfter = textNode.nodeValue.substring(endOffset);
                     
                     if (textToHighlight.trim().length === 0) {
-                        return; // Skip empty or whitespace-only nodes (returns from forEach callback)
+                        // Skip empty or whitespace-only text nodes
+                        // (return in forEach skips current iteration and continues with next)
+                        return;
                     }
                     
                     // Create the highlighted span
