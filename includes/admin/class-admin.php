@@ -900,7 +900,11 @@ class IELTS_CM_Admin {
                 definitionPlaceholder: <?php echo json_encode(__('Detailed information on how to do something...', 'ielts-course-manager')); ?>,
                 exampleLabel: <?php echo json_encode(__('Example Sentence:', 'ielts-course-manager')); ?>,
                 examplePlaceholder: <?php echo json_encode(__('Read the instructions carefully...', 'ielts-course-manager')); ?>,
-                removeButton: <?php echo json_encode(__('Remove Item', 'ielts-course-manager')); ?>
+                removeButton: <?php echo json_encode(__('Remove Item', 'ielts-course-manager')); ?>,
+                pasteVocab: <?php echo json_encode(__('Please paste vocabulary items in the text area.', 'ielts-course-manager')); ?>,
+                importSuccess: <?php echo json_encode(__('Successfully imported %d vocabulary item(s).', 'ielts-course-manager')); ?>,
+                noValidItems: <?php echo json_encode(__('No valid vocabulary items found to import.', 'ielts-course-manager')); ?>,
+                confirmClear: <?php echo json_encode(__('Are you sure you want to remove all vocabulary items? This action cannot be undone.', 'ielts-course-manager')); ?>
             };
             
             // Show/hide vocabulary fields based on checkbox
@@ -943,7 +947,7 @@ class IELTS_CM_Admin {
             $('#import_vocabulary_button').on('click', function() {
                 var text = $('#vocabulary_bulk_import').val().trim();
                 if (!text) {
-                    alert('Please paste vocabulary items in the text area.');
+                    alert(i18n.pasteVocab);
                     return;
                 }
                 
@@ -992,16 +996,16 @@ class IELTS_CM_Admin {
                 });
                 
                 if (imported > 0) {
-                    alert('Successfully imported ' + imported + ' vocabulary item(s).');
+                    alert(i18n.importSuccess.replace('%d', imported));
                     $('#vocabulary_bulk_import').val(''); // Clear the textarea
                 } else {
-                    alert('No valid vocabulary items found to import.');
+                    alert(i18n.noValidItems);
                 }
             });
             
             // Clear all vocabulary items
             $('#clear_vocabulary_button').on('click', function() {
-                if (confirm('Are you sure you want to remove all vocabulary items? This action cannot be undone.')) {
+                if (confirm(i18n.confirmClear)) {
                     $('#vocabulary_items_container').empty();
                     vocabularyIndex = 0;
                 }
