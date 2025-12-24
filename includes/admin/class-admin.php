@@ -715,24 +715,102 @@ class IELTS_CM_Admin {
         $resource_url = get_post_meta($post->ID, '_ielts_cm_resource_url', true);
         $video_url = get_post_meta($post->ID, '_ielts_cm_video_url', true);
         
+        $courses = get_posts(array(
+            'post_type' => 'ielts_course',
+            'posts_per_page' => -1,
+            'orderby' => 'title',
+            'order' => 'ASC'
+        ));
+        
         $lessons = get_posts(array(
             'post_type' => 'ielts_lesson',
             'posts_per_page' => -1,
             'orderby' => 'title',
             'order' => 'ASC'
         ));
+        
+        // Get course IDs for each lesson for filtering
+        $lesson_courses = array();
+        foreach ($lessons as $lesson) {
+            $course_ids = get_post_meta($lesson->ID, '_ielts_cm_course_ids', true);
+            if (!is_array($course_ids)) {
+                $course_ids = array();
+            }
+            if (empty($course_ids)) {
+                // Backward compatibility
+                $old_course_id = get_post_meta($lesson->ID, '_ielts_cm_course_id', true);
+                $course_ids = $old_course_id ? array($old_course_id) : array();
+            }
+            $lesson_courses[$lesson->ID] = $course_ids;
+        }
         ?>
+        <div style="margin-bottom: 15px;">
+            <label for="ielts_cm_filter_course"><strong><?php _e('Filter by Course (Optional)', 'ielts-course-manager'); ?></strong></label><br>
+            <select id="ielts_cm_filter_course" style="width: 100%;">
+                <option value=""><?php _e('-- Show all lessons --', 'ielts-course-manager'); ?></option>
+                <?php foreach ($courses as $course): ?>
+                    <option value="<?php echo esc_attr($course->ID); ?>">
+                        <?php echo esc_html($course->post_title); ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+            <small><?php _e('Select a course to show only lessons from that course', 'ielts-course-manager'); ?></small>
+        </div>
+        
         <div style="margin-bottom: 15px;">
             <label for="ielts_cm_lesson_ids"><strong><?php _e('Assign to Lessons', 'ielts-course-manager'); ?></strong></label><br>
             <select id="ielts_cm_lesson_ids" name="ielts_cm_lesson_ids[]" multiple style="width: 100%; height: 150px;">
                 <?php foreach ($lessons as $lesson): ?>
-                    <option value="<?php echo esc_attr($lesson->ID); ?>" <?php echo in_array($lesson->ID, $lesson_ids) ? 'selected' : ''; ?>>
+                    <option value="<?php echo esc_attr($lesson->ID); ?>" 
+                            data-courses="<?php echo esc_attr(json_encode($lesson_courses[$lesson->ID])); ?>"
+                            <?php echo in_array($lesson->ID, $lesson_ids) ? 'selected' : ''; ?>>
                         <?php echo esc_html($lesson->post_title); ?>
                     </option>
                 <?php endforeach; ?>
             </select>
             <small><?php _e('Hold Ctrl (Cmd on Mac) to select multiple lessons', 'ielts-course-manager'); ?></small>
         </div>
+        
+        <script>
+        jQuery(document).ready(function($) {
+            // Filter lessons based on selected course
+            $('#ielts_cm_filter_course').on('change', function() {
+                var selectedCourse = $(this).val();
+                var $lessonSelect = $('#ielts_cm_lesson_ids');
+                var $options = $lessonSelect.find('option');
+                
+                if (!selectedCourse) {
+                    // Show all lessons
+                    $options.show();
+                } else {
+                    // Show only lessons from selected course
+                    $options.each(function() {
+                        var $option = $(this);
+                        var lessonCourses = $option.data('courses');
+                        
+                        if (lessonCourses && Array.isArray(lessonCourses)) {
+                            // Check if lesson belongs to selected course
+                            if (lessonCourses.includes(parseInt(selectedCourse))) {
+                                $option.show();
+                            } else {
+                                // Hide and deselect if not in course
+                                $option.hide();
+                                if ($option.is(':selected')) {
+                                    $option.prop('selected', false);
+                                }
+                            }
+                        } else {
+                            // Hide lessons with no course assignment
+                            $option.hide();
+                            if ($option.is(':selected')) {
+                                $option.prop('selected', false);
+                            }
+                        }
+                    });
+                }
+            });
+        });
+        </script>
         
         <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ddd;">
         <h4 style="margin-top: 0;"><?php _e('Media & Resources', 'ielts-course-manager'); ?></h4>
@@ -824,6 +902,21 @@ class IELTS_CM_Admin {
             'orderby' => 'title',
             'order' => 'ASC'
         ));
+        
+        // Get course IDs for each lesson for filtering
+        $lesson_courses = array();
+        foreach ($lessons as $lesson) {
+            $lesson_course_ids = get_post_meta($lesson->ID, '_ielts_cm_course_ids', true);
+            if (!is_array($lesson_course_ids)) {
+                $lesson_course_ids = array();
+            }
+            if (empty($lesson_course_ids)) {
+                // Backward compatibility
+                $old_course_id = get_post_meta($lesson->ID, '_ielts_cm_course_id', true);
+                $lesson_course_ids = $old_course_id ? array($old_course_id) : array();
+            }
+            $lesson_courses[$lesson->ID] = $lesson_course_ids;
+        }
         ?>
         <p>
             <label for="ielts_cm_quiz_course_ids"><?php _e('Assign to Courses', 'ielts-course-manager'); ?></label><br>
@@ -834,19 +927,72 @@ class IELTS_CM_Admin {
                     </option>
                 <?php endforeach; ?>
             </select>
-            <small><?php _e('Hold Ctrl (Cmd on Mac) to select multiple courses', 'ielts-course-manager'); ?></small>
+            <small><?php _e('Hold Ctrl (Cmd on Mac) to select multiple courses. Selecting courses will filter the lessons below.', 'ielts-course-manager'); ?></small>
         </p>
         <p>
             <label for="ielts_cm_quiz_lesson_ids"><?php _e('Assign to Lessons (Optional)', 'ielts-course-manager'); ?></label><br>
             <select id="ielts_cm_quiz_lesson_ids" name="ielts_cm_quiz_lesson_ids[]" multiple style="width: 100%; height: 150px;">
                 <?php foreach ($lessons as $lesson): ?>
-                    <option value="<?php echo esc_attr($lesson->ID); ?>" <?php echo in_array($lesson->ID, $lesson_ids) ? 'selected' : ''; ?>>
+                    <option value="<?php echo esc_attr($lesson->ID); ?>" 
+                            data-courses="<?php echo esc_attr(json_encode($lesson_courses[$lesson->ID])); ?>"
+                            <?php echo in_array($lesson->ID, $lesson_ids) ? 'selected' : ''; ?>>
                         <?php echo esc_html($lesson->post_title); ?>
                     </option>
                 <?php endforeach; ?>
             </select>
-            <small><?php _e('Hold Ctrl (Cmd on Mac) to select multiple lessons', 'ielts-course-manager'); ?></small>
+            <small><?php _e('Hold Ctrl (Cmd on Mac) to select multiple lessons. Only lessons from selected courses above are shown.', 'ielts-course-manager'); ?></small>
         </p>
+        
+        <script>
+        jQuery(document).ready(function($) {
+            // Filter lessons based on selected courses for quiz
+            function filterQuizLessons() {
+                var selectedCourses = $('#ielts_cm_quiz_course_ids').val() || [];
+                var $lessonSelect = $('#ielts_cm_quiz_lesson_ids');
+                var $options = $lessonSelect.find('option');
+                
+                if (selectedCourses.length === 0) {
+                    // Show all lessons if no course selected
+                    $options.show();
+                } else {
+                    // Show only lessons from selected courses
+                    $options.each(function() {
+                        var $option = $(this);
+                        var lessonCourses = $option.data('courses');
+                        
+                        if (lessonCourses && Array.isArray(lessonCourses)) {
+                            // Check if lesson belongs to any selected course
+                            var hasMatch = lessonCourses.some(function(courseId) {
+                                return selectedCourses.includes(String(courseId));
+                            });
+                            
+                            if (hasMatch) {
+                                $option.show();
+                            } else {
+                                // Hide and deselect if not in any selected course
+                                $option.hide();
+                                if ($option.is(':selected')) {
+                                    $option.prop('selected', false);
+                                }
+                            }
+                        } else {
+                            // Hide lessons with no course assignment
+                            $option.hide();
+                            if ($option.is(':selected')) {
+                                $option.prop('selected', false);
+                            }
+                        }
+                    });
+                }
+            }
+            
+            // Trigger filtering when courses are selected
+            $('#ielts_cm_quiz_course_ids').on('change', filterQuizLessons);
+            
+            // Run on page load to filter based on initially selected courses
+            filterQuizLessons();
+        });
+        </script>
         
         <p>
             <label for="ielts_cm_exercise_label"><?php _e('Display Label for Students', 'ielts-course-manager'); ?></label><br>
@@ -4300,6 +4446,17 @@ class IELTS_CM_Admin {
         // Remove lesson from content
         $lesson_ids = array_diff($lesson_ids, array($lesson_id));
         update_post_meta($content_id, '_ielts_cm_lesson_ids', array_values($lesson_ids));
+        
+        // Also update backward compatibility field if needed
+        if (!empty($lesson_ids)) {
+            update_post_meta($content_id, '_ielts_cm_lesson_id', $lesson_ids[0]);
+        } else {
+            delete_post_meta($content_id, '_ielts_cm_lesson_id');
+        }
+        
+        // Clear any object cache for this post
+        wp_cache_delete($content_id, 'post_meta');
+        clean_post_cache($content_id);
         
         wp_send_json_success(array('message' => __('Content removed successfully', 'ielts-course-manager')));
     }
