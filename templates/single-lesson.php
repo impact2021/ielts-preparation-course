@@ -280,6 +280,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
         <style>
         /* Lesson progress stats styling */
         .lesson-progress-stats {
+            width: 100%;
             margin: 20px 0;
             padding: 20px;
             background: #f8f9fa;
