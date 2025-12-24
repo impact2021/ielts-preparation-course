@@ -175,7 +175,8 @@ class IELTS_Course_Manager {
      */
     public function fix_imported_serialized_data($postmeta, $post_id, $post) {
         // Only process IELTS quiz post types
-        if ($post['post_type'] !== 'ielts_quiz') {
+        // $post is an array in the wp_import_post_meta filter
+        if (!isset($post['post_type']) || $post['post_type'] !== 'ielts_quiz') {
             return $postmeta;
         }
         
@@ -197,9 +198,8 @@ class IELTS_Course_Manager {
                         // Test if the fix worked
                         $test_fixed = @unserialize($fixed_value);
                         if ($test_fixed !== false || $fixed_value === serialize(false)) {
-                            // Fix worked!
+                            // Fix worked - update the meta value
                             $postmeta[$index]['value'] = $fixed_value;
-                            error_log("IELTS CM: Fixed broken serialization in meta key: $meta_key for post ID: $post_id");
                         }
                     }
                 }
