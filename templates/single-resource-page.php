@@ -136,7 +136,7 @@ body.ielts-resource-single .content-area {
                                 <?php foreach ($vocabulary_items as $item): ?>
                                     <?php if (!empty($item['word'])): ?>
                                         <tr>
-                                            <td><strong><?php echo esc_html(strtoupper($item['word'])); ?></strong></td>
+                                            <td><strong><?php echo esc_html($item['word']); ?></strong></td>
                                             <td><?php echo esc_html($item['definition']); ?></td>
                                             <td><?php echo esc_html($item['example']); ?></td>
                                         </tr>

@@ -885,11 +885,11 @@ class IELTS_CM_Admin {
             // Translatable strings
             var i18n = {
                 wordLabel: <?php echo json_encode(__('Word/Phrase:', 'ielts-course-manager')); ?>,
-                wordPlaceholder: 'e.g., INSTRUCTIONS',
+                wordPlaceholder: <?php echo json_encode(__('e.g., INSTRUCTIONS', 'ielts-course-manager')); ?>,
                 definitionLabel: <?php echo json_encode(__('Definition:', 'ielts-course-manager')); ?>,
-                definitionPlaceholder: 'Detailed information on how to do something...',
+                definitionPlaceholder: <?php echo json_encode(__('Detailed information on how to do something...', 'ielts-course-manager')); ?>,
                 exampleLabel: <?php echo json_encode(__('Example Sentence:', 'ielts-course-manager')); ?>,
-                examplePlaceholder: 'Read the instructions carefully...',
+                examplePlaceholder: <?php echo json_encode(__('Read the instructions carefully...', 'ielts-course-manager')); ?>,
                 removeButton: <?php echo json_encode(__('Remove Item', 'ielts-course-manager')); ?>
             };
             
