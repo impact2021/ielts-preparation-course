@@ -182,7 +182,9 @@ class IELTS_CM_Sync_API {
         // Update metadata
         if (!empty($content_data['metadata'])) {
             foreach ($content_data['metadata'] as $key => $value) {
-                update_post_meta($post_id, $key, $value);
+                // Remap IDs for relational metadata
+                $remapped_value = $this->remap_relational_ids($key, $value);
+                update_post_meta($post_id, $key, $remapped_value);
             }
         }
         
@@ -222,6 +224,81 @@ class IELTS_CM_Sync_API {
         
         $posts = get_posts($args);
         return !empty($posts) ? $posts[0]->ID : false;
+    }
+    
+    /**
+     * Remap IDs in relational metadata from primary site IDs to subsite IDs
+     */
+    private function remap_relational_ids($meta_key, $meta_value) {
+        // Define which meta keys contain IDs that need to be remapped
+        $id_fields = array(
+            '_ielts_cm_course_id' => 'course',
+            '_ielts_cm_course_ids' => 'course',
+            '_ielts_cm_lesson_id' => 'lesson',
+            '_ielts_cm_lesson_ids' => 'lesson'
+        );
+        
+        // Check if this meta key needs ID remapping
+        if (!isset($id_fields[$meta_key])) {
+            return $meta_value;
+        }
+        
+        $content_type = $id_fields[$meta_key];
+        
+        // Handle single ID
+        if ($meta_key === '_ielts_cm_course_id' || $meta_key === '_ielts_cm_lesson_id') {
+            if (empty($meta_value)) {
+                return $meta_value;
+            }
+            
+            $original_id = intval($meta_value);
+            $mapped_id = $this->find_existing_content($original_id, $content_type);
+            
+            // If we found a mapped ID, use it; otherwise keep original (will be created later)
+            return $mapped_id ? $mapped_id : $meta_value;
+        }
+        
+        // Handle array of IDs (could be serialized or JSON)
+        if ($meta_key === '_ielts_cm_course_ids' || $meta_key === '_ielts_cm_lesson_ids') {
+            $is_serialized = false;
+            $ids = false;
+            
+            // Check if it's serialized data first
+            if (is_serialized($meta_value)) {
+                $ids = maybe_unserialize($meta_value);
+                if (is_array($ids)) {
+                    $is_serialized = true;
+                }
+            }
+            
+            // If not serialized or unserialize failed, try JSON decode
+            if (!is_array($ids)) {
+                $ids = json_decode($meta_value, true);
+            }
+            
+            // If still not an array, return original value
+            if (!is_array($ids)) {
+                return $meta_value;
+            }
+            
+            // Remap each ID in the array
+            $mapped_ids = array();
+            foreach ($ids as $id) {
+                $original_id = intval($id);
+                $mapped_id = $this->find_existing_content($original_id, $content_type);
+                $mapped_ids[] = $mapped_id ? $mapped_id : $original_id;
+            }
+            
+            // Return in the same format it came in
+            if ($is_serialized) {
+                return serialize($mapped_ids);
+            } else {
+                $json = wp_json_encode($mapped_ids);
+                return $json !== false ? $json : $meta_value;
+            }
+        }
+        
+        return $meta_value;
     }
     
     /**

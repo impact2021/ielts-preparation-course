@@ -1734,7 +1734,7 @@ select.answer-select-inline.answer-incorrect {
 
 .visualizer-bar {
     width: 12px;
-    background: linear-gradient(to top, #0073aa, #00a0d2);
+    background: linear-gradient(to top, #4a90a4, #6ba5b8);
     border-radius: 6px;
     animation: visualize 0.8s ease-in-out infinite;
 }
@@ -1750,10 +1750,10 @@ select.answer-select-inline.answer-incorrect {
 
 @keyframes visualize {
     0%, 100% {
-        height: 20px;
+        height: 30px;
     }
     50% {
-        height: 80px;
+        height: 55px;
     }
 }
 
