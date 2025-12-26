@@ -40,7 +40,7 @@
 <wp:is_sticky>0</wp:is_sticky>
 <wp:postmeta>
 <wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
-<wp:meta_value><![CDATA[a:10:{i:0;a:10:{s:4:"type";s:8:"headings";s:12:"instructions";s:283:"The Reading Passage has eight paragraphs A-F.
+<wp:meta_value><![CDATA[a:10:{i:0;a:10:{s:4:"type";s:8:"headings";s:12:"instructions";s:281:"The Reading Passage has six paragraphs A-F.
 
 Choose the correct heading for paragraphs A-D and F from the list of headings below.
 
@@ -93,7 +93,7 @@ v. From dining to shopping
 vi. Harbourside development
 vii. Something for every season
 viii. Options in the surrounding area
-ix. Places to eat";s:14:"correct_answer";s:2:"iv";}i:5;a:10:{s:4:"type";s:8:"headings";s:12:"instructions";s:288:"Reading Passage has seven paragraphs A-G.
+ix. Places to eat";s:14:"correct_answer";s:2:"iv";}i:5;a:10:{s:4:"type";s:8:"headings";s:12:"instructions";s:292:"The Reading Passage has seven paragraphs A-G.
 
 Choose the correct heading for paragraphs A-C and E-F from the list of headings below.
 
