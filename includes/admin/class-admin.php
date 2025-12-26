@@ -340,7 +340,7 @@ class IELTS_CM_Admin {
         if ($post->ID && get_post_status($post->ID)) {
             ?>
             <div id="ielts-cm-clone-course-box">
-                <p><?php _e('Clone this course with all its lessons, sub-lessons, and exercises.', 'ielts-course-manager'); ?></p>
+                <p><?php _e('Clone this course with the same table of contents. The cloned course will reference the same lessons, sub-lessons, and exercises (not create duplicates).', 'ielts-course-manager'); ?></p>
                 <button type="button" id="ielts-cm-clone-course-btn" class="button button-primary button-large" style="width: 100%;">
                     <?php _e('Clone Course', 'ielts-course-manager'); ?>
                 </button>
