@@ -461,6 +461,14 @@ class IELTS_CM_Sync_API {
     private function sync_course_lessons($course_id, $primary_lesson_ids) {
         global $wpdb;
         
+        // Validate input
+        if (!is_array($primary_lesson_ids)) {
+            return;
+        }
+        
+        // Convert to associative array for O(1) lookup
+        $primary_lessons_map = array_flip($primary_lesson_ids);
+        
         // Get all lessons currently associated with this course on the subsite
         $subsite_lessons = $wpdb->get_results($wpdb->prepare("
             SELECT post_id, meta_value as original_id 
@@ -501,7 +509,7 @@ class IELTS_CM_Sync_API {
             $original_id = intval($lesson->original_id);
             
             // If this lesson's original ID is not in the current primary lesson list, remove it
-            if (!in_array($original_id, $primary_lesson_ids)) {
+            if (!isset($primary_lessons_map[$original_id])) {
                 // Trash the lesson instead of deleting to preserve data
                 wp_trash_post($lesson->post_id);
             }

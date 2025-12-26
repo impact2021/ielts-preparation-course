@@ -261,10 +261,7 @@ class IELTS_CM_Multi_Site_Sync {
             // Get list of current lesson IDs for this course
             // This allows subsites to remove lessons that are no longer in the course
             $lessons = $this->get_course_lessons($content_id);
-            $data['current_lesson_ids'] = array();
-            foreach ($lessons as $lesson) {
-                $data['current_lesson_ids'][] = $lesson->ID;
-            }
+            $data['current_lesson_ids'] = wp_list_pluck($lessons, 'ID');
         }
         
         // Get featured image
