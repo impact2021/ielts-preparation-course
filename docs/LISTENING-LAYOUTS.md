@@ -233,3 +233,67 @@ Potential improvements for future versions:
 - Time-synced transcript highlighting
 - Download transcript option
 - Audio progress indicator
+
+## Starting Question Number Feature
+
+### Overview
+All exercise layouts now support setting a custom starting question number. This is useful for exercises that are part of a larger test where questions don't start at 1.
+
+### Use Cases
+- **Full IELTS Reading Test**: Section 1 (Q1-13), Section 2 (Q14-26), Section 3 (Q27-40)
+- **Continuation Exercises**: When splitting a long test into multiple exercises
+- **Practice Tests**: Simulating specific sections of official tests
+
+### Configuration
+
+#### In Admin Interface
+1. Edit any quiz/exercise
+2. Find the "Starting Question Number" field (below Pass Percentage)
+3. Enter the desired starting number (default: 1, min: 1, max: 100)
+4. Example: Enter "21" to start at Question 21
+
+#### In Text Format
+Add to the EXERCISE SETTINGS block:
+```
+=== EXERCISE SETTINGS ===
+Starting Question Number: 21
+=== END EXERCISE SETTINGS ===
+```
+
+#### In XML Export/Import
+The field is automatically included in XML exports:
+```xml
+<wp:meta_key><![CDATA[_ielts_cm_starting_question_number]]></wp:meta_key>
+<wp:meta_value><![CDATA[21]]></wp:meta_value>
+```
+
+### How It Works
+
+The starting question number affects:
+1. **Question Headers**: "Question 21" instead of "Question 1"
+2. **Multi-Question Items**: "Questions 21-23" for multi-select
+3. **Navigation Buttons**: Bottom buttons show correct numbers
+4. **Question Ranges**: Automatically calculated based on question types
+
+### Example
+
+If you set Starting Question Number to 27:
+- First question displays as "Question 27"
+- A 3-option multi-select would be "Questions 27-29"
+- Next single question would be "Question 30"
+- Navigation buttons show: [27] [28] [29] [30] ...
+
+### Technical Details
+
+- **Database Field**: `_ielts_cm_starting_question_number`
+- **Default Value**: 1 (when not set)
+- **Validation**: Integer, minimum 1, maximum 100
+- **Templates Updated**: All 4 quiz templates (standard, CBT, listening practice, listening exercise)
+- **Backward Compatible**: Existing exercises without this field default to 1
+
+### Considerations
+
+- Question numbers are display-only (for student interface)
+- Backend question indices remain 0-based
+- Scoring and grading are unaffected
+- Question count calculations work the same way
