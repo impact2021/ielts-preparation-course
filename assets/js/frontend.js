@@ -787,20 +787,21 @@
                 // Check if we're switching to a different passage
                 var isDifferentPassage = (currentReadingTextId !== readingTextId);
                 
-                // Hide all reading texts
-                $('.reading-text-section').hide();
-                // Show the linked reading text
-                $('#reading-text-' + readingTextId).fadeIn(300);
-                
-                // Only scroll to top when switching to a different passage
+                // Only hide/show and scroll when actually switching to a different passage
                 if (isDifferentPassage) {
+                    // Hide all reading texts
+                    $('.reading-text-section').hide();
+                    // Show the linked reading text
+                    $('#reading-text-' + readingTextId).fadeIn(300);
+                    
+                    // Scroll to top when switching to a different passage
                     $('.reading-column').animate({
                         scrollTop: 0
                     }, 300);
+                    
+                    // Update the current reading text ID
+                    currentReadingTextId = readingTextId;
                 }
-                
-                // Update the current reading text ID
-                currentReadingTextId = readingTextId;
             } else {
                 // If no valid reading text, reset the tracking variable
                 currentReadingTextId = null;
