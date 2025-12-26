@@ -5981,42 +5981,28 @@ class IELTS_CM_Admin {
             $new_reading_texts = array();
         }
         
-        // Merge reading texts: We need to handle ID conflicts
-        // Find the highest existing reading text ID
-        $max_id = -1; // Start at -1 so first new text gets ID 0 if no existing texts
-        foreach ($existing_reading_texts as $text) {
-            if (isset($text['id']) && is_numeric($text['id'])) {
-                $text_id = intval($text['id']);
-                if ($text_id > $max_id) {
-                    $max_id = $text_id;
-                }
-            }
-        }
+        // Reading texts use array indices as IDs, not an 'id' field
+        // When appending, we need to remap the reading_text_id in questions from XML
+        // to account for the new indices after merging
         
-        // Remap reading text IDs in new texts to avoid conflicts
-        $id_map = array();
-        foreach ($new_reading_texts as $index => $text) {
-            $old_id = isset($text['id']) ? intval($text['id']) : 0;
-            $new_id = ++$max_id;
-            // Use string keys to handle mapping correctly, including 0
-            $id_map[strval($old_id)] = $new_id;
-            $new_reading_texts[$index]['id'] = $new_id;
-        }
+        // Calculate the offset for new reading text IDs
+        // New reading texts will start at index: count(existing_reading_texts)
+        $reading_text_id_offset = count($existing_reading_texts);
         
         // Update reading_text_id references in new questions before merging
+        // Add the offset to each reading_text_id so they point to correct reading texts after merge
         foreach ($new_questions as $q_index => $question) {
-            if (isset($question['reading_text_id'])) {
-                $old_reading_text_id = strval(intval($question['reading_text_id']));
-                if (isset($id_map[$old_reading_text_id])) {
-                    $new_questions[$q_index]['reading_text_id'] = $id_map[$old_reading_text_id];
-                }
+            if (isset($question['reading_text_id']) && is_numeric($question['reading_text_id'])) {
+                // Add offset to reading_text_id to account for existing reading texts
+                $new_questions[$q_index]['reading_text_id'] = intval($question['reading_text_id']) + $reading_text_id_offset;
             }
         }
         
         // Merge questions: append new questions to existing ones (with updated IDs)
         $merged_questions = array_merge($existing_questions, $new_questions);
         
-        // Merge reading texts
+        // Merge reading texts: simply append them
+        // The array indices will automatically continue from where existing texts end
         $merged_reading_texts = array_merge($existing_reading_texts, $new_reading_texts);
         
         // Update post meta with merged data

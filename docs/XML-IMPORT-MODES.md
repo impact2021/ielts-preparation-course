@@ -55,17 +55,25 @@ When editing an exercise (ielts_quiz post type), navigate to the "Import/Export 
 
 ### Reading Text ID Remapping
 
-When appending content, reading text IDs from the XML file are automatically remapped to avoid conflicts:
+When appending content, reading text references are automatically adjusted because reading texts use array indices as IDs:
+
+**How it works:**
+- Reading texts are stored in an array where the array index (0, 1, 2...) serves as the ID
+- Questions reference reading texts using `reading_text_id` which corresponds to the array index
+- When appending, new reading texts are added after existing ones
+- Question references are updated by adding an offset
 
 **Example:**
-- Existing exercise has reading texts with IDs: 0, 1, 2
-- XML file has reading texts with IDs: 0, 1
-- After import, XML reading texts will have IDs: 3, 4
-- Questions from XML that reference reading text 0 will be updated to reference 3
-- Questions from XML that reference reading text 1 will be updated to reference 4
+- Existing exercise has 2 reading texts (indices 0, 1)
+- XML file has 2 reading texts (indices 0, 1)
+- After import:
+  - Existing reading texts remain at indices 0, 1
+  - New reading texts are appended at indices 2, 3
+  - Questions from XML that reference reading text 0 are updated to reference 2
+  - Questions from XML that reference reading text 1 are updated to reference 3
 
 This ensures that:
-1. No ID conflicts occur
+1. No index conflicts occur
 2. Questions correctly reference their intended reading texts
 3. Existing content remains unchanged
 
