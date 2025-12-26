@@ -1468,59 +1468,63 @@
             var audioElement = document.getElementById('listening-audio');
             var transcriptContainer = $('#listening-transcript');
             
-            // Start countdown when page loads
-            var countdownTimer = countdownSeconds;
-            countdownElement.text(countdownTimer);
-            
-            var countdownInterval = setInterval(function() {
-                countdownTimer--;
+            // Only start countdown if audio URL is available
+            if (audioUrl && countdownElement.length && audioElement) {
+                // Start countdown when page loads
+                var countdownTimer = countdownSeconds;
                 countdownElement.text(countdownTimer);
                 
-                if (countdownTimer <= 0) {
-                    clearInterval(countdownInterval);
-                    startAudioPlayback();
-                }
-            }, 1000);
-            
-            function startAudioPlayback() {
-                // Hide countdown and show audio player
-                countdownContainer.fadeOut(300, function() {
-                    audioPlayerContainer.fadeIn(300);
+                var countdownInterval = setInterval(function() {
+                    countdownTimer--;
                     
-                    // Start playing audio
-                    if (audioElement && audioUrl) {
-                        audioElement.play().catch(function(error) {
-                            console.log('Audio autoplay failed:', error);
-                            // Fallback: show a play button or message
-                            audioPlayerContainer.prepend('<p style="color: #d63638; text-align: center;">Click to play audio manually</p>');
-                        });
+                    if (countdownTimer <= 0) {
+                        clearInterval(countdownInterval);
+                        startAudioPlayback();
+                    } else {
+                        countdownElement.text(countdownTimer);
                     }
-                });
-            }
-            
-            // For listening practice: animate visualizer while audio is playing
-            if (isListeningPractice && audioElement) {
-                audioElement.addEventListener('ended', function() {
-                    // Stop visualizer animation when audio ends
-                    $('.audio-status-icon').text('■');
-                    $('.audio-status-text').text('Audio Finished');
-                    $('.visualizer-bar').css('animation', 'none');
-                });
-            }
-            
-            // Show transcript and audio controls after submission
-            var originalSubmit = $('#ielts-quiz-form').data('submit-handler');
-            
-            $('#ielts-quiz-form').on('submit', function(e) {
-                // After the quiz is submitted, show the transcript
-                setTimeout(function() {
-                    // Hide audio player
-                    audioPlayerContainer.fadeOut(300, function() {
-                        // Show transcript
-                        transcriptContainer.fadeIn(300);
+                }, 1000);
+                
+                function startAudioPlayback() {
+                    // Hide countdown and show audio player
+                    countdownContainer.fadeOut(300, function() {
+                        audioPlayerContainer.fadeIn(300);
+                        
+                        // Start playing audio after a short delay to ensure visibility
+                        setTimeout(function() {
+                            if (audioElement && audioUrl) {
+                                audioElement.play().catch(function(error) {
+                                    console.log('Audio autoplay failed:', error);
+                                    // Fallback: show a play button or message
+                                    audioPlayerContainer.prepend('<p style="color: #d63638; text-align: center; margin-top: 10px;">Please click the play button to start the audio</p>');
+                                });
+                            }
+                        }, 100);
                     });
-                }, 500);
-            });
+                }
+                
+                // For listening practice: animate visualizer while audio is playing
+                if (isListeningPractice && audioElement) {
+                    audioElement.addEventListener('ended', function() {
+                        // Stop visualizer animation when audio ends
+                        $('.audio-status-icon').text('■');
+                        $('.audio-status-text').text('Audio Finished');
+                        $('.visualizer-bar').css('animation', 'none');
+                    });
+                }
+                
+                // Show transcript and audio controls after submission
+                $('#ielts-quiz-form').on('submit', function(e) {
+                    // After the quiz is submitted, show the transcript
+                    setTimeout(function() {
+                        // Hide audio player
+                        audioPlayerContainer.fadeOut(300, function() {
+                            // Show transcript
+                            transcriptContainer.fadeIn(300);
+                        });
+                    }, 500);
+                });
+            }
         }
     });
     
