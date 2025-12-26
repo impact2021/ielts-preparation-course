@@ -1,131 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TEMPLATE - Headings Question Type (2 passages, 4 questions) -->
+<!-- Heading matching questions - Reading comprehension -->
 <rss xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/" version="2.0">
 <channel>
-	<title>IELTStestONLINE</title>
-	<link>https://www.ieltstestonline.com</link>
-	<description>Online IELTS preparation</description>
-	<pubDate>Tue, 23 Dec 2025 23:52:39 +0000</pubDate>
-	<language>en-NZ</language>
-	<wp:wxr_version>1.2</wp:wxr_version>
-	<wp:base_site_url>https://www.ieltstestonline.com</wp:base_site_url>
-	<wp:base_blog_url>https://www.ieltstestonline.com</wp:base_blog_url>
+<title>IELTStestONLINE</title>
+<link>https://www.ieltstestonline.com</link>
+<description>Online IELTS preparation</description>
+<pubDate>Thu, 26 Dec 2025 16:24:20 +0000</pubDate>
+<language>en-NZ</language>
+<wp:wxr_version>1.2</wp:wxr_version>
+<wp:base_site_url>https://www.ieltstestonline.com</wp:base_site_url>
+<wp:base_blog_url>https://www.ieltstestonline.com</wp:base_blog_url>
 
-	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[impact]]></wp:author_login><wp:author_email><![CDATA[impact@ieltstestonline.com]]></wp:author_email><wp:author_display_name><![CDATA[impact]]></wp:author_display_name><wp:author_first_name><![CDATA[Patrick]]></wp:author_first_name><wp:author_last_name><![CDATA[Bourne]]></wp:author_last_name></wp:author>
+<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[impact]]></wp:author_login><wp:author_email><![CDATA[impact@ieltstestonline.com]]></wp:author_email><wp:author_display_name><![CDATA[impact]]></wp:author_display_name><wp:author_first_name><![CDATA[Patrick]]></wp:author_first_name><wp:author_last_name><![CDATA[Bourne]]></wp:author_last_name></wp:author>
 
-	<generator>IELTS Test XML Creator</generator>
+<generator>IELTS Test XML Creator</generator>
 
-	<item>
-		<title><![CDATA[Heading matching questions]]></title>
-		<link>https://www.ieltstestonline.com/ielts-quiz/heading-matching-questions/</link>
-		<pubDate>Tue, 23 Dec 2025 23:52:39 +0000</pubDate>
-		<dc:creator><![CDATA[impact]]></dc:creator>
-		<guid isPermaLink="false">https://www.ieltstestonline.com/?post_type=ielts_quiz&amp;p=8000001</guid>
-		<description/>
-		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>8000001</wp:post_id>
-		<wp:post_date><![CDATA[2025-12-23 23:52:39]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2025-12-23 23:52:39]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2025-12-23 23:52:39]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2025-12-23 23:52:39]]></wp:post_modified_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[heading-matching-questions]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[ielts_quiz]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:4:{i:0;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:249:"Reading Passage 1 has four paragraphs A-D.
+<item>
+<title><![CDATA[Heading matching questions]]></title>
+<link>https://www.ieltstestonline.com/ielts-quiz/heading-matching-questions/</link>
+<pubDate>Thu, 26 Dec 2025 16:24:20 +0000</pubDate>
+<dc:creator><![CDATA[impact]]></dc:creator>
+<guid isPermaLink="false">https://www.ieltstestonline.com/?post_type=ielts_quiz&amp;p=9000005</guid>
+<description/>
+<content:encoded><![CDATA[]]></content:encoded>
+<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+<wp:post_id>9000005</wp:post_id>
+<wp:post_date><![CDATA[2025-12-26 16:24:20]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-12-26 16:24:20]]></wp:post_date_gmt>
+<wp:post_modified><![CDATA[2025-12-26 16:24:20]]></wp:post_modified>
+<wp:post_modified_gmt><![CDATA[2025-12-26 16:24:20]]></wp:post_modified_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_name><![CDATA[heading-matching-questions]]></wp:post_name>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:post_type><![CDATA[ielts_quiz]]></wp:post_type>
+<wp:post_password><![CDATA[]]></wp:post_password>
+<wp:is_sticky>0</wp:is_sticky>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:10:{i:0;a:10:{s:4:"type";s:8:"headings";s:12:"instructions";s:283:"The Reading Passage has eight paragraphs A-F.
 
-Choose the most suitable heading from the list below for paragraphs A and B.
+Choose the correct heading for paragraphs A-D and F from the list of headings below.
 
-List of Headings:
-I. [First heading option]
-II. [Second heading option]
-III. [Third heading option]
-IV. [Fourth heading option]";s:8:"question";s:11:"Paragraph A";s:6:"points";i:1;s:18:"no_answer_feedback";s:56:"[Provide guidance about what to look for in paragraph A]";s:16:"correct_feedback";s:53:"[Explain why the correct heading matches paragraph A]";s:18:"incorrect_feedback";s:44:"[Explain what paragraph A is actually about]";s:15:"reading_text_id";i:0;s:10:"mc_options";a:4:{i:0;a:3:{s:4:"text";s:25:"I. [First heading option]";s:10:"is_correct";b:1;s:8:"feedback";s:57:"[Explain why this is the correct heading for paragraph A]";}i:1;a:3:{s:4:"text";s:27:"II. [Second heading option]";s:10:"is_correct";b:0;s:8:"feedback";s:53:"[Explain why this heading does not match paragraph A]";}i:2;a:3:{s:4:"text";s:27:"III. [Third heading option]";s:10:"is_correct";b:0;s:8:"feedback";s:53:"[Explain why this heading does not match paragraph A]";}i:3;a:3:{s:4:"text";s:27:"IV. [Fourth heading option]";s:10:"is_correct";b:0;s:8:"feedback";s:53:"[Explain why this heading does not match paragraph A]";}}s:7:"options";s:109:"I. [First heading option]
-II. [Second heading option]
-III. [Third heading option]
-IV. [Fourth heading option]";s:14:"correct_answer";s:1:"0";s:15:"option_feedback";a:4:{i:0;s:57:"[Explain why this is the correct heading for paragraph A]";i:1;s:53:"[Explain why this heading does not match paragraph A]";i:2;s:53:"[Explain why this heading does not match paragraph A]";i:3;s:53:"[Explain why this heading does not match paragraph A]";}}i:1;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:11:"Paragraph B";s:6:"points";i:1;s:18:"no_answer_feedback";s:56:"[Provide guidance about what to look for in paragraph B]";s:16:"correct_feedback";s:53:"[Explain why the correct heading matches paragraph B]";s:18:"incorrect_feedback";s:44:"[Explain what paragraph B is actually about]";s:15:"reading_text_id";i:0;s:10:"mc_options";a:4:{i:0;a:3:{s:4:"text";s:25:"I. [First heading option]";s:10:"is_correct";b:0;s:8:"feedback";s:53:"[Explain why this heading does not match paragraph B]";}i:1;a:3:{s:4:"text";s:27:"II. [Second heading option]";s:10:"is_correct";b:1;s:8:"feedback";s:57:"[Explain why this is the correct heading for paragraph B]";}i:2;a:3:{s:4:"text";s:27:"III. [Third heading option]";s:10:"is_correct";b:0;s:8:"feedback";s:53:"[Explain why this heading does not match paragraph B]";}i:3;a:3:{s:4:"text";s:27:"IV. [Fourth heading option]";s:10:"is_correct";b:0;s:8:"feedback";s:53:"[Explain why this heading does not match paragraph B]";}}s:7:"options";s:109:"I. [First heading option]
-II. [Second heading option]
-III. [Third heading option]
-IV. [Fourth heading option]";s:14:"correct_answer";s:1:"1";s:15:"option_feedback";a:4:{i:0;s:53:"[Explain why this heading does not match paragraph B]";i:1;s:57:"[Explain why this is the correct heading for paragraph B]";i:2;s:53:"[Explain why this heading does not match paragraph B]";i:3;s:53:"[Explain why this heading does not match paragraph B]";}}i:2;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:305:"Reading Passage 2 has four paragraphs A-D.
+List of headings:
+i. Messing about on the water
+ii. Boat ownership in the city
+iii. The famous harbour bridge
+iv. Enjoying the natural side
+v. From dining to shopping
+vi. Harbourside development
+vii. Something for every season
+viii. Options in the surrounding area
+ix. Places to eat";s:8:"question";s:11:"Paragraph A";s:6:"points";i:1;s:18:"no_answer_feedback";s:88:"Please select an answer. Read paragraph A and identify the main theme of the paragraph.";s:16:"correct_feedback";s:111:"Correct! Paragraph A is 'Messing about on the water' - the paragraph refers to water repeatedly, and boats.";s:18:"incorrect_feedback";s:102:"Paragraph A is 'Messing about on the water' - it refers to water repeatedly and boats by sea.";s:15:"reading_text_id";i:0;s:7:"options";s:270:"i. Messing about on the water
+ii. Boat ownership in the city
+iii. The famous harbour bridge
+iv. Enjoying the natural side
+v. From dining to shopping
+vi. Harbourside development
+vii. Something for every season
+viii. Options in the surrounding area
+ix. Places to eat";s:14:"correct_answer";s:1:"i";}i:1;a:10:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:11:"Paragraph B";s:6:"points";i:1;s:18:"no_answer_feedback";s:88:"Please select an answer. Read paragraph B and identify the main theme of the paragraph.";s:16:"correct_feedback";s:123:"Correct! Paragraph B is 'Something for every season' - the paragraph refers to things people can do in different seasons.";s:18:"incorrect_feedback";s:114:"Paragraph B is 'Something for every season' - it refers to things people can do in different times of the year.";s:15:"reading_text_id";i:0;s:7:"options";s:270:"i. Messing about on the water
+ii. Boat ownership in the city
+iii. The famous harbour bridge
+iv. Enjoying the natural side
+v. From dining to shopping
+vi. Harbourside development
+vii. Something for every season
+viii. Options in the surrounding area
+ix. Places to eat";s:14:"correct_answer";s:3:"vii";}i:2;a:10:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:11:"Paragraph C";s:6:"points";i:1;s:18:"no_answer_feedback";s:88:"Please select an answer. Read paragraph C and identify the main theme of the paragraph.";s:16:"correct_feedback";s:107:"Correct! Paragraph C is 'Harbourside development' - the paragraph refers to ongoing building and additions.";s:18:"incorrect_feedback";s:98:"Paragraph C is 'Harbourside development' - it refers to ongoing building and additions to the area.";s:15:"reading_text_id";i:0;s:7:"options";s:270:"i. Messing about on the water
+ii. Boat ownership in the city
+iii. The famous harbour bridge
+iv. Enjoying the natural side
+v. From dining to shopping
+vi. Harbourside development
+vii. Something for every season
+viii. Options in the surrounding area
+ix. Places to eat";s:14:"correct_answer";s:2:"vi";}i:3;a:10:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:11:"Paragraph D";s:6:"points";i:1;s:18:"no_answer_feedback";s:88:"Please select an answer. Read paragraph D and identify the main theme of the paragraph.";s:16:"correct_feedback";s:133:"Correct! Paragraph D is 'Options in the surrounding area' - the paragraph refers to various places outside of the centre to visit.";s:18:"incorrect_feedback";s:124:"Paragraph D is 'Options in the surrounding area' - it refers to various places outside of the centre that can be visited.";s:15:"reading_text_id";i:0;s:7:"options";s:270:"i. Messing about on the water
+ii. Boat ownership in the city
+iii. The famous harbour bridge
+iv. Enjoying the natural side
+v. From dining to shopping
+vi. Harbourside development
+vii. Something for every season
+viii. Options in the surrounding area
+ix. Places to eat";s:14:"correct_answer";s:4:"viii";}i:4;a:10:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:11:"Paragraph F";s:6:"points";i:1;s:18:"no_answer_feedback";s:88:"Please select an answer. Read paragraph F and identify the main theme of the paragraph.";s:16:"correct_feedback";s:136:"Correct! Paragraph F is 'Enjoying the natural side' - the paragraph focuses on natural aspects – beaches, walks in the park, the sunset.";s:18:"incorrect_feedback";s:127:"Paragraph F is 'Enjoying the natural side' - it focuses on the natural aspects of Auckland – beaches, walks in the park, etc.";s:15:"reading_text_id";i:0;s:7:"options";s:270:"i. Messing about on the water
+ii. Boat ownership in the city
+iii. The famous harbour bridge
+iv. Enjoying the natural side
+v. From dining to shopping
+vi. Harbourside development
+vii. Something for every season
+viii. Options in the surrounding area
+ix. Places to eat";s:14:"correct_answer";s:2:"iv";}i:5;a:10:{s:4:"type";s:8:"headings";s:12:"instructions";s:288:"Reading Passage has seven paragraphs A-G.
 
-Choose the most suitable heading from the list below for paragraphs A and B.
+Choose the correct heading for paragraphs A-C and E-F from the list of headings below.
 
-List of Headings:
-I. [First heading option for passage 2]
-II. [Second heading option for passage 2]
-III. [Third heading option for passage 2]
-IV. [Fourth heading option for passage 2]";s:8:"question";s:11:"Paragraph A";s:6:"points";i:1;s:18:"no_answer_feedback";s:69:"[Provide guidance about what to look for in paragraph A of passage 2]";s:16:"correct_feedback";s:56:"[Explain why the correct heading matches this paragraph]";s:18:"incorrect_feedback";s:47:"[Explain what this paragraph is actually about]";s:15:"reading_text_id";i:1;s:10:"mc_options";a:4:{i:0;a:3:{s:4:"text";s:39:"I. [First heading option for passage 2]";s:10:"is_correct";b:1;s:8:"feedback";s:41:"[Explain why this is the correct heading]";}i:1;a:3:{s:4:"text";s:41:"II. [Second heading option for passage 2]";s:10:"is_correct";b:0;s:8:"feedback";s:41:"[Explain why this heading does not match]";}i:2;a:3:{s:4:"text";s:41:"III. [Third heading option for passage 2]";s:10:"is_correct";b:0;s:8:"feedback";s:41:"[Explain why this heading does not match]";}i:3;a:3:{s:4:"text";s:41:"IV. [Fourth heading option for passage 2]";s:10:"is_correct";b:0;s:8:"feedback";s:41:"[Explain why this heading does not match]";}}s:7:"options";s:165:"I. [First heading option for passage 2]
-II. [Second heading option for passage 2]
-III. [Third heading option for passage 2]
-IV. [Fourth heading option for passage 2]";s:14:"correct_answer";s:1:"0";s:15:"option_feedback";a:4:{i:0;s:41:"[Explain why this is the correct heading]";i:1;s:41:"[Explain why this heading does not match]";i:2;s:41:"[Explain why this heading does not match]";i:3;s:41:"[Explain why this heading does not match]";}}i:3;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:11:"Paragraph B";s:6:"points";i:1;s:18:"no_answer_feedback";s:69:"[Provide guidance about what to look for in paragraph B of passage 2]";s:16:"correct_feedback";s:56:"[Explain why the correct heading matches this paragraph]";s:18:"incorrect_feedback";s:47:"[Explain what this paragraph is actually about]";s:15:"reading_text_id";i:1;s:10:"mc_options";a:4:{i:0;a:3:{s:4:"text";s:39:"I. [First heading option for passage 2]";s:10:"is_correct";b:0;s:8:"feedback";s:41:"[Explain why this heading does not match]";}i:1;a:3:{s:4:"text";s:41:"II. [Second heading option for passage 2]";s:10:"is_correct";b:1;s:8:"feedback";s:41:"[Explain why this is the correct heading]";}i:2;a:3:{s:4:"text";s:41:"III. [Third heading option for passage 2]";s:10:"is_correct";b:0;s:8:"feedback";s:41:"[Explain why this heading does not match]";}i:3;a:3:{s:4:"text";s:41:"IV. [Fourth heading option for passage 2]";s:10:"is_correct";b:0;s:8:"feedback";s:41:"[Explain why this heading does not match]";}}s:7:"options";s:165:"I. [First heading option for passage 2]
-II. [Second heading option for passage 2]
-III. [Third heading option for passage 2]
-IV. [Fourth heading option for passage 2]";s:14:"correct_answer";s:1:"1";s:15:"option_feedback";a:4:{i:0;s:41:"[Explain why this heading does not match]";i:1;s:41:"[Explain why this is the correct heading]";i:2;s:41:"[Explain why this heading does not match]";i:3;s:41:"[Explain why this heading does not match]";}}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:2:{i:0;a:2:{s:5:"title";s:37:"Reading Passage 1 - [Your Title Here]";s:7:"content";s:469:"<strong>A:</strong> [Content for paragraph A - This paragraph should focus on a specific main idea that matches one of the headings below]
+List of headings:
+i. Caution in the future
+ii. Parameters and purpose of the project
+iii. History of genetic engineering
+iv. Impact and potential of the project
+v. Research and resources
+vi. Impact of the project in the UK
+vii. Freedom of information
+viii. Designer babies or rights of the unborn?";s:8:"question";s:11:"Paragraph A";s:6:"points";i:1;s:18:"no_answer_feedback";s:88:"Please select an answer. Read paragraph A and identify the main theme of the paragraph.";s:16:"correct_feedback";s:110:"Correct! Paragraph A is 'Parameters and purpose of the project' - talks about aims and boundaries.";s:18:"incorrect_feedback";s:101:"Paragraph A is 'Parameters and purpose of the project' - it talks about aims and boundaries.";s:15:"reading_text_id";i:1;s:7:"options";s:279:"i. Caution in the future
+ii. Parameters and purpose of the project
+iii. History of genetic engineering
+iv. Impact and potential of the project
+v. Research and resources
+vi. Impact of the project in the UK
+vii. Freedom of information
+viii. Designer babies or rights of the unborn?";s:14:"correct_answer";s:2:"ii";}i:6;a:10:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:11:"Paragraph B";s:6:"points";i:1;s:18:"no_answer_feedback";s:88:"Please select an answer. Read paragraph B and identify the main theme of the paragraph.";s:16:"correct_feedback";s:143:"Correct! Paragraph B is 'Impact and potential of the project' - talks about effects now and how it could revolutionise future research.";s:18:"incorrect_feedback";s:134:"Paragraph B is 'Impact and potential of the project' - it talks about current effects and potential for future research.";s:15:"reading_text_id";i:1;s:7:"options";s:279:"i. Caution in the future
+ii. Parameters and purpose of the project
+iii. History of genetic engineering
+iv. Impact and potential of the project
+v. Research and resources
+vi. Impact of the project in the UK
+vii. Freedom of information
+viii. Designer babies or rights of the unborn?";s:14:"correct_answer";s:2:"iv";}i:7;a:10:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:11:"Paragraph C";s:6:"points";i:1;s:18:"no_answer_feedback";s:88:"Please select an answer. Read paragraph C and identify the main theme of the paragraph.";s:16:"correct_feedback";s:115:"Correct! Paragraph C is 'Freedom of information' - discusses personal information, privacy, UNESCO support.";s:18:"incorrect_feedback";s:106:"Paragraph C is 'Freedom of information' - it discusses personal privacy, UNESCO support and freedom.";s:15:"reading_text_id";i:1;s:7:"options";s:279:"i. Caution in the future
+ii. Parameters and purpose of the project
+iii. History of genetic engineering
+iv. Impact and potential of the project
+v. Research and resources
+vi. Impact of the project in the UK
+vii. Freedom of information
+viii. Designer babies or rights of the unborn?";s:14:"correct_answer";s:3:"vii";}i:8;a:10:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:11:"Paragraph E";s:6:"points";i:1;s:18:"no_answer_feedback";s:88:"Please select an answer. Read paragraph E and identify the main theme of the paragraph.";s:16:"correct_feedback";s:144:"Correct! Paragraph E is 'Designer babies or rights of the unborn?' - focuses on babies, reproductive issues, decisions about undesirable genes.";s:18:"incorrect_feedback";s:135:"Paragraph E is 'Designer babies or rights of the unborn?' - it focuses on reproductive issues and genetic testing of unborn infants.";s:15:"reading_text_id";i:1;s:7:"options";s:279:"i. Caution in the future
+ii. Parameters and purpose of the project
+iii. History of genetic engineering
+iv. Impact and potential of the project
+v. Research and resources
+vi. Impact of the project in the UK
+vii. Freedom of information
+viii. Designer babies or rights of the unborn?";s:14:"correct_answer";s:4:"viii";}i:9;a:10:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:11:"Paragraph F";s:6:"points";i:1;s:18:"no_answer_feedback";s:88:"Please select an answer. Read paragraph F and identify the main theme of the paragraph.";s:16:"correct_feedback";s:152:"Correct! Paragraph F is 'Caution in the future' - 'Potential to provide consequences not yet considered', concerns that knowledge is advancing too fast.";s:18:"incorrect_feedback";s:143:"Paragraph F is 'Caution in the future' - it warns about potential consequences and difficulties as knowledge advances faster than regulation.";s:15:"reading_text_id";i:1;s:7:"options";s:279:"i. Caution in the future
+ii. Parameters and purpose of the project
+iii. History of genetic engineering
+iv. Impact and potential of the project
+v. Research and resources
+vi. Impact of the project in the UK
+vii. Freedom of information
+viii. Designer babies or rights of the unborn?";s:14:"correct_answer";s:1:"i";}}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:2:{i:0;a:2:{s:5:"title";s:17:"CITY BY THE SEA";s:7:"content";s:3456:"<strong>A.</strong> Lapped on all sides by water, it's hardly surprising that the country's largest city is a giant aquatic playpen, with its two harbours, a gulf full of islands, a rugged coast and the highest density per head of pleasure boats in the world. By ferry, boat or water taxi, some 48 islands make for a perfect cruise. Some offer homes for commuters and weekend retreaters. Others are only for native birds, flora and fauna, or for lifestylers seeking a bygone era. Then there is the volcano island of Rangitoto, with a cone so perfectly round it looks the same wherever you are.
 
-<strong>B:</strong> [Content for paragraph B - This paragraph should focus on a different main idea that matches another heading]
+<strong>B.</strong> Auckland's long and sunny, sometimes humid, but mostly balmy days are at their summer best between January and April. This time of year brings Auckland dwellers outdoors to savour this lifestyle built on a nautical backdrop but underlined by artistic and sporting endeavours. Dotted throughout the calendar there are also events organised by different communities in cosmopolitan Auckland – there is a Chinese Lantern festival often held in March, a Polynesian event in November, and a free evening concert of fireworks and music is an annual event in the Auckland Domain to celebrate new year. Even in winter, brisk weather is no deterrent to the thousands who swamp Eden Park to watch an invigorating game of rugby. No matter when, Auckland always has an event or festival to celebrate.
 
-<strong>C:</strong> [Content for paragraph C - Additional content for another paragraph if needed]
+<strong>C.</strong> Little wonder that more and more well-heeled and sometimes very famous folk fall for the city's charm, and ongoing building and additions to the area help. A lot of these changes are largely due to Team New Zealand bringing two defences of the prestigious international America's Cup yacht race to the Hauraki Gulf. The Cup defence sparked a citywide spruce-up and the creation of a swanky new Viaduct Harbour village, teeming with classy restaurants, boutiques, bars, hotels and apartments. There is a new convention centre, and with that a number of bars and restaurants have sprung up to serve the ever-hungry crowds!
 
-<strong>D:</strong> [Content for paragraph D - Additional content for another paragraph if needed]";}i:1;a:2:{s:5:"title";s:44:"Reading Passage 2 - [Your Second Title Here]";s:7:"content";s:337:"<strong>A:</strong> [Content for paragraph A - This paragraph should focus on a specific main idea]
+<strong>D.</strong> But it's not just the centre that attracts visitors. The North Shore, the community north of the Harbour Bridge, is well worth exploring. Ferries cross the harbour between downtown Auckland and Devonport, a sweet village that offers main street browsing and al fresco cafe lattes in the sun. Mt Victoria and North Head, with their war remnant defence bunkers, rise up behind the village. They're perfect places for children to scramble and explore. Picturesque swimming beaches hug the shores that stretch to the north-east for over 10 kilometres from the middle of the city.
 
-<strong>B:</strong> [Content for paragraph B - This paragraph should focus on a different main idea]
+<strong>E.</strong> The needle-shaped Sky Tower rises from the bustling commercial centre. The tower houses a casino, and madcap sky jumpers plunge over its side past diners eating in the revolving restaurant. Far below, motorways slither under and over each other in such a sprawl that one section is simply known as 'spaghetti junction'. From the gourmet and trendy shopping strip of Ponsonby on the city fringe, to fashion-conscious Newmarket, upmarket Parnell and Remuera, from smart suburban malls to the Pacific Island markets in colourful Otara to the south, the sprawling city is an ever-changing mosaic.
 
-<strong>C:</strong> [Content for paragraph C - Additional content]
+<strong>F.</strong> It is a place where you can fish for snapper, tramp in a national park, or just enjoy a beautiful sunset. There's a beautiful garden smothered in scented roses. Another garden is planted especially for scent for the blind. You can drive up a volcano called One Tree Hill or walk the beach looking for seafood at low tide. There are parks, vineyards and wide open spaces, and with generally good weather in the summer, Auckland is the place to be!";}i:1;a:2:{s:5:"title";s:18:"THE GENOME PROJECT";s:7:"content";s:5603:"<strong>A.</strong> The Human Genome Project (HGP) is a co-ordinated international research programme, which aims to identify and locate all human genes by determining the entire sequence of the human genome within the next ten years. Although there are indisputable benefits to this research, it is fraught with difficult ethical, legal and social issues. In July 1997, the United Nations Educational, Scientific and Cultural Organization (UNESCO) hoped to establish some boundaries within which the project would operate by stating that all research should "fully respect human dignity, freedom and human rights, as well as the prohibition of all forms of discrimination based on genetic characteristics".
 
-<strong>D:</strong> [Content for paragraph D - Additional content]";}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
-			<wp:meta_value><![CDATA[60]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[computer_based]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_exercise_label]]></wp:meta_key>
-			<wp:meta_value><![CDATA[exercise]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_open_as_popup]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_scoring_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[percentage]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
-			<wp:meta_value><![CDATA[10]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_course_ids]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_lesson_ids]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_course_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_ielts_cm_lesson_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
+<strong>B.</strong> Whether in favour of the project or not, there is no doubt it has already had astounding effects. Ten percent completed already, the comparatively simple collection of data is already leading to major advances in technology, including robotics, automation, and new methods of identifying and mapping genes, to allow large-scale sequencing. The storing and analysing of the vast amounts of data generated by the project are also a consideration, requiring the development of sophisticated new software. Yet what the project offers now is almost inconsequential in the face of its potential applications. The information could revolutionise future biological research, particularly in the fields of medicine, gene testing, gene cloning and biotechnology. Mapping the human genome will lead us to understand the underlying causes of genetic diseases such as cystic fibrosis, Huntington's disease, sickle cell anaemia and many forms of cancer. From drugs to new limbs, many currently accepted medical practices could be a thing of the past.
+
+<strong>C.</strong> Although the potential benefits of sequencing the human genome are immense, there is also scope for misuse of information and a threat to personal privacy. New guidelines have to be fixed, and UNESCO has supported the informed consent of individuals, highlighting the importance of educating both the public and medical professionals on issues relating to the Human Genome Project. It entirely supports the right of an individual to decide whether or not to be informed of information relating to their genetic profile. It also states that any benefits from advances in genetic science should be made available to everyone.
+
+<strong>D.</strong> These principles represent what most people consider to be appropriate, yet they paint a simplistic view of a complex problem. The US Department of Energy and the National Institutes of Health have so far allocated between 3% and 5% of their total budget for the Human Genome Project to the investigation of Ethical, Legal and Social Issues (ELSI). Studies are currently concentrated in two main areas: privacy and confidentiality of genetic information, and the development of education in genome science and ELSI. Other issues raised by the project include fairness in the use of genetic information, genetic testing, reproductive issues, clinical issues, commercialisation issues and finally, philosophical implications.
+
+<strong>E.</strong> Genetic testing also raises reproductive issues concerning the use of genetic information in decision-making. As a society, we should consider the acceptability of testing unborn infants. Is abortion on the basis of genetic disorder acceptable? If so, how severe must the 'disorder' be in order to justify terminating the pregnancy? In some countries, sex discrimination in family planning is already a problem, and it is possible that this practice may expand in the future to include unborn infants with 'undesirable' genes. If children with genes that may cause disease in adulthood are tested, at what age should they be told the results? In a survey of its members, the UK Genetic Interest Group (GIG) said that prenatal testing for late-onset conditions should not be carried out unless the mother agrees to terminate the pregnancy, since, if born, the infant has not given consent to be tested.
+
+<strong>F.</strong> The results of the Human Genome Project will affect us all, either directly or indirectly. One of the main threats is that it has the potential to provide us with consequences that have not yet been considered. Without time to think about what is ethically sound, this may lead to considerable difficulties. It is generally held that advances that will prevent human suffering are worthwhile, whereas those that will not are questionable. It can be argued that the advancement of our knowledge concerning the human genome is progressing faster than our ability to regulate its impact. It is clear that widespread education is needed, so that people can formulate and voice opinions on what is ethically and socially acceptable, and so that policy and legislation may be brought into place to govern practices that concern the human genome.
+
+<strong>G.</strong> Finally, conceptual and philosophical issues raise questions regarding human responsibility, as opposed to concepts of genetic 'fates' and beliefs concerning disease and death. Genetic engineering is particularly controversial. Does anyone have the right to 'play God'? As researchers locate genes associated with cognitive abilities and behaviour, will we be tempted to 'improve' our children? Some people argue that genetic enhancement is simply another form of selective breeding, which is present in nature. However, human genetic engineering cannot be developed without some degree of experimentation on humans. The possibility of germ-line therapy, where changes are made to the genomes of future generations is especially debatable. This may in some respects be beneficial. For example, it will improve the success rate of gene therapy by allowing scientists to remove a defective gene by altering just one cell. However, this kind of treatment could have unpredictable effects that would change the lives of all subsequent generations. Since the individuals are unborn, their consent cannot be obtained. Theoretically, it would be possible to take control of our own evolution and create 'superhumans'. According to some scientists, genetic enhancement is an irresistible reality that is only twenty years away.";}}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
+<wp:meta_value><![CDATA[70]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
+<wp:meta_value><![CDATA[computer_based]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_exercise_label]]></wp:meta_key>
+<wp:meta_value><![CDATA[exercise]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_open_as_popup]]></wp:meta_key>
+<wp:meta_value><![CDATA[0]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_scoring_type]]></wp:meta_key>
+<wp:meta_value><![CDATA[percentage]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
+<wp:meta_value><![CDATA[20]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_course_ids]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_lesson_ids]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_course_id]]></wp:meta_key>
+<wp:meta_value><![CDATA[]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_lesson_id]]></wp:meta_key>
+<wp:meta_value><![CDATA[]]></wp:meta_value>
+</wp:postmeta>
+</item>
 </channel>
 </rss>
