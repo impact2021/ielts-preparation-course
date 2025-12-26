@@ -253,6 +253,10 @@ body.ielts-course-archive .content-area {
     color: #666;
 }
 
+.ielts-single-course .course-lessons {
+    margin-top: 40px;
+}
+
 /* Single Lesson */
 .ielts-single-lesson {
     max-width: 100%;

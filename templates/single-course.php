@@ -66,7 +66,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
     </div>
     
     <?php if (!empty($lessons)): ?>
-        <div class="course-lessons" style="margin-top: 40px;">
+        <div class="course-lessons">
             <h3><?php _e('Course Lessons', 'ielts-course-manager'); ?></h3>
             
             <table class="ielts-lessons-table">
