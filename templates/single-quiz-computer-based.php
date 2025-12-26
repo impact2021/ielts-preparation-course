@@ -8,7 +8,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-if (!$questions) {
+if (!is_array($questions)) {
     $questions = array();
 }
 
@@ -19,7 +19,7 @@ if (!$pass_percentage) {
 }
 
 $reading_texts = get_post_meta($quiz->ID, '_ielts_cm_reading_texts', true);
-if (!$reading_texts) {
+if (!is_array($reading_texts)) {
     $reading_texts = array();
 }
 $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);

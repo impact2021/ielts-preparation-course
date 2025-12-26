@@ -108,7 +108,7 @@ body.ielts-quiz-single .content-area {
             
             // Get quiz questions
             $questions = get_post_meta($quiz_id, '_ielts_cm_questions', true);
-            if (!$questions) {
+            if (!is_array($questions)) {
                 $questions = array();
             }
             
