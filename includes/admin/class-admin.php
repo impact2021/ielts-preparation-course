@@ -4444,9 +4444,7 @@ class IELTS_CM_Admin {
      */
     public function ajax_push_to_subsites() {
         // Start output buffering to capture any accidental output
-        if (!ob_get_level()) {
-            ob_start();
-        }
+        ob_start();
         
         check_ajax_referer('ielts_cm_sync_content', 'nonce');
         
@@ -4526,10 +4524,7 @@ class IELTS_CM_Admin {
                 }
             }
             
-            // Clean output buffer before sending response
-            ob_end_clean();
-            
-            wp_send_json_success(array(
+            $response_data = array(
                 'message' => sprintf(
                     __('Course and all child content pushed successfully: %d lesson(s), %d sublesson(s), %d exercise(s)', 'ielts-course-manager'),
                     $lesson_count,
@@ -4542,8 +4537,7 @@ class IELTS_CM_Admin {
                     'resources' => $resource_count,
                     'exercises' => $exercise_count
                 )
-            ));
-            return;
+            );
         } else {
             // Handle regular content results
             foreach ($results as $site_id => $result) {
@@ -4555,15 +4549,17 @@ class IELTS_CM_Admin {
                 );
             }
             
-            // Clean output buffer before sending response
-            ob_end_clean();
-            
-            wp_send_json_success(array(
+            $response_data = array(
                 'message' => sprintf(__('Content pushed to %d subsite(s)', 'ielts-course-manager'), count($results)),
                 'results' => $formatted_results
-            ));
-            return;
+            );
         }
+        
+        // Clean output buffer before sending response
+        ob_end_clean();
+        
+        wp_send_json_success($response_data);
+        return;
     }
     
     /**
