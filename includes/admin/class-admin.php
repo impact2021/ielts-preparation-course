@@ -5852,6 +5852,11 @@ class IELTS_CM_Admin {
         // Get import mode (default to 'replace' for backward compatibility)
         $import_mode = isset($_POST['import_mode']) ? sanitize_text_field($_POST['import_mode']) : 'replace';
         
+        // Validate import mode
+        if (!in_array($import_mode, array('replace', 'append'))) {
+            $import_mode = 'replace'; // Default to safe option
+        }
+        
         // Check if file was uploaded
         if (!isset($_FILES['xml_file']) || $_FILES['xml_file']['error'] !== UPLOAD_ERR_OK) {
             wp_send_json_error(array('message' => __('File upload failed.', 'ielts-course-manager')));
@@ -5978,26 +5983,30 @@ class IELTS_CM_Admin {
         
         // Merge reading texts: We need to handle ID conflicts
         // Find the highest existing reading text ID
-        $max_id = 0;
+        $max_id = -1; // Start at -1 so first new text gets ID 0 if no existing texts
         foreach ($existing_reading_texts as $text) {
-            if (isset($text['id']) && $text['id'] > $max_id) {
-                $max_id = $text['id'];
+            if (isset($text['id']) && is_numeric($text['id'])) {
+                $text_id = intval($text['id']);
+                if ($text_id > $max_id) {
+                    $max_id = $text_id;
+                }
             }
         }
         
         // Remap reading text IDs in new texts to avoid conflicts
         $id_map = array();
         foreach ($new_reading_texts as $index => $text) {
-            $old_id = isset($text['id']) ? $text['id'] : 0;
+            $old_id = isset($text['id']) ? intval($text['id']) : 0;
             $new_id = ++$max_id;
-            $id_map[$old_id] = $new_id;
+            // Use string keys to handle mapping correctly, including 0
+            $id_map[strval($old_id)] = $new_id;
             $new_reading_texts[$index]['id'] = $new_id;
         }
         
         // Update reading_text_id references in new questions before merging
         foreach ($new_questions as $q_index => $question) {
             if (isset($question['reading_text_id'])) {
-                $old_reading_text_id = $question['reading_text_id'];
+                $old_reading_text_id = strval(intval($question['reading_text_id']));
                 if (isset($id_map[$old_reading_text_id])) {
                     $new_questions[$q_index]['reading_text_id'] = $id_map[$old_reading_text_id];
                 }
