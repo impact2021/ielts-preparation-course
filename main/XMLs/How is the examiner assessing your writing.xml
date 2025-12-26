@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- How is the examiner assessing your writing? - Multiple Choice Question Type -->
+<rss xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/" version="2.0">
+<channel>
+	<title>IELTStestONLINE</title>
+	<link>https://www.ieltstestonline.com</link>
+	<description>Online IELTS preparation</description>
+	<pubDate>Thu, 26 Dec 2025 07:05:00 +0000</pubDate>
+	<language>en-NZ</language>
+	<wp:wxr_version>1.2</wp:wxr_version>
+	<wp:base_site_url>https://www.ieltstestonline.com</wp:base_site_url>
+	<wp:base_blog_url>https://www.ieltstestonline.com</wp:base_blog_url>
+
+	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[impact]]></wp:author_login><wp:author_email><![CDATA[impact@ieltstestonline.com]]></wp:author_email><wp:author_display_name><![CDATA[impact]]></wp:author_display_name><wp:author_first_name><![CDATA[Patrick]]></wp:author_first_name><wp:author_last_name><![CDATA[Bourne]]></wp:author_last_name></wp:author>
+
+	<generator>IELTS Test XML Creator</generator>
+
+	<item>
+		<title><![CDATA[How is the examiner assessing your writing?]]></title>
+		<link>https://www.ieltstestonline.com/ielts-quiz/how-examiner-assessing-writing/</link>
+		<pubDate>Thu, 26 Dec 2025 07:05:00 +0000</pubDate>
+		<dc:creator><![CDATA[impact]]></dc:creator>
+		<guid isPermaLink="false">https://www.ieltstestonline.com/?post_type=ielts_quiz&amp;p=9000003</guid>
+		<description/>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>9000003</wp:post_id>
+		<wp:post_date><![CDATA[2025-12-26 07:05:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-12-26 07:05:00]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2025-12-26 07:05:00]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-12-26 07:05:00]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[how-examiner-assessing-writing]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[ielts_quiz]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:4:{i:0;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:142:"Answer the following questions about how IELTS Writing is assessed. Each question has four possible answers - select the most appropriate one.";s:8:"question";s:62:"How many marking criteria are used to assess IELTS Writing?";s:6:"points";i:1;s:18:"no_answer_feedback";s:103:"Please select an answer. Consider the number of different aspects the examiner evaluates in your writing.";s:16:"correct_feedback";s:83:"Correct! IELTS Writing is assessed using four distinct marking criteria.";s:18:"incorrect_feedback";s:136:"Incorrect. IELTS Writing is assessed using four marking criteria: Task Achievement/Response, Coherence and Cohesion, Lexical Resource, and Grammatical Range and Accuracy.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:4:{i:0;a:3:{s:4:"text";s:17:"Two criteria";s:10:"is_correct";b:0;s:8:"feedback";s:128:"Incorrect. IELTS Writing uses more than two criteria. The examiner evaluates your writing using four different marking categories.";}i:1;a:3:{s:4:"text";s:19:"Three criteria";s:10:"is_correct";b:0;s:8:"feedback";s:124:"Incorrect. IELTS Writing uses more than three criteria. Your writing is assessed across four distinct marking categories.";}i:2;a:3:{s:4:"text";s:18:"Four criteria";s:10:"is_correct";b:1;s:8:"feedback";s:189:"Correct! IELTS Writing is assessed using four marking criteria: Task Achievement (Task 1) or Task Response (Task 2), Coherence and Cohesion, Lexical Resource, and Grammatical Range and Accuracy.";}i:3;a:3:{s:4:"text";s:18:"Five criteria";s:10:"is_correct";b:0;s:8:"feedback";s:120:"Incorrect. IELTS Writing uses four criteria, not five. Each of these four criteria assesses a different aspect of your writing.";}}s:7:"options";s:76:"Two criteria
+Three criteria
+Four criteria
+Five criteria";s:14:"correct_answer";s:1:"2";s:15:"option_feedback";a:4:{i:0;s:128:"Incorrect. IELTS Writing uses more than two criteria. The examiner evaluates your writing using four different marking categories.";i:1;s:124:"Incorrect. IELTS Writing uses more than three criteria. Your writing is assessed across four distinct marking categories.";i:2;s:189:"Correct! IELTS Writing is assessed using four marking criteria: Task Achievement (Task 1) or Task Response (Task 2), Coherence and Cohesion, Lexical Resource, and Grammatical Range and Accuracy.";i:3;s:120:"Incorrect. IELTS Writing uses four criteria, not five. Each of these four criteria assesses a different aspect of your writing.";}}i:1;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:84:"Which criterion assesses how well you organize your ideas and use linking words?";s:6:"points";i:1;s:18:"no_answer_feedback";s:121:"Please select an answer. Think about which criterion evaluates the logical flow and connection between your ideas and paragraphs.";s:16:"correct_feedback";s:114:"Correct! Coherence and Cohesion assesses how well you organize your ideas and use cohesive devices to link them.";s:18:"incorrect_feedback";s:188:"Incorrect. Coherence and Cohesion is the criterion that assesses how well you organize your ideas into paragraphs and use linking words and phrases to connect your ideas logically.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:4:{i:0;a:3:{s:4:"text";s:27:"Task Achievement/Response";s:10:"is_correct";b:0;s:8:"feedback";s:164:"Incorrect. Task Achievement/Response focuses on how well you address the task requirements and present relevant ideas, not on organization or linking. Try Coherence and Cohesion.";}i:1;a:3:{s:4:"text";s:24:"Coherence and Cohesion";s:10:"is_correct";b:1;s:8:"feedback";s:234:"Correct! Coherence and Cohesion assesses the logical organization of your writing, including how you structure paragraphs, sequence information, and use cohesive devices (linking words like however, furthermore, in addition) to connect ideas.";}i:2;a:3:{s:4:"text";s:16:"Lexical Resource";s:10:"is_correct";b:0;s:8:"feedback";s:148:"Incorrect. Lexical Resource evaluates your vocabulary range and word choice, not how you organize ideas or use linking devices. Try Coherence and Cohesion.";}i:3;a:3:{s:4:"text";s:32:"Grammatical Range and Accuracy";s:10:"is_correct";b:0;s:8:"feedback";s:149:"Incorrect. Grammatical Range and Accuracy assesses your grammar and sentence structures, not organization or linking. The correct answer is Coherence and Cohesion.";}}s:7:"options";s:102:"Task Achievement/Response
+Coherence and Cohesion
+Lexical Resource
+Grammatical Range and Accuracy";s:14:"correct_answer";s:1:"1";s:15:"option_feedback";a:4:{i:0;s:164:"Incorrect. Task Achievement/Response focuses on how well you address the task requirements and present relevant ideas, not on organization or linking. Try Coherence and Cohesion.";i:1;s:234:"Correct! Coherence and Cohesion assesses the logical organization of your writing, including how you structure paragraphs, sequence information, and use cohesive devices (linking words like however, furthermore, in addition) to connect ideas.";i:2;s:148:"Incorrect. Lexical Resource evaluates your vocabulary range and word choice, not how you organize ideas or use linking devices. Try Coherence and Cohesion.";i:3;s:149:"Incorrect. Grammatical Range and Accuracy assesses your grammar and sentence structures, not organization or linking. The correct answer is Coherence and Cohesion.";}}i:2;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:92:"Which criterion evaluates your range of vocabulary and ability to use words appropriately?";s:6:"points";i:1;s:18:"no_answer_feedback";s:105:"Please select an answer. Consider which criterion focuses on your choice of words and vocabulary variety.";s:16:"correct_feedback";s:129:"Correct! Lexical Resource assesses your vocabulary range, word choice accuracy, and ability to use less common vocabulary items.";s:18:"incorrect_feedback";s:183:"Incorrect. Lexical Resource is the criterion that evaluates your range of vocabulary, precision in word choice, ability to paraphrase, and use of less common and idiomatic vocabulary.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:4:{i:0;a:3:{s:4:"text";s:27:"Task Achievement/Response";s:10:"is_correct";b:0;s:8:"feedback";s:149:"Incorrect. Task Achievement/Response focuses on addressing the task requirements, not on vocabulary. Vocabulary range and accuracy is assessed under Lexical Resource.";}i:1;a:3:{s:4:"text";s:24:"Coherence and Cohesion";s:10:"is_correct";b:0;s:8:"feedback";s:143:"Incorrect. Coherence and Cohesion assesses organization and linking, not vocabulary. Vocabulary range and word choice is evaluated under Lexical Resource.";}i:2;a:3:{s:4:"text";s:16:"Lexical Resource";s:10:"is_correct";b:1;s:8:"feedback";s:256:"Correct! Lexical Resource assesses your vocabulary range, the accuracy and appropriateness of word choice, your ability to use less common vocabulary, awareness of style and collocation, and skillful use of paraphrase to avoid repetition from the task prompt.";}i:3;a:3:{s:4:"text";s:32:"Grammatical Range and Accuracy";s:10:"is_correct";b:0;s:8:"feedback";s:140:"Incorrect. Grammatical Range and Accuracy focuses on grammar and sentence structures, not vocabulary. Vocabulary is assessed under Lexical Resource.";}}s:7:"options";s:102:"Task Achievement/Response
+Coherence and Cohesion
+Lexical Resource
+Grammatical Range and Accuracy";s:14:"correct_answer";s:1:"2";s:15:"option_feedback";a:4:{i:0;s:149:"Incorrect. Task Achievement/Response focuses on addressing the task requirements, not on vocabulary. Vocabulary range and accuracy is assessed under Lexical Resource.";i:1;s:143:"Incorrect. Coherence and Cohesion assesses organization and linking, not vocabulary. Vocabulary range and word choice is evaluated under Lexical Resource.";i:2;s:256:"Correct! Lexical Resource assesses your vocabulary range, the accuracy and appropriateness of word choice, your ability to use less common vocabulary, awareness of style and collocation, and skillful use of paraphrase to avoid repetition from the task prompt.";i:3;s:140:"Incorrect. Grammatical Range and Accuracy focuses on grammar and sentence structures, not vocabulary. Vocabulary is assessed under Lexical Resource.";}}i:3;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:91:"Which criterion assesses your ability to use different sentence structures without errors?";s:6:"points";i:1;s:18:"no_answer_feedback";s:113:"Please select an answer. Think about which criterion evaluates your grammar, sentence variety, and grammatical accuracy.";s:16:"correct_feedback";s:140:"Correct! Grammatical Range and Accuracy assesses your use of different sentence structures and how accurately you use grammar.";s:18:"incorrect_feedback";s:185:"Incorrect. Grammatical Range and Accuracy is the criterion that evaluates your ability to use a variety of sentence structures (simple, compound, complex) and the accuracy of your grammar.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:4:{i:0;a:3:{s:4:"text";s:27:"Task Achievement/Response";s:10:"is_correct";b:0;s:8:"feedback";s:162:"Incorrect. Task Achievement/Response assesses how well you address the task, not grammar or sentence structures. Grammar is assessed under Grammatical Range and Accuracy.";}i:1;a:3:{s:4:"text";s:24:"Coherence and Cohesion";s:10:"is_correct";b:0;s:8:"feedback";s:159:"Incorrect. Coherence and Cohesion focuses on organization and linking ideas, not on grammar or sentence variety. Try Grammatical Range and Accuracy for this aspect.";}i:2;a:3:{s:4:"text";s:16:"Lexical Resource";s:10:"is_correct";b:0;s:8:"feedback";s:150:"Incorrect. Lexical Resource assesses vocabulary, not grammar or sentence structures. Sentence variety and grammatical accuracy is assessed under Grammatical Range and Accuracy.";}i:3;a:3:{s:4:"text";s:32:"Grammatical Range and Accuracy";s:10:"is_correct";b:1;s:8:"feedback";s:262:"Correct! Grammatical Range and Accuracy assesses the variety of sentence structures you use (simple, compound, complex sentences), the accuracy of your grammar, control of punctuation, and how error-free your writing is. Higher scores require both range and accuracy.";}}s:7:"options";s:102:"Task Achievement/Response
+Coherence and Cohesion
+Lexical Resource
+Grammatical Range and Accuracy";s:14:"correct_answer";s:1:"3";s:15:"option_feedback";a:4:{i:0;s:162:"Incorrect. Task Achievement/Response assesses how well you address the task, not grammar or sentence structures. Grammar is assessed under Grammatical Range and Accuracy.";i:1;s:159:"Incorrect. Coherence and Cohesion focuses on organization and linking ideas, not on grammar or sentence variety. Try Grammatical Range and Accuracy for this aspect.";i:2;s:150:"Incorrect. Lexical Resource assesses vocabulary, not grammar or sentence structures. Sentence variety and grammatical accuracy is assessed under Grammatical Range and Accuracy.";i:3;s:262:"Correct! Grammatical Range and Accuracy assesses the variety of sentence structures you use (simple, compound, complex sentences), the accuracy of your grammar, control of punctuation, and how error-free your writing is. Higher scores require both range and accuracy.";}}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;a:2:{s:5:"title";s:46:"Understanding IELTS Writing Assessment Criteria";s:7:"content";s:1289:"<strong>How Your IELTS Writing is Assessed</strong>
+
+When an IELTS examiner marks your writing, they evaluate your work using four distinct criteria. Each criterion carries equal weight in determining your final band score.
+
+<strong>1. Task Achievement (Task 1) / Task Response (Task 2)</strong>
+This criterion assesses whether you have fully addressed all parts of the task. For Task 1, it evaluates how well you describe the visual information, present an overview, and highlight key features. For Task 2, it looks at how well you present and develop your position, ideas, and arguments. Meeting the minimum word count (150 words for Task 1, 250 words for Task 2) is essential.
+
+<strong>2. Coherence and Cohesion</strong>
+This evaluates the organization of your writing. Examiners look at how logically you arrange information and ideas, how well you structure paragraphs, and how effectively you use cohesive devices (linking words such as however, furthermore, in addition, on the other hand) to connect your ideas.
+
+<strong>3. Lexical Resource</strong>
+This assesses your vocabulary range and the accuracy of word choice. Examiners evaluate whether you can use less common vocabulary, demonstrate awareness of style and collocation, and skillfully paraphrase without copying directly from the task prompt.
+
+<strong>4. Grammatical Range and Accuracy</strong>
+This criterion evaluates the variety of sentence structures you use and how accurately you use grammar. Examiners look for a mix of simple, compound, and complex sentences, correct use of grammar, and proper punctuation.";}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[75]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[computer_based]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_exercise_label]]></wp:meta_key>
+			<wp:meta_value><![CDATA[exercise]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_open_as_popup]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_scoring_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[percentage]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_course_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_lesson_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_course_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_lesson_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+</channel>
+</rss>
