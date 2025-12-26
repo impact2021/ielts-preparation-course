@@ -497,7 +497,7 @@
         var $status = $('#ielts-cm-clone-status');
         
         // Confirm with user
-        if (!confirm('Are you sure you want to clone this course? This will create a copy of the course with all its lessons, sub-lessons, and exercises.')) {
+        if (!confirm('Are you sure you want to clone this course? This will create a copy with the same table of contents, referencing the same lessons, sub-lessons, and exercises (not creating duplicates).')) {
             return;
         }
         
