@@ -5705,13 +5705,13 @@ class IELTS_CM_Admin {
                     <label style="display: block; margin-bottom: 8px;">
                         <strong><?php _e('Import Mode:', 'ielts-course-manager'); ?></strong>
                     </label>
-                    <label style="display: block; margin-bottom: 5px;">
-                        <input type="radio" name="ielts_cm_import_mode" value="replace" checked>
+                    <label for="ielts_cm_import_mode_replace" style="display: block; margin-bottom: 5px;">
+                        <input type="radio" id="ielts_cm_import_mode_replace" name="ielts_cm_import_mode" value="replace" checked>
                         <?php _e('Replace all content', 'ielts-course-manager'); ?>
                         <span style="color: #666; font-size: 12px;"><?php _e('(overwrites everything)', 'ielts-course-manager'); ?></span>
                     </label>
-                    <label style="display: block;">
-                        <input type="radio" name="ielts_cm_import_mode" value="append">
+                    <label for="ielts_cm_import_mode_append" style="display: block;">
+                        <input type="radio" id="ielts_cm_import_mode_append" name="ielts_cm_import_mode" value="append">
                         <?php _e('Add to existing content', 'ielts-course-manager'); ?>
                         <span style="color: #666; font-size: 12px;"><?php _e('(keeps current questions and adds new ones)', 'ielts-course-manager'); ?></span>
                     </label>
@@ -5761,9 +5761,9 @@ class IELTS_CM_Admin {
                 // Confirm action with appropriate message
                 var confirmMsg;
                 if (importMode === 'replace') {
-                    confirmMsg = '<?php _e('This will replace all current exercise content. Are you sure you want to continue?', 'ielts-course-manager'); ?>';
+                    confirmMsg = <?php echo json_encode(__('This will replace all current exercise content. Are you sure you want to continue?', 'ielts-course-manager')); ?>;
                 } else {
-                    confirmMsg = '<?php _e('This will add the XML content to your current exercise. Are you sure you want to continue?', 'ielts-course-manager'); ?>';
+                    confirmMsg = <?php echo json_encode(__('This will add the XML content to your current exercise. Are you sure you want to continue?', 'ielts-course-manager')); ?>;
                 }
                 
                 if (!confirm(confirmMsg)) {
@@ -5993,8 +5993,13 @@ class IELTS_CM_Admin {
         // Add the offset to each reading_text_id so they point to correct reading texts after merge
         foreach ($new_questions as $q_index => $question) {
             if (isset($question['reading_text_id']) && is_numeric($question['reading_text_id'])) {
-                // Add offset to reading_text_id to account for existing reading texts
-                $new_questions[$q_index]['reading_text_id'] = intval($question['reading_text_id']) + $reading_text_id_offset;
+                $current_id = intval($question['reading_text_id']);
+                // Validate that the ID is not negative
+                if ($current_id >= 0) {
+                    // Add offset to reading_text_id to account for existing reading texts
+                    $new_questions[$q_index]['reading_text_id'] = $current_id + $reading_text_id_offset;
+                }
+                // If negative ID, leave it as-is (malformed data - will likely cause issues but don't make it worse)
             }
         }
         
