@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-if (!$questions) {
+if (!is_array($questions)) {
     $questions = array();
 }
 

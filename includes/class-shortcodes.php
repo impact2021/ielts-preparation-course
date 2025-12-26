@@ -723,6 +723,9 @@ class IELTS_CM_Shortcodes {
         }
         
         $questions = get_post_meta($quiz_id, '_ielts_cm_questions', true);
+        if (!is_array($questions)) {
+            $questions = array();
+        }
         $course_id = get_post_meta($quiz_id, '_ielts_cm_course_id', true);
         $lesson_id = get_post_meta($quiz_id, '_ielts_cm_lesson_id', true);
         
