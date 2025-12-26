@@ -1840,6 +1840,16 @@ select.answer-select-inline.answer-incorrect {
     width: 100%;
 }
 
+/* Question Instructions Styling for Listening Exercises */
+.ielts-listening-practice-quiz .question-instructions,
+.ielts-listening-exercise-quiz .question-instructions {
+    margin: 0 0 15px 0;
+    padding: 12px 15px;
+    background: #e7f3ff;
+    border-left: 4px solid #0073aa;
+    font-size: 0.95em;
+}
+
 /* Responsive adjustments for listening layouts */
 @media (max-width: 768px) {
     .listening-audio-content {

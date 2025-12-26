@@ -1474,9 +1474,9 @@
             
             var countdownInterval = setInterval(function() {
                 countdownTimer--;
-                if (countdownTimer > 0) {
-                    countdownElement.text(countdownTimer);
-                } else {
+                countdownElement.text(countdownTimer);
+                
+                if (countdownTimer <= 0) {
                     clearInterval(countdownInterval);
                     startAudioPlayback();
                 }
