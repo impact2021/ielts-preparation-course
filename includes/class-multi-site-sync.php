@@ -249,7 +249,8 @@ class IELTS_CM_Multi_Site_Sync {
         $all_meta = get_post_meta($content_id);
         foreach ($all_meta as $key => $values) {
             if (strpos($key, '_ielts_cm_') === 0) {
-                $data['metadata'][$key] = $values[0];
+                // Use get_post_meta with single=true to ensure proper unserialization
+                $data['metadata'][$key] = get_post_meta($content_id, $key, true);
             }
         }
         
