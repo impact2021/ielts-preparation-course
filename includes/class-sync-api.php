@@ -265,8 +265,8 @@ class IELTS_CM_Sync_API {
             
             // Check if it's serialized data first
             if (is_serialized($meta_value)) {
-                $ids = unserialize($meta_value);
-                if ($ids !== false && is_array($ids)) {
+                $ids = maybe_unserialize($meta_value);
+                if (is_array($ids)) {
                     $is_serialized = true;
                 }
             }
