@@ -4443,24 +4443,33 @@ class IELTS_CM_Admin {
      * AJAX handler for pushing content to subsites
      */
     public function ajax_push_to_subsites() {
+        // Start output buffering to capture any accidental output
+        ob_start();
+        
         check_ajax_referer('ielts_cm_sync_content', 'nonce');
         
         if (!current_user_can('edit_posts')) {
+            ob_end_clean();
             wp_send_json_error(array('message' => 'Insufficient permissions'));
+            return;
         }
         
         $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
         $content_type = isset($_POST['content_type']) ? sanitize_text_field($_POST['content_type']) : '';
         
         if (!$post_id || !$content_type) {
+            ob_end_clean();
             wp_send_json_error(array('message' => 'Invalid parameters'));
+            return;
         }
         
         $sync_manager = new IELTS_CM_Multi_Site_Sync();
         
         // Check if this is a primary site
         if (!$sync_manager->is_primary_site()) {
+            ob_end_clean();
             wp_send_json_error(array('message' => 'Only primary sites can push content'));
+            return;
         }
         
         // Push content to all subsites
@@ -4472,7 +4481,9 @@ class IELTS_CM_Admin {
         }
         
         if (is_wp_error($results)) {
+            ob_end_clean();
             wp_send_json_error(array('message' => $results->get_error_message()));
+            return;
         }
         
         // Get subsite names for detailed results
@@ -4490,9 +4501,9 @@ class IELTS_CM_Admin {
             // Format main course results
             foreach ($results['main'] as $site_id => $result) {
                 $formatted_results[$site_id] = array(
-                    'site_name' => $subsite_names[$site_id] ?? 'Unknown Site',
+                    'site_name' => isset($subsite_names[$site_id]) ? $subsite_names[$site_id] : 'Unknown Site',
                     'success' => !is_wp_error($result) && isset($result['success']) && $result['success'],
-                    'message' => is_wp_error($result) ? $result->get_error_message() : ($result['message'] ?? 'Success'),
+                    'message' => is_wp_error($result) ? $result->get_error_message() : (isset($result['message']) ? $result['message'] : 'Success'),
                     'error' => is_wp_error($result) ? $result->get_error_message() : null
                 );
             }
@@ -4513,7 +4524,7 @@ class IELTS_CM_Admin {
                 }
             }
             
-            wp_send_json_success(array(
+            $response_data = array(
                 'message' => sprintf(
                     __('Course and all child content pushed successfully: %d lesson(s), %d sublesson(s), %d exercise(s)', 'ielts-course-manager'),
                     $lesson_count,
@@ -4526,23 +4537,29 @@ class IELTS_CM_Admin {
                     'resources' => $resource_count,
                     'exercises' => $exercise_count
                 )
-            ));
+            );
         } else {
             // Handle regular content results
             foreach ($results as $site_id => $result) {
                 $formatted_results[$site_id] = array(
-                    'site_name' => $subsite_names[$site_id] ?? 'Unknown Site',
+                    'site_name' => isset($subsite_names[$site_id]) ? $subsite_names[$site_id] : 'Unknown Site',
                     'success' => !is_wp_error($result) && isset($result['success']) && $result['success'],
-                    'message' => is_wp_error($result) ? $result->get_error_message() : ($result['message'] ?? 'Success'),
+                    'message' => is_wp_error($result) ? $result->get_error_message() : (isset($result['message']) ? $result['message'] : 'Success'),
                     'error' => is_wp_error($result) ? $result->get_error_message() : null
                 );
             }
             
-            wp_send_json_success(array(
+            $response_data = array(
                 'message' => sprintf(__('Content pushed to %d subsite(s)', 'ielts-course-manager'), count($results)),
                 'results' => $formatted_results
-            ));
+            );
         }
+        
+        // Clean output buffer before sending response
+        ob_end_clean();
+        
+        wp_send_json_success($response_data);
+        return;
     }
     
     /**
