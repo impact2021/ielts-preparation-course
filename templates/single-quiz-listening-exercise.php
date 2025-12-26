@@ -1,7 +1,8 @@
 <?php
 /**
- * Template for displaying single quiz in computer-based IELTS layout
- * Two-column layout with reading text on left and questions on right
+ * Template for displaying listening exercises
+ * Two-column layout with audio player on left (WITH controls, autoplay after countdown) and questions on right
+ * Shows transcript after submission, includes warning about official IELTS test
  */
 
 if (!defined('ABSPATH')) {
@@ -18,14 +19,9 @@ if (!$pass_percentage) {
     $pass_percentage = 70;
 }
 
-$reading_texts = get_post_meta($quiz->ID, '_ielts_cm_reading_texts', true);
-if (!$reading_texts) {
-    $reading_texts = array();
-}
+$audio_url = get_post_meta($quiz->ID, '_ielts_cm_audio_url', true);
+$transcript = get_post_meta($quiz->ID, '_ielts_cm_transcript', true);
 $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
-$open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
-// Check if we're in fullscreen mode
-$is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
 
 // Calculate next and previous URLs for navigation
 $next_url = '';
@@ -95,44 +91,18 @@ if ($lesson_id) {
     // If there's a next item in this lesson, get its URL
     if ($current_index >= 0 && $current_index < count($all_items) - 1) {
         $next_post = $all_items[$current_index + 1]['post'];
-        // For CBT quizzes with fullscreen enabled, add fullscreen parameter
-        if ($next_post->post_type === 'ielts_quiz') {
-            $next_layout_type = get_post_meta($next_post->ID, '_ielts_cm_layout_type', true);
-            $next_open_as_popup = get_post_meta($next_post->ID, '_ielts_cm_open_as_popup', true);
-            if ($next_layout_type === 'computer_based' && $next_open_as_popup) {
-                $next_url = add_query_arg('fullscreen', '1', get_permalink($next_post->ID));
-            } else {
-                $next_url = get_permalink($next_post->ID);
-            }
-        } else {
-            $next_url = get_permalink($next_post->ID);
-        }
+        $next_url = get_permalink($next_post->ID);
     }
     
     // If there's a previous item in this lesson, get its URL
     if ($current_index > 0) {
         $prev_post = $all_items[$current_index - 1]['post'];
-        // For CBT quizzes with fullscreen enabled, add fullscreen parameter
-        if ($prev_post->post_type === 'ielts_quiz') {
-            $prev_layout_type = get_post_meta($prev_post->ID, '_ielts_cm_layout_type', true);
-            $prev_open_as_popup = get_post_meta($prev_post->ID, '_ielts_cm_open_as_popup', true);
-            if ($prev_layout_type === 'computer_based' && $prev_open_as_popup) {
-                $prev_url = add_query_arg('fullscreen', '1', get_permalink($prev_post->ID));
-            } else {
-                $prev_url = get_permalink($prev_post->ID);
-            }
-        } else {
-            $prev_url = get_permalink($prev_post->ID);
-        }
+        $prev_url = get_permalink($prev_post->ID);
     }
 }
 ?>
 
-<div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>" data-next-url="<?php echo esc_attr($next_url); ?>">
-    <?php 
-    // Show fullscreen notice only if popup is enabled AND we're not already in fullscreen mode
-    $show_fullscreen_notice = $open_as_popup && !$is_fullscreen;
-    ?>
+<div class="ielts-listening-exercise-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>" data-next-url="<?php echo esc_attr($next_url); ?>" data-audio-url="<?php echo esc_attr($audio_url); ?>">
     
     <div class="quiz-header">
         <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -171,24 +141,10 @@ if ($lesson_id) {
         </div>
     </div>
     
-    <?php if ($show_fullscreen_notice): ?>
-        <!-- Force fullscreen mode for CBT tests (when popup is enabled) -->
-        <div class="cbt-fullscreen-notice" style="text-align: center; padding: 40px 20px; background: #f9f9f9; border: 2px solid #0073aa; border-radius: 8px; margin: 20px 0;">
-            <p style="font-size: 1.2em; margin-bottom: 20px; color: #333;">
-                <?php _e('This computer-based test must be viewed in fullscreen mode for the best experience.', 'ielts-course-manager'); ?>
-            </p>
-            <a href="<?php echo add_query_arg('fullscreen', '1', get_permalink($quiz->ID)); ?>" class="button button-primary button-large ielts-fullscreen-btn" style="font-size: 1.1em; padding: 12px 30px; text-decoration: none;">
-                <span class="dashicons dashicons-fullscreen-alt" style="vertical-align: middle; font-size: 1.2em;"></span>
-                <?php _e('Open in Fullscreen', 'ielts-course-manager'); ?>
-            </a>
-        </div>
-    <?php endif; ?>
-    
     <?php if (!empty($questions) && is_user_logged_in()): ?>
-        <form id="ielts-quiz-form" class="quiz-form" style="<?php echo $show_fullscreen_notice ? 'display:none;' : ''; ?>">
+        <form id="ielts-quiz-form" class="quiz-form">
             <?php 
             // Show timer bar if there's a timer OR a course link (or both)
-            // This ensures the return to course link is always visible when available
             if ($timer_minutes > 0 || $course_id): ?>
             <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
                 <div class="timer-left-section">
@@ -233,28 +189,49 @@ if ($lesson_id) {
             </div>
             <?php endif; ?>
             <div class="computer-based-container">
-                <!-- Left Column: Reading Texts -->
-                <div class="reading-column">
-                    <div class="reading-content">
-                        <button type="button" class="clear-highlights-btn" style="display:none;">
-                            <?php _e('Clear', 'ielts-course-manager'); ?>
-                        </button>
-                        <?php if (!empty($reading_texts)): ?>
-                            <?php foreach ($reading_texts as $index => $text): ?>
-                                <div class="reading-text-section" id="reading-text-<?php echo $index; ?>" style="<?php echo $index > 0 ? 'display:none;' : ''; ?>">
-                                    <?php if (!empty($text['title'])): ?>
-                                        <h3 class="reading-title"><?php echo esc_html($text['title']); ?></h3>
-                                    <?php endif; ?>
-                                    <div class="reading-text">
-                                        <?php echo wp_kses_post(wpautop($text['content'])); ?>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <div class="reading-text-section">
-                                <p class="no-reading-text"><?php _e('No reading text provided for this exercise.', 'ielts-course-manager'); ?></p>
+                <!-- Left Column: Audio Player & Countdown -->
+                <div class="reading-column listening-audio-column">
+                    <div class="reading-content listening-audio-content">
+                        <!-- Countdown Display (shown before audio plays) -->
+                        <div class="listening-countdown" id="listening-countdown">
+                            <div class="countdown-text"><?php _e('Audio will start in:', 'ielts-course-manager'); ?></div>
+                            <div class="countdown-number" id="countdown-number">1</div>
+                        </div>
+                        
+                        <!-- Audio Player with controls visible -->
+                        <div class="listening-audio-player listening-exercise-player" id="listening-audio-player" style="display: none;">
+                            <div class="ielts-warning-notice">
+                                <span class="dashicons dashicons-warning" style="color: #d63638;"></span>
+                                <p><?php _e('Remember: In the official IELTS test you are NOT able to stop the audio recordings.', 'ielts-course-manager'); ?></p>
                             </div>
-                        <?php endif; ?>
+                            
+                            <div class="audio-player-controls">
+                                <audio id="listening-audio" controls preload="auto">
+                                    <?php if ($audio_url): ?>
+                                    <source src="<?php echo esc_url($audio_url); ?>" type="audio/mpeg">
+                                    <?php endif; ?>
+                                    <?php _e('Your browser does not support the audio element.', 'ielts-course-manager'); ?>
+                                </audio>
+                            </div>
+                        </div>
+                        
+                        <!-- Transcript (shown after submission) -->
+                        <div class="listening-transcript" id="listening-transcript" style="display: none;">
+                            <h3><?php _e('Transcript', 'ielts-course-manager'); ?></h3>
+                            <div class="transcript-content">
+                                <?php echo wp_kses_post(wpautop($transcript)); ?>
+                            </div>
+                            
+                            <!-- Audio controls shown after submission -->
+                            <div class="transcript-audio-controls">
+                                <audio controls>
+                                    <?php if ($audio_url): ?>
+                                    <source src="<?php echo esc_url($audio_url); ?>" type="audio/mpeg">
+                                    <?php endif; ?>
+                                    <?php _e('Your browser does not support the audio element.', 'ielts-course-manager'); ?>
+                                </audio>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -268,7 +245,7 @@ if ($lesson_id) {
                             $starting_question_number = 1;
                         }
                         
-                        // Calculate display question numbers for multi-select, summary completion, and matching questions
+                        // Calculate display question numbers
                         $display_question_number = intval($starting_question_number);
                         $question_display_numbers = array();
                         foreach ($questions as $idx => $q) {
@@ -281,19 +258,15 @@ if ($lesson_id) {
                                         $correct_count++;
                                     }
                                 }
-                                // Multi-select counts as multiple questions based on correct answers
                                 $question_count = max(1, $correct_count);
-                            } elseif ($q['type'] === 'summary_completion') {
-                                // For summary completion, count number of fields
+                            } elseif ($q['type'] === 'summary_completion' || $q['type'] === 'table_completion') {
+                                // Count number of fields
                                 $field_count = 0;
                                 if (isset($q['summary_fields']) && is_array($q['summary_fields'])) {
                                     $field_count = count($q['summary_fields']);
                                 } else {
-                                    // Parse from question text
                                     $question_text = isset($q['question']) ? $q['question'] : '';
-                                    // Check for new format [field N]
                                     preg_match_all('/\[field\s+(\d+)\]/i', $question_text, $field_matches);
-                                    // Check for legacy format [ANSWER N]
                                     preg_match_all('/\[ANSWER\s+(\d+)\]/i', $question_text, $answer_matches);
                                     
                                     if (!empty($field_matches[1])) {
@@ -304,7 +277,6 @@ if ($lesson_id) {
                                 }
                                 $question_count = max(1, $field_count);
                             } elseif ($q['type'] === 'dropdown_paragraph') {
-                                // For dropdown paragraph, count number of dropdowns
                                 $dropdown_count = 0;
                                 $paragraph_text = isset($q['question']) ? $q['question'] : '';
                                 preg_match_all('/(\d+)\.\[([^\]]+)\]/i', $paragraph_text, $dropdown_matches);
@@ -312,20 +284,6 @@ if ($lesson_id) {
                                     $dropdown_count = count($dropdown_matches[0]);
                                 }
                                 $question_count = max(1, $dropdown_count);
-                            } elseif ($q['type'] === 'table_completion') {
-                                // For table completion, count number of fields
-                                $field_count = 0;
-                                if (isset($q['summary_fields']) && is_array($q['summary_fields'])) {
-                                    $field_count = count($q['summary_fields']);
-                                } else {
-                                    // Parse from question text
-                                    $question_text = isset($q['question']) ? $q['question'] : '';
-                                    preg_match_all('/\[field\s+(\d+)\]/i', $question_text, $field_matches);
-                                    if (!empty($field_matches[1])) {
-                                        $field_count = count(array_unique($field_matches[1]));
-                                    }
-                                }
-                                $question_count = max(1, $field_count);
                             } else {
                                 $question_count = 1;
                             }
@@ -341,7 +299,7 @@ if ($lesson_id) {
                         foreach ($questions as $index => $question): 
                             $display_nums = $question_display_numbers[$index];
                         ?>
-                            <div class="quiz-question" id="question-<?php echo $index; ?>" data-reading-text-id="<?php echo esc_attr($question['reading_text_id'] ?? ''); ?>" data-display-start="<?php echo $display_nums['start']; ?>" data-display-end="<?php echo $display_nums['end']; ?>">
+                            <div class="quiz-question" id="question-<?php echo $index; ?>" data-display-start="<?php echo $display_nums['start']; ?>" data-display-end="<?php echo $display_nums['end']; ?>">
                                 <?php if (!empty($question['instructions'])): ?>
                                     <div class="question-instructions"><?php echo wp_kses_post(wpautop($question['instructions'])); ?></div>
                                 <?php endif; ?>
@@ -353,14 +311,14 @@ if ($lesson_id) {
                                     } else {
                                         printf(__('Questions %d – %d', 'ielts-course-manager'), $display_nums['start'], $display_nums['end']);
                                     }
-                                    // For multi-select and matching, show the actual number of sub-questions as points
                                     $display_points = $display_nums['count'];
                                     ?>
                                     <span class="question-points">(<?php printf(_n('%s point', '%s points', $display_points, 'ielts-course-manager'), $display_points); ?>)</span>
                                 </h4>
                                 
                                 <?php
-                                // Don't display question text for dropdown_paragraph, summary_completion, or table_completion - they render their own formatted version
+                                // Include question rendering from computer-based template
+                                // Don't display question text for dropdown_paragraph, summary_completion, or table_completion
                                 if ($question['type'] !== 'dropdown_paragraph' && $question['type'] !== 'summary_completion' && $question['type'] !== 'table_completion'):
                                 ?>
                                 <div class="question-text"><?php echo wp_kses_post(wpautop($question['question'])); ?></div>
@@ -369,7 +327,6 @@ if ($lesson_id) {
                                 <?php
                                 switch ($question['type']) {
                                     case 'multiple_choice':
-                                        // Support both new mc_options format and legacy options format
                                         $options = array();
                                         if (isset($question['mc_options']) && is_array($question['mc_options'])) {
                                             $options = $question['mc_options'];
@@ -394,12 +351,10 @@ if ($lesson_id) {
                                         break;
                                         
                                     case 'multi_select':
-                                        // Multi-select question type
                                         $options = array();
                                         if (isset($question['mc_options']) && is_array($question['mc_options'])) {
                                             $options = $question['mc_options'];
                                         } elseif (isset($question['options']) && !empty($question['options'])) {
-                                            // Fallback for legacy format
                                             $option_lines = array_filter(explode("\n", $question['options']));
                                             foreach ($option_lines as $opt_text) {
                                                 $options[] = array('text' => trim($opt_text), 'is_correct' => false);
@@ -449,59 +404,6 @@ if ($lesson_id) {
                                         
                                     case 'short_answer':
                                     case 'sentence_completion':
-                                    case 'table_completion':
-                                        // Table completion - parse [field N] or [ANSWER N] placeholders and replace with inline inputs (same as summary completion)
-                                        // New format: [field 1], [field 2], etc.
-                                        // Legacy format: [ANSWER 1], [ANSWER 2], etc.
-                                        
-                                        // Get the question text without wpautop processing for inline inputs
-                                        $table_text = isset($question['question']) ? $question['question'] : '';
-                                        
-                                        // Allow input tags in addition to standard post tags
-                                        $allowed_html = wp_kses_allowed_html('post');
-                                        $allowed_html['input'] = array(
-                                            'type' => true,
-                                            'name' => true,
-                                            'class' => true,
-                                            'data-field-num' => true,
-                                            'data-answer-num' => true,
-                                        );
-                                        
-                                        // Find all [field N] placeholders (new format)
-                                        preg_match_all('/\[field\s+(\d+)\]/i', $table_text, $field_matches);
-                                        
-                                        // Find all [ANSWER N] placeholders (legacy format)
-                                        preg_match_all('/\[ANSWER\s+(\d+)\]/i', $table_text, $answer_matches);
-                                        
-                                        if (!empty($field_matches[0])) {
-                                            // New format - multiple inline answers with [field N] placeholders
-                                            $processed_text = $table_text;
-                                            foreach ($field_matches[0] as $match_index => $placeholder) {
-                                                $field_num = $field_matches[1][$match_index];
-                                                $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_field_' . esc_attr($field_num) . '" class="answer-input-inline" data-field-num="' . esc_attr($field_num) . '" />';
-                                                $processed_text = str_replace($placeholder, $input_field, $processed_text);
-                                            }
-                                            echo '<div class="table-completion-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
-                                        } elseif (!empty($answer_matches[0])) {
-                                            // Legacy format - multiple inline answers with [ANSWER N] placeholders
-                                            $processed_text = $table_text;
-                                            foreach ($answer_matches[0] as $match_index => $placeholder) {
-                                                $answer_num = $answer_matches[1][$match_index];
-                                                $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_' . esc_attr($answer_num) . '" class="answer-input-inline" data-answer-num="' . esc_attr($answer_num) . '" />';
-                                                $processed_text = str_replace($placeholder, $input_field, $processed_text);
-                                            }
-                                            echo '<div class="table-completion-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
-                                        } else {
-                                            // No placeholders - single answer input below question text
-                                            ?>
-                                            <div class="question-answer">
-                                                <input type="text" 
-                                                       name="answer_<?php echo $index; ?>" 
-                                                       class="answer-input">
-                                            </div>
-                                            <?php
-                                        }
-                                        break;
                                     case 'labelling':
                                         ?>
                                         <div class="question-answer">
@@ -511,45 +413,11 @@ if ($lesson_id) {
                                         </div>
                                         <?php
                                         break;
-                                        
-                                    case 'locating_information':
-                                        // Locating Information question type - independent implementation
-                                        $locating_options = array();
-                                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
-                                            $locating_options = $question['mc_options'];
-                                        } elseif (isset($question['options']) && !empty($question['options'])) {
-                                            $option_lines = array_filter(explode("\n", $question['options']));
-                                            foreach ($option_lines as $opt_text) {
-                                                $locating_options[] = array('text' => trim($opt_text));
-                                            }
-                                        }
-                                        
-                                        if (!empty($locating_options)):
-                                        ?>
-                                        <div class="question-options locating-information-options">
-                                            <?php foreach ($locating_options as $opt_index => $option): ?>
-                                                <label class="option-label locating-information-option-label">
-                                                    <input type="radio" 
-                                                           name="answer_<?php echo $index; ?>" 
-                                                           value="<?php echo $opt_index; ?>"
-                                                           class="locating-information-radio">
-                                                    <span><?php echo wp_kses_post(isset($option['text']) ? $option['text'] : $option); ?></span>
-                                                </label>
-                                            <?php endforeach; ?>
-                                        </div>
-                                        <?php
-                                        endif;
-                                        break;
-                                        
+                                    
                                     case 'summary_completion':
-                                        // Summary completion - parse [field N] or [ANSWER N] placeholders and replace with inline inputs
-                                        // New format: [field 1], [field 2], etc.
-                                        // Legacy format: [ANSWER 1], [ANSWER 2], etc.
-                                        
-                                        // Get the question text without wpautop processing for inline inputs
+                                    case 'table_completion':
                                         $summary_text = isset($question['question']) ? $question['question'] : '';
                                         
-                                        // Allow input tags in addition to standard post tags
                                         $allowed_html = wp_kses_allowed_html('post');
                                         $allowed_html['input'] = array(
                                             'type' => true,
@@ -559,14 +427,10 @@ if ($lesson_id) {
                                             'data-answer-num' => true,
                                         );
                                         
-                                        // Find all [field N] placeholders (new format)
                                         preg_match_all('/\[field\s+(\d+)\]/i', $summary_text, $field_matches);
-                                        
-                                        // Find all [ANSWER N] placeholders (legacy format)
                                         preg_match_all('/\[ANSWER\s+(\d+)\]/i', $summary_text, $answer_matches);
                                         
                                         if (!empty($field_matches[0])) {
-                                            // New format - multiple inline answers with [field N] placeholders
                                             $processed_text = $summary_text;
                                             foreach ($field_matches[0] as $match_index => $placeholder) {
                                                 $field_num = $field_matches[1][$match_index];
@@ -575,7 +439,6 @@ if ($lesson_id) {
                                             }
                                             echo '<div class="summary-completion-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
                                         } elseif (!empty($answer_matches[0])) {
-                                            // Legacy format - multiple inline answers with [ANSWER N] placeholders
                                             $processed_text = $summary_text;
                                             foreach ($answer_matches[0] as $match_index => $placeholder) {
                                                 $answer_num = $answer_matches[1][$match_index];
@@ -584,7 +447,6 @@ if ($lesson_id) {
                                             }
                                             echo '<div class="summary-completion-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
                                         } else {
-                                            // No placeholders - single answer input below question text
                                             ?>
                                             <div class="question-answer">
                                                 <input type="text" 
@@ -596,29 +458,18 @@ if ($lesson_id) {
                                         break;
                                     
                                     case 'dropdown_paragraph':
-                                        // Dropdown paragraph - parse N.[A: option1 B: option2] placeholders and replace with inline dropdowns
-                                        // Example: "I am writing to 1.[A: let you know B: inform you] that I will be unable to meet."
-                                        
                                         $paragraph_text = isset($question['question']) ? $question['question'] : '';
-                                        
-                                        // Find all N.[A: option1 B: option2 C: option3] placeholders
-                                        // Pattern: number followed by period, then square bracket with options
                                         preg_match_all('/(\d+)\.\[([^\]]+)\]/i', $paragraph_text, $matches);
                                         
                                         if (!empty($matches[0])) {
-                                            // Multiple inline dropdowns - replace placeholders with select fields
                                             $processed_text = $paragraph_text;
                                             foreach ($matches[0] as $match_index => $placeholder) {
                                                 $dropdown_num = $matches[1][$match_index];
                                                 $options_text = $matches[2][$match_index];
-                                                
-                                                // Parse options: "A: option1 B: option2 C: option3"
-                                                // Split by space followed by uppercase letter, colon, and space
                                                 $option_parts = preg_split('/\s+(?=[A-Z]:\s)/', $options_text);
                                                 
-                                                // Build the select dropdown
                                                 $select_field = '<select name="answer_' . esc_attr($index) . '_' . esc_attr($dropdown_num) . '" class="answer-select-inline" data-dropdown-num="' . esc_attr($dropdown_num) . '">';
-                                                $select_field .= '<option value="">-</option>'; // Empty default option
+                                                $select_field .= '<option value="">-</option>';
                                                 
                                                 foreach ($option_parts as $option_part) {
                                                     if (preg_match('/^([A-Z]):\s*(.+)$/i', trim($option_part), $opt_match)) {
@@ -631,7 +482,6 @@ if ($lesson_id) {
                                                 $select_field .= '</select>';
                                                 $processed_text = str_replace($placeholder, $select_field, $processed_text);
                                             }
-                                            // Allow select and option tags in addition to standard post tags
                                             $allowed_html = wp_kses_allowed_html('post');
                                             $allowed_html['select'] = array(
                                                 'name' => true,
@@ -644,96 +494,8 @@ if ($lesson_id) {
                                             );
                                             echo '<div class="dropdown-paragraph-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
                                         } else {
-                                            // No valid placeholders found - show question text as-is
                                             echo '<div class="dropdown-paragraph-text">' . wp_kses_post(wpautop($paragraph_text)) . '</div>';
                                         }
-                                        break;
-                                    
-                                    case 'headings':
-                                        // Headings question type - independent implementation
-                                        $headings_options = array();
-                                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
-                                            $headings_options = $question['mc_options'];
-                                        } elseif (isset($question['options']) && !empty($question['options'])) {
-                                            $option_lines = array_filter(explode("\n", $question['options']));
-                                            foreach ($option_lines as $opt_text) {
-                                                $headings_options[] = array('text' => trim($opt_text));
-                                            }
-                                        }
-                                        
-                                        if (!empty($headings_options)):
-                                        ?>
-                                        <div class="question-options headings-options">
-                                            <?php foreach ($headings_options as $opt_index => $option): ?>
-                                                <label class="option-label headings-option-label">
-                                                    <input type="radio" 
-                                                           name="answer_<?php echo $index; ?>" 
-                                                           value="<?php echo $opt_index; ?>"
-                                                           class="headings-radio">
-                                                    <span><?php echo wp_kses_post(isset($option['text']) ? $option['text'] : $option); ?></span>
-                                                </label>
-                                            <?php endforeach; ?>
-                                        </div>
-                                        <?php
-                                        endif;
-                                        break;
-                                        
-                                    case 'matching_classifying':
-                                        // Matching/Classifying question type - independent implementation
-                                        $classifying_options = array();
-                                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
-                                            $classifying_options = $question['mc_options'];
-                                        } elseif (isset($question['options']) && !empty($question['options'])) {
-                                            $option_lines = array_filter(explode("\n", $question['options']));
-                                            foreach ($option_lines as $opt_text) {
-                                                $classifying_options[] = array('text' => trim($opt_text));
-                                            }
-                                        }
-                                        
-                                        if (!empty($classifying_options)):
-                                        ?>
-                                        <div class="question-options matching-classifying-options">
-                                            <?php foreach ($classifying_options as $opt_index => $option): ?>
-                                                <label class="option-label matching-classifying-option-label">
-                                                    <input type="radio" 
-                                                           name="answer_<?php echo $index; ?>" 
-                                                           value="<?php echo $opt_index; ?>"
-                                                           class="matching-classifying-radio">
-                                                    <span><?php echo wp_kses_post(isset($option['text']) ? $option['text'] : $option); ?></span>
-                                                </label>
-                                            <?php endforeach; ?>
-                                        </div>
-                                        <?php
-                                        endif;
-                                        break;
-                                        
-                                    case 'matching':
-                                        // Matching question type - independent implementation
-                                        $matching_options = array();
-                                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
-                                            $matching_options = $question['mc_options'];
-                                        } elseif (isset($question['options']) && !empty($question['options'])) {
-                                            $option_lines = array_filter(explode("\n", $question['options']));
-                                            foreach ($option_lines as $opt_text) {
-                                                $matching_options[] = array('text' => trim($opt_text));
-                                            }
-                                        }
-                                        
-                                        if (!empty($matching_options)):
-                                        ?>
-                                        <div class="question-options matching-options">
-                                            <?php foreach ($matching_options as $opt_index => $option): ?>
-                                                <label class="option-label matching-option-label">
-                                                    <input type="radio" 
-                                                           name="answer_<?php echo $index; ?>" 
-                                                           value="<?php echo $opt_index; ?>"
-                                                           class="matching-radio">
-                                                    <span><?php echo wp_kses_post(isset($option['text']) ? $option['text'] : $option); ?></span>
-                                                </label>
-                                            <?php endforeach; ?>
-                                        </div>
-                                        <?php
-                                        endif;
                                         break;
                                 }
                                 ?>
@@ -747,23 +509,8 @@ if ($lesson_id) {
             <div class="question-navigation">
                 <div class="question-buttons">
                     <?php 
-                    // Group questions by reading passage
-                    $last_reading_text_id = null;
                     foreach ($questions as $index => $question): 
-                        $current_reading_text_id = isset($question['reading_text_id']) ? $question['reading_text_id'] : null;
-                        
-                        // If reading text changed, show separator
-                        if ($current_reading_text_id !== $last_reading_text_id && $current_reading_text_id !== null && !empty($reading_texts) && $index > 0):
-                    ?>
-                        <span class="passage-separator">|</span>
-                    <?php 
-                        endif;
-                        $last_reading_text_id = $current_reading_text_id;
-                        
-                        // Get display numbers for this question
                         $display_nums = $question_display_numbers[$index];
-                        
-                        // For multi-select with multiple correct answers, show multiple buttons
                         for ($btn_num = $display_nums['start']; $btn_num <= $display_nums['end']; $btn_num++):
                     ?>
                         <button type="button" class="question-nav-btn" data-question="<?php echo $index; ?>" data-display-number="<?php echo $btn_num; ?>">

@@ -560,6 +560,16 @@ You have one hour for the complete test (including transferring your answers).</
                     delete_post_meta($exercise_id, '_ielts_cm_timer_minutes');
                 }
             }
+            
+            // Save starting question number
+            if (isset($metadata['starting_question_number'])) {
+                if (!empty($metadata['starting_question_number']) && is_numeric($metadata['starting_question_number'])) {
+                    $starting_num = max(1, intval($metadata['starting_question_number']));
+                    update_post_meta($exercise_id, '_ielts_cm_starting_question_number', $starting_num);
+                } else {
+                    delete_post_meta($exercise_id, '_ielts_cm_starting_question_number');
+                }
+            }
         }
         
         $results['success'] = true;
@@ -676,6 +686,10 @@ You have one hour for the complete test (including transferring your answers).</
                 $layout_text = trim($layout_match[1]);
                 if (stripos($layout_text, 'Computer-Based') !== false || stripos($layout_text, 'Two Columns') !== false) {
                     $metadata['layout_type'] = 'computer_based';
+                } elseif (stripos($layout_text, 'Listening Practice') !== false || stripos($layout_text, 'No Audio Controls') !== false) {
+                    $metadata['layout_type'] = 'listening_practice';
+                } elseif (stripos($layout_text, 'Listening Exercise') !== false || stripos($layout_text, 'With Audio Controls') !== false) {
+                    $metadata['layout_type'] = 'listening_exercise';
                 } else {
                     $metadata['layout_type'] = 'standard';
                 }
@@ -710,6 +724,11 @@ You have one hour for the complete test (including transferring your answers).</
                 } elseif (stripos($timer_text, 'No timer') !== false) {
                     $metadata['timer_minutes'] = '';
                 }
+            }
+            
+            // Parse Starting Question Number
+            if (preg_match('/Starting Question Number:\s*(\d+)/i', $settings_block, $start_match)) {
+                $metadata['starting_question_number'] = intval($start_match[1]);
             }
         }
         
@@ -2814,7 +2833,9 @@ You have one hour for the complete test (including transferring your answers).</
             if (isset($metadata['layout_type'])) {
                 $layout_map = array(
                     'standard' => 'Standard Layout',
-                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)',
+                    'listening_practice' => 'Listening Practice Test (No Audio Controls)',
+                    'listening_exercise' => 'Listening Exercise (With Audio Controls)'
                 );
                 $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
                 $output[] = 'Layout Type: ' . $layout_display;
@@ -2843,6 +2864,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
             } else {
                 $output[] = 'Timer: No timer';
+            
+            // Starting Question Number
+            if (isset($metadata['starting_question_number']) && $metadata['starting_question_number'] > 1) {
+                $output[] = 'Starting Question Number: ' . $metadata['starting_question_number'];
+            }
             }
             
             $output[] = '=== END EXERCISE SETTINGS ===';
@@ -2926,7 +2952,9 @@ You have one hour for the complete test (including transferring your answers).</
             if (isset($metadata['layout_type'])) {
                 $layout_map = array(
                     'standard' => 'Standard Layout',
-                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)',
+                    'listening_practice' => 'Listening Practice Test (No Audio Controls)',
+                    'listening_exercise' => 'Listening Exercise (With Audio Controls)'
                 );
                 $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
                 $output[] = 'Layout Type: ' . $layout_display;
@@ -2955,6 +2983,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
             } else {
                 $output[] = 'Timer: No timer';
+            
+            // Starting Question Number
+            if (isset($metadata['starting_question_number']) && $metadata['starting_question_number'] > 1) {
+                $output[] = 'Starting Question Number: ' . $metadata['starting_question_number'];
+            }
             }
             
             $output[] = '=== END EXERCISE SETTINGS ===';
@@ -3576,7 +3609,9 @@ You have one hour for the complete test (including transferring your answers).</
             if (isset($metadata['layout_type'])) {
                 $layout_map = array(
                     'standard' => 'Standard Layout',
-                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)',
+                    'listening_practice' => 'Listening Practice Test (No Audio Controls)',
+                    'listening_exercise' => 'Listening Exercise (With Audio Controls)'
                 );
                 $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
                 $output[] = 'Layout Type: ' . $layout_display;
@@ -3602,6 +3637,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
             } else {
                 $output[] = 'Timer: No timer';
+            
+            // Starting Question Number
+            if (isset($metadata['starting_question_number']) && $metadata['starting_question_number'] > 1) {
+                $output[] = 'Starting Question Number: ' . $metadata['starting_question_number'];
+            }
             }
             
             $output[] = '=== END EXERCISE SETTINGS ===';
@@ -3715,7 +3755,9 @@ You have one hour for the complete test (including transferring your answers).</
             if (isset($metadata['layout_type'])) {
                 $layout_map = array(
                     'standard' => 'Standard Layout',
-                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)',
+                    'listening_practice' => 'Listening Practice Test (No Audio Controls)',
+                    'listening_exercise' => 'Listening Exercise (With Audio Controls)'
                 );
                 $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
                 $output[] = 'Layout Type: ' . $layout_display;
@@ -3741,6 +3783,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
             } else {
                 $output[] = 'Timer: No timer';
+            
+            // Starting Question Number
+            if (isset($metadata['starting_question_number']) && $metadata['starting_question_number'] > 1) {
+                $output[] = 'Starting Question Number: ' . $metadata['starting_question_number'];
+            }
             }
             
             $output[] = '=== END EXERCISE SETTINGS ===';
@@ -3903,7 +3950,9 @@ You have one hour for the complete test (including transferring your answers).</
             if (isset($metadata['layout_type'])) {
                 $layout_map = array(
                     'standard' => 'Standard Layout',
-                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)',
+                    'listening_practice' => 'Listening Practice Test (No Audio Controls)',
+                    'listening_exercise' => 'Listening Exercise (With Audio Controls)'
                 );
                 $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
                 $output[] = 'Layout Type: ' . $layout_display;
@@ -3929,6 +3978,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
             } else {
                 $output[] = 'Timer: No timer';
+            
+            // Starting Question Number
+            if (isset($metadata['starting_question_number']) && $metadata['starting_question_number'] > 1) {
+                $output[] = 'Starting Question Number: ' . $metadata['starting_question_number'];
+            }
             }
             
             $output[] = '=== END EXERCISE SETTINGS ===';
@@ -4045,7 +4099,9 @@ You have one hour for the complete test (including transferring your answers).</
             if (isset($metadata['layout_type'])) {
                 $layout_map = array(
                     'standard' => 'Standard Layout',
-                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)',
+                    'listening_practice' => 'Listening Practice Test (No Audio Controls)',
+                    'listening_exercise' => 'Listening Exercise (With Audio Controls)'
                 );
                 $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
                 $output[] = 'Layout Type: ' . $layout_display;
@@ -4071,6 +4127,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
             } else {
                 $output[] = 'Timer: No timer';
+            
+            // Starting Question Number
+            if (isset($metadata['starting_question_number']) && $metadata['starting_question_number'] > 1) {
+                $output[] = 'Starting Question Number: ' . $metadata['starting_question_number'];
+            }
             }
             
             $output[] = '=== END EXERCISE SETTINGS ===';
@@ -4165,7 +4226,9 @@ You have one hour for the complete test (including transferring your answers).</
             if (isset($metadata['layout_type'])) {
                 $layout_map = array(
                     'standard' => 'Standard Layout',
-                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)',
+                    'listening_practice' => 'Listening Practice Test (No Audio Controls)',
+                    'listening_exercise' => 'Listening Exercise (With Audio Controls)'
                 );
                 $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
                 $output[] = 'Layout Type: ' . $layout_display;
@@ -4191,6 +4254,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
             } else {
                 $output[] = 'Timer: No timer';
+            
+            // Starting Question Number
+            if (isset($metadata['starting_question_number']) && $metadata['starting_question_number'] > 1) {
+                $output[] = 'Starting Question Number: ' . $metadata['starting_question_number'];
+            }
             }
             
             $output[] = '=== END EXERCISE SETTINGS ===';

@@ -1220,13 +1220,27 @@ class IELTS_CM_Admin {
             <input type="number" id="ielts_cm_pass_percentage" name="ielts_cm_pass_percentage" value="<?php echo esc_attr($pass_percentage ? $pass_percentage : 70); ?>" min="0" max="100" style="width: 100%;">
         </p>
         
+        <?php
+        $starting_question_number = get_post_meta($post->ID, '_ielts_cm_starting_question_number', true);
+        if (!$starting_question_number) {
+            $starting_question_number = 1;
+        }
+        ?>
+        <p>
+            <label for="ielts_cm_starting_question_number"><?php _e('Starting Question Number', 'ielts-course-manager'); ?></label><br>
+            <input type="number" id="ielts_cm_starting_question_number" name="ielts_cm_starting_question_number" value="<?php echo esc_attr($starting_question_number); ?>" min="1" max="100" style="width: 100%;">
+            <small><?php _e('Set the first question number for this exercise. For example, enter "21" if this exercise should start with Question 21. Default is 1.', 'ielts-course-manager'); ?></small>
+        </p>
+        
         <p>
             <label for="ielts_cm_layout_type"><?php _e('Layout Type', 'ielts-course-manager'); ?></label><br>
             <select id="ielts_cm_layout_type" name="ielts_cm_layout_type" style="width: 100%;">
                 <option value="standard" <?php selected($layout_type, 'standard'); ?>><?php _e('Standard Layout', 'ielts-course-manager'); ?></option>
                 <option value="computer_based" <?php selected($layout_type, 'computer_based'); ?>><?php _e('Computer-Based IELTS Layout (Two Columns)', 'ielts-course-manager'); ?></option>
+                <option value="listening_practice" <?php selected($layout_type, 'listening_practice'); ?>><?php _e('Listening Practice Test (No Audio Controls)', 'ielts-course-manager'); ?></option>
+                <option value="listening_exercise" <?php selected($layout_type, 'listening_exercise'); ?>><?php _e('Listening Exercise (With Audio Controls)', 'ielts-course-manager'); ?></option>
             </select>
-            <small><?php _e('Computer-Based layout displays reading text on the left and questions on the right, similar to the actual IELTS computer test.', 'ielts-course-manager'); ?></small>
+            <small><?php _e('Computer-Based layout displays reading text on the left and questions on the right. Listening layouts display audio player on the left.', 'ielts-course-manager'); ?></small>
         </p>
         
         <?php
@@ -1239,6 +1253,25 @@ class IELTS_CM_Admin {
                     <?php _e('Open as Popup/Fullscreen Modal', 'ielts-course-manager'); ?>
                 </label><br>
                 <small><?php _e('When checked, the CBT exercise will open in a fullscreen popup modal. When unchecked, it opens in the same window.', 'ielts-course-manager'); ?></small>
+            </p>
+        </div>
+        
+        <?php
+        $audio_url = get_post_meta($post->ID, '_ielts_cm_audio_url', true);
+        $transcript = get_post_meta($post->ID, '_ielts_cm_transcript', true);
+        $is_listening = in_array($layout_type, array('listening_practice', 'listening_exercise'));
+        ?>
+        <div id="listening-audio-section" style="<?php echo !$is_listening ? 'display:none;' : ''; ?>">
+            <h3><?php _e('Listening Audio', 'ielts-course-manager'); ?></h3>
+            <p>
+                <label for="ielts_cm_audio_url"><?php _e('Audio URL', 'ielts-course-manager'); ?></label><br>
+                <input type="url" id="ielts_cm_audio_url" name="ielts_cm_audio_url" value="<?php echo esc_attr($audio_url); ?>" style="width: 100%;" placeholder="https://example.com/audio.mp3">
+                <small><?php _e('Enter the URL to the audio file (MP3 format recommended). The audio will autoplay after a countdown.', 'ielts-course-manager'); ?></small>
+            </p>
+            <p>
+                <label for="ielts_cm_transcript"><?php _e('Audio Transcript', 'ielts-course-manager'); ?></label><br>
+                <textarea id="ielts_cm_transcript" name="ielts_cm_transcript" rows="8" style="width: 100%;" placeholder="<?php esc_attr_e('Enter the transcript of the audio here...', 'ielts-course-manager'); ?>"><?php echo esc_textarea($transcript); ?></textarea>
+                <small><?php _e('This transcript will be shown after the student submits their answers.', 'ielts-course-manager'); ?></small>
             </p>
         </div>
         
@@ -1388,12 +1421,19 @@ class IELTS_CM_Admin {
             
             // Layout type change handler
             $('#ielts_cm_layout_type').on('change', function() {
-                if ($(this).val() === 'computer_based') {
+                var layoutType = $(this).val();
+                if (layoutType === 'computer_based') {
                     $('#reading-texts-section').show();
                     $('#cbt-popup-option').show();
+                    $('#listening-audio-section').hide();
+                } else if (layoutType === 'listening_practice' || layoutType === 'listening_exercise') {
+                    $('#reading-texts-section').hide();
+                    $('#cbt-popup-option').hide();
+                    $('#listening-audio-section').show();
                 } else {
                     $('#reading-texts-section').hide();
                     $('#cbt-popup-option').hide();
+                    $('#listening-audio-section').hide();
                 }
             });
             
@@ -3239,6 +3279,14 @@ class IELTS_CM_Admin {
                 update_post_meta($post_id, '_ielts_cm_pass_percentage', intval($_POST['ielts_cm_pass_percentage']));
             }
             
+            // Save starting question number
+            if (isset($_POST['ielts_cm_starting_question_number'])) {
+                $starting_num = intval($_POST['ielts_cm_starting_question_number']);
+                // Ensure it's at least 1
+                $starting_num = max(1, $starting_num);
+                update_post_meta($post_id, '_ielts_cm_starting_question_number', $starting_num);
+            }
+            
             // Save layout type
             if (isset($_POST['ielts_cm_layout_type'])) {
                 update_post_meta($post_id, '_ielts_cm_layout_type', sanitize_text_field($_POST['ielts_cm_layout_type']));
@@ -3249,6 +3297,15 @@ class IELTS_CM_Admin {
                 update_post_meta($post_id, '_ielts_cm_open_as_popup', '1');
             } else {
                 delete_post_meta($post_id, '_ielts_cm_open_as_popup');
+            }
+            
+            // Save audio URL and transcript for listening layouts
+            if (isset($_POST['ielts_cm_audio_url'])) {
+                update_post_meta($post_id, '_ielts_cm_audio_url', esc_url_raw($_POST['ielts_cm_audio_url']));
+            }
+            
+            if (isset($_POST['ielts_cm_transcript'])) {
+                update_post_meta($post_id, '_ielts_cm_transcript', wp_kses_post($_POST['ielts_cm_transcript']));
             }
             
             // Save scoring type with validation
@@ -5051,6 +5108,7 @@ class IELTS_CM_Admin {
         $open_as_popup = get_post_meta($post_id, '_ielts_cm_open_as_popup', true);
         $scoring_type = get_post_meta($post_id, '_ielts_cm_scoring_type', true);
         $timer_minutes = get_post_meta($post_id, '_ielts_cm_timer_minutes', true);
+        $starting_question_number = get_post_meta($post_id, '_ielts_cm_starting_question_number', true);
         
         // Convert to text format
         require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-text-exercises-creator.php';
@@ -5065,7 +5123,8 @@ class IELTS_CM_Admin {
                 'layout_type' => $layout_type ? $layout_type : 'standard',
                 'open_as_popup' => (bool) $open_as_popup,
                 'scoring_type' => $scoring_type ? $scoring_type : 'percentage',
-                'timer_minutes' => $timer_minutes ? $timer_minutes : ''
+                'timer_minutes' => $timer_minutes ? $timer_minutes : '',
+                'starting_question_number' => $starting_question_number ? $starting_question_number : 1
             )
         );
         
@@ -5186,6 +5245,9 @@ class IELTS_CM_Admin {
         $open_as_popup = get_post_meta($post->ID, '_ielts_cm_open_as_popup', true);
         $scoring_type = get_post_meta($post->ID, '_ielts_cm_scoring_type', true);
         $timer_minutes = get_post_meta($post->ID, '_ielts_cm_timer_minutes', true);
+        $starting_question_number = get_post_meta($post->ID, '_ielts_cm_starting_question_number', true);
+        $audio_url = get_post_meta($post->ID, '_ielts_cm_audio_url', true);
+        $transcript = get_post_meta($post->ID, '_ielts_cm_transcript', true);
         $course_ids = get_post_meta($post->ID, '_ielts_cm_course_ids', true);
         $lesson_ids = get_post_meta($post->ID, '_ielts_cm_lesson_ids', true);
         $course_id = get_post_meta($post->ID, '_ielts_cm_course_id', true);
@@ -5289,6 +5351,15 @@ class IELTS_CM_Admin {
         
         // Timer minutes
         $xml .= $this->generate_postmeta_xml('_ielts_cm_timer_minutes', $timer_minutes !== false ? $timer_minutes : '');
+        
+        // Starting question number
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_starting_question_number', $starting_question_number !== false ? $starting_question_number : '');
+        
+        // Audio URL (for listening tests)
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_audio_url', $audio_url !== false ? $audio_url : '');
+        
+        // Transcript (for listening tests)
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_transcript', $transcript !== false ? $transcript : '');
         
         // Course IDs (array)
         $xml .= $this->generate_postmeta_xml('_ielts_cm_course_ids', $course_ids);
@@ -5805,7 +5876,10 @@ class IELTS_CM_Admin {
             '_ielts_cm_exercise_label',
             '_ielts_cm_open_as_popup',
             '_ielts_cm_scoring_type',
-            '_ielts_cm_timer_minutes'
+            '_ielts_cm_timer_minutes',
+            '_ielts_cm_starting_question_number',
+            '_ielts_cm_audio_url',
+            '_ielts_cm_transcript'
         );
         
         foreach ($meta_fields as $meta_key) {

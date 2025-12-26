@@ -1447,6 +1447,81 @@
                 }
             });
         }
+        
+        // ========================================
+        // Listening Test Functionality
+        // ========================================
+        
+        // Check if this is a listening practice or exercise quiz
+        var listeningPracticeQuiz = $('.ielts-listening-practice-quiz');
+        var listeningExerciseQuiz = $('.ielts-listening-exercise-quiz');
+        
+        if (listeningPracticeQuiz.length || listeningExerciseQuiz.length) {
+            var isListeningPractice = listeningPracticeQuiz.length > 0;
+            var listeningContainer = isListeningPractice ? listeningPracticeQuiz : listeningExerciseQuiz;
+            var audioUrl = listeningContainer.data('audio-url');
+            var countdownSeconds = isListeningPractice ? 3 : 1;
+            
+            var countdownElement = $('#countdown-number');
+            var countdownContainer = $('#listening-countdown');
+            var audioPlayerContainer = $('#listening-audio-player');
+            var audioElement = document.getElementById('listening-audio');
+            var transcriptContainer = $('#listening-transcript');
+            
+            // Start countdown when page loads
+            var countdownTimer = countdownSeconds;
+            countdownElement.text(countdownTimer);
+            
+            var countdownInterval = setInterval(function() {
+                countdownTimer--;
+                if (countdownTimer > 0) {
+                    countdownElement.text(countdownTimer);
+                } else {
+                    clearInterval(countdownInterval);
+                    startAudioPlayback();
+                }
+            }, 1000);
+            
+            function startAudioPlayback() {
+                // Hide countdown and show audio player
+                countdownContainer.fadeOut(300, function() {
+                    audioPlayerContainer.fadeIn(300);
+                    
+                    // Start playing audio
+                    if (audioElement && audioUrl) {
+                        audioElement.play().catch(function(error) {
+                            console.log('Audio autoplay failed:', error);
+                            // Fallback: show a play button or message
+                            audioPlayerContainer.prepend('<p style="color: #d63638; text-align: center;">Click to play audio manually</p>');
+                        });
+                    }
+                });
+            }
+            
+            // For listening practice: animate visualizer while audio is playing
+            if (isListeningPractice && audioElement) {
+                audioElement.addEventListener('ended', function() {
+                    // Stop visualizer animation when audio ends
+                    $('.audio-status-icon').text('■');
+                    $('.audio-status-text').text('Audio Finished');
+                    $('.visualizer-bar').css('animation', 'none');
+                });
+            }
+            
+            // Show transcript and audio controls after submission
+            var originalSubmit = $('#ielts-quiz-form').data('submit-handler');
+            
+            $('#ielts-quiz-form').on('submit', function(e) {
+                // After the quiz is submitted, show the transcript
+                setTimeout(function() {
+                    // Hide audio player
+                    audioPlayerContainer.fadeOut(300, function() {
+                        // Show transcript
+                        transcriptContainer.fadeIn(300);
+                    });
+                }, 500);
+            });
+        }
     });
     
 })(jQuery);
