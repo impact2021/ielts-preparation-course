@@ -5592,9 +5592,9 @@ class IELTS_CM_Admin {
      */
     public function course_row_actions($actions, $post) {
         if ($post->post_type === 'ielts_course' && current_user_can('edit_post', $post->ID)) {
-            // Add clone link
-            $clone_url = admin_url('post.php?action=edit&post=' . $post->ID . '#clone-course');
-            $actions['clone'] = '<a href="' . esc_url($clone_url) . '">' . __('Clone', 'ielts-course-manager') . '</a>';
+            // Add clone link that scrolls to the clone meta box
+            $clone_url = admin_url('post.php?action=edit&post=' . $post->ID . '#ielts-cm-clone-course-box');
+            $actions['clone'] = '<a href="' . esc_url($clone_url) . '" title="' . esc_attr__('Go to course edit page and scroll to clone section', 'ielts-course-manager') . '">' . __('Clone', 'ielts-course-manager') . '</a>';
         }
         return $actions;
     }
@@ -5747,12 +5747,28 @@ class IELTS_CM_Admin {
         
         $file = $_FILES['xml_file'];
         
-        // Validate file type
+        // Validate file size (max 5MB)
+        $max_file_size = 5 * 1024 * 1024; // 5MB
+        if ($file['size'] > $max_file_size) {
+            wp_send_json_error(array('message' => __('File is too large. Maximum size is 5MB.', 'ielts-course-manager')));
+        }
+        
+        // Validate file extension
         if (!preg_match('/\.xml$/i', $file['name'])) {
             wp_send_json_error(array('message' => __('Invalid file type. Please upload an XML file.', 'ielts-course-manager')));
         }
         
-        // Read and parse XML
+        // Validate MIME type
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        $mime_type = finfo_file($finfo, $file['tmp_name']);
+        finfo_close($finfo);
+        
+        // Accept text/xml and application/xml
+        if (!in_array($mime_type, array('text/xml', 'application/xml'))) {
+            wp_send_json_error(array('message' => __('Invalid file format. File must be XML.', 'ielts-course-manager')));
+        }
+        
+        // Read XML file with size limit
         $xml_content = file_get_contents($file['tmp_name']);
         if ($xml_content === false) {
             wp_send_json_error(array('message' => __('Failed to read XML file.', 'ielts-course-manager')));
@@ -5846,13 +5862,10 @@ class IELTS_CM_Admin {
                 
                 // Only process IELTS exercise meta fields
                 if (strpos($meta_key, '_ielts_cm_') === 0) {
-                    // Try to unserialize if it's serialized data
-                    $unserialized = @unserialize($meta_value);
-                    if ($unserialized !== false || $meta_value === serialize(false)) {
-                        $data['meta'][$meta_key] = $unserialized;
-                    } else {
-                        $data['meta'][$meta_key] = $meta_value;
-                    }
+                    // Use WordPress's maybe_unserialize for safer unserialization
+                    // This prevents object injection attacks
+                    $unserialized = maybe_unserialize($meta_value);
+                    $data['meta'][$meta_key] = $unserialized;
                 }
             }
         }
