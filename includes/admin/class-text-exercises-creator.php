@@ -676,6 +676,10 @@ You have one hour for the complete test (including transferring your answers).</
                 $layout_text = trim($layout_match[1]);
                 if (stripos($layout_text, 'Computer-Based') !== false || stripos($layout_text, 'Two Columns') !== false) {
                     $metadata['layout_type'] = 'computer_based';
+                } elseif (stripos($layout_text, 'Listening Practice') !== false || stripos($layout_text, 'No Audio Controls') !== false) {
+                    $metadata['layout_type'] = 'listening_practice';
+                } elseif (stripos($layout_text, 'Listening Exercise') !== false || stripos($layout_text, 'With Audio Controls') !== false) {
+                    $metadata['layout_type'] = 'listening_exercise';
                 } else {
                     $metadata['layout_type'] = 'standard';
                 }
@@ -2814,7 +2818,9 @@ You have one hour for the complete test (including transferring your answers).</
             if (isset($metadata['layout_type'])) {
                 $layout_map = array(
                     'standard' => 'Standard Layout',
-                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)',
+                    'listening_practice' => 'Listening Practice Test (No Audio Controls)',
+                    'listening_exercise' => 'Listening Exercise (With Audio Controls)'
                 );
                 $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
                 $output[] = 'Layout Type: ' . $layout_display;
@@ -2926,7 +2932,9 @@ You have one hour for the complete test (including transferring your answers).</
             if (isset($metadata['layout_type'])) {
                 $layout_map = array(
                     'standard' => 'Standard Layout',
-                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)',
+                    'listening_practice' => 'Listening Practice Test (No Audio Controls)',
+                    'listening_exercise' => 'Listening Exercise (With Audio Controls)'
                 );
                 $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
                 $output[] = 'Layout Type: ' . $layout_display;
@@ -3576,7 +3584,9 @@ You have one hour for the complete test (including transferring your answers).</
             if (isset($metadata['layout_type'])) {
                 $layout_map = array(
                     'standard' => 'Standard Layout',
-                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)',
+                    'listening_practice' => 'Listening Practice Test (No Audio Controls)',
+                    'listening_exercise' => 'Listening Exercise (With Audio Controls)'
                 );
                 $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
                 $output[] = 'Layout Type: ' . $layout_display;
@@ -3715,7 +3725,9 @@ You have one hour for the complete test (including transferring your answers).</
             if (isset($metadata['layout_type'])) {
                 $layout_map = array(
                     'standard' => 'Standard Layout',
-                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)',
+                    'listening_practice' => 'Listening Practice Test (No Audio Controls)',
+                    'listening_exercise' => 'Listening Exercise (With Audio Controls)'
                 );
                 $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
                 $output[] = 'Layout Type: ' . $layout_display;
@@ -3903,7 +3915,9 @@ You have one hour for the complete test (including transferring your answers).</
             if (isset($metadata['layout_type'])) {
                 $layout_map = array(
                     'standard' => 'Standard Layout',
-                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)',
+                    'listening_practice' => 'Listening Practice Test (No Audio Controls)',
+                    'listening_exercise' => 'Listening Exercise (With Audio Controls)'
                 );
                 $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
                 $output[] = 'Layout Type: ' . $layout_display;
@@ -4045,7 +4059,9 @@ You have one hour for the complete test (including transferring your answers).</
             if (isset($metadata['layout_type'])) {
                 $layout_map = array(
                     'standard' => 'Standard Layout',
-                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)',
+                    'listening_practice' => 'Listening Practice Test (No Audio Controls)',
+                    'listening_exercise' => 'Listening Exercise (With Audio Controls)'
                 );
                 $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
                 $output[] = 'Layout Type: ' . $layout_display;
@@ -4165,7 +4181,9 @@ You have one hour for the complete test (including transferring your answers).</
             if (isset($metadata['layout_type'])) {
                 $layout_map = array(
                     'standard' => 'Standard Layout',
-                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)'
+                    'computer_based' => 'Computer-Based IELTS Layout (Two Columns)',
+                    'listening_practice' => 'Listening Practice Test (No Audio Controls)',
+                    'listening_exercise' => 'Listening Exercise (With Audio Controls)'
                 );
                 $layout_display = isset($layout_map[$metadata['layout_type']]) ? $layout_map[$metadata['layout_type']] : ucfirst($metadata['layout_type']);
                 $output[] = 'Layout Type: ' . $layout_display;

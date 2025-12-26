@@ -1653,3 +1653,214 @@ select.answer-select-inline.answer-incorrect {
 .reading-content {
     position: relative;
 }
+
+/* ========================================
+   Listening Test Layouts
+   ======================================== */
+
+/* Listening Practice and Exercise Quiz Containers */
+.ielts-listening-practice-quiz,
+.ielts-listening-exercise-quiz {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Listening Audio Column (Left Panel) */
+.listening-audio-column {
+    background: #f9f9f9;
+    border-right: 1px solid #ddd;
+}
+
+.listening-audio-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+/* Countdown Display */
+.listening-countdown {
+    text-align: center;
+    padding: 40px;
+}
+
+.listening-countdown .countdown-text {
+    font-size: 1.3em;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.listening-countdown .countdown-number {
+    font-size: 5em;
+    font-weight: bold;
+    color: #0073aa;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Audio Player for Listening Practice (No Controls) */
+.listening-audio-player {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.listening-audio-player audio {
+    display: none; /* Hidden for practice tests */
+}
+
+/* Audio Visualizer */
+.audio-visualizer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 8px;
+    height: 100px;
+    margin: 30px 0;
+}
+
+.visualizer-bar {
+    width: 12px;
+    background: linear-gradient(to top, #0073aa, #00a0d2);
+    border-radius: 6px;
+    animation: visualize 0.8s ease-in-out infinite;
+}
+
+.visualizer-bar:nth-child(1) { animation-delay: 0s; }
+.visualizer-bar:nth-child(2) { animation-delay: 0.1s; }
+.visualizer-bar:nth-child(3) { animation-delay: 0.2s; }
+.visualizer-bar:nth-child(4) { animation-delay: 0.3s; }
+.visualizer-bar:nth-child(5) { animation-delay: 0.4s; }
+.visualizer-bar:nth-child(6) { animation-delay: 0.3s; }
+.visualizer-bar:nth-child(7) { animation-delay: 0.2s; }
+.visualizer-bar:nth-child(8) { animation-delay: 0.1s; }
+
+@keyframes visualize {
+    0%, 100% {
+        height: 20px;
+    }
+    50% {
+        height: 80px;
+    }
+}
+
+.audio-status {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.audio-status-icon {
+    font-size: 1.5em;
+    color: #0073aa;
+    margin-right: 8px;
+}
+
+/* Audio Player for Listening Exercise (With Controls) */
+.listening-exercise-player {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.listening-exercise-player audio {
+    display: block; /* Visible for exercises */
+    width: 100%;
+    margin: 20px 0;
+}
+
+.ielts-warning-notice {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.ielts-warning-notice .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.ielts-warning-notice p {
+    margin: 0;
+    color: #856404;
+    font-weight: 500;
+}
+
+/* Transcript Display */
+.listening-transcript {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.listening-transcript h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 10px;
+}
+
+.transcript-content {
+    margin: 20px 0;
+    line-height: 1.8;
+    color: #555;
+}
+
+.transcript-audio-controls {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.transcript-audio-controls audio {
+    width: 100%;
+}
+
+/* Responsive adjustments for listening layouts */
+@media (max-width: 768px) {
+    .listening-audio-content {
+        padding: 20px;
+        min-height: 300px;
+    }
+    
+    .listening-countdown .countdown-number {
+        font-size: 3em;
+    }
+    
+    .audio-visualizer {
+        height: 60px;
+        gap: 4px;
+    }
+    
+    .visualizer-bar {
+        width: 8px;
+    }
+    
+    .listening-transcript {
+        padding: 15px;
+    }
+}
