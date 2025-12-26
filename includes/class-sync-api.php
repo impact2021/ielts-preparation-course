@@ -193,6 +193,12 @@ class IELTS_CM_Sync_API {
             wp_set_object_terms($post_id, $content_data['categories'], 'ielts_course_category');
         }
         
+        // Handle lesson synchronization for courses
+        // Remove lessons that are no longer in the course on the primary site
+        if ($content_type === 'course' && isset($content_data['current_lesson_ids'])) {
+            $this->sync_course_lessons($post_id, $content_data['current_lesson_ids']);
+        }
+        
         // Handle featured image
         if (!empty($content_data['featured_image_url'])) {
             $this->set_featured_image_from_url($post_id, $content_data['featured_image_url']);
@@ -444,5 +450,69 @@ class IELTS_CM_Sync_API {
         
         set_post_thumbnail($post_id, $attachment_id);
         return $attachment_id;
+    }
+    
+    /**
+     * Synchronize course lessons by removing lessons that are no longer in the course
+     * 
+     * @param int $course_id The local course ID on the subsite
+     * @param array $primary_lesson_ids Array of lesson IDs from the primary site
+     */
+    private function sync_course_lessons($course_id, $primary_lesson_ids) {
+        global $wpdb;
+        
+        // Validate input
+        if (!is_array($primary_lesson_ids)) {
+            return;
+        }
+        
+        // Convert to associative array for O(1) lookup
+        $primary_lessons_map = array_flip($primary_lesson_ids);
+        
+        // Get all lessons currently associated with this course on the subsite
+        $subsite_lessons = $wpdb->get_results($wpdb->prepare("
+            SELECT post_id, meta_value as original_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE pm.meta_key = '_ielts_cm_original_id'
+            AND p.post_type = 'ielts_lesson'
+            AND p.post_status != 'trash'
+            AND (
+                EXISTS (
+                    SELECT 1 FROM {$wpdb->postmeta} pm2 
+                    WHERE pm2.post_id = pm.post_id 
+                    AND pm2.meta_key = '_ielts_cm_course_id' 
+                    AND pm2.meta_value = %d
+                )
+                OR EXISTS (
+                    SELECT 1 FROM {$wpdb->postmeta} pm3 
+                    WHERE pm3.post_id = pm.post_id 
+                    AND pm3.meta_key = '_ielts_cm_course_ids'
+                    AND (
+                        pm3.meta_value LIKE %s OR
+                        pm3.meta_value LIKE %s OR
+                        pm3.meta_value LIKE %s OR
+                        pm3.meta_value = %s
+                    )
+                )
+            )
+        ", 
+            $course_id,
+            '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%',
+            '%' . $wpdb->esc_like('"' . $course_id . '"') . '%',
+            '%' . $wpdb->esc_like(':' . $course_id . '}') . '%',
+            serialize(array($course_id))
+        ));
+        
+        // Find lessons that should be removed (exist on subsite but not in primary list)
+        foreach ($subsite_lessons as $lesson) {
+            $original_id = intval($lesson->original_id);
+            
+            // If this lesson's original ID is not in the current primary lesson list, remove it
+            if (!isset($primary_lessons_map[$original_id])) {
+                // Trash the lesson instead of deleting to preserve data
+                wp_trash_post($lesson->post_id);
+            }
+        }
     }
 }
