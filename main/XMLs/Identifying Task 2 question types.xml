@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Identifying Task 2 question types - Multiple Choice Question Type -->
+<rss xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/" version="2.0">
+<channel>
+	<title>IELTStestONLINE</title>
+	<link>https://www.ieltstestonline.com</link>
+	<description>Online IELTS preparation</description>
+	<pubDate>Thu, 26 Dec 2025 07:49:05 +0000</pubDate>
+	<language>en-NZ</language>
+	<wp:wxr_version>1.2</wp:wxr_version>
+	<wp:base_site_url>https://www.ieltstestonline.com</wp:base_site_url>
+	<wp:base_blog_url>https://www.ieltstestonline.com</wp:base_blog_url>
+
+	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[impact]]></wp:author_login><wp:author_email><![CDATA[impact@ieltstestonline.com]]></wp:author_email><wp:author_display_name><![CDATA[impact]]></wp:author_display_name><wp:author_first_name><![CDATA[Patrick]]></wp:author_first_name><wp:author_last_name><![CDATA[Bourne]]></wp:author_last_name></wp:author>
+
+	<generator>IELTS Test XML Creator</generator>
+
+	<item>
+		<title><![CDATA[Identifying Task 2 question types]]></title>
+		<link>https://www.ieltstestonline.com/ielts-quiz/identifying-task-2-question-types/</link>
+		<pubDate>Thu, 26 Dec 2025 07:49:05 +0000</pubDate>
+		<dc:creator><![CDATA[impact]]></dc:creator>
+		<guid isPermaLink="false">https://www.ieltstestonline.com/?post_type=ielts_quiz&amp;p=9000003</guid>
+		<description/>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>9000003</wp:post_id>
+		<wp:post_date><![CDATA[2025-12-26 07:49:05]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-12-26 07:49:05]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2025-12-26 07:49:05]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-12-26 07:49:05]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[identifying-task-2-question-types]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[ielts_quiz]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{i:0;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:64:"Select the correct answer.
+
+Instructions will appear before each question.";s:8:"question";s:134:"A lot of people do business internationally. Therefore we should abolish passports to make it easier to travel.
+
+Do you agree or disagree?";s:6:"points";i:1;s:18:"no_answer_feedback";s:112:"Please select an answer. Look at the question carefully - what type of response is being asked for in this prompt?";s:16:"correct_feedback";s:123:"Correct! This question asks 'Do you agree or disagree?' which requires you to give an opinion or challenge a point of view.";s:18:"incorrect_feedback";s:120:"This question asks 'Do you agree or disagree?' which requires you to give an opinion or challenge a point of view.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:6:{i:0;a:3:{s:4:"text";s:43:"Give an opinion / challenge a point of view";s:10:"is_correct";b:1;s:8:"feedback";s:232:"Correct! When a question asks 'Do you agree or disagree?', it is asking you to give your opinion on a statement or challenge the point of view presented. You need to clearly state your position and support it with reasons and examples.";}i:1;a:3:{s:4:"text";s:21:"Compare points of view";s:10:"is_correct";b:0;s:8:"feedback";s:159:"This question type would typically say 'Discuss both views and give your opinion'. This question simply asks if you agree or disagree with a single statement.";}i:2;a:3:{s:4:"text";s:28:"Give solutions to a problem";s:10:"is_correct";b:0;s:8:"feedback";s:166:"Solution questions typically ask 'What can be done about this?' or 'How can this problem be solved?'. This question is asking for your opinion, not suggesting solutions.";}i:3;a:3:{s:4:"text";s:23:"Discuss a given situation";s:10:"is_correct";b:0;s:8:"feedback";s:148:"Discussion questions typically ask 'Why do you think this is?' or ask you to analyze causes. This question asks for your agreement or disagreement.";}i:4;a:3:{s:4:"text";s:9:"Incorrect";s:10:"is_correct";b:0;s:8:"feedback";s:136:"This is the correct answer: Give an opinion / challenge a point of view. The question asks 'Do you agree or disagree?' with a statement.";}}s:7:"options";s:179:"Give an opinion / challenge a point of view
+Compare points of view
+Give solutions to a problem
+Discuss a given situation
+Incorrect";s:14:"correct_answer";s:1:"0";s:15:"option_feedback";a:5:{i:0;s:232:"Correct! When a question asks 'Do you agree or disagree?', it is asking you to give your opinion on a statement or challenge the point of view presented. You need to clearly state your position and support it with reasons and examples.";i:1;s:159:"This question type would typically say 'Discuss both views and give your opinion'. This question simply asks if you agree or disagree with a single statement.";i:2;s:166:"Solution questions typically ask 'What can be done about this?' or 'How can this problem be solved?'. This question is asking for your opinion, not suggesting solutions.";i:3;s:148:"Discussion questions typically ask 'Why do you think this is?' or ask you to analyze causes. This question asks for your agreement or disagreement.";i:4;s:136:"This is the correct answer: Give an opinion / challenge a point of view. The question asks 'Do you agree or disagree?' with a statement.";}}i:1;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:97:"There is a rising rate of obesity among children in developed countries.
+
+What can be done about this?";s:6:"points";i:1;s:18:"no_answer_feedback";s:119:"Please select an answer. Look at the key phrase in the question - what is it asking you to provide in your response?";s:16:"correct_feedback";s:117:"Correct! This question asks 'What can be done about this?' which clearly requires you to give solutions to a problem.";s:18:"incorrect_feedback";s:108:"This question asks 'What can be done about this?' which clearly requires you to give solutions to a problem.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:6:{i:0;a:3:{s:4:"text";s:43:"Give an opinion / challenge a point of view";s:10:"is_correct";b:0;s:8:"feedback";s:162:"Opinion questions ask 'Do you agree or disagree?' or 'To what extent do you agree?'. This question asks 'What can be done?', which requires solutions, not opinions.";}i:1;a:3:{s:4:"text";s:21:"Compare points of view";s:10:"is_correct";b:0;s:8:"feedback";s:164:"Compare questions ask you to 'Discuss both views and give your opinion'. This question presents a problem and asks what can be done, requiring solutions, not comparison.";}i:2;a:3:{s:4:"text";s:28:"Give solutions to a problem";s:10:"is_correct";b:1;s:8:"feedback";s:212:"Correct! When a question asks 'What can be done about this?', it is a solutions question. You need to identify practical solutions or measures that can address the problem and explain how they would be effective.";}i:3;a:3:{s:4:"text";s:23:"Discuss a given situation";s:10:"is_correct";b:0;s:8:"feedback";s:171:"Discussion questions ask about causes or reasons ('Why do you think this is?'). This question asks what can be done to solve the problem, which requires solutions, not analysis.";}i:4;a:3:{s:4:"text";s:9:"Incorrect";s:10:"is_correct";b:0;s:8:"feedback";s:134:"This is the correct answer: Give solutions to a problem. The question asks 'What can be done about this?' which requires solutions.";}}s:7:"options";s:179:"Give an opinion / challenge a point of view
+Compare points of view
+Give solutions to a problem
+Discuss a given situation
+Incorrect";s:14:"correct_answer";s:1:"2";s:15:"option_feedback";a:5:{i:0;s:162:"Opinion questions ask 'Do you agree or disagree?' or 'To what extent do you agree?'. This question asks 'What can be done?', which requires solutions, not opinions.";i:1;s:164:"Compare questions ask you to 'Discuss both views and give your opinion'. This question presents a problem and asks what can be done, requiring solutions, not comparison.";i:2;s:212:"Correct! When a question asks 'What can be done about this?', it is a solutions question. You need to identify practical solutions or measures that can address the problem and explain how they would be effective.";i:3;s:171:"Discussion questions ask about causes or reasons ('Why do you think this is?'). This question asks what can be done to solve the problem, which requires solutions, not analysis.";i:4;s:134:"This is the correct answer: Give solutions to a problem. The question asks 'What can be done about this?' which requires solutions.";}}i:2;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:117:"The internet now allows fast access to a huge range of information.
+
+Do you think that libraries are still important?";s:6:"points";i:1;s:18:"no_answer_feedback";s:105:"Please select an answer. What is the question asking you to do - what type of response does it require?";s:16:"correct_feedback";s:120:"Correct! This question asks 'Do you think...' which is asking for your opinion or to challenge a particular point of view.";s:18:"incorrect_feedback";s:111:"This question asks 'Do you think...' which is asking for your opinion or to challenge a particular point of view.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:6:{i:0;a:3:{s:4:"text";s:43:"Give an opinion / challenge a point of view";s:10:"is_correct";b:1;s:8:"feedback";s:230:"Correct! When a question asks 'Do you think...?', it is asking for your opinion on a topic. You need to state your position clearly (yes, libraries are still important, or no, they are not) and support it with reasons and examples.";}i:1;a:3:{s:4:"text";s:21:"Compare points of view";s:10:"is_correct";b:0;s:8:"feedback";s:170:"Compare questions present two opposing views and ask you to discuss both. This question only asks for your opinion about libraries, not to compare different perspectives.";}i:2;a:3:{s:4:"text";s:28:"Give solutions to a problem";s:10:"is_correct";b:0;s:8:"feedback";s:148:"Solution questions ask 'What can be done?' or 'How can we solve this?'. This question asks for your opinion on whether libraries remain important.";}i:3;a:3:{s:4:"text";s:23:"Discuss a given situation";s:10:"is_correct";b:0;s:8:"feedback";s:144:"Discussion questions ask you to analyze causes or reasons. This question asks for your opinion ('Do you think...?'), not to discuss a situation.";}i:4;a:3:{s:4:"text";s:9:"Incorrect";s:10:"is_correct";b:0;s:8:"feedback";s:142:"This is the correct answer: Give an opinion / challenge a point of view. The question asks 'Do you think...?' which requires your opinion.";}}s:7:"options";s:179:"Give an opinion / challenge a point of view
+Compare points of view
+Give solutions to a problem
+Discuss a given situation
+Incorrect";s:14:"correct_answer";s:1:"0";s:15:"option_feedback";a:5:{i:0;s:230:"Correct! When a question asks 'Do you think...?', it is asking for your opinion on a topic. You need to state your position clearly (yes, libraries are still important, or no, they are not) and support it with reasons and examples.";i:1;s:170:"Compare questions present two opposing views and ask you to discuss both. This question only asks for your opinion about libraries, not to compare different perspectives.";i:2;s:148:"Solution questions ask 'What can be done?' or 'How can we solve this?'. This question asks for your opinion on whether libraries remain important.";i:3;s:144:"Discussion questions ask you to analyze causes or reasons. This question asks for your opinion ('Do you think...?'), not to discuss a situation.";i:4;s:142:"This is the correct answer: Give an opinion / challenge a point of view. The question asks 'Do you think...?' which requires your opinion.";}}i:3;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:192:"Some people believe that the government should support the arts. Others believe that the money would be better spent on basic services such as healthcare.
+
+Discuss both points of view and give your opinion";s:6:"points";i:1;s:18:"no_answer_feedback";s:120:"Please select an answer. Read the question carefully - it presents two different views. What does it ask you to do with them?";s:16:"correct_feedback";s:135:"Correct! This question asks you to 'Discuss both points of view and give your opinion', which is a classic compare points of view question.";s:18:"incorrect_feedback";s:126:"This question asks you to 'Discuss both points of view and give your opinion', which is a classic compare points of view question.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:6:{i:0;a:3:{s:4:"text";s:43:"Give an opinion / challenge a point of view";s:10:"is_correct";b:0;s:8:"feedback";s:192:"While this question does ask for your opinion at the end, it first presents two opposing views and asks you to discuss both. This makes it a compare question, not simply an opinion question.";}i:1;a:3:{s:4:"text";s:21:"Compare points of view";s:10:"is_correct";b:1;s:8:"feedback";s:268:"Correct! This question presents two opposing views ('Some people believe... Others believe...') and explicitly asks you to 'Discuss both points of view and give your opinion'. You need to explain both perspectives fairly before stating and supporting your own position.";}i:2;a:3:{s:4:"text";s:28:"Give solutions to a problem";s:10:"is_correct";b:0;s:8:"feedback";s:155:"Solution questions ask 'What can be done?' This question presents two viewpoints and asks you to discuss both and give your opinion, not provide solutions.";}i:3;a:3:{s:4:"text";s:23:"Discuss a given situation";s:10:"is_correct";b:0;s:8:"feedback";s:181:"Discussion questions ask about causes or reasons. This question presents two opposing viewpoints and asks you to compare them and give your opinion, not analyze a situation.";}i:4;a:3:{s:4:"text";s:9:"Incorrect";s:10:"is_correct";b:0;s:8:"feedback";s:165:"This is the correct answer: Compare points of view. The question explicitly asks you to 'Discuss both points of view and give your opinion' about government spending.";}}s:7:"options";s:179:"Give an opinion / challenge a point of view
+Compare points of view
+Give solutions to a problem
+Discuss a given situation
+Incorrect";s:14:"correct_answer";s:1:"1";s:15:"option_feedback";a:5:{i:0;s:192:"While this question does ask for your opinion at the end, it first presents two opposing views and asks you to discuss both. This makes it a compare question, not simply an opinion question.";i:1;s:268:"Correct! This question presents two opposing views ('Some people believe... Others believe...') and explicitly asks you to 'Discuss both points of view and give your opinion'. You need to explain both perspectives fairly before stating and supporting your own position.";i:2;s:155:"Solution questions ask 'What can be done?' This question presents two viewpoints and asks you to discuss both and give your opinion, not provide solutions.";i:3;s:181:"Discussion questions ask about causes or reasons. This question presents two opposing viewpoints and asks you to compare them and give your opinion, not analyze a situation.";i:4;s:165:"This is the correct answer: Compare points of view. The question explicitly asks you to 'Discuss both points of view and give your opinion' about government spending.";}}i:4;a:12:{s:4:"type";s:8:"headings";s:12:"instructions";s:0:"";s:8:"question";s:91:"The rate of childhood obesity is rising in many developed countries.
+
+Why do you think this is?";s:6:"points";i:1;s:18:"no_answer_feedback";s:113:"Please select an answer. What is the question asking you to explain - what type of analysis does it require?";s:16:"correct_feedback";s:128:"Correct! This question asks 'Why do you think this is?' which requires you to discuss the given situation and analyze the causes.";s:18:"incorrect_feedback";s:119:"This question asks 'Why do you think this is?' which requires you to discuss the given situation and analyze the causes.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:6:{i:0;a:3:{s:4:"text";s:43:"Give an opinion / challenge a point of view";s:10:"is_correct";b:0;s:8:"feedback";s:170:"Opinion questions ask if you agree or disagree with a statement. This question presents a situation and asks 'Why...?', requiring you to analyze causes, not give an opinion.";}i:1;a:3:{s:4:"text";s:21:"Compare points of view";s:10:"is_correct";b:0;s:8:"feedback";s:152:"Compare questions present two opposing views to discuss. This question presents a situation and asks you to explain why it's happening, not compare views.";}i:2;a:3:{s:4:"text";s:28:"Give solutions to a problem";s:10:"is_correct";b:0;s:8:"feedback";s:171:"Solution questions ask 'What can be done?' This question asks 'Why...?', which requires you to analyze and explain the causes of the situation, not provide solutions.";}i:3;a:3:{s:4:"text";s:23:"Discuss a given situation";s:10:"is_correct";b:1;s:8:"feedback";s:227:"Correct! When a question asks 'Why do you think this is?' or 'What are the reasons for this?', it requires you to discuss the given situation by analyzing and explaining the causes or reasons behind the trend or phenomenon.";}i:4;a:3:{s:4:"text";s:9:"Incorrect";s:10:"is_correct";b:0;s:8:"feedback";s:158:"This is the correct answer: Discuss a given situation. The question asks 'Why do you think this is?', which requires analysis of causes, not solutions.";}}s:7:"options";s:179:"Give an opinion / challenge a point of view
+Compare points of view
+Give solutions to a problem
+Discuss a given situation
+Incorrect";s:14:"correct_answer";s:1:"3";s:15:"option_feedback";a:5:{i:0;s:170:"Opinion questions ask if you agree or disagree with a statement. This question presents a situation and asks 'Why...?', requiring you to analyze causes, not give an opinion.";i:1;s:152:"Compare questions present two opposing views to discuss. This question presents a situation and asks you to explain why it's happening, not compare views.";i:2;s:171:"Solution questions ask 'What can be done?' This question asks 'Why...?', which requires you to analyze and explain the causes of the situation, not provide solutions.";i:3;s:227:"Correct! When a question asks 'Why do you think this is?' or 'What are the reasons for this?', it requires you to discuss the given situation by analyzing and explaining the causes or reasons behind the trend or phenomenon.";i:4;s:158:"This is the correct answer: Discuss a given situation. The question asks 'Why do you think this is?', which requires analysis of causes, not solutions.";}}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;a:2:{s:5:"title";s:50:"Task 2 Writing - Identifying Different Question Types";s:7:"content";s:945:"<strong>IELTS Task 2 Writing questions come in different types, each requiring a different approach:</strong>
+
+<strong>1. Give an opinion / challenge a point of view</strong> - Questions that ask 'Do you agree or disagree?' or 'Do you think...?' or 'To what extent do you agree?' require you to state your position and support it.
+
+<strong>2. Compare points of view</strong> - Questions that present two opposing views and ask you to 'Discuss both views and give your opinion' require you to explain both perspectives before stating your own position.
+
+<strong>3. Give solutions to a problem</strong> - Questions that ask 'What can be done about this?' or 'How can this problem be solved?' require you to suggest practical solutions and explain how they would work.
+
+<strong>4. Discuss a given situation</strong> - Questions that ask 'Why do you think this is?' or 'What are the reasons for this?' require you to analyze and explain causes or reasons behind a situation or trend.";}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[75]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[computer_based]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_exercise_label]]></wp:meta_key>
+			<wp:meta_value><![CDATA[exercise]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_open_as_popup]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_scoring_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[percentage]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_course_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_lesson_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_course_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_lesson_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+</channel>
+</rss>
