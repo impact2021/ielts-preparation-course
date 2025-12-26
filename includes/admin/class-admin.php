@@ -5964,10 +5964,6 @@ class IELTS_CM_Admin {
             $new_questions = array();
         }
         
-        // Merge questions: append new questions to existing ones
-        $merged_questions = array_merge($existing_questions, $new_questions);
-        update_post_meta($post_id, '_ielts_cm_questions', $merged_questions);
-        
         // Get existing reading texts
         $existing_reading_texts = get_post_meta($post_id, '_ielts_cm_reading_texts', true);
         if (!is_array($existing_reading_texts)) {
@@ -5998,24 +5994,25 @@ class IELTS_CM_Admin {
             $new_reading_texts[$index]['id'] = $new_id;
         }
         
-        // Update reading_text_id references in new questions
-        foreach ($merged_questions as $q_index => $question) {
-            // Only update questions that were just added (from new_questions)
-            $is_new_question = $q_index >= count($existing_questions);
-            if ($is_new_question && isset($question['reading_text_id'])) {
+        // Update reading_text_id references in new questions before merging
+        foreach ($new_questions as $q_index => $question) {
+            if (isset($question['reading_text_id'])) {
                 $old_reading_text_id = $question['reading_text_id'];
                 if (isset($id_map[$old_reading_text_id])) {
-                    $merged_questions[$q_index]['reading_text_id'] = $id_map[$old_reading_text_id];
+                    $new_questions[$q_index]['reading_text_id'] = $id_map[$old_reading_text_id];
                 }
             }
         }
         
+        // Merge questions: append new questions to existing ones (with updated IDs)
+        $merged_questions = array_merge($existing_questions, $new_questions);
+        
         // Merge reading texts
         $merged_reading_texts = array_merge($existing_reading_texts, $new_reading_texts);
-        update_post_meta($post_id, '_ielts_cm_reading_texts', $merged_reading_texts);
         
-        // Update merged questions again with remapped IDs
+        // Update post meta with merged data
         update_post_meta($post_id, '_ielts_cm_questions', $merged_questions);
+        update_post_meta($post_id, '_ielts_cm_reading_texts', $merged_reading_texts);
         
         // Note: We do NOT update title, content, or settings when appending
         // Only questions and reading texts are appended
