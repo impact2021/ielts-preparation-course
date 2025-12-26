@@ -1493,6 +1493,8 @@
                         // Start playing audio after a short delay to ensure visibility
                         setTimeout(function() {
                             if (audioElement && audioUrl) {
+                                // Ensure the audio source is loaded before playing
+                                audioElement.load();
                                 audioElement.play().catch(function(error) {
                                     console.log('Audio autoplay failed:', error);
                                     // Fallback: show a play button or message
