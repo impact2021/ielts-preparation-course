@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Commuter Transport - Short Answer and Table Completion Question Types -->
+<rss xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/" version="2.0">
+<channel>
+	<title>IELTStestONLINE</title>
+	<link>https://www.ieltstestonline.com</link>
+	<description>Online IELTS preparation</description>
+	<pubDate>Thu, 26 Dec 2025 17:54:00 +0000</pubDate>
+	<language>en-NZ</language>
+	<wp:wxr_version>1.2</wp:wxr_version>
+	<wp:base_site_url>https://www.ieltstestonline.com</wp:base_site_url>
+	<wp:base_blog_url>https://www.ieltstestonline.com</wp:base_blog_url>
+
+	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[impact]]></wp:author_login><wp:author_email><![CDATA[impact@ieltstestonline.com]]></wp:author_email><wp:author_display_name><![CDATA[impact]]></wp:author_display_name><wp:author_first_name><![CDATA[Patrick]]></wp:author_first_name><wp:author_last_name><![CDATA[Bourne]]></wp:author_last_name></wp:author>
+
+	<generator>IELTS Test XML Creator</generator>
+
+	<item>
+		<title><![CDATA[Commuter Transport]]></title>
+		<link>https://www.ieltstestonline.com/ielts-quiz/commuter-transport/</link>
+		<pubDate>Thu, 26 Dec 2025 17:54:00 +0000</pubDate>
+		<dc:creator><![CDATA[impact]]></dc:creator>
+		<guid isPermaLink="false">https://www.ieltstestonline.com/?post_type=ielts_quiz&amp;p=9000006</guid>
+		<description/>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>9000006</wp:post_id>
+		<wp:post_date><![CDATA[2025-12-26 17:54:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-12-26 17:54:00]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2025-12-26 17:54:00]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-12-26 17:54:00]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[commuter-transport]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[ielts_quiz]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:10:{i:0;a:10:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:124:"Complete the sentences below. Write <em><strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong></em> for each answer.";s:8:"question";s:78:"According to the research __________ of commuters use private vehicles to travel to work.";s:6:"points";i:1;s:18:"no_answer_feedback";s:110:"Please provide an answer. Look for the percentage of commuters who use private vehicles according to the research.";s:16:"correct_feedback";s:106:"Correct! The research shows that 72% of commuters use private vehicles to travel to work.";s:18:"incorrect_feedback";s:148:"The correct answer is '72%' (or variations like 'seventy two percent'). This is the percentage of commuters using private vehicles.";s:15:"reading_text_id";i:0;s:7:"options";s:0:"";s:14:"correct_answer";s:90:"72%|SEVENTY TWO %|SEVENTY-TWO %|72 PERCENT|SEVENTY TWO PERCENT|SEVENTY-TWO PERCENT";}i:1;a:10:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:0:"";s:8:"question";s:75:"9% of people surveyed told interviewers that they __________.";s:6:"points";i:1;s:18:"no_answer_feedback";s:94:"Please provide an answer. What did 9% of people tell interviewers about their commute?";s:16:"correct_feedback";s:82:"Correct! 9% of people surveyed said they 'walked to work' or simply 'walked'.";s:18:"incorrect_feedback";s:124:"The correct answer is 'walked to work', 'walked', 'walk', or 'walk to work'. These are the acceptable variations.";s:15:"reading_text_id";i:0;s:7:"options";s:0:"";s:14:"correct_answer";s:35:"WALKED TO WORK|WALKED|WALK|WALK TO WORK";}i:2;a:10:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:0:"";s:8:"question";s:88:"Approximately 35% of people travel to work by public transport in the __________.";s:6:"points";i:1;s:18:"no_answer_feedback";s:107:"Please provide an answer. Where do 35% of people travel by public transport according to the passage?";s:16:"correct_feedback";s:100:"Correct! Approximately 35% of people travel to work by public transport in the 'capital city'.";s:18:"incorrect_feedback";s:125:"The correct answer is 'capital city' or simply 'capital'. This is where 35% of people use public transport for commuting.";s:15:"reading_text_id";i:0;s:7:"options";s:0:"";s:14:"correct_answer";s:20:"CAPITAL CITY|CAPITAL";}i:3;a:10:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:0:"";s:8:"question";s:126:"In the city surveyed, traffic jams are less of a problem and __________ are more readily available than in larger urban areas.";s:6:"points";i:1;s:18:"no_answer_feedback";s:105:"Please provide an answer. What is more readily available in this city compared to larger urban areas?";s:16:"correct_feedback";s:109:"Correct! 'Parking spaces' are more readily available in the surveyed city than in larger urban areas.";s:18:"incorrect_feedback";s:128:"The correct answer is 'parking spaces'. The passage indicates that parking is easier to find in this city than in bigger cities.";s:15:"reading_text_id";i:0;s:7:"options";s:0:"";s:14:"correct_answer";s:14:"PARKING SPACES";}i:4;a:10:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:0:"";s:8:"question";s:81:"The council has a plan to increase use of public transport by __________.";s:6:"points";i:1;s:18:"no_answer_feedback";s:105:"Please provide an answer. By what amount does the council plan to increase public transport usage?";s:16:"correct_feedback";s:90:"Correct! The council plans to increase public transport use by 10% (or ten percent).";s:18:"incorrect_feedback";s:133:"The correct answer is '10%' (or variations like 'ten percent'). This is the target increase for public transport usage.";s:15:"reading_text_id";i:0;s:7:"options";s:0:"";s:14:"correct_answer";s:36:"10%|TEN PERCENT|10 PERCENT|TEN %|10 %";}i:5;a:10:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:104:"Complete the table below. Write <em><strong>NO MORE THAN THREE WORDS</strong></em> for each answer.";s:8:"question";s:109:"Industry concerned may affect ability to attract __________ (Council Initiative 1: Increase parking fees).";s:6:"points";i:1;s:18:"no_answer_feedback";s:103:"Please provide an answer. What does industry worry the parking fee increase might affect their ability to attract?";s:16:"correct_feedback";s:120:"Correct! Industry is concerned that increased parking fees may affect their ability to attract 'suitable employees'.";s:18:"incorrect_feedback";s:131:"The correct answer is 'suitable employees'. Companies worry that higher parking costs might make it harder to recruit good staff.";s:15:"reading_text_id";i:0;s:7:"options";s:0:"";s:14:"correct_answer";s:18:"SUITABLE EMPLOYEES";}i:6;a:10:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:0:"";s:8:"question";s:107:"Increase government __________ so costs for travel can be kept to a minimum (Council Initiative 2).";s:6:"points";i:1;s:18:"no_answer_feedback";s:98:"Please provide an answer. What does the government plan to increase to keep travel costs minimal?";s:16:"correct_feedback";s:96:"Correct! The plan is to increase government 'subsidies' to keep travel costs to a minimum.";s:18:"incorrect_feedback";s:128:"The correct answer is 'subsidies'. Government subsidies help reduce the cost of public transport for commuters.";s:15:"reading_text_id";i:0;s:7:"options";s:0:"";s:14:"correct_answer";s:9:"SUBSIDIES";}i:7;a:10:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:0:"";s:8:"question";s:126:"Ordinary people prefer money is spent on schools, crime prevention and __________ (Council Initiative 2).";s:6:"points";i:1;s:18:"no_answer_feedback";s:100:"Please provide an answer. What third priority do ordinary people have for government spending?";s:16:"correct_feedback";s:117:"Correct! Ordinary people prefer money spent on schools, crime prevention, and 'medical care' (or healthcare).";s:18:"incorrect_feedback";s:143:"The correct answer is 'medical care'. Along with schools and crime prevention, healthcare is a spending priority for ordinary people.";s:15:"reading_text_id";i:0;s:7:"options";s:0:"";s:14:"correct_answer";s:11:"MEDICAL CARE";}i:8;a:10:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:0:"";s:8:"question";s:45:"Council Initiative 3: __________ study";s:6:"points";i:1;s:18:"no_answer_feedback";s:87:"Please provide an answer. What type of study is Council Initiative 3?";s:16:"correct_feedback";s:136:"Correct! Council Initiative 3 is 'a market research' study (also acceptable: 'market research', 'a research', or simply 'research').";s:18:"incorrect_feedback";s:153:"The correct answer is 'a market research', 'market research', 'a research', or 'research'. This study investigates public transport preferences.";s:15:"reading_text_id";i:0;s:7:"options";s:0:"";s:14:"correct_answer";s:44:"MARKET RESEARCH|RESEARCH|A MARKET RESEARCH|A RESEARCH";}i:9;a:10:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:0:"";s:8:"question";s:115:"Findings show people want expansion of routes to more places with increased __________ of services.";s:6:"points";i:1;s:18:"no_answer_feedback";s:106:"Please provide an answer. What aspect of services do people want increased along with route expansion?";s:16:"correct_feedback";s:115:"Correct! People want expansion of routes with increased 'frequency' of services (how often services run).";s:18:"incorrect_feedback";s:139:"The correct answer is 'frequency'. People want public transport services to run more frequently to more destinations.";s:15:"reading_text_id";i:0;s:7:"options";s:0:"";s:14:"correct_answer";s:9:"FREQUENCY";}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;a:2:{s:5:"title";s:18:"Commuter Transport";s:7:"content";s:27:"More information coming soon";}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[60]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[computer_based]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_exercise_label]]></wp:meta_key>
+			<wp:meta_value><![CDATA[exercise]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_open_as_popup]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_scoring_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[percentage]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[15]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_course_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_lesson_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_course_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_lesson_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+</channel>
+</rss>
