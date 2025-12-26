@@ -560,6 +560,16 @@ You have one hour for the complete test (including transferring your answers).</
                     delete_post_meta($exercise_id, '_ielts_cm_timer_minutes');
                 }
             }
+            
+            // Save starting question number
+            if (isset($metadata['starting_question_number'])) {
+                if (!empty($metadata['starting_question_number']) && is_numeric($metadata['starting_question_number'])) {
+                    $starting_num = max(1, intval($metadata['starting_question_number']));
+                    update_post_meta($exercise_id, '_ielts_cm_starting_question_number', $starting_num);
+                } else {
+                    delete_post_meta($exercise_id, '_ielts_cm_starting_question_number');
+                }
+            }
         }
         
         $results['success'] = true;
@@ -714,6 +724,11 @@ You have one hour for the complete test (including transferring your answers).</
                 } elseif (stripos($timer_text, 'No timer') !== false) {
                     $metadata['timer_minutes'] = '';
                 }
+            }
+            
+            // Parse Starting Question Number
+            if (preg_match('/Starting Question Number:\s*(\d+)/i', $settings_block, $start_match)) {
+                $metadata['starting_question_number'] = intval($start_match[1]);
             }
         }
         
@@ -2849,6 +2864,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
             } else {
                 $output[] = 'Timer: No timer';
+            
+            // Starting Question Number
+            if (isset($metadata['starting_question_number']) && $metadata['starting_question_number'] > 1) {
+                $output[] = 'Starting Question Number: ' . $metadata['starting_question_number'];
+            }
             }
             
             $output[] = '=== END EXERCISE SETTINGS ===';
@@ -2963,6 +2983,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
             } else {
                 $output[] = 'Timer: No timer';
+            
+            // Starting Question Number
+            if (isset($metadata['starting_question_number']) && $metadata['starting_question_number'] > 1) {
+                $output[] = 'Starting Question Number: ' . $metadata['starting_question_number'];
+            }
             }
             
             $output[] = '=== END EXERCISE SETTINGS ===';
@@ -3612,6 +3637,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
             } else {
                 $output[] = 'Timer: No timer';
+            
+            // Starting Question Number
+            if (isset($metadata['starting_question_number']) && $metadata['starting_question_number'] > 1) {
+                $output[] = 'Starting Question Number: ' . $metadata['starting_question_number'];
+            }
             }
             
             $output[] = '=== END EXERCISE SETTINGS ===';
@@ -3753,6 +3783,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
             } else {
                 $output[] = 'Timer: No timer';
+            
+            // Starting Question Number
+            if (isset($metadata['starting_question_number']) && $metadata['starting_question_number'] > 1) {
+                $output[] = 'Starting Question Number: ' . $metadata['starting_question_number'];
+            }
             }
             
             $output[] = '=== END EXERCISE SETTINGS ===';
@@ -3943,6 +3978,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
             } else {
                 $output[] = 'Timer: No timer';
+            
+            // Starting Question Number
+            if (isset($metadata['starting_question_number']) && $metadata['starting_question_number'] > 1) {
+                $output[] = 'Starting Question Number: ' . $metadata['starting_question_number'];
+            }
             }
             
             $output[] = '=== END EXERCISE SETTINGS ===';
@@ -4087,6 +4127,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
             } else {
                 $output[] = 'Timer: No timer';
+            
+            // Starting Question Number
+            if (isset($metadata['starting_question_number']) && $metadata['starting_question_number'] > 1) {
+                $output[] = 'Starting Question Number: ' . $metadata['starting_question_number'];
+            }
             }
             
             $output[] = '=== END EXERCISE SETTINGS ===';
@@ -4209,6 +4254,11 @@ You have one hour for the complete test (including transferring your answers).</
                 $output[] = 'Timer: ' . $metadata['timer_minutes'] . ' minutes';
             } else {
                 $output[] = 'Timer: No timer';
+            
+            // Starting Question Number
+            if (isset($metadata['starting_question_number']) && $metadata['starting_question_number'] > 1) {
+                $output[] = 'Starting Question Number: ' . $metadata['starting_question_number'];
+            }
             }
             
             $output[] = '=== END EXERCISE SETTINGS ===';

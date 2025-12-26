@@ -79,8 +79,14 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
         <div class="quiz-questions">
             <?php if (!empty($questions)): ?>
                 <?php 
+                // Get starting question number (default is 1)
+                $starting_question_number = get_post_meta($quiz->ID, '_ielts_cm_starting_question_number', true);
+                if (!$starting_question_number) {
+                    $starting_question_number = 1;
+                }
+                
                 // Calculate display question numbers for multi-select and matching questions
-                $display_question_number = 1;
+                $display_question_number = intval($starting_question_number);
                 $question_display_numbers = array();
                 foreach ($questions as $idx => $q) {
                     $start_num = $display_question_number;

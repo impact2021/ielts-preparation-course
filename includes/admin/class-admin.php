@@ -1220,6 +1220,18 @@ class IELTS_CM_Admin {
             <input type="number" id="ielts_cm_pass_percentage" name="ielts_cm_pass_percentage" value="<?php echo esc_attr($pass_percentage ? $pass_percentage : 70); ?>" min="0" max="100" style="width: 100%;">
         </p>
         
+        <?php
+        $starting_question_number = get_post_meta($post->ID, '_ielts_cm_starting_question_number', true);
+        if (!$starting_question_number) {
+            $starting_question_number = 1;
+        }
+        ?>
+        <p>
+            <label for="ielts_cm_starting_question_number"><?php _e('Starting Question Number', 'ielts-course-manager'); ?></label><br>
+            <input type="number" id="ielts_cm_starting_question_number" name="ielts_cm_starting_question_number" value="<?php echo esc_attr($starting_question_number); ?>" min="1" max="100" style="width: 100%;">
+            <small><?php _e('Set the first question number for this exercise. For example, enter "21" if this exercise should start with Question 21. Default is 1.', 'ielts-course-manager'); ?></small>
+        </p>
+        
         <p>
             <label for="ielts_cm_layout_type"><?php _e('Layout Type', 'ielts-course-manager'); ?></label><br>
             <select id="ielts_cm_layout_type" name="ielts_cm_layout_type" style="width: 100%;">
@@ -3267,6 +3279,14 @@ class IELTS_CM_Admin {
                 update_post_meta($post_id, '_ielts_cm_pass_percentage', intval($_POST['ielts_cm_pass_percentage']));
             }
             
+            // Save starting question number
+            if (isset($_POST['ielts_cm_starting_question_number'])) {
+                $starting_num = intval($_POST['ielts_cm_starting_question_number']);
+                // Ensure it's at least 1
+                $starting_num = max(1, $starting_num);
+                update_post_meta($post_id, '_ielts_cm_starting_question_number', $starting_num);
+            }
+            
             // Save layout type
             if (isset($_POST['ielts_cm_layout_type'])) {
                 update_post_meta($post_id, '_ielts_cm_layout_type', sanitize_text_field($_POST['ielts_cm_layout_type']));
@@ -5088,6 +5108,7 @@ class IELTS_CM_Admin {
         $open_as_popup = get_post_meta($post_id, '_ielts_cm_open_as_popup', true);
         $scoring_type = get_post_meta($post_id, '_ielts_cm_scoring_type', true);
         $timer_minutes = get_post_meta($post_id, '_ielts_cm_timer_minutes', true);
+        $starting_question_number = get_post_meta($post_id, '_ielts_cm_starting_question_number', true);
         
         // Convert to text format
         require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-text-exercises-creator.php';
@@ -5102,7 +5123,8 @@ class IELTS_CM_Admin {
                 'layout_type' => $layout_type ? $layout_type : 'standard',
                 'open_as_popup' => (bool) $open_as_popup,
                 'scoring_type' => $scoring_type ? $scoring_type : 'percentage',
-                'timer_minutes' => $timer_minutes ? $timer_minutes : ''
+                'timer_minutes' => $timer_minutes ? $timer_minutes : '',
+                'starting_question_number' => $starting_question_number ? $starting_question_number : 1
             )
         );
         
@@ -5223,6 +5245,7 @@ class IELTS_CM_Admin {
         $open_as_popup = get_post_meta($post->ID, '_ielts_cm_open_as_popup', true);
         $scoring_type = get_post_meta($post->ID, '_ielts_cm_scoring_type', true);
         $timer_minutes = get_post_meta($post->ID, '_ielts_cm_timer_minutes', true);
+        $starting_question_number = get_post_meta($post->ID, '_ielts_cm_starting_question_number', true);
         $audio_url = get_post_meta($post->ID, '_ielts_cm_audio_url', true);
         $transcript = get_post_meta($post->ID, '_ielts_cm_transcript', true);
         $course_ids = get_post_meta($post->ID, '_ielts_cm_course_ids', true);
@@ -5328,6 +5351,9 @@ class IELTS_CM_Admin {
         
         // Timer minutes
         $xml .= $this->generate_postmeta_xml('_ielts_cm_timer_minutes', $timer_minutes !== false ? $timer_minutes : '');
+        
+        // Starting question number
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_starting_question_number', $starting_question_number !== false ? $starting_question_number : '');
         
         // Audio URL (for listening tests)
         $xml .= $this->generate_postmeta_xml('_ielts_cm_audio_url', $audio_url !== false ? $audio_url : '');
@@ -5851,6 +5877,7 @@ class IELTS_CM_Admin {
             '_ielts_cm_open_as_popup',
             '_ielts_cm_scoring_type',
             '_ielts_cm_timer_minutes',
+            '_ielts_cm_starting_question_number',
             '_ielts_cm_audio_url',
             '_ielts_cm_transcript'
         );
