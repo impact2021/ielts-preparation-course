@@ -261,10 +261,13 @@ class IELTS_CM_Sync_API {
         // Handle array of IDs (could be serialized or JSON)
         if ($meta_key === '_ielts_cm_course_ids' || $meta_key === '_ielts_cm_lesson_ids') {
             // Try to unserialize first
+            $is_serialized = false;
             $ids = @unserialize($meta_value);
             
-            // If unserialize failed, try JSON decode
-            if ($ids === false) {
+            if ($ids !== false && is_array($ids)) {
+                $is_serialized = true;
+            } else {
+                // If unserialize failed, try JSON decode
                 $ids = json_decode($meta_value, true);
             }
             
@@ -282,7 +285,7 @@ class IELTS_CM_Sync_API {
             }
             
             // Return in the same format it came in
-            return serialize($mapped_ids);
+            return $is_serialized ? serialize($mapped_ids) : wp_json_encode($mapped_ids);
         }
         
         return $meta_value;
