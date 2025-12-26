@@ -1840,7 +1840,37 @@ select.answer-select-inline.answer-incorrect {
     width: 100%;
 }
 
-/* Question Instructions Styling for Listening Exercises */
+/* Question Styling for Listening Exercises - Match Computer-Based Layout */
+.ielts-listening-practice-quiz .quiz-question,
+.ielts-listening-exercise-quiz .quiz-question {
+    padding: 20px;
+    margin-bottom: 25px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    scroll-margin-top: 20px;
+}
+
+.ielts-listening-practice-quiz .quiz-question:last-of-type,
+.ielts-listening-exercise-quiz .quiz-question:last-of-type {
+    margin-bottom: 20px;
+}
+
+.ielts-listening-practice-quiz .question-number,
+.ielts-listening-exercise-quiz .question-number {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #0073aa;
+    margin: 0 0 10px 0;
+}
+
+.ielts-listening-practice-quiz .question-points,
+.ielts-listening-exercise-quiz .question-points {
+    font-size: 0.85em;
+    color: #666;
+    font-weight: normal;
+}
+
 .ielts-listening-practice-quiz .question-instructions,
 .ielts-listening-exercise-quiz .question-instructions {
     margin: 0 0 15px 0;
@@ -1851,6 +1881,121 @@ select.answer-select-inline.answer-incorrect {
     line-height: 1.6;
     color: #333;
     font-style: italic;
+}
+
+.ielts-listening-practice-quiz .question-text,
+.ielts-listening-exercise-quiz .question-text {
+    margin: 15px 0;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+.ielts-listening-practice-quiz .question-options,
+.ielts-listening-exercise-quiz .question-options {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.ielts-listening-practice-quiz .option-label,
+.ielts-listening-exercise-quiz .option-label {
+    display: block !important;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ielts-listening-practice-quiz .option-label:hover,
+.ielts-listening-exercise-quiz .option-label:hover {
+    background: #f0f7ff;
+    border-color: #0073aa;
+}
+
+.ielts-listening-practice-quiz .option-label input[type="radio"],
+.ielts-listening-exercise-quiz .option-label input[type="radio"],
+.ielts-listening-practice-quiz .option-label input[type="checkbox"],
+.ielts-listening-exercise-quiz .option-label input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.ielts-listening-practice-quiz .question-answer,
+.ielts-listening-exercise-quiz .question-answer {
+    margin: 15px 0;
+}
+
+.ielts-listening-practice-quiz .answer-input,
+.ielts-listening-exercise-quiz .answer-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.ielts-listening-practice-quiz .answer-input:focus,
+.ielts-listening-exercise-quiz .answer-input:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 1px #0073aa;
+}
+
+.ielts-listening-practice-quiz .answer-input-inline,
+.ielts-listening-exercise-quiz .answer-input-inline {
+    padding: 6px 10px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    min-width: 120px;
+    box-sizing: border-box;
+}
+
+.ielts-listening-practice-quiz .answer-input-inline:focus,
+.ielts-listening-exercise-quiz .answer-input-inline:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 1px #0073aa;
+}
+
+.ielts-listening-practice-quiz .answer-select-inline,
+.ielts-listening-exercise-quiz .answer-select-inline {
+    padding: 6px 10px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    min-width: 150px;
+    box-sizing: border-box;
+}
+
+.ielts-listening-practice-quiz .answer-select-inline:focus,
+.ielts-listening-exercise-quiz .answer-select-inline:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 1px #0073aa;
+}
+
+.ielts-listening-practice-quiz .summary-completion-text,
+.ielts-listening-exercise-quiz .summary-completion-text,
+.ielts-listening-practice-quiz .dropdown-paragraph-text,
+.ielts-listening-exercise-quiz .dropdown-paragraph-text {
+    line-height: 2;
+}
+
+.ielts-listening-practice-quiz .summary-completion-text p,
+.ielts-listening-exercise-quiz .summary-completion-text p,
+.ielts-listening-practice-quiz .dropdown-paragraph-text p,
+.ielts-listening-exercise-quiz .dropdown-paragraph-text p {
+    margin: 10px 0;
 }
 
 /* Responsive adjustments for listening layouts */
