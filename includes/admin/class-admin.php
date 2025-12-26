@@ -1088,7 +1088,8 @@ class IELTS_CM_Admin {
         $reading_texts = get_post_meta($post->ID, '_ielts_cm_reading_texts', true);
         $exercise_label = get_post_meta($post->ID, '_ielts_cm_exercise_label', true);
         
-        if (!$questions) {
+        // Ensure we have an array for questions
+        if (!is_array($questions)) {
             $questions = array();
         }
         
@@ -1096,7 +1097,8 @@ class IELTS_CM_Admin {
             $layout_type = 'standard';
         }
         
-        if (!$reading_texts) {
+        // Ensure we have an array for reading texts
+        if (!is_array($reading_texts)) {
             $reading_texts = array();
         }
         
@@ -2568,7 +2570,8 @@ class IELTS_CM_Admin {
     private function render_question_field($index, $question) {
         global $post;
         $reading_texts = get_post_meta($post->ID, '_ielts_cm_reading_texts', true);
-        if (!$reading_texts) {
+        // Ensure we have an array for reading texts
+        if (!is_array($reading_texts)) {
             $reading_texts = array();
         }
         ?>
