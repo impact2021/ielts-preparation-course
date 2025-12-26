@@ -35,8 +35,9 @@ class IELTS_CM_Admin {
         add_filter('manage_ielts_quiz_posts_columns', array($this, 'quiz_columns'));
         add_action('manage_ielts_quiz_posts_custom_column', array($this, 'quiz_column_content'), 10, 2);
         
-        // Add row actions for exercises
+        // Add row actions
         add_filter('post_row_actions', array($this, 'quiz_row_actions'), 10, 2);
+        add_filter('post_row_actions', array($this, 'course_row_actions'), 10, 2);
         
         // Add AJAX handlers
         add_action('wp_ajax_ielts_cm_update_lesson_order', array($this, 'ajax_update_lesson_order'));
@@ -54,6 +55,7 @@ class IELTS_CM_Admin {
         add_action('wp_ajax_ielts_cm_convert_to_text_format', array($this, 'ajax_convert_to_text_format'));
         add_action('wp_ajax_ielts_cm_parse_text_format', array($this, 'ajax_parse_text_format'));
         add_action('wp_ajax_ielts_cm_export_exercise_xml', array($this, 'ajax_export_exercise_xml'));
+        add_action('wp_ajax_ielts_cm_import_exercise_xml', array($this, 'ajax_import_exercise_xml'));
         
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
@@ -163,6 +165,16 @@ class IELTS_CM_Admin {
             'ielts_quiz',
             'normal',
             'high'
+        );
+        
+        // XML Import/Export meta box for exercises
+        add_meta_box(
+            'ielts_cm_quiz_xml',
+            __('Import/Export XML', 'ielts-course-manager'),
+            array($this, 'quiz_xml_meta_box'),
+            'ielts_quiz',
+            'side',
+            'default'
         );
         
         // Multi-site sync meta box (only for primary sites)
@@ -5569,6 +5581,288 @@ class IELTS_CM_Admin {
             ),
             'reading_text_id' => $first['reading_text_id'] ?? 0
         );
+    }
+    
+    /**
+     * Course row actions - add clone link
+     * 
+     * @param array $actions Row actions
+     * @param WP_Post $post Post object
+     * @return array Modified actions
+     */
+    public function course_row_actions($actions, $post) {
+        if ($post->post_type === 'ielts_course' && current_user_can('edit_post', $post->ID)) {
+            // Add clone link
+            $clone_url = admin_url('post.php?action=edit&post=' . $post->ID . '#clone-course');
+            $actions['clone'] = '<a href="' . esc_url($clone_url) . '">' . __('Clone', 'ielts-course-manager') . '</a>';
+        }
+        return $actions;
+    }
+    
+    /**
+     * XML Import/Export meta box for exercises
+     */
+    public function quiz_xml_meta_box($post) {
+        // Only show for existing exercises (not new ones)
+        if (!$post->ID || !get_post_status($post->ID)) {
+            ?>
+            <p><?php _e('Save the exercise first before importing/exporting XML.', 'ielts-course-manager'); ?></p>
+            <?php
+            return;
+        }
+        
+        $nonce = wp_create_nonce('ielts_cm_export_xml_' . $post->ID);
+        $export_url = admin_url('admin-ajax.php?action=ielts_cm_export_exercise_xml&post_id=' . $post->ID . '&nonce=' . $nonce);
+        ?>
+        <div id="ielts-cm-xml-import-export">
+            <div style="margin-bottom: 15px;">
+                <h4><?php _e('Export to XML', 'ielts-course-manager'); ?></h4>
+                <p><small><?php _e('Download this exercise as an XML file for backup or transfer.', 'ielts-course-manager'); ?></small></p>
+                <a href="<?php echo esc_url($export_url); ?>" class="button button-secondary" style="width: 100%;" target="_blank">
+                    <span class="dashicons dashicons-download" style="margin-top: 3px;"></span>
+                    <?php _e('Export to XML', 'ielts-course-manager'); ?>
+                </a>
+            </div>
+            
+            <hr style="margin: 15px 0;">
+            
+            <div>
+                <h4><?php _e('Import from XML', 'ielts-course-manager'); ?></h4>
+                <p><small><?php _e('Upload an XML file to overwrite this exercise content. This will replace all questions and settings.', 'ielts-course-manager'); ?></small></p>
+                <p><small style="color: #d63638;"><strong><?php _e('Warning:', 'ielts-course-manager'); ?></strong> <?php _e('This action cannot be undone. Export a backup first!', 'ielts-course-manager'); ?></small></p>
+                
+                <input type="file" id="ielts-cm-xml-file" accept=".xml" style="margin-bottom: 10px;">
+                <button type="button" id="ielts-cm-import-xml-btn" class="button button-primary" style="width: 100%;">
+                    <span class="dashicons dashicons-upload" style="margin-top: 3px;"></span>
+                    <?php _e('Upload & Import XML', 'ielts-course-manager'); ?>
+                </button>
+                <div id="ielts-cm-import-status" style="margin-top: 10px; display: none;"></div>
+            </div>
+        </div>
+        
+        <script>
+        jQuery(document).ready(function($) {
+            $('#ielts-cm-import-xml-btn').on('click', function() {
+                var fileInput = $('#ielts-cm-xml-file')[0];
+                var statusDiv = $('#ielts-cm-import-status');
+                
+                if (!fileInput.files || !fileInput.files[0]) {
+                    statusDiv.html('<div class="notice notice-error inline" style="margin: 0; padding: 8px 12px;"><p><?php _e('Please select an XML file first.', 'ielts-course-manager'); ?></p></div>').show();
+                    return;
+                }
+                
+                var file = fileInput.files[0];
+                if (!file.name.endsWith('.xml')) {
+                    statusDiv.html('<div class="notice notice-error inline" style="margin: 0; padding: 8px 12px;"><p><?php _e('Please select a valid XML file.', 'ielts-course-manager'); ?></p></div>').show();
+                    return;
+                }
+                
+                // Confirm action
+                if (!confirm('<?php _e('This will overwrite all current exercise content. Are you sure you want to continue?', 'ielts-course-manager'); ?>')) {
+                    return;
+                }
+                
+                // Disable button and show loading
+                $('#ielts-cm-import-xml-btn').prop('disabled', true);
+                statusDiv.html('<p><span class="spinner is-active" style="float: none;"></span> <?php _e('Uploading and processing XML file...', 'ielts-course-manager'); ?></p>').show();
+                
+                // Prepare form data
+                var formData = new FormData();
+                formData.append('action', 'ielts_cm_import_exercise_xml');
+                formData.append('post_id', <?php echo $post->ID; ?>);
+                formData.append('nonce', '<?php echo wp_create_nonce('ielts_cm_import_xml_' . $post->ID); ?>');
+                formData.append('xml_file', file);
+                
+                // Upload file
+                $.ajax({
+                    url: ajaxurl,
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        $('#ielts-cm-import-xml-btn').prop('disabled', false);
+                        
+                        if (response.success) {
+                            statusDiv.html('<div class="notice notice-success inline" style="margin: 0; padding: 8px 12px;"><p><strong><?php _e('Success!', 'ielts-course-manager'); ?></strong> ' + response.data.message + '</p></div>');
+                            
+                            // Reload page after short delay to show updated content
+                            setTimeout(function() {
+                                window.location.reload();
+                            }, 1500);
+                        } else {
+                            statusDiv.html('<div class="notice notice-error inline" style="margin: 0; padding: 8px 12px;"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> ' + response.data.message + '</p></div>');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        $('#ielts-cm-import-xml-btn').prop('disabled', false);
+                        statusDiv.html('<div class="notice notice-error inline" style="margin: 0; padding: 8px 12px;"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> ' + error + '</p></div>');
+                    }
+                });
+            });
+        });
+        </script>
+        
+        <style>
+        #ielts-cm-xml-import-export .button .dashicons {
+            vertical-align: text-bottom;
+        }
+        #ielts-cm-import-status .notice {
+            margin: 0;
+        }
+        </style>
+        <?php
+    }
+    
+    /**
+     * AJAX handler to import exercise from XML
+     */
+    public function ajax_import_exercise_xml() {
+        // Get post ID
+        $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
+        if (!$post_id) {
+            wp_send_json_error(array('message' => __('Invalid post ID.', 'ielts-course-manager')));
+        }
+        
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_import_xml_' . $post_id)) {
+            wp_send_json_error(array('message' => __('Security check failed.', 'ielts-course-manager')));
+        }
+        
+        // Check user capability
+        if (!current_user_can('edit_post', $post_id)) {
+            wp_send_json_error(array('message' => __('You do not have permission to edit this exercise.', 'ielts-course-manager')));
+        }
+        
+        // Get post
+        $post = get_post($post_id);
+        if (!$post || $post->post_type !== 'ielts_quiz') {
+            wp_send_json_error(array('message' => __('Invalid exercise.', 'ielts-course-manager')));
+        }
+        
+        // Check if file was uploaded
+        if (!isset($_FILES['xml_file']) || $_FILES['xml_file']['error'] !== UPLOAD_ERR_OK) {
+            wp_send_json_error(array('message' => __('File upload failed.', 'ielts-course-manager')));
+        }
+        
+        $file = $_FILES['xml_file'];
+        
+        // Validate file type
+        if (!preg_match('/\.xml$/i', $file['name'])) {
+            wp_send_json_error(array('message' => __('Invalid file type. Please upload an XML file.', 'ielts-course-manager')));
+        }
+        
+        // Read and parse XML
+        $xml_content = file_get_contents($file['tmp_name']);
+        if ($xml_content === false) {
+            wp_send_json_error(array('message' => __('Failed to read XML file.', 'ielts-course-manager')));
+        }
+        
+        // Parse XML and extract exercise data
+        $parsed_data = $this->parse_exercise_xml($xml_content);
+        if (is_wp_error($parsed_data)) {
+            wp_send_json_error(array('message' => $parsed_data->get_error_message()));
+        }
+        
+        // Update post title if provided
+        if (!empty($parsed_data['title'])) {
+            wp_update_post(array(
+                'ID' => $post_id,
+                'post_title' => $parsed_data['title']
+            ));
+        }
+        
+        // Update post content if provided
+        if (isset($parsed_data['content'])) {
+            wp_update_post(array(
+                'ID' => $post_id,
+                'post_content' => $parsed_data['content']
+            ));
+        }
+        
+        // Update all meta data
+        $meta_fields = array(
+            '_ielts_cm_questions',
+            '_ielts_cm_reading_texts',
+            '_ielts_cm_pass_percentage',
+            '_ielts_cm_layout_type',
+            '_ielts_cm_exercise_label',
+            '_ielts_cm_open_as_popup',
+            '_ielts_cm_scoring_type',
+            '_ielts_cm_timer_minutes'
+        );
+        
+        foreach ($meta_fields as $meta_key) {
+            if (isset($parsed_data['meta'][$meta_key])) {
+                update_post_meta($post_id, $meta_key, $parsed_data['meta'][$meta_key]);
+            }
+        }
+        
+        wp_send_json_success(array(
+            'message' => __('Exercise content imported successfully! Page will reload to show updated content.', 'ielts-course-manager')
+        ));
+    }
+    
+    /**
+     * Parse exercise XML and extract data
+     * 
+     * @param string $xml_content XML content
+     * @return array|WP_Error Parsed data or error
+     */
+    private function parse_exercise_xml($xml_content) {
+        // Suppress XML errors and use internal error handling
+        libxml_use_internal_errors(true);
+        
+        // Parse XML
+        $xml = simplexml_load_string($xml_content);
+        
+        if ($xml === false) {
+            $errors = libxml_get_errors();
+            libxml_clear_errors();
+            $error_msg = !empty($errors) ? $errors[0]->message : __('Invalid XML format.', 'ielts-course-manager');
+            return new WP_Error('xml_parse_error', __('Failed to parse XML: ', 'ielts-course-manager') . $error_msg);
+        }
+        
+        // Check if this is a WordPress export
+        if (!isset($xml->channel) || !isset($xml->channel->item)) {
+            return new WP_Error('invalid_xml', __('This does not appear to be a valid WordPress export file.', 'ielts-course-manager'));
+        }
+        
+        $item = $xml->channel->item;
+        
+        // Extract basic post data
+        $data = array(
+            'title' => (string) $item->title,
+            'content' => (string) $item->children('content', true)->encoded,
+            'meta' => array()
+        );
+        
+        // Extract post meta
+        $wp_namespace = $item->children('wp', true);
+        if (isset($wp_namespace->postmeta)) {
+            foreach ($wp_namespace->postmeta as $meta) {
+                $meta_key = (string) $meta->meta_key;
+                $meta_value = (string) $meta->meta_value;
+                
+                // Only process IELTS exercise meta fields
+                if (strpos($meta_key, '_ielts_cm_') === 0) {
+                    // Try to unserialize if it's serialized data
+                    $unserialized = @unserialize($meta_value);
+                    if ($unserialized !== false || $meta_value === serialize(false)) {
+                        $data['meta'][$meta_key] = $unserialized;
+                    } else {
+                        $data['meta'][$meta_key] = $meta_value;
+                    }
+                }
+            }
+        }
+        
+        // Validate that we have questions
+        if (!isset($data['meta']['_ielts_cm_questions']) || empty($data['meta']['_ielts_cm_questions'])) {
+            return new WP_Error('no_questions', __('No questions found in the XML file.', 'ielts-course-manager'));
+        }
+        
+        return $data;
     }
     
     /**
