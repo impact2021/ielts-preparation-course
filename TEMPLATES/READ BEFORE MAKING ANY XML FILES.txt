@@ -1,0 +1,5 @@
+Important points to keep in mind when creating new exercises from templates:
+
+- Ensure you ALWAYS fill EVERY feedback field.
+- The correct answer must always be clear when a user entered an incorrect answer or no answer. Simply writing 'Please select an answer.' is not enough. Ideally you would also identify which paragraph / area of the text should have led them to the correct answer.
+- with groups of question types, the instruction should only be in the first of the group.
