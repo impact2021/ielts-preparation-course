@@ -5699,8 +5699,26 @@ class IELTS_CM_Admin {
             
             <div>
                 <h4><?php _e('Import from XML', 'ielts-course-manager'); ?></h4>
-                <p><small><?php _e('Upload an XML file to overwrite this exercise content. This will replace all questions and settings.', 'ielts-course-manager'); ?></small></p>
-                <p><small style="color: #d63638;"><strong><?php _e('Warning:', 'ielts-course-manager'); ?></strong> <?php _e('This action cannot be undone. Export a backup first!', 'ielts-course-manager'); ?></small></p>
+                <p><small><?php _e('Upload an XML file to import exercise content.', 'ielts-course-manager'); ?></small></p>
+                
+                <div style="margin-bottom: 15px; padding: 10px; background: #f0f0f1; border-left: 4px solid #0073aa;">
+                    <label style="display: block; margin-bottom: 8px;">
+                        <strong><?php _e('Import Mode:', 'ielts-course-manager'); ?></strong>
+                    </label>
+                    <label style="display: block; margin-bottom: 5px;">
+                        <input type="radio" name="ielts_cm_import_mode" value="replace" checked>
+                        <?php _e('Replace all content', 'ielts-course-manager'); ?>
+                        <span style="color: #666; font-size: 12px;"><?php _e('(overwrites everything)', 'ielts-course-manager'); ?></span>
+                    </label>
+                    <label style="display: block;">
+                        <input type="radio" name="ielts_cm_import_mode" value="append">
+                        <?php _e('Add to existing content', 'ielts-course-manager'); ?>
+                        <span style="color: #666; font-size: 12px;"><?php _e('(keeps current questions and adds new ones)', 'ielts-course-manager'); ?></span>
+                    </label>
+                </div>
+                
+                <p id="ielts-cm-replace-warning" style="display: block;"><small style="color: #d63638;"><strong><?php _e('Warning:', 'ielts-course-manager'); ?></strong> <?php _e('Replace mode will overwrite all current content. Export a backup first!', 'ielts-course-manager'); ?></small></p>
+                <p id="ielts-cm-append-info" style="display: none;"><small style="color: #0073aa;"><strong><?php _e('Note:', 'ielts-course-manager'); ?></strong> <?php _e('Questions and reading texts from the XML will be added after your current content.', 'ielts-course-manager'); ?></small></p>
                 
                 <input type="file" id="ielts-cm-xml-file" accept=".xml" style="margin-bottom: 10px;">
                 <button type="button" id="ielts-cm-import-xml-btn" class="button button-primary" style="width: 100%;">
@@ -5713,9 +5731,21 @@ class IELTS_CM_Admin {
         
         <script>
         jQuery(document).ready(function($) {
+            // Toggle warning/info message based on import mode
+            $('input[name="ielts_cm_import_mode"]').on('change', function() {
+                if ($(this).val() === 'replace') {
+                    $('#ielts-cm-replace-warning').show();
+                    $('#ielts-cm-append-info').hide();
+                } else {
+                    $('#ielts-cm-replace-warning').hide();
+                    $('#ielts-cm-append-info').show();
+                }
+            });
+            
             $('#ielts-cm-import-xml-btn').on('click', function() {
                 var fileInput = $('#ielts-cm-xml-file')[0];
                 var statusDiv = $('#ielts-cm-import-status');
+                var importMode = $('input[name="ielts_cm_import_mode"]:checked').val();
                 
                 if (!fileInput.files || !fileInput.files[0]) {
                     statusDiv.html('<div class="notice notice-error inline" style="margin: 0; padding: 8px 12px;"><p><?php _e('Please select an XML file first.', 'ielts-course-manager'); ?></p></div>').show();
@@ -5728,8 +5758,15 @@ class IELTS_CM_Admin {
                     return;
                 }
                 
-                // Confirm action
-                if (!confirm('<?php _e('This will overwrite all current exercise content. Are you sure you want to continue?', 'ielts-course-manager'); ?>')) {
+                // Confirm action with appropriate message
+                var confirmMsg;
+                if (importMode === 'replace') {
+                    confirmMsg = '<?php _e('This will replace all current exercise content. Are you sure you want to continue?', 'ielts-course-manager'); ?>';
+                } else {
+                    confirmMsg = '<?php _e('This will add the XML content to your current exercise. Are you sure you want to continue?', 'ielts-course-manager'); ?>';
+                }
+                
+                if (!confirm(confirmMsg)) {
                     return;
                 }
                 
@@ -5743,6 +5780,7 @@ class IELTS_CM_Admin {
                 formData.append('post_id', <?php echo $post->ID; ?>);
                 formData.append('nonce', '<?php echo wp_create_nonce('ielts_cm_import_xml_' . $post->ID); ?>');
                 formData.append('xml_file', file);
+                formData.append('import_mode', importMode);
                 
                 // Upload file
                 $.ajax({
@@ -5811,6 +5849,9 @@ class IELTS_CM_Admin {
             wp_send_json_error(array('message' => __('Invalid exercise.', 'ielts-course-manager')));
         }
         
+        // Get import mode (default to 'replace' for backward compatibility)
+        $import_mode = isset($_POST['import_mode']) ? sanitize_text_field($_POST['import_mode']) : 'replace';
+        
         // Check if file was uploaded
         if (!isset($_FILES['xml_file']) || $_FILES['xml_file']['error'] !== UPLOAD_ERR_OK) {
             wp_send_json_error(array('message' => __('File upload failed.', 'ielts-course-manager')));
@@ -5851,46 +5892,133 @@ class IELTS_CM_Admin {
             wp_send_json_error(array('message' => $parsed_data->get_error_message()));
         }
         
-        // Update post title if provided
-        if (!empty($parsed_data['title'])) {
-            wp_update_post(array(
-                'ID' => $post_id,
-                'post_title' => $parsed_data['title']
+        // Handle based on import mode
+        if ($import_mode === 'append') {
+            // Append mode: Add questions and reading texts to existing content
+            $this->append_exercise_data($post_id, $parsed_data);
+            
+            wp_send_json_success(array(
+                'message' => __('Exercise content added successfully! Page will reload to show updated content.', 'ielts-course-manager')
+            ));
+        } else {
+            // Replace mode: Original behavior - overwrite everything
+            // Update post title if provided
+            if (!empty($parsed_data['title'])) {
+                wp_update_post(array(
+                    'ID' => $post_id,
+                    'post_title' => $parsed_data['title']
+                ));
+            }
+            
+            // Update post content if provided
+            if (isset($parsed_data['content'])) {
+                wp_update_post(array(
+                    'ID' => $post_id,
+                    'post_content' => $parsed_data['content']
+                ));
+            }
+            
+            // Update all meta data
+            $meta_fields = array(
+                '_ielts_cm_questions',
+                '_ielts_cm_reading_texts',
+                '_ielts_cm_pass_percentage',
+                '_ielts_cm_layout_type',
+                '_ielts_cm_exercise_label',
+                '_ielts_cm_open_as_popup',
+                '_ielts_cm_scoring_type',
+                '_ielts_cm_timer_minutes',
+                '_ielts_cm_starting_question_number',
+                '_ielts_cm_audio_url',
+                '_ielts_cm_transcript'
+            );
+            
+            foreach ($meta_fields as $meta_key) {
+                if (isset($parsed_data['meta'][$meta_key])) {
+                    update_post_meta($post_id, $meta_key, $parsed_data['meta'][$meta_key]);
+                }
+            }
+            
+            wp_send_json_success(array(
+                'message' => __('Exercise content replaced successfully! Page will reload to show updated content.', 'ielts-course-manager')
             ));
         }
-        
-        // Update post content if provided
-        if (isset($parsed_data['content'])) {
-            wp_update_post(array(
-                'ID' => $post_id,
-                'post_content' => $parsed_data['content']
-            ));
+    }
+    
+    /**
+     * Append exercise data from XML to existing exercise
+     * 
+     * @param int $post_id Post ID
+     * @param array $parsed_data Parsed XML data
+     */
+    private function append_exercise_data($post_id, $parsed_data) {
+        // Get existing questions
+        $existing_questions = get_post_meta($post_id, '_ielts_cm_questions', true);
+        if (!is_array($existing_questions)) {
+            $existing_questions = array();
         }
         
-        // Update all meta data
-        $meta_fields = array(
-            '_ielts_cm_questions',
-            '_ielts_cm_reading_texts',
-            '_ielts_cm_pass_percentage',
-            '_ielts_cm_layout_type',
-            '_ielts_cm_exercise_label',
-            '_ielts_cm_open_as_popup',
-            '_ielts_cm_scoring_type',
-            '_ielts_cm_timer_minutes',
-            '_ielts_cm_starting_question_number',
-            '_ielts_cm_audio_url',
-            '_ielts_cm_transcript'
-        );
+        // Get new questions from XML
+        $new_questions = isset($parsed_data['meta']['_ielts_cm_questions']) ? $parsed_data['meta']['_ielts_cm_questions'] : array();
+        if (!is_array($new_questions)) {
+            $new_questions = array();
+        }
         
-        foreach ($meta_fields as $meta_key) {
-            if (isset($parsed_data['meta'][$meta_key])) {
-                update_post_meta($post_id, $meta_key, $parsed_data['meta'][$meta_key]);
+        // Merge questions: append new questions to existing ones
+        $merged_questions = array_merge($existing_questions, $new_questions);
+        update_post_meta($post_id, '_ielts_cm_questions', $merged_questions);
+        
+        // Get existing reading texts
+        $existing_reading_texts = get_post_meta($post_id, '_ielts_cm_reading_texts', true);
+        if (!is_array($existing_reading_texts)) {
+            $existing_reading_texts = array();
+        }
+        
+        // Get new reading texts from XML
+        $new_reading_texts = isset($parsed_data['meta']['_ielts_cm_reading_texts']) ? $parsed_data['meta']['_ielts_cm_reading_texts'] : array();
+        if (!is_array($new_reading_texts)) {
+            $new_reading_texts = array();
+        }
+        
+        // Merge reading texts: We need to handle ID conflicts
+        // Find the highest existing reading text ID
+        $max_id = 0;
+        foreach ($existing_reading_texts as $text) {
+            if (isset($text['id']) && $text['id'] > $max_id) {
+                $max_id = $text['id'];
             }
         }
         
-        wp_send_json_success(array(
-            'message' => __('Exercise content imported successfully! Page will reload to show updated content.', 'ielts-course-manager')
-        ));
+        // Remap reading text IDs in new texts to avoid conflicts
+        $id_map = array();
+        foreach ($new_reading_texts as $index => $text) {
+            $old_id = isset($text['id']) ? $text['id'] : 0;
+            $new_id = ++$max_id;
+            $id_map[$old_id] = $new_id;
+            $new_reading_texts[$index]['id'] = $new_id;
+        }
+        
+        // Update reading_text_id references in new questions
+        foreach ($merged_questions as $q_index => $question) {
+            // Only update questions that were just added (from new_questions)
+            $is_new_question = $q_index >= count($existing_questions);
+            if ($is_new_question && isset($question['reading_text_id'])) {
+                $old_reading_text_id = $question['reading_text_id'];
+                if (isset($id_map[$old_reading_text_id])) {
+                    $merged_questions[$q_index]['reading_text_id'] = $id_map[$old_reading_text_id];
+                }
+            }
+        }
+        
+        // Merge reading texts
+        $merged_reading_texts = array_merge($existing_reading_texts, $new_reading_texts);
+        update_post_meta($post_id, '_ielts_cm_reading_texts', $merged_reading_texts);
+        
+        // Update merged questions again with remapped IDs
+        update_post_meta($post_id, '_ielts_cm_questions', $merged_questions);
+        
+        // Note: We do NOT update title, content, or settings when appending
+        // Only questions and reading texts are appended
     }
     
     /**
