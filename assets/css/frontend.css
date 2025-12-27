@@ -1670,6 +1670,13 @@ select.answer-select-inline.answer-incorrect {
     margin: 0 auto;
 }
 
+/* Quiz header for listening layouts - reduce top spacing */
+.ielts-listening-practice-quiz .quiz-header,
+.ielts-listening-exercise-quiz .quiz-header {
+    margin-top: 0;
+    padding-top: 0;
+}
+
 /* Breadcrumb styling for listening layouts */
 .ielts-listening-practice-quiz .quiz-breadcrumb,
 .ielts-listening-exercise-quiz .quiz-breadcrumb {

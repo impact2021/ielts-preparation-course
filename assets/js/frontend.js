@@ -1518,11 +1518,9 @@
                     countdownContainer.fadeOut(300, function() {
                         audioPlayerContainer.fadeIn(300, function() {
                             // Start playing audio after fade-in completes
-                            if (audioElement && audioUrl) {
-                                // Ensure the audio source is set and loaded before playing
-                                if (!audioElement.src || audioElement.src === '') {
-                                    audioElement.src = audioUrl;
-                                }
+                            if (audioElement) {
+                                // Ensure the audio is loaded before playing
+                                // The source is already set in the HTML template
                                 audioElement.load();
                                 
                                 // Use a promise to handle play
