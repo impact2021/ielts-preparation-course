@@ -1507,37 +1507,38 @@ class IELTS_CM_Admin {
                 if (!empty($audio_sections)) {
                     $keys = array_keys($audio_sections);
                     $numeric_keys = array_filter($keys, 'is_numeric');
-                    echo !empty($numeric_keys) ? (max($numeric_keys) + 1) : count($audio_sections);
+                    $index = !empty($numeric_keys) ? (max($numeric_keys) + 1) : count($audio_sections);
+                    echo intval($index);
                 } else {
                     echo 0;
                 }
             ?>;
             
             $('#add-audio-section').on('click', function() {
-                var sectionNumber = audioSectionIndex + 1;
+                var sectionNumber = parseInt(audioSectionIndex) + 1;
                 var html = '<div class="audio-section-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9; position: relative;">' +
                     '<div class="audio-section-header" style="display: flex; align-items: center; cursor: pointer; margin-bottom: 15px;">' +
                     '<span class="dashicons dashicons-arrow-down-alt2 audio-section-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>' +
-                    '<h4 style="margin: 0; flex: 1;"><?php _e('Section', 'ielts-course-manager'); ?> ' + sectionNumber + '</h4>' +
+                    '<h4 style="margin: 0; flex: 1;"><?php echo esc_js(__('Section', 'ielts-course-manager')); ?> ' + parseInt(sectionNumber) + '</h4>' +
                     '</div>' +
                     '<div class="audio-section-content">' +
                     '<p>' +
-                    '<label><?php _e('Section Number', 'ielts-course-manager'); ?></label><br>' +
-                    '<input type="number" name="audio_sections[' + audioSectionIndex + '][section_number]" value="' + sectionNumber + '" min="1" max="4" style="width: 100px;" placeholder="1">' +
-                    '<small><?php _e('Section number (1-4)', 'ielts-course-manager'); ?></small>' +
+                    '<label><?php echo esc_js(__('Section Number', 'ielts-course-manager')); ?></label><br>' +
+                    '<input type="number" name="audio_sections[' + parseInt(audioSectionIndex) + '][section_number]" value="' + parseInt(sectionNumber) + '" min="1" max="4" style="width: 100px;" placeholder="1">' +
+                    '<small><?php echo esc_js(__('Section number (1-4)', 'ielts-course-manager')); ?></small>' +
                     '</p>' +
                     '<p>' +
-                    '<label><?php _e('Audio URL', 'ielts-course-manager'); ?></label><br>' +
-                    '<input type="url" name="audio_sections[' + audioSectionIndex + '][audio_url]" style="width: 100%;" placeholder="https://example.com/section-' + sectionNumber + '.mp3" class="audio-section-url">' +
-                    '<button type="button" class="button upload-audio-section-btn" data-index="' + audioSectionIndex + '" style="margin-top: 5px;"><?php _e('Upload Audio', 'ielts-course-manager'); ?></button><br>' +
-                    '<small><?php _e('Enter the URL to the audio file or upload one (MP3 format recommended).', 'ielts-course-manager'); ?></small>' +
+                    '<label><?php echo esc_js(__('Audio URL', 'ielts-course-manager')); ?></label><br>' +
+                    '<input type="url" name="audio_sections[' + parseInt(audioSectionIndex) + '][audio_url]" style="width: 100%;" placeholder="https://example.com/section-' + parseInt(sectionNumber) + '.mp3" class="audio-section-url">' +
+                    '<button type="button" class="button upload-audio-section-btn" data-index="' + parseInt(audioSectionIndex) + '" style="margin-top: 5px;"><?php echo esc_js(__('Upload Audio', 'ielts-course-manager')); ?></button><br>' +
+                    '<small><?php echo esc_js(__('Enter the URL to the audio file or upload one (MP3 format recommended).', 'ielts-course-manager')); ?></small>' +
                     '</p>' +
                     '<p>' +
-                    '<label><?php _e('Transcript', 'ielts-course-manager'); ?></label><br>' +
-                    '<textarea name="audio_sections[' + audioSectionIndex + '][transcript]" rows="8" style="width: 100%;" placeholder="<?php esc_attr_e('Enter the transcript for this section...', 'ielts-course-manager'); ?>"></textarea>' +
-                    '<small><?php _e('This transcript will be shown after the student submits their answers.', 'ielts-course-manager'); ?></small>' +
+                    '<label><?php echo esc_js(__('Transcript', 'ielts-course-manager')); ?></label><br>' +
+                    '<textarea name="audio_sections[' + parseInt(audioSectionIndex) + '][transcript]" rows="8" style="width: 100%;" placeholder="<?php echo esc_attr(__('Enter the transcript for this section...', 'ielts-course-manager')); ?>"></textarea>' +
+                    '<small><?php echo esc_js(__('This transcript will be shown after the student submits their answers.', 'ielts-course-manager')); ?></small>' +
                     '</p>' +
-                    '<button type="button" class="button remove-audio-section" style="margin-top: 10px;"><?php _e('Remove Audio Section', 'ielts-course-manager'); ?></button>' +
+                    '<button type="button" class="button remove-audio-section" style="margin-top: 10px;"><?php echo esc_js(__('Remove Audio Section', 'ielts-course-manager')); ?></button>' +
                     '</div>' +
                     '</div>';
                 $('#audio-sections-container').append(html);

@@ -261,15 +261,15 @@ if ($lesson_id) {
                                     <h3><?php _e('Listening Audio', 'ielts-course-manager'); ?></h3>
                                     <div class="audio-section-tabs">
                                         <?php foreach ($audio_sections as $index => $section): ?>
-                                            <button type="button" class="audio-section-tab<?php echo ($index === $first_section_key) ? ' active' : ''; ?>" data-section="<?php echo $index; ?>">
+                                            <button type="button" class="audio-section-tab<?php echo ($index === $first_section_key) ? ' active' : ''; ?>" data-section="<?php echo esc_attr($index); ?>">
                                                 <?php printf(__('Section %d', 'ielts-course-manager'), isset($section['section_number']) ? $section['section_number'] : ($index + 1)); ?>
                                             </button>
                                         <?php endforeach; ?>
                                     </div>
                                     <?php foreach ($audio_sections as $index => $section): ?>
-                                        <div class="audio-section-content" id="audio-section-<?php echo $index; ?>" style="<?php echo ($index !== $first_section_key) ? 'display:none;' : ''; ?>">
+                                        <div class="audio-section-content" id="audio-section-<?php echo esc_attr($index); ?>" style="<?php echo ($index !== $first_section_key) ? 'display:none;' : ''; ?>">
                                             <?php if (!empty($section['audio_url'])): ?>
-                                                <audio class="section-audio-element" controls controlsList="nodownload" data-section="<?php echo $index; ?>">
+                                                <audio class="section-audio-element" controls controlsList="nodownload" data-section="<?php echo esc_attr($index); ?>">
                                                     <source src="<?php echo esc_url($section['audio_url']); ?>" type="audio/mpeg">
                                                     <?php _e('Your browser does not support the audio element.', 'ielts-course-manager'); ?>
                                                 </audio>
@@ -302,13 +302,13 @@ if ($lesson_id) {
                                 <h3><?php _e('Audio Transcripts', 'ielts-course-manager'); ?></h3>
                                 <div class="transcript-section-tabs">
                                     <?php foreach ($audio_sections as $index => $section): ?>
-                                        <button type="button" class="transcript-section-tab<?php echo ($index === $first_section_key) ? ' active' : ''; ?>" data-section="<?php echo $index; ?>">
+                                        <button type="button" class="transcript-section-tab<?php echo ($index === $first_section_key) ? ' active' : ''; ?>" data-section="<?php echo esc_attr($index); ?>">
                                             <?php printf(__('Section %d', 'ielts-course-manager'), isset($section['section_number']) ? $section['section_number'] : ($index + 1)); ?>
                                         </button>
                                     <?php endforeach; ?>
                                 </div>
                                 <?php foreach ($audio_sections as $index => $section): ?>
-                                    <div class="transcript-section-content" id="transcript-section-<?php echo $index; ?>" style="<?php echo ($index !== $first_section_key) ? 'display:none;' : ''; ?>">
+                                    <div class="transcript-section-content" id="transcript-section-<?php echo esc_attr($index); ?>" style="<?php echo ($index !== $first_section_key) ? 'display:none;' : ''; ?>">
                                         <?php if (!empty($section['transcript'])): ?>
                                             <div class="transcript-content">
                                                 <?php echo wp_kses_post(wpautop($section['transcript'])); ?>
