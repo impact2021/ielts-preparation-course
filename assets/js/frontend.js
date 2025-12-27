@@ -1535,12 +1535,7 @@
                                         
                                         // Create unmute button/message
                                         var unmuteMessage = $('<div class="unmute-prompt" style="background: #0073aa; color: white; padding: 15px 20px; border-radius: 8px; text-align: center; margin: 20px auto; max-width: 400px; cursor: pointer; font-weight: 500; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"><span class="dashicons dashicons-controls-volumeon" style="color: white; margin-right: 8px; vertical-align: middle;"></span>Click here to enable audio</div>');
-                                        
-                                        if (isListeningPractice) {
-                                            audioPlayerContainer.prepend(unmuteMessage);
-                                        } else {
-                                            audioPlayerContainer.prepend(unmuteMessage);
-                                        }
+                                        audioPlayerContainer.prepend(unmuteMessage);
                                         
                                         // Unmute on click anywhere in the audio player area
                                         var unmuteAudio = function() {
@@ -1556,31 +1551,31 @@
                                         
                                     }).catch(function(error) {
                                         console.log('Audio autoplay failed even when muted:', error);
+                                        
+                                        // Create play prompt HTML
+                                        var playPromptHtml = '<div class="play-prompt" style="background: #d63638; color: white; padding: 15px 20px; border-radius: 8px; text-align: center; margin: 20px auto; max-width: 400px; cursor: pointer; font-weight: 500; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"><span class="dashicons dashicons-controls-play" style="color: white; margin-right: 8px; vertical-align: middle;"></span>Click here to start the audio</div>';
+                                        
                                         // Fallback: show a play button or message
+                                        audioPlayerContainer.prepend(playPromptHtml);
+                                        
+                                        // Handle click to start audio
+                                        var startAudio = function() {
+                                            audioElement.muted = false;
+                                            audioElement.play().then(function() {
+                                                $('.play-prompt').fadeOut(300, function() {
+                                                    $(this).remove();
+                                                });
+                                            });
+                                            audioPlayerContainer.off('click', startAudio);
+                                            if (isListeningPractice) {
+                                                audioPlayerContainer.css('cursor', 'default');
+                                            }
+                                        };
+                                        
                                         if (isListeningPractice) {
-                                            // For hidden controls layout, show message
-                                            audioPlayerContainer.prepend('<div class="play-prompt" style="background: #d63638; color: white; padding: 15px 20px; border-radius: 8px; text-align: center; margin: 20px auto; max-width: 400px; cursor: pointer; font-weight: 500; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"><span class="dashicons dashicons-controls-play" style="color: white; margin-right: 8px; vertical-align: middle;"></span>Click here to start the audio</div>');
-                                            // Make the entire area clickable to start audio
-                                            audioPlayerContainer.css('cursor', 'pointer').one('click', function() {
-                                                audioElement.muted = false;
-                                                audioElement.play().then(function() {
-                                                    $('.play-prompt').fadeOut(300, function() {
-                                                        $(this).remove();
-                                                    });
-                                                });
-                                                $(this).css('cursor', 'default');
-                                            });
-                                        } else {
-                                            audioPlayerContainer.prepend('<div class="play-prompt" style="background: #d63638; color: white; padding: 15px 20px; border-radius: 8px; text-align: center; margin: 20px auto; max-width: 400px; cursor: pointer; font-weight: 500; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"><span class="dashicons dashicons-controls-play" style="color: white; margin-right: 8px; vertical-align: middle;"></span>Click here to start the audio</div>');
-                                            audioPlayerContainer.one('click', function() {
-                                                audioElement.muted = false;
-                                                audioElement.play().then(function() {
-                                                    $('.play-prompt').fadeOut(300, function() {
-                                                        $(this).remove();
-                                                    });
-                                                });
-                                            });
+                                            audioPlayerContainer.css('cursor', 'pointer');
                                         }
+                                        audioPlayerContainer.on('click', startAudio);
                                     });
                                 }
                             }
