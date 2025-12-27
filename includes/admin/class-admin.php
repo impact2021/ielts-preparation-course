@@ -5564,6 +5564,7 @@ class IELTS_CM_Admin {
         $starting_question_number = get_post_meta($post->ID, '_ielts_cm_starting_question_number', true);
         $audio_url = get_post_meta($post->ID, '_ielts_cm_audio_url', true);
         $transcript = get_post_meta($post->ID, '_ielts_cm_transcript', true);
+        $audio_sections = get_post_meta($post->ID, '_ielts_cm_audio_sections', true);
         $course_ids = get_post_meta($post->ID, '_ielts_cm_course_ids', true);
         $lesson_ids = get_post_meta($post->ID, '_ielts_cm_lesson_ids', true);
         $course_id = get_post_meta($post->ID, '_ielts_cm_course_id', true);
@@ -5575,6 +5576,9 @@ class IELTS_CM_Admin {
         }
         if (!is_array($reading_texts)) {
             $reading_texts = array();
+        }
+        if (!is_array($audio_sections)) {
+            $audio_sections = array();
         }
         if (!is_array($course_ids)) {
             $course_ids = array();
@@ -5679,6 +5683,9 @@ class IELTS_CM_Admin {
         
         // Transcript (for listening tests)
         $xml .= $this->generate_postmeta_xml('_ielts_cm_transcript', $transcript !== false ? $transcript : '');
+        
+        // Audio Sections (for listening tests with multiple sections)
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_audio_sections', $audio_sections);
         
         // Course IDs (array)
         $xml .= $this->generate_postmeta_xml('_ielts_cm_course_ids', $course_ids);
@@ -6255,7 +6262,8 @@ class IELTS_CM_Admin {
                 '_ielts_cm_timer_minutes',
                 '_ielts_cm_starting_question_number',
                 '_ielts_cm_audio_url',
-                '_ielts_cm_transcript'
+                '_ielts_cm_transcript',
+                '_ielts_cm_audio_sections'
             );
             
             foreach ($meta_fields as $meta_key) {
