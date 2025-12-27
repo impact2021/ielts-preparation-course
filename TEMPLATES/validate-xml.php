@@ -66,6 +66,30 @@ if (preg_match_all('/<wp:meta_key><!\[CDATA\[(_ielts_cm_questions|_ielts_cm_read
             $issues[] = "Invalid serialized data in $key";
             echo "  ❌ FAIL: Cannot unserialize $key\n";
             echo "      First 100 chars: " . substr($serialized, 0, 100) . "...\n";
+            
+            // Check for common causes
+            $special_chars = [
+                "\xE2\x80\x93" => 'en-dash (U+2013)',
+                "\xE2\x80\x94" => 'em-dash (U+2014)',
+                "\xE2\x80\x98" => 'left single quote (U+2018)',
+                "\xE2\x80\x99" => 'right single quote (U+2019)',
+                "\xE2\x80\x9C" => 'left double quote (U+201C)',
+                "\xE2\x80\x9D" => 'right double quote (U+201D)',
+            ];
+            
+            $found_chars = [];
+            foreach ($special_chars as $char => $name) {
+                if (strpos($serialized, $char) !== false) {
+                    $found_chars[] = $name;
+                }
+            }
+            
+            if (!empty($found_chars)) {
+                echo "      ⚠ Found problematic UTF-8 characters: " . implode(', ', $found_chars) . "\n";
+                echo "      These characters break PHP serialization. Replace them with ASCII equivalents.\n";
+                echo "      Solution: Re-export the exercise from WordPress after replacing special characters\n";
+                echo "      with regular ASCII equivalents (e.g., use '-' instead of '–', straight quotes instead of curly quotes).\n";
+            }
         } else {
             echo "  ✓ PASS: $key is valid serialized data\n";
             if (is_array($data)) {
