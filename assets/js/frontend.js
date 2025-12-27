@@ -161,9 +161,10 @@
             
             // Stop audio playback if this is a listening quiz
             var isListeningQuiz = quizContainer.hasClass('ielts-listening-practice-quiz') || 
-                                 quizContainer.hasClass('ielts-listening-exercise-quiz');
+                                 quizContainer.hasClass('ielts-listening-exercise-quiz') ||
+                                 quizContainer.data('test-type') === 'listening';
             if (isListeningQuiz) {
-                var audioElement = document.getElementById('listening-audio');
+                var audioElement = document.getElementById('listening-audio') || document.getElementById('cbt-audio-element');
                 if (audioElement) {
                     audioElement.pause();
                 }
@@ -721,7 +722,8 @@
                             
                             // For listening quizzes, show transcript after results are displayed
                             var isListeningQuiz = quizContainer.hasClass('ielts-listening-practice-quiz') || 
-                                                 quizContainer.hasClass('ielts-listening-exercise-quiz');
+                                                 quizContainer.hasClass('ielts-listening-exercise-quiz') ||
+                                                 quizContainer.data('test-type') === 'listening';
                             if (isListeningQuiz) {
                                 var audioPlayerContainer = quizContainer.find('#listening-audio-player');
                                 var transcriptContainer = quizContainer.find('#listening-transcript');
