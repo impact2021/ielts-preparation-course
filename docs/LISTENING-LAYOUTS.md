@@ -9,9 +9,9 @@ This document describes the two new listening test layouts added to the IELTS Co
 ## Features
 
 ### Listening Practice Test
-- **3-second countdown** before audio autoplay
+- **Enable Audio button** to start playback (no countdown)
 - **No audio controls** during the test (simulates real IELTS conditions)
-- **Graphic equalizer visualization** shows audio is playing
+- **Progress bar visualization** shows audio playback progress and time remaining
 - **Transcript revealed** after submission with audio controls
 
 ### Listening Exercise  
@@ -73,14 +73,16 @@ Add your listening comprehension questions as normal:
 ## Technical Details
 
 ### Countdown Implementation
-- JavaScript timer counts down before autoplay
-- Visual countdown number with pulse animation
+- JavaScript timer counts down before autoplay (Exercise mode only)
+- Practice mode uses an "Enable Audio" button instead
+- Visual countdown number with pulse animation (Exercise mode)
 - Smooth fade transition to audio player
 
-### Audio Visualizer (Practice Test Only)
-- 8 animated bars that pulse with audio
-- CSS animations create wave effect
-- Indicates audio is actively playing
+### Audio Progress Display (Practice Test Only)
+- Progress bar shows audio playback position
+- Current time and total duration displayed
+- Visual feedback replaces graphic equalizer
+- Indicates audio playback status
 
 ### Transcript Display
 - Hidden during test
@@ -101,14 +103,23 @@ Add your listening comprehension questions as normal:
 - `.listening-audio-content` - Content wrapper for audio area
 
 ### Countdown
-- `.listening-countdown` - Countdown container
+- `.listening-countdown` - Countdown container (Exercise mode only)
 - `.countdown-text` - "Audio will start in:" text
 - `.countdown-number` - Large countdown number
 
+### Enable Audio Button
+- `.listening-enable-audio` - Enable audio button container (Practice mode only)
+- `.enable-audio-btn` - Enable audio button
+
 ### Audio Player
 - `.listening-audio-player` - Audio player container
-- `.audio-visualizer` - Visualizer container (practice only)
-- `.visualizer-bar` - Individual visualizer bars
+- `.listening-practice-player` - Practice mode specific player
+- `.audio-progress-container` - Progress bar container (Practice mode)
+- `.audio-progress-bar` - Progress bar background
+- `.audio-progress-fill` - Progress bar fill
+- `.audio-time-display` - Time display container
+- `.audio-current-time` - Current playback time
+- `.audio-duration` - Total audio duration
 - `.audio-status` - Playing status indicator
 
 ### Transcript
@@ -129,11 +140,14 @@ Located in `assets/js/frontend.js`:
 var listeningPracticeQuiz = $('.ielts-listening-practice-quiz');
 var listeningExerciseQuiz = $('.ielts-listening-exercise-quiz');
 
-// Countdown timer (3s for practice, 1s for exercise)
-var countdownSeconds = isListeningPractice ? 3 : 1;
+// Practice mode: Enable Audio button
+$('#enable-audio-btn').on('click', function() { ... }
 
-// Autoplay audio when countdown completes
-function startAudioPlayback() { ... }
+// Exercise mode: Countdown timer (1s)
+var countdownSeconds = 1;
+
+// Update progress bar as audio plays (Practice mode)
+function updateAudioProgress() { ... }
 
 // Show transcript after submission
 $('#ielts-quiz-form').on('submit', function(e) { ... }
@@ -177,9 +191,9 @@ Layout Type: Listening Exercise (With Audio Controls)
 - MP3 format recommended for widest compatibility
 
 ### Autoplay
-- May require user interaction in some browsers
-- Fallback message shown if autoplay fails
-- Students can manually start audio if needed
+- Requires user interaction (Enable Audio button for Practice mode)
+- Exercise mode attempts autoplay after countdown
+- Students manually start audio via button in Practice mode
 
 ## Troubleshooting
 
@@ -187,17 +201,14 @@ Layout Type: Listening Exercise (With Audio Controls)
 1. Check audio URL is correct and accessible
 2. Verify audio file format (MP3 recommended)
 3. Check browser console for errors
-4. Some browsers block autoplay - students may need to click play
+4. Practice mode requires clicking "Enable Audio" button
+5. Exercise mode should autoplay after countdown
 
-### Transcript Not Showing
-1. Ensure transcript is entered in admin
-2. Check JavaScript console for errors
-3. Verify quiz form submission is working
-
-### Visualizer Not Animating
-1. CSS animations may be disabled in browser
-2. Check for CSS conflicts with theme
-3. Inspect element to verify CSS classes are applied
+### Progress Bar Not Showing
+1. Ensure you're using Listening Practice (no controls) layout
+2. Click "Enable Audio" to start playback
+3. Check JavaScript console for errors
+4. Progress bar only shows in Practice mode, not Exercise mode
 
 ## Best Practices
 

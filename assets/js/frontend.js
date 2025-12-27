@@ -1488,115 +1488,134 @@
             var isListeningPractice = listeningPracticeQuiz.length > 0;
             var listeningContainer = isListeningPractice ? listeningPracticeQuiz : listeningExerciseQuiz;
             var audioUrl = listeningContainer.data('audio-url');
-            var countdownSeconds = isListeningPractice ? 3 : 1;
             
-            var countdownElement = $('#countdown-number');
-            var countdownContainer = $('#listening-countdown');
             var audioPlayerContainer = $('#listening-audio-player');
             var audioElement = document.getElementById('listening-audio');
             var transcriptContainer = $('#listening-transcript');
             
-            // Only start countdown if audio element is available
-            if (countdownElement.length && audioElement) {
-                // Start countdown when page loads
-                var countdownTimer = countdownSeconds;
-                countdownElement.text(countdownTimer);
-                
-                var countdownInterval = setInterval(function() {
-                    countdownTimer--;
+            if (audioElement) {
+                if (isListeningPractice) {
+                    // Listening Practice: Use Enable Audio button (no countdown)
+                    var enableAudioContainer = $('#listening-enable-audio');
+                    var enableAudioBtn = $('#enable-audio-btn');
                     
-                    if (countdownTimer <= 0) {
-                        clearInterval(countdownInterval);
-                        startAudioPlayback();
-                    } else {
-                        countdownElement.text(countdownTimer);
+                    if (enableAudioBtn.length) {
+                        enableAudioBtn.on('click', function() {
+                            var $btn = $(this);
+                            var originalText = $btn.text();
+                            
+                            // Disable button to prevent multiple clicks
+                            $btn.prop('disabled', true).text('Loading...');
+                            
+                            // Hide enable audio container and show audio player
+                            enableAudioContainer.fadeOut(300, function() {
+                                audioPlayerContainer.fadeIn(300, function() {
+                                    // Start playing audio (muted first for browser compatibility)
+                                    audioElement.load();
+                                    var playPromise = audioElement.play();
+                                    
+                                    if (playPromise !== undefined) {
+                                        playPromise.then(function() {
+                                            console.log('Audio playback started successfully');
+                                            // Unmute immediately after successful playback start
+                                            audioElement.muted = false;
+                                            // Update progress bar as audio plays
+                                            updateAudioProgress();
+                                        }).catch(function(error) {
+                                            console.log('Audio playback failed:', error);
+                                            $('.audio-status-text').text('Unable to play audio. Please check your browser settings.');
+                                            // Re-enable button on error
+                                            enableAudioContainer.fadeIn(300);
+                                            audioPlayerContainer.fadeOut(300);
+                                            $btn.prop('disabled', false).text(originalText);
+                                        });
+                                    }
+                                });
+                            });
+                        });
                     }
-                }, 1000);
-                
-                function startAudioPlayback() {
-                    // Hide countdown and show audio player
-                    countdownContainer.fadeOut(300, function() {
-                        audioPlayerContainer.fadeIn(300, function() {
-                            // Start playing audio after fade-in completes
-                            if (audioElement) {
-                                // Ensure the audio is loaded before playing
-                                // The source is already set in the HTML template
-                                audioElement.load();
-                                
-                                // Use a promise to handle play (audio is already muted in HTML)
-                                var playPromise = audioElement.play();
-                                if (playPromise !== undefined) {
-                                    playPromise.then(function() {
-                                        // Autoplay started successfully (muted)
-                                        console.log('Audio autoplay started successfully (muted)');
-                                        
-                                        // Create unmute button/message
-                                        var unmuteMessage = $('<div class="unmute-prompt"><span class="dashicons dashicons-controls-volumeon"></span>Click here to enable audio</div>');
-                                        audioPlayerContainer.prepend(unmuteMessage);
-                                        
-                                        // Unmute on click anywhere in the audio player area
-                                        var unmuteAudio = function() {
-                                            audioElement.muted = false;
-                                            unmuteMessage.fadeOut(300, function() {
-                                                unmuteMessage.remove();
-                                                // Remove the namespaced click handler after fade completes
-                                                audioPlayerContainer.off('click.audioUnmute', unmuteAudio);
-                                            });
-                                        };
-                                        
-                                        audioPlayerContainer.on('click.audioUnmute', unmuteAudio);
-                                        
-                                    }).catch(function(error) {
-                                        console.log('Audio autoplay failed even when muted:', error);
-                                        
-                                        // Create play prompt HTML
-                                        var playPrompt = $('<div class="play-prompt"><span class="dashicons dashicons-controls-play"></span>Click here to start the audio</div>');
-                                        
-                                        // Fallback: show a play button or message
-                                        audioPlayerContainer.prepend(playPrompt);
-                                        
-                                        // Handle click to start audio
-                                        var startAudio = function() {
-                                            audioElement.muted = false;
-                                            var playAttempt = audioElement.play();
-                                            if (playAttempt !== undefined) {
-                                                playAttempt.then(function() {
-                                                    playPrompt.fadeOut(300, function() {
-                                                        playPrompt.remove();
-                                                        // Remove the event handler after successful play and fade
-                                                        audioPlayerContainer.off('click.audioStart', startAudio);
-                                                        if (isListeningPractice) {
-                                                            audioPlayerContainer.css('cursor', 'default');
-                                                        }
-                                                    });
-                                                }).catch(function(playError) {
-                                                    console.log('Failed to start audio on click:', playError);
-                                                    // Update this specific prompt to show error
-                                                    // Keep the event handler so user can retry if needed
-                                                    playPrompt.html('<span class="dashicons dashicons-warning"></span>Unable to play audio. Please check your browser settings and try again.');
-                                                });
-                                            }
-                                        };
-                                        
-                                        if (isListeningPractice) {
-                                            audioPlayerContainer.css('cursor', 'pointer');
-                                        }
-                                        audioPlayerContainer.on('click.audioStart', startAudio);
-                                    });
-                                }
+                    
+                    // Function to update progress bar
+                    function updateAudioProgress() {
+                        var progressBar = $('#audio-progress-fill');
+                        var currentTimeDisplay = $('#audio-current-time');
+                        var durationDisplay = $('#audio-duration');
+                        
+                        <!-- Update duration when metadata is loaded
+                        audioElement.addEventListener('loadedmetadata', function() {
+                            var duration = audioElement.duration;
+                            if (isFinite(duration) && duration > 0) {
+                                durationDisplay.text(formatTime(duration));
                             }
                         });
-                    });
-                }
-                
-                // For listening practice: animate visualizer while audio is playing
-                if (isListeningPractice && audioElement) {
-                    audioElement.addEventListener('ended', function() {
-                        // Stop visualizer animation when audio ends
-                        $('.audio-status-icon').text('■');
-                        $('.audio-status-text').text('Audio Finished');
-                        $('.visualizer-bar').css('animation', 'none');
-                    });
+                        
+                        // Update progress bar as audio plays
+                        audioElement.addEventListener('timeupdate', function() {
+                            var currentTime = audioElement.currentTime;
+                            var duration = audioElement.duration;
+                            
+                            if (isFinite(duration) && duration > 0) {
+                                var progress = (currentTime / duration) * 100;
+                                progressBar.css('width', progress + '%');
+                                currentTimeDisplay.text(formatTime(currentTime));
+                            }
+                        });
+                        
+                        // Update status when audio ends
+                        audioElement.addEventListener('ended', function() {
+                            $('.audio-status-icon').text('■');
+                            $('.audio-status-text').text('Audio Finished');
+                        });
+                    }
+                    
+                    // Helper function to format time as MM:SS
+                    function formatTime(seconds) {
+                        var mins = Math.floor(seconds / 60);
+                        var secs = Math.floor(seconds % 60);
+                        return mins + ':' + (secs < 10 ? '0' : '') + secs;
+                    }
+                    
+                } else {
+                    // Listening Exercise: Use countdown (existing behavior)
+                    var countdownElement = $('#countdown-number');
+                    var countdownContainer = $('#listening-countdown');
+                    var countdownSeconds = 1;
+                    
+                    if (countdownElement.length) {
+                        // Start countdown when page loads
+                        var countdownTimer = countdownSeconds;
+                        countdownElement.text(countdownTimer);
+                        
+                        var countdownInterval = setInterval(function() {
+                            countdownTimer--;
+                            
+                            if (countdownTimer <= 0) {
+                                clearInterval(countdownInterval);
+                                startAudioPlayback();
+                            } else {
+                                countdownElement.text(countdownTimer);
+                            }
+                        }, 1000);
+                        
+                        function startAudioPlayback() {
+                            // Hide countdown and show audio player
+                            countdownContainer.fadeOut(300, function() {
+                                audioPlayerContainer.fadeIn(300, function() {
+                                    // Start playing audio after fade-in completes
+                                    audioElement.load();
+                                    
+                                    // For listening exercise, audio starts unmuted with controls
+                                    var playPromise = audioElement.play();
+                                    if (playPromise !== undefined) {
+                                        playPromise.catch(function(error) {
+                                            console.log('Audio autoplay failed:', error);
+                                            // Audio controls are visible, user can manually start
+                                        });
+                                    }
+                                });
+                            });
+                        }
+                    }
                 }
                 
                 // Note: Transcript display is now handled in the main quiz submission success callback
