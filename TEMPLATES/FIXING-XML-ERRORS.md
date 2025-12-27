@@ -96,9 +96,12 @@ python3 TEMPLATES/fix-utf8-in-xml.py <input.xml> [output.xml]
 The "Reading Test 10 part 3.xml" file had multiple issues:
 
 1. **4 en-dash characters** (U+2013) in the serialized data
-2. **Structural corruption** with unbalanced braces in the array structure
+2. **Structural corruption** with truncated/malformed array data in `_ielts_cm_questions`
+3. **File was corrupted from original export** - not fixable with automated tools
 
-The UTF-8 characters were fixed using the `fix-utf8-in-xml.py` script, which successfully repaired the `_ielts_cm_reading_texts` data. However, the `_ielts_cm_questions` data had deeper structural issues that required manual intervention or re-export from WordPress.
+**Result:** The `_ielts_cm_reading_texts` portion was successfully fixed, but `_ielts_cm_questions` has fundamental structural corruption that prevents automatic repair. The file must be re-exported from WordPress with special characters replaced before export.
+
+**Status:** This file cannot be used for import until it is re-exported from the source WordPress installation.
 
 ## Technical Details
 

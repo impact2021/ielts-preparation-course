@@ -1,1 +1,11 @@
-NOTE: Reading Test 10 part 3.xml has been partially fixed (reading_texts is now valid) but _ielts_cm_questions still has structural corruption. Recommend re-export from WordPress.
+IMPORTANT: This XML file has structural corruption and CANNOT be imported.
+
+The _ielts_cm_questions data is fundamentally corrupted (truncated/malformed serialization)
+and cannot be automatically repaired. The file was broken from its original export.
+
+TO FIX: Re-export this exercise from WordPress after:
+1. Replacing all en-dashes (–) with regular hyphens (-)
+2. Replacing all curly quotes (' ' " ") with straight quotes (' ")
+3. Verifying all question data is complete
+
+For assistance, see TEMPLATES/FIXING-XML-ERRORS.md
