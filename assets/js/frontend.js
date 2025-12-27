@@ -1051,6 +1051,7 @@
         }
         
         // Text Highlighting Feature for CBT Reading Texts
+        // Note: This is CBT-specific as listening layouts don't have reading text components (they have audio instead)
         if ($('.ielts-computer-based-quiz').length && $('.reading-text').length) {
             var quizId = $('.ielts-computer-based-quiz').data('quiz-id');
             var highlightStorageKey = 'ielts_cbt_highlights_' + quizId;
