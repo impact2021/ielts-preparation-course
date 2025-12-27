@@ -39,7 +39,8 @@ class IELTS_MS_Account_Manager {
         }
         
         // Check if email already exists
-        if (email_exists($new_email) && email_exists($new_email) != $user_id) {
+        $existing_user_id = email_exists($new_email);
+        if ($existing_user_id && $existing_user_id != $user_id) {
             wp_send_json_error(array('message' => 'Email already in use'));
         }
         

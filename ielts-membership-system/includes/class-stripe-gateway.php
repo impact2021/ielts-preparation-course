@@ -118,12 +118,15 @@ class IELTS_MS_Stripe_Gateway extends IELTS_MS_Payment_Gateway {
         );
         
         // Make API request to Stripe
+        // Stripe API accepts form-encoded data with special formatting for nested arrays
+        $body_data = $this->build_stripe_query($stripe_data);
+        
         $response = wp_remote_post('https://api.stripe.com/v1/checkout/sessions', array(
             'headers' => array(
                 'Authorization' => 'Bearer ' . $secret_key,
                 'Content-Type' => 'application/x-www-form-urlencoded'
             ),
-            'body' => http_build_query($stripe_data),
+            'body' => $body_data,
             'timeout' => 60
         ));
         
@@ -197,5 +200,24 @@ class IELTS_MS_Stripe_Gateway extends IELTS_MS_Payment_Gateway {
         
         status_header(200);
         exit;
+    }
+    
+    /**
+     * Build Stripe query string with proper nested array formatting
+     */
+    private function build_stripe_query($data, $prefix = '') {
+        $query = array();
+        
+        foreach ($data as $key => $value) {
+            $formatted_key = $prefix ? "{$prefix}[{$key}]" : $key;
+            
+            if (is_array($value)) {
+                $query[] = $this->build_stripe_query($value, $formatted_key);
+            } else {
+                $query[] = urlencode($formatted_key) . '=' . urlencode($value);
+            }
+        }
+        
+        return implode('&', $query);
     }
 }

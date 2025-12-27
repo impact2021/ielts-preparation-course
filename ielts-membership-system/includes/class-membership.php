@@ -29,16 +29,17 @@ class IELTS_MS_Membership {
         $existing = $this->get_user_membership($user_id);
         
         $start_date = current_time('mysql');
+        $base_date = $start_date; // Base date for calculating end date
         
         if ($existing && $existing->status === 'active' && strtotime($existing->end_date) > time()) {
             // Extend existing membership from current end date
-            $start_date = $existing->end_date;
+            $base_date = $existing->end_date;
         }
         
-        $end_date = date('Y-m-d H:i:s', strtotime($start_date . ' +' . $duration_days . ' days'));
+        $end_date = date('Y-m-d H:i:s', strtotime($base_date . ' +' . $duration_days . ' days'));
         
         if ($existing) {
-            // Update existing membership
+            // Update existing membership - keep original start_date
             $result = $wpdb->update(
                 $table,
                 array(
