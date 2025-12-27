@@ -159,6 +159,16 @@
                 quizContainer = $('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').first();
             }
             
+            // Stop audio playback if this is a listening quiz
+            var isListeningQuiz = quizContainer.hasClass('ielts-listening-practice-quiz') || 
+                                 quizContainer.hasClass('ielts-listening-exercise-quiz');
+            if (isListeningQuiz) {
+                var audioElement = document.getElementById('listening-audio');
+                if (audioElement) {
+                    audioElement.pause();
+                }
+            }
+            
             var quizId = quizContainer.data('quiz-id');
             var courseId = quizContainer.data('course-id');
             var lessonId = quizContainer.data('lesson-id');
@@ -1506,20 +1516,39 @@
                 function startAudioPlayback() {
                     // Hide countdown and show audio player
                     countdownContainer.fadeOut(300, function() {
-                        audioPlayerContainer.fadeIn(300);
-                        
-                        // Start playing audio after a short delay to ensure visibility
-                        setTimeout(function() {
+                        audioPlayerContainer.fadeIn(300, function() {
+                            // Start playing audio after fade-in completes
                             if (audioElement && audioUrl) {
-                                // Ensure the audio source is loaded before playing
+                                // Ensure the audio source is set and loaded before playing
+                                if (!audioElement.src || audioElement.src === '') {
+                                    audioElement.src = audioUrl;
+                                }
                                 audioElement.load();
-                                audioElement.play().catch(function(error) {
-                                    console.log('Audio autoplay failed:', error);
-                                    // Fallback: show a play button or message
-                                    audioPlayerContainer.prepend('<p style="color: #d63638; text-align: center; margin-top: 10px;">Please click the play button to start the audio</p>');
-                                });
+                                
+                                // Use a promise to handle play
+                                var playPromise = audioElement.play();
+                                if (playPromise !== undefined) {
+                                    playPromise.then(function() {
+                                        // Autoplay started successfully
+                                        console.log('Audio autoplay started successfully');
+                                    }).catch(function(error) {
+                                        console.log('Audio autoplay failed:', error);
+                                        // Fallback: show a play button or message
+                                        if (isListeningPractice) {
+                                            // For hidden controls layout, show message
+                                            audioPlayerContainer.prepend('<p style="color: #d63638; text-align: center; margin: 10px; background: #fff; padding: 10px; border-radius: 4px;">Please click here to start the audio, then click the visualizer area.</p>');
+                                            // Make the visualizer clickable to start audio
+                                            $('#audio-visualizer').css('cursor', 'pointer').one('click', function() {
+                                                audioElement.play();
+                                                $(this).prev('p').remove();
+                                            });
+                                        } else {
+                                            audioPlayerContainer.prepend('<p style="color: #d63638; text-align: center; margin-top: 10px;">Please click the play button to start the audio</p>');
+                                        }
+                                    });
+                                }
                             }
-                        }, 100);
+                        });
                     });
                 }
                 
