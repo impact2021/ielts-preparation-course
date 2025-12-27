@@ -1539,9 +1539,9 @@
                                             audioElement.muted = false;
                                             unmuteMessage.fadeOut(300, function() {
                                                 unmuteMessage.remove();
+                                                // Remove the namespaced click handler after fade completes
+                                                audioPlayerContainer.off('click.audioUnmute', unmuteAudio);
                                             });
-                                            // Remove the namespaced click handler after unmuting
-                                            audioPlayerContainer.off('click.audioUnmute', unmuteAudio);
                                         };
                                         
                                         audioPlayerContainer.on('click.audioUnmute', unmuteAudio);
@@ -1563,16 +1563,18 @@
                                                 playAttempt.then(function() {
                                                     playPrompt.fadeOut(300, function() {
                                                         playPrompt.remove();
+                                                        // Remove the event handler after successful play and fade
+                                                        audioPlayerContainer.off('click.audioStart', startAudio);
+                                                        if (isListeningPractice) {
+                                                            audioPlayerContainer.css('cursor', 'default');
+                                                        }
                                                     });
                                                 }).catch(function(playError) {
                                                     console.log('Failed to start audio on click:', playError);
                                                     // Update this specific prompt to show error
-                                                    playPrompt.html('<span class="dashicons dashicons-warning"></span>Unable to play audio. Please check your browser settings.');
+                                                    // Keep the event handler so user can retry if needed
+                                                    playPrompt.html('<span class="dashicons dashicons-warning"></span>Unable to play audio. Please check your browser settings and try again.');
                                                 });
-                                            }
-                                            audioPlayerContainer.off('click.audioStart', startAudio);
-                                            if (isListeningPractice) {
-                                                audioPlayerContainer.css('cursor', 'default');
                                             }
                                         };
                                         
