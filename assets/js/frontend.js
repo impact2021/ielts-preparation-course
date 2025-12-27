@@ -1523,10 +1523,7 @@
                                 // The source is already set in the HTML template
                                 audioElement.load();
                                 
-                                // For muted autoplay, we'll start muted and unmute on user interaction
-                                audioElement.muted = true;
-                                
-                                // Use a promise to handle play
+                                // Use a promise to handle play (audio is already muted in HTML)
                                 var playPromise = audioElement.play();
                                 if (playPromise !== undefined) {
                                     playPromise.then(function() {
@@ -1540,8 +1537,8 @@
                                         // Unmute on click anywhere in the audio player area
                                         var unmuteAudio = function() {
                                             audioElement.muted = false;
-                                            $('.unmute-prompt').fadeOut(300, function() {
-                                                $(this).remove();
+                                            unmuteMessage.fadeOut(300, function() {
+                                                unmuteMessage.remove();
                                             });
                                             // Remove the click handler after unmuting
                                             audioPlayerContainer.off('click', unmuteAudio);
@@ -1564,13 +1561,13 @@
                                             var playAttempt = audioElement.play();
                                             if (playAttempt !== undefined) {
                                                 playAttempt.then(function() {
-                                                    $('.play-prompt').fadeOut(300, function() {
-                                                        $(this).remove();
+                                                    playPrompt.fadeOut(300, function() {
+                                                        playPrompt.remove();
                                                     });
                                                 }).catch(function(playError) {
                                                     console.log('Failed to start audio on click:', playError);
-                                                    // Update prompt to show error
-                                                    $('.play-prompt').html('<span class="dashicons dashicons-warning"></span>Unable to play audio. Please check your browser settings.');
+                                                    // Update this specific prompt to show error
+                                                    playPrompt.html('<span class="dashicons dashicons-warning"></span>Unable to play audio. Please check your browser settings.');
                                                 });
                                             }
                                             audioPlayerContainer.off('click', startAudio);
