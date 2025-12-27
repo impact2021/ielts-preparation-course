@@ -811,7 +811,7 @@
         }
         
         // Detect scroll position and switch reading text automatically
-        if ($('.ielts-computer-based-quiz').length) {
+        if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
             var questionsColumn = $('.questions-column');
             var scrollTimeout;
             
@@ -847,13 +847,13 @@
         }
         
         // Track answered questions in computer-based layout using event delegation
-        $('.ielts-computer-based-quiz').on('change', 'input[type="radio"]', function() {
+        $('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').on('change', 'input[type="radio"]', function() {
             var questionIndex = $(this).attr('name').replace('answer_', '');
             var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"]');
             navButton.addClass('answered');
         });
         
-        $('.ielts-computer-based-quiz').on('input', 'input[type="text"], textarea', function() {
+        $('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').on('input', 'input[type="text"], textarea', function() {
             var name = $(this).attr('name');
             
             // Check if this is a summary completion or table completion field (format: answer_X_field_Y)
@@ -892,7 +892,7 @@
         });
         
         // Track dropdown selections in computer-based layout
-        $('.ielts-computer-based-quiz').on('change', 'select.answer-select-inline', function() {
+        $('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').on('change', 'select.answer-select-inline', function() {
             var name = $(this).attr('name');
             // Extract question index and dropdown number from name (format: answer_X_Y where X is question index, Y is dropdown number)
             var parts = name.replace('answer_', '').split('_');
@@ -1003,7 +1003,7 @@
         });
         
         // Font size controls for CBT quizzes
-        if ($('.ielts-computer-based-quiz').length) {
+        if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
             var $quizContent = $('.computer-based-container');
             var baseFontSize = 16; // Default base font size in pixels
             var currentFontSize = baseFontSize;
