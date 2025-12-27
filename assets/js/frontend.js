@@ -1534,7 +1534,7 @@
                                         console.log('Audio autoplay started successfully (muted)');
                                         
                                         // Create unmute button/message
-                                        var unmuteMessage = $('<div class="unmute-prompt" style="background: #0073aa; color: white; padding: 15px 20px; border-radius: 8px; text-align: center; margin: 20px auto; max-width: 400px; cursor: pointer; font-weight: 500; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"><span class="dashicons dashicons-controls-volumeon" style="color: white; margin-right: 8px; vertical-align: middle;"></span>Click here to enable audio</div>');
+                                        var unmuteMessage = $('<div class="unmute-prompt"><span class="dashicons dashicons-controls-volumeon"></span>Click here to enable audio</div>');
                                         audioPlayerContainer.prepend(unmuteMessage);
                                         
                                         // Unmute on click anywhere in the audio player area
@@ -1553,19 +1553,26 @@
                                         console.log('Audio autoplay failed even when muted:', error);
                                         
                                         // Create play prompt HTML
-                                        var playPromptHtml = '<div class="play-prompt" style="background: #d63638; color: white; padding: 15px 20px; border-radius: 8px; text-align: center; margin: 20px auto; max-width: 400px; cursor: pointer; font-weight: 500; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"><span class="dashicons dashicons-controls-play" style="color: white; margin-right: 8px; vertical-align: middle;"></span>Click here to start the audio</div>';
+                                        var playPrompt = $('<div class="play-prompt"><span class="dashicons dashicons-controls-play"></span>Click here to start the audio</div>');
                                         
                                         // Fallback: show a play button or message
-                                        audioPlayerContainer.prepend(playPromptHtml);
+                                        audioPlayerContainer.prepend(playPrompt);
                                         
                                         // Handle click to start audio
                                         var startAudio = function() {
                                             audioElement.muted = false;
-                                            audioElement.play().then(function() {
-                                                $('.play-prompt').fadeOut(300, function() {
-                                                    $(this).remove();
+                                            var playAttempt = audioElement.play();
+                                            if (playAttempt !== undefined) {
+                                                playAttempt.then(function() {
+                                                    $('.play-prompt').fadeOut(300, function() {
+                                                        $(this).remove();
+                                                    });
+                                                }).catch(function(playError) {
+                                                    console.log('Failed to start audio on click:', playError);
+                                                    // Update prompt to show error
+                                                    $('.play-prompt').html('<span class="dashicons dashicons-warning"></span>Unable to play audio. Please check your browser settings.');
                                                 });
-                                            });
+                                            }
                                             audioPlayerContainer.off('click', startAudio);
                                             if (isListeningPractice) {
                                                 audioPlayerContainer.css('cursor', 'default');

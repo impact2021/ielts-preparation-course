@@ -1872,6 +1872,55 @@ select.answer-select-inline.answer-incorrect {
     width: 100%;
 }
 
+/* Unmute and Play Prompts for Listening Audio */
+.unmute-prompt {
+    background: #0073aa;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.2s ease;
+}
+
+.unmute-prompt:hover {
+    background: #005a87;
+}
+
+.unmute-prompt .dashicons {
+    color: white;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.play-prompt {
+    background: #d63638;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.2s ease;
+}
+
+.play-prompt:hover {
+    background: #b32d2e;
+}
+
+.play-prompt .dashicons {
+    color: white;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
 /* Question Styling for Listening Exercises - Match Computer-Based Layout */
 .ielts-listening-practice-quiz .quiz-question,
 .ielts-listening-exercise-quiz .quiz-question {
