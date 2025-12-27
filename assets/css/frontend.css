@@ -1665,6 +1665,26 @@ select.answer-select-inline.answer-incorrect {
     margin: 0 auto;
 }
 
+/* Breadcrumb styling for listening layouts */
+.ielts-listening-practice-quiz .quiz-breadcrumb,
+.ielts-listening-exercise-quiz .quiz-breadcrumb {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.ielts-listening-practice-quiz .quiz-breadcrumb a,
+.ielts-listening-exercise-quiz .quiz-breadcrumb a {
+    text-decoration: none;
+    color: #0073aa;
+}
+
+.ielts-listening-practice-quiz .quiz-breadcrumb .separator,
+.ielts-listening-exercise-quiz .quiz-breadcrumb .separator {
+    margin: 0 8px;
+    color: #999;
+}
+
 /* Listening Audio Column (Left Panel) */
 .listening-audio-column {
     background: #f9f9f9;
@@ -1996,6 +2016,60 @@ select.answer-select-inline.answer-incorrect {
 .ielts-listening-practice-quiz .dropdown-paragraph-text p,
 .ielts-listening-exercise-quiz .dropdown-paragraph-text p {
     margin: 10px 0;
+}
+
+/* Answer feedback highlighting for listening layouts */
+.ielts-listening-practice-quiz .quiz-question.question-correct,
+.ielts-listening-exercise-quiz .quiz-question.question-correct {
+    border-left: 4px solid #4caf50;
+    background: #f1f8f4;
+}
+
+.ielts-listening-practice-quiz .quiz-question.question-incorrect,
+.ielts-listening-exercise-quiz .quiz-question.question-incorrect {
+    border-left: 4px solid #f44336;
+    background: #fef5f5;
+}
+
+/* Correct answer highlighting - for both selected correct answers and correct answer hints */
+.ielts-listening-practice-quiz .option-label.answer-correct,
+.ielts-listening-exercise-quiz .option-label.answer-correct,
+.ielts-listening-practice-quiz .option-label.answer-correct-highlight,
+.ielts-listening-exercise-quiz .option-label.answer-correct-highlight {
+    background: #4caf50;
+    border-color: #4caf50;
+    border-width: 3px;
+    color: #fff;
+}
+
+/* Incorrect answer highlighting */
+.ielts-listening-practice-quiz .option-label.answer-incorrect,
+.ielts-listening-exercise-quiz .option-label.answer-incorrect {
+    background: #f44336;
+    border-color: #f44336;
+    border-width: 3px;
+    color: #fff;
+}
+
+/* Text input and select feedback for listening layouts */
+.ielts-listening-practice-quiz .answer-input.answer-correct,
+.ielts-listening-exercise-quiz .answer-input.answer-correct,
+.ielts-listening-practice-quiz .answer-input-inline.answer-correct,
+.ielts-listening-exercise-quiz .answer-input-inline.answer-correct,
+.ielts-listening-practice-quiz .answer-select-inline.answer-correct,
+.ielts-listening-exercise-quiz .answer-select-inline.answer-correct {
+    border: 3px solid #4caf50;
+    background: #f1f8f4;
+}
+
+.ielts-listening-practice-quiz .answer-input.answer-incorrect,
+.ielts-listening-exercise-quiz .answer-input.answer-incorrect,
+.ielts-listening-practice-quiz .answer-input-inline.answer-incorrect,
+.ielts-listening-exercise-quiz .answer-input-inline.answer-incorrect,
+.ielts-listening-practice-quiz .answer-select-inline.answer-incorrect,
+.ielts-listening-exercise-quiz .answer-select-inline.answer-incorrect {
+    border: 3px solid #f44336;
+    background: #fef5f5;
 }
 
 /* Responsive adjustments for listening layouts */
