@@ -15,7 +15,7 @@
         }
         
         // Initialize quiz timer if present
-        var quizContainer = $('.ielts-single-quiz, .ielts-computer-based-quiz');
+        var quizContainer = $('.ielts-single-quiz, .ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz');
         var timerMinutes = quizContainer.data('timer-minutes');
         var quizTimerInterval = null;
         
@@ -152,11 +152,11 @@
             e.preventDefault();
             
             var form = $(this);
-            var quizContainer = form.closest('.ielts-single-quiz, .ielts-computer-based-quiz');
+            var quizContainer = form.closest('.ielts-single-quiz, .ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz');
             
             // If form is inside modal, get data from the original quiz container
             if (quizContainer.length === 0) {
-                quizContainer = $('.ielts-computer-based-quiz');
+                quizContainer = $('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz');
             }
             
             var quizId = quizContainer.data('quiz-id');
@@ -244,8 +244,10 @@
                         var result = response.data;
                         var isPassing = result.percentage >= 70;
                         
-                        // Check if this is a CBT quiz
-                        var isCBT = quizContainer.hasClass('ielts-computer-based-quiz');
+                        // Check if this is a CBT quiz or listening quiz (they share the same layout features)
+                        var isCBT = quizContainer.hasClass('ielts-computer-based-quiz') || 
+                                    quizContainer.hasClass('ielts-listening-practice-quiz') || 
+                                    quizContainer.hasClass('ielts-listening-exercise-quiz');
                         
                         var html = '<div class="quiz-result ' + (isPassing ? 'pass' : 'fail') + '">';
                         html += '<h3>' + (isPassing ? 'Congratulations! You Passed!' : 'Quiz Completed') + '</h3>';
@@ -809,7 +811,7 @@
         }
         
         // Detect scroll position and switch reading text automatically
-        if ($('.ielts-computer-based-quiz').length) {
+        if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
             var questionsColumn = $('.questions-column');
             var scrollTimeout;
             
@@ -845,13 +847,13 @@
         }
         
         // Track answered questions in computer-based layout using event delegation
-        $('.ielts-computer-based-quiz').on('change', 'input[type="radio"]', function() {
+        $('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').on('change', 'input[type="radio"]', function() {
             var questionIndex = $(this).attr('name').replace('answer_', '');
             var navButton = $('.question-nav-btn[data-question="' + questionIndex + '"]');
             navButton.addClass('answered');
         });
         
-        $('.ielts-computer-based-quiz').on('input', 'input[type="text"], textarea', function() {
+        $('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').on('input', 'input[type="text"], textarea', function() {
             var name = $(this).attr('name');
             
             // Check if this is a summary completion or table completion field (format: answer_X_field_Y)
@@ -890,7 +892,7 @@
         });
         
         // Track dropdown selections in computer-based layout
-        $('.ielts-computer-based-quiz').on('change', 'select.answer-select-inline', function() {
+        $('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').on('change', 'select.answer-select-inline', function() {
             var name = $(this).attr('name');
             // Extract question index and dropdown number from name (format: answer_X_Y where X is question index, Y is dropdown number)
             var parts = name.replace('answer_', '').split('_');
@@ -1001,7 +1003,7 @@
         });
         
         // Font size controls for CBT quizzes
-        if ($('.ielts-computer-based-quiz').length) {
+        if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
             var $quizContent = $('.computer-based-container');
             var baseFontSize = 16; // Default base font size in pixels
             var currentFontSize = baseFontSize;
@@ -1049,6 +1051,7 @@
         }
         
         // Text Highlighting Feature for CBT Reading Texts
+        // Note: This is CBT-specific as listening layouts don't have reading text components (they have audio instead)
         if ($('.ielts-computer-based-quiz').length && $('.reading-text').length) {
             var quizId = $('.ielts-computer-based-quiz').data('quiz-id');
             var highlightStorageKey = 'ielts_cbt_highlights_' + quizId;
