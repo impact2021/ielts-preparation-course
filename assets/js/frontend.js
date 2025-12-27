@@ -1523,25 +1523,63 @@
                                 // The source is already set in the HTML template
                                 audioElement.load();
                                 
+                                // For muted autoplay, we'll start muted and unmute on user interaction
+                                audioElement.muted = true;
+                                
                                 // Use a promise to handle play
                                 var playPromise = audioElement.play();
                                 if (playPromise !== undefined) {
                                     playPromise.then(function() {
-                                        // Autoplay started successfully
-                                        console.log('Audio autoplay started successfully');
+                                        // Autoplay started successfully (muted)
+                                        console.log('Audio autoplay started successfully (muted)');
+                                        
+                                        // Create unmute button/message
+                                        var unmuteMessage = $('<div class="unmute-prompt" style="background: #0073aa; color: white; padding: 15px 20px; border-radius: 8px; text-align: center; margin: 20px auto; max-width: 400px; cursor: pointer; font-weight: 500; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"><span class="dashicons dashicons-controls-volumeon" style="color: white; margin-right: 8px; vertical-align: middle;"></span>Click here to enable audio</div>');
+                                        
+                                        if (isListeningPractice) {
+                                            audioPlayerContainer.prepend(unmuteMessage);
+                                        } else {
+                                            audioPlayerContainer.prepend(unmuteMessage);
+                                        }
+                                        
+                                        // Unmute on click anywhere in the audio player area
+                                        var unmuteAudio = function() {
+                                            audioElement.muted = false;
+                                            $('.unmute-prompt').fadeOut(300, function() {
+                                                $(this).remove();
+                                            });
+                                            // Remove the click handler after unmuting
+                                            audioPlayerContainer.off('click', unmuteAudio);
+                                        };
+                                        
+                                        audioPlayerContainer.on('click', unmuteAudio);
+                                        
                                     }).catch(function(error) {
-                                        console.log('Audio autoplay failed:', error);
+                                        console.log('Audio autoplay failed even when muted:', error);
                                         // Fallback: show a play button or message
                                         if (isListeningPractice) {
                                             // For hidden controls layout, show message
-                                            audioPlayerContainer.prepend('<p style="color: #d63638; text-align: center; margin: 10px; background: #fff; padding: 10px; border-radius: 4px;">Please click here to start the audio, then click the visualizer area.</p>');
-                                            // Make the visualizer clickable to start audio
-                                            $('#audio-visualizer').css('cursor', 'pointer').one('click', function() {
-                                                audioElement.play();
-                                                $(this).prev('p').remove();
+                                            audioPlayerContainer.prepend('<div class="play-prompt" style="background: #d63638; color: white; padding: 15px 20px; border-radius: 8px; text-align: center; margin: 20px auto; max-width: 400px; cursor: pointer; font-weight: 500; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"><span class="dashicons dashicons-controls-play" style="color: white; margin-right: 8px; vertical-align: middle;"></span>Click here to start the audio</div>');
+                                            // Make the entire area clickable to start audio
+                                            audioPlayerContainer.css('cursor', 'pointer').one('click', function() {
+                                                audioElement.muted = false;
+                                                audioElement.play().then(function() {
+                                                    $('.play-prompt').fadeOut(300, function() {
+                                                        $(this).remove();
+                                                    });
+                                                });
+                                                $(this).css('cursor', 'default');
                                             });
                                         } else {
-                                            audioPlayerContainer.prepend('<p style="color: #d63638; text-align: center; margin-top: 10px;">Please click the play button to start the audio</p>');
+                                            audioPlayerContainer.prepend('<div class="play-prompt" style="background: #d63638; color: white; padding: 15px 20px; border-radius: 8px; text-align: center; margin: 20px auto; max-width: 400px; cursor: pointer; font-weight: 500; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"><span class="dashicons dashicons-controls-play" style="color: white; margin-right: 8px; vertical-align: middle;"></span>Click here to start the audio</div>');
+                                            audioPlayerContainer.one('click', function() {
+                                                audioElement.muted = false;
+                                                audioElement.play().then(function() {
+                                                    $('.play-prompt').fadeOut(300, function() {
+                                                        $(this).remove();
+                                                    });
+                                                });
+                                            });
                                         }
                                     });
                                 }
