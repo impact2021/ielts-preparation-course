@@ -1278,7 +1278,7 @@ class IELTS_CM_Admin {
         $transcript = get_post_meta($post->ID, '_ielts_cm_transcript', true);
         ?>
         <div id="cbt-audio-section" style="<?php echo ($layout_type !== 'computer_based' || $cbt_test_type !== 'listening') ? 'display:none;' : ''; ?>">
-            <h3><?php _e('Audio File', 'ielts-course-manager'); ?></h3>
+            <h3><?php _e('Listening Audio', 'ielts-course-manager'); ?></h3>
             <p>
                 <label for="ielts_cm_audio_url"><?php _e('Audio URL', 'ielts-course-manager'); ?></label><br>
                 <input type="url" id="ielts_cm_audio_url" name="ielts_cm_audio_url" value="<?php echo esc_attr($audio_url); ?>" style="width: 100%;" placeholder="https://example.com/audio.mp3">
@@ -1319,8 +1319,8 @@ class IELTS_CM_Admin {
         </p>
         
         <div id="reading-texts-section" style="<?php echo ($layout_type !== 'computer_based' || $cbt_test_type !== 'reading') ? 'display:none;' : ''; ?>">
-            <h3><?php _e('Reading Passages', 'ielts-course-manager'); ?></h3>
-            <p><small><?php _e('Add reading passages that will be displayed in the left column. You can link specific questions to each reading text.', 'ielts-course-manager'); ?></small></p>
+            <h3><?php _e('Reading Texts', 'ielts-course-manager'); ?></h3>
+            <p><small><?php _e('Add reading texts that will be displayed in the left column. You can link specific questions to each reading text.', 'ielts-course-manager'); ?></small></p>
             
             <div id="reading-texts-container">
                 <?php if (!empty($reading_texts)): ?>
