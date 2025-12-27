@@ -5206,6 +5206,7 @@ class IELTS_CM_Admin {
             array(
                 'exercise_label' => $exercise_label ? $exercise_label : 'exercise',
                 'layout_type' => $layout_type ? $layout_type : 'standard',
+                'cbt_test_type' => $cbt_test_type ? $cbt_test_type : 'reading',
                 'open_as_popup' => (bool) $open_as_popup,
                 'scoring_type' => $scoring_type ? $scoring_type : 'percentage',
                 'timer_minutes' => $timer_minutes ? $timer_minutes : '',
@@ -5326,6 +5327,7 @@ class IELTS_CM_Admin {
         $reading_texts = get_post_meta($post->ID, '_ielts_cm_reading_texts', true);
         $pass_percentage = get_post_meta($post->ID, '_ielts_cm_pass_percentage', true);
         $layout_type = get_post_meta($post->ID, '_ielts_cm_layout_type', true);
+        $cbt_test_type = get_post_meta($post->ID, '_ielts_cm_cbt_test_type', true);
         $exercise_label = get_post_meta($post->ID, '_ielts_cm_exercise_label', true);
         $open_as_popup = get_post_meta($post->ID, '_ielts_cm_open_as_popup', true);
         $scoring_type = get_post_meta($post->ID, '_ielts_cm_scoring_type', true);
@@ -5424,6 +5426,9 @@ class IELTS_CM_Admin {
         
         // Layout type
         $xml .= $this->generate_postmeta_xml('_ielts_cm_layout_type', $layout_type !== false ? $layout_type : '');
+        
+        // CBT test type
+        $xml .= $this->generate_postmeta_xml('_ielts_cm_cbt_test_type', $cbt_test_type !== false ? $cbt_test_type : '');
         
         // Exercise label
         $xml .= $this->generate_postmeta_xml('_ielts_cm_exercise_label', $exercise_label !== false ? $exercise_label : '');
@@ -6014,6 +6019,7 @@ class IELTS_CM_Admin {
                 '_ielts_cm_reading_texts',
                 '_ielts_cm_pass_percentage',
                 '_ielts_cm_layout_type',
+                '_ielts_cm_cbt_test_type',
                 '_ielts_cm_exercise_label',
                 '_ielts_cm_open_as_popup',
                 '_ielts_cm_scoring_type',
