@@ -24,6 +24,12 @@ if (!is_array($reading_texts)) {
 }
 $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
 $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
+$cbt_test_type = get_post_meta($quiz->ID, '_ielts_cm_cbt_test_type', true);
+if (!$cbt_test_type) {
+    $cbt_test_type = 'reading';
+}
+$audio_url = get_post_meta($quiz->ID, '_ielts_cm_audio_url', true);
+$transcript = get_post_meta($quiz->ID, '_ielts_cm_transcript', true);
 // Check if we're in fullscreen mode
 $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
 
@@ -228,29 +234,49 @@ if ($lesson_id) {
                 </div>
             </div>
             <div class="computer-based-container">
-                <!-- Left Column: Reading Texts -->
+                <!-- Left Column: Reading Texts or Audio Player -->
                 <div class="reading-column">
-                    <div class="reading-content">
-                        <button type="button" class="clear-highlights-btn" style="display:none;">
-                            <?php _e('Clear', 'ielts-course-manager'); ?>
-                        </button>
-                        <?php if (!empty($reading_texts)): ?>
-                            <?php foreach ($reading_texts as $index => $text): ?>
-                                <div class="reading-text-section" id="reading-text-<?php echo $index; ?>" style="<?php echo $index > 0 ? 'display:none;' : ''; ?>">
-                                    <?php if (!empty($text['title'])): ?>
-                                        <h3 class="reading-title"><?php echo esc_html($text['title']); ?></h3>
-                                    <?php endif; ?>
-                                    <div class="reading-text">
-                                        <?php echo wp_kses_post(wpautop($text['content'])); ?>
-                                    </div>
+                    <?php if ($cbt_test_type === 'listening'): ?>
+                        <!-- Audio Player for Listening Test -->
+                        <div class="cbt-audio-player">
+                            <?php if (!empty($audio_url)): ?>
+                                <div class="audio-player-wrapper">
+                                    <h3><?php _e('Listening Audio', 'ielts-course-manager'); ?></h3>
+                                    <audio id="cbt-audio-element" controls controlsList="nodownload">
+                                        <source src="<?php echo esc_url($audio_url); ?>" type="audio/mpeg">
+                                        <?php _e('Your browser does not support the audio element.', 'ielts-course-manager'); ?>
+                                    </audio>
                                 </div>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <div class="reading-text-section">
-                                <p class="no-reading-text"><?php _e('No reading text provided for this exercise.', 'ielts-course-manager'); ?></p>
-                            </div>
-                        <?php endif; ?>
-                    </div>
+                            <?php else: ?>
+                                <div class="no-audio-message">
+                                    <p><?php _e('No audio file provided for this listening test.', 'ielts-course-manager'); ?></p>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    <?php else: ?>
+                        <!-- Reading Texts for Reading Test -->
+                        <div class="reading-content">
+                            <button type="button" class="clear-highlights-btn" style="display:none;">
+                                <?php _e('Clear', 'ielts-course-manager'); ?>
+                            </button>
+                            <?php if (!empty($reading_texts)): ?>
+                                <?php foreach ($reading_texts as $index => $text): ?>
+                                    <div class="reading-text-section" id="reading-text-<?php echo $index; ?>" style="<?php echo $index > 0 ? 'display:none;' : ''; ?>">
+                                        <?php if (!empty($text['title'])): ?>
+                                            <h3 class="reading-title"><?php echo esc_html($text['title']); ?></h3>
+                                        <?php endif; ?>
+                                        <div class="reading-text">
+                                            <?php echo wp_kses_post(wpautop($text['content'])); ?>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <div class="reading-text-section">
+                                    <p class="no-reading-text"><?php _e('No reading text provided for this exercise.', 'ielts-course-manager'); ?></p>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 
                 <!-- Right Column: Questions -->

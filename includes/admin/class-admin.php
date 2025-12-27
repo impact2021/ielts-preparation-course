@@ -1239,16 +1239,31 @@ class IELTS_CM_Admin {
             <select id="ielts_cm_layout_type" name="ielts_cm_layout_type" style="width: 100%;">
                 <option value="standard" <?php selected($layout_type, 'standard'); ?>><?php _e('Standard Layout', 'ielts-course-manager'); ?></option>
                 <option value="computer_based" <?php selected($layout_type, 'computer_based'); ?>><?php _e('Computer-Based IELTS Layout (Two Columns)', 'ielts-course-manager'); ?></option>
-                <option value="listening_practice" <?php selected($layout_type, 'listening_practice'); ?>><?php _e('Listening Practice Test (No Audio Controls)', 'ielts-course-manager'); ?></option>
-                <option value="listening_exercise" <?php selected($layout_type, 'listening_exercise'); ?>><?php _e('Listening Exercise (With Audio Controls)', 'ielts-course-manager'); ?></option>
             </select>
-            <small><?php _e('Computer-Based layout displays reading text on the left and questions on the right. Listening layouts display audio player on the left.', 'ielts-course-manager'); ?></small>
+            <small><?php _e('Computer-Based layout displays reading text or audio on the left and questions on the right.', 'ielts-course-manager'); ?></small>
         </p>
         
         <?php
         $open_as_popup = get_post_meta($post->ID, '_ielts_cm_open_as_popup', true);
+        $cbt_test_type = get_post_meta($post->ID, '_ielts_cm_cbt_test_type', true);
+        if (!$cbt_test_type) {
+            $cbt_test_type = 'reading';
+        }
         ?>
-        <div id="cbt-popup-option" style="<?php echo ($layout_type !== 'computer_based') ? 'display:none;' : ''; ?>">
+        <div id="cbt-options" style="<?php echo ($layout_type !== 'computer_based') ? 'display:none;' : ''; ?>">
+            <p>
+                <label><?php _e('Test Type', 'ielts-course-manager'); ?></label><br>
+                <label style="margin-right: 20px;">
+                    <input type="radio" name="ielts_cm_cbt_test_type" value="reading" <?php checked($cbt_test_type, 'reading'); ?>>
+                    <?php _e('This is for the reading test', 'ielts-course-manager'); ?>
+                </label>
+                <label>
+                    <input type="radio" name="ielts_cm_cbt_test_type" value="listening" <?php checked($cbt_test_type, 'listening'); ?>>
+                    <?php _e('This is for the listening test', 'ielts-course-manager'); ?>
+                </label><br>
+                <small><?php _e('Select whether this is a reading or listening test. This changes what is shown in the left column.', 'ielts-course-manager'); ?></small>
+            </p>
+            
             <p>
                 <label>
                     <input type="checkbox" id="ielts_cm_open_as_popup" name="ielts_cm_open_as_popup" value="1" <?php checked($open_as_popup, '1'); ?>>
@@ -1261,14 +1276,14 @@ class IELTS_CM_Admin {
         <?php
         $audio_url = get_post_meta($post->ID, '_ielts_cm_audio_url', true);
         $transcript = get_post_meta($post->ID, '_ielts_cm_transcript', true);
-        $is_listening = in_array($layout_type, array('listening_practice', 'listening_exercise'));
         ?>
-        <div id="listening-audio-section" style="<?php echo !$is_listening ? 'display:none;' : ''; ?>">
-            <h3><?php _e('Listening Audio', 'ielts-course-manager'); ?></h3>
+        <div id="cbt-audio-section" style="<?php echo ($layout_type !== 'computer_based' || $cbt_test_type !== 'listening') ? 'display:none;' : ''; ?>">
+            <h3><?php _e('Audio File', 'ielts-course-manager'); ?></h3>
             <p>
                 <label for="ielts_cm_audio_url"><?php _e('Audio URL', 'ielts-course-manager'); ?></label><br>
                 <input type="url" id="ielts_cm_audio_url" name="ielts_cm_audio_url" value="<?php echo esc_attr($audio_url); ?>" style="width: 100%;" placeholder="https://example.com/audio.mp3">
-                <small><?php _e('Enter the URL to the audio file (MP3 format recommended). The audio will autoplay after a countdown.', 'ielts-course-manager'); ?></small>
+                <button type="button" class="button upload-audio-btn" style="margin-top: 5px;"><?php _e('Upload Audio', 'ielts-course-manager'); ?></button><br>
+                <small><?php _e('Enter the URL to the audio file or upload one (MP3 format recommended).', 'ielts-course-manager'); ?></small>
             </p>
             <p>
                 <label for="ielts_cm_transcript"><?php _e('Audio Transcript', 'ielts-course-manager'); ?></label><br>
@@ -1303,8 +1318,8 @@ class IELTS_CM_Admin {
             <small><?php _e('Set a time limit in minutes. The exercise will automatically submit when time expires, regardless of completion status. Leave empty for no timer.', 'ielts-course-manager'); ?></small>
         </p>
         
-        <div id="reading-texts-section" style="<?php echo ($layout_type !== 'computer_based') ? 'display:none;' : ''; ?>">
-            <h3><?php _e('Reading Texts', 'ielts-course-manager'); ?></h3>
+        <div id="reading-texts-section" style="<?php echo ($layout_type !== 'computer_based' || $cbt_test_type !== 'reading') ? 'display:none;' : ''; ?>">
+            <h3><?php _e('Reading Passages', 'ielts-course-manager'); ?></h3>
             <p><small><?php _e('Add reading passages that will be displayed in the left column. You can link specific questions to each reading text.', 'ielts-course-manager'); ?></small></p>
             
             <div id="reading-texts-container">
@@ -1425,18 +1440,63 @@ class IELTS_CM_Admin {
             $('#ielts_cm_layout_type').on('change', function() {
                 var layoutType = $(this).val();
                 if (layoutType === 'computer_based') {
-                    $('#reading-texts-section').show();
-                    $('#cbt-popup-option').show();
-                    $('#listening-audio-section').hide();
-                } else if (layoutType === 'listening_practice' || layoutType === 'listening_exercise') {
-                    $('#reading-texts-section').hide();
-                    $('#cbt-popup-option').hide();
-                    $('#listening-audio-section').show();
+                    $('#cbt-options').show();
+                    updateCBTSections();
                 } else {
+                    $('#cbt-options').hide();
                     $('#reading-texts-section').hide();
-                    $('#cbt-popup-option').hide();
-                    $('#listening-audio-section').hide();
+                    $('#cbt-audio-section').hide();
                 }
+            });
+            
+            // Test type change handler
+            $('input[name="ielts_cm_cbt_test_type"]').on('change', function() {
+                updateCBTSections();
+            });
+            
+            // Function to update CBT sections based on test type
+            function updateCBTSections() {
+                var testType = $('input[name="ielts_cm_cbt_test_type"]:checked').val();
+                if (testType === 'reading') {
+                    $('#reading-texts-section').show();
+                    $('#cbt-audio-section').hide();
+                } else if (testType === 'listening') {
+                    $('#reading-texts-section').hide();
+                    $('#cbt-audio-section').show();
+                }
+            }
+            
+            // Audio file upload handler
+            var audioUploader;
+            $('.upload-audio-btn').on('click', function(e) {
+                e.preventDefault();
+                
+                // If the media uploader already exists, reopen it
+                if (audioUploader) {
+                    audioUploader.open();
+                    return;
+                }
+                
+                // Create the media uploader
+                audioUploader = wp.media({
+                    title: '<?php _e('Select Audio File', 'ielts-course-manager'); ?>',
+                    button: {
+                        text: '<?php _e('Use this audio', 'ielts-course-manager'); ?>'
+                    },
+                    library: {
+                        type: 'audio'
+                    },
+                    multiple: false
+                });
+                
+                // When an audio file is selected
+                audioUploader.on('select', function() {
+                    var attachment = audioUploader.state().get('selection').first().toJSON();
+                    $('#ielts_cm_audio_url').val(attachment.url);
+                });
+                
+                // Open the uploader
+                audioUploader.open();
             });
             
             // Add reading text
@@ -3295,6 +3355,11 @@ class IELTS_CM_Admin {
                 update_post_meta($post_id, '_ielts_cm_layout_type', sanitize_text_field($_POST['ielts_cm_layout_type']));
             }
             
+            // Save CBT test type
+            if (isset($_POST['ielts_cm_cbt_test_type'])) {
+                update_post_meta($post_id, '_ielts_cm_cbt_test_type', sanitize_text_field($_POST['ielts_cm_cbt_test_type']));
+            }
+            
             // Save open as popup option (only for CBT layout)
             if (isset($_POST['ielts_cm_open_as_popup'])) {
                 update_post_meta($post_id, '_ielts_cm_open_as_popup', '1');
@@ -3302,7 +3367,7 @@ class IELTS_CM_Admin {
                 delete_post_meta($post_id, '_ielts_cm_open_as_popup');
             }
             
-            // Save audio URL and transcript for listening layouts
+            // Save audio URL and transcript
             if (isset($_POST['ielts_cm_audio_url'])) {
                 update_post_meta($post_id, '_ielts_cm_audio_url', esc_url_raw($_POST['ielts_cm_audio_url']));
             }

@@ -125,10 +125,6 @@ body.ielts-quiz-single .content-area {
             // Include the appropriate template based on layout type
             if ($layout_type === 'computer_based') {
                 $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-computer-based.php';
-            } elseif ($layout_type === 'listening_practice') {
-                $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-listening-practice.php';
-            } elseif ($layout_type === 'listening_exercise') {
-                $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-listening-exercise.php';
             } else {
                 $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz.php';
             }
