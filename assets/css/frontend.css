@@ -1704,18 +1704,18 @@ select.answer-select-inline.answer-incorrect {
 }
 
 .listening-audio-content {
-    padding: 30px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 400px;
+    min-height: 300px;
 }
 
 /* Countdown Display */
 .listening-countdown {
     text-align: center;
-    padding: 40px;
+    padding: 20px;
 }
 
 .listening-countdown .countdown-text {
@@ -1760,8 +1760,8 @@ select.answer-select-inline.answer-incorrect {
     align-items: flex-end;
     justify-content: center;
     gap: 8px;
-    height: 100px;
-    margin: 30px 0;
+    height: 80px;
+    margin: 20px 0;
 }
 
 .visualizer-bar {
@@ -1790,8 +1790,8 @@ select.answer-select-inline.answer-incorrect {
 }
 
 .audio-status {
-    margin-top: 20px;
-    font-size: 1.2em;
+    margin-top: 15px;
+    font-size: 1.1em;
     color: #666;
 }
 
@@ -1870,6 +1870,55 @@ select.answer-select-inline.answer-incorrect {
 
 .transcript-audio-controls audio {
     width: 100%;
+}
+
+/* Unmute and Play Prompts for Listening Audio */
+.unmute-prompt {
+    background: #0073aa;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.2s ease;
+}
+
+.unmute-prompt:hover {
+    background: #005a87;
+}
+
+.unmute-prompt .dashicons {
+    color: white;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.play-prompt {
+    background: #d63638;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.2s ease;
+}
+
+.play-prompt:hover {
+    background: #b32d2e;
+}
+
+.play-prompt .dashicons {
+    color: white;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 /* Question Styling for Listening Exercises - Match Computer-Based Layout */

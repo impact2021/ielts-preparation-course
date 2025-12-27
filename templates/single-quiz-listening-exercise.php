@@ -202,7 +202,7 @@ if ($lesson_id) {
                             </div>
                             
                             <div class="audio-player-controls">
-                                <audio id="listening-audio" controls preload="auto">
+                                <audio id="listening-audio" controls preload="auto" muted>
                                     <?php if ($audio_url): ?>
                                     <source src="<?php echo esc_url($audio_url); ?>" type="audio/mpeg">
                                     <?php endif; ?>

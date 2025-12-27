@@ -196,7 +196,7 @@ if ($lesson_id) {
                         
                         <!-- Audio Player (hidden initially, no controls during test) -->
                         <div class="listening-audio-player" id="listening-audio-player" style="display: none;">
-                            <audio id="listening-audio" preload="auto">
+                            <audio id="listening-audio" preload="auto" muted>
                                 <?php if ($audio_url): ?>
                                 <source src="<?php echo esc_url($audio_url); ?>" type="audio/mpeg">
                                 <?php endif; ?>
