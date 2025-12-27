@@ -710,10 +710,11 @@
                             }
                             
                             // For listening quizzes, show transcript after results are displayed
-                            if (quizContainer.hasClass('ielts-listening-practice-quiz') || 
-                                quizContainer.hasClass('ielts-listening-exercise-quiz')) {
-                                var audioPlayerContainer = $('#listening-audio-player');
-                                var transcriptContainer = $('#listening-transcript');
+                            var isListeningQuiz = quizContainer.hasClass('ielts-listening-practice-quiz') || 
+                                                 quizContainer.hasClass('ielts-listening-exercise-quiz');
+                            if (isListeningQuiz) {
+                                var audioPlayerContainer = quizContainer.find('#listening-audio-player');
+                                var transcriptContainer = quizContainer.find('#listening-transcript');
                                 
                                 if (audioPlayerContainer.length && transcriptContainer.length) {
                                     // Hide audio player and show transcript
