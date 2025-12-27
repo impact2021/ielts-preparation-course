@@ -1496,8 +1496,8 @@
             var audioElement = document.getElementById('listening-audio');
             var transcriptContainer = $('#listening-transcript');
             
-            // Only start countdown if audio URL is available
-            if (audioUrl && countdownElement.length && audioElement) {
+            // Only start countdown if audio element is available
+            if (countdownElement.length && audioElement) {
                 // Start countdown when page loads
                 var countdownTimer = countdownSeconds;
                 countdownElement.text(countdownTimer);
