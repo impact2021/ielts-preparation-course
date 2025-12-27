@@ -1743,6 +1743,42 @@ select.answer-select-inline.answer-incorrect {
     }
 }
 
+/* Enable Audio Button for Listening Practice */
+.listening-enable-audio {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.enable-audio-btn {
+    font-size: 1.2em !important;
+    padding: 15px 30px !important;
+    height: auto !important;
+    background: #0073aa !important;
+    border-color: #0073aa !important;
+    box-shadow: 0 2px 8px rgba(0,115,170,0.3) !important;
+    transition: all 0.2s ease !important;
+}
+
+.enable-audio-btn:hover {
+    background: #005a87 !important;
+    border-color: #005a87 !important;
+    box-shadow: 0 4px 12px rgba(0,115,170,0.4) !important;
+    transform: translateY(-2px);
+}
+
+.enable-audio-btn .dashicons {
+    font-size: 1.3em;
+    width: auto;
+    height: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.enable-audio-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
 /* Audio Player for Listening Practice (No Controls) */
 .listening-audio-player {
     text-align: center;
@@ -1752,6 +1788,51 @@ select.answer-select-inline.answer-incorrect {
 
 .listening-audio-player audio {
     display: none; /* Hidden for practice tests */
+}
+
+.listening-practice-player audio {
+    display: none !important; /* Ensure audio controls are always hidden in practice mode */
+}
+
+/* Audio Progress Bar for Listening Practice */
+.audio-progress-container {
+    margin: 30px 0;
+    width: 100%;
+    max-width: 450px;
+}
+
+.audio-progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.audio-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0073aa, #00a0d2);
+    width: 0%;
+    transition: width 0.1s linear;
+    border-radius: 6px;
+}
+
+.audio-time-display {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 0.95em;
+    color: #666;
+    font-weight: 500;
+}
+
+.audio-current-time {
+    color: #0073aa;
+}
+
+.audio-duration {
+    color: #999;
 }
 
 /* Audio Visualizer */

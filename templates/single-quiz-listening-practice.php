@@ -185,33 +185,34 @@ if ($lesson_id) {
                 </div>
             </div>
             <div class="computer-based-container">
-                <!-- Left Column: Audio Player & Countdown -->
+                <!-- Left Column: Audio Player -->
                 <div class="reading-column listening-audio-column">
                     <div class="reading-content listening-audio-content">
-                        <!-- Countdown Display (shown before audio plays) -->
-                        <div class="listening-countdown" id="listening-countdown">
-                            <div class="countdown-text"><?php _e('Audio will start in:', 'ielts-course-manager'); ?></div>
-                            <div class="countdown-number" id="countdown-number">3</div>
+                        <!-- Enable Audio Button (shown before audio plays) -->
+                        <div class="listening-enable-audio" id="listening-enable-audio">
+                            <button type="button" class="button button-primary enable-audio-btn" id="enable-audio-btn">
+                                <span class="dashicons dashicons-controls-volumeon"></span>
+                                <?php _e('Enable Audio', 'ielts-course-manager'); ?>
+                            </button>
                         </div>
                         
                         <!-- Audio Player (hidden initially, no controls during test) -->
-                        <div class="listening-audio-player" id="listening-audio-player" style="display: none;">
-                            <audio id="listening-audio" preload="auto" muted>
+                        <div class="listening-audio-player listening-practice-player" id="listening-audio-player" style="display: none;">
+                            <audio id="listening-audio" preload="auto">
                                 <?php if ($audio_url): ?>
                                 <source src="<?php echo esc_url($audio_url); ?>" type="audio/mpeg">
                                 <?php endif; ?>
                                 <?php _e('Your browser does not support the audio element.', 'ielts-course-manager'); ?>
                             </audio>
                             
-                            <div class="audio-visualizer" id="audio-visualizer">
-                                <div class="visualizer-bar"></div>
-                                <div class="visualizer-bar"></div>
-                                <div class="visualizer-bar"></div>
-                                <div class="visualizer-bar"></div>
-                                <div class="visualizer-bar"></div>
-                                <div class="visualizer-bar"></div>
-                                <div class="visualizer-bar"></div>
-                                <div class="visualizer-bar"></div>
+                            <div class="audio-progress-container">
+                                <div class="audio-progress-bar" id="audio-progress-bar">
+                                    <div class="audio-progress-fill" id="audio-progress-fill"></div>
+                                </div>
+                                <div class="audio-time-display">
+                                    <span class="audio-current-time" id="audio-current-time">0:00</span>
+                                    <span class="audio-duration" id="audio-duration">0:00</span>
+                                </div>
                             </div>
                             
                             <div class="audio-status">
