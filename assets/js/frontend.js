@@ -1540,11 +1540,11 @@
                                             unmuteMessage.fadeOut(300, function() {
                                                 unmuteMessage.remove();
                                             });
-                                            // Remove the click handler after unmuting
-                                            audioPlayerContainer.off('click', unmuteAudio);
+                                            // Remove the namespaced click handler after unmuting
+                                            audioPlayerContainer.off('click.audioUnmute', unmuteAudio);
                                         };
                                         
-                                        audioPlayerContainer.on('click', unmuteAudio);
+                                        audioPlayerContainer.on('click.audioUnmute', unmuteAudio);
                                         
                                     }).catch(function(error) {
                                         console.log('Audio autoplay failed even when muted:', error);
@@ -1570,7 +1570,7 @@
                                                     playPrompt.html('<span class="dashicons dashicons-warning"></span>Unable to play audio. Please check your browser settings.');
                                                 });
                                             }
-                                            audioPlayerContainer.off('click', startAudio);
+                                            audioPlayerContainer.off('click.audioStart', startAudio);
                                             if (isListeningPractice) {
                                                 audioPlayerContainer.css('cursor', 'default');
                                             }
@@ -1579,7 +1579,7 @@
                                         if (isListeningPractice) {
                                             audioPlayerContainer.css('cursor', 'pointer');
                                         }
-                                        audioPlayerContainer.on('click', startAudio);
+                                        audioPlayerContainer.on('click.audioStart', startAudio);
                                     });
                                 }
                             }
