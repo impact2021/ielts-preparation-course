@@ -1,0 +1,22 @@
+# Development files
+*.log
+*.bak
+*~
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+
+# Node modules (if using any build tools)
+node_modules/
+
+# Compiled files
+*.zip

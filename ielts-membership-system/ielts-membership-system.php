@@ -86,7 +86,7 @@ function ielts_ms_create_default_pages() {
     // Login page
     $login_page = get_page_by_path('membership-login');
     if (!$login_page) {
-        wp_insert_post(array(
+        $login_id = wp_insert_post(array(
             'post_title' => 'Membership Login',
             'post_name' => 'membership-login',
             'post_content' => '[ielts_membership_login]',
@@ -94,6 +94,9 @@ function ielts_ms_create_default_pages() {
             'post_type' => 'page',
             'comment_status' => 'closed'
         ));
+        update_option('ielts_ms_login_page_id', $login_id);
+    } else {
+        update_option('ielts_ms_login_page_id', $login_page->ID);
     }
     
     // Registration page
@@ -112,7 +115,7 @@ function ielts_ms_create_default_pages() {
     // Account page
     $account_page = get_page_by_path('my-account');
     if (!$account_page) {
-        wp_insert_post(array(
+        $account_id = wp_insert_post(array(
             'post_title' => 'My Account',
             'post_name' => 'my-account',
             'post_content' => '[ielts_membership_account]',
@@ -120,6 +123,9 @@ function ielts_ms_create_default_pages() {
             'post_type' => 'page',
             'comment_status' => 'closed'
         ));
+        update_option('ielts_ms_account_page_id', $account_id);
+    } else {
+        update_option('ielts_ms_account_page_id', $account_page->ID);
     }
 }
 

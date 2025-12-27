@@ -17,6 +17,40 @@ class IELTS_MS_PayPal_Gateway extends IELTS_MS_Payment_Gateway {
         // Register PayPal IPN handler
         add_action('wp_ajax_nopriv_ielts_ms_paypal_ipn', array($this, 'handle_callback'));
         add_action('wp_ajax_ielts_ms_paypal_ipn', array($this, 'handle_callback'));
+        
+        // Register AJAX handler for processing payment
+        add_action('wp_ajax_ielts_ms_process_payment', array($this, 'ajax_process_payment'));
+        add_action('wp_ajax_nopriv_ielts_ms_process_payment', array($this, 'ajax_process_payment'));
+    }
+    
+    /**
+     * AJAX handler for processing payment
+     */
+    public function ajax_process_payment() {
+        check_ajax_referer('ielts_ms_nonce', 'nonce');
+        
+        $gateway = sanitize_text_field($_POST['gateway']);
+        
+        if ($gateway !== 'paypal') {
+            return; // Not for this gateway
+        }
+        
+        $user_id = get_current_user_id();
+        if (!$user_id) {
+            wp_send_json_error(array('message' => 'User not logged in'));
+        }
+        
+        $amount = floatval($_POST['amount']);
+        $duration_days = intval($_POST['duration_days']);
+        $payment_type = sanitize_text_field($_POST['payment_type']);
+        
+        $result = $this->process_payment($amount, $user_id, $duration_days, $payment_type);
+        
+        if ($result['success']) {
+            wp_send_json_success($result);
+        } else {
+            wp_send_json_error($result);
+        }
     }
     
     /**
