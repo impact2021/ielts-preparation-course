@@ -1749,24 +1749,25 @@ select.answer-select-inline.answer-incorrect {
     padding: 40px 20px;
 }
 
-.enable-audio-btn {
-    font-size: 1.2em !important;
-    padding: 15px 30px !important;
-    height: auto !important;
-    background: #0073aa !important;
-    border-color: #0073aa !important;
-    box-shadow: 0 2px 8px rgba(0,115,170,0.3) !important;
-    transition: all 0.2s ease !important;
+.listening-enable-audio .button.enable-audio-btn {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    height: auto;
+    background: #0073aa;
+    border-color: #0073aa;
+    box-shadow: 0 2px 8px rgba(0,115,170,0.3);
+    transition: all 0.2s ease;
+    color: white;
 }
 
-.enable-audio-btn:hover {
-    background: #005a87 !important;
-    border-color: #005a87 !important;
-    box-shadow: 0 4px 12px rgba(0,115,170,0.4) !important;
+.listening-enable-audio .button.enable-audio-btn:hover {
+    background: #005a87;
+    border-color: #005a87;
+    box-shadow: 0 4px 12px rgba(0,115,170,0.4);
     transform: translateY(-2px);
 }
 
-.enable-audio-btn .dashicons {
+.listening-enable-audio .button.enable-audio-btn .dashicons {
     font-size: 1.3em;
     width: auto;
     height: auto;
@@ -1774,7 +1775,7 @@ select.answer-select-inline.answer-incorrect {
     vertical-align: middle;
 }
 
-.enable-audio-btn:disabled {
+.listening-enable-audio .button.enable-audio-btn:disabled {
     opacity: 0.7;
     cursor: not-allowed;
 }

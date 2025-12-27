@@ -1501,24 +1501,33 @@
                     
                     if (enableAudioBtn.length) {
                         enableAudioBtn.on('click', function() {
+                            var $btn = $(this);
+                            var originalText = $btn.text();
+                            
                             // Disable button to prevent multiple clicks
-                            $(this).prop('disabled', true).text('Loading...');
+                            $btn.prop('disabled', true).text('Loading...');
                             
                             // Hide enable audio container and show audio player
                             enableAudioContainer.fadeOut(300, function() {
                                 audioPlayerContainer.fadeIn(300, function() {
-                                    // Start playing audio
+                                    // Start playing audio (muted first for browser compatibility)
                                     audioElement.load();
                                     var playPromise = audioElement.play();
                                     
                                     if (playPromise !== undefined) {
                                         playPromise.then(function() {
                                             console.log('Audio playback started successfully');
+                                            // Unmute immediately after successful playback start
+                                            audioElement.muted = false;
                                             // Update progress bar as audio plays
                                             updateAudioProgress();
                                         }).catch(function(error) {
                                             console.log('Audio playback failed:', error);
                                             $('.audio-status-text').text('Unable to play audio. Please check your browser settings.');
+                                            // Re-enable button on error
+                                            enableAudioContainer.fadeIn(300);
+                                            audioPlayerContainer.fadeOut(300);
+                                            $btn.prop('disabled', false).text(originalText);
                                         });
                                     }
                                 });
@@ -1532,10 +1541,12 @@
                         var currentTimeDisplay = $('#audio-current-time');
                         var durationDisplay = $('#audio-duration');
                         
-                        // Update duration when metadata is loaded
+                        <!-- Update duration when metadata is loaded
                         audioElement.addEventListener('loadedmetadata', function() {
                             var duration = audioElement.duration;
-                            durationDisplay.text(formatTime(duration));
+                            if (isFinite(duration) && duration > 0) {
+                                durationDisplay.text(formatTime(duration));
+                            }
                         });
                         
                         // Update progress bar as audio plays
@@ -1543,7 +1554,7 @@
                             var currentTime = audioElement.currentTime;
                             var duration = audioElement.duration;
                             
-                            if (duration > 0) {
+                            if (isFinite(duration) && duration > 0) {
                                 var progress = (currentTime / duration) * 100;
                                 progressBar.css('width', progress + '%');
                                 currentTimeDisplay.text(formatTime(currentTime));
