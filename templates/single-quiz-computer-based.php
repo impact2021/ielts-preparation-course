@@ -134,7 +134,7 @@ if ($lesson_id) {
 }
 ?>
 
-<div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>" data-next-url="<?php echo esc_attr($next_url); ?>">
+<div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>" data-next-url="<?php echo esc_attr($next_url); ?>" data-test-type="<?php echo esc_attr($cbt_test_type); ?>">
     <?php 
     // Show fullscreen notice only if popup is enabled AND we're not already in fullscreen mode
     $show_fullscreen_notice = $open_as_popup && !$is_fullscreen;
@@ -238,7 +238,7 @@ if ($lesson_id) {
                 <div class="reading-column">
                     <?php if ($cbt_test_type === 'listening'): ?>
                         <!-- Audio Player for Listening Test -->
-                        <div class="cbt-audio-player">
+                        <div class="cbt-audio-player" id="listening-audio-player">
                             <?php if (!empty($audio_url)): ?>
                                 <div class="audio-player-wrapper">
                                     <h3><?php _e('Listening Audio', 'ielts-course-manager'); ?></h3>
@@ -253,6 +253,16 @@ if ($lesson_id) {
                                 </div>
                             <?php endif; ?>
                         </div>
+                        
+                        <!-- Transcript (shown after submission) -->
+                        <?php if (!empty($transcript)): ?>
+                            <div id="listening-transcript" class="listening-transcript" style="display: none;">
+                                <h3><?php _e('Audio Transcript', 'ielts-course-manager'); ?></h3>
+                                <div class="transcript-content">
+                                    <?php echo wp_kses_post(wpautop($transcript)); ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
                     <?php else: ?>
                         <!-- Reading Texts for Reading Test -->
                         <div class="reading-content">
