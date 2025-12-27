@@ -1276,20 +1276,23 @@ class IELTS_CM_Admin {
         <?php
         $audio_url = get_post_meta($post->ID, '_ielts_cm_audio_url', true);
         $transcript = get_post_meta($post->ID, '_ielts_cm_transcript', true);
+        $audio_sections = get_post_meta($post->ID, '_ielts_cm_audio_sections', true);
+        if (!is_array($audio_sections)) {
+            $audio_sections = array();
+        }
         ?>
         <div id="cbt-audio-section" style="<?php echo ($layout_type !== 'computer_based' || $cbt_test_type !== 'listening') ? 'display:none;' : ''; ?>">
-            <h3><?php _e('Listening Audio', 'ielts-course-manager'); ?></h3>
-            <p>
-                <label for="ielts_cm_audio_url"><?php _e('Audio URL', 'ielts-course-manager'); ?></label><br>
-                <input type="url" id="ielts_cm_audio_url" name="ielts_cm_audio_url" value="<?php echo esc_attr($audio_url); ?>" style="width: 100%;" placeholder="https://example.com/audio.mp3">
-                <button type="button" class="button upload-audio-btn" style="margin-top: 5px;"><?php _e('Upload Audio', 'ielts-course-manager'); ?></button><br>
-                <small><?php _e('Enter the URL to the audio file or upload one (MP3 format recommended).', 'ielts-course-manager'); ?></small>
-            </p>
-            <p>
-                <label for="ielts_cm_transcript"><?php _e('Audio Transcript', 'ielts-course-manager'); ?></label><br>
-                <textarea id="ielts_cm_transcript" name="ielts_cm_transcript" rows="8" style="width: 100%;" placeholder="<?php esc_attr_e('Enter the transcript of the audio here...', 'ielts-course-manager'); ?>"><?php echo esc_textarea($transcript); ?></textarea>
-                <small><?php _e('This transcript will be shown after the student submits their answers.', 'ielts-course-manager'); ?></small>
-            </p>
+            <h3><?php _e('Listening Audio Sections', 'ielts-course-manager'); ?></h3>
+            <p><small><?php _e('Add audio files for each listening section. Each section can have its own audio file and transcript.', 'ielts-course-manager'); ?></small></p>
+            
+            <div id="audio-sections-container">
+                <?php if (!empty($audio_sections)): ?>
+                    <?php foreach ($audio_sections as $index => $section): ?>
+                        <?php $this->render_audio_section_field($index, $section); ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
+            <button type="button" class="button" id="add-audio-section"><?php _e('Add Audio Section', 'ielts-course-manager'); ?></button>
         </div>
         
         <?php
@@ -1499,6 +1502,87 @@ class IELTS_CM_Admin {
                 audioUploader.open();
             });
             
+            // Add audio section
+            var audioSectionIndex = <?php echo !empty($audio_sections) ? (max(array_keys($audio_sections)) + 1) : 0; ?>;
+            
+            $('#add-audio-section').on('click', function() {
+                var sectionNumber = audioSectionIndex + 1;
+                var html = '<div class="audio-section-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9; position: relative;">' +
+                    '<div class="audio-section-header" style="display: flex; align-items: center; cursor: pointer; margin-bottom: 15px;">' +
+                    '<span class="dashicons dashicons-arrow-down-alt2 audio-section-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>' +
+                    '<h4 style="margin: 0; flex: 1;"><?php _e('Section', 'ielts-course-manager'); ?> ' + sectionNumber + '</h4>' +
+                    '</div>' +
+                    '<div class="audio-section-content">' +
+                    '<p>' +
+                    '<label><?php _e('Section Number', 'ielts-course-manager'); ?></label><br>' +
+                    '<input type="number" name="audio_sections[' + audioSectionIndex + '][section_number]" value="' + sectionNumber + '" min="1" max="4" style="width: 100px;" placeholder="1">' +
+                    '<small><?php _e('Section number (1-4)', 'ielts-course-manager'); ?></small>' +
+                    '</p>' +
+                    '<p>' +
+                    '<label><?php _e('Audio URL', 'ielts-course-manager'); ?></label><br>' +
+                    '<input type="url" name="audio_sections[' + audioSectionIndex + '][audio_url]" style="width: 100%;" placeholder="https://example.com/section-' + sectionNumber + '.mp3" class="audio-section-url">' +
+                    '<button type="button" class="button upload-audio-section-btn" data-index="' + audioSectionIndex + '" style="margin-top: 5px;"><?php _e('Upload Audio', 'ielts-course-manager'); ?></button><br>' +
+                    '<small><?php _e('Enter the URL to the audio file or upload one (MP3 format recommended).', 'ielts-course-manager'); ?></small>' +
+                    '</p>' +
+                    '<p>' +
+                    '<label><?php _e('Transcript', 'ielts-course-manager'); ?></label><br>' +
+                    '<textarea name="audio_sections[' + audioSectionIndex + '][transcript]" rows="8" style="width: 100%;" placeholder="<?php esc_attr_e('Enter the transcript for this section...', 'ielts-course-manager'); ?>"></textarea>' +
+                    '<small><?php _e('This transcript will be shown after the student submits their answers.', 'ielts-course-manager'); ?></small>' +
+                    '</p>' +
+                    '<button type="button" class="button remove-audio-section" style="margin-top: 10px;"><?php _e('Remove Audio Section', 'ielts-course-manager'); ?></button>' +
+                    '</div>' +
+                    '</div>';
+                $('#audio-sections-container').append(html);
+                audioSectionIndex++;
+                updateAudioSectionSelectors();
+            });
+            
+            // Remove audio section
+            $(document).on('click', '.remove-audio-section', function() {
+                $(this).closest('.audio-section-item').remove();
+                updateAudioSectionSelectors();
+            });
+            
+            // Audio section upload handler
+            $(document).on('click', '.upload-audio-section-btn', function(e) {
+                e.preventDefault();
+                var $btn = $(this);
+                var $input = $btn.siblings('.audio-section-url');
+                
+                // Create the media uploader
+                var sectionAudioUploader = wp.media({
+                    title: '<?php _e('Select Audio File', 'ielts-course-manager'); ?>',
+                    button: {
+                        text: '<?php _e('Use this audio', 'ielts-course-manager'); ?>'
+                    },
+                    library: {
+                        type: 'audio'
+                    },
+                    multiple: false
+                });
+                
+                // When an audio file is selected
+                sectionAudioUploader.on('select', function() {
+                    var attachment = sectionAudioUploader.state().get('selection').first().toJSON();
+                    $input.val(attachment.url);
+                });
+                
+                // Open the uploader
+                sectionAudioUploader.open();
+            });
+            
+            // Toggle audio section content
+            $(document).on('click', '.audio-section-header', function() {
+                var $content = $(this).siblings('.audio-section-content');
+                var $toggle = $(this).find('.audio-section-toggle');
+                $content.slideToggle(200);
+                if ($toggle.hasClass('dashicons-arrow-down-alt2')) {
+                    $toggle.removeClass('dashicons-arrow-down-alt2').addClass('dashicons-arrow-right-alt2');
+                } else {
+                    $toggle.removeClass('dashicons-arrow-right-alt2').addClass('dashicons-arrow-down-alt2');
+                }
+            });
+            
             // Add reading text
             $('#add-reading-text').on('click', function() {
                 var html = '<div class="reading-text-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9; position: relative;">' +
@@ -1582,9 +1666,67 @@ class IELTS_CM_Admin {
                 });
             }
             
+            // Function to build audio section selector HTML
+            function buildAudioSectionSelector(questionIdx) {
+                var audioSections = [];
+                $('.audio-section-item').each(function(idx) {
+                    var sectionNumber = $(this).find('input[name*="[section_number]"]').val() || (idx + 1);
+                    audioSections.push({index: idx, sectionNumber: sectionNumber});
+                });
+                
+                if (audioSections.length === 0) {
+                    return '';
+                }
+                
+                var html = '<p class="audio-section-link-field">' +
+                    '<label><?php _e('Linked Audio Section (Optional)', 'ielts-course-manager'); ?></label><br>' +
+                    '<select name="questions[' + questionIdx + '][audio_section_id]" style="width: 100%;">' +
+                    '<option value=""><?php _e('-- No specific audio section --', 'ielts-course-manager'); ?></option>';
+                
+                audioSections.forEach(function(section) {
+                    html += '<option value="' + section.index + '"><?php _e('Section', 'ielts-course-manager'); ?> ' + section.sectionNumber + '</option>';
+                });
+                
+                html += '</select>' +
+                    '<small><?php _e('Select which audio section this question is based on.', 'ielts-course-manager'); ?></small>' +
+                    '</p>';
+                
+                return html;
+            }
+            
+            function updateAudioSectionSelectors() {
+                $('.question-item').each(function(idx) {
+                    var $question = $(this);
+                    var $existingSelector = $question.find('.audio-section-link-field');
+                    var currentValue = $existingSelector.find('select').val();
+                    
+                    // Remove existing selector
+                    $existingSelector.remove();
+                    
+                    // Add new selector after reading text selector (or after question type if no reading text)
+                    var newSelector = buildAudioSectionSelector(idx);
+                    if (newSelector) {
+                        var $insertAfter = $question.find('.reading-text-link-field');
+                        if ($insertAfter.length === 0) {
+                            $insertAfter = $question.find('select.question-type').closest('p');
+                        }
+                        $insertAfter.after(newSelector);
+                        // Restore previous value if it still exists
+                        if (currentValue) {
+                            $question.find('.audio-section-link-field select').val(currentValue);
+                        }
+                    }
+                });
+            }
+            
             // Update selectors when reading text titles change
             $(document).on('input', '.reading-text-item input[name*="[title]"]', function() {
                 updateReadingTextSelectors();
+            });
+            
+            // Update selectors when audio section numbers change
+            $(document).on('input', '.audio-section-item input[name*="[section_number]"]', function() {
+                updateAudioSectionSelectors();
             });
             
             // Function to check and update warning visibility
@@ -1615,6 +1757,16 @@ class IELTS_CM_Admin {
                 var readingTextSelector = buildReadingTextSelector(questionIndex);
                 if (readingTextSelector) {
                     $('#questions-container .question-item:last').find('select.question-type').closest('p').after(readingTextSelector);
+                }
+                
+                // Add audio section selector if audio sections exist
+                var audioSectionSelector = buildAudioSectionSelector(questionIndex);
+                if (audioSectionSelector) {
+                    var $insertAfter = $('#questions-container .question-item:last').find('.reading-text-link-field');
+                    if ($insertAfter.length === 0) {
+                        $insertAfter = $('#questions-container .question-item:last').find('select.question-type').closest('p');
+                    }
+                    $insertAfter.after(audioSectionSelector);
                 }
                 
                 questionIndex++;
@@ -2563,6 +2715,43 @@ class IELTS_CM_Admin {
         <?php
     }
     
+    /**
+     * Render audio section field
+     */
+    private function render_audio_section_field($index, $section) {
+        ?>
+        <div class="audio-section-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9; position: relative;">
+            <div class="audio-section-header" style="display: flex; align-items: center; cursor: pointer; margin-bottom: 15px;">
+                <span class="dashicons dashicons-arrow-right-alt2 audio-section-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>
+                <h4 style="margin: 0; flex: 1;"><?php printf(__('Section %d', 'ielts-course-manager'), $index + 1); ?></h4>
+            </div>
+            
+            <div class="audio-section-content">
+                <p>
+                    <label><?php _e('Section Number', 'ielts-course-manager'); ?></label><br>
+                    <input type="number" name="audio_sections[<?php echo $index; ?>][section_number]" value="<?php echo esc_attr(isset($section['section_number']) ? $section['section_number'] : ($index + 1)); ?>" min="1" max="4" style="width: 100px;" placeholder="1">
+                    <small><?php _e('Section number (1-4)', 'ielts-course-manager'); ?></small>
+                </p>
+                
+                <p>
+                    <label><?php _e('Audio URL', 'ielts-course-manager'); ?></label><br>
+                    <input type="url" name="audio_sections[<?php echo $index; ?>][audio_url]" value="<?php echo esc_attr(isset($section['audio_url']) ? $section['audio_url'] : ''); ?>" style="width: 100%;" placeholder="https://example.com/section-<?php echo $index + 1; ?>.mp3" class="audio-section-url">
+                    <button type="button" class="button upload-audio-section-btn" data-index="<?php echo $index; ?>" style="margin-top: 5px;"><?php _e('Upload Audio', 'ielts-course-manager'); ?></button><br>
+                    <small><?php _e('Enter the URL to the audio file or upload one (MP3 format recommended).', 'ielts-course-manager'); ?></small>
+                </p>
+                
+                <p>
+                    <label><?php _e('Transcript', 'ielts-course-manager'); ?></label><br>
+                    <textarea name="audio_sections[<?php echo $index; ?>][transcript]" rows="8" style="width: 100%;" placeholder="<?php esc_attr_e('Enter the transcript for this section...', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($section['transcript']) ? $section['transcript'] : ''); ?></textarea>
+                    <small><?php _e('This transcript will be shown after the student submits their answers.', 'ielts-course-manager'); ?></small>
+                </p>
+                
+                <button type="button" class="button remove-audio-section" style="margin-top: 10px;"><?php _e('Remove Audio Section', 'ielts-course-manager'); ?></button>
+            </div>
+        </div>
+        <?php
+    }
+    
     
     /**
      * Calculate the number of questions/points for a given question
@@ -2701,6 +2890,27 @@ class IELTS_CM_Admin {
                     <?php endforeach; ?>
                 </select>
                 <small><?php _e('When this question is scrolled into view, the selected reading text will be displayed on the left.', 'ielts-course-manager'); ?></small>
+            </p>
+            <?php endif; ?>
+            
+            <?php 
+            $audio_sections = get_post_meta($post->ID, '_ielts_cm_audio_sections', true);
+            if (!is_array($audio_sections)) {
+                $audio_sections = array();
+            }
+            if (!empty($audio_sections)): 
+            ?>
+            <p class="audio-section-link-field">
+                <label><?php _e('Linked Audio Section (Optional)', 'ielts-course-manager'); ?></label><br>
+                <select name="questions[<?php echo $index; ?>][audio_section_id]" style="width: 100%;">
+                    <option value=""><?php _e('-- No specific audio section --', 'ielts-course-manager'); ?></option>
+                    <?php foreach ($audio_sections as $as_index => $section): ?>
+                        <option value="<?php echo esc_attr($as_index); ?>" <?php selected(isset($question['audio_section_id']) ? $question['audio_section_id'] : '', $as_index); ?>>
+                            <?php echo esc_html(sprintf(__('Section %d', 'ielts-course-manager'), isset($section['section_number']) ? $section['section_number'] : ($as_index + 1))); ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+                <small><?php _e('Select which audio section this question is based on.', 'ielts-course-manager'); ?></small>
             </p>
             <?php endif; ?>
             
@@ -3420,6 +3630,23 @@ class IELTS_CM_Admin {
                 }
             }
             update_post_meta($post_id, '_ielts_cm_reading_texts', $reading_texts);
+            
+            // Save audio sections
+            // IMPORTANT: Preserve array keys to maintain audio_section_id references in questions
+            $audio_sections = array();
+            if (isset($_POST['audio_sections']) && is_array($_POST['audio_sections'])) {
+                foreach ($_POST['audio_sections'] as $index => $section) {
+                    if (!empty($section['audio_url'])) {
+                        $audio_sections[$index] = array(
+                            'section_number' => isset($section['section_number']) ? intval($section['section_number']) : ($index + 1),
+                            'audio_url' => esc_url_raw($section['audio_url']),
+                            'transcript' => isset($section['transcript']) ? wp_kses_post($section['transcript']) : ''
+                        );
+                    }
+                }
+            }
+            update_post_meta($post_id, '_ielts_cm_audio_sections', $audio_sections);
+            
             // Always save questions, even if empty
             $questions = array();
             if (isset($_POST['questions']) && is_array($_POST['questions'])) {
@@ -3437,7 +3664,8 @@ class IELTS_CM_Admin {
                         'no_answer_feedback' => isset($question['no_answer_feedback']) ? wp_kses_post($question['no_answer_feedback']) : '',
                         'correct_feedback' => isset($question['correct_feedback']) ? wp_kses_post($question['correct_feedback']) : '',
                         'incorrect_feedback' => isset($question['incorrect_feedback']) ? wp_kses_post($question['incorrect_feedback']) : '',
-                        'reading_text_id' => isset($question['reading_text_id']) && $question['reading_text_id'] !== '' ? intval($question['reading_text_id']) : null
+                        'reading_text_id' => isset($question['reading_text_id']) && $question['reading_text_id'] !== '' ? intval($question['reading_text_id']) : null,
+                        'audio_section_id' => isset($question['audio_section_id']) && $question['audio_section_id'] !== '' ? intval($question['audio_section_id']) : null
                     );
                     
                     // Handle multiple choice and multi-select with new structured format
