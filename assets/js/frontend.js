@@ -15,7 +15,7 @@
         }
         
         // Initialize quiz timer if present
-        var quizContainer = $('.ielts-single-quiz, .ielts-computer-based-quiz');
+        var quizContainer = $('.ielts-single-quiz, .ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz');
         var timerMinutes = quizContainer.data('timer-minutes');
         var quizTimerInterval = null;
         
@@ -152,11 +152,11 @@
             e.preventDefault();
             
             var form = $(this);
-            var quizContainer = form.closest('.ielts-single-quiz, .ielts-computer-based-quiz');
+            var quizContainer = form.closest('.ielts-single-quiz, .ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz');
             
             // If form is inside modal, get data from the original quiz container
             if (quizContainer.length === 0) {
-                quizContainer = $('.ielts-computer-based-quiz');
+                quizContainer = $('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz');
             }
             
             var quizId = quizContainer.data('quiz-id');
@@ -244,8 +244,10 @@
                         var result = response.data;
                         var isPassing = result.percentage >= 70;
                         
-                        // Check if this is a CBT quiz
-                        var isCBT = quizContainer.hasClass('ielts-computer-based-quiz');
+                        // Check if this is a CBT quiz or listening quiz (they share the same layout features)
+                        var isCBT = quizContainer.hasClass('ielts-computer-based-quiz') || 
+                                    quizContainer.hasClass('ielts-listening-practice-quiz') || 
+                                    quizContainer.hasClass('ielts-listening-exercise-quiz');
                         
                         var html = '<div class="quiz-result ' + (isPassing ? 'pass' : 'fail') + '">';
                         html += '<h3>' + (isPassing ? 'Congratulations! You Passed!' : 'Quiz Completed') + '</h3>';
