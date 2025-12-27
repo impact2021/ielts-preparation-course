@@ -360,6 +360,11 @@ body.ielts-course-archive .content-area {
     color: #0073aa;
 }
 
+.ielts-single-quiz .quiz-breadcrumb .separator {
+    margin: 0 8px;
+    color: #999;
+}
+
 .ielts-single-quiz .quiz-info {
     padding: 15px;
     background: #f9f9f9;

@@ -186,10 +186,6 @@ if ($lesson_id) {
     
     <?php if (!empty($questions) && is_user_logged_in()): ?>
         <form id="ielts-quiz-form" class="quiz-form" style="<?php echo $show_fullscreen_notice ? 'display:none;' : ''; ?>">
-            <?php 
-            // Show timer bar if there's a timer OR a course link (or both)
-            // This ensures the return to course link is always visible when available
-            if ($timer_minutes > 0 || $course_id): ?>
             <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
                 <div class="timer-left-section">
                     <?php if ($course_id): ?>
@@ -231,7 +227,6 @@ if ($lesson_id) {
                     </button>
                 </div>
             </div>
-            <?php endif; ?>
             <div class="computer-based-container">
                 <!-- Left Column: Reading Texts -->
                 <div class="reading-column">
