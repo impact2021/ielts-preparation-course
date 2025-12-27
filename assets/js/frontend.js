@@ -156,7 +156,7 @@
             
             // If form is inside modal, get data from the original quiz container
             if (quizContainer.length === 0) {
-                quizContainer = $('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz');
+                quizContainer = $('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').first();
             }
             
             var quizId = quizContainer.data('quiz-id');
