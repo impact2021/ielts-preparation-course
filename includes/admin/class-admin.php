@@ -5190,6 +5190,7 @@ class IELTS_CM_Admin {
         // Get exercise metadata
         $exercise_label = get_post_meta($post_id, '_ielts_cm_exercise_label', true);
         $layout_type = get_post_meta($post_id, '_ielts_cm_layout_type', true);
+        $cbt_test_type = get_post_meta($post_id, '_ielts_cm_cbt_test_type', true);
         $open_as_popup = get_post_meta($post_id, '_ielts_cm_open_as_popup', true);
         $scoring_type = get_post_meta($post_id, '_ielts_cm_scoring_type', true);
         $timer_minutes = get_post_meta($post_id, '_ielts_cm_timer_minutes', true);
