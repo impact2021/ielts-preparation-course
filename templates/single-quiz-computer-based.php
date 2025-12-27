@@ -34,6 +34,14 @@ $audio_sections = get_post_meta($quiz->ID, '_ielts_cm_audio_sections', true);
 if (!is_array($audio_sections)) {
     $audio_sections = array();
 }
+// Sort audio sections by section_number for display
+if (!empty($audio_sections)) {
+    uasort($audio_sections, function($a, $b) {
+        $num_a = isset($a['section_number']) ? intval($a['section_number']) : 999;
+        $num_b = isset($b['section_number']) ? intval($b['section_number']) : 999;
+        return $num_a - $num_b;
+    });
+}
 // Check if we're in fullscreen mode
 $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
 
@@ -245,17 +253,21 @@ if ($lesson_id) {
                         <div class="cbt-audio-player" id="listening-audio-player">
                             <?php if (!empty($audio_sections)): ?>
                                 <!-- Multiple Audio Sections -->
+                                <?php 
+                                // Get first section key after sorting
+                                $first_section_key = key($audio_sections);
+                                ?>
                                 <div class="audio-sections-wrapper">
                                     <h3><?php _e('Listening Audio', 'ielts-course-manager'); ?></h3>
                                     <div class="audio-section-tabs">
                                         <?php foreach ($audio_sections as $index => $section): ?>
-                                            <button type="button" class="audio-section-tab" data-section="<?php echo $index; ?>">
+                                            <button type="button" class="audio-section-tab<?php echo ($index === $first_section_key) ? ' active' : ''; ?>" data-section="<?php echo $index; ?>">
                                                 <?php printf(__('Section %d', 'ielts-course-manager'), isset($section['section_number']) ? $section['section_number'] : ($index + 1)); ?>
                                             </button>
                                         <?php endforeach; ?>
                                     </div>
                                     <?php foreach ($audio_sections as $index => $section): ?>
-                                        <div class="audio-section-content" id="audio-section-<?php echo $index; ?>" style="<?php echo $index > 0 ? 'display:none;' : ''; ?>">
+                                        <div class="audio-section-content" id="audio-section-<?php echo $index; ?>" style="<?php echo ($index !== $first_section_key) ? 'display:none;' : ''; ?>">
                                             <?php if (!empty($section['audio_url'])): ?>
                                                 <audio class="section-audio-element" controls controlsList="nodownload" data-section="<?php echo $index; ?>">
                                                     <source src="<?php echo esc_url($section['audio_url']); ?>" type="audio/mpeg">
@@ -290,13 +302,13 @@ if ($lesson_id) {
                                 <h3><?php _e('Audio Transcripts', 'ielts-course-manager'); ?></h3>
                                 <div class="transcript-section-tabs">
                                     <?php foreach ($audio_sections as $index => $section): ?>
-                                        <button type="button" class="transcript-section-tab" data-section="<?php echo $index; ?>">
+                                        <button type="button" class="transcript-section-tab<?php echo ($index === $first_section_key) ? ' active' : ''; ?>" data-section="<?php echo $index; ?>">
                                             <?php printf(__('Section %d', 'ielts-course-manager'), isset($section['section_number']) ? $section['section_number'] : ($index + 1)); ?>
                                         </button>
                                     <?php endforeach; ?>
                                 </div>
                                 <?php foreach ($audio_sections as $index => $section): ?>
-                                    <div class="transcript-section-content" id="transcript-section-<?php echo $index; ?>" style="<?php echo $index > 0 ? 'display:none;' : ''; ?>">
+                                    <div class="transcript-section-content" id="transcript-section-<?php echo $index; ?>" style="<?php echo ($index !== $first_section_key) ? 'display:none;' : ''; ?>">
                                         <?php if (!empty($section['transcript'])): ?>
                                             <div class="transcript-content">
                                                 <?php echo wp_kses_post(wpautop($section['transcript'])); ?>

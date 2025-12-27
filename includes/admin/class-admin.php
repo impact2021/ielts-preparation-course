@@ -1503,7 +1503,15 @@ class IELTS_CM_Admin {
             });
             
             // Add audio section
-            var audioSectionIndex = <?php echo !empty($audio_sections) ? (max(array_keys($audio_sections)) + 1) : 0; ?>;
+            var audioSectionIndex = <?php 
+                if (!empty($audio_sections)) {
+                    $keys = array_keys($audio_sections);
+                    $numeric_keys = array_filter($keys, 'is_numeric');
+                    echo !empty($numeric_keys) ? (max($numeric_keys) + 1) : count($audio_sections);
+                } else {
+                    echo 0;
+                }
+            ?>;
             
             $('#add-audio-section').on('click', function() {
                 var sectionNumber = audioSectionIndex + 1;
@@ -2719,11 +2727,12 @@ class IELTS_CM_Admin {
      * Render audio section field
      */
     private function render_audio_section_field($index, $section) {
+        $section_number = isset($section['section_number']) ? $section['section_number'] : ($index + 1);
         ?>
         <div class="audio-section-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9; position: relative;">
             <div class="audio-section-header" style="display: flex; align-items: center; cursor: pointer; margin-bottom: 15px;">
-                <span class="dashicons dashicons-arrow-right-alt2 audio-section-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>
-                <h4 style="margin: 0; flex: 1;"><?php printf(__('Section %d', 'ielts-course-manager'), $index + 1); ?></h4>
+                <span class="dashicons dashicons-arrow-down-alt2 audio-section-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>
+                <h4 style="margin: 0; flex: 1;"><?php printf(__('Section %d', 'ielts-course-manager'), $section_number); ?></h4>
             </div>
             
             <div class="audio-section-content">
