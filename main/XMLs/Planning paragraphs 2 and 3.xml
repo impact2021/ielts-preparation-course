@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Planning paragraphs 2 and 3 - Multiple Choice Exercise -->
+<rss xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/" version="2.0">
+<channel>
+	<title>IELTStestONLINE</title>
+	<link>https://www.ieltstestonline.com</link>
+	<description>Online IELTS preparation</description>
+	<pubDate>Fri, 27 Dec 2025 02:35:00 +0000</pubDate>
+	<language>en-NZ</language>
+	<wp:wxr_version>1.2</wp:wxr_version>
+	<wp:base_site_url>https://www.ieltstestonline.com</wp:base_site_url>
+	<wp:base_blog_url>https://www.ieltstestonline.com</wp:base_blog_url>
+
+	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[impact]]></wp:author_login><wp:author_email><![CDATA[impact@ieltstestonline.com]]></wp:author_email><wp:author_display_name><![CDATA[impact]]></wp:author_display_name><wp:author_first_name><![CDATA[Patrick]]></wp:author_first_name><wp:author_last_name><![CDATA[Bourne]]></wp:author_last_name></wp:author>
+
+	<generator>IELTS Test XML Creator</generator>
+
+	<item>
+		<title><![CDATA[Planning paragraphs 2 and 3]]></title>
+		<link>https://www.ieltstestonline.com/ielts-quiz/planning-paragraphs-2-and-3/</link>
+		<pubDate>Fri, 27 Dec 2025 02:35:00 +0000</pubDate>
+		<dc:creator><![CDATA[impact]]></dc:creator>
+		<guid isPermaLink="false">https://www.ieltstestonline.com/?post_type=ielts_quiz&amp;p=9000002</guid>
+		<description/>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>9000002</wp:post_id>
+		<wp:post_date><![CDATA[2025-12-27 02:35:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2025-12-27 02:35:00]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2025-12-27 02:35:00]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2025-12-27 02:35:00]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[planning-paragraphs-2-and-3]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[ielts_quiz]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:10:{i:0;a:12:{s:4:"type";s:15:"multiple_choice";s:12:"instructions";s:205:"In the previous presentation, you saw how to prepare a plan for the first paragraph. Now we will look at planning the second paragraph.
+
+Are the ideas below suitable and accurate to include in paragraph 2?";s:8:"question";s:43:"Europe and Australasia equal in 46-60 group";s:6:"points";i:1;s:18:"no_answer_feedback";s:124:"Please select an answer. Review the bar chart data for the 46-60 age group to determine if Europe and Australasia are equal.";s:16:"correct_feedback";s:85:"Correct! This is a good point to use in the paragraph as the data supports this fact.";s:18:"incorrect_feedback";s:115:"This is correct and should be part of your plan. This is a good point to use in the paragraph as shown in the data.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:2:{i:0;a:3:{s:4:"text";s:47:"This is correct and should be part of your plan";s:10:"is_correct";b:1;s:8:"feedback";s:85:"Correct! This is a good point to use in the paragraph as the data supports this fact.";}i:1;a:3:{s:4:"text";s:41:"This is incorrect and should not be used.";s:10:"is_correct";b:0;s:8:"feedback";s:105:"This is actually correct and should be included. Europe and Australasia are equal in the 46-60 age group.";}}s:7:"options";s:89:"This is correct and should be part of your plan
+This is incorrect and should not be used.";s:14:"correct_answer";s:1:"0";s:15:"option_feedback";a:2:{i:0;s:85:"Correct! This is a good point to use in the paragraph as the data supports this fact.";i:1;s:105:"This is actually correct and should be included. Europe and Australasia are equal in the 46-60 age group.";}}i:1;a:12:{s:4:"type";s:15:"multiple_choice";s:12:"instructions";s:0:"";s:8:"question";s:43:"Smallest increase over period = Australasia";s:6:"points";i:1;s:18:"no_answer_feedback";s:107:"Please select an answer. Review which continent had the smallest increase between the two age groups shown.";s:16:"correct_feedback";s:98:"Correct! The smallest increase was North America, not Australasia, so this should not be included.";s:18:"incorrect_feedback";s:89:"The smallest increase was North America, not Australasia, so this statement is incorrect.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:2:{i:0;a:3:{s:4:"text";s:47:"This is correct and should be part of your plan";s:10:"is_correct";b:0;s:8:"feedback";s:107:"This is incorrect. The smallest increase was North America, not Australasia. Check the data more carefully.";}i:1;a:3:{s:4:"text";s:41:"This is incorrect and should not be used.";s:10:"is_correct";b:1;s:8:"feedback";s:98:"Correct! The smallest increase was North America, not Australasia, so this should not be included.";}}s:7:"options";s:89:"This is correct and should be part of your plan
+This is incorrect and should not be used.";s:14:"correct_answer";s:1:"1";s:15:"option_feedback";a:2:{i:0;s:107:"This is incorrect. The smallest increase was North America, not Australasia. Check the data more carefully.";i:1;s:98:"Correct! The smallest increase was North America, not Australasia, so this should not be included.";}}i:2;a:12:{s:4:"type";s:15:"multiple_choice";s:12:"instructions";s:0:"";s:8:"question";s:83:"Number of hours for those aged 46-60 in North America were the highest in the graph";s:6:"points";i:1;s:18:"no_answer_feedback";s:118:"Please select an answer. Consider whether North America was the highest only in this age group or in the entire graph.";s:16:"correct_feedback";s:110:"Correct! North America was the highest in this age group, but not in the whole graph, so this is not accurate.";s:18:"incorrect_feedback";s:105:"North America was the highest in this age group, but not in the whole graph. This statement is too broad.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:2:{i:0;a:3:{s:4:"text";s:47:"This is correct and should be part of your plan";s:10:"is_correct";b:0;s:8:"feedback";s:143:"This is not accurate. While North America was highest in the 46-60 age group, it was not the highest in the entire graph across all age groups.";}i:1;a:3:{s:4:"text";s:41:"This is incorrect and should not be used.";s:10:"is_correct";b:1;s:8:"feedback";s:110:"Correct! North America was the highest in this age group, but not in the whole graph, so this is not accurate.";}}s:7:"options";s:89:"This is correct and should be part of your plan
+This is incorrect and should not be used.";s:14:"correct_answer";s:1:"1";s:15:"option_feedback";a:2:{i:0;s:143:"This is not accurate. While North America was highest in the 46-60 age group, it was not the highest in the entire graph across all age groups.";i:1;s:110:"Correct! North America was the highest in this age group, but not in the whole graph, so this is not accurate.";}}i:3;a:12:{s:4:"type";s:15:"multiple_choice";s:12:"instructions";s:0:"";s:8:"question";s:40:"North America highest in both age groups";s:6:"points";i:1;s:18:"no_answer_feedback";s:111:"Please select an answer. Check the bar chart data to see if North America was highest in both age groups shown.";s:16:"correct_feedback";s:88:"Correct! North America was indeed the highest in both age groups shown in the bar chart.";s:18:"incorrect_feedback";s:98:"This is correct and should be included in your plan. North America was highest in both age groups.";s:15:"reading_text_id";i:0;s:10:"mc_options";a:2:{i:0;a:3:{s:4:"text";s:47:"This is correct and should be part of your plan";s:10:"is_correct";b:1;s:8:"feedback";s:88:"Correct! North America was indeed the highest in both age groups shown in the bar chart.";}i:1;a:3:{s:4:"text";s:41:"This is incorrect and should not be used.";s:10:"is_correct";b:0;s:8:"feedback";s:130:"This is actually correct. The bar chart clearly shows North America had the highest values in both the 39-45 and 46-60 age groups.";}}s:7:"options";s:89:"This is correct and should be part of your plan
+This is incorrect and should not be used.";s:14:"correct_answer";s:1:"0";s:15:"option_feedback";a:2:{i:0;s:88:"Correct! North America was indeed the highest in both age groups shown in the bar chart.";i:1;s:130:"This is actually correct. The bar chart clearly shows North America had the highest values in both the 39-45 and 46-60 age groups.";}}i:4;a:12:{s:4:"type";s:15:"multiple_choice";s:12:"instructions";s:0:"";s:8:"question";s:50:"Europe more than doubled over these two age ranges";s:6:"points";i:1;s:18:"no_answer_feedback";s:112:"Please select an answer. Check whether Europe's values more than doubled between the 39-45 and 46-60 age groups.";s:16:"correct_feedback";s:100:"Correct! Europe did not quite double over this period (it increased from about 9 hours to 15 hours).";s:18:"incorrect_feedback";s:91:"Europe did not quite double over this period (it increased from about 9 hours to 15 hours).";s:15:"reading_text_id";i:0;s:10:"mc_options";a:2:{i:0;a:3:{s:4:"text";s:47:"This is correct and should be part of your plan";s:10:"is_correct";b:0;s:8:"feedback";s:146:"This is incorrect. Europe increased from approximately 9 hours to 15 hours, which is less than double. To double, it would need to reach 18 hours.";}i:1;a:3:{s:4:"text";s:41:"This is incorrect and should not be used.";s:10:"is_correct";b:1;s:8:"feedback";s:100:"Correct! Europe did not quite double over this period (it increased from about 9 hours to 15 hours).";}}s:7:"options";s:89:"This is correct and should be part of your plan
+This is incorrect and should not be used.";s:14:"correct_answer";s:1:"1";s:15:"option_feedback";a:2:{i:0;s:146:"This is incorrect. Europe increased from approximately 9 hours to 15 hours, which is less than double. To double, it would need to reach 18 hours.";i:1;s:100:"Correct! Europe did not quite double over this period (it increased from about 9 hours to 15 hours).";}}i:5;a:12:{s:4:"type";s:15:"multiple_choice";s:12:"instructions";s:96:"Now move on to paragraph 3. Are the ideas below suitable and accurate to include in paragraph 3?";s:8:"question";s:44:"Australasia has sharpest increase from 46-60";s:6:"points";i:1;s:18:"no_answer_feedback";s:97:"Please select an answer. Review which continent had the sharpest increase in the 46-60 age group.";s:16:"correct_feedback";s:66:"Correct! North America had the sharpest increase, not Australasia.";s:18:"incorrect_feedback";s:57:"North America had the sharpest increase, not Australasia.";s:15:"reading_text_id";i:1;s:10:"mc_options";a:2:{i:0;a:3:{s:4:"text";s:47:"This is correct and should be part of your plan";s:10:"is_correct";b:0;s:8:"feedback";s:136:"This is incorrect. North America had the sharpest increase in this age range, not Australasia. Review the bar chart data more carefully.";}i:1;a:3:{s:4:"text";s:41:"This is incorrect and should not be used.";s:10:"is_correct";b:1;s:8:"feedback";s:66:"Correct! North America had the sharpest increase, not Australasia.";}}s:7:"options";s:89:"This is correct and should be part of your plan
+This is incorrect and should not be used.";s:14:"correct_answer";s:1:"1";s:15:"option_feedback";a:2:{i:0;s:136:"This is incorrect. North America had the sharpest increase in this age range, not Australasia. Review the bar chart data more carefully.";i:1;s:66:"Correct! North America had the sharpest increase, not Australasia.";}}i:6;a:12:{s:4:"type";s:15:"multiple_choice";s:12:"instructions";s:0:"";s:8:"question";s:34:"All three continents at their peak";s:6:"points";i:1;s:18:"no_answer_feedback";s:107:"Please select an answer. Consider whether all three continents reached their peak values in this age group.";s:16:"correct_feedback";s:66:"Correct! This is a good point and should be included in your plan.";s:18:"incorrect_feedback";s:88:"This is correct and should be part of your plan. All three continents are at their peak.";s:15:"reading_text_id";i:1;s:10:"mc_options";a:2:{i:0;a:3:{s:4:"text";s:47:"This is correct and should be part of your plan";s:10:"is_correct";b:1;s:8:"feedback";s:66:"Correct! This is a good point and should be included in your plan.";}i:1;a:3:{s:4:"text";s:41:"This is incorrect and should not be used.";s:10:"is_correct";b:0;s:8:"feedback";s:117:"This is actually correct. The data shows that all three continents reached their highest values in the 61+ age group.";}}s:7:"options";s:89:"This is correct and should be part of your plan
+This is incorrect and should not be used.";s:14:"correct_answer";s:1:"0";s:15:"option_feedback";a:2:{i:0;s:66:"Correct! This is a good point and should be included in your plan.";i:1;s:117:"This is actually correct. The data shows that all three continents reached their highest values in the 61+ age group.";}}i:7;a:12:{s:4:"type";s:15:"multiple_choice";s:12:"instructions";s:0:"";s:8:"question";s:61:"North America higher than other continents for the first time";s:6:"points";i:1;s:18:"no_answer_feedback";s:128:"Please select an answer. Review the data across all age groups to determine if this is the first time North America was highest.";s:16:"correct_feedback";s:156:"Correct! North America is highest, but not for the first time. It was the highest in all age ranges except for 19-38, when it was joint highest with Europe.";s:18:"incorrect_feedback";s:147:"North America is highest, but not for the first time. It was the highest in all age ranges except for 19-38, when it was joint highest with Europe.";s:15:"reading_text_id";i:1;s:10:"mc_options";a:2:{i:0;a:3:{s:4:"text";s:47:"This is correct and should be part of your plan";s:10:"is_correct";b:0;s:8:"feedback";s:183:"This is not accurate. North America was already the highest in previous age groups (except 19-38 where it was joint highest with Europe), so this is not the first time it was highest.";}i:1;a:3:{s:4:"text";s:41:"This is incorrect and should not be used.";s:10:"is_correct";b:1;s:8:"feedback";s:156:"Correct! North America is highest, but not for the first time. It was the highest in all age ranges except for 19-38, when it was joint highest with Europe.";}}s:7:"options";s:89:"This is correct and should be part of your plan
+This is incorrect and should not be used.";s:14:"correct_answer";s:1:"1";s:15:"option_feedback";a:2:{i:0;s:183:"This is not accurate. North America was already the highest in previous age groups (except 19-38 where it was joint highest with Europe), so this is not the first time it was highest.";i:1;s:156:"Correct! North America is highest, but not for the first time. It was the highest in all age ranges except for 19-38, when it was joint highest with Europe.";}}i:8;a:12:{s:4:"type";s:15:"multiple_choice";s:12:"instructions";s:0:"";s:8:"question";s:40:"Continents ranked in same order as 39-45";s:6:"points";i:1;s:18:"no_answer_feedback";s:120:"Please select an answer. Compare the ranking of continents in the 61+ age group with the ranking in the 39-45 age group.";s:16:"correct_feedback";s:127:"Correct! This is a good point and should be included in your plan (North America highest, Australasia second and Europe third).";s:18:"incorrect_feedback";s:107:"This is correct and should be included. The continents are ranked in the same order as the 39-45 age group.";s:15:"reading_text_id";i:1;s:10:"mc_options";a:2:{i:0;a:3:{s:4:"text";s:47:"This is correct and should be part of your plan";s:10:"is_correct";b:1;s:8:"feedback";s:127:"Correct! This is a good point and should be included in your plan (North America highest, Australasia second and Europe third).";}i:1;a:3:{s:4:"text";s:41:"This is incorrect and should not be used.";s:10:"is_correct";b:0;s:8:"feedback";s:157:"This is actually correct. The ranking is the same in both age groups: North America is highest, followed by Australasia in second, and Europe in third place.";}}s:7:"options";s:89:"This is correct and should be part of your plan
+This is incorrect and should not be used.";s:14:"correct_answer";s:1:"0";s:15:"option_feedback";a:2:{i:0;s:127:"Correct! This is a good point and should be included in your plan (North America highest, Australasia second and Europe third).";i:1;s:157:"This is actually correct. The ranking is the same in both age groups: North America is highest, followed by Australasia in second, and Europe in third place.";}}i:9;a:12:{s:4:"type";s:15:"multiple_choice";s:12:"instructions";s:0:"";s:8:"question";s:56:"Each continent more than doubled from previous age range";s:6:"points";i:1;s:18:"no_answer_feedback";s:114:"Please select an answer. Check whether each continent's values more than doubled from the 46-60 to 61+ age groups.";s:16:"correct_feedback";s:66:"Correct! This is a good point and should be included in your plan.";s:18:"incorrect_feedback";s:101:"This is correct and should be included. Each continent more than doubled from the previous age range.";s:15:"reading_text_id";i:1;s:10:"mc_options";a:2:{i:0;a:3:{s:4:"text";s:47:"This is correct and should be part of your plan";s:10:"is_correct";b:1;s:8:"feedback";s:66:"Correct! This is a good point and should be included in your plan.";}i:1;a:3:{s:4:"text";s:41:"This is incorrect and should not be used.";s:10:"is_correct";b:0;s:8:"feedback";s:124:"This is actually correct. The data shows that each continent more than doubled their values from the 46-60 age range to 61+.";}}s:7:"options";s:89:"This is correct and should be part of your plan
+This is incorrect and should not be used.";s:14:"correct_answer";s:1:"0";s:15:"option_feedback";a:2:{i:0;s:66:"Correct! This is a good point and should be included in your plan.";i:1;s:124:"This is actually correct. The data shows that each continent more than doubled their values from the 46-60 age range to 61+.";}}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:2:{i:0;a:2:{s:5:"title";s:32:"Planning Paragraph 2 - Bar Chart";s:7:"content";s:132:"<img src="https://www.ieltstestonline.com/2026/wp-content/uploads/2025/12/barcharts.png" alt="Bar chart for paragraph 2 planning" />";}i:1;a:2:{s:5:"title";s:32:"Planning Paragraph 3 - Bar Chart";s:7:"content";s:134:"<img src="https://www.ieltstestonline.com/2026/wp-content/uploads/2025/12/barcharts-2.png" alt="Bar chart for paragraph 3 planning" />";}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[70]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[computer_based]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_exercise_label]]></wp:meta_key>
+			<wp:meta_value><![CDATA[exercise]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_open_as_popup]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_scoring_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[percentage]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[10]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_course_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_lesson_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_course_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_ielts_cm_lesson_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+</channel>
+</rss>
