@@ -726,10 +726,10 @@
                                                  quizContainer.data('test-type') === 'listening';
                             if (isListeningQuiz) {
                                 var audioPlayerContainer = quizContainer.find('#listening-audio-player');
-                                var transcriptContainer = quizContainer.find('#listening-transcript');
+                                var transcriptContainer = quizContainer.find('#listening-transcript, #listening-transcripts');
                                 
                                 if (audioPlayerContainer.length && transcriptContainer.length) {
-                                    // Hide audio player and show transcript
+                                    // Hide audio player and show transcript(s)
                                     audioPlayerContainer.fadeOut(300, function() {
                                         transcriptContainer.fadeIn(300);
                                     });
@@ -837,7 +837,37 @@
             }
         }
         
-        // Detect scroll position and switch reading text automatically
+        // Function to switch audio section based on question
+        var currentAudioSectionId = null;
+        function switchAudioSection(questionElement) {
+            var audioSectionId = questionElement.data('audio-section-id');
+            
+            // Only switch if the question has a linked audio section
+            if (audioSectionId && audioSectionId !== '') {
+                // Check if we're switching to a different section
+                var isDifferentSection = (currentAudioSectionId !== audioSectionId);
+                
+                // Only hide/show when actually switching to a different section
+                if (isDifferentSection) {
+                    // Hide all audio sections
+                    $('.audio-section-content').hide();
+                    // Show the linked audio section
+                    $('#audio-section-' + audioSectionId).fadeIn(300);
+                    
+                    // Update tab buttons
+                    $('.audio-section-tab').removeClass('active');
+                    $('.audio-section-tab[data-section="' + audioSectionId + '"]').addClass('active');
+                    
+                    // Update the current audio section ID
+                    currentAudioSectionId = audioSectionId;
+                }
+            } else {
+                // If no valid audio section, reset the tracking variable
+                currentAudioSectionId = null;
+            }
+        }
+        
+        // Detect scroll position and switch reading text/audio section automatically
         if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
             var questionsColumn = $('.questions-column');
             var scrollTimeout;
@@ -868,10 +898,30 @@
                     
                     if (closestQuestion) {
                         switchReadingText(closestQuestion);
+                        switchAudioSection(closestQuestion);
                     }
                 }, 150); // Debounce scroll events
             });
         }
+        
+        // Manual audio section tab switching
+        $(document).on('click', '.audio-section-tab', function() {
+            var sectionId = $(this).data('section');
+            $('.audio-section-content').hide();
+            $('#audio-section-' + sectionId).fadeIn(300);
+            $('.audio-section-tab').removeClass('active');
+            $(this).addClass('active');
+            currentAudioSectionId = sectionId;
+        });
+        
+        // Manual transcript section tab switching
+        $(document).on('click', '.transcript-section-tab', function() {
+            var sectionId = $(this).data('section');
+            $('.transcript-section-content').hide();
+            $('#transcript-section-' + sectionId).fadeIn(300);
+            $('.transcript-section-tab').removeClass('active');
+            $(this).addClass('active');
+        });
         
         // Track answered questions in computer-based layout using event delegation
         $('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').on('change', 'input[type="radio"]', function() {
@@ -1493,7 +1543,7 @@
             
             var audioPlayerContainer = $('#listening-audio-player');
             var audioElement = document.getElementById('listening-audio');
-            var transcriptContainer = $('#listening-transcript');
+            var transcriptContainer = $('#listening-transcript, #listening-transcripts');
             
             if (audioElement) {
                 if (isListeningPractice) {
