@@ -708,6 +708,20 @@
                                 
                                 timerElement.html('<div class="timer-left-section">' + navLinksHtml + '</div>' + scoreHtml);
                             }
+                            
+                            // For listening quizzes, show transcript after results are displayed
+                            if (quizContainer.hasClass('ielts-listening-practice-quiz') || 
+                                quizContainer.hasClass('ielts-listening-exercise-quiz')) {
+                                var audioPlayerContainer = $('#listening-audio-player');
+                                var transcriptContainer = $('#listening-transcript');
+                                
+                                if (audioPlayerContainer.length && transcriptContainer.length) {
+                                    // Hide audio player and show transcript
+                                    audioPlayerContainer.fadeOut(300, function() {
+                                        transcriptContainer.fadeIn(300);
+                                    });
+                                }
+                            }
                         }
                     } else {
                         showMessage('error', response.data.message || 'Failed to submit quiz');
@@ -1518,17 +1532,8 @@
                     });
                 }
                 
-                // Show transcript and audio controls after submission
-                $('#ielts-quiz-form').on('submit', function(e) {
-                    // After the quiz is submitted, show the transcript
-                    setTimeout(function() {
-                        // Hide audio player
-                        audioPlayerContainer.fadeOut(300, function() {
-                            // Show transcript
-                            transcriptContainer.fadeIn(300);
-                        });
-                    }, 500);
-                });
+                // Note: Transcript display is now handled in the main quiz submission success callback
+                // to ensure proper timing and avoid race conditions with the results modal
             }
         }
     });
