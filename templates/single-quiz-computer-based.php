@@ -280,6 +280,16 @@ if ($lesson_id) {
                             <!-- Multiple Transcripts -->
                             <div id="listening-transcripts" class="listening-transcripts" style="display: none;">
                                 <h3><?php _e('Audio Transcripts', 'ielts-course-manager'); ?></h3>
+                                
+                                <!-- Audio control shown at the top, above transcripts -->
+                                <?php if (!empty($audio_url)): ?>
+                                    <div class="transcript-audio-controls">
+                                        <audio controls controlsList="nodownload">
+                                            <source src="<?php echo esc_url($audio_url); ?>" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                <?php endif; ?>
+                                
                                 <div class="transcript-section-tabs">
                                     <?php foreach ($audio_sections as $index => $section): ?>
                                         <button type="button" class="transcript-section-tab<?php echo ($index === $first_section_key) ? ' active' : ''; ?>" data-section="<?php echo esc_attr($index); ?>">
@@ -298,8 +308,13 @@ if ($lesson_id) {
                                         <?php endif; ?>
                                     </div>
                                 <?php endforeach; ?>
+                            </div>
+                        <?php elseif (!empty($transcript)): ?>
+                            <!-- Fallback: Single Transcript (backward compatibility) -->
+                            <div id="listening-transcript" class="listening-transcript" style="display: none;">
+                                <h3><?php _e('Audio Transcript', 'ielts-course-manager'); ?></h3>
                                 
-                                <!-- Single audio control for all sections -->
+                                <!-- Audio controls shown above transcript after submission -->
                                 <?php if (!empty($audio_url)): ?>
                                     <div class="transcript-audio-controls">
                                         <audio controls controlsList="nodownload">
@@ -307,11 +322,7 @@ if ($lesson_id) {
                                         </audio>
                                     </div>
                                 <?php endif; ?>
-                            </div>
-                        <?php elseif (!empty($transcript)): ?>
-                            <!-- Fallback: Single Transcript (backward compatibility) -->
-                            <div id="listening-transcript" class="listening-transcript" style="display: none;">
-                                <h3><?php _e('Audio Transcript', 'ielts-course-manager'); ?></h3>
+                                
                                 <div class="transcript-content">
                                     <?php echo wp_kses_post(wpautop($transcript)); ?>
                                 </div>
