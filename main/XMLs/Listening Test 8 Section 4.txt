@@ -1,0 +1,120 @@
+<div id="text" class="style1">
+
+<strong>SECTION 4</strong>
+
+[audio mp3="https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0008-4.mp3"][/audio]
+
+<strong>Questions 31-40</strong>
+
+<strong>Questions 31-33</strong>
+
+Choose the correct letter A, B or C.
+
+31. Using the internet for research
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>is increasingly discouraged for academic study</li>
+ 	<li>has more dangers than advantages</li>
+ 	<li>is sometimes the only way to access certain materials</li>
+</ol>
+</div>
+31. {C}
+
+32. One of the main risks of internet research is
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>web pages are increasingly difficult to update</li>
+ 	<li>people in the same field may not have had the opportunity to comment on its value</li>
+ 	<li>information is potentially copyrighted</li>
+</ol>
+32. {B}
+<div id="text" class="style1">
+
+33. One well-known website
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>has purposefully added erroneous information</li>
+ 	<li>is considering allowing users to make modifications to texts</li>
+ 	<li>has suffered from users entering false or misleading information</li>
+</ol>
+</div>
+33. {C}
+<div id="text" class="style1">
+
+<hr />
+
+<strong>Questions 34-40</strong>
+
+Complete the summary below using<strong> NO MORE THAN TWO WORDS OR A NUMBER</strong>
+
+<em><strong>The CARS method of evaluating internet sources</strong></em>
+
+<strong>Credibility</strong>:
+<ul>
+ 	<li>who is [34] {RESPONSIBLE} for the information given</li>
+ 	<li>where there is a given [35] {[PHYSICAL LOCATION][LOCATION]} to know exactly where the author(s) is/are based</li>
+</ul>
+<strong>Accuracy: </strong>
+<ul>
+ 	<li>be aware of errors in grammar and spelling</li>
+ 	<li>check for a [36] {DATE} stamp</li>
+</ul>
+<strong>Reasonableness</strong>
+<ul>
+ 	<li>should be written neutrally without being excessively emotional</li>
+ 	<li>check that the web address is [37] {APPROPRIATE} to material you are researching</li>
+ 	<li>[38] {ADVERTISING} should not be mixed with the main content of the site</li>
+</ul>
+<strong>Support</strong>
+<ul>
+ 	<li>Make sure all claims can be substantiated</li>
+ 	<li>Sources should be cited</li>
+ 	<li>Corroborate information from at least [39] {[3][THREE]} different sites.</li>
+</ul>
+General note: as well as the <em><strong>CARS</strong></em> test, a good indicator of useful information is [40] {COMMON SENSE}
+
+</div>
+
+&nbsp;
+<table border="0" width="100%" cellpadding="10px">
+<tbody>
+<tr>
+<td valign="top">Answers:
+<ol start="31">
+ 	<li>C</li>
+ 	<li>B</li>
+ 	<li>C</li>
+ 	<li>RESPONSIBLE</li>
+ 	<li>PHYSICAL LOCATION</li>
+ 	<li>DATE MODIFIED</li>
+ 	<li>APPROPRIATE</li>
+ 	<li>ADVERTISING (NOT 'ADVERTISEMENT' BECAUSE THAT WOULD NOT GRAMMATICALLY FIT THE SENTENCE, AND NOT 'ADVERTISEMENTS' BECAUSE THAT WASN'T SAID IN THE RECORDING)</li>
+ 	<li>3</li>
+ 	<li>COMMON SENSE</li>
+</ol>
+</td>
+<td valign="top" width="50%">
+<div style="height: 300px; overflow: scroll;">
+
+<strong>Section 4</strong>
+
+These days, when most people are looking for an answer to a question, the first place they go is the internet. In academic circles, this has also become increasingly true, with internet research becoming the prime location for finding information, with many published materials now only being available online. Although there are clearly benefits to this, in that the internet can deliver results quickly and, in many cases, from the comfort of your own home, there are also a number of pitfalls that you need to be aware of.
+
+To begin, it is worth considering how information may end up on the internet in the first place. These days, even young children have the ability to create simple web pages which they can choose to fill with any information they deem fit. Add to that an understanding of how many search engines work, and you are left with the potential for completely erroneous information to be indexed and found by the researching surfer. The process of ‘peer review’ that traditionally kept poor information from being acknowledged is considerably more limited on the internet. A good example of this is the popular website ‘Wikipedia’. Claiming to be an ‘online encyclopaedia’ and built by the contributions of the internet-surfing public, this site has a reputation for incorrect content and unsubstantiated commentary, so much so that the founder of the site is now considering preventing users from editing the sources.
+
+In order to use the internet as a credible research tool, there is a basic checklist that can help you decide whether the information has value or not. This is commonly known as the CARS checklist, with the acronym standing for credibility, accuracy, reasonableness and support. Let’s consider first of all the first step – credibility.  Is it clear which person, company or organization is responsible for the information on the site?  Is there a link to a page describing what the company or organization does and the people who are involved? This must be more than a simple email address – it needs to be a physical location. Also, can the expertise of the author be verified? Are the writer’s qualifications clearly stated somewhere on the site?
+
+So if the course you are looking at passes the first critical analysis, you will then want to try to determine the accuracy of the information you are being presented with. Again, asking yourself a series of questions can help you decide. Are there many grammatical and spelling errors? A notable number of errors could indicate that the content is not credible. How long ago was the page updated? Often there is a ‘date modified’ stamp somewhere on the page (commonly at the bottom, in the footer of the page).
+
+If you are satisfied with the credibility and accuracy of the material, you will then need to consider the reasonableness of the page you are viewing. Is the information presented neutrally, or is the writing attempting to ‘sell’ something – a point of view or a personal bias, for example? Check that the writing appears fair and balanced, and that it does not slant unfairly towards a particular direction. Angry or overly critical tones suggest that the information is not a suitable reference for academic work. Ideally what you are looking for is a calm, reasoned tone, arguing or presenting material thoughtfully and without being overly emotional. It’s also good practice to check that the website address, the section that begins with ‘www’, is appropriate to the content. For example, if you were researching the environmental impact of vehicle pollution, you would not expect a balanced point of view from a car manufacturer’s website. A final point with regards motivation is looking at the advertising that may be on the site. Some advertising, clearly separated from the content of the page, is acceptable, but if content and advertisement almost seem to merge with one another, it might be time to reconsider the source.
+
+Finally comes support. Are all factual claims clearly substantiated; that is, are there cited sources? Is there a bibliography or similar documentation? Can it be corroborated on other sites? It is worth keeping in mind that most information, if it is factually accurate, can be found in other sources. It is generally accepted that finding the same information in 3 separate sites, assuming they have all passed the previous three tests, is sufficient support to be credible.
+
+Following these basic steps can certainly help you steer clear of some of the worst websites, but while it may still be difficult to universally determine what aspects to look for in a good (or bad) source, there are several sorts of websites that can be useful source materials for the researcher.  Many museums, for example, have websites, either describing their collections in general, or showing a detailed gallery of their collections. Another excellent feature of such sites is that information can be verified or additional information can be sought by contacting the museum via the email addresses commonly present on such websites.
+
+Another good source for reliable information can be online art galleries. Although the pictures in online art galleries are often simply scanned from art books, many of these websites can be helpful for viewing pictures (often in larger sizes or better detail than available in some print resources) as well as getting general information about the artists, such as their biography or background to the environment in which they lived.
+
+And perhaps the final piece of advice that I can offer about research in the internet is simply to use common sense. Some pieces of work may pass the CARS test but still leave you with some sense of disquiet. If that’s the case, it’s much better to leave it and move on.
+
+</div></td>
+</tr>
+</tbody>
+</table>
+&nbsp;
