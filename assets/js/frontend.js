@@ -672,7 +672,9 @@
                                             
                                             // Add correct answer text if available
                                             if (correctIndex >= 0 && correctIndex < options.length) {
-                                                var correctOptionText = options[correctIndex].text || options[correctIndex];
+                                                var correctOptionText = typeof options[correctIndex] === 'object' 
+                                                    ? options[correctIndex].text 
+                                                    : options[correctIndex];
                                                 if (correctOptionText) {
                                                     feedbackText += '<br><br><strong>The correct answer is:</strong> ' + 
                                                                    $('<div>').text(correctOptionText).html(); // Escape HTML
