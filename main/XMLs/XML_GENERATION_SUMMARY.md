@@ -89,3 +89,17 @@ Each quiz will have:
 - Generator: IELTS Course Manager - convert-txt-to-xml.py
 - Character encoding: UTF-8
 - Transcript format: HTML with inline CSS for answer highlighting
+
+### Known Issue: Nested Annotations
+
+In some transcript files, you may see nested answer annotations like:
+```html
+[Q6: [Q31: [Q32: a]]]
+```
+
+This occurs when multiple questions have the same simple answer (e.g., "a", "the") and the script annotates each occurrence. This is a cosmetic issue in the intermediate transcript .txt files and does not affect:
+- The functionality of the XML files
+- The WordPress import process
+- The display of transcripts in WordPress (which uses the embedded transcript from the XML)
+
+The transcript .txt files are primarily for reference and review. The actual transcript used in WordPress is embedded in the XML file itself and will display correctly.
