@@ -1529,10 +1529,10 @@ class IELTS_CM_Admin {
                 var sectionNumber = parseInt(audioSectionIndex) + 1;
                 var html = '<div class="audio-section-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9; position: relative;">' +
                     '<div class="audio-section-header" style="display: flex; align-items: center; cursor: pointer; margin-bottom: 15px;">' +
-                    '<span class="dashicons dashicons-arrow-down-alt2 audio-section-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>' +
+                    '<span class="dashicons dashicons-arrow-right-alt2 audio-section-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>' +
                     '<h4 style="margin: 0; flex: 1;"><?php echo esc_js(__('Section', 'ielts-course-manager')); ?> ' + parseInt(sectionNumber) + '</h4>' +
                     '</div>' +
-                    '<div class="audio-section-content">' +
+                    '<div class="audio-section-content" style="display: none;">' +
                     '<p>' +
                     '<label><?php echo esc_js(__('Section Number', 'ielts-course-manager')); ?></label><br>' +
                     '<input type="number" name="audio_sections[' + parseInt(audioSectionIndex) + '][section_number]" value="' + parseInt(sectionNumber) + '" min="1" max="4" style="width: 100px;" placeholder="1">' +
@@ -2709,11 +2709,11 @@ class IELTS_CM_Admin {
         ?>
         <div class="audio-section-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9; position: relative;">
             <div class="audio-section-header" style="display: flex; align-items: center; cursor: pointer; margin-bottom: 15px;">
-                <span class="dashicons dashicons-arrow-down-alt2 audio-section-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>
+                <span class="dashicons dashicons-arrow-right-alt2 audio-section-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>
                 <h4 style="margin: 0; flex: 1;"><?php printf(__('Section %d', 'ielts-course-manager'), $section_number); ?></h4>
             </div>
             
-            <div class="audio-section-content">
+            <div class="audio-section-content" style="display: none;">
                 <p>
                     <label><?php _e('Section Number', 'ielts-course-manager'); ?></label><br>
                     <input type="number" name="audio_sections[<?php echo $index; ?>][section_number]" value="<?php echo esc_attr(isset($section['section_number']) ? $section['section_number'] : ($index + 1)); ?>" min="1" max="4" style="width: 100px;" placeholder="1">

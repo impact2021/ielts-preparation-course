@@ -428,6 +428,14 @@ body.ielts-course-archive .content-area {
     background: #f9f9f9;
 }
 
+/* Prevent hover from overriding feedback colors in standard quiz */
+.ielts-single-quiz .option-label.answer-correct:hover,
+.ielts-single-quiz .option-label.answer-incorrect:hover,
+.ielts-single-quiz .option-label.answer-correct-highlight:hover {
+    background: inherit !important;
+    border-color: inherit !important;
+}
+
 .ielts-single-quiz .option-label input[type="radio"] {
     margin: 0;
 }
@@ -2102,6 +2110,17 @@ select.answer-select-inline.answer-incorrect {
 .ielts-listening-exercise-quiz .option-label:hover {
     background: #f0f7ff;
     border-color: #0073aa;
+}
+
+/* Prevent hover from overriding feedback colors in listening quizzes */
+.ielts-listening-practice-quiz .option-label.answer-correct:hover,
+.ielts-listening-exercise-quiz .option-label.answer-correct:hover,
+.ielts-listening-practice-quiz .option-label.answer-incorrect:hover,
+.ielts-listening-exercise-quiz .option-label.answer-incorrect:hover,
+.ielts-listening-practice-quiz .option-label.answer-correct-highlight:hover,
+.ielts-listening-exercise-quiz .option-label.answer-correct-highlight:hover {
+    background: inherit !important;
+    border-color: inherit !important;
 }
 
 .ielts-listening-practice-quiz .option-label input[type="radio"],
