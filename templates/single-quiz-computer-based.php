@@ -44,6 +44,9 @@ if (!empty($audio_sections)) {
     // Get first section key for default active tab
     reset($audio_sections);
     $first_section_key = key($audio_sections);
+    if ($first_section_key === null) {
+        $first_section_key = 0;
+    }
 } else {
     $first_section_key = 0;
 }
