@@ -87,8 +87,9 @@ def annotate_transcript(transcript, questions):
             pattern = r'\b(' + pattern_text + r')\b'
             
             # Try to find and annotate (case-insensitive)
+            # Note: Yellow highlighting added per user request for easy visibility
             def replace_func(m):
-                return f'<strong>[Q{q_num}: {escape(m.group(1))}]</strong>'
+                return f'<strong style="background-color: yellow;">[Q{q_num}: {escape(m.group(1))}]</strong>'
             
             new_annotated = re.sub(pattern, replace_func, annotated, count=1, flags=re.IGNORECASE)
             

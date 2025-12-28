@@ -14,7 +14,7 @@
 </tr>
 <tr>
 <td width="25%">Man:</td>
-<td width="75%">I did do a short introduction to driving course at <strong>[Q1: high school]</strong>, and I learned to drive with my father before that.  But I want to get my license, so I need to have some lessons from your school.</td>
+<td width="75%">I did do a short introduction to driving course at <strong style="background-color: yellow;">[Q1: high school]</strong>, and I learned to drive with my father before that.  But I want to get my license, so I need to have some lessons from your school.</td>
 </tr>
 <tr>
 <td width="25%">Receptionist:</td>
@@ -22,7 +22,7 @@
 </tr>
 <tr>
 <td width="25%">Man:</td>
-<td width="75%">That was last year – no, sorry, that was <strong>[Q2: two years]</strong> ago. I have a certificate for that course here with me now. Do you need to see it?</td>
+<td width="75%">That was last year – no, sorry, that was <strong style="background-color: yellow;">[Q2: two years]</strong> ago. I have a certificate for that course here with me now. Do you need to see it?</td>
 </tr>
 <tr>
 <td width="25%">Receptionist:</td>
@@ -34,7 +34,7 @@
 </tr>
 <tr>
 <td width="25%">Receptionist:</td>
-<td width="75%">Well, we have a range of different lessons and times, so let me show you the schedule.  You can do a full-time course – that takes five days, from Monday to Friday, and the lessons are for <strong>[Q3: three hours]</strong> each day. Or you can do three weekends - well, Saturdays actually - five hours each Saturday day, from 9 in the morning until 2 in the afternoon.</td>
+<td width="75%">Well, we have a range of different lessons and times, so let me show you the schedule.  You can do a full-time course – that takes five days, from Monday to Friday, and the lessons are for <strong style="background-color: yellow;">[Q3: three hours]</strong> each day. Or you can do three weekends - well, Saturdays actually - five hours each Saturday day, from 9 in the morning until 2 in the afternoon.</td>
 </tr>
 <tr>
 <td width="25%">Man:</td>
@@ -42,7 +42,7 @@
 </tr>
 <tr>
 <td width="25%">Receptionist:</td>
-<td width="75%">Ok, with the five-day course, that’s 10 a.m. to 1 p.m. from Monday to Friday. You drive in the city for four days, and will learn about parking, driving in traffic and all the essentials… and then there is one day for learning all the <strong>[Q4: road rules]</strong> and regulations.  You do the theory on the second day, so that you understand everything while you’re learning to drive.</td>
+<td width="75%">Ok, with the five-day course, that’s 10 a.m. to 1 p.m. from Monday to Friday. You drive in the city for four days, and will learn about parking, driving in traffic and all the essentials… and then there is one day for learning all the <strong style="background-color: yellow;">[Q4: road rules]</strong> and regulations.  You do the theory on the second day, so that you understand everything while you’re learning to drive.</td>
 </tr>
 <tr>
 <td width="25%">Man:</td>

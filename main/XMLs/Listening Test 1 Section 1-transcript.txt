@@ -10,7 +10,7 @@
 </tr>
 <tr>
 <td valign="top" width="20%">Telephone operator</td>
-<td valign="top" width="80%">Yes we do. We run language classes of course, a settlement support programme and we also offer a new mentoring programme which we're actually trialling for <strong>[Q2: 3]</strong> months starting next week.
+<td valign="top" width="80%">Yes we do. We run language classes of course, a settlement support programme and we also offer a new mentoring programme which we're actually trialling for <strong style="background-color: yellow;">[Q2: 3]</strong> months starting next week.
 Can I ask, are you a permanent resident?</td>
 </tr>
 <tr>
@@ -23,11 +23,11 @@ Can I ask, are you a permanent resident?</td>
 </tr>
 <tr>
 <td valign="top" width="20%">Woman</td>
-<td valign="top" width="80%">Well, I am interested in the settlement support programme and the Mentoring Programme, I am finding it difficult to get a job interview you see. I arrived in the country (Q1) <strong>[Q1: two months]</strong> ago. My husband work full-time but I am looking for work too. Just a part-time job to start with as we have two young children. I'm not sure which course would suit me best. Could you give me some more information about those please?</td>
+<td valign="top" width="80%">Well, I am interested in the settlement support programme and the Mentoring Programme, I am finding it difficult to get a job interview you see. I arrived in the country (Q1) <strong style="background-color: yellow;">[Q1: two months]</strong> ago. My husband work full-time but I am looking for work too. Just a part-time job to start with as we have two young children. I'm not sure which course would suit me best. Could you give me some more information about those please?</td>
 </tr>
 <tr>
 <td valign="top" width="20%">Telephone operator</td>
-<td valign="top" width="80%">Well the Settlement Support Programme is (Q2) three weeks long and students need to attend class (Q3) <strong>[Q3: 4]</strong> days a week. The focus is on settling into work in a new country, so we provide help with searching for jobs, enrolling with employment agencies, writing a CV and writing application letters.</td>
+<td valign="top" width="80%">Well the Settlement Support Programme is (Q2) three weeks long and students need to attend class (Q3) <strong style="background-color: yellow;">[Q3: 4]</strong> days a week. The focus is on settling into work in a new country, so we provide help with searching for jobs, enrolling with employment agencies, writing a CV and writing application letters.</td>
 </tr>
 <tr>
 <td valign="top" width="20%">Woman</td>
@@ -35,7 +35,7 @@ Can I ask, are you a permanent resident?</td>
 </tr>
 <tr>
 <td valign="top" width="20%">Telephone operator</td>
-<td valign="top" width="80%">For the Settlement Support Programme, we do recommend that students buy a handbook which accompanies the course - it's not compulsory to buy but it only costs ₤10.99 if you buy direct from the bookstore so we do recommend that you purchase your own copy if you are able to. We can place a bulk order for the book at the beginning of the course and students only pay (Q4) ₤<strong>[Q4: 7.95]</strong> if they order early enough to qualify for the discount.</td>
+<td valign="top" width="80%">For the Settlement Support Programme, we do recommend that students buy a handbook which accompanies the course - it's not compulsory to buy but it only costs ₤10.99 if you buy direct from the bookstore so we do recommend that you purchase your own copy if you are able to. We can place a bulk order for the book at the beginning of the course and students only pay (Q4) ₤<strong style="background-color: yellow;">[Q4: 7.95]</strong> if they order early enough to qualify for the discount.</td>
 </tr>
 <tr>
 <td valign="top" width="20%">Woman</td>
@@ -43,7 +43,7 @@ Can I ask, are you a permanent resident?</td>
 </tr>
 <tr>
 <td valign="top" width="20%">Telephone operator</td>
-<td valign="top" width="80%">Well these are one to one sessions instead of a group class. They run for two weeks with two (Q5) <strong>[Q5: one hour]</strong> sessions each week. The idea is that if you are having any specific difficulties settling in to your new life, be that work, or social issues, your mentor can talk with you and give suggestions and advice on how to make things better. We currently have (Q6) 15 mentors on the team and each will mentor (Q7) four clients per week. The mentor programme is free but we suggest people join the Settlement Support Programme first then enrol on a Mentor Programme afterwards if they still feel in need of additional support.</td>
+<td valign="top" width="80%">Well these are one to one sessions instead of a group class. They run for two weeks with two (Q5) <strong style="background-color: yellow;">[Q5: one hour]</strong> sessions each week. The idea is that if you are having any specific difficulties settling in to your new life, be that work, or social issues, your mentor can talk with you and give suggestions and advice on how to make things better. We currently have (Q6) 15 mentors on the team and each will mentor (Q7) four clients per week. The mentor programme is free but we suggest people join the Settlement Support Programme first then enrol on a Mentor Programme afterwards if they still feel in need of additional support.</td>
 </tr>
 <tr>
 <td valign="top" width="20%">Woman</td>

@@ -35,17 +35,20 @@ python3 extract-annotated-transcript-from-xml.py "Listening Test 1 Section 1.xml
 
 ## What is an Annotated Transcript?
 
-An annotated transcript is an HTML version of the listening test transcript where each answer is marked with a tag like `<strong>[Q1: answer]</strong>`.
+An annotated transcript is an HTML version of the listening test transcript where each answer is marked with a **yellow-highlighted** tag like `<strong style="background-color: yellow;">[Q1: answer]</strong>`.
 
 **Example:**
 ```html
-<td>We'd like to stay for <strong>[Q1: 4]</strong> nights please.</td>
+<td>We'd like to stay for <strong style="background-color: yellow;">[Q1: 4]</strong> nights please.</td>
 ```
+
+**Visual appearance:** The answer markers will appear with a yellow background, making them easy to spot at a glance.
 
 This makes it easy to:
 - Copy and paste into WordPress or other systems
 - Review where answers appear in the transcript
 - Create study materials for students
+- Quickly identify answer locations with yellow highlighting
 
 ## Examples
 
