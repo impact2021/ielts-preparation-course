@@ -1282,8 +1282,19 @@ class IELTS_CM_Admin {
         }
         ?>
         <div id="cbt-audio-section" style="<?php echo ($layout_type !== 'computer_based' || $cbt_test_type !== 'listening') ? 'display:none;' : ''; ?>">
-            <h3><?php _e('Listening Audio Sections', 'ielts-course-manager'); ?></h3>
-            <p><small><?php _e('Add transcript sections for the listening test. The audio file is set above and applies to all sections. If you add multiple sections, they will be displayed in tabs after the student submits their answers.', 'ielts-course-manager'); ?></small></p>
+            <h3><?php _e('Listening Audio & Transcripts', 'ielts-course-manager'); ?></h3>
+            
+            <div style="margin-bottom: 20px; padding: 15px; background: #f0f7ff; border: 1px solid #0073aa; border-radius: 4px;">
+                <p style="margin-top: 0;">
+                    <label for="ielts_cm_audio_url"><strong><?php _e('Audio File (Required)', 'ielts-course-manager'); ?></strong></label><br>
+                    <input type="url" id="ielts_cm_audio_url" name="ielts_cm_audio_url" value="<?php echo esc_attr($audio_url); ?>" style="width: calc(100% - 150px); margin-right: 10px;" placeholder="https://example.com/audio.mp3">
+                    <button type="button" class="button upload-audio-btn"><?php _e('Upload Audio', 'ielts-course-manager'); ?></button>
+                    <br><small><?php _e('This SINGULAR audio file will be used for the entire listening exercise. You can upload an MP3 file or enter a direct URL.', 'ielts-course-manager'); ?></small>
+                </p>
+            </div>
+            
+            <h4><?php _e('Transcripts', 'ielts-course-manager'); ?></h4>
+            <p><small><?php _e('Add one or more transcripts for the audio. If you add multiple transcripts, they will be displayed in separate tabs after the student submits their answers.', 'ielts-course-manager'); ?></small></p>
             
             <div id="audio-sections-container">
                 <?php if (!empty($audio_sections)): ?>
@@ -1292,7 +1303,7 @@ class IELTS_CM_Admin {
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
-            <button type="button" class="button" id="add-audio-section"><?php _e('Add Audio Section', 'ielts-course-manager'); ?></button>
+            <button type="button" class="button" id="add-audio-section"><?php _e('Add a Transcript', 'ielts-course-manager'); ?></button>
         </div>
         
         <?php
@@ -1532,7 +1543,7 @@ class IELTS_CM_Admin {
                     '<textarea name="audio_sections[' + parseInt(audioSectionIndex) + '][transcript]" rows="8" style="width: 100%;" placeholder="<?php echo esc_attr(__('Enter the transcript for this section...', 'ielts-course-manager')); ?>"></textarea>' +
                     '<small><?php echo esc_js(__('This transcript will be shown after the student submits their answers.', 'ielts-course-manager')); ?></small>' +
                     '</p>' +
-                    '<button type="button" class="button remove-audio-section" style="margin-top: 10px;"><?php echo esc_js(__('Remove Audio Section', 'ielts-course-manager')); ?></button>' +
+                    '<button type="button" class="button remove-audio-section" style="margin-top: 10px;"><?php echo esc_js(__('Remove Transcript', 'ielts-course-manager')); ?></button>' +
                     '</div>' +
                     '</div>';
                 $('#audio-sections-container').append(html);
@@ -2715,7 +2726,7 @@ class IELTS_CM_Admin {
                     <small><?php _e('This transcript will be shown after the student submits their answers.', 'ielts-course-manager'); ?></small>
                 </p>
                 
-                <button type="button" class="button remove-audio-section" style="margin-top: 10px;"><?php _e('Remove Audio Section', 'ielts-course-manager'); ?></button>
+                <button type="button" class="button remove-audio-section" style="margin-top: 10px;"><?php _e('Remove Transcript', 'ielts-course-manager'); ?></button>
             </div>
         </div>
         <?php
