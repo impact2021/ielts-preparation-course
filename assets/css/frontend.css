@@ -1449,12 +1449,26 @@ body.ielts-course-archive .content-area {
     color: #fff;
 }
 
-/* Ensure green border is visible for both standard and computer-based quiz layouts */
+/* Ensure feedback colors are visible for both standard and computer-based quiz layouts */
 .question-options .option-label.answer-correct-highlight,
 .ielts-single-quiz .question-options .option-label.answer-correct-highlight,
 .ielts-computer-based-quiz .question-options .option-label.answer-correct-highlight {
     background: #4caf50 !important;
     border: 3px solid #4caf50 !important;
+    color: #fff !important;
+}
+
+/* Ensure correct answer highlighting works in CBT layout */
+.ielts-computer-based-quiz .question-options .option-label.answer-correct {
+    background: #4caf50 !important;
+    border: 3px solid #4caf50 !important;
+    color: #fff !important;
+}
+
+/* Ensure incorrect answer highlighting works in CBT layout */
+.ielts-computer-based-quiz .question-options .option-label.answer-incorrect {
+    background: #f44336 !important;
+    border: 3px solid #f44336 !important;
     color: #fff !important;
 }
 
