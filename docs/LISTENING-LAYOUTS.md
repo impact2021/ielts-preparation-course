@@ -35,10 +35,21 @@ When you select a listening layout, a new section appears:
 - **Audio URL**: Enter the direct URL to your MP3 audio file
   - Example: `https://example.com/audio/listening-test-1.mp3`
   - Recommended format: MP3
+  - This single audio file will be used for the entire test
   
 - **Audio Transcript**: Enter the full transcript of the audio
   - This will be shown to students after they submit their answers
   - Supports rich text formatting
+
+**Multiple Transcript Sections (Optional)**
+For tests with multiple sections (like IELTS Listening which has 4 sections), you can add multiple transcript sections:
+- Click "Add Audio Section" to create additional transcript tabs
+- Each section has:
+  - **Section Number**: The section number (1-4)
+  - **Transcript**: The transcript text for that section
+- The same audio file plays for all sections
+- Transcripts will be displayed in tabs after submission
+- Students can switch between section transcripts using the tabs
 
 ### 3. Add Questions
 Add your listening comprehension questions as normal:
@@ -239,7 +250,6 @@ Layout Type: Listening Exercise (With Audio Controls)
 
 Potential improvements for future versions:
 - Playback speed control (for exercises)
-- Section-based audio (multiple audio files)
 - Visual waveform display
 - Time-synced transcript highlighting
 - Download transcript option

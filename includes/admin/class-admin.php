@@ -1283,7 +1283,7 @@ class IELTS_CM_Admin {
         ?>
         <div id="cbt-audio-section" style="<?php echo ($layout_type !== 'computer_based' || $cbt_test_type !== 'listening') ? 'display:none;' : ''; ?>">
             <h3><?php _e('Listening Audio Sections', 'ielts-course-manager'); ?></h3>
-            <p><small><?php _e('Add audio files for each listening section. Each section can have its own audio file and transcript.', 'ielts-course-manager'); ?></small></p>
+            <p><small><?php _e('Add transcript sections for the listening test. The audio file is set above and applies to all sections. If you add multiple sections, they will be displayed in tabs after the student submits their answers.', 'ielts-course-manager'); ?></small></p>
             
             <div id="audio-sections-container">
                 <?php if (!empty($audio_sections)): ?>
@@ -1528,12 +1528,6 @@ class IELTS_CM_Admin {
                     '<small><?php echo esc_js(__('Section number (1-4)', 'ielts-course-manager')); ?></small>' +
                     '</p>' +
                     '<p>' +
-                    '<label><?php echo esc_js(__('Audio URL', 'ielts-course-manager')); ?></label><br>' +
-                    '<input type="url" name="audio_sections[' + parseInt(audioSectionIndex) + '][audio_url]" style="width: 100%;" placeholder="https://example.com/section-' + parseInt(sectionNumber) + '.mp3" class="audio-section-url">' +
-                    '<button type="button" class="button upload-audio-section-btn" data-index="' + parseInt(audioSectionIndex) + '" style="margin-top: 5px;"><?php echo esc_js(__('Upload Audio', 'ielts-course-manager')); ?></button><br>' +
-                    '<small><?php echo esc_js(__('Enter the URL to the audio file or upload one (MP3 format recommended).', 'ielts-course-manager')); ?></small>' +
-                    '</p>' +
-                    '<p>' +
                     '<label><?php echo esc_js(__('Transcript', 'ielts-course-manager')); ?></label><br>' +
                     '<textarea name="audio_sections[' + parseInt(audioSectionIndex) + '][transcript]" rows="8" style="width: 100%;" placeholder="<?php echo esc_attr(__('Enter the transcript for this section...', 'ielts-course-manager')); ?>"></textarea>' +
                     '<small><?php echo esc_js(__('This transcript will be shown after the student submits their answers.', 'ielts-course-manager')); ?></small>' +
@@ -1550,34 +1544,6 @@ class IELTS_CM_Admin {
             $(document).on('click', '.remove-audio-section', function() {
                 $(this).closest('.audio-section-item').remove();
                 updateAudioSectionSelectors();
-            });
-            
-            // Audio section upload handler
-            $(document).on('click', '.upload-audio-section-btn', function(e) {
-                e.preventDefault();
-                var $btn = $(this);
-                var $input = $btn.siblings('.audio-section-url');
-                
-                // Create the media uploader
-                var sectionAudioUploader = wp.media({
-                    title: '<?php _e('Select Audio File', 'ielts-course-manager'); ?>',
-                    button: {
-                        text: '<?php _e('Use this audio', 'ielts-course-manager'); ?>'
-                    },
-                    library: {
-                        type: 'audio'
-                    },
-                    multiple: false
-                });
-                
-                // When an audio file is selected
-                sectionAudioUploader.on('select', function() {
-                    var attachment = sectionAudioUploader.state().get('selection').first().toJSON();
-                    $input.val(attachment.url);
-                });
-                
-                // Open the uploader
-                sectionAudioUploader.open();
             });
             
             // Toggle audio section content
@@ -2744,13 +2710,6 @@ class IELTS_CM_Admin {
                 </p>
                 
                 <p>
-                    <label><?php _e('Audio URL', 'ielts-course-manager'); ?></label><br>
-                    <input type="url" name="audio_sections[<?php echo $index; ?>][audio_url]" value="<?php echo esc_attr(isset($section['audio_url']) ? $section['audio_url'] : ''); ?>" style="width: 100%;" placeholder="https://example.com/section-<?php echo $index + 1; ?>.mp3" class="audio-section-url">
-                    <button type="button" class="button upload-audio-section-btn" data-index="<?php echo $index; ?>" style="margin-top: 5px;"><?php _e('Upload Audio', 'ielts-course-manager'); ?></button><br>
-                    <small><?php _e('Enter the URL to the audio file or upload one (MP3 format recommended).', 'ielts-course-manager'); ?></small>
-                </p>
-                
-                <p>
                     <label><?php _e('Transcript', 'ielts-course-manager'); ?></label><br>
                     <textarea name="audio_sections[<?php echo $index; ?>][transcript]" rows="8" style="width: 100%;" placeholder="<?php esc_attr_e('Enter the transcript for this section...', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($section['transcript']) ? $section['transcript'] : ''); ?></textarea>
                     <small><?php _e('This transcript will be shown after the student submits their answers.', 'ielts-course-manager'); ?></small>
@@ -3646,11 +3605,12 @@ class IELTS_CM_Admin {
             $audio_sections = array();
             if (isset($_POST['audio_sections']) && is_array($_POST['audio_sections'])) {
                 foreach ($_POST['audio_sections'] as $index => $section) {
-                    if (!empty($section['audio_url'])) {
+                    // Only save sections with non-empty transcripts
+                    $transcript = isset($section['transcript']) ? trim(wp_kses_post($section['transcript'])) : '';
+                    if (!empty($transcript)) {
                         $audio_sections[$index] = array(
                             'section_number' => isset($section['section_number']) ? intval($section['section_number']) : ($index + 1),
-                            'audio_url' => esc_url_raw($section['audio_url']),
-                            'transcript' => isset($section['transcript']) ? wp_kses_post($section['transcript']) : ''
+                            'transcript' => $transcript
                         );
                     }
                 }
@@ -6041,20 +6001,20 @@ class IELTS_CM_Admin {
                     <label style="display: block; margin-bottom: 8px;">
                         <strong><?php _e('Import Mode:', 'ielts-course-manager'); ?></strong>
                     </label>
-                    <label for="ielts_cm_import_mode_replace" style="display: block; margin-bottom: 5px;">
-                        <input type="radio" id="ielts_cm_import_mode_replace" name="ielts_cm_import_mode" value="replace" checked>
-                        <?php _e('Replace all content', 'ielts-course-manager'); ?>
-                        <span style="color: #666; font-size: 12px;"><?php _e('(overwrites everything)', 'ielts-course-manager'); ?></span>
-                    </label>
-                    <label for="ielts_cm_import_mode_append" style="display: block;">
-                        <input type="radio" id="ielts_cm_import_mode_append" name="ielts_cm_import_mode" value="append">
+                    <label for="ielts_cm_import_mode_append" style="display: block; margin-bottom: 5px;">
+                        <input type="radio" id="ielts_cm_import_mode_append" name="ielts_cm_import_mode" value="append" checked>
                         <?php _e('Add to existing content', 'ielts-course-manager'); ?>
                         <span style="color: #666; font-size: 12px;"><?php _e('(keeps current questions and adds new ones)', 'ielts-course-manager'); ?></span>
                     </label>
+                    <label for="ielts_cm_import_mode_replace" style="display: block;">
+                        <input type="radio" id="ielts_cm_import_mode_replace" name="ielts_cm_import_mode" value="replace">
+                        <?php _e('Replace all content', 'ielts-course-manager'); ?>
+                        <span style="color: #666; font-size: 12px;"><?php _e('(overwrites everything)', 'ielts-course-manager'); ?></span>
+                    </label>
                 </div>
                 
-                <p id="ielts-cm-replace-warning" style="display: block;"><small style="color: #d63638;"><strong><?php _e('Warning:', 'ielts-course-manager'); ?></strong> <?php _e('Replace mode will overwrite all current content. Export a backup first!', 'ielts-course-manager'); ?></small></p>
-                <p id="ielts-cm-append-info" style="display: none;"><small style="color: #0073aa;"><strong><?php _e('Note:', 'ielts-course-manager'); ?></strong> <?php _e('Questions and reading texts from the XML will be added after your current content.', 'ielts-course-manager'); ?></small></p>
+                <p id="ielts-cm-append-info" style="display: block;"><small style="color: #0073aa;"><strong><?php _e('Note:', 'ielts-course-manager'); ?></strong> <?php _e('Questions and reading texts from the XML will be added after your current content.', 'ielts-course-manager'); ?></small></p>
+                <p id="ielts-cm-replace-warning" style="display: none;"><small style="color: #d63638;"><strong><?php _e('Warning:', 'ielts-course-manager'); ?></strong> <?php _e('Replace mode will overwrite all current content. Export a backup first!', 'ielts-course-manager'); ?></small></p>
                 
                 <input type="file" id="ielts-cm-xml-file" accept=".xml" style="margin-bottom: 10px;">
                 <button type="button" id="ielts-cm-import-xml-btn" class="button button-primary" style="width: 100%;">

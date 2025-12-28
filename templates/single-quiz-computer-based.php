@@ -41,6 +41,14 @@ if (!empty($audio_sections)) {
         $num_b = isset($b['section_number']) ? intval($b['section_number']) : 999;
         return $num_a - $num_b;
     });
+    // Get first section key for default active tab
+    reset($audio_sections);
+    $first_section_key = key($audio_sections);
+    if ($first_section_key === null) {
+        $first_section_key = 0;
+    }
+} else {
+    $first_section_key = 0;
 }
 // Check if we're in fullscreen mode
 $is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
@@ -251,36 +259,8 @@ if ($lesson_id) {
                     <?php if ($cbt_test_type === 'listening'): ?>
                         <!-- Audio Player for Listening Test -->
                         <div class="cbt-audio-player" id="listening-audio-player">
-                            <?php if (!empty($audio_sections)): ?>
-                                <!-- Multiple Audio Sections -->
-                                <?php 
-                                // Get first section key after sorting
-                                $first_section_key = key($audio_sections);
-                                ?>
-                                <div class="audio-sections-wrapper">
-                                    <h3><?php _e('Listening Audio', 'ielts-course-manager'); ?></h3>
-                                    <div class="audio-section-tabs">
-                                        <?php foreach ($audio_sections as $index => $section): ?>
-                                            <button type="button" class="audio-section-tab<?php echo ($index === $first_section_key) ? ' active' : ''; ?>" data-section="<?php echo esc_attr($index); ?>">
-                                                <?php printf(__('Section %d', 'ielts-course-manager'), isset($section['section_number']) ? $section['section_number'] : ($index + 1)); ?>
-                                            </button>
-                                        <?php endforeach; ?>
-                                    </div>
-                                    <?php foreach ($audio_sections as $index => $section): ?>
-                                        <div class="audio-section-content" id="audio-section-<?php echo esc_attr($index); ?>" style="<?php echo ($index !== $first_section_key) ? 'display:none;' : ''; ?>">
-                                            <?php if (!empty($section['audio_url'])): ?>
-                                                <audio class="section-audio-element" controls controlsList="nodownload" data-section="<?php echo esc_attr($index); ?>">
-                                                    <source src="<?php echo esc_url($section['audio_url']); ?>" type="audio/mpeg">
-                                                    <?php _e('Your browser does not support the audio element.', 'ielts-course-manager'); ?>
-                                                </audio>
-                                            <?php else: ?>
-                                                <p><?php _e('No audio file for this section.', 'ielts-course-manager'); ?></p>
-                                            <?php endif; ?>
-                                        </div>
-                                    <?php endforeach; ?>
-                                </div>
-                            <?php elseif (!empty($audio_url)): ?>
-                                <!-- Fallback: Single Audio (backward compatibility) -->
+                            <?php if (!empty($audio_url)): ?>
+                                <!-- Single Audio Player for entire test -->
                                 <div class="audio-player-wrapper">
                                     <h3><?php _e('Listening Audio', 'ielts-course-manager'); ?></h3>
                                     <audio id="cbt-audio-element" controls controlsList="nodownload">
@@ -316,15 +296,17 @@ if ($lesson_id) {
                                         <?php else: ?>
                                             <p><?php _e('No transcript available for this section.', 'ielts-course-manager'); ?></p>
                                         <?php endif; ?>
-                                        <?php if (!empty($section['audio_url'])): ?>
-                                            <div class="transcript-audio-controls">
-                                                <audio controls controlsList="nodownload">
-                                                    <source src="<?php echo esc_url($section['audio_url']); ?>" type="audio/mpeg">
-                                                </audio>
-                                            </div>
-                                        <?php endif; ?>
                                     </div>
                                 <?php endforeach; ?>
+                                
+                                <!-- Single audio control for all sections -->
+                                <?php if (!empty($audio_url)): ?>
+                                    <div class="transcript-audio-controls">
+                                        <audio controls controlsList="nodownload">
+                                            <source src="<?php echo esc_url($audio_url); ?>" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                <?php endif; ?>
                             </div>
                         <?php elseif (!empty($transcript)): ?>
                             <!-- Fallback: Single Transcript (backward compatibility) -->
