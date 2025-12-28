@@ -6354,8 +6354,8 @@ class IELTS_CM_Admin {
         // Suppress XML errors and use internal error handling
         libxml_use_internal_errors(true);
         
-        // Parse XML
-        $xml = simplexml_load_string($xml_content);
+        // Parse XML - use LIBXML_NOCDATA to handle CDATA sections properly
+        $xml = simplexml_load_string($xml_content, 'SimpleXMLElement', LIBXML_NOCDATA);
         
         if ($xml === false) {
             $errors = libxml_get_errors();
@@ -6378,12 +6378,25 @@ class IELTS_CM_Admin {
             'meta' => array()
         );
         
-        // Extract post meta
+        // Extract post meta - try both namespace access methods for compatibility
         $wp_namespace = $item->children('wp', true);
+        if (!isset($wp_namespace->postmeta)) {
+            // Try with full namespace URL as fallback
+            $wp_namespace = $item->children('http://wordpress.org/export/1.2/');
+        }
+        
         if (isset($wp_namespace->postmeta)) {
             foreach ($wp_namespace->postmeta as $meta) {
+                // Try direct access first (works in most cases)
                 $meta_key = (string) $meta->meta_key;
                 $meta_value = (string) $meta->meta_value;
+                
+                // If direct access failed, try accessing via namespace
+                if (empty($meta_key)) {
+                    $meta_wp = $meta->children('wp', true);
+                    $meta_key = (string) $meta_wp->meta_key;
+                    $meta_value = (string) $meta_wp->meta_value;
+                }
                 
                 // Only process IELTS exercise meta fields
                 if (strpos($meta_key, '_ielts_cm_') === 0) {
