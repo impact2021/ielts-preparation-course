@@ -3605,10 +3605,12 @@ class IELTS_CM_Admin {
             $audio_sections = array();
             if (isset($_POST['audio_sections']) && is_array($_POST['audio_sections'])) {
                 foreach ($_POST['audio_sections'] as $index => $section) {
-                    if (!empty($section['transcript'])) {
+                    // Only save sections with non-empty transcripts
+                    $transcript = isset($section['transcript']) ? trim(wp_kses_post($section['transcript'])) : '';
+                    if (!empty($transcript)) {
                         $audio_sections[$index] = array(
                             'section_number' => isset($section['section_number']) ? intval($section['section_number']) : ($index + 1),
-                            'transcript' => wp_kses_post($section['transcript'])
+                            'transcript' => $transcript
                         );
                     }
                 }
