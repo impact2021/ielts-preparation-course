@@ -737,27 +737,28 @@ done
 
 ## Additional Resources
 
-### Documentation Files
+### Historical and Supplementary Documentation
+
+**Note:** Most documentation has been consolidated into this DEVELOPMENT-GUIDELINES.md file. The following files remain for historical reference or specific technical details:
 
 **Root Level:**
-- `FIX_SUMMARY.md` - XML import error fix summary
-- `VERSION_8.10_SUMMARY.md` - Version 8.10 changes
-- `VERSION_8.9_SUMMARY.md` - Version 8.9 changes
-- `IMPLEMENTATION_COMPLETE.md` - Implementation completion summary
-- `MEMBERSHIP-SYSTEM-SUMMARY.md` - Membership system documentation
+- `VERSION_8.10_SUMMARY.md` - Version 8.10 release notes (historical)
+- `VERSION_8.9_SUMMARY.md` - Version 8.9 release notes (historical)
+- `IMPLEMENTATION_COMPLETE.md` - Implementation completion summary (historical)
+- `MEMBERSHIP-SYSTEM-SUMMARY.md` - Membership system documentation (separate plugin)
 
 **docs/ Directory:**
-- `docs/LISTENING-LAYOUTS.md` - Listening test layouts guide
-- `docs/LISTENING-TEST-IMPROVEMENTS.md` - Listening test improvements
-- `docs/TRANSCRIPT-ANNOTATION-FEATURE.md` - Automatic annotation feature
-- `docs/XML-IMPORT-MODES.md` - XML import modes documentation
-- `docs/VIDEO-FIELD-GUIDE.md` - Video embedding guide
+- `docs/LISTENING-LAYOUTS.md` - Detailed technical implementation reference
+- `docs/LISTENING-LAYOUTS-TEST-PLAN.md` - Test plan document
+- `docs/VIDEO-FIELD-GUIDE.md` - User guide for video embedding feature
+- `docs/IMPLEMENTATION-SUMMARY.md` - Historical implementation summary
+- `docs/TESTING-XML-APPEND.md` - Specific test documentation
 
-**TEMPLATES/ Directory:**
-- `TEMPLATES/README.md` - Template files documentation
-- `TEMPLATES/QUICK-START.md` - Quick start guide
-- `TEMPLATES/FIXING-XML-ERRORS.md` - Detailed fixing instructions
-- `TEMPLATES/READ BEFORE MAKING ANY XML FILES.txt` - Essential guidelines
+**main/XMLs/ Directory:**
+- `main/XMLs/README-CONVERTER-SCRIPTS.md` - Converter scripts documentation
+- `main/XMLs/TESTS_4-8_STATUS.md` - Test status documentation
+- `main/XMLs/XML_GENERATION_SUMMARY.md` - XML generation history
+- `main/XMLs/XML_CONVERSION_INSTRUCTIONS.md` - Conversion instructions
 
 ### Template Files
 
@@ -783,19 +784,25 @@ Located in `TEMPLATES/`:
 
 ## Contact and Support
 
+**For Issues or Questions:**
+- Open a GitHub issue in the repository
+- Include the tag `[DEVELOPMENT-GUIDELINES]` in the issue title
+- Reference the specific section of this document that relates to your issue
+
 **Before Asking for Help:**
-1. Read this entire guide
-2. Run the validation tools
-3. Try the fixing scripts
-4. Check the documentation files
-5. Review git history for similar issues
+1. Read this entire guide thoroughly
+2. Run the validation tools on your files
+3. Try the fixing scripts to resolve the issue
+4. Check the remaining documentation files for historical context
+5. Review git history for similar issues and their resolutions
 
 **When Asking for Help, Provide:**
-- Validation script output
-- Error messages (full text)
-- Steps you've already tried
-- XML file (if not sensitive)
-- WordPress version and environment details
+- Validation script output (copy and paste full text)
+- Error messages (full text, not screenshots)
+- Steps you've already tried to resolve the issue
+- XML file (if not sensitive) or a minimal reproducible example
+- WordPress version and PHP version
+- Plugin version and environment details
 
 ---
 
