@@ -1,0 +1,81 @@
+<table border="1" width="90%" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td valign="top" width="20%">Telephone operator</td>
+<td valign="top" width="80%">Good morning. Eastville Council. How can I help you?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Woman</td>
+<td valign="top" width="80%">Hello, I understand you offer a number of community classes to new migrants. I was wondering if it would be possible to enrol?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Telephone operator</td>
+<td valign="top" width="80%">Yes we do. We run language classes of course, a settlement support programme and we also offer a new mentoring programme which we're actually trialling for <strong style="background-color: yellow;">[Q2: 3]</strong> months starting next week.
+Can I ask, are you a permanent resident?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Woman</td>
+<td valign="top" width="80%">Yes I am.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Telephone operator</td>
+<td valign="top" width="80%">That's no problem then, you must be a permanent resident to enrol in any of our courses, you see. So which course are you interested in?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Woman</td>
+<td valign="top" width="80%">Well, I am interested in the settlement support programme and the Mentoring Programme, I am finding it difficult to get a job interview you see. I arrived in the country (Q1) <strong style="background-color: yellow;">[Q1: two months]</strong> ago. My husband work full-time but I am looking for work too. Just a part-time job to start with as we have two young children. I'm not sure which course would suit me best. Could you give me some more information about those please?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Telephone operator</td>
+<td valign="top" width="80%">Well the Settlement Support Programme is (Q2) three weeks long and students need to attend class (Q3) <strong style="background-color: yellow;">[Q3: 4]</strong> days a week. The focus is on settling into work in a new country, so we provide help with searching for jobs, enrolling with employment agencies, writing a CV and writing application letters.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Woman</td>
+<td valign="top" width="80%">That does sound interesting. I think that would be a lot of use to me. Is the course completely free? Do I need to pay for textbooks or anything like that?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Telephone operator</td>
+<td valign="top" width="80%">For the Settlement Support Programme, we do recommend that students buy a handbook which accompanies the course - it's not compulsory to buy but it only costs ₤10.99 if you buy direct from the bookstore so we do recommend that you purchase your own copy if you are able to. We can place a bulk order for the book at the beginning of the course and students only pay (Q4) ₤<strong style="background-color: yellow;">[Q4: 7.95]</strong> if they order early enough to qualify for the discount.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Woman</td>
+<td valign="top" width="80%">Okay. And how about the Mentoring Programme? Could you tell me a little more about that please?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Telephone operator</td>
+<td valign="top" width="80%">Well these are one to one sessions instead of a group class. They run for two weeks with two (Q5) <strong style="background-color: yellow;">[Q5: one hour]</strong> sessions each week. The idea is that if you are having any specific difficulties settling in to your new life, be that work, or social issues, your mentor can talk with you and give suggestions and advice on how to make things better. We currently have (Q6) 15 mentors on the team and each will mentor (Q7) four clients per week. The mentor programme is free but we suggest people join the Settlement Support Programme first then enrol on a Mentor Programme afterwards if they still feel in need of additional support.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Woman</td>
+<td valign="top" width="80%">Okay I understand, thank you. So what do I need to do about enrolling on the Settlement Support Programme? I'd like to enrol as soon as I can.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Telephone operator</td>
+<td valign="top" width="80%">Well, you will need to come into our office and fill out an application form. Make sure that you bring your passport with you to confirm your residency and we will also need two additional passport photographs; one for our records and one for your student ID card.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Woman</td>
+<td valign="top" width="80%">Okay. I'll come in this afternoon. So when does the next course start?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Telephone operator</td>
+<td valign="top" width="80%">The next course starts next Monday, on the 26th September, but that one is already fully booked. We have new courses starting each week, so the next with an available place is on the (Q8) 3rd October.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Woman</td>
+<td valign="top" width="80%">Okay. Well thanks very much for your help. It sounds like the Settlement Support Programme is ideal for me and I'll think later about whether to apply for Mentor Support. I'll come in very soon. Can you just remind me where the office is?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Telephone operator</td>
+<td valign="top" width="80%">Yes we're on the (Q9) 2nd floor of the Lakeside View building on St James Plaza. We are in the tall white building next to the technical college. We're very easy to find and there are plenty of places to park in the public car park just to the left of the building. Don't use the (Q10) car park at the front though as those spaces are reserved for staff.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Woman</td>
+<td valign="top" width="80%">That's great thank you very much for all your help. Looking forward to meeting you when I come in later today.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">Telephone operator</td>
+<td valign="top" width="80%">You're very welcome. Glad I could help.</td>
+</tr>
+</tbody>
+</table>
