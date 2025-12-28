@@ -1,0 +1,132 @@
+<table border="1" width="90%" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">Good morning, Hunter Valley Holiday Park. How can I help you today?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">Hello, I'd like to make a booking for August. We're looking to book some tent sites please.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">That's no problem. How many nights do you want to book for?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">We'd like to stay for 4 nights please. We'll be arriving on August the <strong style="background-color: yellow;">[Q2: 5th]</strong> and leaving again on the 9th.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">OK. How many of you are there?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">We're actually quite a large group – there'll be 11 of us in total, and we'll be bringing <strong style="background-color: yellow;">[Q1: four]</strong> tents.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">That's quite a big group! Are you all adults?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">No – there will be <strong style="background-color: yellow;">[Q3: 8]</strong> adults and 3 children.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">OK, I'll make that booking for you now. I'll just fill in this form – what's your name?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">My name is Eric <strong style="background-color: yellow;">[Q4: Huse]</strong>. The spelling is a little unusual though – it's spelled H U S E</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">Okay, no problem. Do you want to pay for the booking now or when you get here?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">I'd prefer to pay when we get there if that's OK.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">That's no problem, but we do need a credit card number for the booking. We won't take the money out of the account until you get here though.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">OK that's fine. My credit card number is 5436 7800 0439 2428.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">Thanks. Now all we need is a contact number. Do you have a number I can take? Just in case we need to contact you for anything.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">Sure – I'll give you my mobile number. It's 034 <strong style="background-color: yellow;">[Q5: 535 7221]</strong>.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">034 - 535 7211.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">No, it's 7 2 2 1</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">Oh, sorry, OK, I've got that.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">Now, have you stayed at our campsite before?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">No, I haven't, but <strong style="background-color: yellow;">[Q6: a friend]</strong> recommended it and she's stayed there quite a few times. She said it's a lovely place with plenty of things to do for the children.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">Well, I'm glad to hear your friend had a good time here! Yes, there's lots for children to do – they can walk by the river, climb some of the local mountains or even swim in the lake. But what the children like most is <strong style="background-color: yellow;">[Q7: the skatepark]</strong> – most kids spend hours there!</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">That sounds great!</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">Now I'll just tell you a little about the campsite. We have barbecues which are free to use, as well as the camp kitchen. There are toilet and shower blocks, but you'll need 50 pence pieces if you want a <strong style="background-color: yellow;">[Q8: hot shower]</strong>. Cold showers are free though, so that depends on the weather.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">That's no problem. You said that you can walk along the river – are there a lot of walking paths in the area? We all enjoy hiking.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">Yes, there are lots of different walks you can take from the campsite along the river or in the mountains. There are several <strong style="background-color: yellow;">[Q9: walking guides]</strong> available free of charge in reception.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">That's good. Oh, I wanted to ask you if it's OK to bring a dog?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">Yes, dogs are welcome as long as they are kept on a lead at all times.  We charge 1 pound per night for dogs to stay.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">Great. Now, can I just confirm the prices? My friend said it was £10 per night for an adult and £5 for children. Is that right?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">Ah no, sorry – the prices have gone up a little this year. It's now £<strong style="background-color: yellow;">[Q10: 12]</strong> for adults and £6 for children.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Visitor</td>
+<td valign="top" width="70%">Oh, OK. Well thanks very much. We're really looking forward to staying with you!</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Campsite reception</td>
+<td valign="top" width="70%">Well we'll look forward to seeing you in August then!</td>
+</tr>
+</tbody>
+</table>
