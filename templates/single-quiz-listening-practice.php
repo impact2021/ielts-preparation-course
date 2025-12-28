@@ -239,6 +239,7 @@ if ($lesson_id) {
                             // Get first section key for default active tab
                             reset($audio_sections);
                             $first_section_key = key($audio_sections);
+                            $section_counter = 1; // Counter for fallback section numbering
                             ?>
                             <!-- Multiple Transcripts -->
                             <div id="listening-transcripts" class="listening-transcripts" style="display: none;">
@@ -246,9 +247,11 @@ if ($lesson_id) {
                                 <div class="transcript-section-tabs">
                                     <?php foreach ($audio_sections as $index => $section): ?>
                                         <button type="button" class="transcript-section-tab<?php echo ($index === $first_section_key) ? ' active' : ''; ?>" data-section="<?php echo esc_attr($index); ?>">
-                                            <?php printf(__('Section %d', 'ielts-course-manager'), isset($section['section_number']) ? $section['section_number'] : ($index + 1)); ?>
+                                            <?php printf(__('Section %d', 'ielts-course-manager'), isset($section['section_number']) ? $section['section_number'] : $section_counter); ?>
                                         </button>
-                                    <?php endforeach; ?>
+                                    <?php 
+                                        $section_counter++; 
+                                    endforeach; ?>
                                 </div>
                                 <?php foreach ($audio_sections as $index => $section): ?>
                                     <div class="transcript-section-content" id="transcript-section-<?php echo esc_attr($index); ?>" style="<?php echo ($index !== $first_section_key) ? 'display:none;' : ''; ?>">
