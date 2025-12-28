@@ -6204,6 +6204,23 @@ class IELTS_CM_Admin {
             wp_send_json_error(array('message' => $parsed_data->get_error_message()));
         }
         
+        // Annotate transcript with answer locations if present
+        if (isset($parsed_data['meta']['_ielts_cm_transcript']) && 
+            !empty($parsed_data['meta']['_ielts_cm_transcript']) &&
+            isset($parsed_data['meta']['_ielts_cm_questions']) &&
+            !empty($parsed_data['meta']['_ielts_cm_questions'])) {
+            
+            $starting_question_number = isset($parsed_data['meta']['_ielts_cm_starting_question_number']) 
+                ? intval($parsed_data['meta']['_ielts_cm_starting_question_number']) 
+                : 1;
+            
+            $parsed_data['meta']['_ielts_cm_transcript'] = $this->annotate_transcript_with_answers(
+                $parsed_data['meta']['_ielts_cm_transcript'],
+                $parsed_data['meta']['_ielts_cm_questions'],
+                $starting_question_number
+            );
+        }
+        
         // Handle based on import mode
         if ($import_mode === 'append') {
             // Append mode: Add questions and reading texts to existing content
@@ -6384,6 +6401,128 @@ class IELTS_CM_Admin {
         }
         
         return $data;
+    }
+    
+    /**
+     * Annotate transcript with answer locations
+     * 
+     * @param string $transcript Original transcript HTML
+     * @param array $questions Array of questions with answers
+     * @param int $starting_question_number Starting question number (default 1)
+     * @return string Annotated transcript
+     */
+    private function annotate_transcript_with_answers($transcript, $questions, $starting_question_number = 1) {
+        if (empty($transcript) || empty($questions)) {
+            return $transcript;
+        }
+        
+        $annotated_transcript = $transcript;
+        $question_number = $starting_question_number;
+        
+        // Process each question
+        foreach ($questions as $question) {
+            // Handle summary completion questions (form filling, etc.) with multiple fields
+            if (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+                // Each field is a separate question
+                foreach ($question['summary_fields'] as $field_num => $field) {
+                    if (isset($field['answer']) && !empty($field['answer'])) {
+                        $answer_text = $field['answer'];
+                        
+                        // Split answer by | to handle multiple acceptable answers
+                        $answer_variants = explode('|', $answer_text);
+                        
+                        // Try to find and mark each variant in the transcript
+                        foreach ($answer_variants as $variant) {
+                            $variant = trim($variant);
+                            if (empty($variant)) {
+                                continue;
+                            }
+                            
+                            // Escape special regex characters but preserve spaces
+                            $pattern = preg_quote($variant, '/');
+                            // Make the search case-insensitive and allow for minor variations in spacing
+                            $pattern = str_replace('\\ ', '\\s+', $pattern);
+                            
+                            // Search for the answer in the transcript and mark it
+                            // Look for word boundaries to avoid partial matches
+                            $regex = '/\b(' . $pattern . ')\b/iu';
+                            
+                            // Check if this answer is already marked to avoid duplicate annotations
+                            $check_pattern = '/\[Q' . $question_number . ':[^\]]*' . preg_quote($variant, '/') . '[^\]]*\]/i';
+                            if (preg_match($check_pattern, $annotated_transcript)) {
+                                continue; // Already marked
+                            }
+                            
+                            // Try to find and mark the first occurrence
+                            $replacement_made = false;
+                            $annotated_transcript = preg_replace_callback($regex, function($matches) use ($question_number, &$replacement_made) {
+                                if (!$replacement_made) {
+                                    $replacement_made = true;
+                                    return '<strong>[Q' . $question_number . ': ' . $matches[1] . ']</strong>';
+                                }
+                                return $matches[0];
+                            }, $annotated_transcript, 1);
+                            
+                            // If we marked this variant, move on to the next field
+                            if ($replacement_made) {
+                                break;
+                            }
+                        }
+                    }
+                    
+                    // Increment question number for each field
+                    $question_number++;
+                }
+            }
+            // Handle other question types (multiple choice, true/false, etc.)
+            elseif (isset($question['correct_answer']) && !empty($question['correct_answer'])) {
+                $answer_text = $question['correct_answer'];
+                
+                // Split answer by | to handle multiple acceptable answers
+                $answer_variants = explode('|', $answer_text);
+                
+                // Try to find and mark each variant in the transcript
+                foreach ($answer_variants as $variant) {
+                    $variant = trim($variant);
+                    if (empty($variant)) {
+                        continue;
+                    }
+                    
+                    // Escape special regex characters but preserve spaces
+                    $pattern = preg_quote($variant, '/');
+                    $pattern = str_replace('\\ ', '\\s+', $pattern);
+                    
+                    // Search for the answer in the transcript and mark it
+                    $regex = '/\b(' . $pattern . ')\b/iu';
+                    
+                    // Check if this answer is already marked
+                    $check_pattern = '/\[Q' . $question_number . ':[^\]]*' . preg_quote($variant, '/') . '[^\]]*\]/i';
+                    if (preg_match($check_pattern, $annotated_transcript)) {
+                        continue;
+                    }
+                    
+                    // Try to find and mark the first occurrence
+                    $replacement_made = false;
+                    $annotated_transcript = preg_replace_callback($regex, function($matches) use ($question_number, &$replacement_made) {
+                        if (!$replacement_made) {
+                            $replacement_made = true;
+                            return '<strong>[Q' . $question_number . ': ' . $matches[1] . ']</strong>';
+                        }
+                        return $matches[0];
+                    }, $annotated_transcript, 1);
+                    
+                    // If we marked this variant, move on
+                    if ($replacement_made) {
+                        break;
+                    }
+                }
+                
+                // Increment question number for this question
+                $question_number++;
+            }
+        }
+        
+        return $annotated_transcript;
     }
     
     /**
