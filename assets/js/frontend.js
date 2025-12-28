@@ -915,11 +915,13 @@
         });
         
         // Manual transcript section tab switching
-        $(document).on('click', '.transcript-section-tab', function() {
+        $(document).on('click', '.transcript-section-tab', function(e) {
+            e.preventDefault();
             var sectionId = $(this).data('section');
-            $('.transcript-section-content').hide();
-            $('#transcript-section-' + sectionId).fadeIn(300);
-            $('.transcript-section-tab').removeClass('active');
+            var transcriptContainer = $(this).closest('.listening-transcripts, .listening-transcript');
+            transcriptContainer.find('.transcript-section-content').hide();
+            transcriptContainer.find('#transcript-section-' + sectionId).fadeIn(300);
+            transcriptContainer.find('.transcript-section-tab').removeClass('active');
             $(this).addClass('active');
         });
         
