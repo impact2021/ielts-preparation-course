@@ -1,0 +1,92 @@
+Listening Test 3 Section 2
+
+=== EXERCISE SETTINGS ===
+Layout Type: Listening Practice Test (No Audio Controls)
+Display Label: Practice test
+Scoring Type: IELTS Listening (Band Score)
+Starting Question Number: 11
+=== END EXERCISE SETTINGS ===
+
+=== QUESTION TYPE: TABLE COMPLETION ===
+
+Questions 11-20
+
+Questions 11-15
+
+Complete the table below USING NO MORE THAN ONE WORD OR A NUMBER.
+
+Things to do in Las Vegas
+
+| Activity | Details |
+|----------|---------|
+| Gambling | there are over [ANSWER 11] casinos in Las Vegas |
+| The 'Mob Museum' | a self-guided tour; visitors can listen to recorded [ANSWER 12] between criminals |
+| The Pinball Hall of Fame | opened in 2006; over 200 machines; profits go to [ANSWER 13] in the local region |
+| The High Roller | 170 m high; Was the largest of its kind; each cabin on the wheel can fit up to [ANSWER 14] people |
+| The Big Apple Roller Coaster | 70 miles per hour; riders get on and off the roller coaster while in a [ANSWER 15]; is built around 2 buildings |
+
+{11:[100][ONE HUNDRED][A HUNDRED][1 HUNDRED]|12:CONVERSATIONS|13:CHARITIES|14:[40][FORTY]|15:HOTEL}
+
+=== CORRECT ANSWERS & FEEDBACK ===
+Field 11: 100 / ONE HUNDRED
+  [CORRECT] Excellent! The speaker mentions there are over 100 casinos in Las Vegas.
+  [INCORRECT] Incorrect. Listen to the beginning when the speaker talks about gambling - he states the exact number of casinos.
+  [NO ANSWER] You should answer this. The number of casinos is clearly stated when discussing gambling in Las Vegas.
+
+Field 12: CONVERSATIONS
+  [CORRECT] Correct! Visitors can listen to recorded conversations between criminals from nearly 100 years ago.
+  [INCORRECT] Incorrect. Listen to the description of the Mob Museum - specifically what visitors can listen to that was recorded by police.
+  [NO ANSWER] Always attempt an answer. The speaker describes what audio recordings visitors can hear at the museum.
+
+Field 13: CHARITIES
+  [CORRECT] Well done! The Pinball Hall of Fame donates excess revenue to charities in the area.
+  [INCORRECT] Incorrect. Listen to how the Pinball Hall of Fame uses its profits - it's mentioned that excess revenue goes somewhere specific.
+  [NO ANSWER] You need to answer. The speaker clearly states where any extra money from the museum goes.
+
+Field 14: 40 / FORTY
+  [CORRECT] Perfect! Each cabin on the High Roller can accommodate up to 40 people.
+  [INCORRECT] Incorrect. Listen to the details about the High Roller - the speaker mentions how many people fit in each cabin.
+  [NO ANSWER] You should answer this. The capacity of each cabin is stated when describing the High Roller.
+
+Field 15: HOTEL
+  [CORRECT] Excellent! The roller coaster begins and ends inside a hotel.
+  [INCORRECT] Incorrect. Listen to the most interesting aspect mentioned about the Big Apple Roller Coaster - where it starts and finishes.
+  [NO ANSWER] Always provide an answer. The speaker describes the unusual feature of where this ride begins and ends.
+
+=== QUESTION TYPE: SUMMARY COMPLETION ===
+
+Questions 16-20
+
+Complete the summary below USING NO MORE THAN TWO WORDS AND/OR A NUMBER.
+
+The Hoover Dam
+
+The dam was first discussed as an idea in [ANSWER 16] but construction did not begin until 1931. The project was completed in [ANSWER 17]. Before construction of the dam could begin, [ANSWER 18] of tunnels needed to be drilled to divert the river. The work was often dangerous, because of [ANSWER 19] and broken ropes, but this did lead to better safety standards on construction sites. Further dangers existed for workers, with deaths from heat and a lack of fresh air. The dam now provides power for around [ANSWER 20] people.
+
+{16:1900|17:1936|18:[5 KILOMETRES][5 KILOMETERS][FIVE KILOMETRES][FIVE KILOMETERS][5 KM][5 KMS][5KM][5KMS][FIVE KM][FIVE KMS]|19:[FALLING ROCKS][ROCKS]|20:1.3 MILLION}
+
+=== CORRECT ANSWERS & FEEDBACK ===
+Field 16: 1900
+  [CORRECT] Correct! The idea of the dam was first discussed as far back as 1900.
+  [INCORRECT] Incorrect. Listen to when the speaker gives important dates about the dam - the earliest date mentioned is when it was first discussed.
+  [NO ANSWER] You should answer. The speaker clearly states when the dam idea was first discussed.
+
+Field 17: 1936
+  [CORRECT] Excellent! The dam was completed in 1936, two years ahead of schedule.
+  [INCORRECT] Incorrect. Listen carefully to the completion date - it was finished 2 years ahead of the 1938 deadline.
+  [NO ANSWER] Always attempt an answer. The speaker provides the actual completion year clearly.
+
+Field 18: 5 KILOMETRES / 5 KILOMETERS
+  [CORRECT] Well done! The tunnels had a combined length of over 5 kilometres.
+  [INCORRECT] Incorrect. Listen to the description of diverting the Colorado River - the speaker mentions the total length of the four tunnels.
+  [NO ANSWER] You need to answer. The combined tunnel length is specifically stated.
+
+Field 19: FALLING ROCKS / ROCKS
+  [CORRECT] Perfect! Falling rocks and broken ropes caused many deaths and injuries.
+  [INCORRECT] Incorrect. Listen to what made the high scalers' job dangerous - the speaker mentions what fell and what broke.
+  [NO ANSWER] You should answer this. The speaker describes the main dangers faced by the high scalers.
+
+Field 20: 1.3 MILLION
+  [CORRECT] Excellent! The dam provides power for approximately 1.3 million people.
+  [INCORRECT] Incorrect. Listen to the final statement about the dam's current function - the speaker gives the exact number of people it serves.
+  [NO ANSWER] Always provide an answer. The number of people served by the dam is clearly stated in the conclusion.

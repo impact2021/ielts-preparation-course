@@ -1,0 +1,84 @@
+Listening Test 3 Section 4
+
+=== EXERCISE SETTINGS ===
+Layout Type: Listening Practice Test (No Audio Controls)
+Display Label: Practice test
+Scoring Type: IELTS Listening (Band Score)
+Starting Question Number: 31
+=== END EXERCISE SETTINGS ===
+
+=== QUESTION TYPE: SHORT ANSWER ===
+
+Questions 31-40
+
+Questions 31-35
+
+Answer the following questions using NO MORE THAN THREE WORDS.
+
+31. What causes RSI? {[REPEATED PHYSICAL MOVEMENT][REPEATED PHYSICAL MOVEMENTS]}
+[CORRECT] Excellent! The speaker states that RSI results from repeated physical movements which damage tendons, nerves, and muscles.
+[INCORRECT] Incorrect. Listen to the definition of RSI at the beginning of the lecture - the cause is clearly stated.
+[NO ANSWER] You should answer. The speaker defines what causes RSI in the opening paragraph.
+
+32. The use of what has caused an increase in RSI in the workplace? {COMPUTERS}
+[CORRECT] Correct! The speaker mentions that RSI has become particularly noticeable due to the increasing importance of computers in the workplace.
+[INCORRECT] Incorrect. Listen to why RSI has increased in the last twenty years - a specific technology is mentioned.
+[NO ANSWER] Always attempt an answer. The cause of the recent increase in RSI is clearly stated.
+
+33. RSI is made worse without break periods or if there is no thought given to what? {BODY POSITION}
+[CORRECT] Well done! The speaker says the situation is intensified if people don't take regular breaks or spend time considering their body position.
+[INCORRECT] Incorrect. Listen to what makes RSI worse besides not taking breaks - the speaker mentions something people should consider.
+[NO ANSWER] You need to answer. The two factors that make RSI worse are clearly mentioned.
+
+34. What should people who use a computer regularly be able to identify to avoid serious cases? {WARNING SIGNS}
+[CORRECT] Perfect! The speaker states that one way to prevent serious RSI is to recognise the warning signs.
+[INCORRECT] Incorrect. Listen to how people can prevent serious RSI - they need to identify something early.
+[NO ANSWER] You should answer. The prevention method is clearly explained.
+
+35. Problems can also occur if the computer monitor is what? {TOO CLOSE}
+[CORRECT] Excellent! The speaker mentions that many people sit too close to their monitor, leading to symptoms like headaches and blurred vision.
+[INCORRECT] Incorrect. Listen to the problem with monitor positioning - the speaker describes how people sit in relation to the monitor.
+[NO ANSWER] Always provide an answer. The monitor positioning problem is clearly stated.
+
+=== QUESTION TYPE: TABLE COMPLETION ===
+
+Questions 36-40
+
+Complete the notes below using NO MORE THAN THREE WORDS.
+
+Ergonomic Setup Guidelines
+
+| Item | Details |
+|------|---------|
+| Chair | Height should allow arms to be at 90 degrees to the keyboard; Feet should be on the floor or a [ANSWER 36]; Space should be allowed between the chair and back of the knees to maintain [ANSWER 37] |
+| Monitor | Screen should be just below eye level; Avoid light reflections by positioning at a [ANSWER 38]; [ANSWER 39] backgrounds are more comfortable to look at |
+| Keyboard | Wrists should remain straight; Elbows close to the body |
+| Posture | Sit up straight or [ANSWER 40] a little |
+
+{36:[FOOT STOOL][STOOL]|37:[PROPER CIRCULATION][CIRCULATION][PROPER BLOOD CIRCULATION]|38:[RIGHT ANGLE][RIGHT-ANGLE]|39:[LIGHT GREY][LIGHT GRAY]|40:[LEAN BACK]}
+
+=== CORRECT ANSWERS & FEEDBACK ===
+Field 36: FOOT STOOL / STOOL
+  [CORRECT] Correct! The speaker says feet should be flat on the ground, or if not practical, on a foot stool.
+  [INCORRECT] Incorrect. Listen to the alternative if feet can't be flat on the ground - the speaker mentions a specific item.
+  [NO ANSWER] You need to answer. The foot positioning options are clearly stated.
+
+Field 37: PROPER CIRCULATION / CIRCULATION
+  [CORRECT] Well done! The speaker mentions maintaining proper circulation in the legs by having space between the knees and chair.
+  [INCORRECT] Incorrect. Listen to why space should be left between the knees and chair seat - the speaker mentions what needs to be maintained.
+  [NO ANSWER] You should answer. The reason for the space is clearly explained.
+
+Field 38: RIGHT ANGLE / RIGHT-ANGLE
+  [CORRECT] Excellent! The speaker states the monitor should be positioned at a right angle to light sources or windows to avoid glare.
+  [INCORRECT] Incorrect. Listen to how to position the monitor to avoid glare - a specific angle is mentioned.
+  [NO ANSWER] Always provide an answer. The positioning technique is clearly described.
+
+Field 39: LIGHT GREY / LIGHT GRAY
+  [CORRECT] Perfect! The speaker explains that a light grey background has been proven to be easier on the eyes than bright white.
+  [INCORRECT] Incorrect. Listen to the recommended background colour alternative to bright white - the speaker gives a specific colour.
+  [NO ANSWER] You need to answer. The better background colour is clearly stated.
+
+Field 40: LEAN BACK
+  [CORRECT] Excellent! The speaker mentions that some people find sitting at 90 degrees too rigid, so they can lean slightly back.
+  [INCORRECT] Incorrect. Listen to the alternative to sitting rigidly at 90 degrees - the speaker describes what users can do instead.
+  [NO ANSWER] You should answer. The posture alternative is clearly mentioned.
