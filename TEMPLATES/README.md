@@ -7,9 +7,11 @@ This directory contains XML template files for creating IELTS quizzes. These tem
 
 ### "No questions available for this quiz" Error
 
-This error occurs when the XML file contains **spaces inside CDATA sections**. 
+This error can occur due to several issues with the XML file:
 
-#### ❌ INCORRECT Format (will cause error):
+#### Issue 1: Spaces inside CDATA sections
+
+**❌ INCORRECT Format (will cause error):**
 ```xml
 <wp:meta_key>
 <![CDATA[ _ielts_cm_questions ]]>
@@ -19,7 +21,7 @@ This error occurs when the XML file contains **spaces inside CDATA sections**.
 </wp:meta_value>
 ```
 
-#### ✅ CORRECT Format (will work):
+**✅ CORRECT Format (will work):**
 ```xml
 <wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
 <wp:meta_value><![CDATA[a:15:{i:0;...}]]></wp:meta_value>
@@ -30,20 +32,81 @@ This error occurs when the XML file contains **spaces inside CDATA sections**.
 - NO spaces before `]]>`
 - XML parsers preserve spaces in CDATA sections
 - Extra spaces break PHP serialized data deserialization
-- This causes WordPress to fail reading the questions data
 
-## How to Fix Broken XML Files
+#### Issue 2: PHP Serialization String Length Mismatches
 
-Use the provided validation script:
+PHP serialized data uses format `s:LENGTH:"content"` where LENGTH must exactly match the byte length of the content string. If these don't match, PHP's `unserialize()` function fails.
+
+**Example of broken serialization:**
+```
+s:142:"Questions 21-25: Answer the following questions..."
+```
+If the actual string is only 137 bytes, unserialization fails with "Error at offset XXX".
+
+**Solution:** Use `fix-serialization-lengths.py` to automatically recalculate and fix all string lengths.
+
+#### Issue 3: Problematic UTF-8 Characters
+
+Smart quotes, em-dashes, and other special UTF-8 characters can break serialization when their byte lengths aren't properly counted.
+
+**Solution:** Use `fix-xml-with-php.php` to replace problematic characters with ASCII equivalents and re-serialize.
+
+## Available Tools
+
+### validate-xml.php
+Validates XML files and checks for common issues:
 ```bash
-php TEMPLATES/validate-xml.php your-file.xml
+php TEMPLATES/validate-xml.php your-file.xml [--fix]
 ```
 
-This will:
-1. Check for spaces in CDATA sections
-2. Validate PHP serialized data can be unserialized
-3. Report any issues found
-4. Optionally fix the issues automatically
+Checks:
+1. Spaces in CDATA sections
+2. PHP serialized data validity
+3. Required postmeta fields
+4. Post type verification
+
+### fix-serialization-lengths.py
+Fixes string length mismatches in PHP serialized data:
+```bash
+python3 TEMPLATES/fix-serialization-lengths.py your-file.xml [output.xml]
+```
+
+Automatically recalculates and updates all string byte lengths in serialized data.
+
+### fix-xml-with-php.php
+Fixes UTF-8 character issues in serialized data:
+```bash
+php TEMPLATES/fix-xml-with-php.php your-file.xml [output.xml]
+```
+
+Replaces problematic UTF-8 characters and re-serializes data.
+
+## Fixing Workflow
+
+1. **Validate** the XML file:
+   ```bash
+   php TEMPLATES/validate-xml.php your-file.xml
+   ```
+
+2. **Fix** based on the error:
+   - For string length mismatches:
+     ```bash
+     python3 TEMPLATES/fix-serialization-lengths.py your-file.xml
+     ```
+   - For UTF-8 character issues:
+     ```bash
+     php TEMPLATES/fix-xml-with-php.php your-file.xml
+     ```
+
+3. **Validate again** to confirm:
+   ```bash
+   php TEMPLATES/validate-xml.php your-file-fixed.xml
+   ```
+
+4. **Replace** the original file if valid:
+   ```bash
+   mv your-file-fixed.xml your-file.xml
+   ```
 
 ## Template Files
 
