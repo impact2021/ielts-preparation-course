@@ -20,15 +20,27 @@ import xml.etree.ElementTree as ET
 def extract_questions_from_txt(txt_content):
     """Extract questions and answers from TXT file."""
     questions = []
-    question_number = 1
     
     # Find all {ANSWER} patterns with question numbers
-    # Pattern: <strong>N</strong> {ANSWER}
-    pattern = r'<strong>(\d+)</strong>\s*(?:£\s*)?{([^}]+)}'
+    # Strategy: Look for any occurrence of number followed by answer in braces
+    # Handles formats like: "31 text {ANSWER}" and "32. text {ANSWER}"
+    
+    # Pattern matches: word boundary + number (1-50) NOT followed by dash (to avoid ranges like "31-35")
+    # optionally followed by period/space, then text (max 200 chars), then {answer}
+    pattern = r'\b(\d{1,2})(?![-–])[\.:\s]+[^{}]{0,200}?{([^}]+)}'
     
     for match in re.finditer(pattern, txt_content):
         q_num = int(match.group(1))
+        
+        # Only accept question numbers 1-50 (typical for IELTS)
+        if q_num < 1 or q_num > 50:
+            continue
+            
         answer_text = match.group(2).strip()
+        
+        # Skip if we already have this question
+        if any(q['number'] == q_num for q in questions):
+            continue
         
         # Handle multiple answers separated by brackets
         # e.g., {[2 YEARS][TWO YEARS]} becomes "2 years|two years"
@@ -42,18 +54,31 @@ def extract_questions_from_txt(txt_content):
             'number': q_num,
             'answer': answer
         })
-        question_number = q_num + 1
+    
+    # Sort by question number
+    questions.sort(key=lambda q: q['number'])
     
     return questions
 
 def extract_transcript_from_txt(txt_content):
     """Extract the transcript table from TXT file."""
-    # Find the transcript table
+    # Find the transcript table - try multiple patterns
+    # Pattern 1: table with class="style1"
     table_pattern = r'(<table[^>]*class="style1"[^>]*>.*?</table>)'
     match = re.search(table_pattern, txt_content, re.DOTALL | re.IGNORECASE)
     
     if match:
         return match.group(1)
+    
+    # Pattern 2: div with overflow scroll (contains the transcript text)
+    div_pattern = r'<div[^>]*overflow:\s*scroll[^>]*>(.*?)</div>'
+    match = re.search(div_pattern, txt_content, re.DOTALL | re.IGNORECASE)
+    
+    if match:
+        # Extract just the text content, wrap in a simple structure
+        transcript_content = match.group(1).strip()
+        return f'<div class="transcript">{transcript_content}</div>'
+    
     return ""
 
 def annotate_transcript(transcript, questions):
