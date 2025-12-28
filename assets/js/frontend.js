@@ -650,10 +650,42 @@
                                         optionLabel.after(feedbackDiv);
                                     } else {
                                         // No option selected - show general no-answer feedback at question level
+                                        // and clearly indicate the correct answer
+                                        var feedbackText = questionResult.feedback;
+                                        
+                                        // Add correct answer indication if we have the correct answer index and options
+                                        var correctIndex = parseInt(questionResult.correct_answer, 10);
+                                        if (!isNaN(correctIndex) && questionResult.options) {
+                                            var options = [];
+                                            
+                                            // Parse options - can be array of objects or newline-separated string
+                                            if (Array.isArray(questionResult.options)) {
+                                                options = questionResult.options;
+                                            } else if (typeof questionResult.options === 'string' && questionResult.options.trim()) {
+                                                var optionLines = questionResult.options.split('\n').filter(function(line) {
+                                                    return line.trim().length > 0;
+                                                });
+                                                options = optionLines.map(function(line) {
+                                                    return { text: line.trim() };
+                                                });
+                                            }
+                                            
+                                            // Add correct answer text if available
+                                            if (correctIndex >= 0 && correctIndex < options.length) {
+                                                var correctOptionText = typeof options[correctIndex] === 'object' 
+                                                    ? options[correctIndex].text 
+                                                    : options[correctIndex];
+                                                if (correctOptionText && typeof correctOptionText === 'string') {
+                                                    feedbackText += '<br><br><strong>The correct answer is:</strong> ' + 
+                                                                   $('<div>').text(correctOptionText).html(); // Escape HTML
+                                                }
+                                            }
+                                        }
+                                        
                                         var feedbackDiv = $('<div>')
                                             .addClass('question-feedback-message')
                                             .addClass('feedback-incorrect')
-                                            .html(questionResult.feedback);
+                                            .html(feedbackText);
                                         questionElement.append(feedbackDiv);
                                     }
                                 }
