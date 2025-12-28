@@ -1,0 +1,105 @@
+<div id="text" class="style1">
+
+<strong>SECTION 2</strong>
+
+[audio mp3="https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0015-2.mp3"][/audio]
+
+<em>Questions 11- 15. Answer the questions using <strong>NO MORE THAN THREE WORDS</strong>.</em>
+<ol start="11" type="1">
+ 	<li>Specific lifestyle changes for whom is the speaker talking about? {[women][for women][changes for women]}</li>
+ 	<li>Name ONE example of a good which has now become thought of as a necessity. {[dishwashers][dishwasher][microwave][microwaves]}</li>
+ 	<li>In addition to work, what have these goods given us more time for? {[leisure pursuits][leisure pursuit][leisure]}</li>
+ 	<li>What do richer societies become? {[more demanding][demanding]}</li>
+ 	<li>What does the ‘race of acquisition’ encourage us to buy? {unnecessary goods}</li>
+</ol>
+
+<hr />
+
+<strong><em>Questions 16 to 20</em></strong>
+
+Select the correct answer<strong> A-C</strong>.
+
+16. Who is mostly responsible for creating the demand for new products?
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>Wealthy, older people</li>
+ 	<li>Professionals</li>
+ 	<li>Models</li>
+</ol>
+16. {B}
+
+17. Why should we be concerned with the increasing number of unnecessary appliances?
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>The cost</li>
+ 	<li>The environment</li>
+ 	<li>The pace of technology</li>
+</ol>
+17. {B}
+
+18. What other risk does the speaker refer to?
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>A loss of traditional skills</li>
+ 	<li>Health factors of pre-packaged food</li>
+ 	<li>A negative impact on careers</li>
+</ol>
+18. {A}
+
+19. Active buying behaviour
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>will cause an increase in manufactured goods</li>
+ 	<li>causes stress within families</li>
+ 	<li>is a purely positive aspect of consumer behaviour</li>
+</ol>
+19.{A}
+
+20. What does the speaker recommend for the future?
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>Buy what is available</li>
+ 	<li>Educating companies about sustainable production</li>
+ 	<li>Purchase in moderation</li>
+</ol>
+20. {C}
+
+</div>&nbsp;
+<table border="0" width="100%" cellpadding="10px">
+<tbody>
+<tr>
+<td valign="top">Answers:
+<ol start="11">
+ 	<li>(CHANGES) (FOR) WOMEN</li>
+ 	<li>DISHWASHER(S) <b>OR </b>MICROWAVE(S)</li>
+ 	<li>LEISURE PURSUITS</li>
+ 	<li>MORE DEMANDING</li>
+ 	<li>UNNECESSARY GOODS</li>
+ 	<li>B</li>
+ 	<li>B</li>
+ 	<li>A</li>
+ 	<li>A</li>
+ 	<li>C</li>
+</ol>
+</td>
+<td valign="top" width="50%">
+<div style="height: 300px; overflow: scroll;">
+
+<strong>Section 2</strong>
+
+(A) I’d like to introduce our guest speaker Professor Louise Phillips from AIL International. She is responsible for researching changes in lifestyle and the consequent impact on buyer behaviour. Today she is going to talk about the impact of changes in attitudes to leisure time on sales of labour-saving equipment such as microwaves and “white goods” which are products such as washing machines, refrigerators and dish washers.
+
+(B) Thank you very much. Thank you for coming today. I’ll start by talking about lifestyle changes over recent years for women. As we all know, the wife and mother of the family has traditionally been responsible for organising and completing household tasks for the family. However, particularly over the last decade or so, we have seen a greater number of women continuing to work after marriage and returning to work after having children. This has significantly reduced the amount of time available for household chores. The result is that nowadays, the majority of people own and regularly use products such as dishwashers or microwaves. The modern family often considers hours spent on cleaning and cooking as a waste of valuable time and generally we are all interested in finding ways of reducing the number of hours we need to devote to such tasks.
+
+While washing machines have long been thought of as necessities by families, nowadays, so too are microwaves and dishwashers. These goods can drastically reduce the amount of time we need to spend running our home and increase the amount of time available not only to go to work, but to also spend on leisure pursuits.
+
+As society develops and we become richer, we put more value on our leisure time and our possessions. The richer a society, the more demanding it becomes. People are no longer happy to work long hours for little return. Expensive holidays, expensive clothes and cars all become more important the more materialistic the society we live in. Acquiring “things” and joining the “race of acquisition” means that modern society spends a lot of time and money purchasing unnecessary goods. Although expensive and persuasive marketing techniques are partly responsible, the demand for such goods often comes from young professionals, those with the money to endlessly upgrade things simply because a better model is made available.
+
+Our obsession with the newest and best products available, while good for the economy, can also have a negative impact on the environment. It is not appropriate to over-produce appliances and over-use electricity to keep these unnecessary appliances operating in our homes. We often forget about the damage we have done to and continue to do to the environment.
+
+Others opposed to the overuse of appliances and technology also argue that from a social point of view, over-reliance on gadgets means that people are losing the ability to be creative. Traditionally it was considered an enviable skill to prepare meals night after night for our families. Nowadays, women are more likely to gain approval from others for their success in their careers than their ability in the kitchen. Along with microwaves have come ready-cooked meals, pre-washed vegetables and our reliance on take-away food when we are too busy to cook it ourselves.
+
+While there are obvious advantages and disadvantages to our increasingly active buying behaviour and changing wants and desires, it is likely that our desire to purchase labour saving items will continue , so it is therefore inevitable that production of such goods will increase. We can only hope to educate ourselves and our children to buy goods we need, not just goods that are available, and always maintain an awareness of their environmental impact. In short, moderation is the most important word for the future.
+
+I thank you very much for coming today and listening to what I have to say. That concludes my talk. I hope you have found it both interesting and informative. If you have any questions, I would be very glad to answer them…….
+
+</div></td>
+</tr>
+</tbody>
+</table>
+&nbsp;

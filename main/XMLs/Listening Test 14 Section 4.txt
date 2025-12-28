@@ -1,0 +1,111 @@
+<div id="text" class="style1">
+
+<strong>SECTION 4</strong>
+
+[audio mp3="https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0014-4.mp3"][/audio]
+
+<strong>Questions 31-40</strong>
+
+<strong><em>Question 31</em></strong>
+
+Circle the correct answer <strong>A–C.</strong>
+
+31 The students will be listening to...
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>a lecture on overpopulation</li>
+ 	<li>last Monday's lecture</li>
+ 	<li>a guest speaker</li>
+</ol>
+31. {C}
+
+<hr />
+
+<strong><em>Questions 32 to 36</em></strong>
+
+Complete the table below using <em><strong>TWO WORDS OR A NUMBER.</strong></em>
+<table border="1" width="100%">
+<tbody>
+<tr class="style1">
+<td colspan="4" align="left" valign="middle"><span class="style1">42 million adults <strong>(32) </strong>{[Cannot read][can't read][cant read]}
+50 million adults have the reading ability of a <strong>(33) </strong>{[10][TEN]}-year-old.
+Increasing by around <strong>(34) </strong>{[TWO][2]} and a quarter million per year.</span><span class="style1"><strong>Illiteracy costs</strong></span></td>
+</tr>
+<tr>
+<td align="center" valign="middle"></td>
+<td align="center" valign="middle"><span class="style1">Unemployment </span></td>
+<td align="center" valign="middle"><span class="style1">Unrealised earnings </span></td>
+<td align="center" valign="middle"><span class="style1">Literacy programmes</span></td>
+</tr>
+<tr>
+<td align="center" valign="middle"><span class="style1">cost (in billions of US dollars)</span></td>
+<td align="center" valign="middle"><span class="style1"><strong>(35)$ </strong>{[6][SIX]}</span></td>
+<td align="center" valign="middle"><span class="style1">237</span></td>
+<td align="center" valign="middle"><span class="style1"><strong>(36)$ </strong>{[10][TEN]}</span></td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<strong><em>Question 37 </em></strong>
+
+Circle the appropriate letter <strong>A–D.</strong>
+
+37. Illiteracy is increasing because many young learners are
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>not being taught how to break words into sounds</li>
+ 	<li>given word lists which are too long</li>
+ 	<li>not challenged enough in the classroom.</li>
+</ol>
+37. {A}
+
+<hr />
+
+<strong><em>Questions 38 to 40</em></strong>
+
+Complete the summary below <em><strong>USING NO MORE THAN TWO WORDS.</strong></em>
+
+English is made up of 26 letters, with 44<strong> (38)</strong> {SOUNDS} and 70 ways to <strong>(39)</strong> {SPELL} those sounds. Unsuccessful teaching practices persist, however, because reading is<strong> (40) </strong>{BIG BUSINESS}.
+
+</div>&nbsp;
+<table border="0" width="100%" cellpadding="10px">
+<tbody>
+<tr>
+<td valign="top">Answers:
+<ol start="31">
+ 	<li>C</li>
+ 	<li>CANNOT READ</li>
+ 	<li>10</li>
+ 	<li>2</li>
+ 	<li>6</li>
+ 	<li>10</li>
+ 	<li>A</li>
+ 	<li>SOUNDS</li>
+ 	<li>SPELLING</li>
+ 	<li>BIG BUSINESS (BOTH WORDS NEEDED TO GET THE CORRECT ANSWER)</li>
+</ol>
+</td>
+<td valign="top" width="50%">
+<div style="height: 300px; overflow: scroll;">
+
+<strong>Section 4</strong>
+
+<em><strong>Announcer</strong>: Good afternoon. l’m pleased to see so many of you here today. As I told you all on Monday, the lecture on overpopulation has been postponed until next week as we have a guest speaker today. l’d like to introduce you all to Donald Mackenzie, who has recently returned from a 12-month research project in America. He is here to share with us some of the results of his studies into the problem of illiteracy. </em>
+
+<strong>Donald Mackenzie</strong>: Hello. Now, as sociology students, I have no doubt that you are aware that it is commonly believed that one indicator of a developed country is the level of education of its citizens. Most of these nations have free compulsory education for all and strict teacher certification requirements, so it would logically follow that people from countries such as America would be highly educated. Yet this isn’t always so: in America alone, 42 million adults cannot read and 50 million can recognise so few printed words they each have the reading ability of a 10-year-old. Frightening statistics indeed, but not as frightening as the trend suggested by current estimates — the number of illiterate adults is increasing by approximately two and a quarter million people each year, and although global statistics have not been compiled, it suggests an extremely disturbing figure.
+
+Inevitably, this is having an impact on employment. In America, the annual cost in welfare programmes and unemployment compensation due to illiteracy stands at six billion US dollars, and an additional $237 billion a year in unrealised earnings is forfeited by people who lack basic reading skills. There is also the cost of post-school literacy programmes, which have been put in place in order to counter this increasing figure. A conservative estimate places the cost of these programmes at 10 billion dollars each year, and growing steadily.
+
+Moving on, l’d like to talk about some of the causes of this increasing illiteracy. Children were taught to read by, first learning the alphabet, then the sounds of each letter, how they blended into syllables, and how those syllables made up words. They were taught that English spelling is logical and systematic, and that to become a ﬂuent reader it was necessary to master the alphabetic code in which English words are written, to the point where the code is used automatically with little conscious thought given to it. To make myself clear, I mean readers could sound out the letters, spelling them phonetically. Once a child learned this ability, attention could be turned to more advanced content. It seldom, if ever, occurred to teachers to give children word lists to read, or to make beginner-level readers memorise whole words before learning the components of those words, or to memorise whole stories as today’s proponents of the whole-language approach recommend. Several recent studies have found that 90 per cent of remedial reading students in developed countries are not able to decode fluently, accurately, and at an automatic level of response. The currently used ‘whole language’ method was originally conceived and used in the early 1800s to teach the deaf how to read, a method which has long since been discarded by the teachers of the deaf themselves as inadequate and outmoded.
+
+English is an alphabetic language that, when written, uses letters to represent speech sounds. When students were taught to read, they consciously identified the speech sounds and learned to recognise the letters used to represent them. They were then trained to apply this information to decode the names of written words, understand their meaning, and comprehend the information presented as a complete thought. The English language contains approximately half a million words. Of these words, about 300 compose about three-quarters of the words we use regularly. As I said, in schools where the ‘whole language’ method is taught, children are constantly memorising sight words during the first three or four grades of school, but are never taught how to unlock the meaning of the other 499 700 or more words.
+
+Whole-language learning causes frustration, poor spelling and hostility towards reading. Very bright children who can’t memorise long lists of words and retain their meaning are placed in special education, when all they need is to be taught the 26 letters of the alphabet, the 44 sounds they make, and the 70 common ways to spell those sounds. Some researchers believe dyslexia and the symptoms of Attention Deficit Disorder are actually caused by this reversal of the normal learning sequence.
+
+So why do faulty reading methods continue to be used? Well, in short it’s Big Business! The sale of instructional reading programmes is big business today: each year publishing companies compete for the adoption of reading programmes and workbooks which have to be replaced annually. Concentrating on phonics would seriously reduce the cost of education.
+
+</div></td>
+</tr>
+</tbody>
+</table>
+&nbsp;

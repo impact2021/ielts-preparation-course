@@ -1,0 +1,81 @@
+<div id="text" class="style1">
+
+<strong>SECTION 4</strong>
+
+[audio mp3="https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0013-4.mp3"][/audio]
+
+Complete the sentences below using <strong><em>NO MORE THAN TWO WORDS OR A NUMBER</em></strong>
+
+<strong>Questions 31-40</strong>
+
+Lecture on <strong>(31)</strong> {[Services marketing][Service marketing]}
+
+Examples: tourism and <strong>(32)</strong> {LEGAL ADVICE}
+
+Common misconception is that marketing points to <strong>(33) </strong>{WEAKNESS} in what is being provided.
+
+Marketing is actually essential in maintaining <strong>(34) </strong>{CUSTOMER NUMBERS}
+
+Selling a product is easier because it is <strong>(35)</strong> {TANGIBLE} and customers do not have such different <strong>(36) </strong>{EXPECTATIONS}.
+
+Aim: offer service beyond hopes of our <strong>(37) </strong>{CLIENTS}
+
+Important to: (a) keep informed &amp; (b) <strong>(38)</strong> {CONSTANTLY IMPROVE}
+
+One way to achieve this: <strong>(39) </strong>{CONDUCT SURVEYS}
+
+<strong>(40) </strong>{A REPRESENTATIVE} of the company must always be available for any queries or problems.
+
+</div>&nbsp;
+<table border="0" width="100%" cellpadding="10px">
+<tbody>
+<tr>
+<td valign="top">Answers:
+<ol start="31">
+ 	<li>SERVICES MARKETING</li>
+ 	<li>LEGAL ADVICE</li>
+ 	<li>WEAKNESS</li>
+ 	<li>CUSTOMERS NUMBERS</li>
+ 	<li>TANGIBLE</li>
+ 	<li>EXPECTATIONS</li>
+ 	<li>CLIENTS</li>
+ 	<li>CONSTANTLY IMPROVE</li>
+ 	<li>CONDUCT SURVEYS</li>
+ 	<li>(A) (COMPANY) REPRESENTATIVE</li>
+</ol>
+</td>
+<td valign="top" width="50%">
+<div style="height: 300px; overflow: scroll;">
+
+<strong>Section </strong>4
+<table border="1" width="90%" cellspacing="0" cellpadding="3" align="center">
+<tbody>
+<tr>
+<td valign="top" width="119">Interviewer</td>
+<td valign="top" width="961">Continuing our theme of business marketing, I have with me today Mr Brian Kinsella, who is here to talk about the differences between marketing a product and marketing a service.</td>
+</tr>
+<tr>
+<td valign="top" width="119">Brian Kinsella</td>
+<td valign="top" width="961">Good morning. Now I understand that many of you here today are interested in a career in services marketing. Well I have been the marketing director for Oceania Travel for nearly 11 years, so I feel that I can present what I consider to be the most important aspects of marketing a service. However, before I begin, I want to clarify what I mean by services marketing. This not only means aspects like holiday destinations but also professional services such as legal advice. In short, anyone that sells a service.
+Actually, a lot of the traditional services such as lawyers, accountants, etc. have not felt too comfortable marketing their services. It’s almost perceived in industries such as these that the need to market indicates a weakness in the services provided.
+However, more and more such industries are realising the importance of marketing to sustain their customer numbers, especially when their competitors are marketing themselves.Now, the main difference between marketing a product and a service is that the customers cannot understand exactly what the service will be. They can see a product and can comprehend exactly what that product will do for them. A service is more
+intangible — by that I mean whatever each customer gains from the service is often very personal. For example, with a travel agency, clients choose to travel abroad for a multitude of motives. Some people travel overseas for the experience and really
+want to get to know the culture of the local people. Others wish to escape from reality, totally relax in sophisticated comfort and be waited on hand and foot. Obviously, our clients will not bejudging what we offer by the same standards, and travel agents, like other such service industries, have an extremely difficult job in satisfying a range of customers from diverse backgrounds with different expectations.</td>
+</tr>
+<tr>
+<td valign="top" width="119">Brian Kinsella</td>
+<td valign="top" width="961">Our company has overcome this dilemma in a number of ways. First of all, our travel consultants are given extensive training in customer service and buyer behaviour. Our aim is not just to be a profit-making organisation, but also to meet and exceed the expectations or dreams of our clients. Our mission statement, in fact, is primarily to offer a service which is above and beyond the hopes of our clients. In addition, we regularly visit the tourist destinations we promote and inform all of our staff about any changes in specific areas.
+
+Not only is it important to be fully informed about every possible aspect of the service you are marketing, it is also essential to constantly improve the service offered. At Oceania Travel, we regularly conduct surveys with all of the people that visit our resorts of choice. Any negative feedback we try to remedy at once. Our clients are met by a company representative during their stay, and we have a set procedure for dealing with any complaints. Our clients are not expected to have to approach the hotel reception, as we have a 24-hour contact service direct to our representatives, and this representative should always welcome any customer
+problems or questions. In the event of a complaint, the representative will then try to remedy the complaint with the hotel. If the problem cannot be rectified by the hotel manager, our representative is authorised to remedy the situation him or herself. For situations beyond the representative’s authority, our complaints department is contacted. The complaints department guarantees a solution within the day. If the customer is still not satisfied, they are welcome to approach our head office on
+their return.
+
+So you see that marketing a service is catering more for the clients’ expectations than anything else and it is that which makes services marketing a very intricate business. Now that’s the end of my presentation, but if there is anything you want to ask, then please feel free to do so. Thank you.</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+&nbsp;

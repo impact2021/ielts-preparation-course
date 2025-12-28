@@ -1,0 +1,221 @@
+<div id="text" class="style1">
+
+Section 1
+
+[audio mp3="https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0047-1.mp3"][/audio]
+
+<strong><em>Questions 1 – 10</em></strong>
+
+<strong><em>Questions 1 – 5</em></strong>
+
+<em>Use <strong>NO MORE THAN</strong> <strong>TWO WORDS and/or A NUMBER</strong> for each answer</em>.
+
+<em><strong>Example</strong>: Where is the man flying to today? <strong>ANSWER</strong> _<u>Paris</u>__</em>
+<ol>
+ 	<li>How will the man travel to Munich? {[BY TRAIN][TRAIN][A TRAIN]}</li>
+ 	<li>Which London airport will the man depart from? {[CITY AIRPORT][CITY]}</li>
+ 	<li>What time does the flight arrive in Paris? {[3Pm][3 pm][3 p m][3 p.m.][3p.m.][3 p. m.]}</li>
+ 	<li>Which seat does the man choose? {[7A][7 A]}</li>
+ 	<li>What is the man’s Frequent Flyer number? {468319}</li>
+</ol>
+&nbsp;
+
+<hr />
+
+<strong><em>Questions 6 – 9</em></strong>
+
+<em>Choose the correct letter <strong>A – C</strong>.</em>
+<ol start="6">
+ 	<li>The man’s passport
+<ol style="list-style-type: upper-alpha" type="A">
+ 	<li>has expired.</li>
+ 	<li>has 6 more months left on it.</li>
+ 	<li>has 7 more months on it.</li>
+</ol>
+</li>
+</ol>
+6. {C}
+<ol start="7">
+ 	<li>The man will check in
+<ol style="list-style-type: upper-alpha" type="A">
+ 	<li>one suitcase.</li>
+ 	<li>one briefcase.</li>
+ 	<li>one laptop case.</li>
+</ol>
+</li>
+</ol>
+7. {A}
+<ol start="8">
+ 	<li>The maximum weight for check-in luggage is
+<ol style="list-style-type: upper-alpha" type="A">
+ 	<li>7 kgs.</li>
+ 	<li>20 kgs.</li>
+ 	<li>30 kgs.</li>
+</ol>
+</li>
+</ol>
+8. {B}
+<ol start="9">
+ 	<li>The boarding time for the flight is
+<ol style="list-style-type: upper-alpha" type="A">
+ 	<li>1:00 p.m.</li>
+ 	<li>1:10 p.m.</li>
+ 	<li>1:30 p.m.</li>
+</ol>
+</li>
+</ol>
+9. {B}
+<ol start="10">
+ 	<li>The woman suggests that the man
+<ol style="list-style-type: upper-alpha" type="A">
+ 	<li>use E-Check-In to Paris.</li>
+ 	<li>stay at a different hotel.</li>
+ 	<li>get a brochure.</li>
+</ol>
+</li>
+</ol>
+10. {C}
+
+</div>&nbsp;
+<table border="0" width="100%" cellpadding="10px">
+<tbody>
+<tr>
+<td valign="top">Answers:
+<ol>
+ 	<li>(BY) TRAIN / ON THE TRAIN</li>
+ 	<li>CITY (AIRPORT)</li>
+ 	<li>3 PM</li>
+ 	<li>7A</li>
+ 	<li>468319</li>
+ 	<li>C</li>
+ 	<li>A</li>
+ 	<li>B</li>
+ 	<li>B</li>
+ 	<li>C</li>
+</ol>
+</td>
+<td valign="top" width="50%">
+<div style="height: 300px; overflow: scroll;">
+
+<strong>Section 1</strong>
+
+<strong>M:  </strong>Man      <strong>W:  </strong>Woman
+
+<span lang="EN-US">W:   Good afternoon, and welcome to
+AngloAir.  Where are you flying to today?</span>
+
+<span lang="EN-US">M:   Hi.  I’m
+flying to Paris today. After that, I’m going to Munich, but by train, and then
+flying back to London.</span>
+
+<span lang="EN-US">W:   Sounds interesting.  It’s Mr…?</span>
+
+<span lang="EN-US">M:   Wickens, David Wickens.</span>
+
+<span lang="EN-US">W:   Ok, well, let’s get you checked in, then,
+Mr. Wickens, for Paris.  Do you have your
+ticket and passport?</span>
+
+<span lang="EN-US">M:   Yes, somewhere here… yes, here they
+are.  Ticket… and passport.</span>
+
+<span lang="EN-US">W:   Ok, let’s see, economy class, leaving from
+City Airport, London, to Paris, leaving 1:30, arriving 3 pm local time, with
+the one hour time difference.  Do you
+have a seat preference?</span>
+
+<span lang="EN-US">M:   Well, it’s a short flight, but I do prefer a
+window seat, if one’s available.</span>
+
+<span lang="EN-US">W:   Yes, I think there are a couple left, give
+me a second here…, yes, here we are.   We
+have seat 7A or 16A available.</span>
+
+<span lang="EN-US">M:   The front of the plane, please, so, the
+first one.</span>
+
+<span lang="EN-US">W:   No problem, Mr. Wickens.  And are you a Frequent-Flyer member. It’s not
+noted here on your booking….</span>
+
+<span lang="EN-US">M:   Yes, I’ve been a member for years - I guess
+I forgot to give them my number when I made the booking.  It’s 468319.</span>
+
+<span lang="EN-US">W:   468319, correct?</span>
+
+<span lang="EN-US">M:   Yes, that’s it.</span>
+
+<span lang="EN-US"> </span>
+
+<i><span lang="EN-US">You now have some time to read questions 6 to
+10. </span></i>
+
+<i><span lang="EN-US">Now listen carefully and answer questions 6
+-10.</span></i>
+
+<span lang="EN-US">W:   Now, I see your passport is about to expire.
+You only have 7 months left.</span>
+
+<span lang="EN-US">M:
+Yes – I’ve already applied for a new one. Is it OK to fly with today?</span>
+
+<span lang="EN-US">W:
+Sure – you need to have at least 6 months remaining to fly. Right, then.  Now, how many bags do you have to check in?</span>
+
+<span lang="EN-US">M:   Well, I will check in just this suitcase,
+but I have a carry-on briefcase, plus my laptop, but I’ll keep them both with
+me.</span>
+
+<span lang="EN-US">W:   Right, no problem, just put your bag
+here.  How about your carry-on bags?  The weight limit for those is 7 kilograms, in
+total.  And for your suitcase, it’s 20
+kilograms on these smaller flights.
+Let’s weigh your carry-on bags.
+Hmm… a total of just under 30 kilograms.
+But we’ll just let everything through today, Mr. Wickens.  The flight’s not full, so should be alright.</span>
+
+<span lang="EN-US">M:   Ok, thank you for that.  What’s the boarding time for this flight?</span>
+
+<span lang="EN-US">W:  Well, it’s a 1:30 departure, and it’s noon
+now, and you have to be at the Gate 20 minutes before departure for boarding,
+so just after 1, 1:10 to be exact.  Try
+to be there earlier, though, if you can.
+Often, the flight can leave a little earlier, that is, if everyone’s on
+board.</span>
+
+<span lang="EN-US">M:  Ok, no problem.</span>
+
+<span lang="EN-US">W:  Now, I think that’s just about
+everything.  I hope you have a good
+flight, and, just for the future, a couple of suggestions.  Do you usually get a ticket, or have you used
+our E-Ticket service?</span>
+
+<span lang="EN-US">M:  Yes, of course, I normally get an E-Ticket,
+but, my secretary was away, so I just bought an ordinary ticket.  </span>
+
+<span lang="EN-US">W:  Oh, ok.
+And, of course, on our Atlantic flights, do you ever use our
+E-Check-in?  You can check in
+electronically.  </span>
+
+<span lang="EN-US">M:   Yes, I always do that, but you don’t have
+that service here for the Paris flight.</span>
+
+<span lang="EN-US">W:   Correct, that’s coming soon.  And, finally, do you normally stay at the
+same hotel here in London?</span>
+
+<span lang="EN-US">M:   Yes, usually, I do.  Why?</span>
+
+<span lang="EN-US">W:   Well, I suggest that you get one of our
+brochures about all of our services, including accommodation, check-in
+facilities, range of flight services and transportation options.  If you just ask at our Service Counter - it’s
+just past the Check-In facilities - I think you’ll be interested in some of the
+things we offer.</span>
+
+<span lang="EN-US">M:   Ok.
+That sounds great, I appreciate your advice.  And thanks for your help… </span>
+
+</div></td>
+</tr>
+</tbody>
+</table>
+&nbsp;

@@ -1,0 +1,189 @@
+<div id="text" class="style1">
+
+<strong>SECTION 1</strong>
+
+[audio mp3="https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0014-1.mp3"][/audio]
+
+Example:
+
+<em>The customer went to South Africa</em>
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li><em>last month</em></li>
+ 	<li><em>last week</em></li>
+ 	<li><em><u>last year. C</u></em><u></u></li>
+</ol>
+<strong>Questions 1-10</strong>
+
+<em><strong>Questions 1 and 2</strong></em>
+Choose the correct letter A–C.
+
+1 The travel agent:
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>thinks Europe is a good destination</li>
+ 	<li>can personally recommend Vancouver</li>
+ 	<li>does not think America is a good choice.</li>
+</ol>
+1. {B}
+2 The customer:
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>is going to Europe next year</li>
+ 	<li>knows people living in Canada</li>
+ 	<li>wants to go to the warmest place.</li>
+</ol>
+2. {B}
+
+<hr />
+
+<strong><em>Questions 3 to 6</em></strong>
+
+Complete the form using <em><strong>NO MORE THAN TWO WORDS AND/OR A NUMBER.</strong></em>
+<table border="1" width="100%">
+<tbody>
+<tr>
+<td colspan="2"><span class="style1">The Travel Depot flight reservations</span></td>
+</tr>
+<tr>
+<td><span class="style1">Customer’s name:</span></td>
+<td><span class="style1">Jim <strong>(3)</strong> {JACKSON}
+</span></td>
+</tr>
+<tr>
+<td><span class="style1">Address</span></td>
+<td><span class="style1">10 Allen Road, Oldham </span></td>
+</tr>
+<tr>
+<td><span class="style1">Destination</span></td>
+<td><span class="style1"> Vancouver, Canada</span></td>
+</tr>
+<tr>
+<td><span class="style1">Contact number: </span></td>
+<td><span class="style1">0151 <strong>(4)</strong> {[433 398][433398][43 33 98][4 3 3 3 9 8][4333 98]} (home)</span></td>
+</tr>
+<tr>
+<td><span class="style1">Flight number</span></td>
+<td><span class="style1"><strong>(5)</strong> {VN217}
+</span></td>
+</tr>
+<tr>
+<td><span class="style1">Length of stay (nights):</span></td>
+<td><span class="style1"><strong>(6)</strong> {[20][TWENTY]}
+</span></td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<strong><em>Questions 7 to 10</em></strong>
+
+Complete the sentences below USING NO MORE THAN TWO WORDS OR A NUMBER
+<ol start="7">
+ 	<li>The travel agent recommends some form of (7) {[travel insurance][insurance][travel]} cover for peace of mind.</li>
+ 	<li>There are two types of cover, but the best cover is offered with the (8) {GOLD} Star policy.</li>
+ 	<li>The client can see a play at the theatre for $ (9) {[54][fifty four][fifty four]}.</li>
+ 	<li>The flight and the insurance together costs £ (10) {433}.</li>
+</ol>
+</div>&nbsp;
+<table border="0" width="100%" cellpadding="10px">
+<tbody>
+<tr>
+<td valign="top">Answers:
+<ol>
+ 	<li>B</li>
+ 	<li>B</li>
+ 	<li>JACKSON (EXACT SPELLING IS REQUIRED FOR THIS)</li>
+ 	<li>433 398 (IF YOUR ANSWER WAS MARKED WRONG, BUT YOU HAVE THESE NUMBERS IN THIS ORDER, PLEASE LET US KNOW!)</li>
+ 	<li>VN217 (IF YOUR ANSWER WAS MARKED WRONG, BUT YOU HAVE THESE LETTERS AND NUMBERS IN THIS ORDER, PLEASE LET US KNOW!)</li>
+ 	<li>20 OR TWENTY</li>
+ 	<li>'TRAVEL', 'TRAVEL INSURANCE' OR JUST 'INSURANCE'</li>
+ 	<li>GOLD</li>
+ 	<li>54 OR FIFTY FOUR (THE CURRENCY SYMBOL IS NOT NEEDED AS IT IS IN THE QUESTION)</li>
+ 	<li>433 (THE CURRENCY SYMBOL IS NOT NEEDED AS IT IS IN THE QUESTION)</li>
+</ol>
+</td>
+<td valign="top" width="50%">
+<div style="height: 300px; overflow: scroll;">
+
+<strong>Section 1</strong>
+
+TRAVEL AGENT: Hello. Welcome to the Flight Depot. How can I help you?
+
+CUSTOMER: Well, I’m looking for a reasonably priced holiday. I went to South Africa for a month last year and I’d like to see North America this time – maybe Canada, but I’m also interested in Europe if the prices to Canada are too expensive. I’m on quite a tight budget you see.
+
+TRAVEL AGENT: Well I can certainly get some prices for Canada for you. Vancouver is lovely this time of year, and we have some special offers on at the moment. There are also some special deals for Europe.
+
+CUSTOMER: Okay, well, I have some relatives over in Vancouver so that would be good. I can always travel around Europe next year.
+
+TRAVEL AGENT: Right, let’s have a look at some prices then. When would you like to go?
+
+CUSTOMER:Some time at the end of the end of next month if possible, but I’m quite flexible anytime between the 24th to the 31st. I’d like to go for three weeks.
+
+TRAVEL AGENT: Well there’s lots of availability for those dates. Now, if you’re concerned about the cost, it’s cheaper if you don’t mind not flying direct.
+
+CUSTOMER:Sorry? What do you mean?
+
+TRAVEL AGENT: Well, if you don’t mind changing planes then it’s cheaper.
+
+CUSTOMER:Oh, well, I don’t mind changing planes.
+
+TRAVEL AGENT: In that case, the cheapest flight I have leaves on the 25th and changes in New York. It’s only a short stop – you’ll be in the airport for two and a half hours. How does that sound?
+
+CUSTOMER:Sounds good, but what’s the price?
+
+TRAVEL AGENT: That’s £412 for a return flight, but that doesn’t include airport tax. Would you like to arrange any accommodation?
+
+CUSTOMER:No, I have a cousin I can stay with. All I need is the flight, so I think I’ll take that one.
+
+TRAVEL AGENT: Right, I’ll just check availability for your return. Three weeks did you say?
+
+CUSTOMER:Yes, that’s right.
+
+TRAVEL AGENT: Okay...well there are seats available on the 14th or the 15th. Which one would you prefer?
+
+CUSTOMER:The fifteenth sounds good. Yes, from the 25th to the 15th sounds fine.
+
+TRAVEL AGENT: I’ll reserve that for you then. Can you tell me your name please?
+
+CUSTOMER:Sandra Jackson.
+
+TRAVEL AGENT: Is that J-A-C-K-S-O-N?
+
+CUSTOMER:That’s right.
+
+TRAVEL AGENT: And can I take an address and contact number?
+
+CUSTOMER:Yes, it’s 10, Allen Road, Oldham. Do you want a home number or my mobile?
+
+TRAVEL AGENT: Either’s fine.
+
+CUSTOMER:Well, my home number is 0151 433 398
+
+TRAVEL AGENT: Great. Now, one more thing. Do you have any travel insurance? We recommend all our clients take some kind of cover, even though most people don’t end up needing it. Most people have it just for peace of mind.
+
+CUSTOMER:Well, what times of cover do you have?
+
+TRAVEL AGENT: Our most comprehensive cover is the Gold Star, which will cost £21 for the period you are away. It’s a good policy because it covers almost all eventualities, even extreme sports such as snow boarding and skydiving.
+
+CUSTOMER:Well, I don’t plan to do anything that dangerous, but £21 sounds fine so I’ll take that too please.
+
+TRAVEL AGENT: Great. Is there anything else I can help you with?
+
+CUSTOMER:Well, do you have any information about what to do in Vancouver?
+
+TRAVEL AGENT: Yes, I’m sure there’s something on the computer that can help. Ahh, yes.
+
+CUSTOMER:There’s a Shakespeare play at the theatre, but it’s quite expensive. That starts at 8pm. The city museum is really popular too, if you like that kind of thing. They have a special exhibition of Japanese armour next month. Entrance is free and the museum is open from 9.00 to 4.30 Monday to Saturday. Would you be interested in either of those?
+
+TRAVEL AGENT: Oh, well..errr, maybe. (sounds hesitant)
+
+CUSTOMER:Well, I’m sure you can arrange that when you get there anyway. So, it’s the flight and the Gold Star insurance. That’s… £433 in total.
+
+TRAVEL AGENT: Can I pay by visa?
+
+CUSTOMER: Yes of course. If you start…. (fade out)
+
+</div></td>
+</tr>
+</tbody>
+</table>
+&nbsp;

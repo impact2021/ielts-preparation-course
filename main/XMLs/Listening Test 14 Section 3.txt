@@ -1,0 +1,164 @@
+<strong>SECTION 3</strong>
+
+[audio mp3="https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0014-3.mp3"][/audio]
+
+<strong>Questions 21-30</strong>
+
+<strong><em>Questions 21 to 24</em></strong>
+
+Answer the following questions <em><strong>USING NO MORE THAN THREE WORDS AND / OR A NUMBER</strong></em>
+<ol start="21" type="1">
+ 	<li>How long is the radio show? {[1 hour][one hour][an hour][hour]}</li>
+ 	<li>What does the programme focus on every week? {[conservation][conservation issue][conservation issues]}</li>
+ 	<li>Where is Professor Ripley from? {[The USA][USA][U.S.A.][U.S.A][America][North America][United States]}</li>
+ 	<li>According to Professor Ripley, what animals do people most associate with the African bush? {[prides of lions][lions][the lion]}</li>
+</ol>
+
+<hr />
+
+<strong><em>Questions 25 to 28</em></strong>
+
+Complete the table below using <em><strong>NO MORE THAN THREE WORDS OR A NUMBER.</strong></em>
+<table border="1" width="100%">
+<tbody>
+<tr>
+<td align="center" valign="middle"></td>
+<td align="center" valign="middle"><strong><span class="style1">Threats </span></strong></td>
+<td align="center" valign="middle"><strong><span class="style1">Natural habitat </span></strong></td>
+<td align="center" valign="middle"><strong><span class="style1">Population</span></strong></td>
+</tr>
+<tr>
+<td align="center" valign="middle"><span class="style1">African lions</span></td>
+<td align="center" valign="middle"></td>
+<td align="center" valign="middle"><span class="style1">bush</span></td>
+<td align="center" valign="middle"><span class="style1">Estimated to be<strong> (25)</strong> {[fifty thousand][fifty-thousand][50 000][50,000][50000][50, 000][50 thousand]}
+</span></td>
+</tr>
+<tr>
+<td align="center" valign="middle"><span class="style1">Tigers</span></td>
+<td align="center" valign="middle"><span class="style1"><strong>(26) </strong>{[HUNTERS]}</span></td>
+<td align="center" valign="middle"><span class="style1">forests and plains</span></td>
+<td align="center" valign="middle"><span class="style1">fewer than <strong>(27) </strong>{[6000][6,000][6 000][6 thousand][six thousand]}</span></td>
+</tr>
+<tr>
+<td align="center" valign="middle"><span class="style1">Snow leopards</span></td>
+<td align="center" valign="middle"><span class="style1">Expansion of<strong> (28) </strong>{AGRICULTURE}</span></td>
+<td align="center" valign="middle"><span class="style1">high-altitude pastures</span></td>
+<td align="center" valign="middle"></td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<strong><em>Questions 29 and 30</em></strong>
+
+Circle the appropriate letter <strong>A–D.</strong>
+
+29 Where is the WWF currently funding projects to help the snow leopard?
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>Nepal, Pakistan and Bhutan</li>
+ 	<li>Nepal and Pakistan</li>
+ 	<li>Bhutan and Nepal</li>
+ 	<li>Pakistan and Bhutan</li>
+</ol>
+29. {B}
+
+30 Listeners should telephone
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>immediately if they want to put forward an opinion</li>
+ 	<li>during the commercial break</li>
+ 	<li>in 10 minutes if they have anything they want to ask the professor</li>
+ 	<li>if they have any information regarding pumas or jaguars.</li>
+</ol>
+30. {C}&nbsp;
+<table border="0" width="100%" cellpadding="10px">
+<tbody>
+<tr>
+<td valign="top">Answers:
+<ol start="21">
+ 	<li>1 HOUR</li>
+ 	<li>CONSERVATION (ISSUES)</li>
+ 	<li>THE USA</li>
+ 	<li>(PRIDES OF) LIONS</li>
+ 	<li>50,000</li>
+ 	<li>HUNTERS</li>
+ 	<li>6,000</li>
+ 	<li>AGRICULTURE</li>
+ 	<li>B</li>
+ 	<li>C</li>
+</ol>
+</td>
+<td valign="top" width="50%">
+<div style="height: 300px; overflow: scroll;">
+
+<strong>Section 3</strong>
+<table border="1" width="90%" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td valign="top">Interviewer</td>
+<td valign="top">Thank you very much for tuning in today to listen to our weekly hour on conservation issues. Last week we spoke about the impact of environmental changes on primates, and this week to continue the theme we have invited in a specialist by the name of Professor Andrew Ripley, all the way from USA, to tell us more about the problems faced by the cat family. Professor Ripley, thank you very much for joining us today.</td>
+</tr>
+<tr>
+<td valign="top">Professor Ripley</td>
+<td valign="top">lt’s my pleasure, thank you very much for inviting me.</td>
+</tr>
+<tr>
+<td valign="top">Interviewer</td>
+<td valign="top">50 l understand that you spent a great proportion of your time travelling the globe and monitoring changes in population levels of the cat family.</td>
+</tr>
+<tr>
+<td valign="top">Professor Ripley</td>
+<td valign="top">Yes, that's correct. Of course we are not talking about the domestic cat here, but their majestic cousins such as the lion, tiger and jaguar to name but a few.</td>
+</tr>
+<tr>
+<td valign="top">Interviewer</td>
+<td valign="top">Which member of the cat family do you yourself find to be the most fascinating?</td>
+</tr>
+<tr>
+<td valign="top">Professor Ripley</td>
+<td valign="top">Well, l’ve spent a lot of time recently studying jaguars, but the lion is still my personal favourite. lt is the world’s most social cat and unusual in the way in which it chooses to group together with others of its species. Prides of lions basking in the sunshine are probably one of people’s most vivid perceptions of the African bush.</td>
+</tr>
+<tr>
+<td valign="top">Interviewer</td>
+<td valign="top">Yes certainly ... l totally agree with you. Can you tell me the current lion population in Africa these days?</td>
+</tr>
+<tr>
+<td valign="top">Professor Ripley</td>
+<td valign="top">Well  it is very difficult to measure it accurately. Figures range from 100 000, to as few as 30 000, but it is generally estimated that there are 50 000. In order to maintain the population and protect the species from poachers, many are moved to protected areas.</td>
+</tr>
+<tr>
+<td valign="top">Interviewer</td>
+<td valign="top">Which member of the cat family do you feel is most at risk?</td>
+</tr>
+<tr>
+<td valign="top">Professor Ripley</td>
+<td valign="top">For different reasons, a number of species of the cat family are endangered. Sometimes due to natural predators or environmental changes, but mainly because of the threat of hunters. For example, I am sure you are aware, the bones and body parts of tigers have been, and still are, traditionally used in medicines in the Far East. Because of this and the demand for medicine made from tiger parts, their numbers have been falling for some time and to date -there are fewer than 6000 tigers living in their natural habitat of the forests and plains of Asia.</td>
+</tr>
+<tr>
+<td valign="top">Interviewer</td>
+<td valign="top">What is being done to curb the population decrease?</td>
+</tr>
+<tr>
+<td valign="top">Professor Ripley</td>
+<td valign="top">Well, specialists such as myself work closely with conservationist groups such as the World Wildlife Federation, or WWF, to protect tigers from illegal hunting. WWF considers the drop in tiger numbers to be catastrophic and they are working hard to conserve the populations in China, India, Indonesia, Malaysia, Thailand, Vietnam and Russia.</td>
+</tr>
+<tr>
+<td valign="top">Interviewer</td>
+<td valign="top">I understand that poaching is not the only problem faced by the leopard... let me get this right  is it the snow leopard which lives in the mountains in Asia?</td>
+</tr>
+<tr>
+<td valign="top">Professor Ripley</td>
+<td valign="top">Yes, it is. Poaching has been a problem, but not the most important. its natural prey—the animals it hunts — is declining too. its natural habitat in high—altitude areas, specifically the pastures, is threatened by the growth of agriculture. lt is this that is causing the main problem for the snow leopard. It is going to be extremely difficult for numbers to recover, but again the WWF has been working hard to continue to fund projects to aid the snow leopard in Nepal and Pakistan, and hopefully Bhutan very soon.</td>
+</tr>
+<tr>
+<td valign="top">Interviewer</td>
+<td valign="top">Well this is fascinating information you are giving us, Professor, we are just going into a short commercial break. When we come back l have a few questions for you about the puma and the jaguar. Remember listeners, there will be an opportunity to phone in and voice any opinions or questions you may have for the professor in ten minutes.</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+&nbsp;

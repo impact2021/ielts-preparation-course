@@ -1,0 +1,174 @@
+<div id="text" class="style1">
+
+Section 3
+
+[audio mp3="https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0047-3.mp3"][/audio]
+
+<strong><em>Questions 21-30</em></strong>
+
+<strong><em>Questions 21-23       </em></strong>
+
+<em>Choose the correct letter, <strong>A</strong>, <strong>B</strong> or <strong>C</strong>.</em>
+
+<strong> </strong><strong>Research Project Background</strong>
+
+<em> </em>The students’ project is on
+<ol start="21">
+ 	<li>
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>urban renewal.</li>
+ 	<li>rural development.</li>
+ 	<li>the horticultural sector.</li>
+</ol>
+</li>
+</ol>
+21. {B}
+<ol start="22">
+ 	<li>The volunteer program received financial assistance from
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>the university.</li>
+ 	<li>volunteers.</li>
+ 	<li>local authorities.</li>
+</ol>
+</li>
+</ol>
+22. {A}
+<ol start="23">
+ 	<li>The students were in Africa for
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>seven weeks.</li>
+ 	<li>one week.</li>
+ 	<li>four weeks.</li>
+</ol>
+</li>
+</ol>
+23. {C}
+
+<hr />
+
+<em><strong>Questions 24-28</strong></em>
+
+<em>Complete the table below.</em>
+
+<em> </em><em>Write <strong>NO MORE THAN TWO WORDS AND/OR A NUMBER</strong> for each answer. </em>
+
+<strong>Singbora Community – Essential Facts</strong>
+<table>
+<tbody>
+<tr>
+<td width="50%">Estimated population</td>
+<td width="50%"><strong>24 </strong>{[20,000][TWENTY THOUSAND][20000][20 000]}</td>
+</tr>
+<tr>
+<td width="50%">Located beside</td>
+<td width="50%"><strong>25 </strong>{LAKE VICTORIA}</td>
+</tr>
+<tr>
+<td width="50%">Distance from<strong> 26 </strong>{REGIONAL CAPITAL}</td>
+<td width="50%">120 kilometres</td>
+</tr>
+<tr>
+<td width="50%">Distance from Dodoma</td>
+<td width="50%"><strong>27 </strong>{[700][SEVEN HUNDRED]} kms</td>
+</tr>
+<tr>
+<td width="50%">Primary Industry</td>
+<td width="50%"><strong>28 </strong>{[FISHING TRADE][FISHING]}</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<strong><em>Questions 29-30       </em></strong>
+
+<em>Choose the correct letter, <strong>A</strong>, <strong>B</strong>,<strong> C</strong> or <strong>D</strong>.</em>
+<ol start="29">
+ 	<li>Thomas found the time spent in Singbora to have been mostly
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>overwhelming.</li>
+ 	<li>challenging.</li>
+ 	<li>regrettable.</li>
+ 	<li>worthwhile.</li>
+</ol>
+</li>
+</ol>
+29. {D}
+<ol start="30">
+ 	<li>Jessica felt that overall the experience was
+<ol style="list-style-type: upper-alpha;" type="A">
+ 	<li>inconvenient.</li>
+ 	<li>eye-opening.</li>
+ 	<li>unsuccessful.</li>
+ 	<li>tremendous.</li>
+</ol>
+</li>
+</ol>
+30. {B}
+
+</div><table border="0" width="100%" cellpadding="10px">
+<tbody>
+<tr>
+<td valign="top">Answers:
+<ol start="21">
+ 	<li>B</li>
+ 	<li>A</li>
+ 	<li>C</li>
+ 	<li>20,000 / TWENTY THOUSAND</li>
+ 	<li>LAKE VICTORIA</li>
+ 	<li>REGIONAL CAPITAL</li>
+ 	<li>700 KILOMETRES</li>
+ 	<li>FISHING (TRADE)</li>
+ 	<li>D</li>
+ 	<li>B</li>
+</ol>
+</td>
+<td valign="top" width="50%">
+<div style="height: 300px; overflow: scroll;">
+
+<strong>Section 3</strong>
+
+<strong>JESSICA</strong>: Good afternoon, everyone… today Thomas and I are going to present you some of the findings from our joint research project… while he is setting up the data projector, I would like to say a few words about the project…
+
+<strong>J</strong>: The topic for our project was originally going to be on urban regeneration in England, which is somewhat different from most of the other project groups who are predominantly focused on the horticultural sector… but, thanks to an offer of an exciting opportunity and generous grant from the university, we were able to set our sights a little further afield…
+
+<strong>THOMAS</strong>: Yes, you’re quite right… as Jessica has just said… originally we had been planning to look at the development and redevelopment of urban areas here in the U.K…. however… we received an email from one of our lecturers, Doctor Smith, about a week after deciding on our original topic, asking if we would be interested in participating in a volunteer programme in East Africa for four weeks, looking at rural development…
+
+<strong>J</strong>: This particular programme was jointly funded, not, as it happens by the volunteers themselves…
+
+<strong>T</strong>: Yes… we incurred very few expenses ourselves…
+
+<strong>J</strong>: The programme was offered financial support by the East Asia Development Bank and no small sum contributed by our very own university… our own local and national authorities were not forthcoming on this particular occasion… And so… seeing as there were still seven weeks of the semester remaining at that time, we decided to change the topic of our research project to rural development in East Africa, opting to take part in the volunteer programme…
+
+<strong>T</strong>: That’s right, Jessica… we were out of the UK for seven weeks and spent four of those in the country, participating in a project first hand before coming back a week ago. The time that we spent in Singbora, which is a small lakeside community some twelve hundred metres above sea level, has provided us with greater insight regarding some of the most pressing development issues in areas like this one…
+
+<strong>J</strong>: I couldn’t have put it better myself, Thomas… during much of the one and a half weeks since our return we have been preparing our presentation seminar… And now, I think the slide show is ready…we’d like to begin with an overview of the area that we visited…
+
+<em> </em>
+
+&nbsp;
+
+&nbsp;
+
+<strong>T</strong>: As you can see from the first slide behind us, Singbora is located in an area of high elevation… Africa’s tallest peak, Kilimanjaro, is in fact located in north-eastern Tanzania… the number of people living in the wider we stayed  as tur project…opiccommunity where we stayed was twenty thousand at last count, and it is situated on the shores of Lake Victoria, which is the largest lake in Africa, as well as being the largest tropical lake in the world…
+
+<strong>J</strong>: The community we were working and living in, Singbora, is around one hundred and twenty kilometres from the regional capital and seven hundred kilometres, give or take, from the Tanzanian capital of Dodoma, which is located in the centre of the country…
+
+<strong>T</strong>: Yes… it may come as no surprise to many of you that the main sources of income and employment in Singbora do not derive from the car industry or IT sector, but from the fishing of freshwater species, and, to a lesser extent, formal and informal trade with nearby communities and larger settlements that are within easy travelling distance…
+
+<strong>J</strong>: And easy travelling distance does not necessarily mean by car for many of the local people, either, as I am sure all of you will appreciate…
+
+<strong>T</strong>: Now, as I am preparing to show you a short video clip detailing some of the specifics on the community and the development work that we were involved in, we would…
+
+<strong>J</strong>: Yes, before we go into much greater detail about the project work, Thomas and I would like to tell you our personal views and what we took away from the experience…
+
+<strong>T</strong>: I for one felt that even though there were many moments that were challenging and, to be frank, at times overwhelming in terms of the scale of some of the issues that are facing the local community… on the whole, it was a most rewarding experience, and I think I can speak for both of us when I say that we don’t regret our decision to participate in the project and offer what little help we were able to.
+
+<strong>J</strong>: I do agree with you there, Thomas, although… I must say that, for my part, and in spite of the minor difficulties and personal inconveniences that we experienced… the entire project really did prove to be very insightful, and helped to open my eyes to the realities of the situation as it exists today in many rural communities, such as Singbora,  including the tremendous amount of work that still needs to be done… I think that being there on the ground really brought that home in a way that text-based research often fails to do…
+
+<strong>T</strong>: Yes, Jessica… I couldn’t agree more… The clip is ready to go now, if you’d kindly view the screen while we dim the lights a moment…
+
+</div></td>
+</tr>
+</tbody>
+</table>
