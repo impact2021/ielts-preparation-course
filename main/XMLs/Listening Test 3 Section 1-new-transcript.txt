@@ -1,61 +1,3 @@
-Listening Test 3 Section 1
-
-=== EXERCISE SETTINGS ===
-Layout Type: Listening Practice Test (No Audio Controls)
-Display Label: Practice test
-Scoring Type: IELTS Listening (Band Score)
-Starting Question Number: 1
-Audio URL: https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0049-1.mp3
-=== END EXERCISE SETTINGS ===
-
-=== QUESTION TYPE: SHORT ANSWER ===
-
-Questions 1-10
-
-Questions 1-4
-
-Answer the following questions using NO MORE THAN TWO WORDS AND/OR A NUMBER.
-
-1. Where did the man do his introduction to driving course? {[HIGH SCHOOL][SCHOOL]}
-[CORRECT] Correct! The man mentions he did a short introduction to driving course at high school.
-[INCORRECT] Incorrect. Listen carefully to where the man did his introduction to driving course.
-[NO ANSWER] You should answer. The location is clearly stated in the conversation.
-
-2. How long ago did the man do the driving course? {[TWO YEARS][2 YEARS]}
-[CORRECT] Well done! The man says "that was two years ago" when asked about the driving course.
-[INCORRECT] Incorrect. Listen to how long ago the man completed his previous driving course.
-[NO ANSWER] Always attempt an answer. The timeframe is clearly mentioned.
-
-3. How many hours per day is the full-time course? {[THREE HOURS][3 HOURS][THREE][3]}
-[CORRECT] Excellent! The receptionist states the full-time course has lessons for three hours each day.
-[INCORRECT] Incorrect. Listen to the details about the full-time course duration per day.
-[NO ANSWER] You need to answer. The daily hours are clearly stated.
-
-4. What are students taught on one of the days? {[ROAD RULES][RULES]}
-[CORRECT] Perfect! The receptionist mentions "there is one day for learning all the road rules and regulations."
-[INCORRECT] Incorrect. Listen to what is taught on one specific day of the course.
-[NO ANSWER] You should answer. The topic is clearly explained in the course description.
-
-=== QUESTION TYPE: FORM COMPLETION ===
-
-Questions 5-10
-
-Complete the form below using NO MORE THAN TWO WORDS AND/OR A NUMBER.
-
-Pacific Harbour Driving School - Course Information
-
-5. Weekend course duration: {[THREE][3]} Saturdays
-
-6. Weekend course hours per day: {[FIVE][5]} hours
-
-7. Weekend course start time: {[NINE][9]} a.m.
-
-8. Weekend course cost: £{[295][TWO HUNDRED AND NINETY FIVE]}
-
-9. Weekday course cost: £{[275][TWO HUNDRED AND SEVENTY FIVE]}
-
-10. Available instructor name: {[JOHN THOMPSON][THOMPSON]}
-
 <table class="style1" border="1px solid #333">
 <tbody>
 <tr>
@@ -72,7 +14,7 @@ Pacific Harbour Driving School - Course Information
 </tr>
 <tr>
 <td width="25%">Man:</td>
-<td width="75%">I did do a short introduction to driving course at <strong style="background-color: yellow;">[Q1: high school]</strong>, and I learned to drive with my father before that.  But I want to get my license, so I need to have some lessons from your school.</td>
+<td width="75%">I did do a short introduction to driving course at <strong style="background-color: yellow;">[Q1: <strong style="background-color: yellow;">[Q10: high school]</strong>]</strong>, and I learned to drive with my father before that.  But I want to get my license, so I need to have some lessons from your school.</td>
 </tr>
 <tr>
 <td width="25%">Receptionist:</td>
