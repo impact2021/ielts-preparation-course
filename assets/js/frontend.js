@@ -905,11 +905,13 @@
         }
         
         // Manual audio section tab switching
-        $(document).on('click', '.audio-section-tab', function() {
+        $(document).on('click', '.audio-section-tab', function(e) {
+            e.preventDefault();
             var sectionId = $(this).data('section');
-            $('.audio-section-content').hide();
-            $('#audio-section-' + sectionId).fadeIn(300);
-            $('.audio-section-tab').removeClass('active');
+            var audioContainer = $(this).closest('.audio-section-container, .listening-audio-content');
+            audioContainer.find('.audio-section-content').hide();
+            audioContainer.find('#audio-section-' + sectionId).fadeIn(300);
+            audioContainer.find('.audio-section-tab').removeClass('active');
             $(this).addClass('active');
             currentAudioSectionId = sectionId;
         });
