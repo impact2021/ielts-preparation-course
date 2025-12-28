@@ -6407,11 +6407,13 @@ class IELTS_CM_Admin {
      * Format annotation markup for an answer
      * 
      * @param int $question_number Question number
-     * @param string $answer_text Answer text
+     * @param string $answer_text Answer text (will be escaped for security)
      * @return string Formatted annotation markup
      */
     private function format_answer_annotation($question_number, $answer_text) {
-        return '<strong>[Q' . $question_number . ': ' . $answer_text . ']</strong>';
+        // Escape answer text to prevent XSS vulnerabilities
+        $safe_answer = esc_html($answer_text);
+        return '<strong>[Q' . intval($question_number) . ': ' . $safe_answer . ']</strong>';
     }
     
     /**
@@ -6519,7 +6521,9 @@ class IELTS_CM_Admin {
             // Build search pattern
             $regex = $this->build_answer_search_pattern($variant);
             
-            // Try to find and mark the first occurrence
+            // Try to find and mark the first occurrence only
+            // The limit of 1 improves performance by stopping after first match
+            // The replacement_made flag tracks whether any replacement was actually made
             $replacement_made = false;
             $transcript = preg_replace_callback($regex, function($matches) use ($question_number, &$replacement_made) {
                 if (!$replacement_made) {
