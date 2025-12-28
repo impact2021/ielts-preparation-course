@@ -258,7 +258,7 @@ def generate_section_3():
     
     # Q21-30: Table completion (all 10 in one multi-field question)
     table_answers = {
-        21: ('nervous', 'NERVOUS'),
+        21: ('quite nervous|nervous', 'QUITE NERVOUS'),
         22: ('rude', 'RUDE'),
         23: ('recorded', 'RECORDED'),
         24: ('culture|cultures', 'CULTURE'),
