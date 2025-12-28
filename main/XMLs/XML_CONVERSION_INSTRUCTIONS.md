@@ -73,9 +73,14 @@ For each XML file:
 4. Verify no "No questions found" error will occur
 
 ### Step 6: Final Placement
-1. Move the validated XML files to: `/main/XMLs/`
-2. Delete or archive the old .txt files if desired
-3. Delete the draft quiz posts from WordPress
+1. Save the validated XML files to: `/main/XMLs/` directory
+2. Name them:
+   - `Listening Test 3 Section 1.xml`
+   - `Listening Test 3 Section 2.xml`
+   - `Listening Test 3 Section 3.xml`
+   - `Listening Test 3 Section 4.xml`
+3. The formatted .txt files can remain or be moved to a `/main/XMLs/formatted/` subdirectory
+4. Delete the draft quiz posts from WordPress (they were temporary for XML generation)
 
 ## Quality Checklist
 

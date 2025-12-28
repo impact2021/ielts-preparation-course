@@ -63,7 +63,7 @@ The Hoover Dam
 
 The dam was first discussed as an idea in [ANSWER 16] but construction did not begin until 1931. The project was completed in [ANSWER 17]. Before construction of the dam could begin, [ANSWER 18] of tunnels needed to be drilled to divert the river. The work was often dangerous, because of [ANSWER 19] and broken ropes, but this did lead to better safety standards on construction sites. Further dangers existed for workers, with deaths from heat and a lack of fresh air. The dam now provides power for around [ANSWER 20] people.
 
-{16:1900|17:1936|18:[5 KILOMETRES][5 KILOMETERS][FIVE KILOMETRES][FIVE KILOMETERS][5 KM][5 KMS][5KM][5KMS][FIVE KM][FIVE KMS]|19:[FALLING ROCKS][ROCKS]|20:1.3 MILLION}
+{16:1900|17:1936|18:[5 KILOMETRES][5 KILOMETERS][FIVE KILOMETRES][FIVE KILOMETERS][5 KM]|19:[FALLING ROCKS][ROCKS]|20:1.3 MILLION}
 
 === CORRECT ANSWERS & FEEDBACK ===
 Field 16: 1900
