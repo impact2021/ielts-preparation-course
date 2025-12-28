@@ -1,0 +1,138 @@
+<div class="transcript"><strong>Section 1</strong>
+<table border="1" width="90%" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">Good morning, George Hotel. How can I help you?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">Hi, I was wondering if you could help me. I'm trying to find out more about the winter specials you are advertising at the moment.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">Okay, well we’re offering weekly deals and long weekend specials at the moment. Which are you interested in ?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">Well, I’m not too sure at the moment. Can you tell me a little about both?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">Yes, of course. The long weekend specials run from Thursday to Sunday or from Friday to Monday. You need to book for a minimum of <strong style="background-color: yellow;">[Q1: three nights]</strong>. For the weekly packages you receive a 5% discount, <strong style="background-color: yellow;">[Q2: free parking]</strong> at any London airport if you choose to fly here and pick up from our local airport.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">Oh right. I don’t think we’ll fly - we’re planning to stay somewhere on the way for a night or two to break up the journey as we’re planning on coming by <strong style="background-color: yellow;">[Q3: car]</strong>. What prices do the rooms work out to be for the three night package?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">It depends if you would like to book for the room only, room with breakfast, room with breakfast and dinner, or for the room with breakfast each day and dinner <strong style="background-color: yellow;">[Q4: first]</strong> night only – there are four options you see. And of course it also depends on how many people you would you be booking for.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">Just two of us. We’d like to arrive on Thursday 17th and check out on Sunday 20th please. And we’d be interested in booking the room, with breakfast each morning and... erm... probably just dinner at the hotel for the first night only.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">Okay, just let me check that availability... Yes, we do have some double rooms left for those dates. So that’s Thursday 17th, leaving Sunday 20th Now a room for two with breakfast each day and dinner the first evening works out at a total of £380. That’s £110 per night including breakfast and a specially discounted three course dinner for two for £50 in our al a carte restaurant.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">That sounds great, I’ll book that please. What is the cost of dinner usually, I mean if we don’t book it now as part of the special offer?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">Well, main meals vary from around £25 to £40 per head. Starters and desserts from around £12 to £20.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">Great – are there any other good restaurants around?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">Yes there are four – there are three local restaurants in the centre of the village – they’re less than 5 minutes walk from here. There is also a new Indian restaurant which opened last month– that takes about 10 minutes by car.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">Great - sounds good.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">So shall I make that booking for you now? What name shall I put the booking under?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">James Jackson – That’s J-A-<strong style="background-color: yellow;">[Q6: <strong style="background-color: yellow;">[Q50: C]</strong>]</strong>-K-S-O-N</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">Great and can I take a credit card number to secure the booking?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">Yes, it’s a visa card and the number is 799-463-0021</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">799-466-0021</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">No, 463, not 466. But I’d like to pay in cash when I arrive rather than pay on my credit card</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">Yes that’s fine. We won’t take payment from your card. But there is a 20% cancellation fee payable if you decide you aren’t coming but don’t cancel at least 48 hours beforehand.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">That’s fine.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">And do you have contact phone number?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">Yes I do, I’ll give you my <strong style="background-color: yellow;">[Q8: work mobile]</strong> as I’m just changing my private number. It’s 07746 998220</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">07746 998220. Great. Now is there anything else I can help you with today?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">Well, I was wondering about what kinds of things there are to do nearby. We’ve never been down there before. Actually we’re looking to buy a house in the local area, so thought we’d come and have a look around at some properties. We’ll still have some free time left and intend to do some <strong style="background-color: yellow;">[Q9: sight-seeing]</strong> too.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">Well, Hardwell Castle is a must see. It’s a beautiful castle set in 60 acres of land and it was built in the 13th century. Part of the castle now serves a museum and you can see a fascinating selection of antique furniture, art, period dress and armaments and armour.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">What are the opening times?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">It’s open from 10am to 4pm in the winter and slightly longer in the summer - from 9m to 6pm, but this time of year there are fewer visitors so the times change slightly.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">Okay, is there an entry fee?</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">Yes, its £5.50 per person. But that also includes a free tour of the <strong style="background-color: yellow;">[Q10: art gallery]</strong> which starts at 12 noon on weekends and 11am on weekdays.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">customer</td>
+<td valign="top" width="80%">Yes, we’ll definitely go along and have a look. Well, thank you so much, you’ve been really helpful.</td>
+</tr>
+<tr>
+<td valign="top" width="20%">hotel receptionist</td>
+<td valign="top" width="80%">Thanks very much, we look forward to seeing you very soon.</td>
+</tr>
+</tbody>
+</table>
+&nbsp;</div>
