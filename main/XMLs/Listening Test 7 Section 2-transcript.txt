@@ -1,8 +1,8 @@
-<strong>Section 2</strong>
+<div class="transcript"><strong>Section 2</strong>
 
-Good evening. My name is Dr James Philipps, and I have been invited here today to discuss my research and to tell you a little more about my new book, <strong>Silver Lining</strong>, which has just been published by Longman Press. This book covers one of my biggest interests – whether there are in fact aliens from other planets that have visited Earth in unidentified flying objects, or UFOs as they are more commonly known.
+Good evening. My name is Dr James Philipps, and I have been invited here today to discuss my research and to tell you a little more about my new book, <strong><strong style="background-color: yellow;">[Q11: Silver Lining]</strong></strong>, which has just been published by Longman Press. This book covers one of my biggest interests – whether there are in fact aliens from other planets that have visited Earth in unidentified flying objects, or UFOs as they are more commonly known.
 
-I’d like to start with a quick introduction – over the last 12 years I have become increasingly interested in the subject of UFOs, and this book is a compilation of all the <strong>alien sightings</strong> I have heard about. Now, I understand that many people doubt whether visitors from other planets even exist, and I admit that until I did a lot of extensive research, I had my doubts, but I am now convinced that there is life on other planets and that aliens have indeed come to our planet.
+I’<strong style="background-color: yellow;">[Q15: d]</strong> like to start with a quick introduction – over the last 12 years I have become increasingly interested in the subject of UFOs, and this book is a compilation of all the <strong>alien sightings</strong> I have heard about. Now, I understand that many people doubt whether visitors from other planets even exist, and I admit that until I did a lot of extensive research, I had my doubts, but I am now convinced that there is life on other planets and that aliens have indeed come to our planet.
 
 The television and the media has given us all a mental picture of an alien space craft - a silver ship with bright lights that moves at very high speed. However, what I was somewhat shocked to discover was that in all the eyewitness accounts I heard, people gave very <strong>precise and detailed descriptions that varied only slightly. Reports from America, Europe, Asia -  in fact, all over the world - share a significant number of similarities.</strong>
 
@@ -12,7 +12,7 @@ Many people have drawn attention to the fact that the majority of UFO sightings 
 
 <hr />
 
-My book also talks about a place in America which has often been in the media, commonly referred to as <strong>Area 51</strong> and is in fact a military base in New Mexico. In 1947, this previously relatively unknown base became internationally famous when a man called <strong>MacBrazel</strong> - that's spelt MACBRAZEL - claimed to have found pieces of an alien spacecraft on his farm in Roswell. Now many people believe that this was true and that the government of the time took the debris to a secure location.
+My book also talks about a place in America which has often been in the media, commonly referred to as <strong><strong style="background-color: yellow;">[Q16: Area 51]</strong></strong> and is in fact a military base in New Mexico. In 1947, this previously relatively unknown base became internationally famous when a man called <strong>MacBrazel</strong> - that's spelt MACBRAZEL - claimed to have found pieces of an alien spacecraft on his farm in Roswell. Now many people believe that this was true and that the government of the time took the debris to a secure location.
 
 Academics and government officials have claimed that what MacBrazel actually saw were pieces of a <strong>high-altitude </strong>weather balloon that had disintegrated. Unfortunately, the lack of information combined with the large number of possible alternate theories means, that no useful scientific conclusion can be drawn.
 
@@ -20,4 +20,4 @@ Many people have asked me if I discuss the question of alien abduction in my boo
 
 The final chapter of my book deals with some of the many scientific theories that could be argued support the idea that we have already been visited by aliens. The Great Pyramids of Egpyt, Stonehenge in the UK and many other archaeological areas certainly raise questions, but perhaps the most interesting new development has come from Scotland, where some recently discovered cave paintings show images very close to those described by eye witnesses in recent years.
 
-Well thank you very much for your time. Before we finish, I would just like to add that my books is available at all leading book stores priced at £19.99.
+Well thank you very much for your time. Before we finish, I would just like to add that my books is available at all leading book stores priced at £19.99.</div>
