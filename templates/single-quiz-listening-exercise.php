@@ -21,6 +21,18 @@ if (!$pass_percentage) {
 
 $audio_url = get_post_meta($quiz->ID, '_ielts_cm_audio_url', true);
 $transcript = get_post_meta($quiz->ID, '_ielts_cm_transcript', true);
+$audio_sections = get_post_meta($quiz->ID, '_ielts_cm_audio_sections', true);
+if (!is_array($audio_sections)) {
+    $audio_sections = array();
+}
+// Sort audio sections by section_number for display
+if (!empty($audio_sections)) {
+    uasort($audio_sections, function($a, $b) {
+        $num_a = isset($a['section_number']) ? intval($a['section_number']) : 999;
+        $num_b = isset($b['section_number']) ? intval($b['section_number']) : 999;
+        return $num_a - $num_b;
+    });
+}
 $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
 
 // Calculate next and previous URLs for navigation
@@ -212,22 +224,63 @@ if ($lesson_id) {
                         </div>
                         
                         <!-- Transcript (shown after submission) -->
-                        <div class="listening-transcript" id="listening-transcript" style="display: none;">
-                            <h3><?php _e('Transcript', 'ielts-course-manager'); ?></h3>
-                            <div class="transcript-content">
-                                <?php echo wp_kses_post(wpautop($transcript)); ?>
+                        <?php if (!empty($audio_sections)): ?>
+                            <?php
+                            // Get first section key for default active tab
+                            reset($audio_sections);
+                            $first_section_key = key($audio_sections);
+                            ?>
+                            <!-- Multiple Transcripts -->
+                            <div id="listening-transcripts" class="listening-transcripts" style="display: none;">
+                                <h3><?php _e('Audio Transcripts', 'ielts-course-manager'); ?></h3>
+                                <div class="transcript-section-tabs">
+                                    <?php foreach ($audio_sections as $index => $section): ?>
+                                        <button type="button" class="transcript-section-tab<?php echo ($index === $first_section_key) ? ' active' : ''; ?>" data-section="<?php echo esc_attr($index); ?>">
+                                            <?php printf(__('Section %d', 'ielts-course-manager'), isset($section['section_number']) ? $section['section_number'] : ($index + 1)); ?>
+                                        </button>
+                                    <?php endforeach; ?>
+                                </div>
+                                <?php foreach ($audio_sections as $index => $section): ?>
+                                    <div class="transcript-section-content" id="transcript-section-<?php echo esc_attr($index); ?>" style="<?php echo ($index !== $first_section_key) ? 'display:none;' : ''; ?>">
+                                        <?php if (!empty($section['transcript'])): ?>
+                                            <div class="transcript-content">
+                                                <?php echo wp_kses_post(wpautop($section['transcript'])); ?>
+                                            </div>
+                                        <?php else: ?>
+                                            <p><?php _e('No transcript available for this section.', 'ielts-course-manager'); ?></p>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endforeach; ?>
+                                
+                                <!-- Single audio control for all sections -->
+                                <div class="transcript-audio-controls">
+                                    <audio controls>
+                                        <?php if ($audio_url): ?>
+                                        <source src="<?php echo esc_url($audio_url); ?>" type="audio/mpeg">
+                                        <?php endif; ?>
+                                        <?php _e('Your browser does not support the audio element.', 'ielts-course-manager'); ?>
+                                    </audio>
+                                </div>
                             </div>
-                            
-                            <!-- Audio controls shown after submission -->
-                            <div class="transcript-audio-controls">
-                                <audio controls>
-                                    <?php if ($audio_url): ?>
-                                    <source src="<?php echo esc_url($audio_url); ?>" type="audio/mpeg">
-                                    <?php endif; ?>
-                                    <?php _e('Your browser does not support the audio element.', 'ielts-course-manager'); ?>
-                                </audio>
+                        <?php elseif (!empty($transcript)): ?>
+                            <!-- Fallback: Single Transcript (backward compatibility) -->
+                            <div class="listening-transcript" id="listening-transcript" style="display: none;">
+                                <h3><?php _e('Transcript', 'ielts-course-manager'); ?></h3>
+                                <div class="transcript-content">
+                                    <?php echo wp_kses_post(wpautop($transcript)); ?>
+                                </div>
+                                
+                                <!-- Audio controls shown after submission -->
+                                <div class="transcript-audio-controls">
+                                    <audio controls>
+                                        <?php if ($audio_url): ?>
+                                        <source src="<?php echo esc_url($audio_url); ?>" type="audio/mpeg">
+                                        <?php endif; ?>
+                                        <?php _e('Your browser does not support the audio element.', 'ielts-course-manager'); ?>
+                                    </audio>
+                                </div>
                             </div>
-                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 
