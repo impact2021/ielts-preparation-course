@@ -6392,7 +6392,8 @@ class IELTS_CM_Admin {
                 $meta_value = (string) $meta->meta_value;
                 
                 // If direct access failed, try accessing via namespace
-                if (empty($meta_key)) {
+                // Use strict comparison to avoid false positives with '0' values
+                if ($meta_key === '') {
                     $meta_wp = $meta->children('wp', true);
                     $meta_key = (string) $meta_wp->meta_key;
                     $meta_value = (string) $meta_wp->meta_value;
