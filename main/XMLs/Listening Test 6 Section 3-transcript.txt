@@ -1,0 +1,66 @@
+<strong>Section 2 </strong>
+<table border="1" width="90%" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td valign="top" width="25%">Interviewer:</td>
+<td valign="top" width="75%">However much we might try not to, we often judge others on their appearance. For our seminar today, we have ‘face reading’ expert Dr Juliet Bryans who is going to tell us just how accurate impressions based upon appearance may or may not be. Welcome Dr Bryans. To many of us ‘face reading' may be an unfamiliar concept... can you give us some background please?</td>
+</tr>
+<tr>
+<td valign="top" width="25%">Dr Bryans:</td>
+<td valign="top" width="75%">Thank you for inviting me... Well, I’ll start by saying that the science of reading facial features has been around for some time! It’s actually an ancient Asian art that hails from China. (Q21) It would most often be used to diagnose health related issues... for example even to non-medics dark circles under someone’s eyes tells us that they are tired or have not slept properly... or red blotches arising from broken capillaries can often be due to over indulgence in (Q22) spicy food or indeed alcohol!</td>
+</tr>
+<tr>
+<td valign="top" width="25%">Interviewer:</td>
+<td valign="top" width="75%">Am I correct in saying though that a newer philosophy is the study of relationships between facial features and our likely behaviour and personality traits. I find this particular aspect of face reading to be all the more fascinating.</td>
+</tr>
+<tr>
+<td valign="top" width="25%">Dr Bryans:</td>
+<td valign="top" width="75%">Yes that’s true. We have been conducting research into this at our institute for the last 5 years. For example, studies have shown that individuals with more rounded faces – you know, chubbier faces, and with larger and fuller mouths are likely to be more interested in socialising than people with more angular, square facial features. The latter are more likely to be focussed upon (Q23) being efficient.</td>
+</tr>
+<tr>
+<td valign="top" width="25%">Interviewer:</td>
+<td valign="top" width="75%">Imagine then being greeted by two receptionists with these different physical characteristics. So could we expect (Q24) the one with the rounder features to typically be friendlier than the one with more angular features?</td>
+</tr>
+<tr>
+<td valign="top" width="25%">Dr Bryans:</td>
+<td valign="top" width="75%">Yes according to the theories that would be the case, though in contrast the person with the squarer features could also be expected to process your enquiry more efficiently due to their practical focus on the task at hand.</td>
+</tr>
+<tr>
+<td valign="top" width="25%">Interviewer:</td>
+<td valign="top" width="75%">So is it easy to categorise people into behavioural groups based upon how they look?</td>
+</tr>
+<tr>
+<td valign="top" width="25%">Dr Bryans:</td>
+<td valign="top" width="75%">Not really....Of course people tend to be a mixture of different things and it is possible to look at an individual’s face and see that they (Q25) possess physical characteristics which show both the ability to be sociable and get along with others alongside possession of more practical skills. For example, (Q26) a person may possess very bright, sparkling, welcoming eyes – ideal for communicating and working with others, but may also have a squared angular chin a sure sign of that person being practical and having a lot of common sense. These kinds of people have the ability to get people on their side and to encourage cooperation with their points of view, whilst also being very determined to achieve their own goals.</td>
+</tr>
+<tr>
+<td valign="top" width="25%">Interviewer:</td>
+<td valign="top" width="75%">It seems that there is often quite a logical connection between looks and behaviour then...? I mean, it seems natural that someone with bright warm eyes, is likely to be friendly and welcoming....</td>
+</tr>
+<tr>
+<td valign="top" width="25%">Dr Bryans:</td>
+<td valign="top" width="75%">(Q27) Yes that true....Very delicate facial features... such as a long thin nose or high delicate cheekbones can give a person a frail and soft physical appearance. There also seems to be a correlation to a sensitive personality – (Q28a) someone who looks like this may have a tendency to be easily emotionally hurt.</td>
+</tr>
+<tr>
+<td valign="top" width="25%">Interviewer:</td>
+<td valign="top" width="75%">That’s interesting.... moving back to the eyes, I think they are one of the easier features for an ordinary person to read about another person. The eyes tell us so much about health, mood and character I think...</td>
+</tr>
+<tr>
+<td valign="top" width="25%">Dr Bryans:</td>
+<td valign="top" width="75%">True... and their shape can also tell us a lot. The eyes and the way in which they slope up or down can also be a sign of emotional vulnerability. According to our studies those with (Q28b) eyes that slope downwards in the inner corners should be great at communication but may be easily hurt by others.  People with upward sloping eyes are often optimists who spend their lives taking advantage of what life has to offer..</td>
+</tr>
+<tr>
+<td valign="top" width="25%">Interviewer:</td>
+<td valign="top" width="75%">This is so interesting. What other feature would you say is an easy one for novice face readers to look out for?</td>
+</tr>
+<tr>
+<td valign="top" width="25%">Dr Bryans:</td>
+<td valign="top" width="75%">Foreheads... now foreheads are a good indicator of how a person may think or learn. A high forehead indicates that person is (Q29/30) highly analytical and has a strong interest in learning and (Q29/30) studying using books – many academics have larger foreheads.... In contrast a short forehead indicates that that person is more likely to learn more by carrying out activities – learning tasks practically rather than reading about them. There are so many characteristics for experts to consider – it’s a very interesting exercise to have your own photograph analysed and you are likely to be surprised by just how accurate descriptions can be – believe me!</td>
+</tr>
+<tr>
+<td valign="top" width="25%">Interviewer:</td>
+<td valign="top" width="75%">That’s a great insight! Thanks for that, now after the break we are going to open the floor to questions....</td>
+</tr>
+</tbody>
+</table>
+&nbsp;
