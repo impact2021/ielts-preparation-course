@@ -34,7 +34,7 @@
 </tr>
 <tr>
 <td width="25%">Receptionist:</td>
-<td width="75%">Well, we have a range of different lessons and times, so let me show you the schedule.  You can do a full-time course – that takes five days, from Monday to Friday, and the lessons are for <strong style="background-color: yellow;">[Q3: three hours]</strong> each day. Or you can do three weekends - well, Saturdays actually - five hours each Saturday day, from 9 in the morning until 2 in the afternoon.</td>
+<td width="75%">Well, we have a range of different lessons and times, so let me show you the schedule.  You can do a full-time course – that takes <strong style="background-color: yellow;">[Q6: five]</strong> days, from Monday to Friday, and the lessons are for <strong style="background-color: yellow;">[Q3: three hours]</strong> each day. Or you can do three weekends - well, Saturdays actually - five hours each Saturday day, from <strong style="background-color: yellow;">[Q7: 9]</strong> in the morning until 2 in the afternoon.</td>
 </tr>
 <tr>
 <td width="25%">Man:</td>
@@ -66,7 +66,7 @@
 </tr>
 <tr>
 <td width="25%">Receptionist:</td>
-<td width="75%">Well, the weekend course is £295, and the weekday course is £275.  There's a slight difference in cost because the weekend class is on a Saturday, not our regular hours.</td>
+<td width="75%">Well, the weekend course is £<strong style="background-color: yellow;">[Q8: 295]</strong>, and the weekday course is £<strong style="background-color: yellow;">[Q9: 275]</strong>.  There's a slight difference in cost because the weekend class is on a Saturday, not our regular hours.</td>
 </tr>
 <tr>
 <td width="25%">Man:</td>
