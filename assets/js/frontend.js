@@ -675,7 +675,7 @@
                                                 var correctOptionText = typeof options[correctIndex] === 'object' 
                                                     ? options[correctIndex].text 
                                                     : options[correctIndex];
-                                                if (correctOptionText) {
+                                                if (correctOptionText && typeof correctOptionText === 'string') {
                                                     feedbackText += '<br><br><strong>The correct answer is:</strong> ' + 
                                                                    $('<div>').text(correctOptionText).html(); // Escape HTML
                                                 }
