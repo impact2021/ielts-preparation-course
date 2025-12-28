@@ -69,67 +69,103 @@ def generate_section_1():
     transcript = extract_transcript(content)
     questions = []
     
-    # Q1-5: Form completion with embedded answers
-    form_answers = {
-        1: ('haltwell', 'HALTWELL', 'Surname'),
-        2: ('12py', '12PY', 'Postcode'),
-        3: ('november', 'NOVEMBER', 'Available from month'),
-        4: ('4 years|four years|4 years\'|four years\'|4years|4years\'', '4 YEARS', 'Length of experience'),
-        5: ('weekends|weekend|on weekends|at weekends|at the weekend|on the weekends', 'WEEKENDS', 'Not available')
+    # Q1-5: Form/Table completion - ONE multi-field question with 5 fields
+    summary_fields = {
+        1: {
+            'answer': 'haltwell',
+            'correct_feedback': 'Correct! The answer is HALTWELL.',
+            'incorrect_feedback': 'Incorrect. Listen to the surname.',
+            'no_answer_feedback': 'The correct answer is: HALTWELL. Make sure to listen carefully for key information and take notes while listening.'
+        },
+        2: {
+            'answer': '12py',
+            'correct_feedback': 'Correct! The answer is 12PY.',
+            'incorrect_feedback': 'Incorrect. Listen to the postcode.',
+            'no_answer_feedback': 'The correct answer is: 12PY. Make sure to listen carefully for key information and take notes while listening.'
+        },
+        3: {
+            'answer': 'november',
+            'correct_feedback': 'Correct! The answer is NOVEMBER.',
+            'incorrect_feedback': 'Incorrect. Listen to the availability date.',
+            'no_answer_feedback': 'The correct answer is: NOVEMBER. Make sure to listen carefully for key information and take notes while listening.'
+        },
+        4: {
+            'answer': '4 years|four years|4 years\'|four years\'|4years|4years\'',
+            'correct_feedback': 'Correct! The answer is 4 YEARS.',
+            'incorrect_feedback': 'Incorrect. Listen to the length of experience.',
+            'no_answer_feedback': 'The correct answer is: 4 YEARS. Make sure to listen carefully for key information and take notes while listening.'
+        },
+        5: {
+            'answer': 'weekends|weekend|on weekends|at weekends|at the weekend|on the weekends',
+            'correct_feedback': 'Correct! The answer is WEEKENDS.',
+            'incorrect_feedback': 'Incorrect. Listen to the availability restrictions.',
+            'no_answer_feedback': 'The correct answer is: WEEKENDS. Make sure to listen carefully for key information and take notes while listening.'
+        }
     }
     
-    for q_num, (answer, display, field_name) in form_answers.items():
-        questions.append({
-            'type': 'summary_completion',
-            'instructions': 'Questions 1-5\n\nComplete the form below.\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.' if q_num == 1 else '',
-            'question': field_name,
-            'points': 1.0,
-            'summary_fields': {
-                1: {
-                    'answer': answer,
-                    'correct_feedback': f'Correct! The answer is {display}.',
-                    'incorrect_feedback': 'Incorrect. Listen to the application details.',
-                    'no_answer_feedback': f'The correct answer is: {display}. Make sure to listen carefully for key information and take notes while listening.'
-                }
-            },
-            'options': '',
-            'correct_answer': '',
-            'no_answer_feedback': 'In the IELTS test, you should always take a guess. You don\'t lose points for a wrong answer.',
-            'correct_feedback': 'Correct!',
-            'incorrect_feedback': 'Incorrect.',
-            'reading_text_id': None
-        })
+    # Create ONE table completion question with 5 fields
+    questions.append({
+        'type': 'summary_completion',
+        'instructions': 'Questions 1-5\n\nComplete the form below.\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.',
+        'question': 'Applicant Details Form',
+        'points': 1.0,
+        'summary_fields': summary_fields,
+        'options': '',
+        'correct_answer': '',
+        'no_answer_feedback': 'In the IELTS test, you should always take a guess. You don\'t lose points for a wrong answer.',
+        'correct_feedback': 'Excellent! You completed the form correctly.',
+        'incorrect_feedback': 'Some answers are incorrect. Review the applicant details.',
+        'reading_text_id': None
+    })
     
-    # Q6-10: Diagram matching (letter answers)
-    diagram_answers = {
-        6: ('J', 'Computing skills'),
-        7: ('H', 'Over the phone'),
-        8: ('I', 'Representatives'),
-        9: ('A', 'Within 24 hours'),
-        10: ('C', 'Employment contract')
+    # Q6-10: Diagram/Flowchart matching - ONE multi-field question with 5 fields
+    diagram_fields = {
+        1: {
+            'answer': 'j',
+            'correct_feedback': 'Correct! The answer is J (Computing skills).',
+            'incorrect_feedback': 'Incorrect. Review the registration sequence.',
+            'no_answer_feedback': 'The correct answer is: J. Make sure to listen carefully for key information and take notes while listening.'
+        },
+        2: {
+            'answer': 'h',
+            'correct_feedback': 'Correct! The answer is H (Over the phone).',
+            'incorrect_feedback': 'Incorrect. Review the registration sequence.',
+            'no_answer_feedback': 'The correct answer is: H. Make sure to listen carefully for key information and take notes while listening.'
+        },
+        3: {
+            'answer': 'i',
+            'correct_feedback': 'Correct! The answer is I (Representatives).',
+            'incorrect_feedback': 'Incorrect. Review the registration sequence.',
+            'no_answer_feedback': 'The correct answer is: I. Make sure to listen carefully for key information and take notes while listening.'
+        },
+        4: {
+            'answer': 'a',
+            'correct_feedback': 'Correct! The answer is A (Within 24 hours).',
+            'incorrect_feedback': 'Incorrect. Review the registration sequence.',
+            'no_answer_feedback': 'The correct answer is: A. Make sure to listen carefully for key information and take notes while listening.'
+        },
+        5: {
+            'answer': 'c',
+            'correct_feedback': 'Correct! The answer is C (Employment contract).',
+            'incorrect_feedback': 'Incorrect. Review the registration sequence.',
+            'no_answer_feedback': 'The correct answer is: C. Make sure to listen carefully for key information and take notes while listening.'
+        }
     }
     
-    for q_num, (letter, desc) in diagram_answers.items():
-        questions.append({
-            'type': 'summary_completion',
-            'instructions': 'Questions 6-10\n\nComplete the flowchart below with words from the box. Write the corresponding letter A-J in the spaces provided.' if q_num == 6 else '',
-            'question': f'Step {q_num - 5}: __________',
-            'points': 1.0,
-            'summary_fields': {
-                1: {
-                    'answer': letter.lower(),
-                    'correct_feedback': f'Correct! The answer is {letter} ({desc}).',
-                    'incorrect_feedback': 'Incorrect. Review the registration sequence.',
-                    'no_answer_feedback': f'The correct answer is: {letter}. Make sure to listen carefully for key information and take notes while listening.'
-                }
-            },
-            'options': '',
-            'correct_answer': '',
-            'no_answer_feedback': 'In the IELTS test, you should always take a guess. You don\'t lose points for a wrong answer.',
-            'correct_feedback': 'Correct!',
-            'incorrect_feedback': 'Incorrect.',
-            'reading_text_id': None
-        })
+    # Create ONE flowchart completion question with 5 fields
+    questions.append({
+        'type': 'summary_completion',
+        'instructions': 'Questions 6-10\n\nComplete the flowchart below with words from the box. Write the corresponding letter A-J in the spaces provided.',
+        'question': 'Sequence for registration flowchart',
+        'points': 1.0,
+        'summary_fields': diagram_fields,
+        'options': '',
+        'correct_answer': '',
+        'no_answer_feedback': 'In the IELTS test, you should always take a guess. You don\'t lose points for a wrong answer.',
+        'correct_feedback': 'Excellent! You completed the flowchart correctly.',
+        'incorrect_feedback': 'Some answers are incorrect. Review the registration sequence.',
+        'reading_text_id': None
+    })
     
     return questions, audio_url, transcript
 
