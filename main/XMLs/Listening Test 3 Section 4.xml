@@ -101,7 +101,50 @@ Posture: Sit up straight or [field 5] a little";s:6:"points";d:1.0;s:14:"summary
 </wp:postmeta>
 <wp:postmeta>
 <wp:meta_key><![CDATA[_ielts_cm_transcript]]></wp:meta_key>
-<wp:meta_value><![CDATA[]]></wp:meta_value>
+<wp:meta_value><![CDATA[<table class="style1" border="1px solid #333">
+<tbody>
+<tr>
+<td width="25%">Lecturer:</td>
+<td width="75%">Good morning, everyone. Today I'll be talking about RSI, or Repetitive Strain Injury, which has become an increasingly important health issue in modern workplaces.</td>
+</tr>
+<tr>
+<td width="25%">Lecturer:</td>
+<td width="75%">So, what exactly is RSI? RSI is a condition that results from <strong style="background-color: yellow;">[Q31: repeated physical movements]</strong> that damage tendons, nerves, and muscles. The problem has become particularly noticeable over the last twenty years due to the increasing importance of <strong style="background-color: yellow;">[Q32: computers]</strong> in the workplace. When people spend hour after hour typing at keyboards and using computer mice, they're putting their hands, wrists, arms, and shoulders at risk.</td>
+</tr>
+<tr>
+<td width="25%">Lecturer:</td>
+<td width="75%">The situation is intensified if people don't take regular breaks or spend time considering their <strong style="background-color: yellow;">[Q33: body position]</strong>. Without proper attention to these factors, RSI can develop and worsen over time. However, many cases can be prevented if people who use a computer regularly are able to recognise the <strong style="background-color: yellow;">[Q34: warning signs]</strong> early on. Common symptoms include tingling sensations, numbness, pain in the hands, wrists, arms, or shoulders, and a general feeling of weakness.</td>
+</tr>
+<tr>
+<td width="25%">Lecturer:</td>
+<td width="75%">Another common problem occurs when people sit <strong style="background-color: yellow;">[Q35: too close]</strong> to their computer monitor. This can lead to eye strain, headaches, and blurred vision, which are all warning signs that shouldn't be ignored.</td>
+</tr>
+<tr>
+<td width="25%">Lecturer:</td>
+<td width="75%">Now, let me give you some practical advice on setting up your workspace ergonomically to prevent these problems.</td>
+</tr>
+<tr>
+<td width="25%">Lecturer:</td>
+<td width="75%">First, let's talk about your chair. The height should be adjusted so that your arms can rest at 90 degrees to the keyboard. Your feet should be flat on the ground, or if that's not practical due to your height and the desk setup, they should rest on a <strong style="background-color: yellow;">[Q36: foot stool]</strong>. It's also important to leave some space between the chair seat and the back of your knees to maintain <strong style="background-color: yellow;">[Q37: proper circulation]</strong> in your legs.</td>
+</tr>
+<tr>
+<td width="25%">Lecturer:</td>
+<td width="75%">Next, your monitor. The screen should be positioned just below eye level - this prevents neck strain. To avoid light reflections and glare on your screen, position it at a <strong style="background-color: yellow;">[Q38: right angle]</strong> to any windows or light sources. Research has shown that <strong style="background-color: yellow;">[Q39: light grey]</strong> backgrounds are actually much more comfortable to look at than bright white ones, so consider changing your default settings.</td>
+</tr>
+<tr>
+<td width="25%">Lecturer:</td>
+<td width="75%">For your keyboard positioning, make sure your wrists remain straight while typing - avoid bending them up or down. Keep your elbows close to your body rather than extending them outward.</td>
+</tr>
+<tr>
+<td width="25%">Lecturer:</td>
+<td width="75%">Finally, regarding your overall posture - you should sit up straight. Some people find this position at 90 degrees too rigid, and if that's the case, you can <strong style="background-color: yellow;">[Q40: lean back]</strong> slightly in your chair to find a more comfortable position while still maintaining good support.</td>
+</tr>
+<tr>
+<td width="25%">Lecturer:</td>
+<td width="75%">Remember, preventing RSI is far easier than treating it, so take these guidelines seriously and make adjustments to your workspace today. Thank you for your attention.</td>
+</tr>
+</tbody>
+</table>]]></wp:meta_value>
 </wp:postmeta>
 <wp:postmeta>
 <wp:meta_key><![CDATA[_ielts_cm_audio_sections]]></wp:meta_key>
