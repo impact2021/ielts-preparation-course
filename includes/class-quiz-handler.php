@@ -830,13 +830,30 @@ class IELTS_CM_Quiz_Handler {
     /**
      * Get preferred feedback from question, checking summary_fields first
      * 
-     * @param array $question Question data
-     * @param string $feedback_type Type of feedback: 'correct_feedback', 'incorrect_feedback', or 'no_answer_feedback'
-     * @return string Feedback text (may be empty)
+     * For short answer questions with summary_fields, the feedback in summary_fields
+     * typically contains more detailed information including the correct answer,
+     * while top-level feedback may contain only generic messages.
+     * 
+     * This method checks summary_fields first (using the first field's feedback),
+     * then falls back to the top-level question feedback if summary_fields feedback
+     * is not available.
+     * 
+     * Note: Uses reset() to get the first field from summary_fields. For single-field
+     * short answer questions, there is typically only one summary field containing
+     * the answer and feedback. For multi-field questions (like summary completion),
+     * each field has its own feedback handled separately.
+     * 
+     * @param array $question Question data array containing feedback fields
+     * @param string $feedback_type Type of feedback to retrieve. Must be one of:
+     *                              'correct_feedback' - shown when answer is correct
+     *                              'incorrect_feedback' - shown when answer is wrong
+     *                              'no_answer_feedback' - shown when no answer provided
+     * @return string Sanitized feedback text (may be empty if no feedback available)
      */
     private function get_preferred_feedback($question, $feedback_type) {
         // Check if summary_fields has feedback (preferred for showing correct answer)
         if (isset($question['summary_fields']) && is_array($question['summary_fields']) && !empty($question['summary_fields'])) {
+            // Get first field's feedback - for short_answer questions this contains the primary feedback
             $first_field = reset($question['summary_fields']);
             if (isset($first_field[$feedback_type]) && !empty($first_field[$feedback_type])) {
                 return wp_kses_post($first_field[$feedback_type]);

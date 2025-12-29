@@ -1770,7 +1770,7 @@ class IELTS_CM_Admin {
                 var correctAnswerField = container.find('.correct-answer-field');
                 var correctAnswerInput = correctAnswerField.find('input, select');
                 var currentValue = correctAnswerInput.val() || '';
-                var ieltsPlaceholder = '<?php echo esc_attr__("", "ielts-course-manager"); ?>';
+                var ieltsPlaceholder = '';
                 
                 if (type === 'multiple_choice') {
                     container.find('.mc-options-field').show();
@@ -2065,7 +2065,7 @@ class IELTS_CM_Admin {
                 // Clear and rebuild
                 container.empty();
                 
-                var defaultNoAnswerFeedback = '<?php echo esc_js(__("", "ielts-course-manager")); ?>';
+                var defaultNoAnswerFeedback = '';
                 
                 matches.forEach(function(fieldNum) {
                     var fieldData = existingFields[fieldNum] || {
@@ -2508,7 +2508,7 @@ class IELTS_CM_Admin {
                                             var $summaryContainer = $lastQuestion.find('.summary-fields-container');
                                             $summaryContainer.empty();
                                             
-                                            var defaultNoAnswerFeedback = '<?php echo esc_js(__("", "ielts-course-manager")); ?>';
+                                            var defaultNoAnswerFeedback = '';
                                             
                                             $.each(question.summary_fields, function(fieldNum, fieldData) {
                                                 var answer = $('<div>').text(fieldData.answer || '').html(); // Escape HTML
