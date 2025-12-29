@@ -6539,13 +6539,18 @@ class IELTS_CM_Admin {
             // The limit of 1 improves performance by stopping after first match
             // The replacement_made flag tracks whether any replacement was actually made
             $replacement_made = false;
-            $transcript = preg_replace_callback($regex, function($matches) use ($question_number, &$replacement_made) {
+            $new_transcript = preg_replace_callback($regex, function($matches) use ($question_number, &$replacement_made) {
                 if (!$replacement_made) {
                     $replacement_made = true;
                     return $this->format_answer_annotation($question_number, $matches[1]);
                 }
                 return $matches[0];
             }, $transcript, 1);
+            
+            // Check for PCRE errors
+            if ($new_transcript !== null) {
+                $transcript = $new_transcript;
+            }
             
             // If we marked this variant, move on to the next answer
             if ($replacement_made) {
