@@ -62,6 +62,10 @@ class IELTS_CM_Admin {
         
         // Add admin notices
         add_action('admin_notices', array($this, 'quiz_validation_notices'));
+        
+        // Add custom columns for menu groups taxonomy
+        add_filter('manage_edit-huapai_menu_group_columns', array($this, 'add_menu_group_columns'));
+        add_filter('manage_huapai_menu_group_custom_column', array($this, 'add_menu_group_column_content'), 10, 3);
     }
     
     /**
@@ -6564,5 +6568,42 @@ class IELTS_CM_Admin {
      */
     private function esc_xml($str) {
         return htmlspecialchars($str, ENT_XML1, 'UTF-8');
+    }
+    
+    /**
+     * Add shortcode column to menu groups taxonomy
+     * 
+     * @param array $columns Existing columns
+     * @return array Modified columns
+     */
+    public function add_menu_group_columns($columns) {
+        // Add shortcode column after the name column
+        $new_columns = array();
+        foreach ($columns as $key => $value) {
+            $new_columns[$key] = $value;
+            if ($key === 'name') {
+                $new_columns['shortcode'] = __('Shortcode', 'ielts-course-manager');
+            }
+        }
+        return $new_columns;
+    }
+    
+    /**
+     * Display shortcode in menu groups taxonomy column
+     * 
+     * @param string $content Column content
+     * @param string $column_name Column name
+     * @param int $term_id Term ID
+     * @return string Column content
+     */
+    public function add_menu_group_column_content($content, $column_name, $term_id) {
+        if ($column_name === 'shortcode') {
+            $term = get_term($term_id, 'huapai_menu_group');
+            if ($term && !is_wp_error($term)) {
+                $shortcode = '[huapai_menu group="' . esc_attr($term->slug) . '"]';
+                $content = '<code>' . esc_html($shortcode) . '</code>';
+            }
+        }
+        return $content;
     }
 }
