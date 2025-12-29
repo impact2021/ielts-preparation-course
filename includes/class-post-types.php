@@ -14,7 +14,6 @@ class IELTS_CM_Post_Types {
         $this->register_lesson();
         $this->register_resource();
         $this->register_quiz();
-        $this->register_menu_item();
     }
     
     /**
@@ -146,57 +145,5 @@ class IELTS_CM_Post_Types {
         );
         
         register_post_type('ielts_quiz', $args);
-    }
-    
-    /**
-     * Register Menu Item post type for Huapai Menu
-     */
-    private function register_menu_item() {
-        $labels = array(
-            'name' => __('Menu Items', 'ielts-course-manager'),
-            'singular_name' => __('Menu Item', 'ielts-course-manager'),
-            'menu_name' => __('Huapai Menu', 'ielts-course-manager'),
-            'add_new' => __('Add New Menu Item', 'ielts-course-manager'),
-            'add_new_item' => __('Add New Menu Item', 'ielts-course-manager'),
-            'edit_item' => __('Edit Menu Item', 'ielts-course-manager'),
-            'new_item' => __('New Menu Item', 'ielts-course-manager'),
-            'view_item' => __('View Menu Item', 'ielts-course-manager'),
-            'search_items' => __('Search Menu Items', 'ielts-course-manager'),
-            'not_found' => __('No menu items found', 'ielts-course-manager'),
-            'not_found_in_trash' => __('No menu items found in trash', 'ielts-course-manager'),
-        );
-        
-        $args = array(
-            'labels' => $labels,
-            'public' => true,
-            'has_archive' => false,
-            'show_in_menu' => true,
-            'show_in_rest' => true,
-            'menu_icon' => 'dashicons-food',
-            'menu_position' => 24,
-            'supports' => array('title', 'editor', 'thumbnail'),
-            'rewrite' => array('slug' => 'menu-item'),
-            'capability_type' => 'post',
-        );
-        
-        register_post_type('huapai_menu_item', $args);
-        
-        // Register taxonomy for menu groups
-        register_taxonomy('huapai_menu_group', 'huapai_menu_item', array(
-            'labels' => array(
-                'name' => __('Menu Groups', 'ielts-course-manager'),
-                'singular_name' => __('Menu Group', 'ielts-course-manager'),
-                'add_new_item' => __('Add New Menu Group', 'ielts-course-manager'),
-                'edit_item' => __('Edit Menu Group', 'ielts-course-manager'),
-                'update_item' => __('Update Menu Group', 'ielts-course-manager'),
-                'search_items' => __('Search Menu Groups', 'ielts-course-manager'),
-                'menu_name' => __('Menu Groups', 'ielts-course-manager'),
-            ),
-            'hierarchical' => true,
-            'show_ui' => true,
-            'show_admin_column' => true,
-            'show_in_rest' => true,
-            'rewrite' => array('slug' => 'menu-group'),
-        ));
     }
 }
