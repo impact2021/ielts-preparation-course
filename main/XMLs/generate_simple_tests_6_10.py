@@ -184,14 +184,75 @@ def extract_question_context(content, answer_index):
     same_line_text = content[line_start:answer_start].strip()
     
     # Clean up same-line text
-    same_line_text = re.sub(r'</?li>', '', same_line_text)  # Remove <li> tags
-    same_line_text = re.sub(r'^\d+\.\s*', '', same_line_text)  # Remove number prefix
-    same_line_text = re.sub(r'<[^>]+>', '', same_line_text)  # Remove other HTML tags
-    same_line_text = same_line_text.strip()
+    same_line_text_clean = re.sub(r'</?li>', '', same_line_text)  # Remove <li> tags
+    same_line_text_clean = re.sub(r'^\d+\.\s*', '', same_line_text_clean)  # Remove number prefix
+    same_line_text_clean = re.sub(r'<[^>]+>', '', same_line_text_clean)  # Remove other HTML tags
+    same_line_text_clean = same_line_text_clean.strip()
     
     # If we found meaningful text on the same line (e.g., a question), use it
-    if same_line_text and len(same_line_text) > 5 and '?' in same_line_text:
-        return same_line_text
+    if same_line_text_clean and len(same_line_text_clean) > 5 and '?' in same_line_text_clean:
+        return same_line_text_clean
+    
+    # Check if previous answer is very similar (indicating grouped questions)
+    if answer_index > 0:
+        prev_match = matches[answer_index - 1]
+        prev_answer = content[prev_match.start():prev_match.end()]
+        curr_answer = content[answer_start:answer_end]
+        
+        # If answers are identical or very similar, they likely share instructions
+        if prev_answer == curr_answer or (
+            len(prev_answer) < 20 and len(curr_answer) < 20 and
+            prev_answer.strip('{}[]|').split('|')[0] == curr_answer.strip('{}[]|').split('|')[0]
+        ):
+            # Look back further to find shared instructions
+            lookback_start = 0
+            if answer_index >= 3:
+                lookback_start = matches[answer_index - 3].end()
+            elif answer_index >= 2:
+                lookback_start = matches[answer_index - 2].end()
+            elif answer_index >= 1:
+                # Look back before the previous answer
+                lookback_start = max(0, matches[answer_index - 1].start() - 500)
+            
+            lookback_chunk = content[max(0, lookback_start):answer_start]
+            
+            # Extract lines and recombine broken lines
+            lines = lookback_chunk.split('\n')
+            # Join lines that might be continuations (end without period/colon)
+            combined_lines = []
+            current_line = ""
+            for line in lines:
+                line = line.strip()
+                if not line:
+                    if current_line:
+                        combined_lines.append(current_line)
+                        current_line = ""
+                    continue
+                if current_line and not current_line.endswith(('.', ':', '?', '!')):
+                    current_line += " " + line
+                else:
+                    if current_line:
+                        combined_lines.append(current_line)
+                    current_line = line
+            if current_line:
+                combined_lines.append(current_line)
+            
+            # Look for instruction lines in combined lines
+            for line in reversed(combined_lines):
+                # Look for instruction-like text
+                if (line and 
+                    not re.match(r'^\d+\.?\s*$', line) and
+                    not re.match(r'^<[^>]+>$', line) and
+                    not re.match(r'^<hr', line) and
+                    len(line) > 15 and
+                    ('below' in line.lower() or 'following' in line.lower() or 
+                     'label' in line.lower() or 'choose' in line.lower() or
+                     'write' in line.lower() or 'complete' in line.lower() or
+                     'identify' in line.lower() or 'which' in line.lower())):
+                    # Clean the instruction
+                    clean_instr = re.sub(r'<[^>]+>', '', line)
+                    if len(clean_instr) > 15:
+                        return clean_instr.strip()
     
     # For standalone answers (like "5. {E}"), look for surrounding context
     # Get the entire chunk from previous answer to current answer
@@ -239,7 +300,7 @@ def extract_question_context(content, answer_index):
     # Check if this is a standalone answer (just number and answer on a line)
     # If so, look for shared instructions in the broader context
     standalone_pattern = r'^\d+\.\s*$'
-    if re.match(standalone_pattern, same_line_text) or not same_line_text:
+    if re.match(standalone_pattern, same_line_text_clean) or not same_line_text_clean or len(same_line_text_clean) < 3:
         # Look further back for instructions (e.g., "Label the map...")
         # Go back up to 500 characters or 2 previous answers
         lookback_start = 0
