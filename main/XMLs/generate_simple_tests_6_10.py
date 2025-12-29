@@ -398,7 +398,7 @@ def generate_section(test_num, section_num):
             question_text = f'Question {i+1}'
         
         questions.append({
-            'type': 'summary_completion',
+            'type': 'short_answer',
             'instructions': '',
             'question': question_text,
             'points': 1.0,
@@ -411,7 +411,7 @@ def generate_section(test_num, section_num):
                 }
             },
             'options': '',
-            'correct_answer': '',
+            'correct_answer': answer,
             'no_answer_feedback': 'In the IELTS test, you should always take a guess. You don\'t lose points for a wrong answer.',
             'correct_feedback': 'Correct!',
             'incorrect_feedback': 'Incorrect.',
