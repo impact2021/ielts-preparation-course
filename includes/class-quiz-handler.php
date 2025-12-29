@@ -708,9 +708,7 @@ class IELTS_CM_Quiz_Handler {
                 
                 if ($answer_is_empty) {
                     // Treat empty text answers as no answer
-                    if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
-                        $feedback = wp_kses_post($question['no_answer_feedback']);
-                    }
+                    $feedback = $this->get_preferred_feedback($question, 'no_answer_feedback');
                 } else {
                     $is_correct = $this->check_answer($question, $answers[$index]);
                     if ($is_correct) {
@@ -739,10 +737,8 @@ class IELTS_CM_Quiz_Handler {
                             }
                         } elseif (in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false'))) {
                             // For short answer, sentence completion, labelling, and true/false - use correct_feedback
-                            if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
-                                $feedback = wp_kses_post($question['correct_feedback']);
-                            } else {
-                                // Provide default feedback if none configured
+                            $feedback = $this->get_preferred_feedback($question, 'correct_feedback');
+                            if (empty($feedback)) {
                                 $feedback = __('Correct!', 'ielts-course-manager');
                             }
                         }
@@ -769,10 +765,8 @@ class IELTS_CM_Quiz_Handler {
                             }
                         } elseif (in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false'))) {
                             // For short answer, sentence completion, labelling, and true/false - use incorrect_feedback
-                            if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
-                                $feedback = wp_kses_post($question['incorrect_feedback']);
-                            } else {
-                                // Provide default feedback if none configured
+                            $feedback = $this->get_preferred_feedback($question, 'incorrect_feedback');
+                            if (empty($feedback)) {
                                 $feedback = __('Incorrect', 'ielts-course-manager');
                             }
                         }
@@ -785,9 +779,7 @@ class IELTS_CM_Quiz_Handler {
                 }
             } else {
                 // No answer provided - show no_answer_feedback if available
-                if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
-                    $feedback = wp_kses_post($question['no_answer_feedback']);
-                }
+                $feedback = $this->get_preferred_feedback($question, 'no_answer_feedback');
             }
             
             $question_results[$index] = array(
@@ -833,6 +825,47 @@ class IELTS_CM_Quiz_Handler {
         } else {
             wp_send_json_error(array('message' => 'Failed to save quiz result'));
         }
+    }
+    
+    /**
+     * Get preferred feedback from question, checking summary_fields first
+     * 
+     * For short answer questions with summary_fields, the feedback in summary_fields
+     * typically contains more detailed information including the correct answer,
+     * while top-level feedback may contain only generic messages.
+     * 
+     * This method checks summary_fields first (using the first field's feedback),
+     * then falls back to the top-level question feedback if summary_fields feedback
+     * is not available.
+     * 
+     * Note: Uses reset() to get the first field from summary_fields. For single-field
+     * short answer questions, there is typically only one summary field containing
+     * the answer and feedback. For multi-field questions (like summary completion),
+     * each field has its own feedback handled separately.
+     * 
+     * @param array $question Question data array containing feedback fields
+     * @param string $feedback_type Type of feedback to retrieve. Must be one of:
+     *                              'correct_feedback' - shown when answer is correct
+     *                              'incorrect_feedback' - shown when answer is wrong
+     *                              'no_answer_feedback' - shown when no answer provided
+     * @return string Sanitized feedback text (may be empty if no feedback available)
+     */
+    private function get_preferred_feedback($question, $feedback_type) {
+        // Check if summary_fields has feedback (preferred for showing correct answer)
+        if (isset($question['summary_fields']) && is_array($question['summary_fields']) && !empty($question['summary_fields'])) {
+            // Get first field's feedback - for short_answer questions this contains the primary feedback
+            $first_field = reset($question['summary_fields']);
+            if (isset($first_field[$feedback_type]) && !empty($first_field[$feedback_type])) {
+                return wp_kses_post($first_field[$feedback_type]);
+            }
+        }
+        
+        // Fall back to top-level feedback
+        if (isset($question[$feedback_type]) && !empty($question[$feedback_type])) {
+            return wp_kses_post($question[$feedback_type]);
+        }
+        
+        return '';
     }
     
     /**

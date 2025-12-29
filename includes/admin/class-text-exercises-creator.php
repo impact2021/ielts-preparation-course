@@ -2466,7 +2466,7 @@ You have one hour for the complete test (including transferring your answers).</
                         'answer' => implode('|', $answers),
                         'correct_feedback' => '',
                         'incorrect_feedback' => '',
-                        'no_answer_feedback' => __("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager')
+                        'no_answer_feedback' => ''
                     );
                 }
             }
