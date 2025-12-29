@@ -708,7 +708,15 @@ class IELTS_CM_Quiz_Handler {
                 
                 if ($answer_is_empty) {
                     // Treat empty text answers as no answer
-                    if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
+                    // Check if summary_fields has feedback (preferred for showing correct answer)
+                    if (isset($question['summary_fields']) && is_array($question['summary_fields']) && !empty($question['summary_fields'])) {
+                        $first_field = reset($question['summary_fields']);
+                        if (isset($first_field['no_answer_feedback']) && !empty($first_field['no_answer_feedback'])) {
+                            $feedback = wp_kses_post($first_field['no_answer_feedback']);
+                        } elseif (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
+                            $feedback = wp_kses_post($question['no_answer_feedback']);
+                        }
+                    } elseif (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
                         $feedback = wp_kses_post($question['no_answer_feedback']);
                     }
                 } else {
@@ -739,7 +747,17 @@ class IELTS_CM_Quiz_Handler {
                             }
                         } elseif (in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false'))) {
                             // For short answer, sentence completion, labelling, and true/false - use correct_feedback
-                            if (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
+                            // Check if summary_fields has feedback (preferred for detailed feedback)
+                            if (isset($question['summary_fields']) && is_array($question['summary_fields']) && !empty($question['summary_fields'])) {
+                                $first_field = reset($question['summary_fields']);
+                                if (isset($first_field['correct_feedback']) && !empty($first_field['correct_feedback'])) {
+                                    $feedback = wp_kses_post($first_field['correct_feedback']);
+                                } elseif (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
+                                    $feedback = wp_kses_post($question['correct_feedback']);
+                                } else {
+                                    $feedback = __('Correct!', 'ielts-course-manager');
+                                }
+                            } elseif (isset($question['correct_feedback']) && !empty($question['correct_feedback'])) {
                                 $feedback = wp_kses_post($question['correct_feedback']);
                             } else {
                                 // Provide default feedback if none configured
@@ -769,7 +787,17 @@ class IELTS_CM_Quiz_Handler {
                             }
                         } elseif (in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false'))) {
                             // For short answer, sentence completion, labelling, and true/false - use incorrect_feedback
-                            if (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                            // Check if summary_fields has feedback (preferred for showing correct answer)
+                            if (isset($question['summary_fields']) && is_array($question['summary_fields']) && !empty($question['summary_fields'])) {
+                                $first_field = reset($question['summary_fields']);
+                                if (isset($first_field['incorrect_feedback']) && !empty($first_field['incorrect_feedback'])) {
+                                    $feedback = wp_kses_post($first_field['incorrect_feedback']);
+                                } elseif (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
+                                    $feedback = wp_kses_post($question['incorrect_feedback']);
+                                } else {
+                                    $feedback = __('Incorrect', 'ielts-course-manager');
+                                }
+                            } elseif (isset($question['incorrect_feedback']) && !empty($question['incorrect_feedback'])) {
                                 $feedback = wp_kses_post($question['incorrect_feedback']);
                             } else {
                                 // Provide default feedback if none configured
@@ -785,7 +813,15 @@ class IELTS_CM_Quiz_Handler {
                 }
             } else {
                 // No answer provided - show no_answer_feedback if available
-                if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
+                // Check if summary_fields has feedback (preferred for showing correct answer)
+                if (isset($question['summary_fields']) && is_array($question['summary_fields']) && !empty($question['summary_fields'])) {
+                    $first_field = reset($question['summary_fields']);
+                    if (isset($first_field['no_answer_feedback']) && !empty($first_field['no_answer_feedback'])) {
+                        $feedback = wp_kses_post($first_field['no_answer_feedback']);
+                    } elseif (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
+                        $feedback = wp_kses_post($question['no_answer_feedback']);
+                    }
+                } elseif (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
                     $feedback = wp_kses_post($question['no_answer_feedback']);
                 }
             }

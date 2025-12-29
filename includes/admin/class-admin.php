@@ -1770,7 +1770,7 @@ class IELTS_CM_Admin {
                 var correctAnswerField = container.find('.correct-answer-field');
                 var correctAnswerInput = correctAnswerField.find('input, select');
                 var currentValue = correctAnswerInput.val() || '';
-                var ieltsPlaceholder = '<?php echo esc_attr__("In the IELTS test, you should always take a guess. You don\'t lose points for a wrong answer.", "ielts-course-manager"); ?>';
+                var ieltsPlaceholder = '<?php echo esc_attr__("", "ielts-course-manager"); ?>';
                 
                 if (type === 'multiple_choice') {
                     container.find('.mc-options-field').show();
@@ -2065,7 +2065,7 @@ class IELTS_CM_Admin {
                 // Clear and rebuild
                 container.empty();
                 
-                var defaultNoAnswerFeedback = '<?php echo esc_js(__("In the IELTS test, you should always take a guess. You don\'t lose points for a wrong answer.", "ielts-course-manager")); ?>';
+                var defaultNoAnswerFeedback = '<?php echo esc_js(__("", "ielts-course-manager")); ?>';
                 
                 matches.forEach(function(fieldNum) {
                     var fieldData = existingFields[fieldNum] || {
@@ -2508,7 +2508,7 @@ class IELTS_CM_Admin {
                                             var $summaryContainer = $lastQuestion.find('.summary-fields-container');
                                             $summaryContainer.empty();
                                             
-                                            var defaultNoAnswerFeedback = '<?php echo esc_js(__("In the IELTS test, you should always take a guess. You don\'t lose points for a wrong answer.", "ielts-course-manager")); ?>';
+                                            var defaultNoAnswerFeedback = '<?php echo esc_js(__("", "ielts-course-manager")); ?>';
                                             
                                             $.each(question.summary_fields, function(fieldNum, fieldData) {
                                                 var answer = $('<div>').text(fieldData.answer || '').html(); // Escape HTML
@@ -3167,7 +3167,7 @@ class IELTS_CM_Admin {
                                         'answer' => '',
                                         'correct_feedback' => '',
                                         'incorrect_feedback' => '',
-                                        'no_answer_feedback' => __("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager')
+                                        'no_answer_feedback' => ''
                                     );
                                 }
                             }
@@ -3180,7 +3180,7 @@ class IELTS_CM_Admin {
                     foreach ($summary_fields as $field_num => $field_data):
                         // Set default no_answer_feedback if not set
                         if (!isset($field_data['no_answer_feedback']) || $field_data['no_answer_feedback'] === '') {
-                            $field_data['no_answer_feedback'] = __("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager');
+                            $field_data['no_answer_feedback'] = '';
                         }
                     ?>
                         <div class="summary-field-item" data-field-num="<?php echo esc_attr($field_num); ?>" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">
@@ -3250,7 +3250,7 @@ class IELTS_CM_Admin {
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
                 <p>
                     <label><?php _e('No Answer Selected Feedback', 'ielts-course-manager'); ?></label><br>
-                    <textarea name="questions[<?php echo $index; ?>][no_answer_feedback]" rows="3" style="width: 100%;" placeholder="<?php echo (isset($question['type']) && in_array($question['type'], array('multi_select', 'headings', 'matching_classifying', 'matching', 'locating_information'))) ? esc_attr__("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager') : ''; ?>"><?php echo esc_textarea(isset($question['no_answer_feedback']) ? $question['no_answer_feedback'] : ''); ?></textarea>
+                    <textarea name="questions[<?php echo $index; ?>][no_answer_feedback]" rows="3" style="width: 100%;" placeholder=""><?php echo esc_textarea(isset($question['no_answer_feedback']) ? $question['no_answer_feedback'] : ''); ?></textarea>
                     <small><?php _e('Shown when the student submits without selecting an answer. HTML is supported.', 'ielts-course-manager'); ?></small>
                 </p>
             </div>
@@ -3398,7 +3398,7 @@ class IELTS_CM_Admin {
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
                 <p>
                     <label><?php _e('No Answer Selected Feedback', 'ielts-course-manager'); ?></label><br>
-                    <textarea name="questions[QUESTION_INDEX][no_answer_feedback]" rows="3" style="width: 100%;"><?php echo esc_textarea(__("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager')); ?></textarea>
+                    <textarea name="questions[QUESTION_INDEX][no_answer_feedback]" rows="3" style="width: 100%;"></textarea>
                     <small><?php _e('Shown when the student submits without selecting an answer. HTML is supported.', 'ielts-course-manager'); ?></small>
                 </p>
             </div>
@@ -5883,7 +5883,7 @@ class IELTS_CM_Admin {
      */
     private function transform_summary_table_group($group, $type) {
         // Default feedback message
-        $default_no_answer_feedback = __("In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.", 'ielts-course-manager');
+        $default_no_answer_feedback = '';
         
         if (count($group) === 1 && isset($group[0]['summary_fields'])) {
             // Already in correct format - ensure all feedback fields have defaults if empty
