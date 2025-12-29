@@ -6547,8 +6547,8 @@ class IELTS_CM_Admin {
                 return $matches[0];
             }, $transcript, 1);
             
-            // Check for PCRE errors
-            if ($new_transcript !== null) {
+            // Check for PCRE errors - preg_replace_callback can return null or false on error
+            if ($new_transcript !== null && $new_transcript !== false && preg_last_error() === PREG_NO_ERROR) {
                 $transcript = $new_transcript;
             }
             
