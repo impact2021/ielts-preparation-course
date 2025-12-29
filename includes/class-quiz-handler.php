@@ -709,6 +709,9 @@ class IELTS_CM_Quiz_Handler {
                 if ($answer_is_empty) {
                     // Treat empty text answers as no answer
                     $feedback = $this->get_preferred_feedback($question, 'no_answer_feedback');
+                    if (empty($feedback)) {
+                        $feedback = $this->get_default_no_answer_feedback($question);
+                    }
                 } else {
                     $is_correct = $this->check_answer($question, $answers[$index]);
                     if ($is_correct) {
@@ -739,7 +742,12 @@ class IELTS_CM_Quiz_Handler {
                             // For short answer, sentence completion, labelling, and true/false - use correct_feedback
                             $feedback = $this->get_preferred_feedback($question, 'correct_feedback');
                             if (empty($feedback)) {
-                                $feedback = __('Correct!', 'ielts-course-manager');
+                                // Provide encouraging and informative correct feedback
+                                $user_ans = isset($answers[$index]) ? $answers[$index] : '';
+                                $feedback = sprintf(
+                                    __('✓ Correct! Your answer "<strong>%s</strong>" is accurate. Well done on listening carefully to the audio.', 'ielts-course-manager'),
+                                    esc_html($user_ans)
+                                );
                             }
                         }
                     } else {
@@ -767,7 +775,24 @@ class IELTS_CM_Quiz_Handler {
                             // For short answer, sentence completion, labelling, and true/false - use incorrect_feedback
                             $feedback = $this->get_preferred_feedback($question, 'incorrect_feedback');
                             if (empty($feedback)) {
-                                $feedback = __('Incorrect', 'ielts-course-manager');
+                                // Provide helpful incorrect feedback with correct answer and explanation
+                                $user_ans = isset($answers[$index]) ? $answers[$index] : '';
+                                $correct_ans = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+                                
+                                if (!empty($correct_ans)) {
+                                    $part1 = sprintf(
+                                        __('✗ Incorrect. Your answer "<strong>%s</strong>" is not correct. The correct answer is: <strong>%s</strong>.', 'ielts-course-manager'),
+                                        esc_html($user_ans),
+                                        esc_html($correct_ans)
+                                    );
+                                    $part2 = __('Listen again to the audio and check the transcript to understand why this is the correct answer. Pay attention to key words and phrases that signal the information.', 'ielts-course-manager');
+                                    $feedback = $part1 . '<br><br>' . $part2;
+                                } else {
+                                    $feedback = sprintf(
+                                        __('✗ Incorrect. Your answer "<strong>%s</strong>" is not correct. Please review the audio transcript to find the correct answer.', 'ielts-course-manager'),
+                                        esc_html($user_ans)
+                                    );
+                                }
                             }
                         }
                     }
@@ -780,6 +805,9 @@ class IELTS_CM_Quiz_Handler {
             } else {
                 // No answer provided - show no_answer_feedback if available
                 $feedback = $this->get_preferred_feedback($question, 'no_answer_feedback');
+                if (empty($feedback)) {
+                    $feedback = $this->get_default_no_answer_feedback($question);
+                }
             }
             
             $question_results[$index] = array(
@@ -834,19 +862,8 @@ class IELTS_CM_Quiz_Handler {
      * typically contains more detailed information including the correct answer,
      * while top-level feedback may contain only generic messages.
      * 
-     * This method checks summary_fields first (using the first field's feedback),
-     * then falls back to the top-level question feedback if summary_fields feedback
-     * is not available.
-     * 
-     * Note: Uses reset() to get the first field from summary_fields. For single-field
-     * short answer questions, there is typically only one summary field containing
-     * the answer and feedback. For multi-field questions (like summary completion),
-     * each field has its own feedback handled separately.
-     * 
-     * @param array $question Question data array containing feedback fields
-     * @param string $feedback_type Type of feedback to retrieve. Must be one of:
-     *                              'correct_feedback' - shown when answer is correct
-     *                              'incorrect_feedback' - shown when answer is wrong
+     * @param array $question Question data array
+     * @param string $feedback_type One of: 'correct_feedback', 'incorrect_feedback', 
      *                              'no_answer_feedback' - shown when no answer provided
      * @return string Sanitized feedback text (may be empty if no feedback available)
      */
@@ -867,6 +884,23 @@ class IELTS_CM_Quiz_Handler {
         
         return '';
     }
+    
+    /**
+     * Generate default no-answer feedback with correct answer
+     * 
+     * @param array $question Question data array
+     * @return string Formatted feedback message
+     */
+    private function get_default_no_answer_feedback($question) {
+        $correct_ans = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+        if (!empty($correct_ans)) {
+            return sprintf(
+                __('No answer provided. The correct answer is: <strong>%s</strong>. Please review the audio transcript to understand how this answer relates to the question.', 'ielts-course-manager'),
+                esc_html($correct_ans)
+            );
+        } else {
+            return __('No answer provided. Please provide an answer to receive feedback.', 'ielts-course-manager');
+        }
     
     /**
      * Check if an answer is correct
