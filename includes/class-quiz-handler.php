@@ -901,6 +901,7 @@ class IELTS_CM_Quiz_Handler {
         } else {
             return __('No answer provided. Please provide an answer to receive feedback.', 'ielts-course-manager');
         }
+    }
     
     /**
      * Check if an answer is correct
