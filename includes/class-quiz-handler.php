@@ -709,6 +709,18 @@ class IELTS_CM_Quiz_Handler {
                 if ($answer_is_empty) {
                     // Treat empty text answers as no answer
                     $feedback = $this->get_preferred_feedback($question, 'no_answer_feedback');
+                    if (empty($feedback)) {
+                        // Provide helpful default no-answer feedback with correct answer
+                        $correct_ans = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+                        if (!empty($correct_ans)) {
+                            $feedback = sprintf(
+                                __('No answer provided. The correct answer is: <strong>%s</strong>. Please review the audio transcript to understand how this answer relates to the question.', 'ielts-course-manager'),
+                                esc_html($correct_ans)
+                            );
+                        } else {
+                            $feedback = __('No answer provided. Please provide an answer to receive feedback.', 'ielts-course-manager');
+                        }
+                    }
                 } else {
                     $is_correct = $this->check_answer($question, $answers[$index]);
                     if ($is_correct) {
@@ -739,7 +751,12 @@ class IELTS_CM_Quiz_Handler {
                             // For short answer, sentence completion, labelling, and true/false - use correct_feedback
                             $feedback = $this->get_preferred_feedback($question, 'correct_feedback');
                             if (empty($feedback)) {
-                                $feedback = __('Correct!', 'ielts-course-manager');
+                                // Provide encouraging and informative correct feedback
+                                $user_ans = isset($answers[$index]) ? $answers[$index] : '';
+                                $feedback = sprintf(
+                                    __('✓ Correct! Your answer "<strong>%s</strong>" is accurate. Well done on listening carefully to the audio.', 'ielts-course-manager'),
+                                    esc_html($user_ans)
+                                );
                             }
                         }
                     } else {
@@ -767,7 +784,22 @@ class IELTS_CM_Quiz_Handler {
                             // For short answer, sentence completion, labelling, and true/false - use incorrect_feedback
                             $feedback = $this->get_preferred_feedback($question, 'incorrect_feedback');
                             if (empty($feedback)) {
-                                $feedback = __('Incorrect', 'ielts-course-manager');
+                                // Provide helpful incorrect feedback with correct answer and explanation
+                                $user_ans = isset($answers[$index]) ? $answers[$index] : '';
+                                $correct_ans = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+                                
+                                if (!empty($correct_ans)) {
+                                    $feedback = sprintf(
+                                        __('✗ Incorrect. Your answer "<strong>%s</strong>" is not correct. The correct answer is: <strong>%s</strong>.<br><br>Listen again to the audio and check the transcript to understand why this is the correct answer. Pay attention to key words and phrases that signal the information.', 'ielts-course-manager'),
+                                        esc_html($user_ans),
+                                        esc_html($correct_ans)
+                                    );
+                                } else {
+                                    $feedback = sprintf(
+                                        __('✗ Incorrect. Your answer "<strong>%s</strong>" is not correct. Please review the audio transcript to find the correct answer.', 'ielts-course-manager'),
+                                        esc_html($user_ans)
+                                    );
+                                }
                             }
                         }
                     }
@@ -780,6 +812,18 @@ class IELTS_CM_Quiz_Handler {
             } else {
                 // No answer provided - show no_answer_feedback if available
                 $feedback = $this->get_preferred_feedback($question, 'no_answer_feedback');
+                if (empty($feedback)) {
+                    // Provide helpful default no-answer feedback with correct answer
+                    $correct_ans = isset($question['correct_answer']) ? $question['correct_answer'] : '';
+                    if (!empty($correct_ans)) {
+                        $feedback = sprintf(
+                            __('No answer provided. The correct answer is: <strong>%s</strong>. Please review the audio transcript to understand how this answer relates to the question.', 'ielts-course-manager'),
+                            esc_html($correct_ans)
+                        );
+                    } else {
+                        $feedback = __('No answer provided. Please provide an answer to receive feedback.', 'ielts-course-manager');
+                    }
+                }
             }
             
             $question_results[$index] = array(
