@@ -165,6 +165,145 @@ def generate_xml(test_num, section_num, questions, audio_url, transcript):
     
     return xml_content
 
+def extract_question_context(content, answer_index):
+    """Extract the question text/context for a given answer."""
+    # Find all answer blocks with their positions
+    pattern = r'\{[^}]+\}'
+    matches = list(re.finditer(pattern, content))
+    
+    if answer_index >= len(matches):
+        return f"Question {answer_index + 1}"
+    
+    match = matches[answer_index]
+    answer_start = match.start()
+    answer_end = match.end()
+    
+    # First, check if the question is on the same line (before the answer)
+    # Look backwards from answer to find the start of the line
+    line_start = content.rfind('\n', 0, answer_start) + 1
+    same_line_text = content[line_start:answer_start].strip()
+    
+    # Clean up same-line text
+    same_line_text = re.sub(r'</?li>', '', same_line_text)  # Remove <li> tags
+    same_line_text = re.sub(r'^\d+\.\s*', '', same_line_text)  # Remove number prefix
+    same_line_text = re.sub(r'<[^>]+>', '', same_line_text)  # Remove other HTML tags
+    same_line_text = same_line_text.strip()
+    
+    # If we found meaningful text on the same line (e.g., a question), use it
+    if same_line_text and len(same_line_text) > 5 and '?' in same_line_text:
+        return same_line_text
+    
+    # For standalone answers (like "5. {E}"), look for surrounding context
+    # Get the entire chunk from previous answer to current answer
+    start_pos = 0
+    if answer_index > 0:
+        start_pos = matches[answer_index - 1].end()
+    
+    question_chunk = content[start_pos:answer_start]
+    
+    # Try to find a summary/paragraph with numbered placeholders
+    # Look for pattern like "text 7. {answer} more text 8. {answer}"
+    # This indicates a fill-in-the-blank paragraph
+    
+    # Check if this looks like part of a summary paragraph
+    # by seeing if there are sentence fragments around the answer
+    before_answer = content[max(0, answer_start - 200):answer_start]
+    after_answer = content[answer_end:min(len(content), answer_end + 200)]
+    
+    # If surrounded by sentence text (lowercase letters before and after), it's likely a summary
+    if (re.search(r'[a-z]\s*\d*\.?\s*$', before_answer) and 
+        re.search(r'^\s*\.?\s*[A-Z]?[a-z]', after_answer)):
+        # Extract the full summary paragraph
+        # Find the start of the paragraph (look for instruction text or blank line)
+        para_start = question_chunk.rfind('\n\n')
+        if para_start == -1:
+            para_start = question_chunk.rfind('below')
+            if para_start != -1:
+                para_start = question_chunk.find('\n', para_start)
+        
+        if para_start != -1:
+            full_para = question_chunk[para_start:].strip()
+            # Clean and extract the summary text
+            full_para = re.sub(r'<[^>]+>', '', full_para)  # Remove HTML
+            full_para = re.sub(r'\s+', ' ', full_para).strip()  # Normalize whitespace
+            
+            # Find the sentence containing this answer
+            sentences = re.split(r'[.!?]\s+', full_para)
+            for sent in sentences:
+                if str(answer_index + 1) in sent or re.search(r'\d+\s*$', sent):
+                    # Found the sentence with this question number
+                    clean_sent = re.sub(r'\d+\s*$', '', sent).strip()
+                    if clean_sent:
+                        return clean_sent + '.'
+    
+    # Check if this is a standalone answer (just number and answer on a line)
+    # If so, look for shared instructions in the broader context
+    standalone_pattern = r'^\d+\.\s*$'
+    if re.match(standalone_pattern, same_line_text) or not same_line_text:
+        # Look further back for instructions (e.g., "Label the map...")
+        # Go back up to 500 characters or 2 previous answers
+        lookback_start = 0
+        if answer_index >= 2:
+            lookback_start = matches[answer_index - 2].end()
+        elif answer_index >= 1:
+            lookback_start = matches[answer_index - 1].end()
+        
+        lookback_chunk = content[lookback_start:answer_start]
+        
+        # Look for instruction lines
+        lines = lookback_chunk.split('\n')
+        for line in reversed(lines):
+            line = line.strip()
+            # Look for instruction-like text (not numbers, not HTML only, not empty)
+            if (line and 
+                not re.match(r'^\d+\.?\s*$', line) and
+                not re.match(r'^<[^>]+>$', line) and
+                len(line) > 10 and
+                ('below' in line.lower() or 'following' in line.lower() or 
+                 'label' in line.lower() or 'choose' in line.lower() or
+                 'write' in line.lower() or 'complete' in line.lower())):
+                # Clean the instruction
+                clean_instr = re.sub(r'<[^>]+>', '', line)
+                return clean_instr.strip()
+    
+    # Otherwise, look for context in the surrounding text
+    lines = question_chunk.split('\n')
+    cleaned_lines = []
+    
+    for line in lines:
+        line = line.strip()
+        # Skip empty lines, separators, and pure HTML tags
+        if not line or line in ['<hr />', '<hr/>', '<hr>', '&nbsp;']:
+            continue
+        if line.startswith('Questions ') or (line.startswith('Question ') and '-' in line):
+            continue  # Skip question range headers like "Questions 1-10"
+        if line.startswith('<') and line.endswith('>') and line.count('<') <= 2:
+            continue  # Skip pure HTML tags
+        
+        # Remove HTML tags but keep content
+        line = re.sub(r'</?li>', '', line)
+        line = re.sub(r'</?ol[^>]*>', '', line)
+        line = re.sub(r'</?em>', '', line)
+        line = re.sub(r'<hr\s*/>', '', line)
+        line = re.sub(r'<img[^>]*>', '', line)  # Remove images
+        line = re.sub(r'^\d+\.\s*$', '', line)  # Remove standalone numbers
+        
+        line = line.strip()
+        if line and len(line) > 3 and not line.startswith('style='):
+            cleaned_lines.append(line)
+    
+    # Take the last meaningful line as the question
+    if cleaned_lines:
+        # Filter out overly long lines that might be instructions
+        # and prefer lines with question-like content
+        for line in reversed(cleaned_lines):
+            # Remove strong/em tags for comparison
+            clean_line = re.sub(r'<[^>]+>', '', line)
+            if len(clean_line) < 200 and len(clean_line) > 5:  # Reasonable question length
+                return line
+    
+    return f"Question {answer_index + 1}"
+
 def generate_section(test_num, section_num):
     """Generate one section."""
     txt_file = f"Listening Test {test_num} Section {section_num}.txt"
@@ -192,10 +331,15 @@ def generate_section(test_num, section_num):
         answer = parse_answer('{' + answer_blocks[i] + '}')
         display_answer = answer.split('|')[0].upper()
         
+        # Extract question context
+        question_text = extract_question_context(content, i)
+        if not question_text:
+            question_text = f'Question {i+1}'
+        
         questions.append({
             'type': 'summary_completion',
             'instructions': '',
-            'question': f'Question {i+1}',
+            'question': question_text,
             'points': 1.0,
             'summary_fields': {
                 1: {
