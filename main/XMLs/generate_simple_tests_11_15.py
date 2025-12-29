@@ -206,7 +206,7 @@ def generate_section(test_num, section_num):
                 }
             },
             'options': '',
-            'correct_answer': '',
+            'correct_answer': answer,
             'no_answer_feedback': f'No answer provided. The correct answer is "{display_answer}". In the IELTS Listening test, you should always attempt every question - there\'s no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it\'s presented.',
             'correct_feedback': f'✓ Excellent! "{display_answer}" is correct. You listened carefully and identified the key information.',
             'incorrect_feedback': f'✗ Not quite. The correct answer is "{display_answer}". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.',
