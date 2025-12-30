@@ -46,3 +46,4 @@ __pycache__/
 
 # Large XML files (keep only converted versions)
 *-original.xml
+*.backup
