@@ -54,18 +54,14 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
             ?>
         </div>
         
+        <?php if ($timer_minutes > 0): ?>
         <div class="quiz-info">
-            <p>
-                <strong><?php _e('Number of Questions:', 'ielts-course-manager'); ?></strong>
-                <?php echo count($questions); ?>
-            </p>
-            <?php if ($timer_minutes > 0): ?>
             <p>
                 <strong><?php _e('Time Limit:', 'ielts-course-manager'); ?></strong>
                 <?php echo intval($timer_minutes); ?> <?php _e('minutes', 'ielts-course-manager'); ?>
             </p>
-            <?php endif; ?>
         </div>
+        <?php endif; ?>
         
         <?php if ($timer_minutes > 0 && !empty($questions) && is_user_logged_in()): ?>
         <div id="quiz-timer" class="quiz-timer">
@@ -195,8 +191,19 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                         </h4>
                         
                         <?php
-                        // Don't display question text for dropdown_paragraph, summary_completion, or table_completion - they render their own formatted version
-                        if ($question['type'] !== 'dropdown_paragraph' && $question['type'] !== 'summary_completion' && $question['type'] !== 'table_completion'):
+                        // Don't display question text for types that render it themselves with inline inputs/dropdowns
+                        $skip_question_text = array('dropdown_paragraph', 'summary_completion', 'table_completion');
+                        
+                        // For open_question, skip if it has placeholders (inline format)
+                        if ($question['type'] === 'open_question') {
+                            $q_text = isset($question['question']) ? $question['question'] : '';
+                            $has_placeholders = (stripos($q_text, '[blank]') !== false) || (preg_match('/\[field\s+\d+\]/i', $q_text) > 0);
+                            if ($has_placeholders) {
+                                $skip_question_text[] = 'open_question';
+                            }
+                        }
+                        
+                        if (!in_array($question['type'], $skip_question_text)):
                         ?>
                         <div class="question-text"><?php echo wp_kses_post(wpautop($question['question'])); ?></div>
                         <?php endif; ?>
@@ -656,9 +663,8 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                     
                                     echo '<div class="open-question-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
                                 } else {
-                                    // Separate format - show question text followed by labeled input fields
+                                    // Separate format - show labeled input fields (question text already displayed above)
                                     ?>
-                                    <div class="question-text"><?php echo wp_kses_post(wpautop($question_text)); ?></div>
                                     <div class="open-question-fields">
                                         <?php for ($field_num = 1; $field_num <= $field_count; $field_num++): ?>
                                             <div class="open-question-field">
