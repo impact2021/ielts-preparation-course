@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ This is a WordPress eXtended RSS file for IELTS Course Manager exercise export 
+-->
+<!--
+ Generated for Listening Exercise - Puppy Kennels Section 1
+-->
+<rss xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/" version="2.0">
+<channel>
+<title>IELTStestONLINE</title>
+<link>https://www.ieltstestonline.com/2026</link>
+<description>Online IELTS preparation</description>
+<pubDate>Mon, 30 Dec 2025 04:46:00 +0000</pubDate>
+<language>en-NZ</language>
+<wp:wxr_version>1.2</wp:wxr_version>
+<wp:base_site_url>https://www.ieltstestonline.com/2026</wp:base_site_url>
+<wp:base_blog_url>https://www.ieltstestonline.com/2026</wp:base_blog_url>
+<wp:author>
+<wp:author_id>1</wp:author_id>
+<wp:author_login><![CDATA[impact]]></wp:author_login>
+<wp:author_email><![CDATA[impact@ieltstestonline.com]]></wp:author_email>
+<wp:author_display_name><![CDATA[impact]]></wp:author_display_name>
+<wp:author_first_name><![CDATA[Patrick]]></wp:author_first_name>
+<wp:author_last_name><![CDATA[Bourne]]></wp:author_last_name>
+</wp:author>
+<generator>IELTS Course Manager</generator>
+<item>
+<title><![CDATA[Listening - Puppy Kennels Section 1]]></title>
+<link>https://www.ieltstestonline.com/2026/ielts-quiz/listening-puppy-kennels-section-1/</link>
+<pubDate>Mon, 30 Dec 2025 04:46:00 +0000</pubDate>
+<dc:creator><![CDATA[impact]]></dc:creator>
+<guid isPermaLink="false">https://www.ieltstestonline.com/2026/?post_type=ielts_quiz&amp;p=AUTO</guid>
+<description/>
+<content:encoded><![CDATA[]]></content:encoded>
+<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+<wp:post_id>AUTO</wp:post_id>
+<wp:post_date><![CDATA[2025-12-30 04:46:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-12-30 04:46:00]]></wp:post_date_gmt>
+<wp:post_modified><![CDATA[2025-12-30 04:46:00]]></wp:post_modified>
+<wp:post_modified_gmt><![CDATA[2025-12-30 04:46:00]]></wp:post_modified_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_name><![CDATA[listening-puppy-kennels-section-1]]></wp:post_name>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:post_type><![CDATA[ielts_quiz]]></wp:post_type>
+<wp:post_password><![CDATA[]]></wp:post_password>
+<wp:is_sticky>0</wp:is_sticky>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:4:{i:0;a:11:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:101:"Questions 1-10: Answer the following questions USING NO MORE THAN THREE WORDS.
+
+EXAMPLE: On the internet";s:8:"question";s:47:"Who is the customer buying the puppy for? 1___";s:6:"points";d:1;s:18:"no_answer_feedback";s:186:"No answer provided. The correct answer is: HIS DAUGHTER. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers. Always take a guess.";s:16:"correct_feedback";s:132:"Correct! The customer says "I want it to be a companion for my daughter" so the answer is HIS DAUGHTER or simply DAUGHTER. Well done!";s:18:"incorrect_feedback";s:184:"Incorrect. The correct answer is: HIS DAUGHTER. Listen carefully to what the customer says about who the puppy is for. The customer mentions wanting it as a companion for his daughter.";s:15:"reading_text_id";N;s:14:"summary_fields";a:1:{i:1;a:4:{s:6:"answer";s:22:"his daughter|daughter";s:16:"correct_feedback";s:132:"Correct! The customer says "I want it to be a companion for my daughter" so the answer is HIS DAUGHTER or simply DAUGHTER. Well done!";s:18:"incorrect_feedback";s:184:"Incorrect. The correct answer is: HIS DAUGHTER. Listen carefully to what the customer says about who the puppy is for. The customer mentions wanting it as a companion for his daughter.";s:18:"no_answer_feedback";s:186:"No answer provided. The correct answer is: HIS DAUGHTER. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers. Always take a guess.";}}s:7:"options";s:0:"";s:14:"correct_answer";s:22:"his daughter|daughter";}i:1;a:11:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:0:"";s:8:"question";s:41:"When will the puppies be available? 2___";s:6:"points";d:1;s:18:"no_answer_feedback";s:182:"No answer provided. The correct answer is: IN ONE WEEK. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers. Always take a guess.";s:16:"correct_feedback";s:120:"Correct! The breeder says the puppies will be available for their owners to take home "in one week". Excellent listening!";s:18:"incorrect_feedback";s:191:"Incorrect. The correct answer is: IN ONE WEEK. Listen to when the breeder says the puppies will be available to take home. The puppies are 7 weeks old and can go home at 8 weeks - in one week.";s:15:"reading_text_id";N;s:14:"summary_fields";a:1:{i:1;a:4:{s:6:"answer";s:56:"in one week|in 1 week|one week|1 week|a week|in a week";s:16:"correct_feedback";s:120:"Correct! The breeder says the puppies will be available for their owners to take home "in one week". Excellent listening!";s:18:"incorrect_feedback";s:191:"Incorrect. The correct answer is: IN ONE WEEK. Listen to when the breeder says the puppies will be available to take home. The puppies are 7 weeks old and can go home at 8 weeks - in one week.";s:18:"no_answer_feedback";s:182:"No answer provided. The correct answer is: IN ONE WEEK. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers. Always take a guess.";}}s:7:"options";s:0:"";s:14:"correct_answer";s:56:"in one week|in 1 week|one week|1 week|a week|in a week";}i:2;a:11:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:0:"";s:8:"question";s:53:"When is the breeder not available to meet? 3___";s:6:"points";d:1;s:18:"no_answer_feedback";s:191:"No answer provided. The correct answer is: FRIDAY AFTERNOON. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers. Always take a guess.";s:16:"correct_feedback";s:114:"Correct! The breeder says "any day this week is fine, apart from Friday afternoon" - she will be at a dog show.";s:18:"incorrect_feedback";s:202:"Incorrect. The correct answer is: FRIDAY AFTERNOON. Listen to when the breeder mentions she will be unavailable. She says she will be out at a dog show on Friday afternoon, so that is when she cannot meet.";s:15:"reading_text_id";N;s:14:"summary_fields";a:1:{i:1;a:4:{s:6:"answer";s:42:"on friday afternoon|friday afternoon";s:16:"correct_feedback";s:114:"Correct! The breeder says "any day this week is fine, apart from Friday afternoon" - she will be at a dog show.";s:18:"incorrect_feedback";s:202:"Incorrect. The correct answer is: FRIDAY AFTERNOON. Listen to when the breeder mentions she will be unavailable. She says she will be out at a dog show on Friday afternoon, so that is when she cannot meet.";s:18:"no_answer_feedback";s:191:"No answer provided. The correct answer is: FRIDAY AFTERNOON. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers. Always take a guess.";}}s:7:"options";s:0:"";s:14:"correct_answer";s:42:"on friday afternoon|friday afternoon";}i:3;a:11:{s:4:"type";s:12:"short_answer";s:12:"instructions";s:0:"";s:8:"question";s:36:"What is outside the kennels? 4___";s:6:"points";d:1;s:18:"no_answer_feedback";s:185:"No answer provided. The correct answer is: A BIG SIGN. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers. Always take a guess.";s:16:"correct_feedback";s:131:"Correct! The breeder says "I've got a big sign outside" to help customers find the kennels. The answer is A BIG SIGN. Well done!";s:18:"incorrect_feedback";s:177:"Incorrect. The correct answer is: A BIG SIGN. Listen to what the breeder says about finding the location. She mentions having a big sign outside to make the kennels easy to find.";s:15:"reading_text_id";N;s:14:"summary_fields";a:1:{i:1;a:4:{s:6:"answer";s:30:"a big sign|big sign|a sign|sign";s:16:"correct_feedback";s:131:"Correct! The breeder says "I've got a big sign outside" to help customers find the kennels. The answer is A BIG SIGN. Well done!";s:18:"incorrect_feedback";s:177:"Incorrect. The correct answer is: A BIG SIGN. Listen to what the breeder says about finding the location. She mentions having a big sign outside to make the kennels easy to find.";s:18:"no_answer_feedback";s:185:"No answer provided. The correct answer is: A BIG SIGN. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers. Always take a guess.";}}s:7:"options";s:0:"";s:14:"correct_answer";s:30:"a big sign|big sign|a sign|sign";}}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
+<wp:meta_value><![CDATA[70]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
+<wp:meta_value><![CDATA[listening_practice]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_exercise_label]]></wp:meta_key>
+<wp:meta_value><![CDATA[practice_test]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_open_as_popup]]></wp:meta_key>
+<wp:meta_value><![CDATA[]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_scoring_type]]></wp:meta_key>
+<wp:meta_value><![CDATA[ielts_listening]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
+<wp:meta_value><![CDATA[]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_starting_question_number]]></wp:meta_key>
+<wp:meta_value><![CDATA[1]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_audio_url]]></wp:meta_key>
+<wp:meta_value><![CDATA[]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_transcript]]></wp:meta_key>
+<wp:meta_value><![CDATA[<table border="1" width="90%" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td valign="top" width="30%">Breeder</td>
+<td valign="top" width="70%">Hello, Greenlee kennels here, how can I help you?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Customer</td>
+<td valign="top" width="70%">Hi there, I'm ringing to enquire about you advertisement I saw on the internet. Do you still have any puppies for sale?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Breeder</td>
+<td valign="top" width="70%">Yes, I do. I've got two boys and one girl left.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Customer</td>
+<td valign="top" width="70%">What colours do you have left? You had some black and some gold coloured dogs advertised on the website I saw.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Breeder</td>
+<td valign="top" width="70%">Yes, I've only got black puppies left now; the last of the golden ones was sold yesterday.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Customer</td>
+<td valign="top" width="70%">Well, I'm interested in buying a male puppy. <strong style="background-color: yellow;">[Q1: his daughter]</strong> I want it to be a companion for my daughter. Do you think the puppies are good with children?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Breeder</td>
+<td valign="top" width="70%">Yes, I raise them in the house and they're very good with other dogs and children. My grandson plays with them all the time. They're still very young remember, so they'll adapt really easily to living in a household with children around full-time. Just remember to tell your little girl to be very gentle, especially at first.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Customer</td>
+<td valign="top" width="70%">How old are they now?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Breeder</td>
+<td valign="top" width="70%">They're seven weeks old. I let them go when they are 8 weeks or older, so they'll be available for their owners to take home in <strong style="background-color: yellow;">[Q2: one week]</strong>.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Customer</td>
+<td valign="top" width="70%">Okay, that sounds great. Now can I arrange to come and see you and the puppies. When would be convenient?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Breeder</td>
+<td valign="top" width="70%">Well, any day this week is fine, apart from <strong style="background-color: yellow;">[Q3: Friday afternoon]</strong>, I'll be out at a dog show then. When would you like to come?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Customer</td>
+<td valign="top" width="70%">How about on Thursday - the day after tomorrow. Would it be okay if I come at around 10.30am?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Breeder</td>
+<td valign="top" width="70%">Can you make it 11am instead, that would suit me better if it's okay for you?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Customer</td>
+<td valign="top" width="70%">Yes, 11am is fine. Is your place easy to find?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Breeder</td>
+<td valign="top" width="70%">Yes, <strong style="background-color: yellow;">[Q4: a big sign]</strong> I've got a big sign outside, we're opposite the new leisure centre on Westlands Rd. I'm at number 157.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Customer</td>
+<td valign="top" width="70%">157 Westlands Rd - isn't Westland Rd near Barnett Drive?</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Breeder</td>
+<td valign="top" width="70%">Yes, it is. After the traffic lights, you come along Barnett Drive and you'll see a fruit and vegetable shop on the left hand side. Just after that you'll see a craft shop. Go past the craft shop and you'll see a cafe on your right. Take the second right after the cafe - that's Westlands Rd, it's the one after Banks Drive.</td>
+</tr>
+<tr>
+<td valign="top" width="30%">Customer</td>
+<td valign="top" width="70%">Okay, that's fine, thanks. I think I know here you mean.</td>
+</tr>
+</tbody>
+</table>]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_course_ids]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_lesson_ids]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_course_id]]></wp:meta_key>
+<wp:meta_value><![CDATA[]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_lesson_id]]></wp:meta_key>
+<wp:meta_value><![CDATA[]]></wp:meta_value>
+</wp:postmeta>
+</item>
+</channel>
+</rss>
