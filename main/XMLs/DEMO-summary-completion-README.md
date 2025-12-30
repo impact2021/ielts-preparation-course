@@ -1,7 +1,7 @@
-# DEMO Summary Completion XML - Microchipping Pets
+# DEMO Summary Completion XML - Buying a Puppy (Listening)
 
 ## Overview
-This demo XML file demonstrates the correct format for summary completion questions with field-based answers.
+This demo XML file demonstrates the correct format for summary completion questions with field-based answers for a listening exercise.
 
 ## File Location
 `main/XMLs/DEMO-summary-completion-microchipping.xml`
@@ -10,42 +10,45 @@ This demo XML file demonstrates the correct format for summary completion questi
 
 ### Question Format
 - **Type**: Summary Completion
-- **Questions**: 7-10 (4 fields)
-- **Instruction**: Complete the summary below using ONE WORD ONLY
+- **Questions**: 1-10 (10 questions)
+- **Instruction**: Answer the following questions USING NO MORE THAN THREE WORDS
 
-### Question Text
-```
-Micro-chipping pets is a secure way of keeping them safe. Collars and tags are 
-convenient but can be removed or 7. [field 1]. Micro chips should be checked 
-occasionally to make sure they are still working properly. The chips are about 
-the same size as a grain of 8. [field 2] and dogs should feel discomfort for no 
-more than a few 9. [field 3]. Infection risk can be minimised by owners making 
-sure the area does not become 10. [field 4]
-```
+### Sample Questions
+1. Who is the customer buying the puppy for?
+2. When will the puppies be available?
+3. When is the breeder not available to meet?
+4. What is outside the kennels?
+5. What shop is on the left side of Barnett Drive?
+... (and 5 more)
 
 ### Fields and Answers
 Each field includes:
-- **Answer** (correct response)
+- **Answer** (correct response with multiple acceptable variations)
 - **Correct feedback** (shown when answer is correct)
 - **Incorrect feedback** (shown when answer is wrong)
 - **No-answer feedback** (shown when field is left blank)
 
-| Field | Answer | Alternative |
-|-------|--------|-------------|
-| 1 | LOST | - |
-| 2 | RICE | - |
-| 3 | SECONDS | SECOND |
-| 4 | INFECTED | INFLAMED |
+Sample answers:
+- Q1: "his daughter" (or "daughter", "HIS DAUGHTER", "DAUGHTER")
+- Q2: "in one week" (or "in 1 week", "one week", "1 week", "a week", "in a week")
+- Q3: "on friday afternoon" (or "friday afternoon", uppercase variants)
 
-### Reading Text
-The XML includes a complete reading passage about pet microchipping that contains all the information needed to answer the questions.
+### Audio Content
+This is a listening exercise. The XML does NOT include reading texts (`_ielts_cm_reading_texts` is empty).
 
-## Validation Status
+## Validation Status (Fixed December 30, 2025)
+✅ **FIXED**: PHP serialization lengths corrected using `fix-serialization-lengths.py`
 ✅ Passes all XML validation checks
 ✅ PHP serialization is correct
 ✅ All required WordPress meta fields present
 ✅ No CDATA spacing issues
 ✅ Ready for import
+
+### Previous Issue
+The original XML file had corrupted PHP serialization string lengths where declared lengths didn't match actual string byte counts (e.g., `s:92:` declared but 149 bytes actual). This caused `unserialize()` to fail, returning `false`, which triggered the "No questions found in the XML file" error.
+
+### Fix Applied
+Used `python3 TEMPLATES/fix-serialization-lengths.py` to recalculate all string lengths in the serialized data. The file now imports successfully without errors.
 
 ## Import Instructions
 1. Log into WordPress admin
@@ -56,15 +59,19 @@ The XML includes a complete reading passage about pet microchipping that contain
 
 ## Features Demonstrated
 - Proper WordPress XML export format
-- Summary completion question type
-- Multiple answer fields with individual feedback
-- Proper PHP serialization format
-- Reading text integration
-- Question numbering starting at 7 (as requested)
+- Summary completion question type for listening exercises
+- Multiple answer fields with individual feedback per question
+- Proper PHP serialization format (after fix)
+- Multiple acceptable answer variations using pipe separator
+- Listening exercise layout (`listening_practice`)
+- Timer functionality (5 minutes)
+- Percentage-based scoring
 
 ## Key Points
-- Each field (`[field 1]`, `[field 2]`, etc.) becomes an input box in the quiz
-- The numbers in the question text (7, 8, 9, 10) are for display only
-- Field numbers in the data structure start at 1, not 7
-- Answers can have multiple acceptable variations separated by `|` (e.g., `SECONDS|SECOND`)
+- This is a **listening exercise** (not reading), so no reading texts are included
+- Each question uses the `summary_completion` type with a single field
+- Answers can have multiple acceptable variations separated by `|` (e.g., `in one week|in 1 week|one week|1 week|a week|in a week`)
 - All feedback follows the ANSWER-FEEDBACK-GUIDELINES.md format
+- Exercise uses a 5-minute timer
+- Layout type is `listening_practice`
+- Starting question number is 1 (default)
