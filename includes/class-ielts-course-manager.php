@@ -62,9 +62,6 @@ class IELTS_Course_Manager {
         // Fix serialized data during WordPress import
         add_filter('wp_import_post_meta', array($this, 'fix_imported_serialized_data'), 10, 3);
         
-        // Ensure admin login always overrides any other login requirements
-        add_filter('login_redirect', array($this, 'admin_login_redirect'), 10, 3);
-        
         // Initialize admin
         if (is_admin()) {
             $this->admin->init();
@@ -241,39 +238,5 @@ class IELTS_Course_Manager {
         );
         
         return $fixed;
-    }
-    
-    /**
-     * Ensure admin users are always redirected to admin dashboard after login
-     * This prevents admins from being redirected to student login pages
-     * 
-     * @param string $redirect_to URL to redirect to after login
-     * @param string $request Requested redirect destination
-     * @param WP_User|WP_Error $user User object or WP_Error
-     * @return string Modified redirect URL
-     */
-    public function admin_login_redirect($redirect_to, $request, $user) {
-        // Check if login was successful (user is WP_User, not WP_Error)
-        if (is_wp_error($user)) {
-            return $redirect_to;
-        }
-        
-        // If user has admin capabilities, always redirect to admin area
-        if (user_can($user, 'manage_options')) {
-            // If a specific admin page was requested, validate it with admin dashboard as fallback
-            if (!empty($request)) {
-                // Only allow redirects to admin URLs, fallback to admin dashboard if invalid
-                $validated = wp_validate_redirect($request, admin_url());
-                // Double-check the validated URL is actually an admin URL
-                if (strpos($validated, admin_url()) === 0) {
-                    return $validated;
-                }
-            }
-            // Default redirect to admin dashboard
-            return admin_url();
-        }
-        
-        // For non-admin users, use the default redirect
-        return $redirect_to;
     }
 }
