@@ -258,16 +258,18 @@ class IELTS_Course_Manager {
             return $redirect_to;
         }
         
-        // If user has admin capabilities, always redirect to admin dashboard
+        // If user has admin capabilities, always redirect to admin area
         if (user_can($user, 'manage_options')) {
-            // If a specific admin page was requested, validate and use that
+            // If a specific admin page was requested, validate it with admin dashboard as fallback
             if (!empty($request)) {
-                $validated_request = wp_validate_redirect($request, '');
-                if ($validated_request && strpos($validated_request, admin_url()) === 0) {
-                    return $validated_request;
+                // Only allow redirects to admin URLs, fallback to admin dashboard if invalid
+                $validated = wp_validate_redirect($request, admin_url());
+                // Double-check the validated URL is actually an admin URL
+                if (strpos($validated, admin_url()) === 0) {
+                    return $validated;
                 }
             }
-            // Otherwise, redirect to admin dashboard
+            // Default redirect to admin dashboard
             return admin_url();
         }
         
