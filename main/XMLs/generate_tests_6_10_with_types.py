@@ -57,6 +57,24 @@ def extract_transcript(content):
         return match.group(1)
     return ""
 
+def extract_summary_text(content, answer_start, answer_end, answer_index):
+    """Helper function to extract summary completion text from paragraph."""
+    para_start = max(0, answer_start - 500)
+    para_end = min(len(content), answer_end + 500)
+    para = content[para_start:para_end]
+    
+    # Clean and find the sentence
+    para_clean = re.sub(r'<[^>]+>', '', para)
+    para_clean = re.sub(r'\{[^}]+\}', '___', para_clean)
+    
+    # Get the sentence with this blank
+    sentences = re.split(r'[.!]\s+', para_clean)
+    for sent in sentences:
+        if str(answer_index + 1) in sent or '___' in sent:
+            return sent.strip()
+    
+    return para_clean[:200].strip() + '...'
+
 def detect_question_type(content, answer_index, answer_text):
     """
     Detect the question type based on context and answer format.
@@ -78,50 +96,22 @@ def detect_question_type(content, answer_index, answer_text):
     
     # Look back for question type indicators
     lookback = content[max(0, answer_start - 1000):answer_start]
-    
-    # First priority: Check for summary/form completion (answer embedded in paragraph with <strong>N</strong>)
-    # This must come BEFORE checking for MC/multi-select to avoid false positives
     before_answer = content[max(0, answer_start - 200):answer_start]
     after_answer = content[answer_end:min(len(content), answer_end + 200)]
     
+    # First priority: Check for summary/form completion (answer embedded in paragraph)
+    # This must come BEFORE checking for MC/multi-select to avoid false positives
+    
     # Check if answer is embedded in a paragraph (has <strong>NUM</strong> format)
     if re.search(r'<strong>\s*\d+\s*</strong>\s*$', before_answer):
-        # This is a fill-in-the-blank in a paragraph
-        para_start = max(0, answer_start - 500)
-        para_end = min(len(content), answer_end + 500)
-        para = content[para_start:para_end]
-        
-        # Clean and find the sentence
-        para_clean = re.sub(r'<[^>]+>', '', para)
-        para_clean = re.sub(r'\{[^}]+\}', '___', para_clean)
-        
-        # Get the sentence with this blank
-        sentences = re.split(r'[.!]\s+', para_clean)
-        for sent in sentences:
-            if str(answer_index + 1) in sent or '___' in sent:
-                return ('summary_completion', sent.strip(), None)
-        
-        return ('summary_completion', para_clean[:200].strip() + '...', None)
+        summary_text = extract_summary_text(content, answer_start, answer_end, answer_index)
+        return ('summary_completion', summary_text, None)
     
     # If surrounded by sentence text (lowercase letters), it's summary completion
     if (re.search(r'[a-z]\s*\d*\.?\s*$', before_answer) and 
         re.search(r'^\s*\.?\s*[A-Z]?[a-z]', after_answer)):
-        # Extract the paragraph context
-        para_start = max(0, answer_start - 500)
-        para_end = min(len(content), answer_end + 500)
-        para = content[para_start:para_end]
-        
-        # Clean and find the sentence
-        para_clean = re.sub(r'<[^>]+>', '', para)
-        para_clean = re.sub(r'\{[^}]+\}', '___', para_clean)
-        
-        # Get just the sentence with this blank
-        sentences = re.split(r'[.!]\s+', para_clean)
-        for sent in sentences:
-            if str(answer_index + 1) in sent or '___' in sent:
-                return ('summary_completion', sent.strip(), None)
-        
-        return ('summary_completion', para_clean[:200].strip() + '...', None)
+        summary_text = extract_summary_text(content, answer_start, answer_end, answer_index)
+        return ('summary_completion', summary_text, None)
     
     # Check for "Choose TWO letters" style multi-select
     # Only if answer contains multiple letter choices (e.g., {[B][D]})
@@ -171,30 +161,6 @@ def detect_question_type(content, answer_index, answer_text):
             if label_match:
                 instr = label_match.group(1).strip()
                 return ('matching', instr, None)
-    
-    # Check for summary/form completion (answer embedded in paragraph)
-    before_answer = content[max(0, answer_start - 200):answer_start]
-    after_answer = content[answer_end:min(len(content), answer_end + 200)]
-    
-    # If surrounded by sentence text, it's summary completion
-    if (re.search(r'[a-z]\s*\d*\.?\s*$', before_answer) and 
-        re.search(r'^\s*\.?\s*[A-Z]?[a-z]', after_answer)):
-        # Extract the paragraph context
-        para_start = max(0, answer_start - 500)
-        para_end = min(len(content), answer_end + 500)
-        para = content[para_start:para_end]
-        
-        # Clean and find the sentence
-        para_clean = re.sub(r'<[^>]+>', '', para)
-        para_clean = re.sub(r'\{[^}]+\}', '___', para_clean)
-        
-        # Get just the sentence with this blank
-        sentences = re.split(r'[.!]\s+', para_clean)
-        for sent in sentences:
-            if str(answer_index + 1) in sent or '___' in sent:
-                return ('summary_completion', sent.strip(), None)
-        
-        return ('summary_completion', para_clean[:200].strip() + '...', None)
     
     # Check if question has a question mark (standard short answer)
     same_line_clean = re.sub(r'<[^>]+>', '', same_line_text)
