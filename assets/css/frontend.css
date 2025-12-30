@@ -2033,14 +2033,14 @@ select.answer-select-inline.answer-incorrect {
     vertical-align: middle;
 }
 
-/* Question Styling for Listening Exercises - Match Computer-Based Layout */
+/* Question Styling for Listening Exercises - Compact Layout Without Boxes */
 .ielts-listening-practice-quiz .quiz-question,
 .ielts-listening-exercise-quiz .quiz-question {
-    padding: 20px;
-    margin-bottom: 25px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 0;
+    margin-bottom: 20px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
     scroll-margin-top: 20px;
 }
 
@@ -2207,12 +2207,16 @@ select.answer-select-inline.answer-incorrect {
 .ielts-listening-exercise-quiz .quiz-question.question-correct {
     border-left: 4px solid #4caf50;
     background: #f1f8f4;
+    padding: 15px;
+    margin-bottom: 20px;
 }
 
 .ielts-listening-practice-quiz .quiz-question.question-incorrect,
 .ielts-listening-exercise-quiz .quiz-question.question-incorrect {
     border-left: 4px solid #f44336;
     background: #fef5f5;
+    padding: 15px;
+    margin-bottom: 20px;
 }
 
 /* Correct answer highlighting - for both selected correct answers and correct answer hints */
