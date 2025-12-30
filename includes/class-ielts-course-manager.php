@@ -260,9 +260,12 @@ class IELTS_Course_Manager {
         
         // If user has admin capabilities, always redirect to admin dashboard
         if (user_can($user, 'manage_options')) {
-            // If a specific admin page was requested, use that
-            if (!empty($request) && strpos($request, 'wp-admin') !== false) {
-                return $request;
+            // If a specific admin page was requested, validate and use that
+            if (!empty($request)) {
+                $validated_request = wp_validate_redirect($request, '');
+                if ($validated_request && strpos($validated_request, admin_url()) === 0) {
+                    return $validated_request;
+                }
             }
             // Otherwise, redirect to admin dashboard
             return admin_url();
