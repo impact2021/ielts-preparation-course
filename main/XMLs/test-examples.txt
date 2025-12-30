@@ -1,0 +1,39 @@
+[audio mp3="https://example.com/audio.mp3"]
+
+<h3>Questions 1-4</h3>
+
+<strong>Instructions:</strong> Complete the sentences below.
+
+1. The first answer is {correct answer 1}
+2. The second answer is {correct answer 2}
+3. Third question text {answer 3}
+4. Fourth question? {answer 4}
+
+<h3>Questions 5-6</h3>
+
+<strong>Choose TWO letters, A-E.</strong>
+
+Which TWO factors are mentioned?
+
+<ol>
+<li>First option</li>
+<li>Second option (correct)</li>
+<li>Third option (correct)</li>
+<li>Fourth option</li>
+<li>Fifth option</li>
+</ol>
+
+5. {B}
+6. {C}
+
+<h3>Questions 7-10</h3>
+
+7. Question seven? {answer 7}
+8. Question eight text {answer 8}
+9. Question nine? {answer 9}
+10. Question ten {answer 10}
+
+<div style="overflow: scroll">
+<h4>Transcript</h4>
+This is the transcript text.
+</div>
