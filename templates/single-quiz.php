@@ -549,6 +549,82 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 <?php
                                 endif;
                                 break;
+                                
+                            case 'closed_question':
+                                // Closed Question - Multiple choice with configurable number of correct answers
+                                // correct_answer_count determines how many question numbers this covers
+                                $options = array();
+                                if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                                    $options = $question['mc_options'];
+                                } elseif (isset($question['options']) && !empty($question['options'])) {
+                                    $option_lines = array_filter(explode("\n", $question['options']));
+                                    foreach ($option_lines as $opt_text) {
+                                        $options[] = array('text' => trim($opt_text));
+                                    }
+                                }
+                                
+                                $correct_answer_count = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
+                                $is_multi_select = $correct_answer_count > 1;
+                                
+                                if (!empty($options)):
+                                ?>
+                                <div class="question-options closed-question-options" data-correct-count="<?php echo $correct_answer_count; ?>">
+                                    <?php foreach ($options as $opt_index => $option): ?>
+                                        <label class="option-label">
+                                            <?php if ($is_multi_select): ?>
+                                                <input type="checkbox" 
+                                                       name="answer_<?php echo $index; ?>[]" 
+                                                       value="<?php echo $opt_index; ?>"
+                                                       class="closed-question-checkbox">
+                                            <?php else: ?>
+                                                <input type="radio" 
+                                                       name="answer_<?php echo $index; ?>" 
+                                                       value="<?php echo $opt_index; ?>"
+                                                       class="closed-question-radio">
+                                            <?php endif; ?>
+                                            <span><?php echo esc_html(isset($option['text']) ? $option['text'] : $option); ?></span>
+                                        </label>
+                                    <?php endforeach; ?>
+                                </div>
+                                <?php if ($is_multi_select): ?>
+                                    <small class="closed-question-hint">
+                                        <?php printf(__('Select %d options (covers questions %d-%d)', 'ielts-course-manager'), 
+                                            $correct_answer_count, 
+                                            $display_question_number, 
+                                            $display_question_number + $correct_answer_count - 1); ?>
+                                    </small>
+                                <?php endif; ?>
+                                <?php
+                                endif;
+                                break;
+                                
+                            case 'open_question':
+                                // Open Question - Text input with configurable number of fields
+                                // field_count determines how many question numbers this covers
+                                $field_count = isset($question['field_count']) ? intval($question['field_count']) : 1;
+                                ?>
+                                <div class="open-question-fields">
+                                    <?php for ($field_num = 1; $field_num <= $field_count; $field_num++): ?>
+                                        <div class="open-question-field">
+                                            <label>
+                                                <?php printf(__('Answer %d:', 'ielts-course-manager'), $display_question_number + $field_num - 1); ?>
+                                                <input type="text" 
+                                                       name="answer_<?php echo $index; ?>_field_<?php echo $field_num; ?>" 
+                                                       class="answer-input open-question-input"
+                                                       data-field-num="<?php echo $field_num; ?>">
+                                            </label>
+                                        </div>
+                                    <?php endfor; ?>
+                                </div>
+                                <small class="open-question-hint">
+                                    <?php if ($field_count > 1): ?>
+                                        <?php printf(__('Questions %d-%d', 'ielts-course-manager'), 
+                                            $display_question_number, 
+                                            $display_question_number + $field_count - 1); ?>
+                                    <?php endif; ?>
+                                </small>
+                                <?php
+                                break;
                         }
                         ?>
                     </div>
