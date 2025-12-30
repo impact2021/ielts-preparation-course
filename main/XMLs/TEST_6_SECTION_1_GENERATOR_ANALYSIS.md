@@ -29,7 +29,7 @@ XML Files (20 new files)
 Generator: IELTS Course Manager - convert-txt-to-xml.py
 ```
 
-### 2. **generate_simple_tests_6_10.py** (Between Dec 28-30, 2025)
+### 2. **generate_simple_tests_6_10.py** (Between December 28-30, 2025)
 - **Purpose**: Simplified generator for Tests 6-10
 - **Usage**: Used to regenerate Test 6 Section 1.xml
 - **Problem**: Hardcoded ALL questions as `short_answer` type (line 401)
@@ -84,9 +84,9 @@ Legacy Generator (now obsolete):
 
 | Date | Generator | Status | Issue |
 |------|-----------|--------|-------|
-| Dec 28, 2025 | convert-txt-to-xml.py | Initial generation | Basic extraction, limited type detection |
-| Dec 28-30, 2025 | generate_simple_tests_6_10.py | Regenerated | All questions hardcoded as short_answer ❌ |
-| Dec 30, 2025 | generate_tests_6_10_with_types.py | Current version ✅ | Proper question type detection |
+| December 28, 2025 | convert-txt-to-xml.py | Initial generation | Basic extraction, limited type detection |
+| December 28-30, 2025 | generate_simple_tests_6_10.py | Regenerated | All questions hardcoded as short_answer ❌ |
+| December 30, 2025 | generate_tests_6_10_with_types.py | Current version ✅ | Proper question type detection |
 
 ## Additional Generators (Not Used for Test 6 Section 1)
 
