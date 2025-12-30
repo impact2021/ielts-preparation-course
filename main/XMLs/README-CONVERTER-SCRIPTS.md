@@ -1,34 +1,48 @@
 # Listening Test Converter Scripts
 
-This directory contains two Python scripts to help with creating and managing listening test XML files with annotated transcripts.
+This directory contains the master XML generator and a utility script for IELTS listening tests.
 
-## Scripts
+## Master Generator
 
-### 1. convert-txt-to-xml.py
+### `generate_listening_xml_master.py` ✅ USE THIS
 
-Converts a listening test TXT file to XML format and generates an annotated transcript.
+**The ONLY generator you need.**
+
+Converts listening test TXT files to XML format with:
+- ✅ Automatic question type detection (all types supported)
+- ✅ FULL feedback auto-generated (CORRECT, INCORRECT, NO ANSWER)
+- ✅ No manual intervention required
 
 **Usage:**
 ```bash
-python3 convert-txt-to-xml.py "Listening Test 3 Section 1.txt"
+# Single section
+python3 generate_listening_xml_master.py "Listening Test 6 Section 1.txt"
+
+# All sections of a test
+python3 generate_listening_xml_master.py --test 6
+
+# Range of tests
+python3 generate_listening_xml_master.py --tests 6-10
+
+# All tests
+python3 generate_listening_xml_master.py --all
 ```
 
 **Input:** A TXT file with questions and transcript (see existing .txt files for format)
 
 **Output:**
-- `Listening Test 3 Section 1.xml` - XML file for import
-- `Listening Test 3 Section 1-transcript.txt` - Annotated HTML transcript with answer markers
+- `Listening Test X Section Y.xml` - WordPress-ready XML file with full feedback
 
-### 2. extract-annotated-transcript-from-xml.py
+## Utility Script
 
-Extracts the transcript from an existing XML file and generates an annotated version.
+### `extract-annotated-transcript-from-xml.py`
+
+Extracts the transcript from an existing XML file.
 
 **Usage:**
 ```bash
 python3 extract-annotated-transcript-from-xml.py "Listening Test 1 Section 1.xml"
 ```
-
-**Input:** An existing XML file with questions and transcript
 
 **Output:**
 - `Listening Test 1 Section 1-transcript.txt` - Annotated HTML transcript with answer markers
@@ -42,52 +56,25 @@ An annotated transcript is an HTML version of the listening test transcript wher
 <td>We'd like to stay for <strong style="background-color: yellow;">[Q1: 4]</strong> nights please.</td>
 ```
 
-**Visual appearance:** The answer markers will appear with a yellow background, making them easy to spot at a glance.
-
 This makes it easy to:
-- Copy and paste into WordPress or other systems
 - Review where answers appear in the transcript
 - Create study materials for students
-- Quickly identify answer locations with yellow highlighting
-
-## Examples
-
-### Converting from TXT (if you have source TXT files)
-```bash
-cd /home/runner/work/ielts-preparation-course/ielts-preparation-course/main/XMLs
-python3 convert-txt-to-xml.py "Listening Test 3 Section 1.txt"
-```
-
-### Extracting from existing XML (for already converted tests)
-```bash
-cd /home/runner/work/ielts-preparation-course/ielts-preparation-course/main/XMLs
-python3 extract-annotated-transcript-from-xml.py "Listening Test 1 Section 1.xml"
-```
+- Copy into WordPress or other systems
 
 ## Generated Files
 
-The scripts have already been used to generate:
-- `Listening Test 1 Section 1-transcript.txt` - Annotated transcript for Test 1 Section 1
-- `Listening Test 3 Section 1-transcript.txt` - Annotated transcript for Test 3 Section 1
-
-You can open these files to see the annotated HTML that can be copied into WordPress.
-
-## Technical Details
-
-### Answer Annotation
-The scripts automatically:
-1. Extract questions and answers from the source
-2. Find where each answer appears in the transcript
-3. Mark the first occurrence with `<strong>[Q#: answer]</strong>`
-4. Handle multiple answer variants (e.g., "4|four" or "2 months|two months")
-5. Case-insensitive matching
-
-### Supported Question Types
-- Summary completion (form filling, note completion)
-- Short answer questions
-- Multiple choice (basic support)
+The master generator creates XML files with:
+- Proper question type detection
+- Full educational feedback (automatically generated)
+- Audio URLs
+- Transcripts
+- All WordPress metadata
 
 ## Requirements
 
-- Python 3.x (already available on this system)
+- Python 3.x (already available)
 - No additional packages required (uses only standard library)
+
+## That's It!
+
+No confusion. One generator for everything. Full automation.
