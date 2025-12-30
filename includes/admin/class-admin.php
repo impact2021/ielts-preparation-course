@@ -1880,6 +1880,89 @@ class IELTS_CM_Admin {
                     correctAnswerField.hide();
                     // Set placeholder for all types
                     container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', ieltsPlaceholder);
+                } else if (type === 'closed_question') {
+                    // Closed Question - show options and add correct answer count field
+                    container.find('.mc-options-field').show();
+                    container.find('.multi-select-settings').hide();
+                    container.find('.general-feedback-field').show();
+                    container.find('.dropdown-paragraph-field').hide();
+                    container.find('.summary-completion-field').hide();
+                    correctAnswerField.hide();
+                    
+                    // Add correct answer count field if not exists
+                    if (container.find('.closed-question-settings').length === 0) {
+                        container.find('.mc-options-field').before(
+                            '<div class="closed-question-settings" style="padding: 10px; background: #f0f0f1; margin-bottom: 15px; border-left: 4px solid #72aee6;">' +
+                            '<p>' +
+                            '<label><?php _e('Number of Correct Answers', 'ielts-course-manager'); ?></label><br>' +
+                            '<input type="number" name="questions[QUESTION_INDEX][correct_answer_count]" value="1" min="1" style="width: 100px;"><br>' +
+                            '<small><?php _e('How many correct answers this question has. This equals the number of question numbers it covers (1 = single select, 2+ = multi-select).', 'ielts-course-manager'); ?></small>' +
+                            '</p>' +
+                            '</div>'
+                        );
+                    }
+                    container.find('.closed-question-settings').show();
+                } else if (type === 'open_question') {
+                    // Open Question - hide options, show field count
+                    container.find('.mc-options-field').hide();
+                    container.find('.multi-select-settings').hide();
+                    container.find('.general-feedback-field').show();
+                    container.find('.dropdown-paragraph-field').hide();
+                    container.find('.summary-completion-field').hide();
+                    correctAnswerField.hide();
+                    
+                    // Add field count and answer fields if not exists
+                    if (container.find('.open-question-settings').length === 0) {
+                        container.find('.general-feedback-field').before(
+                            '<div class="open-question-settings" style="padding: 10px; background: #f0f0f1; margin-bottom: 15px; border-left: 4px solid #72aee6;">' +
+                            '<p>' +
+                            '<label><?php _e('Number of Input Fields', 'ielts-course-manager'); ?></label><br>' +
+                            '<input type="number" name="questions[QUESTION_INDEX][field_count]" value="1" min="1" class="open-question-field-count" style="width: 100px;"><br>' +
+                            '<small><?php _e('How many text input fields to show. Each field is a separate question number.', 'ielts-course-manager'); ?></small>' +
+                            '</p>' +
+                            '<div class="open-question-answers">' +
+                            '<h5><?php _e('Field Answers', 'ielts-course-manager'); ?></h5>' +
+                            '<div class="open-question-answer-item" style="margin-bottom: 10px;">' +
+                            '<label><?php _e('Field 1 Answer (use | for multiple accepted answers)', 'ielts-course-manager'); ?></label>' +
+                            '<input type="text" name="questions[QUESTION_INDEX][field_answers][1]" style="width: 100%;" placeholder="<?php _e('e.g., answer1|answer2', 'ielts-course-manager'); ?>">' +
+                            '</div>' +
+                            '</div>' +
+                            '</div>'
+                        );
+                    }
+                    container.find('.open-question-settings').show();
+                }
+            });
+            
+            // Handle open question field count changes
+            $(document).on('input', '.open-question-field-count', function() {
+                var fieldCount = parseInt($(this).val()) || 1;
+                var container = $(this).closest('.open-question-settings');
+                var answersContainer = container.find('.open-question-answers');
+                var questionIndex = container.closest('.question-item').find('.question-type').attr('name').match(/\[(\d+)\]/)[1];
+                
+                // Clear and rebuild answer fields
+                answersContainer.find('.open-question-answer-item').remove();
+                for (var i = 1; i <= fieldCount; i++) {
+                    answersContainer.append(
+                        '<div class="open-question-answer-item" style="margin-bottom: 10px;">' +
+                        '<label><?php _e('Field', 'ielts-course-manager'); ?> ' + i + ' <?php _e('Answer (use | for multiple accepted answers)', 'ielts-course-manager'); ?></label>' +
+                        '<input type="text" name="questions[' + questionIndex + '][field_answers][' + i + ']" style="width: 100%;" placeholder="<?php _e('e.g., answer1|answer2', 'ielts-course-manager'); ?>">' +
+                        '</div>'
+                    );
+                }
+            });
+            
+            // Hide closed/open question settings when switching away
+            $(document).on('change', '.question-type', function() {
+                var type = $(this).val();
+                var container = $(this).closest('.question-item');
+                
+                if (type !== 'closed_question') {
+                    container.find('.closed-question-settings').hide();
+                }
+                if (type !== 'open_question') {
+                    container.find('.open-question-settings').hide();
                 }
             });
             

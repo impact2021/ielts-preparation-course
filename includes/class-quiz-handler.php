@@ -1541,7 +1541,9 @@ class IELTS_CM_Quiz_Handler {
             'dropdown_paragraph' => __('Dropdown Paragraph Questions', 'ielts-course-manager'),
             'table_completion' => __('Table Completion Questions', 'ielts-course-manager'),
             'labelling' => __('Labelling Style Questions', 'ielts-course-manager'),
-            'locating_information' => __('Locating Information Questions', 'ielts-course-manager')
+            'locating_information' => __('Locating Information Questions', 'ielts-course-manager'),
+            'closed_question' => __('Closed Question (Multiple Choice with configurable answers)', 'ielts-course-manager'),
+            'open_question' => __('Open Question (Text input with configurable fields)', 'ielts-course-manager')
         );
     }
     
