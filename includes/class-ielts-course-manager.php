@@ -254,12 +254,12 @@ class IELTS_Course_Manager {
      */
     public function admin_login_redirect($redirect_to, $request, $user) {
         // Check if login was successful (user is WP_User, not WP_Error)
-        if (!isset($user->ID)) {
+        if (is_wp_error($user)) {
             return $redirect_to;
         }
         
-        // If user is an administrator, always redirect to admin dashboard
-        if (in_array('administrator', (array) $user->roles)) {
+        // If user has admin capabilities, always redirect to admin dashboard
+        if (user_can($user, 'manage_options')) {
             // If a specific admin page was requested, use that
             if (!empty($request) && strpos($request, 'wp-admin') !== false) {
                 return $request;
