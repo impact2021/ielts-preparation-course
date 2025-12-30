@@ -1929,7 +1929,7 @@ class IELTS_CM_Admin {
                             '<strong><?php _e('Open Question Instructions:', 'ielts-course-manager'); ?></strong><br>' +
                             '<small><?php _e('You can use open questions in two ways:', 'ielts-course-manager'); ?></small><br>' +
                             '<small><strong>1. Inline blanks:</strong> <?php _e('Use [blank] placeholders in your question text: "To complete a [blank] question, you need no more than [blank] words."', 'ielts-course-manager'); ?></small><br>' +
-                            '<small><strong>2. Separate answer fields:</strong> <?php _e(\'Write your question normally, and answer fields will appear below: "What is the man\\\'s name?" followed by an input field.\', \'ielts-course-manager\'); ?></small>' +
+                            '<small><strong>2. Separate answer fields:</strong> <?php _e('Write your question normally, and answer fields will appear below: "What is the name?" followed by an input field.', 'ielts-course-manager'); ?></small>' +
                             '</div>'
                         );
                     }
@@ -3362,7 +3362,7 @@ class IELTS_CM_Admin {
                 <strong><?php _e('Open Question Instructions:', 'ielts-course-manager'); ?></strong><br>
                 <small><?php _e('You can use open questions in two ways:', 'ielts-course-manager'); ?></small><br>
                 <small><strong>1. Inline blanks:</strong> <?php _e('Use [blank] placeholders in your question text: "To complete a [blank] question, you need no more than [blank] words."', 'ielts-course-manager'); ?></small><br>
-                <small><strong>2. Separate answer fields:</strong> <?php _e('Write your question normally, and answer fields will appear below: "What is the man\'s name?" followed by an input field.', 'ielts-course-manager'); ?></small>
+                <small><strong>2. Separate answer fields:</strong> <?php _e('Write your question normally, and answer fields will appear below: "What is the name?" followed by an input field.', 'ielts-course-manager'); ?></small>
             </div>
             <div class="open-question-settings" style="padding: 10px; background: #f0f0f1; margin-bottom: 15px; border-left: 4px solid #72aee6;">
                 <p>
