@@ -1889,6 +1889,16 @@ class IELTS_CM_Admin {
                     container.find('.summary-completion-field').hide();
                     correctAnswerField.hide();
                     
+                    // Add help text after question editor if not exists
+                    if (container.find('.closed-question-help').length === 0) {
+                        container.find('div:has(> .wp-editor-wrap)').after(
+                            '<div class="closed-question-help" style="padding: 10px; background: #fff3cd; border-left: 4px solid #ffc107; margin-bottom: 15px;">' +
+                            '<strong><?php _e('Closed Question Instructions:', 'ielts-course-manager'); ?></strong><br>' +
+                            '<small><?php _e('Simply enter your question text above. The options you define below will be shown as radio buttons (if 1 correct answer) or checkboxes (if 2+ correct answers). You do NOT need to use [field 1] or similar placeholders for closed questions.', 'ielts-course-manager'); ?></small>' +
+                            '</div>'
+                        );
+                    }
+                    
                     // Add correct answer count field if not exists
                     if (container.find('.closed-question-settings').length === 0) {
                         container.find('.mc-options-field').before(
@@ -1902,6 +1912,7 @@ class IELTS_CM_Admin {
                         );
                     }
                     container.find('.closed-question-settings').show();
+                    container.find('.closed-question-help').show();
                 } else if (type === 'open_question') {
                     // Open Question - hide options, show field count
                     container.find('.mc-options-field').hide();
@@ -1910,6 +1921,16 @@ class IELTS_CM_Admin {
                     container.find('.dropdown-paragraph-field').hide();
                     container.find('.summary-completion-field').hide();
                     correctAnswerField.hide();
+                    
+                    // Add help text after question editor if not exists
+                    if (container.find('.open-question-help').length === 0) {
+                        container.find('div:has(> .wp-editor-wrap)').after(
+                            '<div class="open-question-help" style="padding: 10px; background: #d1ecf1; border-left: 4px solid #17a2b8; margin-bottom: 15px;">' +
+                            '<strong><?php _e('Open Question Instructions:', 'ielts-course-manager'); ?></strong><br>' +
+                            '<small><?php _e('Enter your question text above. The number of input fields you specify below will automatically be shown to students. You do NOT need to use [field 1], [field 2] etc. placeholders for open questions.', 'ielts-course-manager'); ?></small>' +
+                            '</div>'
+                        );
+                    }
                     
                     // Add field count and answer fields if not exists
                     if (container.find('.open-question-settings').length === 0) {
@@ -1931,6 +1952,7 @@ class IELTS_CM_Admin {
                         );
                     }
                     container.find('.open-question-settings').show();
+                    container.find('.open-question-help').show();
                 }
             });
             
@@ -1960,9 +1982,11 @@ class IELTS_CM_Admin {
                 
                 if (type !== 'closed_question') {
                     container.find('.closed-question-settings').hide();
+                    container.find('.closed-question-help').hide();
                 }
                 if (type !== 'open_question') {
                     container.find('.open-question-settings').hide();
+                    container.find('.open-question-help').hide();
                 }
             });
             
@@ -3858,6 +3882,45 @@ class IELTS_CM_Admin {
                         // Also set options and correct_answer for backward compatibility
                         $question_data['options'] = isset($question['options']) ? sanitize_textarea_field($question['options']) : '';
                         $question_data['correct_answer'] = isset($question['correct_answer']) ? sanitize_text_field($question['correct_answer']) : '';
+                    } elseif ($question['type'] === 'closed_question') {
+                        // Handle closed_question - save options and correct_answer_count
+                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                            $mc_options = array();
+                            $options_text = array();
+                            
+                            foreach ($question['mc_options'] as $idx => $option) {
+                                if (empty($option['text'])) {
+                                    continue; // Skip empty options
+                                }
+                                
+                                $mc_options[] = array(
+                                    'text' => sanitize_text_field($option['text']),
+                                    'is_correct' => !empty($option['is_correct']),
+                                    'feedback' => isset($option['feedback']) ? wp_kses_post($option['feedback']) : ''
+                                );
+                                
+                                $options_text[] = sanitize_text_field($option['text']);
+                            }
+                            
+                            $question_data['mc_options'] = $mc_options;
+                            $question_data['options'] = implode("\n", $options_text);
+                        }
+                        
+                        // Save correct_answer_count
+                        $question_data['correct_answer_count'] = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
+                    } elseif ($question['type'] === 'open_question') {
+                        // Handle open_question - save field_count and field_answers
+                        $question_data['field_count'] = isset($question['field_count']) ? intval($question['field_count']) : 1;
+                        
+                        if (isset($question['field_answers']) && is_array($question['field_answers'])) {
+                            $field_answers = array();
+                            foreach ($question['field_answers'] as $field_num => $answer) {
+                                if (!empty($answer)) {
+                                    $field_answers[$field_num] = sanitize_text_field($answer);
+                                }
+                            }
+                            $question_data['field_answers'] = $field_answers;
+                        }
                     } else {
                         // Non-multiple choice questions
                         $question_data['options'] = isset($question['options']) ? sanitize_textarea_field($question['options']) : '';
