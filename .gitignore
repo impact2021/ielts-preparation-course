@@ -37,5 +37,12 @@ build/
 Thumbs.db
 .DS_Store
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
 # Large XML files (keep only converted versions)
 *-original.xml
