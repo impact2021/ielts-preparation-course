@@ -38,6 +38,16 @@ from datetime import datetime
 from html import escape
 
 # ============================================================================
+# CONSTANTS
+# ============================================================================
+
+# Valid letters for multi-choice and multi-select answers
+VALID_MC_LETTERS = 'ABCDEFGHIJ'
+
+# Maximum distance in characters between </ol> tag and answer for multi-select detection
+MULTI_SELECT_PROXIMITY_CHARS = 40
+
+# ============================================================================
 # REGEX PATTERNS FOR QUESTION TYPE DETECTION
 # ============================================================================
 
@@ -211,7 +221,7 @@ def detect_question_type(content, answer_index, answer_text):
     # PRIORITY 2: Multi-select ("Choose TWO/THREE letters", "Select TWO options", etc.)
     # Check if answer contains multiple single letters (e.g., "b|d" or just "b")
     answer_parts = parsed_answer.upper().split('|')
-    all_single_letters = all(len(part) == 1 and part in 'ABCDEFGH' for part in answer_parts)
+    all_single_letters = all(len(part) == 1 and part in VALID_MC_LETTERS for part in answer_parts)
     
     multi_select_patterns = ['choose two', 'choose 2', 'choose three', 'choose 3', 
                              'select two', 'select 2', 'select three', 'select 3']
@@ -222,9 +232,10 @@ def detect_question_type(content, answer_index, answer_text):
         options_list = extract_ordered_list_options(lookback)
         # Only treat as multi-select if we found options that don't contain answer placeholders
         if options_list and len(options_list) >= 2:
-            # Check that the options list is CLOSE to the answer (within 150 chars)
+            # Check that the options list is VERY CLOSE to the answer
             # This prevents false positives when "choose two" appears earlier in the section
-            recent_context = content[max(0, answer_start - 150):answer_start]
+            # Multi-select answers typically appear immediately after </ol>, often on the next line
+            recent_context = content[max(0, answer_start - MULTI_SELECT_PROXIMITY_CHARS):answer_start]
             if '</ol>' in recent_context:
                 # Try to find the instruction with variations - use full lookback
                 instr_match = re.search(r'((?:Choose|Select)\s+(?:TWO|THREE|2|3)\s+(?:letters?|options?)[^<\n]*)', lookback, re.IGNORECASE)
@@ -301,7 +312,7 @@ def create_question_object(q_type, question_text, answer, display_answer, option
     if q_type == 'multiple_choice' and options:
         # Multiple choice with options
         answer_clean = answer.split('|')[0].strip().upper()
-        if len(answer_clean) == 1 and answer_clean in 'ABCDEFGHIJ':
+        if len(answer_clean) == 1 and answer_clean in VALID_MC_LETTERS:
             correct_idx = ord(answer_clean) - ord('A')
         else:
             # Fallback: try to find the answer in options
@@ -340,7 +351,7 @@ def create_question_object(q_type, question_text, answer, display_answer, option
         correct_indices = []
         for a in answer_letters:
             a_clean = a.strip()
-            if len(a_clean) == 1 and a_clean in 'ABCDEFGHIJ':
+            if len(a_clean) == 1 and a_clean in VALID_MC_LETTERS:
                 correct_indices.append(ord(a_clean) - ord('A'))
         
         # Ensure we have at least one correct answer
@@ -558,13 +569,15 @@ def generate_section(test_num, section_num):
             # Determine how many answers this multi-select needs
             num_answers = count_multi_select_answers(question_text)
             
+            # Ensure we don't try to collect more answers than available
+            answers_available = min(num_answers, len(answer_blocks) - i)
+            
             # Collect all answers for this multi-select question
             all_answers = [answer]
-            for j in range(1, num_answers):
-                if i + j < len(answer_blocks):
-                    next_answer_raw = '{' + answer_blocks[i + j] + '}'
-                    next_answer = parse_answer(next_answer_raw)
-                    all_answers.append(next_answer)
+            for j in range(1, answers_available):
+                next_answer_raw = '{' + answer_blocks[i + j] + '}'
+                next_answer = parse_answer(next_answer_raw)
+                all_answers.append(next_answer)
             
             # Combine all answer variants with pipe separation
             combined_answer = '|'.join(all_answers)
@@ -574,7 +587,7 @@ def generate_section(test_num, section_num):
             questions.append(question_obj)
             
             # Skip the next answer slots since we've consumed them
-            i += num_answers
+            i += answers_available
         else:
             # Regular question handling
             question_obj = create_question_object(q_type, question_text, answer, display_answer, options)
