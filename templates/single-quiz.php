@@ -140,6 +140,14 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                             }
                         }
                         $question_count = max(1, $field_count);
+                    } elseif ($q['type'] === 'closed_question') {
+                        // For closed question, count number of correct answers
+                        $correct_answer_count = isset($q['correct_answer_count']) ? intval($q['correct_answer_count']) : 1;
+                        $question_count = max(1, $correct_answer_count);
+                    } elseif ($q['type'] === 'open_question') {
+                        // For open question, count number of fields
+                        $field_count = isset($q['field_count']) ? intval($q['field_count']) : 1;
+                        $question_count = max(1, $field_count);
                     } else {
                         $question_count = 1;
                     }
@@ -162,15 +170,28 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                         
                         <h4>
                             <?php 
-                            if ($display_nums['start'] === $display_nums['end']) {
-                                printf(__('Question %d', 'ielts-course-manager'), $display_nums['start']);
+                            // For closed and open questions, show range differently
+                            if ($question['type'] === 'closed_question' || $question['type'] === 'open_question') {
+                                if ($display_nums['start'] === $display_nums['end']) {
+                                    printf(__('Question %d', 'ielts-course-manager'), $display_nums['start']);
+                                } elseif ($display_nums['count'] == 2) {
+                                    printf(__('Questions %d and %d', 'ielts-course-manager'), $display_nums['start'], $display_nums['end']);
+                                } else {
+                                    printf(__('Questions %d-%d', 'ielts-course-manager'), $display_nums['start'], $display_nums['end']);
+                                }
                             } else {
-                                printf(__('Questions %d – %d', 'ielts-course-manager'), $display_nums['start'], $display_nums['end']);
+                                if ($display_nums['start'] === $display_nums['end']) {
+                                    printf(__('Question %d', 'ielts-course-manager'), $display_nums['start']);
+                                } else {
+                                    printf(__('Questions %d – %d', 'ielts-course-manager'), $display_nums['start'], $display_nums['end']);
+                                }
+                                // For multi-select and matching, show the actual number of sub-questions as points
+                                $display_points = $display_nums['count'];
+                                ?>
+                                <span class="question-points">(<?php printf(_n('%s point', '%s points', $display_points, 'ielts-course-manager'), $display_points); ?>)</span>
+                                <?php
                             }
-                            // For multi-select and matching, show the actual number of sub-questions as points
-                            $display_points = $display_nums['count'];
                             ?>
-                            <span class="question-points">(<?php printf(_n('%s point', '%s points', $display_points, 'ielts-course-manager'), $display_points); ?>)</span>
                         </h4>
                         
                         <?php
@@ -586,44 +607,79 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                         </label>
                                     <?php endforeach; ?>
                                 </div>
-                                <?php if ($is_multi_select): ?>
-                                    <small class="closed-question-hint">
-                                        <?php printf(__('Select %d options (covers questions %d-%d)', 'ielts-course-manager'), 
-                                            $correct_answer_count, 
-                                            $display_question_number, 
-                                            $display_question_number + $correct_answer_count - 1); ?>
-                                    </small>
-                                <?php endif; ?>
                                 <?php
                                 endif;
                                 break;
                                 
                             case 'open_question':
                                 // Open Question - Text input with configurable number of fields
-                                // field_count determines how many question numbers this covers
+                                // Supports two formats:
+                                // 1. Inline blanks: "To complete a [blank] question..." or "Use [field 1] and [field 2]"
+                                // 2. Separate inputs: Question text followed by labeled answer fields
+                                
                                 $field_count = isset($question['field_count']) ? intval($question['field_count']) : 1;
-                                ?>
-                                <div class="open-question-fields">
-                                    <?php for ($field_num = 1; $field_num <= $field_count; $field_num++): ?>
-                                        <div class="open-question-field">
-                                            <label>
-                                                <?php printf(__('Answer %d:', 'ielts-course-manager'), $display_question_number + $field_num - 1); ?>
-                                                <input type="text" 
-                                                       name="answer_<?php echo $index; ?>_field_<?php echo $field_num; ?>" 
-                                                       class="answer-input open-question-input"
-                                                       data-field-num="<?php echo $field_num; ?>">
-                                            </label>
-                                        </div>
-                                    <?php endfor; ?>
-                                </div>
-                                <small class="open-question-hint">
-                                    <?php if ($field_count > 1): ?>
-                                        <?php printf(__('Questions %d-%d', 'ielts-course-manager'), 
-                                            $display_question_number, 
-                                            $display_question_number + $field_count - 1); ?>
-                                    <?php endif; ?>
-                                </small>
-                                <?php
+                                $question_text = isset($question['question']) ? $question['question'] : '';
+                                
+                                // Check for [blank] or [field N] placeholders
+                                $has_blank_placeholders = (stripos($question_text, '[blank]') !== false);
+                                $has_field_placeholders = (preg_match('/\[field\s+\d+\]/i', $question_text) > 0);
+                                
+                                if ($has_blank_placeholders || $has_field_placeholders) {
+                                    // Inline format - replace placeholders with input fields
+                                    $allowed_html = wp_kses_allowed_html('post');
+                                    $allowed_html['input'] = array(
+                                        'type' => true,
+                                        'name' => true,
+                                        'class' => true,
+                                        'data-field-num' => true,
+                                    );
+                                    
+                                    $processed_text = $question_text;
+                                    
+                                    if ($has_blank_placeholders) {
+                                        // Replace [blank] placeholders sequentially
+                                        $field_num = 1;
+                                        while (stripos($processed_text, '[blank]') !== false && $field_num <= $field_count) {
+                                            $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_field_' . esc_attr($field_num) . '" class="answer-input-inline open-question-input" data-field-num="' . esc_attr($field_num) . '" />';
+                                            $processed_text = preg_replace('/\[blank\]/i', $input_field, $processed_text, 1);
+                                            $field_num++;
+                                        }
+                                    } elseif ($has_field_placeholders) {
+                                        // Replace [field N] placeholders
+                                        preg_match_all('/\[field\s+(\d+)\]/i', $processed_text, $field_matches);
+                                        foreach ($field_matches[0] as $match_index => $placeholder) {
+                                            $field_num = $field_matches[1][$match_index];
+                                            $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_field_' . esc_attr($field_num) . '" class="answer-input-inline open-question-input" data-field-num="' . esc_attr($field_num) . '" />';
+                                            $processed_text = str_replace($placeholder, $input_field, $processed_text);
+                                        }
+                                    }
+                                    
+                                    echo '<div class="open-question-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
+                                } else {
+                                    // Separate format - show question text followed by labeled input fields
+                                    ?>
+                                    <div class="question-text"><?php echo wp_kses_post(wpautop($question_text)); ?></div>
+                                    <div class="open-question-fields">
+                                        <?php for ($field_num = 1; $field_num <= $field_count; $field_num++): ?>
+                                            <div class="open-question-field">
+                                                <label>
+                                                    <?php 
+                                                    if ($field_count > 1) {
+                                                        printf(__('Answer %d:', 'ielts-course-manager'), $display_nums['start'] + $field_num - 1);
+                                                    } else {
+                                                        _e('Answer:', 'ielts-course-manager');
+                                                    }
+                                                    ?>
+                                                    <input type="text" 
+                                                           name="answer_<?php echo $index; ?>_field_<?php echo $field_num; ?>" 
+                                                           class="answer-input open-question-input"
+                                                           data-field-num="<?php echo $field_num; ?>">
+                                                </label>
+                                            </div>
+                                        <?php endfor; ?>
+                                    </div>
+                                    <?php
+                                }
                                 break;
                         }
                         ?>
