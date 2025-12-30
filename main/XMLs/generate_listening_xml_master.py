@@ -118,11 +118,17 @@ def extract_transcript(content):
 # ============================================================================
 
 def extract_ordered_list_options(html_content):
-    """Extract options from an ordered list in HTML."""
-    ol_match = re.search(PATTERN_ORDERED_LIST, html_content, re.DOTALL)
-    if ol_match:
-        options_html = ol_match.group(1)
-        return re.findall(PATTERN_LIST_ITEMS, options_html)
+    """Extract options from an ordered list in HTML - returns the LAST/closest <ol> to avoid picking up earlier lists."""
+    # Find ALL <ol> sections and use the LAST one (closest to the answer)
+    ol_matches = list(re.finditer(PATTERN_ORDERED_LIST, html_content, re.DOTALL))
+    if ol_matches:
+        # Use the last match (closest to the answer position)
+        last_ol = ol_matches[-1]
+        options_html = last_ol.group(1)
+        items = re.findall(PATTERN_LIST_ITEMS, options_html)
+        # Filter out items that contain answer placeholders {}, as those are not option lists
+        clean_items = [item.strip() for item in items if '{' not in item]
+        return clean_items if clean_items else items  # Fallback to original if all filtered
     return []
 
 def is_summary_completion_context(before_answer, after_answer):
@@ -154,6 +160,17 @@ def extract_summary_text(content, answer_start, answer_end, answer_index):
     
     return para_clean[:200].strip() + '...'
 
+def count_multi_select_answers(instruction_text):
+    """Determine how many answer slots a multi-select question needs based on instruction."""
+    instruction_lower = instruction_text.lower()
+    if 'two' in instruction_lower or '2' in instruction_lower:
+        return 2
+    elif 'three' in instruction_lower or '3' in instruction_lower:
+        return 3
+    elif 'four' in instruction_lower or '4' in instruction_lower:
+        return 4
+    return 2  # Default to 2
+
 # ============================================================================
 # QUESTION TYPE DETECTION
 # ============================================================================
@@ -173,6 +190,9 @@ def detect_question_type(content, answer_index, answer_text):
     answer_start = match.start()
     answer_end = match.end()
     
+    # Parse the answer to get variants
+    parsed_answer = parse_answer(match.group())
+    
     # Get context around the answer
     line_start = content.rfind('\n', 0, answer_start) + 1
     same_line_text = content[line_start:answer_start].strip()
@@ -189,20 +209,30 @@ def detect_question_type(content, answer_index, answer_text):
         return ('summary_completion', summary_text, None)
     
     # PRIORITY 2: Multi-select ("Choose TWO/THREE letters", "Select TWO options", etc.)
+    # Check if answer contains multiple single letters (e.g., "b|d" or just "b")
+    answer_parts = parsed_answer.upper().split('|')
+    all_single_letters = all(len(part) == 1 and part in 'ABCDEFGH' for part in answer_parts)
+    
     multi_select_patterns = ['choose two', 'choose 2', 'choose three', 'choose 3', 
                              'select two', 'select 2', 'select three', 'select 3']
-    is_multi_select = any(pattern in lookback.lower() for pattern in multi_select_patterns)
+    has_multi_select_instruction = any(pattern in lookback.lower() for pattern in multi_select_patterns)
     
-    if is_multi_select:
-        recent_lookback = content[max(0, answer_start - 300):answer_start]
-        if any(pattern in recent_lookback.lower() for pattern in multi_select_patterns):
-            options_list = extract_ordered_list_options(lookback)
-            if options_list:
-                # Try to find the instruction with variations
-                instr_match = re.search(r'((?:Choose|Select)\s+(?:TWO|THREE|2|3)\s+(?:letters|options)[^<]+)', recent_lookback, re.IGNORECASE)
+    # Treat as multi-select if: answer is letter(s) AND multi-select instruction is present
+    if all_single_letters and has_multi_select_instruction:
+        options_list = extract_ordered_list_options(lookback)
+        # Only treat as multi-select if we found options that don't contain answer placeholders
+        if options_list and len(options_list) >= 2:
+            # Check that the options list is CLOSE to the answer (within 150 chars)
+            # This prevents false positives when "choose two" appears earlier in the section
+            recent_context = content[max(0, answer_start - 150):answer_start]
+            if '</ol>' in recent_context:
+                # Try to find the instruction with variations - use full lookback
+                instr_match = re.search(r'((?:Choose|Select)\s+(?:TWO|THREE|2|3)\s+(?:letters?|options?)[^<\n]*)', lookback, re.IGNORECASE)
                 if instr_match:
                     q_text = instr_match.group(1).strip()
                     return ('multi_select', q_text, options_list)
+                # Fallback: just use a generic multi-select question text
+                return ('multi_select', f'Choose multiple answers', options_list)
     
     # PRIORITY 3: Multiple choice (has options list with <ol> and answer is single letter)
     if '<ol' in lookback and '</ol>' in lookback:
@@ -513,8 +543,9 @@ def generate_section(test_num, section_num):
     # Create questions with proper type detection and full feedback
     questions = []
     type_counts = {}
+    i = 0
     
-    for i in range(min(10, len(answer_blocks))):
+    while i < min(10, len(answer_blocks)):
         answer_raw = '{' + answer_blocks[i] + '}'
         answer = parse_answer(answer_raw)
         display_answer = answer.split('|')[0].upper()
@@ -522,12 +553,36 @@ def generate_section(test_num, section_num):
         # Detect question type
         q_type, question_text, options = detect_question_type(content, i, answer_blocks[i])
         
+        # Handle multi-select: combine multiple answer slots
+        if q_type == 'multi_select':
+            # Determine how many answers this multi-select needs
+            num_answers = count_multi_select_answers(question_text)
+            
+            # Collect all answers for this multi-select question
+            all_answers = [answer]
+            for j in range(1, num_answers):
+                if i + j < len(answer_blocks):
+                    next_answer_raw = '{' + answer_blocks[i + j] + '}'
+                    next_answer = parse_answer(next_answer_raw)
+                    all_answers.append(next_answer)
+            
+            # Combine all answer variants with pipe separation
+            combined_answer = '|'.join(all_answers)
+            
+            # Create ONE multi-select question with all answers
+            question_obj = create_question_object(q_type, question_text, combined_answer, display_answer, options)
+            questions.append(question_obj)
+            
+            # Skip the next answer slots since we've consumed them
+            i += num_answers
+        else:
+            # Regular question handling
+            question_obj = create_question_object(q_type, question_text, answer, display_answer, options)
+            questions.append(question_obj)
+            i += 1
+        
         # Track types
         type_counts[q_type] = type_counts.get(q_type, 0) + 1
-        
-        # Create question object with FULL feedback
-        question_obj = create_question_object(q_type, question_text, answer, display_answer, options)
-        questions.append(question_obj)
     
     # Generate XML
     xml_content = generate_xml(test_num, section_num, questions, audio_url, transcript)
