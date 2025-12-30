@@ -5815,6 +5815,14 @@ class IELTS_CM_Admin {
             $question = $questions[$i];
             $type = isset($question['type']) ? $question['type'] : '';
             
+            // New question types (closed_question, open_question) don't need transformation
+            // They are already in the correct format for export/import
+            if (in_array($type, array('closed_question', 'open_question'))) {
+                $transformed[] = $question;
+                $i++;
+                continue;
+            }
+            
             // Check if this is a question type that needs transformation
             if (in_array($type, array('dropdown_paragraph', 'summary_completion', 'table_completion'))) {
                 // Check if already in correct format (has dropdown_options or summary_fields)
@@ -6561,8 +6569,39 @@ class IELTS_CM_Admin {
         
         // Process each question
         foreach ($questions as $question) {
+            $type = isset($question['type']) ? $question['type'] : '';
+            
+            // Handle open_question type with multiple fields
+            if ($type === 'open_question' && isset($question['field_answers']) && is_array($question['field_answers'])) {
+                // Each field is a separate question
+                foreach ($question['field_answers'] as $field_answer) {
+                    if (isset($field_answer) && !empty($field_answer)) {
+                        $annotated_transcript = $this->annotate_single_answer(
+                            $annotated_transcript,
+                            $field_answer,
+                            $question_number
+                        );
+                    }
+                    // Increment question number for each field
+                    $question_number++;
+                }
+            }
+            // Handle closed_question type with correct_answer_count
+            elseif ($type === 'closed_question' && isset($question['correct_answer_count'])) {
+                // Process correct answer for each count
+                if (isset($question['correct_answer']) && !empty($question['correct_answer'])) {
+                    $annotated_transcript = $this->annotate_single_answer(
+                        $annotated_transcript,
+                        $question['correct_answer'],
+                        $question_number
+                    );
+                }
+                // Increment question number based on correct answer count
+                $count = intval($question['correct_answer_count']);
+                $question_number += max(1, $count);
+            }
             // Handle summary completion questions (form filling, etc.) with multiple fields
-            if (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
+            elseif (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
                 // Each field is a separate question
                 foreach ($question['summary_fields'] as $field_num => $field) {
                     if (isset($field['answer']) && !empty($field['answer'])) {

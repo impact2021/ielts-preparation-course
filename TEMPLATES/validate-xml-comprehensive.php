@@ -216,8 +216,28 @@ if ($found_questions_key && preg_match('/<wp:meta_key><!\[CDATA\[' . preg_quote(
             }
             
             echo "      Question types distribution:\n";
+            $special_handling_info = [];
             foreach ($question_types as $type => $count) {
                 echo "        - $type: $count\n";
+            }
+            
+            // Add special info for closed_question and open_question types
+            foreach ($data as $idx => $question) {
+                $type = $question['type'] ?? $question['question_type'] ?? 'unknown';
+                if ($type === 'closed_question' && isset($question['correct_answer_count'])) {
+                    $count = intval($question['correct_answer_count']);
+                    $special_handling_info[] = "Question $idx (closed): covers $count question number(s)";
+                } elseif ($type === 'open_question' && isset($question['field_count'])) {
+                    $count = intval($question['field_count']);
+                    $special_handling_info[] = "Question $idx (open): covers $count question number(s)";
+                }
+            }
+            
+            if (!empty($special_handling_info)) {
+                echo "      Special question numbering:\n";
+                foreach ($special_handling_info as $msg) {
+                    echo "        - $msg\n";
+                }
             }
             
         } else {
