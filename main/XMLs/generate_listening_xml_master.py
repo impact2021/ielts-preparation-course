@@ -188,13 +188,18 @@ def detect_question_type(content, answer_index, answer_text):
         summary_text = extract_summary_text(content, answer_start, answer_end, answer_index)
         return ('summary_completion', summary_text, None)
     
-    # PRIORITY 2: Multi-select ("Choose TWO letters")
-    if 'choose two' in lookback.lower() or 'choose 2' in lookback.lower():
+    # PRIORITY 2: Multi-select ("Choose TWO/THREE letters", "Select TWO options", etc.)
+    multi_select_patterns = ['choose two', 'choose 2', 'choose three', 'choose 3', 
+                             'select two', 'select 2', 'select three', 'select 3']
+    is_multi_select = any(pattern in lookback.lower() for pattern in multi_select_patterns)
+    
+    if is_multi_select:
         recent_lookback = content[max(0, answer_start - 300):answer_start]
-        if 'choose two' in recent_lookback.lower() or 'choose 2' in recent_lookback.lower():
+        if any(pattern in recent_lookback.lower() for pattern in multi_select_patterns):
             options_list = extract_ordered_list_options(lookback)
             if options_list:
-                instr_match = re.search(r'(Choose\s+TWO\s+letters[^<]+)', recent_lookback, re.IGNORECASE)
+                # Try to find the instruction with variations
+                instr_match = re.search(r'((?:Choose|Select)\s+(?:TWO|THREE|2|3)\s+(?:letters|options)[^<]+)', recent_lookback, re.IGNORECASE)
                 if instr_match:
                     q_text = instr_match.group(1).strip()
                     return ('multi_select', q_text, options_list)
@@ -266,7 +271,15 @@ def create_question_object(q_type, question_text, answer, display_answer, option
     if q_type == 'multiple_choice' and options:
         # Multiple choice with options
         answer_clean = answer.split('|')[0].strip().upper()
-        correct_idx = ord(answer_clean) - ord('A') if len(answer_clean) == 1 else 0
+        if len(answer_clean) == 1 and answer_clean in 'ABCDEFGHIJ':
+            correct_idx = ord(answer_clean) - ord('A')
+        else:
+            # Fallback: try to find the answer in options
+            correct_idx = 0
+            for i, opt in enumerate(options):
+                if answer_clean.lower() in opt.lower():
+                    correct_idx = i
+                    break
         
         mc_options = []
         for i, opt in enumerate(options):
@@ -294,7 +307,17 @@ def create_question_object(q_type, question_text, answer, display_answer, option
     elif q_type == 'multi_select' and options:
         # Multi-select (e.g., "Choose TWO letters")
         answer_letters = answer.upper().split('|')
-        correct_indices = [ord(a.strip()) - ord('A') for a in answer_letters if len(a.strip()) == 1]
+        correct_indices = []
+        for a in answer_letters:
+            a_clean = a.strip()
+            if len(a_clean) == 1 and a_clean in 'ABCDEFGHIJ':
+                correct_indices.append(ord(a_clean) - ord('A'))
+        
+        # Ensure we have at least one correct answer
+        if not correct_indices:
+            # Fallback: mark first option as correct to avoid empty answer
+            correct_indices = [0]
+        
         correct_letters = [chr(65+i) for i in correct_indices]
         correct_letters_str = ' and '.join(correct_letters)
         
