@@ -2207,7 +2207,7 @@ select.answer-select-inline.answer-incorrect {
 .ielts-listening-exercise-quiz .quiz-question.question-correct {
     border-left: 4px solid #4caf50;
     background: #f1f8f4;
-    padding: 15px;
+    padding: 20px;
     margin-bottom: 20px;
 }
 
@@ -2215,7 +2215,7 @@ select.answer-select-inline.answer-incorrect {
 .ielts-listening-exercise-quiz .quiz-question.question-incorrect {
     border-left: 4px solid #f44336;
     background: #fef5f5;
-    padding: 15px;
+    padding: 20px;
     margin-bottom: 20px;
 }
 
