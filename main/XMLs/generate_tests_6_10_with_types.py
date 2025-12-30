@@ -8,6 +8,15 @@ import re, os, sys
 from datetime import datetime
 from html import escape
 
+# Regex patterns for question type detection
+PATTERN_STRONG_NUMBER = r'<strong>\s*\d+\s*</strong>\s*$'
+PATTERN_SENTENCE_BEFORE = r'[a-z]\s*\d*\.?\s*$'
+PATTERN_SENTENCE_AFTER = r'^\s*\.?\s*[A-Z]?[a-z]'
+PATTERN_ORDERED_LIST = r'<ol[^>]*>(.*?)</ol>'
+PATTERN_LIST_ITEMS = r'<li>([^<]+)</li>'
+PATTERN_LABEL_INSTRUCTION = r'(Label\s+the\s+[^<\n]+)'
+PATTERN_COMPLETE_INSTRUCTION = r'(Complete\s+the\s+[^<\n]+)'
+
 def serialize_php(data):
     if data is None:
         return 'N;'
@@ -57,6 +66,25 @@ def extract_transcript(content):
         return match.group(1)
     return ""
 
+def extract_ordered_list_options(html_content):
+    """Extract options from an ordered list in HTML."""
+    ol_match = re.search(PATTERN_ORDERED_LIST, html_content, re.DOTALL)
+    if ol_match:
+        options_html = ol_match.group(1)
+        return re.findall(PATTERN_LIST_ITEMS, options_html)
+    return []
+
+def is_summary_completion_context(before_answer, after_answer):
+    """Check if the answer is in a summary completion context."""
+    # Check for <strong>NUM</strong> format
+    if re.search(PATTERN_STRONG_NUMBER, before_answer):
+        return True
+    # Check if surrounded by sentence text
+    if (re.search(PATTERN_SENTENCE_BEFORE, before_answer) and 
+        re.search(PATTERN_SENTENCE_AFTER, after_answer)):
+        return True
+    return False
+
 def extract_summary_text(content, answer_start, answer_end, answer_index):
     """Helper function to extract summary completion text from paragraph."""
     para_start = max(0, answer_start - 500)
@@ -102,14 +130,7 @@ def detect_question_type(content, answer_index, answer_text):
     # First priority: Check for summary/form completion (answer embedded in paragraph)
     # This must come BEFORE checking for MC/multi-select to avoid false positives
     
-    # Check if answer is embedded in a paragraph (has <strong>NUM</strong> format)
-    if re.search(r'<strong>\s*\d+\s*</strong>\s*$', before_answer):
-        summary_text = extract_summary_text(content, answer_start, answer_end, answer_index)
-        return ('summary_completion', summary_text, None)
-    
-    # If surrounded by sentence text (lowercase letters), it's summary completion
-    if (re.search(r'[a-z]\s*\d*\.?\s*$', before_answer) and 
-        re.search(r'^\s*\.?\s*[A-Z]?[a-z]', after_answer)):
+    if is_summary_completion_context(before_answer, after_answer):
         summary_text = extract_summary_text(content, answer_start, answer_end, answer_index)
         return ('summary_completion', summary_text, None)
     
@@ -120,11 +141,8 @@ def detect_question_type(content, answer_index, answer_text):
         recent_lookback = content[max(0, answer_start - 300):answer_start]
         if 'choose two' in recent_lookback.lower() or 'choose 2' in recent_lookback.lower():
             # Extract options
-            ol_match = re.search(r'<ol[^>]*style="[^"]*list-style-type:\s*upper-alpha[^"]*"[^>]*>(.*?)</ol>', lookback, re.DOTALL)
-            if ol_match:
-                options_html = ol_match.group(1)
-                options_list = re.findall(r'<li>([^<]+)</li>', options_html)
-                if options_list:
+            options_list = extract_ordered_list_options(lookback)
+            if options_list:
                     # Find instruction text
                     instr_match = re.search(r'(Choose\s+TWO\s+letters[^<]+)', recent_lookback, re.IGNORECASE)
                     if instr_match:
@@ -140,11 +158,8 @@ def detect_question_type(content, answer_index, answer_text):
             recent_lookback = content[max(0, answer_start - 300):answer_start]
             if '<ol' in recent_lookback:
                 # Extract the options list
-                ol_match = re.search(r'<ol[^>]*>(.*?)</ol>', lookback, re.DOTALL)
-                if ol_match:
-                    options_html = ol_match.group(1)
-                    options_list = re.findall(r'<li>([^<]+)</li>', options_html)
-                    if options_list:
+                options_list = extract_ordered_list_options(lookback)
+                if options_list:
                         # Find the question text before the options
                         question_match = re.search(r'(\d+)\.\s+(.+?)<ol', lookback, re.DOTALL)
                         if question_match:
@@ -157,7 +172,7 @@ def detect_question_type(content, answer_index, answer_text):
         answer_clean = answer_text.strip('{}[]').strip().upper()
         if len(answer_clean) <= 2 and answer_clean.isalpha():
             # Extract the instruction
-            label_match = re.search(r'(Label\s+the\s+[^<\n]+)', lookback, re.IGNORECASE)
+            label_match = re.search(PATTERN_LABEL_INSTRUCTION, lookback, re.IGNORECASE)
             if label_match:
                 instr = label_match.group(1).strip()
                 return ('matching', instr, None)
@@ -171,7 +186,7 @@ def detect_question_type(content, answer_index, answer_text):
     # Check for sentence/table completion (has "Complete the" in context)
     if 'complete the' in lookback.lower():
         # Look for the sentence or table prompt
-        complete_match = re.search(r'(Complete\s+the\s+[^<\n]+)', lookback, re.IGNORECASE)
+        complete_match = re.search(PATTERN_COMPLETE_INSTRUCTION, lookback, re.IGNORECASE)
         if complete_match:
             # Extract the actual text to complete
             q_text = same_line_clean.strip()
