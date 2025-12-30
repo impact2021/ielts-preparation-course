@@ -265,8 +265,7 @@ class IELTS_Course_Manager {
                 // Only allow redirects to admin URLs, fallback to admin dashboard if invalid
                 $validated = wp_validate_redirect($request, admin_url());
                 // Double-check the validated URL is actually an admin URL
-                $admin_url_base = admin_url();
-                if (!empty($admin_url_base) && substr($validated, 0, strlen($admin_url_base)) === $admin_url_base) {
+                if (strpos($validated, admin_url()) === 0) {
                     return $validated;
                 }
             }
