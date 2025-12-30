@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ This is a WordPress eXtended RSS file for IELTS Course Manager exercise export 
+-->
+<!--
+ Generated for Listening Test 6 Section 2 NEW - Questions 11-20
+-->
+<rss xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/" version="2.0">
+<channel>
+<title>IELTStestONLINE</title>
+<link>https://www.ieltstestonline.com/2026</link>
+<description>Online IELTS preparation</description>
+<pubDate>Mon, 30 Dec 2025 09:09:00 +0000</pubDate>
+<language>en-NZ</language>
+<wp:wxr_version>1.2</wp:wxr_version>
+<wp:base_site_url>https://www.ieltstestonline.com/2026</wp:base_site_url>
+<wp:base_blog_url>https://www.ieltstestonline.com/2026</wp:base_blog_url>
+<wp:author>
+<wp:author_id>1</wp:author_id>
+<wp:author_login><![CDATA[impact]]></wp:author_login>
+<wp:author_email><![CDATA[impact@ieltstestonline.com]]></wp:author_email>
+<wp:author_display_name><![CDATA[impact]]></wp:author_display_name>
+<wp:author_first_name><![CDATA[Patrick]]></wp:author_first_name>
+<wp:author_last_name><![CDATA[Bourne]]></wp:author_last_name>
+</wp:author>
+<generator>IELTS Course Manager</generator>
+<item>
+<title><![CDATA[Listening test 6 Section 2 NEW]]></title>
+<link>https://www.ieltstestonline.com/2026/ielts-quiz/listening-test-6-section-2-new/</link>
+<pubDate>Mon, 30 Dec 2025 09:09:00 +0000</pubDate>
+<dc:creator><![CDATA[impact]]></dc:creator>
+<guid isPermaLink="false">https://www.ieltstestonline.com/2026/?post_type=ielts_quiz&amp;p=AUTO</guid>
+<description/>
+<content:encoded><![CDATA[]]></content:encoded>
+<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+<wp:post_id>AUTO</wp:post_id>
+<wp:post_date><![CDATA[2025-12-30 09:09:00]]></wp:post_date>
+<wp:post_date_gmt><![CDATA[2025-12-30 09:09:00]]></wp:post_date_gmt>
+<wp:post_modified><![CDATA[2025-12-30 09:09:00]]></wp:post_modified>
+<wp:post_modified_gmt><![CDATA[2025-12-30 09:09:00]]></wp:post_modified_gmt>
+<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+<wp:post_name><![CDATA[listening-test-6-section-2-new]]></wp:post_name>
+<wp:status><![CDATA[publish]]></wp:status>
+<wp:post_parent>0</wp:post_parent>
+<wp:menu_order>0</wp:menu_order>
+<wp:post_type><![CDATA[ielts_quiz]]></wp:post_type>
+<wp:post_password><![CDATA[]]></wp:post_password>
+<wp:is_sticky>0</wp:is_sticky>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:6:{i:0;a:11:{s:4:"type";s:18:"summary_completion";s:12:"instructions";s:108:"Questions 11-13: Complete the sentences below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.";s:8:"question";s:43:"Quartztown was established in 11. [field 1]";s:6:"points";d:1;s:18:"no_answer_feedback";s:130:"No answer provided. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";s:16:"correct_feedback";s:55:"Correct! You identified the key information accurately.";s:18:"incorrect_feedback";s:75:"Incorrect. Listen carefully to the historical information about Quartztown.";s:15:"reading_text_id";N;s:14:"summary_fields";a:1:{i:1;a:4:{s:6:"answer";s:4:"1860";s:16:"correct_feedback";s:109:"Correct! Quartztown was established in 1860 when gold miners discovered the precious metal in the Rift River.";s:18:"incorrect_feedback";s:124:"Incorrect. The correct answer is: 1860. Listen to when the speaker mentions the founding of Quartztown during the gold rush.";s:18:"no_answer_feedback";s:159:"No answer provided. The correct answer is: 1860. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";}}s:7:"options";s:0:"";s:14:"correct_answer";s:0:"";}i:1;a:11:{s:4:"type";s:18:"summary_completion";s:12:"instructions";s:0:"";s:8:"question";s:100:"After the gold rush Quartztown's economy relied on forestry, farming, 12. [field 1] and coal mining.";s:6:"points";d:1;s:18:"no_answer_feedback";s:130:"No answer provided. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";s:16:"correct_feedback";s:61:"Correct! You identified the key economic activity accurately.";s:18:"incorrect_feedback";s:63:"Incorrect. Listen carefully to the list of economic activities.";s:15:"reading_text_id";N;s:14:"summary_fields";a:1:{i:1;a:4:{s:6:"answer";s:7:"fishing";s:16:"correct_feedback";s:109:"Correct! After the gold rush, the main economic activities became forestry, farming, fishing and coal mining.";s:18:"incorrect_feedback";s:117:"Incorrect. The correct answer is: FISHING. Listen to the list of economic activities that followed the gold rush era.";s:18:"no_answer_feedback";s:162:"No answer provided. The correct answer is: FISHING. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";}}s:7:"options";s:0:"";s:14:"correct_answer";s:0:"";}i:2;a:11:{s:4:"type";s:18:"summary_completion";s:12:"instructions";s:0:"";s:8:"question";s:72:"13. [field 1] of the working age population work at the Delmer coalmine.";s:6:"points";d:1;s:18:"no_answer_feedback";s:130:"No answer provided. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";s:16:"correct_feedback";s:50:"Correct! You identified the percentage accurately.";s:18:"incorrect_feedback";s:63:"Incorrect. Listen carefully to the statistics about employment.";s:15:"reading_text_id";N;s:14:"summary_fields";a:1:{i:1;a:4:{s:6:"answer";s:46:"32%|thirty two percent|32 percent|thirty two %";s:16:"correct_feedback";s:95:"Correct! The Delmer coalmine provides employment to 32% of Quartztown's working age population.";s:18:"incorrect_feedback";s:123:"Incorrect. The correct answer is: 32% (or thirty two percent). Listen to the employment statistics for the Delmer coalmine.";s:18:"no_answer_feedback";s:182:"No answer provided. The correct answer is: 32% (or thirty two percent). In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";}}s:7:"options";s:0:"";s:14:"correct_answer";s:0:"";}i:3;a:11:{s:4:"type";s:8:"matching";s:12:"instructions";s:272:"Questions 14-15: Choose TWO letters A-E. Which two things have happened in Quartztown in the last 35 years?
+
+A. Increase in people working in agriculture
+B. Growth of tourism
+C. A boom in the coal mining industry
+D. Development of outdoor activities
+E. Decline in visitors";s:8:"question";s:7:"14. ___";s:6:"points";d:1;s:18:"no_answer_feedback";s:183:"No answer provided. The correct answer is: B or D (both are acceptable). In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";s:16:"correct_feedback";s:88:"Correct! Tourism and outdoor activities have both grown in Quartztown in recent decades.";s:18:"incorrect_feedback";s:180:"Incorrect. The correct answer is: B or D (both are acceptable). Listen to what has happened in the last two decades - the town experienced growth in tourism and outdoor activities.";s:15:"reading_text_id";N;s:14:"summary_fields";a:1:{i:1;a:4:{s:6:"answer";s:3:"b|d";s:16:"correct_feedback";s:88:"Correct! Tourism and outdoor activities have both grown in Quartztown in recent decades.";s:18:"incorrect_feedback";s:180:"Incorrect. The correct answer is: B or D (both are acceptable). Listen to what has happened in the last two decades - the town experienced growth in tourism and outdoor activities.";s:18:"no_answer_feedback";s:183:"No answer provided. The correct answer is: B or D (both are acceptable). In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";}}s:7:"options";s:163:"A. Increase in people working in agriculture
+B. Growth of tourism
+C. A boom in the coal mining industry
+D. Development of outdoor activities
+E. Decline in visitors";s:14:"correct_answer";s:3:"b|d";}i:4;a:11:{s:4:"type";s:8:"matching";s:12:"instructions";s:0:"";s:8:"question";s:7:"15. ___";s:6:"points";d:1;s:18:"no_answer_feedback";s:183:"No answer provided. The correct answer is: B or D (both are acceptable). In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";s:16:"correct_feedback";s:88:"Correct! Tourism and outdoor activities have both grown in Quartztown in recent decades.";s:18:"incorrect_feedback";s:180:"Incorrect. The correct answer is: B or D (both are acceptable). Listen to what has happened in the last two decades - the town experienced growth in tourism and outdoor activities.";s:15:"reading_text_id";N;s:14:"summary_fields";a:1:{i:1;a:4:{s:6:"answer";s:3:"b|d";s:16:"correct_feedback";s:88:"Correct! Tourism and outdoor activities have both grown in Quartztown in recent decades.";s:18:"incorrect_feedback";s:180:"Incorrect. The correct answer is: B or D (both are acceptable). Listen to what has happened in the last two decades - the town experienced growth in tourism and outdoor activities.";s:18:"no_answer_feedback";s:183:"No answer provided. The correct answer is: B or D (both are acceptable). In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";}}s:7:"options";s:163:"A. Increase in people working in agriculture
+B. Growth of tourism
+C. A boom in the coal mining industry
+D. Development of outdoor activities
+E. Decline in visitors";s:14:"correct_answer";s:3:"b|d";}i:5;a:11:{s:4:"type";s:18:"summary_completion";s:12:"instructions";s:88:"Questions 16-20: Complete the summary below using NO MORE THAN TWO WORDS AND/OR NUMBERS.";s:8:"question";s:645:"Quartztown first staged the Midwinter Festival in 16. [field 1]. The festival opens with a parade with costumed characters and floats displaying local and historical scenes. The floats are sponsored by 17. [field 2]. Interactive light spectacles are projected on local buildings and the night ends with an impressive 18. [field 3] show. In the two weeks following there are events which include skiing, snowboarding and mountain biking. A marathon is held in 19. [field 4] Valley. There are also activities for people who are more interested in craft, literature and music. Tours of the gold mining areas can be done on foot or on 20. [field 5].";s:6:"points";d:1;s:18:"no_answer_feedback";s:130:"No answer provided. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";s:16:"correct_feedback";s:48:"Excellent! You completed the summary accurately.";s:18:"incorrect_feedback";s:89:"Some answers are incorrect. Listen carefully to the details about the Midwinter Festival.";s:15:"reading_text_id";N;s:14:"summary_fields";a:5:{i:1;a:4:{s:6:"answer";s:4:"1994";s:16:"correct_feedback";s:59:"Correct! The Midwinter Festival has been hosted since 1994.";s:18:"incorrect_feedback";s:106:"Incorrect. The correct answer is: 1994. Listen to when the speaker mentions the year the festival started.";s:18:"no_answer_feedback";s:159:"No answer provided. The correct answer is: 1994. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";}i:2;a:4:{s:6:"answer";s:31:"local businesses|local business";s:16:"correct_feedback";s:60:"Correct! Many local businesses sponsor floats in the parade.";s:18:"incorrect_feedback";s:100:"Incorrect. The correct answer is: LOCAL BUSINESSES. Listen to who sponsors the floats in the parade.";s:18:"no_answer_feedback";s:171:"No answer provided. The correct answer is: LOCAL BUSINESSES. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";}i:3;a:4:{s:6:"answer";s:18:"fireworks|firework";s:16:"correct_feedback";s:61:"Correct! The night ends with a magnificent fireworks display.";s:18:"incorrect_feedback";s:92:"Incorrect. The correct answer is: FIREWORKS. Listen to what spectacular show ends the night.";s:18:"no_answer_feedback";s:164:"No answer provided. The correct answer is: FIREWORKS. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";}i:4;a:4:{s:6:"answer";s:18:"long neck|longneck";s:16:"correct_feedback";s:75:"Correct! The Long Neck marathon is staged in the stunning Long Neck Valley.";s:18:"incorrect_feedback";s:82:"Incorrect. The correct answer is: LONG NECK. Listen to where the marathon is held.";s:18:"no_answer_feedback";s:164:"No answer provided. The correct answer is: LONG NECK. In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";}i:5;a:4:{s:6:"answer";s:39:"horseback|horse back|horse-back|a horse";s:16:"correct_feedback";s:90:"Correct! Visitors can take walking or horseback tours of the historical gold mining areas.";s:18:"incorrect_feedback";s:124:"Incorrect. The correct answer is: HORSEBACK (or HORSE BACK). Listen to the two ways visitors can tour the gold mining areas.";s:18:"no_answer_feedback";s:180:"No answer provided. The correct answer is: HORSEBACK (or HORSE BACK). In the IELTS Listening test, you should always attempt every question - there is no penalty for wrong answers.";}}s:7:"options";s:0:"";s:14:"correct_answer";s:0:"";}}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_reading_texts]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
+<wp:meta_value><![CDATA[70]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
+<wp:meta_value><![CDATA[listening_practice]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_exercise_label]]></wp:meta_key>
+<wp:meta_value><![CDATA[practice_test]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_open_as_popup]]></wp:meta_key>
+<wp:meta_value><![CDATA[]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_scoring_type]]></wp:meta_key>
+<wp:meta_value><![CDATA[ielts_listening]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
+<wp:meta_value><![CDATA[]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_starting_question_number]]></wp:meta_key>
+<wp:meta_value><![CDATA[11]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_audio_url]]></wp:meta_key>
+<wp:meta_value><![CDATA[https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0023-2.mp3]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_transcript]]></wp:meta_key>
+<wp:meta_value><![CDATA[<strong>Section 2</strong>
+
+Good afternoon. I'm James Harrison and welcome to "Your Hometown", the programme where we explore a place near you.
+
+Today we're going to visit Quartztown, one of the busiest little towns in the country. Situated on the wild remote southwest coast, Quartztown is set amongst stunning scenery with a backdrop of towering mountains and lush forests. Although it wasn't established before the eighteenth century, it's packed in a lot of action since then.
+
+Quartztown was first founded by gold miners who discovered the precious metal in the Rift River in <strong style="background-color: yellow;">[Q11: 1860]</strong>. At the height of the gold rush Quartztown boasted a population of 26,000. In 1865 there were more than 100 pubs and just 1 library. Once the gold rush was over the town settled into a quieter but just as prosperous era. In 1873 the railway reached Quartztown connecting it to the capital city, Warrington. This development enabled the growth of agriculture in the gentle valleys of the coastal region in the twentieth century. The main economic activities became forestry, farming, <strong style="background-color: yellow;">[Q12: fishing]</strong> and coal mining. The Delmer coalmine is the largest opencast mine in the country and provides employment to <strong style="background-color: yellow;">[Q13: 32%]</strong> of Quartztown's working age population.
+
+The town experienced a decline in population in the last couple of decades of the twentieth century owing to developments in the traditional primary industries. For example, dairy farming has become less labour intensive with larger herd sizes and the greater mechanisation of farming processes. This led to decline in the population numbers with many young people moving away to pursue employment opportunities. However, there has been a dramatic reversal of the town's fortunes in the last two decades with <strong style="background-color: yellow;">[Q14/15: B-tourism and D-outdoor activities]</strong> drawing huge numbers of tourists and thrill seekers into the area.
+
+Since <strong style="background-color: yellow;">[Q16: 1994]</strong> Quartztown has hosted a midwinter festival which brings thousands of visitors to the town. Celebrating the longest night of the year, the midwinter festival kicks off with a colourful parade of vividly costumed characters. Music is provided by bands from the town's high school, the army base and local musicians. Many <strong style="background-color: yellow;">[Q17: local businesses]</strong> sponsor floats in the parade which usually feature themes relating to the district and its history. Interactive light displays are staged at various locations, with vibrant projections screened onto local buildings and monuments. And the night ends with a magnificent <strong style="background-color: yellow;">[Q18: fireworks]</strong> display designed by the world famous pyrotechnician, Waldo Emerson.
+
+The parade heralds two weeks of celebration. A skating rink is installed in the town's main square and every night during the festival parties will be held at the rink with music mixed by the internationally renowned DJ, Soulbass. The Quartztown alpine ski and board competition is run at nearby Mt Davenport. Events include the giant slalom, downhill and freestyle skiing. Also on the mountain is a "bikes on snow" event, where mountain bikers engage in a thrilling downhill race. The <strong style="background-color: yellow;">[Q19: Long Neck]</strong> marathon which attracts competitors from around the globe is staged in the stunning Long Neck Valley. All these competitions have been generously supported by international and local sponsors. For the less sports minded there is also a craft fair, a readers' and writers' event which is usually attended by the year's Man Booker prize winner and concerts by the Warrington Symphony Orchestra. Visitors can also take either walking or <strong style="background-color: yellow;">[Q20: horseback]</strong> tours of the historical gold mining areas, and even try their hands at panning for gold. There's a lot going on.
+
+We are going to go now to the town's mayor, Maisie Bates, for her view of this year's midwinter festival.]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_course_ids]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_lesson_ids]]></wp:meta_key>
+<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_course_id]]></wp:meta_key>
+<wp:meta_value><![CDATA[]]></wp:meta_value>
+</wp:postmeta>
+<wp:postmeta>
+<wp:meta_key><![CDATA[_ielts_cm_lesson_id]]></wp:meta_key>
+<wp:meta_value><![CDATA[]]></wp:meta_value>
+</wp:postmeta>
+</item>
+</channel>
+</rss>
