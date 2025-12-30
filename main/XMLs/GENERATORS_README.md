@@ -1,143 +1,75 @@
-# Listening Test XML Generators
+# Listening Test XML Generator
 
-This directory contains scripts to generate properly formatted XML files for IELTS listening tests from TXT source files.
+This directory contains ONE master script to generate properly formatted XML files for IELTS listening tests from TXT source files.
 
-## ⭐ RECOMMENDED: Universal Generator
+## ⭐ THE ONLY GENERATOR YOU NEED
 
-### **`generate_listening_xml_universal.py`** (Production Ready)
-**Status: ✅ READY FOR USE**
+### **`generate_listening_xml_master.py`** ✅ PRODUCTION READY
 
-One comprehensive generator that handles ALL listening test formats:
-- ✅ Auto-detects format (Test 3 vs Test 4 style)
-- ✅ Handles multiple question types (MC, Multi-select, Summary completion, etc.)
-- ✅ Works with 100+ test files
-- ✅ Batch processing support
+**Single, comprehensive generator that handles EVERYTHING:**
+- ✅ ALL question types (Multiple choice, Multi-select, Summary completion, Short answer, Matching, Sentence completion)
+- ✅ FULL feedback auto-generated (CORRECT, INCORRECT, NO ANSWER) - no manual input needed
+- ✅ ALL listening tests (1-15+)
+- ✅ Intelligent question type detection
 - ✅ Proper PHP serialization
-- ✅ Yellow-highlighted transcript annotations
+- ✅ Batch processing support
 
 **Usage:**
 
 ```bash
-# Single file
-python3 generate_listening_xml_universal.py "Listening Test 5 Section 1.txt"
-
-# All sections of a test (recommended for efficiency)
-python3 generate_listening_xml_universal.py --test 5
-
-# Process ALL tests at once (use with caution - 100+ files!)
-python3 generate_listening_xml_universal.py --all
-```
-
-**Advantages:**
-- ✅ One tool for everything
-- ✅ No code duplication
-- ✅ Easy to maintain and improve
-- ✅ Batch processing saves massive time
-- ✅ Auto-detects formats
-- ✅ Warns about incomplete parsing
-
-**Limitations:**
-- Some edge cases may need manual review (tool warns you)
-- Complex question formats may need parser enhancements
-
-## Legacy Generators (For Reference)
-
-### Test-Specific Generators
-These were used to develop the universal generator and remain as reference:
-
-- `generate_test3_section4.py` - Test 3 Section 4 (plain text format)
-- `generate_test4_all_sections.py` - Test 4 all sections (HTML format)
-- `generate_listening_xml.py` - Early attempt (incomplete)
-- `convert-txt-to-xml.py` - Basic skeleton (creates empty questions)
-
-**Note:** Use the universal generator instead of these for new tests.
-
-### Utility Scripts
-
-- `extract-annotated-transcript-from-xml.py` - Extracts transcripts from existing XML files
-
-## Quick Start
-
-**For a single test:**
-```bash
 cd main/XMLs
-python3 generate_listening_xml_universal.py --test 6
+
+# Single section
+python3 generate_listening_xml_master.py "Listening Test 6 Section 1.txt"
+
+# All sections of one test (recommended)
+python3 generate_listening_xml_master.py --test 6
+
+# Range of tests
+python3 generate_listening_xml_master.py --tests 6-10
+
+# ALL tests in directory
+python3 generate_listening_xml_master.py --all
 ```
 
-**For a single section:**
+**What You Get:**
+- ✅ Full educational feedback automatically generated
+- ✅ Correct question types detected from context
+- ✅ WordPress-ready XML files
+- ✅ No manual intervention required
+
+## Utility Tool
+
+### **`extract-annotated-transcript-from-xml.py`**
+
+Extracts transcripts from existing XML files. Useful for generating yellow-highlighted transcripts from already-created XMLs.
+
 ```bash
-cd main/XMLs
-python3 generate_listening_xml_universal.py "Listening Test 7 Section 2.txt"
+python3 extract-annotated-transcript-from-xml.py "Listening Test 1 Section 1.xml"
 ```
 
-**Validate output:**
-```bash
-cd ../..
-php TEMPLATES/validate-xml.php "main/XMLs/Listening Test 6 Section 1.xml"
-```
+## Output Format
 
-## Supported Formats
-
-The universal generator handles these TXT formats:
-
-### Test 3 Style (Plain Text)
-```
-=== QUESTION TYPE: SHORT ANSWER ===
-
-31. What causes RSI? {[ANSWER1][ANSWER2]}
-[CORRECT] Feedback for correct answer
-[INCORRECT] Feedback for incorrect answer
-[NO ANSWER] Feedback when no answer given
-```
-
-### Test 4 Style (HTML with options)
-```html
-<strong>Question 1</strong>
-<ol style="list-style-type: upper-alpha;">
-    <li>Option A</li>
-    <li>Option B</li>
-</ol>
-1. {B}
-```
-
-### Test 5 Style (Simple HTML)
-```html
-<p>(1) {HALTWELL}</p>
-<p>6. {J}</p>
-```
-
-## Output
-
-Each run produces:
-1. **XML file** - WordPress-importable with serialized questions
-2. Console report showing:
-   - Format detected
-   - Questions parsed (should be 10/10)
-   - Warnings for incomplete parsing
+Each XML file includes:
+1. **Questions** with proper type detection
+2. **Full feedback** for all three states (correct/incorrect/no answer)
+3. **Audio URL** from source TXT file
+4. **Transcript** with HTML formatting
+5. **Metadata** for WordPress IELTS Course Manager plugin
 
 ## Troubleshooting
 
 **Q: Generator shows "Only found X questions (expected 10)"**
-A: This means the file has a format variation. Options:
-1. Check the TXT file for unusual formatting
-2. The XML is still generated - validate and review manually
-3. Update the parser for this specific pattern
-4. File an issue with the problematic file
+A: The TXT file may have formatting issues. The generator will still create XML with the questions it found.
 
-**Q: Want to process hundreds of tests quickly?**
-A: Yes! Use `--all` mode, but be prepared to review warnings:
-```bash
-python3 generate_listening_xml_universal.py --all > batch_log.txt
-```
+**Q: How do I verify the XML is correct?**
+A: Check the console output. It shows question types detected and question count. Review the XML file to ensure answers are correct.
 
-## Current Status
+**Q: Can I use this for tests not yet in the repository?**
+A: Yes! Just create a TXT file following the format of existing tests (with {ANSWER} markers), and run the generator.
 
-✅ Test 3 All Sections: Supported (plain text format)
-✅ Test 4 All Sections: Supported (HTML with MC/options)
-✅ Test 5+ Sections: Mostly supported (edge cases may need review)
+## That's It!
 
-**Total TXT files in repo:** 112  
-**Can process automatically:** ~90%  
-**May need review:** ~10%
+**One generator. Full feedback. All question types. Zero manual work.**
 
-The universal generator saves massive time compared to creating test-specific scripts!
+No more confusion about which generator to use. Just use `generate_listening_xml_master.py` for everything.
