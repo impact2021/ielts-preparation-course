@@ -3051,7 +3051,7 @@ class IELTS_CM_Admin {
             </div>
             
             <!-- New structured options for multiple choice -->
-            <div class="mc-options-field" style="<?php echo (isset($question['type']) && !in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'locating_information'))) ? 'display:none;' : ''; ?>">
+            <div class="mc-options-field" style="<?php echo (isset($question['type']) && !in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'locating_information', 'closed_question'))) ? 'display:none;' : ''; ?>">
                 <h5><?php _e('Answer Options', 'ielts-course-manager'); ?></h5>
                 <div class="mc-options-container" data-question-index="<?php echo $index; ?>">
                     <?php
@@ -3339,7 +3339,50 @@ class IELTS_CM_Admin {
                 <input type="number" name="questions[<?php echo $index; ?>][points]" value="<?php echo esc_attr(isset($question['points']) ? $question['points'] : 1); ?>" min="0" step="0.5" style="width: 100%;">
             </p>
             
-            <div class="general-feedback-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false', 'dropdown_paragraph'))) ? '' : 'display:none;'; ?> margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
+            <!-- Closed Question Settings -->
+            <?php if (isset($question['type']) && $question['type'] === 'closed_question'): ?>
+            <div class="closed-question-help" style="padding: 10px; background: #fff3cd; border-left: 4px solid #ffc107; margin-bottom: 15px;">
+                <strong><?php _e('Closed Question Instructions:', 'ielts-course-manager'); ?></strong><br>
+                <small><?php _e('Simply enter your question text above. The options you define below will be shown as radio buttons (if 1 correct answer) or checkboxes (if 2+ correct answers). You do NOT need to use [field 1] or similar placeholders for closed questions.', 'ielts-course-manager'); ?></small>
+            </div>
+            <div class="closed-question-settings" style="padding: 10px; background: #f0f0f1; margin-bottom: 15px; border-left: 4px solid #72aee6;">
+                <p>
+                    <label><?php _e('Number of Correct Answers', 'ielts-course-manager'); ?></label><br>
+                    <input type="number" name="questions[<?php echo $index; ?>][correct_answer_count]" value="<?php echo esc_attr(isset($question['correct_answer_count']) ? $question['correct_answer_count'] : 1); ?>" min="1" style="width: 100px;"><br>
+                    <small><?php _e('How many correct answers this question has. This equals the number of question numbers it covers (1 = single select, 2+ = multi-select).', 'ielts-course-manager'); ?></small>
+                </p>
+            </div>
+            <?php endif; ?>
+            
+            <!-- Open Question Settings -->
+            <?php if (isset($question['type']) && $question['type'] === 'open_question'): ?>
+            <div class="open-question-help" style="padding: 10px; background: #d1ecf1; border-left: 4px solid #17a2b8; margin-bottom: 15px;">
+                <strong><?php _e('Open Question Instructions:', 'ielts-course-manager'); ?></strong><br>
+                <small><?php _e('Enter your question text above. The number of input fields you specify below will automatically be shown to students. You do NOT need to use [field 1], [field 2] etc. placeholders for open questions.', 'ielts-course-manager'); ?></small>
+            </div>
+            <div class="open-question-settings" style="padding: 10px; background: #f0f0f1; margin-bottom: 15px; border-left: 4px solid #72aee6;">
+                <p>
+                    <label><?php _e('Number of Input Fields', 'ielts-course-manager'); ?></label><br>
+                    <input type="number" name="questions[<?php echo $index; ?>][field_count]" value="<?php echo esc_attr(isset($question['field_count']) ? $question['field_count'] : 1); ?>" min="1" class="open-question-field-count" style="width: 100px;"><br>
+                    <small><?php _e('How many text input fields to show. Each field is a separate question number.', 'ielts-course-manager'); ?></small>
+                </p>
+                <div class="open-question-answers">
+                    <h5><?php _e('Field Answers', 'ielts-course-manager'); ?></h5>
+                    <?php 
+                    $field_answers = isset($question['field_answers']) && is_array($question['field_answers']) ? $question['field_answers'] : array();
+                    $field_count = isset($question['field_count']) ? intval($question['field_count']) : 1;
+                    for ($i = 1; $i <= $field_count; $i++):
+                    ?>
+                    <div class="open-question-answer-item" style="margin-bottom: 10px;">
+                        <label><?php printf(__('Field %d Answer (use | for multiple accepted answers)', 'ielts-course-manager'), $i); ?></label>
+                        <input type="text" name="questions[<?php echo $index; ?>][field_answers][<?php echo $i; ?>]" value="<?php echo esc_attr(isset($field_answers[$i]) ? $field_answers[$i] : ''); ?>" style="width: 100%;" placeholder="<?php _e('e.g., answer1|answer2', 'ielts-course-manager'); ?>">
+                    </div>
+                    <?php endfor; ?>
+                </div>
+            </div>
+            <?php endif; ?>
+            
+            <div class="general-feedback-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false', 'dropdown_paragraph', 'closed_question', 'open_question'))) ? '' : 'display:none;'; ?> margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
                 <h5 style="margin-top: 0;"><?php _e('Answer Feedback', 'ielts-course-manager'); ?></h5>
                 <p>
                     <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
