@@ -3322,7 +3322,7 @@ class IELTS_CM_Admin {
                 <textarea name="questions[<?php echo $index; ?>][options]" rows="4" style="width: 100%;"><?php echo esc_textarea(isset($question['options']) ? $question['options'] : ''); ?></textarea>
             </p>
             
-            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph', 'summary_completion', 'table_completion'))) ? 'display:none;' : ''; ?>">
+            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph', 'summary_completion', 'table_completion', 'open_question', 'closed_question'))) ? 'display:none;' : ''; ?>">
                 <label><?php _e('Correct Answer', 'ielts-course-manager'); ?></label><br>
                 <?php if (isset($question['type']) && $question['type'] === 'true_false'): ?>
                     <select name="questions[<?php echo $index; ?>][correct_answer]" style="width: 100%;">
@@ -3336,10 +3336,20 @@ class IELTS_CM_Admin {
                 <?php endif; ?>
             </p>
             
-            <p>
+            <p style="<?php echo (isset($question['type']) && in_array($question['type'], array('open_question', 'closed_question'))) ? 'display:none;' : ''; ?>">
                 <label><?php _e('Points', 'ielts-course-manager'); ?></label><br>
                 <input type="number" name="questions[<?php echo $index; ?>][points]" value="<?php echo esc_attr(isset($question['points']) ? $question['points'] : 1); ?>" min="0" step="0.5" style="width: 100%;">
             </p>
+            
+            <?php if (isset($question['type']) && $question['type'] === 'open_question'): ?>
+            <!-- Auto-calculated points for open questions -->
+            <input type="hidden" name="questions[<?php echo $index; ?>][points]" value="<?php echo esc_attr(isset($question['field_count']) ? $question['field_count'] : 1); ?>">
+            <?php endif; ?>
+            
+            <?php if (isset($question['type']) && $question['type'] === 'closed_question'): ?>
+            <!-- Auto-calculated points for closed questions -->
+            <input type="hidden" name="questions[<?php echo $index; ?>][points]" value="<?php echo esc_attr(isset($question['correct_answer_count']) ? $question['correct_answer_count'] : 1); ?>">
+            <?php endif; ?>
             
             <!-- Closed Question Settings -->
             <?php if (isset($question['type']) && $question['type'] === 'closed_question'): ?>
@@ -3368,25 +3378,39 @@ class IELTS_CM_Admin {
                 <p>
                     <label><?php _e('Number of Input Fields', 'ielts-course-manager'); ?></label><br>
                     <input type="number" name="questions[<?php echo $index; ?>][field_count]" value="<?php echo esc_attr(isset($question['field_count']) ? $question['field_count'] : 1); ?>" min="1" class="open-question-field-count" style="width: 100px;"><br>
-                    <small><?php _e('How many text input fields to show. Each field is a separate question number.', 'ielts-course-manager'); ?></small>
+                    <small><?php _e('How many text input fields to show. Each field equals 1 question number and 1 point.', 'ielts-course-manager'); ?></small>
                 </p>
                 <div class="open-question-answers">
-                    <h5><?php _e('Field Answers', 'ielts-course-manager'); ?></h5>
+                    <h5><?php _e('Field Answers and Feedback', 'ielts-course-manager'); ?></h5>
                     <?php 
                     $field_answers = isset($question['field_answers']) && is_array($question['field_answers']) ? $question['field_answers'] : array();
+                    $field_feedback = isset($question['field_feedback']) && is_array($question['field_feedback']) ? $question['field_feedback'] : array();
                     $field_count = isset($question['field_count']) ? intval($question['field_count']) : 1;
                     for ($i = 1; $i <= $field_count; $i++):
+                        $field_correct_feedback = isset($field_feedback[$i]['correct']) ? $field_feedback[$i]['correct'] : '';
+                        $field_incorrect_feedback = isset($field_feedback[$i]['incorrect']) ? $field_feedback[$i]['incorrect'] : '';
                     ?>
-                    <div class="open-question-answer-item" style="margin-bottom: 10px;">
-                        <label><?php printf(__('Field %d Answer (use | for multiple accepted answers)', 'ielts-course-manager'), $i); ?></label>
-                        <input type="text" name="questions[<?php echo $index; ?>][field_answers][<?php echo $i; ?>]" value="<?php echo esc_attr(isset($field_answers[$i]) ? $field_answers[$i] : ''); ?>" style="width: 100%;" placeholder="<?php _e('e.g., answer1|answer2', 'ielts-course-manager'); ?>">
+                    <div class="open-question-answer-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">
+                        <h6 style="margin-top: 0;"><?php printf(__('Field %d', 'ielts-course-manager'), $i); ?></h6>
+                        <p>
+                            <label><?php _e('Correct Answer (use | for multiple accepted answers)', 'ielts-course-manager'); ?></label>
+                            <input type="text" name="questions[<?php echo $index; ?>][field_answers][<?php echo $i; ?>]" value="<?php echo esc_attr(isset($field_answers[$i]) ? $field_answers[$i] : ''); ?>" style="width: 100%;" placeholder="<?php _e('e.g., answer1|answer2', 'ielts-course-manager'); ?>">
+                        </p>
+                        <p>
+                            <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label>
+                            <textarea name="questions[<?php echo $index; ?>][field_feedback][<?php echo $i; ?>][correct]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers this field correctly', 'ielts-course-manager'); ?>"><?php echo esc_textarea($field_correct_feedback); ?></textarea>
+                        </p>
+                        <p>
+                            <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label>
+                            <textarea name="questions[<?php echo $index; ?>][field_feedback][<?php echo $i; ?>][incorrect]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers this field incorrectly', 'ielts-course-manager'); ?>"><?php echo esc_textarea($field_incorrect_feedback); ?></textarea>
+                        </p>
                     </div>
                     <?php endfor; ?>
                 </div>
             </div>
             <?php endif; ?>
             
-            <div class="general-feedback-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false', 'dropdown_paragraph', 'closed_question', 'open_question'))) ? '' : 'display:none;'; ?> margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
+            <div class="general-feedback-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false', 'dropdown_paragraph'))) ? '' : 'display:none;'; ?> margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
                 <h5 style="margin-top: 0;"><?php _e('Answer Feedback', 'ielts-course-manager'); ?></h5>
                 <p>
                     <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
@@ -3955,9 +3979,15 @@ class IELTS_CM_Admin {
                         
                         // Save correct_answer_count
                         $question_data['correct_answer_count'] = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
+                        
+                        // Auto-calculate points based on correct_answer_count
+                        $question_data['points'] = $question_data['correct_answer_count'];
                     } elseif ($question['type'] === 'open_question') {
-                        // Handle open_question - save field_count and field_answers
+                        // Handle open_question - save field_count, field_answers, and field_feedback
                         $question_data['field_count'] = isset($question['field_count']) ? intval($question['field_count']) : 1;
+                        
+                        // Auto-calculate points based on field count
+                        $question_data['points'] = $question_data['field_count'];
                         
                         if (isset($question['field_answers']) && is_array($question['field_answers'])) {
                             $field_answers = array();
@@ -3967,6 +3997,18 @@ class IELTS_CM_Admin {
                                 }
                             }
                             $question_data['field_answers'] = $field_answers;
+                        }
+                        
+                        // Save field-specific feedback
+                        if (isset($question['field_feedback']) && is_array($question['field_feedback'])) {
+                            $field_feedback = array();
+                            foreach ($question['field_feedback'] as $field_num => $feedback) {
+                                $field_feedback[$field_num] = array(
+                                    'correct' => isset($feedback['correct']) ? wp_kses_post($feedback['correct']) : '',
+                                    'incorrect' => isset($feedback['incorrect']) ? wp_kses_post($feedback['incorrect']) : ''
+                                );
+                            }
+                            $question_data['field_feedback'] = $field_feedback;
                         }
                     } else {
                         // Non-multiple choice questions
