@@ -692,10 +692,11 @@
                                        questionResult.question_type === 'matching_classifying' ||
                                        questionResult.question_type === 'headings' ||
                                        questionResult.question_type === 'locating_information') {
-                                // For single-select question types with options, show feedback strategically:
+                                // For single-select question types with options (including legacy types), show feedback strategically:
                                 // - Under correct answer option (always)
                                 // - Under incorrect selected option (if user selected it)
                                 // - At bottom (only if nothing was selected)
+                                // Note: These legacy types are still supported for existing XML files
                                 // Remove any existing feedback first
                                 questionElement.find('.option-feedback-message').remove();
                                 questionElement.find('.question-feedback-message').remove();
