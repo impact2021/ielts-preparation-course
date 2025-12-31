@@ -790,7 +790,7 @@ class IELTS_CM_Quiz_Handler {
                 $any_answered = false;
                 
                 for ($field_num = 1; $field_num <= $field_count; $field_num++) {
-                    $field_answer_key = $index . '_field_' . $field_num;
+                    $field_answer_key = 'answer_' . $index . '_field_' . $field_num;
                     $user_field_answer = isset($answers[$field_answer_key]) ? trim($answers[$field_answer_key]) : '';
                     
                     $field_correct = false;
