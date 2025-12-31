@@ -674,8 +674,8 @@
                                             .html(feedbackText); // Using .html() because feedback explicitly supports HTML formatting
                                                                  // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
                                         
-                                        // Append feedback after the option label
-                                        optionLabel.after(feedbackDiv);
+                                        // Append feedback inside the option label
+                                        optionLabel.append(feedbackDiv);
                                     }
                                 });
                                 
@@ -711,22 +711,22 @@
                                         var selectedValue = parseInt(selectedRadio.val(), 10);
                                         
                                         if (questionResult.correct) {
-                                            // User selected correct answer - show feedback under the correct option
+                                            // User selected correct answer - show feedback inside the correct option
                                             var correctLabel = selectedRadio.closest('.option-label');
                                             var feedbackDiv = $('<div>')
                                                 .addClass('option-feedback-message')
                                                 .html(questionResult.feedback);
-                                            correctLabel.after(feedbackDiv);
+                                            correctLabel.append(feedbackDiv);
                                         } else {
                                             // User selected wrong answer
-                                            // Show feedback under the incorrect selected option
+                                            // Show feedback inside the incorrect selected option
                                             var incorrectLabel = selectedRadio.closest('.option-label');
                                             var feedbackDiv = $('<div>')
                                                 .addClass('option-feedback-message')
                                                 .html(questionResult.feedback);
-                                            incorrectLabel.after(feedbackDiv);
+                                            incorrectLabel.append(feedbackDiv);
                                             
-                                            // Also show feedback under the correct answer option
+                                            // Also show feedback inside the correct answer option
                                             if (!isNaN(correctIndex)) {
                                                 var correctRadio = questionElement.find('input[type="radio"][value="' + correctIndex + '"]');
                                                 if (correctRadio.length > 0) {
@@ -735,7 +735,7 @@
                                                     var correctFeedbackDiv = $('<div>')
                                                         .addClass('option-feedback-message')
                                                         .html('<strong>This is the correct answer.</strong>');
-                                                    correctLabel.after(correctFeedbackDiv);
+                                                    correctLabel.append(correctFeedbackDiv);
                                                 }
                                             }
                                         }

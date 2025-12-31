@@ -415,6 +415,7 @@ body.ielts-course-archive .content-area {
 
 .ielts-single-quiz .option-label {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
     padding: 10px;
@@ -424,13 +425,20 @@ body.ielts-course-archive .content-area {
     transition: background 0.3s ease;
 }
 
+.ielts-single-quiz .option-label .option-feedback-message {
+    flex-basis: 100%;
+}
+
 .ielts-single-quiz .option-label:hover {
     background: #f9f9f9;
 }
 
 /* Prevent hover from overriding feedback colors in standard quiz */
+.ielts-single-quiz .option-label.answer-correct,
 .ielts-single-quiz .option-label.answer-correct:hover,
+.ielts-single-quiz .option-label.answer-incorrect,
 .ielts-single-quiz .option-label.answer-incorrect:hover,
+.ielts-single-quiz .option-label.answer-correct-highlight,
 .ielts-single-quiz .option-label.answer-correct-highlight:hover {
     background: inherit !important;
     border-color: inherit !important;
@@ -981,7 +989,9 @@ body.ielts-course-archive .content-area {
 }
 
 .ielts-computer-based-quiz .option-label {
-    display: block !important;
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
     padding: 12px 15px;
     margin-bottom: 8px;
     background: #fff;
@@ -993,14 +1003,21 @@ body.ielts-course-archive .content-area {
     box-sizing: border-box;
 }
 
+.ielts-computer-based-quiz .option-label .option-feedback-message {
+    flex-basis: 100%;
+}
+
 .ielts-computer-based-quiz .option-label:hover {
     background: #f0f7ff;
     border-color: #0073aa;
 }
 
 /* Prevent hover from overriding feedback colors */
+.ielts-computer-based-quiz .option-label.answer-correct,
 .ielts-computer-based-quiz .option-label.answer-correct:hover,
+.ielts-computer-based-quiz .option-label.answer-incorrect,
 .ielts-computer-based-quiz .option-label.answer-incorrect:hover,
+.ielts-computer-based-quiz .option-label.answer-correct-highlight,
 .ielts-computer-based-quiz .option-label.answer-correct-highlight:hover {
     background: inherit !important;
     border-color: inherit !important;
@@ -1464,11 +1481,9 @@ body.ielts-course-archive .content-area {
 
 /* Add tick mark for correctly selected answers */
 .question-options .option-label.answer-correct::before {
-    content: '✓';
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    content: '✓ ';
+    display: inline;
+    margin-right: 5px;
     font-size: 20px;
     font-weight: bold;
     color: #fff;
@@ -1483,11 +1498,9 @@ body.ielts-course-archive .content-area {
 
 /* Add cross mark for incorrectly selected answers */
 .question-options .option-label.answer-incorrect::before {
-    content: '✗';
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    content: '✗ ';
+    display: inline;
+    margin-right: 5px;
     font-size: 20px;
     font-weight: bold;
     color: #fff;
@@ -1636,16 +1649,16 @@ select.answer-select-inline.answer-incorrect {
     border-left-color: #f44336;
 }
 
-/* Option-level feedback message displayed under individual options */
+/* Option-level feedback message displayed inside individual options */
 .option-feedback-message {
+    display: block;
     margin-top: 8px;
-    margin-bottom: 8px;
-    padding: 10px;
-    background: #f0f7ff;
-    border-radius: 3px;
-    border-left: 4px solid #0073aa;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     font-size: 0.9em;
     line-height: 1.5;
+    color: #fff;
+}
 }
 
 /* Return to course link on fullscreen page */
@@ -2135,7 +2148,9 @@ select.answer-select-inline.answer-incorrect {
 
 .ielts-listening-practice-quiz .option-label,
 .ielts-listening-exercise-quiz .option-label {
-    display: block !important;
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
     padding: 12px 15px;
     margin-bottom: 8px;
     background: #fff;
@@ -2147,6 +2162,11 @@ select.answer-select-inline.answer-incorrect {
     box-sizing: border-box;
 }
 
+.ielts-listening-practice-quiz .option-label .option-feedback-message,
+.ielts-listening-exercise-quiz .option-label .option-feedback-message {
+    flex-basis: 100%;
+}
+
 .ielts-listening-practice-quiz .option-label:hover,
 .ielts-listening-exercise-quiz .option-label:hover {
     background: #f0f7ff;
@@ -2154,11 +2174,17 @@ select.answer-select-inline.answer-incorrect {
 }
 
 /* Prevent hover from overriding feedback colors in listening quizzes */
+.ielts-listening-practice-quiz .option-label.answer-correct,
 .ielts-listening-practice-quiz .option-label.answer-correct:hover,
+.ielts-listening-exercise-quiz .option-label.answer-correct,
 .ielts-listening-exercise-quiz .option-label.answer-correct:hover,
+.ielts-listening-practice-quiz .option-label.answer-incorrect,
 .ielts-listening-practice-quiz .option-label.answer-incorrect:hover,
+.ielts-listening-exercise-quiz .option-label.answer-incorrect,
 .ielts-listening-exercise-quiz .option-label.answer-incorrect:hover,
+.ielts-listening-practice-quiz .option-label.answer-correct-highlight,
 .ielts-listening-practice-quiz .option-label.answer-correct-highlight:hover,
+.ielts-listening-exercise-quiz .option-label.answer-correct-highlight,
 .ielts-listening-exercise-quiz .option-label.answer-correct-highlight:hover {
     background: inherit !important;
     border-color: inherit !important;
@@ -2271,11 +2297,9 @@ select.answer-select-inline.answer-incorrect {
 /* Add tick mark for correctly selected answers in listening quizzes */
 .ielts-listening-practice-quiz .option-label.answer-correct::before,
 .ielts-listening-exercise-quiz .option-label.answer-correct::before {
-    content: '✓';
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    content: '✓ ';
+    display: inline;
+    margin-right: 5px;
     font-size: 20px;
     font-weight: bold;
     color: #fff;
@@ -2303,11 +2327,9 @@ select.answer-select-inline.answer-incorrect {
 /* Add cross mark for incorrectly selected answers in listening quizzes */
 .ielts-listening-practice-quiz .option-label.answer-incorrect::before,
 .ielts-listening-exercise-quiz .option-label.answer-incorrect::before {
-    content: '✗';
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    content: '✗ ';
+    display: inline;
+    margin-right: 5px;
     font-size: 20px;
     font-weight: bold;
     color: #fff;
