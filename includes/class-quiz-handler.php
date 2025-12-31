@@ -118,6 +118,14 @@ class IELTS_CM_Quiz_Handler {
                     $points_earned = count($correctly_selected);
                     $is_correct = (count($correctly_selected) === count($correct_indices) && empty($incorrectly_selected));
                     
+                    // Collect option feedback for all options (for frontend display)
+                    $option_feedback = array();
+                    foreach ($mc_options as $opt_idx => $option) {
+                        if (isset($option['feedback']) && !empty($option['feedback'])) {
+                            $option_feedback[$opt_idx] = wp_kses_post($option['feedback']);
+                        }
+                    }
+                    
                     // Collect feedback from selected options
                     if (!empty($user_selections)) {
                         foreach ($user_selections as $sel_idx) {
@@ -132,8 +140,11 @@ class IELTS_CM_Quiz_Handler {
                     
                     $score += $points_earned;
                     
-                    // Set correct_answer to include correct_indices for frontend feedback
-                    $correct_answer = array('correct_indices' => $correct_indices);
+                    // Set correct_answer to include correct_indices and option_feedback for frontend feedback
+                    $correct_answer = array(
+                        'correct_indices' => $correct_indices,
+                        'option_feedback' => $option_feedback
+                    );
                 } else {
                     // Single-select mode
                     $correct_idx = !empty($correct_indices) ? $correct_indices[0] : null;
