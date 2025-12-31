@@ -2365,8 +2365,6 @@ class IELTS_CM_Admin {
                     }
                 });
             });
-            
-            });
         });
         </script>
         <?php
