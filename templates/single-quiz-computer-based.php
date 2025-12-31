@@ -427,6 +427,14 @@ if ($lesson_id) {
                                     }
                                 }
                                 $question_count = max(1, $field_count);
+                            } elseif ($q['type'] === 'closed_question') {
+                                // For closed question, count number of correct answers
+                                $correct_answer_count = isset($q['correct_answer_count']) ? intval($q['correct_answer_count']) : 1;
+                                $question_count = max(1, $correct_answer_count);
+                            } elseif ($q['type'] === 'open_question') {
+                                // For open question, count number of fields
+                                $field_count = isset($q['field_count']) ? intval($q['field_count']) : 1;
+                                $question_count = max(1, $field_count);
                             } else {
                                 $question_count = 1;
                             }
@@ -880,7 +888,7 @@ if ($lesson_id) {
                                                                value="<?php echo esc_attr($opt_index); ?>"
                                                                class="closed-question-radio">
                                                     <?php endif; ?>
-                                                    <span class="option-letter"><?php echo esc_html(chr(65 + $opt_index)); ?>: </span>
+                                                    <span class="option-letter"><?php echo esc_html(chr(65 + $opt_index)); ?>:</span> 
                                                     <span><?php echo esc_html(isset($option['text']) ? $option['text'] : $option); ?></span>
                                                 </label>
                                             <?php endforeach; ?>
