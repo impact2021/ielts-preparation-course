@@ -433,15 +433,26 @@ body.ielts-course-archive .content-area {
     background: #f9f9f9;
 }
 
-/* Prevent hover from overriding feedback colors in standard quiz */
+/* Ensure proper feedback colors in standard quiz */
 .ielts-single-quiz .option-label.answer-correct,
-.ielts-single-quiz .option-label.answer-correct:hover,
+.ielts-single-quiz .option-label.answer-correct:hover {
+    background: #4caf50 !important;
+    border: 3px solid #4caf50 !important;
+    color: #fff !important;
+}
+
 .ielts-single-quiz .option-label.answer-incorrect,
-.ielts-single-quiz .option-label.answer-incorrect:hover,
+.ielts-single-quiz .option-label.answer-incorrect:hover {
+    background: #f44336 !important;
+    border: 3px solid #f44336 !important;
+    color: #fff !important;
+}
+
 .ielts-single-quiz .option-label.answer-correct-highlight,
 .ielts-single-quiz .option-label.answer-correct-highlight:hover {
-    background: inherit !important;
-    border-color: inherit !important;
+    background: transparent !important;
+    border: 3px solid #4caf50 !important;
+    color: inherit !important;
 }
 
 .ielts-single-quiz .option-label input[type="radio"] {
@@ -2185,21 +2196,32 @@ select.answer-select-inline.answer-incorrect {
     border-color: #0073aa;
 }
 
-/* Prevent hover from overriding feedback colors in listening quizzes */
+/* Ensure proper feedback colors in listening quizzes */
 .ielts-listening-practice-quiz .option-label.answer-correct,
 .ielts-listening-practice-quiz .option-label.answer-correct:hover,
 .ielts-listening-exercise-quiz .option-label.answer-correct,
-.ielts-listening-exercise-quiz .option-label.answer-correct:hover,
+.ielts-listening-exercise-quiz .option-label.answer-correct:hover {
+    background: #4caf50 !important;
+    border: 3px solid #4caf50 !important;
+    color: #fff !important;
+}
+
 .ielts-listening-practice-quiz .option-label.answer-incorrect,
 .ielts-listening-practice-quiz .option-label.answer-incorrect:hover,
 .ielts-listening-exercise-quiz .option-label.answer-incorrect,
-.ielts-listening-exercise-quiz .option-label.answer-incorrect:hover,
+.ielts-listening-exercise-quiz .option-label.answer-incorrect:hover {
+    background: #f44336 !important;
+    border: 3px solid #f44336 !important;
+    color: #fff !important;
+}
+
 .ielts-listening-practice-quiz .option-label.answer-correct-highlight,
 .ielts-listening-practice-quiz .option-label.answer-correct-highlight:hover,
 .ielts-listening-exercise-quiz .option-label.answer-correct-highlight,
 .ielts-listening-exercise-quiz .option-label.answer-correct-highlight:hover {
-    background: inherit !important;
-    border-color: inherit !important;
+    background: transparent !important;
+    border: 3px solid #4caf50 !important;
+    color: inherit !important;
 }
 
 .ielts-listening-practice-quiz .option-label input[type="radio"],
