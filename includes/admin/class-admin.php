@@ -5203,6 +5203,12 @@ class IELTS_CM_Admin {
         return $new_post_id;
     }
     
+    /**
+     * Add custom row actions for quiz posts
+     * 
+     * @param array $actions Row actions
+     * @param WP_Post $post Post object
+     * @return array Modified actions
      */
     public function quiz_row_actions($actions, $post) {
         if ($post->post_type === 'ielts_quiz' && current_user_can('edit_post', $post->ID)) {
