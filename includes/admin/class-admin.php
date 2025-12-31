@@ -3389,6 +3389,7 @@ class IELTS_CM_Admin {
                     for ($i = 1; $i <= $field_count; $i++):
                         $field_correct_feedback = isset($field_feedback[$i]['correct']) ? $field_feedback[$i]['correct'] : '';
                         $field_incorrect_feedback = isset($field_feedback[$i]['incorrect']) ? $field_feedback[$i]['incorrect'] : '';
+                        $field_no_answer_feedback = isset($field_feedback[$i]['no_answer']) ? $field_feedback[$i]['no_answer'] : '';
                     ?>
                     <div class="open-question-answer-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">
                         <h6 style="margin-top: 0;"><?php printf(__('Field %d', 'ielts-course-manager'), $i); ?></h6>
@@ -3403,6 +3404,10 @@ class IELTS_CM_Admin {
                         <p>
                             <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label>
                             <textarea name="questions[<?php echo $index; ?>][field_feedback][<?php echo $i; ?>][incorrect]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers this field incorrectly', 'ielts-course-manager'); ?>"><?php echo esc_textarea($field_incorrect_feedback); ?></textarea>
+                        </p>
+                        <p>
+                            <label><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></label>
+                            <textarea name="questions[<?php echo $index; ?>][field_feedback][<?php echo $i; ?>][no_answer]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student leaves this field blank', 'ielts-course-manager'); ?>"><?php echo esc_textarea($field_no_answer_feedback); ?></textarea>
                         </p>
                     </div>
                     <?php endfor; ?>
@@ -3424,7 +3429,7 @@ class IELTS_CM_Admin {
                 </p>
             </div>
             
-            <div class="no-answer-feedback-field" style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
+            <div class="no-answer-feedback-field" style="<?php echo (isset($question['type']) && $question['type'] === 'open_question') ? 'display:none;' : ''; ?> margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
                 <p>
                     <label><?php _e('No Answer Selected Feedback', 'ielts-course-manager'); ?></label><br>
@@ -4005,7 +4010,8 @@ class IELTS_CM_Admin {
                             foreach ($question['field_feedback'] as $field_num => $feedback) {
                                 $field_feedback[$field_num] = array(
                                     'correct' => isset($feedback['correct']) ? wp_kses_post($feedback['correct']) : '',
-                                    'incorrect' => isset($feedback['incorrect']) ? wp_kses_post($feedback['incorrect']) : ''
+                                    'incorrect' => isset($feedback['incorrect']) ? wp_kses_post($feedback['incorrect']) : '',
+                                    'no_answer' => isset($feedback['no_answer']) ? wp_kses_post($feedback['no_answer']) : ''
                                 );
                             }
                             $question_data['field_feedback'] = $field_feedback;
