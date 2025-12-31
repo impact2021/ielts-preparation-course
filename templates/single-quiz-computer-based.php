@@ -836,6 +836,117 @@ if ($lesson_id) {
                                         <?php
                                         endif;
                                         break;
+                                        
+                                    case 'closed_question':
+                                        // Closed Question - Multiple choice with configurable number of correct answers
+                                        // correct_answer_count determines how many question numbers this covers
+                                        $options = array();
+                                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                                            $options = $question['mc_options'];
+                                        } elseif (isset($question['options']) && !empty($question['options'])) {
+                                            $option_lines = array_filter(explode("\n", $question['options']));
+                                            foreach ($option_lines as $opt_text) {
+                                                $options[] = array('text' => trim($opt_text));
+                                            }
+                                        }
+                                        
+                                        $correct_answer_count = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
+                                        $is_multi_select = $correct_answer_count > 1;
+                                        
+                                        if (!empty($options)):
+                                        ?>
+                                        <div class="question-options closed-question-options" data-correct-count="<?php echo $correct_answer_count; ?>">
+                                            <?php foreach ($options as $opt_index => $option): ?>
+                                                <label class="option-label">
+                                                    <?php if ($is_multi_select): ?>
+                                                        <input type="checkbox" 
+                                                               name="answer_<?php echo $index; ?>[]" 
+                                                               value="<?php echo $opt_index; ?>"
+                                                               class="closed-question-checkbox">
+                                                    <?php else: ?>
+                                                        <input type="radio" 
+                                                               name="answer_<?php echo $index; ?>" 
+                                                               value="<?php echo $opt_index; ?>"
+                                                               class="closed-question-radio">
+                                                    <?php endif; ?>
+                                                    <span class="option-letter"><?php echo chr(65 + $opt_index); ?>:</span>
+                                                    <span><?php echo esc_html(isset($option['text']) ? $option['text'] : $option); ?></span>
+                                                </label>
+                                            <?php endforeach; ?>
+                                        </div>
+                                        <?php
+                                        endif;
+                                        break;
+                                        
+                                    case 'open_question':
+                                        // Open Question - Text input with configurable number of fields
+                                        // Supports two formats:
+                                        // 1. Inline blanks: "To complete a [blank] question..." or "Use [field 1] and [field 2]"
+                                        // 2. Separate inputs: Question text followed by labeled answer fields
+                                        
+                                        $field_count = isset($question['field_count']) ? intval($question['field_count']) : 1;
+                                        $question_text = isset($question['question']) ? $question['question'] : '';
+                                        
+                                        // Check for [blank] or [field N] placeholders
+                                        $has_blank_placeholders = (stripos($question_text, '[blank]') !== false);
+                                        $has_field_placeholders = (preg_match('/\[field\s+\d+\]/i', $question_text) > 0);
+                                        
+                                        if ($has_blank_placeholders || $has_field_placeholders) {
+                                            // Inline format - replace placeholders with input fields
+                                            $allowed_html = wp_kses_allowed_html('post');
+                                            $allowed_html['input'] = array(
+                                                'type' => true,
+                                                'name' => true,
+                                                'class' => true,
+                                                'data-field-num' => true,
+                                            );
+                                            
+                                            $processed_text = $question_text;
+                                            
+                                            if ($has_blank_placeholders) {
+                                                // Replace [blank] placeholders sequentially
+                                                $field_num = 1;
+                                                while (stripos($processed_text, '[blank]') !== false && $field_num <= $field_count) {
+                                                    $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_field_' . esc_attr($field_num) . '" class="answer-input-inline open-question-input" data-field-num="' . esc_attr($field_num) . '" />';
+                                                    $processed_text = preg_replace('/\[blank\]/i', $input_field, $processed_text, 1);
+                                                    $field_num++;
+                                                }
+                                            } elseif ($has_field_placeholders) {
+                                                // Replace [field N] placeholders
+                                                preg_match_all('/\[field\s+(\d+)\]/i', $processed_text, $field_matches);
+                                                foreach ($field_matches[0] as $match_index => $placeholder) {
+                                                    $field_num = $field_matches[1][$match_index];
+                                                    $input_field = '<input type="text" name="answer_' . esc_attr($index) . '_field_' . esc_attr($field_num) . '" class="answer-input-inline open-question-input" data-field-num="' . esc_attr($field_num) . '" />';
+                                                    $processed_text = str_replace($placeholder, $input_field, $processed_text);
+                                                }
+                                            }
+                                            
+                                            echo '<div class="open-question-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
+                                        } else {
+                                            // Separate format - show labeled input fields (question text already displayed above)
+                                            ?>
+                                            <div class="open-question-fields">
+                                                <?php for ($field_num = 1; $field_num <= $field_count; $field_num++): ?>
+                                                    <div class="open-question-field">
+                                                        <label>
+                                                            <?php 
+                                                            if ($field_count > 1) {
+                                                                printf(__('Answer %d:', 'ielts-course-manager'), $display_nums['start'] + $field_num - 1);
+                                                            } else {
+                                                                _e('Answer:', 'ielts-course-manager');
+                                                            }
+                                                            ?>
+                                                            <input type="text" 
+                                                                   name="answer_<?php echo $index; ?>_field_<?php echo $field_num; ?>" 
+                                                                   class="answer-input open-question-input"
+                                                                   data-field-num="<?php echo $field_num; ?>">
+                                                        </label>
+                                                    </div>
+                                                <?php endfor; ?>
+                                            </div>
+                                            <?php
+                                        }
+                                        break;
                                 }
                                 ?>
                             </div>
