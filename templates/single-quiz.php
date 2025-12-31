@@ -610,7 +610,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                                        value="<?php echo $opt_index; ?>"
                                                        class="closed-question-radio">
                                             <?php endif; ?>
-                                            <span class="option-letter"><?php echo chr(65 + $opt_index); ?>:</span>
+                                            <span class="option-letter"><?php echo chr(65 + $opt_index); ?>: </span>
                                             <span><?php echo esc_html(isset($option['text']) ? $option['text'] : $option); ?></span>
                                         </label>
                                     <?php endforeach; ?>

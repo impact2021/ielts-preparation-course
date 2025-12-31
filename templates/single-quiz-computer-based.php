@@ -461,8 +461,19 @@ if ($lesson_id) {
                                 </h4>
                                 
                                 <?php
-                                // Don't display question text for dropdown_paragraph, summary_completion, or table_completion - they render their own formatted version
-                                if ($question['type'] !== 'dropdown_paragraph' && $question['type'] !== 'summary_completion' && $question['type'] !== 'table_completion'):
+                                // Don't display question text for certain types that render their own formatted version
+                                $skip_question_text = array('dropdown_paragraph', 'summary_completion', 'table_completion');
+                                
+                                // For open_question, skip if it has placeholders (inline format)
+                                if ($question['type'] === 'open_question') {
+                                    $q_text = isset($question['question']) ? $question['question'] : '';
+                                    $has_placeholders = (stripos($q_text, '[blank]') !== false) || (preg_match('/\[field\s+\d+\]/i', $q_text) > 0);
+                                    if ($has_placeholders) {
+                                        $skip_question_text[] = 'open_question';
+                                    }
+                                }
+                                
+                                if (!in_array($question['type'], $skip_question_text)):
                                 ?>
                                 <div class="question-text"><?php echo wp_kses_post(wpautop($question['question'])); ?></div>
                                 <?php endif; ?>
@@ -869,7 +880,7 @@ if ($lesson_id) {
                                                                value="<?php echo esc_attr($opt_index); ?>"
                                                                class="closed-question-radio">
                                                     <?php endif; ?>
-                                                    <span class="option-letter"><?php echo esc_html(chr(65 + $opt_index)); ?>:</span>
+                                                    <span class="option-letter"><?php echo esc_html(chr(65 + $opt_index)); ?>: </span>
                                                     <span><?php echo esc_html(isset($option['text']) ? $option['text'] : $option); ?></span>
                                                 </label>
                                             <?php endforeach; ?>
