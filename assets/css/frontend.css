@@ -1447,10 +1447,12 @@ body.ielts-course-archive .content-area {
     background: #f1f8f4;
 }
 
+/* Removed red border-left and background from question container
+   Only individual answers show borders now */
 .computer-based-container .quiz-question.question-incorrect,
 .quiz-questions .quiz-question.question-incorrect {
-    border-left: 4px solid #f44336;
-    background: #fef5f5;
+    /* border-left: 4px solid #f44336; */
+    /* background: #fef5f5; */
 }
 
 .question-options .option-label.answer-correct {
@@ -2209,10 +2211,12 @@ select.answer-select-inline.answer-incorrect {
     background: #f1f8f4;
 }
 
+/* Removed red border-left and background from question container for listening quiz
+   Only individual answers show borders now */
 .ielts-listening-practice-quiz .quiz-question.question-incorrect,
 .ielts-listening-exercise-quiz .quiz-question.question-incorrect {
-    border-left: 4px solid #f44336;
-    background: #fef5f5;
+    /* border-left: 4px solid #f44336; */
+    /* background: #fef5f5; */
 }
 
 /* Correct answer highlighting - for both selected correct answers and correct answer hints */

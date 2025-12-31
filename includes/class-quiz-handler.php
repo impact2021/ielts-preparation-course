@@ -812,9 +812,15 @@ class IELTS_CM_Quiz_Handler {
                         $any_answered = true;
                         // Check against correct answers
                         $field_correct_answer = isset($question['field_answers'][$field_num]) ? $question['field_answers'][$field_num] : '';
+                        
+                        // Debug logging
+                        error_log('Open Question Debug - Field ' . $field_num . ': User answer = "' . $user_field_answer . '", Correct answer = "' . $field_correct_answer . '"');
+                        
                         $accepted_answers = explode('|', $field_correct_answer);
                         foreach ($accepted_answers as $accepted) {
-                            if (strcasecmp(trim($accepted), $user_field_answer) === 0) {
+                            $accepted_trimmed = trim($accepted);
+                            error_log('Comparing "' . $user_field_answer . '" with "' . $accepted_trimmed . '" - Result: ' . (strcasecmp($accepted_trimmed, $user_field_answer) === 0 ? 'MATCH' : 'NO MATCH'));
+                            if (strcasecmp($accepted_trimmed, $user_field_answer) === 0) {
                                 $field_correct = true;
                                 break;
                             }
