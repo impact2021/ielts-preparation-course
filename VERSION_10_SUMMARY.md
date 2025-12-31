@@ -1,4 +1,53 @@
-# IELTS Course Manager - Version 10.0 Summary
+# IELTS Course Manager - Version 10.1 Summary
+
+## Version 10.1 Updates
+
+Version 10.1 is a patch release that fixes critical issues with feedback coloring and question rendering across different layouts.
+
+### Key Fixes in Version 10.1
+
+#### 1. Fixed Feedback Coloring Across All Layouts
+**Problem:** Feedback colors were not displaying correctly. Instead of showing green for correct answers and red for incorrect answers, the feedback appeared with plain/inherited colors, making it difficult for students to see which answers were right or wrong.
+
+**Root Cause:** CSS rules were using `background: inherit !important` and `border-color: inherit !important`, which prevented the proper feedback colors from being applied.
+
+**Solution:** Updated CSS rules in `assets/css/frontend.css` to explicitly set proper colors for all quiz layouts:
+- ✅ **Correct answers:** Green background (#4caf50) with white text
+- ✗ **Incorrect answers:** Red background (#f44336) with white text  
+- **Correct answers (not selected):** Transparent background with green border
+
+**Files Changed:**
+- `assets/css/frontend.css` (lines 436-456 for standard quiz, lines 2199-2225 for listening quizzes)
+
+**Affected Layouts:**
+- 1 Column Exercise (`.ielts-single-quiz`)
+- Listening Practice Quiz (`.ielts-listening-practice-quiz`)
+- Listening Exercise Quiz (`.ielts-listening-exercise-quiz`)
+
+#### 2. Fixed Missing Question Types in 2-Column Layouts
+**Problem:** Questions using `closed_question` and `open_question` types were not rendering in 2-column layouts (2 Column Reading, 2 Column Listening, 2 Column Exercise). Users would only see "Question 1" but no actual question content or input fields.
+
+**Root Cause:** The `single-quiz-computer-based.php` template was missing the case handlers for `closed_question` and `open_question` types, while `single-quiz.php` had them.
+
+**Solution:** Added the missing question type handlers to `single-quiz-computer-based.php`:
+- **closed_question:** Supports both single-select (radio buttons) and multi-select (checkboxes) based on `correct_answer_count`
+- **open_question:** Supports inline blanks (`[blank]` or `[field N]`) and separate input fields
+
+**Files Changed:**
+- `templates/single-quiz-computer-based.php` (added lines 840-949)
+
+**Benefits:**
+- Questions now render consistently across ALL layout types
+- No need for different question formats depending on layout choice
+- Single source of truth for question rendering logic
+
+### Version Update
+- **Plugin version:** Updated from 10.0 to 10.1
+- **Version constant:** `IELTS_CM_VERSION` updated in `ielts-course-manager.php`
+
+---
+
+## Version 10.0 Summary
 
 ## Overview
 Version 10.0 is a major update that simplifies the layout type system and fixes critical feedback display issues.
@@ -142,6 +191,6 @@ For questions or issues related to Version 10.0, please refer to:
 - Support forum
 
 ---
-**Version:** 10.0  
-**Release Date:** 2024  
+**Version:** 10.1  
+**Release Date:** December 2024  
 **Compatibility:** WordPress 5.8+, PHP 7.2+
