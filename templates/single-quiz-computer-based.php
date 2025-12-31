@@ -24,10 +24,15 @@ if (!is_array($reading_texts)) {
 }
 $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
 $open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
-$cbt_test_type = get_post_meta($quiz->ID, '_ielts_cm_cbt_test_type', true);
-if (!$cbt_test_type) {
-    $cbt_test_type = 'reading';
+
+// Determine test type from layout_type
+$test_type = 'exercise'; // default
+if ($layout_type === 'two_column_reading') {
+    $test_type = 'reading';
+} elseif ($layout_type === 'two_column_listening') {
+    $test_type = 'listening';
 }
+
 $audio_url = get_post_meta($quiz->ID, '_ielts_cm_audio_url', true);
 $transcript = get_post_meta($quiz->ID, '_ielts_cm_transcript', true);
 $audio_sections = get_post_meta($quiz->ID, '_ielts_cm_audio_sections', true);
@@ -154,7 +159,7 @@ if ($lesson_id) {
 }
 ?>
 
-<div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>" data-next-url="<?php echo esc_attr($next_url); ?>" data-test-type="<?php echo esc_attr($cbt_test_type); ?>">
+<div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>" data-next-url="<?php echo esc_attr($next_url); ?>" data-test-type="<?php echo esc_attr($test_type); ?>">
     <?php 
     // Show fullscreen notice only if popup is enabled AND we're not already in fullscreen mode
     $show_fullscreen_notice = $open_as_popup && !$is_fullscreen;
@@ -256,7 +261,7 @@ if ($lesson_id) {
             <div class="computer-based-container">
                 <!-- Left Column: Reading Texts or Audio Player -->
                 <div class="reading-column">
-                    <?php if ($cbt_test_type === 'listening'): ?>
+                    <?php if ($test_type === 'listening'): ?>
                         <!-- Audio Player for Listening Test -->
                         <div class="cbt-audio-player" id="listening-audio-player">
                             <?php if (!empty($audio_url)): ?>

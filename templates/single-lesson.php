@@ -189,11 +189,11 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                             }
                             
                             $type_badge_class = 'quiz';
-                            // Check if this is a computer-based quiz with popup enabled
+                            // Check if this is a two-column quiz with popup enabled
                             $layout_type = get_post_meta($post_item->ID, '_ielts_cm_layout_type', true);
                             $open_as_popup = get_post_meta($post_item->ID, '_ielts_cm_open_as_popup', true);
-                            $is_cbt = ($layout_type === 'computer_based');
-                            $use_fullscreen = $is_cbt && $open_as_popup;
+                            $is_two_column = in_array($layout_type, array('two_column_reading', 'two_column_listening', 'two_column_exercise'));
+                            $use_fullscreen = $is_two_column && $open_as_popup;
                         }
                         ?>
                         <tr class="content-row <?php echo $is_completed ? 'completed' : ''; ?>">

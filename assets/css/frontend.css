@@ -1012,16 +1012,7 @@ body.ielts-course-archive .content-area {
     border-color: #0073aa;
 }
 
-/* Prevent hover from overriding feedback colors */
-.ielts-computer-based-quiz .option-label.answer-correct,
-.ielts-computer-based-quiz .option-label.answer-correct:hover,
-.ielts-computer-based-quiz .option-label.answer-incorrect,
-.ielts-computer-based-quiz .option-label.answer-incorrect:hover,
-.ielts-computer-based-quiz .option-label.answer-correct-highlight,
-.ielts-computer-based-quiz .option-label.answer-correct-highlight:hover {
-    background: inherit !important;
-    border-color: inherit !important;
-}
+/* Removed problematic CSS that was preventing feedback colors from showing */
 
 .ielts-computer-based-quiz .option-label input[type="radio"] {
     margin-right: 10px;

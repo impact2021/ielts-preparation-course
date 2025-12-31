@@ -452,8 +452,8 @@ body.ielts-resource-single .content-area {
                                     // Check if quiz should open in fullscreen
                                     $layout_type = get_post_meta($prev_item['post']->ID, '_ielts_cm_layout_type', true);
                                     $open_as_popup = get_post_meta($prev_item['post']->ID, '_ielts_cm_open_as_popup', true);
-                                    $is_cbt = ($layout_type === 'computer_based');
-                                    $use_fullscreen = $is_cbt && $open_as_popup;
+                                    $is_two_column = in_array($layout_type, array('two_column_reading', 'two_column_listening', 'two_column_exercise'));
+                                    $use_fullscreen = $is_two_column && $open_as_popup;
                                     
                                     if ($use_fullscreen) {
                                         $prev_url = add_query_arg('fullscreen', '1', get_permalink($prev_item['post']->ID));
@@ -483,8 +483,8 @@ body.ielts-resource-single .content-area {
                                     // Check if quiz should open in fullscreen
                                     $layout_type = get_post_meta($next_item['post']->ID, '_ielts_cm_layout_type', true);
                                     $open_as_popup = get_post_meta($next_item['post']->ID, '_ielts_cm_open_as_popup', true);
-                                    $is_cbt = ($layout_type === 'computer_based');
-                                    $use_fullscreen = $is_cbt && $open_as_popup;
+                                    $is_two_column = in_array($layout_type, array('two_column_reading', 'two_column_listening', 'two_column_exercise'));
+                                    $use_fullscreen = $is_two_column && $open_as_popup;
                                     
                                     if ($use_fullscreen) {
                                         $next_url = add_query_arg('fullscreen', '1', get_permalink($next_item['post']->ID));
