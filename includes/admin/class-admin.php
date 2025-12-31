@@ -1091,8 +1091,23 @@ class IELTS_CM_Admin {
             $questions = array();
         }
         
+        // Map old layout types to new ones for backward compatibility
         if (!$layout_type) {
             $layout_type = 'two_column_exercise';
+        } elseif ($layout_type === 'computer_based') {
+            // Check old cbt_test_type for backward compatibility
+            $old_cbt_test_type = get_post_meta($post->ID, '_ielts_cm_cbt_test_type', true);
+            if ($old_cbt_test_type === 'listening') {
+                $layout_type = 'two_column_listening';
+            } elseif ($old_cbt_test_type === 'reading') {
+                $layout_type = 'two_column_reading';
+            } else {
+                $layout_type = 'two_column_exercise';
+            }
+        } elseif ($layout_type === 'standard') {
+            $layout_type = 'one_column_exercise';
+        } elseif ($layout_type === 'listening_practice' || $layout_type === 'listening_exercise') {
+            $layout_type = 'two_column_listening';
         }
         
         // Ensure we have an array for reading texts
