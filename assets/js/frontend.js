@@ -260,27 +260,34 @@
                                     quizContainer.hasClass('ielts-listening-practice-quiz') || 
                                     quizContainer.hasClass('ielts-listening-exercise-quiz');
                         
-                        var html = '<div class="quiz-result ' + (isPassing ? 'pass' : 'fail') + '">';
-                        html += '<h3>' + (isPassing ? 'Congratulations! You Passed!' : 'Quiz Completed') + '</h3>';
+                        // Get exercise label from result, default to 'Exercise'
+                        var exerciseLabel = result.exercise_label || 'Exercise';
                         
-                        // Display score based on type (band score or percentage)
+                        var html = '<div class="quiz-result ' + (isPassing ? 'pass' : 'fail') + '">';
+                        html += '<h3>' + (isPassing ? 'Congratulations! You Passed!' : exerciseLabel + ' completed') + '</h3>';
+                        
+                        // Display score based on type (band score or percentage) with larger font
                         if (result.display_type === 'band') {
+                            html += '<div class="quiz-score-display">';
                             html += '<p><strong>Your Score:</strong> ' + result.score + ' / ' + result.max_score + ' correct</p>';
-                            html += '<p><strong>IELTS Band Score:</strong> ' + result.display_score + '</p>';
+                            html += '<p class="score-large"><strong>IELTS Band Score:</strong> ' + result.display_score + '</p>';
+                            html += '</div>';
                         } else {
-                            html += '<p><strong>Your Score:</strong> ' + result.score + ' / ' + result.max_score + ' (' + result.percentage + '%)</p>';
+                            html += '<div class="quiz-score-display">';
+                            html += '<p class="score-large">' + result.score + ' / ' + result.max_score + ' (' + result.percentage + '%)</p>';
+                            html += '</div>';
                         }
                         
-                        // Show time information
+                        // Show time information only if there was a timer
                         if (timerMinutes && timerMinutes > 0) {
                             html += '<p><strong>Time Limit:</strong> ' + timerMinutes + ' minutes</p>';
+                            html += '<p><strong>Time Taken:</strong> ' + timeTakenFormatted + '</p>';
                         }
-                        html += '<p><strong>Time Taken:</strong> ' + timeTakenFormatted + '</p>';
                         
                         if (isPassing) {
-                            html += '<p>Great job! You have passed this quiz.</p>';
+                            html += '<p class="quiz-comment">Great job! You have passed this quiz.</p>';
                         } else {
-                            html += '<p>Keep studying and try again to improve your score!</p>';
+                            html += '<p class="quiz-comment">Keep studying and try again to improve your score!</p>';
                         }
                         
                         // Question-by-question feedback is now shown via visual highlighting (green/red colors) in the form
@@ -831,6 +838,7 @@
                                 }
                                 
                                 var navLinksHtml = timerElement.find('.timer-left-section').html() || '';
+                                var rightSectionHtml = timerElement.find('.timer-right-section').html() || '';
                                 
                                 var scoreHtml = '';
                                 if (result.display_type === 'band') {
@@ -839,7 +847,10 @@
                                     scoreHtml = '<div class="timer-content"><strong>Score:</strong> <span>' + result.percentage + '%</span></div>';
                                 }
                                 
-                                timerElement.html('<div class="timer-left-section">' + navLinksHtml + '</div>' + scoreHtml);
+                                timerElement.html('<div class="timer-left-section">' + navLinksHtml + '</div>' + scoreHtml + '<div class="timer-right-section">' + rightSectionHtml + '</div>');
+                                
+                                // Make sure the bottom bar is visible (it will be shown when "Review my answers" is clicked)
+                                timerElement.addClass('quiz-completed-bar');
                             }
                             
                             // For listening quizzes, show transcript after results are displayed

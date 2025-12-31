@@ -1624,10 +1624,32 @@ select.answer-select-inline.answer-incorrect {
     margin: 0;
     padding: 0;
     border: none;
+    text-align: center;
 }
 
 .cbt-result-modal-body .quiz-result h3 {
     margin-top: 0;
+}
+
+.cbt-result-modal-body .quiz-result .quiz-score-display {
+    margin: 20px 0;
+}
+
+.cbt-result-modal-body .quiz-result .score-large {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #0073aa;
+}
+
+.cbt-result-modal-body .quiz-result .quiz-comment {
+    margin: 25px 0;
+}
+
+.cbt-result-modal-body .quiz-result .quiz-actions {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
 }
 
 /* Question feedback message displayed during answer review */
