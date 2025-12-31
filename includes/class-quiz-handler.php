@@ -175,6 +175,7 @@ class IELTS_CM_Quiz_Handler {
                 $field_count = isset($question['field_count']) ? intval($question['field_count']) : 1;
                 $field_feedback_arr = isset($question['field_feedback']) && is_array($question['field_feedback']) ? $question['field_feedback'] : array();
                 $field_feedbacks = array();
+                $field_results = array();
                 $all_correct = true;
                 $any_answered = false;
                 
@@ -192,6 +193,9 @@ class IELTS_CM_Quiz_Handler {
                         }
                     }
                 }
+                
+                // Get the display question numbers for this question
+                $display_start = isset($question_display_numbers[$index]['start']) ? $question_display_numbers[$index]['start'] : 1;
                 
                 for ($field_num = 1; $field_num <= $field_count; $field_num++) {
                     $user_field_answer = isset($user_answers[$field_num]) ? trim($user_answers[$field_num]) : '';
@@ -213,24 +217,39 @@ class IELTS_CM_Quiz_Handler {
                         
                         if ($field_correct) {
                             $points_earned += 1;
-                            // Add correct feedback for this field
+                            // Calculate the question number for this field
+                            $field_question_num = $display_start + $field_num - 1;
+                            
+                            // Add correct feedback for this field with question number
                             if (isset($field_feedback_arr[$field_num]['correct']) && !empty($field_feedback_arr[$field_num]['correct'])) {
-                                $field_feedbacks[] = '<strong>' . sprintf(__('Field %d:', 'ielts-course-manager'), $field_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['correct']);
+                                $field_feedbacks[] = '<strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['correct']);
                             }
                         } else {
                             $all_correct = false;
-                            // Add incorrect feedback for this field
+                            // Calculate the question number for this field
+                            $field_question_num = $display_start + $field_num - 1;
+                            
+                            // Add incorrect feedback for this field with question number
                             if (isset($field_feedback_arr[$field_num]['incorrect']) && !empty($field_feedback_arr[$field_num]['incorrect'])) {
-                                $field_feedbacks[] = '<strong>' . sprintf(__('Field %d:', 'ielts-course-manager'), $field_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['incorrect']);
+                                $field_feedbacks[] = '<strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['incorrect']);
                             }
                         }
                     } else {
                         $all_correct = false;
-                        // Add no answer feedback for this field
+                        // Calculate the question number for this field
+                        $field_question_num = $display_start + $field_num - 1;
+                        
+                        // Add no answer feedback for this field with question number
                         if (isset($field_feedback_arr[$field_num]['no_answer']) && !empty($field_feedback_arr[$field_num]['no_answer'])) {
-                            $field_feedbacks[] = '<strong>' . sprintf(__('Field %d:', 'ielts-course-manager'), $field_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['no_answer']);
+                            $field_feedbacks[] = '<strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['no_answer']);
                         }
                     }
+                    
+                    // Store field result for frontend
+                    $field_results[$field_num] = array(
+                        'correct' => $field_correct,
+                        'user_answer' => $user_field_answer
+                    );
                 }
                 
                 $score += $points_earned;
@@ -238,6 +257,11 @@ class IELTS_CM_Quiz_Handler {
                 
                 // Combine all field feedbacks
                 $feedback = !empty($field_feedbacks) ? implode('<br>', $field_feedbacks) : '';
+                
+                // Set correct_answer to include field_results for frontend feedback
+                $correct_answer = array(
+                    'field_results' => $field_results
+                );
             } else {
                 // Unknown or unsupported question type - treat as incorrect with feedback
                 $feedback = __('This question type is no longer supported. Please contact the administrator.', 'ielts-course-manager');
