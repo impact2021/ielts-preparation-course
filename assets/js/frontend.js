@@ -702,6 +702,8 @@
                                 
                                 var correctAnswer = questionResult.correct_answer;
                                 
+                                // Check if multi-select mode: correct_answer will have correct_indices array
+                                // Single-select mode: correct_answer is just the index number
                                 if (correctAnswer && correctAnswer.correct_indices) {
                                     // Multi-select mode - similar to multi_select
                                     // Get option feedback from correct_answer object
