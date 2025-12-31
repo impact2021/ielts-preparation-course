@@ -261,6 +261,20 @@ class IELTS_CM_Quiz_Handler {
                 $course_url = get_permalink($course_id);
             }
             
+            // Get exercise label for display
+            $exercise_label = get_post_meta($quiz_id, '_ielts_cm_exercise_label', true);
+            if (!$exercise_label) {
+                $exercise_label = 'exercise';
+            }
+            
+            // Convert exercise label to display text
+            $label_display_map = array(
+                'exercise' => __('Exercise', 'ielts-course-manager'),
+                'end_of_lesson_test' => __('End of lesson test', 'ielts-course-manager'),
+                'practice_test' => __('Practice test', 'ielts-course-manager')
+            );
+            $exercise_label_display = isset($label_display_map[$exercise_label]) ? $label_display_map[$exercise_label] : $label_display_map['exercise'];
+            
             wp_send_json_success(array(
                 'message' => 'Quiz submitted successfully',
                 'score' => $score,
@@ -270,7 +284,8 @@ class IELTS_CM_Quiz_Handler {
                 'display_type' => $display_score['type'],
                 'question_results' => $question_results,
                 'next_url' => $next_url,
-                'course_url' => $course_url
+                'course_url' => $course_url,
+                'exercise_label' => $exercise_label_display
             ));
         } else {
             wp_send_json_error(array('message' => 'Failed to save quiz result'));
