@@ -1482,10 +1482,10 @@ body.ielts-course-archive .content-area {
 }
 
 /* Add tick mark for correctly selected answers */
-.question-options .option-label.answer-correct::before {
-    content: '✓';
+.question-options .option-label.answer-correct span::after {
+    content: ' ✓';
     display: inline;
-    margin-right: 5px;
+    margin-left: 5px;
     font-size: 20px;
     font-weight: bold;
     color: #fff;
@@ -1499,10 +1499,10 @@ body.ielts-course-archive .content-area {
 }
 
 /* Add cross mark for incorrectly selected answers */
-.question-options .option-label.answer-incorrect::before {
-    content: '✗';
+.question-options .option-label.answer-incorrect span::after {
+    content: ' ✗';
     display: inline;
-    margin-right: 5px;
+    margin-left: 5px;
     font-size: 20px;
     font-weight: bold;
     color: #fff;
@@ -2329,11 +2329,11 @@ select.answer-select-inline.answer-incorrect {
 }
 
 /* Add tick mark for correctly selected answers in listening quizzes */
-.ielts-listening-practice-quiz .option-label.answer-correct::before,
-.ielts-listening-exercise-quiz .option-label.answer-correct::before {
-    content: '✓';
+.ielts-listening-practice-quiz .option-label.answer-correct span::after,
+.ielts-listening-exercise-quiz .option-label.answer-correct span::after {
+    content: ' ✓';
     display: inline;
-    margin-right: 5px;
+    margin-left: 5px;
     font-size: 20px;
     font-weight: bold;
     color: #fff;
@@ -2359,11 +2359,11 @@ select.answer-select-inline.answer-incorrect {
 }
 
 /* Add cross mark for incorrectly selected answers in listening quizzes */
-.ielts-listening-practice-quiz .option-label.answer-incorrect::before,
-.ielts-listening-exercise-quiz .option-label.answer-incorrect::before {
-    content: '✗';
+.ielts-listening-practice-quiz .option-label.answer-incorrect span::after,
+.ielts-listening-exercise-quiz .option-label.answer-incorrect span::after {
+    content: ' ✗';
     display: inline;
-    margin-right: 5px;
+    margin-left: 5px;
     font-size: 20px;
     font-weight: bold;
     color: #fff;
