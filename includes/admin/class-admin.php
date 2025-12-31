@@ -3355,14 +3355,7 @@ class IELTS_CM_Admin {
             <?php if (isset($question['type']) && $question['type'] === 'closed_question'): ?>
             <div class="closed-question-help" style="padding: 10px; background: #fff3cd; border-left: 4px solid #ffc107; margin-bottom: 15px;">
                 <strong><?php _e('Closed Question Instructions:', 'ielts-course-manager'); ?></strong><br>
-                <small><?php _e('Simply enter your question text above. The options you define below will be shown as radio buttons (if 1 correct answer) or checkboxes (if 2+ correct answers). You do NOT need to use [field 1] or similar placeholders for closed questions.', 'ielts-course-manager'); ?></small>
-            </div>
-            <div class="closed-question-settings" style="padding: 10px; background: #f0f0f1; margin-bottom: 15px; border-left: 4px solid #72aee6;">
-                <p>
-                    <label><?php _e('Number of Correct Answers', 'ielts-course-manager'); ?></label><br>
-                    <input type="number" name="questions[<?php echo $index; ?>][correct_answer_count]" value="<?php echo esc_attr(isset($question['correct_answer_count']) ? $question['correct_answer_count'] : 1); ?>" min="1" style="width: 100px;"><br>
-                    <small><?php _e('How many correct answers this question has. This equals the number of question numbers it covers (1 = single select, 2+ = multi-select).', 'ielts-course-manager'); ?></small>
-                </p>
+                <small><?php _e('Simply enter your question text above. The options you define below will be shown as radio buttons (if 1 correct answer) or checkboxes (if 2+ correct answers). Check the options that are correct. The number of correct answers automatically determines how many question numbers this covers. You do NOT need to use [field 1] or similar placeholders for closed questions.', 'ielts-course-manager'); ?></small>
             </div>
             <?php endif; ?>
             
@@ -3959,7 +3952,9 @@ class IELTS_CM_Admin {
                         $question_data['options'] = isset($question['options']) ? sanitize_textarea_field($question['options']) : '';
                         $question_data['correct_answer'] = isset($question['correct_answer']) ? sanitize_text_field($question['correct_answer']) : '';
                     } elseif ($question['type'] === 'closed_question') {
-                        // Handle closed_question - save options and correct_answer_count
+                        // Handle closed_question - save options and auto-calculate correct_answer_count
+                        $correct_count = 0; // Will be calculated from checked options
+                        
                         if (isset($question['mc_options']) && is_array($question['mc_options'])) {
                             $mc_options = array();
                             $options_text = array();
@@ -3969,9 +3964,14 @@ class IELTS_CM_Admin {
                                     continue; // Skip empty options
                                 }
                                 
+                                $is_correct = !empty($option['is_correct']);
+                                if ($is_correct) {
+                                    $correct_count++; // Count the correct answers
+                                }
+                                
                                 $mc_options[] = array(
                                     'text' => sanitize_text_field($option['text']),
-                                    'is_correct' => !empty($option['is_correct']),
+                                    'is_correct' => $is_correct,
                                     'feedback' => isset($option['feedback']) ? wp_kses_post($option['feedback']) : ''
                                 );
                                 
@@ -3982,8 +3982,8 @@ class IELTS_CM_Admin {
                             $question_data['options'] = implode("\n", $options_text);
                         }
                         
-                        // Save correct_answer_count
-                        $question_data['correct_answer_count'] = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
+                        // Auto-calculate correct_answer_count from number of checked options (minimum 1)
+                        $question_data['correct_answer_count'] = max(1, $correct_count);
                         
                         // Auto-calculate points based on correct_answer_count
                         $question_data['points'] = $question_data['correct_answer_count'];

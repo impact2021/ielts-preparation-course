@@ -715,20 +715,22 @@ class IELTS_CM_Quiz_Handler {
                 
                 $score += $points_earned;
             } elseif ($question['type'] === 'closed_question') {
-                // Closed question - multiple choice with configurable correct answer count
+                // Closed question - multiple choice with auto-calculated correct answer count
                 $correct_answer_count = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
                 $user_answer = isset($answers[$index]) ? $answers[$index] : null;
+                
+                // Build feedback from option-specific feedback
+                $option_feedbacks = array();
+                $mc_options = isset($question['mc_options']) && is_array($question['mc_options']) ? $question['mc_options'] : array();
                 
                 if ($correct_answer_count > 1) {
                     // Multi-select mode
                     $user_selections = is_array($user_answer) ? $user_answer : array();
                     $correct_indices = array();
                     
-                    if (isset($question['mc_options']) && is_array($question['mc_options'])) {
-                        foreach ($question['mc_options'] as $opt_idx => $option) {
-                            if (!empty($option['is_correct'])) {
-                                $correct_indices[] = $opt_idx;
-                            }
+                    foreach ($mc_options as $opt_idx => $option) {
+                        if (!empty($option['is_correct'])) {
+                            $correct_indices[] = $opt_idx;
                         }
                     }
                     
@@ -738,32 +740,52 @@ class IELTS_CM_Quiz_Handler {
                     $points_earned = count($correctly_selected);
                     $is_correct = (count($correctly_selected) === count($correct_indices) && empty($incorrectly_selected));
                     
-                    if ($is_correct && isset($question['correct_feedback'])) {
-                        $feedback = wp_kses_post($question['correct_feedback']);
-                    } elseif (!empty($user_selections) && isset($question['incorrect_feedback'])) {
-                        $feedback = wp_kses_post($question['incorrect_feedback']);
-                    } elseif (empty($user_selections) && isset($question['no_answer_feedback'])) {
+                    // Collect feedback from selected options
+                    if (!empty($user_selections)) {
+                        foreach ($user_selections as $sel_idx) {
+                            if (isset($mc_options[$sel_idx]['feedback']) && !empty($mc_options[$sel_idx]['feedback'])) {
+                                $option_feedbacks[] = $mc_options[$sel_idx]['feedback'];
+                            }
+                        }
+                        $feedback = !empty($option_feedbacks) ? implode('<br>', $option_feedbacks) : '';
+                    } elseif (isset($question['no_answer_feedback'])) {
                         $feedback = wp_kses_post($question['no_answer_feedback']);
                     }
                     
                     $score += $points_earned;
                 } else {
                     // Single-select mode
-                    $is_correct = $this->check_answer($question, $user_answer);
+                    $correct_idx = null;
+                    foreach ($mc_options as $opt_idx => $option) {
+                        if (!empty($option['is_correct'])) {
+                            $correct_idx = $opt_idx;
+                            break;
+                        }
+                    }
+                    
+                    $is_correct = ($user_answer !== null && $user_answer !== '' && $user_answer == $correct_idx);
+                    
                     if ($is_correct) {
                         $points_earned = 1;
-                        $feedback = isset($question['correct_feedback']) ? wp_kses_post($question['correct_feedback']) : '';
+                        // Use feedback from the selected correct option
+                        if (isset($mc_options[$user_answer]['feedback']) && !empty($mc_options[$user_answer]['feedback'])) {
+                            $feedback = wp_kses_post($mc_options[$user_answer]['feedback']);
+                        }
                     } elseif ($user_answer === null || $user_answer === '') {
                         $feedback = isset($question['no_answer_feedback']) ? wp_kses_post($question['no_answer_feedback']) : '';
                     } else {
-                        $feedback = isset($question['incorrect_feedback']) ? wp_kses_post($question['incorrect_feedback']) : '';
+                        // Use feedback from the selected incorrect option
+                        if (isset($mc_options[$user_answer]['feedback']) && !empty($mc_options[$user_answer]['feedback'])) {
+                            $feedback = wp_kses_post($mc_options[$user_answer]['feedback']);
+                        }
                     }
                     $score += $points_earned;
                 }
             } elseif ($question['type'] === 'open_question') {
                 // Open question - text input with configurable field count
                 $field_count = isset($question['field_count']) ? intval($question['field_count']) : 1;
-                $field_results = array();
+                $field_feedback_arr = isset($question['field_feedback']) && is_array($question['field_feedback']) ? $question['field_feedback'] : array();
+                $field_feedbacks = array();
                 $all_correct = true;
                 $any_answered = false;
                 
@@ -786,29 +808,31 @@ class IELTS_CM_Quiz_Handler {
                         
                         if ($field_correct) {
                             $points_earned += 1;
+                            // Add correct feedback for this field
+                            if (isset($field_feedback_arr[$field_num]['correct']) && !empty($field_feedback_arr[$field_num]['correct'])) {
+                                $field_feedbacks[] = '<strong>' . sprintf(__('Field %d:', 'ielts-course-manager'), $field_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['correct']);
+                            }
                         } else {
                             $all_correct = false;
+                            // Add incorrect feedback for this field
+                            if (isset($field_feedback_arr[$field_num]['incorrect']) && !empty($field_feedback_arr[$field_num]['incorrect'])) {
+                                $field_feedbacks[] = '<strong>' . sprintf(__('Field %d:', 'ielts-course-manager'), $field_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['incorrect']);
+                            }
                         }
                     } else {
                         $all_correct = false;
+                        // Add no answer feedback for this field
+                        if (isset($field_feedback_arr[$field_num]['no_answer']) && !empty($field_feedback_arr[$field_num]['no_answer'])) {
+                            $field_feedbacks[] = '<strong>' . sprintf(__('Field %d:', 'ielts-course-manager'), $field_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['no_answer']);
+                        }
                     }
-                    
-                    $field_results[$field_num] = array(
-                        'correct' => $field_correct,
-                        'user_answer' => $user_field_answer
-                    );
                 }
                 
                 $score += $points_earned;
                 $is_correct = $all_correct && $any_answered;
                 
-                if ($is_correct && isset($question['correct_feedback'])) {
-                    $feedback = wp_kses_post($question['correct_feedback']);
-                } elseif ($any_answered && isset($question['incorrect_feedback'])) {
-                    $feedback = wp_kses_post($question['incorrect_feedback']);
-                } elseif (!$any_answered && isset($question['no_answer_feedback'])) {
-                    $feedback = wp_kses_post($question['no_answer_feedback']);
-                }
+                // Combine all field feedbacks
+                $feedback = !empty($field_feedbacks) ? implode('<br>', $field_feedbacks) : '';
             } elseif (isset($answers[$index])) {
                 // Check if the answer is effectively empty (for text-based questions)
                 $answer_is_empty = false;
