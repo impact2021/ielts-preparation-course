@@ -1574,18 +1574,6 @@ class IELTS_CM_Quiz_Handler {
      */
     public static function get_quiz_types() {
         return array(
-            'multiple_choice' => __('Multiple Choice', 'ielts-course-manager'),
-            'matching_classifying' => __('Matching and classifying questions', 'ielts-course-manager'),
-            'multi_select' => __('Multi Select', 'ielts-course-manager'),
-            'true_false' => __('True/False/Not Given', 'ielts-course-manager'),
-            'headings' => __('Headings Questions', 'ielts-course-manager'),
-            'short_answer' => __('Short Answer Questions', 'ielts-course-manager'),
-            'sentence_completion' => __('Sentence Completion Questions', 'ielts-course-manager'),
-            'summary_completion' => __('Summary Completion Questions', 'ielts-course-manager'),
-            'dropdown_paragraph' => __('Dropdown Paragraph Questions', 'ielts-course-manager'),
-            'table_completion' => __('Table Completion Questions', 'ielts-course-manager'),
-            'labelling' => __('Labelling Style Questions', 'ielts-course-manager'),
-            'locating_information' => __('Locating Information Questions', 'ielts-course-manager'),
             'closed_question' => __('Closed Question (Multiple Choice with configurable answers)', 'ielts-course-manager'),
             'open_question' => __('Open Question (Text input with configurable fields)', 'ielts-course-manager')
         );
