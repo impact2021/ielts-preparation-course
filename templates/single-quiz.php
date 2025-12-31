@@ -175,6 +175,11 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 } else {
                                     printf(__('Questions %d-%d', 'ielts-course-manager'), $display_nums['start'], $display_nums['end']);
                                 }
+                                // Show points for closed and open questions too
+                                $display_points = $display_nums['count'];
+                                ?>
+                                <span class="question-points">(<?php printf(_n('%s point', '%s points', $display_points, 'ielts-course-manager'), $display_points); ?>)</span>
+                                <?php
                             } else {
                                 if ($display_nums['start'] === $display_nums['end']) {
                                     printf(__('Question %d', 'ielts-course-manager'), $display_nums['start']);
@@ -610,7 +615,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                                        value="<?php echo $opt_index; ?>"
                                                        class="closed-question-radio">
                                             <?php endif; ?>
-                                            <span class="option-letter"><?php echo chr(65 + $opt_index); ?>: </span>
+                                            <span class="option-letter"><?php echo chr(65 + $opt_index); ?>:</span> 
                                             <span><?php echo esc_html(isset($option['text']) ? $option['text'] : $option); ?></span>
                                         </label>
                                     <?php endforeach; ?>
