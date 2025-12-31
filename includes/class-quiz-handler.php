@@ -200,6 +200,9 @@ class IELTS_CM_Quiz_Handler {
                 for ($field_num = 1; $field_num <= $field_count; $field_num++) {
                     $user_field_answer = isset($user_answers[$field_num]) ? trim($user_answers[$field_num]) : '';
                     
+                    // Calculate the question number for this field
+                    $field_question_num = $display_start + $field_num - 1;
+                    
                     $field_correct = false;
                     if (!empty($user_field_answer)) {
                         $any_answered = true;
@@ -217,18 +220,12 @@ class IELTS_CM_Quiz_Handler {
                         
                         if ($field_correct) {
                             $points_earned += 1;
-                            // Calculate the question number for this field
-                            $field_question_num = $display_start + $field_num - 1;
-                            
                             // Add correct feedback for this field with question number
                             if (isset($field_feedback_arr[$field_num]['correct']) && !empty($field_feedback_arr[$field_num]['correct'])) {
                                 $field_feedbacks[] = '<strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['correct']);
                             }
                         } else {
                             $all_correct = false;
-                            // Calculate the question number for this field
-                            $field_question_num = $display_start + $field_num - 1;
-                            
                             // Add incorrect feedback for this field with question number
                             if (isset($field_feedback_arr[$field_num]['incorrect']) && !empty($field_feedback_arr[$field_num]['incorrect'])) {
                                 $field_feedbacks[] = '<strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['incorrect']);
@@ -236,9 +233,6 @@ class IELTS_CM_Quiz_Handler {
                         }
                     } else {
                         $all_correct = false;
-                        // Calculate the question number for this field
-                        $field_question_num = $display_start + $field_num - 1;
-                        
                         // Add no answer feedback for this field with question number
                         if (isset($field_feedback_arr[$field_num]['no_answer']) && !empty($field_feedback_arr[$field_num]['no_answer'])) {
                             $field_feedbacks[] = '<strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['no_answer']);
