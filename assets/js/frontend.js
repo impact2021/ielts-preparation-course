@@ -1629,7 +1629,7 @@
                         var currentTimeDisplay = $('#audio-current-time');
                         var durationDisplay = $('#audio-duration');
                         
-                        <!-- Update duration when metadata is loaded
+                        // Update duration when metadata is loaded
                         audioElement.addEventListener('loadedmetadata', function() {
                             var duration = audioElement.duration;
                             if (isFinite(duration) && duration > 0) {
