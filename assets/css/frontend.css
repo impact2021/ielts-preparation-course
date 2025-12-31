@@ -1481,7 +1481,7 @@ body.ielts-course-archive .content-area {
 
 /* Add tick mark for correctly selected answers */
 .question-options .option-label.answer-correct::before {
-    content: '✓ ';
+    content: '✓';
     display: inline;
     margin-right: 5px;
     font-size: 20px;
@@ -1498,7 +1498,7 @@ body.ielts-course-archive .content-area {
 
 /* Add cross mark for incorrectly selected answers */
 .question-options .option-label.answer-incorrect::before {
-    content: '✗ ';
+    content: '✗';
     display: inline;
     margin-right: 5px;
     font-size: 20px;
@@ -1658,7 +1658,6 @@ select.answer-select-inline.answer-incorrect {
     font-size: 0.9em;
     line-height: 1.5;
     color: #fff;
-}
 }
 
 /* Return to course link on fullscreen page */
@@ -2297,7 +2296,7 @@ select.answer-select-inline.answer-incorrect {
 /* Add tick mark for correctly selected answers in listening quizzes */
 .ielts-listening-practice-quiz .option-label.answer-correct::before,
 .ielts-listening-exercise-quiz .option-label.answer-correct::before {
-    content: '✓ ';
+    content: '✓';
     display: inline;
     margin-right: 5px;
     font-size: 20px;
@@ -2327,7 +2326,7 @@ select.answer-select-inline.answer-incorrect {
 /* Add cross mark for incorrectly selected answers in listening quizzes */
 .ielts-listening-practice-quiz .option-label.answer-incorrect::before,
 .ielts-listening-exercise-quiz .option-label.answer-incorrect::before {
-    content: '✗ ';
+    content: '✗';
     display: inline;
     margin-right: 5px;
     font-size: 20px;
