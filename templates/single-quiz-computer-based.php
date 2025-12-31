@@ -855,21 +855,21 @@ if ($lesson_id) {
                                         
                                         if (!empty($options)):
                                         ?>
-                                        <div class="question-options closed-question-options" data-correct-count="<?php echo $correct_answer_count; ?>">
+                                        <div class="question-options closed-question-options" data-correct-count="<?php echo esc_attr($correct_answer_count); ?>">
                                             <?php foreach ($options as $opt_index => $option): ?>
                                                 <label class="option-label">
                                                     <?php if ($is_multi_select): ?>
                                                         <input type="checkbox" 
-                                                               name="answer_<?php echo $index; ?>[]" 
-                                                               value="<?php echo $opt_index; ?>"
+                                                               name="answer_<?php echo esc_attr($index); ?>[]" 
+                                                               value="<?php echo esc_attr($opt_index); ?>"
                                                                class="closed-question-checkbox">
                                                     <?php else: ?>
                                                         <input type="radio" 
-                                                               name="answer_<?php echo $index; ?>" 
-                                                               value="<?php echo $opt_index; ?>"
+                                                               name="answer_<?php echo esc_attr($index); ?>" 
+                                                               value="<?php echo esc_attr($opt_index); ?>"
                                                                class="closed-question-radio">
                                                     <?php endif; ?>
-                                                    <span class="option-letter"><?php echo chr(65 + $opt_index); ?>:</span>
+                                                    <span class="option-letter"><?php echo esc_html(chr(65 + $opt_index)); ?>:</span>
                                                     <span><?php echo esc_html(isset($option['text']) ? $option['text'] : $option); ?></span>
                                                 </label>
                                             <?php endforeach; ?>
@@ -937,9 +937,9 @@ if ($lesson_id) {
                                                             }
                                                             ?>
                                                             <input type="text" 
-                                                                   name="answer_<?php echo $index; ?>_field_<?php echo $field_num; ?>" 
+                                                                   name="answer_<?php echo esc_attr($index); ?>_field_<?php echo esc_attr($field_num); ?>" 
                                                                    class="answer-input open-question-input"
-                                                                   data-field-num="<?php echo $field_num; ?>">
+                                                                   data-field-num="<?php echo esc_attr($field_num); ?>">
                                                         </label>
                                                     </div>
                                                 <?php endfor; ?>
