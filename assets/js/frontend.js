@@ -838,7 +838,11 @@
                                 }
                                 
                                 var navLinksHtml = timerElement.find('.timer-left-section').html() || '';
-                                var rightSectionHtml = timerElement.find('.timer-right-section').html() || '';
+                                
+                                // Remove submit button from right section before preserving HTML
+                                var rightSection = timerElement.find('.timer-right-section').clone();
+                                rightSection.find('button[type="submit"]').remove();
+                                var rightSectionHtml = rightSection.html() || '';
                                 
                                 var scoreHtml = '';
                                 if (result.display_type === 'band') {
