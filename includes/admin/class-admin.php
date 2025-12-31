@@ -1092,7 +1092,7 @@ class IELTS_CM_Admin {
         }
         
         if (!$layout_type) {
-            $layout_type = 'standard';
+            $layout_type = 'two_column_exercise';
         }
         
         // Ensure we have an array for reading texts
@@ -1235,39 +1235,31 @@ class IELTS_CM_Admin {
         <p>
             <label for="ielts_cm_layout_type"><?php _e('Layout Type', 'ielts-course-manager'); ?></label><br>
             <select id="ielts_cm_layout_type" name="ielts_cm_layout_type" style="width: 100%;">
-                <option value="standard" <?php selected($layout_type, 'standard'); ?>><?php _e('Standard Layout', 'ielts-course-manager'); ?></option>
-                <option value="computer_based" <?php selected($layout_type, 'computer_based'); ?>><?php _e('Computer-Based IELTS Layout (Two Columns)', 'ielts-course-manager'); ?></option>
+                <option value="two_column_reading" <?php selected($layout_type, 'two_column_reading'); ?>><?php _e('2 Column Reading Test', 'ielts-course-manager'); ?></option>
+                <option value="two_column_listening" <?php selected($layout_type, 'two_column_listening'); ?>><?php _e('2 Column Listening Test', 'ielts-course-manager'); ?></option>
+                <option value="two_column_exercise" <?php selected($layout_type, 'two_column_exercise'); ?>><?php _e('2 Column Exercise', 'ielts-course-manager'); ?></option>
+                <option value="one_column_exercise" <?php selected($layout_type, 'one_column_exercise'); ?>><?php _e('1 Column Exercise', 'ielts-course-manager'); ?></option>
             </select>
-            <small><?php _e('Computer-Based layout displays reading text or audio on the left and questions on the right.', 'ielts-course-manager'); ?></small>
+            <small><?php _e('Two column layouts display content on the left and questions on the right. One column shows questions only.', 'ielts-course-manager'); ?></small>
         </p>
         
         <?php
         $open_as_popup = get_post_meta($post->ID, '_ielts_cm_open_as_popup', true);
-        $cbt_test_type = get_post_meta($post->ID, '_ielts_cm_cbt_test_type', true);
-        if (!$cbt_test_type) {
-            $cbt_test_type = 'reading';
+        // Default to checked (on) for new exercises
+        if ($open_as_popup === '') {
+            $open_as_popup = '1';
         }
+        
+        // Determine if we show two-column options based on layout type
+        $is_two_column = in_array($layout_type, array('two_column_reading', 'two_column_listening', 'two_column_exercise'));
         ?>
-        <div id="cbt-options" style="<?php echo ($layout_type !== 'computer_based') ? 'display:none;' : ''; ?>">
-            <p>
-                <label><?php _e('Test Type', 'ielts-course-manager'); ?></label><br>
-                <label style="margin-right: 20px;">
-                    <input type="radio" name="ielts_cm_cbt_test_type" value="reading" <?php checked($cbt_test_type, 'reading'); ?>>
-                    <?php _e('This is for the reading test', 'ielts-course-manager'); ?>
-                </label>
-                <label>
-                    <input type="radio" name="ielts_cm_cbt_test_type" value="listening" <?php checked($cbt_test_type, 'listening'); ?>>
-                    <?php _e('This is for the listening test', 'ielts-course-manager'); ?>
-                </label><br>
-                <small><?php _e('Select whether this is a reading or listening test. This changes what is shown in the left column.', 'ielts-course-manager'); ?></small>
-            </p>
-            
+        <div id="two-column-options" style="<?php echo !$is_two_column ? 'display:none;' : ''; ?>">
             <p>
                 <label>
                     <input type="checkbox" id="ielts_cm_open_as_popup" name="ielts_cm_open_as_popup" value="1" <?php checked($open_as_popup, '1'); ?>>
                     <?php _e('Open as Popup/Fullscreen Modal', 'ielts-course-manager'); ?>
                 </label><br>
-                <small><?php _e('When checked, the CBT exercise will open in a fullscreen popup modal. When unchecked, it opens in the same window.', 'ielts-course-manager'); ?></small>
+                <small><?php _e('When checked, the two-column exercise will open in a fullscreen popup modal. When unchecked, it opens in the same window.', 'ielts-course-manager'); ?></small>
             </p>
         </div>
         
@@ -1279,7 +1271,7 @@ class IELTS_CM_Admin {
             $audio_sections = array();
         }
         ?>
-        <div id="cbt-audio-section" style="<?php echo ($layout_type !== 'computer_based' || $cbt_test_type !== 'listening') ? 'display:none;' : ''; ?>">
+        <div id="listening-audio-section" style="<?php echo ($layout_type !== 'two_column_listening') ? 'display:none;' : ''; ?>">
             <h3><?php _e('Listening Audio & Transcripts', 'ielts-course-manager'); ?></h3>
             
             <div style="margin-bottom: 20px; padding: 15px; background: #f0f7ff; border: 1px solid #0073aa; border-radius: 4px;">
@@ -1330,7 +1322,7 @@ class IELTS_CM_Admin {
             <small><?php _e('Set a time limit in minutes. The exercise will automatically submit when time expires, regardless of completion status. Leave empty for no timer.', 'ielts-course-manager'); ?></small>
         </p>
         
-        <div id="reading-texts-section" style="<?php echo ($layout_type !== 'computer_based' || $cbt_test_type !== 'reading') ? 'display:none;' : ''; ?>">
+        <div id="reading-texts-section" style="<?php echo ($layout_type !== 'two_column_reading') ? 'display:none;' : ''; ?>">
             <h3><?php _e('Reading Texts', 'ielts-course-manager'); ?></h3>
             <p><small><?php _e('Add reading texts that will be displayed in the left column. You can link specific questions to each reading text.', 'ielts-course-manager'); ?></small></p>
             
@@ -1403,32 +1395,26 @@ class IELTS_CM_Admin {
             // Layout type change handler
             $('#ielts_cm_layout_type').on('change', function() {
                 var layoutType = $(this).val();
-                if (layoutType === 'computer_based') {
-                    $('#cbt-options').show();
-                    updateCBTSections();
+                var isTwoColumn = ['two_column_reading', 'two_column_listening', 'two_column_exercise'].indexOf(layoutType) !== -1;
+                
+                if (isTwoColumn) {
+                    $('#two-column-options').show();
                 } else {
-                    $('#cbt-options').hide();
-                    $('#reading-texts-section').hide();
-                    $('#cbt-audio-section').hide();
+                    $('#two-column-options').hide();
                 }
-            });
-            
-            // Test type change handler
-            $('input[name="ielts_cm_cbt_test_type"]').on('change', function() {
-                updateCBTSections();
-            });
-            
-            // Function to update CBT sections based on test type
-            function updateCBTSections() {
-                var testType = $('input[name="ielts_cm_cbt_test_type"]:checked').val();
-                if (testType === 'reading') {
+                
+                // Show/hide sections based on layout type
+                if (layoutType === 'two_column_reading') {
                     $('#reading-texts-section').show();
-                    $('#cbt-audio-section').hide();
-                } else if (testType === 'listening') {
+                    $('#listening-audio-section').hide();
+                } else if (layoutType === 'two_column_listening') {
                     $('#reading-texts-section').hide();
-                    $('#cbt-audio-section').show();
+                    $('#listening-audio-section').show();
+                } else {
+                    $('#reading-texts-section').hide();
+                    $('#listening-audio-section').hide();
                 }
-            }
+            });
             
             // Audio file upload handler
             var audioUploader;
@@ -3322,12 +3308,7 @@ class IELTS_CM_Admin {
                 update_post_meta($post_id, '_ielts_cm_layout_type', sanitize_text_field($_POST['ielts_cm_layout_type']));
             }
             
-            // Save CBT test type
-            if (isset($_POST['ielts_cm_cbt_test_type'])) {
-                update_post_meta($post_id, '_ielts_cm_cbt_test_type', sanitize_text_field($_POST['ielts_cm_cbt_test_type']));
-            }
-            
-            // Save open as popup option (only for CBT layout)
+            // Save open as popup option (only for two-column layouts)
             if (isset($_POST['ielts_cm_open_as_popup'])) {
                 update_post_meta($post_id, '_ielts_cm_open_as_popup', '1');
             } else {

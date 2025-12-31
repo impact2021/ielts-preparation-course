@@ -119,16 +119,30 @@ body.ielts-quiz-single .content-area {
             // Get layout type
             $layout_type = get_post_meta($quiz_id, '_ielts_cm_layout_type', true);
             if (!$layout_type) {
-                $layout_type = 'standard';
+                $layout_type = 'two_column_exercise';
+            }
+            
+            // Determine which template to use
+            // For backward compatibility, map old values to new ones
+            if ($layout_type === 'computer_based') {
+                // Check old cbt_test_type for backward compatibility
+                $old_cbt_test_type = get_post_meta($quiz_id, '_ielts_cm_cbt_test_type', true);
+                if ($old_cbt_test_type === 'listening') {
+                    $layout_type = 'two_column_listening';
+                } elseif ($old_cbt_test_type === 'reading') {
+                    $layout_type = 'two_column_reading';
+                } else {
+                    $layout_type = 'two_column_exercise';
+                }
+            } elseif ($layout_type === 'standard') {
+                $layout_type = 'one_column_exercise';
+            } elseif ($layout_type === 'listening_practice' || $layout_type === 'listening_exercise') {
+                $layout_type = 'two_column_listening';
             }
             
             // Include the appropriate template based on layout type
-            if ($layout_type === 'computer_based') {
+            if (in_array($layout_type, array('two_column_reading', 'two_column_listening', 'two_column_exercise'))) {
                 $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-computer-based.php';
-            } elseif ($layout_type === 'listening_practice') {
-                $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-listening-practice.php';
-            } elseif ($layout_type === 'listening_exercise') {
-                $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-listening-exercise.php';
             } else {
                 $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz.php';
             }
