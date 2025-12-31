@@ -724,7 +724,7 @@
                                     });
                                     
                                     // Also show general no-answer feedback if provided and no options were selected
-                                    if (questionResult.feedback && (!questionResult.user_answer || questionResult.user_answer.length === 0)) {
+                                    if (questionResult.feedback && (!questionResult.user_answer || (Array.isArray(questionResult.user_answer) && questionResult.user_answer.length === 0))) {
                                         var feedbackDiv = $('<div>')
                                             .addClass('question-feedback-message')
                                             .addClass('feedback-incorrect')
