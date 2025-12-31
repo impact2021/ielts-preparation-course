@@ -1351,6 +1351,27 @@ class IELTS_CM_Admin {
             <button type="button" class="button" id="add-reading-text"><?php _e('Add Reading Text', 'ielts-course-manager'); ?></button>
         </div>
         
+        <?php
+        $exercise_content = get_post_meta($post->ID, '_ielts_cm_exercise_content', true);
+        ?>
+        <div id="exercise-content-section" style="<?php echo ($layout_type !== 'two_column_exercise') ? 'display:none;' : ''; ?>">
+            <h3><?php _e('Left Pane Content', 'ielts-course-manager'); ?></h3>
+            <p><small><?php _e('Add content to display in the left pane of the two-column exercise. This can include instructions, images, or any other content you want to show alongside the questions.', 'ielts-course-manager'); ?></small></p>
+            
+            <?php
+            wp_editor($exercise_content, 'ielts_cm_exercise_content', array(
+                'textarea_name' => 'ielts_cm_exercise_content',
+                'textarea_rows' => 15,
+                'media_buttons' => true,
+                'teeny' => false,
+                'tinymce' => array(
+                    'toolbar1' => 'bold,italic,underline,strikethrough,bullist,numlist,blockquote,hr,alignleft,aligncenter,alignright,link,unlink,wp_more,spellchecker,fullscreen,wp_adv',
+                    'toolbar2' => 'formatselect,forecolor,pastetext,removeformat,charmap,outdent,indent,undo,redo,wp_help'
+                )
+            ));
+            ?>
+        </div>
+        
         <div id="ielts-cm-questions">
             <h3><?php _e('Questions', 'ielts-course-manager'); ?></h3>
             
@@ -1422,12 +1443,19 @@ class IELTS_CM_Admin {
                 if (layoutType === 'two_column_reading') {
                     $('#reading-texts-section').show();
                     $('#listening-audio-section').hide();
+                    $('#exercise-content-section').hide();
                 } else if (layoutType === 'two_column_listening') {
                     $('#reading-texts-section').hide();
                     $('#listening-audio-section').show();
+                    $('#exercise-content-section').hide();
+                } else if (layoutType === 'two_column_exercise') {
+                    $('#reading-texts-section').hide();
+                    $('#listening-audio-section').hide();
+                    $('#exercise-content-section').show();
                 } else {
                     $('#reading-texts-section').hide();
                     $('#listening-audio-section').hide();
+                    $('#exercise-content-section').hide();
                 }
             });
             
@@ -3321,6 +3349,11 @@ class IELTS_CM_Admin {
             // Save layout type
             if (isset($_POST['ielts_cm_layout_type'])) {
                 update_post_meta($post_id, '_ielts_cm_layout_type', sanitize_text_field($_POST['ielts_cm_layout_type']));
+            }
+            
+            // Save exercise content (for two_column_exercise layout)
+            if (isset($_POST['ielts_cm_exercise_content'])) {
+                update_post_meta($post_id, '_ielts_cm_exercise_content', wp_kses_post($_POST['ielts_cm_exercise_content']));
             }
             
             // Save open as popup option (only for two-column layouts)

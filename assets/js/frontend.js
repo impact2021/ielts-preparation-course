@@ -469,6 +469,44 @@
                                             $(this).addClass('nav-incorrect');
                                         }
                                     });
+                                } else if (questionResult.question_type === 'closed_question') {
+                                    // For closed_question multi-select mode, mark nav buttons individually (Issue 6)
+                                    var correctAnswer = questionResult.correct_answer;
+                                    
+                                    if (correctAnswer && correctAnswer.correct_indices) {
+                                        // Multi-select mode
+                                        var userAnswers = questionResult.user_answer || [];
+                                        var correctAnswers = correctAnswer.correct_indices || [];
+                                        
+                                        // Convert to arrays if needed
+                                        if (!Array.isArray(userAnswers)) {
+                                            userAnswers = [userAnswers];
+                                        }
+                                        if (!Array.isArray(correctAnswers)) {
+                                            correctAnswers = [correctAnswers];
+                                        }
+                                        
+                                        // Count how many correct answers were selected
+                                        var correctAnswersSet = new Set(correctAnswers.map(function(idx) { return parseInt(idx); }));
+                                        var correctSelectionsCount = 0;
+                                        $.each(userAnswers, function(i, answerIndex) {
+                                            if (correctAnswersSet.has(parseInt(answerIndex))) {
+                                                correctSelectionsCount++;
+                                            }
+                                        });
+                                        
+                                        // Mark nav buttons: first N as correct (green), rest as incorrect (red)
+                                        navButtons.removeClass('answered').each(function(btnIndex) {
+                                            if (btnIndex < correctSelectionsCount) {
+                                                $(this).addClass('nav-correct');
+                                            } else {
+                                                $(this).addClass('nav-incorrect');
+                                            }
+                                        });
+                                    } else {
+                                        // Single-select mode - mark as incorrect
+                                        navButtons.addClass('nav-incorrect').removeClass('answered');
+                                    }
                                 } else if (questionResult.question_type === 'dropdown_paragraph') {
                                     // For dropdown paragraph, mark each dropdown and nav button individually
                                     var userAnswers = questionResult.user_answer || {};
@@ -543,7 +581,7 @@
                                         }
                                     });
                                 } else if (questionResult.question_type === 'open_question') {
-                                    // For open_question with multiple fields, mark each field and nav button individually
+                                    // For open_question with multiple fields, mark each field and nav button individually (Issue 3)
                                     var fieldResults = questionResult.correct_answer && questionResult.correct_answer.field_results 
                                         ? questionResult.correct_answer.field_results 
                                         : {};
@@ -559,13 +597,26 @@
                                         var displayNumber = displayStart + parseInt(fieldNum, 10) - 1;
                                         var navButton = $('.question-nav-btn[data-question="' + index + '"][data-display-number="' + displayNumber + '"]');
                                         
+                                        // Get or create the parent wrapper for styling
+                                        var fieldWrapper = inputField.closest('.open-question-field');
+                                        if (!fieldWrapper.length) {
+                                            // If no wrapper exists, wrap the input
+                                            inputField.wrap('<div class="open-question-field"></div>');
+                                            fieldWrapper = inputField.closest('.open-question-field');
+                                        }
+                                        
                                         if (fieldResult.correct) {
-                                            // Correct answer
+                                            // Correct answer - green background with check icon
                                             inputField.addClass('answer-correct');
+                                            fieldWrapper.addClass('field-correct');
                                             navButton.removeClass('answered').addClass('nav-correct');
-                                        } else {
-                                            // Incorrect or not answered
+                                        } else if (fieldResult.user_answer && fieldResult.user_answer.trim() !== '') {
+                                            // Incorrect answer (user provided an answer) - red background with cross icon
                                             inputField.addClass('answer-incorrect');
+                                            fieldWrapper.addClass('field-incorrect');
+                                            navButton.removeClass('answered').addClass('nav-incorrect');
+                                        } else {
+                                            // No answer provided - just red nav button, no fill color
                                             navButton.removeClass('answered').addClass('nav-incorrect');
                                         }
                                     });
@@ -1310,7 +1361,7 @@
                     navButtons.removeClass('answered answered-partial');
                     
                     if (checkedCount > 0) {
-                        // Mark the first N buttons as answered (green) where N = checkedCount
+                        // Mark the first N buttons as answered (blue) where N = checkedCount
                         navButtons.each(function(index) {
                             if (index < checkedCount) {
                                 $(this).addClass('answered');
@@ -1326,6 +1377,58 @@
                     }
                 }
             });
+        });
+        
+        // Closed question selection enforcement and progressive nav button marking (Issue 2, 7)
+        $('.closed-question-options').each(function() {
+            var $container = $(this);
+            var correctCount = parseInt($container.data('correct-count')) || 1;
+            
+            // For single-select (radio buttons)
+            if (correctCount === 1) {
+                $container.find('.closed-question-radio').on('change', function() {
+                    // Get question index and mark navigation button
+                    var questionIndex = $(this).attr('name').replace('answer_', '');
+                    var navButtons = $('.question-nav-btn[data-question="' + questionIndex + '"]');
+                    
+                    // Mark nav button as answered (blue)
+                    navButtons.removeClass('answered-partial').addClass('answered');
+                });
+            } else {
+                // For multi-select (checkboxes)
+                $container.find('.closed-question-checkbox').on('change', function() {
+                    var checkedCount = $container.find('.closed-question-checkbox:checked').length;
+                    
+                    // Get question index and mark navigation buttons
+                    var questionIndex = $(this).attr('name').replace('answer_', '').replace('[]', '');
+                    var navButtons = $('.question-nav-btn[data-question="' + questionIndex + '"]');
+                    
+                    if (checkedCount > correctCount) {
+                        // Uncheck this box and show warning
+                        $(this).prop('checked', false);
+                        showMessage('error', 'You can only select up to ' + correctCount + ' options.');
+                    } else {
+                        // Progressive marking: mark nav buttons based on number of selections (blue)
+                        navButtons.removeClass('answered answered-partial');
+                        
+                        if (checkedCount > 0) {
+                            // Mark the first N buttons as answered (blue) where N = checkedCount
+                            navButtons.each(function(index) {
+                                if (index < checkedCount) {
+                                    $(this).addClass('answered');
+                                }
+                            });
+                        }
+                        
+                        // Disable/enable checkboxes based on correct answer count
+                        if (checkedCount === correctCount) {
+                            $container.find('.closed-question-checkbox:not(:checked)').prop('disabled', true);
+                        } else {
+                            $container.find('.closed-question-checkbox').prop('disabled', false);
+                        }
+                    }
+                });
+            }
         });
         
         // Font size controls for CBT quizzes
