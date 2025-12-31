@@ -100,16 +100,17 @@ class IELTS_CM_Quiz_Handler {
                 $option_feedbacks = array();
                 $mc_options = isset($question['mc_options']) && is_array($question['mc_options']) ? $question['mc_options'] : array();
                 
+                // Collect all correct indices
+                $correct_indices = array();
+                foreach ($mc_options as $opt_idx => $option) {
+                    if (!empty($option['is_correct'])) {
+                        $correct_indices[] = $opt_idx;
+                    }
+                }
+                
                 if ($correct_answer_count > 1) {
                     // Multi-select mode
                     $user_selections = is_array($user_answer) ? $user_answer : array();
-                    $correct_indices = array();
-                    
-                    foreach ($mc_options as $opt_idx => $option) {
-                        if (!empty($option['is_correct'])) {
-                            $correct_indices[] = $opt_idx;
-                        }
-                    }
                     
                     // Score: 1 point for each correct selection
                     $correctly_selected = array_intersect($user_selections, $correct_indices);
@@ -130,15 +131,12 @@ class IELTS_CM_Quiz_Handler {
                     }
                     
                     $score += $points_earned;
+                    
+                    // Set correct_answer to include correct_indices for frontend feedback
+                    $correct_answer = array('correct_indices' => $correct_indices);
                 } else {
                     // Single-select mode
-                    $correct_idx = null;
-                    foreach ($mc_options as $opt_idx => $option) {
-                        if (!empty($option['is_correct'])) {
-                            $correct_idx = $opt_idx;
-                            break;
-                        }
-                    }
+                    $correct_idx = !empty($correct_indices) ? $correct_indices[0] : null;
                     
                     $is_correct = ($user_answer !== null && $user_answer !== '' && $user_answer == $correct_idx);
                     
@@ -157,6 +155,9 @@ class IELTS_CM_Quiz_Handler {
                         }
                     }
                     $score += $points_earned;
+                    
+                    // Set correct_answer to the correct index for frontend feedback
+                    $correct_answer = $correct_idx;
                 }
             } elseif ($question['type'] === 'open_question') {
                 // Open question - text input with configurable field count
