@@ -692,32 +692,58 @@
                                        questionResult.question_type === 'matching_classifying' ||
                                        questionResult.question_type === 'headings' ||
                                        questionResult.question_type === 'locating_information') {
-                                // For single-select question types with options, show feedback under the selected option
+                                // For single-select question types with options, show feedback strategically:
+                                // - Under correct answer option (always)
+                                // - Under incorrect selected option (if user selected it)
+                                // - At bottom (only if nothing was selected)
                                 // Remove any existing feedback first
                                 questionElement.find('.option-feedback-message').remove();
                                 questionElement.find('.question-feedback-message').remove();
                                 
                                 if (questionResult.feedback) {
-                                    // Find the selected radio button
                                     var selectedRadio = questionElement.find('input[type="radio"]:checked');
+                                    var correctIndex = parseInt(questionResult.correct_answer, 10);
+                                    var userAnswer = questionResult.user_answer;
+                                    
                                     if (selectedRadio.length > 0) {
-                                        var optionLabel = selectedRadio.closest('.option-label');
+                                        // User selected an answer
+                                        var selectedValue = parseInt(selectedRadio.val(), 10);
                                         
-                                        // Create feedback element for this option
-                                        var feedbackDiv = $('<div>')
-                                            .addClass('option-feedback-message')
-                                            .html(questionResult.feedback); // Using .html() because feedback explicitly supports HTML formatting
-                                                                             // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
-                                        
-                                        // Append feedback after the option label
-                                        optionLabel.after(feedbackDiv);
+                                        if (questionResult.correct) {
+                                            // User selected correct answer - show feedback under the correct option
+                                            var correctLabel = selectedRadio.closest('.option-label');
+                                            var feedbackDiv = $('<div>')
+                                                .addClass('option-feedback-message')
+                                                .html(questionResult.feedback);
+                                            correctLabel.after(feedbackDiv);
+                                        } else {
+                                            // User selected wrong answer
+                                            // Show feedback under the incorrect selected option
+                                            var incorrectLabel = selectedRadio.closest('.option-label');
+                                            var feedbackDiv = $('<div>')
+                                                .addClass('option-feedback-message')
+                                                .html(questionResult.feedback);
+                                            incorrectLabel.after(feedbackDiv);
+                                            
+                                            // Also show feedback under the correct answer option
+                                            if (!isNaN(correctIndex)) {
+                                                var correctRadio = questionElement.find('input[type="radio"][value="' + correctIndex + '"]');
+                                                if (correctRadio.length > 0) {
+                                                    var correctLabel = correctRadio.closest('.option-label');
+                                                    // Show what the correct answer explanation is
+                                                    var correctFeedbackDiv = $('<div>')
+                                                        .addClass('option-feedback-message')
+                                                        .html('<strong>This is the correct answer.</strong>');
+                                                    correctLabel.after(correctFeedbackDiv);
+                                                }
+                                            }
+                                        }
                                     } else {
                                         // No option selected - show general no-answer feedback at question level
                                         // and clearly indicate the correct answer
                                         var feedbackText = questionResult.feedback;
                                         
                                         // Add correct answer indication if we have the correct answer index and options
-                                        var correctIndex = parseInt(questionResult.correct_answer, 10);
                                         if (!isNaN(correctIndex) && questionResult.options) {
                                             var options = [];
                                             

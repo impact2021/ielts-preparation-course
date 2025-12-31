@@ -1636,6 +1636,18 @@ select.answer-select-inline.answer-incorrect {
     border-left-color: #f44336;
 }
 
+/* Option-level feedback message displayed under individual options */
+.option-feedback-message {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 10px;
+    background: #f0f7ff;
+    border-radius: 3px;
+    border-left: 4px solid #0073aa;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
 /* Return to course link on fullscreen page */
 .cbt-return-to-course-link {
     margin-top: 20px;
