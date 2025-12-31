@@ -1482,7 +1482,7 @@ body.ielts-course-archive .content-area {
 }
 
 /* Add tick mark for correctly selected answers */
-.question-options .option-label.answer-correct span::after {
+.question-options .option-label.answer-correct > span:not(.option-letter)::after {
     content: ' ✓';
     display: inline;
     margin-left: 5px;
@@ -1499,7 +1499,7 @@ body.ielts-course-archive .content-area {
 }
 
 /* Add cross mark for incorrectly selected answers */
-.question-options .option-label.answer-incorrect span::after {
+.question-options .option-label.answer-incorrect > span:not(.option-letter)::after {
     content: ' ✗';
     display: inline;
     margin-left: 5px;
@@ -2329,8 +2329,8 @@ select.answer-select-inline.answer-incorrect {
 }
 
 /* Add tick mark for correctly selected answers in listening quizzes */
-.ielts-listening-practice-quiz .option-label.answer-correct span::after,
-.ielts-listening-exercise-quiz .option-label.answer-correct span::after {
+.ielts-listening-practice-quiz .option-label.answer-correct > span:not(.option-letter)::after,
+.ielts-listening-exercise-quiz .option-label.answer-correct > span:not(.option-letter)::after {
     content: ' ✓';
     display: inline;
     margin-left: 5px;
@@ -2359,8 +2359,8 @@ select.answer-select-inline.answer-incorrect {
 }
 
 /* Add cross mark for incorrectly selected answers in listening quizzes */
-.ielts-listening-practice-quiz .option-label.answer-incorrect span::after,
-.ielts-listening-exercise-quiz .option-label.answer-incorrect span::after {
+.ielts-listening-practice-quiz .option-label.answer-incorrect > span:not(.option-letter)::after,
+.ielts-listening-exercise-quiz .option-label.answer-incorrect > span:not(.option-letter)::after {
     content: ' ✗';
     display: inline;
     margin-left: 5px;
