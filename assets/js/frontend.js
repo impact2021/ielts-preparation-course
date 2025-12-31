@@ -694,6 +694,65 @@
                                         .html(questionResult.feedback);
                                     questionElement.append(feedbackDiv);
                                 }
+                            } else if (questionResult.question_type === 'closed_question') {
+                                // For closed_question, handle both single and multi-select modes
+                                // Remove any existing feedback first
+                                questionElement.find('.option-feedback-message').remove();
+                                questionElement.find('.question-feedback-message').remove();
+                                
+                                var correctAnswer = questionResult.correct_answer;
+                                
+                                if (correctAnswer && correctAnswer.correct_indices) {
+                                    // Multi-select mode - similar to multi_select
+                                    // Get option feedback from correct_answer object
+                                    var optionFeedback = correctAnswer.option_feedback || {};
+                                    
+                                    // Display feedback under ALL options that have feedback
+                                    $.each(optionFeedback, function(optionIndex, feedbackText) {
+                                        if (feedbackText) {
+                                            var checkbox = questionElement.find('input[type="checkbox"][value="' + optionIndex + '"]');
+                                            var optionLabel = checkbox.closest('.option-label');
+                                            
+                                            // Create feedback element for this option
+                                            var feedbackDiv = $('<div>')
+                                                .addClass('option-feedback-message')
+                                                .html(feedbackText);
+                                            
+                                            // Append feedback inside the option label
+                                            optionLabel.append(feedbackDiv);
+                                        }
+                                    });
+                                    
+                                    // Also show general no-answer feedback if provided and no options were selected
+                                    if (questionResult.feedback && (!questionResult.user_answer || questionResult.user_answer.length === 0)) {
+                                        var feedbackDiv = $('<div>')
+                                            .addClass('question-feedback-message')
+                                            .addClass('feedback-incorrect')
+                                            .html(questionResult.feedback);
+                                        questionElement.append(feedbackDiv);
+                                    }
+                                } else {
+                                    // Single-select mode - show feedback for the question
+                                    if (questionResult.feedback) {
+                                        var selectedRadio = questionElement.find('input[type="radio"]:checked');
+                                        
+                                        if (selectedRadio.length > 0) {
+                                            // User selected an answer - show feedback inside the selected option
+                                            var selectedLabel = selectedRadio.closest('.option-label');
+                                            var feedbackDiv = $('<div>')
+                                                .addClass('option-feedback-message')
+                                                .html(questionResult.feedback);
+                                            selectedLabel.append(feedbackDiv);
+                                        } else {
+                                            // No option selected - show general no-answer feedback at question level
+                                            var feedbackDiv = $('<div>')
+                                                .addClass('question-feedback-message')
+                                                .addClass('feedback-incorrect')
+                                                .html(questionResult.feedback);
+                                            questionElement.append(feedbackDiv);
+                                        }
+                                    }
+                                }
                             } else if (questionResult.question_type === 'multiple_choice' || 
                                        questionResult.question_type === 'matching' || 
                                        questionResult.question_type === 'matching_classifying' ||
