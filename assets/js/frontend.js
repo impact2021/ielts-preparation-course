@@ -388,6 +388,16 @@
                                 } else if (questionResult.question_type === 'multi_select') {
                                     // For multi-select, highlight all checked options in green (they're all correct if question is correct)
                                     questionElement.find('input[type="checkbox"]:checked').closest('.option-label').addClass('answer-correct');
+                                } else if (questionResult.question_type === 'closed_question') {
+                                    // For closed_question, determine if single or multi-select based on correct_answer type
+                                    var correctAnswer = questionResult.correct_answer;
+                                    if (correctAnswer && correctAnswer.correct_indices) {
+                                        // Multi-select mode - highlight all checked options in green (they're all correct if question is correct)
+                                        questionElement.find('input[type="checkbox"]:checked').closest('.option-label').addClass('answer-correct');
+                                    } else {
+                                        // Single-select mode - mark the checked answer in green
+                                        questionElement.find('input[type="radio"]:checked').closest('.option-label').addClass('answer-correct');
+                                    }
                                 } else if (questionResult.question_type !== 'dropdown_paragraph' && 
                                            questionResult.question_type !== 'summary_completion' && 
                                            questionResult.question_type !== 'table_completion') {
@@ -578,6 +588,59 @@
                                             checkbox.closest('.option-label').addClass('answer-correct-highlight');
                                         }
                                     });
+                                } else if (questionResult.question_type === 'closed_question') {
+                                    // For closed_question, handle both single and multi-select modes
+                                    var correctAnswer = questionResult.correct_answer;
+                                    
+                                    if (correctAnswer && correctAnswer.correct_indices) {
+                                        // Multi-select mode - similar to multi_select
+                                        var userAnswers = questionResult.user_answer || [];
+                                        var correctAnswers = correctAnswer.correct_indices || [];
+                                        
+                                        // Convert to arrays if needed
+                                        if (!Array.isArray(userAnswers)) {
+                                            userAnswers = [userAnswers];
+                                        }
+                                        if (!Array.isArray(correctAnswers)) {
+                                            correctAnswers = [correctAnswers];
+                                        }
+                                        
+                                        // Convert correctAnswers to a Set for O(1) lookup performance
+                                        var correctAnswersSet = new Set(correctAnswers.map(function(idx) { return parseInt(idx); }));
+                                        
+                                        // First, mark user's incorrect selections in red
+                                        $.each(userAnswers, function(i, answerIndex) {
+                                            if (!correctAnswersSet.has(parseInt(answerIndex))) {
+                                                questionElement.find('input[type="checkbox"][value="' + answerIndex + '"]').closest('.option-label').addClass('answer-incorrect');
+                                            }
+                                        });
+                                        
+                                        // Then, mark all correct answers in green
+                                        $.each(correctAnswers, function(i, correctIndex) {
+                                            var checkbox = questionElement.find('input[type="checkbox"][value="' + correctIndex + '"]');
+                                            if (checkbox.is(':checked')) {
+                                                // User selected this correct answer - use solid green with tick
+                                                checkbox.closest('.option-label').addClass('answer-correct');
+                                            } else {
+                                                // User missed this correct answer - use highlight green (border only)
+                                                checkbox.closest('.option-label').addClass('answer-correct-highlight');
+                                            }
+                                        });
+                                    } else {
+                                        // Single-select mode - similar to multiple_choice
+                                        var userAnswer = questionResult.user_answer;
+                                        var correctIndex = correctAnswer;
+                                        
+                                        // Mark user's wrong answer in red if they selected one
+                                        if (userAnswer !== null && userAnswer !== '' && userAnswer != correctIndex) {
+                                            questionElement.find('input[type="radio"][value="' + userAnswer + '"]').closest('.option-label').addClass('answer-incorrect');
+                                        }
+                                        
+                                        // Always highlight the correct answer in green
+                                        if (correctIndex !== null && !isNaN(parseInt(correctIndex))) {
+                                            questionElement.find('input[type="radio"][value="' + correctIndex + '"]').closest('.option-label').addClass('answer-correct-highlight');
+                                        }
+                                    }
                                 } else if (questionResult.question_type !== 'dropdown_paragraph' && 
                                            questionResult.question_type !== 'summary_completion' && 
                                            questionResult.question_type !== 'table_completion') {

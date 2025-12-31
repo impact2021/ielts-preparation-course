@@ -1459,21 +1459,48 @@ body.ielts-course-archive .content-area {
     background: #4caf50;
     border: 3px solid #4caf50;
     color: #fff;
+    position: relative;
+}
+
+/* Add tick mark for correctly selected answers */
+.question-options .option-label.answer-correct::before {
+    content: '✓';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
 }
 
 .question-options .option-label.answer-incorrect {
     background: #f44336;
     border: 3px solid #f44336;
     color: #fff;
+    position: relative;
+}
+
+/* Add cross mark for incorrectly selected answers */
+.question-options .option-label.answer-incorrect::before {
+    content: '✗';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
 }
 
 /* Ensure feedback colors are visible for both standard and computer-based quiz layouts */
+/* Green border only for correct answers that should have been selected but weren't */
 .question-options .option-label.answer-correct-highlight,
 .ielts-single-quiz .question-options .option-label.answer-correct-highlight,
 .ielts-computer-based-quiz .question-options .option-label.answer-correct-highlight {
-    background: #4caf50 !important;
+    background: transparent !important;
     border: 3px solid #4caf50 !important;
-    color: #fff !important;
+    color: inherit !important;
 }
 
 /* Ensure correct answer highlighting works in CBT layout */
@@ -2219,15 +2246,36 @@ select.answer-select-inline.answer-incorrect {
     /* background: #fef5f5; */
 }
 
-/* Correct answer highlighting - for both selected correct answers and correct answer hints */
+/* Correct answer highlighting - for selected correct answers */
 .ielts-listening-practice-quiz .option-label.answer-correct,
-.ielts-listening-exercise-quiz .option-label.answer-correct,
-.ielts-listening-practice-quiz .option-label.answer-correct-highlight,
-.ielts-listening-exercise-quiz .option-label.answer-correct-highlight {
+.ielts-listening-exercise-quiz .option-label.answer-correct {
     background: #4caf50;
     border-color: #4caf50;
     border-width: 3px;
     color: #fff;
+    position: relative;
+}
+
+/* Add tick mark for correctly selected answers in listening quizzes */
+.ielts-listening-practice-quiz .option-label.answer-correct::before,
+.ielts-listening-exercise-quiz .option-label.answer-correct::before {
+    content: '✓';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Green border only for correct answers that should have been selected but weren't */
+.ielts-listening-practice-quiz .option-label.answer-correct-highlight,
+.ielts-listening-exercise-quiz .option-label.answer-correct-highlight {
+    background: transparent;
+    border-color: #4caf50;
+    border-width: 3px;
+    color: inherit;
 }
 
 /* Incorrect answer highlighting */
@@ -2236,6 +2284,20 @@ select.answer-select-inline.answer-incorrect {
     background: #f44336;
     border-color: #f44336;
     border-width: 3px;
+    color: #fff;
+    position: relative;
+}
+
+/* Add cross mark for incorrectly selected answers in listening quizzes */
+.ielts-listening-practice-quiz .option-label.answer-incorrect::before,
+.ielts-listening-exercise-quiz .option-label.answer-incorrect::before {
+    content: '✗';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
     color: #fff;
 }
 
