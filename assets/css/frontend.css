@@ -1508,6 +1508,11 @@ body.ielts-course-archive .content-area {
     color: #fff;
 }
 
+/* Add spacing after option letter (for closed questions) */
+.option-letter {
+    margin-right: 8px;
+}
+
 /* Ensure feedback colors are visible for both standard and computer-based quiz layouts */
 /* Green border only for correct answers that should have been selected but weren't */
 .question-options .option-label.answer-correct-highlight,
@@ -1544,6 +1549,49 @@ select.answer-select-inline.answer-correct {
 select.answer-select-inline.answer-incorrect {
     border: 3px solid #f44336;
     background: #fef5f5;
+}
+
+/* Open question input field styling with icons */
+.open-question-input.answer-correct {
+    border: 3px solid #4caf50 !important;
+    background: #e8f5e9 !important;
+    position: relative;
+}
+
+.open-question-input.answer-incorrect {
+    border: 3px solid #f44336 !important;
+    background: #ffebee !important;
+    position: relative;
+}
+
+/* Wrapper for open question field to add icon */
+.open-question-field {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.open-question-field.field-correct::after {
+    content: '✓';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #4caf50;
+    pointer-events: none;
+}
+
+.open-question-field.field-incorrect::after {
+    content: '✗';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #f44336;
+    pointer-events: none;
 }
 
 /* CBT Result Modal */
