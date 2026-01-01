@@ -151,6 +151,14 @@ class IELTS_CM_Quiz_Handler {
                     
                     $is_correct = ($user_answer !== null && $user_answer !== '' && $user_answer == $correct_idx);
                     
+                    // Collect option feedback for all options (for frontend display)
+                    $option_feedback = array();
+                    foreach ($mc_options as $opt_idx => $option) {
+                        if (isset($option['feedback']) && !empty($option['feedback'])) {
+                            $option_feedback[$opt_idx] = wp_kses_post($option['feedback']);
+                        }
+                    }
+                    
                     if ($is_correct) {
                         $points_earned = 1;
                         // Use feedback from the selected correct option
@@ -167,8 +175,11 @@ class IELTS_CM_Quiz_Handler {
                     }
                     $score += $points_earned;
                     
-                    // Set correct_answer to the correct index for frontend feedback
-                    $correct_answer = $correct_idx;
+                    // Set correct_answer to include correct_idx and option_feedback for frontend feedback
+                    $correct_answer = array(
+                        'correct_idx' => $correct_idx,
+                        'option_feedback' => $option_feedback
+                    );
                 }
             } elseif ($question['type'] === 'open_question') {
                 // Open question - text input with configurable field count
@@ -222,20 +233,20 @@ class IELTS_CM_Quiz_Handler {
                             $points_earned += 1;
                             // Add correct feedback for this field with question number
                             if (isset($field_feedback_arr[$field_num]['correct']) && !empty($field_feedback_arr[$field_num]['correct'])) {
-                                $field_feedbacks[] = '<strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['correct']);
+                                $field_feedbacks[] = '<span class="field-feedback field-feedback-correct"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['correct']) . '</span>';
                             }
                         } else {
                             $all_correct = false;
                             // Add incorrect feedback for this field with question number
                             if (isset($field_feedback_arr[$field_num]['incorrect']) && !empty($field_feedback_arr[$field_num]['incorrect'])) {
-                                $field_feedbacks[] = '<strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['incorrect']);
+                                $field_feedbacks[] = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['incorrect']) . '</span>';
                             }
                         }
                     } else {
                         $all_correct = false;
                         // Add no answer feedback for this field with question number
                         if (isset($field_feedback_arr[$field_num]['no_answer']) && !empty($field_feedback_arr[$field_num]['no_answer'])) {
-                            $field_feedbacks[] = '<strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['no_answer']);
+                            $field_feedbacks[] = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['no_answer']) . '</span>';
                         }
                     }
                     
