@@ -3088,7 +3088,7 @@ class IELTS_CM_Admin {
             </div>
             <?php endif; ?>
             
-            <div class="general-feedback-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false', 'dropdown_paragraph'))) ? '' : 'display:none;'; ?> margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
+            <div class="general-feedback-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false', 'dropdown_paragraph', 'closed_question'))) ? '' : 'display:none;'; ?> margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
                 <h5 style="margin-top: 0;"><?php _e('Answer Feedback', 'ielts-course-manager'); ?></h5>
                 <p>
                     <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
