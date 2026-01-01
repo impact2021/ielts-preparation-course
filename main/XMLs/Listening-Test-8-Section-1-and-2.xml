@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">
+  <channel>
+    <item>
+      <title><![CDATA[Listening Test 8 Sections 1 and 2]]></title>
+      <wp:post_type><![CDATA[ielts_quiz]]></wp:post_type>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
+        <wp:meta_value><![CDATA[a:3:{i:0;a:11:{s:4:"type";s:13:"open_question";s:12:"instructions";s:237:"Listen to the recordings and type your answers in the spaces provided.
+
+Questions 1 – 10
+
+Questions 1 – 5
+
+Complete the notes below USING NO MORE THAN TWO WORDS AND / OR A NUMBER
+
+EXAMPLE: The woman has been in the city for ________ ANSWER: 5 days";s:8:"question";s:27:"House Rental - Section 1";s:11:"field_count";i:5;s:12:"field_labels";a:5:{i:0;s:48:"1. The owner wants to rent the house by ________";i:1;s:56:"2. The woman will come to look at the house this ________";i:2;s:46:"3. The woman will need to have her own ________";i:3;s:23:"4. There are two ________";i:4;s:45:"5. The garden is slightly longer than ________";}s:13:"field_answers";a:5:{i:0;s:6:"Friday";i:1;s:9:"afternoon";i:2;s:3:"bed";i:3;s:9:"bathrooms";i:4;s:48:"4 metres|four metres|4 m|4m|4 meters|four meters";}s:14:"field_feedback";a:5:{i:0;a:3:{s:7:"correct";s:176:"✓ Excellent! The owner wants to rent by FRIDAY. You listened carefully when the apartment owner said 'We would like to find someone to rent the house by Friday'.";s:9:"incorrect";s:165:"✗ Not quite. Listen to what the apartment owner says about their timeline. Pay attention to the day of the week mentioned when discussing when they want to rent by.";s:9:"no_answer";s:153:"No answer provided. The apartment owner mentions a specific day they want to rent the house by. In IELTS Listening, you should always attempt every question.";}i:1;a:3:{s:7:"correct";s:169:"✓ Excellent! The woman will come THIS AFTERNOON. You identified the key information when she said 'How about if I come over this afternoon though, if you're free?'";s:9:"incorrect";s:140:"✗ Not quite. The potential tenant suggests a time to view the property after being told tomorrow won't work. Listen for when she can come.";s:9:"no_answer";s:127:"No answer provided. The potential tenant proposes an alternative viewing time. Always attempt every question in IELTS Listening.";}i:2;a:3:{s:7:"correct";s:177:"✓ Excellent! The woman will need her own BED. You listened carefully when the owner said 'You'll probably need a bed at least' when describing the furniture in the house.";s:9:"incorrect";s:149:"✗ Not quite. The apartment owner lists what furniture is available and mentions one essential item the tenant will need. What piece of furniture?";s:9:"no_answer";s:131:"No answer provided. The apartment owner discusses furniture and mentions what the tenant will need to provide. Always try to answer.";}i:3;a:3:{s:7:"correct";s:151:"✓ Excellent! There are TWO BATHROOMS. You identified this correctly when the owner said 'There are two bathrooms – one upstairs, one downstairs'.";s:9:"incorrect";s:135:"✗ Not quite. The apartment owner describes the bathrooms in the house. Listen carefully for the number and their locations mentioned.";s:9:"no_answer";s:112:"No answer provided. The owner describes how many bathrooms are in the property. Always attempt every question.";}i:4;a:3:{s:7:"correct";s:168:"✓ Excellent! The garden is just over 4 METRES long. You caught the detail when the owner said 'the garden is just over 4 metres long, so there'll be plenty of room'.";s:9:"incorrect";s:165:"✗ Not quite. When discussing the garden size, the owner gives a specific measurement in metres. Listen for the number mentioned when describing the garden length.";s:9:"no_answer";s:130:"No answer provided. The apartment owner provides a specific measurement for the garden's length. Always try to answer all questions.";}}s:16:"correct_feedback";s:79:"✓ Well done! You identified all the key information from Section 1 correctly.";s:18:"incorrect_feedback";s:90:"✗ Review the conversation between the potential tenant and apartment owner more carefully.";s:18:"no_answer_feedback";s:69:"No answers provided. Always attempt every question in the IELTS test.";s:6:"points";i:5;}i:1;a:11:{s:4:"type";s:13:"open_question";s:12:"instructions";s:215:"Questions 6 – 10
+
+Label the map below using NO MORE THAN TWO WORDS. Write your answers in boxes 6 – 10 in the answer sheet.
+
+Image URL is https://www.ieltstestonline.com/wp-content/uploads/2018/12/test-8-map.jpg";s:8:"question";s:23:"Map Labeling - Section 1";s:11:"field_count";i:5;s:12:"field_labels";a:5:{i:0;s:12:"6. ________";i:1;s:12:"7. ________";i:2;s:12:"8. ________";i:3;s:12:"9. ________";i:4;s:13:"10. ________";}s:13:"field_answers";a:5:{i:0;s:11:"post office";i:1;s:9:"Hill Park";i:2;s:9:"Wood Lane";i:3;s:14:"Petrol station";i:4;s:8:"bus stop";}s:14:"field_feedback";a:5:{i:0;a:3:{s:7:"correct";s:159:"✓ Excellent! The POST OFFICE is marked here. You listened carefully when the owner said 'you will see the post office just opposite' the supermarket.";s:9:"incorrect";s:152:"✗ Not quite. The apartment owner describes what you see directly opposite the supermarket when you come out. What building is mentioned in this location?";s:9:"no_answer";s:126:"No answer provided. Listen for the first landmark mentioned opposite the supermarket. Always attempt every question in IELTS.";}i:1;a:3:{s:7:"correct";s:163:"✓ Excellent! HILL PARK is correctly identified. You caught when the owner said 'Turn right and go up James Street past Hill Park on the left and you'll see...'.";s:9:"incorrect";s:161:"✗ Not quite. After turning onto James Street from Albert Park, the owner mentions another park on the left side. Listen for the name of this second park mentioned.";s:9:"no_answer";s:109:"No answer provided. A second park is mentioned along James Street. Always attempt every question in the test.";}i:2;a:3:{s:7:"correct";s:177:"✓ Excellent! WOOD LANE is correct. You identified this when the owner said 'that's the first right – that's Wood Lane. You need to take the second right, so go past Wood Lane'.";s:9:"incorrect";s:154:"✗ Not quite. The owner describes two possible right turns from James Street and names the first one. Listen carefully for which street is the first right.";s:9:"no_answer";s:110:"No answer provided. The first right turn off James Street is named. Always try to answer all IELTS questions.";}i:3;a:3:{s:7:"correct";s:192:"✓ Excellent! The PETROL STATION is at this location. You listened well when the owner said 'go past Wood Lane until you see a row of houses on the left and a petrol station on the right'.";s:9:"incorrect";s:143:"✗ Not quite. After passing Wood Lane, the owner describes what's on the corner of James Street and Cavendish Drive. What type of business is there?";s:9:"no_answer";s:117:"No answer provided. A business is mentioned on the corner of two streets. Always attempt every question in the test.";}i:4;a:3:{s:7:"correct";s:180:"✓ Excellent! The BUS STOP is located here. You caught the detail when the owner said 'There's a bus stop just past the house, so if you get to the bus stop, you've gone too far'.";s:9:"incorrect";s:152:"✗ Not quite. The owner uses a final landmark to help the tenant know if they've gone too far past number 103. What is this landmark just past the house?";s:9:"no_answer";s:114:"No answer provided. A landmark is mentioned just past house number 103. Always try to answer all IELTS questions.";}}s:16:"correct_feedback";s:69:"✓ Well done! You correctly labeled all locations on the map.";s:18:"incorrect_feedback";s:90:"✗ Review the directions given by the apartment owner and trace the route more carefully.";s:18:"no_answer_feedback";s:69:"No answers provided. Always attempt every question in the IELTS test.";s:6:"points";i:5;}i:2;a:11:{s:4:"type";s:15:"closed_question";s:12:"instructions";s:190:"Section 2
+
+Which TWO of the following does the chef say are true of the herb oregano?
+
+A It's easy to sprinkle on food
+B It's tastier when fresh
+C It's used in the majority of Italian dishes
+D It has a lemony flavour
+E It gives food a rounded flavour
+F It's a good accompaniment to many meat dishes";s:8:"question";s:32:"Choose TWO letters A-F (Q11-12)";s:10:"mc_options";a:6:{i:0;a:2:{s:4:"text";s:27:"A - Easy to sprinkle on food";s:10:"is_correct";b:0;}i:1;a:2:{s:4:"text";s:20:"B - Tastier when fresh";s:10:"is_correct";b:0;}i:2;a:2:{s:4:"text";s:39:"C - Used in the majority of Italian dishes";s:10:"is_correct";b:1;}i:3;a:2:{s:4:"text";s:21:"D - Has a lemony flavour";s:10:"is_correct";b:0;}i:4;a:2:{s:4:"text";s:30:"E - Gives food a rounded flavour";s:10:"is_correct";b:0;}i:5;a:2:{s:4:"text";s:45:"F - Good accompaniment to many meat dishes";s:10:"is_correct";b:1;}}s:20:"correct_answer_count";i:2;s:14:"correct_answer";s:3:"2|5";s:15:"option_feedback";a:6:{i:0;s:168:"Option A is not mentioned. The chef doesn't discuss how easy oregano is to sprinkle. Listen to what the chef actually says about oregano's characteristics and uses.";i:1;s:207:"Option B is incorrect. Actually, the chef says the opposite - that oregano's dried form is 'usually more full of flavour than when it is fresh'. Listen carefully to distinguish between fresh and dried forms.";i:2;s:183:"✓ Correct! Option C is accurate. The chef states oregano is 'a staple herb used in Greek and Italian cookery', meaning it's commonly used in Italian dishes. Well done identifying this!";i:3;s:207:"Option D is incorrect. The chef says oregano 'goes really well with lemony flavours', meaning it pairs well with lemon, not that it has a lemony flavour itself. Be careful to distinguish between these concepts.";i:4;s:202:"Option E is incorrect. The chef says adding lemon zest 'gives a much zestier, rounded flavour', referring to the lemon's contribution, not oregano's. Listen carefully to what each ingredient contributes.";i:5;s:180:"✓ Correct! Option F is accurate. The chef says oregano is 'a fantastic flavouring for many different types of meat dishes'. Excellent listening - you caught this important detail!";}s:16:"correct_feedback";s:157:"✓ Excellent! You correctly identified both C and F. The chef mentions oregano is used in Italian cookery and is great with meat dishes. Outstanding listening skills!";s:18:"incorrect_feedback";s:247:"✗ Not quite. The correct answers are C and F. The chef says oregano is 'a staple herb used in Greek and Italian cookery' and 'a fantastic flavouring for many different types of meat dishes'. Listen for what the chef actually states, not implies.";s:18:"no_answer_feedback";s:189:"No answer provided. The correct answers are C and F. In IELTS Listening multiple choice questions, listen carefully to distinguish between what is stated and what might seem plausible.";s:6:"points";i:2;}}]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
+        <wp:meta_value><![CDATA[i:60;]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
+        <wp:meta_value><![CDATA[listening_practice]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
+        <wp:meta_value><![CDATA[i:40;]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_starting_question_number]]></wp:meta_key>
+        <wp:meta_value><![CDATA[i:1;]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_scoring_type]]></wp:meta_key>
+        <wp:meta_value><![CDATA[ielts_listening]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_audio_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0008-1.mp3]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_transcript]]></wp:meta_key>
+        <wp:meta_value><![CDATA[<strong>Section 1</strong>
+<table border="2px solid #333">
+<tbody>
+<tr>
+<td width="25%">Potential tenant</td>
+<td width="75%">Good morning. My friend gave me your number because he says you have an house for rent and I was wondering if it was still available? I'm new to the city – I've only been here for 5 days, but I really need to find somewhere more permanent to live.</td>
+</tr>
+<tr>
+<td width="25%">Apartment owner</td>
+<td width="75%">Yes, it is available, but we already have some people who are booked to come and see it tomorrow afternoon. We would like to find someone to rent the house by <strong><em>Friday</em></strong>, so we don't have much time. Would you be free tomorrow to come and look at it?</td>
+</tr>
+<tr>
+<td width="25%">Potential tenant</td>
+<td width="75%">Oh, no, sorry, not tomorrow... I start my new job tomorrow, you see. How about if I come over <strong><em>this afternoon</em></strong> though, if you're free?</td>
+</tr>
+<tr>
+<td width="25%">Apartment owner</td>
+<td width="75%">Yes, that's fine. We live nearby anyway, so that's no problem. Now before you come, I think I should just let you know a few details about the house. First of all, there's not much furniture in the place. There is a sofa and some chairs, and there is a kitchen table, but that's about it. You'll probably need <strong><em>a bed</em></strong> at least. I have a spare bedside table which you can use if you like, but it's not in the house at the moment.  There is a telephone line though, and an internet connection.</td>
+</tr>
+<tr>
+<td width="25%">Potential tenant</td>
+<td width="75%">Great, that sounds absolutely fine. My friend says he has some furniture I can have. Can I just check a few more things with you now, on the phone, before I come over and see you?</td>
+</tr>
+<tr>
+<td width="25%">Apartment owner</td>
+<td width="75%">Sure, go ahead!</td>
+</tr>
+<tr>
+<td width="25%">Potential tenant</td>
+<td width="75%">So it's a three bedroom house with a kitchen, dining room and living room, is that right?</td>
+</tr>
+<tr>
+<td width="25%">Apartment owner</td>
+<td width="75%">Yes, that's right. There are <strong><em>two bathrooms</em></strong> – one is connected to the main bedroom, and the other is downstairs.  Out the back there is a small garden which you can use, but you have to keep it neat and tidy. The grass will need to be cut at least once every few weeks.</td>
+</tr>
+<tr>
+<td width="25%">Potential tenant</td>
+<td width="75%">Oh, OK. Is there room for a table and chairs outside, do you think?</td>
+</tr>
+<tr>
+<td width="25%">Apartment owner</td>
+<td width="75%">Oh yes, the garden is <strong><em>just over 4 metres long</em></strong>, so there'll be plenty of room.</td>
+</tr>
+<tr>
+<td width="25%">Potential tenant</td>
+<td width="75%">Great.</td>
+</tr>
+</tbody>
+</table>
+<table border="2px solid #333">
+<tbody>
+<tr>
+<td width="25%">Potential tenant</td>
+<td width="75%"> Where exactly is the apartment block? My friend said it was in Fernhill, but he didn't know the street it was on. I have actually just got a job working in Fernhill, so I was looking for somewhere to live that was within walking distance.</td>
+</tr>
+<tr>
+<td width="25%">Apartment owner</td>
+<td width="75%">It's on Cavendish Drive, number 103</td>
+</tr>
+<tr>
+<td width="25%">Potential tenant</td>
+<td width="75%">Is that near the supermarket on Smith Lane?</td>
+</tr>
+<tr>
+<td width="25%">Apartment owner</td>
+<td width="75%">No, not quite, but I can give you directions from the supermarket if that helps?</td>
+</tr>
+<tr>
+<td width="25%">Potential tenant</td>
+<td width="75%">Oh, yes please. I'm having some problems with my phone so I can't get the directions from the internet.</td>
+</tr>
+<tr>
+<td width="25%">Apartment owner</td>
+<td width="75%">No problem. As you come out of the supermarket, you will see the <strong><em>post office just opposite.</em></strong></td>
+</tr>
+<tr>
+<td width="25%">Potential tenant</td>
+<td width="75%">Oh yes, I know where that is.</td>
+</tr>
+<tr>
+<td width="25%">Apartment owner</td>
+<td width="75%">Well, turn left just as you come out of the supermarket and go past Albert Park. At the end of the road, just after the park you'll see James Street. Turn right and go up James Street past <strong><em>Hill Park</em></strong> on the left and you'll see a…</td>
+</tr>
+<tr>
+<td width="25%">Potential tenant</td>
+<td width="75%">I didn't know there was another park!</td>
+</tr>
+<tr>
+<td width="25%">Apartment owner</td>
+<td width="75%">Yes, it's very nice. It's just opposite the Mainland Bank. Anyway, go past the park and take the second road on the right.</td>
+</tr>
+<tr>
+<td width="25%">Potential tenant</td>
+<td width="75%">That's opposite Davis Lane isn't it?</td>
+</tr>
+<tr>
+<td width="25%">Apartment owner</td>
+<td width="75%">No, that's the <em>first</em> right– that's <strong><em>Wood Lane</em></strong>. You need to take the second right, so go past Wood Lane until you see a row of houses on the left and a <strong><em>petrol station</em></strong> on the right. The petrol station is actually on the corner of James Street and Cavendish Drive.</td>
+</tr>
+<tr>
+<td width="25%">Potential tenant</td>
+<td width="75%">OK, I think I know where you mean.</td>
+</tr>
+<tr>
+<td width="25%">Apartment owner</td>
+<td width="75%">Great. Now turn right from James Street onto Cavendish Drive, walk past the hairdressers and you'll see another row of houses. Number 103 is the last one in the row. There's a <strong><em>bus stop</em></strong> just past the house, so if you get to the bus stop, you've gone too far.</td>
+</tr>
+<tr>
+<td width="25%">Potential tenant</td>
+<td width="75%">That's great – thanks very much. So I'll see you this afternoon.</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<strong>Section 2</strong>
+
+Thanks for joining us... It is a pleasure to be here with you in Canada. Actually my first visit to your amazing country. Now for our cooking demonstration today, I'm going to show you how to make a main chicken dish which is a healthy meal but allows you to keep preparation time and washing up to a minimum!  With a few slight alterations the dish could serve quite well at an adult dinner party or as part of as a family dinner.
+
+First of all, you'll need to pre-heat your oven as evenly as possible to 180 degrees Celsius. Now you'll need one chicken breast per dinner guest – these should be skinless, boneless and trimmed nicely. Place the chicken pieces in a medium depth oven dish with the thicker sides together.
+
+Remember that using the fan on the oven is a useful way of distributing heat as evenly as possible, but a fan will cause your oven to be slightly hotter at the front than the back. For this reason put the thinner parts of the chicken towards the back of the dish and the oven so that your chicken pieces are more likely to cook evenly with the thicker parts at the front in the warmer part of the oven...
+
+Once you've got your chicken laid out in your dish, sprinkle oregano generously over the chicken. You know, <strong>oregano is such a useful herb</strong> and interestingly enough its dried form is usually more full of flavour than when it is fresh. <strong>It's a fantastic flavouring for many different types of meat dishes and is a staple herb used in Greek and Italian cookery.</strong> Oregano has an aromatic, warm but slightly bitter taste – it goes really well with lemony flavours which we will soon also add to this particular dish.
+
+The next thing that you need to do is add the lemon. Now you can just squeeze the lemon juice out over the top of the chicken, but even better is to grate the outside of the lemon and to add what we call the zest from the rind – this gives a much zestier, rounded flavour which is a fantastic accompaniment to the oregano.]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+  </channel>
+</rss>
