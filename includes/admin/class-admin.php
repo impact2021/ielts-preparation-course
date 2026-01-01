@@ -6959,12 +6959,13 @@ class IELTS_CM_Admin {
                 
                 // Ensure mc_options exists and each option has feedback
                 if (isset($question['mc_options']) && is_array($question['mc_options'])) {
-                    foreach ($question['mc_options'] as $idx => $option) {
+                    foreach ($question['mc_options'] as $idx => &$option) {
                         // Ensure feedback field exists (can be empty string)
-                        if (!isset($question['mc_options'][$idx]['feedback'])) {
-                            $question['mc_options'][$idx]['feedback'] = '';
+                        if (!isset($option['feedback'])) {
+                            $option['feedback'] = '';
                         }
                     }
+                    unset($option); // Break the reference
                 }
             }
             
