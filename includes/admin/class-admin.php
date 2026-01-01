@@ -6917,7 +6917,8 @@ class IELTS_CM_Admin {
                     $question_text .= implode("\n\n", $processed_labels);
                 }
                 
-                $question['question'] = $question_text;
+                // Convert newlines to HTML paragraphs for proper display in wp_editor
+                $question['question'] = wpautop($question_text);
                 
                 // Create field_feedback structure from question-level feedback
                 // Use field_count if set, otherwise count field_labels (which we know exists from condition)
