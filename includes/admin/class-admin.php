@@ -6909,12 +6909,14 @@ class IELTS_CM_Admin {
                 $question['question'] = $question_text;
                 
                 // Create field_feedback structure from question-level feedback
+                // Use field_count if set, otherwise count field_labels (which we know exists from condition)
                 $field_count = isset($question['field_count']) ? intval($question['field_count']) : count($question['field_labels']);
                 $question['field_count'] = $field_count;
                 
                 // Ensure field_answers is properly indexed (1-based, not 0-based)
                 if (isset($question['field_answers']) && is_array($question['field_answers'])) {
-                    $original_answers = $question['field_answers'];
+                    // Use array_values to ensure sequential 0-based input before re-indexing
+                    $original_answers = array_values($question['field_answers']);
                     $question['field_answers'] = array();
                     
                     // Re-index to 1-based array
