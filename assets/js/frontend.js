@@ -793,26 +793,29 @@
                                     questionElement.append(feedbackDiv);
                                 }
                             } else if (questionResult.question_type === 'closed_question') {
-                                // For closed_question with multi-select, show feedback inside options (like multi_select)
-                                // For single-select, show feedback at question level
+                                // For closed_question, show feedback inside options (both multi-select and single-select)
                                 // Remove any existing feedback first
                                 questionElement.find('.option-feedback-message').remove();
                                 questionElement.find('.question-feedback-message').remove();
                                 
-                                // Check if this is a multi-select closed question
+                                // Check if this is a multi-select or single-select closed question
                                 var questionOptions = questionElement.find('.question-options');
                                 var correctAnswerCount = questionOptions.length ? (questionOptions.data('correct-count') || 1) : 1;
                                 
-                                if (correctAnswerCount > 1 && questionResult.correct_answer && questionResult.correct_answer.option_feedback) {
-                                    // Multi-select: show option-specific feedback inside each option
+                                if (questionResult.correct_answer && questionResult.correct_answer.option_feedback) {
+                                    // Both multi-select and single-select: show option-specific feedback inside each option
                                     var optionFeedback = questionResult.correct_answer.option_feedback;
                                     
                                     // Display feedback under ALL options that have feedback
                                     $.each(optionFeedback, function(optionIndex, feedbackText) {
                                         if (feedbackText) {
-                                            var checkbox = questionElement.find('input[type="checkbox"][value="' + optionIndex + '"]');
-                                            if (checkbox.length > 0) {
-                                                var optionLabel = checkbox.closest('.option-label');
+                                            // For multi-select, look for checkboxes; for single-select, look for radio buttons
+                                            var inputSelector = correctAnswerCount > 1 
+                                                ? 'input[type="checkbox"][value="' + optionIndex + '"]'
+                                                : 'input[type="radio"][value="' + optionIndex + '"]';
+                                            var input = questionElement.find(inputSelector);
+                                            if (input.length > 0) {
+                                                var optionLabel = input.closest('.option-label');
                                                 if (optionLabel.length > 0) {
                                                     // Create feedback element for this option
                                                     var feedbackDiv = $('<div>')
@@ -827,23 +830,23 @@
                                     });
                                     
                                     // Also show general no-answer feedback if provided and no options were selected
-                                    if (questionResult.feedback && (!questionResult.user_answer || questionResult.user_answer.length === 0)) {
+                                    if (questionResult.feedback && (!questionResult.user_answer || 
+                                        (Array.isArray(questionResult.user_answer) && questionResult.user_answer.length === 0) ||
+                                        questionResult.user_answer === null || questionResult.user_answer === '')) {
                                         var feedbackDiv = $('<div>')
                                             .addClass('question-feedback-message')
                                             .addClass('feedback-incorrect')
                                             .html(questionResult.feedback);
                                         questionElement.append(feedbackDiv);
                                     }
-                                } else {
-                                    // Single-select: show feedback at question level if available
-                                    if (questionResult.feedback) {
-                                        var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
-                                        var feedbackDiv = $('<div>')
-                                            .addClass('question-feedback-message')
-                                            .addClass(feedbackClass)
-                                            .html(questionResult.feedback);
-                                        questionElement.append(feedbackDiv);
-                                    }
+                                } else if (questionResult.feedback) {
+                                    // Fallback: show feedback at question level if option_feedback not available
+                                    var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
+                                    var feedbackDiv = $('<div>')
+                                        .addClass('question-feedback-message')
+                                        .addClass(feedbackClass)
+                                        .html(questionResult.feedback);
+                                    questionElement.append(feedbackDiv);
                                 }
                             } else if (questionResult.question_type === 'multiple_choice' || 
                                        questionResult.question_type === 'matching' || 

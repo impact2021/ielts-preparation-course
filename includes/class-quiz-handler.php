@@ -151,6 +151,14 @@ class IELTS_CM_Quiz_Handler {
                     
                     $is_correct = ($user_answer !== null && $user_answer !== '' && $user_answer == $correct_idx);
                     
+                    // Collect option feedback for all options (for frontend display)
+                    $option_feedback = array();
+                    foreach ($mc_options as $opt_idx => $option) {
+                        if (isset($option['feedback']) && !empty($option['feedback'])) {
+                            $option_feedback[$opt_idx] = wp_kses_post($option['feedback']);
+                        }
+                    }
+                    
                     if ($is_correct) {
                         $points_earned = 1;
                         // Use feedback from the selected correct option
@@ -167,8 +175,11 @@ class IELTS_CM_Quiz_Handler {
                     }
                     $score += $points_earned;
                     
-                    // Set correct_answer to the correct index for frontend feedback
-                    $correct_answer = $correct_idx;
+                    // Set correct_answer to include correct_idx and option_feedback for frontend feedback
+                    $correct_answer = array(
+                        'correct_idx' => $correct_idx,
+                        'option_feedback' => $option_feedback
+                    );
                 }
             } elseif ($question['type'] === 'open_question') {
                 // Open question - text input with configurable field count
