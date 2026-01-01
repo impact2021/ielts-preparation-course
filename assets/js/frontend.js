@@ -974,6 +974,11 @@
                                     .html(questionResult.feedback); // Using .html() because feedback explicitly supports HTML formatting
                                                                      // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
                                 
+                                // Add special class for open questions to show icon beside feedback
+                                if (questionResult.question_type === 'open_question') {
+                                    feedbackDiv.addClass('open-question-feedback');
+                                }
+                                
                                 questionElement.append(feedbackDiv);
                             }
                         });
