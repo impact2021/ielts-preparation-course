@@ -6949,6 +6949,23 @@ class IELTS_CM_Admin {
                 
                 // Remove field_labels as it's now incorporated into question text
                 unset($question['field_labels']);
+            } elseif ($type === 'closed_question') {
+                // Transform closed_question format
+                // Remove generic feedback fields that should not be present for closed questions
+                // Feedback should be per-option only
+                unset($question['correct_feedback']);
+                unset($question['incorrect_feedback']);
+                unset($question['no_answer_feedback']);
+                
+                // Ensure mc_options exists and each option has feedback
+                if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                    foreach ($question['mc_options'] as $idx => $option) {
+                        // Ensure feedback field exists (can be empty string)
+                        if (!isset($question['mc_options'][$idx]['feedback'])) {
+                            $question['mc_options'][$idx]['feedback'] = '';
+                        }
+                    }
+                }
             }
             
             $transformed[] = $question;

@@ -58,33 +58,36 @@
       "mc_options": [
         {
           "text": "A. It's easy to sprinkle on food",
-          "is_correct": false
+          "is_correct": false,
+          "feedback": "This is not mentioned by the chef. Listen for what the chef actually says about oregano's use and characteristics."
         },
         {
           "text": "B. It's tastier when fresh",
-          "is_correct": false
+          "is_correct": false,
+          "feedback": "The chef doesn't make this comparison. Focus on the specific properties mentioned in the audio."
         },
         {
           "text": "C. It's used in the majority of Italian dishes",
-          "is_correct": true
+          "is_correct": true,
+          "feedback": "Correct! The chef mentions that oregano is used in most Italian dishes."
         },
         {
           "text": "D. It has a lemony flavour",
-          "is_correct": false
+          "is_correct": false,
+          "feedback": "This is not the flavor profile described by the chef. Listen again for the actual taste description."
         },
         {
           "text": "E. It gives food a rounded flavour",
-          "is_correct": false
+          "is_correct": false,
+          "feedback": "While the chef discusses flavor, this specific description is not used. Review the audio for the exact wording."
         },
         {
           "text": "F. It's a good accompaniment to many meat dishes",
-          "is_correct": true
+          "is_correct": true,
+          "feedback": "Correct! The chef states that oregano pairs well with various meat dishes."
         }
       ],
       "correct_answer": "2|5",
-      "correct_feedback": "Correct! The answers are C and F.",
-      "incorrect_feedback": "Not quite. The correct answers are C and F. Listen again for what the chef says about oregano.",
-      "no_answer_feedback": "The correct answers are C and F.",
       "points": 2
     }
   ],

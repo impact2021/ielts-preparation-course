@@ -90,6 +90,8 @@ When imported, the `field_labels` are converted into the question text with line
 
 Covers multiple question numbers based on `correct_answer_count`.
 
+**IMPORTANT: Each option MUST have its own feedback.** Generic question-level feedback (correct_feedback, incorrect_feedback, no_answer_feedback) should NOT be used for closed questions. Instead, provide specific feedback for each option.
+
 **Single Select (1 correct answer):**
 ```json
 {
@@ -98,14 +100,23 @@ Covers multiple question numbers based on `correct_answer_count`.
   "question": "What is the capital of France?",
   "correct_answer_count": 1,
   "mc_options": [
-    {"text": "A. London", "is_correct": false},
-    {"text": "B. Paris", "is_correct": true},
-    {"text": "C. Berlin", "is_correct": false}
+    {
+      "text": "A. London",
+      "is_correct": false,
+      "feedback": "Incorrect. London is the capital of the United Kingdom. The correct answer is Paris."
+    },
+    {
+      "text": "B. Paris",
+      "is_correct": true,
+      "feedback": "Correct! Paris is the capital of France."
+    },
+    {
+      "text": "C. Berlin",
+      "is_correct": false,
+      "feedback": "Incorrect. Berlin is the capital of Germany. The correct answer is Paris."
+    }
   ],
   "correct_answer": "1",
-  "correct_feedback": "Correct! Paris is the capital.",
-  "incorrect_feedback": "Not quite. The answer is Paris.",
-  "no_answer_feedback": "The correct answer is B. Paris.",
   "points": 1
 }
 ```
@@ -118,17 +129,38 @@ Covers multiple question numbers based on `correct_answer_count`.
   "question": "Which TWO are true of oregano?",
   "correct_answer_count": 2,
   "mc_options": [
-    {"text": "A. Easy to sprinkle", "is_correct": false},
-    {"text": "B. Tastier fresh", "is_correct": false},
-    {"text": "C. Used in Italian dishes", "is_correct": true},
-    {"text": "D. Lemony flavor", "is_correct": false},
-    {"text": "E. Rounded flavor", "is_correct": false},
-    {"text": "F. Good with meat", "is_correct": true}
+    {
+      "text": "A. Easy to sprinkle",
+      "is_correct": false,
+      "feedback": "This is not mentioned. Listen for what is actually said about oregano."
+    },
+    {
+      "text": "B. Tastier fresh",
+      "is_correct": false,
+      "feedback": "This comparison is not made. Focus on the specific properties mentioned."
+    },
+    {
+      "text": "C. Used in Italian dishes",
+      "is_correct": true,
+      "feedback": "Correct! Oregano is used in most Italian dishes."
+    },
+    {
+      "text": "D. Lemony flavor",
+      "is_correct": false,
+      "feedback": "This is not the flavor profile described. Listen again for the actual taste."
+    },
+    {
+      "text": "E. Rounded flavor",
+      "is_correct": false,
+      "feedback": "This specific description is not used. Review the audio for exact wording."
+    },
+    {
+      "text": "F. Good with meat",
+      "is_correct": true,
+      "feedback": "Correct! Oregano pairs well with various meat dishes."
+    }
   ],
   "correct_answer": "2|5",
-  "correct_feedback": "Correct! The answers are C and F.",
-  "incorrect_feedback": "Not quite. The correct answers are C and F.",
-  "no_answer_feedback": "The correct answers are C and F.",
   "points": 2
 }
 ```
@@ -136,10 +168,12 @@ Covers multiple question numbers based on `correct_answer_count`.
 **Key Points:**
 - `correct_answer_count`: Number of correct answers (= number of question numbers this covers)
 - `mc_options`: Array of answer choices
+  - Each option MUST include `text`, `is_correct`, and `feedback`
+  - `feedback`: Specific feedback shown when this option is selected
 - `is_correct`: Boolean indicating if this option is correct
 - `correct_answer`: Pipe-separated indices of correct options (0-based)
 - `points`: Usually equals `correct_answer_count`
-- **Feedback**: The feedback fields (correct_feedback, incorrect_feedback, no_answer_feedback) will be properly displayed in the admin interface and shown to students
+- **DO NOT include** `correct_feedback`, `incorrect_feedback`, or `no_answer_feedback` at the question level - feedback is per-option only
 
 ## Settings
 
@@ -211,7 +245,9 @@ The system will accept any of these variations.
 
 ## Feedback Requirements
 
-All questions MUST have three types of feedback:
+### Open Questions (Text Input)
+
+Open questions use question-level feedback that is automatically applied to each field:
 
 1. **correct_feedback**: Shown when answer is correct
 2. **incorrect_feedback**: Shown when answer is wrong (should guide to correct answer)
@@ -223,6 +259,27 @@ Example:
 "incorrect_feedback": "Not quite. Listen again and check paragraph 3.",
 "no_answer_feedback": "The correct answer is: Friday. Make sure to take notes while listening."
 ```
+
+### Closed Questions (Multiple Choice)
+
+Closed questions require **per-option feedback only**. Each option in the `mc_options` array MUST have a `feedback` field:
+
+```json
+"mc_options": [
+  {
+    "text": "A. Option text",
+    "is_correct": false,
+    "feedback": "Specific feedback for this option explaining why it's incorrect."
+  },
+  {
+    "text": "B. Option text",
+    "is_correct": true,
+    "feedback": "Specific feedback for this option confirming it's correct."
+  }
+]
+```
+
+**DO NOT use** question-level feedback fields (correct_feedback, incorrect_feedback, no_answer_feedback) for closed questions.
 
 ## Complete Example
 
