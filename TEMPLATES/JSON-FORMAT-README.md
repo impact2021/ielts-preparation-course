@@ -4,6 +4,12 @@
 
 JSON import is now the **recommended** way to import exercises into the IELTS Course Manager plugin. It's more reliable, easier to read, and has 90% fewer bugs than XML.
 
+**Recent Improvements (Latest Version):**
+- ✅ `field_labels` are now properly incorporated into question text for open questions
+- ✅ Per-field feedback is automatically created from question-level feedback
+- ✅ Feedback fields are now properly displayed in admin for closed questions
+- ✅ All feedback is correctly transferred from JSON to the admin interface
+
 ## Why JSON?
 
 - ✅ **No PHP serialization issues** (eliminates 60-70% of XML bugs)
@@ -69,9 +75,13 @@ Covers multiple question numbers based on `field_count`.
 
 **Key Points:**
 - `field_count`: Number of input fields (= number of question numbers this covers)
-- `field_labels`: Array of labels/prompts for each field
+- `field_labels`: Array of labels/prompts for each field - **these will be automatically added to your question text in the admin interface**
 - `field_answers`: Array of accepted answers (use `|` to separate multiple acceptable answers)
 - `points`: Usually equals `field_count`
+- **Feedback**: The feedback you provide at the question level will be applied to each individual field automatically
+
+**How it works:**
+When imported, the `field_labels` are converted into the question text, and individual field feedback is created for each field. This means you only need to write the feedback once, and it will apply to all fields in the question.
 
 ### Closed Question (Multiple Choice)
 
@@ -126,6 +136,7 @@ Covers multiple question numbers based on `correct_answer_count`.
 - `is_correct`: Boolean indicating if this option is correct
 - `correct_answer`: Pipe-separated indices of correct options (0-based)
 - `points`: Usually equals `correct_answer_count`
+- **Feedback**: The feedback fields (correct_feedback, incorrect_feedback, no_answer_feedback) will be properly displayed in the admin interface and shown to students
 
 ## Settings
 
