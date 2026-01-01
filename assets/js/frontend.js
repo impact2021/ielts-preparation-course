@@ -800,7 +800,8 @@
                                 questionElement.find('.question-feedback-message').remove();
                                 
                                 // Check if this is a multi-select closed question
-                                var correctAnswerCount = questionElement.find('.question-options').data('correct-count');
+                                var questionOptions = questionElement.find('.question-options');
+                                var correctAnswerCount = questionOptions.length ? (questionOptions.data('correct-count') || 1) : 1;
                                 
                                 if (correctAnswerCount > 1 && questionResult.correct_answer && questionResult.correct_answer.option_feedback) {
                                     // Multi-select: show option-specific feedback inside each option
@@ -810,15 +811,18 @@
                                     $.each(optionFeedback, function(optionIndex, feedbackText) {
                                         if (feedbackText) {
                                             var checkbox = questionElement.find('input[type="checkbox"][value="' + optionIndex + '"]');
-                                            var optionLabel = checkbox.closest('.option-label');
-                                            
-                                            // Create feedback element for this option
-                                            var feedbackDiv = $('<div>')
-                                                .addClass('option-feedback-message')
-                                                .html(feedbackText);
-                                            
-                                            // Append feedback inside the option label
-                                            optionLabel.append(feedbackDiv);
+                                            if (checkbox.length > 0) {
+                                                var optionLabel = checkbox.closest('.option-label');
+                                                if (optionLabel.length > 0) {
+                                                    // Create feedback element for this option
+                                                    var feedbackDiv = $('<div>')
+                                                        .addClass('option-feedback-message')
+                                                        .html(feedbackText);
+                                                    
+                                                    // Append feedback inside the option label
+                                                    optionLabel.append(feedbackDiv);
+                                                }
+                                            }
                                         }
                                     });
                                     

@@ -1716,7 +1716,7 @@ select.answer-select-inline.answer-incorrect {
     margin: 0;
 }
 
-/* For open question feedback, keep br tags inline (don't break to new line) */
+/* For open question feedback, hide br tags to keep feedback items inline */
 .question-feedback-message.open-question-feedback br {
     display: none;
 }
@@ -1731,8 +1731,7 @@ select.answer-select-inline.answer-incorrect {
 
 /* Icons for open question feedback messages */
 /* Don't show the main ::before icon for open questions since we'll add icons per field */
-.question-feedback-message.feedback-correct.open-question-feedback::before,
-.question-feedback-message.feedback-incorrect.open-question-feedback::before {
+.question-feedback-message.open-question-feedback::before {
     content: none;
 }
 
