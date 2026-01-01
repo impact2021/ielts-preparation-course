@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">
+  <channel>
+    <item>
+      <title><![CDATA[Listening Test 6 Section 1 - FIXED]]></title>
+      <wp:post_type><![CDATA[ielts_quiz]]></wp:post_type>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_questions]]></wp:meta_key>
+        <wp:meta_value><![CDATA[a:3:{i:0;a:11:{s:4:"type";s:13:"open_question";s:12:"instructions";s:180:"Listen to the recordings and type your answers in the spaces provided.
+
+Questions 1 – 10
+
+Questions 1 – 4
+
+Complete the notes below USING NO MORE THAN TWO WORDS for each answer";s:8:"question";s:33:"Buying a Puppy - Customer Enquiry";s:11:"field_count";i:4;s:12:"field_labels";a:4:{i:0;s:53:"1. Who is the customer buying the puppy for? ________";i:1;s:47:"2. When will the puppies be available? ________";i:2;s:54:"3. When is the breeder not available to meet? ________";i:3;s:40:"4. What is outside the kennels? ________";}s:13:"field_answers";a:4:{i:0;s:21:"his daughter|daughter";i:1;s:54:"in one week|in 1 week|one week|1 week|a week|in a week";i:2;s:36:"on friday afternoon|friday afternoon";i:3;s:31:"a big sign|big sign|a sign|sign";}s:14:"field_feedback";a:4:{i:0;a:3:{s:7:"correct";s:163:"✓ Excellent! The customer is buying the puppy for HIS DAUGHTER. You listened carefully when the customer explained "I want it to be a companion for my daughter."";s:9:"incorrect";s:135:"✗ Not quite. The customer clearly states who the puppy is for. Listen for when the customer explains the reason for buying the puppy.";s:9:"no_answer";s:151:"No answer provided. The customer mentions who the puppy is for early in the conversation. In IELTS Listening, you should always attempt every question.";}i:1;a:3:{s:7:"correct";s:139:"✓ Excellent! The puppies will be available IN ONE WEEK (or variations). The breeder says they are 7 weeks old and can go home at 8 weeks.";s:9:"incorrect";s:134:"✗ Not quite. The breeder states "they'll be available for their owners to take home in one week." Listen for the specific timeframe.";s:9:"no_answer";s:127:"No answer provided. The breeder explains when the puppies will be old enough to go to new homes. Always attempt every question.";}i:2;a:3:{s:7:"correct";s:107:"✓ Excellent! The breeder is not available on FRIDAY AFTERNOON. She mentions she'll be at a dog show then.";s:9:"incorrect";s:136:"✗ Not quite. The breeder says "any day this week is fine, apart from Friday afternoon." Listen for the day and time she's unavailable.";s:9:"no_answer";s:103:"No answer provided. The breeder specifies one time when she cannot meet. Always attempt every question.";}i:3;a:3:{s:7:"correct";s:142:"✓ Excellent! There is A BIG SIGN outside the kennels. The breeder says "I've got a big sign outside" to help the customer find the location.";s:9:"incorrect";s:123:"✗ Not quite. The breeder describes what is outside to help with directions. Listen for what makes the place easy to find.";s:9:"no_answer";s:128:"No answer provided. The breeder mentions something visible outside to help identify the location. Always attempt every question.";}}s:16:"correct_feedback";s:64:"✓ Well done! You identified all the key information correctly.";s:18:"incorrect_feedback";s:82:"✗ Not quite. Review the conversation between the customer and breeder carefully.";s:18:"no_answer_feedback";s:69:"No answers provided. Always attempt every question in the IELTS test.";s:6:"points";i:4;}i:1;a:11:{s:4:"type";s:15:"closed_question";s:12:"instructions";s:291:"Questions 5 – 6
+
+Label the map below using letters A-F. Write your answers in boxes 5 – 6 in the answer sheet.
+
+<img src="https://www.ieltstestonline.com/wp-content/uploads/2018/12/TEST-6.jpg" alt="Map" />
+
+Listen to the directions and identify where the craft shop and cafe are located.";s:8:"question";s:22:"Choose TWO letters A-F";s:10:"mc_options";a:6:{i:0;a:2:{s:4:"text";s:1:"A";s:10:"is_correct";b:0;}i:1;a:2:{s:4:"text";s:1:"B";s:10:"is_correct";b:0;}i:2;a:2:{s:4:"text";s:8:"C - Cafe";s:10:"is_correct";b:1;}i:3;a:2:{s:4:"text";s:1:"D";s:10:"is_correct";b:0;}i:4;a:2:{s:4:"text";s:14:"E - Craft Shop";s:10:"is_correct";b:1;}i:5;a:2:{s:4:"text";s:1:"F";s:10:"is_correct";b:0;}}s:20:"correct_answer_count";i:2;s:14:"correct_answer";s:3:"2|4";s:15:"option_feedback";a:6:{i:0;s:95:"Location A is not correct. Listen to the directions about the fruit shop, craft shop, and cafe.";i:1;s:95:"Location B is not correct. Listen to the directions about the fruit shop, craft shop, and cafe.";i:2;s:88:"✓ Correct! C is the cafe location. The breeder says "you'll see a cafe on your right."";i:3;s:95:"Location D is not correct. Listen to the directions about the fruit shop, craft shop, and cafe.";i:4;s:110:"✓ Correct! E is the craft shop location. The breeder says "you'll see a craft shop. Go past the craft shop."";i:5;s:95:"Location F is not correct. Listen to the directions about the fruit shop, craft shop, and cafe.";}s:16:"correct_feedback";s:129:"✓ Excellent! You correctly identified both locations (C for cafe and E for craft shop). You followed the directions accurately.";s:18:"incorrect_feedback";s:157:"✗ Not quite. The correct locations are C (cafe) and E (craft shop). Listen carefully to the sequence: fruit shop, then craft shop, then cafe on your right.";s:18:"no_answer_feedback";s:119:"No answer provided. The correct locations are C and E. Listen to the breeder's detailed directions along Barnett Drive.";s:6:"points";i:2;}i:2;a:11:{s:4:"type";s:13:"open_question";s:12:"instructions";s:114:"Questions 7 – 10
+
+Complete the notes below about MICROCHIPPING PETS
+
+Write NO MORE THAN ONE WORD for each answer";s:8:"question";s:25:"Microchipping Information";s:11:"field_count";i:4;s:12:"field_labels";a:4:{i:0;s:46:"7. Collars and tags can be removed or ________";i:1;s:55:"8. Microchips are about the size of a grain of ________";i:2;s:47:"9. Dogs feel discomfort for only a few ________";i:3;s:55:"10. Keep the area clean to prevent it becoming ________";}s:13:"field_answers";a:4:{i:0;s:4:"lost";i:1;s:4:"rice";i:2;s:7:"seconds";i:3;s:5:"dirty";}s:14:"field_feedback";a:4:{i:0;a:3:{s:7:"correct";s:125:"✓ Excellent! Collars and tags can be LOST. The breeder explains this is a disadvantage compared to permanent microchipping.";s:9:"incorrect";s:160:"✗ Not quite. The breeder explains what can happen to collars and tags that makes them less reliable than microchips. Listen for the word after "removed or..."";s:9:"no_answer";s:112:"No answer provided. The breeder discusses why microchips are better than collars. Always attempt every question.";}i:1;a:3:{s:7:"correct";s:116:"✓ Excellent! The microchip is the size of a grain of RICE. This shows how tiny and minimally invasive the chip is.";s:9:"incorrect";s:127:"✗ Not quite. The breeder uses a comparison to describe the tiny size. Listen for what specific grain the chip is compared to.";s:9:"no_answer";s:104:"No answer provided. A specific grain is mentioned to show the small size. Always attempt every question.";}i:2;a:3:{s:7:"correct";s:116:"✓ Excellent! Dogs feel discomfort for only a few SECONDS. The breeder reassures that any discomfort is very brief.";s:9:"incorrect";s:106:"✗ Not quite. The breeder talks about how brief the discomfort is. Listen for the unit of time mentioned.";s:9:"no_answer";s:89:"No answer provided. A very short time period is mentioned. Always attempt every question.";}i:3;a:3:{s:7:"correct";s:124:"✓ Excellent! Keep the area from becoming DIRTY to minimize infection risk. Basic hygiene is important after the procedure.";s:9:"incorrect";s:100:"✗ Not quite. The breeder gives advice about preventing infection. What condition should you avoid?";s:9:"no_answer";s:105:"No answer provided. The breeder mentions keeping the injection area clean. Always attempt every question.";}}s:16:"correct_feedback";s:74:"✓ Well done! You understood all the microchipping information correctly.";s:18:"incorrect_feedback";s:81:"✗ Not quite. Listen to the breeder's explanation about microchipping carefully.";s:18:"no_answer_feedback";s:69:"No answers provided. Always attempt every question in the IELTS test.";s:6:"points";i:4;}}]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_pass_percentage]]></wp:meta_key>
+        <wp:meta_value><![CDATA[i:60;]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_layout_type]]></wp:meta_key>
+        <wp:meta_value><![CDATA[listening_practice]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_timer_minutes]]></wp:meta_key>
+        <wp:meta_value><![CDATA[i:40;]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_starting_question_number]]></wp:meta_key>
+        <wp:meta_value><![CDATA[i:1;]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_scoring_type]]></wp:meta_key>
+        <wp:meta_value><![CDATA[ielts_listening]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_audio_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0006-1.mp3]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_ielts_cm_transcript]]></wp:meta_key>
+        <wp:meta_value><![CDATA[&lt;strong&gt;Section 1&lt;/strong&gt;
+&lt;table border="1" width="90%" cellspacing="0" cellpadding="0" align="center"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Breeder:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Hello, Greenlee kennels here, how can I help you?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Customer:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Hi there, I'm ringing to enquire about you advertisement I saw on the internet. Do you still have any puppies for sale?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Breeder:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Yes, I do. I've got two boys and one girl left.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Customer:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;What colours do you have left? You had some black and some gold coloured dogs advertised on the website I saw.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Breeder:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Yes, I've only got black puppies left now; the last of the golden ones was sold yesterday.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Customer:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Well, I'm interested in buying a male puppy. (Q1) I want it to be a companion for my daughter. Do you think the puppies are good with children?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Breeder:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Yes, I raise them in the house and they're very good with other dogs and children. My grandson plays with them all the time. They're still very young remember, so they'll adapt really easily to living in a household with children around full-time. Just remember to tell your little girl to be very gentle, especially at first.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Customer:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;How old are they now?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Breeder:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;They're seven weeks old. I let them go when they are 8 weeks or older, so they'll be available for their owners to take home in (Q2) one week.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Customer:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Okay, that sounds great. Now can I arrange to come and see you and the puppies. When would be convenient?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Breeder:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Well, any day this week is fine, apart from (Q3) Friday afternoon, I'll be out at a dog show then. When would you like to come?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Customer:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;How about on Thursday – the day after tomorrow. Would it be okay if I come at around 10.30am?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Breeder:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Can you make it 11am instead, that would suit me better if it's okay for you?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Customer:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Yes, 11am is fine. Is your place easy to find?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Breeder:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Yes, (Q4) I've got a big sign outside, we're opposite the new leisure centre on Westlands Rd. I'm at number 157.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Customer:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;157 Westlands Rd - isn't Westland Rd near Barnett Drive?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Breeder:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Yes, it is. (Q5/6) After the traffic lights, you come along Barnett Drive and you'll see a fruit and vegetable shop on the left hand side. Just after that you'll see a craft shop. Go past the craft shop and you'll see a cafe on your right. Take the second right after the cafe – that's Westlands Rd, it's the one after Banks Drive.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Customer:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Okay, that's fine, thanks. I think I know here you mean.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Customer:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;I have another question for you. I'm thinking of getting the puppy micro-chipped, so that if it gets lost it could be easily traced and returned to us. Do you think that's a good idea?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Breeder:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Yes, I do. There are many advantages to micro-chipping when you compare it to other forms of identification. Collars and tags can be convenient but they're also easily taken off or (Q7) lost. Micro-chipping is permanent. In very rare cases you might have a situation where the microchip moves in the dog's body so it can't be found and scanned, but you can always have the chip checked every now and then to make sure it's still working properly.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Customer:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Does it hurt the dog? When they put the microchip in?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Breeder:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;No. The microchip is really small, roughly the size of a grain of (Q8) rice. Because it's so small it makes it easy for the vet to put in; it can be easily injected between the shoulder blades of even the smallest dog. The dog being injected rarely notices any discomfort for more than a few (Q9) seconds.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Customer:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Are there any risks involved?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Breeder:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;There's a very small risk of infection – but you can minimise this by just taking a bit of extra care of the area for a while – make sure it doesn't get (Q10) dirty – that sort of thing.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Customer:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Well thanks for that advice, it gives us something to think about. I'll see you soon then - we're looking forward to meeting you and of course the puppies!&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td valign="top" width="24%"&gt;Breeder:&lt;/td&gt;&lt;td valign="top" width="76%"&gt;Yes, looking forward to meeting you too. See you soon.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+  </channel>
+</rss>
