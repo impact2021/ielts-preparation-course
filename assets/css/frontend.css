@@ -1569,6 +1569,8 @@ select.answer-select-inline.answer-incorrect {
 .open-question-field {
     position: relative;
     margin-bottom: 15px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* CBT Result Modal */
@@ -1733,7 +1735,7 @@ select.answer-select-inline.answer-incorrect {
 
 /* Style for individual field feedback within open question feedback */
 .question-feedback-message.open-question-feedback .field-feedback {
-    display: inline-block;
+    display: block;
     margin-right: 10px;
 }
 
