@@ -6836,14 +6836,11 @@ class IELTS_CM_Admin {
             $existing_questions = array();
         }
         
-        // Get new questions from JSON and transform them
+        // Get new questions from JSON (already transformed)
         $new_questions = isset($data['questions']) ? $data['questions'] : array();
         if (!is_array($new_questions)) {
             $new_questions = array();
         }
-        
-        // Transform new questions from JSON format to admin format
-        $new_questions = $this->transform_json_questions_to_admin_format($new_questions);
         
         // Merge questions
         $merged_questions = array_merge($existing_questions, $new_questions);
