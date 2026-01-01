@@ -6898,12 +6898,23 @@ class IELTS_CM_Admin {
                 // Build question text from field_labels
                 $question_text = isset($question['question']) ? $question['question'] : '';
                 
-                // Add field labels as a list
+                // Add field labels as a list, replacing ________ with [field N] placeholders
                 if (!empty($question['field_labels'])) {
                     if (!empty($question_text)) {
                         $question_text .= "\n\n";
                     }
-                    $question_text .= implode("\n", $question['field_labels']);
+                    
+                    // Process each field label to replace ________ with [field N]
+                    $processed_labels = array();
+                    $field_num = 1;
+                    foreach ($question['field_labels'] as $label) {
+                        // Replace ________ (8 or more underscores) with [field N]
+                        $processed_label = preg_replace('/_{8,}/', '[field ' . $field_num . ']', $label);
+                        $processed_labels[] = $processed_label;
+                        $field_num++;
+                    }
+                    
+                    $question_text .= implode("\n", $processed_labels);
                 }
                 
                 $question['question'] = $question_text;
