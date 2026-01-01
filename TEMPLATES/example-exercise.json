@@ -1,0 +1,108 @@
+{
+  "title": "Example Listening Test Section",
+  "content": "",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Complete the notes below using NO MORE THAN TWO WORDS AND/OR A NUMBER",
+      "question": "Complete the following:",
+      "field_count": 5,
+      "field_labels": [
+        "1. The owner wants to rent the house by ________",
+        "2. The woman will come to look at the house this ________",
+        "3. The woman will need to have her own ________",
+        "4. There are two ________",
+        "5. The garden is slightly longer than ________"
+      ],
+      "field_answers": [
+        "Friday",
+        "afternoon",
+        "bed",
+        "bathrooms",
+        "4 metres|four metres|4 m|4m|4 meters|four meters"
+      ],
+      "correct_feedback": "Excellent! You got it right.",
+      "incorrect_feedback": "Not quite. Listen to the audio again and check the transcript.",
+      "no_answer_feedback": "The correct answer is shown above. Listen carefully and take notes while listening.",
+      "points": 5
+    },
+    {
+      "type": "open_question",
+      "instructions": "Label the map below using NO MORE THAN TWO WORDS",
+      "question": "Label the map locations (Questions 6-10):",
+      "field_count": 5,
+      "field_labels": [
+        "6. ________",
+        "7. ________",
+        "8. ________",
+        "9. ________",
+        "10. ________"
+      ],
+      "field_answers": [
+        "post office",
+        "Hill Park",
+        "Wood Lane",
+        "Petrol station|gas station",
+        "Bus stop"
+      ],
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Not quite. Review the map and listen again.",
+      "no_answer_feedback": "The correct answer is shown above.",
+      "points": 5
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Which TWO of the following does the chef say are true of the herb oregano? Choose TWO letters A-F.",
+      "question": "Select the TWO correct answers:",
+      "correct_answer_count": 2,
+      "mc_options": [
+        {
+          "text": "A. It's easy to sprinkle on food",
+          "is_correct": false
+        },
+        {
+          "text": "B. It's tastier when fresh",
+          "is_correct": false
+        },
+        {
+          "text": "C. It's used in the majority of Italian dishes",
+          "is_correct": true
+        },
+        {
+          "text": "D. It has a lemony flavour",
+          "is_correct": false
+        },
+        {
+          "text": "E. It gives food a rounded flavour",
+          "is_correct": false
+        },
+        {
+          "text": "F. It's a good accompaniment to many meat dishes",
+          "is_correct": true
+        }
+      ],
+      "correct_answer": "2|5",
+      "correct_feedback": "Correct! The answers are C and F.",
+      "incorrect_feedback": "Not quite. The correct answers are C and F. Listen again for what the chef says about oregano.",
+      "no_answer_feedback": "The correct answers are C and F.",
+      "points": 2
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "two_column_listening",
+    "exercise_label": "practice_test",
+    "scoring_type": "ielts_listening_band",
+    "timer_minutes": 10,
+    "starting_question_number": 1
+  },
+  "audio": {
+    "url": "https://example.com/audio/listening-test-section-1.mp3",
+    "transcript": "<p>Sample transcript would go here...</p>"
+  },
+  "_metadata": {
+    "format_version": "1.0",
+    "description": "This is an example JSON file demonstrating the IELTS Course Manager import format. Questions 1-5 are open questions (one object with 5 fields). Questions 6-10 are also open questions (another object with 5 fields). Questions 11-12 are a multiple choice with 2 correct answers (one object that counts as 2 questions). Total: 12 questions."
+  }
+}

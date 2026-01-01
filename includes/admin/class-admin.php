@@ -54,6 +54,8 @@ class IELTS_CM_Admin {
         add_action('wp_ajax_ielts_cm_clone_course', array($this, 'ajax_clone_course'));
         add_action('wp_ajax_ielts_cm_export_exercise_xml', array($this, 'ajax_export_exercise_xml'));
         add_action('wp_ajax_ielts_cm_import_exercise_xml', array($this, 'ajax_import_exercise_xml'));
+        add_action('wp_ajax_ielts_cm_export_exercise_json', array($this, 'ajax_export_exercise_json'));
+        add_action('wp_ajax_ielts_cm_import_exercise_json', array($this, 'ajax_import_exercise_json'));
         
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
@@ -5965,10 +5967,145 @@ class IELTS_CM_Admin {
         #ielts-cm-xml-import-export .button .dashicons {
             vertical-align: text-bottom;
         }
-        #ielts-cm-import-status .notice {
+        #ielts-cm-import-status .notice,
+        #ielts-cm-import-json-status .notice {
             margin: 0;
         }
         </style>
+        
+        <hr style="margin: 15px 0;">
+        
+        <div>
+            <h4><?php _e('Export to JSON', 'ielts-course-manager'); ?></h4>
+            <p><small><?php _e('Download this exercise as a JSON file - easier to read and edit than XML.', 'ielts-course-manager'); ?></small></p>
+            <button type="button" id="ielts-cm-export-json-btn" class="button button-secondary" style="width: 100%;">
+                <span class="dashicons dashicons-download" style="margin-top: 3px;"></span>
+                <?php _e('Export to JSON', 'ielts-course-manager'); ?>
+            </button>
+        </div>
+        
+        <hr style="margin: 15px 0;">
+        
+        <div>
+            <h4><?php _e('Import from JSON', 'ielts-course-manager'); ?></h4>
+            <p><small><?php _e('Upload a JSON file to import exercise content. More reliable than XML.', 'ielts-course-manager'); ?></small></p>
+            
+            <div style="margin-bottom: 15px; padding: 10px; background: #f0f0f1; border-left: 4px solid #0073aa;">
+                <label style="display: block; margin-bottom: 8px;">
+                    <strong><?php _e('Import Mode:', 'ielts-course-manager'); ?></strong>
+                </label>
+                <label for="ielts_cm_import_json_mode_append" style="display: block; margin-bottom: 5px;">
+                    <input type="radio" id="ielts_cm_import_json_mode_append" name="ielts_cm_import_json_mode" value="append" checked>
+                    <?php _e('Add to existing content', 'ielts-course-manager'); ?>
+                    <span style="color: #666; font-size: 12px;"><?php _e('(keeps current questions and adds new ones)', 'ielts-course-manager'); ?></span>
+                </label>
+                <label for="ielts_cm_import_json_mode_replace" style="display: block;">
+                    <input type="radio" id="ielts_cm_import_json_mode_replace" name="ielts_cm_import_json_mode" value="replace">
+                    <?php _e('Replace all content', 'ielts-course-manager'); ?>
+                    <span style="color: #666; font-size: 12px;"><?php _e('(overwrites everything)', 'ielts-course-manager'); ?></span>
+                </label>
+            </div>
+            
+            <p id="ielts-cm-append-json-info" style="display: block;"><small style="color: #0073aa;"><strong><?php _e('Note:', 'ielts-course-manager'); ?></strong> <?php _e('Questions and reading texts from the JSON will be added after your current content.', 'ielts-course-manager'); ?></small></p>
+            <p id="ielts-cm-replace-json-warning" style="display: none;"><small style="color: #d63638;"><strong><?php _e('Warning:', 'ielts-course-manager'); ?></strong> <?php _e('Replace mode will overwrite all current content. Export a backup first!', 'ielts-course-manager'); ?></small></p>
+            
+            <input type="file" id="ielts-cm-json-file" accept=".json" style="margin-bottom: 10px;">
+            <button type="button" id="ielts-cm-import-json-btn" class="button button-primary" style="width: 100%;">
+                <span class="dashicons dashicons-upload" style="margin-top: 3px;"></span>
+                <?php _e('Upload & Import JSON', 'ielts-course-manager'); ?>
+            </button>
+            <div id="ielts-cm-import-json-status" style="margin-top: 10px; display: none;"></div>
+        </div>
+        
+        <script>
+        jQuery(document).ready(function($) {
+            // Toggle warning/info message for JSON import mode
+            $('input[name="ielts_cm_import_json_mode"]').on('change', function() {
+                if ($(this).val() === 'replace') {
+                    $('#ielts-cm-replace-json-warning').show();
+                    $('#ielts-cm-append-json-info').hide();
+                } else {
+                    $('#ielts-cm-replace-json-warning').hide();
+                    $('#ielts-cm-append-json-info').show();
+                }
+            });
+            
+            // JSON Export
+            $('#ielts-cm-export-json-btn').on('click', function() {
+                var exportUrl = ajaxurl + '?action=ielts_cm_export_exercise_json&post_id=<?php echo $post->ID; ?>&nonce=<?php echo wp_create_nonce('ielts_cm_export_json_' . $post->ID); ?>';
+                window.location.href = exportUrl;
+            });
+            
+            // JSON Import
+            $('#ielts-cm-import-json-btn').on('click', function() {
+                var fileInput = $('#ielts-cm-json-file')[0];
+                var statusDiv = $('#ielts-cm-import-json-status');
+                var importMode = $('input[name="ielts_cm_import_json_mode"]:checked').val();
+                
+                if (!fileInput.files || !fileInput.files[0]) {
+                    statusDiv.html('<div class="notice notice-error inline" style="margin: 0; padding: 8px 12px;"><p><?php _e('Please select a JSON file first.', 'ielts-course-manager'); ?></p></div>').show();
+                    return;
+                }
+                
+                var file = fileInput.files[0];
+                if (!file.name.endsWith('.json')) {
+                    statusDiv.html('<div class="notice notice-error inline" style="margin: 0; padding: 8px 12px;"><p><?php _e('Please select a valid JSON file.', 'ielts-course-manager'); ?></p></div>').show();
+                    return;
+                }
+                
+                // Confirm action with appropriate message
+                var confirmMsg;
+                if (importMode === 'replace') {
+                    confirmMsg = <?php echo json_encode(__('This will replace all current exercise content. Are you sure you want to continue?', 'ielts-course-manager')); ?>;
+                } else {
+                    confirmMsg = <?php echo json_encode(__('This will add the JSON content to your current exercise. Are you sure you want to continue?', 'ielts-course-manager')); ?>;
+                }
+                
+                if (!confirm(confirmMsg)) {
+                    return;
+                }
+                
+                // Disable button and show loading
+                $('#ielts-cm-import-json-btn').prop('disabled', true);
+                statusDiv.html('<p><span class="spinner is-active" style="float: none;"></span> <?php _e('Uploading and processing JSON file...', 'ielts-course-manager'); ?></p>').show();
+                
+                // Prepare form data
+                var formData = new FormData();
+                formData.append('action', 'ielts_cm_import_exercise_json');
+                formData.append('post_id', <?php echo $post->ID; ?>);
+                formData.append('nonce', '<?php echo wp_create_nonce('ielts_cm_import_json_' . $post->ID); ?>');
+                formData.append('json_file', file);
+                formData.append('import_mode', importMode);
+                
+                // Upload file
+                $.ajax({
+                    url: ajaxurl,
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        $('#ielts-cm-import-json-btn').prop('disabled', false);
+                        
+                        if (response.success) {
+                            statusDiv.html('<div class="notice notice-success inline" style="margin: 0; padding: 8px 12px;"><p><strong><?php _e('Success!', 'ielts-course-manager'); ?></strong> ' + response.data.message + '</p></div>');
+                            
+                            // Reload page after short delay to show updated content
+                            setTimeout(function() {
+                                window.location.reload();
+                            }, 1500);
+                        } else {
+                            statusDiv.html('<div class="notice notice-error inline" style="margin: 0; padding: 8px 12px;"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> ' + response.data.message + '</p></div>');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        $('#ielts-cm-import-json-btn').prop('disabled', false);
+                        statusDiv.html('<div class="notice notice-error inline" style="margin: 0; padding: 8px 12px;"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> ' + error + '</p></div>');
+                    }
+                });
+            });
+        });
+        </script>
         <?php
     }
     
@@ -6442,5 +6579,292 @@ class IELTS_CM_Admin {
      */
     private function esc_xml($str) {
         return htmlspecialchars($str, ENT_XML1, 'UTF-8');
+    }
+    
+    /**
+     * AJAX handler to export exercise to JSON
+     */
+    public function ajax_export_exercise_json() {
+        // Get post ID
+        $post_id = isset($_GET['post_id']) ? intval($_GET['post_id']) : 0;
+        if (!$post_id) {
+            wp_die(__('Invalid post ID.', 'ielts-course-manager'));
+        }
+        
+        // Verify nonce
+        if (!isset($_GET['nonce']) || !wp_verify_nonce($_GET['nonce'], 'ielts_cm_export_json_' . $post_id)) {
+            wp_die(__('Security check failed.', 'ielts-course-manager'));
+        }
+        
+        // Check user capability
+        if (!current_user_can('edit_post', $post_id)) {
+            wp_die(__('You do not have permission to export this exercise.', 'ielts-course-manager'));
+        }
+        
+        // Get post
+        $post = get_post($post_id);
+        if (!$post || $post->post_type !== 'ielts_quiz') {
+            wp_die(__('Invalid exercise.', 'ielts-course-manager'));
+        }
+        
+        // Collect exercise data
+        $export_data = array(
+            'title' => $post->post_title,
+            'content' => $post->post_content,
+            'questions' => get_post_meta($post_id, '_ielts_cm_questions', true) ?: array(),
+            'reading_texts' => get_post_meta($post_id, '_ielts_cm_reading_texts', true) ?: array(),
+            'settings' => array(
+                'pass_percentage' => get_post_meta($post_id, '_ielts_cm_pass_percentage', true) ?: 70,
+                'layout_type' => get_post_meta($post_id, '_ielts_cm_layout_type', true) ?: 'two_column_exercise',
+                'cbt_test_type' => get_post_meta($post_id, '_ielts_cm_cbt_test_type', true),
+                'exercise_label' => get_post_meta($post_id, '_ielts_cm_exercise_label', true) ?: 'exercise',
+                'open_as_popup' => get_post_meta($post_id, '_ielts_cm_open_as_popup', true),
+                'scoring_type' => get_post_meta($post_id, '_ielts_cm_scoring_type', true) ?: 'percentage',
+                'timer_minutes' => get_post_meta($post_id, '_ielts_cm_timer_minutes', true),
+                'starting_question_number' => get_post_meta($post_id, '_ielts_cm_starting_question_number', true) ?: 1,
+            ),
+            'audio' => array(
+                'url' => get_post_meta($post_id, '_ielts_cm_audio_url', true),
+                'transcript' => get_post_meta($post_id, '_ielts_cm_transcript', true),
+                'sections' => get_post_meta($post_id, '_ielts_cm_audio_sections', true) ?: array(),
+            ),
+            '_metadata' => array(
+                'exported_at' => current_time('mysql'),
+                'exported_by' => wp_get_current_user()->user_login,
+                'plugin_version' => defined('IELTS_CM_VERSION') ? IELTS_CM_VERSION : 'unknown',
+                'format_version' => '1.0'
+            )
+        );
+        
+        // Remove empty audio sections to keep JSON clean
+        if (empty($export_data['audio']['url'])) {
+            unset($export_data['audio']);
+        }
+        
+        // Generate filename
+        $filename = sanitize_file_name($post->post_title) . '-' . $post_id . '.json';
+        
+        // Set headers for download
+        header('Content-Type: application/json; charset=utf-8');
+        header('Content-Disposition: attachment; filename="' . $filename . '"');
+        header('Cache-Control: no-cache, no-store, must-revalidate');
+        header('Pragma: no-cache');
+        header('Expires: 0');
+        
+        // Output JSON with pretty print and Unicode support
+        echo json_encode($export_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        exit;
+    }
+    
+    /**
+     * AJAX handler to import exercise from JSON
+     */
+    public function ajax_import_exercise_json() {
+        // Get post ID
+        $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
+        if (!$post_id) {
+            wp_send_json_error(array('message' => __('Invalid post ID.', 'ielts-course-manager')));
+        }
+        
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_import_json_' . $post_id)) {
+            wp_send_json_error(array('message' => __('Security check failed.', 'ielts-course-manager')));
+        }
+        
+        // Check user capability
+        if (!current_user_can('edit_post', $post_id)) {
+            wp_send_json_error(array('message' => __('You do not have permission to edit this exercise.', 'ielts-course-manager')));
+        }
+        
+        // Get post
+        $post = get_post($post_id);
+        if (!$post || $post->post_type !== 'ielts_quiz') {
+            wp_send_json_error(array('message' => __('Invalid exercise.', 'ielts-course-manager')));
+        }
+        
+        // Get import mode
+        $import_mode = isset($_POST['import_mode']) ? sanitize_text_field($_POST['import_mode']) : 'replace';
+        
+        // Validate import mode
+        if (!in_array($import_mode, array('replace', 'append'))) {
+            $import_mode = 'replace';
+        }
+        
+        // Check if file was uploaded
+        if (!isset($_FILES['json_file']) || $_FILES['json_file']['error'] !== UPLOAD_ERR_OK) {
+            wp_send_json_error(array('message' => __('File upload failed.', 'ielts-course-manager')));
+        }
+        
+        $file = $_FILES['json_file'];
+        
+        // Validate file size (max 5MB)
+        $max_file_size = 5 * 1024 * 1024; // 5MB
+        if ($file['size'] > $max_file_size) {
+            wp_send_json_error(array('message' => __('File is too large. Maximum size is 5MB.', 'ielts-course-manager')));
+        }
+        
+        // Validate file extension
+        if (!preg_match('/\.json$/i', $file['name'])) {
+            wp_send_json_error(array('message' => __('Invalid file type. Please upload a JSON file.', 'ielts-course-manager')));
+        }
+        
+        // Read JSON file
+        $json_content = file_get_contents($file['tmp_name']);
+        if ($json_content === false) {
+            wp_send_json_error(array('message' => __('Failed to read JSON file.', 'ielts-course-manager')));
+        }
+        
+        // Parse JSON
+        $data = json_decode($json_content, true);
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            $error_msg = json_last_error_msg();
+            wp_send_json_error(array('message' => sprintf(__('Invalid JSON format: %s', 'ielts-course-manager'), $error_msg)));
+        }
+        
+        // Validate required fields
+        if (!isset($data['questions']) || !is_array($data['questions'])) {
+            wp_send_json_error(array('message' => __('No questions found in the JSON file.', 'ielts-course-manager')));
+        }
+        
+        if (empty($data['questions'])) {
+            wp_send_json_error(array('message' => __('The questions array is empty.', 'ielts-course-manager')));
+        }
+        
+        // Annotate transcript with answer locations if present
+        if (isset($data['audio']['transcript']) && 
+            !empty($data['audio']['transcript']) &&
+            !empty($data['questions'])) {
+            
+            $starting_question_number = isset($data['settings']['starting_question_number']) 
+                ? intval($data['settings']['starting_question_number']) 
+                : 1;
+            
+            $data['audio']['transcript'] = $this->annotate_transcript_with_answers(
+                $data['audio']['transcript'],
+                $data['questions'],
+                $starting_question_number
+            );
+        }
+        
+        // Handle based on import mode
+        if ($import_mode === 'append') {
+            // Append mode: Add questions and reading texts to existing content
+            $this->append_exercise_data_from_json($post_id, $data);
+            
+            wp_send_json_success(array(
+                'message' => __('Exercise content added successfully! Page will reload to show updated content.', 'ielts-course-manager')
+            ));
+        } else {
+            // Replace mode: Overwrite everything
+            
+            // Update post title if provided
+            if (!empty($data['title'])) {
+                wp_update_post(array(
+                    'ID' => $post_id,
+                    'post_title' => sanitize_text_field($data['title'])
+                ));
+            }
+            
+            // Update post content if provided
+            if (isset($data['content'])) {
+                wp_update_post(array(
+                    'ID' => $post_id,
+                    'post_content' => wp_kses_post($data['content'])
+                ));
+            }
+            
+            // Update questions
+            update_post_meta($post_id, '_ielts_cm_questions', $data['questions']);
+            
+            // Update reading texts
+            if (isset($data['reading_texts']) && is_array($data['reading_texts'])) {
+                update_post_meta($post_id, '_ielts_cm_reading_texts', $data['reading_texts']);
+            }
+            
+            // Update settings
+            if (isset($data['settings']) && is_array($data['settings'])) {
+                $settings_map = array(
+                    'pass_percentage' => '_ielts_cm_pass_percentage',
+                    'layout_type' => '_ielts_cm_layout_type',
+                    'cbt_test_type' => '_ielts_cm_cbt_test_type',
+                    'exercise_label' => '_ielts_cm_exercise_label',
+                    'open_as_popup' => '_ielts_cm_open_as_popup',
+                    'scoring_type' => '_ielts_cm_scoring_type',
+                    'timer_minutes' => '_ielts_cm_timer_minutes',
+                    'starting_question_number' => '_ielts_cm_starting_question_number',
+                );
+                
+                foreach ($settings_map as $json_key => $meta_key) {
+                    if (isset($data['settings'][$json_key])) {
+                        update_post_meta($post_id, $meta_key, $data['settings'][$json_key]);
+                    }
+                }
+            }
+            
+            // Update audio data
+            if (isset($data['audio']) && is_array($data['audio'])) {
+                if (isset($data['audio']['url'])) {
+                    update_post_meta($post_id, '_ielts_cm_audio_url', esc_url_raw($data['audio']['url']));
+                }
+                if (isset($data['audio']['transcript'])) {
+                    update_post_meta($post_id, '_ielts_cm_transcript', wp_kses_post($data['audio']['transcript']));
+                }
+                if (isset($data['audio']['sections']) && is_array($data['audio']['sections'])) {
+                    update_post_meta($post_id, '_ielts_cm_audio_sections', $data['audio']['sections']);
+                }
+            }
+            
+            wp_send_json_success(array(
+                'message' => __('Exercise content replaced successfully! Page will reload to show updated content.', 'ielts-course-manager')
+            ));
+        }
+    }
+    
+    /**
+     * Append exercise data from JSON to existing exercise
+     * 
+     * @param int $post_id Post ID
+     * @param array $data Parsed JSON data
+     */
+    private function append_exercise_data_from_json($post_id, $data) {
+        // Get existing questions
+        $existing_questions = get_post_meta($post_id, '_ielts_cm_questions', true);
+        if (!is_array($existing_questions)) {
+            $existing_questions = array();
+        }
+        
+        // Get new questions from JSON
+        $new_questions = isset($data['questions']) ? $data['questions'] : array();
+        if (!is_array($new_questions)) {
+            $new_questions = array();
+        }
+        
+        // Merge questions
+        $merged_questions = array_merge($existing_questions, $new_questions);
+        update_post_meta($post_id, '_ielts_cm_questions', $merged_questions);
+        
+        // Handle reading texts if present
+        if (isset($data['reading_texts']) && is_array($data['reading_texts']) && !empty($data['reading_texts'])) {
+            $existing_reading_texts = get_post_meta($post_id, '_ielts_cm_reading_texts', true);
+            if (!is_array($existing_reading_texts)) {
+                $existing_reading_texts = array();
+            }
+            
+            $offset = count($existing_reading_texts);
+            
+            // Update reading_text_id in new questions to reference correct reading texts
+            foreach ($new_questions as $index => $question) {
+                if (isset($question['reading_text_id']) && is_numeric($question['reading_text_id'])) {
+                    $merged_questions[$index + count($existing_questions)]['reading_text_id'] = $question['reading_text_id'] + $offset;
+                }
+            }
+            
+            // Merge reading texts
+            $merged_reading_texts = array_merge($existing_reading_texts, $data['reading_texts']);
+            update_post_meta($post_id, '_ielts_cm_reading_texts', $merged_reading_texts);
+            
+            // Update questions again with adjusted reading_text_id
+            update_post_meta($post_id, '_ielts_cm_questions', $merged_questions);
+        }
     }
 }
