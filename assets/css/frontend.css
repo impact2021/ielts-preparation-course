@@ -1710,6 +1710,12 @@ select.answer-select-inline.answer-incorrect {
     margin: 0 3px;
 }
 
+/* Ensure proper paragraph spacing in feedback messages */
+.question-feedback-message p {
+    display: block;
+    margin: 0.5em 0;
+}
+
 .question-feedback-message.feedback-correct {
     border-left-color: #4caf50;
 }
