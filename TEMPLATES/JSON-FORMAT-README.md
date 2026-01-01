@@ -6,6 +6,7 @@ JSON import is now the **recommended** way to import exercises into the IELTS Co
 
 **Recent Improvements (Latest Version):**
 - ✅ `field_labels` are now properly incorporated into question text for open questions
+- ✅ Line breaks between field labels are properly preserved in the display
 - ✅ Per-field feedback is automatically created from question-level feedback
 - ✅ Feedback fields are now properly displayed in admin for closed questions
 - ✅ All feedback is correctly transferred from JSON to the admin interface
@@ -76,12 +77,14 @@ Covers multiple question numbers based on `field_count`.
 **Key Points:**
 - `field_count`: Number of input fields (= number of question numbers this covers)
 - `field_labels`: Array of labels/prompts for each field - **these will be automatically added to your question text in the admin interface**
+  - Each label will be displayed on its own line (proper line breaks are preserved)
+  - You can use this to create numbered lists, or have all fields inline in a single paragraph
 - `field_answers`: Array of accepted answers (use `|` to separate multiple acceptable answers)
 - `points`: Usually equals `field_count`
 - **Feedback**: The feedback you provide at the question level will be applied to each individual field automatically
 
 **How it works:**
-When imported, the `field_labels` are converted into the question text, and individual field feedback is created for each field. This means you only need to write the feedback once, and it will apply to all fields in the question.
+When imported, the `field_labels` are converted into the question text with line breaks between each label, and individual field feedback is created for each field. This means you only need to write the feedback once, and it will apply to all fields in the question.
 
 ### Closed Question (Multiple Choice)
 
