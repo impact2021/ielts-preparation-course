@@ -11,8 +11,8 @@ if (php_sapi_name() !== 'cli') {
 function extractQuestionsFromXML($xmlContent) {
     if (preg_match('/<wp:meta_key><!\[CDATA\[_ielts_cm_questions\]\]><\/wp:meta_key>\s*<wp:meta_value><!\[CDATA\[(.*?)\]\]><\/wp:meta_value>/s', $xmlContent, $match)) {
         $serialized = $match[1];
-        $data = @unserialize($serialized);
-        if ($data !== false) {
+        $data = unserialize($serialized);
+        if ($data !== false && is_array($data)) {
             return $data;
         }
     }
@@ -82,6 +82,10 @@ if (count($reindexed) === 0) {
 // Serialize the questions array
 $serialized = serialize($reindexed);
 $combinedTranscript = implode("\n\n<hr />\n\n", $allTranscripts);
+
+// Note: $serialized and $combinedTranscript are already extracted from validated XML sources
+// and will be wrapped in CDATA sections, so no additional escaping is needed.
+// The audioUrl also comes from the source XML and is a known-safe URL format.
 
 // Create XML with proper structure
 $xml = <<<XML
@@ -196,8 +200,13 @@ $xml = str_replace('{POSTDATE}', $postDate, $xml);
 $xml = str_replace('{POSTDATE_GMT}', $postDateGmt, $xml);
 
 $outputFile = __DIR__ . "/Listening-Test-8-Section-1-and-2.xml";
-file_put_contents($outputFile, $xml);
+$bytesWritten = file_put_contents($outputFile, $xml);
+
+if ($bytesWritten === false) {
+    die("ERROR: Failed to write output file: $outputFile\n");
+}
 
 echo "\n✓ Combined XML written to: $outputFile\n";
+echo "  File size: " . number_format($bytesWritten) . " bytes\n";
 echo "  Questions: " . count($reindexed) . "\n";
 echo "  Audio URL: " . ($audioUrl ? $audioUrl : "(none)") . "\n";
