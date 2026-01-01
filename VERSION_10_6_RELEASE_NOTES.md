@@ -111,12 +111,17 @@ When verifying the fix:
 
 ## Screenshot
 
-![Version 10.6 Feedback Demo](./main/Version-10-6-feedback-demo.png)
+![Version 10.6 Feedback Demo](https://github.com/user-attachments/assets/1cb80f53-42a5-4e6a-9867-6f71839df363)
 
 The screenshot above demonstrates:
-1. **Example 1:** Closed question feedback appearing at question level
-2. **Example 2:** Open question with inline fields staying on one line
+1. **Example 1:** Closed question feedback appearing at question level (with red left border, below all options)
+2. **Example 2:** Open question with inline fields staying on one line - `This is [123] and this is 456 [dfdd]`
 3. **Example 3:** Your requested format matching the images you provided
+
+### Key Visual Elements:
+- ✅ **Closed questions:** Feedback shows as `This is right This is wrong` at the bottom (question level)
+- ✅ **Open questions:** Input fields stay inline: `This is [input] and this is 456 [input]` - NO line breaks!
+- ✅ **Options:** Clean checkmarks (✓) in green or crosses (✗) in red
 
 ## Known Issues
 None at this time.
