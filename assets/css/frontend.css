@@ -1510,7 +1510,8 @@ body.ielts-course-archive .content-area {
 
 /* Add spacing after option letter (for closed questions) */
 .option-letter {
-    margin-right: 8px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 /* Ensure feedback colors are visible for both standard and computer-based quiz layouts */
@@ -1564,34 +1565,10 @@ select.answer-select-inline.answer-incorrect {
     position: relative;
 }
 
-/* Wrapper for open question field to add icon */
+/* Wrapper for open question field - icons moved to feedback message */
 .open-question-field {
     position: relative;
     margin-bottom: 15px;
-}
-
-.open-question-field.field-correct::after {
-    content: '✓';
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    font-weight: bold;
-    color: #4caf50;
-    pointer-events: none;
-}
-
-.open-question-field.field-incorrect::after {
-    content: '✗';
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    font-weight: bold;
-    color: #f44336;
-    pointer-events: none;
 }
 
 /* CBT Result Modal */
@@ -1719,6 +1696,23 @@ select.answer-select-inline.answer-incorrect {
 
 .question-feedback-message.feedback-incorrect {
     border-left-color: #f44336;
+}
+
+/* Icons for open question feedback messages */
+.question-feedback-message.feedback-correct.open-question-feedback::before {
+    content: '✓ ';
+    font-size: 20px;
+    font-weight: bold;
+    color: #4caf50;
+    margin-right: 8px;
+}
+
+.question-feedback-message.feedback-incorrect.open-question-feedback::before {
+    content: '✗ ';
+    font-size: 20px;
+    font-weight: bold;
+    color: #f44336;
+    margin-right: 8px;
 }
 
 /* Option-level feedback message displayed inside individual options */
