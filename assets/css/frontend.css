@@ -1710,6 +1710,16 @@ select.answer-select-inline.answer-incorrect {
     margin: 0 3px;
 }
 
+/* Allow line breaks in feedback messages to separate different field feedbacks */
+.question-feedback-message br {
+    display: inline;
+}
+
+.question-feedback-message p {
+    display: block;
+    margin: 0.5em 0;
+}
+
 .question-feedback-message.feedback-correct {
     border-left-color: #4caf50;
 }
