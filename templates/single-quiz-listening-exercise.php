@@ -368,6 +368,33 @@ if ($lesson_id) {
                                     $display_points = $display_nums['count'];
                                     ?>
                                     <span class="question-points">(<?php printf(_n('%s point', '%s points', $display_points, 'ielts-course-manager'), $display_points); ?>)</span>
+                                    <?php
+                                    // Display question category if set
+                                    if (!empty($question['ielts_question_category'])) {
+                                        $category_labels = array(
+                                            'multiple_choice_l' => __('Multiple Choice (L)', 'ielts-course-manager'),
+                                            'matching_l' => __('Matching (L)', 'ielts-course-manager'),
+                                            'plan_map_diagram_l' => __('Plan/Map/Diagram Labeling (L)', 'ielts-course-manager'),
+                                            'form_completion_l' => __('Form/Note/Table/Flow-chart/Summary Completion (L)', 'ielts-course-manager'),
+                                            'sentence_completion_l' => __('Sentence Completion (L)', 'ielts-course-manager'),
+                                            'short_answer_l' => __('Short-Answer Questions (L)', 'ielts-course-manager'),
+                                            'multiple_choice_r' => __('Multiple Choice (R)', 'ielts-course-manager'),
+                                            'true_false_not_given' => __('True/False/Not Given (R)', 'ielts-course-manager'),
+                                            'yes_no_not_given' => __('Yes/No/Not Given (R)', 'ielts-course-manager'),
+                                            'matching_information' => __('Matching Information (R)', 'ielts-course-manager'),
+                                            'matching_headings' => __('Matching Headings (R)', 'ielts-course-manager'),
+                                            'matching_features' => __('Matching Features (R)', 'ielts-course-manager'),
+                                            'sentence_completion_r' => __('Sentence Completion (R)', 'ielts-course-manager'),
+                                            'summary_completion_r' => __('Summary/Note/Table/Flow-chart Completion (R)', 'ielts-course-manager'),
+                                            'diagram_label_r' => __('Diagram Label Completion (R)', 'ielts-course-manager'),
+                                            'short_answer_r' => __('Short-Answer Questions (R)', 'ielts-course-manager')
+                                        );
+                                        $category_label = isset($category_labels[$question['ielts_question_category']]) ? $category_labels[$question['ielts_question_category']] : '';
+                                        if ($category_label) {
+                                            echo '<span class="question-category" style="float: right; font-size: 0.85em; font-weight: normal; color: #666;">' . esc_html($category_label) . '</span>';
+                                        }
+                                    }
+                                    ?>
                                 </h4>
                                 
                                 <?php

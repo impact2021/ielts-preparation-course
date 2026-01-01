@@ -1944,15 +1944,39 @@ class IELTS_CM_Admin {
                 var answersContainer = container.find('.open-question-answers');
                 var questionIndex = container.closest('.question-item').find('.question-type').attr('name').match(/\[(\d+)\]/)[1];
                 
-                // Clear and rebuild answer fields
-                answersContainer.find('.open-question-answer-item').remove();
-                for (var i = 1; i <= fieldCount; i++) {
-                    answersContainer.append(
-                        '<div class="open-question-answer-item" style="margin-bottom: 10px;">' +
-                        '<label><?php _e('Field', 'ielts-course-manager'); ?> ' + i + ' <?php _e('Answer (use | for multiple accepted answers)', 'ielts-course-manager'); ?></label>' +
-                        '<input type="text" name="questions[' + questionIndex + '][field_answers][' + i + ']" style="width: 100%;" placeholder="<?php _e('e.g., answer1|answer2', 'ielts-course-manager'); ?>">' +
-                        '</div>'
-                    );
+                var currentItems = answersContainer.find('.open-question-answer-item');
+                var currentCount = currentItems.length;
+                
+                if (fieldCount > currentCount) {
+                    // Add new fields
+                    for (var i = currentCount + 1; i <= fieldCount; i++) {
+                        answersContainer.append(
+                            '<div class="open-question-answer-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">' +
+                            '<h6 style="margin-top: 0;"><?php _e('Field', 'ielts-course-manager'); ?> ' + i + '</h6>' +
+                            '<p>' +
+                            '<label><?php _e('Correct Answer (use | for multiple accepted answers)', 'ielts-course-manager'); ?></label>' +
+                            '<input type="text" name="questions[' + questionIndex + '][field_answers][' + i + ']" value="" style="width: 100%;" placeholder="<?php _e('e.g., answer1|answer2', 'ielts-course-manager'); ?>">' +
+                            '</p>' +
+                            '<p>' +
+                            '<label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label>' +
+                            '<textarea name="questions[' + questionIndex + '][field_feedback][' + i + '][correct]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers this field correctly', 'ielts-course-manager'); ?>"></textarea>' +
+                            '</p>' +
+                            '<p>' +
+                            '<label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label>' +
+                            '<textarea name="questions[' + questionIndex + '][field_feedback][' + i + '][incorrect]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers this field incorrectly', 'ielts-course-manager'); ?>"></textarea>' +
+                            '</p>' +
+                            '<p>' +
+                            '<label><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></label>' +
+                            '<textarea name="questions[' + questionIndex + '][field_feedback][' + i + '][no_answer]" rows="2" style="width: 100%;" placeholder="<?php _e('Feedback shown when student leaves this field blank', 'ielts-course-manager'); ?>"></textarea>' +
+                            '</p>' +
+                            '</div>'
+                        );
+                    }
+                } else if (fieldCount < currentCount) {
+                    // Remove excess fields from the end
+                    for (var i = currentCount; i > fieldCount; i--) {
+                        currentItems.eq(i - 1).remove();
+                    }
                 }
             });
             
@@ -3500,7 +3524,8 @@ class IELTS_CM_Admin {
                         'correct_feedback' => isset($question['correct_feedback']) ? wp_kses_post($question['correct_feedback']) : '',
                         'incorrect_feedback' => isset($question['incorrect_feedback']) ? wp_kses_post($question['incorrect_feedback']) : '',
                         'reading_text_id' => isset($question['reading_text_id']) && $question['reading_text_id'] !== '' ? intval($question['reading_text_id']) : null,
-                        'audio_section_id' => isset($question['audio_section_id']) && $question['audio_section_id'] !== '' ? intval($question['audio_section_id']) : null
+                        'audio_section_id' => isset($question['audio_section_id']) && $question['audio_section_id'] !== '' ? intval($question['audio_section_id']) : null,
+                        'ielts_question_category' => isset($question['ielts_question_category']) ? sanitize_text_field($question['ielts_question_category']) : ''
                     );
                     
                     // Handle multiple choice and multi-select with new structured format
