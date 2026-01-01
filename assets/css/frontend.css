@@ -1690,16 +1690,19 @@ select.answer-select-inline.answer-incorrect {
     line-height: 1.5;
 }
 
-/* Prevent inline input fields from breaking to new lines in feedback */
-.question-feedback-message p {
+/* Prevent inline input fields from breaking to new lines in open question text */
+.open-question-text p {
     display: inline;
     margin: 0;
 }
 
-.question-feedback-message br {
+.open-question-text br {
     display: none;
 }
 
+/* Keep input fields inline in both question text and feedback messages */
+.open-question-text input.answer-input-inline,
+.open-question-text .open-question-input,
 .question-feedback-message input.answer-input-inline,
 .question-feedback-message .open-question-input {
     display: inline-block;
