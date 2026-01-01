@@ -1736,7 +1736,7 @@ select.answer-select-inline.answer-incorrect {
 /* Style for individual field feedback within open question feedback */
 .question-feedback-message.open-question-feedback .field-feedback {
     display: block;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 /* Add icons before each field feedback based on correctness */
