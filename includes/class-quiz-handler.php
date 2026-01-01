@@ -222,20 +222,20 @@ class IELTS_CM_Quiz_Handler {
                             $points_earned += 1;
                             // Add correct feedback for this field with question number
                             if (isset($field_feedback_arr[$field_num]['correct']) && !empty($field_feedback_arr[$field_num]['correct'])) {
-                                $field_feedbacks[] = '<strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['correct']);
+                                $field_feedbacks[] = '<span class="field-feedback field-feedback-correct"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['correct']) . '</span>';
                             }
                         } else {
                             $all_correct = false;
                             // Add incorrect feedback for this field with question number
                             if (isset($field_feedback_arr[$field_num]['incorrect']) && !empty($field_feedback_arr[$field_num]['incorrect'])) {
-                                $field_feedbacks[] = '<strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['incorrect']);
+                                $field_feedbacks[] = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['incorrect']) . '</span>';
                             }
                         }
                     } else {
                         $all_correct = false;
                         // Add no answer feedback for this field with question number
                         if (isset($field_feedback_arr[$field_num]['no_answer']) && !empty($field_feedback_arr[$field_num]['no_answer'])) {
-                            $field_feedbacks[] = '<strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['no_answer']);
+                            $field_feedbacks[] = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['no_answer']) . '</span>';
                         }
                     }
                     

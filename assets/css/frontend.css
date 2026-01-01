@@ -1710,10 +1710,15 @@ select.answer-select-inline.answer-incorrect {
     margin: 0 3px;
 }
 
-/* Ensure proper paragraph spacing in feedback messages */
+/* Ensure proper paragraph spacing in feedback messages but keep text inline */
 .question-feedback-message p {
-    display: block;
-    margin: 0.5em 0;
+    display: inline;
+    margin: 0;
+}
+
+/* For open question feedback, keep br tags inline (don't break to new line) */
+.question-feedback-message.open-question-feedback br {
+    display: none;
 }
 
 .question-feedback-message.feedback-correct {
@@ -1725,7 +1730,20 @@ select.answer-select-inline.answer-incorrect {
 }
 
 /* Icons for open question feedback messages */
-.question-feedback-message.feedback-correct.open-question-feedback::before {
+/* Don't show the main ::before icon for open questions since we'll add icons per field */
+.question-feedback-message.feedback-correct.open-question-feedback::before,
+.question-feedback-message.feedback-incorrect.open-question-feedback::before {
+    content: none;
+}
+
+/* Style for individual field feedback within open question feedback */
+.question-feedback-message.open-question-feedback .field-feedback {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Add icons before each field feedback based on correctness */
+.question-feedback-message.open-question-feedback .field-feedback-correct::before {
     content: '✓ ';
     font-size: 20px;
     font-weight: bold;
@@ -1733,7 +1751,7 @@ select.answer-select-inline.answer-incorrect {
     margin-right: 8px;
 }
 
-.question-feedback-message.feedback-incorrect.open-question-feedback::before {
+.question-feedback-message.open-question-feedback .field-feedback-incorrect::before {
     content: '✗ ';
     font-size: 20px;
     font-weight: bold;

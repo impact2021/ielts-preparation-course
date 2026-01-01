@@ -793,19 +793,53 @@
                                     questionElement.append(feedbackDiv);
                                 }
                             } else if (questionResult.question_type === 'closed_question') {
-                                // For closed_question, always show feedback at the question level (not inside options)
+                                // For closed_question with multi-select, show feedback inside options (like multi_select)
+                                // For single-select, show feedback at question level
                                 // Remove any existing feedback first
                                 questionElement.find('.option-feedback-message').remove();
                                 questionElement.find('.question-feedback-message').remove();
                                 
-                                // Show feedback at question level if available
-                                if (questionResult.feedback) {
-                                    var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
-                                    var feedbackDiv = $('<div>')
-                                        .addClass('question-feedback-message')
-                                        .addClass(feedbackClass)
-                                        .html(questionResult.feedback);
-                                    questionElement.append(feedbackDiv);
+                                // Check if this is a multi-select closed question
+                                var correctAnswerCount = questionElement.find('.question-options').data('correct-count');
+                                
+                                if (correctAnswerCount > 1 && questionResult.correct_answer && questionResult.correct_answer.option_feedback) {
+                                    // Multi-select: show option-specific feedback inside each option
+                                    var optionFeedback = questionResult.correct_answer.option_feedback;
+                                    
+                                    // Display feedback under ALL options that have feedback
+                                    $.each(optionFeedback, function(optionIndex, feedbackText) {
+                                        if (feedbackText) {
+                                            var checkbox = questionElement.find('input[type="checkbox"][value="' + optionIndex + '"]');
+                                            var optionLabel = checkbox.closest('.option-label');
+                                            
+                                            // Create feedback element for this option
+                                            var feedbackDiv = $('<div>')
+                                                .addClass('option-feedback-message')
+                                                .html(feedbackText);
+                                            
+                                            // Append feedback inside the option label
+                                            optionLabel.append(feedbackDiv);
+                                        }
+                                    });
+                                    
+                                    // Also show general no-answer feedback if provided and no options were selected
+                                    if (questionResult.feedback && (!questionResult.user_answer || questionResult.user_answer.length === 0)) {
+                                        var feedbackDiv = $('<div>')
+                                            .addClass('question-feedback-message')
+                                            .addClass('feedback-incorrect')
+                                            .html(questionResult.feedback);
+                                        questionElement.append(feedbackDiv);
+                                    }
+                                } else {
+                                    // Single-select: show feedback at question level if available
+                                    if (questionResult.feedback) {
+                                        var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
+                                        var feedbackDiv = $('<div>')
+                                            .addClass('question-feedback-message')
+                                            .addClass(feedbackClass)
+                                            .html(questionResult.feedback);
+                                        questionElement.append(feedbackDiv);
+                                    }
                                 }
                             } else if (questionResult.question_type === 'multiple_choice' || 
                                        questionResult.question_type === 'matching' || 
