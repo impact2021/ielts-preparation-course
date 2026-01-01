@@ -100,9 +100,5 @@
   "audio": {
     "url": "https://example.com/audio/listening-test-section-1.mp3",
     "transcript": "<p>Sample transcript would go here...</p>"
-  },
-  "_metadata": {
-    "format_version": "1.0",
-    "description": "This is an example JSON file demonstrating the IELTS Course Manager import format. Questions 1-5 are open questions (one object with 5 fields). Questions 6-10 are also open questions (another object with 5 fields). Questions 11-12 are a multiple choice with 2 correct answers (one object that counts as 2 questions). Total: 12 questions."
   }
 }

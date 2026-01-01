@@ -63,9 +63,6 @@ Complete the following:
 ## Files Modified
 - `assets/css/frontend.css` - Fixed the CSS rules for `.open-question-text p`
 
-## New Files Added
-- `TEMPLATES/example-exercise-2.json` - New example exercise with Library Information topic demonstrating proper line breaks
-
 ## Testing
 A visual test was created showing the before/after comparison. The screenshot clearly shows:
 - **Before:** All lines bunched together on one line (BROKEN)
@@ -86,7 +83,7 @@ This change improves the display of existing exercises. It does not break any ex
 - No changes required to existing data or JSON structure
 
 ## How to Verify in WordPress
-1. Import `TEMPLATES/example-exercise.json` or `TEMPLATES/example-exercise-2.json`
+1. Import `TEMPLATES/example-exercise.json`
 2. View the exercise on the frontend
 3. Verify that field labels appear on separate lines, not bunched together
 4. Verify that input fields are properly positioned after their labels
@@ -94,8 +91,7 @@ This change improves the display of existing exercises. It does not break any ex
 ## Related Documentation
 - `TESTING-JSON-IMPORT-FIX.md` - Contains the expected format showing labels on separate lines
 - `IMPORT_OPTIONS_GUIDE.md` - Describes how to import JSON exercises
-- `TEMPLATES/example-exercise.json` - Original example exercise
-- `TEMPLATES/example-exercise-2.json` - New example exercise (Library Information)
+- `TEMPLATES/example-exercise.json` - Example exercise demonstrating proper format
 
 ## Date
 January 1, 2026
