@@ -6730,6 +6730,9 @@ class IELTS_CM_Admin {
             wp_send_json_error(array('message' => __('The questions array is empty.', 'ielts-course-manager')));
         }
         
+        // Transform questions from JSON format to admin format
+        $data['questions'] = $this->transform_json_questions_to_admin_format($data['questions']);
+        
         // Annotate transcript with answer locations if present
         if (isset($data['audio']['transcript']) && 
             !empty($data['audio']['transcript']) &&
@@ -6833,11 +6836,14 @@ class IELTS_CM_Admin {
             $existing_questions = array();
         }
         
-        // Get new questions from JSON
+        // Get new questions from JSON and transform them
         $new_questions = isset($data['questions']) ? $data['questions'] : array();
         if (!is_array($new_questions)) {
             $new_questions = array();
         }
+        
+        // Transform new questions from JSON format to admin format
+        $new_questions = $this->transform_json_questions_to_admin_format($new_questions);
         
         // Merge questions
         $merged_questions = array_merge($existing_questions, $new_questions);
@@ -6866,5 +6872,77 @@ class IELTS_CM_Admin {
             // Update questions again with adjusted reading_text_id
             update_post_meta($post_id, '_ielts_cm_questions', $merged_questions);
         }
+    }
+    
+    /**
+     * Transform questions from JSON format to admin format
+     * Handles conversion of field_labels to question text and creates per-field feedback
+     * 
+     * @param array $questions Questions array from JSON
+     * @return array Transformed questions array
+     */
+    private function transform_json_questions_to_admin_format($questions) {
+        if (!is_array($questions)) {
+            return array();
+        }
+        
+        $transformed = array();
+        
+        foreach ($questions as $question) {
+            if (!isset($question['type'])) {
+                $transformed[] = $question;
+                continue;
+            }
+            
+            $type = $question['type'];
+            
+            // Transform open_question format
+            if ($type === 'open_question' && isset($question['field_labels']) && is_array($question['field_labels'])) {
+                // Build question text from field_labels
+                $question_text = isset($question['question']) ? $question['question'] : '';
+                
+                // Add field labels as a list
+                if (!empty($question['field_labels'])) {
+                    if (!empty($question_text)) {
+                        $question_text .= "\n\n";
+                    }
+                    $question_text .= implode("\n", $question['field_labels']);
+                }
+                
+                $question['question'] = $question_text;
+                
+                // Create field_feedback structure from question-level feedback
+                $field_count = isset($question['field_count']) ? intval($question['field_count']) : count($question['field_labels']);
+                $question['field_count'] = $field_count;
+                
+                // Ensure field_answers is properly indexed (1-based, not 0-based)
+                if (isset($question['field_answers']) && is_array($question['field_answers'])) {
+                    $original_answers = $question['field_answers'];
+                    $question['field_answers'] = array();
+                    
+                    // Re-index to 1-based array
+                    foreach ($original_answers as $index => $answer) {
+                        $question['field_answers'][$index + 1] = $answer;
+                    }
+                }
+                
+                // Create per-field feedback from question-level feedback
+                $question['field_feedback'] = array();
+                for ($i = 1; $i <= $field_count; $i++) {
+                    $question['field_feedback'][$i] = array(
+                        'correct' => isset($question['correct_feedback']) ? $question['correct_feedback'] : '',
+                        'incorrect' => isset($question['incorrect_feedback']) ? $question['incorrect_feedback'] : '',
+                        'no_answer' => isset($question['no_answer_feedback']) ? $question['no_answer_feedback'] : ''
+                    );
+                }
+                
+                // Remove field_labels as it's now incorporated into question text
+                unset($question['field_labels']);
+            }
+            
+            $transformed[] = $question;
+        }
+        
+        return $transformed;
     }
 }
