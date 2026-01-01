@@ -170,16 +170,22 @@ class IELTS_CM_Quiz_Handler {
                         // Use feedback from the selected correct option
                         if (isset($mc_options[$user_answer]['feedback']) && !empty($mc_options[$user_answer]['feedback'])) {
                             $feedback = wp_kses_post($mc_options[$user_answer]['feedback']);
+                        } else {
+                            $feedback = '';
                         }
                     } elseif ($user_answer === null || $user_answer === '') {
                         // No answer provided - show feedback from correct option
                         if (isset($mc_options[$correct_idx]['feedback']) && !empty($mc_options[$correct_idx]['feedback'])) {
                             $feedback = wp_kses_post($mc_options[$correct_idx]['feedback']);
+                        } else {
+                            $feedback = '';
                         }
                     } else {
                         // Use feedback from the selected incorrect option
                         if (isset($mc_options[$user_answer]['feedback']) && !empty($mc_options[$user_answer]['feedback'])) {
                             $feedback = wp_kses_post($mc_options[$user_answer]['feedback']);
+                        } else {
+                            $feedback = '';
                         }
                     }
                     $score += $points_earned;
