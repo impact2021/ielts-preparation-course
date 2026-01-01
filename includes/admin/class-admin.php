@@ -6914,7 +6914,7 @@ class IELTS_CM_Admin {
                         $field_num++;
                     }
                     
-                    $question_text .= implode("\n", $processed_labels);
+                    $question_text .= implode("\n\n", $processed_labels);
                 }
                 
                 $question['question'] = $question_text;
