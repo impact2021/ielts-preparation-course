@@ -1700,14 +1700,9 @@ select.answer-select-inline.answer-incorrect {
     display: none;
 }
 
+/* Keep input fields inline in both question text and feedback messages */
 .open-question-text input.answer-input-inline,
-.open-question-text .open-question-input {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 3px;
-}
-
-/* Keep feedback input fields inline but allow line breaks between field feedbacks */
+.open-question-text .open-question-input,
 .question-feedback-message input.answer-input-inline,
 .question-feedback-message .open-question-input {
     display: inline-block;
