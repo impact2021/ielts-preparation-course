@@ -1,0 +1,104 @@
+{
+  "title": "Library Information - Listening Practice",
+  "content": "",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Complete the notes below using NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer",
+      "question": "Library Membership Information",
+      "field_count": 5,
+      "field_labels": [
+        "1. Annual membership fee is ________",
+        "2. Library is closed on ________",
+        "3. Maximum loan period for DVDs is ________",
+        "4. The children's section is located on the ________",
+        "5. Free computer access is available for ________ per day"
+      ],
+      "field_answers": [
+        "£15|15 pounds|fifteen pounds",
+        "Sundays|Sunday",
+        "one week|1 week|7 days",
+        "ground floor|first floor",
+        "two hours|2 hours"
+      ],
+      "correct_feedback": "Well done! That's correct.",
+      "incorrect_feedback": "Not quite right. Listen to the recording again.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to take notes while listening.",
+      "points": 5
+    },
+    {
+      "type": "open_question",
+      "instructions": "Complete the sentences below using NO MORE THAN TWO WORDS",
+      "question": "Study Facilities",
+      "field_count": 5,
+      "field_labels": [
+        "6. The quiet study area has ________",
+        "7. Group discussion rooms must be ________",
+        "8. Printing costs ________ per page",
+        "9. The reference section contains ________",
+        "10. Wi-Fi password changes every ________"
+      ],
+      "field_answers": [
+        "individual desks",
+        "booked online|reserved online|booked ahead",
+        "10p|10 pence|ten pence",
+        "academic journals|reference books",
+        "two weeks|2 weeks|fortnight"
+      ],
+      "correct_feedback": "Excellent work!",
+      "incorrect_feedback": "That's not quite right. Try listening again.",
+      "no_answer_feedback": "The correct answer is shown above.",
+      "points": 5
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Which TWO services are available free of charge? Choose TWO letters A-E.",
+      "question": "Select TWO answers:",
+      "correct_answer_count": 2,
+      "mc_options": [
+        {
+          "text": "A. Photocopying",
+          "is_correct": false
+        },
+        {
+          "text": "B. Book reservations",
+          "is_correct": true
+        },
+        {
+          "text": "C. Printing",
+          "is_correct": false
+        },
+        {
+          "text": "D. Research assistance",
+          "is_correct": true
+        },
+        {
+          "text": "E. Laptop rental",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": "1|3",
+      "correct_feedback": "Correct! Book reservations (B) and research assistance (D) are both free.",
+      "incorrect_feedback": "Not quite. The correct answers are B and D. These are the only services mentioned as free of charge.",
+      "no_answer_feedback": "The correct answers are B (Book reservations) and D (Research assistance).",
+      "points": 2
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "two_column_listening",
+    "exercise_label": "practice_test",
+    "scoring_type": "ielts_listening_band",
+    "timer_minutes": 12,
+    "starting_question_number": 1
+  },
+  "audio": {
+    "url": "https://example.com/audio/library-information.mp3",
+    "transcript": "<p>Welcome to the City Library. Let me tell you about our services and membership options...</p>"
+  },
+  "_metadata": {
+    "format_version": "1.0",
+    "description": "Example exercise demonstrating proper line breaks in open questions. Questions 1-5 cover library membership (5 fields). Questions 6-10 cover study facilities (5 fields). Questions 11-12 are a two-answer multiple choice. Total: 12 questions. After the CSS fix, each field label should appear on a separate line, not bunched together."
+  }
+}

@@ -1691,13 +1691,13 @@ select.answer-select-inline.answer-incorrect {
     line-height: 1.5;
 }
 
-/* Prevent inline input fields from breaking to new lines in open question text */
+/* Style open question text paragraphs - allow block display for proper line breaks */
 .open-question-text p {
-    display: inline;
-    margin: 0;
+    margin: 0.5em 0;
 }
 
-.open-question-text br {
+/* Hide extra br tags within paragraphs to avoid double spacing */
+.open-question-text p br {
     display: none;
 }
 
