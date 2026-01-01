@@ -126,7 +126,7 @@ class IELTS_CM_Quiz_Handler {
                         }
                     }
                     
-                    // Collect feedback from selected options
+                    // Collect option feedback for selected options
                     if (!empty($user_selections)) {
                         foreach ($user_selections as $sel_idx) {
                             if (isset($mc_options[$sel_idx]['feedback']) && !empty($mc_options[$sel_idx]['feedback'])) {
@@ -134,8 +134,14 @@ class IELTS_CM_Quiz_Handler {
                             }
                         }
                         $feedback = !empty($option_feedbacks) ? implode('<br>', $option_feedbacks) : '';
-                    } elseif (isset($question['no_answer_feedback'])) {
-                        $feedback = wp_kses_post($question['no_answer_feedback']);
+                    } else {
+                        // No answer provided - show feedback from correct options
+                        foreach ($correct_indices as $correct_idx) {
+                            if (isset($mc_options[$correct_idx]['feedback']) && !empty($mc_options[$correct_idx]['feedback'])) {
+                                $option_feedbacks[] = $mc_options[$correct_idx]['feedback'];
+                            }
+                        }
+                        $feedback = !empty($option_feedbacks) ? implode('<br>', $option_feedbacks) : '';
                     }
                     
                     $score += $points_earned;
@@ -164,13 +170,22 @@ class IELTS_CM_Quiz_Handler {
                         // Use feedback from the selected correct option
                         if (isset($mc_options[$user_answer]['feedback']) && !empty($mc_options[$user_answer]['feedback'])) {
                             $feedback = wp_kses_post($mc_options[$user_answer]['feedback']);
+                        } else {
+                            $feedback = '';
                         }
                     } elseif ($user_answer === null || $user_answer === '') {
-                        $feedback = isset($question['no_answer_feedback']) ? wp_kses_post($question['no_answer_feedback']) : '';
+                        // No answer provided - show feedback from correct option
+                        if (isset($mc_options[$correct_idx]['feedback']) && !empty($mc_options[$correct_idx]['feedback'])) {
+                            $feedback = wp_kses_post($mc_options[$correct_idx]['feedback']);
+                        } else {
+                            $feedback = '';
+                        }
                     } else {
                         // Use feedback from the selected incorrect option
                         if (isset($mc_options[$user_answer]['feedback']) && !empty($mc_options[$user_answer]['feedback'])) {
                             $feedback = wp_kses_post($mc_options[$user_answer]['feedback']);
+                        } else {
+                            $feedback = '';
                         }
                     }
                     $score += $points_earned;
