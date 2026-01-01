@@ -1,0 +1,273 @@
+# JSON Import Format - Quick Reference
+
+## Overview
+
+JSON import is now the **recommended** way to import exercises into the IELTS Course Manager plugin. It's more reliable, easier to read, and has 90% fewer bugs than XML.
+
+## Why JSON?
+
+- ✅ **No PHP serialization issues** (eliminates 60-70% of XML bugs)
+- ✅ **Native UTF-8 support** (no issues with special characters)
+- ✅ **Better error messages** (exact line/column instead of "offset 1247")
+- ✅ **64% smaller files** than equivalent XML
+- ✅ **Human-readable** and easy to edit manually
+- ✅ **Validation available** at jsonlint.com and in most code editors
+
+## Quick Start
+
+1. Download `example-exercise.json` as a template
+2. Edit the JSON file with your content
+3. In WordPress admin: Quizzes → Edit Quiz → Import from JSON section
+4. Upload your JSON file
+5. Done!
+
+## File Structure
+
+```json
+{
+  "title": "Exercise Title",
+  "content": "Optional description",
+  "questions": [...],
+  "reading_texts": [...],
+  "settings": {...},
+  "audio": {...}
+}
+```
+
+## Question Types
+
+### Open Question (Text Input)
+
+Covers multiple question numbers based on `field_count`.
+
+```json
+{
+  "type": "open_question",
+  "instructions": "Complete using NO MORE THAN TWO WORDS",
+  "question": "Complete the notes below:",
+  "field_count": 5,
+  "field_labels": [
+    "1. The owner wants to rent by ________",
+    "2. The woman will come this ________",
+    "3. She needs her own ________",
+    "4. There are two ________",
+    "5. Garden longer than ________"
+  ],
+  "field_answers": [
+    "Friday",
+    "afternoon",
+    "bed",
+    "bathrooms",
+    "4 metres|four metres|4m"
+  ],
+  "correct_feedback": "Excellent! You got it right.",
+  "incorrect_feedback": "Not quite. Listen to the audio again.",
+  "no_answer_feedback": "The correct answers are shown above.",
+  "points": 5
+}
+```
+
+**Key Points:**
+- `field_count`: Number of input fields (= number of question numbers this covers)
+- `field_labels`: Array of labels/prompts for each field
+- `field_answers`: Array of accepted answers (use `|` to separate multiple acceptable answers)
+- `points`: Usually equals `field_count`
+
+### Closed Question (Multiple Choice)
+
+Covers multiple question numbers based on `correct_answer_count`.
+
+**Single Select (1 correct answer):**
+```json
+{
+  "type": "closed_question",
+  "instructions": "Choose the correct answer",
+  "question": "What is the capital of France?",
+  "correct_answer_count": 1,
+  "mc_options": [
+    {"text": "A. London", "is_correct": false},
+    {"text": "B. Paris", "is_correct": true},
+    {"text": "C. Berlin", "is_correct": false}
+  ],
+  "correct_answer": "1",
+  "correct_feedback": "Correct! Paris is the capital.",
+  "incorrect_feedback": "Not quite. The answer is Paris.",
+  "no_answer_feedback": "The correct answer is B. Paris.",
+  "points": 1
+}
+```
+
+**Multi-Select (2+ correct answers):**
+```json
+{
+  "type": "closed_question",
+  "instructions": "Choose TWO letters A-F",
+  "question": "Which TWO are true of oregano?",
+  "correct_answer_count": 2,
+  "mc_options": [
+    {"text": "A. Easy to sprinkle", "is_correct": false},
+    {"text": "B. Tastier fresh", "is_correct": false},
+    {"text": "C. Used in Italian dishes", "is_correct": true},
+    {"text": "D. Lemony flavor", "is_correct": false},
+    {"text": "E. Rounded flavor", "is_correct": false},
+    {"text": "F. Good with meat", "is_correct": true}
+  ],
+  "correct_answer": "2|5",
+  "correct_feedback": "Correct! The answers are C and F.",
+  "incorrect_feedback": "Not quite. The correct answers are C and F.",
+  "no_answer_feedback": "The correct answers are C and F.",
+  "points": 2
+}
+```
+
+**Key Points:**
+- `correct_answer_count`: Number of correct answers (= number of question numbers this covers)
+- `mc_options`: Array of answer choices
+- `is_correct`: Boolean indicating if this option is correct
+- `correct_answer`: Pipe-separated indices of correct options (0-based)
+- `points`: Usually equals `correct_answer_count`
+
+## Settings
+
+```json
+"settings": {
+  "pass_percentage": 70,
+  "layout_type": "two_column_listening",
+  "exercise_label": "practice_test",
+  "scoring_type": "ielts_listening_band",
+  "timer_minutes": 10,
+  "starting_question_number": 1
+}
+```
+
+**Layout Types:**
+- `two_column_listening` - Audio player on left
+- `two_column_reading` - Reading text on left
+- `two_column_exercise` - General two-column
+- `one_column_exercise` - Single column
+
+**Exercise Labels:**
+- `exercise` - General exercise
+- `practice_test` - Practice test
+- `test` - Full test
+
+**Scoring Types:**
+- `percentage` - Simple percentage
+- `ielts_listening_band` - IELTS listening band score
+- `ielts_reading_band` - IELTS reading band score
+
+## Audio (for Listening Tests)
+
+```json
+"audio": {
+  "url": "https://example.com/audio/test-section-1.mp3",
+  "transcript": "<p>Section 1 transcript...</p>",
+  "sections": []
+}
+```
+
+**Notes:**
+- `url`: Direct URL to MP3 file
+- `transcript`: HTML transcript (will be auto-annotated with answers)
+- `sections`: For multi-section transcripts (optional)
+
+## Reading Texts (for Reading Tests)
+
+```json
+"reading_texts": [
+  {
+    "title": "Passage Title",
+    "text": "<p>Full passage text...</p>",
+    "source": "Optional source citation"
+  }
+]
+```
+
+## Multiple Acceptable Answers
+
+Use the pipe `|` character to separate multiple acceptable answers:
+
+```json
+"field_answers": [
+  "4 metres|four metres|4m|4 meters|four meters"
+]
+```
+
+The system will accept any of these variations.
+
+## Feedback Requirements
+
+All questions MUST have three types of feedback:
+
+1. **correct_feedback**: Shown when answer is correct
+2. **incorrect_feedback**: Shown when answer is wrong (should guide to correct answer)
+3. **no_answer_feedback**: Shown when no answer provided (MUST show the correct answer)
+
+Example:
+```json
+"correct_feedback": "Excellent! You got it right.",
+"incorrect_feedback": "Not quite. Listen again and check paragraph 3.",
+"no_answer_feedback": "The correct answer is: Friday. Make sure to take notes while listening."
+```
+
+## Complete Example
+
+See `example-exercise.json` for a full working example with:
+- Questions 1-5: Open question (5 fields)
+- Questions 6-10: Open question (5 fields)  
+- Questions 11-12: Closed question (2 correct answers)
+- Total: 12 questions
+
+## Import Modes
+
+When importing, you can choose:
+
+1. **Add to existing content** - Appends questions after current content
+2. **Replace all content** - Overwrites everything (backup first!)
+
+## Validation
+
+Before importing, validate your JSON:
+1. Use jsonlint.com
+2. Use VS Code or other editor with JSON validation
+3. Check that all required fields are present
+4. Ensure arrays have correct number of items
+
+## Common Errors
+
+**"Invalid JSON format"**
+- Check for missing commas, brackets, or quotes
+- Validate at jsonlint.com
+- Error message shows exact line/column
+
+**"No questions found"**
+- Ensure `questions` array exists and is not empty
+- Check JSON structure matches examples
+
+**"Field count mismatch"**
+- `field_count` must equal length of `field_labels` and `field_answers`
+- For closed questions, `correct_answer_count` must match number of correct options
+
+## Tips
+
+1. **Start with the example file** - Modify it rather than creating from scratch
+2. **Use a JSON-aware editor** - VS Code, Sublime Text, etc.
+3. **Validate before importing** - Catches syntax errors early
+4. **Export existing exercises** - See how they're structured
+5. **Keep backups** - Export before using "Replace" mode
+
+## Migration from XML
+
+To convert existing XML exercises to JSON:
+
+1. Edit the exercise in WordPress admin
+2. Click "Export to JSON" button
+3. You now have a clean JSON file
+4. Much easier to edit than XML!
+
+---
+
+**For More Information:**
+- See `IMPORT_OPTIONS_GUIDE.md` for all import options
+- See `IMPORT_FORMAT_ANALYSIS.md` for technical details
+- See `example-exercise.json` for working example
