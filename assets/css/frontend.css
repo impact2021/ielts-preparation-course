@@ -1685,7 +1685,6 @@ select.answer-select-inline.answer-incorrect {
     padding: 10px;
     background: #f0f0f1;
     border-radius: 3px;
-    border-left: 4px solid #999;
     font-size: 0.95em;
     line-height: 1.5;
 }
@@ -1716,17 +1715,14 @@ select.answer-select-inline.answer-incorrect {
     margin: 0;
 }
 
-/* For open question feedback, hide br tags to keep feedback items inline */
-.question-feedback-message.open-question-feedback br {
+/* For all feedback messages, hide br tags to keep feedback items inline */
+.question-feedback-message br {
     display: none;
 }
 
-.question-feedback-message.feedback-correct {
-    border-left-color: #4caf50;
-}
-
-.question-feedback-message.feedback-incorrect {
-    border-left-color: #f44336;
+/* For open question feedback, hide br tags to keep feedback items inline */
+.question-feedback-message.open-question-feedback br {
+    display: none;
 }
 
 /* Icons for open question feedback messages */
