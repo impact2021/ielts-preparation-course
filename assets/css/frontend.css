@@ -1690,6 +1690,23 @@ select.answer-select-inline.answer-incorrect {
     line-height: 1.5;
 }
 
+/* Prevent inline input fields from breaking to new lines in feedback */
+.question-feedback-message p {
+    display: inline;
+    margin: 0;
+}
+
+.question-feedback-message br {
+    display: none;
+}
+
+.question-feedback-message input.answer-input-inline,
+.question-feedback-message .open-question-input {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px;
+}
+
 .question-feedback-message.feedback-correct {
     border-left-color: #4caf50;
 }
