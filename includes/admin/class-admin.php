@@ -3043,7 +3043,11 @@ class IELTS_CM_Admin {
                         <input type="checkbox" 
                                name="questions[<?php echo $index; ?>][show_option_letters]" 
                                value="1"
-                               <?php checked(!isset($question['show_option_letters']) || !empty($question['show_option_letters'])); ?>
+                               <?php 
+                               // Default to true (checked) for backward compatibility
+                               $show_letters = isset($question['show_option_letters']) ? $question['show_option_letters'] : true;
+                               checked($show_letters); 
+                               ?>
                                style="margin-right: 8px;">
                         <span><?php _e('Automatically add A, B, C, etc. to options', 'ielts-course-manager'); ?></span>
                     </label><br>
@@ -3686,7 +3690,9 @@ class IELTS_CM_Admin {
                         // Auto-calculate points based on correct_answer_count
                         $question_data['points'] = $question_data['correct_answer_count'];
                         
-                        // Save the show_option_letters toggle (default true for backward compatibility)
+                        // Save the show_option_letters toggle
+                        // When checkbox is checked, value is '1', when unchecked, field won't be in POST
+                        // Always save explicit true/false, never leave unset
                         $question_data['show_option_letters'] = !empty($question['show_option_letters']);
                     } elseif ($question['type'] === 'open_question') {
                         // Handle open_question - save field_count, field_answers, and field_feedback
