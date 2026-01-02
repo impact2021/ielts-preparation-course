@@ -23,7 +23,7 @@ This feedback follows the IELTS Course Manager guidelines by:
 
 1. **Acknowledging the user action**: "You did not select an answer"
 2. **Showing the correct answer clearly**: "The correct answer is vii"
-3. **Explaining WHY it's correct**: Provides context about Paragraph B discussing "immediate financial benefits from timber" being prioritized over "long-term environmental sustainability"
+3. **Explaining WHY it's correct**: Provides context about Paragraph B discussing "immediate financial benefits from timber" (temporary gain) being prioritized over "long-term environmental sustainability" (long-term concerns), which demonstrates the concept of option vii: "Temporary gain outweighing long term concerns"
 
 ## Implementation Details
 
