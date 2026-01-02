@@ -11,12 +11,12 @@
         {
           "text": "YES",
           "is_correct": false,
-          "feedback": "Incorrect. The passage states that medical courses are 'far from easy' compared to other postgraduate courses, indicating they are MORE difficult."
+          "feedback": "Incorrect. The passage states that the life of a student doctor is 'considerably more challenging' than other postgraduate students, indicating they are MORE difficult."
         },
         {
           "text": "NO",
           "is_correct": true,
-          "feedback": "Correct! The first paragraph states that medical courses are 'far from easy' compared to other postgraduate courses, meaning they are more difficult."
+          "feedback": "Correct! The first paragraph states that the life of a student doctor is 'considerably more challenging' than other postgraduate students, meaning they are more difficult."
         },
         {
           "text": "NOT GIVEN",
@@ -25,7 +25,7 @@
         }
       ],
       "correct_answer": "1",
-      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states that medical courses are 'far from easy' compared to other postgraduate courses, meaning they are MORE difficult than other postgraduate courses.",
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states that the life of a student doctor is 'considerably more challenging' than other postgraduate students, meaning medical courses are MORE difficult than other postgraduate courses.",
       "points": 1
     },
     {
@@ -281,12 +281,12 @@
     {
       "type": "open_question",
       "instructions": "Complete the following text using NO MORE THAN TWO WORDS from the text.",
-      "question": "A significant number of graduates from New Zealand and Britain are not remaining in the medical field. Poor relationships with [field 1], student loan repayments and increasingly long [field 2] are all contributory factors. The NZMSA is attempting to find an answer to the problem, but is wary of supporting ideas it perceives to be only [field 3] solutions.",
+      "question": "A significant number of graduates from New Zealand and Britain are not remaining in the medical field. Poor relationships with 12.[field 1], student loan repayments and increasingly long 13.[field 2] are all contributory factors. The NZMSA is attempting to find an answer to the problem, but is wary of supporting ideas it perceives to be only 14.[field 3] solutions.",
       "field_count": 3,
       "field_labels": [
-        "12. [field 1]",
-        "13. [field 2]",
-        "14. [field 3]"
+        "[field 1]",
+        "[field 2]",
+        "[field 3]"
       ],
       "field_answers": [
         "MENTORS|mentors",
@@ -295,7 +295,7 @@
       ],
       "correct_feedback": "Correct! All answers can be found in the fourth paragraph (mentors) and the sixth and final paragraphs (working hours and short-term solutions).",
       "incorrect_feedback": "Incorrect. Review the fourth paragraph which discusses mentors, and the sixth and final paragraphs which discuss working hours and the NZMSA's concerns about short-term solutions.",
-      "no_answer_feedback": "The correct answers are: Field 1: MENTORS, Field 2: HOURS (or WORKING HOURS), Field 3: SHORT-TERM. Review the fourth, sixth, and final paragraphs for these key terms.",
+      "no_answer_feedback": "The correct answers are: 12: MENTORS, 13: HOURS (or WORKING HOURS), 14: SHORT-TERM. Review the fourth, sixth, and final paragraphs for these key terms.",
       "points": 3
     },
     {
@@ -564,13 +564,13 @@
     {
       "type": "open_question",
       "instructions": "Complete the following summary using NO MORE THAN TWO WORDS FROM THE TEXT.",
-      "question": "Not only are cities becoming larger, new housing is being built on areas reclaimed from [field 1]. In addition, migrating birds are also at risk from a number of different [field 2] which cannot be seen in the dark. Smaller birds are particularly vulnerable as they are at risk from external factors such as [field 3] and [field 4].",
+      "question": "Not only are cities becoming larger, new housing is being built on areas reclaimed from 26.[field 1]. In addition, migrating birds are also at risk from a number of different 27.[field 2] which cannot be seen in the dark. Smaller birds are particularly vulnerable as they are at risk from external factors such as 28.[field 3] and 29.[field 4].",
       "field_count": 4,
       "field_labels": [
-        "26. [field 1]",
-        "27. [field 2]",
-        "28. [field 3]",
-        "29. [field 4]"
+        "[field 1]",
+        "[field 2]",
+        "[field 3]",
+        "[field 4]"
       ],
       "field_answers": [
         "WETLANDS|wetlands",
@@ -579,8 +579,8 @@
         "STORMS|storms|PREDATORS|predators"
       ],
       "correct_feedback": "Correct! All answers can be found in the final paragraph which discusses the dangers faced by migrating birds.",
-      "incorrect_feedback": "Incorrect. Review the final paragraph which discusses various dangers to migrating birds including habitat loss and obstacles they encounter. Remember fields 3 and 4 can be in either order.",
-      "no_answer_feedback": "The correct answers are: Field 1: WETLANDS, Field 2: AERIAL OBSTRUCTIONS, Field 3 and 4: PREDATORS and STORMS (in either order). Review the final paragraph for these terms.",
+      "incorrect_feedback": "Incorrect. Review the final paragraph which discusses various dangers to migrating birds including habitat loss and obstacles they encounter. Remember questions 28 and 29 can be in either order.",
+      "no_answer_feedback": "The correct answers are: 26: WETLANDS, 27: AERIAL OBSTRUCTIONS, 28 and 29: PREDATORS and STORMS (in either order). Review the final paragraph for these terms.",
       "points": 4
     },
     {
@@ -997,7 +997,7 @@
   "reading_texts": [
     {
       "title": "Reading Passage 1",
-      "content": "<h3>Reading Passage 1</h3>\n<h2>The pressure on Junior Doctors</h2>\n\n<p>In comparison with the lives of other postgraduate students, the life of a student doctor is far from easy. Despite the heavy workload, it seems that the more you learn, the more you realise what you still need to study, meaning that it becomes increasingly complex and difficult as the course progresses. As a result, it is not unusual for students to drop out. Misguided teachers attempt to simplify matters, but this can then result in incomplete understanding in an environment that demands the very best of its practitioners, and this can cause the situation.</p>\n\n<p>The situation is little better in the year or two years after qualifying. Poorly paid for such long hours, many junior doctors find themselves becoming disillusioned with medicine. The more depressed they become, the more likely they are to look elsewhere for a career, wasting up to seven years of training and education. An unfortunate statistic is that of those that qualify as doctors, 18% do not remain in the profession for more than three years.</p>\n\n<p>The problem can be more clearly defined by considering specific examples. In New Zealand and Britain, for example, the exodus of medical graduates is leaving the remaining newly qualified doctors with responsibilities that are beyond their capacity. In statistics from 1998 over half the graduates from one medical school in New Zealand left the country immediately after qualifying, and hospitals are really beginning to feel the shortage. Certain hospitals in Auckland, for example, do not have enough staff to cover the timetable, and some of the newly qualified doctors are finding themselves on call for 48 hours straight. In Britain, the situation is equally bleak.</p>\n\n<p>The structure of the health service itself is the most important factor to be taken into account when considering the number of migrating British medical graduates. Junior doctors are required to take mentors, more senior doctors (often consultants), to act as supervisors. They are entrusted with the educational supervision of doctors in their first year of practice and are responsible for ensuring the application of the principles of good medical practice. However, when interviewed, slightly less than 60% of junior doctors had any positive feedback on the relationship. The remaining respondents described situations in which a consultant was accused of making unreasonable demands, bullying, being unfair, or being sexist. In more extreme cases, the consultant was portrayed as incompetent, insensitive or negligent towards patients.</p>\n\n<p>A healthy mentoring relationship is likely to provide the mental and moral challenges essential to continuing self-improvement. But such statistics may encourage junior doctors to conclude that role models may not be a dependable way to impart professional values, attitudes and behaviour. Indeed, a survey of just under 200 nearly qualified doctors highlights significant gaps in their knowledge and understanding of basic care. It was found that many junior doctors do not know the signs indicating a patient is critically ill, a third of respondents failed to answer a question on how to deal with someone who was unconscious and none of the trainees identified all of the steps involved in using an oxygen mask.</p>\n\n<p>In New Zealand, the situation, although having essentially the same effect of fewer junior doctors, has different causes. There are two main factors which explain this mass migration of medical graduates from New Zealand. The first factor is the student loans system where a medical graduate can leave university having accumulated a loan of anything up to NZ$60 000 in the course of training. By leaving the country, such graduates have the option of at least delaying the repayment of those loans. The other reason is the long hours. The stories of working hours a week being almost in the three-figure mark are often not exaggerated, and this is a situation which is worsening the fewer junior doctors there are.</p>\n\n<p>In New Zealand, at least, a solution is being sought at a student level. The New Zealand Medical Students Association (NZMSA) is a national body that aims to advance the long-term interests of medical students and act as their advocate on a political level. Composed of students elected from the Otago and Auckland Medical Schools, the NZMSA aims to find a balance between the demands of the profession and the expectations of junior doctors. At a recent conference, the Association concluded that increasing student numbers or attracting overseas doctors is too short term to be successful and the roots of the problem need to be addressed, specifically in the area of student debt. Either way, there is no doubt that a solution is needed and needed quickly, not just in Britain and New Zealand, but in most countries.</p>"
+      "content": "<h3>Reading Passage 1</h3>\n<h2>The pressure on Junior Doctors</h2>\n\n<p>In comparison with the lives of other postgraduate students, the life of a student doctor is considerably more challenging. Despite the heavy workload, it seems that the more you learn, the more you realise what you still need to study, meaning that it becomes increasingly complex and difficult as the course progresses. As a result, it is not unusual for students to drop out. Misguided teachers attempt to simplify matters, but this can then result in incomplete understanding in an environment that demands the very best of its practitioners, and this can cause the situation.</p>\n\n<p>The situation is little better in the year or two years after qualifying. Poorly paid for such long hours, many junior doctors find themselves becoming disillusioned with medicine. The more depressed they become, the more likely they are to look elsewhere for a career, wasting up to seven years of training and education. An unfortunate statistic is that of those that qualify as doctors, 18% do not remain in the profession for more than three years.</p>\n\n<p>The problem can be more clearly defined by considering specific examples. In New Zealand and Britain, for example, the exodus of medical graduates is leaving the remaining newly qualified doctors with responsibilities that are beyond their capacity. In statistics from 1998 over half the graduates from one medical school in New Zealand left the country immediately after qualifying, and hospitals are really beginning to feel the shortage. Certain hospitals in Auckland, for example, do not have enough staff to cover the timetable, and some of the newly qualified doctors are finding themselves on call for 48 hours straight. In Britain, the situation is equally bleak.</p>\n\n<p>The structure of the health service itself is the most important factor to be taken into account when considering the number of migrating British medical graduates. Junior doctors are required to take mentors, more senior doctors (often consultants), to act as supervisors. They are entrusted with the educational supervision of doctors in their first year of practice and are responsible for ensuring the application of the principles of good medical practice. However, when interviewed, slightly less than 60% of junior doctors had any positive feedback on the relationship. The remaining respondents described situations in which a consultant was accused of making unreasonable demands, bullying, being unfair, or being sexist. In more extreme cases, the consultant was portrayed as incompetent, insensitive or negligent towards patients.</p>\n\n<p>A healthy mentoring relationship is likely to provide the mental and moral challenges essential to continuing self-improvement. But such statistics may encourage junior doctors to conclude that role models may not be a dependable way to impart professional values, attitudes and behaviour. Indeed, a survey of just under 200 nearly qualified doctors highlights significant gaps in their knowledge and understanding of basic care. It was found that many junior doctors do not know the signs indicating a patient is critically ill, a third of respondents failed to answer a question on how to deal with someone who was unconscious and none of the trainees identified all of the steps involved in using an oxygen mask.</p>\n\n<p>In New Zealand, the situation, although having essentially the same effect of fewer junior doctors, has different causes. There are two main factors which explain this mass migration of medical graduates from New Zealand. The first factor is the student loans system where a medical graduate can leave university having accumulated a loan of anything up to NZ$60 000 in the course of training. By leaving the country, such graduates have the option of at least delaying the repayment of those loans. The other reason is the long hours. The stories of working hours a week being almost in the three-figure mark are often not exaggerated, and this is a situation which is worsening the fewer junior doctors there are.</p>\n\n<p>In New Zealand, at least, a solution is being sought at a student level. The New Zealand Medical Students Association (NZMSA) is a national body that aims to advance the long-term interests of medical students and act as their advocate on a political level. Composed of students elected from the Otago and Auckland Medical Schools, the NZMSA aims to find a balance between the demands of the profession and the expectations of junior doctors. At a recent conference, the Association concluded that increasing student numbers or attracting overseas doctors is too short term to be successful and the roots of the problem need to be addressed, specifically in the area of student debt. Either way, there is no doubt that a solution is needed and needed quickly, not just in Britain and New Zealand, but in most countries.</p>"
     },
     {
       "title": "Reading Passage 2",
