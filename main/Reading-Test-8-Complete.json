@@ -295,7 +295,7 @@
       ],
       "correct_feedback": "Correct! All answers can be found in the fourth paragraph (mentors) and the sixth and final paragraphs (working hours and short-term solutions).",
       "incorrect_feedback": "Incorrect. Review the fourth paragraph which discusses mentors, and the sixth and final paragraphs which discuss working hours and the NZMSA's concerns about short-term solutions.",
-      "no_answer_feedback": "The correct answers are: Field 1: MENTORS, Field 2: HOURS (or WORKING HOURS), Field 3: SHORT-TERM. Review the fourth, sixth, and final paragraphs for these key terms.",
+      "no_answer_feedback": "The correct answers are: 12: MENTORS, 13: HOURS (or WORKING HOURS), 14: SHORT-TERM. Review the fourth, sixth, and final paragraphs for these key terms.",
       "points": 3
     },
     {
@@ -579,8 +579,8 @@
         "STORMS|storms|PREDATORS|predators"
       ],
       "correct_feedback": "Correct! All answers can be found in the final paragraph which discusses the dangers faced by migrating birds.",
-      "incorrect_feedback": "Incorrect. Review the final paragraph which discusses various dangers to migrating birds including habitat loss and obstacles they encounter. Remember fields 3 and 4 can be in either order.",
-      "no_answer_feedback": "The correct answers are: Field 1: WETLANDS, Field 2: AERIAL OBSTRUCTIONS, Field 3 and 4: PREDATORS and STORMS (in either order). Review the final paragraph for these terms.",
+      "incorrect_feedback": "Incorrect. Review the final paragraph which discusses various dangers to migrating birds including habitat loss and obstacles they encounter. Remember questions 28 and 29 can be in either order.",
+      "no_answer_feedback": "The correct answers are: 26: WETLANDS, 27: AERIAL OBSTRUCTIONS, 28 and 29: PREDATORS and STORMS (in either order). Review the final paragraph for these terms.",
       "points": 4
     },
     {
