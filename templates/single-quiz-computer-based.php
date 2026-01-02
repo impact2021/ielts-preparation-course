@@ -922,7 +922,13 @@ if ($lesson_id) {
                                                                value="<?php echo esc_attr($opt_index); ?>"
                                                                class="closed-question-radio">
                                                     <?php endif; ?>
-                                                    <span class="option-letter"><?php echo esc_html(chr(65 + $opt_index)); ?>:</span> 
+                                                    <?php 
+                                                    // Only show letter prefix if show_option_letters is true (or not set for backward compatibility)
+                                                    $show_letters = !isset($question['show_option_letters']) || $question['show_option_letters'];
+                                                    if ($show_letters): 
+                                                    ?>
+                                                        <span class="option-letter"><?php echo esc_html(chr(65 + $opt_index)); ?>:</span> 
+                                                    <?php endif; ?>
                                                     <span><?php echo esc_html(isset($option['text']) ? $option['text'] : $option); ?></span>
                                                 </label>
                                             <?php endforeach; ?>
