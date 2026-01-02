@@ -92,6 +92,7 @@
         }
       ],
       "correct_answer": "2|5",
+      "no_answer_feedback": "You did not select any answers. The correct answers are C and F.",
       "points": 2
     }
   ],
