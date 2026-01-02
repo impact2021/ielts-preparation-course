@@ -643,7 +643,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                             <?php endif; ?>
                                             <?php 
                                             // Only show letter prefix if show_option_letters is true (or not set for backward compatibility)
-                                            $show_letters = !isset($question['show_option_letters']) || !empty($question['show_option_letters']);
+                                            $show_letters = !isset($question['show_option_letters']) || $question['show_option_letters'];
                                             if ($show_letters): 
                                             ?>
                                                 <span class="option-letter"><?php echo esc_html(chr(65 + $opt_index)); ?>:</span> 
