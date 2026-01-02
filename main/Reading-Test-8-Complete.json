@@ -25,6 +25,7 @@
         }
       ],
       "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states that medical courses are 'far from easy' compared to other postgraduate courses, meaning they are MORE difficult than other postgraduate courses.",
       "points": 1
     },
     {
