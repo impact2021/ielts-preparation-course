@@ -2512,6 +2512,14 @@ class IELTS_CM_Admin {
                 }
             }
             $question_count = max(1, $correct_count);
+        } elseif ($question_type === 'closed_question') {
+            // Count correct answers for closed_question (multi-select with feedback per option)
+            $question_count = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
+            $question_count = max(1, $question_count);
+        } elseif ($question_type === 'open_question') {
+            // Count fields for open_question (text inputs with per-field feedback)
+            $question_count = isset($question['field_count']) ? intval($question['field_count']) : 1;
+            $question_count = max(1, $question_count);
         } elseif ($question_type === 'summary_completion') {
             // Count fields for summary completion
             if (isset($question['summary_fields']) && is_array($question['summary_fields'])) {
