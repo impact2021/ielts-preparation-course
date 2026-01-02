@@ -757,7 +757,7 @@
                             
                             // Add per-question text feedback messages for all layouts
                             if (questionResult.question_type === 'multi_select') {
-                                // For multi_select, show individual feedback under ALL options
+                                // For multi_select, show individual feedback only under selected options
                                 // Remove any existing feedback first
                                 questionElement.find('.option-feedback-message').remove();
                                 questionElement.find('.question-feedback-message').remove();
@@ -767,20 +767,23 @@
                                     ? questionResult.correct_answer.option_feedback 
                                     : {};
                                 
-                                // Display feedback under ALL options that have feedback
+                                // Display feedback only under selected options that have feedback
                                 $.each(optionFeedback, function(optionIndex, feedbackText) {
                                     if (feedbackText) {
                                         var checkbox = questionElement.find('input[type="checkbox"][value="' + optionIndex + '"]');
-                                        var optionLabel = checkbox.closest('.option-label');
-                                        
-                                        // Create feedback element for this option
-                                        var feedbackDiv = $('<div>')
-                                            .addClass('option-feedback-message')
-                                            .html(feedbackText); // Using .html() because feedback explicitly supports HTML formatting
-                                                                 // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
-                                        
-                                        // Append feedback inside the option label
-                                        optionLabel.append(feedbackDiv);
+                                        // Only show feedback if this option was selected by the user
+                                        if (checkbox.is(':checked')) {
+                                            var optionLabel = checkbox.closest('.option-label');
+                                            
+                                            // Create feedback element for this option
+                                            var feedbackDiv = $('<div>')
+                                                .addClass('option-feedback-message')
+                                                .html(feedbackText); // Using .html() because feedback explicitly supports HTML formatting
+                                                                     // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
+                                            
+                                            // Append feedback inside the option label
+                                            optionLabel.append(feedbackDiv);
+                                        }
                                     }
                                 });
                                 
@@ -793,7 +796,7 @@
                                     questionElement.append(feedbackDiv);
                                 }
                             } else if (questionResult.question_type === 'closed_question') {
-                                // For closed_question, show feedback inside options (both multi-select and single-select)
+                                // For closed_question, show feedback only for selected options (both multi-select and single-select)
                                 // Remove any existing feedback first
                                 questionElement.find('.option-feedback-message').remove();
                                 questionElement.find('.question-feedback-message').remove();
@@ -803,10 +806,10 @@
                                 var correctAnswerCount = questionOptions.length ? (questionOptions.data('correct-count') || 1) : 1;
                                 
                                 if (questionResult.correct_answer && questionResult.correct_answer.option_feedback) {
-                                    // Both multi-select and single-select: show option-specific feedback inside each option
+                                    // Both multi-select and single-select: show option-specific feedback only for selected options
                                     var optionFeedback = questionResult.correct_answer.option_feedback;
                                     
-                                    // Display feedback under ALL options that have feedback
+                                    // Display feedback only under selected options that have feedback
                                     $.each(optionFeedback, function(optionIndex, feedbackText) {
                                         if (feedbackText) {
                                             // For multi-select, look for checkboxes; for single-select, look for radio buttons
@@ -814,7 +817,8 @@
                                                 ? 'input[type="checkbox"][value="' + optionIndex + '"]'
                                                 : 'input[type="radio"][value="' + optionIndex + '"]';
                                             var input = questionElement.find(inputSelector);
-                                            if (input.length > 0) {
+                                            // Only show feedback if this option was selected by the user
+                                            if (input.length > 0 && input.is(':checked')) {
                                                 var optionLabel = input.closest('.option-label');
                                                 if (optionLabel.length > 0) {
                                                     // Create feedback element for this option
