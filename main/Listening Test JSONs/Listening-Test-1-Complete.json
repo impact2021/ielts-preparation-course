@@ -218,8 +218,8 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 4,
             "field_answers": {
                 "1": "1985",
@@ -725,7 +725,7 @@
         ]
     },
     "_metadata": {
-        "exported_at": "2026-01-03 11:47:07",
+        "exported_at": "2026-01-03 11:49:57",
         "exported_by": "impact",
         "plugin_version": "10.16",
         "format_version": "1.0"
