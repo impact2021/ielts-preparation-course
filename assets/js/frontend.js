@@ -1101,6 +1101,10 @@
                 
                 // Switch reading text if needed
                 switchReadingText(questionElement);
+                // Switch audio section if needed
+                switchAudioSection(questionElement);
+                // Switch transcript section if needed
+                switchTranscriptSection(questionElement);
             }
         });
         
@@ -1167,6 +1171,36 @@
             }
         }
         
+        // Function to switch transcript section based on question
+        var currentTranscriptSectionId = null;
+        function switchTranscriptSection(questionElement) {
+            var audioSectionId = questionElement.data('audio-section-id');
+            
+            // Only switch if the question has a linked audio section
+            if (audioSectionId && audioSectionId !== '') {
+                // Check if we're switching to a different section
+                var isDifferentSection = (currentTranscriptSectionId !== audioSectionId);
+                
+                // Only hide/show when actually switching to a different section
+                if (isDifferentSection) {
+                    // Hide all transcript sections
+                    $('.transcript-section-content').hide();
+                    // Show the linked transcript section
+                    $('#transcript-section-' + audioSectionId).fadeIn(300);
+                    
+                    // Update tab buttons
+                    $('.transcript-section-tab').removeClass('active');
+                    $('.transcript-section-tab[data-section="' + audioSectionId + '"]').addClass('active');
+                    
+                    // Update the current transcript section ID
+                    currentTranscriptSectionId = audioSectionId;
+                }
+            } else {
+                // If no valid audio section, reset the tracking variable
+                currentTranscriptSectionId = null;
+            }
+        }
+        
         // Detect scroll position and switch reading text/audio section automatically
         if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
             var questionsColumn = $('.questions-column');
@@ -1199,6 +1233,7 @@
                     if (closestQuestion) {
                         switchReadingText(closestQuestion);
                         switchAudioSection(closestQuestion);
+                        switchTranscriptSection(closestQuestion);
                     }
                 }, 150); // Debounce scroll events
             });
