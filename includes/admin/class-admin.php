@@ -1756,7 +1756,6 @@ class IELTS_CM_Admin {
                 if (type === 'multiple_choice') {
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
                     // Set placeholder for all types
@@ -1764,7 +1763,6 @@ class IELTS_CM_Admin {
                 } else if (type === 'multi_select') {
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').show();
-                    container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
                     // Update no answer feedback placeholder
@@ -1773,7 +1771,6 @@ class IELTS_CM_Admin {
                     // Headings - independent implementation
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
                     // Update no answer feedback placeholder
@@ -1782,7 +1779,6 @@ class IELTS_CM_Admin {
                     // Matching/Classifying - independent implementation
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
                     // Set placeholder for all types
@@ -1791,7 +1787,6 @@ class IELTS_CM_Admin {
                     // Matching - independent implementation
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
                     // Set placeholder for all types
@@ -1800,7 +1795,6 @@ class IELTS_CM_Admin {
                     // Locating Information - independent implementation
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.hide();
                     // Set placeholder for all types
@@ -1808,7 +1802,6 @@ class IELTS_CM_Admin {
                 } else if (type === 'true_false') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').show();
                     container.find('.dropdown-paragraph-field').hide();
                     correctAnswerField.find('label').text('<?php _e('Correct Answer', 'ielts-course-manager'); ?>');
                     // Set placeholder for all types
@@ -1830,7 +1823,6 @@ class IELTS_CM_Admin {
                 } else if (type === 'short_answer' || type === 'sentence_completion' || type === 'labelling') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').show();
                     container.find('.dropdown-paragraph-field').hide();
                     container.find('.summary-completion-field').hide();
                     correctAnswerField.find('label').text('<?php _e('Correct Answer (use | to separate multiple accepted answers)', 'ielts-course-manager'); ?>');
@@ -1847,7 +1839,6 @@ class IELTS_CM_Admin {
                 } else if (type === 'summary_completion' || type === 'table_completion') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').hide();
                     container.find('.dropdown-paragraph-field').hide();
                     container.find('.summary-completion-field').show();
                     correctAnswerField.hide();
@@ -1856,16 +1847,16 @@ class IELTS_CM_Admin {
                 } else if (type === 'dropdown_paragraph') {
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').show();
                     container.find('.dropdown-paragraph-field').show();
                     correctAnswerField.hide();
                     // Set placeholder for all types
                     container.find('.no-answer-feedback-field textarea[name*="[no_answer_feedback]"]').attr('placeholder', ieltsPlaceholder);
                 } else if (type === 'closed_question') {
                     // Closed Question - show options and add correct answer count field
+                    // See CRITICAL-FEEDBACK-RULES.md: per-option feedback + single no_answer_feedback
                     container.find('.mc-options-field').show();
                     container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').show();
+                    container.find('.no-answer-feedback-field').show(); // Single field for when nothing selected
                     container.find('.dropdown-paragraph-field').hide();
                     container.find('.summary-completion-field').hide();
                     correctAnswerField.hide();
@@ -1896,9 +1887,10 @@ class IELTS_CM_Admin {
                     container.find('.closed-question-help').show();
                 } else if (type === 'open_question') {
                     // Open Question - hide options, show field count
+                    // See CRITICAL-FEEDBACK-RULES.md: per-field feedback (correct, incorrect, no_answer)
                     container.find('.mc-options-field').hide();
                     container.find('.multi-select-settings').hide();
-                    container.find('.general-feedback-field').show();
+                    container.find('.no-answer-feedback-field').hide(); // Open questions use per-field feedback
                     container.find('.dropdown-paragraph-field').hide();
                     container.find('.summary-completion-field').hide();
                     correctAnswerField.hide();
@@ -1917,7 +1909,7 @@ class IELTS_CM_Admin {
                     
                     // Add field count and answer fields if not exists
                     if (container.find('.open-question-settings').length === 0) {
-                        container.find('.general-feedback-field').before(
+                        container.find('.no-answer-feedback-field').before(
                             '<div class="open-question-settings" style="padding: 10px; background: #f0f0f1; margin-bottom: 15px; border-left: 4px solid #72aee6;">' +
                             '<p>' +
                             '<label><?php _e('Number of Input Fields', 'ielts-course-manager'); ?></label><br>' +
@@ -3088,19 +3080,9 @@ class IELTS_CM_Admin {
             </div>
             <?php endif; ?>
             
-            <div class="general-feedback-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('short_answer', 'sentence_completion', 'labelling', 'true_false', 'dropdown_paragraph', 'closed_question'))) ? '' : 'display:none;'; ?> margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
-                <h5 style="margin-top: 0;"><?php _e('Answer Feedback', 'ielts-course-manager'); ?></h5>
-                <p>
-                    <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
-                    <textarea name="questions[<?php echo $index; ?>][correct_feedback]" rows="3" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers correctly', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($question['correct_feedback']) ? $question['correct_feedback'] : ''); ?></textarea>
-                    <small><?php _e('Shown when the student answers correctly. HTML is supported.', 'ielts-course-manager'); ?></small>
-                </p>
-                <p>
-                    <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>
-                    <textarea name="questions[<?php echo $index; ?>][incorrect_feedback]" rows="3" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers incorrectly', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($question['incorrect_feedback']) ? $question['incorrect_feedback'] : ''); ?></textarea>
-                    <small><?php _e('Shown when the student answers incorrectly. HTML is supported.', 'ielts-course-manager'); ?></small>
-                </p>
-            </div>
+            <!-- NO GENERIC FEEDBACK TABLE - See CRITICAL-FEEDBACK-RULES.md -->
+            <!-- Closed questions: per-option feedback + single no_answer_feedback -->
+            <!-- Open questions: per-field feedback (correct, incorrect, no_answer) -->
             
             <div class="no-answer-feedback-field" style="<?php echo (isset($question['type']) && $question['type'] === 'open_question') ? 'display:none;' : ''; ?> margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
@@ -3260,19 +3242,9 @@ class IELTS_CM_Admin {
                 <input type="number" name="questions[QUESTION_INDEX][points]" value="1" min="0" step="0.5" style="width: 100%;">
             </p>
             
-            <div class="general-feedback-field" style="display: none; margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
-                <h5 style="margin-top: 0;"><?php _e('Answer Feedback', 'ielts-course-manager'); ?></h5>
-                <p>
-                    <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label><br>
-                    <textarea name="questions[QUESTION_INDEX][correct_feedback]" rows="3" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers correctly', 'ielts-course-manager'); ?>"></textarea>
-                    <small><?php _e('Shown when the student answers correctly. HTML is supported.', 'ielts-course-manager'); ?></small>
-                </p>
-                <p>
-                    <label><?php _e('Incorrect Answer Feedback', 'ielts-course-manager'); ?></label><br>
-                    <textarea name="questions[QUESTION_INDEX][incorrect_feedback]" rows="3" style="width: 100%;" placeholder="<?php _e('Feedback shown when student answers incorrectly', 'ielts-course-manager'); ?>"></textarea>
-                    <small><?php _e('Shown when the student answers incorrectly. HTML is supported.', 'ielts-course-manager'); ?></small>
-                </p>
-            </div>
+            <!-- NO GENERIC FEEDBACK TABLE - See CRITICAL-FEEDBACK-RULES.md -->
+            <!-- Closed questions: per-option feedback + single no_answer_feedback -->
+            <!-- Open questions: per-field feedback (correct, incorrect, no_answer) -->
             
             <div class="no-answer-feedback-field" style="margin-top: 15px; padding: 15px; background: #fff; border: 1px solid #ccc;">
                 <h5 style="margin-top: 0;"><?php _e('No Answer Feedback', 'ielts-course-manager'); ?></h5>
