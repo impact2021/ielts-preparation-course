@@ -3037,6 +3037,19 @@ class IELTS_CM_Admin {
                 <strong><?php _e('Closed Question Instructions:', 'ielts-course-manager'); ?></strong><br>
                 <small><?php _e('Simply enter your question text above. The options you define below will be shown as radio buttons (if 1 correct answer) or checkboxes (if 2+ correct answers). Check the options that are correct. The number of correct answers automatically determines how many question numbers this covers. You do NOT need to use [field 1] or similar placeholders for closed questions.', 'ielts-course-manager'); ?></small>
             </div>
+            <div class="closed-question-settings" style="padding: 10px; background: #f0f0f1; margin-bottom: 15px; border-left: 4px solid #72aee6;">
+                <p style="margin: 0;">
+                    <label style="display: inline-flex; align-items: center; cursor: pointer;">
+                        <input type="checkbox" 
+                               name="questions[<?php echo $index; ?>][show_option_letters]" 
+                               value="1"
+                               <?php checked(!isset($question['show_option_letters']) || !empty($question['show_option_letters'])); ?>
+                               style="margin-right: 8px;">
+                        <span><?php _e('Automatically add A, B, C, etc. to options', 'ielts-course-manager'); ?></span>
+                    </label><br>
+                    <small style="margin-left: 24px; color: #666;"><?php _e('Uncheck this if your option text already includes letters (e.g., "A. Option text").', 'ielts-course-manager'); ?></small>
+                </p>
+            </div>
             <?php endif; ?>
             
             <!-- Open Question Settings -->
@@ -3672,6 +3685,9 @@ class IELTS_CM_Admin {
                         
                         // Auto-calculate points based on correct_answer_count
                         $question_data['points'] = $question_data['correct_answer_count'];
+                        
+                        // Save the show_option_letters toggle (default true for backward compatibility)
+                        $question_data['show_option_letters'] = isset($question['show_option_letters']) ? true : false;
                     } elseif ($question['type'] === 'open_question') {
                         // Handle open_question - save field_count, field_answers, and field_feedback
                         $question_data['field_count'] = isset($question['field_count']) ? intval($question['field_count']) : 1;

@@ -566,12 +566,6 @@
       "instructions": "Complete the following summary using NO MORE THAN TWO WORDS FROM THE TEXT.",
       "question": "Not only are cities becoming larger, new housing is being built on areas reclaimed from 26.[field 1]. In addition, migrating birds are also at risk from a number of different 27.[field 2] which cannot be seen in the dark. Smaller birds are particularly vulnerable as they are at risk from external factors such as 28.[field 3] and 29.[field 4].",
       "field_count": 4,
-      "field_labels": [
-        "[field 1]",
-        "[field 2]",
-        "[field 3]",
-        "[field 4]"
-      ],
       "field_answers": [
         "WETLANDS|wetlands",
         "AERIAL OBSTRUCTIONS|aerial obstructions",
