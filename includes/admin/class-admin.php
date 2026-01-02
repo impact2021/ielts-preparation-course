@@ -3045,7 +3045,8 @@ class IELTS_CM_Admin {
                                value="1"
                                <?php 
                                // Default to true (checked) for backward compatibility
-                               $show_letters = isset($question['show_option_letters']) ? $question['show_option_letters'] : true;
+                               // Match the template logic: show if not set OR if explicitly true
+                               $show_letters = !isset($question['show_option_letters']) || $question['show_option_letters'];
                                checked($show_letters); 
                                ?>
                                style="margin-right: 8px;">
