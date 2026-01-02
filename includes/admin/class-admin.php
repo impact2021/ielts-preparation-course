@@ -2617,7 +2617,7 @@ class IELTS_CM_Admin {
                         if (isset($question['reading_text_id']) && $question['reading_text_id'] !== null && $question['reading_text_id'] !== '') {
                             if (is_array($reading_texts) && isset($reading_texts[$question['reading_text_id']])) {
                                 $reading_text = $reading_texts[$question['reading_text_id']];
-                                $reading_label = !empty($reading_text['title']) ? $reading_text['title'] : sprintf(__('Reading Text %d', 'ielts-course-manager'), intval($question['reading_text_id']) + 1);
+                                $reading_label = !empty($reading_text['title']) ? sanitize_text_field($reading_text['title']) : sprintf(__('Reading Text %d', 'ielts-course-manager'), intval($question['reading_text_id']) + 1);
                                 $label_parts[] = $reading_label;
                             }
                         }
@@ -2626,7 +2626,8 @@ class IELTS_CM_Admin {
                             $audio_sections = get_post_meta($post->ID, '_ielts_cm_audio_sections', true);
                             if (is_array($audio_sections) && isset($audio_sections[$question['audio_section_id']])) {
                                 $audio_section = $audio_sections[$question['audio_section_id']];
-                                $section_label = sprintf(__('Section %d', 'ielts-course-manager'), isset($audio_section['section_number']) ? $audio_section['section_number'] : (intval($question['audio_section_id']) + 1));
+                                $section_number = isset($audio_section['section_number']) ? intval($audio_section['section_number']) : (intval($question['audio_section_id']) + 1);
+                                $section_label = sprintf(__('Section %d', 'ielts-course-manager'), $section_number);
                                 $label_parts[] = $section_label;
                             }
                         }
