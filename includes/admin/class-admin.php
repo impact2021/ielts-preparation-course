@@ -2613,20 +2613,22 @@ class IELTS_CM_Admin {
                     
                     // Part 3: Reading text or audio section (if linked)
                     if (isset($post->ID)) {
-                        // Check for linked reading text
+                        // Check for linked reading text (reading_text_id can be 0 or higher)
                         if (isset($question['reading_text_id']) && $question['reading_text_id'] !== null && $question['reading_text_id'] !== '') {
-                            if (is_array($reading_texts) && isset($reading_texts[$question['reading_text_id']])) {
-                                $reading_text = $reading_texts[$question['reading_text_id']];
-                                $reading_label = !empty($reading_text['title']) ? sanitize_text_field($reading_text['title']) : sprintf(__('Reading Text %d', 'ielts-course-manager'), intval($question['reading_text_id']) + 1);
+                            $reading_text_id = intval($question['reading_text_id']);
+                            if (is_array($reading_texts) && isset($reading_texts[$reading_text_id])) {
+                                $reading_text = $reading_texts[$reading_text_id];
+                                $reading_label = !empty($reading_text['title']) ? sanitize_text_field($reading_text['title']) : sprintf(__('Reading Text %d', 'ielts-course-manager'), $reading_text_id + 1);
                                 $label_parts[] = $reading_label;
                             }
                         }
-                        // Check for linked audio section
+                        // Check for linked audio section (audio_section_id can be 0 or higher)
                         elseif (isset($question['audio_section_id']) && $question['audio_section_id'] !== null && $question['audio_section_id'] !== '') {
+                            $audio_section_id = intval($question['audio_section_id']);
                             $audio_sections = get_post_meta($post->ID, '_ielts_cm_audio_sections', true);
-                            if (is_array($audio_sections) && isset($audio_sections[$question['audio_section_id']])) {
-                                $audio_section = $audio_sections[$question['audio_section_id']];
-                                $section_number = isset($audio_section['section_number']) ? intval($audio_section['section_number']) : (intval($question['audio_section_id']) + 1);
+                            if (is_array($audio_sections) && isset($audio_sections[$audio_section_id])) {
+                                $audio_section = $audio_sections[$audio_section_id];
+                                $section_number = isset($audio_section['section_number']) ? intval($audio_section['section_number']) : ($audio_section_id + 1);
                                 $section_label = sprintf(__('Section %d', 'ielts-course-manager'), $section_number);
                                 $label_parts[] = $section_label;
                             }
