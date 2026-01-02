@@ -2575,14 +2575,6 @@ class IELTS_CM_Admin {
                 <span class="dashicons dashicons-arrow-right-alt2 question-toggle" style="color: #666; margin-right: 8px; transition: transform 0.2s;"></span>
                 <h4 style="margin: 0; flex: 1;">
                     <?php 
-                    // Calculate question number range for multi-point questions
-                    $question_type = isset($question['type']) ? $question['type'] : 'short_answer';
-                    $question_type_label = '';
-                    $question_types = IELTS_CM_Quiz_Handler::get_quiz_types();
-                    if (isset($question_types[$question_type])) {
-                        $question_type_label = ' (' . $question_types[$question_type] . ')';
-                    }
-                    
                     // Calculate actual question count for this question
                     $question_count = $this->calculate_question_count($question);
                     
@@ -2601,12 +2593,50 @@ class IELTS_CM_Admin {
                     
                     $display_end = $display_start + $question_count - 1;
                     
+                    // Build question label parts
+                    $label_parts = array();
+                    
+                    // Part 1: Question number(s)
                     if ($display_start === $display_end) {
-                        printf(__('Question %d', 'ielts-course-manager'), $display_start);
+                        $label_parts[] = sprintf(__('Question %d', 'ielts-course-manager'), $display_start);
                     } else {
-                        printf(__('Questions %d – %d', 'ielts-course-manager'), $display_start, $display_end);
+                        $label_parts[] = sprintf(__('Questions %d – %d', 'ielts-course-manager'), $display_start, $display_end);
                     }
-                    echo $question_type_label;
+                    
+                    // Part 2: IELTS question category (if selected)
+                    if (!empty($question['ielts_question_category'])) {
+                        $category_labels = $this->get_ielts_category_labels();
+                        if (isset($category_labels[$question['ielts_question_category']])) {
+                            $label_parts[] = $category_labels[$question['ielts_question_category']];
+                        }
+                    }
+                    
+                    // Part 3: Reading text or audio section (if linked)
+                    if (isset($post->ID)) {
+                        // Check for linked reading text (reading_text_id can be 0 or higher)
+                        if (isset($question['reading_text_id']) && $question['reading_text_id'] !== null && $question['reading_text_id'] !== '') {
+                            $reading_text_id = intval($question['reading_text_id']);
+                            if (is_array($reading_texts) && isset($reading_texts[$reading_text_id])) {
+                                $reading_text = $reading_texts[$reading_text_id];
+                                $reading_label = !empty($reading_text['title']) ? sanitize_text_field($reading_text['title']) : sprintf(__('Reading Text %d', 'ielts-course-manager'), $reading_text_id + 1);
+                                $label_parts[] = $reading_label;
+                            }
+                        }
+                        // Check for linked audio section (audio_section_id can be 0 or higher)
+                        elseif (isset($question['audio_section_id']) && $question['audio_section_id'] !== null && $question['audio_section_id'] !== '') {
+                            $audio_section_id = intval($question['audio_section_id']);
+                            $audio_sections = get_post_meta($post->ID, '_ielts_cm_audio_sections', true);
+                            if (is_array($audio_sections) && isset($audio_sections[$audio_section_id])) {
+                                $audio_section = $audio_sections[$audio_section_id];
+                                $section_number = isset($audio_section['section_number']) ? intval($audio_section['section_number']) : ($audio_section_id + 1);
+                                $section_label = sprintf(__('Section %d', 'ielts-course-manager'), $section_number);
+                                $label_parts[] = $section_label;
+                            }
+                        }
+                    }
+                    
+                    // Output the complete label
+                    echo esc_html(implode(' - ', $label_parts));
                     ?>
                 </h4>
             </div>
@@ -2627,22 +2657,14 @@ class IELTS_CM_Admin {
                 <label><?php _e('IELTS Question Type Category', 'ielts-course-manager'); ?></label><br>
                 <select name="questions[<?php echo $index; ?>][ielts_question_category]" class="question-category" style="width: 100%;">
                     <option value=""><?php _e('-- Select Category --', 'ielts-course-manager'); ?></option>
-                    <option value="multiple_choice_l" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'multiple_choice_l'); ?>><?php _e('Multiple Choice (L)', 'ielts-course-manager'); ?></option>
-                    <option value="matching_l" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'matching_l'); ?>><?php _e('Matching (L)', 'ielts-course-manager'); ?></option>
-                    <option value="plan_map_diagram_l" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'plan_map_diagram_l'); ?>><?php _e('Plan/Map/Diagram Labeling (L)', 'ielts-course-manager'); ?></option>
-                    <option value="form_completion_l" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'form_completion_l'); ?>><?php _e('Form/Note/Table/Flow-chart/Summary Completion (L)', 'ielts-course-manager'); ?></option>
-                    <option value="sentence_completion_l" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'sentence_completion_l'); ?>><?php _e('Sentence Completion (L)', 'ielts-course-manager'); ?></option>
-                    <option value="short_answer_l" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'short_answer_l'); ?>><?php _e('Short-Answer Questions (L)', 'ielts-course-manager'); ?></option>
-                    <option value="multiple_choice_r" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'multiple_choice_r'); ?>><?php _e('Multiple Choice (R)', 'ielts-course-manager'); ?></option>
-                    <option value="true_false_not_given" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'true_false_not_given'); ?>><?php _e('True/False/Not Given (R)', 'ielts-course-manager'); ?></option>
-                    <option value="yes_no_not_given" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'yes_no_not_given'); ?>><?php _e('Yes/No/Not Given (R)', 'ielts-course-manager'); ?></option>
-                    <option value="matching_information" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'matching_information'); ?>><?php _e('Matching Information (R)', 'ielts-course-manager'); ?></option>
-                    <option value="matching_headings" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'matching_headings'); ?>><?php _e('Matching Headings (R)', 'ielts-course-manager'); ?></option>
-                    <option value="matching_features" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'matching_features'); ?>><?php _e('Matching Features (R)', 'ielts-course-manager'); ?></option>
-                    <option value="sentence_completion_r" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'sentence_completion_r'); ?>><?php _e('Sentence Completion (R)', 'ielts-course-manager'); ?></option>
-                    <option value="summary_completion_r" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'summary_completion_r'); ?>><?php _e('Summary/Note/Table/Flow-chart Completion (R)', 'ielts-course-manager'); ?></option>
-                    <option value="diagram_label_r" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'diagram_label_r'); ?>><?php _e('Diagram Label Completion (R)', 'ielts-course-manager'); ?></option>
-                    <option value="short_answer_r" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', 'short_answer_r'); ?>><?php _e('Short-Answer Questions (R)', 'ielts-course-manager'); ?></option>
+                    <?php 
+                    $category_labels = $this->get_ielts_category_labels();
+                    foreach ($category_labels as $value => $label): 
+                    ?>
+                        <option value="<?php echo esc_attr($value); ?>" <?php selected(isset($question['ielts_question_category']) ? $question['ielts_question_category'] : '', $value); ?>>
+                            <?php echo esc_html($label); ?>
+                        </option>
+                    <?php endforeach; ?>
                 </select>
                 <small><?php _e('Select the IELTS question type category. This will be displayed in the top right of the question for students.', 'ielts-course-manager'); ?></small>
             </p>
@@ -3155,22 +3177,14 @@ class IELTS_CM_Admin {
                 <label><?php _e('IELTS Question Type Category', 'ielts-course-manager'); ?></label><br>
                 <select name="questions[QUESTION_INDEX][ielts_question_category]" class="question-category" style="width: 100%;">
                     <option value=""><?php _e('-- Select Category --', 'ielts-course-manager'); ?></option>
-                    <option value="multiple_choice_l"><?php _e('Multiple Choice (L)', 'ielts-course-manager'); ?></option>
-                    <option value="matching_l"><?php _e('Matching (L)', 'ielts-course-manager'); ?></option>
-                    <option value="plan_map_diagram_l"><?php _e('Plan/Map/Diagram Labeling (L)', 'ielts-course-manager'); ?></option>
-                    <option value="form_completion_l"><?php _e('Form/Note/Table/Flow-chart/Summary Completion (L)', 'ielts-course-manager'); ?></option>
-                    <option value="sentence_completion_l"><?php _e('Sentence Completion (L)', 'ielts-course-manager'); ?></option>
-                    <option value="short_answer_l"><?php _e('Short-Answer Questions (L)', 'ielts-course-manager'); ?></option>
-                    <option value="multiple_choice_r"><?php _e('Multiple Choice (R)', 'ielts-course-manager'); ?></option>
-                    <option value="true_false_not_given"><?php _e('True/False/Not Given (R)', 'ielts-course-manager'); ?></option>
-                    <option value="yes_no_not_given"><?php _e('Yes/No/Not Given (R)', 'ielts-course-manager'); ?></option>
-                    <option value="matching_information"><?php _e('Matching Information (R)', 'ielts-course-manager'); ?></option>
-                    <option value="matching_headings"><?php _e('Matching Headings (R)', 'ielts-course-manager'); ?></option>
-                    <option value="matching_features"><?php _e('Matching Features (R)', 'ielts-course-manager'); ?></option>
-                    <option value="sentence_completion_r"><?php _e('Sentence Completion (R)', 'ielts-course-manager'); ?></option>
-                    <option value="summary_completion_r"><?php _e('Summary/Note/Table/Flow-chart Completion (R)', 'ielts-course-manager'); ?></option>
-                    <option value="diagram_label_r"><?php _e('Diagram Label Completion (R)', 'ielts-course-manager'); ?></option>
-                    <option value="short_answer_r"><?php _e('Short-Answer Questions (R)', 'ielts-course-manager'); ?></option>
+                    <?php 
+                    $category_labels = $this->get_ielts_category_labels();
+                    foreach ($category_labels as $value => $label): 
+                    ?>
+                        <option value="<?php echo esc_attr($value); ?>">
+                            <?php echo esc_html($label); ?>
+                        </option>
+                    <?php endforeach; ?>
                 </select>
                 <small><?php _e('Select the IELTS question type category. This will be displayed in the top right of the question for students.', 'ielts-course-manager'); ?></small>
             </p>
@@ -6976,5 +6990,31 @@ class IELTS_CM_Admin {
         }
         
         return $transformed;
+    }
+    
+    /**
+     * Get IELTS question category labels
+     * 
+     * @return array Associative array of category values to labels
+     */
+    private function get_ielts_category_labels() {
+        return array(
+            'multiple_choice_l' => __('Multiple Choice (L)', 'ielts-course-manager'),
+            'matching_l' => __('Matching (L)', 'ielts-course-manager'),
+            'plan_map_diagram_l' => __('Plan/Map/Diagram Labeling (L)', 'ielts-course-manager'),
+            'form_completion_l' => __('Form/Note/Table/Flow-chart/Summary Completion (L)', 'ielts-course-manager'),
+            'sentence_completion_l' => __('Sentence Completion (L)', 'ielts-course-manager'),
+            'short_answer_l' => __('Short-Answer Questions (L)', 'ielts-course-manager'),
+            'multiple_choice_r' => __('Multiple Choice (R)', 'ielts-course-manager'),
+            'true_false_not_given' => __('True/False/Not Given (R)', 'ielts-course-manager'),
+            'yes_no_not_given' => __('Yes/No/Not Given (R)', 'ielts-course-manager'),
+            'matching_information' => __('Matching Information (R)', 'ielts-course-manager'),
+            'matching_headings' => __('Matching Headings (R)', 'ielts-course-manager'),
+            'matching_features' => __('Matching Features (R)', 'ielts-course-manager'),
+            'sentence_completion_r' => __('Sentence Completion (R)', 'ielts-course-manager'),
+            'summary_completion_r' => __('Summary/Note/Table/Flow-chart Completion (R)', 'ielts-course-manager'),
+            'diagram_label_r' => __('Diagram Label Completion (R)', 'ielts-course-manager'),
+            'short_answer_r' => __('Short-Answer Questions (R)', 'ielts-course-manager'),
+        );
     }
 }
