@@ -3687,7 +3687,7 @@ class IELTS_CM_Admin {
                         $question_data['points'] = $question_data['correct_answer_count'];
                         
                         // Save the show_option_letters toggle (default true for backward compatibility)
-                        $question_data['show_option_letters'] = isset($question['show_option_letters']) ? true : false;
+                        $question_data['show_option_letters'] = !empty($question['show_option_letters']);
                     } elseif ($question['type'] === 'open_question') {
                         // Handle open_question - save field_count, field_answers, and field_feedback
                         $question_data['field_count'] = isset($question['field_count']) ? intval($question['field_count']) : 1;

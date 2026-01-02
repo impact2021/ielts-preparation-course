@@ -646,7 +646,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                             $show_letters = !isset($question['show_option_letters']) || !empty($question['show_option_letters']);
                                             if ($show_letters): 
                                             ?>
-                                                <span class="option-letter"><?php echo chr(65 + $opt_index); ?>:</span> 
+                                                <span class="option-letter"><?php echo esc_html(chr(65 + $opt_index)); ?>:</span> 
                                             <?php endif; ?>
                                             <span><?php echo esc_html(isset($option['text']) ? $option['text'] : $option); ?></span>
                                         </label>
