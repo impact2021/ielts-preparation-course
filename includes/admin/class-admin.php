@@ -167,16 +167,6 @@ class IELTS_CM_Admin {
             'high'
         );
         
-        // XML Import/Export meta box for exercises
-        add_meta_box(
-            'ielts_cm_quiz_xml',
-            __('Import/Export XML', 'ielts-course-manager'),
-            array($this, 'quiz_xml_meta_box'),
-            'ielts_quiz',
-            'side',
-            'default'
-        );
-        
         // Multi-site sync meta box (only for primary sites)
         $sync_manager = new IELTS_CM_Multi_Site_Sync();
         if ($sync_manager->is_primary_site()) {
