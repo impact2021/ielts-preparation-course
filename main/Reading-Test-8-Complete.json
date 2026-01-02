@@ -351,6 +351,7 @@
       "instructions": "Choose the correct answer A–D.",
       "question": "The main reason birds migrate is",
       "correct_answer_count": 1,
+      "show_option_letters": false,
       "mc_options": [
         {
           "text": "A. the demands of their new-born",
@@ -381,6 +382,7 @@
       "instructions": "",
       "question": "Birds prepare for migration by",
       "correct_answer_count": 1,
+      "show_option_letters": false,
       "mc_options": [
         {
           "text": "A. eating more during the day",
@@ -411,6 +413,7 @@
       "instructions": "",
       "question": "Birds that die during migration",
       "correct_answer_count": 1,
+      "show_option_letters": false,
       "mc_options": [
         {
           "text": "A. prove migration is too dangerous",

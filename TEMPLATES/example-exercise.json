@@ -55,6 +55,7 @@
       "instructions": "Which TWO of the following does the chef say are true of the herb oregano? Choose TWO letters A-F.",
       "question": "Select the TWO correct answers:",
       "correct_answer_count": 2,
+      "show_option_letters": false,
       "mc_options": [
         {
           "text": "A. It's easy to sprinkle on food",
