@@ -90,7 +90,7 @@ When imported, the `field_labels` are converted into the question text with line
 
 Covers multiple question numbers based on `correct_answer_count`.
 
-**IMPORTANT: Each option MUST have its own feedback.** Generic question-level feedback (correct_feedback, incorrect_feedback, no_answer_feedback) should NOT be used for closed questions. Instead, provide specific feedback for each option.
+**IMPORTANT: Each option MUST have its own feedback.** Additionally, the question should have a single `no_answer_feedback` field shown when the student submits without selecting any option.
 
 **Single Select (1 correct answer):**
 ```json
@@ -117,6 +117,7 @@ Covers multiple question numbers based on `correct_answer_count`.
     }
   ],
   "correct_answer": "1",
+  "no_answer_feedback": "You did not select an answer. The correct answer is B. Paris.",
   "points": 1
 }
 ```
@@ -161,6 +162,7 @@ Covers multiple question numbers based on `correct_answer_count`.
     }
   ],
   "correct_answer": "2|5",
+  "no_answer_feedback": "You did not select any answers. The correct answers are C and F.",
   "points": 2
 }
 ```
@@ -172,8 +174,9 @@ Covers multiple question numbers based on `correct_answer_count`.
   - `feedback`: Specific feedback shown when this option is selected
 - `is_correct`: Boolean indicating if this option is correct
 - `correct_answer`: Pipe-separated indices of correct options (0-based)
+- `no_answer_feedback`: Single field shown when student submits without selecting anything
 - `points`: Usually equals `correct_answer_count`
-- **DO NOT include** `correct_feedback`, `incorrect_feedback`, or `no_answer_feedback` at the question level - feedback is per-option only
+- **DO NOT include** `correct_feedback` or `incorrect_feedback` at the question level - those are per-option only
 
 ## Settings
 
@@ -262,7 +265,7 @@ Example:
 
 ### Closed Questions (Multiple Choice)
 
-Closed questions require **per-option feedback only**. Each option in the `mc_options` array MUST have a `feedback` field:
+Closed questions require **per-option feedback PLUS a single no_answer_feedback field**. Each option in the `mc_options` array MUST have a `feedback` field, and the question itself must have a `no_answer_feedback` field:
 
 ```json
 "mc_options": [
@@ -276,10 +279,11 @@ Closed questions require **per-option feedback only**. Each option in the `mc_op
     "is_correct": true,
     "feedback": "Specific feedback for this option confirming it's correct."
   }
-]
+],
+"no_answer_feedback": "You did not select an answer. The correct answer is B."
 ```
 
-**DO NOT use** question-level feedback fields (correct_feedback, incorrect_feedback, no_answer_feedback) for closed questions.
+**DO NOT use** question-level `correct_feedback` or `incorrect_feedback` fields for closed questions - those are per-option only.
 
 ## Complete Example
 

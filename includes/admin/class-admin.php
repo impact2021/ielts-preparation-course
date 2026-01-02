@@ -6923,11 +6923,11 @@ class IELTS_CM_Admin {
                 unset($question['field_labels']);
             } elseif ($type === 'closed_question') {
                 // Transform closed_question format
-                // Remove generic feedback fields that should not be present for closed questions
-                // Feedback should be per-option only
+                // See CRITICAL-FEEDBACK-RULES.md: closed questions have per-option feedback + single no_answer_feedback
+                // Remove generic correct/incorrect feedback (should be per-option only)
                 unset($question['correct_feedback']);
                 unset($question['incorrect_feedback']);
-                unset($question['no_answer_feedback']);
+                // Keep no_answer_feedback - it's the single field for when nothing is selected
                 
                 // Ensure mc_options exists and each option has feedback
                 if (isset($question['mc_options']) && is_array($question['mc_options'])) {
