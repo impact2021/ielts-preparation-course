@@ -26,7 +26,8 @@
       ],
       "correct_answer": "1",
       "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states that the life of a student doctor is 'considerably more challenging' than other postgraduate students, meaning medical courses are MORE difficult than other postgraduate courses.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 0
     },
     {
       "type": "closed_question",
@@ -52,7 +53,8 @@
       ],
       "correct_answer": "1",
       "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states 'the more you learn, the more you realise what you still need to study' making it increasingly difficult, not easier.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 0
     },
     {
       "type": "closed_question",
@@ -78,7 +80,8 @@
       ],
       "correct_answer": "0",
       "no_answer_feedback": "You did not select an answer. The correct answer is YES. The first paragraph clearly mentions 'it is not unusual for students to drop out.'",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 0
     },
     {
       "type": "closed_question",
@@ -104,7 +107,8 @@
       ],
       "correct_answer": "1",
       "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage describes teachers who simplify as 'misguided' because it results in incomplete understanding, indicating they are not better teachers.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 0
     },
     {
       "type": "closed_question",
@@ -130,7 +134,8 @@
       ],
       "correct_answer": "0",
       "no_answer_feedback": "You did not select an answer. The correct answer is YES. The second paragraph states 'The situation is little better in the year or two years after qualifying,' indicating a slight improvement.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 0
     },
     {
       "type": "closed_question",
@@ -156,7 +161,8 @@
       ],
       "correct_answer": "2",
       "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. While the passage mentions 'poorly paid,' it does not explicitly state whether they are poor or provide enough information to determine this.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 0
     },
     {
       "type": "closed_question",
@@ -182,7 +188,8 @@
       ],
       "correct_answer": "1",
       "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states disillusioned doctors 'look elsewhere for a career,' meaning they leave the profession entirely, not just move to another hospital.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 0
     },
     {
       "type": "closed_question",
@@ -208,7 +215,8 @@
       ],
       "correct_answer": "1",
       "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states 'slightly less than 60%' had positive feedback, meaning the majority did have something positive to say about their mentors.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 0
     },
     {
       "type": "closed_question",
@@ -234,7 +242,8 @@
       ],
       "correct_answer": "1",
       "no_answer_feedback": "You did not select an answer. The correct answer is NO. The sixth paragraph states the situations in New Zealand and Britain have 'essentially the same effect' but 'different causes,' meaning different root problems.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 0
     },
     {
       "type": "closed_question",
@@ -260,7 +269,8 @@
       ],
       "correct_answer": "2",
       "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. While the sixth paragraph mentions student loans, it does not state whether doctors are able or unable to repay them.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 0
     },
     {
       "type": "closed_question",
@@ -286,7 +296,8 @@
       ],
       "correct_answer": "1",
       "no_answer_feedback": "You did not select an answer. The correct answer is NO. The final paragraph states the NZMSA 'aims to find a balance,' indicating it is a goal, not an achievement they have already accomplished.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 0
     },
     {
       "type": "open_question",
@@ -306,7 +317,8 @@
       "correct_feedback": "Correct! All answers can be found in the fourth paragraph (mentors) and the sixth and final paragraphs (working hours and short-term solutions).",
       "incorrect_feedback": "Incorrect. Review the fourth paragraph which discusses mentors, and the sixth and final paragraphs which discuss working hours and the NZMSA's concerns about short-term solutions.",
       "no_answer_feedback": "The correct answers are: 12: MENTORS, 13: HOURS (or WORKING HOURS), 14: SHORT-TERM. Review the fourth, sixth, and final paragraphs for these key terms.",
-      "points": 3
+      "points": 3,
+      "reading_text_id": 0
     },
     {
       "type": "open_question",
@@ -322,7 +334,8 @@
       "correct_feedback": "Correct! The third paragraph states 'In statistics from 1998 over half the graduates from one medical school in New Zealand left the country.'",
       "incorrect_feedback": "Incorrect. Look for the year mentioned when discussing New Zealand medical school graduates leaving the country. Review the third paragraph.",
       "no_answer_feedback": "The correct answer is 1998. The third paragraph states 'In statistics from 1998 over half the graduates from one medical school in New Zealand left the country.'",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 0
     },
     {
       "type": "open_question",
@@ -338,7 +351,8 @@
       "correct_feedback": "Correct! The final paragraph states NZMSA members are 'elected from the Otago and Auckland Medical Schools.'",
       "incorrect_feedback": "Incorrect. Review the final paragraph which describes how NZMSA members are chosen.",
       "no_answer_feedback": "The correct answer is ELECTED. The final paragraph states that NZMSA members are 'elected from the Otago and Auckland Medical Schools.'",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 0
     },
     {
       "type": "open_question",
@@ -354,7 +368,8 @@
       "correct_feedback": "Correct! The third paragraph mentions 'Certain hospitals in Auckland' where doctors work 48-hour shifts.",
       "incorrect_feedback": "Incorrect. Look for the specific location mentioned where newly qualified doctors work extremely long shifts. Review the third paragraph.",
       "no_answer_feedback": "The correct answer is AUCKLAND. The passage mentions 'Certain hospitals in Auckland' where doctors work 48-hour (two-day) shifts.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 0
     },
     {
       "type": "closed_question",
@@ -386,7 +401,8 @@
       ],
       "correct_answer": "0",
       "no_answer_feedback": "You did not select an answer. The correct answer is A. The second paragraph states the primary cause is 'the search for food, particularly for their chicks.'",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 1
     },
     {
       "type": "closed_question",
@@ -418,7 +434,8 @@
       ],
       "correct_answer": "2",
       "no_answer_feedback": "You did not select an answer. The correct answer is C. The third paragraph mentions birds become 'considerably more active at night' due to chemical changes preparing them for migration.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 1
     },
     {
       "type": "closed_question",
@@ -450,7 +467,8 @@
       ],
       "correct_answer": "1",
       "no_answer_feedback": "You did not select an answer. The correct answer is B. The sixth paragraph states mortality is 'covered by the increased production of offspring.'",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 1
     },
     {
       "type": "closed_question",
@@ -476,7 +494,8 @@
       ],
       "correct_answer": "0",
       "no_answer_feedback": "You did not select an answer. The correct answer is YES. The passage discusses various differences between species throughout, including migration speed, patterns, and timing in the fourth paragraph.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 1
     },
     {
       "type": "closed_question",
@@ -502,7 +521,8 @@
       ],
       "correct_answer": "1",
       "no_answer_feedback": "You did not select an answer. The correct answer is NO. The fifth paragraph states theories exist but notes 'these theories do not explain' certain navigation abilities, indicating theories are incomplete.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 1
     },
     {
       "type": "closed_question",
@@ -528,7 +548,8 @@
       ],
       "correct_answer": "2",
       "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. The fourth paragraph mentions males migrating first but does not compare the flying speeds of males and females.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 1
     },
     {
       "type": "closed_question",
@@ -554,7 +575,8 @@
       ],
       "correct_answer": "0",
       "no_answer_feedback": "You did not select an answer. The correct answer is YES. The sixth paragraph states 'smaller birds' face dangers from 'storms and attacks by predators' and have 'less energy reserves.'",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 1
     },
     {
       "type": "closed_question",
@@ -580,7 +602,8 @@
       ],
       "correct_answer": "2",
       "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. While the final paragraph discusses human impact as a recent challenge, the passage does not identify it as the single biggest danger compared to other threats.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 1
     },
     {
       "type": "open_question",
@@ -602,7 +625,8 @@
       "correct_feedback": "Correct! All answers can be found in the final paragraph which discusses the dangers faced by migrating birds.",
       "incorrect_feedback": "Incorrect. Review the final paragraph which discusses various dangers to migrating birds including habitat loss and obstacles they encounter. Remember questions 28 and 29 can be in either order.",
       "no_answer_feedback": "The correct answers are: 26: WETLANDS, 27: AERIAL OBSTRUCTIONS, 28 and 29: PREDATORS and STORMS (in either order). Review the final paragraph for these terms.",
-      "points": 4
+      "points": 4,
+      "reading_text_id": 1
     },
     {
       "type": "closed_question",
@@ -658,7 +682,8 @@
       ],
       "correct_answer": "6",
       "no_answer_feedback": "You did not select an answer. The correct answer is vii. Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 2
     },
     {
       "type": "closed_question",
@@ -714,7 +739,8 @@
       ],
       "correct_answer": "7",
       "no_answer_feedback": "You did not select an answer. The correct answer is viii. Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 2
     },
     {
       "type": "closed_question",
@@ -770,7 +796,8 @@
       ],
       "correct_answer": "1",
       "no_answer_feedback": "You did not select an answer. The correct answer is ii. Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 2
     },
     {
       "type": "closed_question",
@@ -826,7 +853,8 @@
       ],
       "correct_answer": "5",
       "no_answer_feedback": "You did not select an answer. The correct answer is vi. Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 2
     },
     {
       "type": "closed_question",
@@ -882,7 +910,8 @@
       ],
       "correct_answer": "8",
       "no_answer_feedback": "You did not select an answer. The correct answer is ix. Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 2
     },
     {
       "type": "closed_question",
@@ -938,7 +967,8 @@
       ],
       "correct_answer": "2",
       "no_answer_feedback": "You did not select an answer. The correct answer is iii. Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 2
     },
     {
       "type": "open_question",
@@ -954,7 +984,8 @@
       "correct_feedback": "Correct! Paragraph D states that deforestation will lead to 'a 15 per cent rise in the greenhouse effect around the planet.'",
       "incorrect_feedback": "Incorrect. Review Paragraph D which discusses the global environmental phenomenon predicted to increase due to deforestation.",
       "no_answer_feedback": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 2
     },
     {
       "type": "open_question",
@@ -970,7 +1001,8 @@
       "correct_feedback": "Correct! Paragraph C states 'International travel is becoming increasingly popular,' enabling ecological tourism in forests.",
       "incorrect_feedback": "Incorrect. Review Paragraph C which mentions what is becoming more popular and enabling ecological uses of forests.",
       "no_answer_feedback": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 2
     },
     {
       "type": "open_question",
@@ -986,7 +1018,8 @@
       "correct_feedback": "Correct! Paragraph E states that '70 per cent of rural households are landless' in Brazil.",
       "incorrect_feedback": "Incorrect. Review Paragraph E which discusses the situation of rural people in Brazil regarding land ownership.",
       "no_answer_feedback": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 2
     },
     {
       "type": "open_question",
@@ -1002,7 +1035,8 @@
       "correct_feedback": "Correct! Paragraph B states the United States 'has less than two per cent of its original forest' (which is one fiftieth).",
       "incorrect_feedback": "Incorrect. Review Paragraph B which mentions the country with only 2% (one fiftieth) of its original forests remaining.",
       "no_answer_feedback": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 2
     },
     {
       "type": "open_question",
@@ -1018,7 +1052,8 @@
       "correct_feedback": "Correct! Paragraph G states that 'the raising of public awareness' is necessary for changing negative behaviors.",
       "incorrect_feedback": "Incorrect. Review Paragraph G which identifies what needs to be raised or increased to change people's harmful behaviors.",
       "no_answer_feedback": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change.",
-      "points": 1
+      "points": 1,
+      "reading_text_id": 2
     }
   ],
   "reading_texts": [
