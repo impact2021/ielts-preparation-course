@@ -1,0 +1,523 @@
+{
+  "title": "Listening Test 1",
+  "content": "Complete IELTS Listening Test 1 with all 4 sections (40 questions)",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Questions 1-5: Complete the notes below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.\n\nCommunity Courses for New Migrants",
+      "question": "The woman arrived in the country [field 1] ago.\n\nThe Settlement Support Programme lasts for [field 2] weeks.\n\nStudents need to attend the Settlement Support Programme [field 3] days a week.\n\nThe discounted price for the handbook is [field 4].\n\nMentoring Programme sessions last for [field 5] each.",
+      "points": 1.0,
+      "field_count": 5,
+      "field_labels": [
+        "1. [Field 1]",
+        "2. [Field 2]",
+        "3. [Field 3]",
+        "4. [Field 4]",
+        "5. [Field 5]"
+      ],
+      "field_answers": [
+        "2 months|two months",
+        "3|three|III",
+        "4|four",
+        "₤7.95|£7.95|7.95|GBP 7.95|seven pounds ninety five|seven ninety five|7,95",
+        "one hour|1 hour|an hour|one-hour|1-hour|one hr|1 hr|60 minutes|60m"
+      ],
+      "correct_feedback": "Correct! The woman states she arrived in the country two months ago.",
+      "incorrect_feedback": "Incorrect. Listen carefully to when the woman says she arrived in the country (Question 1).",
+      "no_answer_feedback": "The correct answer is: 2 months. Make sure to listen carefully for key information and take notes while listening."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 6-10: Multiple Choice\nChoose the correct answer (A, B, or C).",
+      "question": "How many mentors are currently on the team?",
+      "points": 1.0,
+      "mc_options": [
+        {
+          "text": "A. 4",
+          "is_correct": false,
+          "feedback": "Incorrect. 4 is the number of clients each mentor sees per week, not total mentors."
+        },
+        {
+          "text": "B. 15",
+          "is_correct": true,
+          "feedback": "Correct! The operator states there are currently 15 mentors total."
+        },
+        {
+          "text": "C. 20",
+          "is_correct": false,
+          "feedback": "Incorrect. This number is not mentioned in relation to mentors at all."
+        }
+      ],
+      "correct_answer_count": 1,
+      "correct_answer": "1",
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "How many clients does each mentor see per week?",
+      "points": 1.0,
+      "mc_options": [
+        {
+          "text": "A. 2",
+          "is_correct": false,
+          "feedback": "Incorrect. There are 2 sessions per week, but each mentor sees 4 clients (not 2) in total weekly."
+        },
+        {
+          "text": "B. 4",
+          "is_correct": true,
+          "feedback": "Correct! Each mentor sees 4 clients per week, according to details."
+        },
+        {
+          "text": "C. 6",
+          "is_correct": false,
+          "feedback": "Incorrect. This number is not mentioned in the conversation."
+        }
+      ],
+      "correct_answer_count": 1,
+      "correct_answer": "1",
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "When is the next available Settlement Support Programme course?",
+      "points": 1.0,
+      "mc_options": [
+        {
+          "text": "A. 26th September",
+          "is_correct": false,
+          "feedback": "Incorrect. This course starts on 26th September but is already fully booked/not available."
+        },
+        {
+          "text": "B. 3rd October",
+          "is_correct": true,
+          "feedback": "Correct! Although there's a course on 26th September, it's full. The next available is 3rd October."
+        },
+        {
+          "text": "C. 10th October",
+          "is_correct": false,
+          "feedback": "Incorrect. This date is not mentioned at all in the conversation."
+        }
+      ],
+      "correct_answer_count": 1,
+      "correct_answer": "1",
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Where is the office located?",
+      "points": 1.0,
+      "mc_options": [
+        {
+          "text": "A. On the 2nd floor of Lakeside View building",
+          "is_correct": true,
+          "feedback": "Correct! The operator states the office is on the 2nd floor of the Lakeside View building."
+        },
+        {
+          "text": "B. On St James Plaza",
+          "is_correct": false,
+          "feedback": "Incorrect. The building is on St James Plaza (not Street), but this doesn't specify the floor or building name."
+        },
+        {
+          "text": "C. Next to the public car park",
+          "is_correct": false,
+          "feedback": "Incorrect. The car park is next to the building, but this doesn't describe the office itself."
+        }
+      ],
+      "correct_answer_count": 1,
+      "correct_answer": "0",
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Which car park should students not use?",
+      "points": 1.0,
+      "mc_options": [
+        {
+          "text": "A. The public car park on the left",
+          "is_correct": false,
+          "feedback": "Incorrect. Students are actually encouraged to use the public car park on the left - it's recommended."
+        },
+        {
+          "text": "B. The staff car park at the front",
+          "is_correct": true,
+          "feedback": "Correct! The operator clearly warns not to use the car park at the front as it's reserved for staff."
+        },
+        {
+          "text": "C. The one behind the building",
+          "is_correct": false,
+          "feedback": "Incorrect. A car park behind the building is not mentioned in the conversation."
+        }
+      ],
+      "correct_answer_count": 1,
+      "correct_answer": "1",
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 11-14: Complete the sentences below. Write NO MORE THAN THREE WORDS.",
+      "question": "Gorgona Island housed a maximum security prison until [field 1].\n\nThe island is also known as Science Island because of the [field 2] the coral environment presents.\n\nWhite-sand beaches are located on the [field 3] of Gorgona Island.\n\nThe vegetation around the prison buildings provides a [field 4] for wildlife observation.",
+      "points": 1.0,
+      "field_count": 4,
+      "field_labels": [
+        "1. [Field 1]",
+        "2. [Field 2]",
+        "3. [Field 3]",
+        "4. [Field 4]"
+      ],
+      "field_answers": [
+        "1985",
+        "research|research possibilities|research possibility",
+        "eastern side|east side",
+        "perfect environment|ideal environment"
+      ],
+      "correct_feedback": "Correct! The prison was operational until 1985 when it was closed and the island became a natural park.",
+      "incorrect_feedback": "Incorrect. Listen for the year when the prison was closed. The speaker mentions when Gorgona Island was declared a natural park.",
+      "no_answer_feedback": "The correct answer is: 1985. Make sure to listen carefully for key information and take notes while listening."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 15-16: Choose TWO letters A-E.\n\nWhat TWO rules must visitors to Gorgona Island obey? Visitors must...",
+      "question": "A. stay on jungle trails\nB. not take prohibited items to the island\nC. take all rubbish away with them\nD. meet medical requirements\nE. carry a first aid kit",
+      "points": 1.0,
+      "mc_options": [
+        {
+          "text": "A. stay on jungle trails",
+          "is_correct": false,
+          "feedback": "Incorrect. While visitors are supervised and limited in where they can go (not too far from the coastline), staying on jungle trails specifically is not mentioned as a requirement."
+        },
+        {
+          "text": "B. not take prohibited items to the island",
+          "is_correct": true,
+          "feedback": "Correct! Visitors are prohibited from bringing electrical appliances, alcoholic beverages, sprays and contaminants, arms, and articles for hunting or capturing animals to the island."
+        },
+        {
+          "text": "C. take all rubbish away with them",
+          "is_correct": false,
+          "feedback": "Incorrect. The recording states that no non-biodegradable rubbish must be left behind and organic waste should be placed in special containers for collection by rangers, not taken away."
+        },
+        {
+          "text": "D. meet medical requirements",
+          "is_correct": true,
+          "feedback": "Correct! Visitors are required to get vaccinated against yellow fever, tetanus, and hepatitis B at least 10 days before arriving, and must show vaccination certificates."
+        },
+        {
+          "text": "E. carry a first aid kit",
+          "is_correct": false,
+          "feedback": "Incorrect. While visitors are strongly recommended to take a first aid kit with snake anti-venom and medicine, it is not compulsory."
+        }
+      ],
+      "correct_answer_count": 2,
+      "min_selections": 2,
+      "max_selections": 2,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 17-20: Choose the correct letter A, B or C.\n\n17. On Gorgona Island there are.....",
+      "question": "On Gorgona Island there are.....",
+      "points": 1.0,
+      "mc_options": [
+        {
+          "text": "A. more types of insects than birds",
+          "is_correct": false,
+          "feedback": "Incorrect. There are 147 bird species and over 100 insect species, so there are more bird species."
+        },
+        {
+          "text": "B. more types of birds than marine animals",
+          "is_correct": false,
+          "feedback": "Incorrect. There are 147 bird species but more than 500 species of marine fauna, so there are more marine species."
+        },
+        {
+          "text": "C. more types of marine species than insects",
+          "is_correct": true,
+          "feedback": "Correct! The recording states there are over 100 insect species but more than 500 species of marine fauna on Gorgona Island."
+        }
+      ],
+      "correct_answer_count": 1,
+      "correct_answer": "2",
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Humpback whales.....",
+      "points": 1.0,
+      "mc_options": [
+        {
+          "text": "A. travel from the Pacific Coast to give birth",
+          "is_correct": false,
+          "feedback": "Incorrect. The whales travel TO the Pacific Coast (specifically to Colombian waters) to give birth, not from it. They travel 8000km from the poles."
+        },
+        {
+          "text": "B. can reliably be seen during mating season",
+          "is_correct": true,
+          "feedback": "Correct! The recording states that with more than 1000 humpback whales arriving during mating and calving season, tourists need not be concerned their whale-watching trip will be unsuccessful."
+        },
+        {
+          "text": "C. migrate at the beginning of the year",
+          "is_correct": false,
+          "feedback": "Incorrect. Humpback whales migrate between June and October each year, not at the beginning of the year."
+        }
+      ],
+      "correct_answer_count": 1,
+      "correct_answer": "1",
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The boat ride from Buenaventura to Gorgona Island takes....",
+      "points": 1.0,
+      "mc_options": [
+        {
+          "text": "A. 10 hours",
+          "is_correct": false,
+          "feedback": "Incorrect. 10 hours is mentioned but it's the travel time from Buenaventura to Bogota by road, not the boat ride to Gorgona Island."
+        },
+        {
+          "text": "B. 12 hours",
+          "is_correct": true,
+          "feedback": "Correct! The recording clearly states that the boat ride from Buenaventura takes 12 hours."
+        },
+        {
+          "text": "C. 1 hour 40 minutes",
+          "is_correct": false,
+          "feedback": "Incorrect. 1 hour 40 minutes is the boat ride time from Guapi to Gorgona Island, not from Buenaventura."
+        }
+      ],
+      "correct_answer_count": 1,
+      "correct_answer": "1",
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The cost of trips to Gorgona Island increased when....",
+      "points": 1.0,
+      "mc_options": [
+        {
+          "text": "A. the Government took control of tourism there",
+          "is_correct": false,
+          "feedback": "Incorrect. The government didn't take control themselves; rather, they gave control to a private company. It was this privatization, not government control, that increased prices."
+        },
+        {
+          "text": "B. prison guard quarters were refurbished for accommodation",
+          "is_correct": false,
+          "feedback": "Incorrect. While the prison guard quarters were remodelled into bungalows, this happened as part of the overall tourism changes, not as the cause of the price increase."
+        },
+        {
+          "text": "C. one tourism operator was given control",
+          "is_correct": true,
+          "feedback": "Correct! In 2009, the government decided to give a private company sole control over all tourism on Gorgona Island, which resulted in exponential price increases."
+        }
+      ],
+      "correct_answer_count": 1,
+      "correct_answer": "2",
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 21-25: Answer the following questions using NO MORE THAN THREE WORDS AND/OR A NUMBER.\n\nChanges in New Zealand Family Structures",
+      "question": "A divorce rate of slightly below what has been recorded for couples who married in 1970 in New Zealand? [field 1]\n\nTypes of family and what have been changing since the 1960s? [field 2]\n\nWhat has dropped significantly since the 1960s? [field 3]\n\nWhat type of household was at 23% in 2006 and is expected to reach 26% in 2021? [field 4]\n\nWhat percentage of households do not have children? [field 5]",
+      "points": 1.0,
+      "field_count": 5,
+      "field_labels": [
+        "1. [Field 1]",
+        "2. [Field 2]",
+        "3. [Field 3]",
+        "4. [Field 4]",
+        "5. [Field 5]"
+      ],
+      "field_answers": [
+        "one third|one-third|third|1/3|1/3 rd|1/3rd|One third|One-third",
+        "Household structures|Household structure",
+        "Birth rates|Birth",
+        "Single person|Single parent family|Single persons|Single-person|single person household|single person households",
+        "Around 20%|20|Twenty|20%|twenty %|20 per cent|twenty per cent|twenty percent|20 percent|around 20|around twenty|around 20%|around twenty %|around 20 per cent|around twenty per cent|around twenty percent|around 20 percent"
+      ],
+      "correct_feedback": "Correct! Just under one third of couples who married in 1970 had divorced by their jade wedding anniversary.",
+      "incorrect_feedback": "Incorrect. Listen for the divorce rate mentioned for couples who married in 1970 (Q21).",
+      "no_answer_feedback": "The correct answer is: one third. Make sure to listen carefully for key information and take notes while listening."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 26-27: Choose the correct letter A, B or C.\n\n26. Some people are having families later.....",
+      "question": "Some people are having families later.....",
+      "points": 1.0,
+      "mc_options": [
+        {
+          "text": "A. So they can finish their university education",
+          "is_correct": false,
+          "feedback": "Incorrect. University education is not mentioned as a reason for delaying parenthood in the conversation."
+        },
+        {
+          "text": "B. So they can gain other life experiences first",
+          "is_correct": true,
+          "feedback": "Correct! Speaker 1 says younger people appreciate a few years of freedom with no family commitments and mentions mobility, work and travel experiences that are difficult with children."
+        },
+        {
+          "text": "C. So that they are more mature when they have children",
+          "is_correct": false,
+          "feedback": "Incorrect. Maturity is not mentioned as a reason for delaying having children in the conversation."
+        }
+      ],
+      "correct_answer_count": 1,
+      "correct_answer": "1",
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Increasing numbers of older people are currently living in retirement homes because.....",
+      "points": 1.0,
+      "mc_options": [
+        {
+          "text": "A. Their children don't want to look after them",
+          "is_correct": false,
+          "feedback": "Incorrect. It's not that children don't want to look after them, but rather that they are unable to due to geography or work commitments."
+        },
+        {
+          "text": "B. They receive better health care",
+          "is_correct": false,
+          "feedback": "Incorrect. Better health care is not mentioned as a reason in the conversation."
+        },
+        {
+          "text": "C. Their families live in different places",
+          "is_correct": true,
+          "feedback": "Correct! Speaker 2 states that families are spread geographically or children work so much they aren't able to give elderly parents the time they need."
+        }
+      ],
+      "correct_answer_count": 1,
+      "correct_answer": "2",
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 28-30: List the THREE methods of communication that the speaker says negatively affect community feeling.\n\nWrite NO MORE THAN TWO WORDS for each answer",
+      "question": "28. [field 1]\n\n29. [field 2]\n\n30. [field 3]",
+      "points": 1.0,
+      "field_count": 3,
+      "field_labels": [
+        "1. [Field 1]",
+        "2. [Field 2]",
+        "3. [Field 3]"
+      ],
+      "field_answers": [
+        "texts|text|email|e mail|e-mail|emails|e mails|e-mails|social media|text messages|text message|texting",
+        "texts|text|email|e mail|e-mail|emails|e mails|e-mails|social media|text messages|text message|texting",
+        "texts|text|email|e mail|e-mail|emails|e mails|e-mails|social media|text messages|text message|texting"
+      ],
+      "correct_feedback": "Correct! Speaker 1 mentions that people are using texts, email and social media rather than talking, which affects community feeling.",
+      "incorrect_feedback": "Incorrect. Listen for the three methods of communication Speaker 1 says negatively affect the feeling of community (Q28-30).",
+      "no_answer_feedback": "The correct answer is: B. So they can gain other life experiences first. In future, pay close attention to the specific details mentioned in the audio."
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 31-34: Complete the sentences below. Use NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.\n\nFactors Affecting Elections",
+      "question": "General elections in the UK are not held on [field 1] but must be held within 5 years.\n\nVoter turnout is the percentage of [field 2] voters who vote in an election.\n\nVoter turnout is usually just over 80% in [field 3].\n\nVoter turnout is getting lower in the United States, Western Europe, Japan and [field 4].",
+      "points": 1.0,
+      "field_count": 4,
+      "field_labels": [
+        "1. [Field 1]",
+        "2. [Field 2]",
+        "3. [Field 3]",
+        "4. [Field 4]"
+      ],
+      "field_answers": [
+        "FIXED DATES|A FIXED DATE|FIXED DATE|fixed dates|a fixed date|fixed date",
+        "ELIGIBLE|eligible|Eligible",
+        "AUSTRALIA|Australia|81%|81 %|81 percent|81 per cent|eighty one percent|eighty one per cent",
+        "LATIN AMERICA|Latin America|latin america"
+      ],
+      "correct_feedback": "Correct! General elections in the UK do not have fixed dates, though they must be held every five years.",
+      "incorrect_feedback": "Incorrect. Listen for what General elections in the UK do not have, unlike other types of elections.",
+      "no_answer_feedback": "The correct answer is: FIXED DATES. Make sure to listen carefully for key information and take notes while listening."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 35-36: Choose TWO letters A-E.\n\nWhich of the following socioeconomic factors affect voting habits?",
+      "question": "A. Ethnicity\nB. Wealth\nC. Occupation\nD. Marital status\nE. Religion",
+      "points": 1.0,
+      "mc_options": [
+        {
+          "text": "A. Ethnicity",
+          "is_correct": false,
+          "feedback": "Incorrect. Ethnicity is not mentioned as a socioeconomic factor affecting voting habits in the lecture (Q35-36)."
+        },
+        {
+          "text": "B. Wealth",
+          "is_correct": true,
+          "feedback": "Correct! Income (wealth) is mentioned as having an independent effect - richer people are more likely to vote than poor people (Q35 or Q36)."
+        },
+        {
+          "text": "C. Occupation",
+          "is_correct": false,
+          "feedback": "Incorrect. Occupation is not mentioned as a socioeconomic factor affecting voting habits in the lecture."
+        },
+        {
+          "text": "D. Marital status",
+          "is_correct": true,
+          "feedback": "Correct! The lecture states that single people are less likely to vote than married people, making marital status a factor (Q35 or Q36)."
+        },
+        {
+          "text": "E. Religion",
+          "is_correct": false,
+          "feedback": "Incorrect. Religion is not mentioned as a socioeconomic factor affecting voting habits in the lecture."
+        }
+      ],
+      "correct_answer_count": 2,
+      "min_selections": 2,
+      "max_selections": 2,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 37-40: Complete the table below. Write NO MORE THAN THREE WORDS for each answer.\n\nVoter Apathy",
+      "question": "Candidates can inspire [field 1] (Q37).\n\nOutcome seems inevitable and / or election topics are not of [field 2] to voters (Q38).\n\n[field 3] and /or complicated voting processes reduces turnout (Q39).\n\nBallot papers are too complicated and require voters to have too much patience and / or [field 4] (Q40).",
+      "points": 1.0,
+      "field_count": 4,
+      "field_labels": [
+        "1. [Field 1]",
+        "2. [Field 2]",
+        "3. [Field 3]",
+        "4. [Field 4]"
+      ],
+      "field_answers": [
+        "CONFIDENCE|Confidence|confidence",
+        "Personal importance|personal importance|Importance|importance|IMPORTANCE|PERSONAL IMPORTANCE",
+        "BAD WEATHER|Bad weather|bad weather|Bad Weather",
+        "KNOWLEDGE|Knowledge|knowledge|their knowledge|Their knowledge|THEIR KNOWLEDGE"
+      ],
+      "correct_feedback": "Correct! Leaders and parties need to inspire confidence to decrease voter apathy and increase turnout (Q37).",
+      "incorrect_feedback": "Incorrect. Listen for what leaders and parties should inspire to decrease voter apathy when discussing trust (Q37).",
+      "no_answer_feedback": "The correct answers are: B. Wealth, D. Marital status. Listen carefully for all the relevant details mentioned in the audio."
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "listening_practice",
+    "exercise_label": "practice_test",
+    "scoring_type": "ielts_listening",
+    "timer_minutes": 40,
+    "starting_question_number": 1
+  },
+  "audio": {
+    "sections": [
+      {
+        "url": "https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0018-2.mp3"
+      },
+      {
+        "url": "https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0018-3.mp3"
+      },
+      {
+        "url": "https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0018-4.mp3"
+      }
+    ]
+  },
+  "transcript": "<!-- Section 1 -->\n<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">\n<tbody>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Good morning. Eastville Council. How can I help you?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Hello, I understand you offer a number of community classes to new migrants. I was wondering if it would be possible to enrol?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Yes we do. We run language classes of course, a settlement support programme and we also offer a new mentoring programme which we're actually trialling for 3 months starting next week.\nCan I ask, are you a permanent resident?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Yes I am.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">That's no problem then, you must be a permanent resident to enrol in any of our courses, you see. So which course are you interested in?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Well, I am interested in the settlement support programme and the Mentoring Programme, I am finding it difficult to get a job interview you see. I arrived in the country <strong style=\"background-color: yellow;\">[Q1: two]</strong> months ago. My husband work full-time but I am looking for work too. Just a part-time job to start with as we have two young children. I'm not sure which course would suit me best. Could you give me some more information about those please?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Well the Settlement Support Programme is <strong style=\"background-color: yellow;\">[Q2: three]</strong> weeks long and students need to attend class <strong style=\"background-color: yellow;\">[Q3: 4]</strong> days a week. The focus is on settling into work in a new country, so we provide help with searching for jobs, enrolling with employment agencies, writing a CV and writing application letters.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">That does sound interesting. I think that would be a lot of use to me. Is the course completely free? Do I need to pay for textbooks or anything like that?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">For the Settlement Support Programme, we do recommend that students buy a handbook which accompanies the course - it's not compulsory to buy but it only costs ₤10.99 if you buy direct from the bookstore so we do recommend that you purchase your own copy if you are able to. We can place a bulk order for the book at the beginning of the course and students only pay <strong style=\"background-color: yellow;\">[Q4: ₤7]</strong>.95 if they order early enough to qualify for the discount.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Okay. And how about the Mentoring Programme? Could you tell me a little more about that please?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Well these are one to one sessions instead of a group class. They run for two weeks with two <strong style=\"background-color: yellow;\">[Q5: one]</strong> hour sessions each week. The idea is that if you are having any specific difficulties settling in to your new life, be that work, or social issues, your mentor can talk with you and give suggestions and advice on how to make things better. We currently have <strong style=\"background-color: yellow;\">[Q6: 15]</strong> mentors on the team and each will mentor <strong style=\"background-color: yellow;\">[Q7: four]</strong> clients per week. The mentor programme is free but we suggest people join the Settlement Support Programme first then enrol on a Mentor Programme afterwards if they still feel in need of additional support.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Okay I understand, thank you. So what do I need to do about enrolling on the Settlement Support Programme? I'd like to enrol as soon as I can.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Well, you will need to come into our office and fill out an application form. Make sure that you bring your passport with you to confirm your residency and we will also need two additional passport photographs; one for our records and one for your student ID card.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Okay. I'll come in this afternoon. So when does the next course start?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">The next course starts next Monday, on the 26th September, but that one is already fully booked. We have new courses starting each week, so the next with an available place is on the <strong style=\"background-color: yellow;\">[Q8: 3rd]</strong> October.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Okay. Well thanks very much for your help. It sounds like the Settlement Support Programme is ideal for me and I'll think later about whether to apply for Mentor Support. I'll come in very soon. Can you just remind me where the office is?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Yes we're on the <strong style=\"background-color: yellow;\">[Q9: 2nd]</strong> floor of the Lakeside View building on St James Plaza. We are in the tall white building next to the technical college. We're very easy to find and there are plenty of places to park in the public car park just to the left of the building. Don't use the <strong style=\"background-color: yellow;\">[Q10: car]</strong> park at the front though as those spaces are reserved for staff.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">That's great thank you very much for all your help. Looking forward to meeting you when I come in later today.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">You're very welcome. Glad I could help.</td>\n</tr>\n</tbody>\n</table>\n\n<!-- Section 2 -->\n<table border=\"0\" width=\"100%\">\n<tbody>\n<tr>\n<td valign=\"top\">\n<strong>Section 2</strong>\n\nOnce the home of a maximum security prison, Gorgona Island, a small 25 km² island in the Colombian Pacific, is now home to a natural paradise and has become an important centre for eco-tourism and fauna and flora <strong style=\"background-color: yellow;\">[Q2: research]</strong>.\n\nFrom the 1950s and for around 30 years, this landmass in the Pacific was a maximum security prison —Colombia's Alcatraz some might say. The 56km of rough, shark-infested waters and its venomous snakes arguably making it the ideal place to house the most violent criminals of the time, as these hazards usually put an end to any hope of escape.\n\nThe prison was operational until (11) <strong style=\"background-color: yellow;\">[Q1: 1985]</strong> when the penal facility was closed and Gorgona Island was declared a natural national park by the Colombian Government, UNESCO having recognised the island a World Heritage Site in the previous year, 1984.\n\nGorgona Island is known as the 'Science Island' due to its coral reef and tropical rainforest ecosystems and the (12) research possibilities they present. The island was originally discovered in 1524 by Diego de Almagro, who gave Gorgona Island its name due to the large number of reptiles and the association with the Gorgons from Greek mythology – 'woman-demons with the hair of snakes'.\n\nGorgona Island is home to a wealth of native plant and animal species in its rainforests. On its (13) <strong style=\"background-color: yellow;\">[Q3: eastern side]</strong>, the island also boasts some of the finest white-sand beaches in Colombia, while the west coast is made up of cliffs. There are also several hills on the island, the tallest being La Trinidad which peaks at 388 meters. While the prison buildings remain, they are now overgrown with dense vegetation and provide a (14) <strong style=\"background-color: yellow;\">[Q4: perfect environment]</strong> in which to observe all kinds of wildlife such as monkeys swinging through the vines.\n\nIn order to preserve the environment, visitors who travel to Gorgona Island are strictly supervised, are limited to groups of 80 at a time, and are also prohibited from wandering too far away from the coastline. Especially during high season, it is advised that reservations are made one or two months in advance in order to avoid disappointment as visitor quotas are staunchly upheld and quickly filled.\n\nTourists are required to strictly follow the rules of the Natural Park at all times to preserve the flora and fauna on the island.\n\n(15 or 16) Electrical appliances such as stoves and hair dryers, alcoholic beverages, sprays and other contaminants, arms, and articles for hunting or capturing animals are banned and must not be brought to the island. No non-biodegradable rubbish must be left behind. Any organic waste should be placed in special containers found in the park for collection by rangers.\n\n(15 or 16) Visitors are also required get vaccinated against yellow fever, tetanus, and hepatitis B at least 10 days before arriving on the island (vaccination certificates must be shown on entrance to the park). In the interests of their own safety, while not compulsory, visitors are also strongly recommended to take a first aid kit that includes multipurpose snake anti-venom and medicine for diarrhoea, along with rubber boots, a change of clothes, and sun block.\n\nAbsolutely strictly forbidden is the collecting of shells, coral or other mineral material from the protected area and the taking of any seeds, plants or animals, all of which could have catastrophic effect on the island's ecosystem.\n\nThe terrestrial animal population on Gorgona Island includes sloths, blue lizards, fresh water turtles, snakes, and babilla alligators. (17) There are 147 bird species, over 100 insect species, more than 500 species of marine fauna. There are also hundreds of species of marine and terrestrial plant life on Gorgona Island.\n\nThe sea around Gorgona Island has the most developed and diverse coral bank in the Eastern Tropical Pacific Ocean, which is also the largest in the country's Pacific region. The island's surrounding waters provide tourists with a great opportunity to observe, amongst other species, dolphins, porpoises, sharks, sperm whales and humpback whales, the latter also known as the Yubarta whale.\n\nThe Colombian Pacific coast is the mating and birthing area for the humpback whale, which migrates between June and October each year. Almost all humpback whales found in this region are born in Colombian waters and are faithful to their birthplace, travelling 8000Km from the poles to have their babies and feed them in the warmer waters of Gorgona Island. (18) With more than 1000 humpback whales arriving in Gorgona Island's waters during mating and calving season, tourists need not be concerned that their whale-watching trip will be unsuccessful, rather how just many of these majestic creatures they will be able to see.\n\nRelatively few people can boast of a trip to Gorgona Island. Not only are visitor numbers restricted, but the trip is also difficult and is becoming increasingly expensive. The boat ride from Buenaventura (a coastal city of more than 300,000 people situated about 10 hours from Bogota and four hours from Cali) takes (19) 12 hours. Alternatively it is an hour-and-40-minute boat ride from Guapi, an Afro-pacific town near the border of Ecuador, but no roads lead to Guapi. Guapi's single-runway Juan Casino Solis Airport does, however, service flights to and from the southern cities of Cali and Popyan.\n\nUntil 2009, visitors could make day trips to Gorgona from Guapi or spend a night there for as little as US$12. However, in that same year the government decided to give (20) a private company sole control over all tourism on Gorgona Island which resulted in exponential price increases. Since then a park permit, night in a basic bungalow in the remodelled prison-guard quarters, three meals and a return boat ride from Guapi can cost at least US$250, and additional nights around US$150. All activities — whale watching, snorkelling, even walking around the island — are extra. While these prices may still be in the price range for overseas visitors, they are prohibitively expensive for many locals.\n\nThe people who do make it to Gorgona, however, can rest assured that they will be left blissfully alone in extraordinarily wild surroundings, and know that since such small numbers visit the island, its incredible ecosystem can continue to flourish.\n</td>\n</tr>\n</tbody>\n</table>\n\n<!-- Section 3 -->\n<table border=\"0\" width=\"100%\">\n<tbody>\n<tr>\n<td valign=\"top\">\n<div style=\"height: 300px; overflow: scroll;\">\n\n<strong>Section 3</strong>\n<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">\n<tbody>\n<tr>\n<td valign=\"top\" width=\"<strong style=\"background-color: yellow;\">[Q5: 20]</strong>%\">\nSpeaker 1</td>\n<td valign=\"top\" width=\"80%\">Did you see that programme on TV3 last night? The one about the traditional family and how family structures are changing in New Zealand?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\n<td valign=\"top\" width=\"80%\">No – I was going to watch it but forgot it was on!</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\n<td valign=\"top\" width=\"80%\">Oh, you should have seen it. It was really interesting. It started by talking about the divorce rate and the myth that half of marriages end in divorce.\nApparently there are approximately 10,000 divorces and 20,000 marriages in New Zealand each year. That causes people to think the divorce rate is 50%. In reality though, statistics show that (21) just under <strong style=\"background-color: yellow;\">[Q1: 1/3]</strong> of couples who married in 1970 had divorced by their jade wedding anniversary (35 years later).\nOf those who married in 1980, just under 1/3 of couples had already divorced by their silver wedding anniversary (25 years later). This is still well below one-half of all marriages though.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\n<td valign=\"top\" width=\"80%\">Hmm. I think the divorce rate here is probably lower than a lot of other countries too. What else did they talk about?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\n<td valign=\"top\" width=\"80%\">They were saying that since the 1960s there have been a lot of changes in types of family and (22) <strong style=\"background-color: yellow;\">[Q2: household structures]</strong> and that these continue to change.\nTwo very significant trends since that time are that people are more likely to live with a partner before marrying now than in previous years, and (23) <strong style=\"background-color: yellow;\">[Q3: birth rates]</strong> are on the decrease.\nThere has been an increase in the number of single parents families and an increase in 'blended families' -  you know, that's when people who have been married and divorced meet a new partner and join with their children to make a new family.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\n<td valign=\"top\" width=\"80%\">Don't more people live by themselves these days too? I remember reading something about that in a newspaper.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\n<td valign=\"top\" width=\"80%\">Yes that's true. The programme said that (24) <strong style=\"background-color: yellow;\">[Q4: single person]</strong> households are a growing family form. They compared two years – 2006 when 23% of households were that type, and 2021 by which time they are expected to grow to 26%. While some of these people are younger, a lot of single person households are made up of older people who may have lost their partner.\nLike most countries in the developed world New Zealand's ageing population is growing  as people continue to live longer so that's one of the reasons this type of living situation is expected to rise.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\n<td valign=\"top\" width=\"80%\">Yeah, I suppose that's true. So what else did they say?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\n<td valign=\"top\" width=\"80%\">They said that currently just under 40% of households were couples with at least one dependent child and that around (25) 20% of households are made up of couples without children. Childless households are expected to increase much faster than couples with children over the next couple of decades.\nOf course people who do have children are more often deciding to have smaller families and many are putting parenthood off until later in life. They said that in 2007, the average age of women giving birth to their first child was 28 years, I think it's risen to around 30 years now. This compares with a median of 25 years, for giving birth, in 1976.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\n<td valign=\"top\" width=\"80%\">I suppose a lot of people want to get their career established, maybe buy a house, those sorts of things first, don't they?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\n<td valign=\"top\" width=\"80%\">Yes that's true. (26) I think younger people nowadays also appreciate a few years of freedom with no family commitments. Generally people have more mobility nowadays, you know, with people going overseas for extended periods for work and travel. If you already have children it's quite difficult to have those experiences.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\n<td valign=\"top\" width=\"80%\">Wow – just think what it will be like when our generation gets old. With more people choosing not to have kids, getting married later and concentrating on their careers, there's going to be more elderly people with no one to support them. I mean, traditionally, families looked after the elderly members in their homes, but even now (27) an increasing number of people are spending their old age in a retirement home because either the family is spread geographically or their children work so much they aren't able to give them the time they need.\nDid the programme suggest that relationships and families are becoming less important to people in general?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\n<td valign=\"top\" width=\"80%\">No, they indicated that the decline of the traditional family structure was more about social acceptance of other forms and people taking advantage of the increasing number of choices. Although at the end of the programme they started talking about how technology has had an adverse effect on traditional families. People are becoming more materialistic, but more importantly we are becoming less sociable. (28-30) The feeling of community is disappearing, because people are using <strong style=\"background-color: yellow;\">[Q8: <strong style=\"background-color: yellow;\">[Q9: <strong style=\"background-color: yellow;\">[Q10: texts]</strong>]</strong>]</strong>, email and social media to interact with others rather than talking.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\n<td valign=\"top\" width=\"80%\">Well, that's not really a new point of view, is it? People have been talking about that for years. Anyway, I don't agree. I visit my parents the first weekend of every month, but in-between times I keep in touch by e-mail.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\n<td valign=\"top\" width=\"80%\">Why not by telephone?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\n<td valign=\"top\" width=\"80%\">Well, it's cheaper to use the Internet and it's much quicker.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\n<td valign=\"top\" width=\"80%\">Hmm, I don't think that's such a good idea. I prefer to be able to speak directly to people.…. (fade out)</td>\n</tr>\n</tbody>\n</table>\n</div></td>\n</tr>\n</tbody>\n</table>\n\n<!-- Section 4 -->\n<table border=\"0\" width=\"100%\">\n<tbody>\n<tr>\n<td valign=\"top\">\n<div style=\"height: 300px; overflow: scroll;\">\n\n<strong>Section 4</strong>\n\nIn today's lecture we will look at factors that affect the election process.\nAn election is a formal decision-making process by which a population chooses a representative to take on a specific responsibility. Elections have been operated in modern democratic societies since the 17th century.\n\nSix types of elections are held in the United Kingdom. These are: General elections to appoint National Government, European Parliament elections, local elections to appoint Local Government, Mayoral elections and Police and Crime Commissioner elections. Unlike other types, General elections do not have (31) <u><strong style=\"background-color: yellow;\">[Q1: fixed dates]</strong></u>; though in the UK the political party in power is required to call an election at least every five years.\n\nAnyone who lives in the UK, is aged 18 or over on polling day and who is a national of the United Kingdom, the Republic of Ireland, a Commonwealth country, Cyprus or a European Union member state can apply to be included in the UK Electoral Register. Convicted persons detained in prison or a mental hospital or a person who has ever been found guilty of certain illegal practices (such as corruption) are not <strong style=\"background-color: yellow;\">[Q2: eligible]</strong> to vote.\n\nWe'll now move on to 'voter turnout' - this is the percentage of (32) eligible voters who cast a ballot in an election. One of the strongest factors affecting voter turnout is whether voting is compulsory. In <strong style=\"background-color: yellow;\">[Q3: Australia]</strong>, for example, voter registration and attendance at a polling booth have been mandatory since the 1920s. Since Australia typically has around 10% of eligible voters who are not registered to vote and around 6% of invalid votes, actual voter turnouts in Australia are usually (33) close to 81%.\n\nIn countries where voting is not compulsory, many members of the population who are entitled to vote, do not exercise their rights and do not go to polling stations on election day. Numerous reports from various countries around the world suggest that fewer voters are turning out for elections than in the past.\n\nThis falling trend has been significant in the United States, Western Europe, Japan and (34) <strong style=\"background-color: yellow;\">[Q4: Latin America]</strong>. For example, the percentage of Americans eligible to vote who did, in fact, vote was 63% in 1960, but this percentage has been falling ever since. Voter turnout in 2008 was 62% - the only year since the 1960s when a similar turnout was achieved.\n\nResearch shows that socioeconomic factors significantly affect whether or not individuals develop the habit of voting. The most important socioeconomic factor affecting voter turnout is education. The more educated a person is, the more likely he or she is to vote. (35 or 36) Income appears to have some independent effect too, as studies show that richer people are more likely to vote than poor people, regardless of their educational background. Young people are far less likely to vote than older generations, and (35 or 36) single people are less likely to vote than married people.\n\n'Voter apathy' (lack of caring) poses a huge problem for parties and individuals reliant on their supporters casting a ballot on election day.\nOverall, voter apathy is lower in national government elections than other types of elections, but a number of specific factors have been identified as important influences on voter apathy. These include how the voter sees the parties, the candidates, and the importance of the issues in an election.\n\nIn terms of how voters see the parties and candidates up for election, lack of trust or a feeling that nothing will change regardless of who wins the election are opinions that can increase voter apathy. Why bother if all parties are corrupt and nothing gets better anyway? It is therefore important for leaders and parties to inspire (37) <strong style=\"background-color: yellow;\">[Q7: confidence]</strong> so that more voters will turn out to give them their backing.\n\nIn theory, another factor that is likely to increase turnout is a 'close race' – where election outcome could easily go either way. In elections where it seems clear that one party or candidate will win, voter apathy may increase as people think why bother if the outcome is inevitable. This can actually be a huge concern for the favoured candidate or party, as if their supporters do not turn out on election day, their competitor can achieve an unexpected win.\n\nThe perceived importance of issues in an election also influences voter turnout and increases or decreases voter apathy in the following ways. If the issues in an election are not of (38) <strong style=\"background-color: yellow;\">[Q8: personal importance]</strong> to a voter, their apathy may be increased. For example, an election campaign focussed on improving the circumstances of families may not be of interest to individuals without children. Conversely, if an election campaign focuses on topics that will affect an individual's life, they are more likely to vote.\n\nVoter fatigue (tiredness) is also a form of voter apathy which occurs when voters are expected to vote too often. For instance, this happened in Canada when voters were asked to vote in a federal election three times in five years (2004, 2006, 2008) and at each election voter turnout significantly decreased.\n\nOther practical issues also affect voter turnout. For example, (39) <strong style=\"background-color: yellow;\">[Q9: bad weather]</strong> can reduce turnouts. How easy it is to vote is also a concern. In many states in America and most Latin American nations, voters must go through separate voter registration procedures before they are allowed to vote. This two-step process quite clearly appears to decrease turnout as U.S. states with no, or easier, registration requirements consistently have larger turnouts.\n\nThe final issue relating to collecting valid votes that I will discuss today is known as 'ballot fatigue'. Many people are simply very lazy when it comes to voting so they may just pick the first candidates they see on the ballot just to get it over with. In a case of ballot fatigue it would therefore follow that the farther down the candidate list a candidate is, the fewer the number of votes they will collect. The ballot fatigue principle suggests that affected voters use up all their patience and/or their (40) <strong style=\"background-color: yellow;\">[Q10: knowledge]</strong> as they work their way down the ballot and make an 'easy' choice to get the process over.\n\nPossible methods of improving voting processes focus on making voting easier; for example, making ballot papers more user-friendly; increasing the number of possible voting locations; lowering the average time voters have to spend waiting in line; or encouraging companies to give workers some time off on voting day.\n\n</div></td>\n</tr>\n</tbody>\n</table>"
+}
