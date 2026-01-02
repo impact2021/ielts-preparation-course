@@ -174,9 +174,9 @@ class IELTS_CM_Quiz_Handler {
                             $feedback = '';
                         }
                     } elseif ($user_answer === null || $user_answer === '') {
-                        // No answer provided - show feedback from correct option
-                        if (isset($mc_options[$correct_idx]['feedback']) && !empty($mc_options[$correct_idx]['feedback'])) {
-                            $feedback = wp_kses_post($mc_options[$correct_idx]['feedback']);
+                        // No answer provided - use no_answer_feedback if available
+                        if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
+                            $feedback = wp_kses_post($question['no_answer_feedback']);
                         } else {
                             $feedback = '';
                         }
