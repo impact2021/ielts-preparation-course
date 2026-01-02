@@ -11,7 +11,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 0,
             "ielts_question_category": "",
             "field_count": 5,
             "field_answers": {
@@ -58,7 +58,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 0,
             "ielts_question_category": "",
             "mc_options": [
                 {
@@ -90,7 +90,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 0,
             "ielts_question_category": "",
             "mc_options": [
                 {
@@ -122,7 +122,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 0,
             "ielts_question_category": "",
             "mc_options": [
                 {
@@ -154,7 +154,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 0,
             "ielts_question_category": "",
             "mc_options": [
                 {
@@ -186,7 +186,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 0,
             "ielts_question_category": "",
             "mc_options": [
                 {
@@ -259,7 +259,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 1,
             "ielts_question_category": "",
             "mc_options": [
                 {
@@ -301,7 +301,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 1,
             "ielts_question_category": "",
             "mc_options": [
                 {
@@ -333,7 +333,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 1,
             "ielts_question_category": "",
             "mc_options": [
                 {
@@ -365,7 +365,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 1,
             "ielts_question_category": "",
             "mc_options": [
                 {
@@ -397,7 +397,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 1,
             "ielts_question_category": "",
             "mc_options": [
                 {
@@ -429,7 +429,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 2,
             "ielts_question_category": "",
             "field_count": 5,
             "field_answers": {
@@ -476,7 +476,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 2,
             "ielts_question_category": "",
             "mc_options": [
                 {
@@ -508,7 +508,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 2,
             "ielts_question_category": "",
             "mc_options": [
                 {
@@ -540,7 +540,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 2,
             "ielts_question_category": "",
             "field_count": 3,
             "field_answers": {
@@ -575,7 +575,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 3,
             "ielts_question_category": "",
             "field_count": 4,
             "field_answers": {
@@ -616,7 +616,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 3,
             "ielts_question_category": "",
             "mc_options": [
                 {
@@ -658,7 +658,7 @@
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": null,
+            "audio_section_id": 3,
             "ielts_question_category": "",
             "field_count": 4,
             "field_answers": {
