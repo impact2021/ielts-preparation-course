@@ -2615,7 +2615,6 @@ class IELTS_CM_Admin {
                     if (isset($post->ID)) {
                         // Check for linked reading text
                         if (isset($question['reading_text_id']) && $question['reading_text_id'] !== null && $question['reading_text_id'] !== '') {
-                            $reading_texts = get_post_meta($post->ID, '_ielts_cm_reading_texts', true);
                             if (is_array($reading_texts) && isset($reading_texts[$question['reading_text_id']])) {
                                 $reading_text = $reading_texts[$question['reading_text_id']];
                                 $reading_label = !empty($reading_text['title']) ? $reading_text['title'] : sprintf(__('Reading Text %d', 'ielts-course-manager'), intval($question['reading_text_id']) + 1);
