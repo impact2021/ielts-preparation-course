@@ -407,7 +407,7 @@
     {
       "type": "closed_question",
       "instructions": "",
-      "question": "Birds prepare for migration by",
+      "question": "The primary behavioral change birds undergo to prepare for migration is",
       "correct_answer_count": 1,
       "show_option_letters": false,
       "mc_options": [
@@ -419,12 +419,12 @@
         {
           "text": "B. storing energy in fat deposits",
           "is_correct": false,
-          "feedback": "Incorrect. This is a result of increased appetite, not the main preparation method highlighted. The passage emphasizes chemical changes making them more active at night. Review the third paragraph."
+          "feedback": "Incorrect. While storing energy in fat deposits is part of preparation, it's a physiological change resulting from increased appetite. The question asks about the primary behavioral change, which is becoming more active at night. Review the third paragraph."
         },
         {
           "text": "C. becoming more nocturnal",
           "is_correct": true,
-          "feedback": "Correct! The third paragraph mentions birds become 'considerably more active at night' due to chemical changes preparing them for migration."
+          "feedback": "Correct! The third paragraph emphasizes that birds undergo chemical changes that make them 'considerably more active at night,' which is the key behavioral adaptation for migration."
         },
         {
           "text": "D. reducing their body temperature",
@@ -433,7 +433,7 @@
         }
       ],
       "correct_answer": "2",
-      "no_answer_feedback": "You did not select an answer. The correct answer is C. The third paragraph mentions birds become 'considerably more active at night' due to chemical changes preparing them for migration.",
+      "no_answer_feedback": "You did not select an answer. The correct answer is C. The third paragraph emphasizes that chemical changes make birds 'considerably more active at night,' which is the primary behavioral adaptation for migration.",
       "points": 1,
       "reading_text_id": 1
     },
@@ -581,29 +581,34 @@
     {
       "type": "closed_question",
       "instructions": "",
-      "question": "People's relationship with the land is the biggest danger for migrating birds.",
+      "question": "Human activities represent the most recent challenge to migrating birds.",
       "correct_answer_count": 1,
       "mc_options": [
         {
           "text": "YES",
-          "is_correct": false,
-          "feedback": "Incorrect. While human impact is discussed as a recent and serious challenge, the passage does not explicitly state it is the single biggest danger compared to all others."
+          "is_correct": true,
+          "feedback": "Correct! The final paragraph explicitly states 'The most recent challenge to migration is, however, man,' and describes various human activities threatening bird migration."
         },
         {
           "text": "NO",
           "is_correct": false,
-          "feedback": "Incorrect. The passage doesn't say it's NOT the biggest danger, it simply doesn't make this comparison."
+          "feedback": "Incorrect. The final paragraph clearly identifies human activities as 'the most recent challenge to migration.' Review the seventh paragraph."
         },
         {
           "text": "NOT GIVEN",
-          "is_correct": true,
-          "feedback": "Correct! While the final paragraph discusses human impact as a recent challenge, the passage does not identify it as the single biggest danger compared to other threats."
+          "is_correct": false,
+          "feedback": "Incorrect. The passage explicitly states that 'The most recent challenge to migration is, however, man.' This information is given in the final paragraph."
         }
       ],
-      "correct_answer": "2",
-      "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. While the final paragraph discusses human impact as a recent challenge, the passage does not identify it as the single biggest danger compared to other threats.",
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is YES. The final paragraph states 'The most recent challenge to migration is, however, man.'",
       "points": 1,
-      "reading_text_id": 1
+      "reading_text_id": 1,
+      "is_correct": [
+        true,
+        false,
+        false
+      ]
     },
     {
       "type": "open_question",
