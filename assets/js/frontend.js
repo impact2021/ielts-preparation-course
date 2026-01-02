@@ -733,7 +733,7 @@
                                     } else {
                                         // Single-select mode - similar to multiple_choice
                                         var userAnswer = questionResult.user_answer;
-                                        var correctIndex = correctAnswer;
+                                        var correctIndex = correctAnswer && correctAnswer.correct_idx !== undefined ? correctAnswer.correct_idx : correctAnswer;
                                         
                                         // Mark user's wrong answer in red if they selected one
                                         if (userAnswer !== null && userAnswer !== '' && userAnswer != correctIndex) {
@@ -741,7 +741,7 @@
                                         }
                                         
                                         // Always highlight the correct answer in green
-                                        if (correctIndex !== null && !isNaN(parseInt(correctIndex))) {
+                                        if (correctIndex !== null && correctIndex !== undefined && !isNaN(parseInt(correctIndex))) {
                                             questionElement.find('input[type="radio"][value="' + correctIndex + '"]').closest('.option-label').addClass('answer-correct-highlight');
                                         }
                                     }
