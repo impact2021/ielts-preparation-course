@@ -1,0 +1,1241 @@
+{
+  "title": "Reading Test 9",
+  "content": "Complete IELTS Academic Reading Test 9 with three passages and 40 questions",
+  "questions": [
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "Do the following statements agree with the information given in Reading Passage 1?\n\nIn boxes 1 – 6 on your answer sheet write\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this in the passage",
+      "question": "Potential tenants must undergo a selection process that takes into account more than finances.",
+      "points": 1,
+      "reading_text_id": 0,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The first paragraph states '…with its residents' cooperative board deciding on the eligibility and suitability of prospective tenants with a view to maintaining the building's unique character, traditions and atmosphere.'"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the first paragraph which mentions that the residents' cooperative board decides on the eligibility and suitability of prospective tenants to maintain the building's unique character, traditions and atmosphere."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the first paragraph which mentions that the residents' cooperative board decides on the eligibility and suitability of prospective tenants to maintain the building's unique character, traditions and atmosphere."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The first paragraph states '…with its residents' cooperative board deciding on the eligibility and suitability of prospective tenants with a view to maintaining the building's unique character, traditions and atmosphere.'"
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "The Dakota building was built in a heavily populated area in order to draw on the number of people there.",
+      "points": 1,
+      "reading_text_id": 0,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The second paragraph clearly states that when the Dakota was built, the upper West Side of New York was relatively uninhabited."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The second paragraph states '…when the Dakota was built, the upper West Side of New York was relatively uninhabited…'."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The second paragraph clearly states that when the Dakota was built, the upper West Side of New York was relatively uninhabited."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The second paragraph states '…when the Dakota was built, the upper West Side of New York was relatively uninhabited…'."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "The original Dakota apartments were not intended for the wealthy upper class.",
+      "points": 1,
+      "reading_text_id": 0,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The second paragraph contains the phrase [The apartments were] 'not originally for the mega-wealthy…'"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the second paragraph which discusses the original target residents and mentions they were not for the mega-wealthy."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the second paragraph which discusses the original target residents and mentions they were not for the mega-wealthy."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The second paragraph contains the phrase [The apartments were] 'not originally for the mega-wealthy…'"
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "The reasons behind the naming of the Dakota are disputed.",
+      "points": 1,
+      "reading_text_id": 0,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The third paragraph starts '…It has long been held, though also contradicted, that the name 'Dakota' was chosen because…'"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The third paragraph indicates there is debate about the naming, using the phrase 'though also contradicted' regarding theories."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The third paragraph indicates there is debate about the naming, using the phrase 'though also contradicted' regarding theories."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The third paragraph starts '…It has long been held, though also contradicted, that the name 'Dakota' was chosen because…'"
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "The gardens and tennis courts were designed to be used exclusively by the residents.",
+      "points": 1,
+      "reading_text_id": 0,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. While the fourth paragraph mentions these facilities, it does not specify whether they were exclusively for residents or not."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. While the fourth paragraph mentions these facilities, it does not specify whether they were exclusively for residents or not."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! The fourth paragraph mentions gardens and tennis courts but there is no mention of whether these were exclusively for the residents."
+        }
+      ],
+      "correct_answer": "2",
+      "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The fourth paragraph mentions gardens and tennis courts but there is no mention of whether these were exclusively for the residents."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "The apartments are all designed differently.",
+      "points": 1,
+      "reading_text_id": 0,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The fifth paragraph states that '…no two apartments are alike…'."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The fifth paragraph clearly states that no two apartments are alike, meaning they differ."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The fifth paragraph clearly states that no two apartments are alike, meaning they differ."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The fifth paragraph states that '…no two apartments are alike…'."
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Summary Completion",
+      "instructions": "Complete the flowchart below, using NO MORE THAN TWO WORDS from the passage.\n\nWrite your answers in boxes 7 – 11 on your answer sheet.\n\nThe Dakota Apartment Building",
+      "question": "Built around [field 1], with [field 2] on the top two floors and [field 3] as an innovative feature. Changed from rental to [field 4], but some applicants have been [field 5].",
+      "points": 5,
+      "reading_text_id": 0,
+      "field_count": 5,
+      "field_labels": [
+        "[field 1]",
+        "[field 2]",
+        "[field 3]",
+        "[field 4]",
+        "[field 5]"
+      ],
+      "field_answers": [
+        "HUGE CENTRAL COURTYARD|HUGE COURTYARD|CENTRAL COURTYARD|COURTYARD",
+        "STAFF",
+        "CENTRAL HEATING",
+        "COOPERATIVE OWNERSHIP|OWNERSHIP|CO-OPERATIVE OWNERSHIP",
+        "DENIED"
+      ],
+      "correct_feedback": "Correct! All answers can be found in the relevant paragraphs.",
+      "incorrect_feedback": "Incorrect. Review the fourth, fifth, sixth and last paragraphs which discuss these features of the Dakota building.",
+      "no_answer_feedback": "Please provide an answer for all fields. The correct answers are: Field 1: HUGE CENTRAL COURTYARD (or variants), Field 2: STAFF, Field 3: CENTRAL HEATING, Field 4: COOPERATIVE OWNERSHIP (or variants), Field 5: DENIED."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Choose the appropriate letter A – D and write them in boxes 12 – 13 on your answer sheet.",
+      "question": "When the building changed from rentals to an ownership scheme,",
+      "points": 1,
+      "reading_text_id": 0,
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "the residents were able to make huge profits.",
+          "is_correct": false,
+          "feedback": "Incorrect. While one apartment later sold for a profit, the passage does not say that all residents made huge profits."
+        },
+        {
+          "text": "investors approached the tenants to buy their apartments.",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage does not mention that investors approached tenants to buy apartments."
+        },
+        {
+          "text": "a philanthropist bought an apartment to allow one couple to remain in their home.",
+          "is_correct": true,
+          "feedback": "Correct! The sixth paragraph states that when one elderly couple was unable to purchase their apartment, 'a benefactor was approached who bought the apartment on behalf of the resident couple and allowed them to stay on.'"
+        },
+        {
+          "text": "more artists and creative people wanted to move to the Dakota.",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage does not mention that more artists wanted to move to the Dakota after the ownership change."
+        }
+      ],
+      "correct_answer": "2",
+      "no_answer_feedback": "Please select an answer. The correct answer is C. The sixth paragraph states '…a benefactor was approached who bought the apartment on behalf of the resident couple and allowed them to stay on.'"
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "The Dakota apartments building",
+      "points": 1,
+      "reading_text_id": 0,
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "now only houses famous artists, actors and musicians.",
+          "is_correct": false,
+          "feedback": "Incorrect. While famous people have lived there, the passage does not state it only houses them."
+        },
+        {
+          "text": "has been used as part of movie sets.",
+          "is_correct": true,
+          "feedback": "Correct! The final paragraph states 'Films, such as the horror 'Rosemary's Baby' in the 1960s, were set at the Dakota, and the Dakota has featured in many New York motion pictures as a landmark building.'"
+        },
+        {
+          "text": "is currently undergoing development.",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage mentions that Manhattan skyline has more apartment buildings rising up, but does not state the Dakota itself is undergoing development."
+        },
+        {
+          "text": "is now the most expensive in New York City.",
+          "is_correct": false,
+          "feedback": "Incorrect. While the passage mentions high prices, it does not confirm the Dakota is the most expensive building in New York."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "Please select an answer. The correct answer is B. The final paragraph states 'Films, such as the horror 'Rosemary's Baby' in the 1960s, were set at the Dakota, and the Dakota has featured in many New York motion pictures as a landmark building.'"
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
+      "instructions": "Reading Passage 2 has seven paragraphs A – G.\n\nFor paragraphs A – G, choose the most suitable heading from the list of headings below.\n\nWrite the appropriate numbers I – X in boxes 14 – 20 on your answer sheet.\n\nNB There are more headings than paragraphs, so some headings will not be used.\n\nList of Headings\n\ni. How terms common today may have arisen\nii. Gender driven preferences\niii. Manipulating the aging process\niv. The components of an appealing pair of jeans\nv. Popular culture contributes\nvi. Working independently towards a shared goal\nvii. Cutting manufacturing costs\nviii. A shared vision realized\nix. Researching popular designs of jeans\nx. A global commodity",
+      "question": "Paragraph A",
+      "points": 1,
+      "reading_text_id": 1,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "How terms common today may have arisen",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph A."
+        },
+        {
+          "text": "Gender driven preferences",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph A."
+        },
+        {
+          "text": "Manipulating the aging process",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph A."
+        },
+        {
+          "text": "The components of an appealing pair of jeans",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph A."
+        },
+        {
+          "text": "Popular culture contributes",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph A."
+        },
+        {
+          "text": "Working independently towards a shared goal",
+          "is_correct": true,
+          "feedback": "Correct! The first paragraph describes how Levi Strauss and Jacob Davis were both independently manufacturing rugged trousers for outdoor workers."
+        },
+        {
+          "text": "Cutting manufacturing costs",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph A."
+        },
+        {
+          "text": "A shared vision realized",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph A."
+        },
+        {
+          "text": "Researching popular designs of jeans",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph A."
+        },
+        {
+          "text": "A global commodity",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph A."
+        }
+      ],
+      "correct_answer": "5",
+      "no_answer_feedback": "Please select an answer. The correct answer is Working independently towards a shared goal. The first paragraph gives information about Levi Strauss and Jacob Davis and how they both were manufacturing, independently of each other, rugged trousers for outdoors workman to wear."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
+      "instructions": "",
+      "question": "Paragraph B",
+      "points": 1,
+      "reading_text_id": 1,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "How terms common today may have arisen",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph B."
+        },
+        {
+          "text": "Gender driven preferences",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph B."
+        },
+        {
+          "text": "Manipulating the aging process",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph B."
+        },
+        {
+          "text": "The components of an appealing pair of jeans",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph B."
+        },
+        {
+          "text": "Popular culture contributes",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph B."
+        },
+        {
+          "text": "Working independently towards a shared goal",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph B."
+        },
+        {
+          "text": "Cutting manufacturing costs",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph B."
+        },
+        {
+          "text": "A shared vision realized",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph B describes how Strauss and Davis entered into partnership, secured a patent, and achieved business success together."
+        },
+        {
+          "text": "Researching popular designs of jeans",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph B."
+        },
+        {
+          "text": "A global commodity",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph B."
+        }
+      ],
+      "correct_answer": "7",
+      "no_answer_feedback": "Please select an answer. The correct answer is A shared vision realized. Para B gives information about Levi Strauss and Jacob Davis manufacturing and how they went into partnership, acquired a patent for their product and were successful in their business."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
+      "instructions": "",
+      "question": "Paragraph C",
+      "points": 1,
+      "reading_text_id": 1,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "How terms common today may have arisen",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph C explores how French and Italian terminology led to the modern words denim and jeans."
+        },
+        {
+          "text": "Gender driven preferences",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C."
+        },
+        {
+          "text": "Manipulating the aging process",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C."
+        },
+        {
+          "text": "The components of an appealing pair of jeans",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C."
+        },
+        {
+          "text": "Popular culture contributes",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C."
+        },
+        {
+          "text": "Working independently towards a shared goal",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C."
+        },
+        {
+          "text": "Cutting manufacturing costs",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C."
+        },
+        {
+          "text": "A shared vision realized",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C."
+        },
+        {
+          "text": "Researching popular designs of jeans",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C."
+        },
+        {
+          "text": "A global commodity",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "Please select an answer. The correct answer is How terms common today may have arisen. Para C explores the history of denim in Italy and France and how French words may have given rise to the words denim and jeans used today."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
+      "instructions": "",
+      "question": "Paragraph D",
+      "points": 1,
+      "reading_text_id": 1,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "How terms common today may have arisen",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph D."
+        },
+        {
+          "text": "Gender driven preferences",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph D."
+        },
+        {
+          "text": "Manipulating the aging process",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph D."
+        },
+        {
+          "text": "The components of an appealing pair of jeans",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph D describes the famous trademarks and components that made Levi's jeans popular."
+        },
+        {
+          "text": "Popular culture contributes",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph D."
+        },
+        {
+          "text": "Working independently towards a shared goal",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph D."
+        },
+        {
+          "text": "Cutting manufacturing costs",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph D."
+        },
+        {
+          "text": "A shared vision realized",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph D."
+        },
+        {
+          "text": "Researching popular designs of jeans",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph D."
+        },
+        {
+          "text": "A global commodity",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph D."
+        }
+      ],
+      "correct_answer": "3",
+      "no_answer_feedback": "Please select an answer. The correct answer is The components of an appealing pair of jeans. Para D gives information about the famous trademarks of jeans and lists and describes the various parts of a pair of jeans that proved popular with customers."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
+      "instructions": "",
+      "question": "Paragraph E",
+      "points": 1,
+      "reading_text_id": 1,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "How terms common today may have arisen",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E."
+        },
+        {
+          "text": "Gender driven preferences",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E."
+        },
+        {
+          "text": "Manipulating the aging process",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E."
+        },
+        {
+          "text": "The components of an appealing pair of jeans",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E."
+        },
+        {
+          "text": "Popular culture contributes",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph E explains how movies featuring Marlon Brando and James Dean helped make jeans a popular fashion item."
+        },
+        {
+          "text": "Working independently towards a shared goal",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E."
+        },
+        {
+          "text": "Cutting manufacturing costs",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E."
+        },
+        {
+          "text": "A shared vision realized",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E."
+        },
+        {
+          "text": "Researching popular designs of jeans",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E."
+        },
+        {
+          "text": "A global commodity",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E."
+        }
+      ],
+      "correct_answer": "4",
+      "no_answer_feedback": "Please select an answer. The correct answer is Popular culture contributes. Para E describes how two popular movies contributed to blue jeans becoming fashion items, in America and around the world."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
+      "instructions": "",
+      "question": "Paragraph F",
+      "points": 1,
+      "reading_text_id": 1,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "How terms common today may have arisen",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph F."
+        },
+        {
+          "text": "Gender driven preferences",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph F."
+        },
+        {
+          "text": "Manipulating the aging process",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph F describes techniques like washing, stone-washing, and distressing that manipulate the aging appearance of jeans."
+        },
+        {
+          "text": "The components of an appealing pair of jeans",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph F."
+        },
+        {
+          "text": "Popular culture contributes",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph F."
+        },
+        {
+          "text": "Working independently towards a shared goal",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph F."
+        },
+        {
+          "text": "Cutting manufacturing costs",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph F."
+        },
+        {
+          "text": "A shared vision realized",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph F."
+        },
+        {
+          "text": "Researching popular designs of jeans",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph F."
+        },
+        {
+          "text": "A global commodity",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph F."
+        }
+      ],
+      "correct_answer": "2",
+      "no_answer_feedback": "Please select an answer. The correct answer is Manipulating the aging process. Para F describes fading and stone-wash methods, and distressed designs for jeans."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
+      "instructions": "",
+      "question": "Paragraph G",
+      "points": 1,
+      "reading_text_id": 1,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "How terms common today may have arisen",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G."
+        },
+        {
+          "text": "Gender driven preferences",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G."
+        },
+        {
+          "text": "Manipulating the aging process",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G."
+        },
+        {
+          "text": "The components of an appealing pair of jeans",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G."
+        },
+        {
+          "text": "Popular culture contributes",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G."
+        },
+        {
+          "text": "Working independently towards a shared goal",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G."
+        },
+        {
+          "text": "Cutting manufacturing costs",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G."
+        },
+        {
+          "text": "A shared vision realized",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G."
+        },
+        {
+          "text": "Researching popular designs of jeans",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G."
+        },
+        {
+          "text": "A global commodity",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph G provides statistics and discusses the worldwide popularity and ubiquity of jeans."
+        }
+      ],
+      "correct_answer": "9",
+      "no_answer_feedback": "Please select an answer. The correct answer is A global commodity. The final para, para G, gives some statistics and some facts regarding the universal popularity of jeans."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "Do the following statements agree with the information given in Reading Passage 2?\n\nIn boxes 21 – 26 on your answer sheet write\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this in the passage",
+      "question": "Levi Strauss initially rejected the idea of using rivets in the new hard-wearing pants.",
+      "points": 1,
+      "reading_text_id": 1,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage describes Jacob Davis using rivets and then approaching Strauss for partnership, but does not mention Strauss's initial opinion about rivets."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage describes Jacob Davis using rivets and then approaching Strauss for partnership, but does not mention Strauss's initial opinion about rivets."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! The passage does not provide information about Strauss's initial reaction to the rivet idea."
+        }
+      ],
+      "correct_answer": "2",
+      "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. There is no information given regarding whether Levi Strauss was initially opposed to using rivets in his jeans manufacturing process."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "Partners, Strauss and Davis, settled immediately on the fabric to be used in their joint manufacturing venture.",
+      "points": 1,
+      "reading_text_id": 1,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph B which states The two men experimented with different fabrics and Denim was the material they finally settled on, indicating it was not an immediate decision."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph B clearly states they experimented with different fabrics before finally settling on denim."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph B which states The two men experimented with different fabrics and Denim was the material they finally settled on, indicating it was not an immediate decision."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "Please select an answer. The correct answer is FALSE. Para B states The two men experimented with different fabrics and mentioned that Denim was the material they finally settled on."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "The name denim comes from the Italian language.",
+      "points": 1,
+      "reading_text_id": 1,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C which explains that the term denim is speculated to come from serge de Nimes, a French name, not Italian."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph C explains that denim likely came from the French term serge de Nimes, not from Italian."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C which explains that the term denim is speculated to come from serge de Nimes, a French name, not Italian."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "Please select an answer. The correct answer is FALSE. Para C states that serge de Nimes was the French name, and this is likely where denim came from."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "More women than men buy Levi zipper-fly jeans.",
+      "points": 1,
+      "reading_text_id": 1,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. Although Paragraph D mentions the zipper fly was introduced to cater for female tastes, there is no information about actual sales differences between men and women."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. Although Paragraph D mentions the zipper fly was introduced to cater for female tastes, there is no information about actual sales differences between men and women."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! While the passage mentions the zipper fly was introduced to cater for female tastes, it does not provide sales data by gender."
+        }
+      ],
+      "correct_answer": "2",
+      "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. Para D states with Levi subsequently introducing the zipper fly in 1947, originally to cater for female tastes but no information is given about subsequent differences in sales by gender."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "Not all innovations relating to jeans manufacture were developed in the U.S.A.",
+      "points": 1,
+      "reading_text_id": 1,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph F states that a Canadian company introduced the stone-washing technique, showing innovation outside the U.S.A."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph F which mentions that a Canadian company, GWG, introduced the stone-washing technique, demonstrating that not all jeans innovations came from the U.S.A."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph F which mentions that a Canadian company, GWG, introduced the stone-washing technique, demonstrating that not all jeans innovations came from the U.S.A."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Para F mentions that a Canadian company introduced the stone-washing technique to soften and fade the jeans."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "Research shows that Americans own more pairs of jeans than any other type of trousers.",
+      "points": 1,
+      "reading_text_id": 1,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. Although Paragraph G mentions that the average American owns seven pairs of jeans, it does not indicate whether this is more than any other type of trousers."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. Although Paragraph G mentions that the average American owns seven pairs of jeans, it does not indicate whether this is more than any other type of trousers."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! While Paragraph G states Americans own an average of seven pairs of jeans, it does not compare this to ownership of other types of trousers."
+        }
+      ],
+      "correct_answer": "2",
+      "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. Para G says that the average American owns seven pairs of jeans but does not say if this is the most popular form of pants/trousers."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "Do the following statements agree with the information given in Reading Passage 3?\n\nIn boxes 27 – 32 on your answer sheet, write\n\nTRUE if the statement agrees with the information\n\nFALSE if the statement contradicts the information\n\nNOT GIVEN if there is no information on this",
+      "question": "The Tasmanian authorities introduced legislation to protect thylacines in 1935.",
+      "points": 1,
+      "reading_text_id": 2,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph A which states the last captive Tasmanian tiger died in September 1936, less than two months after the Tasmanian government had passed a law to protect the animal, meaning the law was passed in 1936, not 1935."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The second sentence of Paragraph A states: '…the last captive Tasmanian tiger died in Hobart Zoo on the 7th of September, 1936, less than two months after the Tasmanian government had passed a law to protect the animal.'"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph A which states the last captive Tasmanian tiger died in September 1936, less than two months after the Tasmanian government had passed a law to protect the animal, meaning the law was passed in 1936, not 1935."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The second sentence of Paragraph A states: '…the last captive Tasmanian tiger died in Hobart Zoo on the 7th of September, 1936, less than two months after the Tasmanian government had passed a law to protect the animal.'"
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "The Tasmanian tiger is genetically related to the dog family.",
+      "points": 1,
+      "reading_text_id": 2,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph B which explains that while the thylacine's body resembles that of the dog family, it is actually a true pouched marsupial related to the Tasmanian devil, not genetically related to dogs."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph B states that: 'While the thylacine's body resembles that of members of the dog family, with sharp teeth and powerful jaws, it is, in fact, a true pouched marsupial related to the Tasmanian devil.'"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph B which explains that while the thylacine's body resembles that of the dog family, it is actually a true pouched marsupial related to the Tasmanian devil, not genetically related to dogs."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "Please select an answer. The correct answer is FALSE. Paragraph B states that: 'While the thylacine's body resembles that of members of the dog family, with sharp teeth and powerful jaws, it is, in fact, a true pouched marsupial related to the Tasmanian devil.'"
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "Hunting is regarded as the main cause of the extinction of the thylacine in Tasmania.",
+      "points": 1,
+      "reading_text_id": 2,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph C states that: 'Popular belief holds that the thylacine's extinction in Tasmania was largely due to the efforts of farmers and bounty hunters killing the animals.'"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C which indicates that popular belief holds that hunting by farmers and bounty hunters was largely responsible for the thylacine's extinction in Tasmania."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C which indicates that popular belief holds that hunting by farmers and bounty hunters was largely responsible for the thylacine's extinction in Tasmania."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Paragraph C states that: 'Popular belief holds that the thylacine's extinction in Tasmania was largely due to the efforts of farmers and bounty hunters killing the animals.'"
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "Photographs published by the New Scientist were suspected to be fake.",
+      "points": 1,
+      "reading_text_id": 2,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph D states that: 'Subsequent examination raised questions about the photographs' authenticity.'"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph D which mentions that subsequent examination raised questions about the authenticity of the New Scientist photographs."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph D which mentions that subsequent examination raised questions about the authenticity of the New Scientist photographs."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Paragraph D states that: 'Subsequent examination raised questions about the photographs' authenticity.'"
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "The eyes of foxes shine green at night time.",
+      "points": 1,
+      "reading_text_id": 2,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. While Paragraph E mentions that dogs' and dingoes' eyes shine green in torchlight, there is no information given about what colour foxes' eyes shine, making this NOT GIVEN."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. While Paragraph E mentions that dogs' and dingoes' eyes shine green in torchlight, there is no information given about what colour foxes' eyes shine, making this NOT GIVEN."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! While Paragraph E states that 'the colour of dogs' and dingoes' eyes shining in torchlight is green', the colour of foxes' eyes is not mentioned."
+        }
+      ],
+      "correct_answer": "2",
+      "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. While Paragraph E states that 'the colour of dogs' and dingoes' eyes shining in torchlight is green', the colour of foxes' eyes is not mentioned."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "Bill Laurance puts the chance of finding evidence of living thylacines at less than 3%.",
+      "points": 1,
+      "reading_text_id": 2,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph G states that Laurance '…believes that there exists a remote possibility of between one and two percent that the creature could persist in Cape York.'"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G which states that Bill Laurance believes there is a remote possibility of between 1 and 2 percent, which is indeed less than 3%."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G which states that Bill Laurance believes there is a remote possibility of between 1 and 2 percent, which is indeed less than 3%."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Paragraph G states that Laurance '…believes that there exists a remote possibility of between one and two percent that the creature could persist in Cape York.'"
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Summary Completion",
+      "instructions": "Complete the sentences below.\n\nChoose NO MORE THAN TWO WORDS from the passage for each answer.\n\nWrite your answers in boxes 33 – 37 on your answer sheet.",
+      "question": "The Tasmanian tiger was once the planet's biggest [field 1]. Thylacines could jump and move upright using their [field 2]. [field 3] brought dogs to Tasmania. The creature in photos published in New Scientist was [field 4] by vegetation. The James Cook University researchers intend to install a number of [field 5].",
+      "points": 5,
+      "reading_text_id": 2,
+      "field_count": 5,
+      "field_labels": [
+        "[field 1]",
+        "[field 2]",
+        "[field 3]",
+        "[field 4]",
+        "[field 5]"
+      ],
+      "field_answers": [
+        "MARSUPIAL PREDATOR",
+        "HIND LEGS",
+        "EUROPEAN SETTLERS|SETTLERS",
+        "PARTLY HIDDEN|HIDDEN",
+        "TRAIL CAMERAS|CAMERAS"
+      ],
+      "correct_feedback": "Correct! All answers can be found directly in the reading passage.",
+      "incorrect_feedback": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+      "no_answer_feedback": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
+      "instructions": "Reading Passage 3 has seven paragraphs, A-G.\n\nWhich paragraph contains the following information?\n\nWrite the correct letter, A-G, in boxes 38-40 on your answer sheet.",
+      "question": "The likelihood of discovering thylacines on the Cape York Peninsula",
+      "points": 1,
+      "reading_text_id": 2,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "A",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+        },
+        {
+          "text": "B",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+        },
+        {
+          "text": "C",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+        },
+        {
+          "text": "D",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+        },
+        {
+          "text": "E",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+        },
+        {
+          "text": "F",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+        },
+        {
+          "text": "G",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph G discusses the probability or likelihood of rediscovering the Tasmanian tiger alive on the Cape York Peninsula in Queensland."
+        }
+      ],
+      "correct_answer": "6",
+      "no_answer_feedback": "Please select an answer. The correct answer is G. Paragraph G states that: '…the chance of rediscovering the Tasmanian tiger alive in north Queensland is very slim, given that it is unlikely that the species could survive in such low numbers, he believes that there exists a remote possibility of between one and two percent that the creature could persist in Cape York.'"
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
+      "instructions": "",
+      "question": "Reasons behind the Tasmanian tiger's extinction",
+      "points": 1,
+      "reading_text_id": 2,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "A",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+        },
+        {
+          "text": "B",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+        },
+        {
+          "text": "C",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph C discusses multiple causes of the thylacine's extinction including competition with introduced dogs, loss of prey, disease, and hunting."
+        },
+        {
+          "text": "D",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+        },
+        {
+          "text": "E",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+        },
+        {
+          "text": "F",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+        },
+        {
+          "text": "G",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+        }
+      ],
+      "correct_answer": "2",
+      "no_answer_feedback": "Please select an answer. The correct answer is C. A number of causes are mentioned in Paragraph C."
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
+      "instructions": "",
+      "question": "Animals erroneously identified as being Tasmanian tigers",
+      "points": 1,
+      "reading_text_id": 2,
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "A",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+        },
+        {
+          "text": "B",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+        },
+        {
+          "text": "C",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+        },
+        {
+          "text": "D",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+        },
+        {
+          "text": "E",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph E discusses cases of mistaken identity where people have confused foxes, dingoes, or feral dogs for Tasmanian tigers."
+        },
+        {
+          "text": "F",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+        },
+        {
+          "text": "G",
+          "is_correct": false,
+          "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+        }
+      ],
+      "correct_answer": "4",
+      "no_answer_feedback": "Please select an answer. The correct answer is E. Paragraph E states: '…the vast majority of thylacine sightings are dismissed as cases of mistaken identity, where eyewitnesses are said to have seen foxes, dingoes or feral dogs,'"
+    }
+  ],
+  "reading_texts": [
+    {
+      "title": "Reading Passage 1",
+      "content": "<h3>Reading Passage 1</h3>\n<h4>You should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.</h4>\n\n<h2>New York's Famous Dakota Building</h2>\n\n<p>Situated in the north-west corner of 72nd Street and Central Park West, in the upper West Side of Manhattan with Central Park frontage, the address of 1 West 72nd Street, New York City, is one of the most exclusive and historical residential buildings in New York City. It is the address of the Dakota apartment building.  Famous for being the home of many of New York's most creative residents, the Dakota today still retains its 'old-worldliness' and creativity, with its residents' cooperative board deciding on the eligibility and suitability of prospective tenants with a view to maintaining the building's unique character, traditions and atmosphere. Legendary stories abound regarding the myriad of famous residents who have passed through its magnificent doors.</p>\n\n<p>In the 1880s, when the Dakota was built, the upper West Side of New York was relatively uninhabited and was considered to be some distance from the more populated areas of Manhattan.  Henry Clark, who headed a famous sewing machine company, had a vision to create an architecturally magnificent building and to run it in a benevolent fashion, looking after the tenants.  The architect Henry Hardenbergh was commissioned to design the building and his track-record included the famous Waldorf-Astoria and Plaza Hotels in New York.  Construction began in 1880 and was completed in 1884, with approximately 100 apartments built. They were not originally for the mega-wealthy – the first rents were between $1000 and $5000 a year, close to $30,000 in today's money, but, nowadays, the apartments sell for an average $10,000,000 each.</p>\n\n<p>It has long been held, though also contradicted, that the name 'Dakota' was chosen because the building was in the sparsely-populated area of the upper West Side, similarities being drawn to the largely uninhabited state (then territory) of Dakota in the north-west of the United States. In support of the theory, on the top southern side near the roof of the building is a magnificent carved panel depicting what is believed to be a Dakota Indian. In fact, it has been said that the man behind the project, Henry Clark, when naming the Dakota, wanted all the new avenues running through this area to be named after western states, such as Montana Place, Wyoming Place and Arizona Place, all three of these locations now bearing their current and famous names, Central Park West, Columbus Avenue and Broadway respectively.</p>\n\n<p>The Dakota apartment building is square, constructed around a huge central courtyard and the large arched main entrance was originally built to allow horse-drawn carriages to enter and to remain under shelter.  Other outside features included a garden, croquet lawns and tennis courts, all connected to the main building.  Inside there are large sweeping marble staircases, spacious hallways which connect rooms and apartments, oak- and mahogany-wood panelled dining rooms, ceilings stretching up to fifteen feet, huge fireplaces and views across Central Park.  The apartments for residents occupy the first seven floors, and the two top floors were originally designed for staff, because they were hotter, being at the top of the building, and the rooms were much smaller with low sloping ceilings.</p>\n\n<p>Other innovative features on its opening included electricity, this being powered by the building's own generator, and central heating to offset New York's bitter winters. Interestingly, no two apartments are alike, ranging in size from four rooms to up to 20 rooms, with elevators in all four corners of the building, and multi-staircases throughout.  The elevators were operated by uniformed women, indeed, until well into the 20th century, and there is a large central dining room which is used on occasion by all residents in the community spirit of the building.</p>\n\n<p>However, one of the most intriguing aspects of the Dakota, that which has kept the public's attention over the years, is the clientele, the number of interesting residents who have claimed the Dakota as their home.  In the beginning, it was home to the merchants and businessmen and women of the time, but as the decades passed, the Dakota became home to the artistic, the creators and the creative – actors, musicians, artists and those moving slightly outside the mainstream.  In addition, the collective spirit of the residents, along with the benevolent spirit of the original owners, the Clark family, saw that anyone who was in need, or unable to maintain their rent, was looked after.  A famous incident occurred in the 1960s when the Dakota went from a rental building to a cooperative ownership, and one elderly couple was unable to purchase their apartment, and the residents banded together, and a benefactor was approached who bought the apartment on behalf of the resident couple and allowed them to stay on.  Not only for philanthropic reasons perhaps, as the apartment was purchased for $26,000 in the 1960s and sold for $1.3 million in 1990.</p>\n\n<p>Famous tenants have included, originally, members of the famous piano-making company, the Steinways, and actors of early days such as Lillian Gish and Boris Karloff.  More recently, the great American composer and conductor Leonard Bernstein called the Dakota home, while filmmakers, classical dancers and writers have all lived in the Dakota's revered apartments, from Lauren Bacall through to Albert Maysles.  Films, such as the horror 'Rosemary's Baby' in the 1960s, were set at the Dakota, and the Dakota has featured in many New York motion pictures as a landmark building, imposing high over Central Park.  Perhaps most famously among all the residents was the musician John Lennon of the rock group The Beatles, who was murdered outside the entrance by a deranged fan in 1980 in front of Lennon's wife, the artist Yoko Ono, who still lives there.</p>\n\n<p>It is of interest that a number of high profile applicants have been denied the opportunity of residency in the Dakota.  In 2014, one of the apartments sold for more than $27 million, and with more and more apartment buildings rising up in the Manhattan skyline at ever-increasing prices, even though prices also increase at the Dakota, there is still something to be said about its tradition, its values and its invaluable character that draws people who want to make 1 West 72nd Street their home address.</p>"
+    },
+    {
+      "title": "Reading Passage 2",
+      "content": "<h3>Reading Passage 2</h3>\n<h4>You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.</h4>\n\n<h2>The Blue Jeans Phenomenon</h2>\n\n<p><strong>A:</strong> In 1852, a young Bavarian by the name of Levi Strauss migrated from his native Germany to New York in the United States.  Shortly thereafter, in 1853, he travelled across America to San Francisco to carry on his family business in the dry goods trade.  Seeing a need for hard-wearing clothes, for the gold miners working the gold fields of California, in particular, as well as for others plying physical outdoor trades, Strauss used tent canvas to fashion no-nonsense trousers designed to withstand the most rigorous of activity and wear-and-tear.  At about the same time, a Russian immigrant tailor, Jacob Davis, was making rugged trousers for forestry workers and was experimenting with the use of rivets – small round metal clamps – to reinforce critical stress points, such as pockets and crotch seams.  Interestingly, Davis was sourcing his material from the Levi Strauss & Co. Wholesale House.</p>\n\n<p><strong>B:</strong> By 1860, Strauss had changed his fabric from the original rough tent material to what is now known as denim, a twill fabric originating in France which Strauss had dyed Indigo blue.  His trousers, or pants, were proving a success.  Meanwhile, Jacob Davis rivet-reinforced trousers were also selling well, but Davis was having difficulty in securing a patent for his rivets.  In 1872, Jacob Davis approached Levi Strauss about a partnership deal as Davis was unable to raise the funds to pay for the patent, and in May 1873, the partnership was sealed, and a U.S. patent was issued entitled Improvements in Fastening Pocket-Openings.  The partnership proved fruitful and their business flourished.  The two men experimented with different fabrics, always searching for the combination of durability and comfort, intending to capture the market of miners, woodsmen and cowboys.  Denim was the material they finally settled on.</p>\n\n<p><strong>C:</strong> The history of denim, the material, is as varied as it is vague.  In the late 1700s it is known that a sturdy fabric was being produced in both Genoa, Italy as well as Nimes, in France.  The French name for Genoa is Genes, and there is speculation that bleu de Genes, the name of the blue fabric produced in Italy, is where the term blue jeans originated.  It is also known that the material was mass-produced, and that a blue indigo dye, sourced from India, was used to impart the famous blue colour.  Previous to this, in the late 16th century, Italian paintings depicted field workers labouring in their blue clothing, resembling what we now refer to as jeans.  The material that Strauss and Davis settled on was the fabric produced in France, similar to the Italian fabric, a product then going by the French name serge de Nimes and the speculation is that this was where the term denim came from.</p>\n\n<p><strong>D:</strong> For Levi jeans, the famous trademarks were settled on early: the orange stitching and the rivets, the double-line pattern across the rear pockets and the small watch-pocket on the right front, as well as the leather patch on the rear belt loop.  The jeans proved popular, so popular that soon others were following in the wake of the Levi Strauss success.  In America, Henry David Lee of the H.D. Lee Mercantile Company branched out and began producing work clothes.  In the 1920s Lee Overalls were introduced and, importantly, they had an additional innovation that the existing Levi Strauss trousers did not, a zipper fly on the front.  The zipper was invented and modified over a period of 20 years from the late 1800s, originally called the clasp-locker, but finally being accepted in the garment industry in the early 1900s.  The Levi jeans still sported the button fly, and the new Lee product proved more popular, with Levi subsequently introducing the zipper fly in 1947, originally to cater for female tastes.</p>\n\n<p><strong>E:</strong> For a time, denim jeans and overalls continued to be the mainstay of the working man.  Fashion had not yet played its part, and it was not until the 1950s when two movies helped propel the images of rebellious jeans-wearing youths into the fashion forefront.  Marlon Brando The Wild One and James Dean Rebel Without a Cause featured both young stars as denim-clad outsiders, and the image stuck.  Young people took to wearing the new fashion statement, to the point where schools in the U.S. even banned them.  As well as America, the trend was catching on internationally as well, with American culture now being spread through movies and even, some claim, with the stationing of U.S. soldiers overseas.</p>\n\n<p><strong>F:</strong> Jeans fit and form to the body for a more comfortable fit.  As jeans wear through washing and normal use, they fade with the blue hue lightening.  Manufacturers and retailers noted this and as early as the 1960s a store in New York began washing new jeans to help them develop a faded look.  In the 1980s, a Canadian company, GWG, introduced the stone-washing technique, which is essentially washing the jeans in salt water and applying a pumice rock to soften and fade the jeans.  To further add to the lived-in look, today jeans also come with the ripped, or distressed, look, something the early goldminers would surely have shaken their heads at in wonder.</p>\n\n<p><strong>G:</strong> Blue jeans today are ubiquitous and truly international. The anthropologist Danny Miller has written a book on the subject, and conducted an informal survey across the globe, from the Indian sub-continent to South America, from Asia to the Far East.  Systemically counting the first 100 people to walk by, he noted that almost exactly 50% were wearing jeans. North America leads the market in jeanswear, at 39%, with one estimate revealing that the average American owns seven pairs of jeans, while Europe accounts for 20% of the global market.  Asians have embraced the denim culture with Japan and Korea combined at 10%.  In some parts of the world, however, the embracing of jeans culture has caused contention. In India, there has been controversy over the combining of jeans and the traditional kurta and sari. Disharmony also surfaced in the former Soviet Union over the young adopting western fashions and values.  Yet, truly, blue jeans are surely one segment of the global fashion market here to stay.</p>"
+    },
+    {
+      "title": "Reading Passage 3",
+      "content": "<h3>Reading Passage 3</h3>\n<h4>You should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.</h4>\n\n<h2>The Tasmanian Tiger</h2>\n<h3>Is the extinct marsupial still roaming the Australian mainland?</h3>\n\n<p><strong>A:</strong> Once found throughout continental Australia, as well as the islands of Tasmania and New Guinea, the large, carnivorous marsupial species commonly called the Tasmanian tiger or Tasmanian wolf, is believed to have become extinct in the 1930s. At one time the world's largest marsupial predator, the last captive Tasmanian tiger died in Hobart Zoo on the 7th of September, 1936, less than two months after the Tasmanian government had passed a law to protect the animal. However, since that time, there have been hundreds of reported sightings of the Tasmanian tiger in remote locations both on the Australian mainland and in Tasmania. In addition to eyewitness accounts, a number of sightings are supported by photographs and video footage of the animal, although this evidence is considered inconclusive. The thylacine, as the Tasmanian tiger is formally known, continues to be regarded as an extinct species by the scientific community.</p>\n\n<p><strong>B:</strong> The Tasmanian tiger's scientific or binomial name, Thylacinus cynocephalus, means \"pouched and dog-headed\". In terms of its physical appearance, the thylacine is described as being a large, shorthaired, doglike animal, with yellow-brown fur, and dark, vertical stripes running down its lower back to the base of the tail, similar to those of a tiger. Its stripy coat earned the thylacine the nickname of Tasmanian tiger. While the thylacine's body resembles that of members of the dog family, with sharp teeth and powerful jaws, it is, in fact, a true pouched marsupial related to the Tasmanian devil. It is thought that the Tasmanian tiger was predominantly quadrupedal, routinely walking on all fours, although captive animals were also observed as being able to stand on their hind legs and hop like a kangaroo.</p>\n\n<p><strong>C:</strong> Experts believe that the thylacine most likely became extinct in mainland Australia and New Guinea around 2000 years ago, largely as a result of competition for food with indigenous people and their introduced wild dogs, known as dingoes. At the same time, it has been theorised that a lack of genetic diversity in the thylacine population, due to physical isolation, may have been another cause. As far as the fate of the species on the island state of Tasmania is concerned, a number of reasons have been put forward to explain its decline and subsequent extinction. These include competition with dogs introduced by European settlers, the loss of prey species and natural habitat, disease and hunting. For more than a century, both the Van Diemen's Land Company and the Tasmanian government offered financial rewards, or bounties, on thylacines that were killed, with a view to controlling their numbers to reduce attacks on sheep by Tasmanian tigers. Popular belief holds that the thylacine's extinction in Tasmania was largely due to the efforts of farmers and bounty hunters killing the animals.</p>\n\n<p><strong>D:</strong> Despite the fact that most scientists consider the Tasmanian tiger to be extinct, each year dozens of unconfirmed sightings of the animal are reported from relatively uninhabited areas in New Guinea, Tasmania and mainland Australia by people from all walks of life. However, to date, there has been no conclusive physical evidence of a living thylacine population in any of these locations. On 24 April 1986, the New Scientist magazine made world news when it published a series of colour photographs of an alleged Tasmanian tiger taken by Kevin Cameron, an expert tracker employed with the Agricultural Protection Board of Western Australia. The pictures showed a grey animal with fawn stripes, partly hidden from view in wilderness surrounds. Subsequent examination raised questions about the photographs' authenticity.</p>\n\n<p><strong>E:</strong> Recently, the British daily newspaper The Guardian, along with other media publications, ran a story detailing the plans of a group of scientists from James Cook University to undertake a search for the Tasmanian tiger on the remote Cape York Peninsula in Queensland's far north. The expedition was prompted by a pair of detailed sightings, one from a long-time employee of the Queensland National Parks Service, that appear to be both credible and plausible. While the vast majority of thylacine sightings are dismissed as cases of mistaken identity, where eyewitnesses are said to have seen foxes, dingoes or feral dogs, the Cape York accounts differ in one key detail. Both observers reported that the animals' eyes shone red at night, whereas the colour of dogs' and dingoes' eyes shining in torchlight is green. In addition, the size, shape and behaviour of the creatures, as described by the Cape York eyewitnesses, were not consistent with those of other large species found in north Queensland.</p>\n\n<p><strong>F:</strong> The two James Cook University researchers undertaking the Cape York expedition, Professor Bill Laurance and Doctor Sandra Abell, have stated that they will set up more than fifty trail cameras in the area of the sightings, one to two kilometres apart, in the hopes of photographing a live Tasmanian tiger. Isolated, uninhabited and not very extensively explored, the Cape York Peninsula in Australia's northeast is known to be home to a number of endangered species that are not found anywhere else on the continent. The traps will be baited with a scent that is attractive to predatory species, and the research team plan to check the cameras every few weeks and download the data, with a view to gathering photographic evidence of living thylacines.</p>\n\n<p><strong>G:</strong> While Laurance admits that the chance of rediscovering the Tasmanian tiger alive in north Queensland is very slim, given that it is unlikely that the species could survive in such low numbers, he believes that there exists a remote possibility of between 1 and 2% that the creature could persist in Cape York. Jack Ashby, manager of the Grant Museum of Zoology at University College London, shares this view. \"It's not impossible\", he says.</p>"
+    }
+  ],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "two_column_reading",
+    "exercise_label": "practice_test",
+    "scoring_type": "ielts_reading_band",
+    "timer_minutes": 60,
+    "starting_question_number": 1
+  },
+  "audio": {
+    "url": "",
+    "transcript": ""
+  }
+}
