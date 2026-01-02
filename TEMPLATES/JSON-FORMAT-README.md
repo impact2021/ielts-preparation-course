@@ -43,6 +43,28 @@ JSON import is now the **recommended** way to import exercises into the IELTS Co
 
 ## Question Types
 
+All questions support an optional `ielts_question_type` field to categorize the question by IELTS question type. This helps with organizing and filtering questions.
+
+**Common IELTS Question Type Categories:**
+- `Note Completion`
+- `Table Completion`
+- `Form Completion`
+- `Summary Completion`
+- `Sentence Completion`
+- `Short Answer Questions`
+- `Multiple Choice (Single Answer)`
+- `Multiple Choice (Multiple Answers)`
+- `Yes/No/Not Given`
+- `True/False/Not Given`
+- `Matching Headings`
+- `Matching Information`
+- `Matching Features`
+- `Matching Sentence Endings`
+- `Diagram Labelling`
+- `Map Labelling`
+- `Plan Labelling`
+- `Flow Chart Completion`
+
 ### Open Question (Text Input)
 
 Covers multiple question numbers based on `field_count`.
@@ -50,6 +72,7 @@ Covers multiple question numbers based on `field_count`.
 ```json
 {
   "type": "open_question",
+  "ielts_question_type": "Note Completion",
   "instructions": "Complete using NO MORE THAN TWO WORDS",
   "question": "Complete the notes below:",
   "field_count": 5,
@@ -75,6 +98,8 @@ Covers multiple question numbers based on `field_count`.
 ```
 
 **Key Points:**
+- `type`: Required field - use "open_question" for text input questions
+- `ielts_question_type`: Optional field - categorizes the question by IELTS question type (e.g., "Note Completion", "Summary Completion", "Short Answer Questions")
 - `field_count`: Number of input fields (= number of question numbers this covers)
 - `field_labels`: Array of labels/prompts for each field - **these will be automatically added to your question text in the admin interface**
   - Each label will be displayed on its own line (proper line breaks are preserved)
@@ -96,6 +121,7 @@ Covers multiple question numbers based on `correct_answer_count`.
 ```json
 {
   "type": "closed_question",
+  "ielts_question_type": "Multiple Choice (Single Answer)",
   "instructions": "Choose the correct answer",
   "question": "What is the capital of France?",
   "correct_answer_count": 1,
@@ -126,6 +152,7 @@ Covers multiple question numbers based on `correct_answer_count`.
 ```json
 {
   "type": "closed_question",
+  "ielts_question_type": "Multiple Choice (Multiple Answers)",
   "instructions": "Choose TWO letters A-F",
   "question": "Which TWO are true of oregano?",
   "correct_answer_count": 2,
@@ -168,6 +195,8 @@ Covers multiple question numbers based on `correct_answer_count`.
 ```
 
 **Key Points:**
+- `type`: Required field - use "closed_question" for multiple choice questions
+- `ielts_question_type`: Optional field - categorizes the question by IELTS question type (e.g., "Multiple Choice (Single Answer)", "Multiple Choice (Multiple Answers)", "Yes/No/Not Given", "Matching Headings")
 - `correct_answer_count`: Number of correct answers (= number of question numbers this covers)
 - `mc_options`: Array of answer choices
   - Each option MUST include `text`, `is_correct`, and `feedback`

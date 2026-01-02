@@ -4,6 +4,7 @@
   "questions": [
     {
       "type": "open_question",
+      "ielts_question_type": "Note Completion",
       "instructions": "Complete the notes below using NO MORE THAN TWO WORDS AND/OR A NUMBER",
       "question": "Complete the following:",
       "field_count": 5,
@@ -28,6 +29,7 @@
     },
     {
       "type": "open_question",
+      "ielts_question_type": "Map Labelling",
       "instructions": "Label the map below using NO MORE THAN TWO WORDS",
       "question": "Label the map locations (Questions 6-10):",
       "field_count": 5,
@@ -52,6 +54,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Multiple Answers)",
       "instructions": "Which TWO of the following does the chef say are true of the herb oregano? Choose TWO letters A-F.",
       "question": "Select the TWO correct answers:",
       "correct_answer_count": 2,
