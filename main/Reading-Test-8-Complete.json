@@ -358,7 +358,7 @@
     },
     {
       "type": "closed_question",
-      "instructions": "Choose the correct answer A–D.",
+      "instructions": "Choose the correct answer A-D.",
       "question": "The main reason birds migrate is",
       "correct_answer_count": 1,
       "show_option_letters": false,
@@ -606,7 +606,7 @@
     },
     {
       "type": "closed_question",
-      "instructions": "Choose the most suitable headings for paragraphs B–G from the list below. Use each heading once only.",
+      "instructions": "Choose the most suitable headings for paragraphs B-G from the list below. Use each heading once only.",
       "question": "Paragraph B",
       "correct_answer_count": 1,
       "mc_options": [
