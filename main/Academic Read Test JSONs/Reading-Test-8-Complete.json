@@ -4,6 +4,7 @@
   "questions": [
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "Do the following statements agree with the views of the writer?\n\nWrite\n\nYES if the statement agrees with the writer\nNO if the statement does not agree with the writer\nNOT GIVEN if the information is not given in the passage.",
       "question": "Medical courses are as difficult as any other postgraduate course.",
       "correct_answer_count": 1,
@@ -31,6 +32,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "",
       "question": "For student doctors, the course becomes easier the more you learn.",
       "correct_answer_count": 1,
@@ -58,6 +60,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "",
       "question": "A number of students do not complete the course.",
       "correct_answer_count": 1,
@@ -85,6 +88,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "",
       "question": "Better teachers know how to simplify the course.",
       "correct_answer_count": 1,
@@ -112,6 +116,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "",
       "question": "Once qualified, the situation for junior doctors slightly improves.",
       "correct_answer_count": 1,
@@ -139,6 +144,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "",
       "question": "Junior doctors are poor.",
       "correct_answer_count": 1,
@@ -166,6 +172,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "",
       "question": "Disillusioned doctors often move to another hospital to work.",
       "correct_answer_count": 1,
@@ -193,6 +200,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "",
       "question": "The majority of students had nothing positive to say about their mentors.",
       "correct_answer_count": 1,
@@ -220,6 +228,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "",
       "question": "The root of the problem in New Zealand and Britain is essentially the same.",
       "correct_answer_count": 1,
@@ -247,6 +256,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "",
       "question": "Many junior doctors are unable to repay their student loans.",
       "correct_answer_count": 1,
@@ -274,6 +284,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "",
       "question": "The NZMSA has found a balance between expectation and reality.",
       "correct_answer_count": 1,
@@ -301,6 +312,7 @@
     },
     {
       "type": "open_question",
+      "ielts_question_type": "Summary Completion",
       "instructions": "Complete the following text using NO MORE THAN TWO WORDS from the text.",
       "question": "A significant number of graduates from New Zealand and Britain are not remaining in the medical field. Poor relationships with [field 1], student loan repayments and increasingly long [field 2] are all contributory factors. The NZMSA is attempting to find an answer to the problem, but is wary of supporting ideas it perceives to be only [field 3] solutions.",
       "field_count": 3,
@@ -322,6 +334,7 @@
     },
     {
       "type": "open_question",
+      "ielts_question_type": "Short Answer Questions",
       "instructions": "Answer the following questions using NO MORE THAN TWO WORDS OR A NUMBER.",
       "question": "In which year did over 50% of newly qualified doctors from a medical school in New Zealand leave the country?",
       "field_count": 1,
@@ -339,6 +352,7 @@
     },
     {
       "type": "open_question",
+      "ielts_question_type": "Short Answer Questions",
       "instructions": "",
       "question": "How are members of the NZMSA chosen?",
       "field_count": 1,
@@ -356,6 +370,7 @@
     },
     {
       "type": "open_question",
+      "ielts_question_type": "Short Answer Questions",
       "instructions": "",
       "question": "Where are two-day shifts not uncommon?",
       "field_count": 1,
@@ -373,6 +388,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
       "instructions": "Choose the correct answer A-D.",
       "question": "The main reason birds migrate is",
       "correct_answer_count": 1,
@@ -406,6 +422,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
       "instructions": "",
       "question": "The primary behavioral change birds undergo to prepare for migration is",
       "correct_answer_count": 1,
@@ -439,6 +456,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
       "instructions": "",
       "question": "Birds that die during migration",
       "correct_answer_count": 1,
@@ -472,6 +490,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "Do the following statements agree with the views of the writer?\n\nWrite\n\nYES if the statement agrees with the writer\nNO if the statement does not agree with the writer\nNOT GIVEN if the information is not given in the passage.",
       "question": "Migratory habits vary between species.",
       "correct_answer_count": 1,
@@ -499,6 +518,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "",
       "question": "There are a number of complete theories to explain the navigational abilities of migrating birds.",
       "correct_answer_count": 1,
@@ -526,6 +546,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "",
       "question": "The female of the species often flies slower than the male.",
       "correct_answer_count": 1,
@@ -553,6 +574,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "",
       "question": "Smaller birds are at greater risk than bigger birds.",
       "correct_answer_count": 1,
@@ -580,6 +602,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Yes/No/Not Given",
       "instructions": "",
       "question": "Human activities represent the most recent challenge to migrating birds.",
       "correct_answer_count": 1,
@@ -612,6 +635,7 @@
     },
     {
       "type": "open_question",
+      "ielts_question_type": "Summary Completion",
       "instructions": "Complete the following summary using NO MORE THAN TWO WORDS FROM THE TEXT.",
       "question": "Not only are cities becoming larger, new housing is being built on areas reclaimed from [field 1]. In addition, migrating birds are also at risk from a number of different [field 2] which cannot be seen in the dark. Smaller birds are particularly vulnerable as they are at risk from external factors such as [field 3] and [field 4].",
       "field_count": 4,
@@ -635,6 +659,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
       "instructions": "Choose the most suitable headings for paragraphs B-G from the list below. Use each heading once only.",
       "question": "Paragraph B",
       "correct_answer_count": 1,
@@ -692,6 +717,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
       "instructions": "",
       "question": "Paragraph C",
       "correct_answer_count": 1,
@@ -749,6 +775,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
       "instructions": "",
       "question": "Paragraph D",
       "correct_answer_count": 1,
@@ -806,6 +833,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
       "instructions": "",
       "question": "Paragraph E",
       "correct_answer_count": 1,
@@ -863,6 +891,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
       "instructions": "",
       "question": "Paragraph F",
       "correct_answer_count": 1,
@@ -920,6 +949,7 @@
     },
     {
       "type": "closed_question",
+      "ielts_question_type": "Matching Headings",
       "instructions": "",
       "question": "Paragraph G",
       "correct_answer_count": 1,
@@ -977,6 +1007,7 @@
     },
     {
       "type": "open_question",
+      "ielts_question_type": "Short Answer Questions",
       "instructions": "Answer the following questions using NO MORE THAN TWO WORDS from the text.",
       "question": "What phenomenon is predicted to increase at a global level due to deforestation?",
       "field_count": 1,
@@ -994,6 +1025,7 @@
     },
     {
       "type": "open_question",
+      "ielts_question_type": "Short Answer Questions",
       "instructions": "",
       "question": "What is becoming more common, allowing for more ecological uses of forested areas?",
       "field_count": 1,
@@ -1011,6 +1043,7 @@
     },
     {
       "type": "open_question",
+      "ielts_question_type": "Short Answer Questions",
       "instructions": "",
       "question": "Over two thirds of people living in the countryside in Brazil are what?",
       "field_count": 1,
@@ -1028,6 +1061,7 @@
     },
     {
       "type": "open_question",
+      "ielts_question_type": "Short Answer Questions",
       "instructions": "",
       "question": "Which country has only one fiftieth of their original forested areas remaining?",
       "field_count": 1,
@@ -1045,6 +1079,7 @@
     },
     {
       "type": "open_question",
+      "ielts_question_type": "Short Answer Questions",
       "instructions": "",
       "question": "What needs to be increased so that people can begin to change negative habits?",
       "field_count": 1,
