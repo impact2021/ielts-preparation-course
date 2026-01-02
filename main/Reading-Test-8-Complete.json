@@ -51,6 +51,7 @@
         }
       ],
       "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states 'the more you learn, the more you realise what you still need to study' making it increasingly difficult, not easier.",
       "points": 1
     },
     {
@@ -76,6 +77,7 @@
         }
       ],
       "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is YES. The first paragraph clearly mentions 'it is not unusual for students to drop out.'",
       "points": 1
     },
     {
@@ -101,6 +103,7 @@
         }
       ],
       "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage describes teachers who simplify as 'misguided' because it results in incomplete understanding, indicating they are not better teachers.",
       "points": 1
     },
     {
@@ -126,6 +129,7 @@
         }
       ],
       "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is YES. The second paragraph states 'The situation is little better in the year or two years after qualifying,' indicating a slight improvement.",
       "points": 1
     },
     {
@@ -151,6 +155,7 @@
         }
       ],
       "correct_answer": "2",
+      "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. While the passage mentions 'poorly paid,' it does not explicitly state whether they are poor or provide enough information to determine this.",
       "points": 1
     },
     {
@@ -176,6 +181,7 @@
         }
       ],
       "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states disillusioned doctors 'look elsewhere for a career,' meaning they leave the profession entirely, not just move to another hospital.",
       "points": 1
     },
     {
@@ -201,6 +207,7 @@
         }
       ],
       "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states 'slightly less than 60%' had positive feedback, meaning the majority did have something positive to say about their mentors.",
       "points": 1
     },
     {
@@ -226,6 +233,7 @@
         }
       ],
       "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The sixth paragraph states the situations in New Zealand and Britain have 'essentially the same effect' but 'different causes,' meaning different root problems.",
       "points": 1
     },
     {
@@ -251,6 +259,7 @@
         }
       ],
       "correct_answer": "2",
+      "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. While the sixth paragraph mentions student loans, it does not state whether doctors are able or unable to repay them.",
       "points": 1
     },
     {
@@ -276,17 +285,18 @@
         }
       ],
       "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The final paragraph states the NZMSA 'aims to find a balance,' indicating it is a goal, not an achievement they have already accomplished.",
       "points": 1
     },
     {
       "type": "open_question",
       "instructions": "Complete the following text using NO MORE THAN TWO WORDS from the text.",
-      "question": "A significant number of graduates from New Zealand and Britain are not remaining in the medical field. Poor relationships with 12.[field 1], student loan repayments and increasingly long 13.[field 2] are all contributory factors. The NZMSA is attempting to find an answer to the problem, but is wary of supporting ideas it perceives to be only 14.[field 3] solutions.",
+      "question": "A significant number of graduates from New Zealand and Britain are not remaining in the medical field. Poor relationships with [field 1], student loan repayments and increasingly long [field 2] are all contributory factors. The NZMSA is attempting to find an answer to the problem, but is wary of supporting ideas it perceives to be only [field 3] solutions.",
       "field_count": 3,
       "field_labels": [
-        "[field 1]",
-        "[field 2]",
-        "[field 3]"
+        "12. [field 1]",
+        "13. [field 2]",
+        "14. [field 3]"
       ],
       "field_answers": [
         "MENTORS|mentors",
@@ -375,6 +385,7 @@
         }
       ],
       "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is A. The second paragraph states the primary cause is 'the search for food, particularly for their chicks.'",
       "points": 1
     },
     {
@@ -406,6 +417,7 @@
         }
       ],
       "correct_answer": "2",
+      "no_answer_feedback": "You did not select an answer. The correct answer is C. The third paragraph mentions birds become 'considerably more active at night' due to chemical changes preparing them for migration.",
       "points": 1
     },
     {
@@ -437,6 +449,7 @@
         }
       ],
       "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is B. The sixth paragraph states mortality is 'covered by the increased production of offspring.'",
       "points": 1
     },
     {
@@ -462,6 +475,7 @@
         }
       ],
       "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is YES. The passage discusses various differences between species throughout, including migration speed, patterns, and timing in the fourth paragraph.",
       "points": 1
     },
     {
@@ -487,6 +501,7 @@
         }
       ],
       "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The fifth paragraph states theories exist but notes 'these theories do not explain' certain navigation abilities, indicating theories are incomplete.",
       "points": 1
     },
     {
@@ -512,6 +527,7 @@
         }
       ],
       "correct_answer": "2",
+      "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. The fourth paragraph mentions males migrating first but does not compare the flying speeds of males and females.",
       "points": 1
     },
     {
@@ -537,6 +553,7 @@
         }
       ],
       "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is YES. The sixth paragraph states 'smaller birds' face dangers from 'storms and attacks by predators' and have 'less energy reserves.'",
       "points": 1
     },
     {
@@ -562,6 +579,7 @@
         }
       ],
       "correct_answer": "2",
+      "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. While the final paragraph discusses human impact as a recent challenge, the passage does not identify it as the single biggest danger compared to other threats.",
       "points": 1
     },
     {
@@ -633,6 +651,7 @@
         }
       ],
       "correct_answer": "6",
+      "no_answer_feedback": "You did not select an answer. The correct answer is vii. Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability.",
       "points": 1
     },
     {
@@ -688,6 +707,7 @@
         }
       ],
       "correct_answer": "7",
+      "no_answer_feedback": "You did not select an answer. The correct answer is viii. Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests.",
       "points": 1
     },
     {
@@ -743,6 +763,7 @@
         }
       ],
       "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is ii. Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting.",
       "points": 1
     },
     {
@@ -798,6 +819,7 @@
         }
       ],
       "correct_answer": "5",
+      "no_answer_feedback": "You did not select an answer. The correct answer is vi. Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil.",
       "points": 1
     },
     {
@@ -853,6 +875,7 @@
         }
       ],
       "correct_answer": "8",
+      "no_answer_feedback": "You did not select an answer. The correct answer is ix. Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism.",
       "points": 1
     },
     {
@@ -908,6 +931,7 @@
         }
       ],
       "correct_answer": "2",
+      "no_answer_feedback": "You did not select an answer. The correct answer is iii. Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption.",
       "points": 1
     },
     {
