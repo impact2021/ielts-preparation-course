@@ -331,7 +331,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Many __________ sponsor floats in the parade which usually feature themes relating to the district and its history.",
+            "question": "Many [field 1] sponsor floats in the parade which usually feature themes relating to the district and its history.",
             "points": 1.0,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"LOCAL BUSINESS\" or \"LOCAL BUSINESSES\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
             "correct_feedback": "✓ Excellent! Acceptable answers: \"LOCAL BUSINESS\" or \"LOCAL BUSINESSES\". You listened carefully and identified the key information.",
@@ -355,7 +355,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "The festival opens with a parade with costumed characters and floats displaying local and historical scenes. Interactive light displays are staged at various locations, with vibrant projections screened onto local buildings and monuments. And the night ends with a magnificent __________ display.",
+            "question": "The festival opens with a parade with costumed characters and floats displaying local and historical scenes. Interactive light displays are staged at various locations, with vibrant projections screened onto local buildings and monuments. And the night ends with a magnificent [field 1] display.",
             "points": 1.0,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"FIREWORKS\" or \"FIREWORK\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
             "correct_feedback": "✓ Excellent! Acceptable answers: \"FIREWORKS\" or \"FIREWORK\". You listened carefully and identified the key information.",
@@ -379,7 +379,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "The __________ marathon which attracts competitors from around the globe is staged in the stunning valley.",
+            "question": "The [field 1] marathon which attracts competitors from around the globe is staged in the stunning valley.",
             "points": 1.0,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"LONGNECK\" or \"LONG NECK\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
             "correct_feedback": "✓ Excellent! Acceptable answers: \"LONGNECK\" or \"LONG NECK\". You listened carefully and identified the key information.",
@@ -403,7 +403,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Visitors can also take either walking or __________ tours of the historical gold mining areas, and even try their hands at panning for gold.",
+            "question": "Visitors can also take either walking or [field 1] tours of the historical gold mining areas, and even try their hands at panning for gold.",
             "points": 1.0,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"HORSE BACK\" or \"HORSEBACK\" or \"HORSE-BACK\" or \"A HORSE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
             "correct_feedback": "✓ Excellent! Acceptable answers: \"HORSE BACK\" or \"HORSEBACK\" or \"HORSE-BACK\" or \"A HORSE\". You listened carefully and identified the key information.",
