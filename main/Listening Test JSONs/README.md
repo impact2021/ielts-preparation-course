@@ -11,6 +11,13 @@ This folder contains complete IELTS Listening Tests in JSON format, combining al
 - **Audio URLs**: 3 (Sections 2, 3, 4)
 - **Transcripts**: All 4 sections included
 
+### Listening-Test-2-Complete.json
+- **Questions**: 1-40 (all 4 sections)
+- **Format**: JSON
+- **Sections**: 4
+- **Audio URL**: https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0048.mp3
+- **Transcripts**: All 4 sections included
+
 ## Structure
 
 Each JSON file contains:
@@ -27,6 +34,12 @@ Listening Test 1:
 - Questions 11-20: Section 2 (Gorgona Island)
 - Questions 21-30: Section 3 (Family Structures in NZ)
 - Questions 31-40: Section 4 (Factors Affecting Elections)
+
+Listening Test 2:
+- Questions 1-10: Section 1 (Hunter Valley Holiday Park Booking)
+- Questions 11-20: Section 2 (Swimming for Fitness)
+- Questions 21-30: Section 3 (Student Academic Meeting)
+- Questions 31-40: Section 4 (Remote Working)
 
 ## Feedback Structure
 
