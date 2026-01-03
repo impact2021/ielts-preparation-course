@@ -46,6 +46,13 @@ This folder contains complete IELTS Listening Tests in JSON format, combining al
 - **Audio URL**: https://www.ieltstestonline.com/wp-content/uploads/2018/12/listening-test-6.mp3
 - **Transcripts**: All 4 sections included
 
+### Listening-Test-7-Complete.json
+- **Questions**: 1-40 (all 4 sections)
+- **Format**: JSON
+- **Sections**: 4
+- **Audio URL**: https://www.ieltstestonline.com/wp-content/uploads/2018/12/listening-test-7.mp3
+- **Transcripts**: All 4 sections included
+
 ## Structure
 
 Each JSON file contains:
@@ -92,6 +99,12 @@ Listening Test 6:
 - Questions 11-20: Section 2 (Study Techniques)
 - Questions 21-30: Section 3 (Face Reading)
 - Questions 31-40: Section 4 (Business Discussion)
+
+Listening Test 7:
+- Questions 1-10: Section 1 (General Conversation)
+- Questions 11-20: Section 2 (Academic Topic)
+- Questions 21-30: Section 3 (Study Discussion)
+- Questions 31-40: Section 4 (Lecture Topic)
 
 ## Feedback Structure
 
