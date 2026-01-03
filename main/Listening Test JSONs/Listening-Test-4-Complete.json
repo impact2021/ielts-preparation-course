@@ -7,7 +7,7 @@
             "instructions": "Questions 1-3\n\nChoose the correct letter A-C",
             "question": "How often does the man visit the Art Gallery?",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "You did not select an answer. The correct answer is B. Two to three times a year. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
             "correct_feedback": "Correct! The answer is B.",
             "incorrect_feedback": "Incorrect. The correct answer is B.",
             "reading_text_id": null,
@@ -32,14 +32,15 @@
             ],
             "options": "A. Once a year\nB. Two to three times a year\nC. Four to five times a year",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "What section is the man’s favourite?",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "You did not select an answer. The correct answer is A. Traditional paintings. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
             "correct_feedback": "Correct! The answer is A.",
             "incorrect_feedback": "Incorrect. The correct answer is A.",
             "reading_text_id": null,
@@ -64,14 +65,15 @@
             ],
             "options": "A. Traditional paintings\nB. Modern Art\nC. Sculpture",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "What publicity material is the man interested in?",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "You did not select an answer. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
             "correct_feedback": "Correct! The answer is C.",
             "incorrect_feedback": "Incorrect. The correct answer is C.",
             "reading_text_id": null,
@@ -91,14 +93,15 @@
             ],
             "options": "A. New exhibitions of paintings\nB. Talks about painters",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "open_question",
             "instructions": "Questions 4-5\n\nName TWO items the man is interested in looking at buying from the museum shop",
             "question": "Item 1",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -114,14 +117,15 @@
                     "incorrect": "Incorrect. Listen to what the man says he looks at or buys in the museum shop.",
                     "no_answer": "The correct answers include: new books, calendars, or souvenirs. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Item 2",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -137,14 +141,15 @@
                     "incorrect": "Incorrect. Listen to what the man says he looks at or buys in the museum shop.",
                     "no_answer": "The correct answers include: new books, calendars, or souvenirs. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "Questions 6-8\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
             "question": "Age group: __________",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -160,14 +165,15 @@
                     "incorrect": "Incorrect. Listen for the man's age group.",
                     "no_answer": "The correct answer is: 36. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Subject taught: __________",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -183,14 +189,15 @@
                     "incorrect": "Incorrect. Listen for the man's subject taught.",
                     "no_answer": "The correct answer is: Economics. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Part of city: __________",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -206,14 +213,15 @@
                     "incorrect": "Incorrect. Listen for the man's part of city.",
                     "no_answer": "The correct answer is: City centre. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "closed_question",
             "instructions": "Questions 9-10\n\nChoose TWO LETTERS from the following list.\n\nWhat areas does the man think need improving at the Art Gallery?",
             "question": "A. The range of exhibits\nB. The frequency of new exhibits\nC. Site of the Museum\nD. Parking\nE. Add a coffee shop",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "You did not select any answers. The correct answers are B. The frequency of new exhibits and E. Add a coffee shop. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
             "correct_feedback": "Correct! Both B and E are correct.",
             "incorrect_feedback": "Review the conversation about improvements. The man mentions new exhibits more often and adding a coffee shop.",
             "reading_text_id": null,
@@ -248,14 +256,15 @@
             ],
             "options": "A. The range of exhibits\nB. The frequency of new exhibits\nC. Site of the Museum\nD. Parking\nE. Add a coffee shop",
             "correct_answer_count": 2,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Multiple Answers)"
         },
         {
             "type": "open_question",
             "instructions": "Questions 11-15\n\nComplete the sentences below.\n\nWrite NO MORE THAN TWO WORDS for each answer.",
             "question": "Brochures and leaflets from the travel companies are in the __________",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -271,14 +280,15 @@
                     "incorrect": "Incorrect. Listen to the introduction about the Travel Expo.",
                     "no_answer": "The correct answer is: TRAVEL PACK. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Sentence Completion"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The winner of the travel raffle will have a holiday in the __________",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -294,14 +304,15 @@
                     "incorrect": "Incorrect. Listen to the introduction about the Travel Expo.",
                     "no_answer": "The correct answer is: SOUTH PACIFIC. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The airline exhibitors are along the __________ side of the hall.",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -317,14 +328,15 @@
                     "incorrect": "Incorrect. Listen to the introduction about the Travel Expo.",
                     "no_answer": "The correct answer is: RIGHT HAND. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The train through the Central Mountains has rail cars with __________",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -340,14 +352,15 @@
                     "incorrect": "Incorrect. Listen to the introduction about the Travel Expo.",
                     "no_answer": "The correct answer is: GLASS ROOFS. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Currently, cruise ships operate out of Victoria Bay during the __________",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -363,14 +376,15 @@
                     "incorrect": "Incorrect. Listen to the introduction about the Travel Expo.",
                     "no_answer": "The correct answer is: SUMMER. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "Questions 16-20\n\nComplete the table below.\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.\n\nVIEWING ROOM SCHEDULE",
             "question": "Viewing Room A - 11 a.m.: [field 1]\n11:45 a.m. - Time: [field 2]\nViewing Room A - 2:30 p.m.: Includes [field 3] & Argentina\nViewing Room B - Time: [field 4]\nViewing Room B - 3 p.m.: Overview of [field 5]",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Excellent! You got all the answers correct.",
             "incorrect_feedback": "Some answers are incorrect. Review the schedule information.",
             "reading_text_id": null,
@@ -410,14 +424,15 @@
                     "incorrect": "Incorrect. Listen for what the 3 o'clock presentation is about.",
                     "no_answer": "The correct answer is: AIR TRAVEL. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Table Completion"
         },
         {
             "type": "open_question",
             "instructions": "Questions 21-25\n\nComplete the sentences below.\n\nWrite NO MORE THAN ONE WORD for each answer.",
             "question": "The new employee's name is Jason __________",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -433,14 +448,15 @@
                     "incorrect": "Incorrect. Listen to the discussion about Jason's new role.",
                     "no_answer": "The correct answer is: ENDICOTT. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Sentence Completion"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Jason will begin working as a __________ in the accounts department.",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -456,14 +472,15 @@
                     "incorrect": "Incorrect. Listen to the discussion about Jason's new role.",
                     "no_answer": "The correct answer is: JUNIOR. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "There are new __________ markets opening.",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -479,14 +496,15 @@
                     "incorrect": "Incorrect. Listen to the discussion about Jason's new role.",
                     "no_answer": "The correct answer is: EXPORT. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Jason's main role will be __________ new markets and making presentations.",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -502,14 +520,15 @@
                     "incorrect": "Incorrect. Listen to the discussion about Jason's new role.",
                     "no_answer": "The correct answer is: MONITORING. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Jason's previous work experience involved __________ potential new developments.",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -525,14 +544,15 @@
                     "incorrect": "Incorrect. Listen to the discussion about Jason's new role.",
                     "no_answer": "The correct answer is: INVESTIGATING. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "closed_question",
             "instructions": "Questions 26-30\n\nChoose the correct letters A-C.",
             "question": "Jason will report to",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "You did not select an answer. The correct answer is C. two managers.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
             "correct_feedback": "Correct! The answer is C.",
             "incorrect_feedback": "Incorrect. The correct answer is C.",
             "reading_text_id": null,
@@ -557,14 +577,15 @@
             ],
             "options": "A. no one.\nB. the accountant.\nC. two managers.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "Jason will mostly be trained by",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "You did not select an answer. The correct answer is C. Sharon Greenslade.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
             "correct_feedback": "Correct! The answer is C.",
             "incorrect_feedback": "Incorrect. The correct answer is C.",
             "reading_text_id": null,
@@ -589,14 +610,15 @@
             ],
             "options": "A. Darren Smith.\nB. John Owens.\nC. Sharon Greenslade.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "Jason may have to work overtime",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "You did not select an answer. The correct answer is B. if reports are needed.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
             "correct_feedback": "Correct! The answer is B.",
             "incorrect_feedback": "Incorrect. The correct answer is B.",
             "reading_text_id": null,
@@ -621,14 +643,15 @@
             ],
             "options": "A. as part of his salary.\nB. if reports are needed.\nC. during weekends in extreme cases.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "The option to work from home",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "You did not select an answer. The correct answer is B. will depend on technical concerns.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
             "correct_feedback": "Correct! The answer is B.",
             "incorrect_feedback": "Incorrect. The correct answer is B.",
             "reading_text_id": null,
@@ -653,14 +676,15 @@
             ],
             "options": "A. is soon going to be withdrawn.\nB. will depend on technical concerns.\nC. will affect employee wages.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "After three months, there is",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "You did not select an answer. The correct answer is B. a review.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
             "correct_feedback": "Correct! The answer is B.",
             "incorrect_feedback": "Incorrect. The correct answer is B.",
             "reading_text_id": null,
@@ -685,14 +709,15 @@
             ],
             "options": "A. a requirement to join the Human Resources department.\nB. a review.\nC. a move.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "open_question",
             "instructions": "Questions 31-35\n\nComplete the sentences below\n\nWrite NO MORE THAN THREE WORDS for each answer.",
             "question": "Simon Felder believes that younger people are less concerned about buying property and __________ than previous generations.",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -708,14 +733,15 @@
                     "incorrect": "Incorrect. Listen to the lecture about generational attitudes to money.",
                     "no_answer": "The correct answer is: SAVING. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Sentence Completion"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Many under-30s may wish to buy their own home but cannot due to __________.",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -731,14 +757,15 @@
                     "incorrect": "Incorrect. Listen to the lecture about generational attitudes to money.",
                     "no_answer": "The correct answer is: INCREASING HOUSE PRICES. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "In particular, people working as teachers or __________ may find it very difficult to afford their own home.",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -754,14 +781,15 @@
                     "incorrect": "Incorrect. Listen to the lecture about generational attitudes to money.",
                     "no_answer": "The correct answer is: NURSES. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The trend towards buying rental properties has created more difficulties for __________.",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -777,14 +805,15 @@
                     "incorrect": "Incorrect. Listen to the lecture about generational attitudes to money.",
                     "no_answer": "The correct answer is: FIRST TIME BUYERS. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Many people are now choosing to wait until their mid-thirties before getting __________.",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -800,14 +829,15 @@
                     "incorrect": "Incorrect. Listen to the lecture about generational attitudes to money.",
                     "no_answer": "The correct answer is: MARRIED. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "Questions 36-40\n\nComplete the summary below\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.\n\nDIFFERENT OPINIONS TO SAVING",
             "question": "People born between the years of 1945 and [field 1] have been observed to have more interest in saving than younger generations, younger people being more focused on their [field 2] situation than the long term.\n\nYounger people would benefit from being given more information on [field 3] and long term planning so they can develop the ability to manage their own [field 4]. Many young people now find it impossible to save because of the increasing [field 5]. Advice from banks and other financial institutions could benefit customers.",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Excellent! You got all the answers correct.",
             "incorrect_feedback": "Some answers are incorrect. Review the lecture about saving attitudes.",
             "reading_text_id": null,
@@ -847,7 +877,8 @@
                     "incorrect": "Incorrect. Listen for why many young people find it difficult to save.",
                     "no_answer": "The correct answer is: COST OF LIVING. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Summary Completion"
         }
     ],
     "reading_texts": [],

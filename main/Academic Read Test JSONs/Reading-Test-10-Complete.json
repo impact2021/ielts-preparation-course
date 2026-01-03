@@ -62,7 +62,8 @@
             ],
             "options": "The leading authority\nFinancial concerns\nSurgical implantation\nHistory of prosthetics\nCommonplace miracles\nOther applications\nA perfect solution\nImproving realism\nA second chance",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -124,7 +125,8 @@
             ],
             "options": "The leading authority\nFinancial concerns\nSurgical implantation\nHistory of prosthetics\nCommonplace miracles\nOther applications\nA perfect solution\nImproving realism\nA second chance",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -186,7 +188,8 @@
             ],
             "options": "The leading authority\nFinancial concerns\nSurgical implantation\nHistory of prosthetics\nCommonplace miracles\nOther applications\nA perfect solution\nImproving realism\nA second chance",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -248,7 +251,8 @@
             ],
             "options": "The leading authority\nFinancial concerns\nSurgical implantation\nHistory of prosthetics\nCommonplace miracles\nOther applications\nA perfect solution\nImproving realism\nA second chance",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -310,7 +314,8 @@
             ],
             "options": "The leading authority\nFinancial concerns\nSurgical implantation\nHistory of prosthetics\nCommonplace miracles\nOther applications\nA perfect solution\nImproving realism\nA second chance",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -372,7 +377,8 @@
             ],
             "options": "The leading authority\nFinancial concerns\nSurgical implantation\nHistory of prosthetics\nCommonplace miracles\nOther applications\nA perfect solution\nImproving realism\nA second chance",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "open_question",
@@ -395,7 +401,8 @@
                     "incorrect": "Incorrect. Review Paragraph B which mentions the medical condition that led to Mr Baird's amputation. The correct answer is DIABETES.",
                     "no_answer": "Please provide an answer. The correct answer is DIABETES. The passage states that Mr Baird lost his leg due to complications from diabetes."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -418,7 +425,8 @@
                     "incorrect": "Incorrect. Review Paragraph E which discusses the main obstacle to using bionic limbs. The correct answer is COST.",
                     "no_answer": "Please provide an answer. The correct answer is COST. The passage states that cost is the main obstacle to using bionic limbs."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "closed_question",
@@ -450,7 +458,8 @@
             ],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -482,7 +491,8 @@
             ],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "open_question",
@@ -529,7 +539,8 @@
                     "incorrect": "Incorrect. Look in Paragraph C or D for what covers the bionic limb for natural appearance.",
                     "no_answer": "Please provide an answer. The correct answer is SILICONE SKIN (or SYNTHETIC SKIN). Hint: What covers the limb for natural look?"
                 }
-            }
+            },
+            "ielts_question_type": "Diagram Labelling"
         },
         {
             "type": "closed_question",
@@ -561,7 +572,8 @@
             ],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -593,7 +605,8 @@
             ],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -625,7 +638,8 @@
             ],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -667,7 +681,8 @@
             ],
             "options": "more isolated than other forms\nfailure of short-term or recent memory\nclear memories only since the onset of amnesia\nthe result of the sufferer's habits\npossibly a result of temporary blood-flow problems.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -709,7 +724,8 @@
             ],
             "options": "more isolated than other forms\nfailure of short-term or recent memory\nclear memories only since the onset of amnesia\nthe result of the sufferer's habits\npossibly a result of temporary blood-flow problems.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -751,7 +767,8 @@
             ],
             "options": "more isolated than other forms\nfailure of short-term or recent memory\nclear memories only since the onset of amnesia\nthe result of the sufferer's habits\npossibly a result of temporary blood-flow problems.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -793,7 +810,8 @@
             ],
             "options": "more isolated than other forms\nfailure of short-term or recent memory\nclear memories only since the onset of amnesia\nthe result of the sufferer's habits\npossibly a result of temporary blood-flow problems.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -835,7 +853,8 @@
             ],
             "options": "more isolated than other forms\nfailure of short-term or recent memory\nclear memories only since the onset of amnesia\nthe result of the sufferer's habits\npossibly a result of temporary blood-flow problems.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -872,7 +891,8 @@
             ],
             "options": "recover all their memories\nrecover older memories first\nsuffer from transient global amnesia\nhave suffered a head injury.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -909,7 +929,8 @@
             ],
             "options": "has now been perfected\ndepends on a patient's general health\ncan sometimes be made with a brain scan\nis easily made",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "open_question",
@@ -932,7 +953,8 @@
                     "incorrect": "Incorrect. Review Paragraph B which discusses how technology enables us to do business from different locations.",
                     "no_answer": "Please provide an answer. The correct answer is 'work from home'. Paragraph B states that technology means we can do business efficiently regardless of location."
                 }
-            }
+            },
+            "ielts_question_type": "Sentence Completion"
         },
         {
             "type": "open_question",
@@ -955,7 +977,8 @@
                     "incorrect": "Incorrect. Review Paragraph C which discusses the financial benefits for companies of having home-based workers.",
                     "no_answer": "Please provide an answer. The correct answer is 'costs'. Paragraph C states that home-based workers require less office space reducing fixed costs."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -978,7 +1001,8 @@
                     "incorrect": "Incorrect. Review Paragraph D which discusses people's resistance to using buses or trains instead of private cars.",
                     "no_answer": "Please provide an answer. The correct answer is 'unpopular'. Paragraph D states that governments have tried to persuade us to use public transport but 'this is still unpopular'."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -1001,7 +1025,8 @@
                     "incorrect": "Incorrect. Review Paragraph E which discusses the importance of workplace relationships and social aspects.",
                     "no_answer": "Please provide an answer. The correct answer is 'overlooked'. Paragraph E states that workplace relationships 'are a significant part of our life and should not be overlooked'."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -1048,7 +1073,8 @@
                     "incorrect": "Incorrect. Review Paragraph E for the type of factor to consider as a drawback. The answer is H.",
                     "no_answer": "Please provide an answer for Field 5. Hint: What kind of factor is discussed in Paragraph E? The correct answer is H."
                 }
-            }
+            },
+            "ielts_question_type": "Summary Completion"
         },
         {
             "type": "closed_question",
@@ -1115,7 +1141,8 @@
             ],
             "options": "Time for a change?\nSocial impact\nManagement decisions\nFlexibility of technology\nWasted time on the road\nTechnology keeping us at home\nBenefits for all\nBusiness in the workplace\nKeeping it clean\nThe best of both worlds",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -1182,7 +1209,8 @@
             ],
             "options": "Time for a change?\nSocial impact\nManagement decisions\nFlexibility of technology\nWasted time on the road\nTechnology keeping us at home\nBenefits for all\nBusiness in the workplace\nKeeping it clean\nThe best of both worlds",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -1249,7 +1277,8 @@
             ],
             "options": "Time for a change?\nSocial impact\nManagement decisions\nFlexibility of technology\nWasted time on the road\nTechnology keeping us at home\nBenefits for all\nBusiness in the workplace\nKeeping it clean\nThe best of both worlds",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -1316,7 +1345,8 @@
             ],
             "options": "Time for a change?\nSocial impact\nManagement decisions\nFlexibility of technology\nWasted time on the road\nTechnology keeping us at home\nBenefits for all\nBusiness in the workplace\nKeeping it clean\nThe best of both worlds",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -1383,7 +1413,8 @@
             ],
             "options": "Time for a change?\nSocial impact\nManagement decisions\nFlexibility of technology\nWasted time on the road\nTechnology keeping us at home\nBenefits for all\nBusiness in the workplace\nKeeping it clean\nThe best of both worlds",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -1450,7 +1481,8 @@
             ],
             "options": "Time for a change?\nSocial impact\nManagement decisions\nFlexibility of technology\nWasted time on the road\nTechnology keeping us at home\nBenefits for all\nBusiness in the workplace\nKeeping it clean\nThe best of both worlds",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         }
     ],
     "reading_texts": [

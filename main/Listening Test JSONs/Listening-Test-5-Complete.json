@@ -7,7 +7,7 @@
             "instructions": "Questions 1-5\n\nComplete the form below.\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
             "question": "Applicant Details Form",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Excellent! You completed the form correctly.",
             "incorrect_feedback": "Some answers are incorrect. Review the applicant details.",
             "reading_text_id": null,
@@ -47,14 +47,15 @@
                     "incorrect": "Incorrect. Listen to the availability restrictions.",
                     "no_answer": "The correct answer is: WEEKENDS. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Form Completion"
         },
         {
             "type": "open_question",
             "instructions": "Questions 6-10\n\nComplete the flowchart below with words from the box. Write the corresponding letter A-J in the spaces provided.",
             "question": "Sequence for registration flowchart",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Excellent! You completed the flowchart correctly.",
             "incorrect_feedback": "Some answers are incorrect. Review the registration sequence.",
             "reading_text_id": null,
@@ -94,14 +95,15 @@
                     "incorrect": "Incorrect. Review the registration sequence.",
                     "no_answer": "The correct answer is: C. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Flow Chart Completion"
         },
         {
             "type": "closed_question",
             "instructions": "Questions 11-15\n\nChoose the correct answer A-C.",
             "question": "Records…",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "You did not select an answer. The correct answer is C. are catching up with CD sales.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
             "correct_feedback": "Correct! The answer is C.",
             "incorrect_feedback": "Incorrect. The correct answer is C.",
             "reading_text_id": null,
@@ -126,14 +128,15 @@
             ],
             "options": "A. make more money than CDs.\nB. sell more units than CDs.\nC. are catching up with CD sales.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "The first records…",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "You did not select an answer. The correct answer is C. were not long lasting.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
             "correct_feedback": "Correct! The answer is C.",
             "incorrect_feedback": "Incorrect. The correct answer is C.",
             "reading_text_id": null,
@@ -158,14 +161,15 @@
             ],
             "options": "A. were sold by Thomas Edison.\nB. were only made of firm rubber.\nC. were not long lasting.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "Shellac records…",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "You did not select an answer. The correct answer is C. were produced for over half a century.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
             "correct_feedback": "Correct! The answer is C.",
             "incorrect_feedback": "Incorrect. The correct answer is C.",
             "reading_text_id": null,
@@ -190,14 +194,15 @@
             ],
             "options": "A. could not be played many times.\nB. were not popular with the public.\nC. were produced for over half a century.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "'Unbreakable' records…",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "You did not select an answer. The correct answer is B. were made of plastic.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
             "correct_feedback": "Correct! The answer is B.",
             "incorrect_feedback": "Incorrect. The correct answer is B.",
             "reading_text_id": null,
@@ -222,14 +227,15 @@
             ],
             "options": "A. were made from shellac.\nB. were made of plastic.\nC. had a high quality sound.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "Vinyl records…",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "You did not select an answer. The correct answer is A. offered a wider choice in appearance.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
             "correct_feedback": "Correct! The answer is A.",
             "incorrect_feedback": "Incorrect. The correct answer is A.",
             "reading_text_id": null,
@@ -254,14 +260,15 @@
             ],
             "options": "A. offered a wider choice in appearance.\nB. could not be damaged.\nC. dropped in popularity in the 1950s.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "open_question",
             "instructions": "Questions 16-20\n\nLabel the diagram below. Use NO MORE THAN TWO WORDS OR A NUMBER for each answer.",
             "question": "Label 1",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -277,14 +284,15 @@
                     "incorrect": "Incorrect. Listen to the description of the record player parts.",
                     "no_answer": "The correct answer is: THE RECORD PLATE. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Diagram Labelling"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Label 2",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -300,14 +308,15 @@
                     "incorrect": "Incorrect. Listen to the description of the record player parts.",
                     "no_answer": "The correct answer is: THE POWER LIGHT. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Label 3",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -323,14 +332,15 @@
                     "incorrect": "Incorrect. Listen to the description of the record player parts.",
                     "no_answer": "The correct answer is: 33. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Label 4",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -346,14 +356,15 @@
                     "incorrect": "Incorrect. Listen to the description of the record player parts.",
                     "no_answer": "The correct answer is: 45. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Label 5",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -369,14 +380,15 @@
                     "incorrect": "Incorrect. Listen to the description of the record player parts.",
                     "no_answer": "The correct answer is: TONE ARM. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "Questions 21-30\n\nComplete the table below\n\nWrite NO MORE THAN THREE WORDS for each answer",
             "question": "Life and Leisure Survey table with 10 fields",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Excellent! You got all the answers correct.",
             "incorrect_feedback": "Some answers are incorrect. Review the survey discussion.",
             "reading_text_id": null,
@@ -446,14 +458,15 @@
                     "incorrect": "Incorrect. Review the life and leisure survey discussion.",
                     "no_answer": "The correct answer is: REAL. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Table Completion"
         },
         {
             "type": "open_question",
             "instructions": "Question 31\n\nComplete the sentence using NO MORE THAN TWO WORDS",
             "question": "The term 'the Goldilocks Effect' is being used to describe a situation where everything is __________.",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -469,14 +482,15 @@
                     "incorrect": "Incorrect. Listen for the definition of the Goldilocks Effect.",
                     "no_answer": "The correct answer is: JUST RIGHT. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Sentence Completion"
         },
         {
             "type": "open_question",
             "instructions": "Questions 32-36\n\nComplete the summary below using words in the box below. Write the correct letter A-J in the answer sheet.",
             "question": "Gap 32",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -492,14 +506,15 @@
                     "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
                     "no_answer": "The correct answer is: C. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Summary Completion"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Gap 33",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -515,14 +530,15 @@
                     "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
                     "no_answer": "The correct answer is: H. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Gap 34",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -538,14 +554,15 @@
                     "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
                     "no_answer": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Gap 35",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -561,14 +578,15 @@
                     "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
                     "no_answer": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Gap 36",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -584,14 +602,15 @@
                     "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
                     "no_answer": "The correct answer is: D. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "Questions 37-40\n\nComplete each sentence with the correct ending A-G below",
             "question": "Statement 37",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -607,14 +626,15 @@
                     "incorrect": "Incorrect. Review the Goldilocks applications.",
                     "no_answer": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Sentence Completion"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Statement 38",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -630,14 +650,15 @@
                     "incorrect": "Incorrect. Review the Goldilocks applications.",
                     "no_answer": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Statement 39",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -653,14 +674,15 @@
                     "incorrect": "Incorrect. Review the Goldilocks applications.",
                     "no_answer": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Statement 40",
             "points": 1.0,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
@@ -676,7 +698,8 @@
                     "incorrect": "Incorrect. Review the Goldilocks applications.",
                     "no_answer": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         }
     ],
     "reading_texts": [],
