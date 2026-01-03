@@ -12,7 +12,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "note_completion_l",
             "field_count": 5,
             "field_answers": {
                 "1": "2 months|two months",
@@ -59,7 +59,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. 4",
@@ -91,7 +91,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. 2",
@@ -123,7 +123,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. 26th September",
@@ -155,7 +155,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. On the 2nd floor of Lakeside View building",
@@ -187,7 +187,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. The public car park on the left",
@@ -260,7 +260,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 1,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. stay on jungle trails",
@@ -302,7 +302,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 1,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. more types of insects than birds",
@@ -334,7 +334,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 1,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. travel from the Pacific Coast to give birth",
@@ -366,7 +366,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 1,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. 10 hours",
@@ -398,7 +398,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 1,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. the Government took control of tourism there",
@@ -430,7 +430,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 2,
-            "ielts_question_category": "",
+            "ielts_question_category": "short_answer_l",
             "field_count": 5,
             "field_answers": {
                 "1": "one third|one-third|third|1/3|1/3 rd|1/3rd|One third|One-third",
@@ -477,7 +477,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 2,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. So they can finish their university education",
@@ -509,7 +509,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 2,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. Their children don't want to look after them",
@@ -541,7 +541,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 2,
-            "ielts_question_category": "",
+            "ielts_question_category": "list_completion_l",
             "field_count": 3,
             "field_answers": {
                 "1": "texts|text|email|e mail|e-mail|emails|e mails|e-mails|social media|text messages|text message|texting",
@@ -576,7 +576,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 3,
-            "ielts_question_category": "",
+            "ielts_question_category": "form_completion_l",
             "field_count": 4,
             "field_answers": {
                 "1": "FIXED DATES|A FIXED DATE|FIXED DATE|fixed dates|a fixed date|fixed date",
@@ -617,7 +617,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 3,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. Ethnicity",
@@ -659,7 +659,7 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 3,
-            "ielts_question_category": "",
+            "ielts_question_category": "table_completion_l",
             "field_count": 4,
             "field_answers": {
                 "1": "CONFIDENCE|Confidence|confidence",
@@ -704,7 +704,7 @@
     },
     "audio": {
         "url": "https://www.ieltstestonline.com/2026/wp-content/plugins/audio-files/Listening-test-1.mp3",
-        "transcript": "&lt;table border=&quot;<strong>[Q7: <strong>[Q8: <strong>[Q9: 1]</strong>]</strong>]</strong>\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\"&gt;\n<tbody>\n<tr>\n&lt;td valign=&quot;top&quot; width=&quot;<strong>[Q25: 20]</strong>%\"&gt;Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Good morning. Eastville Council. How can I help you?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Hello, I understand you offer a number of community classes to new migrants. I was wondering if it would be possible to enrol?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Yes we do. We run language classes of course, a settlement support programme and we also offer a new mentoring programme which we're actually trialling for <strong>[Q2: 3]</strong> months starting next week.\nCan I ask, are you a permanent resident?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Yes I am.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">That's no problem then, you must be a permanent resident to enrol in any of our courses, you see. So which course are you interested in?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Well, I am interested in the settlement support programme and the Mentoring Programme, I am finding it difficult to get a job interview you see. I arrived in the country <strong style=\"background-color: yellow\">[Q1: two]</strong> months ago. My husband work full-time but I am looking for work too. Just a part-time job to start with as we have two young children. I'm not sure which course would suit me best. Could you give me some more information about those please?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Well the Settlement Support Programme is <strong style=\"background-color: yellow\">[Q2: three]</strong> weeks long and students need to attend class <strong style=\"background-color: yellow\">[Q3: 4]</strong> days a week. The focus is on settling into work in a new country, so we provide help with searching for jobs, enrolling with employment agencies, writing a CV and writing application letters.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">That does sound interesting. I think that would be a lot of use to me. Is the course completely free? Do I need to pay for textbooks or anything like that?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">For the Settlement Support Programme, we do recommend that students buy a handbook which accompanies the course - it's not compulsory to buy but it only costs ₤10.99 if you buy direct from the bookstore so we do recommend that you purchase your own copy if you are able to. We can place a bulk order for the book at the beginning of the course and students only pay <strong style=\"background-color: yellow\">[Q4: ₤7]</strong>.95 if they order early enough to qualify for the discount.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Okay. And how about the Mentoring Programme? Could you tell me a little more about that please?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Well these are one to one sessions instead of a group class. They run for two weeks with two <strong style=\"background-color: yellow\">[Q5: one]</strong> hour sessions each week. The idea is that if you are having any specific difficulties settling in to your new life, be that work, or social issues, your mentor can talk with you and give suggestions and advice on how to make things better. We currently have <strong style=\"background-color: yellow\">[Q6: 15]</strong> mentors on the team and each will mentor <strong style=\"background-color: yellow\">[Q7: <strong>[Q3: four]</strong>]</strong> clients per week. The mentor programme is free but we suggest people join the Settlement Support Programme first then enrol on a Mentor Programme afterwards if they still feel in need of additional support.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Okay I understand, thank you. So what do I need to do about enrolling on the Settlement Support Programme? I'd like to enrol as soon as I can.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Well, you will need to come into our office and fill out an application form. Make sure that you bring your passport with you to confirm your residency and we will also need two additional passport photographs; one for our records and one for your student ID card.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Okay. I'll come in this afternoon. So when does the next course start?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">The next course starts next Monday, on the 26th September, but that one is already fully booked. We have new courses starting each week, so the next with an available place is on the <strong style=\"background-color: yellow\">[Q8: 3rd]</strong> October.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Okay. Well thanks very much for your help. It sounds like the Settlement Support Programme is ideal for me and I'll think later about whether to apply for Mentor Support. I'll come in very soon. Can you just remind me where the office is?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Yes we're on the <strong style=\"background-color: yellow\">[Q9: 2nd]</strong> floor of the Lakeside View building on St James Plaza. We are in the tall white building next to the technical college. We're very easy to find and there are plenty of places to park in the public car park just to the left of the building. Don't use the <strong style=\"background-color: yellow\">[Q10: car]</strong> park at the front though as those spaces are reserved for staff.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">That's great thank you very much for all your help. Looking forward to meeting you when I come in later today.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">You're very welcome. Glad I could help.</td>\n</tr>\n</tbody>\n</table>",
+        "transcript": "<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">\n<tbody>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Good morning. Eastville Council. How can I help you?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Hello, I understand you offer a number of community classes to new migrants. I was wondering if it would be possible to enrol?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Yes we do. We run language classes of course, a settlement support programme and we also offer a new mentoring programme which we're actually trialling for <strong>[Q2: 3]</strong> months starting next week.\nCan I ask, are you a permanent resident?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Yes I am.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">That's no problem then, you must be a permanent resident to enrol in any of our courses, you see. So which course are you interested in?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Well, I am interested in the settlement support programme and the Mentoring Programme, I am finding it difficult to get a job interview you see. I arrived in the country <strong style=\"background-color: yellow\">[Q1: two]</strong> months ago. My husband work full-time but I am looking for work too. Just a part-time job to start with as we have two young children. I'm not sure which course would suit me best. Could you give me some more information about those please?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Well the Settlement Support Programme is <strong style=\"background-color: yellow\">[Q2: three]</strong> weeks long and students need to attend class <strong style=\"background-color: yellow\">[Q3: 4]</strong> days a week. The focus is on settling into work in a new country, so we provide help with searching for jobs, enrolling with employment agencies, writing a CV and writing application letters.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">That does sound interesting. I think that would be a lot of use to me. Is the course completely free? Do I need to pay for textbooks or anything like that?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">For the Settlement Support Programme, we do recommend that students buy a handbook which accompanies the course - it's not compulsory to buy but it only costs ₤10.99 if you buy direct from the bookstore so we do recommend that you purchase your own copy if you are able to. We can place a bulk order for the book at the beginning of the course and students only pay <strong style=\"background-color: yellow\">[Q4: ₤7]</strong>.95 if they order early enough to qualify for the discount.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Okay. And how about the Mentoring Programme? Could you tell me a little more about that please?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Well these are one to one sessions instead of a group class. They run for two weeks with two <strong style=\"background-color: yellow\">[Q5: one]</strong> hour sessions each week. The idea is that if you are having any specific difficulties settling in to your new life, be that work, or social issues, your mentor can talk with you and give suggestions and advice on how to make things better. We currently have <strong style=\"background-color: yellow\">[Q6: 15]</strong> mentors on the team and each will mentor <strong style=\"background-color: yellow\">[Q7: <strong>[Q3: four]</strong>]</strong> clients per week. The mentor programme is free but we suggest people join the Settlement Support Programme first then enrol on a Mentor Programme afterwards if they still feel in need of additional support.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Okay I understand, thank you. So what do I need to do about enrolling on the Settlement Support Programme? I'd like to enrol as soon as I can.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Well, you will need to come into our office and fill out an application form. Make sure that you bring your passport with you to confirm your residency and we will also need two additional passport photographs; one for our records and one for your student ID card.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Okay. I'll come in this afternoon. So when does the next course start?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">The next course starts next Monday, on the 26th September, but that one is already fully booked. We have new courses starting each week, so the next with an available place is on the <strong style=\"background-color: yellow\">[Q8: 3rd]</strong> October.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">Okay. Well thanks very much for your help. It sounds like the Settlement Support Programme is ideal for me and I'll think later about whether to apply for Mentor Support. I'll come in very soon. Can you just remind me where the office is?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">Yes we're on the <strong style=\"background-color: yellow\">[Q9: 2nd]</strong> floor of the Lakeside View building on St James Plaza. We are in the tall white building next to the technical college. We're very easy to find and there are plenty of places to park in the public car park just to the left of the building. Don't use the <strong style=\"background-color: yellow\">[Q10: car]</strong> park at the front though as those spaces are reserved for staff.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Woman</td>\n<td valign=\"top\" width=\"80%\">That's great thank you very much for all your help. Looking forward to meeting you when I come in later today.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Telephone operator</td>\n<td valign=\"top\" width=\"80%\">You're very welcome. Glad I could help.</td>\n</tr>\n</tbody>\n</table>",
         "sections": [
             {
                 "section_number": 1,
@@ -716,7 +716,7 @@
             },
             {
                 "section_number": 3,
-                "transcript": "<table border=\"0\" width=\"100%\">\r\n<tbody>\r\n<tr>\r\n<td valign=\"top\">\r\n<div style=\"height: 300px;overflow: scroll\">\r\n\r\n<strong>Section 3</strong>\r\n<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">\r\n<tbody>\r\n<tr>\r\n&lt;td valign=&quot;top&quot; width=&quot;<strong style=\"background-color: yellow\">[Q5: 20]</strong>%\"&gt;\r\nSpeaker 1</td>\r\n<td valign=\"top\" width=\"80%\">Did you see that programme on TV3 last night? The one about the traditional family and how family structures are changing in New Zealand?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">No – I was going to watch it but forgot it was on!</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">Oh, you should have seen it. It was really interesting. It started by talking about the divorce rate and the myth that half of marriages end in divorce.\r\nApparently there are approximately 10,000 divorces and 20,000 marriages in New Zealand each year. That causes people to think the divorce rate is 50%. In reality though, statistics show that (21) just under <strong style=\"background-color: yellow\">[Q1: 1/3]</strong> of couples who married in 1970 had divorced by their jade wedding anniversary (35 years later).\r\nOf those who married in 1980, just under 1/3 of couples had already divorced by their silver wedding anniversary (25 years later). This is still well below one-half of all marriages though.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">Hmm. I think the divorce rate here is probably lower than a lot of other countries too. What else did they talk about?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">They were saying that since the 1960s there have been a lot of changes in types of family and (22) <strong style=\"background-color: yellow\">[Q2: household structures]</strong> and that these continue to change.\r\nTwo very significant trends since that time are that people are more likely to live with a partner before marrying now than in previous years, and (23) <strong style=\"background-color: yellow\">[Q3: birth rates]</strong> are on the decrease.\r\nThere has been an increase in the number of single parents families and an increase in 'blended families' -  you know, that's when people who have been married and divorced meet a new partner and join with their children to make a new family.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">Don't more people live by themselves these days too? I remember reading something about that in a newspaper.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">Yes that's true. The programme said that (24) <strong style=\"background-color: yellow\">[Q4: single person]</strong> households are a growing family form. They compared two years – 2006 when 23% of households were that type, and 2021 by which time they are expected to grow to 26%. While some of these people are younger, a lot of single person households are made up of older people who may have lost their partner.\r\nLike most countries in the developed world New Zealand's ageing population is growing  as people continue to live longer so that's one of the reasons this type of living situation is expected to rise.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">Yeah, I suppose that's true. So what else did they say?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">They said that currently just under 40% of households were couples with at least one dependent child and that around (25) 20% of households are made up of couples without children. Childless households are expected to increase much faster than couples with children over the next couple of decades.\r\nOf course people who do have children are more often deciding to have smaller families and many are putting parenthood off until later in life. They said that in 2007, the average age of women giving birth to their first child was 28 years, I think it's risen to around 30 years now. This compares with a median of 25 years, for giving birth, in 1976.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">I suppose a lot of people want to get their career established, maybe buy a house, those sorts of things first, don't they?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">Yes that's true. (26) I think younger people nowadays also appreciate a few years of freedom with no family commitments. Generally people have more mobility nowadays, you know, with people going overseas for extended periods for work and travel. If you already have children it's quite difficult to have those experiences.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">Wow – just think what it will be like when our generation gets old. With more people choosing not to have kids, getting married later and concentrating on their careers, there's going to be more elderly people with no one to support them. I mean, traditionally, families looked after the elderly members in their homes, but even now (27) an increasing number of people are spending their old age in a retirement home because either the family is spread geographically or their children work so much they aren't able to give them the time they need.\r\nDid the programme suggest that relationships and families are becoming less important to people in general?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">No, they indicated that the decline of the traditional family structure was more about social acceptance of other forms and people taking advantage of the increasing number of choices. Although at the end of the programme they started talking about how technology has had an adverse effect on traditional families. People are becoming more materialistic, but more importantly we are becoming less sociable. (28-30) The feeling of community is disappearing, because people are using <strong style=\"background-color: yellow\">[Q8: <strong style=\"background-color: yellow\">[Q9: <strong style=\"background-color: yellow\">[Q10: texts]</strong>]</strong>]</strong>, email and social media to interact with others rather than talking.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">Well, that's not really a new point of view, is it? People have been talking about that for years. Anyway, I don't agree. I visit my parents the first weekend of every month, but in-between times I keep in touch by e-mail.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">Why not by telephone?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">Well, it's cheaper to use the Internet and it's much quicker.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">Hmm, I don't think that's such a good idea. I prefer to be able to speak directly to people.…. (fade out)</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div></td>\r\n</tr>\r\n</tbody>\r\n</table>"
+                "transcript": "<table border=\"0\" width=\"100%\">\r\n<tbody>\r\n<tr>\r\n<td valign=\"top\">\r\n<div style=\"height: 300px;overflow: scroll\">\r\n\r\n<strong>Section 3</strong>\r\n<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">\r\n<tbody>\r\n<tr>\r\n&lt;td valign=&quot;top&quot; width=&quot;<strong style=\"background-color: yellow\">[Q5: 20]</strong>%\"&gt;\r\nSpeaker 1</td>\r\n<td valign=\"top\" width=\"80%\">Did you see that programme on TV3 last night? The one about the traditional family and how family structures are changing in New Zealand?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">No – I was going to watch it but forgot it was on!</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">Oh, you should have seen it. It was really interesting. It started by talking about the divorce rate and the myth that half of marriages end in divorce.\r\nApparently there are approximately 10,000 divorces and 20,000 marriages in New Zealand each year. That causes people to think the divorce rate is 50%. In reality though, statistics show that (21) just under <strong style=\"background-color: yellow\">[Q1: 1/3]</strong> of couples who married in 1970 had divorced by their jade wedding anniversary (35 years later).\r\nOf those who married in 1980, just under 1/3 of couples had already divorced by their silver wedding anniversary (25 years later). This is still well below one-half of all marriages though.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">Hmm. I think the divorce rate here is probably lower than a lot of other countries too. What else did they talk about?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">They were saying that since the 1960s there have been a lot of changes in types of family and (22) <strong style=\"background-color: yellow\">[Q2: household structures]</strong> and that these continue to change.\r\nTwo very significant trends since that time are that people are more likely to live with a partner before marrying now than in previous years, and (23) <strong style=\"background-color: yellow\">[Q3: birth rates]</strong> are on the decrease.\r\nThere has been an increase in the number of single parents families and an increase in 'blended families' -  you know, that's when people who have been married and divorced meet a new partner and join with their children to make a new family.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">Don't more people live by themselves these days too? I remember reading something about that in a newspaper.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">Yes that's true. The programme said that (24) <strong style=\"background-color: yellow\">[Q4: single person]</strong> households are a growing family form. They compared two years – 2006 when 23% of households were that type, and 2021 by which time they are expected to grow to 26%. While some of these people are younger, a lot of single person households are made up of older people who may have lost their partner.\r\nLike most countries in the developed world New Zealand's ageing population is growing  as people continue to live longer so that's one of the reasons this type of living situation is expected to rise.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">Yeah, I suppose that's true. So what else did they say?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">They said that currently just under 40% of households were couples with at least one dependent child and that around (25) 20% of households are made up of couples without children. Childless households are expected to increase much faster than couples with children over the next couple of decades.\r\nOf course people who do have children are more often deciding to have smaller families and many are putting parenthood off until later in life. They said that in 2007, the average age of women giving birth to their first child was 28 years, I think it's risen to around 30 years now. This compares with a median of 25 years, for giving birth, in 1976.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">I suppose a lot of people want to get their career established, maybe buy a house, those sorts of things first, don't they?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">Yes that's true. (26) I think younger people nowadays also appreciate a few years of freedom with no family commitments. Generally people have more mobility nowadays, you know, with people going overseas for extended periods for work and travel. If you already have children it's quite difficult to have those experiences.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">Wow – just think what it will be like when our generation gets old. With more people choosing not to have kids, getting married later and concentrating on their careers, there's going to be more elderly people with no one to support them. I mean, traditionally, families looked after the elderly members in their homes, but even now (27) an increasing number of people are spending their old age in a retirement home because either the family is spread geographically or their children work so much they aren't able to give them the time they need.\r\nDid the programme suggest that relationships and families are becoming less important to people in general?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">No, they indicated that the decline of the traditional family structure was more about social acceptance of other forms and people taking advantage of the increasing number of choices. Although at the end of the programme they started talking about how technology has had an adverse effect on traditional families. People are becoming more materialistic, but more importantly we are becoming less sociable. (28-30) The feeling of community is disappearing, because people are using texts, email and social media to interact with others rather than talking.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">Well, that's not really a new point of view, is it? People have been talking about that for years. Anyway, I don't agree. I visit my parents the first weekend of every month, but in-between times I keep in touch by e-mail.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">Why not by telephone?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 2</td>\r\n<td valign=\"top\" width=\"80%\">Well, it's cheaper to use the Internet and it's much quicker.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"20%\">Speaker 1</td>\r\n<td valign=\"top\" width=\"80%\">Hmm, I don't think that's such a good idea. I prefer to be able to speak directly to people.…. (fade out)</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div></td>\r\n</tr>\r\n</tbody>\r\n</table>"
             },
             {
                 "section_number": 4,
