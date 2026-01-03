@@ -167,6 +167,16 @@ class IELTS_CM_Admin {
             'high'
         );
         
+        // JSON Import/Export meta box for exercises
+        add_meta_box(
+            'ielts_cm_json_import_export',
+            __('JSON Import/Export', 'ielts-course-manager'),
+            array($this, 'quiz_json_meta_box'),
+            'ielts_quiz',
+            'side',
+            'default'
+        );
+        
         // Multi-site sync meta box (only for primary sites)
         $sync_manager = new IELTS_CM_Multi_Site_Sync();
         if ($sync_manager->is_primary_site()) {
@@ -5974,54 +5984,67 @@ class IELTS_CM_Admin {
         #ielts-cm-xml-import-export .button .dashicons {
             vertical-align: text-bottom;
         }
-        #ielts-cm-import-status .notice,
-        #ielts-cm-import-json-status .notice {
+        #ielts-cm-import-status .notice {
             margin: 0;
         }
         </style>
-        
-        <hr style="margin: 15px 0;">
-        
-        <div>
-            <h4><?php _e('Export to JSON', 'ielts-course-manager'); ?></h4>
-            <p><small><?php _e('Download this exercise as a JSON file - easier to read and edit than XML.', 'ielts-course-manager'); ?></small></p>
-            <button type="button" id="ielts-cm-export-json-btn" class="button button-secondary" style="width: 100%;">
-                <span class="dashicons dashicons-download" style="margin-top: 3px;"></span>
-                <?php _e('Export to JSON', 'ielts-course-manager'); ?>
-            </button>
-        </div>
-        
-        <hr style="margin: 15px 0;">
-        
-        <div>
-            <h4><?php _e('Import from JSON', 'ielts-course-manager'); ?></h4>
-            <p><small><?php _e('Upload a JSON file to import exercise content. More reliable than XML.', 'ielts-course-manager'); ?></small></p>
-            
-            <div style="margin-bottom: 15px; padding: 10px; background: #f0f0f1; border-left: 4px solid #0073aa;">
-                <label style="display: block; margin-bottom: 8px;">
-                    <strong><?php _e('Import Mode:', 'ielts-course-manager'); ?></strong>
-                </label>
-                <label for="ielts_cm_import_json_mode_append" style="display: block; margin-bottom: 5px;">
-                    <input type="radio" id="ielts_cm_import_json_mode_append" name="ielts_cm_import_json_mode" value="append" checked>
-                    <?php _e('Add to existing content', 'ielts-course-manager'); ?>
-                    <span style="color: #666; font-size: 12px;"><?php _e('(keeps current questions and adds new ones)', 'ielts-course-manager'); ?></span>
-                </label>
-                <label for="ielts_cm_import_json_mode_replace" style="display: block;">
-                    <input type="radio" id="ielts_cm_import_json_mode_replace" name="ielts_cm_import_json_mode" value="replace">
-                    <?php _e('Replace all content', 'ielts-course-manager'); ?>
-                    <span style="color: #666; font-size: 12px;"><?php _e('(overwrites everything)', 'ielts-course-manager'); ?></span>
-                </label>
+        <?php
+    }
+    
+    /**
+     * JSON Import/Export meta box for exercises
+     */
+    public function quiz_json_meta_box($post) {
+        // Only show for existing exercises (not new ones)
+        if (!$post->ID || !get_post_status($post->ID)) {
+            ?>
+            <p><?php _e('Save the exercise first before importing/exporting JSON.', 'ielts-course-manager'); ?></p>
+            <?php
+            return;
+        }
+        ?>
+        <div id="ielts-cm-json-import-export">
+            <div style="margin-bottom: 15px;">
+                <h4><?php _e('Export to JSON', 'ielts-course-manager'); ?></h4>
+                <p><small><?php _e('Download this exercise as a JSON file for backup or transfer.', 'ielts-course-manager'); ?></small></p>
+                <button type="button" id="ielts-cm-export-json-btn" class="button button-secondary" style="width: 100%;">
+                    <span class="dashicons dashicons-download" style="margin-top: 3px;"></span>
+                    <?php _e('Export to JSON', 'ielts-course-manager'); ?>
+                </button>
             </div>
             
-            <p id="ielts-cm-append-json-info" style="display: block;"><small style="color: #0073aa;"><strong><?php _e('Note:', 'ielts-course-manager'); ?></strong> <?php _e('Questions and reading texts from the JSON will be added after your current content.', 'ielts-course-manager'); ?></small></p>
-            <p id="ielts-cm-replace-json-warning" style="display: none;"><small style="color: #d63638;"><strong><?php _e('Warning:', 'ielts-course-manager'); ?></strong> <?php _e('Replace mode will overwrite all current content. Export a backup first!', 'ielts-course-manager'); ?></small></p>
+            <hr style="margin: 15px 0;">
             
-            <input type="file" id="ielts-cm-json-file" accept=".json" style="margin-bottom: 10px;">
-            <button type="button" id="ielts-cm-import-json-btn" class="button button-primary" style="width: 100%;">
-                <span class="dashicons dashicons-upload" style="margin-top: 3px;"></span>
-                <?php _e('Upload & Import JSON', 'ielts-course-manager'); ?>
-            </button>
-            <div id="ielts-cm-import-json-status" style="margin-top: 10px; display: none;"></div>
+            <div>
+                <h4><?php _e('Import from JSON', 'ielts-course-manager'); ?></h4>
+                <p><small><?php _e('Upload a JSON file to import exercise content.', 'ielts-course-manager'); ?></small></p>
+                
+                <div style="margin-bottom: 15px; padding: 10px; background: #f0f0f1; border-left: 4px solid #0073aa;">
+                    <label style="display: block; margin-bottom: 8px;">
+                        <strong><?php _e('Import Mode:', 'ielts-course-manager'); ?></strong>
+                    </label>
+                    <label for="ielts_cm_import_json_mode_append" style="display: block; margin-bottom: 5px;">
+                        <input type="radio" id="ielts_cm_import_json_mode_append" name="ielts_cm_import_json_mode" value="append" checked>
+                        <?php _e('Add to existing content', 'ielts-course-manager'); ?>
+                        <span style="color: #666; font-size: 12px;"><?php _e('(keeps current questions and adds new ones)', 'ielts-course-manager'); ?></span>
+                    </label>
+                    <label for="ielts_cm_import_json_mode_replace" style="display: block;">
+                        <input type="radio" id="ielts_cm_import_json_mode_replace" name="ielts_cm_import_json_mode" value="replace">
+                        <?php _e('Replace all content', 'ielts-course-manager'); ?>
+                        <span style="color: #666; font-size: 12px;"><?php _e('(overwrites everything)', 'ielts-course-manager'); ?></span>
+                    </label>
+                </div>
+                
+                <p id="ielts-cm-append-json-info" style="display: block;"><small style="color: #0073aa;"><strong><?php _e('Note:', 'ielts-course-manager'); ?></strong> <?php _e('Questions and reading texts from the JSON will be added after your current content.', 'ielts-course-manager'); ?></small></p>
+                <p id="ielts-cm-replace-json-warning" style="display: none;"><small style="color: #d63638;"><strong><?php _e('Warning:', 'ielts-course-manager'); ?></strong> <?php _e('Replace mode will overwrite all current content. Export a backup first!', 'ielts-course-manager'); ?></small></p>
+                
+                <input type="file" id="ielts-cm-json-file" accept=".json" style="margin-bottom: 10px;">
+                <button type="button" id="ielts-cm-import-json-btn" class="button button-primary" style="width: 100%;">
+                    <span class="dashicons dashicons-upload" style="margin-top: 3px;"></span>
+                    <?php _e('Upload & Import JSON', 'ielts-course-manager'); ?>
+                </button>
+                <div id="ielts-cm-import-json-status" style="margin-top: 10px; display: none;"></div>
+            </div>
         </div>
         
         <script>
@@ -6039,7 +6062,7 @@ class IELTS_CM_Admin {
             
             // JSON Export
             $('#ielts-cm-export-json-btn').on('click', function() {
-                var exportUrl = ajaxurl + '?action=ielts_cm_export_exercise_json&post_id=<?php echo $post->ID; ?>&nonce=<?php echo wp_create_nonce('ielts_cm_export_json_' . $post->ID); ?>';
+                var exportUrl = ajaxurl + '?action=ielts_cm_export_exercise_json&post_id=<?php echo absint($post->ID); ?>&nonce=<?php echo esc_js(wp_create_nonce('ielts_cm_export_json_' . $post->ID)); ?>';
                 window.location.href = exportUrl;
             });
             
@@ -6079,8 +6102,8 @@ class IELTS_CM_Admin {
                 // Prepare form data
                 var formData = new FormData();
                 formData.append('action', 'ielts_cm_import_exercise_json');
-                formData.append('post_id', <?php echo $post->ID; ?>);
-                formData.append('nonce', '<?php echo wp_create_nonce('ielts_cm_import_json_' . $post->ID); ?>');
+                formData.append('post_id', <?php echo absint($post->ID); ?>);
+                formData.append('nonce', '<?php echo esc_js(wp_create_nonce('ielts_cm_import_json_' . $post->ID)); ?>');
                 formData.append('json_file', file);
                 formData.append('import_mode', importMode);
                 
@@ -6113,6 +6136,15 @@ class IELTS_CM_Admin {
             });
         });
         </script>
+        
+        <style>
+        #ielts-cm-json-import-export .button .dashicons {
+            vertical-align: text-bottom;
+        }
+        #ielts-cm-import-json-status .notice {
+            margin: 0;
+        }
+        </style>
         <?php
     }
     
