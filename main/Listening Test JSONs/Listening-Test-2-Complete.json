@@ -1,0 +1,800 @@
+{
+    "title": "IELTS Listening Test 02",
+    "content": "Complete IELTS Listening Test 2 with all 4 sections (40 questions)",
+    "questions": [
+        {
+            "type": "open_question",
+            "instructions": "Questions 1-5: Complete the form below using NO MORE THAN ONE WORD OR A NUMBER.",
+            "question": "Hunter Valley Holiday Park booking form\n\nBooking details:\n\nExample Month of booking: Answer August\n\n1. Length of stay: [field 1] nights\n\n2. Arrival date: August [field 2]\n\n\n\nGroup Details:\n\n3. Number of adults: [field 3]\n\nNumber of children: THREE\n\n4. Booking name: Eric [field 4]\n\nCredit card number: 5436 7800 0439 2428\n\n5. Contact phone number: 034 [field 5]",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Excellent! You got all the answers correct.",
+            "incorrect_feedback": "Some answers are incorrect. Review the conversation.",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 5,
+            "field_answers": {
+                "1": "4|four",
+                "2": "5th|fifth|5",
+                "3": "8|eight",
+                "4": "HUSE",
+                "5": "535 7221|5357221"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The booking is for 4 nights.",
+                    "incorrect": "Incorrect. Listen carefully to how many nights they want to book (Question 1).",
+                    "no_answer": "The correct answer is: 4. Make sure to listen carefully for key information and take notes while listening."
+                },
+                "2": {
+                    "correct": "Correct! They arrive on August 5th.",
+                    "incorrect": "Incorrect. Listen for the arrival date in August (Question 2).",
+                    "no_answer": "The correct answer is: 5th. Make sure to listen carefully for key information and take notes while listening."
+                },
+                "3": {
+                    "correct": "Correct! There will be 8 adults in the group.",
+                    "incorrect": "Incorrect. Listen for the number of adults in the group (Question 3).",
+                    "no_answer": "The correct answer is: 8. Make sure to listen carefully for key information and take notes while listening."
+                },
+                "4": {
+                    "correct": "Correct! The surname is HUSE (spelled H U S E).",
+                    "incorrect": "Incorrect. Listen carefully to the spelling of the surname (Question 4).",
+                    "no_answer": "The correct answer is: HUSE. Make sure to listen carefully for key information and take notes while listening."
+                },
+                "5": {
+                    "correct": "Correct! The rest of the phone number is 535 7221.",
+                    "incorrect": "Incorrect. Listen carefully to the phone number after 034 (Question 5).",
+                    "no_answer": "The correct answer is: 535 7221. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 6-10: Answer the following questions using NO MORE THAN TWO WORDS AND/OR A NUMBER.",
+            "question": "Who recommended the campsite to the customer?",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! A friend recommended the campsite.",
+            "incorrect_feedback": "Incorrect. Listen for who recommended the campsite (Question 6).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "a friend|friend"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! A friend recommended it.",
+                    "incorrect": "Incorrect. Who told the visitor about the campsite?",
+                    "no_answer": "The correct answer is: a friend. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What's the most popular entertainment for children?",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! The skatepark is most popular with children.",
+            "incorrect_feedback": "Incorrect. Listen for what children like most (Question 7).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "the skatepark|skatepark|skate park|the skate park"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Most kids spend hours at the skatepark.",
+                    "incorrect": "Incorrect. What activity do children like most?",
+                    "no_answer": "The correct answer is: the skatepark. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What are 50p pieces needed for?",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! 50 pence pieces are needed for hot showers.",
+            "incorrect_feedback": "Incorrect. Listen for what requires 50 pence pieces (Question 8).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "hot showers|hot shower|a hot shower"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! You need 50p for hot showers.",
+                    "incorrect": "Incorrect. What costs 50 pence?",
+                    "no_answer": "The correct answer is: hot showers. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What are available for free in reception?",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! Walking guides are free in reception.",
+            "incorrect_feedback": "Incorrect. Listen for what is available free in reception (Question 9).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "walking guides"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Walking guides are available free of charge.",
+                    "incorrect": "Incorrect. What can you get free in reception?",
+                    "no_answer": "The correct answer is: walking guides. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "How much does it cost per night for adults to stay?",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! It costs £12 per night for adults.",
+            "incorrect_feedback": "Incorrect. Listen for the current price for adults (Question 10).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "£12|12|12 pounds|twelve pounds"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Adults now pay £12 per night.",
+                    "incorrect": "Incorrect. How much do adults pay per night?",
+                    "no_answer": "The correct answer is: £12. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 11-15: Complete the summary below USING NO MORE THAN TWO WORDS.",
+            "question": "Swimming is better than activities like [field 1] for older people because it avoids strain on the knees and other joints. Swimming is a good form of exercise because the water can support a person's [field 2] while also offering resistance. Studies have shown that swimming can also reduce [field 3] and also prevent [field 4] which can cause pain in the muscles. A study showed that a high percentage of older people stopped exercising because of injuries resulting from [field 5] which happened during the exercise period.",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Excellent! You got all the answers correct.",
+            "incorrect_feedback": "Some answers are incorrect. Review the talk.",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 5,
+            "field_answers": {
+                "1": "jogging",
+                "2": "weight",
+                "3": "blood pressure",
+                "4": "overheating|over heating",
+                "5": "falls|falling"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Jogging can strain joints, unlike swimming.",
+                    "incorrect": "Incorrect. Listen for what activity is mentioned that strains the knees (Question 11).",
+                    "no_answer": "The correct answer is: jogging. Make sure to listen carefully for key information and take notes while listening."
+                },
+                "2": {
+                    "correct": "Correct! Water supports your weight.",
+                    "incorrect": "Incorrect. Listen for what the water supports (Question 12).",
+                    "no_answer": "The correct answer is: weight. Make sure to listen carefully for key information and take notes while listening."
+                },
+                "3": {
+                    "correct": "Correct! Swimming can reduce blood pressure.",
+                    "incorrect": "Incorrect. Listen for what swimming can reduce (Question 13).",
+                    "no_answer": "The correct answer is: blood pressure. Make sure to listen carefully for key information and take notes while listening."
+                },
+                "4": {
+                    "correct": "Correct! Swimming prevents overheating.",
+                    "incorrect": "Incorrect. Listen for what swimming prevents (Question 14).",
+                    "no_answer": "The correct answer is: overheating. Make sure to listen carefully for key information and take notes while listening."
+                },
+                "5": {
+                    "correct": "Correct! Many injuries were from falls during exercise.",
+                    "incorrect": "Incorrect. Listen for what caused injuries (Question 15).",
+                    "no_answer": "The correct answer is: falls. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 16-20: Complete the sentences below USING NO MORE THAN TWO WORDS.",
+            "question": "Water walkers wear a special _____ to help them float.",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! They wear a special belt.",
+            "incorrect_feedback": "Incorrect. Listen for what water walkers wear (Question 16).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "belt"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! A specially designed belt helps them float.",
+                    "incorrect": "Incorrect. What do water walkers wear?",
+                    "no_answer": "The correct answer is: belt. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Water walking allows you to have _____ with other people as you exercise.",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! You can have a conversation while water walking.",
+            "incorrect_feedback": "Incorrect. Listen for what you can do with others (Question 17).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "a conversation|conversation"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! You can have a conversation while exercising.",
+                    "incorrect": "Incorrect. What can you do with friends while water walking?",
+                    "no_answer": "The correct answer is: a conversation. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "When starting with lane swimming, it is recommended not to _____ the number of laps attempted each session.",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! You shouldn't overdo it when starting.",
+            "incorrect_feedback": "Incorrect. Listen for the advice about starting lane swimming (Question 18).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "overdo|over do"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Don't overdo it on your first visits.",
+                    "incorrect": "Incorrect. What should you avoid doing?",
+                    "no_answer": "The correct answer is: overdo. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Aqua aerobics involves _____ demonstrated by an instructor.",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! It involves gentle movements.",
+            "incorrect_feedback": "Incorrect. Listen for what aqua aerobics involves (Question 19).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "gentle movement|gentle movements"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The instructor shows gentle movements.",
+                    "incorrect": "Incorrect. What does the instructor demonstrate?",
+                    "no_answer": "The correct answer is: gentle movement. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Aqua aerobics is typically held in _____ water, no more than 1.2 m deep.",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! Classes are in shallow water.",
+            "incorrect_feedback": "Incorrect. Listen for what type of water is used (Question 20).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "shallow"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Most classes are in shallow pools.",
+                    "incorrect": "Incorrect. What depth of water is used?",
+                    "no_answer": "The correct answer is: shallow. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 21-25: Choose the appropriate letter A-C.",
+            "question": "The meeting has been arranged because",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! The meeting is an opportunity for the student to discuss his academic performance.",
+            "incorrect_feedback": "Incorrect. Listen carefully to why the meeting was arranged (Question 21).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A. the tutor has some concerns about the student's academic progress.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The tutor does not express concerns initially."
+                },
+                {
+                    "text": "B. it is an opportunity for the student to discuss his academic performance.",
+                    "is_correct": true,
+                    "feedback": "Correct! The tutor explains this is a chance for students to talk about their performance."
+                },
+                {
+                    "text": "C. the tutor needs to write a report about the student.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Writing a report is not mentioned as the reason."
+                }
+            ],
+            "options": "A. the tutor has some concerns about the student's academic progress.\nB. it is an opportunity for the student to discuss his academic performance.\nC. the tutor needs to write a report about the student.",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The student",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! The student feels his classmates are doing better than him in some subjects.",
+            "incorrect_feedback": "Incorrect. Listen to what the student says about his performance (Question 22).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A. is happy with his achievements in languages.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. He is struggling with languages."
+                },
+                {
+                    "text": "B. feels his classmates are performing better than him in some subjects.",
+                    "is_correct": true,
+                    "feedback": "Correct! He mentions his classmates seem to be OK but he is struggling."
+                },
+                {
+                    "text": "C. feels that the tutor should be offering more support.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. He doesn't say this about the tutor."
+                }
+            ],
+            "options": "A. is happy with his achievements in languages.\nB. feels his classmates are performing better than him in some subjects.\nC. feels that the tutor should be offering more support.",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The student has a part time job",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! The job is three days a week.",
+            "incorrect_feedback": "Incorrect. Listen to the details about his job (Question 23).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A. arranged by the tutor.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The tutor did not arrange the job."
+                },
+                {
+                    "text": "B. to get work experience.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. He needs it for money, not experience."
+                },
+                {
+                    "text": "C. three days a week.",
+                    "is_correct": true,
+                    "feedback": "Correct! He works Saturday, Sunday, and one evening during the week."
+                }
+            ],
+            "options": "A. arranged by the tutor.\nB. to get work experience.\nC. three days a week.",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The student feels",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! He needs to be more disciplined with his studies.",
+            "incorrect_feedback": "Incorrect. Listen to what the student says he needs (Question 24).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A. he needs to focus a little more on his studies.",
+                    "is_correct": true,
+                    "feedback": "Correct! He says he needs to be more disciplined with his studies."
+                },
+                {
+                    "text": "B. that a study plan would be helpful.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. He tried a plan before but it didn't help."
+                },
+                {
+                    "text": "C. that his work is interfering with his studies.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. He doesn't explicitly say this."
+                }
+            ],
+            "options": "A. he needs to focus a little more on his studies.\nB. that a study plan would be helpful.\nC. that his work is interfering with his studies.",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "According to the tutor, a study group",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! A study group helps discuss difficult issues.",
+            "incorrect_feedback": "Incorrect. Listen to what the tutor says about study groups (Question 25).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A. might help the students discuss issues they find difficult.",
+                    "is_correct": true,
+                    "feedback": "Correct! The tutor suggests they can discuss things they find difficult."
+                },
+                {
+                    "text": "B. means that the students can approach the tutor together.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned."
+                },
+                {
+                    "text": "C. cannot be held near the library.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. They can meet in front of the library."
+                }
+            ],
+            "options": "A. might help the students discuss issues they find difficult.\nB. means that the students can approach the tutor together.\nC. cannot be held near the library.",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 26-30: Answer the following questions using NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+            "question": "On which campus are the French lectures held?",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! French lectures are on the south campus.",
+            "incorrect_feedback": "Incorrect. Listen for where the French lectures are held (Question 26).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "south campus|the south campus"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The French lectures are on the south campus.",
+                    "incorrect": "Incorrect. Which campus?",
+                    "no_answer": "The correct answer is: south campus. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What did the student use as transport last semester?",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! He used a bicycle last semester.",
+            "incorrect_feedback": "Incorrect. Listen for what transport he used (Question 27).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "a bicycle|bicycle"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! He has a bicycle he used last semester.",
+                    "incorrect": "Incorrect. What did he use?",
+                    "no_answer": "The correct answer is: a bicycle. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "When does the first bus leave?",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! The first bus leaves at 12 o'clock.",
+            "incorrect_feedback": "Incorrect. Listen for when the first bus leaves (Question 28).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "12 o'clock|12|12.00|12:00|12 pm"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The first bus leaves at 12.00.",
+                    "incorrect": "Incorrect. What time?",
+                    "no_answer": "The correct answer is: 12 o'clock. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What has the student been offered by the restaurant?",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! He has been offered extra shifts.",
+            "incorrect_feedback": "Incorrect. Listen for what the restaurant offered (Question 29).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "some extra shifts|extra shifts"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The restaurant offered him extra shifts.",
+                    "incorrect": "Incorrect. What was offered?",
+                    "no_answer": "The correct answer is: some extra shifts. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What did the student not qualify for?",
+            "points": 1.0,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Correct! He didn't qualify for the hardship grant.",
+            "incorrect_feedback": "Incorrect. Listen for what he didn't qualify for (Question 30).",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "hardship grant|a hardship grant|the hardship grant"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! He didn't qualify for the hardship grant.",
+                    "incorrect": "Incorrect. What didn't he qualify for?",
+                    "no_answer": "The correct answer is: hardship grant. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 31-32: Choose the appropriate letter A-C.",
+            "question": "10 years ago, remote working became more popular with larger companies due to",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 3,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "A. pressure from staff for more flexibility.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Staff pressure came later from millennials."
+                },
+                {
+                    "text": "B. more efficient and widespread internet connections.",
+                    "is_correct": true,
+                    "feedback": "Correct! Suburban broadband improved and video conferencing became practical."
+                },
+                {
+                    "text": "C. increased use of video conferencing.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Video conferencing was a result, not the cause."
+                }
+            ],
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Millennials are:",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 3,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "A. the most adept at using remote technology.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned."
+                },
+                {
+                    "text": "B. defined as being born between 1980 and 2000.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The dates given are 1982 and 2004."
+                },
+                {
+                    "text": "C. often unwilling to accept traditional work conditions.",
+                    "is_correct": true,
+                    "feedback": "Correct! Many are not willing to work 9 to 5 like their parents."
+                }
+            ],
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 33-34: Choose TWO incentives for companies to offer more flexible work conditions that are mentioned in the recording.",
+            "question": "Choose TWO letters A-E.",
+            "points": 2,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 3,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "A. improved productivity",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is mentioned later as a reason for reversing remote work."
+                },
+                {
+                    "text": "B. cheaper insurance",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned."
+                },
+                {
+                    "text": "C. fewer bathrooms required",
+                    "is_correct": true,
+                    "feedback": "Correct! Fewer bathrooms are needed with fewer staff on-site."
+                },
+                {
+                    "text": "D. lower requirement for parking spaces",
+                    "is_correct": true,
+                    "feedback": "Correct! Fewer parking spaces are needed."
+                },
+                {
+                    "text": "E. increased staff morale",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is mentioned later in a different context."
+                }
+            ],
+            "correct_answer_count": 2,
+            "show_option_letters": true
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 35-40: Complete the summary below USING NO MORE THAN THREE WORDS.",
+            "question": "Some companies are now reversing the option of remote working. Official reasons include improved productivity, teamwork, morale, and easier [field 1]. However, there are [field 2] that the requirement for staff to return to the physical office may not be for the reasons stated by companies. [field 3] by staff unhappy with the changes do not require a staff payout, whereas redundancies often require a payout by the company. Public perception that a company making redundancies is in [field 4] may also be a factor. In theory, fewer people working in an office should mean [field 5] were required, but apparent downsizing made many shareholders and [field 6] suspicious that the company was in trouble and at risk of collapse.",
+            "points": 6,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "Excellent! You got all the answers correct.",
+            "incorrect_feedback": "Some answers are incorrect. Review the talk.",
+            "reading_text_id": null,
+            "audio_section_id": 3,
+            "ielts_question_category": "",
+            "field_count": 6,
+            "field_answers": {
+                "1": "collaboration",
+                "2": "clear indications|indications",
+                "3": "resignations|resignation",
+                "4": "financial trouble|trouble",
+                "5": "smaller office spaces",
+                "6": "potential customers|customers"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Collaboration is mentioned as easier.",
+                    "incorrect": "Incorrect. Listen for what is easier when working together (Question 35).",
+                    "no_answer": "The correct answer is: collaboration. Make sure to listen carefully for key information and take notes while listening."
+                },
+                "2": {
+                    "correct": "Correct! There are clear indications of other reasons.",
+                    "incorrect": "Incorrect. Listen for what suggests other reasons (Question 36).",
+                    "no_answer": "The correct answer is: clear indications. Make sure to listen carefully for key information and take notes while listening."
+                },
+                "3": {
+                    "correct": "Correct! Resignations don't require payouts.",
+                    "incorrect": "Incorrect. Listen for what doesn't require a payout (Question 37).",
+                    "no_answer": "The correct answer is: resignations. Make sure to listen carefully for key information and take notes while listening."
+                },
+                "4": {
+                    "correct": "Correct! Companies in financial trouble make redundancies.",
+                    "incorrect": "Incorrect. Listen for what the public perception is (Question 38).",
+                    "no_answer": "The correct answer is: financial trouble. Make sure to listen carefully for key information and take notes while listening."
+                },
+                "5": {
+                    "correct": "Correct! Smaller office spaces would be needed.",
+                    "incorrect": "Incorrect. Listen for what would be needed (Question 39).",
+                    "no_answer": "The correct answer is: smaller office spaces. Make sure to listen carefully for key information and take notes while listening."
+                },
+                "6": {
+                    "correct": "Correct! Potential customers were suspicious.",
+                    "incorrect": "Incorrect. Listen for who was suspicious (Question 40).",
+                    "no_answer": "The correct answer is: potential customers. Make sure to listen carefully for key information and take notes while listening."
+                }
+            }
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_listening",
+        "cbt_test_type": "listening",
+        "exercise_label": "practice_test",
+        "open_as_popup": "1",
+        "scoring_type": "ielts_listening",
+        "timer_minutes": "",
+        "starting_question_number": "1"
+    },
+    "audio": {
+        "url": "https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0048.mp3",
+        "transcript": "",
+        "sections": [
+            {
+                "section_number": 1,
+                "transcript": "<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">\n<tbody>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">Good morning, Hunter Valley Holiday Park. How can I help you today?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">Hello, I'd like to make a booking for August. We're looking to book some tent sites please.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">That's no problem. How many nights do you want to book for?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">We'd like to stay for 4 nights please. We'll be arriving on August the <strong style=\"background-color: yellow;\">[Q2: 5th]</strong> and leaving again on the 9th.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">OK. How many of you are there?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">We're actually quite a large group – there'll be 11 of us in total, and we'll be bringing <strong style=\"background-color: yellow;\">[Q1: four]</strong> tents.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">That's quite a big group! Are you all adults?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">No – there will be 8 adults and 3 children.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">OK, I'll make that booking for you now. I'll just fill in this form – what's your name?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">My name is Eric <strong style=\"background-color: yellow;\">[Q4: Huse]</strong>. The spelling is a little unusual though – it's spelled H U S E</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">Okay, no problem. Do you want to pay for the booking now or when you get here?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">I'd prefer to pay when we get there if that's OK.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">That's no problem, but we do need a credit card number for the booking. We won't take the money out of the account until you get here though.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">OK that's fine. My credit card number is 5436 7800 0439 2428.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">Thanks. Now all we need is a contact number. Do you have a number I can take? Just in case we need to contact you for anything.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">Sure – I'll give you my mobile number. It's 034 <strong style=\"background-color: yellow;\">[Q5: 535 7221]</strong>.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">034 - 535 7211.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">No, it's 7 2 2 1</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">Oh, sorry, OK, I've got that.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">Now, have you stayed at our campsite before?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">No, I haven't, but <strong style=\"background-color: yellow;\">[Q6: a friend]</strong> recommended it and she's stayed there quite a few times. She said it's a lovely place with plenty of things to do for the children.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">Well, I'm glad to hear your friend had a good time here! Yes, there's lots for children to do – they can walk by the river, climb some of the local mountains or even swim in the lake. But what the children like most is <strong style=\"background-color: yellow;\">[Q7: the skatepark]</strong> – most kids spend hours there!</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">That sounds great!</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">Now I'll just tell you a little about the campsite. We have barbecues which are free to use, as well as the camp kitchen. There are toilet and shower blocks, but you'll need 50 pence pieces if you want a <strong style=\"background-color: yellow;\">[Q8: hot shower]</strong>. Cold showers are free though, so that depends on the weather.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">That's no problem. You said that you can walk along the river – are there a lot of walking paths in the area? We all enjoy hiking.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">Yes, there are lots of different walks you can take from the campsite along the river or in the mountains. There are several <strong style=\"background-color: yellow;\">[Q9: walking guides]</strong> available free of charge in reception.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">That's good. Oh, I wanted to ask you if it's OK to bring a dog?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">Yes, dogs are welcome as long as they are kept on a lead at all times.  We charge 1 pound per night for dogs to stay.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">Great. Now, can I just confirm the prices? My friend said it was £10 per night for an adult and £5 for children. Is that right?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">Ah no, sorry – the prices have gone up a little this year. It's now £<strong style=\"background-color: yellow;\">[Q10: 12]</strong> for adults and £6 for children.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Visitor</td>\n<td valign=\"top\" width=\"70%\">Oh, OK. Well thanks very much. We're really looking forward to staying with you!</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"30%\">Campsite reception</td>\n<td valign=\"top\" width=\"70%\">Well we'll look forward to seeing you in August then!</td>\n</tr>\n</tbody>\n</table>"
+            },
+            {
+                "section_number": 2,
+                "transcript": "<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">\n<tbody>\n<tr>\n<td valign=\"top\" width=\"100%\">\n<p>Good afternoon ladies and gentlemen and thanks very much for having me here to speak to you today on the topic of health and fitness. The focus of my talk today will be swimming and how it can not only keep you fit but also be a social occasion - even a bit of fun!</p>\n\n<p>Now, as you probably all know, as we get older it is harder to stay in shape and keep fit. Options like <strong style=\"background-color: yellow;\">[Q1: jogging]</strong> don't always suit older people because of the strain they can cause on your knees and other joints. In fact, there are many so-called 'healthy' fitness options that can actually do more damage than good because of this strain. With swimming, however, the water can help support your <strong style=\"background-color: yellow;\">[Q2: weight]</strong>, but at the same time provides some resistance, which makes it an excellent form of exercise that does not strain joints and muscles, and has been found to be particularly useful for people suffering from arthritis.</p>\n\n<p>A gentle swim or even walk in water has also been proven to reduce <strong style=\"background-color: yellow;\">[Q3: blood pressure]</strong>, and studies have shown that 20 minutes in the pool three times a week can reduce blood pressure within a matter of just one month. Now some of you may be thinking that a swim in warmer weather is fine, but not so great in colder weather. Well in fact this is another of the advantages of swimming – although it may be a little cold when you first get in, exercising in the water reduces the risk of <strong style=\"background-color: yellow;\">[Q4: overheating]</strong> common with many other forms of exercises. Overheating can actually cause problems as there is the risk of getting muscle pain.</p>\n\n<p>Before we take a short break, I'll just share a statistic with you. Just a few years ago, a study by McAllan Research centre found that of 200 people aged 60 plus who had done some regular exercise in the previous 12 months, over 70% had stopped due to injury. Now most of these injuries were caused by <strong style=\"background-color: yellow;\">[Q5: falls]</strong> which occurred during exercising, even something as gentle as lawn bowling or walking. Now when you consider that falling during swimming is not even possible, I think that's a great reason to consider it!</p>\n\n<p>Now, when I refer to swimming, I would just like to point out that you don't even need to be able to swim to take advantage of getting some exercise in the local swimming pool. There are lots of options available, so I'll start by talking about water walking. By wearing a specially designed <strong style=\"background-color: yellow;\">[Q6: belt]</strong> with a section at the back that will keep you afloat, you can exercise at your own pace. All you need to do is move your legs as though you are walking. Because the water is carrying most of the weight, there is a lot less pressure and stress on your knees and legs, but at the same time it is a very good way of getting some exercise. Also, because water walking is not a fast activity, you can do it with a friend or small group, and can even have <strong style=\"background-color: yellow;\">[Q7: a conversation]</strong> as you walk around the pool.</p>\n\n<p>For those of you who are quite confident with swimming, you can of course use the lanes to swim laps. However, I would make a strong recommendation here that you don't <strong style=\"background-color: yellow;\">[Q8: overdo]</strong> it on your first couple of visits.  We have found that people who build up their swimming lengths gradually, even if they only do five or 10 laps, end up going more often than people who rush and try and do 20 laps in the first visit and find it too hard.</p>\n\n<p>So, moderation is the key here. Now, as most of us are already retired and work hours are no longer a problem, you will be able to go during the day where it is a lot less busy.</p>\n\n<p>In addition to water walking and lane swimming, you can also join a fitness class. These are often referred to as aqua aerobics, and involve <strong style=\"background-color: yellow;\">[Q9: gentle movements]</strong> which will be shown to you by your instructor. Most aqua aerobics classes will also involve the use of some weights, although I should say that these are generally very light!</p>\n\n<p>Again, this is a great option for those of you who are not that confident in the water, because most aqua aerobics classes are held in <strong style=\"background-color: yellow;\">[Q10: shallow]</strong> pools where the water is no more than 1.2 m deep. This means that you will be able to stand and don't have to worry about keeping afloat. Because aqua aerobics is done in groups, it can be a very sociable way to keep fit and do some exercise. The classes are often done with background music as well, so it makes it a little bit more interesting for people in the class.</p>\n</td>\n</tr>\n</tbody>\n</table>"
+            },
+            {
+                "section_number": 3,
+                "transcript": "<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">\n<tbody>\n<tr>\n<td valign=\"top\" width=\"20%\">Tutor:</td>\n<td valign=\"top\" width=\"80%\">Hi John, please come in. As you know, the university has set up these meetings to give all students the opportunity to talk to their tutors about the subjects and how they are doing academically, but this is also a chance for you to talk about how things are going generally, living in the student accommodation, sharing facilities with other students, that sort of thing. And don't forget, everything we discuss here remains confidential. So, how do you feel the year is going so far?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Student:</td>\n<td valign=\"top\" width=\"80%\">Well, yeah, no problems really. I'm doing OK with my subjects. I just got 82% for my last history assignment, so I'm very pleased with that. Things aren't going so well with my language classes though. I'm starting to wonder whether I should have taken just the history lectures this semester.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Tutor:</td>\n<td valign=\"top\" width=\"80%\">Hmm... so what grades are you getting for languages?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Student:</td>\n<td valign=\"top\" width=\"80%\">Well, I'm just above the pass level for French, but I think I might fail my German classes. I just can't seem to get the hang of it, and it's so much harder than when I was in high school.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Tutor:</td>\n<td valign=\"top\" width=\"80%\">Is there anything your German tutor can do to help you, do you think?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Student:</td>\n<td valign=\"top\" width=\"80%\">No, not really. I mean, all my classmates seem to be OK - it's just me. But then again, I haven't really divided my time equally between the subjects, and I have started a part time job recently that gives me even less time.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Tutor:</td>\n<td valign=\"top\" width=\"80%\">Oh, I see. Do you think you should have a job if your studies are suffering?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Student:</td>\n<td valign=\"top\" width=\"80%\">Well, I wouldn't choose to, but I need to earn a little extra cash to pay for some of my living expenses. I have a student loan but it's limited and doesn't last the week. And the job is only four hours a day Saturday and Sunday, as well as one evening during the week, so it's not too much time.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Tutor:</td>\n<td valign=\"top\" width=\"80%\">Do you have a study plan? You know - a schedule of when you will study which subject and for how long?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Student:</td>\n<td valign=\"top\" width=\"80%\">To be honest, I think I just need to be a little more disciplined with my studies. I made a plan at the beginning of last semester but I didn't stick to it, so I haven't made one for this semester. I don't think it really helped me much.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Tutor:</td>\n<td valign=\"top\" width=\"80%\">Well if that's not the kind of thing that works for you, how about creating a study group with some of your classmates? You can discuss the work you have studied that week, and talk about those things that you are finding difficult. It may be that one of the other students can explain something in a way that you find easier to understand. You can find a quiet table in the room in front of the library to meet, or if that doesn't work you can come and see me and I'll try to find a quiet room for you in this part of the school.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Student:</td>\n<td valign=\"top\" width=\"80%\">Hmmm... that's actually quite a good idea. It would give me a chance to catch up, and it would certainly make me feel more confident. I'll try to get some people interested and see how we go from there.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Tutor:</td>\n<td valign=\"top\" width=\"80%\">OK, good. And what about student life? Are you happy where you are living?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Student:</td>\n<td valign=\"top\" width=\"80%\">Oh yes, it's much better than I thought it would be. In the first semester, I didn't really like living with so many other people, but now I've come to quite like it. Most of the people on my floor are very friendly and we all get on well. It's good to spend some time with people that are studying different subjects, too, otherwise you spend too much time talking about coursework and assignments. I am finding it a little difficult getting to the French lectures though. It's on the <strong style=\"background-color: yellow;\">[Q6: south campus]</strong> and takes me nearly half an hour to walk there, and I only have 30 minutes between my French lecture and my history lecture, so I have been late a few times.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Tutor:</td>\n<td valign=\"top\" width=\"80%\">Do you have a vehicle of your own?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Student:</td>\n<td valign=\"top\" width=\"80%\">No...well, I have <strong style=\"background-color: yellow;\">[Q7: a bicycle]</strong>, but I haven't used it since the end of last semester when the front tyre went flat.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Tutor:</td>\n<td valign=\"top\" width=\"80%\">OK, well what about using the bus? It runs between the two campuses so would get you there in about 10 minutes. It only costs 24 pounds for the semester.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Student:</td>\n<td valign=\"top\" width=\"80%\">Yes, I looked into that, but I don't get out of my history lecture until <strong style=\"background-color: yellow;\">[Q8: 12]</strong>.00 and the first bus leaves then, so I never get to the bus stop on time. The next bus comes at 25 past, so that would get me there late.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Tutor:</td>\n<td valign=\"top\" width=\"80%\">Oh, I see. Then I recommend you look into getting your bicycle fixed then. You can't afford to be late, especially as you are only at a pass level at the moment. Have you talked to your French teacher about why you are sometimes late?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Student:</td>\n<td valign=\"top\" width=\"80%\">I keep meaning to but never get around to it.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Tutor:</td>\n<td valign=\"top\" width=\"80%\">OK, well I think that you ought to make that a priority as soon as you can. Have you had any thoughts about what you plan to do over the summer break? We encourage all of our students to enrol in our work placement scheme, where the university will help students find a job doing something that they think they might like to pursue after graduation. Have you had any thoughts?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Student:</td>\n<td valign=\"top\" width=\"80%\">Well, as I said before, I really need a little extra money at the moment, and I have been offered <strong style=\"background-color: yellow;\">[Q9: some extra shifts]</strong> at the restaurant where I am working at the moment, so I'll probably take that, even though it's not what I plan to do in the long term. Maybe next year I'll be in a better position to look for something more in line with my future career.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Tutor:</td>\n<td valign=\"top\" width=\"80%\">I see. Well, have you considered applying for an extension to your current student loan?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Student:</td>\n<td valign=\"top\" width=\"80%\">Yes, I have, but unfortunately, I was turned down - I didn't qualify for the <strong style=\"background-color: yellow;\">[Q10: hardship grant]</strong> I had applied for. I guess I need to learn to live a little more economically, and stop going out so much.</td>\n</tr>\n</tbody>\n</table>"
+            },
+            {
+                "section_number": 4,
+                "transcript": "<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">\n<tbody>\n<tr>\n<td valign=\"top\" width=\"100%\">\n<p>Since the late 1990s, when internet connections became commonplace in many countries, there has been significant change in the way a number of companies permit their staff to operate, and the concept of working out of the office began on a large scale. Working from home, also referred to as 'remote working', became even more popular with large companies about a decade ago as suburban broadband improved. Video conferencing went from being difficult to practical. Statistics released in 2004 showed that, in many countries across Western Europe and North America, just over 17% of major corporations offered at least some staff the option of working from home.</p>\n\n<p>Fast forward to today, and leaps in mobile technology have meant that 'remote working' has now expanded far beyond the working from home options of the early 2000s. Now employees are able to work almost anywhere, with little more than a cell phone and a data connection.</p>\n\n<p>However, this change can only in part be attributed to ever-evolving technology. A large part of the driving force, which has more recently seen a huge rise in the number of corporations offering remote working options, has also been driven by a generation referred to as 'millennials' (defined by researchers Strauss and Howe as born between 1982 and 2004). This group of employees, and soon to be employees, are demanding a wider range of flexibility in their working hours and locations. The concept of travelling to an office 5 days a week, to work a 9 to 5 job just like their parents, is simply something many are not willing to do.</p>\n\n<p>For the corporations themselves, this increasing move towards a more flexible working environment offers a number of incentives. Fewer staff members on-site means a reduction in the necessary physical size of offices and work environments. As more staff are working outside of the office, there are more and more companies who operate an 'available desk' policy, meaning that workers that usually work remotely but may need to visit their office do not have a designated workspace - they simply occupy the first free desk that is available on any given day. There are also less obvious ways that office areas can be reduced - fewer bathrooms are now needed, as well as fewer car parking spaces.</p>\n\n<p>Although there is a continued increase in the number of positions which can now be filled by those who work remotely, there are some companies that are now beginning to clamp down on the practice, even to the point of cancelling previously established positions that were conducted out of the office. Given that working from home solved a number of issues, this seems to be an unusual step for corporations to take.</p>\n\n<p>The official reason for the change is that a department working together in one place improves productivity, teamwork and morale. And there's something in this. <strong style=\"background-color: yellow;\">[Q5: Collaboration]</strong> is easier when co-workers are based at the same location. Even chance meetings at the coffee station can spark fresh ideas.</p>\n\n<p>However, there are <strong style=\"background-color: yellow;\">[Q6: clear indications]</strong> that the requirement for staff to return to the physical office is not entirely based on a desire to increase productivity and creativity in the workplace. Are there more sinister reasons for the change?</p>\n\n<p>For companies that once offered the option of working from home, the requirement for staff to now once again travel to an office might prove too much for some employees, who may instead choose to resign and find work elsewhere. <strong style=\"background-color: yellow;\">[Q7: Resignations]</strong> do not require a payout, whereas redundancies often require a sum of money to be paid to the staff member whose position has been cut. For a company that may want to reduce the number of people on the payroll, reintroducing unfavourable work conditions that encourage staff to move on is a convenient and low-cost way of trimming staff numbers. Then of course there is the public perception factor too - a company that is making staff redundant can often - and generally accurately - be perceived as being in <strong style=\"background-color: yellow;\">[Q8: financial trouble]</strong>, and that does not make for good business.</p>\n\n<p>The cost factor that working from home appeared to offer to companies also did not work out quite the way it was expected. Fewer people working at an office base meant that companies required - at least in theory - <strong style=\"background-color: yellow;\">[Q9: smaller office spaces]</strong>. But could the reduced building space mean the company was in trouble? Was there a potential collapse imminent? As with many decisions made when a company is in the public eye, this apparent downsizing made many shareholders and <strong style=\"background-color: yellow;\">[Q10: potential customers]</strong> suspicious about the changes being implemented.</p>\n\n<p>But of course, there are significant concerns for companies that have decided to withdraw the option of working from home. Many talented staff members may quit, and those that do return to the office may carry a degree of resentment.</p>\n</td>\n</tr>\n</tbody>\n</table>"
+            }
+        ]
+    },
+    "_metadata": {
+        "exported_at": "2026-01-03 14:30:00",
+        "exported_by": "converter",
+        "plugin_version": "10.16",
+        "format_version": "1.0"
+    }
+}
