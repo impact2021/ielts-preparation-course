@@ -6197,7 +6197,7 @@ class IELTS_CM_Admin {
             
             // JSON Export
             $('#ielts-cm-export-json-btn').on('click', function() {
-                var exportUrl = ajaxurl + '?action=ielts_cm_export_exercise_json&post_id=<?php echo $post->ID; ?>&nonce=<?php echo wp_create_nonce('ielts_cm_export_json_' . $post->ID); ?>';
+                var exportUrl = ajaxurl + '?action=ielts_cm_export_exercise_json&post_id=<?php echo absint($post->ID); ?>&nonce=<?php echo esc_js(wp_create_nonce('ielts_cm_export_json_' . $post->ID)); ?>';
                 window.location.href = exportUrl;
             });
             
@@ -6237,8 +6237,8 @@ class IELTS_CM_Admin {
                 // Prepare form data
                 var formData = new FormData();
                 formData.append('action', 'ielts_cm_import_exercise_json');
-                formData.append('post_id', <?php echo $post->ID; ?>);
-                formData.append('nonce', '<?php echo wp_create_nonce('ielts_cm_import_json_' . $post->ID); ?>');
+                formData.append('post_id', <?php echo absint($post->ID); ?>);
+                formData.append('nonce', '<?php echo esc_js(wp_create_nonce('ielts_cm_import_json_' . $post->ID)); ?>');
                 formData.append('json_file', file);
                 formData.append('import_mode', importMode);
                 
