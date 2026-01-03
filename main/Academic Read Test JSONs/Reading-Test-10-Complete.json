@@ -1,0 +1,1480 @@
+{
+    "title": "Reading Test 10",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Choose the most suitable headings for sections A–F from the list.\n\nParagraph A",
+            "question": "Paragraph A",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'History of prosthetics'. Paragraph A discusses the historical development of artificial limbs from ancient times.",
+            "correct_feedback": "Correct! Paragraph A traces the development of prosthetics from ancient civilizations to modern technology.",
+            "incorrect_feedback": "Incorrect. Review Paragraph A which paragraph a discusses the historical development of artificial limbs from ancient times.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "The leading authority",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Financial concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Surgical implantation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "History of prosthetics",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph A traces the development of prosthetics from ancient civilizations to modern technology."
+                },
+                {
+                    "text": "Commonplace miracles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Other applications",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "A perfect solution",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Improving realism",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "A second chance",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "The leading authority\nFinancial concerns\nSurgical implantation\nHistory of prosthetics\nCommonplace miracles\nOther applications\nA perfect solution\nImproving realism\nA second chance",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph B",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'A second chance'. Paragraph B describes how prosthetics give amputees the opportunity to regain their mobility.",
+            "correct_feedback": "Correct! Paragraph B describes how prosthetics give people like Mr Baird a second chance at normal life.",
+            "incorrect_feedback": "Incorrect. Review Paragraph B which paragraph b describes how prosthetics give amputees the opportunity to regain their mobility.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "The leading authority",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Financial concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Surgical implantation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "History of prosthetics",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Commonplace miracles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Other applications",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "A perfect solution",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Improving realism",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "A second chance",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B describes how prosthetics give people like Mr Baird a second chance at normal life."
+                }
+            ],
+            "options": "The leading authority\nFinancial concerns\nSurgical implantation\nHistory of prosthetics\nCommonplace miracles\nOther applications\nA perfect solution\nImproving realism\nA second chance",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph C",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Improving realism'. Paragraph C discusses advances in making prosthetic limbs more life-like.",
+            "correct_feedback": "Correct! Paragraph C discusses how advances in technology are making prosthetics more realistic.",
+            "incorrect_feedback": "Incorrect. Review Paragraph C which paragraph c discusses advances in making prosthetic limbs more life-like.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "The leading authority",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Financial concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Surgical implantation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "History of prosthetics",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Commonplace miracles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Other applications",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "A perfect solution",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Improving realism",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C discusses how advances in technology are making prosthetics more realistic."
+                },
+                {
+                    "text": "A second chance",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "The leading authority\nFinancial concerns\nSurgical implantation\nHistory of prosthetics\nCommonplace miracles\nOther applications\nA perfect solution\nImproving realism\nA second chance",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph D",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Surgical implantation'. Paragraph D describes the surgical process of attaching bionic limbs.",
+            "correct_feedback": "Correct! Paragraph D describes the surgical process of connecting bionic limbs to nerves, muscles and bone structure.",
+            "incorrect_feedback": "Incorrect. Review Paragraph D which paragraph d describes the surgical process of attaching bionic limbs.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "The leading authority",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Financial concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Surgical implantation",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D describes the surgical process of connecting bionic limbs to nerves, muscles and bone structure."
+                },
+                {
+                    "text": "History of prosthetics",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Commonplace miracles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Other applications",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "A perfect solution",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Improving realism",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "A second chance",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "The leading authority\nFinancial concerns\nSurgical implantation\nHistory of prosthetics\nCommonplace miracles\nOther applications\nA perfect solution\nImproving realism\nA second chance",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph E",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Financial concerns'. Paragraph E discusses the cost barriers to accessing bionic limbs.",
+            "correct_feedback": "Correct! Paragraph E discusses how cost is the main obstacle preventing widespread adoption of bionic limbs.",
+            "incorrect_feedback": "Incorrect. Review Paragraph E which paragraph e discusses the cost barriers to accessing bionic limbs.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "The leading authority",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Financial concerns",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E discusses how cost is the main obstacle preventing widespread adoption of bionic limbs."
+                },
+                {
+                    "text": "Surgical implantation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "History of prosthetics",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Commonplace miracles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Other applications",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "A perfect solution",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Improving realism",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "A second chance",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "The leading authority\nFinancial concerns\nSurgical implantation\nHistory of prosthetics\nCommonplace miracles\nOther applications\nA perfect solution\nImproving realism\nA second chance",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph F",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Other applications'. Paragraph F discusses how bionic technology is being applied to other organs and body parts.",
+            "correct_feedback": "Correct! Paragraph F discusses how bionic technology is being used for hearts, eyes, ears and other organs.",
+            "incorrect_feedback": "Incorrect. Review Paragraph F which paragraph f discusses how bionic technology is being applied to other organs and body parts.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "The leading authority",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Financial concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Surgical implantation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "History of prosthetics",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Commonplace miracles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Other applications",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F discusses how bionic technology is being used for hearts, eyes, ears and other organs."
+                },
+                {
+                    "text": "A perfect solution",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Improving realism",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "A second chance",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "The leading authority\nFinancial concerns\nSurgical implantation\nHistory of prosthetics\nCommonplace miracles\nOther applications\nA perfect solution\nImproving realism\nA second chance",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "open_question",
+            "instructions": "Answer the following questions using NO MORE THAN ONE WORD from the text.",
+            "question": "What was the reason for Mr Baird's amputation?",
+            "points": 1.0,
+            "no_answer_feedback": "Please provide an answer. The correct answer is DIABETES. The passage states that Mr Baird lost his leg due to complications from diabetes.",
+            "correct_feedback": "Correct! The passage clearly states that Mr Baird's amputation was due to complications from diabetes.",
+            "incorrect_feedback": "Incorrect. Review Paragraph B which mentions the medical condition that led to Mr Baird's amputation. The correct answer is DIABETES.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "DIABETES"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage clearly states that Mr Baird's amputation was due to complications from diabetes.",
+                    "incorrect": "Incorrect. Review Paragraph B which mentions the medical condition that led to Mr Baird's amputation. The correct answer is DIABETES.",
+                    "no_answer": "Please provide an answer. The correct answer is DIABETES. The passage states that Mr Baird lost his leg due to complications from diabetes."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What is the main obstacle to using bionic limbs?",
+            "points": 1.0,
+            "no_answer_feedback": "Please provide an answer. The correct answer is COST. The passage states that cost is the main obstacle to using bionic limbs.",
+            "correct_feedback": "Correct! The passage identifies cost as the primary barrier preventing widespread use of bionic limbs.",
+            "incorrect_feedback": "Incorrect. Review Paragraph E which discusses the main obstacle to using bionic limbs. The correct answer is COST.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "COST"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage identifies cost as the primary barrier preventing widespread use of bionic limbs.",
+                    "incorrect": "Incorrect. Review Paragraph E which discusses the main obstacle to using bionic limbs. The correct answer is COST.",
+                    "no_answer": "Please provide an answer. The correct answer is COST. The passage states that cost is the main obstacle to using bionic limbs."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Do the following statements agree with the views of the writer?\n\nWrite\n\nYES if the statement agrees with the writer\nNO if the statement does not agree with the writer\nNOT GIVEN if there is no information about this in the passage.",
+            "question": "The difference between traditional prosthetics and bionic limbs is that they have not been subjected to such rigorous testing.",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The passage does not compare the testing procedures between traditional prosthetics and bionic limbs, so this information is not given.",
+            "correct_feedback": "Correct! The passage does not provide information comparing the testing procedures of traditional prosthetics versus bionic limbs, so the answer is NOT GIVEN.",
+            "incorrect_feedback": "Incorrect. Review the passage carefully. There is no mention comparing the testing procedures between traditional prosthetics and bionic limbs. The correct answer is NOT GIVEN.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "NO",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": ""
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Many organs are now replaceable thanks to bionic technology and research.",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is YES. Paragraph F states that bionic technology has been developed for hearts, eyes, ears and other organs.",
+            "correct_feedback": "Correct! Paragraph F confirms that bionic technology has expanded to many organs including hearts, eyes, ears, making many organs replaceable.",
+            "incorrect_feedback": "Incorrect. Review Paragraph F which discusses the application of bionic technology to various organs beyond just limbs. The correct answer is YES.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "open_question",
+            "instructions": "Label the diagram using NO MORE THAN TWO WORDS from the text for each answer.\n\nHow a Bionic Limb Works\n\nComponents of a bionic prosthetic arm:",
+            "question": "The bionic arm contains [field 1] that detect electrical signals from the remaining muscles. These signals are processed by a [field 2] that controls the movement of [field 3] in the hand and wrist. The device is powered by a [field 4], and covered with [field 5] for a natural appearance.",
+            "points": 1.0,
+            "no_answer_feedback": "Please provide answers for all fields. The correct answers are: Field 1: SENSORS (or ELECTRODES), Field 2: MICROPROCESSOR (or COMPUTER CHIP), Field 3: MOTORS, Field 4: RECHARGEABLE BATTERY (or BATTERY), Field 5: SILICONE SKIN (or SYNTHETIC SKIN or SKIN).",
+            "correct_feedback": "Correct! All components have been correctly identified.",
+            "incorrect_feedback": "Incorrect. Review Paragraph D which describes the components and operation of a bionic limb. Check each field carefully.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 5,
+            "field_answers": {
+                "1": "SENSORS|ELECTRODES",
+                "2": "MICROPROCESSOR|COMPUTER CHIP",
+                "3": "MOTORS",
+                "4": "RECHARGEABLE BATTERY|BATTERY",
+                "5": "SILICONE SKIN|SYNTHETIC SKIN|SKIN"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage mentions that sensors (or electrodes) detect electrical signals from the remaining muscles.",
+                    "incorrect": "Incorrect. Look for what detects electrical signals from muscles in Paragraph D discussing bionic limbs.",
+                    "no_answer": "Please provide an answer. The correct answer is SENSORS (or ELECTRODES). Hint: What detects electrical signals from remaining muscles?"
+                },
+                "2": {
+                    "correct": "Correct! The passage states that a microprocessor processes the signals to control movement.",
+                    "incorrect": "Incorrect. Check Paragraph D for what processes the electrical signals to control limb movement.",
+                    "no_answer": "Please provide an answer. The correct answer is MICROPROCESSOR (or COMPUTER CHIP). Hint: What processes the signals to control movement?"
+                },
+                "3": {
+                    "correct": "Correct! The passage mentions that motors provide movement in the hand and wrist.",
+                    "incorrect": "Incorrect. Look in Paragraph D for what provides movement in the bionic hand and wrist.",
+                    "no_answer": "Please provide an answer. The correct answer is MOTORS. Hint: What provides movement in the hand and wrist?"
+                },
+                "4": {
+                    "correct": "Correct! The passage states that the device is powered by a rechargeable battery.",
+                    "incorrect": "Incorrect. Check Paragraph D for what provides power to the bionic limb.",
+                    "no_answer": "Please provide an answer. The correct answer is RECHARGEABLE BATTERY (or BATTERY). Hint: What provides power to the device?"
+                },
+                "5": {
+                    "correct": "Correct! The passage mentions that the bionic limb is covered with silicone skin for a natural appearance.",
+                    "incorrect": "Incorrect. Look in Paragraph C or D for what covers the bionic limb for natural appearance.",
+                    "no_answer": "Please provide an answer. The correct answer is SILICONE SKIN (or SYNTHETIC SKIN). Hint: What covers the limb for natural look?"
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Look at the following statements and decide if they are right or wrong according to the information given.\n\nWrite\n\nTRUE if the statement is true\nFALSE if the statement is false\nNOT GIVEN if the information is not given in the passage.",
+            "question": "A better understanding of the causes of amnesia has allowed researchers to find cures.",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The passage states 'Though we may be some way from a cure' and describes amnesia as 'a condition which has as yet defied true understanding and consequently any form of effective treatment.'",
+            "correct_feedback": "Correct! The passage clearly states that amnesia has defied true understanding and there is no effective treatment or cure yet available.",
+            "incorrect_feedback": "Incorrect. Review the first and third paragraphs which state that amnesia 'has as yet defied true understanding and consequently any form of effective treatment' and 'Though we may be some way from a cure'. The answer is FALSE.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Older people are more likely to suffer from amnesia.",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. While the passage mentions that transient global amnesia 'is usually seen in middle-aged to elderly people,' there is no general statement about older people being more prone to amnesia overall.",
+            "correct_feedback": "Correct! The passage mentions age in relation to one specific type of amnesia (transient global) but does not make a general statement about age and amnesia.",
+            "incorrect_feedback": "Incorrect. Although the passage states transient global amnesia 'is usually seen in middle-aged to elderly people,' this refers only to one type of amnesia, not amnesia in general. There is no overall statement about older people being more likely to suffer from amnesia. The answer is NOT GIVEN.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "NO",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": ""
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Some forms of amnesia are self-induced.",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The passage states 'There are some forms of amnesia that are self-induced' and gives Korsakoff syndrome from excessive alcohol consumption as an example.",
+            "correct_feedback": "Correct! The passage explicitly states 'There are some forms of amnesia that are self-induced' with Korsakoff syndrome as an example.",
+            "incorrect_feedback": "Incorrect. Review the fifth paragraph which states 'There are some forms of amnesia that are self-induced. Korsakoff syndrome... is memory loss stemming from excessive alcohol consumption.' The answer is TRUE.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Match a type of amnesia with a description.\n\nAnterograde",
+            "question": "Anterograde",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'failure of short-term or recent memory'. The passage states that anterograde amnesia is characterised by 'a complete recall of events that occurred before the trauma... but an inability to retain new memories since that time.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "more isolated than other forms",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes lacunar amnesia. Review the description of anterograde amnesia."
+                },
+                {
+                    "text": "failure of short-term or recent memory",
+                    "is_correct": true,
+                    "feedback": "Correct! Anterograde amnesia is characterised by an inability to retain new memories, which represents a failure of short-term or recent memory."
+                },
+                {
+                    "text": "clear memories only since the onset of amnesia",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes retrograde amnesia. Review the description of anterograde amnesia."
+                },
+                {
+                    "text": "the result of the sufferer's habits",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes Korsakoff syndrome. Review the description of anterograde amnesia."
+                },
+                {
+                    "text": "possibly a result of temporary blood-flow problems.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes transient global amnesia. Review the description of anterograde amnesia."
+                }
+            ],
+            "options": "more isolated than other forms\nfailure of short-term or recent memory\nclear memories only since the onset of amnesia\nthe result of the sufferer's habits\npossibly a result of temporary blood-flow problems.",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Retrograde",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'clear memories only since the onset of amnesia'. The passage states that retrograde amnesia is 'the opposite' of anterograde, 'in which short-term memory functions perfectly well, but events or experiences from before the trauma... can no longer be recalled.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "more isolated than other forms",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes lacunar amnesia. Review the description of retrograde amnesia."
+                },
+                {
+                    "text": "failure of short-term or recent memory",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes anterograde amnesia. Review the description of retrograde amnesia."
+                },
+                {
+                    "text": "clear memories only since the onset of amnesia",
+                    "is_correct": true,
+                    "feedback": "Correct! Retrograde amnesia allows short-term memory to function perfectly well while past memories are lost, meaning clear memories only since the onset."
+                },
+                {
+                    "text": "the result of the sufferer's habits",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes Korsakoff syndrome. Review the description of retrograde amnesia."
+                },
+                {
+                    "text": "possibly a result of temporary blood-flow problems.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes transient global amnesia. Review the description of retrograde amnesia."
+                }
+            ],
+            "options": "more isolated than other forms\nfailure of short-term or recent memory\nclear memories only since the onset of amnesia\nthe result of the sufferer's habits\npossibly a result of temporary blood-flow problems.",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Transient global",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'possibly a result of temporary blood-flow problems.' The passage states 'Some theorists have suggested that it could be the result of small strokes which can occur when a blockage in an artery temporarily prevents oxygen supply to part of the brain' for transient global amnesia.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "more isolated than other forms",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes lacunar amnesia. Review the description of transient global amnesia."
+                },
+                {
+                    "text": "failure of short-term or recent memory",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes anterograde amnesia. Review the description of transient global amnesia."
+                },
+                {
+                    "text": "clear memories only since the onset of amnesia",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes retrograde amnesia. Review the description of transient global amnesia."
+                },
+                {
+                    "text": "the result of the sufferer's habits",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes Korsakoff syndrome. Review the description of transient global amnesia."
+                },
+                {
+                    "text": "possibly a result of temporary blood-flow problems.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions that transient global amnesia could result from 'small strokes which can occur when a blockage in an artery temporarily prevents oxygen supply.'"
+                }
+            ],
+            "options": "more isolated than other forms\nfailure of short-term or recent memory\nclear memories only since the onset of amnesia\nthe result of the sufferer's habits\npossibly a result of temporary blood-flow problems.",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Lacunar",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'more isolated than other forms'. The passage states lacunar amnesia is 'in which a specific event is blocked or erased from memory,' making it more isolated or specific than other broader forms of amnesia.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "more isolated than other forms",
+                    "is_correct": true,
+                    "feedback": "Correct! Lacunar amnesia is characterised by a specific event being blocked or erased from memory, making it more isolated or specific than other forms."
+                },
+                {
+                    "text": "failure of short-term or recent memory",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes anterograde amnesia. Review the description of lacunar amnesia."
+                },
+                {
+                    "text": "clear memories only since the onset of amnesia",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes retrograde amnesia. Review the description of lacunar amnesia."
+                },
+                {
+                    "text": "the result of the sufferer's habits",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes Korsakoff syndrome. Review the description of lacunar amnesia."
+                },
+                {
+                    "text": "possibly a result of temporary blood-flow problems.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes transient global amnesia. Review the description of lacunar amnesia."
+                }
+            ],
+            "options": "more isolated than other forms\nfailure of short-term or recent memory\nclear memories only since the onset of amnesia\nthe result of the sufferer's habits\npossibly a result of temporary blood-flow problems.",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Korsakoff",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'the result of the sufferer's habits'. The passage describes Korsakoff syndrome as 'memory loss stemming from excessive alcohol consumption,' which is clearly a result of the sufferer's drinking habits.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "more isolated than other forms",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes lacunar amnesia. Review the description of Korsakoff syndrome."
+                },
+                {
+                    "text": "failure of short-term or recent memory",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes anterograde amnesia. Review the description of Korsakoff syndrome."
+                },
+                {
+                    "text": "clear memories only since the onset of amnesia",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes retrograde amnesia. Review the description of Korsakoff syndrome."
+                },
+                {
+                    "text": "the result of the sufferer's habits",
+                    "is_correct": true,
+                    "feedback": "Correct! Korsakoff syndrome is described as 'memory loss stemming from excessive alcohol consumption,' which is directly related to the sufferer's habits."
+                },
+                {
+                    "text": "possibly a result of temporary blood-flow problems.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes transient global amnesia. Review the description of Korsakoff syndrome."
+                }
+            ],
+            "options": "more isolated than other forms\nfailure of short-term or recent memory\nclear memories only since the onset of amnesia\nthe result of the sufferer's habits\npossibly a result of temporary blood-flow problems.",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose the correct answer A-D.\n\n24. Most amnesiacs",
+            "question": "Most amnesiacs",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'recover older memories first'. The passage states 'For those amnesiacs who recover, older memories are generally recalled first, and then more recent memories, until almost all memory is recovered.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "recover all their memories",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'Memories of events that occurred around the time of the accident or onset of amnesia are sometimes never recovered.'"
+                },
+                {
+                    "text": "recover older memories first",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'For those amnesiacs who recover, older memories are generally recalled first, and then more recent memories.'"
+                },
+                {
+                    "text": "suffer from transient global amnesia",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Transient global amnesia is just one type of amnesia mentioned in the passage, not the most common form among amnesiacs."
+                },
+                {
+                    "text": "have suffered a head injury.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While the passage mentions head injuries as one cause of amnesia, it also lists many other causes such as stroke, disease, and psychological trauma."
+                }
+            ],
+            "options": "recover all their memories\nrecover older memories first\nsuffer from transient global amnesia\nhave suffered a head injury.",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Diagnosis of amnesia",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'can sometimes be made with a brain scan'. The passage states 'The brain can also be scanned to reveal any evidence of damage' as part of the diagnosis process for amnesia.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "has now been perfected",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'Diagnosing amnesia and its cause is still far from an exact science,' indicating it is not perfected."
+                },
+                {
+                    "text": "depends on a patient's general health",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While doctors check general health as part of the examination, the diagnosis depends on multiple factors, not primarily on general health alone."
+                },
+                {
+                    "text": "can sometimes be made with a brain scan",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'The brain can also be scanned to reveal any evidence of damage' as one method used in diagnosing amnesia."
+                },
+                {
+                    "text": "is easily made",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states 'Diagnosing amnesia and its cause is still far from an exact science,' indicating difficulty."
+                }
+            ],
+            "options": "has now been perfected\ndepends on a patient's general health\ncan sometimes be made with a brain scan\nis easily made",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the sentences below. Use NO MORE THAN THREE WORDS from the text for each answer.",
+            "question": "Without office technology we couldn't ______________.",
+            "points": 1.0,
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'work from home'. Paragraph B states that technology means we can do business efficiently regardless of location.",
+            "correct_feedback": "Correct! Paragraph B states that 'The technology available to us now means that we no longer need to be in the same office building as our colleagues'.",
+            "incorrect_feedback": "Incorrect. Review Paragraph B which discusses how technology enables us to do business from different locations.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "work from home"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph B states that 'The technology available to us now means that we no longer need to be in the same office building as our colleagues'.",
+                    "incorrect": "Incorrect. Review Paragraph B which discusses how technology enables us to do business from different locations.",
+                    "no_answer": "Please provide an answer. The correct answer is 'work from home'. Paragraph B states that technology means we can do business efficiently regardless of location."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "With fewer requirements for space, businesses can benefit from lower static _____.",
+            "points": 1.0,
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'costs'. Paragraph C states that home-based workers require less office space reducing fixed costs.",
+            "correct_feedback": "Correct! Paragraph C mentions that 'a workforce set up in such a way requires far less office space' reducing fixed costs.",
+            "incorrect_feedback": "Incorrect. Review Paragraph C which discusses the financial benefits for companies of having home-based workers.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "costs"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph C mentions that 'a workforce set up in such a way requires far less office space' reducing fixed costs.",
+                    "incorrect": "Incorrect. Review Paragraph C which discusses the financial benefits for companies of having home-based workers.",
+                    "no_answer": "Please provide an answer. The correct answer is 'costs'. Paragraph C states that home-based workers require less office space reducing fixed costs."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Despite political pressure, public transport is still ______________.",
+            "points": 1.0,
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'unpopular'. Paragraph D states that governments have tried to persuade us to use public transport but 'this is still unpopular'.",
+            "correct_feedback": "Correct! Paragraph D states that 'Governments have been trying for years to persuade us to forsake our private car journey' but 'this is still unpopular'.",
+            "incorrect_feedback": "Incorrect. Review Paragraph D which discusses people's resistance to using buses or trains instead of private cars.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "unpopular"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph D states that 'Governments have been trying for years to persuade us to forsake our private car journey' but 'this is still unpopular'.",
+                    "incorrect": "Incorrect. Review Paragraph D which discusses people's resistance to using buses or trains instead of private cars.",
+                    "no_answer": "Please provide an answer. The correct answer is 'unpopular'. Paragraph D states that governments have tried to persuade us to use public transport but 'this is still unpopular'."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "It is important that the social aspects of working in an office are not ________.",
+            "points": 1.0,
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'overlooked'. Paragraph E states that workplace relationships 'are a significant part of our life and should not be overlooked'.",
+            "correct_feedback": "Correct! Paragraph E emphasizes that 'The relationships we have with our colleagues...are a significant part of our life and should not be overlooked'.",
+            "incorrect_feedback": "Incorrect. Review Paragraph E which discusses the importance of workplace relationships and social aspects.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "overlooked"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph E emphasizes that 'The relationships we have with our colleagues...are a significant part of our life and should not be overlooked'.",
+                    "incorrect": "Incorrect. Review Paragraph E which discusses the importance of workplace relationships and social aspects.",
+                    "no_answer": "Please provide an answer. The correct answer is 'overlooked'. Paragraph E states that workplace relationships 'are a significant part of our life and should not be overlooked'."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the summary by using words from the box below. Write the correct letter A - H.\n\nA benefits\nB friendships\nC conduct business\nD workplace\nE financial\nF flexibility\nG release\nH psychological",
+            "question": "Technology has allowed us to (30) [field 1] at home instead of the office. For the company, there are (31) [field 2] incentives and for the employee there is more (32) [field 3]. There are even (33) [field 4] for the environment. However, there is a (34) [field 5] factor to be considered.",
+            "points": 5.0,
+            "no_answer_feedback": "Please provide answers for all fields. The correct answers are: Field 1: C (conduct business), Field 2: E (financial), Field 3: F (flexibility), Field 4: A (benefits), Field 5: H (psychological).",
+            "correct_feedback": "Correct! All your answers accurately summarize the key points about working from home.",
+            "incorrect_feedback": "Incorrect. Review the passage to find the words that best complete the summary.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "field_count": 5,
+            "field_answers": {
+                "1": "C",
+                "2": "E",
+                "3": "F",
+                "4": "A",
+                "5": "H"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph B states that technology means 'we can do business' from different locations.",
+                    "incorrect": "Incorrect. Look at Paragraph B for what technology enables us to do. The answer is C.",
+                    "no_answer": "Please provide an answer for Field 1. Hint: What does technology allow us to do at home? The correct answer is C."
+                },
+                "2": {
+                    "correct": "Correct! Paragraph C mentions that 'The fixed costs of a business can be dramatically reduced'.",
+                    "incorrect": "Incorrect. Review Paragraph C for the type of incentives companies have. The answer is E.",
+                    "no_answer": "Please provide an answer for Field 2. Hint: What kind of incentives do companies get from reduced costs? The correct answer is E."
+                },
+                "3": {
+                    "correct": "Correct! Paragraph C mentions employees enjoy 'freedom to schedule the day as they choose' which is flexibility.",
+                    "incorrect": "Incorrect. Review Paragraph C for what employees get more of. The answer is F.",
+                    "no_answer": "Please provide an answer for Field 3. Hint: What do employees get more of with working from home? The correct answer is F."
+                },
+                "4": {
+                    "correct": "Correct! Paragraph D discusses environmental benefits like fewer cars and lower CO2 levels.",
+                    "incorrect": "Incorrect. Review Paragraph D for positive impacts on the environment. The answer is A.",
+                    "no_answer": "Please provide an answer for Field 4. Hint: What are there for the environment? The correct answer is A."
+                },
+                "5": {
+                    "correct": "Correct! Paragraph E discusses psychological aspects like becoming 'depressed and withdrawn' without enough social interaction.",
+                    "incorrect": "Incorrect. Review Paragraph E for the type of factor to consider as a drawback. The answer is H.",
+                    "no_answer": "Please provide an answer for Field 5. Hint: What kind of factor is discussed in Paragraph E? The correct answer is H."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose the appropriate heading for each paragraph of the following text from the list below.\n\nList of headings\n\nParagraph A",
+            "question": "Paragraph A",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Time for a change?'. Paragraph A asks questions about wanting change and suggests working from home.",
+            "correct_feedback": "Correct! Paragraph A asks questions about wanting change and suggests making a career change to work from home.",
+            "incorrect_feedback": "Incorrect. Review Paragraph A which discusses the desire for change and working from home.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Time for a change?",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph A asks questions about wanting change and suggests making a career change to work from home."
+                },
+                {
+                    "text": "Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "Time for a change?\nSocial impact\nManagement decisions\nFlexibility of technology\nWasted time on the road\nTechnology keeping us at home\nBenefits for all\nBusiness in the workplace\nKeeping it clean\nThe best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph B",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Flexibility of technology'. Paragraph B discusses how technology enables working from home.",
+            "correct_feedback": "Correct! Paragraph B discusses how technology enables flexible work arrangements and communication from any location.",
+            "incorrect_feedback": "Incorrect. Review Paragraph B which discusses the technology that makes working from home possible.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Flexibility of technology",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B discusses how technology enables flexible work arrangements and communication from any location."
+                },
+                {
+                    "text": "Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "Time for a change?\nSocial impact\nManagement decisions\nFlexibility of technology\nWasted time on the road\nTechnology keeping us at home\nBenefits for all\nBusiness in the workplace\nKeeping it clean\nThe best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph C",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Benefits for all'. Paragraph C discusses benefits for both companies and employees.",
+            "correct_feedback": "Correct! Paragraph C discusses the benefits for both companies (reduced costs) and employees (flexibility, time with family).",
+            "incorrect_feedback": "Incorrect. Review Paragraph C which discusses the advantages of working from home for both employers and employees.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Benefits for all",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C discusses the benefits for both companies (reduced costs) and employees (flexibility, time with family)."
+                },
+                {
+                    "text": "Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "Time for a change?\nSocial impact\nManagement decisions\nFlexibility of technology\nWasted time on the road\nTechnology keeping us at home\nBenefits for all\nBusiness in the workplace\nKeeping it clean\nThe best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph D",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Keeping it clean'. Paragraph D discusses environmental benefits and pollution reduction.",
+            "correct_feedback": "Correct! Paragraph D discusses environmental benefits of working from home, including reduced pollution and CO2 levels.",
+            "incorrect_feedback": "Incorrect. Review Paragraph D which discusses pollution problems and environmental benefits of working from home.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Keeping it clean",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D discusses environmental benefits of working from home, including reduced pollution and CO2 levels."
+                },
+                {
+                    "text": "The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "Time for a change?\nSocial impact\nManagement decisions\nFlexibility of technology\nWasted time on the road\nTechnology keeping us at home\nBenefits for all\nBusiness in the workplace\nKeeping it clean\nThe best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph E",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Social impact'. Paragraph E discusses workplace relationships and social interactions.",
+            "correct_feedback": "Correct! Paragraph E discusses the social aspects of work, relationships with colleagues, and the psychological impact of isolation.",
+            "incorrect_feedback": "Incorrect. Review Paragraph E which discusses the importance of social interactions and relationships at work.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Social impact",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E discusses the social aspects of work, relationships with colleagues, and the psychological impact of isolation."
+                },
+                {
+                    "text": "Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "Time for a change?\nSocial impact\nManagement decisions\nFlexibility of technology\nWasted time on the road\nTechnology keeping us at home\nBenefits for all\nBusiness in the workplace\nKeeping it clean\nThe best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph F",
+            "points": 1.0,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'The best of both worlds'. Paragraph F suggests combining home-based work with regular meetings.",
+            "correct_feedback": "Correct! Paragraph F suggests that a balance combining home-based work with regular office meetings is the best solution.",
+            "incorrect_feedback": "Incorrect. Review Paragraph F which discusses finding a balance between working from home and regular office contact.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "The best of both worlds",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F suggests that a balance combining home-based work with regular office meetings is the best solution."
+                }
+            ],
+            "options": "Time for a change?\nSocial impact\nManagement decisions\nFlexibility of technology\nWasted time on the road\nTechnology keeping us at home\nBenefits for all\nBusiness in the workplace\nKeeping it clean\nThe best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Passage 1",
+            "content": "<h3>Reading Passage 1</h3>\n<h4>You should spend about 20 minutes on Questions 1 – 15 which are based on Reading Passage 1.</h4>\n\n<h2>Bionic Limbs: The Future of Prosthetics</h2>\n\n<p><strong>A</strong> The history of prosthetics dates back thousands of years. Archaeological evidence suggests that artificial limbs were used in ancient Egypt, with the earliest known prosthetic toe discovered on a mummy from around 950 BC. Throughout the Middle Ages and Renaissance, craftsmen fashioned wooden legs and metal hands for those who had lost limbs in battle or accidents. However, these early prosthetics were purely cosmetic or offered very limited functionality. It was not until the 20th century that significant advances began to emerge, with improvements in materials and design leading to more practical devices. The late 20th and early 21st centuries have witnessed a revolution in prosthetic technology, with the development of bionic limbs that can respond to the user's thoughts and intentions through electronic interfaces.</p>\n\n<p><strong>B</strong> For individuals like James Baird, who lost his leg below the knee due to complications from diabetes, modern prosthetics offer far more than just the ability to walk again. Mr Baird, a 52-year-old engineer from Manchester, was fitted with a state-of-the-art bionic leg that has transformed his life. 'I thought my active days were over,' he recalls. 'But with this new prosthetic, I can not only walk normally, I can run, climb stairs, and even play football with my grandchildren.' This represents a second chance at living a full and active life that would have been unimaginable just a generation ago. The psychological benefits are equally important, as users report feeling more confident and less self-conscious about their disability.</p>\n\n<p><strong>C</strong> Modern bionic limbs represent a significant leap forward in realism and functionality. Advanced prosthetics now incorporate sophisticated sensors, microprocessors, and motorized joints that work together to create natural movement patterns. The latest models feature silicone skin that closely matches the user's skin tone and texture, making the prosthetic almost indistinguishable from a natural limb at first glance. Some manufacturers have even developed synthetic skin that responds to touch and temperature, providing sensory feedback to the user. This attention to aesthetic detail, combined with improved mechanical performance, helps users feel more comfortable and confident in social situations. The technology has advanced to the point where professional athletes can compete at the highest levels using prosthetic limbs.</p>\n\n<p><strong>D</strong> The process of fitting a bionic limb involves complex surgical procedures and careful integration with the body's existing systems. Surgeons must ensure that the residual limb is properly prepared, with nerves and muscles positioned to interface effectively with the prosthetic device. For advanced bionic limbs, electrodes or sensors are surgically implanted to detect electrical signals from the remaining muscles. These signals are then processed by a microprocessor embedded in the prosthetic, which translates them into precise movements of motors that control the joints, hand, and fingers. The entire system is powered by a rechargeable battery that can last for several hours of continuous use. This surgical implantation and integration process requires significant expertise and post-operative care to ensure optimal functioning.</p>\n\n<p><strong>E</strong> Despite these remarkable advances, cost remains the primary obstacle to widespread adoption of bionic limb technology. A state-of-the-art bionic arm or leg can cost anywhere from £40,000 to £100,000, putting it beyond the reach of most individuals without comprehensive insurance coverage or government assistance. Even in wealthy countries, many insurance companies refuse to cover the full cost of bionic prosthetics, arguing that simpler, cheaper alternatives are adequate. This financial barrier means that the majority of amputees worldwide continue to use traditional prosthetics or no prosthetic at all. Researchers and manufacturers are working to reduce costs through mass production and simplified designs, but progress has been slow. Until bionic limbs become more affordable, they will remain a luxury available only to a privileged few.</p>\n\n<p><strong>F</strong> The technology behind bionic limbs is now being applied to other parts of the human body with remarkable results. Scientists have developed bionic eyes that can partially restore vision to people with certain types of blindness, using electronic implants that stimulate the optic nerve. Bionic ears, more commonly known as cochlear implants, have been helping deaf individuals hear for several decades. Researchers are also working on artificial hearts, bionic organs for kidney function, and even brain-computer interfaces that could help paralyzed individuals control their environment. This expansion of bionic technology represents a fundamental shift in how we approach disability and human enhancement. While ethical questions remain about the appropriate use of such technology, there is no doubt that many organs and body parts are now replaceable through bionic research and development, offering hope to millions of people worldwide.</p>"
+        },
+        {
+            "title": "Reading Passage 2",
+            "content": "<h3>Reading Passage 2</h3>\n<h4>You should spend about 20 minutes on Questions 16 – 25 which are based on Reading Passage 2.</h4>\n\n<h2>Amnesia</h2>\n\n<p>Medical science has made some amazing discoveries over the past century. Nerves can be repaired, skin can be grafted, organs can be replaced. Advancements in the field of psychology are no less impressive, as it is now possible to diagnose and treat a number of mental illnesses. Yet there is a gap in our knowledge, a condition which has as yet defied true understanding and consequently any form of effective treatment – amnesia. Sufferers of amnesia find themselves unable to recall or remember past experiences, even to the point of not knowing the names of their own family.</p>\n\n<p>In order to understand how amnesia affects us, it is important to understand how our memories are stored. Physiologically speaking, a memory is the result of chemical or even structural changes in synaptic transmissions between neurons. As these changes occur, a pathway is created. This pathway is called a memory trace. Signals can travel along these memory traces through the brain. Making and storing memories is a complex process involving many regions of the brain, including the frontal, temporal and parietal lobes, and it is damage or disease to these areas that results in varying degrees of memory loss. For this reason, it is common for people with head injuries to experience at least some degree of amnesia. For those amnesiacs who recover, older memories are generally recalled first, and then more recent memories, until almost all memory is recovered. Memories of events that occurred around the time of the accident or onset of amnesia are sometimes never recovered.</p>\n\n<p>Though we may be some way from a cure, research has allowed us to at least identify the problem areas. Amnesia is an umbrella term covering memory loss in general and there are a number of specific types depending on related causes, different causes or symptoms. This condition may result from health problems or events in life, such as an accident. It may result from damage to the brain from injuries, including head injury, stroke, or a result of disease, such as alcohol, or chronic drug abuse or psychological trauma or stress. For each of these causes, there is a distinct form of amnesia.</p>\n\n<p>Anterograde amnesia is characterised by a complete recall of events that occurred before the trauma or disease that caused the amnesia, but an inability to retain new memories since that time. Retrograde amnesia is the opposite, in which short-term memory functions perfectly well, but events or experiences from before the trauma or disease can no longer be recalled. Transient global amnesia is perhaps the most frightening, as there is as yet no consistently identifiable cause. Some theorists have suggested that it could be the result of small strokes which can occur when a blockage in an artery temporarily prevents oxygen supply to part of the brain. Others argue that intense migraines could be a significant factor. Both theories base themselves on the fact that this amnesia is usually seen in middle-aged to elderly people. Characterised by sudden confusion and forgetfulness, this generally lasts between half an hour and 24 hours, although in severe attacks a victim can become completely disoriented and may briefly experience retrograde amnesia that extends back several years. While very frightening for the patient, transient global amnesia has the highest rate of total recovery.</p>\n\n<p>Amnesia can also manifest itself in other, more specific, forms such as lacunar amnesia, in which a specific event is blocked or erased from memory. This is a fairly common form of amnesia, most often occurring after a particular harrowing or emotionally difficult event or experience. On a similar note, temporary memory loss can be induced through psychological trauma leading the victim to suffer from emotional or hysterical amnesia. There are some forms of amnesia that are self-induced. Korsakoff syndrome, familiar in its mildest form to many, is memory loss stemming from excessive alcohol consumption. In extreme cases of alcohol abuse, days or even weeks of memory may disappear.</p>\n\n<p>Diagnosing amnesia and its cause is still far from an exact science. If amnesia is suspected, patients undergo a physical examination during which doctors look at several factors. During a physical examination, the doctor enquires about recent traumas or illnesses, drug and medication history, and checks the patient's general health. For cases where a problem appears to be manifesting itself, psychological examination may be able to determine the extent of amnesia and the memory system affected. The brain can also be scanned to reveal any evidence of damage, and blood can be tested to check for any diseases that may be present. Yet it should be remembered that for the most part, amnesia is often temporary and very limited. Some types of amnesia, such as transient global amnesia, are completely resolved and there is no permanent loss of memory. Others, such as Korsakoff syndrome, may be permanent, but no matter what the cause, a degree of rehabilitation is almost always possible.</p>"
+        },
+        {
+            "title": "Reading Passage 3",
+            "content": "<h3>Reading Passage 3</h3>\n<h4>You should spend about 20 minutes on Questions 26 - 40 which are based on Reading Passage 3.</h4>\n\n<h2>Working from home</h2>\n\n<p><strong>A:</strong> Can you feel your anxiety and stress levels increasing every time you get caught in a traffic jam? Do you find it difficult to control your tongue when your boss points out your shortcomings yet again? Do you just not have the right kind of office attire, hate spending hours shopping for it and, frankly, would feel much better if you only had more independence, more freedom, more flexible hours and fewer people on your back? Do you yearn for state-of-the-art technology in your home, that ... wait for it ... you haven't had to pay for? If you are shouting an enthusiastic 'Yes!' in answer to these questions, then it could be time to make a career and life change that may not even require you to quit your job. Just suggest to your boss that you wish to become one of the new breed of executives whose office is based at home.</p>\n\n<p><strong>B:</strong> Working from home is a relatively new phenomenon, but is becoming an increasingly popular option with both businesses and employees. The technology available to us now means that we no longer need to be in the same office building as our colleagues to communicate effectively with each other. E-mail, video conferencing, mobile telephones and more, mean that we can do business just as efficiently, regardless of our location.</p>\n\n<p><strong>C:</strong> Companies may choose to employ a proportion of their staff as home-based workers, as, of course, a workforce set up in such a way requires far less office space and fewer parking facilities. The fixed costs of a business can be dramatically reduced. Employees can enjoy the added benefits of freedom to schedule the day as they choose and freedom to spend more time at home with their families. Working from home can be a particularly valid option for young mothers who wish to pursue their careers but find it impossible to be out of the house for nine or ten hours per day.</p>\n\n<p><strong>D:</strong> We can even go so far as to say that the working-from-home phenomenon could be one of the answers to the pollution problems which the modern world has inflicted upon itself. Fewer people travelling to work every day equals fewer cars. Fewer cars, of course, equates to lower CO2 levels in the atmosphere. Governments have been trying for years to persuade us to forsake our private car journey to work each day for the hideous experience of a crowded bus or train, but this is still unpopular. Most of us have been resistant, even when parking fees in city areas have been on the rise and unpredictable traffic patterns mean we have to leave our house 30 minutes earlier than necessary anyway. But working from home gives us no excuse whatsoever to emit CO2 into the atmosphere twice a day in our working week.</p>\n\n<p><strong>E:</strong> But what are the drawbacks to working from home? There must be some or everybody would be doing it. For many of us, work is a means of escaping our nearest and dearest and making our own mark on the world. The relationships we have with our colleagues, be they good or bad, are a significant part of our life and should not be overlooked - after all, full-time workers spend a third of their day in their workplace. After-hours pursuits of a game of squash or a pint in the pub become part of our daily routine. We cement sound friendships at work and an astounding percentage of us meet our life partner at our place of work. The people there have similar ambitions and business interests and we are, after all, social animals. The majority of us become depressed and withdrawn if we do not have enough interaction with others. Some people who work from home feel that, because they do spend a large proportion of the day at home alone with few distractions, they are actually much more productive and can get tasks done in a much shorter time than in an office environment. Others, however, may be demotivated by the isolation and find it difficult to get down to tasks which have a more intangible deadline.</p>\n\n<p><strong>F:</strong> As with most aspects of life, a balance is probably the best solution for the majority of workers - a job based at home which requires regular contact with colleagues at regular meetings. Management surveys show that successful business is easier if we operate as a team: brainstorming and sharing ideas and offering support and motivation to each other. After all, we are only human and we need others to complain to if we have a bad day at work!</p>"
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "reading",
+        "exercise_label": "practice_test",
+        "open_as_popup": "1",
+        "scoring_type": "ielts_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    }
+}
