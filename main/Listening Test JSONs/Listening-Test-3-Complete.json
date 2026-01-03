@@ -12,7 +12,7 @@
             "incorrect_feedback": "Incorrect. Listen carefully to where the man did his introduction to driving course.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "high school|school"
@@ -35,7 +35,7 @@
             "incorrect_feedback": "Incorrect. Listen to how long ago the man completed his previous driving course.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "two years|2 years"
@@ -58,7 +58,7 @@
             "incorrect_feedback": "Incorrect. Listen to the details about the full-time course duration per day.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "three hours|3 hours|three|3"
@@ -81,7 +81,7 @@
             "incorrect_feedback": "Incorrect. Listen to what is taught on one specific day of the course.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "road rules|rules"
@@ -104,7 +104,7 @@
             "incorrect_feedback": "Incorrect. Listen for how many Saturdays the weekend course runs.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "form_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "three|3"
@@ -127,7 +127,7 @@
             "incorrect_feedback": "Incorrect. Listen for the daily hours of the weekend course.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "form_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "five|5"
@@ -150,7 +150,7 @@
             "incorrect_feedback": "Incorrect. Listen for what time the weekend course starts.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "form_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "nine|9"
@@ -166,21 +166,21 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "8. Weekend course cost: £[field 1]",
+            "question": "8. Weekend course cost: \u00a3[field 1]",
             "points": 1.0,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "Correct! The weekend course costs £295.",
+            "correct_feedback": "Correct! The weekend course costs \u00a3295.",
             "incorrect_feedback": "Incorrect. Listen for the cost of the weekend course.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "form_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "295|two hundred and ninety five"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! The weekend course costs £295.",
+                    "correct": "Correct! The weekend course costs \u00a3295.",
                     "incorrect": "Incorrect. Listen for the cost of the weekend course.",
                     "no_answer": "The correct answer is: 295. Make sure to listen carefully for key information and take notes while listening."
                 }
@@ -189,21 +189,21 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "9. Weekday course cost: £[field 1]",
+            "question": "9. Weekday course cost: \u00a3[field 1]",
             "points": 1.0,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "Correct! The weekday course costs £275.",
+            "correct_feedback": "Correct! The weekday course costs \u00a3275.",
             "incorrect_feedback": "Incorrect. Listen for the cost of the weekday course.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "form_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "275|two hundred and seventy five"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! The weekday course costs £275.",
+                    "correct": "Correct! The weekday course costs \u00a3275.",
                     "incorrect": "Incorrect. Listen for the cost of the weekday course.",
                     "no_answer": "The correct answer is: 275. Make sure to listen carefully for key information and take notes while listening."
                 }
@@ -219,7 +219,7 @@
             "incorrect_feedback": "Incorrect. Listen for the name of the available instructor.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "form_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "john thompson|thompson"
@@ -241,8 +241,8 @@
             "correct_feedback": "Excellent! You got all the answers correct.",
             "incorrect_feedback": "Some answers are incorrect. Review the talk about Las Vegas attractions.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "table_completion_l",
             "field_count": 5,
             "field_answers": {
                 "1": "100|ONE HUNDRED|A HUNDRED|1 HUNDRED|one hundred|a hundred",
@@ -288,8 +288,8 @@
             "correct_feedback": "Excellent! You got all the answers correct.",
             "incorrect_feedback": "Some answers are incorrect. Review the talk about the Hoover Dam.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "summary_completion_l",
             "field_count": 5,
             "field_answers": {
                 "1": "1900",
@@ -335,8 +335,8 @@
             "correct_feedback": "Correct! Children start later in South Africa (Q21).",
             "incorrect_feedback": "Incorrect. Listen for which country has children starting school at age 7.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "matching_l",
             "mc_options": [
                 {
                     "text": "A. South Africa",
@@ -367,8 +367,8 @@
             "correct_feedback": "Correct! New Zealand has intermediate school (Q22).",
             "incorrect_feedback": "Incorrect. Listen for which country has intermediate school.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "matching_l",
             "mc_options": [
                 {
                     "text": "A. South Africa",
@@ -399,8 +399,8 @@
             "correct_feedback": "Correct! South Africa has few religious private schools (Q23).",
             "incorrect_feedback": "Incorrect. Listen for which country has only a few religious schools.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "matching_l",
             "mc_options": [
                 {
                     "text": "A. South Africa",
@@ -431,8 +431,8 @@
             "correct_feedback": "Correct! South Africa doesn't have correspondence education (Q24).",
             "incorrect_feedback": "Incorrect. Listen for which country doesn't have correspondence education.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "matching_l",
             "mc_options": [
                 {
                     "text": "A. South Africa",
@@ -463,8 +463,8 @@
             "correct_feedback": "Correct! New Zealand has home schooling (Q25).",
             "incorrect_feedback": "Incorrect. Listen for which country has home schooling.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "matching_l",
             "mc_options": [
                 {
                     "text": "A. South Africa",
@@ -495,8 +495,8 @@
             "correct_feedback": "Correct! Australia has compulsory extracurricular activities (Q26).",
             "incorrect_feedback": "Incorrect. Listen for which country has compulsory extracurricular activities.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "matching_l",
             "mc_options": [
                 {
                     "text": "A. South Africa",
@@ -527,8 +527,8 @@
             "correct_feedback": "Excellent! You got all the answers correct.",
             "incorrect_feedback": "Some answers are incorrect. Review the discussion about the boarding school dress code.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "note_completion_l",
             "field_count": 4,
             "field_answers": {
                 "1": "KNEELING|KNEELING DOWN|kneeling|kneeling down|Kneeling|Kneeling down",
@@ -568,8 +568,8 @@
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "repeated physical movement|repeated physical movements"
@@ -591,8 +591,8 @@
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "computers"
@@ -614,8 +614,8 @@
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "body position"
@@ -637,8 +637,8 @@
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "warning signs"
@@ -660,8 +660,8 @@
             "correct_feedback": "Correct!",
             "incorrect_feedback": "Incorrect.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "too close"
@@ -683,8 +683,8 @@
             "correct_feedback": "Excellent! You got all the answers correct.",
             "incorrect_feedback": "Some answers are incorrect. Review the lecture about ergonomic setup guidelines.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "note_completion_l",
             "field_count": 5,
             "field_answers": {
                 "1": "foot stool|stool",
@@ -739,15 +739,15 @@
         "sections": [
             {
                 "section_number": 1,
-                "transcript": "<table class=\"style1\" border=\"1px solid #333\">\n<tbody>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">Hello. Welcome to Pacific Harbour Driving school. How can I help?</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">Good afternoon. I have a driving test booked for next month, and I want to take some driving lessons.</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">We can help you there. Have you taken any driving lessons before, or is this your first time?</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">I did do a short introduction to driving course at <strong style=\"background-color: yellow;\">[Q1: high school]</strong>, and I learned to drive with my father before that.  But I want to get my license, so I need to have some lessons from your school.</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">Of course – that's no problem.  How long ago did you do the driving course?</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">That was last year – no, sorry, that was <strong style=\"background-color: yellow;\">[Q2: two years]</strong> ago. I have a certificate for that course here with me now. Do you need to see it?</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">No, that's OK – I'll just make a note about it here though.</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">OK, great. When do you think I will be able to start the driving lessons?</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">Well, we have a range of different lessons and times, so let me show you the schedule.  You can do a full-time course – that takes five days, from Monday to Friday, and the lessons are for <strong style=\"background-color: yellow;\">[Q3: three hours]</strong> each day. Or you can do three weekends - well, Saturdays actually - five hours each Saturday day, from 9 in the morning until 2 in the afternoon.</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">Can you tell me a little more about the five-day course? How much does it cost and what will I learn?</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">Ok, with the five-day course, that's 10 a.m. to 1 p.m. from Monday to Friday. You drive in the city for four days, and will learn about parking, driving in traffic and all the essentials… and then there is one day for learning all the <strong style=\"background-color: yellow;\">[Q4: road rules]</strong> and regulations.  You do the theory on the second day, so that you understand everything while you're learning to drive.</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">That sounds like a lot.</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">Well, it's not really that hard, it's over five days so the instructor really takes his time, and you can go at your own speed.  We will also give you a copy of the book you will need to study from with all the rules about driving so you can do some study in your own time. The book's called <em>Road Rules</em> and is included in the price of the course.</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">Ok, sounds good.  What about the weekend course?  Is it much different?</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">You will cover the same information, it's just that you do it at different times.  As I said, it's 9 a.m. to two p.m., and you have an introductory session here at our driving school to get the basics of handling a car, then a couple of hours for theory and the road rules. Over the next 2 Saturdays, you will be driving in traffic, parallel parking and learning proper behaviour on busy city streets.</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">I think having more time to study between lessons might be good for me, so the weekend course will be better. Yes, I think I'll sign up for the weekend course.  How much is that?  And when does the next course start?</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">Well, the weekend course is £295, and the weekday course is £275.  There's a slight difference in cost because the weekend class is on a Saturday, not our regular hours.</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">Alright, well, I think I'll sign up for the weekend course.  Can I start this weekend?</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">Let me see if we have any instructors available….  Yes, we do.  John Thompson is available.</td>\n</tr>\n</tbody>\n</table>"
+                "transcript": "<table class=\"style1\" border=\"1px solid #333\">\n<tbody>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">Hello. Welcome to Pacific Harbour Driving school. How can I help?</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">Good afternoon. I have a driving test booked for next month, and I want to take some driving lessons.</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">We can help you there. Have you taken any driving lessons before, or is this your first time?</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">I did do a short introduction to driving course at <strong style=\"background-color: yellow;\">[Q1: high school]</strong>, and I learned to drive with my father before that.  But I want to get my license, so I need to have some lessons from your school.</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">Of course \u2013 that's no problem.  How long ago did you do the driving course?</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">That was last year \u2013 no, sorry, that was <strong style=\"background-color: yellow;\">[Q2: two years]</strong> ago. I have a certificate for that course here with me now. Do you need to see it?</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">No, that's OK \u2013 I'll just make a note about it here though.</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">OK, great. When do you think I will be able to start the driving lessons?</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">Well, we have a range of different lessons and times, so let me show you the schedule.  You can do a full-time course \u2013 that takes five days, from Monday to Friday, and the lessons are for <strong style=\"background-color: yellow;\">[Q3: three hours]</strong> each day. Or you can do three weekends - well, Saturdays actually - five hours each Saturday day, from 9 in the morning until 2 in the afternoon.</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">Can you tell me a little more about the five-day course? How much does it cost and what will I learn?</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">Ok, with the five-day course, that's 10 a.m. to 1 p.m. from Monday to Friday. You drive in the city for four days, and will learn about parking, driving in traffic and all the essentials\u2026 and then there is one day for learning all the <strong style=\"background-color: yellow;\">[Q4: road rules]</strong> and regulations.  You do the theory on the second day, so that you understand everything while you're learning to drive.</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">That sounds like a lot.</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">Well, it's not really that hard, it's over five days so the instructor really takes his time, and you can go at your own speed.  We will also give you a copy of the book you will need to study from with all the rules about driving so you can do some study in your own time. The book's called <em>Road Rules</em> and is included in the price of the course.</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">Ok, sounds good.  What about the weekend course?  Is it much different?</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">You will cover the same information, it's just that you do it at different times.  As I said, it's 9 a.m. to two p.m., and you have an introductory session here at our driving school to get the basics of handling a car, then a couple of hours for theory and the road rules. Over the next 2 Saturdays, you will be driving in traffic, parallel parking and learning proper behaviour on busy city streets.</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">I think having more time to study between lessons might be good for me, so the weekend course will be better. Yes, I think I'll sign up for the weekend course.  How much is that?  And when does the next course start?</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">Well, the weekend course is \u00a3295, and the weekday course is \u00a3275.  There's a slight difference in cost because the weekend class is on a Saturday, not our regular hours.</td>\n</tr>\n<tr>\n<td width=\"25%\">Man:</td>\n<td width=\"75%\">Alright, well, I think I'll sign up for the weekend course.  Can I start this weekend?</td>\n</tr>\n<tr>\n<td width=\"25%\">Receptionist:</td>\n<td width=\"75%\">Let me see if we have any instructors available\u2026.  Yes, we do.  John Thompson is available.</td>\n</tr>\n</tbody>\n</table>"
             },
             {
                 "section_number": 2,
-                "transcript": "<div style=\"height: 300px; overflow: scroll;\">\n\n<strong>Section 2</strong><strong> </strong>\n\nHello everyone and thank you for inviting me here to talk about places to visit the in the USA. For my presentation today, I’d like to focus on Las Vegas, which as many of you will know is in Nevada.\n\nWhen talking about Las Vegas, the first thing that comes to mind for most people is gambling. Now of course it’s true that gambling is a major aspect of the city – there are over <strong style=\"background-color: yellow;\">[Q1: 100]</strong> casinos. However, there is actually a whole lot more that you can do there, and that’s what I’d like to talk to you about today.\n\nWithout even needing to travel out of the city, there are plenty of different and exciting things to do. We’ll start by talking about the museums in the area. One of the most well known is the National Museum of Organized Crime and Law Enforcement, or the ‘Mob Museum’ as it is more commonly known. This is a self-guided tour where you can find out about the history of organised crime in the area and the people that were involved. Visitors can listen to <strong style=\"background-color: yellow;\">[Q2: conversations]</strong> between criminals that were recorded by the police nearly 100 years ago, and you can even sit in a real electric chair.\n\nFor something a little more lighthearted, you can also visit the Pinball Hall of Fame - a museum for pinball machines that opened January 2006. Containing over 200 different pinball machines, the museum also has some classic video games, and is funded purely from donations. In fact, this museum is not run to make a profit, and any excess revenue is passed on to <strong style=\"background-color: yellow;\">[Q3: charities]</strong> in the area.\n\nThere are also museums for car lovers, a waxwork museum with images of famous people moulded in wax, an aviation museum with full sized aeroplanes and much more.\n\nBut for those of you who are looking for a little more of a thrill than a museum, there are plenty of more exciting options. Take, for example, the <em>High Roller</em> – at nearly 170 metres high, it was the world’s largest Ferris wheel when it was built in 2014. There are 32 cabins on the wheel, each of which can accommodate up to <strong style=\"background-color: yellow;\">[Q4: 40]</strong> people, and it takes about 30 minutes for the wheel to turn all the way around.\n\nThere is also the <em>Big Apple Roller Coaster</em>, which reaches speeds of nearly 70 miles per hour and has two loops, as well as a terrifying 50 metre drop. In total, the track is over 1.<strong style=\"background-color: yellow;\">[Q8: 5 kilometres]</strong> long, but the ride itself takes less than 3 minutes, and perhaps one of the most interesting aspects of this ride is that it actually begins and ends inside a <strong style=\"background-color: yellow;\">[Q5: hotel]</strong>, with the track snaking its way around the outside of 2 buildings, before ending back in the hotel to finish.\n\nAnother place that is extremely popular for day trippers is the Hoover Dam, and that’s what I would like to talk about now.\n\nFirst, let’s talk about some important dates. The idea of building a dam was first discussed as far back as <strong style=\"background-color: yellow;\">[Q6: 1900]</strong>, but it was not until 1928 that the project was authorised by the government. In 1931, a group of companies finally began construction, with a completion date of 1938. However,  the dam was actually finished and in operation 2 years ahead of schedule, in <strong style=\"background-color: yellow;\">[Q7: 1936]</strong>.\n\nConstruction of the dam faced some massive challenges. The first was to divert the Colorado River, and this was done by drilling 4 tunnels into the canyon walls, and these tunnels had a combined length of over 5 kilometres. Next came the beginning of the dam itself. Rising to a height of 221 metres, the dam was a massive undertaking. The people who worked at those heights, supported only by ropes, were called ‘high scalers’, and this was arguably the most dangerous job of them all. <strong style=\"background-color: yellow;\">[Q9: Falling rocks]</strong> and broken ropes caused many deaths and injuries, but this was also the time when safety equipment started to become used in construction. Initially, to protect their heads from falling rocks, the high scalers dipped pieces of cloth into tar and waited for the tar to harden before strapping them to their heads. When the company saw how effective this simple measure was, they ordered thousands of what were initially called ‘hard boiled hats’, which later became known as hard hats which are still in use – although of course in an updated version – on construction sites today.\n\nHowever, falling rock was not the only danger the workers faced. The heat alone – which regularly reached over 45 degrees – was responsible for the death of 16 workers. Others died from carbon monoxide poisoning from the use of petrol powered generators and vehicles in tunnels without enough fresh air, and in total, 112 people died during the dam’s construction.\n\nDespite this heavy cost, the dam has performed without any major incident since the time of its construction and provides power for approximately <strong style=\"background-color: yellow;\">[Q10: 1.3 million]</strong> people.\n\n</div>"
+                "transcript": "<div style=\"height: 300px; overflow: scroll;\">\n\n<strong>Section 2</strong><strong>\u00a0</strong>\n\nHello everyone and thank you for inviting me here to talk about places to visit the in the USA. For my presentation today, I\u2019d like to focus on Las Vegas, which as many of you will know is in Nevada.\n\nWhen talking about Las Vegas, the first thing that comes to mind for most people is gambling. Now of course it\u2019s true that gambling is a major aspect of the city \u2013 there are over <strong style=\"background-color: yellow;\">[Q1: 100]</strong> casinos. However, there is actually a whole lot more that you can do there, and that\u2019s what I\u2019d like to talk to you about today.\n\nWithout even needing to travel out of the city, there are plenty of different and exciting things to do. We\u2019ll start by talking about the museums in the area. One of the most well known is the National Museum of Organized Crime and Law Enforcement, or the \u2018Mob Museum\u2019 as it is more commonly known. This is a self-guided tour where you can find out about the history of organised crime in the area and the people that were involved. Visitors can listen to <strong style=\"background-color: yellow;\">[Q2: conversations]</strong> between criminals that were recorded by the police nearly 100 years ago, and you can even sit in a real electric chair.\n\nFor something a little more lighthearted, you can also visit the Pinball Hall of Fame - a museum for pinball machines that opened January 2006. Containing over 200 different pinball machines, the museum also has some classic video games, and is funded purely from donations. In fact, this museum is not run to make a profit, and any excess revenue is passed on to <strong style=\"background-color: yellow;\">[Q3: charities]</strong> in the area.\n\nThere are also museums for car lovers, a waxwork museum with images of famous people moulded in wax, an aviation museum with full sized aeroplanes and much more.\n\nBut for those of you who are looking for a little more of a thrill than a museum, there are plenty of more exciting options. Take, for example, the <em>High Roller</em> \u2013 at nearly 170 metres high, it was the world\u2019s largest Ferris wheel when it was built in 2014. There are 32 cabins on the wheel, each of which can accommodate up to <strong style=\"background-color: yellow;\">[Q4: 40]</strong> people, and it takes about 30 minutes for the wheel to turn all the way around.\n\nThere is also the <em>Big Apple Roller Coaster</em>, which reaches speeds of nearly 70 miles per hour and has two loops, as well as a terrifying 50 metre drop. In total, the track is over 1.<strong style=\"background-color: yellow;\">[Q8: 5 kilometres]</strong> long, but the ride itself takes less than 3 minutes, and perhaps one of the most interesting aspects of this ride is that it actually begins and ends inside a <strong style=\"background-color: yellow;\">[Q5: hotel]</strong>, with the track snaking its way around the outside of 2 buildings, before ending back in the hotel to finish.\n\nAnother place that is extremely popular for day trippers is the Hoover Dam, and that\u2019s what I would like to talk about now.\n\nFirst, let\u2019s talk about some important dates. The idea of building a dam was first discussed as far back as <strong style=\"background-color: yellow;\">[Q6: 1900]</strong>, but it was not until 1928 that the project was authorised by the government. In 1931, a group of companies finally began construction, with a completion date of 1938. However, \u00a0the dam was actually finished and in operation 2 years ahead of schedule, in <strong style=\"background-color: yellow;\">[Q7: 1936]</strong>.\n\nConstruction of the dam faced some massive challenges. The first was to divert the Colorado River, and this was done by drilling 4 tunnels into the canyon walls, and these tunnels had a combined length of over 5 kilometres. Next came the beginning of the dam itself. Rising to a height of 221 metres, the dam was a massive undertaking. The people who worked at those heights, supported only by ropes, were called \u2018high scalers\u2019, and this was arguably the most dangerous job of them all. <strong style=\"background-color: yellow;\">[Q9: Falling rocks]</strong> and broken ropes caused many deaths and injuries, but this was also the time when safety equipment started to become used in construction. Initially, to protect their heads from falling rocks, the high scalers dipped pieces of cloth into tar and waited for the tar to harden before strapping them to their heads. When the company saw how effective this simple measure was, they ordered thousands of what were initially called \u2018hard boiled hats\u2019, which later became known as hard hats which are still in use \u2013 although of course in an updated version \u2013 on construction sites today.\n\nHowever, falling rock was not the only danger the workers faced. The heat alone \u2013 which regularly reached over 45 degrees \u2013 was responsible for the death of 16 workers. Others died from carbon monoxide poisoning from the use of petrol powered generators and vehicles in tunnels without enough fresh air, and in total, 112 people died during the dam\u2019s construction.\n\nDespite this heavy cost, the dam has performed without any major incident since the time of its construction and provides power for approximately <strong style=\"background-color: yellow;\">[Q10: 1.3 million]</strong> people.\n\n</div>"
             },
             {
                 "section_number": 3,
-                "transcript": "<div style=\"height: 300px; overflow: scroll;\">\n\n<strong>Section 3</strong>\n\n \n<table class=\"style1\" border=\"1px solid #333\">\n<tbody>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">So what was it like in your school then, Lyn?</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">Well, South African schools are very different from schools in Australia. For a start, children don't start their schooling until they are seven quite a bit later than schools in Australia. What about New Zealand, Gail?</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">We're more like Australia. can't believe children don't go to school until they are seven! When do the parents get any free time?</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">Well, there's still the availability of kindergartens or playschools, it's just that formal education doesn't start until later. don't think it's such a good idea for children to have to be too academic at such a young age. They should be able to just enjoy themselves</td>\n</tr>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">Well, yes, but the first school children go to isn't very academic. It's Just an really opportunity for children to learn a few basic social skills by playing and learning with other children.</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">Yes, I'd agree with that.</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">I guess being so close, Australian and New Zealand schools must be similar then?</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">Well, I suppose they do share a lot of similarities, but there're also some differences. For example, children in New Zealand go through intermediate school, but in Australia there's only high school. That's right, isn't it Pat?</td>\n</tr>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">Yes, I think so. What about South Africa, Lyn? Do you have intermediate or high school?</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">Oh, high school.</td>\n</tr>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">Another difference between Australian and New Zealand education is that although both countries have state schools and private schools, our private schools are very often run by religious groups, whereas New Zealand schools are secular.</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">That's not true there are quite a few religious schools in New Zealand</td>\n</tr>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">Oh, OK. Maybe we are similar. we're different</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">Lyn Only a few South African schools have any religious connection, so I guess country don't Most people go to state schools. Pat, is it true that some people from your have to go to school at all?</td>\n</tr>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">Well, that's partly true. Because of the geography of Australia, there are a lot of children who do not have access to schools, at least on a regular basis. Instead they have a form of correspondence education, where the lessons are actually on the radio and the students send their work in by post. That way they get a lot of what they would if they were in the classroom apart from the interaction</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">In New Zealand, not all students have to go to school either some parents have opted for home schooling</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">Oh, is that like correspondence teaching? We don't really have that</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">Well, we do have correspondence schools but home schooling is different. With home schooling the parents teach the children and set them homework. They have to present a syllabus to their local education authority before they can do that, but it is becoming a more popular choice for some parents. I suppose it also suits parents' own commitments. mean they don't have to worry about collecting their children from school, and they can always teach over the weekend or in the evening if they want to</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">ls the school day normally quite long then?</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">Not in New Zealand, but I think it can be in Australia</td>\n</tr>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">Yes, that's right. I think Australia is unusual in that there are extracurricular activities which you have to go to. These are normally sport activities, but there are a few other options.</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">We have activities after school for any student that is interested, but they aren't compulsory. What about in New Zealand, Gail?</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">I had to do some sport every week. didn't really like it, but it was part of the school day so guess that's not so bad. Anyway, I spent two years at boarding school so things were a little different.</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">Boarding school? What was that like?</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">well, the thing I remember most about it was the strict dress code. There were restrictions on everything You had to wear a school uniform almost all of the time, and it had to be cleaned and ironed. The length of your skirt had to be no less than one inch above your knees when <strong style=\"background-color: yellow;\">[Q1: kneeling]</strong> down. Sometimes we used to go out on school trips or just at weekends with a few friends, but whenever we were <strong style=\"background-color: yellow;\">[Q2: outside the school]</strong> we had to wear a hat. There was one teacher who used to give me extra homework because my socks weren't <strong style=\"background-color: yellow;\">[Q3: pulled up]</strong>, and that was in the school late in the evening! U suppose it wasn’t that bad, but forgot it felt like a prison! I kept getting into trouble for something. Most of the time I forgot something, normally my school <strong style=\"background-color: yellow;\">[Q4: badge]</strong>. We had to wear that all the time, in the school, and out, because it had our house colours on it.</td>\n</tr>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">Wow! That doesn't sound like much fun!</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">No, but it was a good education. suppose... (fade out)"
+                "transcript": "<div style=\"height: 300px; overflow: scroll;\">\n\n<strong>Section 3</strong>\n\n\u00a0\n<table class=\"style1\" border=\"1px solid #333\">\n<tbody>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">So what was it like in your school then, Lyn?</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">Well, South African schools are very different from schools in Australia. For a start, children don't start their schooling until they are seven quite a bit later than schools in Australia. What about New Zealand, Gail?</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">We're more like Australia. can't believe children don't go to school until they are seven! When do the parents get any free time?</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">Well, there's still the availability of kindergartens or playschools, it's just that formal education doesn't start until later. don't think it's such a good idea for children to have to be too academic at such a young age. They should be able to just enjoy themselves</td>\n</tr>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">Well, yes, but the first school children go to isn't very academic. It's Just an really opportunity for children to learn a few basic social skills by playing and learning with other children.</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">Yes, I'd agree with that.</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">I guess being so close, Australian and New Zealand schools must be similar then?</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">Well, I suppose they do share a lot of similarities, but there're also some differences. For example, children in New Zealand go through intermediate school, but in Australia there's only high school. That's right, isn't it Pat?</td>\n</tr>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">Yes, I think so. What about South Africa, Lyn? Do you have intermediate or high school?</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">Oh, high school.</td>\n</tr>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">Another difference between Australian and New Zealand education is that although both countries have state schools and private schools, our private schools are very often run by religious groups, whereas New Zealand schools are secular.</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">That's not true there are quite a few religious schools in New Zealand</td>\n</tr>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">Oh, OK. Maybe we are similar. we're different</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">Lyn Only a few South African schools have any religious connection, so I guess country don't Most people go to state schools. Pat, is it true that some people from your have to go to school at all?</td>\n</tr>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">Well, that's partly true. Because of the geography of Australia, there are a lot of children who do not have access to schools, at least on a regular basis. Instead they have a form of correspondence education, where the lessons are actually on the radio and the students send their work in by post. That way they get a lot of what they would if they were in the classroom apart from the interaction</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">In New Zealand, not all students have to go to school either some parents have opted for home schooling</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">Oh, is that like correspondence teaching? We don't really have that</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">Well, we do have correspondence schools but home schooling is different. With home schooling the parents teach the children and set them homework. They have to present a syllabus to their local education authority before they can do that, but it is becoming a more popular choice for some parents. I suppose it also suits parents' own commitments. mean they don't have to worry about collecting their children from school, and they can always teach over the weekend or in the evening if they want to</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">ls the school day normally quite long then?</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">Not in New Zealand, but I think it can be in Australia</td>\n</tr>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">Yes, that's right. I think Australia is unusual in that there are extracurricular activities which you have to go to. These are normally sport activities, but there are a few other options.</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">We have activities after school for any student that is interested, but they aren't compulsory. What about in New Zealand, Gail?</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">I had to do some sport every week. didn't really like it, but it was part of the school day so guess that's not so bad. Anyway, I spent two years at boarding school so things were a little different.</td>\n</tr>\n<tr>\n<td width=\"25%\">Lyn</td>\n<td width=\"75%\">Boarding school? What was that like?</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">well, the thing I remember most about it was the strict dress code. There were restrictions on everything You had to wear a school uniform almost all of the time, and it had to be cleaned and ironed. The length of your skirt had to be no less than one inch above your knees when <strong style=\"background-color: yellow;\">[Q1: kneeling]</strong> down. Sometimes we used to go out on school trips or just at weekends with a few friends, but whenever we were <strong style=\"background-color: yellow;\">[Q2: outside the school]</strong> we had to wear a hat. There was one teacher who used to give me extra homework because my socks weren't <strong style=\"background-color: yellow;\">[Q3: pulled up]</strong>, and that was in the school late in the evening! U suppose it wasn\u2019t that bad, but forgot it felt like a prison! I kept getting into trouble for something. Most of the time I forgot something, normally my school <strong style=\"background-color: yellow;\">[Q4: badge]</strong>. We had to wear that all the time, in the school, and out, because it had our house colours on it.</td>\n</tr>\n<tr>\n<td width=\"25%\">Pat</td>\n<td width=\"75%\">Wow! That doesn't sound like much fun!</td>\n</tr>\n<tr>\n<td width=\"25%\">Gail</td>\n<td width=\"75%\">No, but it was a good education. suppose... (fade out)</td>\n</tr>\n</tbody>\n</table>"
             },
             {
                 "section_number": 4,
