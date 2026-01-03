@@ -23,7 +23,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"BY TRAIN\" or \"TRAIN\" or \"A TRAIN\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"BY TRAIN\" or \"TRAIN\" or \"A TRAIN\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -46,7 +47,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"CITY AIRPORT\" or \"CITY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"CITY AIRPORT\" or \"CITY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -69,7 +71,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"3PM\" or \"3 PM\" or \"3 P M\" or \"3 P.M.\" or \"3P.M.\" or \"3 P. M.\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"3PM\" or \"3 PM\" or \"3 P M\" or \"3 P.M.\" or \"3P.M.\" or \"3 P. M.\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -92,7 +95,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"7A\" or \"7 A\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"7A\" or \"7 A\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -115,7 +119,8 @@
                     "incorrect": "✗ Not quite. The answer is \"468319\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"468319\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -138,7 +143,8 @@
                     "incorrect": "✗ Not quite. The answer is \"C\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"C\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "closed_question",
@@ -170,7 +176,8 @@
             ],
             "options": "A. one suitcase.\nB. one briefcase.\nC. one laptop case.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -202,7 +209,8 @@
             ],
             "options": "A. 7 kgs.\nB. 20 kgs.\nC. 30 kgs.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -234,7 +242,8 @@
             ],
             "options": "A. 1:00 p.m.\nB. 1:10 p.m.\nC. 1:30 p.m.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -266,7 +275,8 @@
             ],
             "options": "A. use E-Check-In to Paris.\nB. stay at a different hotel.\nC. get a brochure.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "open_question",
@@ -289,7 +299,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"A\" or \"D\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"A\" or \"D\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -312,7 +323,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"A\" or \"D\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"A\" or \"D\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -335,7 +347,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"C\" or \"E\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"C\" or \"E\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -358,7 +371,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"C\" or \"E\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"C\" or \"E\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -381,7 +395,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"FOOTWEAR\" or \"FOOT WEAR\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"FOOTWEAR\" or \"FOOT WEAR\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -404,7 +419,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"24 HOURS\" or \"24 HRS\" or \"TWENTY FOUR HOURS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"24 HOURS\" or \"24 HRS\" or \"TWENTY FOUR HOURS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -427,7 +443,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"NIGHTCLUB\" or \"NIGHT CLUB\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"NIGHTCLUB\" or \"NIGHT CLUB\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -450,7 +467,8 @@
                     "incorrect": "✗ Not quite. The answer is \"DIVING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"DIVING\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -473,7 +491,8 @@
                     "incorrect": "✗ Not quite. The answer is \"DINING HALL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"DINING HALL\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -496,7 +515,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"11 P M\" or \"11 PM\" or \"11P.M.\" or \"11 P.M.\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"11 P M\" or \"11 PM\" or \"11P.M.\" or \"11 P.M.\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -519,7 +539,8 @@
                     "incorrect": "✗ Not quite. The answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "closed_question",
@@ -551,7 +572,8 @@
             ],
             "options": "A. the university.\nB. volunteers.\nC. local authorities.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -583,7 +605,8 @@
             ],
             "options": "A. seven weeks.\nB. one week.\nC. four weeks.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "open_question",
@@ -606,7 +629,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"20,000\" or \"TWENTY THOUSAND\" or \"20000\" or \"20 000\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"20,000\" or \"TWENTY THOUSAND\" or \"20000\" or \"20 000\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -629,7 +653,8 @@
                     "incorrect": "✗ Not quite. The answer is \"LAKE VICTORIA\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"LAKE VICTORIA\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -652,7 +677,8 @@
                     "incorrect": "✗ Not quite. The answer is \"REGIONAL CAPITAL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"REGIONAL CAPITAL\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -675,7 +701,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"700\" or \"SEVEN HUNDRED\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"700\" or \"SEVEN HUNDRED\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -698,7 +725,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"FISHING TRADE\" or \"FISHING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"FISHING TRADE\" or \"FISHING\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -721,7 +749,8 @@
                     "incorrect": "✗ Not quite. The answer is \"D\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"D\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "closed_question",
@@ -758,7 +787,8 @@
             ],
             "options": "A. inconvenient.\nB. eye-opening.\nC. unsuccessful.\nD. tremendous.",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "open_question",
@@ -781,7 +811,8 @@
                     "incorrect": "✗ Not quite. The answer is \"IRRIGATION\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"IRRIGATION\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -804,7 +835,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"2300 YEARS\" or \"2,300 YEARS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"2300 YEARS\" or \"2,300 YEARS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -827,7 +859,8 @@
                     "incorrect": "✗ Not quite. The answer is \"RICE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"RICE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -850,7 +883,8 @@
                     "incorrect": "✗ Not quite. The answer is \"FLASH LOCK\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"FLASH LOCK\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -873,7 +907,8 @@
                     "incorrect": "✗ Not quite. The answer is \"DIRECTIONS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"DIRECTIONS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -896,7 +931,8 @@
                     "incorrect": "✗ Not quite. The answer is \"SAFETY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"SAFETY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -919,7 +955,8 @@
                     "incorrect": "✗ Not quite. The answer is \"COMMERCE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"COMMERCE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -942,7 +979,8 @@
                     "incorrect": "✗ Not quite. The answer is \"TROPICAL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"TROPICAL\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -965,7 +1003,8 @@
                     "incorrect": "✗ Not quite. Acceptable answers: \"77 KILOMETERS\" or \"77 KM\" or \"77 KMS\" or \"SEVENTY-SEVEN KILOMETRES\" or \"SEVENTY SEVEN KILOMETRES\" or \"SEVENTY-SEVEN KILOMETERS\" or \"SEVENTY SEVEN KILOMETERS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"77 KILOMETERS\" or \"77 KM\" or \"77 KMS\" or \"SEVENTY-SEVEN KILOMETRES\" or \"SEVENTY SEVEN KILOMETRES\" or \"SEVENTY-SEVEN KILOMETERS\" or \"SEVENTY SEVEN KILOMETERS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -988,7 +1027,8 @@
                     "incorrect": "✗ Not quite. The answer is \"MARS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"MARS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         }
     ],
     "reading_texts": [],

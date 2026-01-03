@@ -47,7 +47,8 @@
                     "incorrect": "Incorrect. Listen carefully to when the woman says she arrived in the country (Question 1).",
                     "no_answer": "The correct answer is: 2 months. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Note Completion"
         },
         {
             "type": "closed_question",
@@ -79,7 +80,8 @@
             ],
             "options": "A. 4\nB. 15\nC. 20",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -111,7 +113,8 @@
             ],
             "options": "A. 2\nB. 4\nC. 6",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -143,7 +146,8 @@
             ],
             "options": "A. 26th September\nB. 3rd October\nC. 10th October",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -175,7 +179,8 @@
             ],
             "options": "A. On the 2nd floor of Lakeside View building\nB. On St James Plaza\nC. Next to the public car park",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -207,7 +212,8 @@
             ],
             "options": "A. The public car park on the left\nB. The staff car park at the front\nC. The one behind the building",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "open_question",
@@ -248,7 +254,8 @@
                     "incorrect": "Incorrect. Listen for the year when the prison was closed. The speaker mentions when Gorgona Island was declared a natural park.",
                     "no_answer": "The correct answer is: 1985. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Sentence Completion"
         },
         {
             "type": "closed_question",
@@ -290,7 +297,8 @@
             ],
             "options": "A. stay on jungle trails\nB. not take prohibited items to the island\nC. take all rubbish away with them\nD. meet medical requirements\nE. carry a first aid kit",
             "correct_answer_count": 2,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Multiple Answers)"
         },
         {
             "type": "closed_question",
@@ -322,7 +330,8 @@
             ],
             "options": "A. more types of insects than birds\nB. more types of birds than marine animals\nC. more types of marine species than insects",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -354,7 +363,8 @@
             ],
             "options": "A. travel from the Pacific Coast to give birth\nB. can reliably be seen during mating season\nC. migrate at the beginning of the year",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -386,7 +396,8 @@
             ],
             "options": "A. 10 hours\nB. 12 hours\nC. 1 hour 40 minutes",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -418,7 +429,8 @@
             ],
             "options": "A. the Government took control of tourism there\nB. prison guard quarters were refurbished for accommodation\nC. one tourism operator was given control",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "open_question",
@@ -465,7 +477,8 @@
                     "incorrect": "Incorrect. Listen for the divorce rate mentioned for couples who married in 1970 (Q21).",
                     "no_answer": "The correct answer is: one third. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "closed_question",
@@ -497,7 +510,8 @@
             ],
             "options": "A. So they can finish their university education\nB. So they can gain other life experiences first\nC. So that they are more mature when they have children",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "closed_question",
@@ -529,7 +543,8 @@
             ],
             "options": "A. Their children don't want to look after them\nB. They receive better health care\nC. Their families live in different places",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Single Answer)"
         },
         {
             "type": "open_question",
@@ -564,7 +579,8 @@
                     "incorrect": "Incorrect. Listen for the three methods of communication Speaker 1 says negatively affect the feeling of community (Q28-30).",
                     "no_answer": "The correct answers are: texts (or text messages), email (or e-mail), and social media. Speaker 1 mentions these three methods of communication negatively affect the feeling of community."
                 }
-            }
+            },
+            "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
@@ -605,7 +621,8 @@
                     "incorrect": "Incorrect. Listen for what General elections in the UK do not have, unlike other types of elections.",
                     "no_answer": "The correct answer is: FIXED DATES. Make sure to listen carefully for key information and take notes while listening."
                 }
-            }
+            },
+            "ielts_question_type": "Form Completion"
         },
         {
             "type": "closed_question",
@@ -647,7 +664,8 @@
             ],
             "options": "A. Ethnicity\nB. Wealth\nC. Occupation\nD. Marital status\nE. Religion",
             "correct_answer_count": 2,
-            "show_option_letters": true
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Multiple Answers)"
         },
         {
             "type": "open_question",
@@ -688,7 +706,8 @@
                     "incorrect": "Incorrect. Listen for what voters might run out of besides patience when experiencing ballot fatigue (Q40).",
                     "no_answer": "The correct answer is: knowledge. Ballot fatigue occurs when affected voters use up all their patience and/or their knowledge as they work their way down the ballot."
                 }
-            }
+            },
+            "ielts_question_type": "Table Completion"
         }
     ],
     "reading_texts": [],
