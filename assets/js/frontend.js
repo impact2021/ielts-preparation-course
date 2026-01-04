@@ -2231,8 +2231,8 @@
             
             // Load quiz attempts function for lesson page
             function loadQuizAttemptsForLesson(quizId) {
-                $('.attempts-loading').show();
-                $('.attempts-list').html('');
+                $('#attempts-modal .attempts-loading').show();
+                $('#attempts-modal .attempts-list').html('');
                 
                 $.ajax({
                     url: ieltsCM.ajaxUrl,
@@ -2243,17 +2243,17 @@
                         quiz_id: quizId
                     },
                     success: function(response) {
-                        $('.attempts-loading').hide();
+                        $('#attempts-modal .attempts-loading').hide();
                         
                         if (response.success && response.data.attempts && response.data.attempts.length > 0) {
                             displayAttemptsInModal(response.data.attempts, response.data.is_admin, quizId);
                         } else {
-                            $('.attempts-list').html('<p style="text-align: center; color: #666;">No attempts found for this exercise.</p>');
+                            $('#attempts-modal .attempts-list').html('<p style="text-align: center; color: #666;">No attempts found for this exercise.</p>');
                         }
                     },
                     error: function() {
-                        $('.attempts-loading').hide();
-                        $('.attempts-list').html('<p style="text-align: center; color: #c00;">Failed to load attempts. Please try again.</p>');
+                        $('#attempts-modal .attempts-loading').hide();
+                        $('#attempts-modal .attempts-list').html('<p style="text-align: center; color: #c00;">Failed to load attempts. Please try again.</p>');
                     }
                 });
             }
@@ -2289,11 +2289,11 @@
                 });
                 
                 html += '</tbody></table>';
-                $('.attempts-list').html(html);
+                $('#attempts-modal .attempts-list').html(html);
                 
                 // Add delete functionality for admin
                 if (isAdmin) {
-                    $('.delete-attempt-modal-btn').on('click', function() {
+                    $('#attempts-modal .delete-attempt-modal-btn').on('click', function() {
                         var attemptId = $(this).data('attempt-id');
                         var quizId = $(this).data('quiz-id');
                         if (confirm('Are you sure you want to delete this attempt? This action cannot be undone.')) {
@@ -2318,8 +2318,8 @@
                             row.fadeOut(300, function() {
                                 $(this).remove();
                                 // Check if there are any attempts left
-                                if ($('.attempts-table tbody tr').length === 0) {
-                                    $('.attempts-list').html('<p style="text-align: center; color: #666;">No attempts remaining.</p>');
+                                if ($('#attempts-modal .attempts-table tbody tr').length === 0) {
+                                    $('#attempts-modal .attempts-list').html('<p style="text-align: center; color: #666;">No attempts remaining.</p>');
                                 }
                             });
                             // Optionally reload the page to update the score display
@@ -2342,45 +2342,18 @@
             $('body').addClass('ielts-quiz-focus-mode');
             $('html').addClass('ielts-quiz-focus-mode');
             
-            // Header toggle functionality
-            $('#header-toggle-btn').on('click', function(e) {
-                e.preventDefault();
-                var $header = $('.quiz-header');
-                var $wpHeader = $('.et-l--header'); // WordPress/Divi header
-                var $toggleBtn = $(this);
-                var $toggleIcon = $toggleBtn.find('.toggle-icon');
-                
-                if ($header.hasClass('header-visible')) {
-                    // Hide header
-                    $header.removeClass('header-visible');
-                    $wpHeader.removeClass('header-visible');
-                    $toggleIcon.text('▼');
-                    $toggleBtn.attr('title', 'Show header');
-                } else {
-                    // Show header
-                    $header.addClass('header-visible');
-                    $wpHeader.addClass('header-visible');
-                    $toggleIcon.text('▲');
-                    $toggleBtn.attr('title', 'Hide header');
-                }
-            });
-        }
-        
-        // Dynamic viewport height recalculation for exercise layouts
-        // Fixes issue where navigation doesn't resize when window is moved to different monitor
-        if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
             // Store last known dimensions to detect real changes
             var lastWidth = 0;
             var lastHeight = 0;
             
             // Function to recalculate and apply dynamic heights
-            function updateDynamicHeights() {
+            function updateDynamicHeights(force) {
                 // Force a fresh read of current viewport dimensions
                 var vh = window.innerHeight;
                 var vw = window.innerWidth;
                 
-                // Only update if dimensions actually changed
-                if (vh === lastHeight && vw === lastWidth) {
+                // Only update if dimensions actually changed (unless forced)
+                if (!force && vh === lastHeight && vw === lastWidth) {
                     return;
                 }
                 
@@ -2388,16 +2361,30 @@
                 lastWidth = vw;
                 
                 var isFocusMode = $('body').hasClass('ielts-quiz-focus-mode');
+                // Check if header is visible - use single source of truth
+                var isHeaderVisible = $('.quiz-header').hasClass('header-visible');
                 
-                // Calculate appropriate offset based on focus mode and screen size
+                // Calculate appropriate offset based on focus mode, header visibility, and screen size
                 var offset;
                 if (isFocusMode) {
-                    if (vw <= 768) {
-                        offset = 220; // Mobile focus mode
-                    } else if (vw <= 1024) {
-                        offset = 200; // Tablet focus mode
+                    if (isHeaderVisible) {
+                        // When header is visible in focus mode, add extra offset for header height
+                        if (vw <= 768) {
+                            offset = 400; // Mobile focus mode with header
+                        } else if (vw <= 1024) {
+                            offset = 350; // Tablet focus mode with header
+                        } else {
+                            offset = 300; // Desktop focus mode with header
+                        }
                     } else {
-                        offset = 180; // Desktop focus mode
+                        // Focus mode without header
+                        if (vw <= 768) {
+                            offset = 220; // Mobile focus mode
+                        } else if (vw <= 1024) {
+                            offset = 200; // Tablet focus mode
+                        } else {
+                            offset = 180; // Desktop focus mode
+                        }
                     }
                 } else {
                     if (vw <= 768) {
@@ -2414,6 +2401,45 @@
                 // Apply the calculated height to the columns
                 $('.reading-column, .questions-column, .listening-audio-column').css('max-height', maxHeight + 'px');
             }
+            
+            // Header toggle functionality
+            $('#header-toggle-btn').on('click', function(e) {
+                e.preventDefault();
+                var $header = $('.quiz-header');
+                var $wpHeader = $('.et-l--header'); // WordPress/Divi header
+                var $adminBar = $('#wpadminbar'); // WordPress admin bar
+                var $toggleBtn = $(this);
+                var $toggleIcon = $toggleBtn.find('.toggle-icon');
+                
+                if ($header.hasClass('header-visible')) {
+                    // Hide header
+                    $header.removeClass('header-visible');
+                    $wpHeader.removeClass('header-visible');
+                    $adminBar.removeClass('header-visible');
+                    $('html').removeClass('admin-bar-visible');
+                    $toggleIcon.text('▼');
+                    $toggleBtn.attr('title', 'Show header');
+                } else {
+                    // Show header
+                    $header.addClass('header-visible');
+                    $wpHeader.addClass('header-visible');
+                    $adminBar.addClass('header-visible');
+                    // Only add admin-bar-visible if admin bar exists
+                    if ($adminBar.length > 0) {
+                        $('html').addClass('admin-bar-visible');
+                    }
+                    $toggleIcon.text('▲');
+                    $toggleBtn.attr('title', 'Hide header');
+                }
+                
+                // Trigger height recalculation after header toggle
+                // Use short delay to allow CSS transitions/rendering to complete before measuring
+                var HEADER_TOGGLE_DELAY_MS = 50;
+                setTimeout(function() {
+                    // Force recalculation regardless of cached dimensions
+                    updateDynamicHeights(true);
+                }, HEADER_TOGGLE_DELAY_MS);
+            });
             
             // Initial calculation with small delay to ensure page is fully loaded
             setTimeout(function() {
