@@ -2342,6 +2342,65 @@
             $('body').addClass('ielts-quiz-focus-mode');
             $('html').addClass('ielts-quiz-focus-mode');
             
+            // Store last known dimensions to detect real changes
+            var lastWidth = 0;
+            var lastHeight = 0;
+            
+            // Function to recalculate and apply dynamic heights
+            function updateDynamicHeights() {
+                // Force a fresh read of current viewport dimensions
+                var vh = window.innerHeight;
+                var vw = window.innerWidth;
+                
+                // Only update if dimensions actually changed
+                if (vh === lastHeight && vw === lastWidth) {
+                    return;
+                }
+                
+                lastHeight = vh;
+                lastWidth = vw;
+                
+                var isFocusMode = $('body').hasClass('ielts-quiz-focus-mode');
+                var isHeaderVisible = $('.et-l--header').hasClass('header-visible') || $('.quiz-header').hasClass('header-visible');
+                
+                // Calculate appropriate offset based on focus mode, header visibility, and screen size
+                var offset;
+                if (isFocusMode) {
+                    if (isHeaderVisible) {
+                        // When header is visible in focus mode, add extra offset for header height
+                        if (vw <= 768) {
+                            offset = 400; // Mobile focus mode with header
+                        } else if (vw <= 1024) {
+                            offset = 350; // Tablet focus mode with header
+                        } else {
+                            offset = 300; // Desktop focus mode with header
+                        }
+                    } else {
+                        // Focus mode without header
+                        if (vw <= 768) {
+                            offset = 220; // Mobile focus mode
+                        } else if (vw <= 1024) {
+                            offset = 200; // Tablet focus mode
+                        } else {
+                            offset = 180; // Desktop focus mode
+                        }
+                    }
+                } else {
+                    if (vw <= 768) {
+                        offset = 450; // Mobile normal mode
+                    } else if (vw <= 1024) {
+                        offset = 400; // Tablet normal mode
+                    } else {
+                        offset = 300; // Desktop normal mode
+                    }
+                }
+                
+                var maxHeight = vh - offset;
+                
+                // Apply the calculated height to the columns
+                $('.reading-column, .questions-column, .listening-audio-column').css('max-height', maxHeight + 'px');
+            }
+            
             // Header toggle functionality
             $('#header-toggle-btn').on('click', function(e) {
                 e.preventDefault();
@@ -2371,57 +2430,16 @@
                     $toggleIcon.text('▲');
                     $toggleBtn.attr('title', 'Hide header');
                 }
+                
+                // Trigger height recalculation after header toggle
+                // Use setTimeout to allow CSS transitions to complete
+                setTimeout(function() {
+                    // Force recalculation by resetting last dimensions
+                    lastHeight = 0;
+                    lastWidth = 0;
+                    updateDynamicHeights();
+                }, 50);
             });
-        }
-        
-        // Dynamic viewport height recalculation for exercise layouts
-        // Fixes issue where navigation doesn't resize when window is moved to different monitor
-        if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
-            // Store last known dimensions to detect real changes
-            var lastWidth = 0;
-            var lastHeight = 0;
-            
-            // Function to recalculate and apply dynamic heights
-            function updateDynamicHeights() {
-                // Force a fresh read of current viewport dimensions
-                var vh = window.innerHeight;
-                var vw = window.innerWidth;
-                
-                // Only update if dimensions actually changed
-                if (vh === lastHeight && vw === lastWidth) {
-                    return;
-                }
-                
-                lastHeight = vh;
-                lastWidth = vw;
-                
-                var isFocusMode = $('body').hasClass('ielts-quiz-focus-mode');
-                
-                // Calculate appropriate offset based on focus mode and screen size
-                var offset;
-                if (isFocusMode) {
-                    if (vw <= 768) {
-                        offset = 220; // Mobile focus mode
-                    } else if (vw <= 1024) {
-                        offset = 200; // Tablet focus mode
-                    } else {
-                        offset = 180; // Desktop focus mode
-                    }
-                } else {
-                    if (vw <= 768) {
-                        offset = 450; // Mobile normal mode
-                    } else if (vw <= 1024) {
-                        offset = 400; // Tablet normal mode
-                    } else {
-                        offset = 300; // Desktop normal mode
-                    }
-                }
-                
-                var maxHeight = vh - offset;
-                
-                // Apply the calculated height to the columns
-                $('.reading-column, .questions-column, .listening-audio-column').css('max-height', maxHeight + 'px');
-            }
             
             // Initial calculation with small delay to ensure page is fully loaded
             setTimeout(function() {
