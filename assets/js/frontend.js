@@ -2318,8 +2318,8 @@
                             row.fadeOut(300, function() {
                                 $(this).remove();
                                 // Check if there are any attempts left
-                                if ($('.attempts-table tbody tr').length === 0) {
-                                    $('.attempts-list').html('<p style="text-align: center; color: #666;">No attempts remaining.</p>');
+                                if ($('#attempts-modal .attempts-table tbody tr').length === 0) {
+                                    $('#attempts-modal .attempts-list').html('<p style="text-align: center; color: #666;">No attempts remaining.</p>');
                                 }
                             });
                             // Optionally reload the page to update the score display
