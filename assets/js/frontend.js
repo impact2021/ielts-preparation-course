@@ -2202,6 +2202,7 @@
         if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
             // Auto-enable focus mode for all CBT quizzes
             $('body').addClass('ielts-quiz-focus-mode');
+            $('html').addClass('ielts-quiz-focus-mode');
             
             // Header toggle functionality
             $('#header-toggle-btn').on('click', function(e) {

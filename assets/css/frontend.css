@@ -2875,6 +2875,11 @@ body.ielts-quiz-focus-mode #et-boc > .et_builder_inner_content > .et_pb_section:
     display: none !important;
 }
 
+/* Remove WordPress admin bar margin from html element in focus mode */
+html.ielts-quiz-focus-mode {
+    margin-top: 0 !important;
+}
+
 /* Show header when toggled visible */
 body.ielts-quiz-focus-mode .quiz-header.header-visible {
     display: block !important;
