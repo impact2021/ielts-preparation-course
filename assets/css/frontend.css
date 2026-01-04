@@ -2917,3 +2917,20 @@ body.ielts-quiz-focus-mode .ielts-listening-practice-quiz,
 body.ielts-quiz-focus-mode .ielts-listening-exercise-quiz {
     min-height: 100vh;
 }
+
+/* Maximize available space in focus mode */
+body.ielts-quiz-focus-mode .computer-based-container {
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+body.ielts-quiz-focus-mode .reading-column,
+body.ielts-quiz-focus-mode .questions-column {
+    max-height: calc(100vh - 180px) !important;
+}
+
+body.ielts-quiz-focus-mode .listening-audio-column {
+    max-height: calc(100vh - 180px) !important;
+}

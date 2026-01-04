@@ -93,6 +93,13 @@ body.ielts-quiz-single .content-area {
     padding-top: 60px !important;
     padding-bottom: 60px !important;
 }
+/* Focus mode: Remove padding to maximize space for exercises */
+body.ielts-quiz-focus-mode.ielts-quiz-single #main.site-main,
+body.ielts-quiz-focus-mode.ielts-quiz-single .site-main,
+body.ielts-quiz-focus-mode.ielts-quiz-single #primary,
+body.ielts-quiz-focus-mode.ielts-quiz-single .content-area {
+    padding: 0 !important;
+}
 <?php endif; ?>
 </style>
 
