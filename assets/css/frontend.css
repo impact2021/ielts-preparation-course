@@ -2865,6 +2865,7 @@ select.answer-select-inline.answer-incorrect {
 body.ielts-quiz-focus-mode #wpadminbar,
 body.ielts-quiz-focus-mode .et-l--header,
 body.ielts-quiz-focus-mode .et-l--footer,
+body.ielts-quiz-focus-mode .quiz-header,
 body.ielts-quiz-focus-mode #et-boc > .et_builder_inner_content > .et_pb_section:not(.quiz-section) {
     display: none !important;
 }
