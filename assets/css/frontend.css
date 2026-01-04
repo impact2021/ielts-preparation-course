@@ -2875,8 +2875,13 @@ body.ielts-quiz-focus-mode .quiz-header.header-visible {
     display: block !important;
 }
 
-/* Header toggle button */
+/* Header toggle button - hidden by default, only visible in focus mode */
 .header-toggle-btn {
+    display: none;
+}
+
+body.ielts-quiz-focus-mode .header-toggle-btn {
+    display: block;
     position: fixed;
     top: 0;
     left: 50%;
@@ -2894,12 +2899,12 @@ body.ielts-quiz-focus-mode .quiz-header.header-visible {
     transition: all 0.3s ease;
 }
 
-.header-toggle-btn:hover {
+body.ielts-quiz-focus-mode .header-toggle-btn:hover {
     background: #005a87;
     transform: translateX(-50%) translateY(2px);
 }
 
-.header-toggle-btn .toggle-icon {
+body.ielts-quiz-focus-mode .header-toggle-btn .toggle-icon {
     font-size: 12px;
     margin-left: 5px;
 }
