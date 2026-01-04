@@ -142,7 +142,6 @@ if ($lesson_id) {
             $prev_title = substr($prev_title, 0, 15) . '...';
         }
         $prev_url = get_permalink($prev_post->ID);
-        }
     }
 }
 ?>
