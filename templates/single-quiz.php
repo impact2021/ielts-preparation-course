@@ -817,6 +817,16 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                         </a>
                     <?php endif; ?>
                 </div>
+                <div class="nav-center">
+                    <?php if ($course_id): ?>
+                        <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course">
+                            <span class="nav-label">
+                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
+                                <strong><?php _e('Course', 'ielts-course-manager'); ?></strong>
+                            </span>
+                        </a>
+                    <?php endif; ?>
+                </div>
                 <div class="nav-next">
                     <?php if ($next_quiz): ?>
                         <a href="<?php echo get_permalink($next_quiz->ID); ?>" class="nav-link">
@@ -834,15 +844,21 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
             .ielts-navigation {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 margin-top: 40px;
                 padding-top: 30px;
                 border-top: 2px solid #e0e0e0;
+                gap: 15px;
             }
             .ielts-navigation .nav-prev {
-                flex: 0 0 48%;
+                flex: 1;
+            }
+            .ielts-navigation .nav-center {
+                flex: 0 0 auto;
+                text-align: center;
             }
             .ielts-navigation .nav-next {
-                flex: 0 0 48%;
+                flex: 1;
                 text-align: right;
             }
             .ielts-navigation .nav-link {
@@ -860,6 +876,17 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                 background: #e0e0e0;
                 transform: translateY(-2px);
                 box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            }
+            .ielts-navigation .nav-back-to-course {
+                background: #0073aa;
+                color: white;
+            }
+            .ielts-navigation .nav-back-to-course:hover {
+                background: #005a87;
+            }
+            .ielts-navigation .nav-back-to-course .nav-label small,
+            .ielts-navigation .nav-back-to-course .nav-label strong {
+                color: white;
             }
             .ielts-navigation .nav-arrow {
                 font-size: 24px;
@@ -882,6 +909,24 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
             }
             .ielts-navigation .nav-next .nav-label {
                 align-items: flex-end;
+            }
+            .ielts-navigation .nav-center .nav-label {
+                align-items: center;
+            }
+            @media (max-width: 768px) {
+                .ielts-navigation {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .ielts-navigation .nav-prev,
+                .ielts-navigation .nav-center,
+                .ielts-navigation .nav-next {
+                    width: 100%;
+                    text-align: center;
+                }
+                .ielts-navigation .nav-label {
+                    align-items: center !important;
+                }
             }
             </style>
         <?php endif; ?>
