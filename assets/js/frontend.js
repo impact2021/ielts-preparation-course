@@ -2231,8 +2231,8 @@
             
             // Load quiz attempts function for lesson page
             function loadQuizAttemptsForLesson(quizId) {
-                $('.attempts-loading').show();
-                $('.attempts-list').html('');
+                $('#attempts-modal .attempts-loading').show();
+                $('#attempts-modal .attempts-list').html('');
                 
                 $.ajax({
                     url: ieltsCM.ajaxUrl,
@@ -2243,17 +2243,17 @@
                         quiz_id: quizId
                     },
                     success: function(response) {
-                        $('.attempts-loading').hide();
+                        $('#attempts-modal .attempts-loading').hide();
                         
                         if (response.success && response.data.attempts && response.data.attempts.length > 0) {
                             displayAttemptsInModal(response.data.attempts, response.data.is_admin, quizId);
                         } else {
-                            $('.attempts-list').html('<p style="text-align: center; color: #666;">No attempts found for this exercise.</p>');
+                            $('#attempts-modal .attempts-list').html('<p style="text-align: center; color: #666;">No attempts found for this exercise.</p>');
                         }
                     },
                     error: function() {
-                        $('.attempts-loading').hide();
-                        $('.attempts-list').html('<p style="text-align: center; color: #c00;">Failed to load attempts. Please try again.</p>');
+                        $('#attempts-modal .attempts-loading').hide();
+                        $('#attempts-modal .attempts-list').html('<p style="text-align: center; color: #c00;">Failed to load attempts. Please try again.</p>');
                     }
                 });
             }
@@ -2289,11 +2289,11 @@
                 });
                 
                 html += '</tbody></table>';
-                $('.attempts-list').html(html);
+                $('#attempts-modal .attempts-list').html(html);
                 
                 // Add delete functionality for admin
                 if (isAdmin) {
-                    $('.delete-attempt-modal-btn').on('click', function() {
+                    $('#attempts-modal .delete-attempt-modal-btn').on('click', function() {
                         var attemptId = $(this).data('attempt-id');
                         var quizId = $(this).data('quiz-id');
                         if (confirm('Are you sure you want to delete this attempt? This action cannot be undone.')) {
@@ -2347,6 +2347,7 @@
                 e.preventDefault();
                 var $header = $('.quiz-header');
                 var $wpHeader = $('.et-l--header'); // WordPress/Divi header
+                var $adminBar = $('#wpadminbar'); // WordPress admin bar
                 var $toggleBtn = $(this);
                 var $toggleIcon = $toggleBtn.find('.toggle-icon');
                 
@@ -2354,12 +2355,19 @@
                     // Hide header
                     $header.removeClass('header-visible');
                     $wpHeader.removeClass('header-visible');
+                    $adminBar.removeClass('header-visible');
+                    $('html').removeClass('admin-bar-visible');
                     $toggleIcon.text('▼');
                     $toggleBtn.attr('title', 'Show header');
                 } else {
                     // Show header
                     $header.addClass('header-visible');
                     $wpHeader.addClass('header-visible');
+                    $adminBar.addClass('header-visible');
+                    // Only add admin-bar-visible if admin bar exists
+                    if ($adminBar.length > 0) {
+                        $('html').addClass('admin-bar-visible');
+                    }
                     $toggleIcon.text('▲');
                     $toggleBtn.attr('title', 'Hide header');
                 }
