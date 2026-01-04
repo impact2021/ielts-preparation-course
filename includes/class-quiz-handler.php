@@ -137,13 +137,12 @@ class IELTS_CM_Quiz_Handler {
                         }
                         $feedback = !empty($option_feedbacks) ? implode('<br>', $option_feedbacks) : '';
                     } else {
-                        // No answer provided - show feedback from correct options
-                        foreach ($correct_indices as $correct_idx) {
-                            if (isset($mc_options[$correct_idx]['feedback']) && !empty($mc_options[$correct_idx]['feedback'])) {
-                                $option_feedbacks[] = $mc_options[$correct_idx]['feedback'];
-                            }
+                        // No answer provided - use no_answer_feedback if available
+                        if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
+                            $feedback = wp_kses_post($question['no_answer_feedback']);
+                        } else {
+                            $feedback = '';
                         }
-                        $feedback = !empty($option_feedbacks) ? implode('<br>', $option_feedbacks) : '';
                     }
                     
                     $score += $points_earned;
