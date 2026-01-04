@@ -770,9 +770,19 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     <div id="quiz-result" class="quiz-result" style="display: none;"></div>
     
     <?php
-    // Previous/Next quiz navigation within the lesson
+    // Previous/Next content navigation within the lesson (includes both sublessons and exercises)
     if ($lesson_id) {
         global $wpdb;
+        
+        // Get all resources (sublessons) for this lesson
+        $resource_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT post_id 
+            FROM {$wpdb->postmeta} 
+            WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+               OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
+        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+        
+        // Get all quizzes (exercises) for this lesson
         $quiz_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT post_id 
             FROM {$wpdb->postmeta} 
@@ -780,9 +790,25 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
         ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
         
-        $all_quizzes = array();
+        // Combine all content items (resources and quizzes)
+        $all_content_items = array();
+        
+        if (!empty($resource_ids)) {
+            $resources = get_posts(array(
+                'post_type' => 'ielts_resource',
+                'posts_per_page' => -1,
+                'post__in' => $resource_ids,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+                'post_status' => 'publish'
+            ));
+            foreach ($resources as $resource) {
+                $all_content_items[] = array('post' => $resource, 'order' => $resource->menu_order);
+            }
+        }
+        
         if (!empty($quiz_ids)) {
-            $all_quizzes = get_posts(array(
+            $quizzes = get_posts(array(
                 'post_type' => 'ielts_quiz',
                 'posts_per_page' => -1,
                 'post__in' => $quiz_ids,
@@ -790,29 +816,48 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                 'order' => 'ASC',
                 'post_status' => 'publish'
             ));
+            foreach ($quizzes as $quiz_item) {
+                $all_content_items[] = array('post' => $quiz_item, 'order' => $quiz_item->menu_order);
+            }
         }
         
+        // Sort by menu order
+        usort($all_content_items, function($a, $b) {
+            return $a['order'] - $b['order'];
+        });
+        
+        // Find current quiz and get previous/next items
         $current_index = -1;
-        foreach ($all_quizzes as $index => $q) {
-            if ($q->ID == $quiz->ID) {
+        foreach ($all_content_items as $index => $item) {
+            if ($item['post']->ID == $quiz->ID) {
                 $current_index = $index;
                 break;
             }
         }
         
-        $prev_quiz = ($current_index > 0) ? $all_quizzes[$current_index - 1] : null;
-        $next_quiz = ($current_index >= 0 && $current_index < count($all_quizzes) - 1) ? $all_quizzes[$current_index + 1] : null;
+        $prev_item = ($current_index > 0) ? $all_content_items[$current_index - 1]['post'] : null;
+        $next_item = ($current_index >= 0 && $current_index < count($all_content_items) - 1) ? $all_content_items[$current_index + 1]['post'] : null;
+        
+        // Determine labels for previous/next items
+        $prev_label = '';
+        if ($prev_item) {
+            $prev_label = ($prev_item->post_type === 'ielts_resource') ? __('Previous Sublesson', 'ielts-course-manager') : __('Previous Exercise', 'ielts-course-manager');
+        }
+        $next_label = '';
+        if ($next_item) {
+            $next_label = ($next_item->post_type === 'ielts_resource') ? __('Next Sublesson', 'ielts-course-manager') : __('Next Exercise', 'ielts-course-manager');
+        }
         ?>
         
-        <?php if ($prev_quiz || $next_quiz): ?>
+        <?php if ($prev_item || $next_item): ?>
             <div class="ielts-navigation">
                 <div class="nav-prev">
-                    <?php if ($prev_quiz): ?>
-                        <a href="<?php echo get_permalink($prev_quiz->ID); ?>" class="nav-link">
+                    <?php if ($prev_item): ?>
+                        <a href="<?php echo get_permalink($prev_item->ID); ?>" class="nav-link">
                             <span class="nav-arrow">&laquo;</span>
                             <span class="nav-label">
-                                <small><?php _e('Previous Exercise', 'ielts-course-manager'); ?></small>
-                                <strong><?php echo esc_html($prev_quiz->post_title); ?></strong>
+                                <small><?php echo esc_html($prev_label); ?></small>
+                                <strong><?php echo esc_html($prev_item->post_title); ?></strong>
                             </span>
                         </a>
                     <?php endif; ?>
@@ -828,11 +873,11 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                     <?php endif; ?>
                 </div>
                 <div class="nav-next">
-                    <?php if ($next_quiz): ?>
-                        <a href="<?php echo get_permalink($next_quiz->ID); ?>" class="nav-link">
+                    <?php if ($next_item): ?>
+                        <a href="<?php echo get_permalink($next_item->ID); ?>" class="nav-link">
                             <span class="nav-label">
-                                <small><?php _e('Next Exercise', 'ielts-course-manager'); ?></small>
-                                <strong><?php echo esc_html($next_quiz->post_title); ?></strong>
+                                <small><?php echo esc_html($next_label); ?></small>
+                                <strong><?php echo esc_html($next_item->post_title); ?></strong>
                             </span>
                             <span class="nav-arrow">&raquo;</span>
                         </a>

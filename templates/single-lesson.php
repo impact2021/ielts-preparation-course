@@ -142,6 +142,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                         <th class="content-title-col"><?php _e('Title', 'ielts-course-manager'); ?></th>
                         <?php if ($user_id): ?>
                             <th class="content-score-col"><?php _e('Score', 'ielts-course-manager'); ?></th>
+                            <th class="content-attempts-col"><?php _e('Attempts', 'ielts-course-manager'); ?></th>
                         <?php endif; ?>
                         <th class="content-action-col"><?php _e('Action', 'ielts-course-manager'); ?></th>
                     </tr>
@@ -251,6 +252,17 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                                         <?php endif; ?>
                                     <?php endif; ?>
                                 </td>
+                                <td class="content-attempts">
+                                    <?php if ($item_type === 'quiz'): ?>
+                                        <button class="button button-small view-attempts-btn" 
+                                                data-quiz-id="<?php echo $post_item->ID; ?>"
+                                                data-quiz-title="<?php echo esc_attr($post_item->post_title); ?>">
+                                            <?php _e('View Attempts', 'ielts-course-manager'); ?>
+                                        </button>
+                                    <?php else: ?>
+                                        —
+                                    <?php endif; ?>
+                                </td>
                             <?php endif; ?>
                             <td class="content-action">
                                 <?php if ($item_type === 'quiz' && isset($use_fullscreen) && $use_fullscreen): ?>
@@ -276,6 +288,24 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                 </tbody>
             </table>
         </div>
+        
+        <!-- Modal for viewing attempts -->
+        <?php if ($user_id): ?>
+        <div id="attempts-modal" class="attempts-modal" style="display: none;">
+            <div class="attempts-modal-content">
+                <div class="attempts-modal-header">
+                    <h3 id="attempts-modal-title"><?php _e('Previous Attempts', 'ielts-course-manager'); ?></h3>
+                    <button class="attempts-modal-close">&times;</button>
+                </div>
+                <div class="attempts-modal-body">
+                    <div class="attempts-loading">
+                        <?php _e('Loading attempts...', 'ielts-course-manager'); ?>
+                    </div>
+                    <div class="attempts-list"></div>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
         
         <style>
         /* Lesson progress stats styling */
@@ -374,10 +404,17 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
             width: 180px;
         }
         .ielts-content-table .content-score-col {
-            width: 360px;
+            width: 200px;
             text-align: center;
         }
         .ielts-content-table .content-score {
+            text-align: center;
+        }
+        .ielts-content-table .content-attempts-col {
+            width: 160px;
+            text-align: center;
+        }
+        .ielts-content-table .content-attempts {
             text-align: center;
         }
         .ielts-content-table .content-action-col {
@@ -405,6 +442,95 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
         .ielts-content-table .type-badge.quiz {
             background: #fff3e0;
             color: #f57c00;
+        }
+        
+        /* Modal styles for attempts */
+        .attempts-modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .attempts-modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .attempts-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .attempts-modal-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .attempts-modal-close {
+            background: none;
+            border: none;
+            font-size: 28px;
+            font-weight: bold;
+            color: #999;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            line-height: 1;
+        }
+        .attempts-modal-close:hover {
+            color: #333;
+        }
+        .attempts-modal-body {
+            padding: 20px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        .attempts-loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        .attempts-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .attempts-table th,
+        .attempts-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .attempts-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .attempts-table tr:hover {
+            background-color: #f5f5f5;
+        }
+        .percentage-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        .percentage-pass {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .percentage-fail {
+            background-color: #f8d7da;
+            color: #721c24;
         }
         </style>
     <?php endif; ?>

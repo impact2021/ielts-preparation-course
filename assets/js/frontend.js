@@ -2197,6 +2197,142 @@
             }
         }
         
+        // Lesson page: Previous Attempts modal functionality
+        if ($('.view-attempts-btn').length) {
+            // Open modal when clicking "View Attempts" button
+            $('.view-attempts-btn').on('click', function(e) {
+                e.preventDefault();
+                var $btn = $(this);
+                var quizId = $btn.data('quiz-id');
+                var quizTitle = $btn.data('quiz-title');
+                
+                // Set modal title
+                $('#attempts-modal-title').text('Previous Attempts - ' + quizTitle);
+                
+                // Show modal
+                $('#attempts-modal').fadeIn(200);
+                
+                // Load attempts for this quiz
+                loadQuizAttemptsForLesson(quizId);
+            });
+            
+            // Close modal functionality
+            $('.attempts-modal-close').on('click', function() {
+                $('#attempts-modal').fadeOut(200);
+            });
+            
+            // Close modal when clicking outside
+            $(window).on('click', function(e) {
+                if ($(e.target).is('#attempts-modal')) {
+                    $('#attempts-modal').fadeOut(200);
+                }
+            });
+            
+            // Load quiz attempts function for lesson page
+            function loadQuizAttemptsForLesson(quizId) {
+                $('.attempts-loading').show();
+                $('.attempts-list').html('');
+                
+                $.ajax({
+                    url: ieltsCM.ajaxUrl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_get_quiz_attempts',
+                        nonce: ieltsCM.nonce,
+                        quiz_id: quizId
+                    },
+                    success: function(response) {
+                        $('.attempts-loading').hide();
+                        
+                        if (response.success && response.data.attempts && response.data.attempts.length > 0) {
+                            displayAttemptsInModal(response.data.attempts, response.data.is_admin, quizId);
+                        } else {
+                            $('.attempts-list').html('<p style="text-align: center; color: #666;">No attempts found for this exercise.</p>');
+                        }
+                    },
+                    error: function() {
+                        $('.attempts-loading').hide();
+                        $('.attempts-list').html('<p style="text-align: center; color: #c00;">Failed to load attempts. Please try again.</p>');
+                    }
+                });
+            }
+            
+            // Display attempts in modal
+            function displayAttemptsInModal(attempts, isAdmin, quizId) {
+                var html = '<table class="attempts-table">';
+                html += '<thead><tr>';
+                html += '<th>Attempt</th>';
+                html += '<th>Score</th>';
+                html += '<th>Percentage</th>';
+                html += '<th>Date</th>';
+                if (isAdmin) {
+                    html += '<th>Actions</th>';
+                }
+                html += '</tr></thead>';
+                html += '<tbody>';
+                
+                attempts.forEach(function(attempt, index) {
+                    var attemptNum = attempts.length - index;
+                    var passClass = attempt.percentage >= 70 ? 'pass' : 'fail';
+                    
+                    html += '<tr data-attempt-id="' + attempt.id + '">';
+                    html += '<td>' + attemptNum + '</td>';
+                    html += '<td>' + attempt.score + ' / ' + attempt.max_score + '</td>';
+                    html += '<td><span class="percentage-badge percentage-' + passClass + '">' + attempt.percentage + '%</span></td>';
+                    html += '<td>' + attempt.submitted_date + '</td>';
+                    if (isAdmin) {
+                        html += '<td><button class="delete-attempt-modal-btn button button-small" data-attempt-id="' + attempt.id + '" data-quiz-id="' + quizId + '">Delete</button></td>';
+                    }
+                    html += '</tr>';
+                });
+                
+                html += '</tbody></table>';
+                $('.attempts-list').html(html);
+                
+                // Add delete functionality for admin
+                if (isAdmin) {
+                    $('.delete-attempt-modal-btn').on('click', function() {
+                        var attemptId = $(this).data('attempt-id');
+                        var quizId = $(this).data('quiz-id');
+                        if (confirm('Are you sure you want to delete this attempt? This action cannot be undone.')) {
+                            deleteAttemptFromModal(attemptId, quizId, $(this).closest('tr'));
+                        }
+                    });
+                }
+            }
+            
+            // Delete attempt from modal
+            function deleteAttemptFromModal(attemptId, quizId, row) {
+                $.ajax({
+                    url: ieltsCM.ajaxUrl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_delete_quiz_attempt',
+                        nonce: ieltsCM.nonce,
+                        attempt_id: attemptId
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            row.fadeOut(300, function() {
+                                $(this).remove();
+                                // Check if there are any attempts left
+                                if ($('.attempts-table tbody tr').length === 0) {
+                                    $('.attempts-list').html('<p style="text-align: center; color: #666;">No attempts remaining.</p>');
+                                }
+                            });
+                            // Optionally reload the page to update the score display
+                            // You could also update the score in the table directly
+                        } else {
+                            alert('Failed to delete attempt: ' + (response.data.message || 'Unknown error'));
+                        }
+                    },
+                    error: function() {
+                        alert('Failed to delete attempt. Please try again.');
+                    }
+                });
+            }
+        }
+        
         // Focus mode for exercises (auto-enabled for all CBT quizzes)
         // Check if we're on an exercise page
         if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
@@ -2231,25 +2367,40 @@
         // Dynamic viewport height recalculation for exercise layouts
         // Fixes issue where navigation doesn't resize when window is moved to different monitor
         if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
+            // Store last known dimensions to detect real changes
+            var lastWidth = 0;
+            var lastHeight = 0;
+            
             // Function to recalculate and apply dynamic heights
             function updateDynamicHeights() {
+                // Force a fresh read of current viewport dimensions
                 var vh = window.innerHeight;
+                var vw = window.innerWidth;
+                
+                // Only update if dimensions actually changed
+                if (vh === lastHeight && vw === lastWidth) {
+                    return;
+                }
+                
+                lastHeight = vh;
+                lastWidth = vw;
+                
                 var isFocusMode = $('body').hasClass('ielts-quiz-focus-mode');
                 
                 // Calculate appropriate offset based on focus mode and screen size
                 var offset;
                 if (isFocusMode) {
-                    if (window.innerWidth <= 768) {
+                    if (vw <= 768) {
                         offset = 220; // Mobile focus mode
-                    } else if (window.innerWidth <= 1024) {
+                    } else if (vw <= 1024) {
                         offset = 200; // Tablet focus mode
                     } else {
                         offset = 180; // Desktop focus mode
                     }
                 } else {
-                    if (window.innerWidth <= 768) {
+                    if (vw <= 768) {
                         offset = 450; // Mobile normal mode
-                    } else if (window.innerWidth <= 1024) {
+                    } else if (vw <= 1024) {
                         offset = 400; // Tablet normal mode
                     } else {
                         offset = 300; // Desktop normal mode
@@ -2260,10 +2411,15 @@
                 
                 // Apply the calculated height to the columns
                 $('.reading-column, .questions-column, .listening-audio-column').css('max-height', maxHeight + 'px');
+                
+                // Debug log to help track monitor changes
+                console.log('Height updated: vh=' + vh + 'px, maxHeight=' + maxHeight + 'px');
             }
             
-            // Initial calculation
-            updateDynamicHeights();
+            // Initial calculation with small delay to ensure page is fully loaded
+            setTimeout(function() {
+                updateDynamicHeights();
+            }, 100);
             
             // Recalculate on window resize (includes moving to different monitor)
             var resizeTimeout;
@@ -2271,7 +2427,43 @@
                 clearTimeout(resizeTimeout);
                 resizeTimeout = setTimeout(function() {
                     updateDynamicHeights();
-                }, 100); // Debounce to avoid excessive calculations
+                }, 50); // Reduced debounce time for faster response
+            });
+            
+            // Additional listener for screen changes (moving between monitors)
+            // This catches monitor changes that might not trigger resize
+            if (window.matchMedia) {
+                var mediaQueryList = window.matchMedia('(min-width: 0px)');
+                var mediaHandler = function() {
+                    setTimeout(function() {
+                        updateDynamicHeights();
+                    }, 100);
+                };
+                
+                // Modern browsers
+                if (mediaQueryList.addEventListener) {
+                    mediaQueryList.addEventListener('change', mediaHandler);
+                } else if (mediaQueryList.addListener) {
+                    // Older browsers
+                    mediaQueryList.addListener(mediaHandler);
+                }
+            }
+            
+            // Periodic check for dimension changes (fallback for extended monitor issues)
+            // Check every second for height changes when window is focused
+            var intervalCheck = setInterval(function() {
+                if (document.hasFocus()) {
+                    var currentHeight = window.innerHeight;
+                    var currentWidth = window.innerWidth;
+                    if (currentHeight !== lastHeight || currentWidth !== lastWidth) {
+                        updateDynamicHeights();
+                    }
+                }
+            }, 1000);
+            
+            // Clean up interval on page unload
+            $(window).on('beforeunload', function() {
+                clearInterval(intervalCheck);
             });
         }
     });
