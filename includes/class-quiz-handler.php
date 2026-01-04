@@ -1125,6 +1125,8 @@ class IELTS_CM_Quiz_Handler {
     public function delete_quiz_attempt_ajax() {
         check_ajax_referer('ielts_cm_nonce', 'nonce');
         
+        $current_user_id = get_current_user_id();
+        
         // Check if user is admin
         if (!current_user_can('manage_options')) {
             wp_send_json_error(array('message' => 'You do not have permission to delete attempts'));
@@ -1134,6 +1136,15 @@ class IELTS_CM_Quiz_Handler {
         
         if (!$attempt_id) {
             wp_send_json_error(array('message' => 'Attempt ID is required'));
+        }
+        
+        // Verify the attempt belongs to the current user (even admins can only delete their own)
+        global $wpdb;
+        $table = $this->db->get_quiz_results_table();
+        $attempt = $wpdb->get_row($wpdb->prepare("SELECT user_id FROM $table WHERE id = %d", $attempt_id));
+        
+        if (!$attempt || $attempt->user_id != $current_user_id) {
+            wp_send_json_error(array('message' => 'You can only delete your own attempts'));
         }
         
         $result = $this->delete_quiz_attempt($attempt_id);

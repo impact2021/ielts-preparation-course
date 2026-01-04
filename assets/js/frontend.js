@@ -2214,12 +2214,12 @@
                     // Hide header
                     $header.removeClass('header-visible');
                     $toggleIcon.text('▼');
-                    $toggleBtn.attr('title', '<?php _e('Show header', 'ielts-course-manager'); ?>');
+                    $toggleBtn.attr('title', 'Show header');
                 } else {
                     // Show header
                     $header.addClass('header-visible');
                     $toggleIcon.text('▲');
-                    $toggleBtn.attr('title', '<?php _e('Hide header', 'ielts-course-manager'); ?>');
+                    $toggleBtn.attr('title', 'Hide header');
                 }
             });
         }
