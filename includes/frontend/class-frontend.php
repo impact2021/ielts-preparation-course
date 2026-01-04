@@ -306,9 +306,12 @@ class IELTS_CM_Frontend {
             const email = document.getElementById('impact-user-email').value;
             const formContainer = document.getElementById('impact-form-container');
             
-            // Check for minimized state in localStorage
-            const isMinimized = localStorage.getItem('impactFeedbackMinimized') === 'true';
-            if (isMinimized) {
+            // Constant for localStorage key
+            const FEEDBACK_EXPANDED_KEY = 'impactFeedbackExpanded';
+            
+            // Check for expanded state in localStorage (default is minimized)
+            const isExpanded = localStorage.getItem(FEEDBACK_EXPANDED_KEY) === 'true';
+            if (!isExpanded) {
                 btn.classList.add('minimized');
             }
 
@@ -316,7 +319,7 @@ class IELTS_CM_Frontend {
                 // If minimized, restore it
                 if (btn.classList.contains('minimized')) {
                     btn.classList.remove('minimized');
-                    localStorage.setItem('impactFeedbackMinimized', 'false');
+                    localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'true');
                     return;
                 }
                 
@@ -344,7 +347,7 @@ class IELTS_CM_Frontend {
                 modal.style.display = 'none';
                 // Minimize the button instead of closing it
                 btn.classList.add('minimized');
-                localStorage.setItem('impactFeedbackMinimized', 'true');
+                localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'false');
             });
             
             window.addEventListener('click', e => { 
@@ -352,7 +355,7 @@ class IELTS_CM_Frontend {
                     modal.style.display = 'none';
                     // Minimize the button instead of closing it
                     btn.classList.add('minimized');
-                    localStorage.setItem('impactFeedbackMinimized', 'true');
+                    localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'false');
                 }
             });
 
