@@ -1145,7 +1145,8 @@ body.ielts-course-archive .content-area {
     background: #f5f5f5;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .question-navigation .question-buttons {
@@ -2853,7 +2854,7 @@ select.answer-select-inline.answer-incorrect {
 
 .quiz-timer-fullscreen .nav-label strong {
     font-size: 14px;
-    color: #333;
+    color: #fff;
     margin-top: 3px;
 }
 
@@ -2875,6 +2876,11 @@ body.ielts-quiz-focus-mode .quiz-header.header-visible {
     display: block !important;
 }
 
+/* Show WordPress header when toggled visible */
+body.ielts-quiz-focus-mode .et-l--header.header-visible {
+    display: block !important;
+}
+
 /* Header toggle button - hidden by default, only visible in focus mode */
 .header-toggle-btn {
     display: none;
@@ -2890,13 +2896,14 @@ body.ielts-quiz-focus-mode .header-toggle-btn {
     background: #0073aa;
     color: #fff;
     border: none;
-    padding: 8px 20px;
+    padding: 4px 16px;
     cursor: pointer;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 6px 6px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     transition: all 0.3s ease;
+    line-height: 1.2;
 }
 
 body.ielts-quiz-focus-mode .header-toggle-btn:hover {
@@ -2905,8 +2912,8 @@ body.ielts-quiz-focus-mode .header-toggle-btn:hover {
 }
 
 body.ielts-quiz-focus-mode .header-toggle-btn .toggle-icon {
-    font-size: 12px;
-    margin-left: 5px;
+    font-size: 10px;
+    margin-left: 4px;
 }
 
 body.ielts-quiz-focus-mode #et-main-area {

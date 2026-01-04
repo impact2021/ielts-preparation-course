@@ -2207,17 +2207,20 @@
             $('#header-toggle-btn').on('click', function(e) {
                 e.preventDefault();
                 var $header = $('.quiz-header');
+                var $wpHeader = $('.et-l--header'); // WordPress/Divi header
                 var $toggleBtn = $(this);
                 var $toggleIcon = $toggleBtn.find('.toggle-icon');
                 
                 if ($header.hasClass('header-visible')) {
                     // Hide header
                     $header.removeClass('header-visible');
+                    $wpHeader.removeClass('header-visible');
                     $toggleIcon.text('▼');
                     $toggleBtn.attr('title', 'Show header');
                 } else {
                     // Show header
                     $header.addClass('header-visible');
+                    $wpHeader.addClass('header-visible');
                     $toggleIcon.text('▲');
                     $toggleBtn.attr('title', 'Hide header');
                 }
