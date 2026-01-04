@@ -2227,6 +2227,53 @@
                 }
             });
         }
+        
+        // Dynamic viewport height recalculation for exercise layouts
+        // Fixes issue where navigation doesn't resize when window is moved to different monitor
+        if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
+            // Function to recalculate and apply dynamic heights
+            function updateDynamicHeights() {
+                var vh = window.innerHeight;
+                var isFocusMode = $('body').hasClass('ielts-quiz-focus-mode');
+                
+                // Calculate appropriate offset based on focus mode and screen size
+                var offset;
+                if (isFocusMode) {
+                    if (window.innerWidth <= 768) {
+                        offset = 220; // Mobile focus mode
+                    } else if (window.innerWidth <= 1024) {
+                        offset = 200; // Tablet focus mode
+                    } else {
+                        offset = 180; // Desktop focus mode
+                    }
+                } else {
+                    if (window.innerWidth <= 768) {
+                        offset = 450; // Mobile normal mode
+                    } else if (window.innerWidth <= 1024) {
+                        offset = 400; // Tablet normal mode
+                    } else {
+                        offset = 300; // Desktop normal mode
+                    }
+                }
+                
+                var maxHeight = vh - offset;
+                
+                // Apply the calculated height to the columns
+                $('.reading-column, .questions-column, .listening-audio-column').css('max-height', maxHeight + 'px');
+            }
+            
+            // Initial calculation
+            updateDynamicHeights();
+            
+            // Recalculate on window resize (includes moving to different monitor)
+            var resizeTimeout;
+            $(window).on('resize', function() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(function() {
+                    updateDynamicHeights();
+                }, 100); // Debounce to avoid excessive calculations
+            });
+        }
     });
     
 })(jQuery);

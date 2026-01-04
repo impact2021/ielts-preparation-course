@@ -182,8 +182,13 @@ if ($lesson_id) {
                         </a>
                     <?php endif; ?>
                     
+                    <!-- Always show Return to course button -->
+                    <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-page-link return-course-link nav-link-clickable">
+                        <?php _e('Return to course', 'ielts-course-manager'); ?>
+                    </a>
+                    
                     <?php 
-                    // Show Next page button if there's a next item, otherwise Return to course
+                    // Show Next page button if there's a next item
                     if ($next_url): ?>
                         <a href="<?php echo esc_url($next_url); ?>" class="nav-page-link next-page-link nav-link-clickable">
                             <div class="nav-label">
@@ -191,10 +196,6 @@ if ($lesson_id) {
                                 <strong><?php echo esc_html($next_title); ?></strong>
                             </div>
                             <div class="nav-arrow">&gt;</div>
-                        </a>
-                    <?php else: ?>
-                        <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-page-link return-course-link nav-link-clickable">
-                            <?php _e('< Return to course', 'ielts-course-manager'); ?>
                         </a>
                     <?php endif; ?>
                     <?php endif; ?>
