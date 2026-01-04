@@ -880,7 +880,7 @@ body.ielts-course-archive .content-area {
 /* Two-column container */
 .computer-based-container {
     display: flex;
-    gap: 20px;
+    gap: 8px;
     min-height: 500px;
     margin-bottom: 0;
     margin-top: 0;
