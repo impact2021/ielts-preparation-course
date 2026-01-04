@@ -84,14 +84,14 @@ body .questions-column {
 }
 <?php else: ?>
 body.ielts-quiz-single #main.site-main {
-    padding: 60px 40px !important;
+    padding: 60px 40px 20px 40px !important;
 }
 /* Fallback for themes with different structure */
 body.ielts-quiz-single .site-main,
 body.ielts-quiz-single #primary,
 body.ielts-quiz-single .content-area {
     padding-top: 60px !important;
-    padding-bottom: 60px !important;
+    padding-bottom: 20px !important;
 }
 /* Focus mode: Remove padding to maximize space for exercises */
 body.ielts-quiz-focus-mode.ielts-quiz-single #main.site-main,
