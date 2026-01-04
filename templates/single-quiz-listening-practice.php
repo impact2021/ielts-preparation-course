@@ -38,6 +38,8 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
 // Calculate next and previous URLs for navigation
 $next_url = '';
 $prev_url = '';
+$next_title = '';
+$prev_title = '';
 if ($lesson_id) {
     global $wpdb;
     // Get all resources and quizzes for this lesson
@@ -100,16 +102,26 @@ if ($lesson_id) {
         }
     }
     
-    // If there's a next item in this lesson, get its URL
+    // If there's a next item in this lesson, get its URL and title
     if ($current_index >= 0 && $current_index < count($all_items) - 1) {
         $next_post = $all_items[$current_index + 1]['post'];
         $next_url = get_permalink($next_post->ID);
+        $next_title = $next_post->post_title;
+        // Truncate to 15 characters
+        if (strlen($next_title) > 15) {
+            $next_title = substr($next_title, 0, 15) . '...';
+        }
     }
     
-    // If there's a previous item in this lesson, get its URL
+    // If there's a previous item in this lesson, get its URL and title
     if ($current_index > 0) {
         $prev_post = $all_items[$current_index - 1]['post'];
         $prev_url = get_permalink($prev_post->ID);
+        $prev_title = $prev_post->post_title;
+        // Truncate to 15 characters
+        if (strlen($prev_title) > 15) {
+            $prev_title = substr($prev_title, 0, 15) . '...';
+        }
     }
 }
 ?>
@@ -162,7 +174,11 @@ if ($lesson_id) {
                     // Show Previous page button if there's a previous item
                     if ($prev_url): ?>
                         <a href="<?php echo esc_url($prev_url); ?>" class="nav-page-link prev-page-link nav-link-clickable">
-                            <?php _e('< Previous page', 'ielts-course-manager'); ?>
+                            <div class="nav-arrow">&lt;</div>
+                            <div class="nav-label">
+                                <small><?php _e('Previous', 'ielts-course-manager'); ?></small>
+                                <strong><?php echo esc_html($prev_title); ?></strong>
+                            </div>
                         </a>
                     <?php endif; ?>
                     
@@ -170,7 +186,11 @@ if ($lesson_id) {
                     // Show Next page button if there's a next item, otherwise Return to course
                     if ($next_url): ?>
                         <a href="<?php echo esc_url($next_url); ?>" class="nav-page-link next-page-link nav-link-clickable">
-                            <?php _e('Next page >', 'ielts-course-manager'); ?>
+                            <div class="nav-label">
+                                <small><?php _e('Next', 'ielts-course-manager'); ?></small>
+                                <strong><?php echo esc_html($next_title); ?></strong>
+                            </div>
+                            <div class="nav-arrow">&gt;</div>
                         </a>
                     <?php else: ?>
                         <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-page-link return-course-link nav-link-clickable">

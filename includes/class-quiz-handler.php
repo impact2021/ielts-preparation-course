@@ -17,6 +17,8 @@ class IELTS_CM_Quiz_Handler {
         // AJAX handlers
         add_action('wp_ajax_ielts_cm_submit_quiz', array($this, 'submit_quiz'));
         add_action('wp_ajax_ielts_cm_get_quiz_results', array($this, 'get_quiz_results_ajax'));
+        add_action('wp_ajax_ielts_cm_get_quiz_attempts', array($this, 'get_quiz_attempts_ajax'));
+        add_action('wp_ajax_ielts_cm_delete_quiz_attempt', array($this, 'delete_quiz_attempt_ajax'));
     }
     
     /**
@@ -1037,5 +1039,107 @@ class IELTS_CM_Quiz_Handler {
             'value' => $band_score,
             'type' => 'band'
         );
+    }
+    
+    /**
+     * Get all attempts for a specific quiz by a user
+     * 
+     * @param int $user_id User ID
+     * @param int $quiz_id Quiz ID
+     * @return array Array of quiz attempt results
+     */
+    public function get_quiz_attempts($user_id, $quiz_id) {
+        global $wpdb;
+        $table = $this->db->get_quiz_results_table();
+        
+        $attempts = $wpdb->get_results($wpdb->prepare(
+            "SELECT * FROM $table WHERE user_id = %d AND quiz_id = %d ORDER BY submitted_date DESC",
+            $user_id, $quiz_id
+        ));
+        
+        return $attempts;
+    }
+    
+    /**
+     * AJAX handler for getting quiz attempts
+     */
+    public function get_quiz_attempts_ajax() {
+        check_ajax_referer('ielts_cm_nonce', 'nonce');
+        
+        $user_id = get_current_user_id();
+        if (!$user_id) {
+            wp_send_json_error(array('message' => 'User not logged in'));
+        }
+        
+        $quiz_id = isset($_POST['quiz_id']) ? intval($_POST['quiz_id']) : 0;
+        
+        if (!$quiz_id) {
+            wp_send_json_error(array('message' => 'Quiz ID is required'));
+        }
+        
+        $attempts = $this->get_quiz_attempts($user_id, $quiz_id);
+        
+        // Format attempts for frontend display
+        $formatted_attempts = array();
+        foreach ($attempts as $attempt) {
+            $formatted_attempts[] = array(
+                'id' => $attempt->id,
+                'score' => $attempt->score,
+                'max_score' => $attempt->max_score,
+                'percentage' => round($attempt->percentage, 2),
+                'submitted_date' => date_i18n(
+                    get_option('date_format') . ' ' . get_option('time_format'), 
+                    strtotime($attempt->submitted_date)
+                ),
+                'submitted_date_raw' => $attempt->submitted_date,
+                'answers' => json_decode($attempt->answers, true)
+            );
+        }
+        
+        wp_send_json_success(array(
+            'attempts' => $formatted_attempts,
+            'total' => count($formatted_attempts)
+        ));
+    }
+    
+    /**
+     * Delete a quiz attempt
+     * 
+     * @param int $attempt_id The ID of the attempt to delete
+     * @return bool True on success, false on failure
+     */
+    public function delete_quiz_attempt($attempt_id) {
+        global $wpdb;
+        $table = $this->db->get_quiz_results_table();
+        
+        $result = $wpdb->delete($table, array('id' => $attempt_id), array('%d'));
+        
+        return $result !== false;
+    }
+    
+    /**
+     * AJAX handler for deleting quiz attempts (admin only)
+     */
+    public function delete_quiz_attempt_ajax() {
+        check_ajax_referer('ielts_cm_nonce', 'nonce');
+        
+        // Check if user is admin
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error(array('message' => 'You do not have permission to delete attempts'));
+        }
+        
+        $attempt_id = isset($_POST['attempt_id']) ? intval($_POST['attempt_id']) : 0;
+        
+        if (!$attempt_id) {
+            wp_send_json_error(array('message' => 'Attempt ID is required'));
+        }
+        
+        $result = $this->delete_quiz_attempt($attempt_id);
+        
+        if ($result) {
+            wp_send_json_success(array('message' => 'Attempt deleted successfully'));
+        } else {
+            wp_send_json_error(array('message' => 'Failed to delete attempt'));
+        }
     }
 }
