@@ -2111,7 +2111,7 @@
                         $('.attempts-loading').hide();
                         
                         if (response.success && response.data.attempts && response.data.attempts.length > 0) {
-                            displayAttempts(response.data.attempts);
+                            displayAttempts(response.data.attempts, response.data.is_admin);
                             attemptsLoaded = true;
                         } else {
                             $('.attempts-list').html('<p>' + 'You have not attempted this exercise yet.' + '</p>');
@@ -2125,13 +2125,16 @@
             }
             
             // Display attempts in a table
-            function displayAttempts(attempts) {
+            function displayAttempts(attempts, isAdmin) {
                 var html = '<table class="attempts-table">';
                 html += '<thead><tr>';
                 html += '<th>Attempt</th>';
                 html += '<th>Score</th>';
                 html += '<th>Percentage</th>';
                 html += '<th>Date</th>';
+                if (isAdmin) {
+                    html += '<th>Actions</th>';
+                }
                 html += '</tr></thead>';
                 html += '<tbody>';
                 
@@ -2139,43 +2142,85 @@
                     var attemptNum = attempts.length - index;
                     var passClass = attempt.percentage >= 70 ? 'pass' : 'fail';
                     
-                    html += '<tr>';
+                    html += '<tr data-attempt-id="' + attempt.id + '">';
                     html += '<td>' + attemptNum + '</td>';
                     html += '<td>' + attempt.score + ' / ' + attempt.max_score + '</td>';
                     html += '<td><span class="percentage-badge percentage-' + passClass + '">' + attempt.percentage + '%</span></td>';
                     html += '<td>' + attempt.submitted_date + '</td>';
+                    if (isAdmin) {
+                        html += '<td><button class="delete-attempt-btn button button-small" data-attempt-id="' + attempt.id + '">Delete</button></td>';
+                    }
                     html += '</tr>';
                 });
                 
                 html += '</tbody></table>';
                 $('.attempts-list').html(html);
+                
+                // Add delete functionality for admin
+                if (isAdmin) {
+                    $('.delete-attempt-btn').on('click', function() {
+                        var attemptId = $(this).data('attempt-id');
+                        if (confirm('Are you sure you want to delete this attempt? This action cannot be undone.')) {
+                            deleteAttempt(attemptId, $(this).closest('tr'));
+                        }
+                    });
+                }
+            }
+            
+            // Delete attempt function
+            function deleteAttempt(attemptId, row) {
+                $.ajax({
+                    url: ieltsCM.ajaxUrl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_delete_quiz_attempt',
+                        nonce: ieltsCM.nonce,
+                        attempt_id: attemptId
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            row.fadeOut(300, function() {
+                                $(this).remove();
+                                // Check if there are any attempts left
+                                if ($('.attempts-table tbody tr').length === 0) {
+                                    $('.attempts-list').html('<p>No attempts remaining.</p>');
+                                }
+                            });
+                        } else {
+                            alert('Failed to delete attempt: ' + (response.data.message || 'Unknown error'));
+                        }
+                    },
+                    error: function() {
+                        alert('Failed to delete attempt. Please try again.');
+                    }
+                });
             }
         }
         
-        // Focus mode for exercises (hide header/footer instead of fullscreen popup)
-        // Check if we're on an exercise page with focus mode enabled
+        // Focus mode for exercises (auto-enabled for all CBT quizzes)
+        // Check if we're on an exercise page
         if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
-            // Check if URL has fullscreen parameter or if quiz has started
-            var urlParams = new URLSearchParams(window.location.search);
-            var focusModeEnabled = urlParams.get('fullscreen') === '1';
+            // Auto-enable focus mode for all CBT quizzes
+            $('body').addClass('ielts-quiz-focus-mode');
             
-            if (focusModeEnabled) {
-                // Enable focus mode immediately
-                $('body').addClass('ielts-quiz-focus-mode');
-            }
-            
-            // Also enable focus mode when clicking the fullscreen button
-            $('.ielts-fullscreen-btn').on('click', function(e) {
+            // Header toggle functionality
+            $('#header-toggle-btn').on('click', function(e) {
                 e.preventDefault();
-                // Enable focus mode
-                $('body').addClass('ielts-quiz-focus-mode');
-                // Show the quiz form
-                $('#ielts-quiz-form').show();
-                // Hide the fullscreen notice
-                $('.cbt-fullscreen-notice').hide();
-                // Update URL without reload
-                var newUrl = window.location.pathname + '?fullscreen=1';
-                window.history.pushState({path: newUrl}, '', newUrl);
+                var $header = $('.quiz-header');
+                var $toggleBtn = $(this);
+                var $toggleIcon = $toggleBtn.find('.toggle-icon');
+                
+                if ($header.hasClass('header-visible')) {
+                    // Hide header
+                    $header.removeClass('header-visible');
+                    $toggleIcon.text('▼');
+                    $toggleBtn.attr('title', 'Show header');
+                } else {
+                    // Show header
+                    $header.addClass('header-visible');
+                    $toggleIcon.text('▲');
+                    $toggleBtn.attr('title', 'Hide header');
+                }
             });
         }
     });

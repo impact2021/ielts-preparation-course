@@ -23,7 +23,6 @@ if (!is_array($reading_texts)) {
     $reading_texts = array();
 }
 $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
-$open_as_popup = get_post_meta($quiz->ID, '_ielts_cm_open_as_popup', true);
 
 // Determine test type from layout_type
 $test_type = 'exercise'; // default
@@ -55,8 +54,6 @@ if (!empty($audio_sections)) {
 } else {
     $first_section_key = 0;
 }
-// Check if we're in fullscreen mode
-$is_fullscreen = isset($_GET['fullscreen']) && $_GET['fullscreen'] === '1';
 
 // Calculate next and previous URLs for navigation
 $next_url = '';
@@ -133,18 +130,7 @@ if ($lesson_id) {
         if (strlen($next_title) > 15) {
             $next_title = substr($next_title, 0, 15) . '...';
         }
-        // For CBT quizzes with fullscreen enabled, add fullscreen parameter
-        if ($next_post->post_type === 'ielts_quiz') {
-            $next_layout_type = get_post_meta($next_post->ID, '_ielts_cm_layout_type', true);
-            $next_open_as_popup = get_post_meta($next_post->ID, '_ielts_cm_open_as_popup', true);
-            if ($next_layout_type === 'computer_based' && $next_open_as_popup) {
-                $next_url = add_query_arg('fullscreen', '1', get_permalink($next_post->ID));
-            } else {
-                $next_url = get_permalink($next_post->ID);
-            }
-        } else {
-            $next_url = get_permalink($next_post->ID);
-        }
+        $next_url = get_permalink($next_post->ID);
     }
     
     // If there's a previous item in this lesson, get its URL and title
@@ -155,27 +141,18 @@ if ($lesson_id) {
         if (strlen($prev_title) > 15) {
             $prev_title = substr($prev_title, 0, 15) . '...';
         }
-        // For CBT quizzes with fullscreen enabled, add fullscreen parameter
-        if ($prev_post->post_type === 'ielts_quiz') {
-            $prev_layout_type = get_post_meta($prev_post->ID, '_ielts_cm_layout_type', true);
-            $prev_open_as_popup = get_post_meta($prev_post->ID, '_ielts_cm_open_as_popup', true);
-            if ($prev_layout_type === 'computer_based' && $prev_open_as_popup) {
-                $prev_url = add_query_arg('fullscreen', '1', get_permalink($prev_post->ID));
-            } else {
-                $prev_url = get_permalink($prev_post->ID);
-            }
-        } else {
-            $prev_url = get_permalink($prev_post->ID);
+        $prev_url = get_permalink($prev_post->ID);
         }
     }
 }
 ?>
 
 <div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>" data-next-url="<?php echo esc_attr($next_url); ?>" data-test-type="<?php echo esc_attr($test_type); ?>">
-    <?php 
-    // Show fullscreen notice only if popup is enabled AND we're not already in fullscreen mode
-    $show_fullscreen_notice = $open_as_popup && !$is_fullscreen;
-    ?>
+    
+    <!-- Header toggle button -->
+    <button type="button" id="header-toggle-btn" class="header-toggle-btn" title="<?php _e('Toggle header visibility', 'ielts-course-manager'); ?>">
+        <span class="toggle-icon">▼</span>
+    </button>
     
     <div class="quiz-header">
         <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -214,21 +191,8 @@ if ($lesson_id) {
         </div>
     </div>
     
-    <?php if ($show_fullscreen_notice): ?>
-        <!-- Force fullscreen mode for CBT tests (when popup is enabled) -->
-        <div class="cbt-fullscreen-notice" style="text-align: center; padding: 40px 20px; background: #f9f9f9; border: 2px solid #0073aa; border-radius: 8px; margin: 20px 0;">
-            <p style="font-size: 1.2em; margin-bottom: 20px; color: #333;">
-                <?php _e('This computer-based test must be viewed in fullscreen mode for the best experience.', 'ielts-course-manager'); ?>
-            </p>
-            <a href="<?php echo add_query_arg('fullscreen', '1', get_permalink($quiz->ID)); ?>" class="button button-primary button-large ielts-fullscreen-btn" style="font-size: 1.1em; padding: 12px 30px; text-decoration: none;">
-                <span class="dashicons dashicons-fullscreen-alt" style="vertical-align: middle; font-size: 1.2em;"></span>
-                <?php _e('Open in Fullscreen', 'ielts-course-manager'); ?>
-            </a>
-        </div>
-    <?php endif; ?>
-    
     <?php if (!empty($questions) && is_user_logged_in()): ?>
-        <form id="ielts-quiz-form" class="quiz-form" style="<?php echo $show_fullscreen_notice ? 'display:none;' : ''; ?>">
+        <form id="ielts-quiz-form" class="quiz-form">
             <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
                 <div class="timer-left-section">
                     <?php if ($course_id): ?>

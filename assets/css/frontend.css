@@ -2865,8 +2865,43 @@ select.answer-select-inline.answer-incorrect {
 body.ielts-quiz-focus-mode #wpadminbar,
 body.ielts-quiz-focus-mode .et-l--header,
 body.ielts-quiz-focus-mode .et-l--footer,
+body.ielts-quiz-focus-mode .quiz-header,
 body.ielts-quiz-focus-mode #et-boc > .et_builder_inner_content > .et_pb_section:not(.quiz-section) {
     display: none !important;
+}
+
+/* Show header when toggled visible */
+body.ielts-quiz-focus-mode .quiz-header.header-visible {
+    display: block !important;
+}
+
+/* Header toggle button */
+.header-toggle-btn {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.header-toggle-btn:hover {
+    background: #005a87;
+    transform: translateX(-50%) translateY(2px);
+}
+
+.header-toggle-btn .toggle-icon {
+    font-size: 12px;
+    margin-left: 5px;
 }
 
 body.ielts-quiz-focus-mode #et-main-area {
