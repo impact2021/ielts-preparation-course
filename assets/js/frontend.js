@@ -2140,6 +2140,7 @@
                 
                 attempts.forEach(function(attempt, index) {
                     var attemptNum = attempts.length - index;
+                    // Using default 70% pass threshold - ideally this would come from quiz settings
                     var passClass = attempt.percentage >= 70 ? 'pass' : 'fail';
                     
                     html += '<tr data-attempt-id="' + attempt.id + '">';
@@ -2273,6 +2274,7 @@
                 
                 attempts.forEach(function(attempt, index) {
                     var attemptNum = attempts.length - index;
+                    // Using default 70% pass threshold - ideally this would come from quiz settings
                     var passClass = attempt.percentage >= 70 ? 'pass' : 'fail';
                     
                     html += '<tr data-attempt-id="' + attempt.id + '">';
@@ -2411,9 +2413,6 @@
                 
                 // Apply the calculated height to the columns
                 $('.reading-column, .questions-column, .listening-audio-column').css('max-height', maxHeight + 'px');
-                
-                // Debug log to help track monitor changes
-                console.log('Height updated: vh=' + vh + 'px, maxHeight=' + maxHeight + 'px');
             }
             
             // Initial calculation with small delay to ensure page is fully loaded
@@ -2450,9 +2449,9 @@
             }
             
             // Periodic check for dimension changes (fallback for extended monitor issues)
-            // Check every second for height changes when window is focused
+            // Check every second for height changes when window is focused and page is visible
             var intervalCheck = setInterval(function() {
-                if (document.hasFocus()) {
+                if (document.hasFocus() && !document.hidden) {
                     var currentHeight = window.innerHeight;
                     var currentWidth = window.innerWidth;
                     if (currentHeight !== lastHeight || currentWidth !== lastWidth) {
@@ -2463,7 +2462,10 @@
             
             // Clean up interval on page unload
             $(window).on('beforeunload', function() {
-                clearInterval(intervalCheck);
+                if (intervalCheck) {
+                    clearInterval(intervalCheck);
+                    intervalCheck = null;
+                }
             });
         }
     });
