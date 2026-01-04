@@ -1077,6 +1077,7 @@ class IELTS_CM_Quiz_Handler {
             wp_send_json_error(array('message' => 'Quiz ID is required'));
         }
         
+        // Get attempts for the current user (including admins)
         $attempts = $this->get_quiz_attempts($user_id, $quiz_id);
         
         // Format attempts for frontend display
@@ -1098,7 +1099,8 @@ class IELTS_CM_Quiz_Handler {
         
         wp_send_json_success(array(
             'attempts' => $formatted_attempts,
-            'total' => count($formatted_attempts)
+            'total' => count($formatted_attempts),
+            'is_admin' => current_user_can('manage_options')
         ));
     }
     
