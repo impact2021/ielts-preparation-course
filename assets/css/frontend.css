@@ -2927,10 +2927,7 @@ body.ielts-quiz-focus-mode .computer-based-container {
 }
 
 body.ielts-quiz-focus-mode .reading-column,
-body.ielts-quiz-focus-mode .questions-column {
-    max-height: calc(100vh - 180px) !important;
-}
-
+body.ielts-quiz-focus-mode .questions-column,
 body.ielts-quiz-focus-mode .listening-audio-column {
     max-height: calc(100vh - 180px) !important;
 }
@@ -2938,14 +2935,16 @@ body.ielts-quiz-focus-mode .listening-audio-column {
 /* Focus mode responsive optimizations */
 @media (max-width: 1024px) {
     body.ielts-quiz-focus-mode .reading-column,
-    body.ielts-quiz-focus-mode .questions-column {
+    body.ielts-quiz-focus-mode .questions-column,
+    body.ielts-quiz-focus-mode .listening-audio-column {
         max-height: calc(100vh - 200px) !important;
     }
 }
 
 @media (max-width: 768px) {
     body.ielts-quiz-focus-mode .reading-column,
-    body.ielts-quiz-focus-mode .questions-column {
+    body.ielts-quiz-focus-mode .questions-column,
+    body.ielts-quiz-focus-mode .listening-audio-column {
         max-height: calc(100vh - 220px) !important;
     }
 }
