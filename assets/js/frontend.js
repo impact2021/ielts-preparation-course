@@ -2065,6 +2065,119 @@
                 // to ensure proper timing and avoid race conditions with the results modal
             }
         }
+        
+        // Previous Attempts functionality
+        if ($('.quiz-attempts-section').length) {
+            var attemptsLoaded = false;
+            
+            // Toggle attempts section
+            $('.attempts-toggle').on('click', function() {
+                var $content = $('.attempts-content');
+                var $icon = $('.toggle-icon');
+                
+                if ($content.is(':visible')) {
+                    $content.slideUp();
+                    $icon.removeClass('dashicons-arrow-up-alt2').addClass('dashicons-arrow-down-alt2');
+                } else {
+                    $content.slideDown();
+                    $icon.removeClass('dashicons-arrow-down-alt2').addClass('dashicons-arrow-up-alt2');
+                    
+                    // Load attempts if not already loaded
+                    if (!attemptsLoaded) {
+                        loadQuizAttempts();
+                    }
+                }
+            });
+            
+            // Load quiz attempts
+            function loadQuizAttempts() {
+                var quizId = $('.ielts-single-quiz, .ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').data('quiz-id');
+                
+                if (!quizId) {
+                    $('.attempts-loading').hide();
+                    $('.attempts-list').html('<p>' + 'No quiz ID found.' + '</p>');
+                    return;
+                }
+                
+                $.ajax({
+                    url: ieltsCM.ajaxUrl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_get_quiz_attempts',
+                        nonce: ieltsCM.nonce,
+                        quiz_id: quizId
+                    },
+                    success: function(response) {
+                        $('.attempts-loading').hide();
+                        
+                        if (response.success && response.data.attempts && response.data.attempts.length > 0) {
+                            displayAttempts(response.data.attempts);
+                            attemptsLoaded = true;
+                        } else {
+                            $('.attempts-list').html('<p>' + 'You have not attempted this exercise yet.' + '</p>');
+                        }
+                    },
+                    error: function() {
+                        $('.attempts-loading').hide();
+                        $('.attempts-list').html('<p>' + 'Failed to load attempts. Please try again.' + '</p>');
+                    }
+                });
+            }
+            
+            // Display attempts in a table
+            function displayAttempts(attempts) {
+                var html = '<table class="attempts-table">';
+                html += '<thead><tr>';
+                html += '<th>Attempt</th>';
+                html += '<th>Score</th>';
+                html += '<th>Percentage</th>';
+                html += '<th>Date</th>';
+                html += '</tr></thead>';
+                html += '<tbody>';
+                
+                attempts.forEach(function(attempt, index) {
+                    var attemptNum = attempts.length - index;
+                    var passClass = attempt.percentage >= 70 ? 'pass' : 'fail';
+                    
+                    html += '<tr>';
+                    html += '<td>' + attemptNum + '</td>';
+                    html += '<td>' + attempt.score + ' / ' + attempt.max_score + '</td>';
+                    html += '<td><span class="percentage-badge percentage-' + passClass + '">' + attempt.percentage + '%</span></td>';
+                    html += '<td>' + attempt.submitted_date + '</td>';
+                    html += '</tr>';
+                });
+                
+                html += '</tbody></table>';
+                $('.attempts-list').html(html);
+            }
+        }
+        
+        // Focus mode for exercises (hide header/footer instead of fullscreen popup)
+        // Check if we're on an exercise page with focus mode enabled
+        if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
+            // Check if URL has fullscreen parameter or if quiz has started
+            var urlParams = new URLSearchParams(window.location.search);
+            var focusModeEnabled = urlParams.get('fullscreen') === '1';
+            
+            if (focusModeEnabled) {
+                // Enable focus mode immediately
+                $('body').addClass('ielts-quiz-focus-mode');
+            }
+            
+            // Also enable focus mode when clicking the fullscreen button
+            $('.ielts-fullscreen-btn').on('click', function(e) {
+                e.preventDefault();
+                // Enable focus mode
+                $('body').addClass('ielts-quiz-focus-mode');
+                // Show the quiz form
+                $('#ielts-quiz-form').show();
+                // Hide the fullscreen notice
+                $('.cbt-fullscreen-notice').hide();
+                // Update URL without reload
+                var newUrl = window.location.pathname + '?fullscreen=1';
+                window.history.pushState({path: newUrl}, '', newUrl);
+            });
+        }
     });
     
 })(jQuery);

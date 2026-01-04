@@ -2735,3 +2735,150 @@ select.answer-select-inline.answer-incorrect {
 .listening-transcript .transcript-content p {
     margin-bottom: 15px;
 }
+
+/* Quiz Attempts Section */
+.quiz-attempts-section {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.quiz-attempts-section .attempts-toggle {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.quiz-attempts-section .attempts-toggle:hover {
+    color: #667eea;
+}
+
+.quiz-attempts-section .toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.quiz-attempts-section .attempts-content {
+    margin-top: 20px;
+}
+
+.quiz-attempts-section .attempts-loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+.quiz-attempts-section .attempts-list p {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+.attempts-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.attempts-table thead {
+    background: #667eea;
+    color: #fff;
+}
+
+.attempts-table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.attempts-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.attempts-table tbody tr:hover {
+    background: #f5f5f5;
+}
+
+.attempts-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.attempts-table .percentage-badge {
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.attempts-table .percentage-pass {
+    background: #10b981;
+    color: #fff;
+}
+
+.attempts-table .percentage-fail {
+    background: #ef4444;
+    color: #fff;
+}
+
+/* Navigation with labels and arrows */
+.quiz-timer-fullscreen .nav-page-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quiz-timer-fullscreen .nav-arrow {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.quiz-timer-fullscreen .nav-label {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.quiz-timer-fullscreen .nav-label small {
+    font-size: 10px;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+.quiz-timer-fullscreen .nav-label strong {
+    font-size: 14px;
+    color: #333;
+    margin-top: 3px;
+}
+
+.quiz-timer-fullscreen .nav-next .nav-label {
+    align-items: flex-end;
+}
+
+/* Focus mode - Hide page elements for exercises */
+body.ielts-quiz-focus-mode #wpadminbar,
+body.ielts-quiz-focus-mode .et-l--header,
+body.ielts-quiz-focus-mode .et-l--footer,
+body.ielts-quiz-focus-mode #et-boc > .et_builder_inner_content > .et_pb_section:not(.quiz-section) {
+    display: none !important;
+}
+
+body.ielts-quiz-focus-mode #et-main-area {
+    padding-top: 0 !important;
+}
+
+body.ielts-quiz-focus-mode #page-container {
+    padding-top: 0 !important;
+}
+
+body.ielts-quiz-focus-mode .ielts-computer-based-quiz,
+body.ielts-quiz-focus-mode .ielts-listening-practice-quiz,
+body.ielts-quiz-focus-mode .ielts-listening-exercise-quiz {
+    min-height: 100vh;
+}

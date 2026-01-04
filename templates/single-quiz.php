@@ -71,6 +71,23 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
         <?php endif; ?>
     </div>
     
+    <?php if (is_user_logged_in()): ?>
+    <!-- Previous Attempts Section -->
+    <div class="quiz-attempts-section">
+        <h3 class="attempts-toggle" style="cursor: pointer; user-select: none;">
+            <span class="dashicons dashicons-clipboard"></span>
+            <?php _e('Previous Attempts', 'ielts-course-manager'); ?>
+            <span class="dashicons dashicons-arrow-down-alt2 toggle-icon"></span>
+        </h3>
+        <div class="attempts-content" style="display: none;">
+            <div class="attempts-loading">
+                <?php _e('Loading your previous attempts...', 'ielts-course-manager'); ?>
+            </div>
+            <div class="attempts-list"></div>
+        </div>
+    </div>
+    <?php endif; ?>
+    
     <form id="ielts-quiz-form" class="quiz-form">
         <div class="quiz-questions">
             <?php if (!empty($questions)): ?>
