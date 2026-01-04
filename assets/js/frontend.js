@@ -2347,13 +2347,13 @@
             var lastHeight = 0;
             
             // Function to recalculate and apply dynamic heights
-            function updateDynamicHeights() {
+            function updateDynamicHeights(force) {
                 // Force a fresh read of current viewport dimensions
                 var vh = window.innerHeight;
                 var vw = window.innerWidth;
                 
-                // Only update if dimensions actually changed
-                if (vh === lastHeight && vw === lastWidth) {
+                // Only update if dimensions actually changed (unless forced)
+                if (!force && vh === lastHeight && vw === lastWidth) {
                     return;
                 }
                 
@@ -2361,7 +2361,8 @@
                 lastWidth = vw;
                 
                 var isFocusMode = $('body').hasClass('ielts-quiz-focus-mode');
-                var isHeaderVisible = $('.et-l--header').hasClass('header-visible') || $('.quiz-header').hasClass('header-visible');
+                // Check if header is visible - use single source of truth
+                var isHeaderVisible = $('.quiz-header').hasClass('header-visible');
                 
                 // Calculate appropriate offset based on focus mode, header visibility, and screen size
                 var offset;
@@ -2432,13 +2433,12 @@
                 }
                 
                 // Trigger height recalculation after header toggle
-                // Use setTimeout to allow CSS transitions to complete
+                // Use short delay to allow CSS transitions/rendering to complete before measuring
+                var HEADER_TOGGLE_DELAY_MS = 50;
                 setTimeout(function() {
-                    // Force recalculation by resetting last dimensions
-                    lastHeight = 0;
-                    lastWidth = 0;
-                    updateDynamicHeights();
-                }, 50);
+                    // Force recalculation regardless of cached dimensions
+                    updateDynamicHeights(true);
+                }, HEADER_TOGGLE_DELAY_MS);
             });
             
             // Initial calculation with small delay to ensure page is fully loaded
