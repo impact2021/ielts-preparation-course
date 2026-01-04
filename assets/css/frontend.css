@@ -857,7 +857,7 @@ body.ielts-course-archive .content-area {
 }
 
 .ielts-computer-based-quiz .quiz-breadcrumb {
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 0.9em;
     color: #666;
 }
@@ -873,7 +873,7 @@ body.ielts-course-archive .content-area {
 }
 
 .ielts-computer-based-quiz .quiz-description {
-    margin: 15px 0;
+    margin: 5px 0;
     color: #555;
 }
 
@@ -1875,7 +1875,7 @@ select.answer-select-inline.answer-incorrect {
 /* Breadcrumb styling for listening layouts */
 .ielts-listening-practice-quiz .quiz-breadcrumb,
 .ielts-listening-exercise-quiz .quiz-breadcrumb {
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 0.9em;
     color: #666;
 }
