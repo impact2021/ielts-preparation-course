@@ -1271,13 +1271,7 @@ class IELTS_CM_Admin {
         $is_two_column = in_array($layout_type, array('two_column_reading', 'two_column_listening', 'two_column_exercise'));
         ?>
         <div id="two-column-options" style="<?php echo !$is_two_column ? 'display:none;' : ''; ?>">
-            <p>
-                <label>
-                    <input type="checkbox" id="ielts_cm_open_as_popup" name="ielts_cm_open_as_popup" value="1" <?php checked($open_as_popup, '1'); ?>>
-                    <?php _e('Open as Popup/Fullscreen Modal', 'ielts-course-manager'); ?>
-                </label><br>
-                <small><?php _e('When checked, the two-column exercise will open in a fullscreen popup modal. When unchecked, it opens in the same window.', 'ielts-course-manager'); ?></small>
-            </p>
+            <!-- Popup option removed - all CBT exercises now auto-enable focus mode with header toggle -->
         </div>
         
         <?php

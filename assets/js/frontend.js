@@ -2152,30 +2152,30 @@
             }
         }
         
-        // Focus mode for exercises (hide header/footer instead of fullscreen popup)
-        // Check if we're on an exercise page with focus mode enabled
+        // Focus mode for exercises (auto-enabled for all CBT quizzes)
+        // Check if we're on an exercise page
         if ($('.ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz').length) {
-            // Check if URL has fullscreen parameter or if quiz has started
-            var urlParams = new URLSearchParams(window.location.search);
-            var focusModeEnabled = urlParams.get('fullscreen') === '1';
+            // Auto-enable focus mode for all CBT quizzes
+            $('body').addClass('ielts-quiz-focus-mode');
             
-            if (focusModeEnabled) {
-                // Enable focus mode immediately
-                $('body').addClass('ielts-quiz-focus-mode');
-            }
-            
-            // Also enable focus mode when clicking the fullscreen button
-            $('.ielts-fullscreen-btn').on('click', function(e) {
+            // Header toggle functionality
+            $('#header-toggle-btn').on('click', function(e) {
                 e.preventDefault();
-                // Enable focus mode
-                $('body').addClass('ielts-quiz-focus-mode');
-                // Show the quiz form
-                $('#ielts-quiz-form').show();
-                // Hide the fullscreen notice
-                $('.cbt-fullscreen-notice').hide();
-                // Update URL without reload
-                var newUrl = window.location.pathname + '?fullscreen=1';
-                window.history.pushState({path: newUrl}, '', newUrl);
+                var $header = $('.quiz-header');
+                var $toggleBtn = $(this);
+                var $toggleIcon = $toggleBtn.find('.toggle-icon');
+                
+                if ($header.hasClass('header-visible')) {
+                    // Hide header
+                    $header.removeClass('header-visible');
+                    $toggleIcon.text('▼');
+                    $toggleBtn.attr('title', '<?php _e('Show header', 'ielts-course-manager'); ?>');
+                } else {
+                    // Show header
+                    $header.addClass('header-visible');
+                    $toggleIcon.text('▲');
+                    $toggleBtn.attr('title', '<?php _e('Hide header', 'ielts-course-manager'); ?>');
+                }
             });
         }
     });
