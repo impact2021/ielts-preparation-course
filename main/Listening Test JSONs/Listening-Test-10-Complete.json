@@ -345,7 +345,7 @@
         },
         {
             "type": "open_question",
-            "instructions": "SECTION 4\r\n\r\n[audio mp3=\"https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0010-4.mp3\"][/audio]\r\n\r\nQuestions 31-40\r\n\r\nQuestions 31 – 34\r\n\r\nComplete the summary below using NO MORE THAN ONE WORD",
+            "instructions": "SECTION 4\r\n\r\nQuestions 31-40\r\n\r\nQuestions 31 – 34\r\n\r\nComplete the summary below using NO MORE THAN ONE WORD",
             "question": "Brain Drain Summary\r\n<ul>\r\n \t<li>Brain drain occurs when technically skilled and/or 31.[field 1] people leave their country</li>\r\n \t<li>Migration may be prompted by a desire to escape conflict or 32.[field 2] instability</li>\r\n \t<li>There is an economic 33.[field 3] to the country being left behind</li>\r\n \t<li>The term 'brain drain' was first used to describe emigration of scientists from post-war 34.[field 4]</li>\r\n</ul>",
             "points": 4,
             "no_answer_feedback": "No answer provided. The answer is \"EDUCATED\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
@@ -386,19 +386,130 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 35 – 38\r\n\r\nDecide which of the answers the statements refer to.\r\n\r\nChoose your answers from the list and write the correct letter A-D next to questions 35-38. You can use each letter more than once.",
-            "question": "35. Has experienced brain drain due to difficult living conditions.\r\n\r\n36. Incentives were offered to encourage early settlers to stay.\r\n\r\n37. Brain drain activity decreased between the 1920s and the 1960s.\r\n\r\n38. Is thought to offer superior research opportunities.",
-            "points": 4,
-            "no_answer_feedback": "No answer provided. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
+            "instructions": "Questions 35 – 38\r\n\r\nDecide which of the answers the statements refer to.\r\n\r\nChoose your answers from the list and write the correct letter A-D next to questions 35-38.",
+            "question": "35. Has experienced brain drain due to difficult living conditions.",
+            "points": 1,
+            "no_answer_feedback": "No answer provided. The answer is \"C\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "matching_l",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "America",
                     "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Canada",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Neither America or Canada",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "Both America and Canada",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "America\nCanada\nNeither America or Canada\nBoth America and Canada",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "36. Incentives were offered to encourage early settlers to stay.",
+            "points": 1,
+            "no_answer_feedback": "No answer provided. The answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "America",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Canada",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "Neither America or Canada",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Both America and Canada",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "America\nCanada\nNeither America or Canada\nBoth America and Canada",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "37. Brain drain activity decreased between the 1920s and the 1960s.",
+            "points": 1,
+            "no_answer_feedback": "No answer provided. The answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "America",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Canada",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "Neither America or Canada",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Both America and Canada",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "America\nCanada\nNeither America or Canada\nBoth America and Canada",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "38. Is thought to offer superior research opportunities.",
+            "points": 1,
+            "no_answer_feedback": "No answer provided. The answer is \"A\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "America",
+                    "is_correct": true,
                     "feedback": ""
                 },
                 {
@@ -418,14 +529,8 @@
                 }
             ],
             "options": "America\nCanada\nNeither America or Canada\nBoth America and Canada",
-            "correct_answer_count": 4,
-            "show_option_letters": true,
-            "matching_answers": {
-                "35": "c",
-                "36": "b",
-                "37": "b",
-                "38": "a"
-            }
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "open_question",
