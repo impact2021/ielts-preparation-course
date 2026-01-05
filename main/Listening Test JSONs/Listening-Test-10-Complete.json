@@ -222,113 +222,45 @@
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Section 3\r\n\r\n[audio mp3=\"https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0053-3.mp3\"][/audio]\r\n\r\nQuestions 21 – 30\r\n\r\nQuestions 21 – 25\r\n\r\nComplete the sentences below",
-            "points": 1,
+            "instructions": "SECTION 3\r\n\r\n[audio mp3=\"https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0053-3.mp3\"][/audio]\r\n\r\nQuestions 21 – 30\r\n\r\nQuestions 21 – 25\r\n\r\nComplete the sentences below.\r\n\r\nWrite NO MORE THAN TWO WORDS for each answer.",
+            "question": "Student Presentation Notes\r\n<ul>\r\n \t<li>The student wants to talk to the professor about his 21.[field 1] for next week</li>\r\n \t<li>The student will be mainly discussing the 22.[field 2] gannet</li>\r\n \t<li>The birds live in large 23.[field 3], although some live and feed on their own</li>\r\n \t<li>The student will show a video and a 24.[field 4] presentation</li>\r\n \t<li>The birds migrate to 25.[field 5]</li>\r\n</ul>",
+            "points": 5,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"UPCOMING PRESENTATION\" or \"PRESENTATION\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
+            "ielts_question_category": "sentence_completion_l",
+            "field_count": 5,
             "field_answers": {
-                "1": "upcoming presentation|presentation"
+                "1": "upcoming presentation|presentation",
+                "2": "southern pacific",
+                "3": "colonies",
+                "4": "powerpoint",
+                "5": "australia"
             },
             "field_feedback": {
                 "1": {
                     "correct": "✓ Excellent! Acceptable answers: \"UPCOMING PRESENTATION\" or \"PRESENTATION\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "✗ Not quite. Acceptable answers: \"UPCOMING PRESENTATION\" or \"PRESENTATION\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"UPCOMING PRESENTATION\" or \"PRESENTATION\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "strong&gt;\r\n\r\n[audio mp3=\"https://www.ieltstestonline.com/wp-content/uploads/2018/12/L0053-3.mp3\"][/audio]\r\n\r\nQuestions 21 – 30\r\n\r\nQuestions 21 – 25\r\n\r\nComplete the sentences below",
-            "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"SOUTHERN PACIFIC\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "southern pacific"
-            },
-            "field_feedback": {
-                "1": {
+                },
+                "2": {
                     "correct": "✓ Excellent! The answer is \"SOUTHERN PACIFIC\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "✗ Not quite. The answer is \"SOUTHERN PACIFIC\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"SOUTHERN PACIFIC\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "2018/12/L0053-3.mp3\"][/audio]\r\n\r\nQuestions 21 – 30\r\n\r\nQuestions 21 – 25\r\n\r\nComplete the sentences below",
-            "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"COLONIES\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "colonies"
-            },
-            "field_feedback": {
-                "1": {
+                },
+                "3": {
                     "correct": "✓ Excellent! The answer is \"COLONIES\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "✗ Not quite. The answer is \"COLONIES\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"COLONIES\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "The student wants to talk to the professor about his ___ for next week",
-            "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"POWERPOINT\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "powerpoint"
-            },
-            "field_feedback": {
-                "1": {
+                },
+                "4": {
                     "correct": "✓ Excellent! The answer is \"POWERPOINT\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "✗ Not quite. The answer is \"POWERPOINT\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"POWERPOINT\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "The student wants to talk to the professor about his ___ for next week",
-            "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"AUSTRALIA\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "australia"
-            },
-            "field_feedback": {
-                "1": {
+                },
+                "5": {
                     "correct": "✓ Excellent! The answer is \"AUSTRALIA\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "✗ Not quite. The answer is \"AUSTRALIA\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"AUSTRALIA\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
