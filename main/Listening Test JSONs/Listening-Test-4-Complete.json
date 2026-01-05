@@ -4,15 +4,15 @@
     "questions": [
         {
             "type": "closed_question",
-            "instructions": "Questions 1-3\n\nChoose the correct letter A-C",
+            "instructions": "Questions 1-3\r\n\r\nChoose the correct letter A-C",
             "question": "How often does the man visit the Art Gallery?",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "You did not select an answer. The correct answer is B. Two to three times a year. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "Correct! The answer is B.",
-            "incorrect_feedback": "Incorrect. The correct answer is B.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. Once a year",
@@ -32,20 +32,19 @@
             ],
             "options": "A. Once a year\nB. Two to three times a year\nC. Four to five times a year",
             "correct_answer_count": 1,
-            "show_option_letters": true,
-            "ielts_question_type": "Multiple Choice (Single Answer)"
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "What section is the man’s favourite?",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "You did not select an answer. The correct answer is A. Traditional paintings. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "Correct! The answer is A.",
-            "incorrect_feedback": "Incorrect. The correct answer is A.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_l",
             "mc_options": [
                 {
                     "text": "A. Traditional paintings",
@@ -65,48 +64,51 @@
             ],
             "options": "A. Traditional paintings\nB. Modern Art\nC. Sculpture",
             "correct_answer_count": 1,
-            "show_option_letters": true,
-            "ielts_question_type": "Multiple Choice (Single Answer)"
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "What publicity material is the man interested in?",
-            "points": 1.0,
-            "no_answer_feedback": "You did not select an answer. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "Correct! The answer is C.",
-            "incorrect_feedback": "Incorrect. The correct answer is C.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
-                    "text": "A. New exhibitions of paintings",
+                    "text": "A. Sales of paintings",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is C."
                 },
                 {
-                    "text": "B. Talks about painters",
+                    "text": "B. New exhibitions of paintings",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "C. Talks about painters",
+                    "is_correct": true,
+                    "feedback": "Correct!"
                 }
             ],
-            "options": "A. New exhibitions of paintings\nB. Talks about painters",
+            "options": "A. Sales of paintings\nB. New exhibitions of paintings\nC. Talks about painters",
             "correct_answer_count": 1,
-            "show_option_letters": true,
-            "ielts_question_type": "Multiple Choice (Single Answer)"
+            "show_option_letters": true
         },
         {
             "type": "open_question",
-            "instructions": "Questions 4-5\n\nName TWO items the man is interested in looking at buying from the museum shop",
+            "instructions": "Questions 4-5\r\n\r\nName TWO items the man is interested in looking at buying from the museum shop",
             "question": "Item 1",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_l",
             "field_count": 1,
             "field_answers": {
                 "1": "new books|books|calendars|calendar|a calendar|souvenir|souvenirs"
@@ -117,20 +119,19 @@
                     "incorrect": "Incorrect. Listen to what the man says he looks at or buys in the museum shop.",
                     "no_answer": "The correct answers include: new books, calendars, or souvenirs. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Item 2",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_l",
             "field_count": 1,
             "field_answers": {
                 "1": "new books|books|calendars|calendar|a calendar|souvenir|souvenirs"
@@ -141,20 +142,19 @@
                     "incorrect": "Incorrect. Listen to what the man says he looks at or buys in the museum shop.",
                     "no_answer": "The correct answers include: new books, calendars, or souvenirs. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
-            "instructions": "Questions 6-8\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+            "instructions": "Questions 6-8\r\n\r\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
             "question": "Age group: __________",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "36|thirty six|thirty-six"
@@ -165,20 +165,19 @@
                     "incorrect": "Incorrect. Listen for the man's age group.",
                     "no_answer": "The correct answer is: 36. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Subject taught: __________",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "economics"
@@ -189,20 +188,19 @@
                     "incorrect": "Incorrect. Listen for the man's subject taught.",
                     "no_answer": "The correct answer is: Economics. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Part of city: __________",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "city centre|city center|inner city|the city centre|the city center|the inner city"
@@ -213,63 +211,61 @@
                     "incorrect": "Incorrect. Listen for the man's part of city.",
                     "no_answer": "The correct answer is: City centre. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 9-10\n\nChoose TWO LETTERS from the following list.\n\nWhat areas does the man think need improving at the Art Gallery?",
-            "question": "A. The range of exhibits\nB. The frequency of new exhibits\nC. Site of the Museum\nD. Parking\nE. Add a coffee shop",
-            "points": 1.0,
+            "instructions": "Questions 9-10\r\n\r\nChoose TWO LETTERS from the following list.\r\n\r\nWhat areas does the man think need improving at the Art Gallery?",
+            "question": "A. The range of exhibits\r\nB. The frequency of new exhibits\r\nC. Site of the Museum\r\nD. Parking\r\nE. Add a coffee shop",
+            "points": 2,
             "no_answer_feedback": "You did not select any answers. The correct answers are B. The frequency of new exhibits and E. Add a coffee shop. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "Correct! Both B and E are correct.",
-            "incorrect_feedback": "Review the conversation about improvements. The man mentions new exhibits more often and adding a coffee shop.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
-                    "text": "A. The range of exhibits",
+                    "text": "The range of exhibits",
                     "is_correct": false,
                     "feedback": "Incorrect. The man is happy with the range."
                 },
                 {
-                    "text": "B. The frequency of new exhibits",
+                    "text": "The frequency of new exhibits",
                     "is_correct": true,
                     "feedback": "Correct! The man mentions new exhibits more often."
                 },
                 {
-                    "text": "C. Site of the Museum",
+                    "text": "Site of the Museum",
                     "is_correct": false,
                     "feedback": "Incorrect. The man says the location is good."
                 },
                 {
-                    "text": "D. Parking",
+                    "text": "Parking",
                     "is_correct": false,
                     "feedback": "Incorrect. The man says there is good parking."
                 },
                 {
-                    "text": "E. Add a coffee shop",
+                    "text": "Add a coffee shop",
                     "is_correct": true,
                     "feedback": "Correct! The man suggests adding a café or coffee shop."
                 }
             ],
-            "options": "A. The range of exhibits\nB. The frequency of new exhibits\nC. Site of the Museum\nD. Parking\nE. Add a coffee shop",
+            "options": "The range of exhibits\nThe frequency of new exhibits\nSite of the Museum\nParking\nAdd a coffee shop",
             "correct_answer_count": 2,
-            "show_option_letters": true,
-            "ielts_question_type": "Multiple Choice (Multiple Answers)"
+            "show_option_letters": true
         },
         {
             "type": "open_question",
-            "instructions": "Questions 11-15\n\nComplete the sentences below.\n\nWrite NO MORE THAN TWO WORDS for each answer.",
+            "instructions": "Questions 11-15\r\n\r\nComplete the sentences below.\r\n\r\nWrite NO MORE THAN TWO WORDS for each answer.",
             "question": "Brochures and leaflets from the travel companies are in the __________",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "travel pack|travel packs"
@@ -280,20 +276,19 @@
                     "incorrect": "Incorrect. Listen to the introduction about the Travel Expo.",
                     "no_answer": "The correct answer is: TRAVEL PACK. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Sentence Completion"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The winner of the travel raffle will have a holiday in the __________",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "south pacific"
@@ -304,20 +299,19 @@
                     "incorrect": "Incorrect. Listen to the introduction about the Travel Expo.",
                     "no_answer": "The correct answer is: SOUTH PACIFIC. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The airline exhibitors are along the __________ side of the hall.",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "right hand|right-hand|right"
@@ -328,20 +322,19 @@
                     "incorrect": "Incorrect. Listen to the introduction about the Travel Expo.",
                     "no_answer": "The correct answer is: RIGHT HAND. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The train through the Central Mountains has rail cars with __________",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "glass roofs|glass roof"
@@ -352,20 +345,19 @@
                     "incorrect": "Incorrect. Listen to the introduction about the Travel Expo.",
                     "no_answer": "The correct answer is: GLASS ROOFS. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Currently, cruise ships operate out of Victoria Bay during the __________",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "summer months|summer"
@@ -376,20 +368,19 @@
                     "incorrect": "Incorrect. Listen to the introduction about the Travel Expo.",
                     "no_answer": "The correct answer is: SUMMER. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
-            "instructions": "Questions 16-20\n\nComplete the table below.\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.\n\nVIEWING ROOM SCHEDULE",
-            "question": "Viewing Room A - 11 a.m.: [field 1]\n11:45 a.m. - Time: [field 2]\nViewing Room A - 2:30 p.m.: Includes [field 3] & Argentina\nViewing Room B - Time: [field 4]\nViewing Room B - 3 p.m.: Overview of [field 5]",
-            "points": 1.0,
+            "instructions": "Questions 16-20\r\n\r\nComplete the table below.\r\n\r\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.\r\n\r\nVIEWING ROOM SCHEDULE",
+            "question": "<table style=\"border-collapse: collapse;width: 100%;font-family: Arial, sans-serif\">\r\n  <thead>\r\n    <tr>\r\n      <th style=\"border: 1px solid #333;padding: 8px;background-color: #f2f2f2;text-align: left\">&nbsp;</th>\r\n      <th style=\"border: 1px solid #333;padding: 8px;background-color: #f2f2f2;text-align: left\">Time</th>\r\n      <th style=\"border: 1px solid #333;padding: 8px;background-color: #f2f2f2;text-align: left\">Place</th>\r\n      <th style=\"border: 1px solid #333;padding: 8px;background-color: #f2f2f2;text-align: left\">Comments</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <tr>\r\n      <td style=\"border: 1px solid #333;padding: 8px\" rowspan=\"5\"><strong>Viewing Room A</strong></td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">11 a.m.</td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\"><strong>16[field16]</strong></td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">Includes Vietnam, Malaysia, Thailand, Singapore, etc.</td>\r\n    </tr>\r\n    <tr>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">11:45 a.m.</td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">Canada &amp; USA</td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">Includes train trips, Hollywood, New York, etc.</td>\r\n    </tr>\r\n    <tr>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">1 p.m.</td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">Japan, Korea &amp; China</td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">Includes temples, food, Great Wall, etc.</td>\r\n    </tr>\r\n    <tr>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">1:45 p.m.</td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">Britain &amp; Europe</td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">Historical tours, castles, etc.</td>\r\n    </tr>\r\n    <tr>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">2:30 p.m.</td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">South America</td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">Includes <strong>17[field17]</strong> Argentina, etc.</td>\r\n    </tr>\r\n    <tr>\r\n      <td style=\"border: 1px solid #333;padding: 8px\" rowspan=\"2\"><strong>Viewing Room B</strong></td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">12:30 p.m.</td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">Travel in Europe</td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">Includes river and canal cruises, bus tours &amp; trains</td>\r\n    </tr>\r\n    <tr>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">3 p.m.</td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">Overview of <strong>18[field18]</strong></td>\r\n      <td style=\"border: 1px solid #333;padding: 8px\">For new international travellers</td>\r\n    </tr>\r\n  </tbody>\r\n</table>",
+            "points": 5,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Excellent! You got all the answers correct.",
-            "incorrect_feedback": "Some answers are incorrect. Review the schedule information.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "form_completion_l",
             "field_count": 5,
             "field_answers": {
                 "1": "south-east asia|south east asia|southeast asia",
@@ -405,7 +396,7 @@
                     "no_answer": "The correct answer is: SOUTH-EAST ASIA. Make sure to listen carefully for key information and take notes while listening."
                 },
                 "2": {
-                    "correct": "Correct! The Canada & USA presentation is at 11:45 a.m.",
+                    "correct": "Correct! The Canada &amp; USA presentation is at 11:45 a.m.",
                     "incorrect": "Incorrect. Listen for when the Canada and USA viewing starts.",
                     "no_answer": "The correct answer is: 11:45. Make sure to listen carefully for key information and take notes while listening."
                 },
@@ -424,20 +415,19 @@
                     "incorrect": "Incorrect. Listen for what the 3 o'clock presentation is about.",
                     "no_answer": "The correct answer is: AIR TRAVEL. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Table Completion"
+            }
         },
         {
             "type": "open_question",
-            "instructions": "Questions 21-25\n\nComplete the sentences below.\n\nWrite NO MORE THAN ONE WORD for each answer.",
+            "instructions": "Questions 21-25\r\n\r\nComplete the sentences below.\r\n\r\nWrite NO MORE THAN ONE WORD for each answer.",
             "question": "The new employee's name is Jason __________",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "endicott"
@@ -448,20 +438,19 @@
                     "incorrect": "Incorrect. Listen to the discussion about Jason's new role.",
                     "no_answer": "The correct answer is: ENDICOTT. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Sentence Completion"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Jason will begin working as a __________ in the accounts department.",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "junior"
@@ -472,20 +461,19 @@
                     "incorrect": "Incorrect. Listen to the discussion about Jason's new role.",
                     "no_answer": "The correct answer is: JUNIOR. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "There are new __________ markets opening.",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "export"
@@ -496,20 +484,19 @@
                     "incorrect": "Incorrect. Listen to the discussion about Jason's new role.",
                     "no_answer": "The correct answer is: EXPORT. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Jason's main role will be __________ new markets and making presentations.",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "monitoring"
@@ -520,20 +507,19 @@
                     "incorrect": "Incorrect. Listen to the discussion about Jason's new role.",
                     "no_answer": "The correct answer is: MONITORING. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Jason's previous work experience involved __________ potential new developments.",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "investigating"
@@ -544,20 +530,19 @@
                     "incorrect": "Incorrect. Listen to the discussion about Jason's new role.",
                     "no_answer": "The correct answer is: INVESTIGATING. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 26-30\n\nChoose the correct letters A-C.",
+            "instructions": "Questions 26-30\r\n\r\nChoose the correct letters A-C.",
             "question": "Jason will report to",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "You did not select an answer. The correct answer is C. two managers.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "Correct! The answer is C.",
-            "incorrect_feedback": "Incorrect. The correct answer is C.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. no one.",
@@ -577,20 +562,19 @@
             ],
             "options": "A. no one.\nB. the accountant.\nC. two managers.",
             "correct_answer_count": 1,
-            "show_option_letters": true,
-            "ielts_question_type": "Multiple Choice (Single Answer)"
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "Jason will mostly be trained by",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "You did not select an answer. The correct answer is C. Sharon Greenslade.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "Correct! The answer is C.",
-            "incorrect_feedback": "Incorrect. The correct answer is C.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. Darren Smith.",
@@ -610,20 +594,19 @@
             ],
             "options": "A. Darren Smith.\nB. John Owens.\nC. Sharon Greenslade.",
             "correct_answer_count": 1,
-            "show_option_letters": true,
-            "ielts_question_type": "Multiple Choice (Single Answer)"
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "Jason may have to work overtime",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "You did not select an answer. The correct answer is B. if reports are needed.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "Correct! The answer is B.",
-            "incorrect_feedback": "Incorrect. The correct answer is B.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. as part of his salary.",
@@ -643,20 +626,19 @@
             ],
             "options": "A. as part of his salary.\nB. if reports are needed.\nC. during weekends in extreme cases.",
             "correct_answer_count": 1,
-            "show_option_letters": true,
-            "ielts_question_type": "Multiple Choice (Single Answer)"
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "The option to work from home",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "You did not select an answer. The correct answer is B. will depend on technical concerns.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "Correct! The answer is B.",
-            "incorrect_feedback": "Incorrect. The correct answer is B.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. is soon going to be withdrawn.",
@@ -676,20 +658,19 @@
             ],
             "options": "A. is soon going to be withdrawn.\nB. will depend on technical concerns.\nC. will affect employee wages.",
             "correct_answer_count": 1,
-            "show_option_letters": true,
-            "ielts_question_type": "Multiple Choice (Single Answer)"
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "After three months, there is",
-            "points": 1.0,
+            "points": 1,
             "no_answer_feedback": "You did not select an answer. The correct answer is B. a review.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "Correct! The answer is B.",
-            "incorrect_feedback": "Incorrect. The correct answer is B.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
                     "text": "A. a requirement to join the Human Resources department.",
@@ -709,20 +690,19 @@
             ],
             "options": "A. a requirement to join the Human Resources department.\nB. a review.\nC. a move.",
             "correct_answer_count": 1,
-            "show_option_letters": true,
-            "ielts_question_type": "Multiple Choice (Single Answer)"
+            "show_option_letters": true
         },
         {
             "type": "open_question",
-            "instructions": "Questions 31-35\n\nComplete the sentences below\n\nWrite NO MORE THAN THREE WORDS for each answer.",
-            "question": "Simon Felder believes that younger people are less concerned about buying property and __________ than previous generations.",
-            "points": 1.0,
+            "instructions": "Questions 31-35\r\n\r\nComplete the sentences below\r\n\r\nWrite NO MORE THAN THREE WORDS for each answer.",
+            "question": "Simon Felder believes that younger people are less concerned about buying property and [field 1] than previous generations.",
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "saving|saving money"
@@ -733,20 +713,19 @@
                     "incorrect": "Incorrect. Listen to the lecture about generational attitudes to money.",
                     "no_answer": "The correct answer is: SAVING. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Sentence Completion"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Many under-30s may wish to buy their own home but cannot due to __________.",
-            "points": 1.0,
+            "question": "Many under-30s may wish to buy their own home but cannot due to [field 1].",
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "increasing house prices|house prices|increasing prices|increase in price|increase in prices"
@@ -757,20 +736,19 @@
                     "incorrect": "Incorrect. Listen to the lecture about generational attitudes to money.",
                     "no_answer": "The correct answer is: INCREASING HOUSE PRICES. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "In particular, people working as teachers or __________ may find it very difficult to afford their own home.",
-            "points": 1.0,
+            "question": "In particular, people working as teachers or [field 1] may find it very difficult to afford their own home.",
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "nurses"
@@ -781,20 +759,19 @@
                     "incorrect": "Incorrect. Listen to the lecture about generational attitudes to money.",
                     "no_answer": "The correct answer is: NURSES. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "The trend towards buying rental properties has created more difficulties for __________.",
-            "points": 1.0,
+            "question": "The trend towards buying rental properties has created more difficulties for [field 1].",
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "first time buyers|1st time buyers|first-time buyers"
@@ -805,20 +782,19 @@
                     "incorrect": "Incorrect. Listen to the lecture about generational attitudes to money.",
                     "no_answer": "The correct answer is: FIRST TIME BUYERS. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Many people are now choosing to wait until their mid-thirties before getting __________.",
-            "points": 1.0,
+            "question": "Many people are now choosing to wait until their mid-thirties before getting [field 1].",
+            "points": 1,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "married"
@@ -829,20 +805,19 @@
                     "incorrect": "Incorrect. Listen to the lecture about generational attitudes to money.",
                     "no_answer": "The correct answer is: MARRIED. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
-            "instructions": "Questions 36-40\n\nComplete the summary below\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.\n\nDIFFERENT OPINIONS TO SAVING",
-            "question": "People born between the years of 1945 and [field 1] have been observed to have more interest in saving than younger generations, younger people being more focused on their [field 2] situation than the long term.\n\nYounger people would benefit from being given more information on [field 3] and long term planning so they can develop the ability to manage their own [field 4]. Many young people now find it impossible to save because of the increasing [field 5]. Advice from banks and other financial institutions could benefit customers.",
-            "points": 1.0,
+            "instructions": "Questions 36-40\r\n\r\nComplete the summary below\r\n\r\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.\r\n\r\nDIFFERENT OPINIONS TO SAVING",
+            "question": "People born between the years of 1945 and [field 1] have been observed to have more interest in saving than younger generations, younger people being more focused on their [field 2] situation than the long term.\r\n\r\nYounger people would benefit from being given more information on [field 3] and long term planning so they can develop the ability to manage their own [field 4]. Many young people now find it impossible to save because of the increasing [field 5]. Advice from banks and other financial institutions could benefit customers.",
+            "points": 5,
             "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "Excellent! You got all the answers correct.",
-            "incorrect_feedback": "Some answers are incorrect. Review the lecture about saving attitudes.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "form_completion_l",
             "field_count": 5,
             "field_answers": {
                 "1": "1964",
@@ -877,8 +852,7 @@
                     "incorrect": "Incorrect. Listen for why many young people find it difficult to save.",
                     "no_answer": "The correct answer is: COST OF LIVING. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Summary Completion"
+            }
         }
     ],
     "reading_texts": [],
@@ -887,7 +861,7 @@
         "layout_type": "two_column_listening",
         "cbt_test_type": "listening",
         "exercise_label": "practice_test",
-        "open_as_popup": "1",
+        "open_as_popup": "",
         "scoring_type": "ielts_listening",
         "timer_minutes": "",
         "starting_question_number": "1"
@@ -898,26 +872,26 @@
         "sections": [
             {
                 "section_number": 1,
-                "transcript": "<strong>Section 1</strong>\n\nW<strong>:   </strong>Hi, I was wondering if I could ask you a few questions about the renovations and changes made to the city Art Gallery.  It shouldn’t take more than 5 minutes.\n\nM:   Five minutes?  Ok, that shouldn’t be too long.  Sure, what do you want to know?\n\nW:  Well, one of the things we want to know is how often people visit the Art Gallery, and if they visit more than once a year?How many times would you say you come to the Art Gallery?\n\nM:  Oh, I’d say it depends, it depends on what exhibitions are on, usually more than once a year, probably <u>2 or 3 times</u>.  I do like art, but I don’t come 4 times, haven’t usually got the time.\n\nW:  And what section do you like to visit?\n\nM:  Well, I do like the Old Master’s, it’s always the first section I see.  Not too keen on Modern Art.  I might have a quick look, and I usually see what sculptures they’ve added, but I always like to spend time with the Van Goghs and other <u>classics</u>.\n\nW:  I see.  Do you follow our publicity about new exhibitions?  New shows?\n\nM:  Well, not so much new exhibitions, but I do read any info on upcoming <u>talks</u>, when you have a speaker, especially aboutthe painters themselves.\n\nW:  Ok, thank you.  Now, one other area I’d like to look at is the Shop.  Do you ever visit the Shop in the museum?\n\nM:  Oh, yes, every time I go.\n\nW:  And what, if anything, do you buy?  What are you interested in?\n\nM:  Well, I always look at the <strong style=\"background-color: yellow;\">[Q4: <strong style=\"background-color: yellow;\">[Q5: books]</strong>]</strong>, especially the new ones.  And I always <u>buy a calendar</u>, I like to give them as gifts.  And, then, I usually check out any souvenirs, or small items.  Anything new.\n\nW:  Ok, thank you very much for that.\n\n&nbsp;\n\nW:  Now, if you don’t mind, can I just get a little bit of personal information, you don’t have to answer all of the questions,if you don’t want to.\n\nM:  Sure.  No problem.\n\nW:  Well, I don’t need your name, but can I ask your age group?  For example, are you 20-35, <strong style=\"background-color: yellow;\">[Q6: 36]</strong>-50, or over 50?\n\nM:  Well, not quite a senior citizen, I’m in the <u>36 to 50 </u>age group.\n\nW:  And can I ask your profession?  Your job?\n\nM:  Yes, I teach at City College.  I’m an <strong style=\"background-color: yellow;\">[Q7: Economics]</strong> <u>teacher.</u>\n\nW:  And can you tell me what part of the city you live in?  The outskirts, the suburbs, the inner city?\n\nM:  Well, we can walk to the Gallery, so, I guess you could say we live in the <u><strong style=\"background-color: yellow;\">[Q8: city centre]</strong></u>.\n\nW:  And, finally, you seem to be happy with the Art Gallery, but if you could, what changes or improvements would you like to see at the Gallery?\n\nM:  Hmm, that’s a good question.  Well, I’m pretty happy with the number of exhibits in general, and the range is good, butpossibly, the exhibitions could be changed, you know, <u>new exhibits more often</u>.\n\nW:  Ok, I’ll note that.\n\nM:  The location is good, easy to walk to and there is good convenient parking nearby.  One thing, though, maybe a <u>café or</u> <u>coffee shop</u>.  I know you can get a drink or snack in the shop, but I’d like some place to sit and relax and really be able to take in the experience.\n\nW:  Ok, that’s all good information.  Thank you, I’ll take note of that.  Now, if we can just…"
+                "transcript": "<strong>Section 1</strong>\r\n\r\nW<strong>:   </strong>Hi, I was wondering if I could ask you a few questions about the renovations and changes made to the city Art Gallery.  It shouldn’t take more than 5 minutes.\r\n\r\nM:   Five minutes?  Ok, that shouldn’t be too long.  Sure, what do you want to know?\r\n\r\nW:  Well, one of the things we want to know is how often people visit the Art Gallery, and if they visit more than once a year?How many times would you say you come to the Art Gallery?\r\n\r\nM:  Oh, I’d say it depends, it depends on what exhibitions are on, usually more than once a year, probably <u>2 or 3 times</u>.  I do like art, but I don’t come 4 times, haven’t usually got the time.\r\n\r\nW:  And what section do you like to visit?\r\n\r\nM:  Well, I do like the Old Master’s, it’s always the first section I see.  Not too keen on Modern Art.  I might have a quick look, and I usually see what sculptures they’ve added, but I always like to spend time with the Van Goghs and other <u>classics</u>.\r\n\r\nW:  I see.  Do you follow our publicity about new exhibitions?  New shows?\r\n\r\nM:  Well, not so much new exhibitions, but I do read any info on upcoming <u>talks</u>, when you have a speaker, especially aboutthe painters themselves.\r\n\r\nW:  Ok, thank you.  Now, one other area I’d like to look at is the Shop.  Do you ever visit the Shop in the museum?\r\n\r\nM:  Oh, yes, every time I go.\r\n\r\nW:  And what, if anything, do you buy?  What are you interested in?\r\n\r\nM:  Well, I always look at the <strong style=\"background-color: yellow\">[Q4: <strong style=\"background-color: yellow\">[Q5: books]</strong>]</strong>, especially the new ones.  And I always <u>buy a calendar</u>, I like to give them as gifts.  And, then, I usually check out any souvenirs, or small items.  Anything new.\r\n\r\nW:  Ok, thank you very much for that.\r\n\r\n&nbsp;\r\n\r\nW:  Now, if you don’t mind, can I just get a little bit of personal information, you don’t have to answer all of the questions,if you don’t want to.\r\n\r\nM:  Sure.  No problem.\r\n\r\nW:  Well, I don’t need your name, but can I ask your age group?  For example, are you 20-35, <strong style=\"background-color: yellow\">[Q6: 36]</strong>-50, or over 50?\r\n\r\nM:  Well, not quite a senior citizen, I’m in the <u>36 to 50 </u>age group.\r\n\r\nW:  And can I ask your profession?  Your job?\r\n\r\nM:  Yes, I teach at City College.  I’m an <strong style=\"background-color: yellow\">[Q7: Economics]</strong> <u>teacher.</u>\r\n\r\nW:  And can you tell me what part of the city you live in?  The outskirts, the suburbs, the inner city?\r\n\r\nM:  Well, we can walk to the Gallery, so, I guess you could say we live in the <u><strong style=\"background-color: yellow\">[Q8: city centre]</strong></u>.\r\n\r\nW:  And, finally, you seem to be happy with the Art Gallery, but if you could, what changes or improvements would you like to see at the Gallery?\r\n\r\nM:  Hmm, that’s a good question.  Well, I’m pretty happy with the number of exhibits in general, and the range is good, butpossibly, the exhibitions could be changed, you know, <u>new exhibits more often</u>.\r\n\r\nW:  Ok, I’ll note that.\r\n\r\nM:  The location is good, easy to walk to and there is good convenient parking nearby.  One thing, though, maybe a <u>café or</u> <u>coffee shop</u>.  I know you can get a drink or snack in the shop, but I’d like some place to sit and relax and really be able to take in the experience.\r\n\r\nW:  Ok, that’s all good information.  Thank you, I’ll take note of that.  Now, if we can just…"
             },
             {
                 "section_number": 2,
-                "transcript": "<strong>Section 2</strong>\n\n<strong>Woman:</strong>  Good afternoon, and welcome to the Travel Plus Travel Expo here in Victoria Bay.  My name is Jan Warfield, and I’m just going to give you a little bit of information about some of the exhibits here and the layout of the exhibition hall. Hopefully this will make it a little easier for you to find your way around and make your visit to the Travel Expo more enjoyable.\n\nFirstly, I hope you have all received your own <strong style=\"background-color: yellow;\">[Q11: travel packs]</strong>, which contain brochures and leaflets from some of the exhibitors. The travel packs also include some discount coupons, so make sure to take a look before shopping today.  Now, I’d like to hand out these information forms - remember to fill them out before the end of the day, because each form puts you in the raffle for a trip for two to any location in the <strong style=\"background-color: yellow;\">[Q12: South Pacific]</strong>, including flights with Island Airways.\n\nNow, let me tell you about what we have here in the exhibition hall.  When you first came in, you will probably have seen that there are booths already set up to let you know about all the offers available. On one side, you can find all the airlines that operate from here in Victoria Bay as well as other major cities on the west coast, and they continue all the way down the <strong style=\"background-color: yellow;\">[Q13: right-hand]</strong> side of the exhibition hall.  You will be able to speak to the many representatives of the travel agencies as well as the airlines, both domestic and international, who have taken the opportunity to showcase their products.\n\nNow, lined up down the middle of the hall we have a number of hospitality organisations, such as the major hotel chains and some restaurants and vineyards. They would love to have the opportunity to speak with you as well, if you are thinking of a holiday overseas, or even a getaway here in our own country.  We also have a display from our own rail line, which as I am sure you know has just opened a wonderful scenic rail journey over the Central Mountains through to the capitol city.  Be sure to stop there and have a look at the video they have outlining the wonderful experience of taking the scenic train through the mountains, as well as the food and drink on offer in the dining carriage at the front and the brand-new rail carriages with glass rooves which allow you to take in the all the scenery.\n\nNext to the South Pacific tourism section, we have representatives from three cruise companies who operate cruise ships out of Victoria Bay through the <strong style=\"background-color: yellow;\">[Q15: summer months]</strong>, and one company is even looking at taking advantage of island cruises through the winter season as well, so I strongly recommend taking a look there.\n\n<em>.  </em>\n\n<em> </em>\n\nNow I’m very excited to let you know about something new we have for you at this year’s Travel Expo – the viewing rooms.  We have two viewing rooms and throughout the day, there will be a number of videos showcasing the different countries and locations you can visit.  The schedule for those videos is on a large display outside each of the viewing rooms, but I should tell you that Viewing Room A is slightly larger than Viewing Room B, although even in the smaller room you can still comfortably fit 50 people.\n\nI’ll just give you an idea of some of what they’ll be showing. Viewing Room A opens at 11 a.m., starting with a 20-minute presentation of travel through <strong style=\"background-color: yellow;\">[Q16: South-East Asia]</strong>, and this will include some wonderful panoramas of Vietnam, Thailand, Singapore and Malaysia, as well as other South-East Asian destinations. Additionally, representatives from travel organisations will be there to answer any questions about these destinations and they have many years’ experience in these locations, with some of them living there now.  The schedule continues with an <strong style=\"background-color: yellow;\">[Q17: 11:45]</strong> a.m. viewing, and that will feature Canada and the United States, and the many wonderful experiences they have to offer, from train rides across Canada, to Hollywood, New York and all the big-city excitement that is North America.  Oh, and don’t forget the Grand Canyon in the U.S., as well as cruises from Vancouver in Canada up to Alaska.\n\nFollowing that, there is a short video showcasing Japan, Korea and China, which will be showing at 1 p.m., Europe and Britain, with all their history, are on at 1:45, South America, including <strong style=\"background-color: yellow;\">[Q18: Brazil]</strong> and Argentina, at 2:30, and many more.  We hope there will be something for everyone!\n\nFinally, the other viewing room, Viewing Room B, will be showing videos of different traveling options, such as cruises, bus tours, river and canal cruises through Europe, at <strong style=\"background-color: yellow;\">[Q19: 12:30]</strong>, and for those relatively new to international travel, an overview of what <strong style=\"background-color: yellow;\">[Q20: air travel]</strong> is like today, which will be on at 3 o’clock.  And this includes destinations, types of aircraft, et cetera.  I’m sure you’ll agree that there is something for everyone.\n\nAlright, enough from me, so enjoy your day.  Thank you very much, folks, and have a great time here at the Travel Expo."
+                "transcript": "<strong>Section 2</strong>\r\n\r\n<strong>Woman:</strong>  Good afternoon, and welcome to the Travel Plus Travel Expo here in Victoria Bay.  My name is Jan Warfield, and I’m just going to give you a little bit of information about some of the exhibits here and the layout of the exhibition hall. Hopefully this will make it a little easier for you to find your way around and make your visit to the Travel Expo more enjoyable.\r\n\r\nFirstly, I hope you have all received your own <strong style=\"background-color: yellow\">[Q11: travel packs]</strong>, which contain brochures and leaflets from some of the exhibitors. The travel packs also include some discount coupons, so make sure to take a look before shopping today.  Now, I’d like to hand out these information forms - remember to fill them out before the end of the day, because each form puts you in the raffle for a trip for two to any location in the <strong style=\"background-color: yellow\">[Q12: South Pacific]</strong>, including flights with Island Airways.\r\n\r\nNow, let me tell you about what we have here in the exhibition hall.  When you first came in, you will probably have seen that there are booths already set up to let you know about all the offers available. On one side, you can find all the airlines that operate from here in Victoria Bay as well as other major cities on the west coast, and they continue all the way down the <strong style=\"background-color: yellow\">[Q13: right-hand]</strong> side of the exhibition hall.  You will be able to speak to the many representatives of the travel agencies as well as the airlines, both domestic and international, who have taken the opportunity to showcase their products.\r\n\r\nNow, lined up down the middle of the hall we have a number of hospitality organisations, such as the major hotel chains and some restaurants and vineyards. They would love to have the opportunity to speak with you as well, if you are thinking of a holiday overseas, or even a getaway here in our own country.  We also have a display from our own rail line, which as I am sure you know has just opened a wonderful scenic rail journey over the Central Mountains through to the capitol city.  Be sure to stop there and have a look at the video they have outlining the wonderful experience of taking the scenic train through the mountains, as well as the food and drink on offer in the dining carriage at the front and the brand-new rail carriages with glass rooves which allow you to take in the all the scenery.\r\n\r\nNext to the South Pacific tourism section, we have representatives from three cruise companies who operate cruise ships out of Victoria Bay through the <strong style=\"background-color: yellow\">[Q15: summer months]</strong>, and one company is even looking at taking advantage of island cruises through the winter season as well, so I strongly recommend taking a look there.\r\n\r\n<em>.  </em>\r\n\r\n<em> </em>\r\n\r\nNow I’m very excited to let you know about something new we have for you at this year’s Travel Expo – the viewing rooms.  We have two viewing rooms and throughout the day, there will be a number of videos showcasing the different countries and locations you can visit.  The schedule for those videos is on a large display outside each of the viewing rooms, but I should tell you that Viewing Room A is slightly larger than Viewing Room B, although even in the smaller room you can still comfortably fit 50 people.\r\n\r\nI’ll just give you an idea of some of what they’ll be showing. Viewing Room A opens at 11 a.m., starting with a 20-minute presentation of travel through <strong style=\"background-color: yellow\">[Q16: South-East Asia]</strong>, and this will include some wonderful panoramas of Vietnam, Thailand, Singapore and Malaysia, as well as other South-East Asian destinations. Additionally, representatives from travel organisations will be there to answer any questions about these destinations and they have many years’ experience in these locations, with some of them living there now.  The schedule continues with an <strong style=\"background-color: yellow\">[Q17: 11:45]</strong> a.m. viewing, and that will feature Canada and the United States, and the many wonderful experiences they have to offer, from train rides across Canada, to Hollywood, New York and all the big-city excitement that is North America.  Oh, and don’t forget the Grand Canyon in the U.S., as well as cruises from Vancouver in Canada up to Alaska.\r\n\r\nFollowing that, there is a short video showcasing Japan, Korea and China, which will be showing at 1 p.m., Europe and Britain, with all their history, are on at 1:45, South America, including <strong style=\"background-color: yellow\">[Q18: Brazil]</strong> and Argentina, at 2:30, and many more.  We hope there will be something for everyone!\r\n\r\nFinally, the other viewing room, Viewing Room B, will be showing videos of different traveling options, such as cruises, bus tours, river and canal cruises through Europe, at <strong style=\"background-color: yellow\">[Q19: 12:30]</strong>, and for those relatively new to international travel, an overview of what <strong style=\"background-color: yellow\">[Q20: air travel]</strong> is like today, which will be on at 3 o’clock.  And this includes destinations, types of aircraft, et cetera.  I’m sure you’ll agree that there is something for everyone.\r\n\r\nAlright, enough from me, so enjoy your day.  Thank you very much, folks, and have a great time here at the Travel Expo."
             },
             {
                 "section_number": 3,
-                "transcript": "<strong>Section 3</strong>\n\n<strong> </strong>\n<table border=\"2px solid #333\">\n<tbody>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">Come in, come in…, sit down… and you are… let’s see, Jason…?</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">Yes, Jason <strong style=\"background-color: yellow;\">[Q21: Endicott]</strong>, with a double ‘t’,  <strong><em>E – N – D – I – C – O – T – T</em></strong>.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">Good, thank you.  Pleased to meet you, and welcome to the company.  My name is Debbie, Debbie Smith, and I’m the Commercial Manager here at Platinum Products.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">And I’m pleased to meet you, too, sir, and thank you for the opportunity to work here. I’m very excited to get started.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">Good to have you on board.  Now, I believe it was discussed during your interview with the HR department that you’ll be joining as a <strong><em><strong style=\"background-color: yellow;\">[Q22: junior]</strong></em></strong> in the accounts department, but I hope you realise this is a real career opportunity. We see the role developing rather quickly, as we’re experiencing a significant level of growth at the moment.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">Yes, that was explained during the interview. I like the sound of the company, and what’s happening.  It must be an exciting time.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">Yes, it certainly is.  There are a lot changes underway at the moment the, and we’ve got new <strong><em><strong style=\"background-color: yellow;\">[Q23: export]</strong></em></strong> markets opening up all the time. We’ve actually just signed a new contract in South East Asia, and as you know, the majority of your workday will be spent <strong><em><strong style=\"background-color: yellow;\">[Q24: monitoring]</strong></em></strong> these new markets and formally presenting your feedback.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">Sure, no problem.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">I see that     you studied Economics and Business at University, so I’m hoping to draw on some of that knowledge while we work on developing these new markets.  What exactly did you study?</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">Well, I did Marketing and Accounting, but I was particularly interested in <strong><em>Statistics</em></strong><em>, </em>which was part of the Economics course.  I liked the numbers side of things, and I quite enjoyed looking at market trends and all the figures associated with that.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">That’s good.  That’s why we offered you the position, and we’re hoping to see some of that knowledge translated into analysing where we’re going, and how we’re going to get there.  Have you worked previously in any sort of industry position – I mean, have you done any similar work?</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">Absolutely - I worked for Wilson Manufacturing last year for six months, a work experience sort of thing, and we were <strong><em><strong style=\"background-color: yellow;\">[Q25: investigating]</strong></em></strong> a possible new project and working out the numbers to see if it was a good idea for the company.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">Interesting.  I hope some of that experience will carry over into this role.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">I’m sure it will.  I’m looking forward to getting started, and its especially exciting being a part of a new venture for the company and to be part of that growth.</td>\n</tr>\n</tbody>\n</table>\n\n<hr />\n\n&nbsp;\n<table border=\"2px solid #333\">\n<tbody>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">Well, let’s discuss some of the details of the job, and then we can get you started.  As was discussed in your interview, you will be working in the Sales and Marketing department alongside the accountant, where you will report to John Owens, the Manager there, but you will also be reporting to me as well, because I will be interested in those stats you come up with.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">Well, that will be interesting, with <strong><em>two</em></strong> managers, I mean.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">Well, we don’t see it as a problem. The departments generally communicate well with each other, and we think that your position will become increasingly important, as I mentioned before, so you’ll probably find you will need to work with a number of different departments.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">Is my position a stand-alone role, or do I work with others?</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">That’s a good question.  Initially, you will be with two others, but we see the role becoming quite independent, so after a few months you will mostly be working by yourself.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">And if you don’t mind me asking, Ms Smith…</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">You can just me call me Debbie – we’re quite informal around the office.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong> </strong></td>\n<td width=\"75%\">OK, thank you Debbie. So, who will I receive my training from? Just to get me started, I mean.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">Ah, another good question….  John Owens, who I mentioned before, will be watching over you, as will I. However, John will be away for a few weeks from tomorrow, so I will be covering his role and my own. That means that, for the most part, the training will be done <strong><em>by Sharon Greenslade</em></strong>.  She’s the accountant that I mentioned before and has extensive knowledge of the sales side of things.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">Well, that sounds good.  It sounds as though I will have a lot of people I can draw knowledge from.  A silly question, perhaps, but do I have my own work station?</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">Yes, in a moment I’ll take you through to where you’ll be working, but just to let you know you’re in a work station area with Sharon, who I just mentioned, and two others.  You will have your own desk and computer, of course.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">That sounds fine.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">Now, one thing I should tell you about is that there may be a requirement to work a few extra hours of overtime, which will be paid for in addition to your normal salary.  <strong><em>It’s just to prepare any reports that may be required</em></strong> and is most often only at the end of the month, but only in extreme cases. Saturdays and Sunday are your own though – we don’t ask staff to work then.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">Could I do that from <strong><em>home</em></strong>?</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">Well, actually, that’s something we’re considering, and we might be moving to a situation where there is a lot of opportunity to do that. Our <strong><em>technical department are looking into making sure you can safely access information from outside of the office, but there are some security issues</em></strong> to be worked out. It would certainly help with parking – that’s often a problem here - and there are lots of other potential bonuses.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">That’s sounds great.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">I agree.  So…  Overall, what do you think?</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Employee:  </strong></td>\n<td width=\"75%\">Well, as I said before, I’m excited to be working here.  It’s a very progressive company, and I want to be a part of it.  I hope I’ll be able to make a contribution.</td>\n</tr>\n<tr>\n<td width=\"25%\"><strong>Manager:  </strong></td>\n<td width=\"75%\">Yes, so do we, and we see you fitting in well.  As you may have been told by the Human Resources Department, there is a three-month <strong><em>review</em></strong>, at which time we can sit down and talk about how you’re doing, any concerns you might have, and how we see you moving forward. (fade)</td>\n</tr>\n</tbody>\n</table>"
+                "transcript": "<strong>Section 3</strong>\r\n\r\n<strong> </strong>\r\n<table border=\"2px solid #333\">\r\n<tbody>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">Come in, come in…, sit down… and you are… let’s see, Jason…?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">Yes, Jason <strong style=\"background-color: yellow\">[Q21: Endicott]</strong>, with a double ‘t’,  <strong><em>E – N – D – I – C – O – T – T</em></strong>.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">Good, thank you.  Pleased to meet you, and welcome to the company.  My name is Debbie, Debbie Smith, and I’m the Commercial Manager here at Platinum Products.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">And I’m pleased to meet you, too, sir, and thank you for the opportunity to work here. I’m very excited to get started.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">Good to have you on board.  Now, I believe it was discussed during your interview with the HR department that you’ll be joining as a <strong><em><strong style=\"background-color: yellow\">[Q22: junior]</strong></em></strong> in the accounts department, but I hope you realise this is a real career opportunity. We see the role developing rather quickly, as we’re experiencing a significant level of growth at the moment.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">Yes, that was explained during the interview. I like the sound of the company, and what’s happening.  It must be an exciting time.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">Yes, it certainly is.  There are a lot changes underway at the moment the, and we’ve got new <strong><em><strong style=\"background-color: yellow\">[Q23: export]</strong></em></strong> markets opening up all the time. We’ve actually just signed a new contract in South East Asia, and as you know, the majority of your workday will be spent <strong><em><strong style=\"background-color: yellow\">[Q24: monitoring]</strong></em></strong> these new markets and formally presenting your feedback.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">Sure, no problem.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">I see that     you studied Economics and Business at University, so I’m hoping to draw on some of that knowledge while we work on developing these new markets.  What exactly did you study?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">Well, I did Marketing and Accounting, but I was particularly interested in <strong><em>Statistics</em></strong><em>, </em>which was part of the Economics course.  I liked the numbers side of things, and I quite enjoyed looking at market trends and all the figures associated with that.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">That’s good.  That’s why we offered you the position, and we’re hoping to see some of that knowledge translated into analysing where we’re going, and how we’re going to get there.  Have you worked previously in any sort of industry position – I mean, have you done any similar work?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">Absolutely - I worked for Wilson Manufacturing last year for six months, a work experience sort of thing, and we were <strong><em><strong style=\"background-color: yellow\">[Q25: investigating]</strong></em></strong> a possible new project and working out the numbers to see if it was a good idea for the company.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">Interesting.  I hope some of that experience will carry over into this role.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">I’m sure it will.  I’m looking forward to getting started, and its especially exciting being a part of a new venture for the company and to be part of that growth.</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<hr />\r\n\r\n&nbsp;\r\n<table border=\"2px solid #333\">\r\n<tbody>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">Well, let’s discuss some of the details of the job, and then we can get you started.  As was discussed in your interview, you will be working in the Sales and Marketing department alongside the accountant, where you will report to John Owens, the Manager there, but you will also be reporting to me as well, because I will be interested in those stats you come up with.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">Well, that will be interesting, with <strong><em>two</em></strong> managers, I mean.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">Well, we don’t see it as a problem. The departments generally communicate well with each other, and we think that your position will become increasingly important, as I mentioned before, so you’ll probably find you will need to work with a number of different departments.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">Is my position a stand-alone role, or do I work with others?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">That’s a good question.  Initially, you will be with two others, but we see the role becoming quite independent, so after a few months you will mostly be working by yourself.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">And if you don’t mind me asking, Ms Smith…</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">You can just me call me Debbie – we’re quite informal around the office.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong> </strong></td>\r\n<td width=\"75%\">OK, thank you Debbie. So, who will I receive my training from? Just to get me started, I mean.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">Ah, another good question….  John Owens, who I mentioned before, will be watching over you, as will I. However, John will be away for a few weeks from tomorrow, so I will be covering his role and my own. That means that, for the most part, the training will be done <strong><em>by Sharon Greenslade</em></strong>.  She’s the accountant that I mentioned before and has extensive knowledge of the sales side of things.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">Well, that sounds good.  It sounds as though I will have a lot of people I can draw knowledge from.  A silly question, perhaps, but do I have my own work station?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">Yes, in a moment I’ll take you through to where you’ll be working, but just to let you know you’re in a work station area with Sharon, who I just mentioned, and two others.  You will have your own desk and computer, of course.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">That sounds fine.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">Now, one thing I should tell you about is that there may be a requirement to work a few extra hours of overtime, which will be paid for in addition to your normal salary.  <strong><em>It’s just to prepare any reports that may be required</em></strong> and is most often only at the end of the month, but only in extreme cases. Saturdays and Sunday are your own though – we don’t ask staff to work then.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">Could I do that from <strong><em>home</em></strong>?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">Well, actually, that’s something we’re considering, and we might be moving to a situation where there is a lot of opportunity to do that. Our <strong><em>technical department are looking into making sure you can safely access information from outside of the office, but there are some security issues</em></strong> to be worked out. It would certainly help with parking – that’s often a problem here - and there are lots of other potential bonuses.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">That’s sounds great.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">I agree.  So…  Overall, what do you think?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Employee:  </strong></td>\r\n<td width=\"75%\">Well, as I said before, I’m excited to be working here.  It’s a very progressive company, and I want to be a part of it.  I hope I’ll be able to make a contribution.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\"><strong>Manager:  </strong></td>\r\n<td width=\"75%\">Yes, so do we, and we see you fitting in well.  As you may have been told by the Human Resources Department, there is a three-month <strong><em>review</em></strong>, at which time we can sit down and talk about how you’re doing, any concerns you might have, and how we see you moving forward. (fade)</td>\r\n</tr>\r\n</tbody>\r\n</table>"
             },
             {
                 "section_number": 4,
-                "transcript": "<strong>Section 4 </strong>\n\nWe have been looking at differences in attitudes of members of different generations and we are now going to consider the economic discrepancies between different age groups; this means the different attitudes they may display with regards to <strong style=\"background-color: yellow;\">[Q38: money management]</strong>.\n\nTraditionally, <u>in many cultures, older generations - let’s say the 45 and above age group - have attached a great deal of value to (Q31) <strong style=\"background-color: yellow;\">[Q31: saving]</strong> money and also establishing security through buying their own home. According to Economist Simon Felder priorities are changing regarding both of these aspects for younger age groups in that they have been less important issues.</u> We’ll look at saving and house buying individually. First of all, let’s consider home-ownership. Firstly, in countries such as the UK , <u>while younger people may still have the desire to buy their own home, many under 30 year olds are actually unable to do so due to (Q32) <strong style=\"background-color: yellow;\">[Q32: increasing house prices]</strong></u>. <u>In many major cities in the UK , public sector workers such as (Q33) teachers or <strong style=\"background-color: yellow;\">[Q33: nurses]</strong> are excluded from the property market due to economic pressures. </u>\n\n<u>There has also been a relatively recent trend for individuals with a higher than average disposable income to purchase two or more properties; one for their own use and the additional houses as investments which they rent out to tenants; this has also added pressure for (Q34) <strong style=\"background-color: yellow;\">[Q34: first time buyers]</strong>,</u> as general property prices have increased as a result. Many younger people now need to remain in shared rental property or continue to live with their parents, as they find it impossible to buy their own home.\n\nPeople are also tending nowadays to settle into a romantic relationship later in life; <u>many people not opting to (Q35) marry until their mid-thirties</u>. Single people dependent on only one income often find it even more difficult to raise adequate finances to buy their own home. In response to the increased challenges in the housing market, some young professional people are now opting to invest in property with a friend, or even a like-minded acquaintance who also wishes to buy their first home, but is single and cannot afford the cost of a mortgage on their own.\n\n<hr />\n\nLet’s move on now to the other point we raised earlier – that of saving money. Many sociologists believe that attitudes regarding long term planning versus the desire to obtain immediate gratification: that is ‘the wish have everything now’ vary quite dramatically in older and younger generations. According to Anne Hartwell, a prominent social scientist, <u>the “Baby Boomer” generation (those born between (Q36) 1945 and <strong style=\"background-color: yellow;\">[Q36: 1964]</strong>) tend to retain the traditional values of saving and moderation with regards to expenditure</u>; <u>whereas, younger generations of today have a tendency to spend money in the (Q37) <strong style=\"background-color: yellow;\">[Q37: present]</strong> thinking less about the consequences of the future. </u>\n\n<u>Many educators believe that education about (Q38) money management and long term planning is vital for the youth of today</u>. <u>It is unrealistic to expect young people to act responsibly regarding their spending if little is done to ensure they have the basic skills to manage their own (Q39) <strong style=\"background-color: yellow;\">[Q39: budget]</strong></u>.While many subjects are taught in school, very few education institutions offer an insight into skills that will assist pupils with coping with real life once they enter the world of work.\n\n<u>For many young people, saving money is extremely difficult, as the (Q40) <strong style=\"background-color: yellow;\">[Q40: cost of living]</strong> rises a high percentage of the population struggle to meet the costs of day to day life.</u> Anne Hartwell believes that banks, building societies and other such financial institutions offer additional support in helping their customers manage their finances so that fewer people fall into debt."
+                "transcript": "<strong>Section 4 </strong>\r\n\r\nWe have been looking at differences in attitudes of members of different generations and we are now going to consider the economic discrepancies between different age groups; this means the different attitudes they may display with regards to <strong style=\"background-color: yellow\">[Q38: money management]</strong>.\r\n\r\nTraditionally, <u>in many cultures, older generations - let’s say the 45 and above age group - have attached a great deal of value to (Q31) <strong style=\"background-color: yellow\">[Q31: saving]</strong> money and also establishing security through buying their own home. According to Economist Simon Felder priorities are changing regarding both of these aspects for younger age groups in that they have been less important issues.</u> We’ll look at saving and house buying individually. First of all, let’s consider home-ownership. Firstly, in countries such as the UK , <u>while younger people may still have the desire to buy their own home, many under 30 year olds are actually unable to do so due to (Q32) <strong style=\"background-color: yellow\">[Q32: increasing house prices]</strong></u>. <u>In many major cities in the UK , public sector workers such as (Q33) teachers or <strong style=\"background-color: yellow\">[Q33: nurses]</strong> are excluded from the property market due to economic pressures. </u>\r\n\r\n<u>There has also been a relatively recent trend for individuals with a higher than average disposable income to purchase two or more properties; one for their own use and the additional houses as investments which they rent out to tenants; this has also added pressure for (Q34) <strong style=\"background-color: yellow\">[Q34: first time buyers]</strong>,</u> as general property prices have increased as a result. Many younger people now need to remain in shared rental property or continue to live with their parents, as they find it impossible to buy their own home.\r\n\r\nPeople are also tending nowadays to settle into a romantic relationship later in life; <u>many people not opting to (Q35) marry until their mid-thirties</u>. Single people dependent on only one income often find it even more difficult to raise adequate finances to buy their own home. In response to the increased challenges in the housing market, some young professional people are now opting to invest in property with a friend, or even a like-minded acquaintance who also wishes to buy their first home, but is single and cannot afford the cost of a mortgage on their own.\r\n\r\n<hr />\r\n\r\nLet’s move on now to the other point we raised earlier – that of saving money. Many sociologists believe that attitudes regarding long term planning versus the desire to obtain immediate gratification: that is ‘the wish have everything now’ vary quite dramatically in older and younger generations. According to Anne Hartwell, a prominent social scientist, <u>the “Baby Boomer” generation (those born between (Q36) 1945 and <strong style=\"background-color: yellow\">[Q36: 1964]</strong>) tend to retain the traditional values of saving and moderation with regards to expenditure</u>; <u>whereas, younger generations of today have a tendency to spend money in the (Q37) <strong style=\"background-color: yellow\">[Q37: present]</strong> thinking less about the consequences of the future. </u>\r\n\r\n<u>Many educators believe that education about (Q38) money management and long term planning is vital for the youth of today</u>. <u>It is unrealistic to expect young people to act responsibly regarding their spending if little is done to ensure they have the basic skills to manage their own (Q39) <strong style=\"background-color: yellow\">[Q39: budget]</strong></u>.While many subjects are taught in school, very few education institutions offer an insight into skills that will assist pupils with coping with real life once they enter the world of work.\r\n\r\n<u>For many young people, saving money is extremely difficult, as the (Q40) <strong style=\"background-color: yellow\">[Q40: cost of living]</strong> rises a high percentage of the population struggle to meet the costs of day to day life.</u> Anne Hartwell believes that banks, building societies and other such financial institutions offer additional support in helping their customers manage their finances so that fewer people fall into debt."
             }
         ]
     },
     "_metadata": {
-        "exported_at": "2026-01-03 14:30:00",
-        "exported_by": "converter",
-        "plugin_version": "10.16",
+        "exported_at": "2026-01-05 17:44:55",
+        "exported_by": "impact",
+        "plugin_version": "11.4",
         "format_version": "1.0"
     }
 }
