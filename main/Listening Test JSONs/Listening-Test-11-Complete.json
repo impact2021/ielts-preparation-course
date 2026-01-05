@@ -45,8 +45,8 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 5 and 6\r\n\r\nChoose TWO letters A – E. Write your answer in boxes 5 and 6 on your answer sheet.",
-            "question": "Which TWO accommodation options does the caller enquire about?",
+            "instructions": "Questions 5 and 6\r\n\r\nChoose TWO answers from the list and write the correct letter A-E next to questions 5 and 6.",
+            "question": "Which two of the following statements are true?",
             "points": 2,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"C\" or \"D\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
             "correct_feedback": "",
@@ -56,32 +56,32 @@
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
-                    "text": "Room only",
+                    "text": "The booking is for one week.",
                     "is_correct": false,
                     "feedback": ""
                 },
                 {
-                    "text": "Room + breakfast",
+                    "text": "Breakfast for the duration of the stay costs £50.",
                     "is_correct": false,
                     "feedback": ""
                 },
                 {
-                    "text": "Room + breakfast + dinner",
+                    "text": "The Indian restaurant is the furthest from the hotel.",
                     "is_correct": true,
                     "feedback": ""
                 },
                 {
-                    "text": "Room + breakfast + dinner (on the first night only)",
+                    "text": "The caller is booking a double room.",
                     "is_correct": true,
                     "feedback": ""
                 },
                 {
-                    "text": "Full board with all meals included",
+                    "text": "The most expensive appetizers on the regular menu cost £25.",
                     "is_correct": false,
                     "feedback": ""
                 }
             ],
-            "options": "Room only\nRoom + breakfast\nRoom + breakfast + dinner\nRoom + breakfast + dinner (on the first night only)\nFull board with all meals included",
+            "options": "The booking is for one week.\nBreakfast for the duration of the stay costs £50.\nThe Indian restaurant is the furthest from the hotel.\nThe caller is booking a double room.\nThe most expensive appetizers on the regular menu cost £25.",
             "correct_answer_count": 2,
             "show_option_letters": true
         },
