@@ -113,7 +113,7 @@
                 "1": {
                     "correct": "✓ Excellent! The answer is \"468319\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "✗ Incorrect. The man explicitly gives his Frequent Flyer number as: '468319.' The correct answer is '468319.'",
-                    "no_answer": "No answer provided. The man states: 'It's 468319,' when asked for his Frequent Flyer number."
+                    "no_answer": "No answer provided. The man states: 'It's 468319,' when asked for his Frequent Flyer number. The correct answer is '468319.'"
                 }
             }
         },
