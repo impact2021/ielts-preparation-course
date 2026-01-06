@@ -19,9 +19,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! Acceptable answers: \"BY TRAIN\" or \"TRAIN\" or \"A TRAIN\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Incorrect. The man clearly states: 'I'm going to Munich, but by train, and then flying back to London.' The correct answer is 'by train.'",
-                    "no_answer": "No answer provided. In the transcript, the man says: 'I'm going to Munich, but by train, and then flying back to London.' The correct answer is 'by train.'"
+                    "correct": "\u2713 Excellent! Acceptable answers: \"BY TRAIN\" or \"TRAIN\" or \"A TRAIN\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Incorrect. The man clearly states: 'I'm going to Munich, but by train, and then flying back to London.' The correct answer is 'by train.'",
+                    "no_answer": "No answer provided. The correct answer is 'by train.'"
                 }
             }
         },
@@ -42,9 +42,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! Acceptable answers: \"CITY AIRPORT\" or \"CITY\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Incorrect. The check-in assistant says: 'Leaving from City Airport, London.' The correct answer is 'City Airport.'",
-                    "no_answer": "No answer provided. The assistant explicitly mentions: 'Leaving from City Airport, London.' The correct answer is 'City Airport.'"
+                    "correct": "\u2713 Excellent! Acceptable answers: \"CITY AIRPORT\" or \"CITY\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Incorrect. The check-in assistant says: 'Leaving from City Airport, London.' The correct answer is 'City Airport.'",
+                    "no_answer": "No answer provided. The correct answer is 'City Airport.'"
                 }
             }
         },
@@ -65,9 +65,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! Acceptable answers: \"3PM\" or \"3 PM\" or \"3 P M\" or \"3 P.M.\" or \"3P.M.\" or \"3 P. M.\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Incorrect. The assistant says: 'Arriving 3 pm local time, with the one-hour time difference.' The correct answer is '3 PM.'",
-                    "no_answer": "No answer provided. In the transcript, the assistant confirms: 'Arriving 3 pm local time, with the one-hour time difference.' The correct answer is '3 PM.'"
+                    "correct": "\u2713 Excellent! Acceptable answers: \"3PM\" or \"3 PM\" or \"3 P M\" or \"3 P.M.\" or \"3P.M.\" or \"3 P. M.\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Incorrect. The assistant says: 'Arriving 3 pm local time, with the one-hour time difference.' The correct answer is '3 PM.'",
+                    "no_answer": "No answer provided. The correct answer is '3 PM.'"
                 }
             }
         },
@@ -88,16 +88,16 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! Acceptable answers: \"7A\" or \"7 A\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Incorrect. The man says: 'The front of the plane, please, so, the first one.' The assistant confirms the seat as '7A.'",
-                    "no_answer": "No answer provided. The man requests: 'The front of the plane, please, so, the first one.' The assistant then assigns him seat '7A.'"
+                    "correct": "\u2713 Excellent! Acceptable answers: \"7A\" or \"7 A\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Incorrect. The man says: 'The front of the plane, please, so, the first one.' The assistant confirms the seat as '7A.'",
+                    "no_answer": "No answer provided. The correct answer is '7A.'"
                 }
             }
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "What is the man’s Frequent Flyer number?",
+            "question": "What is the man\u2019s Frequent Flyer number?",
             "points": 1,
             "no_answer_feedback": "No answer provided. The answer is \"468319\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
             "correct_feedback": "",
@@ -111,20 +111,20 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! The answer is \"468319\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Incorrect. The man explicitly gives his Frequent Flyer number as: '468319.' The correct answer is '468319.'",
-                    "no_answer": "No answer provided. The man states: 'It's 468319,' when asked for his Frequent Flyer number. The correct answer is '468319.'"
+                    "correct": "\u2713 Excellent! The answer is \"468319\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Incorrect. The man explicitly gives his Frequent Flyer number as: '468319.' The correct answer is '468319.'",
+                    "no_answer": "No answer provided. The correct answer is '468319.'"
                 }
             }
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 6 – 9\r\n\r\nChoose the correct letter A – C.",
-            "question": "The man’s passport... ",
+            "instructions": "Questions 6 \u2013 9\r\n\r\nChoose the correct letter A \u2013 C.",
+            "question": "The man\u2019s passport... ",
             "points": 1,
             "no_answer_feedback": "No answer provided. The assistant says: 'You only have 7 months left,' which matches the correct answer: 'has 7 more months on it.'",
             "correct_feedback": "",
-            "incorrect_feedback": "✗ Incorrect. The assistant mentions: 'You only have 7 months left.' The correct answer is: 'has 7 more months on it.'",
+            "incorrect_feedback": "\u2717 Incorrect. The assistant mentions: 'You only have 7 months left.' The correct answer is: 'has 7 more months on it.'",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "multiple_choice_l",
@@ -132,17 +132,17 @@
                 {
                     "text": "has expired.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. The assistant mentions: 'You only have 7 months left.' The correct answer is: 'has 7 more months on it.'"
+                    "feedback": "\u2717 Incorrect. The assistant mentions: 'You only have 7 months left.' The correct answer is: 'has 7 more months on it.'"
                 },
                 {
                     "text": "has 6 more months left on it.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. The assistant mentions: 'You only have 7 months left.' The correct answer is: 'has 7 more months on it.'"
+                    "feedback": "\u2717 Incorrect. The assistant mentions: 'You only have 7 months left.' The correct answer is: 'has 7 more months on it.'"
                 },
                 {
                     "text": "has 7 more months on it.",
                     "is_correct": true,
-                    "feedback": "✓ Correct! You identified the key information in the listening passage."
+                    "feedback": "\u2713 Correct! You identified the key information in the listening passage."
                 }
             ],
             "options": "has expired.\nhas 6 more months left on it.\nhas 7 more months on it.",
@@ -156,7 +156,7 @@
             "points": 1,
             "no_answer_feedback": "No answer provided. The man states: 'I will check in just this suitcase.' The correct answer is: 'one suitcase.'",
             "correct_feedback": "",
-            "incorrect_feedback": "✗ Incorrect. The man explicitly says: 'I will check in just this suitcase.' The correct answer is: 'one suitcase.'",
+            "incorrect_feedback": "\u2717 Incorrect. The man explicitly says: 'I will check in just this suitcase.' The correct answer is: 'one suitcase.'",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "multiple_choice_l",
@@ -164,17 +164,17 @@
                 {
                     "text": "A. one suitcase.",
                     "is_correct": true,
-                    "feedback": "✓ Correct! Option A is the right answer. You identified the key information in the listening passage."
+                    "feedback": "\u2713 Correct! Option A is the right answer. You identified the key information in the listening passage."
                 },
                 {
                     "text": "B. one briefcase.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. The man explicitly says: 'I will check in just this suitcase.' The correct answer is: 'one suitcase.'"
+                    "feedback": "\u2717 Incorrect. The man explicitly says: 'I will check in just this suitcase.' The correct answer is: 'one suitcase.'"
                 },
                 {
                     "text": "C. one laptop case.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. The man explicitly says: 'I will check in just this suitcase.' The correct answer is: 'one suitcase.'"
+                    "feedback": "\u2717 Incorrect. The man explicitly says: 'I will check in just this suitcase.' The correct answer is: 'one suitcase.'"
                 }
             ],
             "options": "A. one suitcase.\nB. one briefcase.\nC. one laptop case.",
@@ -188,7 +188,7 @@
             "points": 1,
             "no_answer_feedback": "No answer provided. The assistant mentions: 'For your suitcase, it's 20 kilograms.' The correct answer is: '20 kgs.'",
             "correct_feedback": "",
-            "incorrect_feedback": "✗ Incorrect. The assistant confirms: 'For your suitcase, it's 20 kilograms.' The correct answer is '20 kgs.'",
+            "incorrect_feedback": "\u2717 Incorrect. The assistant confirms: 'For your suitcase, it's 20 kilograms.' The correct answer is '20 kgs.'",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "multiple_choice_l",
@@ -196,17 +196,17 @@
                 {
                     "text": "A. 7 kgs.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. The assistant confirms: 'For your suitcase, it's 20 kilograms.' The correct answer is '20 kgs.'"
+                    "feedback": "\u2717 Incorrect. The assistant confirms: 'For your suitcase, it's 20 kilograms.' The correct answer is '20 kgs.'"
                 },
                 {
                     "text": "B. 20 kgs.",
                     "is_correct": true,
-                    "feedback": "✓ Correct! Option B is the right answer. You identified the key information in the listening passage."
+                    "feedback": "\u2713 Correct! Option B is the right answer. You identified the key information in the listening passage."
                 },
                 {
                     "text": "C. 30 kgs.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. The assistant confirms: 'For your suitcase, it's 20 kilograms.' The correct answer is '20 kgs.'"
+                    "feedback": "\u2717 Incorrect. The assistant confirms: 'For your suitcase, it's 20 kilograms.' The correct answer is '20 kgs.'"
                 }
             ],
             "options": "A. 7 kgs.\nB. 20 kgs.\nC. 30 kgs.",
@@ -218,9 +218,9 @@
             "instructions": "",
             "question": "The boarding time for the flight is ",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The assistant specifies: 'Be at the gate 20 minutes before departure… so just after 1, 1:10 to be exact.' The correct answer is '1:10 PM.'",
+            "no_answer_feedback": "No answer provided. The assistant specifies: 'Be at the gate 20 minutes before departure\u2026 so just after 1, 1:10 to be exact.' The correct answer is '1:10 PM.'",
             "correct_feedback": "",
-            "incorrect_feedback": "✗ Incorrect. The assistant says: 'Be at the gate 20 minutes before departure… so just after 1, 1:10 to be exact.' The correct answer is '1:10 PM.'",
+            "incorrect_feedback": "\u2717 Incorrect. The assistant says: 'Be at the gate 20 minutes before departure\u2026 so just after 1, 1:10 to be exact.' The correct answer is '1:10 PM.'",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "multiple_choice_l",
@@ -228,17 +228,17 @@
                 {
                     "text": "A. 1:00 p.m.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. The assistant says: 'Be at the gate 20 minutes before departure… so just after 1, 1:10 to be exact.' The correct answer is '1:10 PM.'"
+                    "feedback": "\u2717 Incorrect. The assistant says: 'Be at the gate 20 minutes before departure\u2026 so just after 1, 1:10 to be exact.' The correct answer is '1:10 PM.'"
                 },
                 {
                     "text": "B. 1:10 p.m.",
                     "is_correct": true,
-                    "feedback": "✓ Correct! Option B is the right answer. You identified the key information in the listening passage."
+                    "feedback": "\u2713 Correct! Option B is the right answer. You identified the key information in the listening passage."
                 },
                 {
                     "text": "C. 1:30 p.m.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. The assistant says: 'Be at the gate 20 minutes before departure… so just after 1, 1:10 to be exact.' The correct answer is '1:10 PM.'"
+                    "feedback": "\u2717 Incorrect. The assistant says: 'Be at the gate 20 minutes before departure\u2026 so just after 1, 1:10 to be exact.' The correct answer is '1:10 PM.'"
                 }
             ],
             "options": "A. 1:00 p.m.\nB. 1:10 p.m.\nC. 1:30 p.m.",
@@ -252,7 +252,7 @@
             "points": 1,
             "no_answer_feedback": "No answer provided. The assistant advises: 'I suggest that you get one of our brochures about all of our services.' The correct answer is: 'get a brochure.'",
             "correct_feedback": "",
-            "incorrect_feedback": "✗ Incorrect. The assistant states: 'I suggest that you get one of our brochures about all of our services.' The correct answer is: 'get a brochure.'",
+            "incorrect_feedback": "\u2717 Incorrect. The assistant states: 'I suggest that you get one of our brochures about all of our services.' The correct answer is: 'get a brochure.'",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "multiple_choice_l",
@@ -260,17 +260,17 @@
                 {
                     "text": "A. use E-Check-In to Paris.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. The assistant states: 'I suggest that you get one of our brochures about all of our services.' The correct answer is: 'get a brochure.'"
+                    "feedback": "\u2717 Incorrect. The assistant states: 'I suggest that you get one of our brochures about all of our services.' The correct answer is: 'get a brochure.'"
                 },
                 {
                     "text": "B. stay at a different hotel.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. The assistant states: 'I suggest that you get one of our brochures about all of our services.' The correct answer is: 'get a brochure.'"
+                    "feedback": "\u2717 Incorrect. The assistant states: 'I suggest that you get one of our brochures about all of our services.' The correct answer is: 'get a brochure.'"
                 },
                 {
                     "text": "C. get a brochure.",
                     "is_correct": true,
-                    "feedback": "✓ Correct! Option C is the right answer. You identified the key information in the listening passage."
+                    "feedback": "\u2713 Correct! Option C is the right answer. You identified the key information in the listening passage."
                 }
             ],
             "options": "A. use E-Check-In to Paris.\nB. stay at a different hotel.\nC. get a brochure.",
@@ -284,7 +284,7 @@
             "points": 2,
             "no_answer_feedback": "No answer provided. The manager highlights: 'The hotel was originally built during the last decade of the seventeenth century.' Also, they mention: 'The Fairview Arms became a tourist hotel in the late 1880s.' The correct answers are 'A' and 'D.'",
             "correct_feedback": "",
-            "incorrect_feedback": "✗ Incorrect. The manager states: 'The hotel was originally built during the last decade of the seventeenth century.' They also say: 'The Fairview Arms became a tourist hotel in the late 1880s.' The correct answers are 'A' and 'D.'",
+            "incorrect_feedback": "\u2717 Incorrect. The manager states: 'The hotel was originally built during the last decade of the seventeenth century.' They also say: 'The Fairview Arms became a tourist hotel in the late 1880s.' The correct answers are 'A' and 'D.'",
             "reading_text_id": null,
             "audio_section_id": 1,
             "ielts_question_category": "multiple_choice_l",
@@ -326,7 +326,7 @@
             "points": 2,
             "no_answer_feedback": "No answer provided. The manager explains: 'The hotel souvenir shop is currently undergoing an extensive upgrade.' Also: 'The hotel squash courts are presently being upgraded.' The correct answers are 'C' and 'E.'",
             "correct_feedback": "",
-            "incorrect_feedback": "✗ Incorrect. The manager explains: 'The hotel souvenir shop is currently undergoing an extensive upgrade.' Also: 'The hotel squash courts are presently being upgraded.' The correct answers are 'C' and 'E.'",
+            "incorrect_feedback": "\u2717 Incorrect. The manager explains: 'The hotel souvenir shop is currently undergoing an extensive upgrade.' Also: 'The hotel squash courts are presently being upgraded.' The correct answers are 'C' and 'E.'",
             "reading_text_id": null,
             "audio_section_id": 1,
             "ielts_question_category": "multiple_choice_l",
@@ -383,45 +383,45 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! Acceptable answers: \"FOOTWEAR\" or \"FOOT WEAR\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. Acceptable answers: \"FOOTWEAR\" or \"FOOT WEAR\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"FOOTWEAR\" or \"FOOT WEAR\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! Acceptable answers: \"FOOTWEAR\" or \"FOOT WEAR\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. Acceptable answers: \"FOOTWEAR\" or \"FOOT WEAR\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. Acceptable answers: \"FOOTWEAR\" or \"FOOT WEAR\"."
                 },
                 "2": {
-                    "correct": "✓ Excellent! Acceptable answers: \"24 HOURS\" or \"24 HRS\" or \"TWENTY FOUR HOURS\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. Acceptable answers: \"24 HOURS\" or \"24 HRS\" or \"TWENTY FOUR HOURS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"24 HOURS\" or \"24 HRS\" or \"TWENTY FOUR HOURS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! Acceptable answers: \"24 HOURS\" or \"24 HRS\" or \"TWENTY FOUR HOURS\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. Acceptable answers: \"24 HOURS\" or \"24 HRS\" or \"TWENTY FOUR HOURS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. Acceptable answers: \"24 HOURS\" or \"24 HRS\" or \"TWENTY FOUR HOURS\"."
                 },
                 "3": {
-                    "correct": "✓ Excellent! Acceptable answers: \"NIGHTCLUB\" or \"NIGHT CLUB\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. Acceptable answers: \"NIGHTCLUB\" or \"NIGHT CLUB\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"NIGHTCLUB\" or \"NIGHT CLUB\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! Acceptable answers: \"NIGHTCLUB\" or \"NIGHT CLUB\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. Acceptable answers: \"NIGHTCLUB\" or \"NIGHT CLUB\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. Acceptable answers: \"NIGHTCLUB\" or \"NIGHT CLUB\"."
                 },
                 "4": {
-                    "correct": "✓ Excellent! The answer is \"DIVING\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. The answer is \"DIVING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"DIVING\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! The answer is \"DIVING\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. The answer is \"DIVING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. The answer is \"DIVING\"."
                 },
                 "5": {
-                    "correct": "✓ Excellent! The answer is \"DINING HALL\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. The answer is \"DINING HALL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"DINING HALL\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! The answer is \"DINING HALL\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. The answer is \"DINING HALL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. The answer is \"DINING HALL\"."
                 },
                 "6": {
-                    "correct": "✓ Excellent! Acceptable answers: \"11 P M\" or \"11 PM\" or \"11P.M.\" or \"11 P.M.\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. Acceptable answers: \"11 P M\" or \"11 PM\" or \"11P.M.\" or \"11 P.M.\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"11 P M\" or \"11 PM\" or \"11P.M.\" or \"11 P.M.\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! Acceptable answers: \"11 P M\" or \"11 PM\" or \"11P.M.\" or \"11 P.M.\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. Acceptable answers: \"11 P M\" or \"11 PM\" or \"11P.M.\" or \"11 P.M.\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. Acceptable answers: \"11 P M\" or \"11 PM\" or \"11P.M.\" or \"11 P.M.\"."
                 }
             }
         },
         {
             "type": "closed_question",
             "instructions": "Questions 21-30\r\n\r\nQuestions 21-23      \r\n\r\nChoose the correct letter, A, B or C.",
-            "question": " Research Project Background\r\n\r\n The students’ project is on...",
+            "question": " Research Project Background\r\n\r\n The students\u2019 project is on...",
             "points": 1,
             "no_answer_feedback": "No answer provided. Thomas explains they were 'asking if we would be interested in participating in a volunteer programme in East Africa for four weeks, looking at rural development.' The correct answer is 'rural development.'",
             "correct_feedback": "",
-            "incorrect_feedback": "✗ Incorrect. Thomas explains they were 'asking if we would be interested in participating in a volunteer programme in East Africa for four weeks, looking at rural development.' The correct answer is 'rural development.'",
+            "incorrect_feedback": "\u2717 Incorrect. Thomas explains they were 'asking if we would be interested in participating in a volunteer programme in East Africa for four weeks, looking at rural development.' The correct answer is 'rural development.'",
             "reading_text_id": null,
             "audio_section_id": 2,
             "ielts_question_category": "multiple_choice_l",
@@ -429,17 +429,17 @@
                 {
                     "text": "urban renewal.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. Thomas explains they were 'asking if we would be interested in participating in a volunteer programme in East Africa for four weeks, looking at rural development.' The correct answer is 'rural development.'"
+                    "feedback": "\u2717 Incorrect. Thomas explains they were 'asking if we would be interested in participating in a volunteer programme in East Africa for four weeks, looking at rural development.' The correct answer is 'rural development.'"
                 },
                 {
                     "text": "rural development.",
                     "is_correct": true,
-                    "feedback": "✓ Correct! You identified the key information in the listening passage."
+                    "feedback": "\u2713 Correct! You identified the key information in the listening passage."
                 },
                 {
                     "text": "the horticultural sector.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. Thomas explains they were 'asking if we would be interested in participating in a volunteer programme in East Africa for four weeks, looking at rural development.' The correct answer is 'rural development.'"
+                    "feedback": "\u2717 Incorrect. Thomas explains they were 'asking if we would be interested in participating in a volunteer programme in East Africa for four weeks, looking at rural development.' The correct answer is 'rural development.'"
                 }
             ],
             "options": "urban renewal.\nrural development.\nthe horticultural sector.",
@@ -453,7 +453,7 @@
             "points": 1,
             "no_answer_feedback": "No answer provided. Jessica states: 'no small sum contributed by our very own university.' The correct answer is 'the university.'",
             "correct_feedback": "",
-            "incorrect_feedback": "✗ Incorrect. Jessica states: 'no small sum contributed by our very own university.' The correct answer is 'the university.'",
+            "incorrect_feedback": "\u2717 Incorrect. Jessica states: 'no small sum contributed by our very own university.' The correct answer is 'the university.'",
             "reading_text_id": null,
             "audio_section_id": 2,
             "ielts_question_category": "multiple_choice_l",
@@ -461,17 +461,17 @@
                 {
                     "text": "the university.",
                     "is_correct": true,
-                    "feedback": "✓ Correct! You identified the key information in the listening passage."
+                    "feedback": "\u2713 Correct! You identified the key information in the listening passage."
                 },
                 {
                     "text": "volunteers.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. Jessica states: 'no small sum contributed by our very own university.' The correct answer is 'the university.'"
+                    "feedback": "\u2717 Incorrect. Jessica states: 'no small sum contributed by our very own university.' The correct answer is 'the university.'"
                 },
                 {
                     "text": "local authorities.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. Jessica states: 'no small sum contributed by our very own university.' The correct answer is 'the university.'"
+                    "feedback": "\u2717 Incorrect. Jessica states: 'no small sum contributed by our very own university.' The correct answer is 'the university.'"
                 }
             ],
             "options": "the university.\nvolunteers.\nlocal authorities.",
@@ -485,7 +485,7 @@
             "points": 1,
             "no_answer_feedback": "No answer provided. Thomas says: 'we were out of the UK for seven weeks and spent four of those in the country.' The correct answer is 'four weeks.'",
             "correct_feedback": "",
-            "incorrect_feedback": "✗ Incorrect. Thomas says: 'we were out of the UK for seven weeks and spent four of those in the country.' The correct answer is 'four weeks.'",
+            "incorrect_feedback": "\u2717 Incorrect. Thomas says: 'we were out of the UK for seven weeks and spent four of those in the country.' The correct answer is 'four weeks.'",
             "reading_text_id": null,
             "audio_section_id": 2,
             "ielts_question_category": "multiple_choice_l",
@@ -493,17 +493,17 @@
                 {
                     "text": "seven weeks.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. Thomas says: 'we were out of the UK for seven weeks and spent four of those in the country.' The correct answer is 'four weeks.'"
+                    "feedback": "\u2717 Incorrect. Thomas says: 'we were out of the UK for seven weeks and spent four of those in the country.' The correct answer is 'four weeks.'"
                 },
                 {
                     "text": "one week.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. Thomas says: 'we were out of the UK for seven weeks and spent four of those in the country.' The correct answer is 'four weeks.'"
+                    "feedback": "\u2717 Incorrect. Thomas says: 'we were out of the UK for seven weeks and spent four of those in the country.' The correct answer is 'four weeks.'"
                 },
                 {
                     "text": "four weeks.",
                     "is_correct": true,
-                    "feedback": "✓ Correct! You identified the key information in the listening passage."
+                    "feedback": "\u2713 Correct! You identified the key information in the listening passage."
                 }
             ],
             "options": "seven weeks.\none week.\nfour weeks.",
@@ -531,29 +531,29 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! Acceptable answers: \"20,000\" or \"TWENTY THOUSAND\" or \"20000\" or \"20 000\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. Acceptable answers: \"20,000\" or \"TWENTY THOUSAND\" or \"20000\" or \"20 000\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"20,000\" or \"TWENTY THOUSAND\" or \"20000\" or \"20 000\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! Acceptable answers: \"20,000\" or \"TWENTY THOUSAND\" or \"20000\" or \"20 000\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. Acceptable answers: \"20,000\" or \"TWENTY THOUSAND\" or \"20000\" or \"20 000\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. Acceptable answers: \"20,000\" or \"TWENTY THOUSAND\" or \"20000\" or \"20 000\"."
                 },
                 "2": {
-                    "correct": "✓ Excellent! The answer is \"LAKE VICTORIA\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. The answer is \"LAKE VICTORIA\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"LAKE VICTORIA\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! The answer is \"LAKE VICTORIA\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. The answer is \"LAKE VICTORIA\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. The answer is \"LAKE VICTORIA\"."
                 },
                 "3": {
-                    "correct": "✓ Excellent! The answer is \"REGIONAL CAPITAL\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. The answer is \"REGIONAL CAPITAL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"REGIONAL CAPITAL\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! The answer is \"REGIONAL CAPITAL\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. The answer is \"REGIONAL CAPITAL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. The answer is \"REGIONAL CAPITAL\"."
                 },
                 "4": {
-                    "correct": "✓ Excellent! Acceptable answers: \"700\" or \"SEVEN HUNDRED\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. Acceptable answers: \"700\" or \"SEVEN HUNDRED\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"700\" or \"SEVEN HUNDRED\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! Acceptable answers: \"700\" or \"SEVEN HUNDRED\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. Acceptable answers: \"700\" or \"SEVEN HUNDRED\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. Acceptable answers: \"700\" or \"SEVEN HUNDRED\"."
                 },
                 "5": {
-                    "correct": "✓ Excellent! Acceptable answers: \"FISHING TRADE\" or \"FISHING\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. Acceptable answers: \"FISHING TRADE\" or \"FISHING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"FISHING TRADE\" or \"FISHING\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! Acceptable answers: \"FISHING TRADE\" or \"FISHING\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. Acceptable answers: \"FISHING TRADE\" or \"FISHING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. Acceptable answers: \"FISHING TRADE\" or \"FISHING\"."
                 }
             }
         },
@@ -564,7 +564,7 @@
             "points": 1,
             "no_answer_feedback": "No answer provided. Thomas says: 'it was a most rewarding experience.' The correct answer is 'worthwhile.'",
             "correct_feedback": "",
-            "incorrect_feedback": "✗ Incorrect. Thomas says: 'it was a most rewarding experience.' The correct answer is 'worthwhile.'",
+            "incorrect_feedback": "\u2717 Incorrect. Thomas says: 'it was a most rewarding experience.' The correct answer is 'worthwhile.'",
             "reading_text_id": null,
             "audio_section_id": 2,
             "ielts_question_category": "multiple_choice_l",
@@ -572,22 +572,22 @@
                 {
                     "text": "overwhelming",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. Thomas says: 'it was a most rewarding experience.' The correct answer is 'worthwhile.'"
+                    "feedback": "\u2717 Incorrect. Thomas says: 'it was a most rewarding experience.' The correct answer is 'worthwhile.'"
                 },
                 {
                     "text": "challenging.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. Thomas says: 'it was a most rewarding experience.' The correct answer is 'worthwhile.'"
+                    "feedback": "\u2717 Incorrect. Thomas says: 'it was a most rewarding experience.' The correct answer is 'worthwhile.'"
                 },
                 {
                     "text": "regrettable.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. Thomas says: 'it was a most rewarding experience.' The correct answer is 'worthwhile.'"
+                    "feedback": "\u2717 Incorrect. Thomas says: 'it was a most rewarding experience.' The correct answer is 'worthwhile.'"
                 },
                 {
                     "text": "worthwhile.",
                     "is_correct": true,
-                    "feedback": "✓ Correct! You identified the key information in the listening passage."
+                    "feedback": "\u2713 Correct! You identified the key information in the listening passage."
                 }
             ],
             "options": "overwhelming\nchallenging.\nregrettable.\nworthwhile.",
@@ -601,7 +601,7 @@
             "points": 1,
             "no_answer_feedback": "No answer provided. Jessica says: 'the entire project really did prove to be very insightful, and helped to open my eyes.' The correct answer is 'eye-opening.'",
             "correct_feedback": "",
-            "incorrect_feedback": "✗ Incorrect. Jessica says: 'the entire project really did prove to be very insightful, and helped to open my eyes.' The correct answer is 'eye-opening.'",
+            "incorrect_feedback": "\u2717 Incorrect. Jessica says: 'the entire project really did prove to be very insightful, and helped to open my eyes.' The correct answer is 'eye-opening.'",
             "reading_text_id": null,
             "audio_section_id": 2,
             "ielts_question_category": "multiple_choice_l",
@@ -609,22 +609,22 @@
                 {
                     "text": "inconvenient.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. Jessica says: 'the entire project really did prove to be very insightful, and helped to open my eyes.' The correct answer is 'eye-opening.'"
+                    "feedback": "\u2717 Incorrect. Jessica says: 'the entire project really did prove to be very insightful, and helped to open my eyes.' The correct answer is 'eye-opening.'"
                 },
                 {
                     "text": "eye-opening.",
                     "is_correct": true,
-                    "feedback": "✓ Correct! You identified the key information in the listening passage."
+                    "feedback": "\u2713 Correct! You identified the key information in the listening passage."
                 },
                 {
                     "text": "unsuccessful.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. Jessica says: 'the entire project really did prove to be very insightful, and helped to open my eyes.' The correct answer is 'eye-opening.'"
+                    "feedback": "\u2717 Incorrect. Jessica says: 'the entire project really did prove to be very insightful, and helped to open my eyes.' The correct answer is 'eye-opening.'"
                 },
                 {
                     "text": "tremendous.",
                     "is_correct": false,
-                    "feedback": "✗ Incorrect. Jessica says: 'the entire project really did prove to be very insightful, and helped to open my eyes.' The correct answer is 'eye-opening.'"
+                    "feedback": "\u2717 Incorrect. Jessica says: 'the entire project really did prove to be very insightful, and helped to open my eyes.' The correct answer is 'eye-opening.'"
                 }
             ],
             "options": "inconvenient.\neye-opening.\nunsuccessful.\ntremendous.",
@@ -633,7 +633,7 @@
         },
         {
             "type": "open_question",
-            "instructions": "Questions 31 – 40\r\n\r\nComplete the notes below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+            "instructions": "Questions 31 \u2013 40\r\n\r\nComplete the notes below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
             "question": "<strong>Early Uses of Water and Canals</strong>\r\n\r\nQ31. Waterways have been used to move goods and people and for 31.[field 31].  \r\nQ32. Canals in China were constructed as over 32.[field 32] ago.  \r\nQ33. The Grand Canal in China was designed to transport 33.[field 33] and soldiers.  \r\n\r\n<strong>Problems Encountered</strong>  \r\n\r\nQ34. The first known system to overcome the problems of differing sea levels was called a 34.[field 34].  \r\nQ35. Modern locks allow vessels to travel without difficulty in two 35.[field 35].  \r\n\r\n<strong>More Modern Examples of Major Canals</strong>  \r\n\r\nQ36. As well as reducing travelling time, 36.[field 36] was also a concern.  \r\nQ37. The Suez Canal soon had a significant influence on global 37.[field 37].  \r\nQ38. Building the Panama Canal, many workers lost their lives due to various 38.[field 38] diseases.  \r\nQ39. The length of the Panama Canal is 39.[field 39].  \r\n\r\n<strong>The Future?</strong>  \r\n\r\nQ40. Some scientists predict that there are canals on 40.[field 40].  ",
             "points": 10,
             "no_answer_feedback": "No answer provided. The answer is \"IRRIGATION\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
@@ -657,54 +657,54 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! The answer is \"IRRIGATION\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. The answer is \"IRRIGATION\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"IRRIGATION\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! The answer is \"IRRIGATION\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. The answer is \"IRRIGATION\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. The answer is \"IRRIGATION\"."
                 },
                 "2": {
-                    "correct": "✓ Excellent! Acceptable answers: \"2300 YEARS\" or \"2,300 YEARS\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. Acceptable answers: \"2300 YEARS\" or \"2,300 YEARS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"2300 YEARS\" or \"2,300 YEARS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! Acceptable answers: \"2300 YEARS\" or \"2,300 YEARS\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. Acceptable answers: \"2300 YEARS\" or \"2,300 YEARS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. Acceptable answers: \"2300 YEARS\" or \"2,300 YEARS\"."
                 },
                 "3": {
-                    "correct": "✓ Excellent! The answer is \"RICE\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. The answer is \"RICE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"RICE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! The answer is \"RICE\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. The answer is \"RICE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. The answer is \"RICE\"."
                 },
                 "4": {
-                    "correct": "✓ Excellent! The answer is \"FLASH LOCK\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. The answer is \"FLASH LOCK\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"FLASH LOCK\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! The answer is \"FLASH LOCK\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. The answer is \"FLASH LOCK\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. The answer is \"FLASH LOCK\"."
                 },
                 "5": {
-                    "correct": "✓ Excellent! The answer is \"DIRECTIONS\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. The answer is \"DIRECTIONS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"DIRECTIONS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! The answer is \"DIRECTIONS\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. The answer is \"DIRECTIONS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. The answer is \"DIRECTIONS\"."
                 },
                 "6": {
-                    "correct": "✓ Excellent! The answer is \"SAFETY\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. The answer is \"SAFETY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"SAFETY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! The answer is \"SAFETY\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. The answer is \"SAFETY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. The answer is \"SAFETY\"."
                 },
                 "7": {
-                    "correct": "✓ Excellent! The answer is \"COMMERCE\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. The answer is \"COMMERCE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"COMMERCE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! The answer is \"COMMERCE\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. The answer is \"COMMERCE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. The answer is \"COMMERCE\"."
                 },
                 "8": {
-                    "correct": "✓ Excellent! The answer is \"TROPICAL\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. The answer is \"TROPICAL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"TROPICAL\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! The answer is \"TROPICAL\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. The answer is \"TROPICAL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. The answer is \"TROPICAL\"."
                 },
                 "9": {
-                    "correct": "✓ Excellent! Acceptable answers: \"77 KILOMETERS\" or \"77 KM\" or \"77 KMS\" or \"SEVENTY-SEVEN KILOMETRES\" or \"SEVENTY SEVEN KILOMETRES\" or \"SEVENTY-SEVEN KILOMETERS\" or \"SEVENTY SEVEN KILOMETERS\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. Acceptable answers: \"77 KILOMETERS\" or \"77 KM\" or \"77 KMS\" or \"SEVENTY-SEVEN KILOMETRES\" or \"SEVENTY SEVEN KILOMETRES\" or \"SEVENTY-SEVEN KILOMETERS\" or \"SEVENTY SEVEN KILOMETERS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"77 KILOMETERS\" or \"77 KM\" or \"77 KMS\" or \"SEVENTY-SEVEN KILOMETRES\" or \"SEVENTY SEVEN KILOMETRES\" or \"SEVENTY-SEVEN KILOMETERS\" or \"SEVENTY SEVEN KILOMETERS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! Acceptable answers: \"77 KILOMETERS\" or \"77 KM\" or \"77 KMS\" or \"SEVENTY-SEVEN KILOMETRES\" or \"SEVENTY SEVEN KILOMETRES\" or \"SEVENTY-SEVEN KILOMETERS\" or \"SEVENTY SEVEN KILOMETERS\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. Acceptable answers: \"77 KILOMETERS\" or \"77 KM\" or \"77 KMS\" or \"SEVENTY-SEVEN KILOMETRES\" or \"SEVENTY SEVEN KILOMETRES\" or \"SEVENTY-SEVEN KILOMETERS\" or \"SEVENTY SEVEN KILOMETERS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. Acceptable answers: \"77 KILOMETERS\" or \"77 KM\" or \"77 KMS\" or \"SEVENTY-SEVEN KILOMETRES\" or \"SEVENTY SEVEN KILOMETRES\" or \"SEVENTY-SEVEN KILOMETERS\" or \"SEVENTY SEVEN KILOMETERS\"."
                 },
                 "10": {
-                    "correct": "✓ Excellent! The answer is \"MARS\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "✗ Not quite. The answer is \"MARS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"MARS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
+                    "correct": "\u2713 Excellent! The answer is \"MARS\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "\u2717 Not quite. The answer is \"MARS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "no_answer": "No answer provided. The answer is \"MARS\"."
                 }
             }
         }
@@ -726,19 +726,19 @@
         "sections": [
             {
                 "section_number": 1,
-                "transcript": "<strong>Section 1</strong>\r\n\r\n<strong>M:  </strong>Man      <strong>W:  </strong>Woman\r\n\r\n<span lang=\"EN-US\">W:   Good afternoon, and welcome to\r\nAngloAir.  Where are you flying to today?</span>\r\n\r\n<span lang=\"EN-US\">M:   Hi.  I’m\r\nflying to Paris today. After that, I’m going to Munich, but by train, and then\r\nflying back to London.</span>\r\n\r\n<span lang=\"EN-US\">W:   Sounds interesting.  It’s Mr…?</span>\r\n\r\n<span lang=\"EN-US\">M:   Wickens, David Wickens.</span>\r\n\r\n<span lang=\"EN-US\">W:   Ok, well, let’s get you checked in, then,\r\nMr. Wickens, for Paris.  Do you have your\r\nticket and passport?</span>\r\n\r\n<span lang=\"EN-US\">M:   Yes, somewhere here… yes, here they\r\nare.  Ticket… and passport.</span>\r\n\r\n<span lang=\"EN-US\">W:   Ok, let’s see, economy class, leaving from\r\nCity Airport, London, to Paris, leaving 1:30, arriving 3 pm local time, with\r\nthe one hour time difference.  Do you\r\nhave a seat preference?</span>\r\n\r\n<span lang=\"EN-US\">M:   Well, it’s a short flight, but I do prefer a\r\nwindow seat, if one’s available.</span>\r\n\r\n<span lang=\"EN-US\">W:   Yes, I think there are a couple left, give\r\nme a second here…, yes, here we are.   We\r\nhave seat 7A or 16A available.</span>\r\n\r\n<span lang=\"EN-US\">M:   The front of the plane, please, so, the\r\nfirst one.</span>\r\n\r\n<span lang=\"EN-US\">W:   No problem, Mr. Wickens.  And are you a Frequent-Flyer member. It’s not\r\nnoted here on your booking….</span>\r\n\r\n<span lang=\"EN-US\">M:   Yes, I’ve been a member for years - I guess\r\nI forgot to give them my number when I made the booking.  It’s 468319.</span>\r\n\r\n<span lang=\"EN-US\">W:   468319, correct?</span>\r\n\r\n<span lang=\"EN-US\">M:   Yes, that’s it.</span>\r\n\r\n<span lang=\"EN-US\"> </span>\r\n\r\n<i><span lang=\"EN-US\">You now have some time to read questions 6 to\r\n10. </span></i>\r\n\r\n<i><span lang=\"EN-US\">Now listen carefully and answer questions 6\r\n-10.</span></i>\r\n\r\n<span lang=\"EN-US\">W:   Now, I see your passport is about to expire.\r\nYou only have 7 months left.</span>\r\n\r\n<span lang=\"EN-US\">M:\r\nYes – I’ve already applied for a new one. Is it OK to fly with today?</span>\r\n\r\n<span lang=\"EN-US\">W:\r\nSure – you need to have at least 6 months remaining to fly. Right, then.  Now, how many bags do you have to check in?</span>\r\n\r\n<span lang=\"EN-US\">M:   Well, I will check in just this suitcase,\r\nbut I have a carry-on briefcase, plus my laptop, but I’ll keep them both with\r\nme.</span>\r\n\r\n<span lang=\"EN-US\">W:   Right, no problem, just put your bag\r\nhere.  How about your carry-on bags?  The weight limit for those is 7 kilograms, in\r\ntotal.  And for your suitcase, it’s 20\r\nkilograms on these smaller flights.\r\nLet’s weigh your carry-on bags.\r\nHmm… a total of just under 30 kilograms.\r\nBut we’ll just let everything through today, Mr. Wickens.  The flight’s not full, so should be alright.</span>\r\n\r\n<span lang=\"EN-US\">M:   Ok, thank you for that.  What’s the boarding time for this flight?</span>\r\n\r\n<span lang=\"EN-US\">W:  Well, it’s a 1:30 departure, and it’s noon\r\nnow, and you have to be at the Gate 20 minutes before departure for boarding,\r\nso just after 1, 1:10 to be exact.  Try\r\nto be there earlier, though, if you can.\r\nOften, the flight can leave a little earlier, that is, if everyone’s on\r\nboard.</span>\r\n\r\n<span lang=\"EN-US\">M:  Ok, no problem.</span>\r\n\r\n<span lang=\"EN-US\">W:  Now, I think that’s just about\r\neverything.  I hope you have a good\r\nflight, and, just for the future, a couple of suggestions.  Do you usually get a ticket, or have you used\r\nour E-Ticket service?</span>\r\n\r\n<span lang=\"EN-US\">M:  Yes, of course, I normally get an E-Ticket,\r\nbut, my secretary was away, so I just bought an ordinary ticket.  </span>\r\n\r\n<span lang=\"EN-US\">W:  Oh, ok.\r\nAnd, of course, on our Atlantic flights, do you ever use our\r\nE-Check-in?  You can check in\r\nelectronically.  </span>\r\n\r\n<span lang=\"EN-US\">M:   Yes, I always do that, but you don’t have\r\nthat service here for the Paris flight.</span>\r\n\r\n<span lang=\"EN-US\">W:   Correct, that’s coming soon.  And, finally, do you normally stay at the\r\nsame hotel here in London?</span>\r\n\r\n<span lang=\"EN-US\">M:   Yes, usually, I do.  Why?</span>\r\n\r\n<span lang=\"EN-US\">W:   Well, I suggest that you get one of our\r\nbrochures about all of our services, including accommodation, check-in\r\nfacilities, range of flight services and transportation options.  If you just ask at our Service Counter - it’s\r\njust past the Check-In facilities - I think you’ll be interested in some of the\r\nthings we offer.</span>\r\n\r\n<span lang=\"EN-US\">M:   Ok.\r\nThat sounds great, I appreciate your advice.  And thanks for your help… </span>"
+                "transcript": "<strong>Section 1</strong>\r\n\r\n<strong>M:\u00a0 </strong>Man\u00a0\u00a0\u00a0\u00a0\u00a0 <strong>W:\u00a0 </strong>Woman\r\n\r\n<span lang=\"EN-US\">W:\u00a0\u00a0 Good afternoon, and welcome to\r\nAngloAir.\u00a0 Where are you flying to today?</span>\r\n\r\n<span lang=\"EN-US\">M:\u00a0\u00a0 Hi.\u00a0 I\u2019m\r\nflying to Paris today. After that, I\u2019m going to Munich, but by train, and then\r\nflying back to London.</span>\r\n\r\n<span lang=\"EN-US\">W:\u00a0\u00a0 Sounds interesting.\u00a0 It\u2019s Mr\u2026?</span>\r\n\r\n<span lang=\"EN-US\">M:\u00a0\u00a0 Wickens, David Wickens.</span>\r\n\r\n<span lang=\"EN-US\">W:\u00a0\u00a0 Ok, well, let\u2019s get you checked in, then,\r\nMr. Wickens, for Paris.\u00a0 Do you have your\r\nticket and passport?</span>\r\n\r\n<span lang=\"EN-US\">M:\u00a0\u00a0 Yes, somewhere here\u2026 yes, here they\r\nare.\u00a0 Ticket\u2026 and passport.</span>\r\n\r\n<span lang=\"EN-US\">W:\u00a0\u00a0 Ok, let\u2019s see, economy class, leaving from\r\nCity Airport, London, to Paris, leaving 1:30, arriving 3 pm local time, with\r\nthe one hour time difference.\u00a0 Do you\r\nhave a seat preference?</span>\r\n\r\n<span lang=\"EN-US\">M:\u00a0\u00a0 Well, it\u2019s a short flight, but I do prefer a\r\nwindow seat, if one\u2019s available.</span>\r\n\r\n<span lang=\"EN-US\">W:\u00a0\u00a0 Yes, I think there are a couple left, give\r\nme a second here\u2026, yes, here we are.\u00a0\u00a0 We\r\nhave seat 7A or 16A available.</span>\r\n\r\n<span lang=\"EN-US\">M:\u00a0\u00a0 The front of the plane, please, so, the\r\nfirst one.</span>\r\n\r\n<span lang=\"EN-US\">W:\u00a0\u00a0 No problem, Mr. Wickens.\u00a0 And are you a Frequent-Flyer member. It\u2019s not\r\nnoted here on your booking\u2026.</span>\r\n\r\n<span lang=\"EN-US\">M:\u00a0\u00a0 Yes, I\u2019ve been a member for years - I guess\r\nI forgot to give them my number when I made the booking.\u00a0 It\u2019s 468319.</span>\r\n\r\n<span lang=\"EN-US\">W:\u00a0\u00a0 468319, correct?</span>\r\n\r\n<span lang=\"EN-US\">M:\u00a0\u00a0 Yes, that\u2019s it.</span>\r\n\r\n<span lang=\"EN-US\">\u00a0</span>\r\n\r\n<i><span lang=\"EN-US\">You now have some time to read questions 6 to\r\n10. </span></i>\r\n\r\n<i><span lang=\"EN-US\">Now listen carefully and answer questions 6\r\n-10.</span></i>\r\n\r\n<span lang=\"EN-US\">W:\u00a0\u00a0 Now, I see your passport is about to expire.\r\nYou only have 7 months left.</span>\r\n\r\n<span lang=\"EN-US\">M:\r\nYes \u2013 I\u2019ve already applied for a new one. Is it OK to fly with today?</span>\r\n\r\n<span lang=\"EN-US\">W:\r\nSure \u2013 you need to have at least 6 months remaining to fly. Right, then.\u00a0 Now, how many bags do you have to check in?</span>\r\n\r\n<span lang=\"EN-US\">M:\u00a0\u00a0 Well, I will check in just this suitcase,\r\nbut I have a carry-on briefcase, plus my laptop, but I\u2019ll keep them both with\r\nme.</span>\r\n\r\n<span lang=\"EN-US\">W:\u00a0\u00a0 Right, no problem, just put your bag\r\nhere.\u00a0 How about your carry-on bags?\u00a0 The weight limit for those is 7 kilograms, in\r\ntotal.\u00a0 And for your suitcase, it\u2019s 20\r\nkilograms on these smaller flights.\r\nLet\u2019s weigh your carry-on bags.\r\nHmm\u2026 a total of just under 30 kilograms.\r\nBut we\u2019ll just let everything through today, Mr. Wickens.\u00a0 The flight\u2019s not full, so should be alright.</span>\r\n\r\n<span lang=\"EN-US\">M:\u00a0\u00a0 Ok, thank you for that.\u00a0 What\u2019s the boarding time for this flight?</span>\r\n\r\n<span lang=\"EN-US\">W:\u00a0 Well, it\u2019s a 1:30 departure, and it\u2019s noon\r\nnow, and you have to be at the Gate 20 minutes before departure for boarding,\r\nso just after 1, 1:10 to be exact.\u00a0 Try\r\nto be there earlier, though, if you can.\r\nOften, the flight can leave a little earlier, that is, if everyone\u2019s on\r\nboard.</span>\r\n\r\n<span lang=\"EN-US\">M:\u00a0 Ok, no problem.</span>\r\n\r\n<span lang=\"EN-US\">W:\u00a0 Now, I think that\u2019s just about\r\neverything.\u00a0 I hope you have a good\r\nflight, and, just for the future, a couple of suggestions.\u00a0 Do you usually get a ticket, or have you used\r\nour E-Ticket service?</span>\r\n\r\n<span lang=\"EN-US\">M:\u00a0 Yes, of course, I normally get an E-Ticket,\r\nbut, my secretary was away, so I just bought an ordinary ticket.\u00a0 </span>\r\n\r\n<span lang=\"EN-US\">W:\u00a0 Oh, ok.\r\nAnd, of course, on our Atlantic flights, do you ever use our\r\nE-Check-in?\u00a0 You can check in\r\nelectronically.\u00a0 </span>\r\n\r\n<span lang=\"EN-US\">M:\u00a0\u00a0 Yes, I always do that, but you don\u2019t have\r\nthat service here for the Paris flight.</span>\r\n\r\n<span lang=\"EN-US\">W:\u00a0\u00a0 Correct, that\u2019s coming soon.\u00a0 And, finally, do you normally stay at the\r\nsame hotel here in London?</span>\r\n\r\n<span lang=\"EN-US\">M:\u00a0\u00a0 Yes, usually, I do.\u00a0 Why?</span>\r\n\r\n<span lang=\"EN-US\">W:\u00a0\u00a0 Well, I suggest that you get one of our\r\nbrochures about all of our services, including accommodation, check-in\r\nfacilities, range of flight services and transportation options.\u00a0 If you just ask at our Service Counter - it\u2019s\r\njust past the Check-In facilities - I think you\u2019ll be interested in some of the\r\nthings we offer.</span>\r\n\r\n<span lang=\"EN-US\">M:\u00a0\u00a0 Ok.\r\nThat sounds great, I appreciate your advice.\u00a0 And thanks for your help\u2026 </span>"
             },
             {
                 "section_number": 2,
-                "transcript": "<strong>Section 2</strong>\r\n\r\n<span lang=\"EN-US\">Hello, everyone… my name is Mary\r\nTaylor… I am the manager here at the Fairview Arms Hotel... now, while our\r\nfriendly porters are carrying your luggage upstairs to your rooms, I would like\r\nto take a few moments to tell you a little bit about our lovely hotel where\r\nyou’ll soon be enjoying what we at the Fairview Arms are sure will be a\r\nfantastic summer holiday...</span>\r\n\r\n<span lang=\"EN-US\"> </span>\r\n\r\n<span lang=\"EN-US\">The hotel was originally built during the last decade of the seventeenth century as a travellers’ inn for traders going to work at the local market, and additional outbuildings and land for the extensive gardens were added nearly two hundred years later, in eighteen eighty-eight, when a local lord, Lord Fairview, bought the inn and converted it into a hotel for holiday makers.</span>\r\n\r\n<span lang=\"EN-US\">And so it remains today… the Fairview Arms Hotel has been operating as a seaside holiday destination in more or less its current form for well over a century. Of course, many of the facilities have been upgraded to meet the expectations of all of our guests, while the original buildings remain, their interiors having been patiently and faithfully restored… such as you see now here in the reception hall and foyer. </span>\r\n\r\n<span lang=\"EN-US\"> </span>\r\n\r\n<span lang=\"EN-US\">Now, while on the topic of facilities available here for your enjoyment and comfort during your stay with us… I would like to point out that the Olympic-size swimming pool has been cleaned recently, and, while it was off bounds last week, is now available for all to enjoy. Likewise, the tennis courts were resurfaced in our off season, and are free for all to use, although I should mention that the hotel squash courts are presently being upgraded, and we expect to reopen these by the end of next week, everything going according to schedule. </span>\r\n\r\n<span lang=\"EN-US\">For the gourmands among you, I am very pleased to announce that the grand dining hall has just this morning been reopened to guests following a period of refurbishment… diners will be able to enjoy viewing the original nineteenth century paintings which have been\r\nrecently restored.</span>\r\n\r\n<span lang=\"EN-US\">At the same time, the hotel souvenir shop is currently undergoing an extensive upgrade, and we would therefore\r\ndirect all of our valued guests to the nearby souvenir shop in the local village, just a ten-minute stroll from the hotel, if you would like to purchase any gifts or mementoes during your stay…</span>\r\n\r\n<span lang=\"EN-US\"> </span>\r\n\r\n<span lang=\"EN-US\">Now, just before I let you go… thank you so much for your time and patience, everyone… a few of the hotel rules, as\r\nwell as important information for you, our guests, to help make your stay all that more pleasant and enjoyable…</span>\r\n\r\n<span lang=\"EN-US\"> </span>\r\n\r\n<span lang=\"EN-US\">First and foremost, as this is a seaside resort, and out of consideration for the comfort of others, ourprofessional cleaning staff included, we would ask that you wear some type of footwear, be it shoes or sandals, at all times when inside the Fairview Arms and not in your suites… we have also found that this helps to minimise the amount of sand being brought indoors…</span>\r\n\r\n<span lang=\"EN-US\">The reception area and the main desk that you see here behind me used to be staffed from five-thirty a.m. until eleven-thirty p.m. on a day to day basis, although now I am pleased to tell you that the reception is open twenty-four hours a day…</span>\r\n\r\n<span lang=\"EN-US\">However, for those keen on dancing, I regret to say that the hotel ballroom is undergoing some renovations at\r\npresent… we are in the process of replacing the wooden floor, and so any keen dancers couldn’t put a foot wrong by visiting the nightclub across the road from the post office in the village for the time being…</span>\r\n\r\n<span lang=\"EN-US\">As regards our own facilities, we hope you enjoy the pool but be aware that diving is strictly prohibited. You may\r\nalso appreciate that, as a family holiday destination, we ask that any adult wishing to consume alcohol, such as a glass of wine with the evening meal, do so only in the bar or the dining hall of the hotel…</span>\r\n\r\n<span lang=\"EN-US\">And, lastly, just before I let you head up to your rooms to relax or take a look around the hotel, I must remind\r\nyou that all guests are asked to keep noise to a minimum after eleven p.m. at night… this is to ensure that everyone has equal opportunity to enjoy their stay here as fully as possible… anything else… oh, yes… there is a lunch being\r\nserved in the dining hall at midday, which is in fifteen minutes time… thank you again for your time, and  choosing to stay with us... I hope to get the chance to meet with all of you at some stage during your stay…</span>"
+                "transcript": "<strong>Section 2</strong>\r\n\r\n<span lang=\"EN-US\">Hello, everyone\u2026 my name is Mary\r\nTaylor\u2026 I am the manager here at the Fairview Arms Hotel... now, while our\r\nfriendly porters are carrying your luggage upstairs to your rooms, I would like\r\nto take a few moments to tell you a little bit about our lovely hotel where\r\nyou\u2019ll soon be enjoying what we at the Fairview Arms are sure will be a\r\nfantastic summer holiday...</span>\r\n\r\n<span lang=\"EN-US\">\u00a0</span>\r\n\r\n<span lang=\"EN-US\">The hotel was originally built during the last decade of the seventeenth century as a travellers\u2019 inn for traders going to work at the local market, and additional outbuildings and land for the extensive gardens were added nearly two hundred years later, in eighteen eighty-eight, when a local lord, Lord Fairview, bought the inn and converted it into a hotel for holiday makers.</span>\r\n\r\n<span lang=\"EN-US\">And so it remains today\u2026 the Fairview Arms Hotel has been operating as a seaside holiday destination in more or less its current form for well over a century. Of course, many of the facilities have been upgraded to meet the expectations of all of our guests, while the original buildings remain, their interiors having been patiently and faithfully restored\u2026 such as you see now here in the reception hall and foyer. </span>\r\n\r\n<span lang=\"EN-US\">\u00a0</span>\r\n\r\n<span lang=\"EN-US\">Now, while on the topic of facilities available here for your enjoyment and comfort during your stay with us\u2026 I would like to point out that the Olympic-size swimming pool has been cleaned recently, and, while it was off bounds last week, is now available for all to enjoy. Likewise, the tennis courts were resurfaced in our off season, and are free for all to use, although I should mention that the hotel squash courts are presently being upgraded, and we expect to reopen these by the end of next week, everything going according to schedule. </span>\r\n\r\n<span lang=\"EN-US\">For the gourmands among you, I am very pleased to announce that the grand dining hall has just this morning been reopened to guests following a period of refurbishment\u2026 diners will be able to enjoy viewing the original nineteenth century paintings which have been\r\nrecently restored.</span>\r\n\r\n<span lang=\"EN-US\">At the same time, the hotel souvenir shop is currently undergoing an extensive upgrade, and we would therefore\r\ndirect all of our valued guests to the nearby souvenir shop in the local village, just a ten-minute stroll from the hotel, if you would like to purchase any gifts or mementoes during your stay\u2026</span>\r\n\r\n<span lang=\"EN-US\">\u00a0</span>\r\n\r\n<span lang=\"EN-US\">Now, just before I let you go\u2026 thank you so much for your time and patience, everyone\u2026 a few of the hotel rules, as\r\nwell as important information for you, our guests, to help make your stay all that more pleasant and enjoyable\u2026</span>\r\n\r\n<span lang=\"EN-US\">\u00a0</span>\r\n\r\n<span lang=\"EN-US\">First and foremost, as this is a seaside resort, and out of consideration for the comfort of others, ourprofessional cleaning staff included, we would ask that you wear some type of footwear, be it shoes or sandals, at all times when inside the Fairview Arms and not in your suites\u2026 we have also found that this helps to minimise the amount of sand being brought indoors\u2026</span>\r\n\r\n<span lang=\"EN-US\">The reception area and the main desk that you see here behind me used to be staffed from five-thirty a.m. until eleven-thirty p.m. on a day to day basis, although now I am pleased to tell you that the reception is open twenty-four hours a day\u2026</span>\r\n\r\n<span lang=\"EN-US\">However, for those keen on dancing, I regret to say that the hotel ballroom is undergoing some renovations at\r\npresent\u2026 we are in the process of replacing the wooden floor, and so any keen dancers couldn\u2019t put a foot wrong by visiting the nightclub across the road from the post office in the village for the time being\u2026</span>\r\n\r\n<span lang=\"EN-US\">As regards our own facilities, we hope you enjoy the pool but be aware that diving is strictly prohibited. You may\r\nalso appreciate that, as a family holiday destination, we ask that any adult wishing to consume alcohol, such as a glass of wine with the evening meal, do so only in the bar or the dining hall of the hotel\u2026</span>\r\n\r\n<span lang=\"EN-US\">And, lastly, just before I let you head up to your rooms to relax or take a look around the hotel, I must remind\r\nyou that all guests are asked to keep noise to a minimum after eleven p.m. at night\u2026 this is to ensure that everyone has equal opportunity to enjoy their stay here as fully as possible\u2026 anything else\u2026 oh, yes\u2026 there is a lunch being\r\nserved in the dining hall at midday, which is in fifteen minutes time\u2026 thank you again for your time, and\u00a0 choosing to stay with us... I hope to get the chance to meet with all of you at some stage during your stay\u2026</span>"
             },
             {
                 "section_number": 3,
-                "transcript": "<strong>Section 3</strong>\r\n\r\n<strong>JESSICA</strong>: Good afternoon, everyone… today Thomas and I are going to present you some of the findings from our joint research project… while he is setting up the data projector, I would like to say a few words about the project…\r\n\r\n<strong>J</strong>: The topic for our project was originally going to be on urban regeneration in England, which is somewhat different from most of the other project groups who are predominantly focused on the horticultural sector… but, thanks to an offer of an exciting opportunity and generous grant from the university, we were able to set our sights a little further afield…\r\n\r\n<strong>THOMAS</strong>: Yes, you’re quite right… as Jessica has just said… originally we had been planning to look at the development and redevelopment of urban areas here in the U.K…. however… we received an email from one of our lecturers, Doctor Smith, about a week after deciding on our original topic, asking if we would be interested in participating in a volunteer programme in East Africa for four weeks, looking at rural development…\r\n\r\n<strong>J</strong>: This particular programme was jointly funded, not, as it happens by the volunteers themselves…\r\n\r\n<strong>T</strong>: Yes… we incurred very few expenses ourselves…\r\n\r\n<strong>J</strong>: The programme was offered financial support by the East Asia Development Bank and no small sum contributed by our very own university… our own local and national authorities were not forthcoming on this particular occasion… And so… seeing as there were still seven weeks of the semester remaining at that time, we decided to change the topic of our research project to rural development in East Africa, opting to take part in the volunteer programme…\r\n\r\n<strong>T</strong>: That’s right, Jessica… we were out of the UK for seven weeks and spent four of those in the country, participating in a project first hand before coming back a week ago. The time that we spent in Singbora, which is a small lakeside community some twelve hundred metres above sea level, has provided us with greater insight regarding some of the most pressing development issues in areas like this one…\r\n\r\n<strong>J</strong>: I couldn’t have put it better myself, Thomas… during much of the one and a half weeks since our return we have been preparing our presentation seminar… And now, I think the slide show is ready…we’d like to begin with an overview of the area that we visited…\r\n\r\n<em> </em>\r\n\r\n&nbsp;\r\n\r\n&nbsp;\r\n\r\n<strong>T</strong>: As you can see from the first slide behind us, Singbora is located in an area of high elevation… Africa’s tallest peak, Kilimanjaro, is in fact located in north-eastern Tanzania… the number of people living in the wider we stayed  as tur project…opiccommunity where we stayed was twenty thousand at last count, and it is situated on the shores of Lake Victoria, which is the largest lake in Africa, as well as being the largest tropical lake in the world…\r\n\r\n<strong>J</strong>: The community we were working and living in, Singbora, is around one hundred and twenty kilometres from the regional capital and seven hundred kilometres, give or take, from the Tanzanian capital of Dodoma, which is located in the centre of the country…\r\n\r\n<strong>T</strong>: Yes… it may come as no surprise to many of you that the main sources of income and employment in Singbora do not derive from the car industry or IT sector, but from the fishing of freshwater species, and, to a lesser extent, formal and informal trade with nearby communities and larger settlements that are within easy travelling distance…\r\n\r\n<strong>J</strong>: And easy travelling distance does not necessarily mean by car for many of the local people, either, as I am sure all of you will appreciate…\r\n\r\n<strong>T</strong>: Now, as I am preparing to show you a short video clip detailing some of the specifics on the community and the development work that we were involved in, we would…\r\n\r\n<strong>J</strong>: Yes, before we go into much greater detail about the project work, Thomas and I would like to tell you our personal views and what we took away from the experience…\r\n\r\n<strong>T</strong>: I for one felt that even though there were many moments that were challenging and, to be frank, at times overwhelming in terms of the scale of some of the issues that are facing the local community… on the whole, it was a most rewarding experience, and I think I can speak for both of us when I say that we don’t regret our decision to participate in the project and offer what little help we were able to.\r\n\r\n<strong>J</strong>: I do agree with you there, Thomas, although… I must say that, for my part, and in spite of the minor difficulties and personal inconveniences that we experienced… the entire project really did prove to be very insightful, and helped to open my eyes to the realities of the situation as it exists today in many rural communities, such as Singbora,  including the tremendous amount of work that still needs to be done… I think that being there on the ground really brought that home in a way that text-based research often fails to do…\r\n\r\n<strong>T</strong>: Yes, Jessica… I couldn’t agree more… The clip is ready to go now, if you’d kindly view the screen while we dim the lights a moment…"
+                "transcript": "<strong>Section 3</strong>\r\n\r\n<strong>JESSICA</strong>: Good afternoon, everyone\u2026 today Thomas and I are going to present you some of the findings from our joint research project\u2026 while he is setting up the data projector, I would like to say a few words about the project\u2026\r\n\r\n<strong>J</strong>: The topic for our project was originally going to be on urban regeneration in England, which is somewhat different from most of the other project groups who are predominantly focused on the horticultural sector\u2026 but, thanks to an offer of an exciting opportunity and generous grant from the university, we were able to set our sights a little further afield\u2026\r\n\r\n<strong>THOMAS</strong>: Yes, you\u2019re quite right\u2026 as Jessica has just said\u2026 originally we had been planning to look at the development and redevelopment of urban areas here in the U.K\u2026. however\u2026 we received an email from one of our lecturers, Doctor Smith, about a week after deciding on our original topic, asking if we would be interested in participating in a volunteer programme in East Africa for four weeks, looking at rural development\u2026\r\n\r\n<strong>J</strong>: This particular programme was jointly funded, not, as it happens by the volunteers themselves\u2026\r\n\r\n<strong>T</strong>: Yes\u2026 we incurred very few expenses ourselves\u2026\r\n\r\n<strong>J</strong>: The programme was offered financial support by the East Asia Development Bank and no small sum contributed by our very own university\u2026 our own local and national authorities were not forthcoming on this particular occasion\u2026 And so\u2026 seeing as there were still seven weeks of the semester remaining at that time, we decided to change the topic of our research project to rural development in East Africa, opting to take part in the volunteer programme\u2026\r\n\r\n<strong>T</strong>: That\u2019s right, Jessica\u2026 we were out of the UK for seven weeks and spent four of those in the country, participating in a project first hand before coming back a week ago. The time that we spent in Singbora, which is a small lakeside community some twelve hundred metres above sea level, has provided us with greater insight regarding some of the most pressing development issues in areas like this one\u2026\r\n\r\n<strong>J</strong>: I couldn\u2019t have put it better myself, Thomas\u2026 during much of the one and a half weeks since our return we have been preparing our presentation seminar\u2026 And now, I think the slide show is ready\u2026we\u2019d like to begin with an overview of the area that we visited\u2026\r\n\r\n<em>\u00a0</em>\r\n\r\n&nbsp;\r\n\r\n&nbsp;\r\n\r\n<strong>T</strong>: As you can see from the first slide behind us, Singbora is located in an area of high elevation\u2026 Africa\u2019s tallest peak, Kilimanjaro, is in fact located in north-eastern Tanzania\u2026 the number of people living in the wider we stayed\u00a0 as tur project\u2026opiccommunity where we stayed was twenty thousand at last count, and it is situated on the shores of Lake Victoria, which is the largest lake in Africa, as well as being the largest tropical lake in the world\u2026\r\n\r\n<strong>J</strong>: The community we were working and living in, Singbora, is around one hundred and twenty kilometres from the regional capital and seven hundred kilometres, give or take, from the Tanzanian capital of Dodoma, which is located in the centre of the country\u2026\r\n\r\n<strong>T</strong>: Yes\u2026 it may come as no surprise to many of you that the main sources of income and employment in Singbora do not derive from the car industry or IT sector, but from the fishing of freshwater species, and, to a lesser extent, formal and informal trade with nearby communities and larger settlements that are within easy travelling distance\u2026\r\n\r\n<strong>J</strong>: And easy travelling distance does not necessarily mean by car for many of the local people, either, as I am sure all of you will appreciate\u2026\r\n\r\n<strong>T</strong>: Now, as I am preparing to show you a short video clip detailing some of the specifics on the community and the development work that we were involved in, we would\u2026\r\n\r\n<strong>J</strong>: Yes, before we go into much greater detail about the project work, Thomas and I would like to tell you our personal views and what we took away from the experience\u2026\r\n\r\n<strong>T</strong>: I for one felt that even though there were many moments that were challenging and, to be frank, at times overwhelming in terms of the scale of some of the issues that are facing the local community\u2026 on the whole, it was a most rewarding experience, and I think I can speak for both of us when I say that we don\u2019t regret our decision to participate in the project and offer what little help we were able to.\r\n\r\n<strong>J</strong>: I do agree with you there, Thomas, although\u2026 I must say that, for my part, and in spite of the minor difficulties and personal inconveniences that we experienced\u2026 the entire project really did prove to be very insightful, and helped to open my eyes to the realities of the situation as it exists today in many rural communities, such as Singbora, \u00a0including the tremendous amount of work that still needs to be done\u2026 I think that being there on the ground really brought that home in a way that text-based research often fails to do\u2026\r\n\r\n<strong>T</strong>: Yes, Jessica\u2026 I couldn\u2019t agree more\u2026 The clip is ready to go now, if you\u2019d kindly view the screen while we dim the lights a moment\u2026"
             },
             {
                 "section_number": 4,
-                "transcript": "<strong>Section 4</strong>\r\n\r\nGood afternoon, and welcome to this week’s lecture on man’s working relationship with the great waterways of the world.  Last week we discussed some of the more famous bridges of the world, and this week I’d like to look more closely at canals and how people have worked with the canal system as a form of transportation for people and tradable commodities, as well as its use in irrigation.\r\n\r\nAs mentioned, it is believed that canals, or man-made waterways used either to collect water, or link existing waterways, such as rivers and lakes, were first used as a form of irrigation, and there still exist canals directing water from the Euphrates and the Tigris rivers in ancient Mesopotamia, the area that is modern-day Iraq, Kuwait, and parts of Syria and Turkey, which date back to the 6<sup>th</sup> Century BC.  Also in the 6<sup>th</sup> Century BC, the great Persian ruler Darius I built a canal to transport goods that connected the Nile River and the Red Sea, which was two and a half thousand years before another great canal, the Suez, was constructed linking the Mediterranean and India and the Far East.  We’ll be looking at the Suez Canal in more detail later....\r\n\r\nMeanwhile, in China, some of the great early canals were being constructed from the 3<sup>rd</sup> Century BC – that’s over 2,300 years ago - which were used for both the transport of people and goods, and irrigation. Then in the 7<sup>th</sup> Century AD, one of the greatest engineering feats of the time was accomplished, some even calling it ‘brillliant madness’.  China’s main rivers run from the west to the east, and Emperor Yang of the Sui Dynasty had an idea to connect the rivers with a Grand Canal running from the south to the north, principally to move rice from the rich farmlands of the southern regions to the northern regions, and to move his armies at his will in order to better protect his empire.  China’s Grand Canal has become one of the great symbols of Chinese engineering, and at 1,764 kilometres in length is the longest man-made waterway in the world, and is now listed on UNESCO’s World Heritage List.\r\n\r\nOne of the main problems in constructing canals, in particular for canals connecting different waterways over long distances, is that usually there are great differences in the water levels of different seas and oceans, and also through the length of the canal.  Originally, a very simple method was employed, known as a flash lock, that’s two words, ‘flash lock’, which would hold the water on one side and when opened, would carry a vessel through to the other side.  However, this meant that it was difficult to travel in the opposite direction, as water rushed through from one elevation to the other.  Chinese engineers working on the Grand Canal system in the 10<sup>th</sup> Century AD devised a more sophisticated lock, known as a pound lock, which has now become the standard operating lock in all modern canals, which allows water levels to be more controlled, allowing transport to be easily accomplished in both directions.  It is likely that Leonardo da Vinci refined the pound lock system, as designs were discovered in his writings, which appear to be later incorporated into the Milan canals in around 1500.\r\n\r\nAs well as famous cities that have intricate canals and locking systems, such as Venice, Amsterdam and Bangkok’s famous ‘klongs’, canals are also used to link major bodies of water, such as oceans and seas.  Two of the most famous are, of course, the Suez Canal and the Panama Canal.  As trading between nations began to really make its mark in the 19<sup>th</sup> Century, and with the advent of powered vessels, cutting sailing times became a prime concern, and, additionally, there was the element of safety, as vessels moved from Europe to the Far East, or from the Atlantic Ocean to the Pacific Ocean.  Previously, they had to travel around the southern tip of Africa or South America, which were notorious for loss of both life and vessel.\r\n\r\nIn the middle of the 19<sup>th</sup> Century, construction began on the Suez Canal, linking the Mediterranean Sea with the Red Sea, and this was completed in 1869, although many attempts had been embarked upon in previous years.  When opened, the Suez Canal had a huge impact on world commerce, as the sailing distance linking Europe and the markets and suppliers of the Indian sub-Continent and the East was reduced by 7,000 kilometres.  Today, the Suez Canal is 163 kilometres in length and carries around 17,000 vessels a year.  Interestingly, because the Mediterranean and Red Seas have approximately the same water level, there are no locks for vessels to navigate.\r\n\r\nThe Panama Canal was an altogether different situation, with various attempts ending in massive loss of life and at huge cost.  In the 1880s, the French began construction of the Panama Canal to link the Atlantic and Pacific Oceans, but within only a couple of years, more than 20,000 workers died of tropical diseases, and it was left to the Dutch to attempt to complete the project.  However, in 1890, the Dutch called a halt to the project, again owing to disease and massive costs, and the site was handed to the Americans in 1902.  Thanks to better medical practices, the Canal was finally completed in 1914, with the loss of just 5,000 workers.   The locks of the Canal are just under 35 metres wide, and the depth is, in places, just 26 metres, while the travelling distance is measured at 77 kilometres.\r\n\r\nAs a final point, it is interesting to note that history shows us that canals have been in use for thousands of years on Earth, but certain scientists have claimed that Mars also appears to have an intricate system of canals cut. However, this is probably something best left to science fiction."
+                "transcript": "<strong>Section 4</strong>\r\n\r\nGood afternoon, and welcome to this week\u2019s lecture on man\u2019s working relationship with the great waterways of the world.\u00a0 Last week we discussed some of the more famous bridges of the world, and this week I\u2019d like to look more closely at canals and how people have worked with the canal system as a form of transportation for people and tradable commodities, as well as its use in irrigation.\r\n\r\nAs mentioned, it is believed that canals, or man-made waterways used either to collect water, or link existing waterways, such as rivers and lakes, were first used as a form of irrigation, and there still exist canals directing water from the Euphrates and the Tigris rivers in ancient Mesopotamia, the area that is modern-day Iraq, Kuwait, and parts of Syria and Turkey, which date back to the 6<sup>th</sup> Century BC.\u00a0 Also in the 6<sup>th</sup> Century BC, the great Persian ruler Darius I built a canal to transport goods that connected the Nile River and the Red Sea, which was two and a half thousand years before another great canal, the Suez, was constructed linking the Mediterranean and India and the Far East.\u00a0 We\u2019ll be looking at the Suez Canal in more detail later....\r\n\r\nMeanwhile, in China, some of the great early canals were being constructed from the 3<sup>rd</sup> Century BC \u2013 that\u2019s over 2,300 years ago - which were used for both the transport of people and goods, and irrigation. Then in the 7<sup>th</sup> Century AD, one of the greatest engineering feats of the time was accomplished, some even calling it \u2018brillliant madness\u2019.\u00a0 China\u2019s main rivers run from the west to the east, and Emperor Yang of the Sui Dynasty had an idea to connect the rivers with a Grand Canal running from the south to the north, principally to move rice from the rich farmlands of the southern regions to the northern regions, and to move his armies at his will in order to better protect his empire.\u00a0 China\u2019s Grand Canal has become one of the great symbols of Chinese engineering, and at 1,764 kilometres in length is the longest man-made waterway in the world, and is now listed on UNESCO\u2019s World Heritage List.\r\n\r\nOne of the main problems in constructing canals, in particular for canals connecting different waterways over long distances, is that usually there are great differences in the water levels of different seas and oceans, and also through the length of the canal.\u00a0 Originally, a very simple method was employed, known as a flash lock, that\u2019s two words, \u2018flash lock\u2019, which would hold the water on one side and when opened, would carry a vessel through to the other side.\u00a0 However, this meant that it was difficult to travel in the opposite direction, as water rushed through from one elevation to the other.\u00a0 Chinese engineers working on the Grand Canal system in the 10<sup>th</sup> Century AD devised a more sophisticated lock, known as a pound lock, which has now become the standard operating lock in all modern canals, which allows water levels to be more controlled, allowing transport to be easily accomplished in both directions.\u00a0 It is likely that Leonardo da Vinci refined the pound lock system, as designs were discovered in his writings, which appear to be later incorporated into the Milan canals in around 1500.\r\n\r\nAs well as famous cities that have intricate canals and locking systems, such as Venice, Amsterdam and Bangkok\u2019s famous \u2018klongs\u2019, canals are also used to link major bodies of water, such as oceans and seas.\u00a0 Two of the most famous are, of course, the Suez Canal and the Panama Canal.\u00a0 As trading between nations began to really make its mark in the 19<sup>th</sup> Century, and with the advent of powered vessels, cutting sailing times became a prime concern, and, additionally, there was the element of safety, as vessels moved from Europe to the Far East, or from the Atlantic Ocean to the Pacific Ocean.\u00a0 Previously, they had to travel around the southern tip of Africa or South America, which were notorious for loss of both life and vessel.\r\n\r\nIn the middle of the 19<sup>th</sup> Century, construction began on the Suez Canal, linking the Mediterranean Sea with the Red Sea, and this was completed in 1869, although many attempts had been embarked upon in previous years.\u00a0 When opened, the Suez Canal had a huge impact on world commerce, as the sailing distance linking Europe and the markets and suppliers of the Indian sub-Continent and the East was reduced by 7,000 kilometres.\u00a0 Today, the Suez Canal is 163 kilometres in length and carries around 17,000 vessels a year.\u00a0 Interestingly, because the Mediterranean and Red Seas have approximately the same water level, there are no locks for vessels to navigate.\r\n\r\nThe Panama Canal was an altogether different situation, with various attempts ending in massive loss of life and at huge cost.\u00a0 In the 1880s, the French began construction of the Panama Canal to link the Atlantic and Pacific Oceans, but within only a couple of years, more than 20,000 workers died of tropical diseases, and it was left to the Dutch to attempt to complete the project.\u00a0 However, in 1890, the Dutch called a halt to the project, again owing to disease and massive costs, and the site was handed to the Americans in 1902.\u00a0 Thanks to better medical practices, the Canal was finally completed in 1914, with the loss of just 5,000 workers.\u00a0\u00a0 The locks of the Canal are just under 35 metres wide, and the depth is, in places, just 26 metres, while the travelling distance is measured at 77 kilometres.\r\n\r\nAs a final point, it is interesting to note that history shows us that canals have been in use for thousands of years on Earth, but certain scientists have claimed that Mars also appears to have an intricate system of canals cut. However, this is probably something best left to science fiction."
             }
         ]
     },
