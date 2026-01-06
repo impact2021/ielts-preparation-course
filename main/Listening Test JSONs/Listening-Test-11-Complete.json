@@ -22,31 +22,31 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "\u2713 Excellent! Acceptable answers: \"3 NIGHTS\" or \"THREE NIGHTS\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "\u2717 Not quite. Acceptable answers: \"3 NIGHTS\" or \"THREE NIGHTS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "correct": "✓ Excellent! Acceptable answers: \"3 NIGHTS\" or \"THREE NIGHTS\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"3 NIGHTS\" or \"THREE NIGHTS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"3 NIGHTS\" or \"THREE NIGHTS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 },
                 "2": {
-                    "correct": "\u2713 Excellent! Acceptable answers: \"FREE PARKING\" or \"PARKING\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "\u2717 Not quite. Acceptable answers: \"FREE PARKING\" or \"PARKING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "correct": "✓ Excellent! Acceptable answers: \"FREE PARKING\" or \"PARKING\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"FREE PARKING\" or \"PARKING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"FREE PARKING\" or \"PARKING\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 },
                 "3": {
-                    "correct": "\u2713 Excellent! Acceptable answers: \"CAR\" or \"THEIR CAR\" or \"HIS CAR\" or \"A CAR\" or \"THE CAR\" or \"BY CAR\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "\u2717 Not quite. Acceptable answers: \"CAR\" or \"THEIR CAR\" or \"HIS CAR\" or \"A CAR\" or \"THE CAR\" or \"BY CAR\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "correct": "✓ Excellent! Acceptable answers: \"CAR\" or \"THEIR CAR\" or \"HIS CAR\" or \"A CAR\" or \"THE CAR\" or \"BY CAR\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"CAR\" or \"THEIR CAR\" or \"HIS CAR\" or \"A CAR\" or \"THE CAR\" or \"BY CAR\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"CAR\" or \"THEIR CAR\" or \"HIS CAR\" or \"A CAR\" or \"THE CAR\" or \"BY CAR\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 },
                 "4": {
-                    "correct": "\u2713 Excellent! The answer is \"FIRST\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "\u2717 Not quite. The answer is \"FIRST\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "correct": "✓ Excellent! The answer is \"FIRST\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "✗ Not quite. The answer is \"FIRST\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"FIRST\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
             }
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 5 and 6\r\n\r\nChoose TWO answers from the list and write the correct letter A-E next to questions 5 and 6.",
-            "question": "Which two of the following statements are true?",
+            "instructions": "Questions 5 and 6\r\n\r\nChoose TWO letters A – E. Write your answer in boxes 5 and 6 on your answer sheet.",
+            "question": "Which TWO accommodation options does the caller enquire about?",
             "points": 2,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"C\" or \"D\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
             "correct_feedback": "",
@@ -56,43 +56,43 @@
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
-                    "text": "The booking is for one week.",
+                    "text": "Room only",
                     "is_correct": false,
                     "feedback": ""
                 },
                 {
-                    "text": "Breakfast for the duration of the stay costs \u00a350.",
+                    "text": "Room + breakfast",
                     "is_correct": false,
                     "feedback": ""
                 },
                 {
-                    "text": "The Indian restaurant is the furthest from the hotel.",
+                    "text": "Room + breakfast + dinner",
                     "is_correct": true,
                     "feedback": ""
                 },
                 {
-                    "text": "The caller is booking a double room.",
+                    "text": "Room + breakfast + dinner (on the first night only)",
                     "is_correct": true,
                     "feedback": ""
                 },
                 {
-                    "text": "The most expensive appetizers on the regular menu cost \u00a325.",
+                    "text": "Full board with all meals included",
                     "is_correct": false,
                     "feedback": ""
                 }
             ],
-            "options": "The booking is for one week.\nBreakfast for the duration of the stay costs \u00a350.\nThe Indian restaurant is the furthest from the hotel.\nThe caller is booking a double room.\nThe most expensive appetizers on the regular menu cost \u00a325.",
+            "options": "Room only\nRoom + breakfast\nRoom + breakfast + dinner\nRoom + breakfast + dinner (on the first night only)\nFull board with all meals included",
             "correct_answer_count": 2,
             "show_option_letters": true
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "7. The customer\u2019s credit card number is 799",
+            "question": "7. The customer’s credit card number is 799",
             "points": 1.0,
             "no_answer_feedback": "No answer provided. The answer is \"4630021\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "\u2713 Excellent! The answer is \"4630021\". You listened carefully and identified the key information.",
-            "incorrect_feedback": "\u2717 Not quite. The answer is \"4630021\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
+            "correct_feedback": "✓ Excellent! The answer is \"4630021\". You listened carefully and identified the key information.",
+            "incorrect_feedback": "✗ Not quite. The answer is \"4630021\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "",
@@ -102,8 +102,8 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "\u2713 Excellent! The answer is \"4630021\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "\u2717 Not quite. The answer is \"4630021\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "correct": "✓ Excellent! The answer is \"4630021\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "✗ Not quite. The answer is \"4630021\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. The answer is \"4630021\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
             },
@@ -112,11 +112,11 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "8. The phone number given is for the customer\u2019s",
+            "question": "8. The phone number given is for the customer’s",
             "points": 1.0,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"WORK MOBILE\" or \"MOBILE\" or \"WORK PHONE\" or \"WORK NUMBER\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "\u2713 Excellent! Acceptable answers: \"WORK MOBILE\" or \"MOBILE\" or \"WORK PHONE\" or \"WORK NUMBER\". You listened carefully and identified the key information.",
-            "incorrect_feedback": "\u2717 Not quite. Acceptable answers: \"WORK MOBILE\" or \"MOBILE\" or \"WORK PHONE\" or \"WORK NUMBER\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
+            "correct_feedback": "✓ Excellent! Acceptable answers: \"WORK MOBILE\" or \"MOBILE\" or \"WORK PHONE\" or \"WORK NUMBER\". You listened carefully and identified the key information.",
+            "incorrect_feedback": "✗ Not quite. Acceptable answers: \"WORK MOBILE\" or \"MOBILE\" or \"WORK PHONE\" or \"WORK NUMBER\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "",
@@ -126,8 +126,8 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "\u2713 Excellent! Acceptable answers: \"WORK MOBILE\" or \"MOBILE\" or \"WORK PHONE\" or \"WORK NUMBER\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "\u2717 Not quite. Acceptable answers: \"WORK MOBILE\" or \"MOBILE\" or \"WORK PHONE\" or \"WORK NUMBER\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "correct": "✓ Excellent! Acceptable answers: \"WORK MOBILE\" or \"MOBILE\" or \"WORK PHONE\" or \"WORK NUMBER\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"WORK MOBILE\" or \"MOBILE\" or \"WORK PHONE\" or \"WORK NUMBER\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"WORK MOBILE\" or \"MOBILE\" or \"WORK PHONE\" or \"WORK NUMBER\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
             },
@@ -139,8 +139,8 @@
             "question": "9. The purpose of the visit is house-hunting and",
             "points": 1.0,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"SIGHT-SEEING\" or \"SIGHTSEEING\" or \"SIGHT SEEING\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "\u2713 Excellent! Acceptable answers: \"SIGHT-SEEING\" or \"SIGHTSEEING\" or \"SIGHT SEEING\". You listened carefully and identified the key information.",
-            "incorrect_feedback": "\u2717 Not quite. Acceptable answers: \"SIGHT-SEEING\" or \"SIGHTSEEING\" or \"SIGHT SEEING\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
+            "correct_feedback": "✓ Excellent! Acceptable answers: \"SIGHT-SEEING\" or \"SIGHTSEEING\" or \"SIGHT SEEING\". You listened carefully and identified the key information.",
+            "incorrect_feedback": "✗ Not quite. Acceptable answers: \"SIGHT-SEEING\" or \"SIGHTSEEING\" or \"SIGHT SEEING\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "",
@@ -150,8 +150,8 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "\u2713 Excellent! Acceptable answers: \"SIGHT-SEEING\" or \"SIGHTSEEING\" or \"SIGHT SEEING\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "\u2717 Not quite. Acceptable answers: \"SIGHT-SEEING\" or \"SIGHTSEEING\" or \"SIGHT SEEING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "correct": "✓ Excellent! Acceptable answers: \"SIGHT-SEEING\" or \"SIGHTSEEING\" or \"SIGHT SEEING\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"SIGHT-SEEING\" or \"SIGHTSEEING\" or \"SIGHT SEEING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"SIGHT-SEEING\" or \"SIGHTSEEING\" or \"SIGHT SEEING\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
             },
@@ -163,8 +163,8 @@
             "question": "10. The entry fee to Hardwell Castle includes a free tour of the",
             "points": 1.0,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"ART GALLERY\" or \"GALLERY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "\u2713 Excellent! Acceptable answers: \"ART GALLERY\" or \"GALLERY\". You listened carefully and identified the key information.",
-            "incorrect_feedback": "\u2717 Not quite. Acceptable answers: \"ART GALLERY\" or \"GALLERY\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
+            "correct_feedback": "✓ Excellent! Acceptable answers: \"ART GALLERY\" or \"GALLERY\". You listened carefully and identified the key information.",
+            "incorrect_feedback": "✗ Not quite. Acceptable answers: \"ART GALLERY\" or \"GALLERY\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "",
@@ -174,8 +174,8 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "\u2713 Excellent! Acceptable answers: \"ART GALLERY\" or \"GALLERY\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "\u2717 Not quite. Acceptable answers: \"ART GALLERY\" or \"GALLERY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "correct": "✓ Excellent! Acceptable answers: \"ART GALLERY\" or \"GALLERY\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"ART GALLERY\" or \"GALLERY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"ART GALLERY\" or \"GALLERY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
             },
@@ -183,33 +183,33 @@
         },
         {
             "type": "closed_question",
-            "instructions": "",
+            "instructions": "Questions 11-15\n\nChoose the correct letter, A, B or C.",
             "question": "Queenstown Wildlife Sanctuary has been operating since",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"B\".",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "No answer provided.",
+            "correct_feedback": "✓ Correct!",
+            "incorrect_feedback": "✗ Not quite.",
             "reading_text_id": null,
             "audio_section_id": 1,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
-                    "text": "1994.",
+                    "text": "1994",
                     "is_correct": false,
                     "feedback": ""
                 },
                 {
-                    "text": "2002.",
+                    "text": "2002",
                     "is_correct": true,
                     "feedback": ""
                 },
                 {
-                    "text": "2004.",
+                    "text": "2004",
                     "is_correct": false,
                     "feedback": ""
                 }
             ],
-            "options": "1994.\n2002.\n2004.",
+            "options": "1994\n2002\n2004",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
@@ -218,30 +218,30 @@
             "instructions": "",
             "question": "Nowadays, the main focus of the sanctuary is on",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"B\".",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "No answer provided.",
+            "correct_feedback": "✓ Correct!",
+            "incorrect_feedback": "✗ Not quite.",
             "reading_text_id": null,
             "audio_section_id": 1,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
-                    "text": "education.",
+                    "text": "education",
                     "is_correct": false,
                     "feedback": ""
                 },
                 {
-                    "text": "conservation.",
+                    "text": "conservation",
                     "is_correct": true,
                     "feedback": ""
                 },
                 {
-                    "text": "entertainment.",
+                    "text": "entertainment",
                     "is_correct": false,
                     "feedback": ""
                 }
             ],
-            "options": "education.\nconservation.\nentertainment.",
+            "options": "education\nconservation\nentertainment",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
@@ -250,30 +250,30 @@
             "instructions": "",
             "question": "The sanctuary is closed to the public on",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"C\".",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "No answer provided.",
+            "correct_feedback": "✓ Correct!",
+            "incorrect_feedback": "✗ Not quite.",
             "reading_text_id": null,
             "audio_section_id": 1,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
-                    "text": "weekends.",
+                    "text": "weekends",
                     "is_correct": false,
                     "feedback": ""
                 },
                 {
-                    "text": "Thursdays.",
+                    "text": "Thursdays",
                     "is_correct": false,
                     "feedback": ""
                 },
                 {
-                    "text": "Mondays.",
+                    "text": "Mondays",
                     "is_correct": true,
                     "feedback": ""
                 }
             ],
-            "options": "weekends.\nThursdays.\nMondays.",
+            "options": "weekends\nThursdays\nMondays",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
@@ -282,9 +282,9 @@
             "instructions": "",
             "question": "Question 14",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"B\".",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "No answer provided.",
+            "correct_feedback": "✓ Correct!",
+            "incorrect_feedback": "✗ Not quite.",
             "reading_text_id": null,
             "audio_section_id": 1,
             "ielts_question_category": "multiple_choice_l",
@@ -314,9 +314,9 @@
             "instructions": "",
             "question": "Question 15",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"C\".",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "No answer provided.",
+            "correct_feedback": "✓ Correct!",
+            "incorrect_feedback": "✗ Not quite.",
             "reading_text_id": null,
             "audio_section_id": 1,
             "ielts_question_category": "multiple_choice_l",
@@ -343,12 +343,12 @@
         },
         {
             "type": "closed_question",
-            "instructions": "",
-            "question": "Question 16 - Choose TWO answers",
+            "instructions": "Questions 16 and 17\n\nChoose TWO letters A – E.",
+            "question": "Question 16 (Choose TWO answers)",
             "points": 2,
-            "no_answer_feedback": "No answer provided. The answer is \"B/D\".",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "No answer provided. The correct answers are B and D.",
+            "correct_feedback": "✓ Correct! The answers are B and D.",
+            "incorrect_feedback": "✗ Not quite. The correct answers are B and D.",
             "reading_text_id": null,
             "audio_section_id": 1,
             "ielts_question_category": "multiple_choice_l",
@@ -386,11 +386,11 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Question 17 - Choose TWO answers",
+            "question": "Question 17 (Choose TWO answers)",
             "points": 2,
-            "no_answer_feedback": "No answer provided. The answer is \"B/D\".",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "No answer provided. The correct answers are B and D.",
+            "correct_feedback": "✓ Correct! The answers are B and D.",
+            "incorrect_feedback": "✗ Not quite. The correct answers are B and D.",
             "reading_text_id": null,
             "audio_section_id": 1,
             "ielts_question_category": "multiple_choice_l",
@@ -431,8 +431,8 @@
             "question": "18.",
             "points": 1.0,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"ASSESSED FOR INJURIES\" or \"ASSESSED\" or \"ANIMALS ASSESSED\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "\u2713 Excellent! Acceptable answers: \"ASSESSED FOR INJURIES\" or \"ASSESSED\" or \"ANIMALS ASSESSED\". You listened carefully and identified the key information.",
-            "incorrect_feedback": "\u2717 Not quite. Acceptable answers: \"ASSESSED FOR INJURIES\" or \"ASSESSED\" or \"ANIMALS ASSESSED\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
+            "correct_feedback": "✓ Excellent! Acceptable answers: \"ASSESSED FOR INJURIES\" or \"ASSESSED\" or \"ANIMALS ASSESSED\". You listened carefully and identified the key information.",
+            "incorrect_feedback": "✗ Not quite. Acceptable answers: \"ASSESSED FOR INJURIES\" or \"ASSESSED\" or \"ANIMALS ASSESSED\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "",
@@ -442,8 +442,8 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "\u2713 Excellent! Acceptable answers: \"ASSESSED FOR INJURIES\" or \"ASSESSED\" or \"ANIMALS ASSESSED\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "\u2717 Not quite. Acceptable answers: \"ASSESSED FOR INJURIES\" or \"ASSESSED\" or \"ANIMALS ASSESSED\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "correct": "✓ Excellent! Acceptable answers: \"ASSESSED FOR INJURIES\" or \"ASSESSED\" or \"ANIMALS ASSESSED\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"ASSESSED FOR INJURIES\" or \"ASSESSED\" or \"ANIMALS ASSESSED\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"ASSESSED FOR INJURIES\" or \"ASSESSED\" or \"ANIMALS ASSESSED\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
             },
@@ -455,8 +455,8 @@
             "question": "18. {[Assessed for injuries][Assessed][animals Assessed]} 19.",
             "points": 1.0,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"24\" or \"TWENTY FOUR\" or \"TWENTY-FOUR\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "\u2713 Excellent! Acceptable answers: \"24\" or \"TWENTY FOUR\" or \"TWENTY-FOUR\". You listened carefully and identified the key information.",
-            "incorrect_feedback": "\u2717 Not quite. Acceptable answers: \"24\" or \"TWENTY FOUR\" or \"TWENTY-FOUR\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
+            "correct_feedback": "✓ Excellent! Acceptable answers: \"24\" or \"TWENTY FOUR\" or \"TWENTY-FOUR\". You listened carefully and identified the key information.",
+            "incorrect_feedback": "✗ Not quite. Acceptable answers: \"24\" or \"TWENTY FOUR\" or \"TWENTY-FOUR\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "",
@@ -466,8 +466,8 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "\u2713 Excellent! Acceptable answers: \"24\" or \"TWENTY FOUR\" or \"TWENTY-FOUR\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "\u2717 Not quite. Acceptable answers: \"24\" or \"TWENTY FOUR\" or \"TWENTY-FOUR\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "correct": "✓ Excellent! Acceptable answers: \"24\" or \"TWENTY FOUR\" or \"TWENTY-FOUR\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"24\" or \"TWENTY FOUR\" or \"TWENTY-FOUR\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"24\" or \"TWENTY FOUR\" or \"TWENTY-FOUR\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
             },
@@ -479,8 +479,8 @@
             "question": "18. {[Assessed for injuries][Assessed][animals Assessed]} 19. {[24][twenty four][twenty-four]} 20.",
             "points": 1.0,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"RELEASED\" or \"GENERALLY RELEASED\" or \"ANIMALS RELEASED\" or \"ANIMALS GENERALLY RELEASED\" or \"ANIMALS ARE RELEASED\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "\u2713 Excellent! Acceptable answers: \"RELEASED\" or \"GENERALLY RELEASED\" or \"ANIMALS RELEASED\" or \"ANIMALS GENERALLY RELEASED\" or \"ANIMALS ARE RELEASED\". You listened carefully and identified the key information.",
-            "incorrect_feedback": "\u2717 Not quite. Acceptable answers: \"RELEASED\" or \"GENERALLY RELEASED\" or \"ANIMALS RELEASED\" or \"ANIMALS GENERALLY RELEASED\" or \"ANIMALS ARE RELEASED\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
+            "correct_feedback": "✓ Excellent! Acceptable answers: \"RELEASED\" or \"GENERALLY RELEASED\" or \"ANIMALS RELEASED\" or \"ANIMALS GENERALLY RELEASED\" or \"ANIMALS ARE RELEASED\". You listened carefully and identified the key information.",
+            "incorrect_feedback": "✗ Not quite. Acceptable answers: \"RELEASED\" or \"GENERALLY RELEASED\" or \"ANIMALS RELEASED\" or \"ANIMALS GENERALLY RELEASED\" or \"ANIMALS ARE RELEASED\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "",
@@ -490,8 +490,8 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "\u2713 Excellent! Acceptable answers: \"RELEASED\" or \"GENERALLY RELEASED\" or \"ANIMALS RELEASED\" or \"ANIMALS GENERALLY RELEASED\" or \"ANIMALS ARE RELEASED\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "\u2717 Not quite. Acceptable answers: \"RELEASED\" or \"GENERALLY RELEASED\" or \"ANIMALS RELEASED\" or \"ANIMALS GENERALLY RELEASED\" or \"ANIMALS ARE RELEASED\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "correct": "✓ Excellent! Acceptable answers: \"RELEASED\" or \"GENERALLY RELEASED\" or \"ANIMALS RELEASED\" or \"ANIMALS GENERALLY RELEASED\" or \"ANIMALS ARE RELEASED\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"RELEASED\" or \"GENERALLY RELEASED\" or \"ANIMALS RELEASED\" or \"ANIMALS GENERALLY RELEASED\" or \"ANIMALS ARE RELEASED\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"RELEASED\" or \"GENERALLY RELEASED\" or \"ANIMALS RELEASED\" or \"ANIMALS GENERALLY RELEASED\" or \"ANIMALS ARE RELEASED\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
             },
@@ -499,33 +499,33 @@
         },
         {
             "type": "closed_question",
-            "instructions": "",
+            "instructions": "Questions 21 and 22\n\nChoose the correct letter, A, B or C.",
             "question": "Robert is having difficulty with",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"B\".",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "No answer provided.",
+            "correct_feedback": "✓ Correct!",
+            "incorrect_feedback": "✗ Not quite.",
             "reading_text_id": null,
             "audio_section_id": 2,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
-                    "text": "chemistry.",
+                    "text": "chemistry",
                     "is_correct": false,
                     "feedback": ""
                 },
                 {
-                    "text": "economics.",
+                    "text": "economics",
                     "is_correct": true,
                     "feedback": ""
                 },
                 {
-                    "text": "mathematics.",
+                    "text": "mathematics",
                     "is_correct": false,
                     "feedback": ""
                 }
             ],
-            "options": "chemistry.\neconomics.\nmathematics.",
+            "options": "chemistry\neconomics\nmathematics",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
@@ -534,41 +534,41 @@
             "instructions": "",
             "question": "Fiona suggests that Robert",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"C\".",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "No answer provided.",
+            "correct_feedback": "✓ Correct!",
+            "incorrect_feedback": "✗ Not quite.",
             "reading_text_id": null,
             "audio_section_id": 2,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
-                    "text": "change his major to communications.",
+                    "text": "change his major to communications",
                     "is_correct": false,
                     "feedback": ""
                 },
                 {
-                    "text": "go to the library.",
+                    "text": "go to the library",
                     "is_correct": false,
                     "feedback": ""
                 },
                 {
-                    "text": "contact his tutor.",
+                    "text": "contact his tutor",
                     "is_correct": true,
                     "feedback": ""
                 }
             ],
-            "options": "change his major to communications.\ngo to the library.\ncontact his tutor.",
+            "options": "change his major to communications\ngo to the library\ncontact his tutor",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "23 \u00a0\u00a0\u00a0\u00a0\u00a0What is the subject of Robert\u2019s essay?",
+            "question": "23      What is the subject of Robert’s essay?",
             "points": 1.0,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"THE MUSIC INDUSTRY\" or \"MUSIC INDUSTRY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "\u2713 Excellent! Acceptable answers: \"THE MUSIC INDUSTRY\" or \"MUSIC INDUSTRY\". You listened carefully and identified the key information.",
-            "incorrect_feedback": "\u2717 Not quite. Acceptable answers: \"THE MUSIC INDUSTRY\" or \"MUSIC INDUSTRY\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
+            "correct_feedback": "✓ Excellent! Acceptable answers: \"THE MUSIC INDUSTRY\" or \"MUSIC INDUSTRY\". You listened carefully and identified the key information.",
+            "incorrect_feedback": "✗ Not quite. Acceptable answers: \"THE MUSIC INDUSTRY\" or \"MUSIC INDUSTRY\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "",
@@ -578,8 +578,8 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "\u2713 Excellent! Acceptable answers: \"THE MUSIC INDUSTRY\" or \"MUSIC INDUSTRY\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "\u2717 Not quite. Acceptable answers: \"THE MUSIC INDUSTRY\" or \"MUSIC INDUSTRY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "correct": "✓ Excellent! Acceptable answers: \"THE MUSIC INDUSTRY\" or \"MUSIC INDUSTRY\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"THE MUSIC INDUSTRY\" or \"MUSIC INDUSTRY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"THE MUSIC INDUSTRY\" or \"MUSIC INDUSTRY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
             },
@@ -588,11 +588,11 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "24\u00a0\u00a0\u00a0\u00a0\u00a0 What is the required word-length of the essay?",
+            "question": "24      What is the required word-length of the essay?",
             "points": 1.0,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"2500 WORDS\" or \"2,500 WORDS\" or \"2500\" or \"2,500\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "\u2713 Excellent! Acceptable answers: \"2500 WORDS\" or \"2,500 WORDS\" or \"2500\" or \"2,500\". You listened carefully and identified the key information.",
-            "incorrect_feedback": "\u2717 Not quite. Acceptable answers: \"2500 WORDS\" or \"2,500 WORDS\" or \"2500\" or \"2,500\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
+            "correct_feedback": "✓ Excellent! Acceptable answers: \"2500 WORDS\" or \"2,500 WORDS\" or \"2500\" or \"2,500\". You listened carefully and identified the key information.",
+            "incorrect_feedback": "✗ Not quite. Acceptable answers: \"2500 WORDS\" or \"2,500 WORDS\" or \"2500\" or \"2,500\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "",
@@ -602,8 +602,8 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "\u2713 Excellent! Acceptable answers: \"2500 WORDS\" or \"2,500 WORDS\" or \"2500\" or \"2,500\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "\u2717 Not quite. Acceptable answers: \"2500 WORDS\" or \"2,500 WORDS\" or \"2500\" or \"2,500\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "correct": "✓ Excellent! Acceptable answers: \"2500 WORDS\" or \"2,500 WORDS\" or \"2500\" or \"2,500\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"2500 WORDS\" or \"2,500 WORDS\" or \"2500\" or \"2,500\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"2500 WORDS\" or \"2,500 WORDS\" or \"2500\" or \"2,500\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
             },
@@ -612,11 +612,11 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "25\u00a0\u00a0\u00a0\u00a0\u00a0 How much time has Robert spent on the essay already?",
+            "question": "25      How much time has Robert spent on the essay already?",
             "points": 1.0,
             "no_answer_feedback": "No answer provided. Acceptable answers: \"THREE WEEKS\" or \"3 WEEKS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "\u2713 Excellent! Acceptable answers: \"THREE WEEKS\" or \"3 WEEKS\". You listened carefully and identified the key information.",
-            "incorrect_feedback": "\u2717 Not quite. Acceptable answers: \"THREE WEEKS\" or \"3 WEEKS\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
+            "correct_feedback": "✓ Excellent! Acceptable answers: \"THREE WEEKS\" or \"3 WEEKS\". You listened carefully and identified the key information.",
+            "incorrect_feedback": "✗ Not quite. Acceptable answers: \"THREE WEEKS\" or \"3 WEEKS\". Listen to the audio again and check the transcript. Pay attention to keywords and signal words that indicate important information.",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "",
@@ -626,8 +626,8 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "\u2713 Excellent! Acceptable answers: \"THREE WEEKS\" or \"3 WEEKS\". You listened carefully and identified the key information. Well done!",
-                    "incorrect": "\u2717 Not quite. Acceptable answers: \"THREE WEEKS\" or \"3 WEEKS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
+                    "correct": "✓ Excellent! Acceptable answers: \"THREE WEEKS\" or \"3 WEEKS\". You listened carefully and identified the key information. Well done!",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"THREE WEEKS\" or \"3 WEEKS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
                     "no_answer": "No answer provided. Acceptable answers: \"THREE WEEKS\" or \"3 WEEKS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details."
                 }
             },
@@ -635,10 +635,10 @@
         },
         {
             "type": "open_question",
-            "instructions": "Questions 26-30\r\n\r\nComplete the table below.\r\n\r\nWrite NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
-            "question": "Bibliography\r\n\r\n26.[field 1]\r\n2008\r\nTom Jackson\r\nOxford University\r\n\r\n27.[field 2]\r\nEconomics Research\r\nKumar\r\nCambridge University\r\n\r\n28.Jane [field 3]\r\nCambridge University\r\n\r\n29.[field 4]\r\n2006\r\nJane Kumar\r\nUniversity of Sydney\r\n\r\n30.[field 5]",
+            "instructions": "Questions 26-30\n\nComplete the table below.\n\nWrite NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+            "question": "Bibliography\n\n<table>\n<tr>\n<th>Title</th>\n<th>Year</th>\n<th>Author</th>\n<th>Publisher</th>\n</tr>\n<tr>\n<td>26.[field 1]</td>\n<td>2008</td>\n<td>Tom Jackson</td>\n<td>Oxford University</td>\n</tr>\n<tr>\n<td>Economics Research</td>\n<td>27.[field 2]</td>\n<td>28. Jane [field 3]</td>\n<td>Cambridge University</td>\n</tr>\n<tr>\n<td>29.[field 4]</td>\n<td>2006</td>\n<td>Michaela Petty</td>\n<td>30.[field 5]</td>\n</tr>\n</table>",
             "points": 5,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "No answer provided.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -654,40 +654,40 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "\u2713 Correct!",
-                    "incorrect": "\u2717 Not quite. The answer is 'principles of economics'.",
-                    "no_answer": "No answer provided."
+                    "correct": "✓ Excellent! The answer is \"PRINCIPLES OF ECONOMICS\".",
+                    "incorrect": "✗ Not quite. The answer is \"PRINCIPLES OF ECONOMICS\".",
+                    "no_answer": "No answer provided. The answer is \"PRINCIPLES OF ECONOMICS\"."
                 },
                 "2": {
-                    "correct": "\u2713 Correct!",
-                    "incorrect": "\u2717 Not quite. The answer is '2013'.",
-                    "no_answer": "No answer provided."
+                    "correct": "✓ Excellent! The answer is \"2013\".",
+                    "incorrect": "✗ Not quite. The answer is \"2013\".",
+                    "no_answer": "No answer provided. The answer is \"2013\"."
                 },
                 "3": {
-                    "correct": "\u2713 Correct!",
-                    "incorrect": "\u2717 Not quite. The answer is 'kumar'.",
-                    "no_answer": "No answer provided."
+                    "correct": "✓ Excellent! The answer is \"KUMAR\".",
+                    "incorrect": "✗ Not quite. The answer is \"KUMAR\".",
+                    "no_answer": "No answer provided. The answer is \"KUMAR\"."
                 },
                 "4": {
-                    "correct": "\u2713 Correct!",
-                    "incorrect": "\u2717 Not quite. The answer is 'statistics'.",
-                    "no_answer": "No answer provided."
+                    "correct": "✓ Excellent! The answer is \"STATISTICS\".",
+                    "incorrect": "✗ Not quite. The answer is \"STATISTICS\".",
+                    "no_answer": "No answer provided. The answer is \"STATISTICS\"."
                 },
                 "5": {
-                    "correct": "\u2713 Correct!",
-                    "incorrect": "\u2717 Not quite. The answer is 'university of sydney' or 'sydney university'.",
-                    "no_answer": "No answer provided."
+                    "correct": "✓ Excellent! Acceptable answers: \"UNIVERSITY OF SYDNEY\" or \"SYDNEY UNIVERSITY\".",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"UNIVERSITY OF SYDNEY\" or \"SYDNEY UNIVERSITY\".",
+                    "no_answer": "No answer provided. Acceptable answers: \"UNIVERSITY OF SYDNEY\" or \"SYDNEY UNIVERSITY\"."
                 }
             }
         },
         {
             "type": "closed_question",
-            "instructions": "",
+            "instructions": "Questions 31-34\n\nChoose the correct letter, A, B or C.",
             "question": "Question 31",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"B\".",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "No answer provided. The correct answer is B.",
+            "correct_feedback": "✓ Correct!",
+            "incorrect_feedback": "✗ Not quite. The correct answer is B.",
             "reading_text_id": null,
             "audio_section_id": 3,
             "ielts_question_category": "multiple_choice_l",
@@ -717,9 +717,9 @@
             "instructions": "",
             "question": "Question 32",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"B\".",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "No answer provided. The correct answer is B.",
+            "correct_feedback": "✓ Correct!",
+            "incorrect_feedback": "✗ Not quite. The correct answer is B.",
             "reading_text_id": null,
             "audio_section_id": 3,
             "ielts_question_category": "multiple_choice_l",
@@ -749,9 +749,9 @@
             "instructions": "",
             "question": "Question 33",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"A\".",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "No answer provided. The correct answer is A.",
+            "correct_feedback": "✓ Correct!",
+            "incorrect_feedback": "✗ Not quite. The correct answer is A.",
             "reading_text_id": null,
             "audio_section_id": 3,
             "ielts_question_category": "multiple_choice_l",
@@ -781,9 +781,9 @@
             "instructions": "",
             "question": "Question 34",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"C\".",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "No answer provided. The correct answer is C.",
+            "correct_feedback": "✓ Correct!",
+            "incorrect_feedback": "✗ Not quite. The correct answer is C.",
             "reading_text_id": null,
             "audio_section_id": 3,
             "ielts_question_category": "multiple_choice_l",
@@ -810,10 +810,10 @@
         },
         {
             "type": "open_question",
-            "instructions": "Questions 35-38\r\n\r\nComplete the document below.\r\n\r\nWrite NO MORE THAN THREE WORDS for each answer.",
-            "question": "Bill of Lading\r\n\r\n35.[field 1]\r\n\r\nSHIPPING LINE: Southern Shipping\r\n\r\n36.[field 2]\r\n\r\n37.[field 3]\r\n\r\nVESSEL: Southern Star\r\n\r\n38.Type of [field 4]: Sydney, Australia",
+            "instructions": "Questions 35-38\n\nComplete the document below.\n\nWrite NO MORE THAN THREE WORDS for each answer.",
+            "question": "BILL OF LADING\n\n35.[field 1]\n\nSHIPPING LINE: Southern Shipping\n\n36.[field 2]\n\n37.[field 3]\n\nVESSEL: Southern Cross\n\n38.[field 4]: Sydney, Australia\n\nPORT OF DISCHARGE: Tokyo, Japan\n\nPLACE OF DELIVERY: Yokohama, Japan",
             "points": 4,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "No answer provided.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -821,40 +821,40 @@
             "ielts_question_category": "form_completion_l",
             "field_count": 4,
             "field_answers": {
-                "1": "the shipper information|shipper information",
-                "2": "the consignee information|the consignee|consignee information",
+                "1": "the shipper information|shipper information|the shipper|shipper",
+                "2": "the consignee information|the consignee|consignee information|consignee",
                 "3": "notify party|the notify party",
                 "4": "port of loading"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "\u2713 Correct!",
-                    "incorrect": "\u2717 Not quite.",
-                    "no_answer": "No answer provided."
+                    "correct": "✓ Excellent! Acceptable answers: \"THE SHIPPER INFORMATION\", \"SHIPPER INFORMATION\", \"THE SHIPPER\", or \"SHIPPER\".",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"THE SHIPPER INFORMATION\", \"SHIPPER INFORMATION\", \"THE SHIPPER\", or \"SHIPPER\".",
+                    "no_answer": "No answer provided. Acceptable answers: \"THE SHIPPER INFORMATION\", \"SHIPPER INFORMATION\", \"THE SHIPPER\", or \"SHIPPER\"."
                 },
                 "2": {
-                    "correct": "\u2713 Correct!",
-                    "incorrect": "\u2717 Not quite.",
-                    "no_answer": "No answer provided."
+                    "correct": "✓ Excellent! Acceptable answers: \"THE CONSIGNEE INFORMATION\", \"THE CONSIGNEE\", \"CONSIGNEE INFORMATION\", or \"CONSIGNEE\".",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"THE CONSIGNEE INFORMATION\", \"THE CONSIGNEE\", \"CONSIGNEE INFORMATION\", or \"CONSIGNEE\".",
+                    "no_answer": "No answer provided. Acceptable answers: \"THE CONSIGNEE INFORMATION\", \"THE CONSIGNEE\", \"CONSIGNEE INFORMATION\", or \"CONSIGNEE\"."
                 },
                 "3": {
-                    "correct": "\u2713 Correct!",
-                    "incorrect": "\u2717 Not quite.",
-                    "no_answer": "No answer provided."
+                    "correct": "✓ Excellent! Acceptable answers: \"NOTIFY PARTY\" or \"THE NOTIFY PARTY\".",
+                    "incorrect": "✗ Not quite. Acceptable answers: \"NOTIFY PARTY\" or \"THE NOTIFY PARTY\".",
+                    "no_answer": "No answer provided. Acceptable answers: \"NOTIFY PARTY\" or \"THE NOTIFY PARTY\"."
                 },
                 "4": {
-                    "correct": "\u2713 Correct!",
-                    "incorrect": "\u2717 Not quite.",
-                    "no_answer": "No answer provided."
+                    "correct": "✓ Excellent! The answer is \"PORT OF LOADING\".",
+                    "incorrect": "✗ Not quite. The answer is \"PORT OF LOADING\".",
+                    "no_answer": "No answer provided. The answer is \"PORT OF LOADING\"."
                 }
             }
         },
         {
             "type": "open_question",
-            "instructions": "Questions 39-40\r\n\r\nComplete the summary below.\r\n\r\nWrite NO MORE THAN ONE WORD for each answer.",
-            "question": "The Bill of Lading is a document used to control the 39.[field 1] of goods between different 40.[field 2].",
+            "instructions": "Questions 39 and 40\n\nComplete the summary below.\n\nWrite NO MORE THAN ONE WORD for each answer.",
+            "question": "The Bill of Lading is a document used to control the 39.[field 1] of goods from one country to another 40.[field 2].",
             "points": 2,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "No answer provided.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -867,14 +867,14 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "\u2713 Correct!",
-                    "incorrect": "\u2717 Not quite.",
-                    "no_answer": "No answer provided."
+                    "correct": "✓ Excellent! The answer is \"MOVEMENT\".",
+                    "incorrect": "✗ Not quite. The answer is \"MOVEMENT\".",
+                    "no_answer": "No answer provided. The answer is \"MOVEMENT\"."
                 },
                 "2": {
-                    "correct": "\u2713 Correct!",
-                    "incorrect": "\u2717 Not quite.",
-                    "no_answer": "No answer provided."
+                    "correct": "✓ Excellent! The answer is \"COUNTRY\".",
+                    "incorrect": "✗ Not quite. The answer is \"COUNTRY\".",
+                    "no_answer": "No answer provided. The answer is \"COUNTRY\"."
                 }
             }
         }
@@ -896,19 +896,19 @@
         "sections": [
             {
                 "section_number": 1,
-                "transcript": "<strong>Section 1</strong>\n<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">\n<tbody>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Good morning, George Hotel. How can I help you?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Hi, I was wondering if you could help me. I'm trying to find out more about the winter specials you are advertising at the moment.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Okay, well we\u2019re offering weekly deals and long weekend specials at the moment. Which are you interested in ?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Well, I\u2019m not too sure at the moment. Can you tell me a little about both?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Yes, of course. The long weekend specials run from Thursday to Sunday or from Friday to Monday. You need to book for a minimum of three nights. For the weekly packages you receive a 5% discount, free parking at any London airport if you choose to fly here and pick up from our local airport.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Oh right. I don\u2019t think we\u2019ll fly - we\u2019re planning to stay somewhere on the way for a night or two to break up the journey as we\u2019re planning on coming by car. What prices do the rooms work out to be for the three night package?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">It depends if you would like to book for the room only, room with breakfast, room with breakfast and dinner, or for the room with breakfast each day and dinner first night only \u2013 there are four options you see. And of course it also depends on how many people you would you be booking for.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Just two of us. We\u2019d like to arrive on Thursday 17th and check out on Sunday 20th please. And we\u2019d be interested in booking the room, with breakfast each morning and... erm... probably just dinner at the hotel for the first night only.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Okay, just let me check that availability... Yes, we do have some double rooms left for those dates. So that\u2019s Thursday 17th, leaving Sunday 20th Now a room for two with breakfast each day and dinner the first evening works out at a total of \u00a3380. That\u2019s \u00a3110 per night including breakfast and a specially discounted three course dinner for two for \u00a350 in our al a carte restaurant.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">That sounds great, I\u2019ll book that please. What is the cost of dinner usually, I mean if we don\u2019t book it now as part of the special offer?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Well, main meals vary from around \u00a325 to \u00a340 per head. Starters and desserts from around \u00a312 to \u00a320.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Great \u2013 are there any other good restaurants around?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Yes there are four \u2013 there are three local restaurants in the centre of the village \u2013 they\u2019re less than 5 minutes walk from here. There is also a new Indian restaurant which opened last month\u2013 that takes about 10 minutes by car.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Great - sounds good.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">So shall I make that booking for you now? What name shall I put the booking under?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">James Jackson \u2013 That\u2019s J-A-C-K-S-O-N</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Great and can I take a credit card number to secure the booking?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Yes, it\u2019s a visa card and the number is 799-463-0021</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">799-466-0021</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">No, 463, not 466. But I\u2019d like to pay in cash when I arrive rather than pay on my credit card</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Yes that\u2019s fine. We won\u2019t take payment from your card. But there is a 20% cancellation fee payable if you decide you aren\u2019t coming but don\u2019t cancel at least 48 hours beforehand.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">That\u2019s fine.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">And do you have contact phone number?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Yes I do, I\u2019ll give you my work mobile as I\u2019m just changing my private number. It\u2019s 07746 998220</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">07746 998220. Great. Now is there anything else I can help you with today?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Well, I was wondering about what kinds of things there are to do nearby. We\u2019ve never been down there before. Actually we\u2019re looking to buy a house in the local area, so thought we\u2019d come and have a look around at some properties. We\u2019ll still have some free time left and intend to do some sight-seeing too.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Well, Hardwell Castle is a must see. It\u2019s a beautiful castle set in 60 acres of land and it was built in the 13th century. Part of the castle now serves a museum and you can see a fascinating selection of antique furniture, art, period dress and armaments and armour.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">What are the opening times?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">It\u2019s open from 10am to 4pm in the winter and slightly longer in the summer - from 9m to 6pm, but this time of year there are fewer visitors so the times change slightly.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Okay, is there an entry fee?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Yes, its \u00a35.50 per person. But that also includes a free tour of the art gallery which starts at 12 noon on weekends and 11am on weekdays.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Yes, we\u2019ll definitely go along and have a look. Well, thank you so much, you\u2019ve been really helpful.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Thanks very much, we look forward to seeing you very soon.</td>\n</tr>\n</tbody>\n</table>\n&nbsp;"
+                "transcript": "<strong>Section 1</strong>\n<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">\n<tbody>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Good morning, George Hotel. How can I help you?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Hi, I was wondering if you could help me. I'm trying to find out more about the winter specials you are advertising at the moment.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Okay, well we’re offering weekly deals and long weekend specials at the moment. Which are you interested in ?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Well, I’m not too sure at the moment. Can you tell me a little about both?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Yes, of course. The long weekend specials run from Thursday to Sunday or from Friday to Monday. You need to book for a minimum of three nights. For the weekly packages you receive a 5% discount, free parking at any London airport if you choose to fly here and pick up from our local airport.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Oh right. I don’t think we’ll fly - we’re planning to stay somewhere on the way for a night or two to break up the journey as we’re planning on coming by car. What prices do the rooms work out to be for the three night package?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">It depends if you would like to book for the room only, room with breakfast, room with breakfast and dinner, or for the room with breakfast each day and dinner first night only – there are four options you see. And of course it also depends on how many people you would you be booking for.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Just two of us. We’d like to arrive on Thursday 17th and check out on Sunday 20th please. And we’d be interested in booking the room, with breakfast each morning and... erm... probably just dinner at the hotel for the first night only.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Okay, just let me check that availability... Yes, we do have some double rooms left for those dates. So that’s Thursday 17th, leaving Sunday 20th Now a room for two with breakfast each day and dinner the first evening works out at a total of £380. That’s £110 per night including breakfast and a specially discounted three course dinner for two for £50 in our al a carte restaurant.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">That sounds great, I’ll book that please. What is the cost of dinner usually, I mean if we don’t book it now as part of the special offer?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Well, main meals vary from around £25 to £40 per head. Starters and desserts from around £12 to £20.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Great – are there any other good restaurants around?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Yes there are four – there are three local restaurants in the centre of the village – they’re less than 5 minutes walk from here. There is also a new Indian restaurant which opened last month– that takes about 10 minutes by car.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Great - sounds good.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">So shall I make that booking for you now? What name shall I put the booking under?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">James Jackson – That’s J-A-C-K-S-O-N</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Great and can I take a credit card number to secure the booking?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Yes, it’s a visa card and the number is 799-463-0021</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">799-466-0021</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">No, 463, not 466. But I’d like to pay in cash when I arrive rather than pay on my credit card</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Yes that’s fine. We won’t take payment from your card. But there is a 20% cancellation fee payable if you decide you aren’t coming but don’t cancel at least 48 hours beforehand.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">That’s fine.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">And do you have contact phone number?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Yes I do, I’ll give you my work mobile as I’m just changing my private number. It’s 07746 998220</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">07746 998220. Great. Now is there anything else I can help you with today?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Well, I was wondering about what kinds of things there are to do nearby. We’ve never been down there before. Actually we’re looking to buy a house in the local area, so thought we’d come and have a look around at some properties. We’ll still have some free time left and intend to do some sight-seeing too.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Well, Hardwell Castle is a must see. It’s a beautiful castle set in 60 acres of land and it was built in the 13th century. Part of the castle now serves a museum and you can see a fascinating selection of antique furniture, art, period dress and armaments and armour.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">What are the opening times?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">It’s open from 10am to 4pm in the winter and slightly longer in the summer - from 9m to 6pm, but this time of year there are fewer visitors so the times change slightly.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Okay, is there an entry fee?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Yes, its £5.50 per person. But that also includes a free tour of the art gallery which starts at 12 noon on weekends and 11am on weekdays.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">customer</td>\n<td valign=\"top\" width=\"80%\">Yes, we’ll definitely go along and have a look. Well, thank you so much, you’ve been really helpful.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">hotel receptionist</td>\n<td valign=\"top\" width=\"80%\">Thanks very much, we look forward to seeing you very soon.</td>\n</tr>\n</tbody>\n</table>\n&nbsp;"
             },
             {
                 "section_number": 2,
-                "transcript": "<strong>Section 2</strong>\n\nGUIDE: Good morning, everyone! I\u2019m pleased to welcome you along today to the Queenstown Wildlife Sanctuary. It\u2019s great that you could join us here. Before we start on a brief tour around the site, I\u2019d just like to have a few minutes to tell you a little bit about the sanctuary itself, as well as some of the work that we do here\u2026\n\nThe land on which the sanctuary now stands was gifted to a charitable trust in 1994, and was established as a wildlife sanctuary nearly ten years later, in 2002. While the sanctuary had originally operated with a primarily educational focus, this changed soon afterward and two years later, in 2004, our main role became involved with conservation first and foremost.\n\nAs far as opening hours are concerned, the sanctuary is open to the general public on both Saturdays and Sundays with Mondays being a day off for our staff. Having said that, we also close two hours earlier than usual on Thursdays, at three p.m., and are operating until five p.m. on all other business days.\n\nAs your guide, I should also mention that the sanctuary and the charity which operates it do offer the opportunity to members of the public to join our conservation club. Membership includes a number of discounts at our gift shop, special passes and a free copy of our monthly newsletter outlining all of our recent conservation efforts. If you are interested in finding out more about it and possibly joining our conservation club, please remember to ask at the front desk before you leave today.\n\nLastly, for the teachers and students among you, I would like to let you know that we do offer special tours for classes ranging from primary to secondary level. You just need to arrange these by booking at least a few weeks in advance.\n\nGuide: Now, as I lead you outside of the entrance building to the kiwi house, I must remind you that these are very shy nocturnal creatures so please do not use your cameras or mobiles with the flash function to take pictures inside the enclosure! Talking is fine, and there is absolutely no problem with any of you having a snack or drink inside the kiwi house, although I must ask you to speak very quietly, as shouting is likely to disturb the animals\n\nGuide: Right, here we are outside the kiwi house\u2026 I\u2019d just like to say a few quick words about some of the conservation work that we do here at the Queenstown Wildlife Sanctuary\u2026 this work is part of what we call the conservation cycle. This process really begins for us when an animal is brought to the sanctuary. Initially the animals are assessed for any injuries so that we can decide what type of care they may require. Over the next twelve to twenty-four weeks or so the animals are cared for and gradually nursed back to health. After we have looked after them for between six months and one year, the individual animals are generally released, so that they can live in their natural environment again\u2026 Now, if you\u2019d all like to just follow me\u2026"
+                "transcript": "<strong>Section 2</strong>\n\nGUIDE: Good morning, everyone! I’m pleased to welcome you along today to the Queenstown Wildlife Sanctuary. It’s great that you could join us here. Before we start on a brief tour around the site, I’d just like to have a few minutes to tell you a little bit about the sanctuary itself, as well as some of the work that we do here…\n\nThe land on which the sanctuary now stands was gifted to a charitable trust in 1994, and was established as a wildlife sanctuary nearly ten years later, in 2002. While the sanctuary had originally operated with a primarily educational focus, this changed soon afterward and two years later, in 2004, our main role became involved with conservation first and foremost.\n\nAs far as opening hours are concerned, the sanctuary is open to the general public on both Saturdays and Sundays with Mondays being a day off for our staff. Having said that, we also close two hours earlier than usual on Thursdays, at three p.m., and are operating until five p.m. on all other business days.\n\nAs your guide, I should also mention that the sanctuary and the charity which operates it do offer the opportunity to members of the public to join our conservation club. Membership includes a number of discounts at our gift shop, special passes and a free copy of our monthly newsletter outlining all of our recent conservation efforts. If you are interested in finding out more about it and possibly joining our conservation club, please remember to ask at the front desk before you leave today.\n\nLastly, for the teachers and students among you, I would like to let you know that we do offer special tours for classes ranging from primary to secondary level. You just need to arrange these by booking at least a few weeks in advance.\n\nGuide: Now, as I lead you outside of the entrance building to the kiwi house, I must remind you that these are very shy nocturnal creatures so please do not use your cameras or mobiles with the flash function to take pictures inside the enclosure! Talking is fine, and there is absolutely no problem with any of you having a snack or drink inside the kiwi house, although I must ask you to speak very quietly, as shouting is likely to disturb the animals\n\nGuide: Right, here we are outside the kiwi house… I’d just like to say a few quick words about some of the conservation work that we do here at the Queenstown Wildlife Sanctuary… this work is part of what we call the conservation cycle. This process really begins for us when an animal is brought to the sanctuary. Initially the animals are assessed for any injuries so that we can decide what type of care they may require. Over the next twelve to twenty-four weeks or so the animals are cared for and gradually nursed back to health. After we have looked after them for between six months and one year, the individual animals are generally released, so that they can live in their natural environment again… Now, if you’d all like to just follow me…"
             },
             {
                 "section_number": 3,
-                "transcript": "<strong>Section 3</strong>\n\nFIONA: \u00a0\u00a0\u00a0\u00a0\u00a0Hi Robert, long time no see! How are you?\n\nROBERT:\u00a0\u00a0 Fine, thanks\u2026 and you?\n\nFIONA:\u00a0\u00a0\u00a0\u00a0\u00a0 Great! Really great! How are your classes going this semester?\n\nROBERT:\u00a0\u00a0 Good, on the whole. I\u2019ve never really had any problems with mathematics\u2026 or chemistry either, for that matter. I\u2019m finding my economics course a bit of a struggle though.\n\nFIONA:\u00a0\u00a0\u00a0\u00a0\u00a0 I see. Well, I don\u2019t envy you! You must be spending an awful lot of time in the library. I\u2019m glad that I changed my major to communications last semester! Have you thought about asking your tutor for some assistance? Mine\u2019s been really helpful.\n\nROBERT:\u00a0\u00a0 I\u2019ve tried. I went to see her during her office hours and she wasn\u2019t there\u2026 then I sent her an email and I got a reply saying that she\u2019s away at a conference until the end of next week. Now I\u2019m not sure how I\u2019m going to finish my essay!\n\nFIONA:\u00a0\u00a0\u00a0\u00a0\u00a0 Oh dear! Well, I may be able to help you. I did economics last year before I changed my major, remember?\n\nROBERT: \u00a0\u00a0Really? That\u2019d be great if you could. How much do you know about the music industry, Fiona?\n\nFIONA:\u00a0\u00a0\u00a0\u00a0\u00a0 That\u2019s your topic?\n\nROBERT:\u00a0\u00a0 \u00a0Yes. We didn\u2019t have much choice\u2026 it was either that or the tourism sector for this assignment\u2026 and now I have to write two and a half thousand words by the end of next week!\n\nFIONA:\u00a0\u00a0\u00a0\u00a0\u00a0 \u00a0Two and a half thousand? That doesn\u2019t sound too bad, Robert! I did my essay for the same economics paper on the fishing industry. Perhaps I can give you some general advice\u2026 steer you in the right direction\u2026\n\nROBERT: \u00a0\u00a0\u00a0Oh, yes please! If you could that would be great. I\u2019ve been working on this paper for three weeks and I still feel as though I haven\u2019t made any progress\u2026 and now there\u2019s only one week left until the deadline!\nFIONA:\u00a0\u00a0\u00a0\u00a0\u00a0 Okay, let\u2019s see\u2026 the first one I was thinking of is by Jackson. Tom Jackson. It\u2019s called \u201cPrinciples of Economics\u201d and that was published in 2008 by Oxford University, if I remember correctly.\n\nROBERT: \u00a0Wow, Fiona! You certainly do have a good memory, much better than mine I have to say. Let me just write it down in my notebook here\u2026 what was the title again?\n\nFIONA: \u00a0\u00a0\u00a0\u201cPrinciples of Economics\u201d by Jackson.\n\nROBERT: \u00a0Right, got it! That\u2019s great\u2026 anything else?\n\nFIONA: \u00a0\u00a0\u00a0\u00a0Well, there\u2019s \u201cEconomics Research\u201d from Cambridge University. I\u2019m sure you would\u2019ve heard of it. It was published in 2013. It\u2019s a key text for most economics papers, you know\u2026\n\nROBERT: \u00a0Yes, it does ring a bell\u2026 I should\u2019ve paid more attention during my lectures! What\u2019s the author\u2019s name? It\u2019s Jane something isn\u2019t it?\n\nFIONA: Yes, that\u2019s right. It\u2019s Jane Kumar.\n\nROBERT: How do you spell that?\n\nFIONA: Kumar. K-U-M-A-R. Would you like me to spell the title for you as well?\n\nROBERT: Ha-ha, no\u2026 that\u2019s fine. I think I\u2019ve got it. Was there anything else?\n\nFIONA: Well, I\u2019m sure you know about Michaela Petty\u2019s book... the one on statistics from the University of Sydney?\n\nROBERT: Hmmm\u2026 no, I don\u2019t think so. Do you think it would be helpful?\n\nFIONA: Definitely. It will be useful as a general reference and it\u2019ll be a good look for the tutor to have it in your bibliography.\n\nROBERT: I see. Petty, you said. You don\u2019t know the title and year it was published, by any chance?\n\nFIONA: That\u2019s easy. Her book is called \u201cStatistics\u201d. It was published in 2006, although I\u2019m sure there have been later editions put out by other universities. You should be able to find all three of those on reserve at the library.\n\nROBERT: Fiona, you\u2019re a lifesaver! Thank you so much for helping me out with this essay. I suppose I\u2019d best be getting along to the library now before it closes\u2026 I\u2019ve got a deadline to meet after all\u2026"
+                "transcript": "<strong>Section 3</strong>\n\nFIONA:      Hi Robert, long time no see! How are you?\n\nROBERT:   Fine, thanks… and you?\n\nFIONA:      Great! Really great! How are your classes going this semester?\n\nROBERT:   Good, on the whole. I’ve never really had any problems with mathematics… or chemistry either, for that matter. I’m finding my economics course a bit of a struggle though.\n\nFIONA:      I see. Well, I don’t envy you! You must be spending an awful lot of time in the library. I’m glad that I changed my major to communications last semester! Have you thought about asking your tutor for some assistance? Mine’s been really helpful.\n\nROBERT:   I’ve tried. I went to see her during her office hours and she wasn’t there… then I sent her an email and I got a reply saying that she’s away at a conference until the end of next week. Now I’m not sure how I’m going to finish my essay!\n\nFIONA:      Oh dear! Well, I may be able to help you. I did economics last year before I changed my major, remember?\n\nROBERT:   Really? That’d be great if you could. How much do you know about the music industry, Fiona?\n\nFIONA:      That’s your topic?\n\nROBERT:    Yes. We didn’t have much choice… it was either that or the tourism sector for this assignment… and now I have to write two and a half thousand words by the end of next week!\n\nFIONA:       Two and a half thousand? That doesn’t sound too bad, Robert! I did my essay for the same economics paper on the fishing industry. Perhaps I can give you some general advice… steer you in the right direction…\n\nROBERT:    Oh, yes please! If you could that would be great. I’ve been working on this paper for three weeks and I still feel as though I haven’t made any progress… and now there’s only one week left until the deadline!\nFIONA:      Okay, let’s see… the first one I was thinking of is by Jackson. Tom Jackson. It’s called “Principles of Economics” and that was published in 2008 by Oxford University, if I remember correctly.\n\nROBERT:  Wow, Fiona! You certainly do have a good memory, much better than mine I have to say. Let me just write it down in my notebook here… what was the title again?\n\nFIONA:    “Principles of Economics” by Jackson.\n\nROBERT:  Right, got it! That’s great… anything else?\n\nFIONA:     Well, there’s “Economics Research” from Cambridge University. I’m sure you would’ve heard of it. It was published in 2013. It’s a key text for most economics papers, you know…\n\nROBERT:  Yes, it does ring a bell… I should’ve paid more attention during my lectures! What’s the author’s name? It’s Jane something isn’t it?\n\nFIONA: Yes, that’s right. It’s Jane Kumar.\n\nROBERT: How do you spell that?\n\nFIONA: Kumar. K-U-M-A-R. Would you like me to spell the title for you as well?\n\nROBERT: Ha-ha, no… that’s fine. I think I’ve got it. Was there anything else?\n\nFIONA: Well, I’m sure you know about Michaela Petty’s book... the one on statistics from the University of Sydney?\n\nROBERT: Hmmm… no, I don’t think so. Do you think it would be helpful?\n\nFIONA: Definitely. It will be useful as a general reference and it’ll be a good look for the tutor to have it in your bibliography.\n\nROBERT: I see. Petty, you said. You don’t know the title and year it was published, by any chance?\n\nFIONA: That’s easy. Her book is called “Statistics”. It was published in 2006, although I’m sure there have been later editions put out by other universities. You should be able to find all three of those on reserve at the library.\n\nROBERT: Fiona, you’re a lifesaver! Thank you so much for helping me out with this essay. I suppose I’d best be getting along to the library now before it closes… I’ve got a deadline to meet after all…"
             },
             {
                 "section_number": 4,
-                "transcript": "<strong>Section 4</strong>\n\nGood afternoon, and welcome to the second lecture in our Maritime School series.\u00a0 Last week we looked at the range of documentation that is necessary for overseas export shipments, the Letter of Credit, the Bill of Lading, Customs documents, Certificates of Origin and Insurance documents, and <u>this week I want to look closely at one particularly form of documentation, the Bill of Lading.</u>\n\nFor international shipments, the Bill of Lading is probably the crucial document, as it links the exporter that is, the shipper, with the shipping line, the banks and the other required documents, such as Customs, Insurance and other Certificates, to prove that the goods being exported are of their true nature.\u00a0 One of the problems with international shipments is that you have two companies in two separate countries, and both parties require guarantees, for example, the shipper requires the guarantee that they will be paid, and, of course, the importer requires the guarantee that they will receive the goods that they have ordered and paid for.\n\nThe first question to be considered, then, is who issues the Bill of Lading, and the answer is <u>the Shipping line</u>.\u00a0 This document, as mentioned, is then given to <u>the exporting company, who pays the Shipping company</u> for carrying the goods to the importer\u2019s country<em>.</em>\n\nAfter the Bill of Lading is received by the Exporter, it is in turn given to the Exporter\u2019s bank, who will pay the Exporter for the value of the cargo.\u00a0 At this point, the Bank is now in control and in ownership of the cargo.\u00a0 <u>The Exporting bank will now send the Bill of Lading to the Importer\u2019s bank</u> in their country, who will then control the cargo, and when they receive payment from the Importer, they will give the Bill of Lading to the Importer, who will have ownership of the cargo, and the transaction is now almost complete.\n\nNow, let\u2019s look more closely at the preparation of the Bill of Lading.\u00a0 At the top of the Bill of Lading, on the left-hand side, you will see three boxes.\u00a0 The top box is for the Shipper information, which gives their proper company name, and their address, of course, so this is labeled \u2018<u>Shipper</u>\u2019.\u00a0 The second box is to indicate who is importing the goods, the company that will own the cargo when it arrives, and they are called the \u2018<u>Consignee</u>\u2019, and that is spelled C-O-N-S-I-G-N-E-E.\u00a0 Finally, the third box is to show who is to be advised when the cargo has arrived at the Importer\u2019s country, and this is called the \u2018<u>Notify Party</u>\u2019, in other words, who is to be notified on arrival of the cargo.\n\nIn addition, as you can see from the copy of the Bill of Lading that has been handed out, there is a wide range of other information that is required to complete the Bill.\u00a0 Some of the other key information that is necessary is the Shipping Company\u2019s name, and here it is Southern Shipping, and the name of the vessel, which is Southern Cross.\u00a0 Next is the <u>Port of Loading</u>, which, on our example here, is shown as Sydney, Australia.\u00a0 The port of loading is where the cargo is loaded on the ship.\u00a0 And, of course, there is the Port of Discharge, where the cargo is delivered to.\n\nSo, let\u2019s review so far.\u00a0 The Bill of Lading is a document used to facilitate the <u>movement</u> of cargo from one country to another, and it clearly outlines who controls the cargo while it is in shipment.\u00a0 The Bill of Lading is created by the Shipping Company and is passed from one organization to another on payment of the value of the cargo, until it finally reaches the hands of the buyer in the importing <u>country</u>.\u00a0 Of course, there are other considerations, such as Customs and Insurance to be considered, and these are the responsibilities of all the companies involved in the movement of the cargo and\u2026"
+                "transcript": "<strong>Section 4</strong>\n\nGood afternoon, and welcome to the second lecture in our Maritime School series.  Last week we looked at the range of documentation that is necessary for overseas export shipments, the Letter of Credit, the Bill of Lading, Customs documents, Certificates of Origin and Insurance documents, and <u>this week I want to look closely at one particularly form of documentation, the Bill of Lading.</u>\n\nFor international shipments, the Bill of Lading is probably the crucial document, as it links the exporter that is, the shipper, with the shipping line, the banks and the other required documents, such as Customs, Insurance and other Certificates, to prove that the goods being exported are of their true nature.  One of the problems with international shipments is that you have two companies in two separate countries, and both parties require guarantees, for example, the shipper requires the guarantee that they will be paid, and, of course, the importer requires the guarantee that they will receive the goods that they have ordered and paid for.\n\nThe first question to be considered, then, is who issues the Bill of Lading, and the answer is <u>the Shipping line</u>.  This document, as mentioned, is then given to <u>the exporting company, who pays the Shipping company</u> for carrying the goods to the importer’s country<em>.</em>\n\nAfter the Bill of Lading is received by the Exporter, it is in turn given to the Exporter’s bank, who will pay the Exporter for the value of the cargo.  At this point, the Bank is now in control and in ownership of the cargo.  <u>The Exporting bank will now send the Bill of Lading to the Importer’s bank</u> in their country, who will then control the cargo, and when they receive payment from the Importer, they will give the Bill of Lading to the Importer, who will have ownership of the cargo, and the transaction is now almost complete.\n\nNow, let’s look more closely at the preparation of the Bill of Lading.  At the top of the Bill of Lading, on the left-hand side, you will see three boxes.  The top box is for the Shipper information, which gives their proper company name, and their address, of course, so this is labeled ‘<u>Shipper</u>’.  The second box is to indicate who is importing the goods, the company that will own the cargo when it arrives, and they are called the ‘<u>Consignee</u>’, and that is spelled C-O-N-S-I-G-N-E-E.  Finally, the third box is to show who is to be advised when the cargo has arrived at the Importer’s country, and this is called the ‘<u>Notify Party</u>’, in other words, who is to be notified on arrival of the cargo.\n\nIn addition, as you can see from the copy of the Bill of Lading that has been handed out, there is a wide range of other information that is required to complete the Bill.  Some of the other key information that is necessary is the Shipping Company’s name, and here it is Southern Shipping, and the name of the vessel, which is Southern Cross.  Next is the <u>Port of Loading</u>, which, on our example here, is shown as Sydney, Australia.  The port of loading is where the cargo is loaded on the ship.  And, of course, there is the Port of Discharge, where the cargo is delivered to.\n\nSo, let’s review so far.  The Bill of Lading is a document used to facilitate the <u>movement</u> of cargo from one country to another, and it clearly outlines who controls the cargo while it is in shipment.  The Bill of Lading is created by the Shipping Company and is passed from one organization to another on payment of the value of the cargo, until it finally reaches the hands of the buyer in the importing <u>country</u>.  Of course, there are other considerations, such as Customs and Insurance to be considered, and these are the responsibilities of all the companies involved in the movement of the cargo and…"
             }
         ]
     },
