@@ -419,9 +419,9 @@
             "instructions": "Questions 21-30\r\n\r\nQuestions 21-23      \r\n\r\nChoose the correct letter, A, B or C.",
             "question": " Research Project Background\r\n\r\n The students’ project is on...",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
+            "no_answer_feedback": "No answer provided. Thomas explains they were 'asking if we would be interested in participating in a volunteer programme in East Africa for four weeks, looking at rural development.' The correct answer is 'rural development.'",
             "correct_feedback": "",
-            "incorrect_feedback": "",
+            "incorrect_feedback": "✗ Incorrect. Thomas explains they were 'asking if we would be interested in participating in a volunteer programme in East Africa for four weeks, looking at rural development.' The correct answer is 'rural development.'",
             "reading_text_id": null,
             "audio_section_id": 2,
             "ielts_question_category": "multiple_choice_l",
@@ -429,17 +429,17 @@
                 {
                     "text": "urban renewal.",
                     "is_correct": false,
-                    "feedback": "The correct answers is B"
+                    "feedback": "✗ Incorrect. Thomas explains they were 'asking if we would be interested in participating in a volunteer programme in East Africa for four weeks, looking at rural development.' The correct answer is 'rural development.'"
                 },
                 {
                     "text": "rural development.",
                     "is_correct": true,
-                    "feedback": "Correct!"
+                    "feedback": "✓ Correct! You identified the key information in the listening passage."
                 },
                 {
                     "text": "the horticultural sector.",
                     "is_correct": false,
-                    "feedback": "The correct answers is B"
+                    "feedback": "✗ Incorrect. Thomas explains they were 'asking if we would be interested in participating in a volunteer programme in East Africa for four weeks, looking at rural development.' The correct answer is 'rural development.'"
                 }
             ],
             "options": "urban renewal.\nrural development.\nthe horticultural sector.",
@@ -451,9 +451,9 @@
             "instructions": "",
             "question": "The volunteer program received financial assistance from...",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The correct answer is A. In the IELTS Listening test, you should always attempt every question even if you're unsure - there's no penalty for wrong answers. Review the audio and transcript to understand why this is the correct option.",
+            "no_answer_feedback": "No answer provided. Jessica states: 'no small sum contributed by our very own university.' The correct answer is 'the university.'",
             "correct_feedback": "",
-            "incorrect_feedback": "",
+            "incorrect_feedback": "✗ Incorrect. Jessica states: 'no small sum contributed by our very own university.' The correct answer is 'the university.'",
             "reading_text_id": null,
             "audio_section_id": 2,
             "ielts_question_category": "multiple_choice_l",
@@ -461,17 +461,17 @@
                 {
                     "text": "the university.",
                     "is_correct": true,
-                    "feedback": "✓ Correct! Option A is the right answer. You identified the key information in the listening passage."
+                    "feedback": "✓ Correct! You identified the key information in the listening passage."
                 },
                 {
                     "text": "volunteers.",
                     "is_correct": false,
-                    "feedback": "✗ Not quite. Option B is not correct. The correct answer is A. Listen again and focus on the specific details mentioned in the audio."
+                    "feedback": "✗ Incorrect. Jessica states: 'no small sum contributed by our very own university.' The correct answer is 'the university.'"
                 },
                 {
                     "text": "local authorities.",
                     "is_correct": false,
-                    "feedback": "✗ Not quite. Option C is not correct. The correct answer is A. Listen again and focus on the specific details mentioned in the audio."
+                    "feedback": "✗ Incorrect. Jessica states: 'no small sum contributed by our very own university.' The correct answer is 'the university.'"
                 }
             ],
             "options": "the university.\nvolunteers.\nlocal authorities.",
@@ -483,9 +483,9 @@
             "instructions": "",
             "question": "The students were in Africa for...",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The correct answer is C. In the IELTS Listening test, you should always attempt every question even if you're unsure - there's no penalty for wrong answers. Review the audio and transcript to understand why this is the correct option.",
+            "no_answer_feedback": "No answer provided. Thomas says: 'we were out of the UK for seven weeks and spent four of those in the country.' The correct answer is 'four weeks.'",
             "correct_feedback": "",
-            "incorrect_feedback": "",
+            "incorrect_feedback": "✗ Incorrect. Thomas says: 'we were out of the UK for seven weeks and spent four of those in the country.' The correct answer is 'four weeks.'",
             "reading_text_id": null,
             "audio_section_id": 2,
             "ielts_question_category": "multiple_choice_l",
@@ -493,17 +493,17 @@
                 {
                     "text": "seven weeks.",
                     "is_correct": false,
-                    "feedback": "✗ Not quite. Option A is not correct. The correct answer is C. Listen again and focus on the specific details mentioned in the audio."
+                    "feedback": "✗ Incorrect. Thomas says: 'we were out of the UK for seven weeks and spent four of those in the country.' The correct answer is 'four weeks.'"
                 },
                 {
                     "text": "one week.",
                     "is_correct": false,
-                    "feedback": "✗ Not quite. Option B is not correct. The correct answer is C. Listen again and focus on the specific details mentioned in the audio."
+                    "feedback": "✗ Incorrect. Thomas says: 'we were out of the UK for seven weeks and spent four of those in the country.' The correct answer is 'four weeks.'"
                 },
                 {
                     "text": "four weeks.",
                     "is_correct": true,
-                    "feedback": "✓ Correct! Option C is the right answer. You identified the key information in the listening passage."
+                    "feedback": "✓ Correct! You identified the key information in the listening passage."
                 }
             ],
             "options": "seven weeks.\none week.\nfour weeks.",
@@ -562,9 +562,9 @@
             "instructions": "Questions 29-30      \r\n\r\nChoose the correct letter, A, B, C or D.",
             "question": "Thomas found the time spent in Singbora to have been mostly... ",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The answer is \"D\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
+            "no_answer_feedback": "No answer provided. Thomas says: 'it was a most rewarding experience.' The correct answer is 'worthwhile.'",
             "correct_feedback": "",
-            "incorrect_feedback": "",
+            "incorrect_feedback": "✗ Incorrect. Thomas says: 'it was a most rewarding experience.' The correct answer is 'worthwhile.'",
             "reading_text_id": null,
             "audio_section_id": 2,
             "ielts_question_category": "multiple_choice_l",
@@ -572,22 +572,22 @@
                 {
                     "text": "overwhelming",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "✗ Incorrect. Thomas says: 'it was a most rewarding experience.' The correct answer is 'worthwhile.'"
                 },
                 {
                     "text": "challenging.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "✗ Incorrect. Thomas says: 'it was a most rewarding experience.' The correct answer is 'worthwhile.'"
                 },
                 {
                     "text": "regrettable.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "✗ Incorrect. Thomas says: 'it was a most rewarding experience.' The correct answer is 'worthwhile.'"
                 },
                 {
                     "text": "worthwhile.",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "✓ Correct! You identified the key information in the listening passage."
                 }
             ],
             "options": "overwhelming\nchallenging.\nregrettable.\nworthwhile.",
@@ -599,9 +599,9 @@
             "instructions": "",
             "question": "Jessica felt that overall the experience was ",
             "points": 1,
-            "no_answer_feedback": "No answer provided. The correct answer is B. In the IELTS Listening test, you should always attempt every question even if you're unsure - there's no penalty for wrong answers. Review the audio and transcript to understand why this is the correct option.",
+            "no_answer_feedback": "No answer provided. Jessica says: 'the entire project really did prove to be very insightful, and helped to open my eyes.' The correct answer is 'eye-opening.'",
             "correct_feedback": "",
-            "incorrect_feedback": "",
+            "incorrect_feedback": "✗ Incorrect. Jessica says: 'the entire project really did prove to be very insightful, and helped to open my eyes.' The correct answer is 'eye-opening.'",
             "reading_text_id": null,
             "audio_section_id": 2,
             "ielts_question_category": "multiple_choice_l",
@@ -609,22 +609,22 @@
                 {
                     "text": "inconvenient.",
                     "is_correct": false,
-                    "feedback": "✗ Not quite. Option A is not correct. The correct answer is B. Listen again and focus on the specific details mentioned in the audio."
+                    "feedback": "✗ Incorrect. Jessica says: 'the entire project really did prove to be very insightful, and helped to open my eyes.' The correct answer is 'eye-opening.'"
                 },
                 {
                     "text": "eye-opening.",
                     "is_correct": true,
-                    "feedback": "✓ Correct! Option B is the right answer. You identified the key information in the listening passage."
+                    "feedback": "✓ Correct! You identified the key information in the listening passage."
                 },
                 {
                     "text": "unsuccessful.",
                     "is_correct": false,
-                    "feedback": "✗ Not quite. Option C is not correct. The correct answer is B. Listen again and focus on the specific details mentioned in the audio."
+                    "feedback": "✗ Incorrect. Jessica says: 'the entire project really did prove to be very insightful, and helped to open my eyes.' The correct answer is 'eye-opening.'"
                 },
                 {
                     "text": "tremendous.",
                     "is_correct": false,
-                    "feedback": "✗ Not quite. Option D is not correct. The correct answer is B. Listen again and focus on the specific details mentioned in the audio."
+                    "feedback": "✗ Incorrect. Jessica says: 'the entire project really did prove to be very insightful, and helped to open my eyes.' The correct answer is 'eye-opening.'"
                 }
             ],
             "options": "inconvenient.\neye-opening.\nunsuccessful.\ntremendous.",
