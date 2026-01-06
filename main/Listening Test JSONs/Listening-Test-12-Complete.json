@@ -21,7 +21,7 @@
                 "1": {
                     "correct": "\u2713 Excellent! Acceptable answers: \"BY TRAIN\" or \"TRAIN\" or \"A TRAIN\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Incorrect. The man clearly states: 'I'm going to Munich, but by train, and then flying back to London.' The correct answer is 'by train.'",
-                    "no_answer": "No answer provided. The correct answer is 'by train.'"
+                    "no_answer": "No answer provided. In the transcript, the man says: 'I'm going to Munich, but by train, and then flying back to London.' The correct answer is 'by train.'"
                 }
             }
         },
@@ -44,7 +44,7 @@
                 "1": {
                     "correct": "\u2713 Excellent! Acceptable answers: \"CITY AIRPORT\" or \"CITY\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Incorrect. The check-in assistant says: 'Leaving from City Airport, London.' The correct answer is 'City Airport.'",
-                    "no_answer": "No answer provided. The correct answer is 'City Airport.'"
+                    "no_answer": "No answer provided. The assistant explicitly mentions: 'Leaving from City Airport, London.' The correct answer is 'City Airport.'"
                 }
             }
         },
@@ -67,7 +67,7 @@
                 "1": {
                     "correct": "\u2713 Excellent! Acceptable answers: \"3PM\" or \"3 PM\" or \"3 P M\" or \"3 P.M.\" or \"3P.M.\" or \"3 P. M.\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Incorrect. The assistant says: 'Arriving 3 pm local time, with the one-hour time difference.' The correct answer is '3 PM.'",
-                    "no_answer": "No answer provided. The correct answer is '3 PM.'"
+                    "no_answer": "No answer provided. In the transcript, the assistant confirms: 'Arriving 3 pm local time, with the one-hour time difference.' The correct answer is '3 PM.'"
                 }
             }
         },
@@ -90,7 +90,7 @@
                 "1": {
                     "correct": "\u2713 Excellent! Acceptable answers: \"7A\" or \"7 A\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Incorrect. The man says: 'The front of the plane, please, so, the first one.' The assistant confirms the seat as '7A.'",
-                    "no_answer": "No answer provided. The correct answer is '7A.'"
+                    "no_answer": "No answer provided. The man requests: 'The front of the plane, please, so, the first one.' The assistant then assigns him seat '7A.'"
                 }
             }
         },
@@ -113,7 +113,7 @@
                 "1": {
                     "correct": "\u2713 Excellent! The answer is \"468319\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Incorrect. The man explicitly gives his Frequent Flyer number as: '468319.' The correct answer is '468319.'",
-                    "no_answer": "No answer provided. The correct answer is '468319.'"
+                    "no_answer": "No answer provided. The man states: 'It's 468319,' when asked for his Frequent Flyer number. The correct answer is '468319.'"
                 }
             }
         },
