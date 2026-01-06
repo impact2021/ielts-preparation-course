@@ -132,17 +132,17 @@
                 {
                     "text": "has expired.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "✗ Incorrect. The assistant mentions: 'You only have 7 months left.' The correct answer is: 'has 7 more months on it.'"
                 },
                 {
                     "text": "has 6 more months left on it.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "✗ Incorrect. The assistant mentions: 'You only have 7 months left.' The correct answer is: 'has 7 more months on it.'"
                 },
                 {
                     "text": "has 7 more months on it.",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "✓ Correct! You identified the key information in the listening passage."
                 }
             ],
             "options": "has expired.\nhas 6 more months left on it.\nhas 7 more months on it.",
