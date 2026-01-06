@@ -90,7 +90,7 @@
                 "1": {
                     "correct": "\u2713 Excellent! Acceptable answers: \"7A\" or \"7 A\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Incorrect. The man says: 'The front of the plane, please, so, the first one.' The assistant confirms the seat as '7A.'",
-                    "no_answer": "No answer provided. The man requests: 'The front of the plane, please, so, the first one.' The assistant then assigns him seat '7A.'"
+                    "no_answer": "No answer provided. The man says: 'The front of the plane, please, so, the first one.' The assistant confirms the seat as '7A.'"
                 }
             }
         },
@@ -385,32 +385,32 @@
                 "1": {
                     "correct": "\u2713 Excellent! Acceptable answers: \"FOOTWEAR\" or \"FOOT WEAR\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. Acceptable answers: \"FOOTWEAR\" or \"FOOT WEAR\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"FOOTWEAR\" or \"FOOT WEAR\"."
+                    "no_answer": "No answer provided. The manager says: 'we would ask that you wear some type of footwear, be it shoes or sandals, at all times when inside the Fairview Arms.' Acceptable answers: \"FOOTWEAR\" or \"FOOT WEAR\"."
                 },
                 "2": {
                     "correct": "\u2713 Excellent! Acceptable answers: \"24 HOURS\" or \"24 HRS\" or \"TWENTY FOUR HOURS\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. Acceptable answers: \"24 HOURS\" or \"24 HRS\" or \"TWENTY FOUR HOURS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"24 HOURS\" or \"24 HRS\" or \"TWENTY FOUR HOURS\"."
+                    "no_answer": "No answer provided. The manager states: 'the reception is open twenty-four hours a day.' Acceptable answers: \"24 HOURS\" or \"24 HRS\" or \"TWENTY FOUR HOURS\"."
                 },
                 "3": {
                     "correct": "\u2713 Excellent! Acceptable answers: \"NIGHTCLUB\" or \"NIGHT CLUB\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. Acceptable answers: \"NIGHTCLUB\" or \"NIGHT CLUB\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"NIGHTCLUB\" or \"NIGHT CLUB\"."
+                    "no_answer": "No answer provided. The manager mentions: 'any keen dancers couldn't put a foot wrong by visiting the nightclub across the road from the post office in the village.' Acceptable answers: \"NIGHTCLUB\" or \"NIGHT CLUB\"."
                 },
                 "4": {
                     "correct": "\u2713 Excellent! The answer is \"DIVING\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. The answer is \"DIVING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"DIVING\"."
+                    "no_answer": "No answer provided. The manager states: 'we hope you enjoy the pool but be aware that diving is strictly prohibited.' The answer is \"DIVING\"."
                 },
                 "5": {
                     "correct": "\u2713 Excellent! The answer is \"DINING HALL\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. The answer is \"DINING HALL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"DINING HALL\"."
+                    "no_answer": "No answer provided. The manager explains: 'any adult wishing to consume alcohol, such as a glass of wine with the evening meal, do so only in the bar or the dining hall of the hotel.' The answer is \"DINING HALL\"."
                 },
                 "6": {
                     "correct": "\u2713 Excellent! Acceptable answers: \"11 P M\" or \"11 PM\" or \"11P.M.\" or \"11 P.M.\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. Acceptable answers: \"11 P M\" or \"11 PM\" or \"11P.M.\" or \"11 P.M.\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"11 P M\" or \"11 PM\" or \"11P.M.\" or \"11 P.M.\"."
+                    "no_answer": "No answer provided. The manager says: 'all guests are asked to keep noise to a minimum after eleven p.m. at night.' Acceptable answers: \"11 P M\" or \"11 PM\" or \"11P."
                 }
             }
         },
@@ -533,27 +533,27 @@
                 "1": {
                     "correct": "\u2713 Excellent! Acceptable answers: \"20,000\" or \"TWENTY THOUSAND\" or \"20000\" or \"20 000\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. Acceptable answers: \"20,000\" or \"TWENTY THOUSAND\" or \"20000\" or \"20 000\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"20,000\" or \"TWENTY THOUSAND\" or \"20000\" or \"20 000\"."
+                    "no_answer": "No answer provided. Thomas states: 'the number of people living in the wider community where we stayed was twenty thousand at last count.' Acceptable answers: \"20,000\" or \"TWENTY THOUSAND\" or \"20000\" or \"20 000\"."
                 },
                 "2": {
                     "correct": "\u2713 Excellent! The answer is \"LAKE VICTORIA\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. The answer is \"LAKE VICTORIA\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"LAKE VICTORIA\"."
+                    "no_answer": "No answer provided. Thomas mentions: 'it is situated on the shores of Lake Victoria, which is the largest lake in Africa.' The answer is \"LAKE VICTORIA\"."
                 },
                 "3": {
                     "correct": "\u2713 Excellent! The answer is \"REGIONAL CAPITAL\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. The answer is \"REGIONAL CAPITAL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"REGIONAL CAPITAL\"."
+                    "no_answer": "No answer provided. Jessica explains: 'The community we were working and living in, Singbora, is around one hundred and twenty kilometres from the regional capital.' The answer is \"REGIONAL CAPITAL\"."
                 },
                 "4": {
                     "correct": "\u2713 Excellent! Acceptable answers: \"700\" or \"SEVEN HUNDRED\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. Acceptable answers: \"700\" or \"SEVEN HUNDRED\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"700\" or \"SEVEN HUNDRED\"."
+                    "no_answer": "No answer provided. Jessica states: 'seven hundred kilometres, give or take, from the Tanzanian capital of Dodoma.' Acceptable answers: \"700\" or \"SEVEN HUNDRED\"."
                 },
                 "5": {
                     "correct": "\u2713 Excellent! Acceptable answers: \"FISHING TRADE\" or \"FISHING\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. Acceptable answers: \"FISHING TRADE\" or \"FISHING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"FISHING TRADE\" or \"FISHING\"."
+                    "no_answer": "No answer provided. Thomas says: 'the main sources of income and employment in Singbora... derive from the fishing of freshwater species.' Acceptable answers: \"FISHING TRADE\" or \"FISHING\"."
                 }
             }
         },
@@ -659,52 +659,52 @@
                 "1": {
                     "correct": "\u2713 Excellent! The answer is \"IRRIGATION\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. The answer is \"IRRIGATION\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"IRRIGATION\"."
+                    "no_answer": "No answer provided. The lecturer explains: 'canals, or man-made waterways... were first used as a form of irrigation.' The answer is \"IRRIGATION\"."
                 },
                 "2": {
                     "correct": "\u2713 Excellent! Acceptable answers: \"2300 YEARS\" or \"2,300 YEARS\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. Acceptable answers: \"2300 YEARS\" or \"2,300 YEARS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"2300 YEARS\" or \"2,300 YEARS\"."
+                    "no_answer": "No answer provided. The lecturer states: 'In China, some of the great early canals were being constructed from the 3rd Century BC \u2013 that's over 2,300 years ago.' Acceptable answers: \"2300 YEARS\" or \"2,300 YEARS\"."
                 },
                 "3": {
                     "correct": "\u2713 Excellent! The answer is \"RICE\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. The answer is \"RICE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"RICE\"."
+                    "no_answer": "No answer provided. The lecturer mentions: 'principally to move rice from the rich farmlands of the southern regions to the northern regions.' The answer is \"RICE\"."
                 },
                 "4": {
                     "correct": "\u2713 Excellent! The answer is \"FLASH LOCK\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. The answer is \"FLASH LOCK\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"FLASH LOCK\"."
+                    "no_answer": "No answer provided. The lecturer explains: 'Originally, a very simple method was employed, known as a flash lock.' The answer is \"FLASH LOCK\"."
                 },
                 "5": {
                     "correct": "\u2713 Excellent! The answer is \"DIRECTIONS\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. The answer is \"DIRECTIONS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"DIRECTIONS\"."
+                    "no_answer": "No answer provided. The lecturer states: 'which allows water levels to be more controlled, allowing transport to be easily accomplished in both directions.' The answer is \"DIRECTIONS\"."
                 },
                 "6": {
                     "correct": "\u2713 Excellent! The answer is \"SAFETY\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. The answer is \"SAFETY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"SAFETY\"."
+                    "no_answer": "No answer provided. The lecturer mentions: 'there was the element of safety, as vessels moved from Europe to the Far East.' The answer is \"SAFETY\"."
                 },
                 "7": {
                     "correct": "\u2713 Excellent! The answer is \"COMMERCE\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. The answer is \"COMMERCE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"COMMERCE\"."
+                    "no_answer": "No answer provided. The lecturer explains: 'When opened, the Suez Canal had a huge impact on world commerce.' The answer is \"COMMERCE\"."
                 },
                 "8": {
                     "correct": "\u2713 Excellent! The answer is \"TROPICAL\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. The answer is \"TROPICAL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"TROPICAL\"."
+                    "no_answer": "No answer provided. The lecturer states: 'within only a couple of years, more than 20,000 workers died of tropical diseases.' The answer is \"TROPICAL\"."
                 },
                 "9": {
                     "correct": "\u2713 Excellent! Acceptable answers: \"77 KILOMETERS\" or \"77 KM\" or \"77 KMS\" or \"SEVENTY-SEVEN KILOMETRES\" or \"SEVENTY SEVEN KILOMETRES\" or \"SEVENTY-SEVEN KILOMETERS\" or \"SEVENTY SEVEN KILOMETERS\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. Acceptable answers: \"77 KILOMETERS\" or \"77 KM\" or \"77 KMS\" or \"SEVENTY-SEVEN KILOMETRES\" or \"SEVENTY SEVEN KILOMETRES\" or \"SEVENTY-SEVEN KILOMETERS\" or \"SEVENTY SEVEN KILOMETERS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. Acceptable answers: \"77 KILOMETERS\" or \"77 KM\" or \"77 KMS\" or \"SEVENTY-SEVEN KILOMETRES\" or \"SEVENTY SEVEN KILOMETRES\" or \"SEVENTY-SEVEN KILOMETERS\" or \"SEVENTY SEVEN KILOMETERS\"."
+                    "no_answer": "No answer provided. The lecturer mentions: 'the travelling distance is measured at 77 kilometres.' Acceptable answers: \"77 KILOMETERS\" or \"77 KM\" or \"77 KMS\" or \"SEVENTY-SEVEN KILOMETRES\" or \"SEVENTY SEVEN KILOMETRES\" or \"SEVENTY-SEVEN KILOMETERS\" or \"SEVENTY SEVEN KILOMETERS\"."
                 },
                 "10": {
                     "correct": "\u2713 Excellent! The answer is \"MARS\". You listened carefully and identified the key information. Well done!",
                     "incorrect": "\u2717 Not quite. The answer is \"MARS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming. In IELTS Listening, answers appear in the same order as the questions.",
-                    "no_answer": "No answer provided. The answer is \"MARS\"."
+                    "no_answer": "No answer provided. The lecturer notes: 'certain scientists have claimed that Mars also appears to have an intricate system of canals.' The answer is \"MARS\"."
                 }
             }
         }
