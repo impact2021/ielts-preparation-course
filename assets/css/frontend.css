@@ -1787,6 +1787,29 @@ select.answer-select-inline.answer-incorrect {
     outline-offset: 2px;
 }
 
+/* Show in reading passage link for reading test feedback */
+.show-in-reading-passage-link {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 5px 12px;
+    background: #0073aa;
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.9em;
+    transition: background 0.2s ease;
+}
+
+.show-in-reading-passage-link:hover {
+    background: #005a87;
+    text-decoration: none;
+}
+
+.show-in-reading-passage-link:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
 /* Transcript question markers and highlighting */
 .transcript-answer-marker {
     position: relative;
@@ -3079,7 +3102,7 @@ body.ielts-quiz-focus-mode .question-navigation {
 body.ielts-quiz-focus-mode .reading-column,
 body.ielts-quiz-focus-mode .questions-column,
 body.ielts-quiz-focus-mode .listening-audio-column {
-    max-height: calc(100dvh - 180px) !important;
+    max-height: calc(100vh - 12rem) !important;
 }
 
 /* Focus mode responsive optimizations */
@@ -3087,7 +3110,7 @@ body.ielts-quiz-focus-mode .listening-audio-column {
     body.ielts-quiz-focus-mode .reading-column,
     body.ielts-quiz-focus-mode .questions-column,
     body.ielts-quiz-focus-mode .listening-audio-column {
-        max-height: calc(100dvh - 200px) !important;
+        max-height: calc(100vh - 13rem) !important;
     }
 }
 
@@ -3095,6 +3118,6 @@ body.ielts-quiz-focus-mode .listening-audio-column {
     body.ielts-quiz-focus-mode .reading-column,
     body.ielts-quiz-focus-mode .questions-column,
     body.ielts-quiz-focus-mode .listening-audio-column {
-        max-height: calc(100dvh - 220px) !important;
+        max-height: calc(100vh - 14rem) !important;
     }
 }
