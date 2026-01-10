@@ -68,195 +68,195 @@
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 3",
+            "instructions": "Questions 3 to 6\nComplete the form using NO MORE THAN TWO WORDS AND/OR A NUMBER.",
+            "question": "Customer's name: Sandra [field 1]",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"JACKSON\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"JACKSON\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"JACKSON\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"JACKSON\". The customer states her full name as \"Sandra Jackson\" when asked by the travel agent. Exact spelling is required. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! \"JACKSON\" is correct. You listened carefully when the customer gave her surname and spelled it correctly.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"JACKSON\" (exact spelling required). Listen when the travel agent asks \"Can you tell me your name please?\" The customer responds \"Sandra Jackson,\" and the agent confirms the spelling: \"Is that J-A-C-K-S-O-N?\" to which the customer replies \"That's right.\"",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "form_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "jackson"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"JACKSON\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"JACKSON\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"JACKSON\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! \"JACKSON\" is correct. You listened carefully when the customer gave her surname and spelled it correctly.",
+                    "incorrect": "✗ Not quite. The correct answer is \"JACKSON\" (exact spelling required). Listen when the travel agent asks \"Can you tell me your name please?\" The customer responds \"Sandra Jackson,\" and the agent confirms the spelling: \"Is that J-A-C-K-S-O-N?\" to which the customer replies \"That's right.\"",
+                    "no_answer": "No answer provided. The correct answer is \"JACKSON\". The customer states her full name as \"Sandra Jackson\" when asked by the travel agent. Exact spelling is required. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Form Completion"
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Question 4",
+            "question": "Contact number: 0151 [field 1] (home)",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"433 398\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"433 398\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"433 398\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"433 398\". The customer provides her home phone number when asked for contact details. If your answer was marked wrong but you have these numbers in this order, please let us know! In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! \"433 398\" is correct. You listened carefully and wrote down the phone number accurately.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"433 398\". Listen carefully when the travel agent asks \"Can I take an address and contact number?\" The customer responds with \"Well, my home number is 0151 433 398.\" If your answer was marked wrong but you have these numbers in this order, please let us know!",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "form_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "433 398|433398|43 33 98|4 3 3 3 9 8|4333 98"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"433 398\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"433 398\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"433 398\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! \"433 398\" is correct. You listened carefully and wrote down the phone number accurately.",
+                    "incorrect": "✗ Not quite. The correct answer is \"433 398\". Listen carefully when the travel agent asks \"Can I take an address and contact number?\" The customer responds with \"Well, my home number is 0151 433 398.\" If your answer was marked wrong but you have these numbers in this order, please let us know!",
+                    "no_answer": "No answer provided. The correct answer is \"433 398\". The customer provides her home phone number when asked for contact details. If your answer was marked wrong but you have these numbers in this order, please let us know! In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Form Completion"
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Question 5",
+            "question": "Flight number: [field 1]",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"VN217\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"VN217\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"VN217\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"VN217\". Note: This flight number is not explicitly mentioned in the transcript provided but would appear in the audio. If your answer was marked wrong but you have these letters and numbers in this order, please let us know! In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! \"VN217\" is correct. You listened carefully and noted the flight number accurately.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"VN217\". Listen carefully for the flight number mentioned in the conversation. If your answer was marked wrong but you have these letters and numbers in this order, please let us know!",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "form_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "vn217"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"VN217\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"VN217\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"VN217\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! \"VN217\" is correct. You listened carefully and noted the flight number accurately.",
+                    "incorrect": "✗ Not quite. The correct answer is \"VN217\". Listen carefully for the flight number mentioned in the conversation. If your answer was marked wrong but you have these letters and numbers in this order, please let us know!",
+                    "no_answer": "No answer provided. The correct answer is \"VN217\". Note: This flight number is not explicitly mentioned in the transcript provided but would appear in the audio. If your answer was marked wrong but you have these letters and numbers in this order, please let us know! In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Form Completion"
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Question 6",
+            "question": "Length of stay (nights): [field 1]",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"20\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"20\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"20\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"20\" or \"TWENTY\". The customer is going for three weeks, which equals 20 nights (from the 25th to the 15th). In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! \"20\" or \"TWENTY\" is correct. You calculated the length of stay correctly from the dates mentioned.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"20\" or \"TWENTY\". Listen when the customer says \"I'd like to go for three weeks\" and the final dates confirmed are \"from the 25th to the 15th\" - this is 20 nights (3 weeks = approximately 21 days/20 nights).",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "form_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "20|twenty"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"20\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"20\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"20\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! \"20\" or \"TWENTY\" is correct. You calculated the length of stay correctly from the dates mentioned.",
+                    "incorrect": "✗ Not quite. The correct answer is \"20\" or \"TWENTY\". Listen when the customer says \"I'd like to go for three weeks\" and the final dates confirmed are \"from the 25th to the 15th\" - this is 20 nights (3 weeks = approximately 21 days/20 nights).",
+                    "no_answer": "No answer provided. The correct answer is \"20\" or \"TWENTY\". The customer is going for three weeks, which equals 20 nights (from the 25th to the 15th). In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Form Completion"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 7",
+            "instructions": "Questions 7 to 10\nComplete the sentences below USING NO MORE THAN TWO WORDS OR A NUMBER",
+            "question": "The travel agent recommends some form of [field 1] cover for peace of mind.",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"TRAVEL INSURANCE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"TRAVEL INSURANCE\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"TRAVEL INSURANCE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"TRAVEL INSURANCE\", \"INSURANCE\", or \"TRAVEL\". The travel agent asks \"Do you have any travel insurance?\" and explains that they recommend all clients take some kind of cover for peace of mind. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! You listened carefully and identified the type of cover being discussed.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"TRAVEL INSURANCE\", \"INSURANCE\", or \"TRAVEL\". Listen when the travel agent says \"Do you have any travel insurance? We recommend all our clients take some kind of cover, even though most people don't end up needing it. Most people have it just for peace of mind.\"",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "travel insurance|insurance|travel"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"TRAVEL INSURANCE\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"TRAVEL INSURANCE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"TRAVEL INSURANCE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! You listened carefully and identified the type of cover being discussed.",
+                    "incorrect": "✗ Not quite. The correct answer is \"TRAVEL INSURANCE\", \"INSURANCE\", or \"TRAVEL\". Listen when the travel agent says \"Do you have any travel insurance? We recommend all our clients take some kind of cover, even though most people don't end up needing it. Most people have it just for peace of mind.\"",
+                    "no_answer": "No answer provided. The correct answer is \"TRAVEL INSURANCE\", \"INSURANCE\", or \"TRAVEL\". The travel agent asks \"Do you have any travel insurance?\" and explains that they recommend all clients take some kind of cover for peace of mind. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Sentence Completion"
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Question 8",
+            "question": "There are two types of cover, but the best cover is offered with the [field 1] Star policy.",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"GOLD\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"GOLD\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"GOLD\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"GOLD\". The travel agent mentions \"Our most comprehensive cover is the Gold Star, which will cost £21 for the period you are away.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! \"GOLD\" is correct. You identified the name of the best insurance policy.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"GOLD\". Listen when the travel agent says \"Our most comprehensive cover is the Gold Star\" - this is described as the best/most comprehensive policy available.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "gold"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"GOLD\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"GOLD\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"GOLD\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! \"GOLD\" is correct. You identified the name of the best insurance policy.",
+                    "incorrect": "✗ Not quite. The correct answer is \"GOLD\". Listen when the travel agent says \"Our most comprehensive cover is the Gold Star\" - this is described as the best/most comprehensive policy available.",
+                    "no_answer": "No answer provided. The correct answer is \"GOLD\". The travel agent mentions \"Our most comprehensive cover is the Gold Star, which will cost £21 for the period you are away.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Sentence Completion"
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Question 9",
+            "question": "The client can see a play at the theatre for $ [field 1]. (Note: Currency symbol is not needed as it is in the question)",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"54\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"54\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"54\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"54\" or \"FIFTY FOUR\". The travel agent mentions information about activities in Vancouver, including the theatre. Note: The currency symbol is not needed as it is already in the question. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! \"54\" or \"FIFTY FOUR\" is correct. You listened carefully for the price information.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"54\" or \"FIFTY FOUR\". Listen when the travel agent provides information about the Shakespeare play at the theatre and mentions it is \"quite expensive.\" Note: The currency symbol is not needed as it is already in the question.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
-                "1": "54|fifty four|fifty four"
+                "1": "54|fifty four|fifty-four"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"54\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"54\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"54\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! \"54\" or \"FIFTY FOUR\" is correct. You listened carefully for the price information.",
+                    "incorrect": "✗ Not quite. The correct answer is \"54\" or \"FIFTY FOUR\". Listen when the travel agent provides information about the Shakespeare play at the theatre and mentions it is \"quite expensive.\" Note: The currency symbol is not needed as it is already in the question.",
+                    "no_answer": "No answer provided. The correct answer is \"54\" or \"FIFTY FOUR\". The travel agent mentions information about activities in Vancouver, including the theatre. Note: The currency symbol is not needed as it is already in the question. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Sentence Completion"
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Question 10",
+            "question": "The flight and the insurance together costs £ [field 1]. (Note: Currency symbol is not needed as it is in the question)",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"433\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"433\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"433\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"433\". The travel agent says at the end \"So, it's the flight and the Gold Star insurance. That's… £433 in total.\" Note: The currency symbol is not needed as it is already in the question. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! \"433\" is correct. You listened carefully and calculated or heard the total cost.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"433\". Listen at the end when the travel agent summarizes: \"So, it's the flight and the Gold Star insurance. That's… £433 in total.\" Note: The currency symbol is not needed as it is already in the question.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "433"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"433\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"433\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"433\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! \"433\" is correct. You listened carefully and calculated or heard the total cost.",
+                    "incorrect": "✗ Not quite. The correct answer is \"433\". Listen at the end when the travel agent summarizes: \"So, it's the flight and the Gold Star insurance. That's… £433 in total.\" Note: The currency symbol is not needed as it is already in the question.",
+                    "no_answer": "No answer provided. The correct answer is \"433\". The travel agent says at the end \"So, it's the flight and the Gold Star insurance. That's… £433 in total.\" Note: The currency symbol is not needed as it is already in the question. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Sentence Completion"
         },
         {
             "type": "open_question",
