@@ -31,31 +31,15 @@ function process_transcript_markers_cbt($transcript, $starting_question = 1) {
         return $transcript;
     }
     
-    // Convert [Q#] or [q#] markers to anchor spans with highlighted answer text
-    // Pattern matches [Q1], [q1], [Q10], etc. and captures text after it
-    $pattern = '/\[Q(\d+)\]([^\[]*?)(?=\[Q|$)/is';
+    // Convert [Q#] markers to visible badges with anchor for hyperlinking
+    $pattern = '/\[Q(\d+)\]/i';
     
     $processed = preg_replace_callback($pattern, function($matches) use ($starting_question) {
         $question_num = intval($matches[1]);
-        $answer_text = isset($matches[2]) ? $matches[2] : '';
-        
-        // Adjust question number if there's a starting offset
         $display_num = $question_num;
         
-        // Trim the answer text to a reasonable length (first sentence or ~100 chars)
-        $trimmed_text = $answer_text;
-        // Find the first sentence ending (., !, ?, or line break) or take first ~100 chars
-        if (preg_match('/^([^\.!\?\r\n]{1,100}[\.!\?]?)/', $answer_text, $sentence_match)) {
-            $trimmed_text = $sentence_match[1];
-        } else if (strlen($answer_text) > 100) {
-            // Take first 100 chars if no sentence ending found
-            $trimmed_text = substr($answer_text, 0, 100);
-        }
-        
-        return '<span id="transcript-q' . $display_num . '" class="transcript-answer-marker" data-question="' . $display_num . '">' . 
-               '<span class="question-marker-badge">Q' . $display_num . '</span>' . 
-               esc_html($trimmed_text) .
-               '</span>';
+        // Return the anchor span with visible Q badge - simple button with anchor link
+        return '<span id="transcript-q' . $display_num . '" data-question="' . $display_num . '"><span class="question-marker-badge">Q' . $display_num . '</span></span>';
     }, $transcript);
     
     return $processed;

@@ -42,15 +42,15 @@ function process_transcript_markers($transcript, $starting_question = 1) {
         return $transcript;
     }
     
-    // Simply convert [Q#] markers to anchor spans for hyperlinking - don't modify the transcript text
+    // Convert [Q#] markers to visible badges with anchor for hyperlinking
     $pattern = '/\[Q(\d+)\]/i';
     
     $processed = preg_replace_callback($pattern, function($matches) use ($starting_question) {
         $question_num = intval($matches[1]);
         $display_num = $question_num;
         
-        // Just return the anchor span for the hyperlink - no text modification
-        return '<span id="transcript-q' . $display_num . '" class="transcript-answer-marker" data-question="' . $display_num . '"></span>';
+        // Return the anchor span with visible Q badge - simple button with anchor link
+        return '<span id="transcript-q' . $display_num . '" data-question="' . $display_num . '"><span class="question-marker-badge">Q' . $display_num . '</span></span>';
     }, $transcript);
     
     return $processed;
