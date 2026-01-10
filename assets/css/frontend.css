@@ -1211,7 +1211,7 @@ body.ielts-course-archive .content-area {
 }
 
 /* Responsive design for computer-based layout */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .computer-based-container {
         flex-direction: column;
     }
@@ -1794,8 +1794,8 @@ select.answer-select-inline.answer-incorrect {
 
 .question-marker-badge {
     display: inline-block;
-    background: #0073aa;
-    color: #fff;
+    background: #ffc107;
+    color: #333;
     padding: 2px 6px;
     border-radius: 3px;
     font-size: 0.85em;
