@@ -39,7 +39,7 @@ function process_transcript_markers_cbt($transcript, $starting_question = 1) {
         $display_num = $question_num;
         
         // Return the anchor span with visible Q badge - simple button with anchor link
-        return '<span id="transcript-q' . $display_num . '" data-question="' . $display_num . '"><span class="question-marker-badge">Q' . $display_num . '</span></span>';
+        return '<span id="transcript-q' . esc_attr($display_num) . '" data-question="' . esc_attr($display_num) . '"><span class="question-marker-badge">Q' . esc_html($display_num) . '</span></span>';
     }, $transcript);
     
     return $processed;
