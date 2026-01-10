@@ -984,27 +984,63 @@
                                         .attr('href', '#')
                                         .addClass('show-in-transcript-link')
                                         .attr('data-section', questionResult.audio_section_id)
+                                        .attr('data-question', questionNum)
                                         .text('Show in transcript')
                                         .on('click', function(e) {
                                             e.preventDefault();
                                             var sectionId = $(this).data('section');
+                                            var questionNumber = $(this).data('question');
                                             
                                             // Hide all transcript sections
                                             $('.transcript-section-content').hide();
                                             
                                             // Show the linked transcript section
-                                            $('#transcript-section-' + sectionId).fadeIn(300);
+                                            var $targetSection = $('#transcript-section-' + sectionId);
+                                            $targetSection.fadeIn(300);
                                             
                                             // Update tab active states
                                             $('.transcript-section-tab').removeClass('active');
                                             $('.transcript-section-tab[data-section="' + sectionId + '"]').addClass('active');
                                             
-                                            // Scroll to transcript
-                                            var transcriptContainer = $('#listening-transcript, #listening-transcripts');
-                                            if (transcriptContainer.length) {
-                                                $('html, body').animate({
-                                                    scrollTop: transcriptContainer.offset().top - 100
-                                                }, 500);
+                                            // Find and highlight the question marker in the transcript
+                                            var $questionMarker = $('#transcript-q' + questionNumber);
+                                            
+                                            // Remove any previous highlighting
+                                            $('.transcript-content .transcript-highlight').removeClass('transcript-highlight');
+                                            
+                                            if ($questionMarker.length) {
+                                                // Highlight the paragraph containing the marker
+                                                var $paragraph = $questionMarker.closest('p');
+                                                if ($paragraph.length) {
+                                                    $paragraph.addClass('transcript-highlight');
+                                                }
+                                                
+                                                // Scroll to the question marker
+                                                setTimeout(function() {
+                                                    // For CBT layout, scroll within the reading column
+                                                    var $readingColumn = $questionMarker.closest('.reading-column');
+                                                    if ($readingColumn.length) {
+                                                        // CBT layout - scroll within the column
+                                                        var markerOffset = $questionMarker.position().top;
+                                                        var columnScrollTop = $readingColumn.scrollTop();
+                                                        $readingColumn.animate({
+                                                            scrollTop: columnScrollTop + markerOffset - 100
+                                                        }, 500);
+                                                    } else {
+                                                        // Standard layout - scroll the whole page
+                                                        $('html, body').animate({
+                                                            scrollTop: $questionMarker.offset().top - 100
+                                                        }, 500);
+                                                    }
+                                                }, 350); // Wait for section fade-in
+                                            } else {
+                                                // If no marker found, just scroll to transcript container
+                                                var transcriptContainer = $('#listening-transcript, #listening-transcripts');
+                                                if (transcriptContainer.length) {
+                                                    $('html, body').animate({
+                                                        scrollTop: transcriptContainer.offset().top - 100
+                                                    }, 500);
+                                                }
                                             }
                                         });
                                     

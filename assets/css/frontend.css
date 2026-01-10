@@ -1786,6 +1786,45 @@ select.answer-select-inline.answer-incorrect {
     outline-offset: 2px;
 }
 
+/* Transcript question markers and highlighting */
+.transcript-answer-marker {
+    position: relative;
+    display: inline;
+}
+
+.question-marker-badge {
+    display: inline-block;
+    background: #0073aa;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    font-weight: bold;
+    margin: 0 4px;
+    vertical-align: baseline;
+}
+
+.transcript-highlight {
+    background-color: #fff9c4 !important; /* Yellow highlight */
+    padding: 12px 16px !important;
+    border-left: 4px solid #ffc107 !important;
+    margin: 10px 0 !important;
+    border-radius: 4px;
+    animation: highlightFadeIn 0.5s ease-in-out;
+}
+
+@keyframes highlightFadeIn {
+    0% {
+        background-color: #fff;
+    }
+    50% {
+        background-color: #ffeb3b;
+    }
+    100% {
+        background-color: #fff9c4;
+    }
+}
+
 /* Option-level feedback message displayed inside individual options */
 .option-feedback-message {
     display: block;
