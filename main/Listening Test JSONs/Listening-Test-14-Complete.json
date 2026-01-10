@@ -3,52 +3,68 @@
     "content": "Complete IELTS Listening Test 14 with all 4 sections (40 questions)",
     "questions": [
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 1",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "type": "closed_question",
+            "instructions": "Questions 1 and 2\nChoose the correct letter A–C.",
+            "question": "The travel agent:",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. can personally recommend Vancouver. The travel agent says \"Vancouver is lovely this time of year\" which shows personal recommendation. In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "b"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "thinks Europe is a good destination",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While the travel agent mentions \"There are also some special deals for Europe,\" this is just presenting an option, not a personal recommendation. The agent specifically says \"Vancouver is lovely this time of year,\" which shows a personal recommendation for Vancouver (Canada), not Europe."
+                },
+                {
+                    "text": "can personally recommend Vancouver",
+                    "is_correct": true,
+                    "feedback": "Correct! The travel agent says \"Vancouver is lovely this time of year\" which demonstrates a personal recommendation based on knowledge of the destination."
+                },
+                {
+                    "text": "does not think America is a good choice",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The travel agent never suggests America is not a good choice. In fact, they enthusiastically recommend Vancouver (in Canada, which is in North America) and say \"Vancouver is lovely this time of year.\""
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            ],
+            "options": "thinks Europe is a good destination\ncan personally recommend Vancouver\ndoes not think America is a good choice",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
-            "question": "Question 2",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "question": "The customer:",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. knows people living in Canada. The customer says \"I have some relatives over in Vancouver\" which shows they know people in Canada. In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "b"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "is going to Europe next year",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While the customer mentions \"I can always travel around Europe next year,\" this is just a possibility, not a definite plan. The customer is actually booking a trip to Vancouver, Canada right now."
+                },
+                {
+                    "text": "knows people living in Canada",
+                    "is_correct": true,
+                    "feedback": "Correct! The customer says \"I have some relatives over in Vancouver\" and later mentions \"I have a cousin I can stay with,\" which clearly shows they know people living in Canada."
+                },
+                {
+                    "text": "wants to go to the warmest place",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The customer never mentions wanting to go to the warmest place. They mention being interested in North America (specifically Canada) or Europe, and that they're \"on quite a tight budget,\" but warmth is not mentioned as a factor."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            ],
+            "options": "is going to Europe next year\nknows people living in Canada\nwants to go to the warmest place",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "open_question",
