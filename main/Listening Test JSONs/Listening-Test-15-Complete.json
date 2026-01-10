@@ -496,20 +496,16 @@
         },
         {
             "type": "open_question",
-            "instructions": "Questions 25 to 30\nComplete the table using NO MORE THAN TWO WORDS AND/OR A NUMBER.",
-            "question": "<table border='1' width='100%'><tbody><tr><td align='center'><strong>Food Group</strong></td><td align='center'><strong>Recommended % of diet</strong></td></tr><tr><td>Fruit and Vegetables</td><td>[field 1] %</td></tr><tr><td>Carbohydrates</td><td>[field 2] %</td></tr><tr><td>[field 3]</td><td>12%</td></tr><tr><td>[field 4]</td><td>15%</td></tr><tr><td>[field 5]</td><td>8%</td></tr><tr><td>[field 6]</td><td>8%</td></tr></tbody></table>",
-            "points": 6.0,
+            "instructions": "Questions 25 and 26\nComplete the table using NO MORE THAN TWO WORDS AND/OR A NUMBER.",
+            "question": "<table border='1' width='100%'><tbody><tr><td align='center'><strong>Food Group</strong></td><td align='center'><strong>Recommended % of diet</strong></td></tr><tr><td>Fruit and Vegetables</td><td>[field 1] %</td></tr><tr><td>Carbohydrates</td><td>[field 2] %</td></tr></tbody></table>",
+            "points": 2.0,
             "reading_text_id": null,
             "audio_section_id": 2,
             "ielts_question_category": "table_completion_l",
-            "field_count": 6,
+            "field_count": 2,
             "field_answers": {
                 "1": "21|twenty one|twenty-one",
-                "2": "44|forty four|forty-four",
-                "3": "cereals",
-                "4": "dairy",
-                "5": "white meat",
-                "6": "red meat"
+                "2": "44|forty four|forty-four"
             },
             "field_feedback": {
                 "1": {
@@ -521,29 +517,48 @@
                     "correct": "✓ Correct! Carbohydrates should be 44% of the diet - the largest portion.",
                     "incorrect": "✗ Incorrect. The correct answer is 44. Listen for the carbohydrate percentage in the recommended diet.",
                     "no_answer": "No answer provided. The correct answer is 44. This is the largest food group percentage mentioned."
-                },
-                "3": {
+                }
+            },
+            "ielts_question_type": "Table Completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 27 to 30\nLabel the following diagram using NO MORE THAN TWO WORDS.\n\nImage: https://www.ieltstestonline.com/wp-content/uploads/2018/12/TEST15.jpg",
+            "question": "Label the food pyramid diagram with the correct food groups:\n\n27. [field 1] (12%)\n28. [field 2] (15%)\n29. [field 3] (8%)\n30. [field 4] (8%)",
+            "points": 4.0,
+            "reading_text_id": null,
+            "audio_section_id": 2,
+            "ielts_question_category": "diagram_labelling_l",
+            "field_count": 4,
+            "field_answers": {
+                "1": "cereals",
+                "2": "dairy",
+                "3": "white meat",
+                "4": "red meat"
+            },
+            "field_feedback": {
+                "1": {
                     "correct": "✓ Correct! CEREALS comprise 12% of the recommended diet.",
                     "incorrect": "✗ Incorrect. The correct answer is CEREALS. Listen for which food group accounts for 12%.",
                     "no_answer": "No answer provided. The correct answer is CEREALS. This food group is at 12% of the diet."
                 },
-                "4": {
+                "2": {
                     "correct": "✓ Correct! DAIRY products make up 15% of the recommended diet.",
                     "incorrect": "✗ Incorrect. The correct answer is DAIRY. Listen for the 15% food category.",
                     "no_answer": "No answer provided. The correct answer is DAIRY. This accounts for 15% in the nutritional breakdown."
                 },
-                "5": {
+                "3": {
                     "correct": "✓ Correct! WHITE MEAT should be 8% of the diet.",
                     "incorrect": "✗ Incorrect. The correct answer is WHITE MEAT. Listen for the protein sources and their percentages.",
                     "no_answer": "No answer provided. The correct answer is WHITE MEAT. One of the 8% categories in the table."
                 },
-                "6": {
+                "4": {
                     "correct": "✓ Correct! RED MEAT should also be 8% of the diet.",
                     "incorrect": "✗ Incorrect. The correct answer is RED MEAT. This is the other 8% protein category.",
                     "no_answer": "No answer provided. The correct answer is RED MEAT. The final 8% category mentioned."
                 }
             },
-            "ielts_question_type": "Table Completion"
+            "ielts_question_type": "Diagram Labelling"
         },
         {
             "type": "open_question",
