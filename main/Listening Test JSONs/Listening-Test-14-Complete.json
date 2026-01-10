@@ -69,92 +69,38 @@
         {
             "type": "open_question",
             "instructions": "Questions 3 to 6\nComplete the form using NO MORE THAN TWO WORDS AND/OR A NUMBER.",
-            "question": "Customer's name: Sandra [field 1]",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"JACKSON\". The customer states her full name as \"Sandra Jackson\" when asked by the travel agent. Exact spelling is required. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "✓ Excellent! \"JACKSON\" is correct. You listened carefully when the customer gave her surname and spelled it correctly.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"JACKSON\" (exact spelling required). Listen when the travel agent asks \"Can you tell me your name please?\" The customer responds \"Sandra Jackson,\" and the agent confirms the spelling: \"Is that J-A-C-K-S-O-N?\" to which the customer replies \"That's right.\"",
+            "question": "<table border='1' width='100%'><tr><td colspan='2'><strong>The Travel Depot flight reservations</strong></td></tr><tr><td>Customer's name:</td><td>Sandra [field 1]</td></tr><tr><td>Address</td><td>10 Allen Road, Oldham</td></tr><tr><td>Destination</td><td>Vancouver, Canada</td></tr><tr><td>Contact number:</td><td>0151 [field 2] (home)</td></tr><tr><td>Flight number</td><td>[field 3]</td></tr><tr><td>Length of stay (nights):</td><td>[field 4]</td></tr></table>",
+            "points": 4.0,
+            "no_answer_feedback": "No answers provided. Make sure to listen carefully for all the details in the conversation. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
             "ielts_question_category": "form_completion_l",
-            "field_count": 1,
+            "field_count": 4,
             "field_answers": {
-                "1": "jackson"
+                "1": "jackson",
+                "2": "433 398|433398|43 33 98|4 3 3 3 9 8|4333 98",
+                "3": "vn217",
+                "4": "20|twenty"
             },
             "field_feedback": {
                 "1": {
                     "correct": "✓ Excellent! \"JACKSON\" is correct. You listened carefully when the customer gave her surname and spelled it correctly.",
                     "incorrect": "✗ Not quite. The correct answer is \"JACKSON\" (exact spelling required). Listen when the travel agent asks \"Can you tell me your name please?\" The customer responds \"Sandra Jackson,\" and the agent confirms the spelling: \"Is that J-A-C-K-S-O-N?\" to which the customer replies \"That's right.\"",
                     "no_answer": "No answer provided. The correct answer is \"JACKSON\". The customer states her full name as \"Sandra Jackson\" when asked by the travel agent. Exact spelling is required. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
-                }
-            },
-            "ielts_question_type": "Form Completion"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Contact number: 0151 [field 1] (home)",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"433 398\". The customer provides her home phone number when asked for contact details. If your answer was marked wrong but you have these numbers in this order, please let us know! In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "✓ Excellent! \"433 398\" is correct. You listened carefully and wrote down the phone number accurately.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"433 398\". Listen carefully when the travel agent asks \"Can I take an address and contact number?\" The customer responds with \"Well, my home number is 0151 433 398.\" If your answer was marked wrong but you have these numbers in this order, please let us know!",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "form_completion_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "433 398|433398|43 33 98|4 3 3 3 9 8|4333 98"
-            },
-            "field_feedback": {
-                "1": {
+                },
+                "2": {
                     "correct": "✓ Excellent! \"433 398\" is correct. You listened carefully and wrote down the phone number accurately.",
                     "incorrect": "✗ Not quite. The correct answer is \"433 398\". Listen carefully when the travel agent asks \"Can I take an address and contact number?\" The customer responds with \"Well, my home number is 0151 433 398.\" If your answer was marked wrong but you have these numbers in this order, please let us know!",
                     "no_answer": "No answer provided. The correct answer is \"433 398\". The customer provides her home phone number when asked for contact details. If your answer was marked wrong but you have these numbers in this order, please let us know! In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
-                }
-            },
-            "ielts_question_type": "Form Completion"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Flight number: [field 1]",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"VN217\". Note: This flight number is not explicitly mentioned in the transcript provided but would appear in the audio. If your answer was marked wrong but you have these letters and numbers in this order, please let us know! In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "✓ Excellent! \"VN217\" is correct. You listened carefully and noted the flight number accurately.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"VN217\". Listen carefully for the flight number mentioned in the conversation. If your answer was marked wrong but you have these letters and numbers in this order, please let us know!",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "form_completion_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "vn217"
-            },
-            "field_feedback": {
-                "1": {
+                },
+                "3": {
                     "correct": "✓ Excellent! \"VN217\" is correct. You listened carefully and noted the flight number accurately.",
                     "incorrect": "✗ Not quite. The correct answer is \"VN217\". Listen carefully for the flight number mentioned in the conversation. If your answer was marked wrong but you have these letters and numbers in this order, please let us know!",
                     "no_answer": "No answer provided. The correct answer is \"VN217\". Note: This flight number is not explicitly mentioned in the transcript provided but would appear in the audio. If your answer was marked wrong but you have these letters and numbers in this order, please let us know! In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
-                }
-            },
-            "ielts_question_type": "Form Completion"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Length of stay (nights): [field 1]",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"20\" or \"TWENTY\". The customer is going for three weeks, which equals 20 nights (from the 25th to the 15th). In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "✓ Excellent! \"20\" or \"TWENTY\" is correct. You calculated the length of stay correctly from the dates mentioned.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"20\" or \"TWENTY\". Listen when the customer says \"I'd like to go for three weeks\" and the final dates confirmed are \"from the 25th to the 15th\" - this is 20 nights (3 weeks = approximately 21 days/20 nights).",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "form_completion_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "20|twenty"
-            },
-            "field_feedback": {
-                "1": {
+                },
+                "4": {
                     "correct": "✓ Excellent! \"20\" or \"TWENTY\" is correct. You calculated the length of stay correctly from the dates mentioned.",
                     "incorrect": "✗ Not quite. The correct answer is \"20\" or \"TWENTY\". Listen when the customer says \"I'd like to go for three weeks\" and the final dates confirmed are \"from the 25th to the 15th\" - this is 20 nights (3 weeks = approximately 21 days/20 nights).",
                     "no_answer": "No answer provided. The correct answer is \"20\" or \"TWENTY\". The customer is going for three weeks, which equals 20 nights (from the 25th to the 15th). In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
@@ -656,387 +602,267 @@
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 5",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"FIFTY THOUSAND\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"FIFTY THOUSAND\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"FIFTY THOUSAND\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "instructions": "Questions 25 to 28\nComplete the table below using NO MORE THAN THREE WORDS OR A NUMBER.",
+            "question": "<table border='1' width='100%'><tr><td></td><td><strong>Threat</strong></td><td align='center'><strong>Natural habitat</strong></td><td align='center'><strong>Population</strong></td></tr><tr><td align='center'>African lions</td><td align='center'></td><td align='center'>bush</td><td align='center'>Estimated to be [field 1]</td></tr><tr><td align='center'>Tigers</td><td align='center'>[field 2]</td><td align='center'>forests and plains</td><td align='center'>fewer than [field 3]</td></tr><tr><td align='center'>Snow leopards</td><td align='center'>Expansion of [field 4]</td><td align='center'>high-altitude pastures</td><td align='center'></td></tr></table>",
+            "points": 4.0,
+            "no_answer_feedback": "No answers provided. Make sure to listen carefully for all the details about different cat species. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
+            "audio_section_id": 2,
+            "ielts_question_category": "table_completion_l",
+            "field_count": 4,
             "field_answers": {
-                "1": "fifty thousand|fifty-thousand|50 000|50,000|50000|50, 000|50 thousand"
+                "1": "fifty thousand|fifty-thousand|50 000|50,000|50000|50, 000|50 thousand",
+                "2": "hunters",
+                "3": "6000|6,000|6 000|6 thousand|six thousand",
+                "4": "agriculture"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"FIFTY THOUSAND\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"FIFTY THOUSAND\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"FIFTY THOUSAND\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! You correctly identified the estimated lion population.",
+                    "incorrect": "✗ Not quite. The correct answer is \"FIFTY THOUSAND\" (or \"50,000\" or \"50 THOUSAND\"). Listen when the interviewer asks \"Can you tell me the current lion population in Africa these days?\" and Professor Ripley responds: \"Figures range from 100 000, to as few as 30 000, but it is generally estimated that there are 50 000.\"",
+                    "no_answer": "No answer provided. The correct answer is \"FIFTY THOUSAND\" (or \"50,000\" or \"50 THOUSAND\"). The interviewer asks about the lion population and Professor Ripley responds: \"it is generally estimated that there are 50 000.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
+                },
+                "2": {
+                    "correct": "✓ Excellent! You correctly identified the main threat to tigers.",
+                    "incorrect": "✗ Not quite. The correct answer is \"HUNTERS\". Listen when Professor Ripley says: \"For different reasons, a number of species of the cat family are endangered. Sometimes due to natural predators or environmental changes, but mainly because of the threat of hunters.\" They specifically discuss tigers in this context.",
+                    "no_answer": "No answer provided. The correct answer is \"HUNTERS\". Professor Ripley explains that tigers face threats \"mainly because of the threat of hunters\" and mentions that \"the bones and body parts of tigers have been, and still are, traditionally used in medicines.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
+                },
+                "3": {
+                    "correct": "✓ Excellent! You correctly identified the tiger population number.",
+                    "incorrect": "✗ Not quite. The correct answer is \"6000\" (or \"6,000\" or \"SIX THOUSAND\"). Listen when Professor Ripley discusses tigers and says: \"Because of this and the demand for medicine made from tiger parts, their numbers have been falling for some time and to date there are fewer than 6000 tigers living in their natural habitat of the forests and plains of Asia.\"",
+                    "no_answer": "No answer provided. The correct answer is \"6000\" (or \"6,000\" or \"SIX THOUSAND\"). Professor Ripley states: \"to date there are fewer than 6000 tigers living in their natural habitat.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
+                },
+                "4": {
+                    "correct": "✓ Excellent! You correctly identified the threat to snow leopards.",
+                    "incorrect": "✗ Not quite. The correct answer is \"AGRICULTURE\". Listen when Professor Ripley discusses the snow leopard: \"Poaching has been a problem, but not the most important. its natural prey—the animals it hunts — is declining too. its natural habitat in high-altitude areas, specifically the pastures, is threatened by the growth of agriculture. lt is this that is causing the main problem for the snow leopard.\"",
+                    "no_answer": "No answer provided. The correct answer is \"AGRICULTURE\". Professor Ripley explains that the snow leopard's \"natural habitat in high-altitude areas, specifically the pastures, is threatened by the growth of agriculture.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Table Completion"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 29 to 30\nCircle the appropriate letter A–D.",
+            "question": "Where is the WWF currently funding projects to help the snow leopard?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. Nepal and Pakistan. Professor Ripley says the WWF \"has been working hard to continue to fund projects to aid the snow leopard in Nepal and Pakistan, and hopefully Bhutan very soon.\" In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 2,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "Nepal, Pakistan and Bhutan",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While all three countries are mentioned, Bhutan is not currently being funded. Professor Ripley says the WWF has been funding projects in \"Nepal and Pakistan, and hopefully Bhutan very soon\" - meaning Bhutan is a future possibility, not current."
+                },
+                {
+                    "text": "Nepal and Pakistan",
+                    "is_correct": true,
+                    "feedback": "Correct! Professor Ripley clearly states: \"the WWF has been working hard to continue to fund projects to aid the snow leopard in Nepal and Pakistan, and hopefully Bhutan very soon.\""
+                },
+                {
+                    "text": "Bhutan and Nepal",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While both countries are mentioned, the WWF is currently funding projects in Nepal and Pakistan. Bhutan is mentioned as \"hopefully very soon,\" indicating it's a future plan, not currently funded."
+                },
+                {
+                    "text": "Pakistan and Bhutan",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The WWF is currently funding projects in Nepal and Pakistan. Bhutan is mentioned as \"hopefully very soon,\" meaning projects there are planned for the future, not currently active."
+                }
+            ],
+            "options": "Nepal, Pakistan and Bhutan\nNepal and Pakistan\nBhutan and Nepal\nPakistan and Bhutan",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Listeners should telephone",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. in 10 minutes if they have anything they want to ask the professor. The interviewer says: \"Remember listeners, there will be an opportunity to phone in and voice any opinions or questions you may have for the professor in ten minutes.\" In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 2,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "immediately if they want to put forward an opinion",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The interviewer does not say to call immediately. They specifically state: \"there will be an opportunity to phone in and voice any opinions or questions you may have for the professor in ten minutes,\" meaning listeners should wait 10 minutes."
+                },
+                {
+                    "text": "during the commercial break",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While the interviewer mentions \"we are just going into a short commercial break,\" they don't say to call during the break. They say listeners can call \"in ten minutes.\""
+                },
+                {
+                    "text": "in 10 minutes if they have anything they want to ask the professor",
+                    "is_correct": true,
+                    "feedback": "Correct! The interviewer clearly states: \"Remember listeners, there will be an opportunity to phone in and voice any opinions or questions you may have for the professor in ten minutes.\""
+                },
+                {
+                    "text": "if they have any information regarding pumas or jaguars",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The interviewer mentions pumas and jaguars as topics they will discuss after the break (\"When we come back l have a few questions for you about the puma and the jaguar\"), but doesn't ask listeners to call with information about these animals."
+                }
+            ],
+            "options": "immediately if they want to put forward an opinion\nduring the commercial break\nin 10 minutes if they have anything they want to ask the professor\nif they have any information regarding pumas or jaguars",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 31-40\n\nQuestion 31\nCircle the correct answer A–C.",
+            "question": "The students will be listening to…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. a guest speaker. The announcer says: \"the lecture on overpopulation has been postponed until next week as we have a guest speaker today.\" In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 3,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "a lecture on overpopulation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The announcer specifically states: \"the lecture on overpopulation has been postponed until next week as we have a guest speaker today,\" meaning they will NOT be listening to the overpopulation lecture today."
+                },
+                {
+                    "text": "last Monday's lecture",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The announcer mentions \"As I told you all on Monday,\" referring to when they informed students about the schedule change, not that they will listen to Monday's lecture."
+                },
+                {
+                    "text": "a guest speaker",
+                    "is_correct": true,
+                    "feedback": "Correct! The announcer says: \"the lecture on overpopulation has been postponed until next week as we have a guest speaker today. l'd like to introduce you all to Donald Mackenzie, who has recently returned from a 12-month research project in America.\""
+                }
+            ],
+            "options": "a lecture on overpopulation\nlast Monday's lecture\na guest speaker",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 6",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"HUNTERS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"HUNTERS\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"HUNTERS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "instructions": "Questions 32 to 36\nComplete the table below using TWO WORDS OR A NUMBER.",
+            "question": "<table border='1' width='100%'><tr><td colspan='4' align='left'><strong>Illiteracy costs</strong><br/>42 million adults [field 1]<br/>50 million adults have the reading ability of a [field 2]-year-old.<br/>Increasing by around [field 3] and a quarter million per year.</td></tr><tr><td align='center'>&nbsp;</td><td align='center'>Unemployment</td><td align='center'>Unrealised earnings</td><td align='center'>Literacy programmes</td></tr><tr><td align='center'>cost (in billions of US dollars)</td><td align='center'>$ [field 4]</td><td align='center'>237</td><td align='center'>$ [field 5]</td></tr></table>",
+            "points": 5.0,
+            "no_answer_feedback": "No answers provided. Make sure to listen carefully for all the details about illiteracy statistics and costs. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
+            "audio_section_id": 3,
+            "ielts_question_category": "table_completion_l",
+            "field_count": 5,
             "field_answers": {
-                "1": "hunters"
+                "1": "cannot read|can't read|cant read",
+                "2": "10|ten",
+                "3": "two|2",
+                "4": "6|six",
+                "5": "10|ten"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"HUNTERS\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"HUNTERS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"HUNTERS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! You correctly identified what 42 million adults cannot do.",
+                    "incorrect": "✗ Not quite. The correct answer is \"CANNOT READ\" (or \"CAN'T READ\"). Listen when Donald Mackenzie says: \"in America alone, 42 million adults cannot read and 50 million can recognise so few printed words they each have the reading ability of a 10-year-old.\"",
+                    "no_answer": "No answer provided. The correct answer is \"CANNOT READ\" (or \"CAN'T READ\"). Donald Mackenzie states: \"in America alone, 42 million adults cannot read.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
+                },
+                "2": {
+                    "correct": "✓ Excellent! You correctly identified the reading age level.",
+                    "incorrect": "✗ Not quite. The correct answer is \"10\" (or \"TEN\"). Listen when Donald Mackenzie says: \"in America alone, 42 million adults cannot read and 50 million can recognise so few printed words they each have the reading ability of a 10-year-old.\"",
+                    "no_answer": "No answer provided. The correct answer is \"10\" (or \"TEN\"). Donald Mackenzie says: \"50 million can recognise so few printed words they each have the reading ability of a 10-year-old.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
+                },
+                "3": {
+                    "correct": "✓ Excellent! You correctly identified the annual increase rate.",
+                    "incorrect": "✗ Not quite. The correct answer is \"TWO\" (or \"2\"). Listen when Donald Mackenzie says: \"the number of illiterate adults is increasing by approximately two and a quarter million people each year.\"",
+                    "no_answer": "No answer provided. The correct answer is \"TWO\" (or \"2\"). Donald Mackenzie states: \"the number of illiterate adults is increasing by approximately two and a quarter million people each year.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
+                },
+                "4": {
+                    "correct": "✓ Excellent! You correctly identified the unemployment cost.",
+                    "incorrect": "✗ Not quite. The correct answer is \"6\" (or \"SIX\"). Listen when Donald Mackenzie discusses the costs of illiteracy and mentions the unemployment cost is 6 billion dollars.",
+                    "no_answer": "No answer provided. The correct answer is \"6\" (or \"SIX\"). The cost of unemployment due to illiteracy is 6 billion US dollars. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
+                },
+                "5": {
+                    "correct": "✓ Excellent! You correctly identified the literacy programmes cost.",
+                    "incorrect": "✗ Not quite. The correct answer is \"10\" (or \"TEN\"). Listen when Donald Mackenzie discusses the costs and mentions that literacy programmes cost 10 billion dollars.",
+                    "no_answer": "No answer provided. The correct answer is \"10\" (or \"TEN\"). The cost of literacy programmes is 10 billion US dollars. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Table Completion"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Question 37\nCircle the appropriate letter A–D.",
+            "question": "Illiteracy is increasing because many young learners are",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A. not being taught how to break words into sounds. Donald Mackenzie explains the importance of phonetic instruction in learning to read. In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 3,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "not being taught how to break words into sounds",
+                    "is_correct": true,
+                    "feedback": "Correct! Donald Mackenzie discusses the importance of phonetics and explains that proper instruction should teach students how to break words down into sounds, which is essential for reading."
+                },
+                {
+                    "text": "given word lists which are too long",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Donald Mackenzie discusses teaching methods, the issue isn't about word lists being too long. The main problem relates to not teaching students phonetic skills to break words into sounds."
+                },
+                {
+                    "text": "not challenged enough in the classroom",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The speaker doesn't mention lack of challenge as the reason for increasing illiteracy. The focus is on teaching methodology, specifically the lack of phonetic instruction."
+                }
+            ],
+            "options": "not being taught how to break words into sounds\ngiven word lists which are too long\nnot challenged enough in the classroom",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 7",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"6000\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"6000\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"6000\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "instructions": "Questions 38 to 40\nComplete the summary below USING NO MORE THAN TWO WORDS.",
+            "question": "English is made up of 26 letters, with 44 [field 1] and 70 ways to [field 2] those sounds. Unsuccessful teaching practices persist, however, because reading is [field 3].",
+            "points": 3.0,
+            "no_answer_feedback": "No answers provided. Listen carefully to Donald Mackenzie's explanation about the English language and why certain teaching practices continue. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
+            "audio_section_id": 3,
+            "ielts_question_category": "summary_completion_l",
+            "field_count": 3,
             "field_answers": {
-                "1": "6000|6,000|6 000|6 thousand|six thousand"
+                "1": "sounds",
+                "2": "spell",
+                "3": "big business"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"6000\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"6000\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"6000\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! \"SOUNDS\" is correct. You identified the key component of English phonetics.",
+                    "incorrect": "✗ Not quite. The correct answer is \"SOUNDS\". Listen when Donald Mackenzie explains the structure of English: \"English is made up of 26 letters which when manipulated can be turned into 44 sounds.\"",
+                    "no_answer": "No answer provided. The correct answer is \"SOUNDS\". Donald Mackenzie explains that English has 44 sounds. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
+                },
+                "2": {
+                    "correct": "✓ Excellent! \"SPELL\" is correct. You identified what can be done with the sounds in different ways.",
+                    "incorrect": "✗ Not quite. The correct answer is \"SPELL\". Listen when Donald Mackenzie says: \"Those 44 sounds can then be spelt or written in 70 different ways.\"",
+                    "no_answer": "No answer provided. The correct answer is \"SPELL\". Donald Mackenzie explains there are 70 ways to spell the sounds. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
+                },
+                "3": {
+                    "correct": "✓ Excellent! \"BIG BUSINESS\" is correct. You identified why unsuccessful practices continue.",
+                    "incorrect": "✗ Not quite. The correct answer is \"BIG BUSINESS\". Listen when Donald Mackenzie explains why ineffective teaching methods persist: \"The reason unsuccessful teaching practices continue is because reading is big business.\"",
+                    "no_answer": "No answer provided. The correct answer is \"BIG BUSINESS\". Donald Mackenzie explains that reading is big business, which is why unsuccessful practices persist. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 8",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"AGRICULTURE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"AGRICULTURE\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"AGRICULTURE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "agriculture"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"AGRICULTURE\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"AGRICULTURE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"AGRICULTURE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 9",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "b"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 10",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"C\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"C\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"C\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "c"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"C\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"C\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"C\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 1",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"C\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"C\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"C\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "c"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"C\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"C\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"C\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 2",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"CANNOT READ\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"CANNOT READ\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"CANNOT READ\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "cannot read|can't read|cant read"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"CANNOT READ\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"CANNOT READ\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"CANNOT READ\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 3",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"10\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"10\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"10\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "10|ten"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"10\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"10\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"10\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 4",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"TWO\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"TWO\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"TWO\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "two|2"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"TWO\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"TWO\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"TWO\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 5",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"6\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"6\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"6\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "6|six"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"6\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"6\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"6\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 6",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"10\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"10\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"10\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "10|ten"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"10\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"10\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"10\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 7",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"A\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"A\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"A\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "a"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"A\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"A\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"A\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 8",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"SOUNDS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"SOUNDS\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"SOUNDS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "sounds"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"SOUNDS\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"SOUNDS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"SOUNDS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 9",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"SPELL\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"SPELL\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"SPELL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "spell"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"SPELL\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"SPELL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"SPELL\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 10",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"BIG BUSINESS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"BIG BUSINESS\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"BIG BUSINESS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "big business"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"BIG BUSINESS\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"BIG BUSINESS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"BIG BUSINESS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Summary Completion"
         }
     ],
     "reading_texts": [],
