@@ -4,1002 +4,787 @@
     "questions": [
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 1",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"HAWBERRY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"HAWBERRY\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"HAWBERRY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "instructions": "Questions 1-5. Complete the form below with the applicant's personal details using NO MORE THAN THREE WORDS OR A NUMBER.",
+            "question": "<table border='1' width='100%' cellspacing='0' cellpadding='0'><tbody><tr><td class='style1' valign='top'><strong>Applicant information form:</strong><br>Name: Anne [field 1]<br>D.O.B.: 22nd of [field 2], 1981<br>Address: [field 3] Simon Place, Brighton<br>Contact number: (01903) [field 4]<br>Mobile: [field 5]</td></tr></tbody></table>",
+            "points": 5.0,
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
+            "ielts_question_category": "form_completion_l",
+            "field_count": 5,
             "field_answers": {
-                "1": "hawberry"
+                "1": "hawberry",
+                "2": "may",
+                "3": "26|twenty six|twenty-six",
+                "4": "714721|714 721",
+                "5": "no mobile phone|no mobile|none"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"HAWBERRY\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"HAWBERRY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"HAWBERRY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! HAWBERRY is the applicant's surname. The admissions officer confirms the spelling: 'H-A-W-B-E-R-R-Y'.",
+                    "incorrect": "✗ Incorrect. The correct answer is HAWBERRY. Listen for when Anne states 'It's Anne Hawberry' and the officer confirms the spelling.",
+                    "no_answer": "No answer provided. The correct answer is HAWBERRY. Listen carefully when the applicant introduces herself at the beginning of the conversation."
+                },
+                "2": {
+                    "correct": "✓ Correct! MAY is the month of birth. Anne states her date of birth is '22 May 1981'.",
+                    "incorrect": "✗ Incorrect. The correct answer is MAY. Listen for when Anne gives her complete date of birth.",
+                    "no_answer": "No answer provided. The correct answer is MAY. The applicant provides her full date of birth during the personal details section."
+                },
+                "3": {
+                    "correct": "✓ Correct! The address is 26 Simon Place. Anne clearly states this when providing her contact details.",
+                    "incorrect": "✗ Incorrect. The correct answer is 26. Listen carefully when Anne provides her full address.",
+                    "no_answer": "No answer provided. The correct answer is 26. Pay attention to the address details given by the applicant."
+                },
+                "4": {
+                    "correct": "✓ Correct! 714721 is the phone number (after 01903). Anne repeats this number when asked to confirm.",
+                    "incorrect": "✗ Incorrect. The correct answer is 714721 (or 534 345 based on one mention, but she corrects to 714 721). Note: If your answer was marked wrong but you have 714721, please let us know!",
+                    "no_answer": "No answer provided. The correct answer is 714721. Listen when Anne provides and then repeats her contact number."
+                },
+                "5": {
+                    "correct": "✓ Correct! Anne does not have a mobile phone. She explicitly states 'No, I don't' when asked.",
+                    "incorrect": "✗ Incorrect. The correct answer is NO MOBILE PHONE (or similar). Anne clearly states she doesn't have one.",
+                    "no_answer": "No answer provided. The correct answer is NO MOBILE PHONE. Listen when the admissions officer asks about mobile phone details."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Form Completion"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 2",
+            "instructions": "Questions 6 to 10\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+            "question": "6. What is the applicant's current job?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"MAY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"MAY\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"MAY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "may"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"MAY\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"MAY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"MAY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 3",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"26\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"26\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"26\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "26|twenty six"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"26\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"26\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"26\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 4",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"714721\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"714721\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"714721\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "714721"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"714721\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"714721\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"714721\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 5",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"NO MOBILE PHONE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"NO MOBILE PHONE\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"NO MOBILE PHONE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "no mobile phone"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"NO MOBILE PHONE\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"NO MOBILE PHONE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"NO MOBILE PHONE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 6",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"SECRETARY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"SECRETARY\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"SECRETARY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "secretary"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"SECRETARY\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"SECRETARY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"SECRETARY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! Anne works as a SECRETARY. She states 'I am working for Lloyd Enterprises in the city as a secretary'.",
+                    "incorrect": "✗ Incorrect. The correct answer is SECRETARY. Listen when Anne describes her current employment.",
+                    "no_answer": "No answer provided. The correct answer is SECRETARY. Anne mentions her current job when discussing her work experience."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 7",
+            "instructions": "Questions 6 to 10\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+            "question": "7. What university course has she already completed?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"BUSINESS DEGREE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"BUSINESS DEGREE\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"BUSINESS DEGREE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "business degree|a business degree|business"
+                "1": "business|business degree|a business degree|a business"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"BUSINESS DEGREE\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"BUSINESS DEGREE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"BUSINESS DEGREE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! Anne completed a BUSINESS DEGREE. She mentions 'I completed a degree in Business degree a year ago'.",
+                    "incorrect": "✗ Incorrect. The correct answer is BUSINESS (DEGREE). Listen when Anne discusses her educational background.",
+                    "no_answer": "No answer provided. The correct answer is BUSINESS (DEGREE). Pay attention when Anne talks about her qualifications."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 8",
+            "instructions": "Questions 6 to 10\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+            "question": "8. Why does the MBA course get full quickly?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"EXTREMELY POPULAR\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"EXTREMELY POPULAR\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"EXTREMELY POPULAR\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "extremely popular|it's extremely popular"
+                "1": "it's extremely popular|extremely popular|it is extremely popular"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"EXTREMELY POPULAR\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"EXTREMELY POPULAR\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"EXTREMELY POPULAR\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! The MBA is EXTREMELY POPULAR. The admissions officer warns: 'our MBA programme is extremely popular and gets full quickly'.",
+                    "incorrect": "✗ Incorrect. The correct answer is IT'S EXTREMELY POPULAR. Listen to the admissions officer's warning about the MBA programme.",
+                    "no_answer": "No answer provided. The correct answer is IT'S EXTREMELY POPULAR. The officer explains why she should consider alternatives."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 9",
+            "instructions": "Questions 6 to 10\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+            "question": "9. What is her second choice?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"INTERNATIONAL MARKETING\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"INTERNATIONAL MARKETING\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"INTERNATIONAL MARKETING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "international marketing|international marketing course"
+                "1": "international marketing|international marketing course|ma in international marketing"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"INTERNATIONAL MARKETING\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"INTERNATIONAL MARKETING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"INTERNATIONAL MARKETING\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! Her second choice is INTERNATIONAL MARKETING. Anne says 'I would also be interested in the MA in International Marketing'.",
+                    "incorrect": "✗ Incorrect. The correct answer is INTERNATIONAL MARKETING (COURSE). Listen when Anne discusses alternative courses.",
+                    "no_answer": "No answer provided. The correct answer is INTERNATIONAL MARKETING. Anne mentions this as her backup option."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 10",
+            "instructions": "Questions 6 to 10\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+            "question": "10. Which department will contact the applicant?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"ADMISSIONS DEPARTMENT\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"ADMISSIONS DEPARTMENT\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"ADMISSIONS DEPARTMENT\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
             "audio_section_id": 0,
-            "ielts_question_category": "",
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "admissions department|admissions|admission"
+                "1": "admissions|admissions department|the admissions department"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"ADMISSIONS DEPARTMENT\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"ADMISSIONS DEPARTMENT\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"ADMISSIONS DEPARTMENT\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! The ADMISSIONS DEPARTMENT will contact her. The officer states 'I will pass your details on to our admissions department'.",
+                    "incorrect": "✗ Incorrect. The correct answer is ADMISSIONS DEPARTMENT. Listen at the end when the officer explains the next steps.",
+                    "no_answer": "No answer provided. The correct answer is ADMISSIONS DEPARTMENT. Pay attention to the officer's closing remarks about the application process."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 1",
+            "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
+            "question": "11. Specific lifestyle changes for whom is the speaker talking about?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"WOMEN\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"WOMEN\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"WOMEN\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "women|for women|changes for women"
+                "1": "women|changes for women|changes for women|for women"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"WOMEN\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"WOMEN\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"WOMEN\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! The speaker discusses lifestyle CHANGES FOR WOMEN (or just WOMEN). The transcript references changes in women's roles and lifestyles.",
+                    "incorrect": "✗ Incorrect. The correct answer is WOMEN or CHANGES FOR WOMEN. Listen for references to who has experienced lifestyle changes.",
+                    "no_answer": "No answer provided. The correct answer is WOMEN or CHANGES FOR WOMEN. The speaker discusses demographic-specific lifestyle shifts."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 2",
+            "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
+            "question": "12. Name ONE example of a good which has now become thought of as a necessity.",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"DISHWASHERS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"DISHWASHERS\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"DISHWASHERS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "dishwashers|dishwasher|microwave|microwaves"
+                "1": "dishwasher|dishwashers|microwave|microwaves"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"DISHWASHERS\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"DISHWASHERS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"DISHWASHERS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! DISHWASHER(S) or MICROWAVE(S) are examples mentioned. These appliances have become viewed as necessities rather than luxuries.",
+                    "incorrect": "✗ Incorrect. The correct answer is DISHWASHER(S) or MICROWAVE(S). Listen for examples of goods that were once luxuries.",
+                    "no_answer": "No answer provided. The correct answer is DISHWASHER(S) or MICROWAVE(S). The speaker gives examples of modern 'necessities'."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 3",
+            "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
+            "question": "13. In addition to work, what have these goods given us more time for?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"LEISURE PURSUITS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"LEISURE PURSUITS\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"LEISURE PURSUITS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "leisure pursuits|leisure pursuit|leisure"
+                "1": "leisure|leisure pursuits|leisure activities"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"LEISURE PURSUITS\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"LEISURE PURSUITS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"LEISURE PURSUITS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! LEISURE PURSUITS (or LEISURE). Modern appliances have freed up time for leisure activities.",
+                    "incorrect": "✗ Incorrect. The correct answer is LEISURE PURSUITS or LEISURE. Listen for what people can do with the time saved by modern conveniences.",
+                    "no_answer": "No answer provided. The correct answer is LEISURE PURSUITS. The speaker discusses the benefits of time-saving devices."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 4",
+            "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
+            "question": "14. What do richer societies become?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"MORE DEMANDING\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"MORE DEMANDING\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"MORE DEMANDING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "more demanding|demanding"
+                "1": "more demanding"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"MORE DEMANDING\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"MORE DEMANDING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"MORE DEMANDING\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! Richer societies become MORE DEMANDING. The speaker discusses how wealth affects consumer behavior.",
+                    "incorrect": "✗ Incorrect. The correct answer is MORE DEMANDING. Listen for how the speaker characterizes wealthier societies.",
+                    "no_answer": "No answer provided. The correct answer is MORE DEMANDING. Pay attention to the discussion about societal wealth and expectations."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 5",
+            "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
+            "question": "15. What does the 'race of acquisition' encourage us to buy?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"UNNECESSARY GOODS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"UNNECESSARY GOODS\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"UNNECESSARY GOODS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "unnecessary goods"
+                "1": "unnecessary goods|unnecessary items"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"UNNECESSARY GOODS\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"UNNECESSARY GOODS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"UNNECESSARY GOODS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! The race of acquisition encourages buying UNNECESSARY GOODS. The speaker criticizes consumer culture.",
+                    "incorrect": "✗ Incorrect. The correct answer is UNNECESSARY GOODS. Listen for the speaker's critique of modern consumerism.",
+                    "no_answer": "No answer provided. The correct answer is UNNECESSARY GOODS. The speaker discusses negative aspects of consumer culture."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 6",
+            "type": "closed_question",
+            "instructions": "Questions 16 to 20\nSelect the correct answer A-C.",
+            "question": "16. Who is mostly responsible for creating the demand for new products?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "Wealthy, older people",
+                    "correct": false,
+                    "feedback": "Incorrect. While wealth plays a role, this isn't the specific group identified."
+                },
+                {
+                    "text": "Professionals",
+                    "correct": true,
+                    "feedback": "✓ Correct! Professionals are identified as a key driver of demand for new products."
+                },
+                {
+                    "text": "Models",
+                    "correct": false,
+                    "feedback": "Incorrect. Models may influence trends but aren't identified as the primary demand creators."
+                }
+            ],
+            "correct_answer_count": 1,
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 16 to 20\nSelect the correct answer A-C.",
+            "question": "17. Why should we be concerned with the increasing number of unnecessary appliances?",
+            "points": 1.0,
+            "reading_text_id": null,
+            "audio_section_id": 1,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "The cost",
+                    "correct": false,
+                    "feedback": "Incorrect. While cost is a factor, the main concern is different."
+                },
+                {
+                    "text": "The environment",
+                    "correct": true,
+                    "feedback": "✓ Correct! Environmental concerns are the primary reason for worry about unnecessary appliances."
+                },
+                {
+                    "text": "The pace of technology",
+                    "correct": false,
+                    "feedback": "Incorrect. Technology pace isn't the main environmental concern."
+                }
+            ],
+            "correct_answer_count": 1,
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 16 to 20\nSelect the correct answer A-C.",
+            "question": "18. What other risk does the speaker refer to?",
+            "points": 1.0,
+            "reading_text_id": null,
+            "audio_section_id": 1,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "A loss of traditional skills",
+                    "correct": true,
+                    "feedback": "✓ Correct! The speaker mentions the risk of losing traditional skills as a concern."
+                },
+                {
+                    "text": "Health factors of pre-packaged food",
+                    "correct": false,
+                    "feedback": "Incorrect. While health may be mentioned, the focus is on traditional skills."
+                },
+                {
+                    "text": "A negative impact on careers",
+                    "correct": false,
+                    "feedback": "Incorrect. Career impacts aren't the risk being emphasized."
+                }
+            ],
+            "correct_answer_count": 1,
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 16 to 20\nSelect the correct answer A-C.",
+            "question": "19. Active buying behaviour will",
+            "points": 1.0,
+            "reading_text_id": null,
+            "audio_section_id": 1,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "cause an increase in manufactured goods",
+                    "correct": true,
+                    "feedback": "✓ Correct! Active buying leads to increased demand for manufactured goods."
+                },
+                {
+                    "text": "causes stress within families",
+                    "correct": false,
+                    "feedback": "Incorrect. This isn't the primary consequence discussed."
+                },
+                {
+                    "text": "is a purely positive aspect of consumer behaviour",
+                    "correct": false,
+                    "feedback": "Incorrect. The speaker presents a more nuanced view with concerns."
+                }
+            ],
+            "correct_answer_count": 1,
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 16 to 20\nSelect the correct answer A-C.",
+            "question": "20. What does the speaker recommend for the future?",
+            "points": 1.0,
+            "reading_text_id": null,
+            "audio_section_id": 1,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "Buy what is available",
+                    "correct": false,
+                    "feedback": "Incorrect. This isn't the recommendation."
+                },
+                {
+                    "text": "Educating companies about sustainable production",
+                    "correct": false,
+                    "feedback": "Incorrect. While sustainability is important, this isn't the specific recommendation."
+                },
+                {
+                    "text": "Purchase in moderation",
+                    "correct": true,
+                    "feedback": "✓ Correct! The speaker recommends purchasing in moderation as a solution."
+                }
+            ],
+            "correct_answer_count": 1,
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Question 21. Choose the correct letter A–C.",
+            "question": "21. Helen became a vegetarian",
+            "points": 1.0,
+            "reading_text_id": null,
+            "audio_section_id": 2,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "sixteen years ago",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While a timeframe may be mentioned, this isn't why she became vegetarian."
+                },
+                {
+                    "text": "because of family influences",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Family influence isn't given as the reason."
+                },
+                {
+                    "text": "for personal reasons",
+                    "is_correct": true,
+                    "feedback": "✓ Correct! Helen became vegetarian for personal reasons."
+                }
+            ],
+            "correct_answer_count": 1,
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice"
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 22-24. Answer the following questions using NO MORE THAN TWO WORDS.",
+            "question": "22. According to Helen, what is the most important food source for vegetarians?",
+            "points": 1.0,
+            "reading_text_id": null,
+            "audio_section_id": 2,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "b"
+                "1": "soya|soya bean|soyabean|soy"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! SOYA (or SOYA BEAN) is identified as the most important food source for vegetarians.",
+                    "incorrect": "✗ Incorrect. The correct answer is SOYA. Listen when Helen discusses essential vegetarian protein sources.",
+                    "no_answer": "No answer provided. The correct answer is SOYA. Helen emphasizes this as a key vegetarian food source."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 7",
+            "instructions": "Questions 22-24. Answer the following questions using NO MORE THAN TWO WORDS.",
+            "question": "23. According to Helen, what do most countries do to vegetables?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "b"
+                "1": "overcook|overcook them"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! Most countries OVERCOOK vegetables. Helen mentions this as a common problem.",
+                    "incorrect": "✗ Incorrect. The correct answer is OVERCOOK THEM. Listen for Helen's criticism of cooking methods.",
+                    "no_answer": "No answer provided. The correct answer is OVERCOOK THEM. Helen discusses common vegetable preparation mistakes."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 8",
+            "instructions": "Questions 22-24. Answer the following questions using NO MORE THAN TWO WORDS.",
+            "question": "24. According to Helen, it is a misconception people have that vegetarians are what?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"A\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"A\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"A\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "a"
+                "1": "unhealthy"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"A\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"A\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"A\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! The misconception is that vegetarians are UNHEALTHY. Helen addresses this false belief.",
+                    "incorrect": "✗ Incorrect. The correct answer is UNHEALTHY. Listen when Helen discusses common misconceptions about vegetarianism.",
+                    "no_answer": "No answer provided. The correct answer is UNHEALTHY. Helen challenges stereotypes about vegetarian diets."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 9",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"A\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"A\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"A\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "instructions": "Questions 25 and 26\nComplete the table using NO MORE THAN TWO WORDS AND/OR A NUMBER.",
+            "question": "<table border='1' width='100%'><tbody><tr><td align='center'><strong>Food Group</strong></td><td align='center'><strong>Recommended % of diet</strong></td></tr><tr><td>Fruit and Vegetables</td><td>[field 1] %</td></tr><tr><td>Carbohydrates</td><td>[field 2] %</td></tr></tbody></table>",
+            "points": 2.0,
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
+            "audio_section_id": 2,
+            "ielts_question_category": "table_completion_l",
+            "field_count": 2,
             "field_answers": {
-                "1": "a"
+                "1": "21|twenty one|twenty-one",
+                "2": "44|forty four|forty-four"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"A\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"A\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"A\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! Fruit and vegetables should comprise 21% of the diet according to the table.",
+                    "incorrect": "✗ Incorrect. The correct answer is 21. Listen for the percentage recommendations for each food group.",
+                    "no_answer": "No answer provided. The correct answer is 21. Pay attention to the nutritional breakdown discussed."
+                },
+                "2": {
+                    "correct": "✓ Correct! Carbohydrates should be 44% of the diet - the largest portion.",
+                    "incorrect": "✗ Incorrect. The correct answer is 44. Listen for the carbohydrate percentage in the recommended diet.",
+                    "no_answer": "No answer provided. The correct answer is 44. This is the largest food group percentage mentioned."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Table Completion"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 10",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"C\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"C\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"C\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "instructions": "Questions 27 to 30\nLabel the following diagram using NO MORE THAN TWO WORDS.\n\nImage: https://www.ieltstestonline.com/wp-content/uploads/2018/12/TEST15.jpg",
+            "question": "Label the food pyramid diagram with the correct food groups:\n\n27. [field 1] (12%)\n28. [field 2] (15%)\n29. [field 3] (8%)\n30. [field 4] (8%)",
+            "points": 4.0,
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
+            "audio_section_id": 2,
+            "ielts_question_category": "diagram_labelling_l",
+            "field_count": 4,
             "field_answers": {
-                "1": "c"
+                "1": "cereals",
+                "2": "dairy",
+                "3": "white meat",
+                "4": "red meat"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"C\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"C\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"C\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! CEREALS comprise 12% of the recommended diet.",
+                    "incorrect": "✗ Incorrect. The correct answer is CEREALS. Listen for which food group accounts for 12%.",
+                    "no_answer": "No answer provided. The correct answer is CEREALS. This food group is at 12% of the diet."
+                },
+                "2": {
+                    "correct": "✓ Correct! DAIRY products make up 15% of the recommended diet.",
+                    "incorrect": "✗ Incorrect. The correct answer is DAIRY. Listen for the 15% food category.",
+                    "no_answer": "No answer provided. The correct answer is DAIRY. This accounts for 15% in the nutritional breakdown."
+                },
+                "3": {
+                    "correct": "✓ Correct! WHITE MEAT should be 8% of the diet.",
+                    "incorrect": "✗ Incorrect. The correct answer is WHITE MEAT. Listen for the protein sources and their percentages.",
+                    "no_answer": "No answer provided. The correct answer is WHITE MEAT. One of the 8% categories in the table."
+                },
+                "4": {
+                    "correct": "✓ Correct! RED MEAT should also be 8% of the diet.",
+                    "incorrect": "✗ Incorrect. The correct answer is RED MEAT. This is the other 8% protein category.",
+                    "no_answer": "No answer provided. The correct answer is RED MEAT. The final 8% category mentioned."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Diagram Labelling"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 1",
+            "instructions": "Questions 31 and 32. Complete the following sentence using ONE WORD.",
+            "question": "31. East feels [field 1] therapy is a better word than 'alternative'.",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"C\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"C\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"C\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "c"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"C\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"C\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"C\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 2",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"SOYA BEAN\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"SOYA BEAN\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"SOYA BEAN\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "soya bean|soya|soyabeans|soybeans|soyabean"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"SOYA BEAN\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"SOYA BEAN\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"SOYA BEAN\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 3",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"OVERCOOK THEM\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"OVERCOOK THEM\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"OVERCOOK THEM\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "overcook them|overcook"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"OVERCOOK THEM\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"OVERCOOK THEM\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"OVERCOOK THEM\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 4",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"UNHEALTHY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"UNHEALTHY\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"UNHEALTHY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "unhealthy|not healthy"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"UNHEALTHY\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"UNHEALTHY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"UNHEALTHY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 5",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"21\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"21\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"21\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "21|21 kilos|21kg|21 kg|twenty one kilos|twenty one kgs|twenty one|twenty one kg|twenty-one kilos|twenty-one kgs|twenty-one|twenty-one kg"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"21\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"21\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"21\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 6",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"44\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"44\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"44\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "44|44 kilos|44kg|44 kg|forty four kilos|forty four kgs|forty one|forty four kg|forty-four kilos|forty-four kgs|forty-four|forty-four kg"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"44\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"44\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"44\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 7",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"CEREALS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"CEREALS\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"CEREALS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "cereals"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"CEREALS\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"CEREALS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"CEREALS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 8",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"DAIRY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"DAIRY\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"DAIRY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "dairy"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"DAIRY\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"DAIRY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"DAIRY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 9",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"WHITE MEAT\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"WHITE MEAT\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"WHITE MEAT\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "white meat"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"WHITE MEAT\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"WHITE MEAT\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"WHITE MEAT\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 10",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"RED MEAT\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"RED MEAT\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"RED MEAT\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "red meat"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"RED MEAT\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"RED MEAT\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"RED MEAT\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 1",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"NATURAL\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"NATURAL\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"NATURAL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "natural"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"NATURAL\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"NATURAL\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"NATURAL\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! East prefers the term NATURAL. He explicitly states 'I prefer the term \"natural\"'.",
+                    "incorrect": "✗ Incorrect. The correct answer is NATURAL. Listen at the beginning when East discusses terminology.",
+                    "no_answer": "No answer provided. The correct answer is NATURAL. East clarifies his preferred terminology early in the discussion."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Sentence Completion"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 2",
+            "instructions": "Questions 31 and 32. Complete the following sentence using ONE WORD.",
+            "question": "32. Osteopathy involves the manipulation of [field 1] in order to remove stresses and strains.",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"MUSCLES\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"MUSCLES\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"MUSCLES\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "sentence_completion_l",
             "field_count": 1,
             "field_answers": {
                 "1": "muscles"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"MUSCLES\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"MUSCLES\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"MUSCLES\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! Osteopathy manipulates MUSCLES. East defines it as 'the manipulation of muscles in order to alleviate stresses and tensions'.",
+                    "incorrect": "✗ Incorrect. The correct answer is MUSCLES. Listen to East's definition of osteopathy.",
+                    "no_answer": "No answer provided. The correct answer is MUSCLES. East provides a clear definition of what osteopathy involves."
                 }
             },
-            "ielts_question_type": "Short Answer Questions"
+            "ielts_question_type": "Sentence Completion"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 3",
+            "instructions": "Questions 33-36. Answer the following questions using NO MORE THAN THREE WORDS.",
+            "question": "33. According to Matthew East, what must be considered when treating a patient?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"THE WHOLE BODY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"THE WHOLE BODY\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"THE WHOLE BODY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "the whole body|whole body"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"THE WHOLE BODY\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"THE WHOLE BODY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"THE WHOLE BODY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! THE WHOLE BODY must be considered. East emphasizes 'The whole body must be considered before a course of treatment can be decided upon'.",
+                    "incorrect": "✗ Incorrect. The correct answer is THE WHOLE BODY. Listen when East explains the holistic approach of osteopathy.",
+                    "no_answer": "No answer provided. The correct answer is THE WHOLE BODY. East stresses this as a key principle of natural remedies."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 4",
+            "instructions": "Questions 33-36. Answer the following questions using NO MORE THAN THREE WORDS.",
+            "question": "34. According to Matthew East, what was the original cause of the baby's discomfort?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"A DIFFICULT BIRTH\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"A DIFFICULT BIRTH\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"A DIFFICULT BIRTH\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "a difficult birth|difficult birth|birth"
+                "1": "a difficult birth|difficult birth"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"A DIFFICULT BIRTH\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"A DIFFICULT BIRTH\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"A DIFFICULT BIRTH\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! A DIFFICULT BIRTH caused the problem. East explains 'the real problem stemmed from a difficult birth which had put pressure on their baby's neck'.",
+                    "incorrect": "✗ Incorrect. The correct answer is A DIFFICULT BIRTH. Listen to East's case study about treating a baby.",
+                    "no_answer": "No answer provided. The correct answer is A DIFFICULT BIRTH. East uses this as an example of finding root causes."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 5",
+            "instructions": "Questions 33-36. Answer the following questions using NO MORE THAN THREE WORDS.",
+            "question": "35. How does East describe the use of drugs and operations?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"INVASIVE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"INVASIVE\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"INVASIVE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "invasive"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"INVASIVE\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"INVASIVE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"INVASIVE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! East describes them as INVASIVE. He states 'Avoiding such invasive methods of treatment highlights another of the differences'.",
+                    "incorrect": "✗ Incorrect. The correct answer is INVASIVE. Listen when East contrasts natural remedies with conventional medicine.",
+                    "no_answer": "No answer provided. The correct answer is INVASIVE. East uses this term to describe traditional medical interventions."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 6",
+            "instructions": "Questions 33-36. Answer the following questions using NO MORE THAN THREE WORDS.",
+            "question": "36. According to East, what is the percentage cost of natural remedies compared to western treatment?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"10%\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"10%\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"10%\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "10%|10 percent|10 per cent|ten%|ten %|ten percent|ten per cent|10 %|10|ten"
+                "1": "10|10%|10 percent|ten|ten percent"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"10%\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"10%\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"10%\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! Natural remedies cost 10% (or less than ten percent) of western treatment. East states 'Natural remedies actually amount to less than ten percent of the cost'.",
+                    "incorrect": "✗ Incorrect. The correct answer is 10 (%). Listen when East discusses the financial benefits of natural remedies.",
+                    "no_answer": "No answer provided. The correct answer is 10 (%). East mentions the significant cost savings."
+                }
+            },
+            "ielts_question_type": "Short Answer Questions"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 37 and 38. Choose the correct letter A–C.",
+            "question": "37. East cites the example of a baby to illustrate that natural remedies",
+            "points": 1.0,
+            "reading_text_id": null,
+            "audio_section_id": 3,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "have no side effects",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While this may be true, it's not the main point of the baby example."
+                },
+                {
+                    "text": "work on children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The point is more specific than just working on children."
+                },
+                {
+                    "text": "have benefits that are not just psychological",
+                    "is_correct": true,
+                    "feedback": "✓ Correct! The baby example demonstrates real physiological benefits, not just psychological effects."
+                }
+            ],
+            "correct_answer_count": 1,
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 37 and 38. Choose the correct letter A–C.",
+            "question": "38. East feels the best approach for the future is",
+            "points": 1.0,
+            "reading_text_id": null,
+            "audio_section_id": 3,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "to reject western medicine",
+                    "is_correct": false,
+                    "feedback": "Incorrect. East doesn't advocate completely rejecting western medicine."
+                },
+                {
+                    "text": "a combination of natural and western medicine",
+                    "is_correct": true,
+                    "feedback": "✓ Correct! East recommends 'an open-minded combination of the two forms'."
+                },
+                {
+                    "text": "more research into natural remedies",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While research may be valuable, this isn't East's stated recommendation."
+                }
+            ],
+            "correct_answer_count": 1,
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice"
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 39 and 40. Answer using NO MORE THAN TWO WORDS.",
+            "question": "39. In which situation does East feel western medicine is the best option?",
+            "points": 1.0,
+            "reading_text_id": null,
+            "audio_section_id": 3,
+            "ielts_question_category": "short_answer_l",
+            "field_count": 1,
+            "field_answers": {
+                "1": "emergency surgery|emergency|emergencies"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "✓ Correct! EMERGENCY SURGERY is when western medicine is best. East states 'Take emergency surgery, for example. Obviously more natural remedies do not provide the speed required'.",
+                    "incorrect": "✗ Incorrect. The correct answer is EMERGENCY SURGERY. Listen when East acknowledges situations where western medicine is superior.",
+                    "no_answer": "No answer provided. The correct answer is EMERGENCY SURGERY. East gives this as a clear example of when western medicine is needed."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 7",
+            "instructions": "Questions 39 and 40. Answer using NO MORE THAN TWO WORDS.",
+            "question": "40. Who will be invited to argue the opposing view next week?",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"C\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"C\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"C\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 3,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
-                "1": "c"
+                "1": "dr moore|doctor moore"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"C\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"C\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"C\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 8",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "b"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 9",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"EMERGENCY SURGERY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"EMERGENCY SURGERY\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"EMERGENCY SURGERY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "emergency surgery|emergencies"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"EMERGENCY SURGERY\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"EMERGENCY SURGERY\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"EMERGENCY SURGERY\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 10",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"DR MOORE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"DR MOORE\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"DR MOORE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "dr moore|dr. moore|doctor moore"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"DR MOORE\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"DR MOORE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"DR MOORE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Correct! DR MOORE will present the opposing view. The host says 'Next week we'll be inviting Dr Moore onto the programme to argue his case as a doctor'.",
+                    "incorrect": "✗ Incorrect. The correct answer is DR MOORE. Listen to the closing remarks about next week's guest.",
+                    "no_answer": "No answer provided. The correct answer is DR MOORE. The host announces the next week's programme at the end."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         }
-    ],
-    "reading_texts": [],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_listening",
-        "cbt_test_type": "listening",
-        "exercise_label": "practice_test",
-        "open_as_popup": "1",
-        "scoring_type": "ielts_listening",
-        "timer_minutes": "",
-        "starting_question_number": "1"
-    },
-    "audio": {
-        "url": "https://www.ieltstestonline.com/wp-content/uploads/2018/12/listening-test-15.mp3",
-        "transcript": "",
-        "sections": [
-            {
-                "section_number": 1,
-                "transcript": "<strong>Section 1</strong>\n\nAnne: Hello I wonder if you could help me. I am interested in enrolling on your M.B.A programme. Could you give me some information please?\n\nAdmissions officer: Yes of course. I’ll take a few details first of all and I’ll give you a copy of our prospectus.\n\nAnne: Oh that’s okay. I already have one here. I’ve been researching the MBA courses in the local area, so I already have lots of course information!\n\nAdmissions officer: That’s great. Okay so first of all, can you tell me your name please?\n\nAnne: Yes of course. It’s Anne Hawberry.\n\nAdmissions officer: Hawberry. Is that H-A-W-B-E-R-R-Y?\n\nAnne: Yes that’s right.\n\nAdmissions officer: Okay and how old are you Ms Hawberry?\n\nAnne: I’m 24. My date of birth is 22 May 1981.\n\nAdmissions officer: That’s great. And were you born in the UK?\n\nAnne: Yes I was.\n\nAdmissions officer: Alright, can you give me some contact details please?\n\nAnne: Sure. My address is 26 Simon Place in Brighton and my telephone number is 01903 534 345.\n\nAdmissions officer: Sorry, can you tell me your contact number once again?\n\nAnne: Yes, it’s 01903, 534 345.\n\nAdmissions officer: Okay. Great. And do you have a mobile phone number?\n\nAnne: No, I don’t – is it important?\n\nAdmissions officer: No that’s OK, I’ll just write it on your form –no…. mobile …..phone. Now just a few additional questions. Are you working or studying anywhere else at the moment?\n\nAnne: Yes. I am working for Lloyd Enterprises in the city as a secretary and I am also studying a computer course part time in the evenings.\n\nAdmissions officer: Great. So can you give me some details about your educational back ground? We need to make sure that your qualifications match the entry requirements.\n\nAnne: Yes I completed a degree in Business degree a year ago and I graduated with a 2:1. I’ve been working since my graduation, but the job market is very competitive these days, so I’d like to do some post-graduate study now.\n\nAdmissions officer: Okay that sounds fine. Your degree is relevant and it is good that you have some work experience too. I do need to warn you though that our MBA programme is extremely popular and gets full quickly, so would you be interested in applying for any alternative courses if you application is not successful this time?\n\nAnne: Well….. My first choice would of course be the MBA, but yes, I’ve had a good look through your prospectus and I would also be interested in the MA in International Marketing.\n\nAdmissions officer: That’s great, it’s always a good idea to keep your options open just in case.\n\nAdmissions officer: Well, just a few more questions. Can you tell me how you plan to fund your tuition throughout the course?\n\nAnne: Yes, personal means. I have savings and my parents have also promised to contribute. I don’t think I’ll need any bank loans at this stage.\n\nAdmissions officer: Well finally, can you tell me how you learned about or courses here?\n\nAnne: Actually my cousin studied on the MBA course two years ago and she recommended it to me.\n\nAdmissions officer: Okay, well thank you for coming in today. I will pass your details on to our admissions department. They will contact you this week with a formal application form and they usually invite MBA candidates for interview.\n\nAnne: Okay, well thanks for you time.\n\nAdmissions officer: No problem. Good luck with your application."
-            },
-            {
-                "section_number": 2,
-                "transcript": "<strong>Section 2</strong>\n\n(A) I’d like to introduce our guest speaker Professor Louise Phillips from AIL International. She is responsible for researching changes in lifestyle and the consequent impact on buyer behaviour. Today she is going to talk about the impact of changes in attitudes to leisure time on sales of labour-saving equipment such as microwaves and “white goods” which are products such as washing machines, refrigerators and dish washers.\n\n(B) Thank you very much. Thank you for coming today. I’ll start by talking about lifestyle changes over recent years for women. As we all know, the wife and mother of the family has traditionally been responsible for organising and completing household tasks for the family. However, particularly over the last decade or so, we have seen a greater number of women continuing to work after marriage and returning to work after having children. This has significantly reduced the amount of time available for household chores. The result is that nowadays, the majority of people own and regularly use products such as dishwashers or microwaves. The modern family often considers hours spent on cleaning and cooking as a waste of valuable time and generally we are all interested in finding ways of reducing the number of hours we need to devote to such tasks.\n\nWhile washing machines have long been thought of as necessities by families, nowadays, so too are microwaves and dishwashers. These goods can drastically reduce the amount of time we need to spend running our home and increase the amount of time available not only to go to work, but to also spend on leisure pursuits.\n\nAs society develops and we become richer, we put more value on our leisure time and our possessions. The richer a society, the more demanding it becomes. People are no longer happy to work long hours for little return. Expensive holidays, expensive clothes and cars all become more important the more materialistic the society we live in. Acquiring “things” and joining the “race of acquisition” means that modern society spends a lot of time and money purchasing unnecessary goods. Although expensive and persuasive marketing techniques are partly responsible, the demand for such goods often comes from young professionals, those with the money to endlessly upgrade things simply because a better model is made available.\n\nOur obsession with the newest and best products available, while good for the economy, can also have a negative impact on the environment. It is not appropriate to over-produce appliances and over-use electricity to keep these unnecessary appliances operating in our homes. We often forget about the damage we have done to and continue to do to the environment.\n\nOthers opposed to the overuse of appliances and technology also argue that from a social point of view, over-reliance on gadgets means that people are losing the ability to be creative. Traditionally it was considered an enviable skill to prepare meals night after night for our families. Nowadays, women are more likely to gain approval from others for their success in their careers than their ability in the kitchen. Along with microwaves have come ready-cooked meals, pre-washed vegetables and our reliance on take-away food when we are too busy to cook it ourselves.\n\nWhile there are obvious advantages and disadvantages to our increasingly active buying behaviour and changing wants and desires, it is likely that our desire to purchase labour saving items will continue , so it is therefore inevitable that production of such goods will increase. We can only hope to educate ourselves and our children to buy goods we need, not just goods that are available, and always maintain an awareness of their environmental impact. In short, moderation is the most important word for the future.\n\nI thank you very much for coming today and listening to what I have to say. That concludes my talk. I hope you have found it both interesting and informative. If you have any questions, I would be very glad to answer them……."
-            },
-            {
-                "section_number": 3,
-                "transcript": "<strong>Section 3</strong>\n\nInterviewer: I’m here with today with Helen Warner, who has been a vegetarian for many years and is going to talk a little about vegetarianism. Helen, the concept of vegetarianism seems to have interested a number of our listeners, who have sent in some questions. To begin, what made you want to become a vegetarian?\n\nHelen: Well, when I was sixteen, I had friends that were vegetarian and they introduced me to the idea. My parents were typical of their generation, and ate meat at least three or four times a week, so I didn’t really think about it too much until a few years later. It was while I was at university that I really thought about, and decided that it was unfair to eat meat when there are so many alternatives available.\n\nInterviewer: Is there anything you miss about not eating meat?\n\nHelen: Ummm. No, not really. As I said, there are so many substitutes available these days, perhaps the most important of which comes from the soya bean. Soya is so versatile, and is the staple substitute for most vegetarians.\n\nInterviewer: So what about the nutritional value of vegetarian food? Isn’t it true that there are some vitamins that you can’t get from soya or vegetables alone. Surely people need these vitamins?\n\nHelen: Yes, that’s correct. But actually there is only one vital vitamin that is only present in meat – that’s vitamin B12. Most vegetarians are aware of the implication of this and actually take B12 supplement in the form of tablets. Of course the way you cook vegetables is also very important in preserving vitamins. Many countries, particularly the UK, have a reputation for overcooking vegetables. Water soluble vitamins - you know, where the vitamins are dissolved into the water - are often lost. Vitamin C is a common example. However, this loss of vitamins can be avoided by micro waving or steaming vegetables, which is what I do whenever I cook. Some people don’t want to change their cooking habits too much, so if you do boil them simply cut down on the cooking time.\n\nInterviewer: So a vegetarian diet is fairly healthy then?\n\nHelen: Oh yes. A lot of people believe that vegetarianism is unhealthy, but that’s not actually the case. Vegetarians are actually considerably healthier than many meat eaters. Consider for a minute the health aspects of the incredible amount of meat this country and others like it consume. The statistics for beef eating, for example, are quite frightening. The world figure for beef consumption is slightly less than 11kg per person each year. Yet in Europe, the average consumption is nearly double that at 21 kilos per person, and in the USA it is even worse, with the average person eating 44kg of beef every year.\n\nInterviewer: So are you suggesting that people stop eating meat altogether and everyone adopts a vegetarian lifestyle?\n\nHelen: No, not at all. Even in the healthiest diets there is still a place for meat, but it should be eaten in moderation. Many nutritionalists think of foods in terms of a pyramid, with the foods we can eat relatively freely at the bottom and the foods we should carefully restrict at the top. The majority of our diet should be composed of cereals, which would go on the bottom row of the pyramid. In this category could also be included such things as rice and pasta. Next, a good diet is followed by a roughly equal amount of vegetables and fruit. I try to have at least two servings a day of fruit and vegetable whenever possible. In decreasing quantities, you can then eat dairy foods – eggs, cheese etc. Almost at the top of the food pyramid comes fish - carefully prepared of course, not dripping in oil or batter! – and white meat. Chicken, for example, is a comparatively healthy meat, but again, a lot of this comes down to preparation methods. Right at the top of the pyramid come the ingredients of far too many western meals – red meat and potatoes. It is particularly in this area that I would suggest moderation.\n\nInterviewer: Well, thank you very much Helen. I’m sure that a lot of listeners are interested in your views. How could they find out more about the health benefits of vegetarian options?\n\nHelen: Well there are lots of websites and books on healthy eating and vegetarianism, but it is always important to remember to consult your doctor before making any radical changes to your diet or lifestyle."
-            },
-            {
-                "section_number": 4,
-                "transcript": "<strong>Section 4</strong>\n\nOver the past 50 years, there have been some radical changes in the medicine as it is known in the West. This is largely the result of vast improvements in technology, but also in the rising importance of ‘alternative’ treatments. I have with me today Matthew East, a registered osteopath and a supporter of alternative techniques in healthcare. Matthew, can you tell us more about osteopathy?\n\nWell, perhaps the first thing I should say is that the term ‘alternative’ is actually a little misleading, as I am referring to approaches and attitudes to health that were in common use long before western medicine was established. I prefer the term ‘natural’. Anyway, I’ll begin by telling you a little about osteopathy. Basically, osteopathy is the manipulation of muscles in order to alleviate stresses and tensions that lead to pain. Now unlike western medicine, osteopathy considers the whole body, not just the affected area, and this is a very important principle of natural remedies. The whole body must be considered before a course of treatment can be decided upon. You see, the aim of therapies like osteopathy is not only to repair the body, but also to get the body treating itself, and this does not come from treating the symptoms. To give an example, I recently treated a two-month-old baby who was screaming all day and was even worse at night. The couple had taken the baby to their doctor, but the only advice they were given was that the baby ‘would grow out of it’. However, the real problem stemmed from a difficult birth which had put pressure on their baby’s neck. After ten minutes of gentle manipulation the pressure was released and within 20 minutes, the baby was quiet and calm for the first time. This was achieved without drugs or operations. Avoiding such invasive methods of treatment highlights another of the differences between western medicine and a more natural approach. You see, western medicine often uses surgery in order to find a solution to problems that could have been addressed with simple remedies. A medical approach that looks closely at how essential an operation is before it is performed would offer patients a considerably less stressful method of treatment, not to mention the financial savings. Natural remedies actually amount to less than ten percent of the cost of a western course of treatment.\n\nI’d like to mention the subject of surgery again a little later, but I would like to say at this point that there are those that claim that the benefits of osteopathy and herbal therapies are largely psychological, that they have not undergone the clinical trials that pharmaceuticals have. To answer that, you only need to look at the example I gave earlier, of the baby that stopped crying less than an hour after treatment but was obviously far too young to react because of purely psychological factors. Another example can be seen in the successful use of acupuncture in the treatment of animals. In response to criticism regarding clinical trials, it is worth noting that the power of pharmaceutical companies is such that although some drugs fail the standards required of them, they are sometimes still prescribed by doctors.\n\nMoving on to another point, it should be stressed that natural remedies, in addition to having no side effects, can also be applied to any patient. Now I’m not suggesting that the same treatments are used indiscriminately. I’m referring to the fact that treatment is the same with natural therapies regardless of age, but very specific to the person. By this I mean that not only the general health of the patient needs to be considered, but also their habits, diet and lifestyle in order to build a complete picture.\n\nHowever, I am not suggesting that we should reject western medicine entirely. In fact, there have been occasions when I have referred patients to their doctor as I felt that in those cases it was the most suitable course of action. There are many situations in which it is by far the best option. Take emergency surgery, for example. Obviously more natural remedies do not provide the speed required in such cases. The best solution would therefore be an open-minded combination of the two forms.\n\nWell, thank you very much Matthew. That was a very interesting insight into alternative, sorry natural, treatments. Next week we’ll be inviting Dr Moore onto the programme to argue his case as a doctor. Until next week, then, goodbye."
-            }
-        ]
-    },
-    "_metadata": {
-        "exported_at": "2026-01-03 14:30:00",
-        "exported_by": "converter",
-        "plugin_version": "10.16",
-        "format_version": "1.0"
-    }
+    ]
 }
