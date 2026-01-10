@@ -35,6 +35,30 @@ if (!empty($audio_sections)) {
 }
 $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
 
+// Helper function to process transcript question markers
+// Converts [Q#] markers to anchored, highlightable spans
+function process_transcript_markers($transcript, $starting_question = 1) {
+    if (empty($transcript)) {
+        return $transcript;
+    }
+    
+    // Convert [Q#] or [q#] markers to anchor spans
+    // Pattern matches [Q1], [q1], [Q10], etc.
+    $pattern = '/\[Q(\d+)\]/i';
+    
+    $processed = preg_replace_callback($pattern, function($matches) use ($starting_question) {
+        $question_num = intval($matches[1]);
+        // Adjust question number if there's a starting offset
+        $display_num = $question_num;
+        
+        return '<span id="transcript-q' . $display_num . '" class="transcript-answer-marker" data-question="' . $display_num . '">' . 
+               '<span class="question-marker-badge">Q' . $display_num . '</span>' . 
+               '</span>';
+    }, $transcript);
+    
+    return $processed;
+}
+
 // Calculate next and previous URLs for navigation
 $next_url = '';
 $prev_url = '';
@@ -279,7 +303,16 @@ if ($lesson_id) {
                                     <div class="transcript-section-content" id="transcript-section-<?php echo esc_attr($index); ?>" style="<?php echo ($index !== $first_section_key) ? 'display:none;' : ''; ?>">
                                         <?php if (!empty($section['transcript'])): ?>
                                             <div class="transcript-content">
-                                                <?php echo wp_kses_post(wpautop($section['transcript'])); ?>
+                                                <?php 
+                                                // Process transcript to add question markers
+                                                $processed_transcript = process_transcript_markers($section['transcript']);
+                                                // Allow the question marker spans through wp_kses
+                                                $allowed_html = wp_kses_allowed_html('post');
+                                                $allowed_html['span']['id'] = true;
+                                                $allowed_html['span']['class'] = true;
+                                                $allowed_html['span']['data-question'] = true;
+                                                echo wp_kses(wpautop($processed_transcript), $allowed_html);
+                                                ?>
                                             </div>
                                         <?php else: ?>
                                             <p><?php _e('No transcript available for this section.', 'ielts-course-manager'); ?></p>
