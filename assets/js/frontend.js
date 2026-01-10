@@ -979,70 +979,16 @@
                                 }
                                 
                                 // Add "Show in transcript" link if audio_section_id is available (for listening tests)
-                                if (questionResult.audio_section_id !== null && questionResult.audio_section_id !== undefined) {
+                                // Skip for open_question type since links are added per-field in PHP
+                                if (questionResult.question_type !== 'open_question' && 
+                                    questionResult.audio_section_id !== null && 
+                                    questionResult.audio_section_id !== undefined) {
                                     var transcriptLink = $('<a>')
                                         .attr('href', '#')
                                         .addClass('show-in-transcript-link')
                                         .attr('data-section', questionResult.audio_section_id)
                                         .attr('data-question', questionNum)
-                                        .text('Show in transcript')
-                                        .on('click', function(e) {
-                                            e.preventDefault();
-                                            var sectionId = $(this).data('section');
-                                            var questionNumber = $(this).data('question');
-                                            
-                                            // Hide all transcript sections
-                                            $('.transcript-section-content').hide();
-                                            
-                                            // Show the linked transcript section
-                                            var $targetSection = $('#transcript-section-' + sectionId);
-                                            $targetSection.fadeIn(300);
-                                            
-                                            // Update tab active states
-                                            $('.transcript-section-tab').removeClass('active');
-                                            $('.transcript-section-tab[data-section="' + sectionId + '"]').addClass('active');
-                                            
-                                            // Find and highlight the question marker in the transcript
-                                            var $questionMarker = $('#transcript-q' + questionNumber);
-                                            
-                                            // Remove any previous highlighting
-                                            $('.transcript-content .transcript-highlight').removeClass('transcript-highlight');
-                                            
-                                            if ($questionMarker.length) {
-                                                // Highlight the paragraph containing the marker
-                                                var $paragraph = $questionMarker.closest('p');
-                                                if ($paragraph.length) {
-                                                    $paragraph.addClass('transcript-highlight');
-                                                }
-                                                
-                                                // Scroll to the question marker
-                                                setTimeout(function() {
-                                                    // For CBT layout, scroll within the reading column
-                                                    var $readingColumn = $questionMarker.closest('.reading-column');
-                                                    if ($readingColumn.length) {
-                                                        // CBT layout - scroll within the column
-                                                        var markerOffset = $questionMarker.position().top;
-                                                        var columnScrollTop = $readingColumn.scrollTop();
-                                                        $readingColumn.animate({
-                                                            scrollTop: columnScrollTop + markerOffset - 100
-                                                        }, 500);
-                                                    } else {
-                                                        // Standard layout - scroll the whole page
-                                                        $('html, body').animate({
-                                                            scrollTop: $questionMarker.offset().top - 100
-                                                        }, 500);
-                                                    }
-                                                }, 350); // Wait for section fade-in
-                                            } else {
-                                                // If no marker found, just scroll to transcript container
-                                                var transcriptContainer = $('#listening-transcript, #listening-transcripts');
-                                                if (transcriptContainer.length) {
-                                                    $('html, body').animate({
-                                                        scrollTop: transcriptContainer.offset().top - 100
-                                                    }, 500);
-                                                }
-                                            }
-                                        });
+                                        .text('Show in transcript');
                                     
                                     feedbackDiv.append('<br>').append(transcriptLink);
                                 }
@@ -1329,6 +1275,65 @@
             transcriptContainer.find('#transcript-section-' + sectionId).fadeIn(300);
             transcriptContainer.find('.transcript-section-tab').removeClass('active');
             $(this).addClass('active');
+        });
+        
+        // Delegated event handler for "Show in transcript" links (including PHP-generated links in feedback)
+        $(document).on('click', '.show-in-transcript-link', function(e) {
+            e.preventDefault();
+            var sectionId = $(this).data('section');
+            var questionNumber = $(this).data('question');
+            
+            // Hide all transcript sections
+            $('.transcript-section-content').hide();
+            
+            // Show the linked transcript section
+            var $targetSection = $('#transcript-section-' + sectionId);
+            $targetSection.fadeIn(300);
+            
+            // Update tab active states
+            $('.transcript-section-tab').removeClass('active');
+            $('.transcript-section-tab[data-section="' + sectionId + '"]').addClass('active');
+            
+            // Find and highlight the question marker in the transcript
+            var $questionMarker = $('#transcript-q' + questionNumber);
+            
+            // Remove any previous highlighting
+            $('.transcript-content .transcript-highlight').removeClass('transcript-highlight');
+            
+            if ($questionMarker.length) {
+                // Highlight the paragraph containing the marker
+                var $paragraph = $questionMarker.closest('p');
+                if ($paragraph.length) {
+                    $paragraph.addClass('transcript-highlight');
+                }
+                
+                // Scroll to the question marker
+                setTimeout(function() {
+                    // For CBT layout, scroll within the reading column
+                    var $readingColumn = $questionMarker.closest('.reading-column');
+                    if ($readingColumn.length) {
+                        // CBT layout - scroll within the column
+                        var markerOffset = $questionMarker.position().top;
+                        var columnScrollTop = $readingColumn.scrollTop();
+                        $readingColumn.animate({
+                            scrollTop: columnScrollTop + markerOffset - 100
+                        }, 500);
+                    } else {
+                        // Standard layout - scroll the whole page
+                        $('html, body').animate({
+                            scrollTop: $questionMarker.offset().top - 100
+                        }, 500);
+                    }
+                }, 350); // Wait for section fade-in
+            } else {
+                // If no marker found, just scroll to transcript container
+                var transcriptContainer = $('#listening-transcript, #listening-transcripts');
+                if (transcriptContainer.length) {
+                    $('html, body').animate({
+                        scrollTop: transcriptContainer.offset().top - 100
+                    }, 500);
+                }
+            }
         });
         
         // Track answered questions in computer-based layout using event delegation

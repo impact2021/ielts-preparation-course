@@ -947,6 +947,7 @@ body.ielts-course-archive .content-area {
 
 .questions-content {
     padding: 20px;
+    padding-bottom: 0; /* No bottom padding to allow nav bar to sit flush at bottom */
 }
 
 .ielts-computer-based-quiz .quiz-question {
@@ -1147,8 +1148,8 @@ body.ielts-course-archive .content-area {
     padding: 8px 20px;
     background: #f5f5f5;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 0;
+    border-radius: 0; /* Remove border radius for flush bottom */
+    margin-bottom: 0 !important; /* Force no bottom margin */
     margin-top: 0;
     z-index: 100;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
@@ -1790,6 +1791,10 @@ select.answer-select-inline.answer-incorrect {
 .transcript-answer-marker {
     position: relative;
     display: inline;
+    background-color: #fff9c4; /* Yellow highlight background for the answer section */
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin: 0 2px;
 }
 
 .question-marker-badge {
@@ -3009,10 +3014,26 @@ body.ielts-quiz-focus-mode .header-toggle-btn .toggle-icon {
 
 body.ielts-quiz-focus-mode #et-main-area {
     padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 body.ielts-quiz-focus-mode #page-container {
     padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+body.ielts-quiz-focus-mode .entry-content {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+body.ielts-quiz-focus-mode .site-main,
+body.ielts-quiz-focus-mode #primary,
+body.ielts-quiz-focus-mode .content-area {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 body.ielts-quiz-focus-mode .ielts-computer-based-quiz,
@@ -3027,6 +3048,32 @@ body.ielts-quiz-focus-mode .computer-based-container {
     border-radius: 0 !important;
     border-left: none !important;
     border-right: none !important;
+}
+
+/* Force no bottom spacing on quiz containers and their children */
+body.ielts-quiz-focus-mode .ielts-computer-based-quiz,
+body.ielts-quiz-focus-mode .ielts-listening-practice-quiz,
+body.ielts-quiz-focus-mode .ielts-listening-exercise-quiz {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Ensure questions column and content have no bottom spacing */
+body.ielts-quiz-focus-mode .questions-column {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+body.ielts-quiz-focus-mode .questions-content {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Force navigation bar to stick to absolute bottom */
+body.ielts-quiz-focus-mode .question-navigation {
+    margin-bottom: 0 !important;
+    position: sticky;
+    bottom: 0 !important;
 }
 
 body.ielts-quiz-focus-mode .reading-column,

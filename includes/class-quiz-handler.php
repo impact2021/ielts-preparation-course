@@ -249,27 +249,50 @@ class IELTS_CM_Quiz_Handler {
                             $points_earned += 1;
                             // Add correct feedback for this field with question number
                             if (isset($field_feedback_arr[$field_num]['correct']) && !empty($field_feedback_arr[$field_num]['correct'])) {
-                                $field_feedbacks[] = '<span class="field-feedback field-feedback-correct"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['correct']) . '</span>';
+                                $feedback_text = '<span class="field-feedback field-feedback-correct"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['correct']) . '</span>';
+                                
+                                // Add "Show in transcript" link if audio_section_id is available
+                                if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
+                                    $feedback_text .= ' <a href="#" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
+                                }
+                                
+                                $field_feedbacks[] = $feedback_text;
                             }
                         } else {
                             $all_correct = false;
                             // Add incorrect feedback for this field with question number
                             if (isset($field_feedback_arr[$field_num]['incorrect']) && !empty($field_feedback_arr[$field_num]['incorrect'])) {
-                                $field_feedbacks[] = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['incorrect']) . '</span>';
+                                $feedback_text = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['incorrect']) . '</span>';
+                                
+                                // Add "Show in transcript" link if audio_section_id is available
+                                if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
+                                    $feedback_text .= ' <a href="#" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
+                                }
+                                
+                                $field_feedbacks[] = $feedback_text;
                             }
                         }
                     } else {
                         $all_correct = false;
                         // Add no answer feedback for this field with question number
                         if (isset($field_feedback_arr[$field_num]['no_answer']) && !empty($field_feedback_arr[$field_num]['no_answer'])) {
-                            $field_feedbacks[] = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['no_answer']) . '</span>';
+                            $feedback_text = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['no_answer']) . '</span>';
+                            
+                            // Add "Show in transcript" link if audio_section_id is available
+                            if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
+                                $feedback_text .= ' <a href="#" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
+                            }
+                            
+                            $field_feedbacks[] = $feedback_text;
                         }
                     }
                     
                     // Store field result for frontend
                     $field_results[$field_num] = array(
                         'correct' => $field_correct,
-                        'user_answer' => $user_field_answer
+                        'user_answer' => $user_field_answer,
+                        'question_number' => $field_question_num,
+                        'audio_section_id' => isset($question['audio_section_id']) ? $question['audio_section_id'] : null
                     );
                 }
                 
