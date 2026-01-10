@@ -979,18 +979,30 @@
                                 }
                                 
                                 // Add "Show in transcript" link if audio_section_id is available (for listening tests)
+                                // Add "Show in reading passage" link if reading_text_id is available (for reading tests)
                                 // Skip for open_question type since links are added per-field in PHP
-                                if (questionResult.question_type !== 'open_question' && 
-                                    questionResult.audio_section_id !== null && 
-                                    questionResult.audio_section_id !== undefined) {
-                                    var transcriptLink = $('<a>')
-                                        .attr('href', '#')
-                                        .addClass('show-in-transcript-link')
-                                        .attr('data-section', questionResult.audio_section_id)
-                                        .attr('data-question', questionNum)
-                                        .text('Show in transcript');
-                                    
-                                    feedbackDiv.append('<br>').append(transcriptLink);
+                                if (questionResult.question_type !== 'open_question') {
+                                    if (questionResult.audio_section_id !== null && 
+                                        questionResult.audio_section_id !== undefined) {
+                                        var transcriptLink = $('<a>')
+                                            .attr('href', '#')
+                                            .addClass('show-in-transcript-link')
+                                            .attr('data-section', questionResult.audio_section_id)
+                                            .attr('data-question', questionNum)
+                                            .text('Show in transcript');
+                                        
+                                        feedbackDiv.append('<br>').append(transcriptLink);
+                                    } else if (questionResult.reading_text_id !== null && 
+                                               questionResult.reading_text_id !== undefined) {
+                                        var readingLink = $('<a>')
+                                            .attr('href', '#')
+                                            .addClass('show-in-reading-passage-link')
+                                            .attr('data-reading-text', questionResult.reading_text_id)
+                                            .attr('data-question', questionNum)
+                                            .text('Show in reading passage');
+                                        
+                                        feedbackDiv.append('<br>').append(readingLink);
+                                    }
                                 }
                                 
                                 questionElement.append(feedbackDiv);
@@ -1334,6 +1346,37 @@
                     }, 500);
                 }
             }
+        });
+        
+        // Delegated event handler for "Show in reading passage" links (for reading tests)
+        $(document).on('click', '.show-in-reading-passage-link', function(e) {
+            e.preventDefault();
+            var readingTextId = $(this).data('reading-text');
+            var questionNumber = $(this).data('question');
+            
+            // Hide all reading text sections
+            $('.reading-text-section').hide();
+            
+            // Show the linked reading text section
+            var $targetText = $('#reading-text-' + readingTextId);
+            $targetText.fadeIn(300);
+            
+            // Scroll to the reading text
+            setTimeout(function() {
+                // For CBT layout, scroll within the reading column
+                var $readingColumn = $targetText.closest('.reading-column');
+                if ($readingColumn.length) {
+                    // CBT layout - scroll to top of the column to show the reading text
+                    $readingColumn.animate({
+                        scrollTop: 0
+                    }, 500);
+                } else {
+                    // Standard layout - scroll the whole page to the reading text
+                    $('html, body').animate({
+                        scrollTop: $targetText.offset().top - 100
+                    }, 500);
+                }
+            }, 350); // Wait for section fade-in
         });
         
         // Track answered questions in computer-based layout using event delegation

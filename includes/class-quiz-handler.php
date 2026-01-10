@@ -251,9 +251,12 @@ class IELTS_CM_Quiz_Handler {
                             if (isset($field_feedback_arr[$field_num]['correct']) && !empty($field_feedback_arr[$field_num]['correct'])) {
                                 $feedback_text = '<span class="field-feedback field-feedback-correct"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['correct']) . '</span>';
                                 
-                                // Add "Show in transcript" link if audio_section_id is available
+                                // Add "Show in transcript" link if audio_section_id is available (listening tests)
+                                // Add "Show in reading passage" link if reading_text_id is available (reading tests)
                                 if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
                                     $feedback_text .= ' <a href="#" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
+                                } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null) {
+                                    $feedback_text .= ' <a href="#" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in reading passage', 'ielts-course-manager') . '</a>';
                                 }
                                 
                                 $field_feedbacks[] = $feedback_text;
@@ -264,9 +267,12 @@ class IELTS_CM_Quiz_Handler {
                             if (isset($field_feedback_arr[$field_num]['incorrect']) && !empty($field_feedback_arr[$field_num]['incorrect'])) {
                                 $feedback_text = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['incorrect']) . '</span>';
                                 
-                                // Add "Show in transcript" link if audio_section_id is available
+                                // Add "Show in transcript" link if audio_section_id is available (listening tests)
+                                // Add "Show in reading passage" link if reading_text_id is available (reading tests)
                                 if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
                                     $feedback_text .= ' <a href="#" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
+                                } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null) {
+                                    $feedback_text .= ' <a href="#" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in reading passage', 'ielts-course-manager') . '</a>';
                                 }
                                 
                                 $field_feedbacks[] = $feedback_text;
@@ -278,9 +284,12 @@ class IELTS_CM_Quiz_Handler {
                         if (isset($field_feedback_arr[$field_num]['no_answer']) && !empty($field_feedback_arr[$field_num]['no_answer'])) {
                             $feedback_text = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['no_answer']) . '</span>';
                             
-                            // Add "Show in transcript" link if audio_section_id is available
+                            // Add "Show in transcript" link if audio_section_id is available (listening tests)
+                            // Add "Show in reading passage" link if reading_text_id is available (reading tests)
                             if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
                                 $feedback_text .= ' <a href="#" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
+                            } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null) {
+                                $feedback_text .= ' <a href="#" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in reading passage', 'ielts-course-manager') . '</a>';
                             }
                             
                             $field_feedbacks[] = $feedback_text;
