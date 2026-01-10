@@ -259,145 +259,205 @@
             "ielts_question_type": "Sentence Completion"
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 1",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"D\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"D\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"D\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "type": "closed_question",
+            "instructions": "Questions 11-15\nSelect the correct answers A-C.",
+            "question": "Who is the speaker addressing?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D. people buying second homes. The speaker says \"I understand that you all own your own home, and some of you may be interested in buying additional property here in the city.\" In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "d"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"D\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"D\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"D\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+            "audio_section_id": 1,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "Property agents",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The speaker is not addressing property agents. The speaker says \"My company deals with finding property\" and \"One of my main roles within the company is to find investment properties,\" which shows they work as a property agent, not speaking to other agents."
+                },
+                {
+                    "text": "people selling houses",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The speaker is not addressing people selling houses. The opening states \"I understand that you all own your own home, and some of you may be interested in buying additional property,\" indicating the audience wants to buy, not sell."
+                },
+                {
+                    "text": "people in the countryside",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The speaker mentions countryside as a topic but isn't addressing people who live there. The talk is about \"property here in the city\" and the speaker says \"some of you may be interested in buying additional property here in the city.\""
+                },
+                {
+                    "text": "people buying second homes",
+                    "is_correct": true,
+                    "feedback": "Correct! The speaker begins by saying \"I understand that you all own your own home, and some of you may be interested in buying additional property here in the city,\" which clearly indicates the audience already owns one home and may want to buy another (second home)."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            ],
+            "options": "Property agents\npeople selling houses\npeople in the countryside\npeople buying second homes",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Rental property in the city",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. is becoming more difficult to find. The speaker states \"as more and more people are competing for houses in this area, both renting and buying are becoming increasingly difficult.\" In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 1,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "is very easy to find",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The opposite is true. The speaker clearly states \"as more and more people are competing for houses in this area, both renting and buying are becoming increasingly difficult,\" not easy."
+                },
+                {
+                    "text": "is becoming more difficult to find",
+                    "is_correct": true,
+                    "feedback": "Correct! The speaker says \"as more and more people are competing for houses in this area, both renting and buying are becoming increasingly difficult.\""
+                },
+                {
+                    "text": "is an investment opportunity",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While investment properties are discussed later in the talk, this option doesn't answer the question about rental property availability. The correct answer relates to how difficult it is to find rental property."
+                },
+                {
+                    "text": "Is often the only option",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While the speaker mentions \"Young couples who cannot get the deposit together, need to rent for a long time and sometimes forever,\" this describes a consequence for some people, not the general situation of rental property in the city."
+                }
+            ],
+            "options": "is very easy to find\nis becoming more difficult to find\nis an investment opportunity\nIs often the only option",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Lisa Brown believes",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. there is a psychological factor involved in owning your own home. The speaker says \"House ownership gives us a feeling of having achieved something\" and \"It can give us a sense of security,\" indicating psychological/emotional benefits. In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 1,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "most people will own their own home at some time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The speaker says \"It is most people's dream to, one day, own their own house,\" which describes a dream/aspiration, not a statement that most people will actually achieve homeownership. The talk also discusses how buying is \"very difficult and often impossible\" for many young people."
+                },
+                {
+                    "text": "there is a psychological factor involved in owning your own home",
+                    "is_correct": true,
+                    "feedback": "Correct! The speaker discusses the emotional and psychological aspects: \"House ownership gives us a feeling of having achieved something\" and \"It can give us a sense of security for our old age\" - these are clearly psychological factors."
+                },
+                {
+                    "text": "most young people need a deposit before they can buy a house",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While the speaker does mention \"buying a house, particularly for first-time buyers, is becoming more and more difficult...because of the need for a substantial deposit,\" this is stated as a fact about the housing market, not as Lisa Brown's belief or opinion specifically."
+                }
+            ],
+            "options": "most people will own their own home at some time\nthere is a psychological factor involved in owning your own home\nmost young people need a deposit before they can buy a house",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Property in the countryside is becoming more popular because",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. the concept of the home office means that some people don't need to go into work. The speaker says \"More and more people are beginning to work from home which means they can avoid the hustle and bustle of rush-hour traffic jams.\" In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 1,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "people want to get away from the city",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While this might seem plausible, it's not the specific reason given. The speaker states the reason is work-related: \"More and more people are beginning to work from home\" which allows them to \"live in a more rural and peaceful location.\""
+                },
+                {
+                    "text": "some parts of the city are becoming overcrowded",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The speaker mentions \"more and more people are competing for houses\" in the city center, but this is not given as the reason why countryside property is becoming popular. The actual reason relates to working from home."
+                },
+                {
+                    "text": "the concept of the home office means that some people don't need to go into work",
+                    "is_correct": true,
+                    "feedback": "Correct! The speaker says \"our style of work is changing\" and \"In certain professions, for example sales and computing, it is no longer necessary for people to be based in an office full-time. More and more people are beginning to work from home\" which allows them to choose rural locations."
+                },
+                {
+                    "text": "public transport is beginning to serve outlying areas",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Public transport is not mentioned in the talk. The speaker explains that working from home allows people to \"avoid the hustle and bustle of rush-hour traffic jams into work,\" which is about not commuting, not about better public transport."
+                }
+            ],
+            "options": "people want to get away from the city\nsome parts of the city are becoming overcrowded\nthe concept of the home office means that some people don't need to go into work\npublic transport is beginning to serve outlying areas",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "What kind of properties does the speaker specialise in?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. investment. The speaker says \"One of my main roles within the company is to find investment properties for people who wish to plan ahead for their future.\" In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 1,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "commercial",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Commercial properties are not mentioned. The speaker discusses residential properties for investment purposes, not commercial properties."
+                },
+                {
+                    "text": "investment",
+                    "is_correct": true,
+                    "feedback": "Correct! The speaker clearly states: \"One of my main roles within the company is to find investment properties for people who wish to plan ahead for their future.\" They then go on to explain what investment properties are."
+                },
+                {
+                    "text": "first homes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While the speaker mentions first-time buyers facing difficulties, they don't specialize in first homes. They specifically say they specialize in \"investment properties\" which are \"in addition to their own home.\""
+                },
+                {
+                    "text": "rural",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Rural properties are mentioned as becoming popular, but the speaker says \"My company deals with finding property for both purchasers and renters in the city area\" and specializes in \"investment properties,\" not rural properties specifically."
+                }
+            ],
+            "options": "commercial\ninvestment\nfirst homes\nrural",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 2",
+            "instructions": "Questions 16 to 20\nAnswer the following questions USING NO MORE THAN THREE WORDS OR A NUMBER",
+            "question": "What end of the market are the properties? [field 1]",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"CHEAPER\" (or variations like \"THE CHEAPER END\"). The speaker states \"An investment property is usually at the cheaper end of the market.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! You correctly identified that investment properties are at the cheaper end of the market.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"CHEAPER\" (or variations like \"THE CHEAPER END\" or \"THE CHEAP END\"). Listen when the speaker explains: \"An investment property is usually at the cheaper end of the market.\"",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "b"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 3",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "b"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 4",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"C\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"C\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"C\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "c"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"C\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"C\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"C\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 5",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "b"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Excellent! \"B\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"B\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"B\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
-                }
-            },
-            "ielts_question_type": "Short Answer Questions"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Question 6",
-            "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"CHEAPER\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"CHEAPER\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"CHEAPER\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "cheaper|the cheap|the cheaper end|the cheap end|the cheap"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"CHEAPER\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"CHEAPER\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"CHEAPER\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! You correctly identified that investment properties are at the cheaper end of the market.",
+                    "incorrect": "✗ Not quite. The correct answer is \"CHEAPER\" (or variations like \"THE CHEAPER END\" or \"THE CHEAP END\"). Listen when the speaker explains: \"An investment property is usually at the cheaper end of the market.\"",
+                    "no_answer": "No answer provided. The correct answer is \"CHEAPER\" (or variations like \"THE CHEAPER END\"). The speaker states \"An investment property is usually at the cheaper end of the market.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
@@ -405,23 +465,23 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Question 7",
+            "question": "What does the speaker compare buying houses with? [field 1]",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"HAVING A PENSION\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"HAVING A PENSION\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"HAVING A PENSION\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"HAVING A PENSION\" (or variations like \"PENSION\" or \"PENSION SCHEMES\"). The speaker says \"Many people are turning to property investment instead of pension schemes.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! You correctly identified that the speaker compares property investment with pension schemes.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"HAVING A PENSION\" (or variations like \"PENSION\" or \"PENSION SCHEMES\"). Listen when the speaker says: \"Many people are turning to property investment instead of pension schemes as we hear the horror stories of countries such as the UK, where people have invested all their lives into their pension schemes to find that now their money is relatively worthless.\"",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "having a pension|pension|having pension|a pension|pensions|having pensions|pension schemes|pension scheme"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"HAVING A PENSION\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"HAVING A PENSION\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"HAVING A PENSION\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! You correctly identified that the speaker compares property investment with pension schemes.",
+                    "incorrect": "✗ Not quite. The correct answer is \"HAVING A PENSION\" (or variations like \"PENSION\" or \"PENSION SCHEMES\"). Listen when the speaker says: \"Many people are turning to property investment instead of pension schemes as we hear the horror stories of countries such as the UK, where people have invested all their lives into their pension schemes to find that now their money is relatively worthless.\"",
+                    "no_answer": "No answer provided. The correct answer is \"HAVING A PENSION\" (or variations like \"PENSION\" or \"PENSION SCHEMES\"). The speaker says \"Many people are turning to property investment instead of pension schemes.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
@@ -429,23 +489,23 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Question 8",
+            "question": "What kind of equity can be the result of buying a property when the market is high? [field 1]",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"NEGATIVE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"NEGATIVE\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"NEGATIVE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"NEGATIVE\" (or \"NEGATIVE EQUITY\"). The speaker explains: \"when the housing market slows down, they are in a state of negative equity.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! You correctly identified negative equity as the risk of buying when the market is high.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"NEGATIVE\" (or \"NEGATIVE EQUITY\"). Listen when the speaker says: \"There are people who buy property when the market is high and prices are inflated beyond their true value, only to find that when the housing market slows down, they are in a state of negative equity. Negative equity is a situation that arises when you owe more for the house than the house itself is worth.\"",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "negative|negative equity"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"NEGATIVE\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"NEGATIVE\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"NEGATIVE\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! You correctly identified negative equity as the risk of buying when the market is high.",
+                    "incorrect": "✗ Not quite. The correct answer is \"NEGATIVE\" (or \"NEGATIVE EQUITY\"). Listen when the speaker says: \"There are people who buy property when the market is high and prices are inflated beyond their true value, only to find that when the housing market slows down, they are in a state of negative equity. Negative equity is a situation that arises when you owe more for the house than the house itself is worth.\"",
+                    "no_answer": "No answer provided. The correct answer is \"NEGATIVE\" (or \"NEGATIVE EQUITY\"). The speaker explains: \"when the housing market slows down, they are in a state of negative equity.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
@@ -453,23 +513,23 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Question 9",
+            "question": "How does she describe careful but successful property investment? [field 1]",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"ENORMOUSLY SATISFYING\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"ENORMOUSLY SATISFYING\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"ENORMOUSLY SATISFYING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"ENORMOUSLY SATISFYING\" (or just \"SATISFYING\"). The speaker concludes: \"Property investment, if handled correctly, can be enormously satisfying.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! You correctly identified how the speaker describes successful property investment.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"ENORMOUSLY SATISFYING\" (or just \"SATISFYING\"). Listen to the speaker's conclusion: \"In short: the best advice is to be aware of the ups and downs of the housing market. Property investment, if handled correctly, can be enormously satisfying.\"",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "enormously satisfying|satisfying"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"ENORMOUSLY SATISFYING\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"ENORMOUSLY SATISFYING\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"ENORMOUSLY SATISFYING\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! You correctly identified how the speaker describes successful property investment.",
+                    "incorrect": "✗ Not quite. The correct answer is \"ENORMOUSLY SATISFYING\" (or just \"SATISFYING\"). Listen to the speaker's conclusion: \"In short: the best advice is to be aware of the ups and downs of the housing market. Property investment, if handled correctly, can be enormously satisfying.\"",
+                    "no_answer": "No answer provided. The correct answer is \"ENORMOUSLY SATISFYING\" (or just \"SATISFYING\"). The speaker concludes: \"Property investment, if handled correctly, can be enormously satisfying.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
@@ -477,47 +537,47 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Question 10",
+            "question": "How can you ask the speaker a question? [field 1]",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"RAISE YOUR HAND\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"RAISE YOUR HAND\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"RAISE YOUR HAND\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"RAISE YOUR HAND\" (or variations like \"RAISE HAND\" or \"RAISING YOUR HAND\"). The speaker says at the end: \"Please raise your hand if you have any questions.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! You correctly identified how to ask the speaker a question.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"RAISE YOUR HAND\" (or variations like \"RAISE HAND\" or \"RAISING YOUR HAND\"). Listen at the very end when the speaker says: \"Thank you for listening. Please raise your hand if you have any questions and I will try to be of assistance.\"",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 1,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "raise your hand|raise hand|raising hand|raising your hand|raising a hand|by raising hand"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"RAISE YOUR HAND\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"RAISE YOUR HAND\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"RAISE YOUR HAND\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! You correctly identified how to ask the speaker a question.",
+                    "incorrect": "✗ Not quite. The correct answer is \"RAISE YOUR HAND\" (or variations like \"RAISE HAND\" or \"RAISING YOUR HAND\"). Listen at the very end when the speaker says: \"Thank you for listening. Please raise your hand if you have any questions and I will try to be of assistance.\"",
+                    "no_answer": "No answer provided. The correct answer is \"RAISE YOUR HAND\" (or variations like \"RAISE HAND\" or \"RAISING YOUR HAND\"). The speaker says at the end: \"Please raise your hand if you have any questions.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
         },
         {
             "type": "open_question",
-            "instructions": "",
-            "question": "Question 1",
+            "instructions": "Questions 21 to 24\nAnswer the following questions USING NO MORE THAN THREE WORDS AND / OR A NUMBER",
+            "question": "How long is the radio show? [field 1]",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"1 HOUR\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"1 HOUR\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"1 HOUR\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"1 HOUR\" (or \"ONE HOUR\" or \"AN HOUR\"). The interviewer says at the beginning: \"Thank you very much for tuning in today to listen to our weekly hour on conservation issues.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! You correctly identified the length of the radio show.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"1 HOUR\" (or \"ONE HOUR\" or \"AN HOUR\"). Listen at the very beginning when the interviewer says: \"Thank you very much for tuning in today to listen to our weekly hour on conservation issues.\"",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "1 hour|one hour|an hour|hour"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"1 HOUR\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"1 HOUR\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"1 HOUR\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! You correctly identified the length of the radio show.",
+                    "incorrect": "✗ Not quite. The correct answer is \"1 HOUR\" (or \"ONE HOUR\" or \"AN HOUR\"). Listen at the very beginning when the interviewer says: \"Thank you very much for tuning in today to listen to our weekly hour on conservation issues.\"",
+                    "no_answer": "No answer provided. The correct answer is \"1 HOUR\" (or \"ONE HOUR\" or \"AN HOUR\"). The interviewer says at the beginning: \"Thank you very much for tuning in today to listen to our weekly hour on conservation issues.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
@@ -525,23 +585,23 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Question 2",
+            "question": "What does the programme focus on every week? [field 1]",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"CONSERVATION\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"CONSERVATION\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"CONSERVATION\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"CONSERVATION\" (or \"CONSERVATION ISSUES\"). The interviewer says: \"our weekly hour on conservation issues.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! You correctly identified the weekly focus of the programme.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"CONSERVATION\" (or \"CONSERVATION ISSUES\"). Listen when the interviewer says: \"Thank you very much for tuning in today to listen to our weekly hour on conservation issues.\"",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "conservation|conservation issue|conservation issues"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"CONSERVATION\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"CONSERVATION\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"CONSERVATION\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! You correctly identified the weekly focus of the programme.",
+                    "incorrect": "✗ Not quite. The correct answer is \"CONSERVATION\" (or \"CONSERVATION ISSUES\"). Listen when the interviewer says: \"Thank you very much for tuning in today to listen to our weekly hour on conservation issues.\"",
+                    "no_answer": "No answer provided. The correct answer is \"CONSERVATION\" (or \"CONSERVATION ISSUES\"). The interviewer says: \"our weekly hour on conservation issues.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
@@ -549,23 +609,23 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Question 3",
+            "question": "Where is Professor Ripley from? [field 1]",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"THE USA\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"THE USA\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"THE USA\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"THE USA\" (or \"USA\" or \"AMERICA\"). The interviewer says: \"we have invited in a specialist by the name of Professor Andrew Ripley, all the way from USA.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! You correctly identified where Professor Ripley is from.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"THE USA\" (or \"USA\" or \"AMERICA\"). Listen when the interviewer says: \"we have invited in a specialist by the name of Professor Andrew Ripley, all the way from USA, to tell us more about the problems faced by the cat family.\"",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "the usa|usa|u.s.a.|u.s.a|america|north america|united states"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"THE USA\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"THE USA\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"THE USA\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! You correctly identified where Professor Ripley is from.",
+                    "incorrect": "✗ Not quite. The correct answer is \"THE USA\" (or \"USA\" or \"AMERICA\"). Listen when the interviewer says: \"we have invited in a specialist by the name of Professor Andrew Ripley, all the way from USA, to tell us more about the problems faced by the cat family.\"",
+                    "no_answer": "No answer provided. The correct answer is \"THE USA\" (or \"USA\" or \"AMERICA\"). The interviewer says: \"we have invited in a specialist by the name of Professor Andrew Ripley, all the way from USA.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
@@ -573,23 +633,23 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Question 4",
+            "question": "According to Professor Ripley, what animals do people most associate with the African bush? [field 1]",
             "points": 1.0,
-            "no_answer_feedback": "No answer provided. The correct answer is \"PRIDES OF LIONS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented.",
-            "correct_feedback": "✓ Excellent! \"PRIDES OF LIONS\" is correct. You listened carefully and identified the key information.",
-            "incorrect_feedback": "✗ Not quite. The correct answer is \"PRIDES OF LIONS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
+            "no_answer_feedback": "No answer provided. The correct answer is \"PRIDES OF LIONS\" (or just \"LIONS\"). Professor Ripley says: \"Prides of lions basking in the sunshine are probably one of people's most vivid perceptions of the African bush.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+            "correct_feedback": "✓ Excellent! You correctly identified what people most associate with the African bush.",
+            "incorrect_feedback": "✗ Not quite. The correct answer is \"PRIDES OF LIONS\" (or just \"LIONS\"). Listen when Professor Ripley says: \"Prides of lions basking in the sunshine are probably one of people's most vivid perceptions of the African bush.\"",
             "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "",
+            "audio_section_id": 2,
+            "ielts_question_category": "short_answer_l",
             "field_count": 1,
             "field_answers": {
                 "1": "prides of lions|lions|the lion"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "✓ Excellent! \"PRIDES OF LIONS\" is correct. You listened carefully and identified the key information.",
-                    "incorrect": "✗ Not quite. The correct answer is \"PRIDES OF LIONS\". Listen to the audio again and check the transcript. Pay attention to keywords and phrases that directly relate to the question. Try to identify signal words that indicate important information is coming.",
-                    "no_answer": "No answer provided. The correct answer is \"PRIDES OF LIONS\". In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented."
+                    "correct": "✓ Excellent! You correctly identified what people most associate with the African bush.",
+                    "incorrect": "✗ Not quite. The correct answer is \"PRIDES OF LIONS\" (or just \"LIONS\"). Listen when Professor Ripley says: \"Prides of lions basking in the sunshine are probably one of people's most vivid perceptions of the African bush.\"",
+                    "no_answer": "No answer provided. The correct answer is \"PRIDES OF LIONS\" (or just \"LIONS\"). Professor Ripley says: \"Prides of lions basking in the sunshine are probably one of people's most vivid perceptions of the African bush.\" In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers."
                 }
             },
             "ielts_question_type": "Short Answer Questions"
