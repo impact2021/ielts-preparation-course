@@ -295,7 +295,8 @@ class IELTS_CM_Quiz_Handler {
                 'correct_answer' => $correct_answer,
                 'question_text' => isset($question['question']) ? $question['question'] : '',
                 'question_type' => isset($question['type']) ? $question['type'] : '',
-                'options' => isset($question['options']) ? $question['options'] : ''
+                'options' => isset($question['options']) ? $question['options'] : '',
+                'audio_section_id' => isset($question['audio_section_id']) ? $question['audio_section_id'] : null
             );
         }
         

@@ -1763,6 +1763,29 @@ select.answer-select-inline.answer-incorrect {
     margin-right: 8px;
 }
 
+/* Show in transcript link for listening test feedback */
+.show-in-transcript-link {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 5px 12px;
+    background: #0073aa;
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.9em;
+    transition: background 0.2s ease;
+}
+
+.show-in-transcript-link:hover {
+    background: #005a87;
+    text-decoration: none;
+}
+
+.show-in-transcript-link:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
 /* Option-level feedback message displayed inside individual options */
 .option-feedback-message {
     display: block;

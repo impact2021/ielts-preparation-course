@@ -978,6 +978,39 @@
                                     feedbackDiv.addClass('open-question-feedback');
                                 }
                                 
+                                // Add "Show in transcript" link if audio_section_id is available (for listening tests)
+                                if (questionResult.audio_section_id !== null && questionResult.audio_section_id !== undefined) {
+                                    var transcriptLink = $('<a>')
+                                        .attr('href', '#')
+                                        .addClass('show-in-transcript-link')
+                                        .attr('data-section', questionResult.audio_section_id)
+                                        .text('Show in transcript')
+                                        .on('click', function(e) {
+                                            e.preventDefault();
+                                            var sectionId = $(this).data('section');
+                                            
+                                            // Hide all transcript sections
+                                            $('.transcript-section-content').hide();
+                                            
+                                            // Show the linked transcript section
+                                            $('#transcript-section-' + sectionId).fadeIn(300);
+                                            
+                                            // Update tab active states
+                                            $('.transcript-section-tab').removeClass('active');
+                                            $('.transcript-section-tab[data-section="' + sectionId + '"]').addClass('active');
+                                            
+                                            // Scroll to transcript
+                                            var transcriptContainer = $('#listening-transcript, #listening-transcripts');
+                                            if (transcriptContainer.length) {
+                                                $('html, body').animate({
+                                                    scrollTop: transcriptContainer.offset().top - 100
+                                                }, 500);
+                                            }
+                                        });
+                                    
+                                    feedbackDiv.append('<br>').append(transcriptLink);
+                                }
+                                
                                 questionElement.append(feedbackDiv);
                             }
                         });
