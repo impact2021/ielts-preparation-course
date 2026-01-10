@@ -326,7 +326,6 @@ if ($lesson_id) {
                                                 echo wp_kses(wpautop($processed_transcript), $allowed_html);
                                                 ?>
                                             </div>
-                                            </div>
                                         <?php else: ?>
                                             <p><?php _e('No transcript available for this section.', 'ielts-course-manager'); ?></p>
                                         <?php endif; ?>
