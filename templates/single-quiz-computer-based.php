@@ -58,12 +58,14 @@ function process_transcript_markers_cbt($transcript, $starting_question = 1) {
         $output .= '</span>';
         
         // Wrap the highlighted answer text in a yellow background span
+        // Note: $highlighted_text may contain HTML tags from transcript (e.g., <strong>) which must be preserved
         $trimmed_text = trim($highlighted_text);
         if (!empty($trimmed_text)) {
-            $output .= '<span class="transcript-answer-marker">' . $highlighted_text . '</span>';
+            $output .= '<span class="transcript-answer-marker">' . $trimmed_text . '</span>';
         }
         
         // Add any remaining text that wasn't highlighted
+        // Note: $remaining_text may also contain HTML tags which must be preserved
         $remaining_text = mb_substr($answer_text, mb_strlen($highlighted_text));
         $output .= $remaining_text;
         

@@ -181,6 +181,44 @@ To get optimal results:
 - Update marker placement in existing transcripts following the new guide
 - New transcripts should follow placement rules from the start
 
+## Security Considerations
+
+### HTML in Transcripts
+
+Transcript content is stored with HTML formatting (e.g., `<strong>`, `<p>` tags) to preserve structure and emphasis. The highlighting code preserves this HTML by design.
+
+**Important Security Notes:**
+
+1. **Transcript content is trusted**: Transcripts are created and managed by site administrators through the WordPress admin interface, not by end users.
+
+2. **HTML preservation required**: The code does not escape HTML in transcripts because:
+   - Transcripts contain intentional HTML formatting (speaker names in `<strong>` tags, etc.)
+   - This HTML must be preserved for correct display
+   - Escaping would break the transcript layout
+
+3. **Access control**: Transcript creation and editing should only be accessible to trusted administrators. The WordPress admin interface provides this security layer.
+
+4. **Input validation**: If adding transcript editing features in the future, implement:
+   - Strict capability checks (e.g., `manage_options` or custom capability)
+   - Server-side validation of allowed HTML tags
+   - Sanitization using `wp_kses()` with allowed tags whitelist
+
+**Current Implementation:**
+```php
+// HTML tags in transcripts are preserved intentionally
+$output .= '<span class="transcript-answer-marker">' . $trimmed_text . '</span>';
+$output .= $remaining_text;
+```
+
+This is safe because:
+- Transcripts come from database (admin-controlled content)
+- No user-submitted content is processed
+- Consistent with how transcripts are displayed elsewhere in the codebase
+
+
+- Update marker placement in existing transcripts following the new guide
+- New transcripts should follow placement rules from the start
+
 ## Why Version 11.9 Instead of 11.7?
 
 Version 11.8 was documented in release notes but the code was never fully implemented. Since some parts of 11.8 may have been partially implemented elsewhere, we're using 11.9 to clearly indicate this is a new release that completes the 11.8 work.
