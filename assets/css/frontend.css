@@ -1745,6 +1745,15 @@ select.answer-select-inline.answer-incorrect {
 .question-feedback-message.open-question-feedback .field-feedback {
     display: block;
     margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border-left: 4px solid;
+}
+
+/* Styling for correct field feedback */
+.question-feedback-message.open-question-feedback .field-feedback-correct {
+    background: rgba(76, 175, 80, 0.1);
+    border-left-color: #4caf50;
 }
 
 /* Add icons before each field feedback based on correctness */
@@ -1756,12 +1765,28 @@ select.answer-select-inline.answer-incorrect {
     margin-right: 8px;
 }
 
+/* Make the "Question X:" text also green for correct answers */
+.question-feedback-message.open-question-feedback .field-feedback-correct strong {
+    color: #2e7d32;
+}
+
+/* Styling for incorrect field feedback */
+.question-feedback-message.open-question-feedback .field-feedback-incorrect {
+    background: rgba(244, 67, 54, 0.1);
+    border-left-color: #f44336;
+}
+
 .question-feedback-message.open-question-feedback .field-feedback-incorrect::before {
     content: '✗ ';
     font-size: 20px;
     font-weight: bold;
     color: #f44336;
     margin-right: 8px;
+}
+
+/* Make the "Question X:" text also red for incorrect answers */
+.question-feedback-message.open-question-feedback .field-feedback-incorrect strong {
+    color: #c62828;
 }
 
 /* Show in transcript link for listening test feedback */
