@@ -36,21 +36,47 @@ if (!empty($audio_sections)) {
 $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
 
 // Helper function to process transcript question markers
-// Converts [Q#] markers to anchored, highlightable spans
+// Converts [Q#] markers to anchored, highlightable spans with yellow background on answer text
 function process_transcript_markers_practice($transcript, $starting_question = 1) {
     if (empty($transcript)) {
         return $transcript;
     }
     
-    // Convert [Q#] markers to visible badges with anchor for hyperlinking
-    $pattern = '/\[Q(\d+)\]/i';
+    // Convert [Q#] markers to visible badges with yellow background highlighting on answer text
+    // Pattern captures: [Q1]answer text here... and wraps answer text in yellow highlight
+    $pattern = '/\[Q(\d+)\]([^\[]*?)(?=\[Q|$)/is';
     
     $processed = preg_replace_callback($pattern, function($matches) use ($starting_question) {
         $question_num = intval($matches[1]);
         $display_num = $question_num;
+        $answer_text = isset($matches[2]) ? $matches[2] : '';
         
-        // Return the anchor span with visible Q badge - simple button with anchor link
-        return '<span id="transcript-q' . esc_attr($display_num) . '" data-question="' . esc_attr($display_num) . '"><span class="question-marker-badge">Q' . esc_html($display_num) . '</span></span>';
+        // Trim the answer text to first sentence or ~100 characters
+        $highlighted_text = $answer_text;
+        
+        // Try to find first sentence ending
+        if (preg_match('/^(.*?[.!?\n])/s', $answer_text, $sentence_match)) {
+            $highlighted_text = $sentence_match[1];
+        } else {
+            // No sentence ending found, take first 100 characters
+            $highlighted_text = mb_substr($answer_text, 0, 100);
+        }
+        
+        // Build the output: Q badge + highlighted answer text + remaining text
+        $output = '<span id="transcript-q' . esc_attr($display_num) . '" data-question="' . esc_attr($display_num) . '">';
+        $output .= '<span class="question-marker-badge">Q' . esc_html($display_num) . '</span>';
+        $output .= '</span>';
+        
+        // Wrap the highlighted answer text in a yellow background span
+        if (!empty(trim($highlighted_text))) {
+            $output .= '<span class="transcript-answer-marker">' . $highlighted_text . '</span>';
+        }
+        
+        // Add any remaining text that wasn't highlighted
+        $remaining_text = mb_substr($answer_text, mb_strlen($highlighted_text));
+        $output .= $remaining_text;
+        
+        return $output;
     }, $transcript);
     
     return $processed;
