@@ -1377,6 +1377,12 @@
         $(document).on('click', '.listen-to-answer-link', function(e) {
             e.preventDefault();
             var $button = $(this);
+            
+            // Prevent multiple clicks while loading
+            if ($button.hasClass('loading')) {
+                return;
+            }
+            
             var startTime = parseFloat($button.data('start-time'));
             var endTime = parseFloat($button.data('end-time'));
             
@@ -1389,14 +1395,16 @@
                 // Show loading state
                 $button.addClass('loading');
                 
-                // Set the current time to start time
-                audioElement.currentTime = startTime;
-                
-                // Remove loading state and play audio when seeking is complete
+                // Define handler functions before using them
                 var seekedHandler = function() {
                     $button.removeClass('loading');
                     audioElement.removeEventListener('seeked', seekedHandler);
                 };
+                
+                // Set the current time to start time
+                audioElement.currentTime = startTime;
+                
+                // Remove loading state when seeking is complete
                 audioElement.addEventListener('seeked', seekedHandler);
                 
                 // Play the audio
