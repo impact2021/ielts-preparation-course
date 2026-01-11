@@ -549,7 +549,7 @@
     /**
      * Convert audio time format (M:SS or MM:SS or seconds) to seconds
      * Accepts: "2:36", "12:45", "156", "156.5"
-     * Returns: numeric seconds value
+     * Returns: numeric seconds value or empty string for invalid input
      */
     function convertAudioTimeToSeconds(timeStr) {
         if (!timeStr || timeStr.trim() === '') {
@@ -559,24 +559,27 @@
         timeStr = timeStr.trim();
         
         // If it contains a colon, it's in M:SS or MM:SS format
-        if (timeStr.indexOf(':') !== -1) {
+        if (timeStr.includes(':')) {
             var parts = timeStr.split(':');
             if (parts.length === 2) {
                 var minutes = parseInt(parts[0], 10);
                 var seconds = parseFloat(parts[1]);
-                if (!isNaN(minutes) && !isNaN(seconds)) {
+                if (!isNaN(minutes) && !isNaN(seconds) && minutes >= 0 && seconds >= 0) {
                     return (minutes * 60 + seconds).toString();
                 }
             }
+            // Invalid M:SS format - return empty string
+            return '';
         }
         
         // Otherwise, assume it's already in seconds
         var numValue = parseFloat(timeStr);
-        if (!isNaN(numValue)) {
+        if (!isNaN(numValue) && numValue >= 0) {
             return numValue.toString();
         }
         
-        return timeStr; // Return as-is if we can't parse it
+        // Invalid input - return empty string instead of original value
+        return '';
     }
     
     /**
