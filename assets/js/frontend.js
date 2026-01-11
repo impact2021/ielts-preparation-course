@@ -992,6 +992,23 @@
                                             .text('Show in transcript');
                                         
                                         feedbackDiv.append('<br>').append(transcriptLink);
+                                        
+                                        // Add "Listen to this answer" button if audio timing is available
+                                        if (questionResult.audio_start_time !== null && 
+                                            questionResult.audio_start_time !== undefined &&
+                                            questionResult.audio_end_time !== null && 
+                                            questionResult.audio_end_time !== undefined) {
+                                            var listenLink = $('<a>')
+                                                .attr('href', '#')
+                                                .addClass('listen-to-answer-link')
+                                                .attr('data-start-time', questionResult.audio_start_time)
+                                                .attr('data-end-time', questionResult.audio_end_time)
+                                                .attr('data-question', questionNum)
+                                                .text('Listen to this answer')
+                                                .css('margin-left', '10px');
+                                            
+                                            feedbackDiv.append(listenLink);
+                                        }
                                     } else if (questionResult.reading_text_id !== null && 
                                                questionResult.reading_text_id !== undefined) {
                                         var readingLink = $('<a>')
@@ -1353,6 +1370,43 @@
                         scrollTop: transcriptContainer.offset().top - 100
                     }, 500);
                 }
+            }
+        });
+        
+        // Delegated event handler for "Listen to this answer" links
+        $(document).on('click', '.listen-to-answer-link', function(e) {
+            e.preventDefault();
+            var startTime = parseFloat($(this).data('start-time'));
+            var endTime = parseFloat($(this).data('end-time'));
+            
+            // Find the audio player element
+            var $audioPlayer = $('#listening-audio-player audio').first();
+            
+            if ($audioPlayer.length && !isNaN(startTime) && !isNaN(endTime)) {
+                var audioElement = $audioPlayer[0];
+                
+                // Set the current time to start time
+                audioElement.currentTime = startTime;
+                
+                // Play the audio
+                audioElement.play();
+                
+                // Set up an event listener to stop at end time
+                var timeUpdateHandler = function() {
+                    if (audioElement.currentTime >= endTime) {
+                        audioElement.pause();
+                        audioElement.removeEventListener('timeupdate', timeUpdateHandler);
+                    }
+                };
+                
+                audioElement.addEventListener('timeupdate', timeUpdateHandler);
+                
+                // Also ensure we remove the listener if user stops/pauses manually
+                var pauseHandler = function() {
+                    audioElement.removeEventListener('timeupdate', timeUpdateHandler);
+                    audioElement.removeEventListener('pause', pauseHandler);
+                };
+                audioElement.addEventListener('pause', pauseHandler);
             }
         });
         
