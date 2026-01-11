@@ -44,6 +44,7 @@ function process_transcript_markers($transcript, $starting_question = 1) {
     
     // Convert [Q#] markers to visible badges with yellow background highlighting on answer text
     // Pattern captures: [Q1]answer text here... and wraps answer text in yellow highlight
+    // Stops at next Q marker or end of string to avoid spanning multiple questions
     $pattern = '/\[Q(\d+)\]([^\[]*?)(?=\[Q|$)/is';
     
     $processed = preg_replace_callback($pattern, function($matches) use ($starting_question) {
@@ -54,7 +55,7 @@ function process_transcript_markers($transcript, $starting_question = 1) {
         // Trim the answer text to first sentence or ~100 characters
         $highlighted_text = $answer_text;
         
-        // Try to find first sentence ending
+        // Try to find first sentence ending (non-greedy match)
         if (preg_match('/^(.*?[.!?\n])/s', $answer_text, $sentence_match)) {
             $highlighted_text = $sentence_match[1];
         } else {
@@ -68,7 +69,8 @@ function process_transcript_markers($transcript, $starting_question = 1) {
         $output .= '</span>';
         
         // Wrap the highlighted answer text in a yellow background span
-        if (!empty(trim($highlighted_text))) {
+        $trimmed_text = trim($highlighted_text);
+        if (!empty($trimmed_text)) {
             $output .= '<span class="transcript-answer-marker">' . $highlighted_text . '</span>';
         }
         
