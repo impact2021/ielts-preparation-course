@@ -22,6 +22,20 @@ class IELTS_CM_Quiz_Handler {
     }
     
     /**
+     * Check if field has audio time data (both start and end times are set)
+     * 
+     * @param array|null $field_audio_times Field audio times array
+     * @return bool True if both start and end times exist, false otherwise
+     */
+    private function has_field_audio_times($field_audio_times) {
+        return $field_audio_times && 
+               isset($field_audio_times['start']) && 
+               isset($field_audio_times['end']) && 
+               $field_audio_times['start'] !== null && 
+               $field_audio_times['end'] !== null;
+    }
+    
+    /**
      * Submit quiz answers
      */
     public function submit_quiz() {
@@ -255,6 +269,12 @@ class IELTS_CM_Quiz_Handler {
                                 // Add "Show in reading passage" link if reading_text_id is available (reading tests)
                                 if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
                                     $feedback_text .= ' <a href="#" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
+                                    
+                                    // Add "Listen to this answer" button if field has audio timing
+                                    $field_audio_times = isset($question['field_audio_times'][$field_num]) ? $question['field_audio_times'][$field_num] : null;
+                                    if ($this->has_field_audio_times($field_audio_times)) {
+                                        $feedback_text .= ' <a href="#" class="listen-to-answer-link" data-start-time="' . esc_attr($field_audio_times['start']) . '" data-end-time="' . esc_attr($field_audio_times['end']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Listen to this answer', 'ielts-course-manager') . '</a>';
+                                    }
                                 } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null) {
                                     $feedback_text .= ' <a href="#" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in reading passage', 'ielts-course-manager') . '</a>';
                                 }
@@ -271,6 +291,12 @@ class IELTS_CM_Quiz_Handler {
                                 // Add "Show in reading passage" link if reading_text_id is available (reading tests)
                                 if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
                                     $feedback_text .= ' <a href="#" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
+                                    
+                                    // Add "Listen to this answer" button if field has audio timing
+                                    $field_audio_times = isset($question['field_audio_times'][$field_num]) ? $question['field_audio_times'][$field_num] : null;
+                                    if ($this->has_field_audio_times($field_audio_times)) {
+                                        $feedback_text .= ' <a href="#" class="listen-to-answer-link" data-start-time="' . esc_attr($field_audio_times['start']) . '" data-end-time="' . esc_attr($field_audio_times['end']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Listen to this answer', 'ielts-course-manager') . '</a>';
+                                    }
                                 } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null) {
                                     $feedback_text .= ' <a href="#" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in reading passage', 'ielts-course-manager') . '</a>';
                                 }
@@ -288,6 +314,12 @@ class IELTS_CM_Quiz_Handler {
                             // Add "Show in reading passage" link if reading_text_id is available (reading tests)
                             if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
                                 $feedback_text .= ' <a href="#" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
+                                
+                                // Add "Listen to this answer" button if field has audio timing
+                                $field_audio_times = isset($question['field_audio_times'][$field_num]) ? $question['field_audio_times'][$field_num] : null;
+                                if ($this->has_field_audio_times($field_audio_times)) {
+                                    $feedback_text .= ' <a href="#" class="listen-to-answer-link" data-start-time="' . esc_attr($field_audio_times['start']) . '" data-end-time="' . esc_attr($field_audio_times['end']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Listen to this answer', 'ielts-course-manager') . '</a>';
+                                }
                             } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null) {
                                 $feedback_text .= ' <a href="#" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in reading passage', 'ielts-course-manager') . '</a>';
                             }
@@ -297,11 +329,14 @@ class IELTS_CM_Quiz_Handler {
                     }
                     
                     // Store field result for frontend
+                    $field_audio_times = isset($question['field_audio_times'][$field_num]) ? $question['field_audio_times'][$field_num] : null;
                     $field_results[$field_num] = array(
                         'correct' => $field_correct,
                         'user_answer' => $user_field_answer,
                         'question_number' => $field_question_num,
-                        'audio_section_id' => isset($question['audio_section_id']) ? $question['audio_section_id'] : null
+                        'audio_section_id' => isset($question['audio_section_id']) ? $question['audio_section_id'] : null,
+                        'audio_start_time' => $field_audio_times && isset($field_audio_times['start']) ? $field_audio_times['start'] : null,
+                        'audio_end_time' => $field_audio_times && isset($field_audio_times['end']) ? $field_audio_times['end'] : null
                     );
                 }
                 
