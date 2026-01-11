@@ -1396,6 +1396,7 @@
                 $button.addClass('loading');
                 
                 // Define handler functions before using them
+                // seekedHandler is a one-time handler that removes itself after execution
                 var seekedHandler = function() {
                     $button.removeClass('loading');
                     audioElement.removeEventListener('seeked', seekedHandler);

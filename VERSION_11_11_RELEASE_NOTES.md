@@ -114,8 +114,8 @@ This release focuses on improving the user experience for the audio feedback but
 }
 
 @keyframes spin-loading {
-    0% { transform: translateY(-50%) rotate(0deg); }
-    100% { transform: translateY(-50%) rotate(360deg); }
+    from { transform: translateY(-50%) rotate(0deg); }
+    to { transform: translateY(-50%) rotate(360deg); }
 }
 ```
 
