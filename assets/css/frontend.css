@@ -1834,11 +1834,21 @@ select.answer-select-inline.answer-incorrect {
 
 .transcript-highlight {
     background-color: #fff9c4 !important; /* Yellow highlight */
+    animation: highlightFadeIn 0.5s ease-in-out;
+}
+
+/* For paragraphs, add additional styling */
+p.transcript-highlight {
     padding: 12px 16px !important;
     border-left: 4px solid #ffc107 !important;
     margin: 10px 0 !important;
     border-radius: 4px;
-    animation: highlightFadeIn 0.5s ease-in-out;
+}
+
+/* For table cells, use simpler styling to preserve table structure */
+td.transcript-highlight {
+    /* Yellow background is applied by base class above */
+    /* Don't add padding/margin to avoid breaking table layout */
 }
 
 @keyframes highlightFadeIn {
