@@ -1845,12 +1845,6 @@ p.transcript-highlight {
     border-radius: 4px;
 }
 
-/* For table cells, use simpler styling to preserve table structure */
-td.transcript-highlight {
-    /* Yellow background is applied by base class above */
-    /* Don't add padding/margin to avoid breaking table layout */
-}
-
 @keyframes highlightFadeIn {
     0% {
         background-color: #fff;
