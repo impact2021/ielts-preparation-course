@@ -1,4 +1,4 @@
-# Transcript Marker Placement Guide - Version 11.9
+# Transcript Marker Placement Guide - Version 11.10
 
 ## Overview
 This guide explains how to properly place `[Q#]` markers in listening test transcripts to ensure the question badges and answer highlighting appear in the correct locations.
@@ -70,17 +70,23 @@ For table-formatted transcripts, place the marker within the appropriate cell wh
 </tr>
 ```
 
-## How the Highlighting Works
+## How the Highlighting Works (Updated in Version 11.10)
 
 Once you place the marker correctly, the system automatically:
 
 1. **Displays the Q badge** with yellow background (#ffc107)
 2. **Wraps answer text** in light yellow background (#fff9c4)
-3. **Limits highlighting** to:
-   - First sentence after the marker (ending with `.`, `!`, `?`, or line break), OR
-   - First ~100 characters if no sentence ending is found
+3. **Smart answer detection** - Stops highlighting at:
+   - First comma (`,`) - for embedded answers like "It's Anne Hawberry, and..."
+   - First semicolon (`;`)
+   - First period followed by space and capital letter (`. Next sentence`)
+   - First newline character
+   - First 50 characters (safety limit, reduced from 100 for better accuracy)
+4. **Word boundary trimming** - If over 50 characters, trims to last complete word
 
-## Technical Implementation
+This ensures that only the answer itself gets highlighted, not entire sentences or paragraphs.
+
+## Technical Implementation (Updated in Version 11.10)
 
 The pattern used is: `/\[Q(\d+)\]([^\[]*?)(?=\[Q|$)/is`
 
@@ -89,6 +95,18 @@ This regex:
 - Captures text after the marker
 - Stops at the next Q marker or end of string
 - Works across multiple lines
+
+The highlighting logic then applies smart boundary detection:
+```php
+// Stop at comma, semicolon, sentence boundary, or newline
+if (preg_match('/^([^,;]+?)(?:[,;]|\.\s+[A-Z]|\n|$)/s', $answer_text, $boundary_match)) {
+    $highlighted_text = $boundary_match[1];
+} else {
+    $highlighted_text = mb_substr($answer_text, 0, 50);
+}
+```
+
+This ensures precise answer highlighting without capturing extra context.
 
 ## Visual Result
 
@@ -178,6 +196,7 @@ If you answer "no" to any of these, reposition the marker closer to the actual a
 
 ## Version History
 
+- **Version 11.10** - Improved smart answer boundary detection (stops at commas, semicolons, 50-char limit)
 - **Version 11.9** - Implemented automatic answer text highlighting with yellow background
 - **Version 11.8** - Documented intended behavior (not fully implemented)
 - **Version 11.6** - Changed Q badge color from blue to yellow

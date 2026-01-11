@@ -52,15 +52,36 @@ function process_transcript_markers($transcript, $starting_question = 1) {
         $display_num = $question_num;
         $answer_text = isset($matches[2]) ? $matches[2] : '';
         
-        // Trim the answer text to first sentence or ~100 characters
+        // Smart answer extraction: highlight only the answer portion, not entire sentences
         $highlighted_text = $answer_text;
         
-        // Try to find first sentence ending (non-greedy match)
-        if (preg_match('/^(.*?[.!?\n])/s', $answer_text, $sentence_match)) {
-            $highlighted_text = $sentence_match[1];
+        // Try multiple strategies to find the answer boundary (in order of preference):
+        // 1. Stop at comma (common for embedded answers like "It's Anne Hawberry, and I live...")
+        // 2. Stop at semicolon
+        // 3. Stop at period + space + capital letter (sentence boundary)
+        // 4. Stop at newline
+        // 5. Limit to first 50 characters (reduced from 100 for better accuracy)
+        
+        if (preg_match('/^([^,;]+?)(?:[,;]|\.\s+[A-Z]|\n|$)/s', $answer_text, $boundary_match)) {
+            // Found a natural boundary - use text up to that point
+            $highlighted_text = $boundary_match[1];
         } else {
-            // No sentence ending found, take first 100 characters
-            $highlighted_text = mb_substr($answer_text, 0, 100);
+            // No natural boundary found - take first 50 characters
+            $highlighted_text = mb_substr($answer_text, 0, 50);
+        }
+        
+        // Trim and ensure we have content
+        $highlighted_text = trim($highlighted_text);
+        
+        // If highlighted text is still very long (>50 chars), try to trim to words
+        if (mb_strlen($highlighted_text) > 50) {
+            // Find the last complete word within 50 characters
+            $trimmed = mb_substr($highlighted_text, 0, 50);
+            if (preg_match('/^(.*)\s+\S+$/', $trimmed, $word_match)) {
+                $highlighted_text = $word_match[1];
+            } else {
+                $highlighted_text = $trimmed;
+            }
         }
         
         // Build the output: Q badge + highlighted answer text + remaining text
@@ -70,9 +91,8 @@ function process_transcript_markers($transcript, $starting_question = 1) {
         
         // Wrap the highlighted answer text in a yellow background span
         // Note: $highlighted_text may contain HTML tags from transcript (e.g., <strong>) which must be preserved
-        $trimmed_text = trim($highlighted_text);
-        if (!empty($trimmed_text)) {
-            $output .= '<span class="transcript-answer-marker">' . $trimmed_text . '</span>';
+        if (!empty($highlighted_text)) {
+            $output .= '<span class="transcript-answer-marker">' . $highlighted_text . '</span>';
         }
         
         // Add any remaining text that wasn't highlighted
