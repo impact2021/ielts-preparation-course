@@ -1692,6 +1692,7 @@ select.answer-select-inline.answer-incorrect {
 /* Question feedback message displayed during answer review */
 .question-feedback-message {
     margin-top: 10px;
+    margin-bottom: 20px;
     padding: 10px;
     background: #f0f0f1;
     border-radius: 3px;
@@ -1744,7 +1745,7 @@ select.answer-select-inline.answer-incorrect {
 /* Style for individual field feedback within open question feedback */
 .question-feedback-message.open-question-feedback .field-feedback {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 12px 15px;
     border-radius: 5px;
     border-left: 4px solid;
@@ -1833,6 +1834,56 @@ select.answer-select-inline.answer-incorrect {
 .show-in-reading-passage-link:focus {
     outline: 2px solid #0073aa;
     outline-offset: 2px;
+}
+
+/* Listen to this answer button for listening test feedback */
+.listen-to-answer-link {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 5px 12px;
+    background: #0073aa;
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.9em;
+    transition: background 0.2s ease;
+    position: relative;
+}
+
+.listen-to-answer-link:hover {
+    background: #005a87;
+    text-decoration: none;
+}
+
+.listen-to-answer-link:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+/* Loading state for listen to answer button */
+.listen-to-answer-link.loading {
+    padding-right: 35px;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.listen-to-answer-link.loading::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin-loading 0.6s linear infinite;
+}
+
+@keyframes spin-loading {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
 }
 
 /* Transcript question markers and highlighting */

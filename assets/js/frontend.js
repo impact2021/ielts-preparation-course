@@ -1376,8 +1376,9 @@
         // Delegated event handler for "Listen to this answer" links
         $(document).on('click', '.listen-to-answer-link', function(e) {
             e.preventDefault();
-            var startTime = parseFloat($(this).data('start-time'));
-            var endTime = parseFloat($(this).data('end-time'));
+            var $button = $(this);
+            var startTime = parseFloat($button.data('start-time'));
+            var endTime = parseFloat($button.data('end-time'));
             
             // Find the audio player element
             var $audioPlayer = $('#listening-audio-player audio').first();
@@ -1385,11 +1386,31 @@
             if ($audioPlayer.length && !isNaN(startTime) && !isNaN(endTime)) {
                 var audioElement = $audioPlayer[0];
                 
+                // Show loading state
+                $button.addClass('loading');
+                
                 // Set the current time to start time
                 audioElement.currentTime = startTime;
                 
+                // Remove loading state and play audio when seeking is complete
+                var seekedHandler = function() {
+                    $button.removeClass('loading');
+                    audioElement.removeEventListener('seeked', seekedHandler);
+                };
+                audioElement.addEventListener('seeked', seekedHandler);
+                
                 // Play the audio
-                audioElement.play();
+                var playPromise = audioElement.play();
+                
+                // Handle play promise
+                if (playPromise !== undefined) {
+                    playPromise.catch(function(error) {
+                        // Remove loading state on error
+                        $button.removeClass('loading');
+                        audioElement.removeEventListener('seeked', seekedHandler);
+                        console.log('Audio playback failed:', error);
+                    });
+                }
                 
                 // Set up an event listener to stop at end time
                 var timeUpdateHandler = function() {
