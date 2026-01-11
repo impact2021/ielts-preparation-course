@@ -559,12 +559,14 @@
         timeStr = timeStr.trim();
         
         // If it contains a colon, it's in M:SS or MM:SS format
-        if (timeStr.includes(':')) {
+        // Note: Using includes() requires ES2015+ browser (all modern browsers)
+        if (timeStr.indexOf(':') !== -1) {
             var parts = timeStr.split(':');
             if (parts.length === 2) {
                 var minutes = parseInt(parts[0], 10);
                 var seconds = parseFloat(parts[1]);
-                if (!isNaN(minutes) && !isNaN(seconds) && minutes >= 0 && seconds >= 0) {
+                // Validate: minutes >= 0, seconds >= 0 and < 60 (valid time format)
+                if (!isNaN(minutes) && !isNaN(seconds) && minutes >= 0 && seconds >= 0 && seconds < 60) {
                     return (minutes * 60 + seconds).toString();
                 }
             }
