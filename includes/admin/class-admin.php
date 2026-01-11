@@ -3770,8 +3770,27 @@ class IELTS_CM_Admin {
                         if (isset($question['field_audio_times']) && is_array($question['field_audio_times'])) {
                             $field_audio_times = array();
                             foreach ($question['field_audio_times'] as $field_num => $times) {
-                                $start_time = isset($times['start']) && $times['start'] !== '' ? floatval($times['start']) : null;
-                                $end_time = isset($times['end']) && $times['end'] !== '' ? floatval($times['end']) : null;
+                                // Validate and sanitize audio times
+                                $start_time = null;
+                                $end_time = null;
+                                
+                                if (isset($times['start']) && $times['start'] !== '') {
+                                    $start_val = floatval($times['start']);
+                                    // Only accept non-negative values
+                                    if ($start_val >= 0) {
+                                        $start_time = $start_val;
+                                    }
+                                }
+                                
+                                if (isset($times['end']) && $times['end'] !== '') {
+                                    $end_val = floatval($times['end']);
+                                    // Only accept non-negative values
+                                    if ($end_val >= 0) {
+                                        $end_time = $end_val;
+                                    }
+                                }
+                                
+                                // Only save if at least one time is valid
                                 if ($start_time !== null || $end_time !== null) {
                                     $field_audio_times[$field_num] = array(
                                         'start' => $start_time,
