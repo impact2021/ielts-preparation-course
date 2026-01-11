@@ -1313,10 +1313,18 @@
             $('.transcript-content .transcript-highlight').removeClass('transcript-highlight');
             
             if ($questionMarker.length) {
-                // Highlight the paragraph containing the marker
-                var $paragraph = $questionMarker.closest('p');
-                if ($paragraph.length) {
-                    $paragraph.addClass('transcript-highlight');
+                // Highlight the specific sentence or phrase containing the marker
+                // For table-formatted transcripts (most common), highlight the table cell
+                var $tableCell = $questionMarker.closest('td');
+                if ($tableCell.length) {
+                    // For table cells, highlight the cell containing the answer
+                    $tableCell.addClass('transcript-highlight');
+                } else {
+                    // For non-table content, highlight the containing paragraph
+                    var $paragraph = $questionMarker.closest('p');
+                    if ($paragraph.length) {
+                        $paragraph.addClass('transcript-highlight');
+                    }
                 }
                 
                 // Scroll to the question marker
