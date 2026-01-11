@@ -2697,6 +2697,22 @@ class IELTS_CM_Admin {
                 </select>
                 <small><?php _e('Select which audio section this question is based on.', 'ielts-course-manager'); ?></small>
             </p>
+            <p class="audio-timing-fields" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <span>
+                    <label><?php _e('Audio Start Time (seconds)', 'ielts-course-manager'); ?></label><br>
+                    <input type="number" step="0.1" min="0" name="questions[<?php echo $index; ?>][audio_start_time]" 
+                           value="<?php echo isset($question['audio_start_time']) ? esc_attr($question['audio_start_time']) : ''; ?>" 
+                           style="width: 100%;" placeholder="e.g., 45.5">
+                    <small><?php _e('Optional: When answer begins (e.g., 45.5)', 'ielts-course-manager'); ?></small>
+                </span>
+                <span>
+                    <label><?php _e('Audio End Time (seconds)', 'ielts-course-manager'); ?></label><br>
+                    <input type="number" step="0.1" min="0" name="questions[<?php echo $index; ?>][audio_end_time]" 
+                           value="<?php echo isset($question['audio_end_time']) ? esc_attr($question['audio_end_time']) : ''; ?>" 
+                           style="width: 100%;" placeholder="e.g., 52.3">
+                    <small><?php _e('Optional: When answer ends (e.g., 52.3)', 'ielts-course-manager'); ?></small>
+                </span>
+            </p>
             <?php endif; ?>
             
             <div>
@@ -3533,6 +3549,8 @@ class IELTS_CM_Admin {
                         'incorrect_feedback' => isset($question['incorrect_feedback']) ? wp_kses_post($question['incorrect_feedback']) : '',
                         'reading_text_id' => isset($question['reading_text_id']) && $question['reading_text_id'] !== '' ? intval($question['reading_text_id']) : null,
                         'audio_section_id' => isset($question['audio_section_id']) && $question['audio_section_id'] !== '' ? intval($question['audio_section_id']) : null,
+                        'audio_start_time' => isset($question['audio_start_time']) && $question['audio_start_time'] !== '' ? floatval($question['audio_start_time']) : null,
+                        'audio_end_time' => isset($question['audio_end_time']) && $question['audio_end_time'] !== '' ? floatval($question['audio_end_time']) : null,
                         'ielts_question_category' => isset($question['ielts_question_category']) ? sanitize_text_field($question['ielts_question_category']) : ''
                     );
                     
