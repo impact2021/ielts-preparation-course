@@ -2699,18 +2699,18 @@ class IELTS_CM_Admin {
             </p>
             <p class="audio-timing-fields" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                 <span>
-                    <label><?php _e('Audio Start Time (seconds)', 'ielts-course-manager'); ?></label><br>
-                    <input type="number" step="0.1" min="0" name="questions[<?php echo $index; ?>][audio_start_time]" 
+                    <label><?php _e('Audio Start Time', 'ielts-course-manager'); ?></label><br>
+                    <input type="text" class="audio-time-input" name="questions[<?php echo $index; ?>][audio_start_time]" 
                            value="<?php echo isset($question['audio_start_time']) ? esc_attr($question['audio_start_time']) : ''; ?>" 
-                           style="width: 100%;" placeholder="e.g., 45.5">
-                    <small><?php _e('Optional: When answer begins (e.g., 45.5)', 'ielts-course-manager'); ?></small>
+                           style="width: 100%;" placeholder="<?php _e('e.g., 2:36 or 156', 'ielts-course-manager'); ?>">
+                    <small><?php _e('Format: M:SS or seconds (e.g., 2:36 = 156s)', 'ielts-course-manager'); ?></small>
                 </span>
                 <span>
-                    <label><?php _e('Audio End Time (seconds)', 'ielts-course-manager'); ?></label><br>
-                    <input type="number" step="0.1" min="0" name="questions[<?php echo $index; ?>][audio_end_time]" 
+                    <label><?php _e('Audio End Time', 'ielts-course-manager'); ?></label><br>
+                    <input type="text" class="audio-time-input" name="questions[<?php echo $index; ?>][audio_end_time]" 
                            value="<?php echo isset($question['audio_end_time']) ? esc_attr($question['audio_end_time']) : ''; ?>" 
-                           style="width: 100%;" placeholder="e.g., 52.3">
-                    <small><?php _e('Optional: When answer ends (e.g., 52.3)', 'ielts-course-manager'); ?></small>
+                           style="width: 100%;" placeholder="<?php _e('e.g., 2:45 or 165', 'ielts-course-manager'); ?>">
+                    <small><?php _e('Format: M:SS or seconds (e.g., 2:45 = 165s)', 'ielts-course-manager'); ?></small>
                 </span>
             </p>
             <?php endif; ?>
@@ -3108,17 +3108,32 @@ class IELTS_CM_Admin {
                     <?php 
                     $field_answers = isset($question['field_answers']) && is_array($question['field_answers']) ? $question['field_answers'] : array();
                     $field_feedback = isset($question['field_feedback']) && is_array($question['field_feedback']) ? $question['field_feedback'] : array();
+                    $field_audio_times = isset($question['field_audio_times']) && is_array($question['field_audio_times']) ? $question['field_audio_times'] : array();
                     $field_count = isset($question['field_count']) ? intval($question['field_count']) : 1;
                     for ($i = 1; $i <= $field_count; $i++):
                         $field_correct_feedback = isset($field_feedback[$i]['correct']) ? $field_feedback[$i]['correct'] : '';
                         $field_incorrect_feedback = isset($field_feedback[$i]['incorrect']) ? $field_feedback[$i]['incorrect'] : '';
                         $field_no_answer_feedback = isset($field_feedback[$i]['no_answer']) ? $field_feedback[$i]['no_answer'] : '';
+                        $field_audio_start = isset($field_audio_times[$i]['start']) ? $field_audio_times[$i]['start'] : '';
+                        $field_audio_end = isset($field_audio_times[$i]['end']) ? $field_audio_times[$i]['end'] : '';
                     ?>
                     <div class="open-question-answer-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fff;">
                         <h6 style="margin-top: 0;"><?php printf(__('Field %d', 'ielts-course-manager'), $i); ?></h6>
                         <p>
                             <label><?php _e('Correct Answer (use | for multiple accepted answers)', 'ielts-course-manager'); ?></label>
                             <input type="text" name="questions[<?php echo $index; ?>][field_answers][<?php echo $i; ?>]" value="<?php echo esc_attr(isset($field_answers[$i]) ? $field_answers[$i] : ''); ?>" style="width: 100%;" placeholder="<?php _e('e.g., answer1|answer2', 'ielts-course-manager'); ?>">
+                        </p>
+                        <p style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+                            <span>
+                                <label><?php _e('Audio Start Time', 'ielts-course-manager'); ?></label><br>
+                                <input type="text" class="audio-time-input" name="questions[<?php echo $index; ?>][field_audio_times][<?php echo $i; ?>][start]" value="<?php echo esc_attr($field_audio_start); ?>" style="width: 100%;" placeholder="<?php _e('e.g., 2:36 or 156', 'ielts-course-manager'); ?>">
+                                <small><?php _e('Format: M:SS or seconds (e.g., 2:36 = 156s)', 'ielts-course-manager'); ?></small>
+                            </span>
+                            <span>
+                                <label><?php _e('Audio End Time', 'ielts-course-manager'); ?></label><br>
+                                <input type="text" class="audio-time-input" name="questions[<?php echo $index; ?>][field_audio_times][<?php echo $i; ?>][end]" value="<?php echo esc_attr($field_audio_end); ?>" style="width: 100%;" placeholder="<?php _e('e.g., 2:45 or 165', 'ielts-course-manager'); ?>">
+                                <small><?php _e('Format: M:SS or seconds (e.g., 2:45 = 165s)', 'ielts-course-manager'); ?></small>
+                            </span>
                         </p>
                         <p>
                             <label><?php _e('Correct Answer Feedback', 'ielts-course-manager'); ?></label>
@@ -3749,6 +3764,24 @@ class IELTS_CM_Admin {
                                 );
                             }
                             $question_data['field_feedback'] = $field_feedback;
+                        }
+                        
+                        // Save field-specific audio times
+                        if (isset($question['field_audio_times']) && is_array($question['field_audio_times'])) {
+                            $field_audio_times = array();
+                            foreach ($question['field_audio_times'] as $field_num => $times) {
+                                $start_time = isset($times['start']) && $times['start'] !== '' ? floatval($times['start']) : null;
+                                $end_time = isset($times['end']) && $times['end'] !== '' ? floatval($times['end']) : null;
+                                if ($start_time !== null || $end_time !== null) {
+                                    $field_audio_times[$field_num] = array(
+                                        'start' => $start_time,
+                                        'end' => $end_time
+                                    );
+                                }
+                            }
+                            if (!empty($field_audio_times)) {
+                                $question_data['field_audio_times'] = $field_audio_times;
+                            }
                         }
                     } else {
                         // Non-multiple choice questions

@@ -546,4 +546,59 @@
         });
     });
     
+    /**
+     * Convert audio time format (M:SS or MM:SS or seconds) to seconds
+     * Accepts: "2:36", "12:45", "156", "156.5"
+     * Returns: numeric seconds value
+     */
+    function convertAudioTimeToSeconds(timeStr) {
+        if (!timeStr || timeStr.trim() === '') {
+            return '';
+        }
+        
+        timeStr = timeStr.trim();
+        
+        // If it contains a colon, it's in M:SS or MM:SS format
+        if (timeStr.indexOf(':') !== -1) {
+            var parts = timeStr.split(':');
+            if (parts.length === 2) {
+                var minutes = parseInt(parts[0], 10);
+                var seconds = parseFloat(parts[1]);
+                if (!isNaN(minutes) && !isNaN(seconds)) {
+                    return (minutes * 60 + seconds).toString();
+                }
+            }
+        }
+        
+        // Otherwise, assume it's already in seconds
+        var numValue = parseFloat(timeStr);
+        if (!isNaN(numValue)) {
+            return numValue.toString();
+        }
+        
+        return timeStr; // Return as-is if we can't parse it
+    }
+    
+    /**
+     * Process all audio time inputs before form submission
+     * Converts M:SS format to seconds
+     */
+    function processAudioTimeInputs() {
+        $('.audio-time-input').each(function() {
+            var $input = $(this);
+            var value = $input.val();
+            if (value) {
+                var converted = convertAudioTimeToSeconds(value);
+                $input.val(converted);
+            }
+        });
+    }
+    
+    // Process audio time inputs when quiz form is submitted
+    $('form#post').on('submit', function() {
+        if ($('#post_type').val() === 'ielts_quiz') {
+            processAudioTimeInputs();
+        }
+    });
+    
 })(jQuery);
