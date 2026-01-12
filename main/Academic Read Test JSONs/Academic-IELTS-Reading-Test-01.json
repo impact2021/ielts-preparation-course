@@ -14,7 +14,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_l",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "plan extensively for upgrades and expansions.",
@@ -53,7 +53,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "are considered to be better than New York\u2019s rail system.",
@@ -92,7 +92,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "constructing housing and office premises.",
