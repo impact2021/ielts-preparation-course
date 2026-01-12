@@ -982,7 +982,7 @@
                                 }
                                 
                                 // Add "Show in transcript" link if audio_section_id is available (for listening tests)
-                                // Add "Show in reading passage" link if reading_text_id is available (for reading tests)
+                                // Add "Show me the section of the reading passage" link if reading_text_id is available (for reading tests)
                                 // Skip for open_question type since links are added per-field in PHP
                                 if (questionResult.question_type !== 'open_question') {
                                     if (questionResult.audio_section_id !== null && 
@@ -1019,7 +1019,7 @@
                                             .addClass('show-in-reading-passage-link')
                                             .attr('data-reading-text', questionResult.reading_text_id)
                                             .attr('data-question', questionNum)
-                                            .text('Show in reading passage');
+                                            .text('Show me the section of the reading passage');
                                         
                                         feedbackDiv.append('<br>').append(readingLink);
                                     }
@@ -1444,7 +1444,7 @@
             }
         });
         
-        // Delegated event handler for "Show in reading passage" links (for reading tests)
+        // Delegated event handler for "Show me the section of the reading passage" links (for reading tests)
         $(document).on('click', '.show-in-reading-passage-link', function(e) {
             e.preventDefault();
             var readingTextId = $(this).data('reading-text');
@@ -1457,22 +1457,66 @@
             var $targetText = $('#reading-text-' + readingTextId);
             $targetText.fadeIn(300);
             
-            // Scroll to the reading text
-            setTimeout(function() {
-                // For CBT layout, scroll within the reading column
-                var $readingColumn = $targetText.closest('.reading-column');
-                if ($readingColumn.length) {
-                    // CBT layout - scroll to top of the column to show the reading text
-                    $readingColumn.animate({
-                        scrollTop: 0
-                    }, 500);
-                } else {
-                    // Standard layout - scroll the whole page to the reading text
-                    $('html, body').animate({
-                        scrollTop: $targetText.offset().top - 100
-                    }, 500);
+            // Find the question marker in the reading passage
+            var $questionMarker = $('#transcript-q' + questionNumber);
+            
+            // Remove any previous highlighting
+            $('.reading-text .reading-passage-highlight').removeClass('reading-passage-highlight');
+            
+            if ($questionMarker.length) {
+                // Highlight the answer text associated with this question
+                var $answerHighlight = $questionMarker.siblings('.reading-answer-highlight[data-question="' + questionNumber + '"]');
+                if (!$answerHighlight.length) {
+                    // If not a sibling, find it as the next element
+                    $answerHighlight = $questionMarker.next('.reading-answer-highlight[data-question="' + questionNumber + '"]');
                 }
-            }, 350); // Wait for section fade-in
+                
+                if ($answerHighlight.length) {
+                    $answerHighlight.addClass('reading-passage-highlight');
+                } else {
+                    // Fallback: highlight the containing paragraph
+                    var $paragraph = $questionMarker.closest('p');
+                    if ($paragraph.length) {
+                        $paragraph.addClass('reading-passage-highlight');
+                    }
+                }
+                
+                // Scroll to the question marker
+                setTimeout(function() {
+                    // For CBT layout, scroll within the reading column
+                    var $readingColumn = $targetText.closest('.reading-column');
+                    if ($readingColumn.length) {
+                        // CBT layout - scroll to the marker within the column
+                        var markerOffset = $questionMarker.position().top;
+                        var columnScrollTop = $readingColumn.scrollTop();
+                        $readingColumn.animate({
+                            scrollTop: columnScrollTop + markerOffset - 100
+                        }, 500);
+                    } else {
+                        // Standard layout - scroll the whole page to the marker
+                        $('html, body').animate({
+                            scrollTop: $questionMarker.offset().top - 100
+                        }, 500);
+                    }
+                }, 350); // Wait for section fade-in
+            } else {
+                // If no marker found, just scroll to the reading text
+                setTimeout(function() {
+                    // For CBT layout, scroll within the reading column
+                    var $readingColumn = $targetText.closest('.reading-column');
+                    if ($readingColumn.length) {
+                        // CBT layout - scroll to top of the column to show the reading text
+                        $readingColumn.animate({
+                            scrollTop: 0
+                        }, 500);
+                    } else {
+                        // Standard layout - scroll the whole page to the reading text
+                        $('html, body').animate({
+                            scrollTop: $targetText.offset().top - 100
+                        }, 500);
+                    }
+                }, 350); // Wait for section fade-in
+            }
         });
         
         // Track answered questions in computer-based layout using event delegation
