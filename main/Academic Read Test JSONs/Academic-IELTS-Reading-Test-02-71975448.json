@@ -1,0 +1,1779 @@
+{
+    "title": "Academic IELTS Reading Test 02",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Questions 1 – 6\r\n\r\nDo the following statements agree with the information given in Reading Passage 1?\r\n\r\nWrite TRUE, FALSE or NOT GIVEN.",
+            "question": "1. Multi-national companies operating in New Zealand have a lower average profit than in Australia.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "2. Approximately 90 per cent of global corporate income is taxed appropriately.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "3. Research now indicates that all situations of lost tax income result from illegal activities.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "4. The global practice of avoiding paying tax has been occurring for nearly one hundred years.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "5. Some people argue that the avoidance of paying corporate tax is within the laws, because the tax laws are so complicated and the tax rates so high.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "6. There is universal agreement that unitary taxation will prove to be the best solution.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 7 – 13\r\n\r\nComplete each of the following statements with one of the phrases A – J from the box below. Write the correct letter A – J.",
+            "question": "In Australia, nearly 33% of large companies generate profits with...",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A shell companies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "B unitary taxation",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "C no tax",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "D action plan",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "E developing countries",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "F national tax laws",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "G high corporate tax rates",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "H transfer pricing",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "I multi-national companies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "J avoidance of tax",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "A shell companies\nB unitary taxation\nC no tax\nD action plan\nE developing countries\nF national tax laws\nG high corporate tax rates\nH transfer pricing\nI multi-national companies\nJ avoidance of tax",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Lawyers and accountants try to lower tax liabilities by researching... ",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A shell companies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "B unitary taxation",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "C no tax",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "D action plan",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "E developing countries",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "F national tax laws",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "G high corporate tax rates",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "H transfer pricing",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "I multi-national companies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "J avoidance of tax",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "A shell companies\nB unitary taxation\nC no tax\nD action plan\nE developing countries\nF national tax laws\nG high corporate tax rates\nH transfer pricing\nI multi-national companies\nJ avoidance of tax",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Swapping profits and expenses between countries is known as... ",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A shell companies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "B unitary taxation",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "C no tax",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "D action plan",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "E developing countries",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "F national tax laws",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "G high corporate tax rates",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "H transfer pricing",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "I multi-national companies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "J avoidance of tax",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "A shell companies\nB unitary taxation\nC no tax\nD action plan\nE developing countries\nF national tax laws\nG high corporate tax rates\nH transfer pricing\nI multi-national companies\nJ avoidance of tax",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "In 2015, there was criticism of the G20 for not making enough progress, even though they made public an... ",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A shell companies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "B unitary taxation",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "C no tax",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "D action plan",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "E developing countries",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "F national tax laws",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "G high corporate tax rates",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "H transfer pricing",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "I multi-national companies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "J avoidance of tax",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "A shell companies\nB unitary taxation\nC no tax\nD action plan\nE developing countries\nF national tax laws\nG high corporate tax rates\nH transfer pricing\nI multi-national companies\nJ avoidance of tax",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "One argument for the avoidance of paying company taxes is because of the... ",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A shell companies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "B unitary taxation",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "C no tax",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "D action plan",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "E developing countries",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "F national tax laws",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "G high corporate tax rates",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "H transfer pricing",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "I multi-national companies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "J avoidance of tax",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "A shell companies\nB unitary taxation\nC no tax\nD action plan\nE developing countries\nF national tax laws\nG high corporate tax rates\nH transfer pricing\nI multi-national companies\nJ avoidance of tax",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "One solution being discussed is what is known as... ",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A shell companies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "B unitary taxation",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "C no tax",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "D action plan",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "E developing countries",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "F national tax laws",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "G high corporate tax rates",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "H transfer pricing",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "I multi-national companies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "J avoidance of tax",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "A shell companies\nB unitary taxation\nC no tax\nD action plan\nE developing countries\nF national tax laws\nG high corporate tax rates\nH transfer pricing\nI multi-national companies\nJ avoidance of tax",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "To help distribute taxes more fairly, OECD countries are working with...",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A shell companies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "B unitary taxation",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "C no tax",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "D action plan",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "E developing countries",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "F national tax laws",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "G high corporate tax rates",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "H transfer pricing",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "I multi-national companies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "J avoidance of tax",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "A shell companies\nB unitary taxation\nC no tax\nD action plan\nE developing countries\nF national tax laws\nG high corporate tax rates\nH transfer pricing\nI multi-national companies\nJ avoidance of tax",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 2\r\n\r\nYou should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.\r\n\r\nQuestions 14 – 19\r\n\r\nReading Passage 2 has nine paragraphs A – H.\r\n\r\nFor paragraphs B – G, choose the most suitable heading from the list of headings below.\r\n\r\nWrite the appropriate numbers I – X in boxes 14 – 19 on your answer sheet.\r\n\r\nNB There are more headings than paragraphs, so some headings will not be used.\r\n\r\nExample Paragraph A Answer II",
+            "question": "Paragraph B",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. The features of the main remedy",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "II. Questions surround the remedy",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "III. Over-the-Counter medicines provide the answer",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "IV. Concern regarding the young",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "V. A range of drawbacks",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VI. Doubts regarding placebos",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VII. Unique approaches through the centuries",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VIII. The approach remains the same",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "IX. Natural approaches to remedies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "X. Other common chemical therapies",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "I. The features of the main remedy\nII. Questions surround the remedy\nIII. Over-the-Counter medicines provide the answer\nIV. Concern regarding the young\nV. A range of drawbacks\nVI. Doubts regarding placebos\nVII. Unique approaches through the centuries\nVIII. The approach remains the same\nIX. Natural approaches to remedies\nX. Other common chemical therapies",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph C",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. The features of the main remedy",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "II. Questions surround the remedy",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "III. Over-the-Counter medicines provide the answer",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "IV. Concern regarding the young",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "V. A range of drawbacks",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VI. Doubts regarding placebos",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VII. Unique approaches through the centuries",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VIII. The approach remains the same",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "IX. Natural approaches to remedies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "X. Other common chemical therapies",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "I. The features of the main remedy\nII. Questions surround the remedy\nIII. Over-the-Counter medicines provide the answer\nIV. Concern regarding the young\nV. A range of drawbacks\nVI. Doubts regarding placebos\nVII. Unique approaches through the centuries\nVIII. The approach remains the same\nIX. Natural approaches to remedies\nX. Other common chemical therapies",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph D",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. The features of the main remedy",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "II. Questions surround the remedy",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "III. Over-the-Counter medicines provide the answer",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "IV. Concern regarding the young",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "V. A range of drawbacks",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VI. Doubts regarding placebos",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VII. Unique approaches through the centuries",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VIII. The approach remains the same",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "IX. Natural approaches to remedies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "X. Other common chemical therapies",
+                    "is_correct": true,
+                    "feedback": ""
+                }
+            ],
+            "options": "I. The features of the main remedy\nII. Questions surround the remedy\nIII. Over-the-Counter medicines provide the answer\nIV. Concern regarding the young\nV. A range of drawbacks\nVI. Doubts regarding placebos\nVII. Unique approaches through the centuries\nVIII. The approach remains the same\nIX. Natural approaches to remedies\nX. Other common chemical therapies",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph E",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. The features of the main remedy",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "II. Questions surround the remedy",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "III. Over-the-Counter medicines provide the answer",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "IV. Concern regarding the young",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "V. A range of drawbacks",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VI. Doubts regarding placebos",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VII. Unique approaches through the centuries",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VIII. The approach remains the same",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "IX. Natural approaches to remedies",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "X. Other common chemical therapies",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "I. The features of the main remedy\nII. Questions surround the remedy\nIII. Over-the-Counter medicines provide the answer\nIV. Concern regarding the young\nV. A range of drawbacks\nVI. Doubts regarding placebos\nVII. Unique approaches through the centuries\nVIII. The approach remains the same\nIX. Natural approaches to remedies\nX. Other common chemical therapies",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph F",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. The features of the main remedy",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "II. Questions surround the remedy",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "III. Over-the-Counter medicines provide the answer",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "IV. Concern regarding the young",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "V. A range of drawbacks",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "VI. Doubts regarding placebos",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VII. Unique approaches through the centuries",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VIII. The approach remains the same",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "IX. Natural approaches to remedies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "X. Other common chemical therapies",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "I. The features of the main remedy\nII. Questions surround the remedy\nIII. Over-the-Counter medicines provide the answer\nIV. Concern regarding the young\nV. A range of drawbacks\nVI. Doubts regarding placebos\nVII. Unique approaches through the centuries\nVIII. The approach remains the same\nIX. Natural approaches to remedies\nX. Other common chemical therapies",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph G",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. The features of the main remedy",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "II. Questions surround the remedy",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "III. Over-the-Counter medicines provide the answer",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "IV. Concern regarding the young",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "V. A range of drawbacks",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VI. Doubts regarding placebos",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VII. Unique approaches through the centuries",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "VIII. The approach remains the same",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "IX. Natural approaches to remedies",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "X. Other common chemical therapies",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "I. The features of the main remedy\nII. Questions surround the remedy\nIII. Over-the-Counter medicines provide the answer\nIV. Concern regarding the young\nV. A range of drawbacks\nVI. Doubts regarding placebos\nVII. Unique approaches through the centuries\nVIII. The approach remains the same\nIX. Natural approaches to remedies\nX. Other common chemical therapies",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 20 – 26\r\n\r\nA number of claims are made regarding the various cough remedies and chemical compounds.\r\n\r\nChoose the correct letter A – G to correspond with the claims made regarding the remedy or chemical.",
+            "question": "...assists in loosening mucous in the body",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. Paragraph D mentions that acetylcysteine thins mucous, which can be ‘…coughed up more easily…, and that ‘…water… is just as effective in loosening mucous.’",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A: Dextromethorphan, the active ingredient in over-the-counter cough suppressants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The correct answer is B. Paragraph D mentions that acetylcysteine thins mucous, which can be ‘…coughed up more easily…, and that ‘…water… is just as effective in loosening mucous.’"
+                },
+                {
+                    "text": "B: Acetylcysteine, the active ingredient in expectorants",
+                    "is_correct": true,
+                    "feedback": "Paragraph D mentions that acetylcysteine thins mucous, which can be ‘…coughed up more easily…, and that ‘…water… is just as effective in loosening mucous.’"
+                },
+                {
+                    "text": "C: Ephedrine, the active ingredient in decongestants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The correct answer is B. Paragraph D mentions that acetylcysteine thins mucous, which can be ‘…coughed up more easily…, and that ‘…water… is just as effective in loosening mucous.’"
+                },
+                {
+                    "text": "D: Diphenhydramine, the active ingredient in antihistamines",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The correct answer is B. Paragraph D mentions that acetylcysteine thins mucous, which can be ‘…coughed up more easily…, and that ‘…water… is just as effective in loosening mucous.’"
+                },
+                {
+                    "text": "E: Natural remedies, such as honey and Vitamin C",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The correct answer is B. Paragraph D mentions that acetylcysteine thins mucous, which can be ‘…coughed up more easily…, and that ‘…water… is just as effective in loosening mucous.’"
+                },
+                {
+                    "text": "F: Placebos, a non-medical compound",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The correct answer is B. Paragraph D mentions that acetylcysteine thins mucous, which can be ‘…coughed up more easily…, and that ‘…water… is just as effective in loosening mucous.’"
+                },
+                {
+                    "text": "G: Methamphetamine, an addictive substance",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The correct answer is B. Paragraph D mentions that acetylcysteine thins mucous, which can be ‘…coughed up more easily…, and that ‘…water… is just as effective in loosening mucous.’"
+                }
+            ],
+            "options": "A: Dextromethorphan, the active ingredient in over-the-counter cough suppressants\nB: Acetylcysteine, the active ingredient in expectorants\nC: Ephedrine, the active ingredient in decongestants\nD: Diphenhydramine, the active ingredient in antihistamines\nE: Natural remedies, such as honey and Vitamin C\nF: Placebos, a non-medical compound\nG: Methamphetamine, an addictive substance",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "...reduces the urge to cough by calming the body ",
+            "points": 1,
+            "no_answer_feedback": "The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) ",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A: Dextromethorphan, the active ingredient in over-the-counter cough suppressants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "B: Acetylcysteine, the active ingredient in expectorants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "C: Ephedrine, the active ingredient in decongestants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "D: Diphenhydramine, the active ingredient in antihistamines",
+                    "is_correct": true,
+                    "feedback": "Right! The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct'."
+                },
+                {
+                    "text": "E: Natural remedies, such as honey and Vitamin C",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "F: Placebos, a non-medical compound",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "G: Methamphetamine, an addictive substance",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                }
+            ],
+            "options": "A: Dextromethorphan, the active ingredient in over-the-counter cough suppressants\nB: Acetylcysteine, the active ingredient in expectorants\nC: Ephedrine, the active ingredient in decongestants\nD: Diphenhydramine, the active ingredient in antihistamines\nE: Natural remedies, such as honey and Vitamin C\nF: Placebos, a non-medical compound\nG: Methamphetamine, an addictive substance",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "...reduces the urge to cough by calming the body ",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. Paragraph D mentions that acetylcysteine thins mucous, which can be ‘…coughed up more easily…, and that ‘…water… is just as effective in loosening mucous.’",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A: Dextromethorphan, the active ingredient in over-the-counter cough suppressants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "B: Acetylcysteine, the active ingredient in expectorants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "C: Ephedrine, the active ingredient in decongestants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "D: Diphenhydramine, the active ingredient in antihistamines",
+                    "is_correct": true,
+                    "feedback": "Correct! It is mentioned that this chemical compound can help ‘…reduce symptoms of… allergies and reactions…’"
+                },
+                {
+                    "text": "E: Natural remedies, such as honey and Vitamin C",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "F: Placebos, a non-medical compound",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "G: Methamphetamine, an addictive substance",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                }
+            ],
+            "options": "A: Dextromethorphan, the active ingredient in over-the-counter cough suppressants\nB: Acetylcysteine, the active ingredient in expectorants\nC: Ephedrine, the active ingredient in decongestants\nD: Diphenhydramine, the active ingredient in antihistamines\nE: Natural remedies, such as honey and Vitamin C\nF: Placebos, a non-medical compound\nG: Methamphetamine, an addictive substance",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "...reduces the urge to cough by calming the body ",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. Paragraph D mentions that acetylcysteine thins mucous, which can be ‘…coughed up more easily…, and that ‘…water… is just as effective in loosening mucous.’",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A: Dextromethorphan, the active ingredient in over-the-counter cough suppressants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "B: Acetylcysteine, the active ingredient in expectorants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "C: Ephedrine, the active ingredient in decongestants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "D: Diphenhydramine, the active ingredient in antihistamines",
+                    "is_correct": true,
+                    "feedback": "Correct! It is mentioned that this chemical compound can help ‘…reduce symptoms of… allergies and reactions…’"
+                },
+                {
+                    "text": "E: Natural remedies, such as honey and Vitamin C",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "F: Placebos, a non-medical compound",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "G: Methamphetamine, an addictive substance",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                }
+            ],
+            "options": "A: Dextromethorphan, the active ingredient in over-the-counter cough suppressants\nB: Acetylcysteine, the active ingredient in expectorants\nC: Ephedrine, the active ingredient in decongestants\nD: Diphenhydramine, the active ingredient in antihistamines\nE: Natural remedies, such as honey and Vitamin C\nF: Placebos, a non-medical compound\nG: Methamphetamine, an addictive substance",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "...reduces the urge to cough by calming the body ",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. Paragraph D mentions that acetylcysteine thins mucous, which can be ‘…coughed up more easily…, and that ‘…water… is just as effective in loosening mucous.’",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A: Dextromethorphan, the active ingredient in over-the-counter cough suppressants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "B: Acetylcysteine, the active ingredient in expectorants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "C: Ephedrine, the active ingredient in decongestants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "D: Diphenhydramine, the active ingredient in antihistamines",
+                    "is_correct": true,
+                    "feedback": "Correct! It is mentioned that this chemical compound can help ‘…reduce symptoms of… allergies and reactions…’"
+                },
+                {
+                    "text": "E: Natural remedies, such as honey and Vitamin C",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "F: Placebos, a non-medical compound",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "G: Methamphetamine, an addictive substance",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                }
+            ],
+            "options": "A: Dextromethorphan, the active ingredient in over-the-counter cough suppressants\nB: Acetylcysteine, the active ingredient in expectorants\nC: Ephedrine, the active ingredient in decongestants\nD: Diphenhydramine, the active ingredient in antihistamines\nE: Natural remedies, such as honey and Vitamin C\nF: Placebos, a non-medical compound\nG: Methamphetamine, an addictive substance",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "...reduces the urge to cough by calming the body ",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. Paragraph D mentions that acetylcysteine thins mucous, which can be ‘…coughed up more easily…, and that ‘…water… is just as effective in loosening mucous.’",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A: Dextromethorphan, the active ingredient in over-the-counter cough suppressants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "B: Acetylcysteine, the active ingredient in expectorants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "C: Ephedrine, the active ingredient in decongestants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "D: Diphenhydramine, the active ingredient in antihistamines",
+                    "is_correct": true,
+                    "feedback": "Correct! It is mentioned that this chemical compound can help ‘…reduce symptoms of… allergies and reactions…’"
+                },
+                {
+                    "text": "E: Natural remedies, such as honey and Vitamin C",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "F: Placebos, a non-medical compound",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "G: Methamphetamine, an addictive substance",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                }
+            ],
+            "options": "A: Dextromethorphan, the active ingredient in over-the-counter cough suppressants\nB: Acetylcysteine, the active ingredient in expectorants\nC: Ephedrine, the active ingredient in decongestants\nD: Diphenhydramine, the active ingredient in antihistamines\nE: Natural remedies, such as honey and Vitamin C\nF: Placebos, a non-medical compound\nG: Methamphetamine, an addictive substance",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "...reduces the urge to cough by calming the body ",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. Paragraph D mentions that acetylcysteine thins mucous, which can be ‘…coughed up more easily…, and that ‘…water… is just as effective in loosening mucous.’",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A: Dextromethorphan, the active ingredient in over-the-counter cough suppressants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "B: Acetylcysteine, the active ingredient in expectorants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "C: Ephedrine, the active ingredient in decongestants",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "D: Diphenhydramine, the active ingredient in antihistamines",
+                    "is_correct": true,
+                    "feedback": "Correct! It is mentioned that this chemical compound can help ‘…reduce symptoms of… allergies and reactions…’"
+                },
+                {
+                    "text": "E: Natural remedies, such as honey and Vitamin C",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "F: Placebos, a non-medical compound",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                },
+                {
+                    "text": "G: Methamphetamine, an addictive substance",
+                    "is_correct": false,
+                    "feedback": "That's not correct. The last sentence in Paragraph D says that this product ‘…helps in suppressing the coughing instinct', so the correct answer is D (Diphenhydramine, the active ingredient in antihistamines) "
+                }
+            ],
+            "options": "A: Dextromethorphan, the active ingredient in over-the-counter cough suppressants\nB: Acetylcysteine, the active ingredient in expectorants\nC: Ephedrine, the active ingredient in decongestants\nD: Diphenhydramine, the active ingredient in antihistamines\nE: Natural remedies, such as honey and Vitamin C\nF: Placebos, a non-medical compound\nG: Methamphetamine, an addictive substance",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 27 – 32\r\n\r\nDo the following statements agree with the information given in Reading Passage 3? Write TRUE, FALSE or NOT GIVEN.",
+            "question": "27. William Shakespeare died in 1616.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "28. In The Tempest, King Alonso is Prospero’s brother.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "29. The Tempest was written in 1611.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "30. A Discovery of the Bermudas was based on true events.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "31. King James I funded the publication of the First Folio.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "32. The Tempest has been adapted for cinema.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 33 – 37\r\n\r\nComplete the sentences. Use NO MORE THAN TWO WORDS OR A NUMBER from the passage for each answer.",
+            "question": "33. Many consider William Shakespeare to be the ___ in the world.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "34. A total of ___ plays were published for the first time in the First Folio.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "35. A performance of The Tempest was given in the ___ in 1613.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "36. Some viewed Prospero’s last monologue as an expression of Shakespeare’s plan ___ .",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "37. Colonial and ___ themes were prominent topics in The Tempest.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 38-40\r\n\r\nReading Passage 3 has seven paragraphs, A-G.\r\n\r\nWhich paragraph contains the following information?",
+            "question": "Names of individuals behind the publication of the First Folio.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Works that had a direct influence on The Tempest.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The structure of The Tempest. ",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Passage 1",
+            "content": "Base Erosion and Profit Shifting – does the corporate world avoid paying its fair share of tax?\r\n\r\nA recent tax study was completed in Australia and close reading of the assembled data revealed that nearly a third of private companies with annual incomes of AUD200 million or more pay no tax on profits to the Australian government. Similarly, statistics in New Zealand show that a list of 20 of the top multi-national earners in New Zealand reported an average profit of just 1.3 per cent for New Zealand-generated revenue yet their parent companies reported, on average, profit margins of over 20 per cent for their global operations. In South Africa, a report to the U.N. from the charity OXFAM stated that “only 1.6 out of 2 million registered companies in South Africa… pay their tax revenue.” It is noted that in the U.S., corporate tax rates are amongst the highest in the world, at a stated rate of 35 per cent, yet the figures show that corporate America pays, on average, less than half that rate, costing the U.S. government USD90 billion annually in lost revenue. Worldwide, lost income from unpaid taxes is estimated to come in at 10 per cent of global corporate income.\r\n\r\nHow does this loss of federal income and, it would seem, tax evasion, happen? Are there illegal practices being pursued by what would otherwise seem to be upstanding, and in many cases outstanding, companies? The answer lies in a murky netherworld of corporate tax laws, cross-nation trading practices, a growing world of Intellectual Property (IP) services and an army of tax lawyers and tax accountants trolling through the myriad of national tax laws intent on securing the best, and legal, tax structures for their clients. What has emerged now is a somewhat-acceptable understanding of the possibilities of the advantages being taken of various national tax laws to the benefit of the corporate client, but the question then arises as to not whether the tax regime is legal, but whether it is ethical, in a business and good-corporate-citizen sense.\r\n\r\nThe underlying situation that created this complicated nightmare is that the collection of tax no longer keeps pace with the new globalised trading economy, a system which is based on tax structures nearly a century old. The basic principle that most corporate entities employ is the concept of transfer pricing, which, in simple terms, is moving profits from a high-tax country to a lower tax jurisdiction, and expenses to a high-tax locality, all within the organizational structure of the company, using its many branch and subsidiary operations. An example of this is a well-known multi-national technology company that had set up what are known as ‘shell companies’ – that is, companies designed to absorb tax and legal requirements but that deliver no real tangible services, but are still a legal entity as a subsidiary or branch of the parent company.\r\n\r\nThe term given to this practice by governments around the world, who are working together in an attempt to minimize tax losses, is Base Erosion and profit shifting, or BEPS, in that moving costs and revenues from country to country within a company’s structure erodes the tax base of the host countries. Efforts by the G20 group of top industrialized nations to make the tax information of multi-national companies public have so far failed, and since 2012, the G20 has been working on a World Financial Registry, with only small steps being recorded as to progress made. In 2015, a G20 meeting released an action plan for further progress, but there was general consensus that the G20 countries had “failed to take bold action needed to end tax avoidance in developing countries”, as reported by the anti-poverty charity ActionAid.\r\n\r\nHowever, the entire situation lies within such a grey area that there are some who claim there are no illegalities involved, just a careful maneuvering through existing tax laws within countries. There is an argument advanced that tax avoidance is a symptom of the high, and complex, corporate tax rates and laws imposed by the industrialized countries, and that if a company did not seek to exploit the rules, they would be at a competitive disadvantage. Others also point out that large multi-nationals working in developing nations bring employment, wages and security to the economy, and some even mention that their company has been actively sought to bring its operations to a country by having lower tax rates offered by the government. The complexity of the situation is such that there are no two similar situations and the complications involved in drafting legislation to cover all scenarios is proving to be a difficult and time-consuming task.\r\n\r\nVarious attempts at solutions have been presented, but there is an apparent unwillingness to reach a consensus on the best approach. One proposal put forward, and even adopted by some countries, is what is known as unitary taxation, which aims to tax activities where they actually generate the income, not where the accounts have been shifted through the internal workings of the company. The company would then be expected to produce one overall set of accounts and the global profits, and resulting tax liabilities, would then be allocated. However, unitary taxation has its detractors as well, owing to the difficulty in agreeing on how to apportion incomes and taxes levied on service sector companies and those dealing with intangible assets. In particular, developing countries are working with OECD countries to ensure they are receiving a bigger portion of tax revenue. An example of this is one large multi-national brewer that was selling its product in Africa and India with local labelling, but the trademarks for the company’s products were held in low-tax European countries. It was calculated that the brewer had avoided paying USD30 million in taxes in Africa and India, but public action has now spurred results, just as another multi-national coffee chain raised its tax payments in developing countries owing to a consumer backlash.\r\n\r\nThe end result is that governments do not benefit from profit shifting, the companies and their shareholders do. It is recognized that action is needed to look at the missing 10 per cent of global corporate revenue that appears not to be taxed. The billions of dollars not going into government coffers represents lost income that should more properly be spent on a country’s infrastructure, and ultimately, its citizens."
+        },
+        {
+            "title": "Reading Passage 2",
+            "content": "Cough Medicines and Cough Syrups\r\n\r\nResearch today indicates that cough remedies may not be as effective as previously thought.\r\n\r\nA: Every year, as winter approaches, the public is assailed by advertising warning of the coming cough and cold season. Images of red-nosed, ailing, wheezing, teary-eyed sufferers highlight the approaching dangers, and the commercial world is ready to assist the prospective bed-ridden consumer with an array of cough and cold medicines, all making claims to reduce, clear, cure and restore. But do they work? Can a cough really be stopped, let alone cleared up? Are there dangers connected with the consumption of a chemically-laced cough concoction? What is the extent of our knowledge of the efficacy of cough medicines?\r\n\r\nB: Cough medicines, or cough syrups, or, technically, a linctus (a medicine in syrup form), are used globally to treat one of the most common ailments known to man, the cold and its evil cousin, the cough. However, surprisingly, research shows that there is no supportable evidence for, or indeed against, the use of over-the-counter (OTC) cough medicines. In fact, while their use is common by children in the U.S., Canadian and American health authorities discourage their use for those under six years because they have not been proven to be effective, and for concerns regarding the detrimental effects on health.\r\n\r\nC: Cough medicines come in an array of applications, and chemical compounds, and advertise different approaches in easing the cough. Possibly the most common cough relief formula is the use of dextromethorphan, or DM, or sometimes DXM, which is used as a cough suppressant in many common OTC cough mixtures. The main selling point of DM is that it does not have the addictive features of codeine, a centuries-old cough suppressant which has rightly raised concerns regarding its addictive properties. Dextromethorphan brings relief to sufferers of dry coughs, as opposed to what is known as a productive cough, that is, a cough that brings up mucous from within the body, which helps to clear the air passages, which medical practitioners advise as being beneficial.\r\n\r\nD: Another form of cough medicine is what is known as an expectorant, that is, a compound that eases the coughing reflex while helping the production of mucous, which relieves breathing problems. The active ingredient in this medicine is acetylcysteine, which helps to thin mucous so that it can be coughed up more easily, although it is also known that drinking water can be just as effective in loosening mucous. Side effects from expectorants include common complaints such as nausea and vomiting. Decongestants, more of a cold remedy, help to reduce nasal congestion in the sinuses, using the chemical compound ephedrine, which is a common substance found in many OTC products. These help to ‘dry out’ the sinus and assist with breathing, and are a popular product, often sold in a combination cough-and-cold medicine. Diphenhydramine is an example of a drug that is used in antihistamines which are promoted for their properties to reduce symptoms of both colds and coughs, as well as allergies and reactions, such as runny noses and eyes, and coughing fits. These products also sedate a person, which helps in suppressing the coughing instinct.\r\n\r\nE: Interestingly, honey, a natural compound produced organically, is also known for its effectiveness in cough treatments. Honey is commonly used in hot beverages, and historically has also been linked to topical applications, combined with various herb concoctions, which have proved to have varying degrees of efficacy. Continuing with the common cold, Vitamin C is also an age-old cure-all, also found naturally, with some proponents advocating massive doses in advance of cold onsets to ward them off, but there is still conflicting evidence which questions whether Vitamin C proves effective or not. It is known, however, that Vitamin C can reduce the duration and severity of the common cold, and also aids the immune system against physical and environmental stresses. Finally, placebos have been used in trials as a control measure against the vast array of promoted pharmaceuticals, and there is documented evidence that the outcomes of some trials show that placebo results have proven on par with the highly-touted results of modern pharmaceuticals. This falls into a similar category of various naturopathic remedies of herbs and plants, such as garlic and ginger, but which studies have shown to be inconclusive.\r\n\r\nF: There is some concern regarding possible negative reactions surrounding the use of cough suppressants, apart from the issue of the degree of efficacy of cough mixtures. These include the addictive properties of codeine, which has seen it extended into widespread consumption for its opiate-based qualities in cough mixtures as a recreational drug. Likewise, pseudoephidrine compounds in cold and cough medicines are extracted to be used as a base product in methamphetamine production, a highly-addictive scourge throughout the developed world. Medical reports also document concerns of children being adversely affected by common OTC cough products. As well, some decongestants have been linked with raised blood pressure levels. Many states and localities around the world have introduced legislation to restrict the commercial sale of various cold and cough remedies to minors, or to make them prescription-only.\r\n\r\nG: The history of cold medicines dates back hundreds of years, to home remedies, false cures and the attempts of the medical profession to best allay the causes, symptoms and results of colds and coughs. In the 18th century, coughs were classified into several categories, such as asthmatic, consumptive and tickling, with a number of remedies recommended depending on the type. Much was made of the sharing of information regarding the different types of coughs, and newspapers in England were given over to reporting the varying remedies based on family recipes, home therapies and different concoctions, one such being an oil from almonds, combined with herbs, syrups and candle wax which resembled, remarkably, a modern topical vaporizing rub which helps in breathing.\r\n\r\nH: Interestingly, given the wide range of ancient, holistic, homeopathic, chemical and modern remedies and therapies for the common cough and cold, the advice over the centuries has remained remarkably similar in the approach to relieving the symptoms of this ubiquitous health problem: stay home, rest, liquids, medicines to relieve the obvious symptoms and sleep. The research seems to indicate that if one feels they are benefiting from the medicine, then it should be continued. Even a simple lozenge to ease a sore throat will assist."
+        },
+        {
+            "title": "Reading Passage 3",
+            "content": "The Tempest: Shakespeare’s Final Play\r\n\r\nA: The 23rd of April, 2016, marked the four hundredth anniversary of the death of the world-renowned English playwright and poet, William Shakespeare, at the age of 52. Numerous festivals, exhibitions, theatrical performances and other events were held around the world to commemorate the special anniversary year and celebrate and honour the life and continuing legacy of a figure that many regard as being the world’s greatest dramatist. In addition to the multitude of celebrations held in the author’s home town of Stratford-upon-Avon in Warwickshire, England, one of the more notable highlights across the Atlantic in the United States was the exhibition of Shakespeare’s First Folio, featuring discussion panels and a display of First Folio editions and digital content, in addition to local performances. The exhibition tour, its full title being First Folio: The Book That Gave Us Shakespeare, travelled to all fifty American states, as well as the country’s capital, Washington D.C., and the territory of Puerto Rico.\r\n\r\nB: First published in 1623, seven years following Shakespeare’s death, the book known as the First Folio is widely regarded by scholars as being the first authentic print collection of all the plays attributed to William Shakespeare. The content of the First Folio was prepared and compiled by Henry Condell and John Heminges, two friends and colleagues of the playwright. The Folio was published by the Stationers Company syndicate under the title Mr. William Shakespeare’s Comedies, Histories, &amp; Tragedies. Of the estimated 750 copies of the First Folio that were originally printed, fewer than 250 survive today, each worth millions of dollars. The largest collection of First Folios is held by the Folger Shakespeare Library in Washington, D.C., with a total of 82 copies. Among the 36 plays appearing in the pages of the First Folio are eighteen of Shakespeare’s works that had never been previously published, including Twelfth Night, Antony and Cleopatra, The Taming of the Shrew, Comedy of Errors, Macbeth and The Tempest.\r\n\r\nC: While there is not universal consensus, the overwhelming majority of contemporary Shakespeare critics consider The Tempest to have been the last of the plays penned by the bard. It is the first of Shakespeare’s works to appear in the contents of the First Folio, among his collected comedies. Today, The Tempest is regarded as one of Shakespeare’s greatest works. Perhaps due to the fact that it was the final play of his writing career as a playwright, more is known about the early performances of The Tempest than many of Shakespeare’s other dramatic works. It was performed for the first time in Whitehall, London, on the 1st of November, 1611, for an audience that included King James I. Another performance of the play was given at the royal court two years later, forming part of the entertainment celebrating the marriage of the king’s daughter, Elizabeth, to Prince Frederick of Bohemia.\r\n\r\nD: As far as plot is concerned, The Tempest is set on a remote island where the deposed Duke of Milan, Prospero, and his daughter have been banished. Possessed of magical powers, Prospero conjures up a storm, or tempest, that causes a boat carrying a group of people from the mainland, including his only brother – the treacherous Antonio – as well as King Alonso of Naples, to become shipwrecked on the island. The play then moves through a number of scenes in five separate acts, as the various characters interact. By the conclusion of the story, Prospero’s daughter, Miranda, and the son of King Alonso, Prince Ferdinand, have met and fallen in love and are married in Act IV of the play. At the same time, Prospero is redeemed and his former title and position are restored by the king as a result of revelations of his brother’s treachery. In the final scene, the epilogue of the play, Prospero, alone on the stage, addresses the audience in an extended monologue, renouncing his magical powers. With regard to this last scene, some early critics of Shakespeare’s work viewed Prospero’s final speech in The Tempest as representing the author’s announcement to the audience of his own intention to retire from the playwright profession.\r\n\r\nE: In terms of Shakespeare’s sources of inspiration for the writing of The Tempest, scholars have pointed out that each of the playwright’s dramatic works was very much influenced by popular topics and concerns of the day, and that the author would make use of existing written material, drawing on literature and other documents from a variety of sources for many of his ideas. The bard’s final play is no exception in this respect. Of particular note is a pamphlet that was published in England in 1610 under the title A Discovery of the Bermudas, detailing the real-life account of the shipwreck of English colonists bound for Virginia in North America, which the playwright is known to have read. As well as funding the Virginia expedition, King James I had also written an essay on magic in 1603. The fact that the themes of colonialism and the supernatural both feature strongly in The Tempest reflects that these topics were broadly popular in Shakespeare’s day when the play was written and performed. Experts have also pointed out that the author copied large parts of Prospero’s soliloquy at the end of the play from a speech made by the character Medea in the epic poem Metamorphoses, written by the Roman poet, Ovid.\r\n\r\nF: The fact that the 1623 First Folio publication of Shakespeare’s works opens with The Tempest is both a reflection of the play’s popularity at the time, as well as a significant factor in its subsequent critical history. Its position in first place certainly gave readers, academics and literary critics a strongly favourable impression of The Tempest in comparison with the author’s other works. Many felt, for example, that the bard’s final play represented the pinnacle of Shakespeare’s career, the playwright working at the height of his powers. In addition, the order of the works published in the First Folio lent greater weight to the idea that the character of the magician Prospero had been written by Shakespeare as a semi-autobiographical figure, intended to represent the genuine feelings of the author, at least at some level.\r\n\r\nG: Today, more than four centuries after The Tempest was written, it remains one of William Shakespeare’s most popular and widely-recognised works. As with his other plays, it has been translated into and published in dozens of languages. These dramatic works, with their well-drawn, complex characters and compelling storylines, have had a tremendous impact on the theatre, as well as the English language and culture. The bard’s swan song, The Tempest, continues to be appreciated by modern audiences across the globe to this day in a variety of media formats, ranging from print publications of the original play and live theatrical performances to television and big screen adaptations."
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "ielts_academic_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-12 17:46:34",
+        "exported_by": "impact",
+        "plugin_version": "11.14",
+        "format_version": "1.0"
+    }
+}
