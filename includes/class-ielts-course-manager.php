@@ -43,7 +43,7 @@ class IELTS_Course_Manager {
         $this->sync_manager = new IELTS_CM_Multi_Site_Sync();
         $this->sync_api = new IELTS_CM_Sync_API();
         $this->sync_settings_page = new IELTS_CM_Sync_Settings_Page();
-        $this->payment_receipt = new IELTS_CM_Payment_Receipt();
+        $this->payment_receipt = IELTS_CM_Payment_Receipt::get_instance();
     }
     
     public function run() {

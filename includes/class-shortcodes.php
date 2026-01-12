@@ -503,8 +503,8 @@ class IELTS_CM_Shortcodes {
                 <h3><?php _e('Payment History & Receipts', 'ielts-course-manager'); ?></h3>
                 
                 <?php
-                // Get user's payment history using the payment receipt class
-                $payment_receipt = new IELTS_CM_Payment_Receipt();
+                // Get user's payment history using the payment receipt singleton instance
+                $payment_receipt = IELTS_CM_Payment_Receipt::get_instance();
                 $payments = $payment_receipt->get_user_payments($user_id);
                 
                 if (empty($payments)): ?>

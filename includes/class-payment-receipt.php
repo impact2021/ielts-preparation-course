@@ -10,13 +10,25 @@ if (!defined('ABSPATH')) {
 class IELTS_CM_Payment_Receipt {
     
     private $db;
+    private static $instance = null;
+    
+    /**
+     * Get singleton instance
+     * 
+     * @return IELTS_CM_Payment_Receipt
+     */
+    public static function get_instance() {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
     
     public function __construct() {
         $this->db = new IELTS_CM_Database();
         
-        // AJAX handlers for logged in and logged out users
+        // AJAX handler - only for logged in users
         add_action('wp_ajax_ielts_cm_download_receipt', array($this, 'download_receipt'));
-        add_action('wp_ajax_nopriv_ielts_cm_download_receipt', array($this, 'download_receipt'));
     }
     
     /**
@@ -274,7 +286,10 @@ class IELTS_CM_Payment_Receipt {
                     <h3><?php _e('Customer Information', 'ielts-course-manager'); ?></h3>
                     <div class="info-row">
                         <span class="info-label"><?php _e('Name:', 'ielts-course-manager'); ?></span>
-                        <span class="info-value"><?php echo esc_html(trim($user->first_name . ' ' . $user->last_name) ?: $user->display_name); ?></span>
+                        <span class="info-value"><?php 
+                            $full_name = trim($user->first_name . ' ' . $user->last_name);
+                            echo esc_html($full_name ? $full_name : $user->display_name); 
+                        ?></span>
                     </div>
                     <div class="info-row">
                         <span class="info-label"><?php _e('Email:', 'ielts-course-manager'); ?></span>
