@@ -264,21 +264,26 @@ class IELTS_CM_Sync_API {
             return $mapped_id ? $mapped_id : $meta_value;
         }
         
-        // Handle array of IDs (could be serialized or JSON)
+        // Handle array of IDs (could be serialized, JSON, or already an array)
         if ($meta_key === '_ielts_cm_course_ids' || $meta_key === '_ielts_cm_lesson_ids') {
             $is_serialized = false;
+            $is_already_array = false;
             $ids = false;
             
-            // Check if it's serialized data first
-            if (is_serialized($meta_value)) {
+            // Check if it's already an array (from JSON API)
+            if (is_array($meta_value)) {
+                $ids = $meta_value;
+                $is_already_array = true;
+            }
+            // Check if it's serialized data
+            elseif (is_serialized($meta_value)) {
                 $ids = maybe_unserialize($meta_value);
                 if (is_array($ids)) {
                     $is_serialized = true;
                 }
             }
-            
-            // If not serialized or unserialize failed, try JSON decode
-            if (!is_array($ids)) {
+            // Try JSON decode as fallback
+            else {
                 $ids = json_decode($meta_value, true);
             }
             
@@ -296,9 +301,15 @@ class IELTS_CM_Sync_API {
             }
             
             // Return in the same format it came in
-            if ($is_serialized) {
+            // If it was already an array (from JSON), return array (WordPress will serialize it)
+            // If it was serialized, return serialized
+            // Otherwise, encode as JSON (fallback for edge cases like manually set JSON strings)
+            if ($is_already_array) {
+                return $mapped_ids;
+            } elseif ($is_serialized) {
                 return serialize($mapped_ids);
             } else {
+                // This handles the JSON string case
                 $json = wp_json_encode($mapped_ids);
                 return $json !== false ? $json : $meta_value;
             }
