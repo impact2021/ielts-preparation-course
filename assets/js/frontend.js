@@ -1465,11 +1465,9 @@
             
             if ($questionMarker.length) {
                 // Highlight the answer text associated with this question
-                var $answerHighlight = $questionMarker.siblings('.reading-answer-highlight[data-question="' + questionNumber + '"]');
-                if (!$answerHighlight.length) {
-                    // If not a sibling, find it as the next element
-                    $answerHighlight = $questionMarker.next('.reading-answer-highlight[data-question="' + questionNumber + '"]');
-                }
+                // Use a consolidated selector to find answer highlight by data-question attribute
+                var $container = $questionMarker.closest('.reading-text');
+                var $answerHighlight = $container.find('.reading-answer-highlight[data-question="' + questionNumber + '"]').first();
                 
                 if ($answerHighlight.length) {
                     $answerHighlight.addClass('reading-passage-highlight');
