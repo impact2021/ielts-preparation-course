@@ -365,7 +365,8 @@ class IELTS_CM_Quiz_Handler {
                 'options' => isset($question['options']) ? $question['options'] : '',
                 'audio_section_id' => isset($question['audio_section_id']) ? $question['audio_section_id'] : null,
                 'audio_start_time' => isset($question['audio_start_time']) ? $question['audio_start_time'] : null,
-                'audio_end_time' => isset($question['audio_end_time']) ? $question['audio_end_time'] : null
+                'audio_end_time' => isset($question['audio_end_time']) ? $question['audio_end_time'] : null,
+                'reading_text_id' => isset($question['reading_text_id']) ? $question['reading_text_id'] : null
             );
         }
         
