@@ -1948,6 +1948,27 @@ p.transcript-highlight {
     }
 }
 
+/* Reading passage highlighting - for when user clicks "Show me the section" button */
+.reading-passage-highlight,
+.reading-text .reading-passage-highlight {
+    background-color: #fff9c4 !important; /* Yellow highlight */
+    animation: highlightFadeIn 0.5s ease-in-out;
+    padding: 2px 8px !important;
+    border-radius: 3px !important;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.3) !important;
+}
+
+/* For reading tests, hide question marker badges (NO QUESTION NUMBERS in reading passage) */
+.reading-text .question-marker-badge {
+    display: none !important;
+}
+
+/* Keep the reading answer marker transparent until highlighted */
+.reading-text .reading-answer-highlight {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
 /* Option-level feedback message displayed inside individual options */
 .option-feedback-message {
     display: block;

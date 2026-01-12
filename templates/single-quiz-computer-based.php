@@ -26,17 +26,17 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
 
 // Helper function to process transcript question markers
 // Converts [Q#] markers to anchored, highlightable spans with yellow background on answer text
-function process_transcript_markers_cbt($transcript, $starting_question = 1) {
+function process_transcript_markers_cbt($transcript, $starting_question = 1, $is_reading = false) {
     if (empty($transcript)) {
         return $transcript;
     }
     
-    // Convert [Q#] markers to visible badges with yellow background highlighting on answer text
-    // Pattern captures: [Q1]answer text here... and wraps answer text in yellow highlight
+    // Convert [Q#] markers to invisible anchors for navigation (reading) or visible badges (listening)
+    // Pattern captures: [Q1]answer text here... and wraps answer text in highlight
     // Stops at next Q marker or end of string to avoid spanning multiple questions
     $pattern = '/\[Q(\d+)\]([^\[]*?)(?=\[Q|$)/is';
     
-    $processed = preg_replace_callback($pattern, function($matches) use ($starting_question) {
+    $processed = preg_replace_callback($pattern, function($matches) use ($starting_question, $is_reading) {
         $question_num = intval($matches[1]);
         $display_num = $question_num;
         $answer_text = isset($matches[2]) ? $matches[2] : '';
@@ -73,15 +73,20 @@ function process_transcript_markers_cbt($transcript, $starting_question = 1) {
             }
         }
         
-        // Build the output: Q badge + highlighted answer text + remaining text
-        $output = '<span id="transcript-q' . esc_attr($display_num) . '" data-question="' . esc_attr($display_num) . '">';
-        $output .= '<span class="question-marker-badge">Q' . esc_html($display_num) . '</span>';
+        // Build the output with invisible anchor for reading tests
+        $output = '<span id="transcript-q' . esc_attr($display_num) . '" data-question="' . esc_attr($display_num) . '" class="reading-passage-marker">';
+        
+        // For reading tests, don't show the question number badge (per requirements)
+        if (!$is_reading) {
+            $output .= '<span class="question-marker-badge">Q' . esc_html($display_num) . '</span>';
+        }
+        
         $output .= '</span>';
         
-        // Wrap the highlighted answer text in a yellow background span
+        // Wrap the highlighted answer text in a span for highlighting on click
         // Note: $highlighted_text may contain HTML tags from transcript (e.g., <strong>) which must be preserved
         if (!empty($highlighted_text)) {
-            $output .= '<span class="transcript-answer-marker">' . $highlighted_text . '</span>';
+            $output .= '<span class="transcript-answer-marker reading-answer-highlight" data-question="' . esc_attr($display_num) . '">' . $highlighted_text . '</span>';
         }
         
         // Add any remaining text that wasn't highlighted
@@ -427,9 +432,9 @@ if ($lesson_id) {
                                         <div class="reading-text">
                                             <?php 
                                             // Process [Q#] markers in reading text content to enable highlighting
-                                            // Markers are hidden by default and only shown after quiz submission via CSS
+                                            // For reading tests, question numbers are hidden (only invisible markers remain)
                                             $reading_content = isset($text['content']) ? $text['content'] : '';
-                                            $processed_content = process_transcript_markers_cbt($reading_content, $starting_question_number);
+                                            $processed_content = process_transcript_markers_cbt($reading_content, $starting_question_number, true);
                                             echo wp_kses_post(wpautop($processed_content)); 
                                             ?>
                                         </div>
