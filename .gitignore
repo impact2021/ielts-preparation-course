@@ -47,3 +47,6 @@ __pycache__/
 # Large XML files (keep only converted versions)
 *-original.xml
 *.backup
+
+# Test files (do not commit to production)
+test-membership.php
