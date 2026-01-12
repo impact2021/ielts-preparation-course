@@ -1476,16 +1476,25 @@
             $targetText.fadeIn(300);
             
             // Find the question marker in the reading passage
-            var $questionMarker = $('#transcript-q' + questionNumber);
+            // Try passage-q# first (new format), then transcript-q# (old format for backward compatibility)
+            var $questionMarker = $('#passage-q' + questionNumber);
+            if (!$questionMarker.length) {
+                $questionMarker = $('#transcript-q' + questionNumber);
+            }
             
             // Remove any previous highlighting
             $('.reading-text .reading-passage-highlight').removeClass('reading-passage-highlight');
             
             if ($questionMarker.length) {
                 // Highlight the answer text associated with this question
-                // Use a consolidated selector to find answer highlight by data-question attribute
+                // Look for reading-answer-marker (new manual format) or reading-answer-highlight (auto-generated)
                 var $container = $questionMarker.closest('.reading-text');
-                var $answerHighlight = $container.find('.reading-answer-highlight[data-question="' + questionNumber + '"]').first();
+                var $answerHighlight = $container.find('.reading-answer-highlight[data-question="' + questionNumber + '"], .reading-answer-marker[data-question="' + questionNumber + '"]').first();
+                
+                // If no data-question attribute, try finding the next sibling .reading-answer-marker (manual format without data-question)
+                if (!$answerHighlight.length) {
+                    $answerHighlight = $questionMarker.next('.reading-answer-marker');
+                }
                 
                 if ($answerHighlight.length) {
                     $answerHighlight.addClass('reading-passage-highlight');
