@@ -263,6 +263,13 @@ if ($lesson_id) {
     </div>
     
     <?php if (!empty($questions) && is_user_logged_in()): ?>
+        <?php
+        // Get starting question number early as it's used in reading text processing
+        $starting_question_number = get_post_meta($quiz->ID, '_ielts_cm_starting_question_number', true);
+        if (!$starting_question_number) {
+            $starting_question_number = 1;
+        }
+        ?>
         <form id="ielts-quiz-form" class="quiz-form">
             <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
                 <div class="timer-left-section">
@@ -418,7 +425,13 @@ if ($lesson_id) {
                                             <h3 class="reading-title"><?php echo esc_html($text['title']); ?></h3>
                                         <?php endif; ?>
                                         <div class="reading-text">
-                                            <?php echo wp_kses_post(wpautop($text['content'])); ?>
+                                            <?php 
+                                            // Process [Q#] markers in reading text content to enable highlighting
+                                            // Markers are hidden by default and only shown after quiz submission via CSS
+                                            $reading_content = isset($text['content']) ? $text['content'] : '';
+                                            $processed_content = process_transcript_markers_cbt($reading_content, $starting_question_number);
+                                            echo wp_kses_post(wpautop($processed_content)); 
+                                            ?>
                                         </div>
                                     </div>
                                 <?php endforeach; ?>
@@ -435,12 +448,6 @@ if ($lesson_id) {
                 <div class="questions-column">
                     <div class="questions-content">
                         <?php 
-                        // Get starting question number (default is 1)
-                        $starting_question_number = get_post_meta($quiz->ID, '_ielts_cm_starting_question_number', true);
-                        if (!$starting_question_number) {
-                            $starting_question_number = 1;
-                        }
-                        
                         // Calculate display question numbers for multi-select, summary completion, and matching questions
                         $display_question_number = intval($starting_question_number);
                         $question_display_numbers = array();
@@ -968,38 +975,76 @@ if ($lesson_id) {
                                             }
                                         }
                                         
-                                        $correct_answer_count = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
-                                        $is_multi_select = $correct_answer_count > 1;
+                                        // If no options provided but instructions mention TRUE/FALSE, render as true_false type
+                                        // This handles legacy questions that were incorrectly typed as closed_question
+                                        $instructions_text = isset($question['instructions']) ? strtoupper($question['instructions']) : '';
+                                        $is_true_false_question = (empty($options) && 
+                                                                   (strpos($instructions_text, 'TRUE') !== false || 
+                                                                    strpos($instructions_text, 'FALSE') !== false ||
+                                                                    strpos($instructions_text, 'NOT GIVEN') !== false ||
+                                                                    strpos($instructions_text, 'YES') !== false ||
+                                                                    strpos($instructions_text, 'NO') !== false));
                                         
-                                        if (!empty($options)):
-                                        ?>
-                                        <div class="question-options closed-question-options" data-correct-count="<?php echo esc_attr($correct_answer_count); ?>">
-                                            <?php foreach ($options as $opt_index => $option): ?>
+                                        if ($is_true_false_question) {
+                                            // Render as TRUE/FALSE/NOT GIVEN or YES/NO/NOT GIVEN based on instructions
+                                            $is_yes_no = (strpos($instructions_text, 'YES') !== false);
+                                            ?>
+                                            <div class="question-options">
                                                 <label class="option-label">
-                                                    <?php if ($is_multi_select): ?>
-                                                        <input type="checkbox" 
-                                                               name="answer_<?php echo esc_attr($index); ?>[]" 
-                                                               value="<?php echo esc_attr($opt_index); ?>"
-                                                               class="closed-question-checkbox">
-                                                    <?php else: ?>
-                                                        <input type="radio" 
-                                                               name="answer_<?php echo esc_attr($index); ?>" 
-                                                               value="<?php echo esc_attr($opt_index); ?>"
-                                                               class="closed-question-radio">
-                                                    <?php endif; ?>
-                                                    <?php 
-                                                    // Only show letter prefix if show_option_letters is true (or not set for backward compatibility)
-                                                    $show_letters = !isset($question['show_option_letters']) || $question['show_option_letters'];
-                                                    if ($show_letters): 
-                                                    ?>
-                                                        <span class="option-letter"><?php echo esc_html(chr(65 + $opt_index)); ?>:</span> 
-                                                    <?php endif; ?>
-                                                    <span><?php echo esc_html(isset($option['text']) ? $option['text'] : $option); ?></span>
+                                                    <input type="radio" 
+                                                           name="answer_<?php echo esc_attr($index); ?>" 
+                                                           value="<?php echo esc_attr($is_yes_no ? 'yes' : 'true'); ?>">
+                                                    <span><?php echo $is_yes_no ? __('Yes', 'ielts-course-manager') : __('True', 'ielts-course-manager'); ?></span>
                                                 </label>
-                                            <?php endforeach; ?>
-                                        </div>
-                                        <?php
-                                        endif;
+                                                <label class="option-label">
+                                                    <input type="radio" 
+                                                           name="answer_<?php echo esc_attr($index); ?>" 
+                                                           value="<?php echo esc_attr($is_yes_no ? 'no' : 'false'); ?>">
+                                                    <span><?php echo $is_yes_no ? __('No', 'ielts-course-manager') : __('False', 'ielts-course-manager'); ?></span>
+                                                </label>
+                                                <label class="option-label">
+                                                    <input type="radio" 
+                                                           name="answer_<?php echo esc_attr($index); ?>" 
+                                                           value="not_given">
+                                                    <span><?php _e('Not Given', 'ielts-course-manager'); ?></span>
+                                                </label>
+                                            </div>
+                                            <?php
+                                        } else {
+                                            // Normal closed_question with options
+                                            $correct_answer_count = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
+                                            $is_multi_select = $correct_answer_count > 1;
+                                            
+                                            if (!empty($options)):
+                                            ?>
+                                            <div class="question-options closed-question-options" data-correct-count="<?php echo esc_attr($correct_answer_count); ?>">
+                                                <?php foreach ($options as $opt_index => $option): ?>
+                                                    <label class="option-label">
+                                                        <?php if ($is_multi_select): ?>
+                                                            <input type="checkbox" 
+                                                                   name="answer_<?php echo esc_attr($index); ?>[]" 
+                                                                   value="<?php echo esc_attr($opt_index); ?>"
+                                                                   class="closed-question-checkbox">
+                                                        <?php else: ?>
+                                                            <input type="radio" 
+                                                                   name="answer_<?php echo esc_attr($index); ?>" 
+                                                                   value="<?php echo esc_attr($opt_index); ?>"
+                                                                   class="closed-question-radio">
+                                                        <?php endif; ?>
+                                                        <?php 
+                                                        // Only show letter prefix if show_option_letters is true (or not set for backward compatibility)
+                                                        $show_letters = !isset($question['show_option_letters']) || $question['show_option_letters'];
+                                                        if ($show_letters): 
+                                                        ?>
+                                                            <span class="option-letter"><?php echo esc_html(chr(65 + $opt_index)); ?>:</span> 
+                                                        <?php endif; ?>
+                                                        <span><?php echo esc_html(isset($option['text']) ? $option['text'] : $option); ?></span>
+                                                    </label>
+                                                <?php endforeach; ?>
+                                            </div>
+                                            <?php
+                                            endif;
+                                        }
                                         break;
                                         
                                     case 'open_question':
