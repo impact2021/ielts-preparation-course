@@ -25,6 +25,7 @@ class IELTS_CM_Payment_Receipt {
     }
     
     public function __construct() {
+        // Database instance - WordPress uses a global $wpdb, so multiple instances are lightweight
         $this->db = new IELTS_CM_Database();
         
         // AJAX handler - only for logged in users
@@ -111,15 +112,16 @@ class IELTS_CM_Payment_Receipt {
             wp_die(__('You must be logged in to download receipts.', 'ielts-course-manager'));
         }
         
-        // Verify nonce
-        if (!isset($_GET['nonce']) || !wp_verify_nonce($_GET['nonce'], 'download_receipt_' . (isset($_GET['payment_id']) ? intval($_GET['payment_id']) : 0))) {
-            wp_die(__('Invalid security token.', 'ielts-course-manager'));
-        }
-        
+        // Validate payment ID first
         $payment_id = isset($_GET['payment_id']) ? intval($_GET['payment_id']) : 0;
         
         if (!$payment_id) {
             wp_die(__('Invalid payment ID.', 'ielts-course-manager'));
+        }
+        
+        // Verify nonce with validated payment ID
+        if (!isset($_GET['nonce']) || !wp_verify_nonce($_GET['nonce'], 'download_receipt_' . $payment_id)) {
+            wp_die(__('Invalid security token.', 'ielts-course-manager'));
         }
         
         $payment = $this->get_payment($payment_id);
@@ -134,17 +136,17 @@ class IELTS_CM_Payment_Receipt {
             wp_die(__('You do not have permission to view this receipt.', 'ielts-course-manager'));
         }
         
-        // Generate and output the receipt PDF
-        $this->generate_receipt_pdf($payment);
+        // Generate and output the receipt HTML
+        $this->generate_receipt_html($payment);
         exit;
     }
     
     /**
-     * Generate receipt PDF
+     * Generate receipt HTML (printable as PDF)
      * 
      * @param object $payment Payment object
      */
-    private function generate_receipt_pdf($payment) {
+    private function generate_receipt_html($payment) {
         // Get user data
         $user = get_userdata($payment->user_id);
         
@@ -329,7 +331,15 @@ class IELTS_CM_Payment_Receipt {
             <div class="payment-details">
                 <h3><?php _e('Payment Details', 'ielts-course-manager'); ?></h3>
                 <div class="amount-row">
-                    <span><?php echo $payment->description ?: ($course_name ? esc_html($course_name) : __('Course Payment', 'ielts-course-manager')); ?></span>
+                    <span><?php 
+                        if ($payment->description) {
+                            echo esc_html($payment->description);
+                        } elseif ($course_name) {
+                            echo esc_html($course_name);
+                        } else {
+                            _e('Course Payment', 'ielts-course-manager');
+                        }
+                    ?></span>
                     <span><?php echo esc_html($payment->currency . ' ' . number_format($payment->amount, 2)); ?></span>
                 </div>
                 <div class="amount-row total">
