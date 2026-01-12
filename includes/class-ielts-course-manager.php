@@ -20,6 +20,7 @@ class IELTS_Course_Manager {
     protected $sync_manager;
     protected $sync_api;
     protected $sync_settings_page;
+    protected $membership;
     
     public function __construct() {
         $this->load_dependencies();
@@ -42,6 +43,7 @@ class IELTS_Course_Manager {
         $this->sync_manager = new IELTS_CM_Multi_Site_Sync();
         $this->sync_api = new IELTS_CM_Sync_API();
         $this->sync_settings_page = new IELTS_CM_Sync_Settings_Page();
+        $this->membership = new IELTS_CM_Membership();
     }
     
     public function run() {
@@ -71,6 +73,9 @@ class IELTS_Course_Manager {
         
         // Initialize frontend
         $this->frontend->init();
+        
+        // Initialize membership
+        $this->membership->init();
         
         // Enqueue scripts and styles
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));

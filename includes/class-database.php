@@ -119,6 +119,9 @@ class IELTS_CM_Database {
         dbDelta($sql_enrollment);
         dbDelta($sql_site_connections);
         dbDelta($sql_content_sync);
+        
+        // Create membership tables
+        IELTS_CM_Membership::create_tables();
     }
     
     /**
@@ -132,7 +135,9 @@ class IELTS_CM_Database {
             $wpdb->prefix . 'ielts_cm_quiz_results',
             $wpdb->prefix . 'ielts_cm_enrollment',
             $wpdb->prefix . 'ielts_cm_site_connections',
-            $wpdb->prefix . 'ielts_cm_content_sync'
+            $wpdb->prefix . 'ielts_cm_content_sync',
+            $wpdb->prefix . 'ielts_cm_memberships',
+            $wpdb->prefix . 'ielts_cm_payments'
         );
         
         foreach ($tables as $table) {
