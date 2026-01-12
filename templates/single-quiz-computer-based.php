@@ -73,8 +73,11 @@ function process_transcript_markers_cbt($transcript, $starting_question = 1, $is
             }
         }
         
-        // Build the output with invisible anchor for reading tests
-        $output = '<span id="transcript-q' . esc_attr($display_num) . '" data-question="' . esc_attr($display_num) . '" class="reading-passage-marker">';
+        // Build the output with appropriate ID prefix and class based on test type
+        // Listening: transcript-q# with transcript-answer-marker | Reading: passage-q# with reading-answer-marker
+        $id_prefix = $is_reading ? 'passage-q' : 'transcript-q';
+        $answer_class = $is_reading ? 'reading-answer-marker' : 'transcript-answer-marker';
+        $output = '<span id="' . $id_prefix . esc_attr($display_num) . '" data-question="' . esc_attr($display_num) . '" class="reading-passage-marker">';
         
         // For reading tests, don't show the question number badge (per requirements)
         if (!$is_reading) {
@@ -86,7 +89,7 @@ function process_transcript_markers_cbt($transcript, $starting_question = 1, $is
         // Wrap the highlighted answer text in a span for highlighting on click
         // Note: $highlighted_text may contain HTML tags from transcript (e.g., <strong>) which must be preserved
         if (!empty($highlighted_text)) {
-            $output .= '<span class="transcript-answer-marker reading-answer-highlight" data-question="' . esc_attr($display_num) . '">' . $highlighted_text . '</span>';
+            $output .= '<span class="' . $answer_class . ' reading-answer-highlight" data-question="' . esc_attr($display_num) . '">' . $highlighted_text . '</span>';
         }
         
         // Add any remaining text that wasn't highlighted

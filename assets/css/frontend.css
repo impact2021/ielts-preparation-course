@@ -1886,8 +1886,18 @@ select.answer-select-inline.answer-incorrect {
     to { transform: translateY(-50%) rotate(360deg); }
 }
 
-/* Transcript question markers and highlighting */
+/* Transcript question markers and highlighting (for listening tests) */
 .transcript-answer-marker {
+    position: relative;
+    display: inline;
+    background-color: #fff9c4; /* Yellow highlight background for the answer section */
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin: 0 2px;
+}
+
+/* Reading passage answer markers (for reading tests) - same styling as transcript markers */
+.reading-answer-marker {
     position: relative;
     display: inline;
     background-color: #fff9c4; /* Yellow highlight background for the answer section */
@@ -1913,13 +1923,15 @@ select.answer-select-inline.answer-incorrect {
     display: inline-block;
 }
 
-/* Also hide answer marker highlighting initially */
-.transcript-answer-marker {
+/* Hide answer marker highlighting initially (both listening and reading) */
+.transcript-answer-marker,
+.reading-answer-marker {
     background-color: transparent; /* No highlighting before submission */
 }
 
-/* Show answer marker highlighting after quiz submission */
-.quiz-submitted .transcript-answer-marker {
+/* Show answer marker highlighting after quiz submission (both listening and reading) */
+.quiz-submitted .transcript-answer-marker,
+.quiz-submitted .reading-answer-marker {
     background-color: #fff9c4; /* Yellow highlight after submission */
 }
 

@@ -10,6 +10,7 @@ You can use either automatic markers or manual markers, depending on your needs.
 ### Method 1: Automatic Markers (Recommended for Simple Cases)
 
 Use `[Q#]` markers in your reading passage content. The system will automatically:
+- Create invisible anchors with ID `passage-q#`
 - Hide the question number badge (unlike listening transcripts)
 - Highlight the answer text using smart boundary detection
 - Create clickable navigation from the "Show in the reading passage" button
@@ -23,25 +24,44 @@ Statistics in New Zealand show that [Q1]a list of 20 of the top multi-national e
 - The `[Q1]` marker is invisible to students
 - The text after it (up to the next comma, period, or 50 characters) is highlighted when clicked
 - Smart boundary detection stops at natural breakpoints
+- Generates: `<span id="passage-q1">...</span><span class="reading-answer-marker">text</span>`
 
 ### Method 2: Manual Markers (Full Control)
 
-For precise control over what text gets highlighted, use manual HTML markers just like in listening transcripts.
+For precise control over what text gets highlighted, use manual HTML markers.
 
-**Format:**
+**Format for Reading Passages:**
 ```html
-<span id="transcript-q1" data-question="1"></span><span class="transcript-answer-marker">exact text to highlight</span>
+<span id="passage-q1" data-question="1"></span><span class="reading-answer-marker">exact text to highlight</span>
 ```
 
-**Key differences from listening:**
+**Key points:**
+- **ID format:** Use `passage-q#` for reading passages
+- **Class:** Use `reading-answer-marker` for reading passages
 - **No question badge** - Reading passages don't show the "Q1" badge
-- **Same ID format** - Use `transcript-q#` (not `reading-text-q#`)
-- **Same class** - Use `transcript-answer-marker`
 
 **Example:**
 ```html
-Statistics in New Zealand show that <span id="transcript-q1" data-question="1"></span><span class="transcript-answer-marker">a list of 20 of the top multi-national earners in New Zealand reported an average profit of just 1.3 per cent for New Zealand-generated revenue</span>.
+<p>Statistics in New Zealand show that <span id="passage-q1" data-question="1"></span><span class="reading-answer-marker">a list of 20 of the top multi-national earners in New Zealand reported an average profit of just 1.3 per cent for New Zealand-generated revenue</span>.</p>
 ```
+
+## Comparison: Listening vs Reading Markers
+
+### Listening Transcript Format:
+```html
+<span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">It's Anne Hawberry.</span>
+```
+- Uses `transcript-q#` ID
+- Shows visible Q1 badge
+- Uses `transcript-answer-marker` class
+
+### Reading Passage Format:
+```html
+<span id="passage-q1" data-question="1"></span><span class="reading-answer-marker">exact text to highlight</span>
+```
+- Uses `passage-q#` ID
+- No visible badge
+- Uses `reading-answer-marker` class (different from listening for clarity)
 
 ## When to Use Each Method
 
@@ -59,9 +79,11 @@ Statistics in New Zealand show that <span id="transcript-q1" data-question="1"><
 ## Complete Example: Manual Markers in Reading Passage
 
 ```html
-<p>A recent tax study was completed in Australia and close reading of the assembled data revealed that <span id="transcript-q7" data-question="7"></span><span class="transcript-answer-marker">nearly a third of private companies with annual incomes of AUD200 million or more pay no tax on profits</span> to the Australian government.</p>
+<p>A recent tax study was completed in Australia and close reading of the assembled data revealed that <span id="passage-q7" data-question="7"></span><span class="reading-answer-marker">nearly a third of private companies with annual incomes of AUD200 million or more pay no tax on profits</span> to the Australian government.</p>
 
-<p>Similarly, <span id="transcript-q1" data-question="1"></span><span class="transcript-answer-marker">statistics in New Zealand show that a list of 20 of the top multi-national earners in New Zealand reported an average profit of just 1.3 per cent for New Zealand-generated revenue</span> yet their parent companies reported, on average, profit margins of over 20 per cent for their global operations.</p>
+<p>Similarly, <span id="passage-q1" data-question="1"></span><span class="reading-answer-marker">statistics in New Zealand show that a list of 20 of the top multi-national earners in New Zealand reported an average profit of just 1.3 per cent for New Zealand-generated revenue</span> yet their parent companies reported, on average, profit margins of over 20 per cent for their global operations.</p>
+
+<p><span id="passage-q2" data-question="2"></span><span class="reading-answer-marker">Worldwide, lost income from unpaid taxes is estimated to come in at 10 per cent of global corporate income.</span></p>
 ```
 
 ## Best Practices
@@ -70,23 +92,26 @@ Statistics in New Zealand show that <span id="transcript-q1" data-question="1"><
 2. **Avoid excess** - Don't highlight unnecessary context
 3. **Test it** - Click the "Show in the reading passage" button to verify
 4. **Consistency** - Use the same method throughout a passage
+5. **Use correct IDs and classes** - Always use `passage-q#` and `reading-answer-marker` for reading
 
 ## How It Works
 
 When a student clicks "Show in the reading passage":
 
-1. The system finds the marker: `#transcript-q{number}`
-2. It locates the answer text: `.transcript-answer-marker[data-question="{number}"]` or the next `.transcript-answer-marker`
+1. The system finds the marker: `#passage-q{number}`
+2. It locates the answer text: `.reading-answer-marker[data-question="{number}"]` or the next `.reading-answer-marker`
 3. It adds the `.reading-passage-highlight` class (yellow background)
 4. It scrolls to that location in the passage
 
-## Migration from Old Format
+## Migration from Old Formats
 
 If you have existing reading passages using:
-- `id="reading-text-q#"` → Change to `id="transcript-q#"`
-- `class="reading-text-answer-marker"` → Change to `class="transcript-answer-marker"`
+- `id="transcript-q#"` → Change to `id="passage-q#"` (new format)
+- `id="reading-text-q#"` → Change to `id="passage-q#"` (new format)
+- `class="transcript-answer-marker"` → Change to `class="reading-answer-marker"`
+- `class="reading-text-answer-marker"` → Change to `class="reading-answer-marker"`
 
-The new format matches the listening transcript format for consistency.
+The system maintains backward compatibility with `transcript-q#` IDs but `passage-q#` is preferred for reading passages.
 
 ## Visual Comparison
 
@@ -98,16 +123,19 @@ It's Anne Hawberry. ← Only highlighted text (no badge)
 
 ## Technical Notes
 
-- Reading passages use the same marker system as listening transcripts
+- Reading passages use `passage-q#` IDs to distinguish from listening's `transcript-q#`
+- Reading passages use `reading-answer-marker` class (listening uses `transcript-answer-marker`)
+- Both classes share the same CSS styling (yellow highlight)
 - The difference is controlled by the `$is_reading` parameter in `process_transcript_markers_cbt()`
 - Both methods generate the same output format internally
 - The `data-question` attribute is optional but recommended for better targeting
+- Backward compatibility maintained for old `transcript-q#` format
 
 ## Summary
 
 **For Reading Passages:**
-- Use `[Q#]` for automatic highlighting (quick setup)
-- Use `<span id="transcript-q#"></span><span class="transcript-answer-marker">text</span>` for manual control
+- Use `[Q#]` for automatic highlighting (quick setup) → generates `passage-q#` ID
+- Use `<span id="passage-q#"></span><span class="reading-answer-marker">text</span>` for manual control
 - Both methods link to the "Show in the reading passage" button
 - No question badges are shown (unlike listening)
-- Use the same format as listening transcripts for consistency
+- Use distinct `passage-q#` IDs and `reading-answer-marker` class (separate from listening)
