@@ -453,6 +453,42 @@ class IELTS_CM_Multi_Site_Sync {
     }
     
     /**
+     * Push lesson children (resources and exercises) to subsites
+     * Helper method to avoid code duplication
+     * 
+     * @param int $lesson_id Lesson ID
+     * @return array Array with 'resources' and 'exercises' results
+     */
+    private function push_lesson_children($lesson_id) {
+        $result = array(
+            'resources' => array(),
+            'exercises' => array()
+        );
+        
+        // Push all resources (sub-lessons) for this lesson
+        $resources = $this->get_lesson_resources($lesson_id);
+        foreach ($resources as $resource) {
+            $resource_results = $this->push_content_to_subsites($resource->ID, 'resource');
+            $result['resources'][$resource->ID] = array(
+                'title' => $resource->post_title,
+                'sync_results' => $resource_results
+            );
+        }
+        
+        // Push all exercises (quizzes) for this lesson
+        $exercises = $this->get_lesson_exercises($lesson_id);
+        foreach ($exercises as $exercise) {
+            $exercise_results = $this->push_content_to_subsites($exercise->ID, 'quiz');
+            $result['exercises'][$exercise->ID] = array(
+                'title' => $exercise->post_title,
+                'sync_results' => $exercise_results
+            );
+        }
+        
+        return $result;
+    }
+    
+    /**
      * Push content and all its children to subsites
      */
     public function push_content_with_children($content_id, $content_type) {
@@ -483,54 +519,19 @@ class IELTS_CM_Multi_Site_Sync {
                     'sync_results' => $lesson_results
                 );
                 
-                // Push all resources for this lesson
-                $resources = $this->get_lesson_resources($lesson->ID);
-                $results['lessons'][$lesson->ID]['resources'] = array();
-                foreach ($resources as $resource) {
-                    $resource_results = $this->push_content_to_subsites($resource->ID, 'resource');
-                    $results['lessons'][$lesson->ID]['resources'][$resource->ID] = array(
-                        'title' => $resource->post_title,
-                        'sync_results' => $resource_results
-                    );
-                }
-                
-                // Push all exercises for this lesson
-                $exercises = $this->get_lesson_exercises($lesson->ID);
-                $results['lessons'][$lesson->ID]['exercises'] = array();
-                foreach ($exercises as $exercise) {
-                    $exercise_results = $this->push_content_to_subsites($exercise->ID, 'quiz');
-                    $results['lessons'][$lesson->ID]['exercises'][$exercise->ID] = array(
-                        'title' => $exercise->post_title,
-                        'sync_results' => $exercise_results
-                    );
-                }
+                // Push all resources and exercises for this lesson using helper
+                $lesson_children = $this->push_lesson_children($lesson->ID);
+                $results['lessons'][$lesson->ID]['resources'] = $lesson_children['resources'];
+                $results['lessons'][$lesson->ID]['exercises'] = $lesson_children['exercises'];
             }
         }
         
         // If it's a lesson, push all resources and exercises for this lesson
         if ($content_type === 'lesson') {
-            $results['resources'] = array();
-            $results['exercises'] = array();
-            
-            // Push all resources (sub-lessons) for this lesson
-            $resources = $this->get_lesson_resources($content_id);
-            foreach ($resources as $resource) {
-                $resource_results = $this->push_content_to_subsites($resource->ID, 'resource');
-                $results['resources'][$resource->ID] = array(
-                    'title' => $resource->post_title,
-                    'sync_results' => $resource_results
-                );
-            }
-            
-            // Push all exercises (quizzes) for this lesson
-            $exercises = $this->get_lesson_exercises($content_id);
-            foreach ($exercises as $exercise) {
-                $exercise_results = $this->push_content_to_subsites($exercise->ID, 'quiz');
-                $results['exercises'][$exercise->ID] = array(
-                    'title' => $exercise->post_title,
-                    'sync_results' => $exercise_results
-                );
-            }
+            // Use helper method to push lesson children
+            $lesson_children = $this->push_lesson_children($content_id);
+            $results['resources'] = $lesson_children['resources'];
+            $results['exercises'] = $lesson_children['exercises'];
         }
         
         return $results;
