@@ -263,6 +263,13 @@ if ($lesson_id) {
     </div>
     
     <?php if (!empty($questions) && is_user_logged_in()): ?>
+        <?php
+        // Get starting question number early as it's used in reading text processing
+        $starting_question_number = get_post_meta($quiz->ID, '_ielts_cm_starting_question_number', true);
+        if (!$starting_question_number) {
+            $starting_question_number = 1;
+        }
+        ?>
         <form id="ielts-quiz-form" class="quiz-form">
             <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
                 <div class="timer-left-section">
@@ -441,12 +448,6 @@ if ($lesson_id) {
                 <div class="questions-column">
                     <div class="questions-content">
                         <?php 
-                        // Get starting question number (default is 1)
-                        $starting_question_number = get_post_meta($quiz->ID, '_ielts_cm_starting_question_number', true);
-                        if (!$starting_question_number) {
-                            $starting_question_number = 1;
-                        }
-                        
                         // Calculate display question numbers for multi-select, summary completion, and matching questions
                         $display_question_number = intval($starting_question_number);
                         $question_display_numbers = array();
@@ -991,19 +992,19 @@ if ($lesson_id) {
                                             <div class="question-options">
                                                 <label class="option-label">
                                                     <input type="radio" 
-                                                           name="answer_<?php echo $index; ?>" 
+                                                           name="answer_<?php echo esc_attr($index); ?>" 
                                                            value="<?php echo $is_yes_no ? 'yes' : 'true'; ?>">
                                                     <span><?php echo $is_yes_no ? __('Yes', 'ielts-course-manager') : __('True', 'ielts-course-manager'); ?></span>
                                                 </label>
                                                 <label class="option-label">
                                                     <input type="radio" 
-                                                           name="answer_<?php echo $index; ?>" 
+                                                           name="answer_<?php echo esc_attr($index); ?>" 
                                                            value="<?php echo $is_yes_no ? 'no' : 'false'; ?>">
                                                     <span><?php echo $is_yes_no ? __('No', 'ielts-course-manager') : __('False', 'ielts-course-manager'); ?></span>
                                                 </label>
                                                 <label class="option-label">
                                                     <input type="radio" 
-                                                           name="answer_<?php echo $index; ?>" 
+                                                           name="answer_<?php echo esc_attr($index); ?>" 
                                                            value="not_given">
                                                     <span><?php _e('Not Given', 'ielts-course-manager'); ?></span>
                                                 </label>
