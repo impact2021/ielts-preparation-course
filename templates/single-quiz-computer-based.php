@@ -993,13 +993,13 @@ if ($lesson_id) {
                                                 <label class="option-label">
                                                     <input type="radio" 
                                                            name="answer_<?php echo esc_attr($index); ?>" 
-                                                           value="<?php echo $is_yes_no ? 'yes' : 'true'; ?>">
+                                                           value="<?php echo esc_attr($is_yes_no ? 'yes' : 'true'); ?>">
                                                     <span><?php echo $is_yes_no ? __('Yes', 'ielts-course-manager') : __('True', 'ielts-course-manager'); ?></span>
                                                 </label>
                                                 <label class="option-label">
                                                     <input type="radio" 
                                                            name="answer_<?php echo esc_attr($index); ?>" 
-                                                           value="<?php echo $is_yes_no ? 'no' : 'false'; ?>">
+                                                           value="<?php echo esc_attr($is_yes_no ? 'no' : 'false'); ?>">
                                                     <span><?php echo $is_yes_no ? __('No', 'ielts-course-manager') : __('False', 'ielts-course-manager'); ?></span>
                                                 </label>
                                                 <label class="option-label">
