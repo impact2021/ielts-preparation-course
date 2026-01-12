@@ -1160,7 +1160,8 @@
             var readingTextId = questionElement.data('reading-text-id');
             
             // Only switch if the question has a linked reading text
-            if (readingTextId && readingTextId !== '') {
+            // Note: readingTextId can be 0, which is valid, so we check !== null and !== undefined
+            if (readingTextId !== null && readingTextId !== undefined && readingTextId !== '') {
                 // Check if we're switching to a different passage
                 var isDifferentPassage = (currentReadingTextId !== readingTextId);
                 
