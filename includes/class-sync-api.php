@@ -267,11 +267,13 @@ class IELTS_CM_Sync_API {
         // Handle array of IDs (could be serialized, JSON, or already an array)
         if ($meta_key === '_ielts_cm_course_ids' || $meta_key === '_ielts_cm_lesson_ids') {
             $is_serialized = false;
+            $is_already_array = false;
             $ids = false;
             
             // Check if it's already an array (from JSON API)
             if (is_array($meta_value)) {
                 $ids = $meta_value;
+                $is_already_array = true;
             }
             // Check if it's serialized data
             elseif (is_serialized($meta_value)) {
@@ -302,7 +304,7 @@ class IELTS_CM_Sync_API {
             // If it was already an array (from JSON), return array (WordPress will serialize it)
             // If it was serialized, return serialized
             // Otherwise return JSON (shouldn't happen, but for safety)
-            if (is_array($meta_value)) {
+            if ($is_already_array) {
                 return $mapped_ids;
             } elseif ($is_serialized) {
                 return serialize($mapped_ids);
