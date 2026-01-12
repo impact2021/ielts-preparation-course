@@ -1029,6 +1029,33 @@
                             }
                         });
                         
+                        // Add "Show me the section of the reading passage" buttons for reading tests
+                        // This applies to ALL question types that have a reading_text_id
+                        $.each(result.question_results, function(index, questionResult) {
+                            var questionNum = parseInt(index, 10) + 1;
+                            var questionElement = $('#question-' + index);
+                            
+                            // Only add button if reading_text_id is present and this is not an open_question
+                            // (open_question has the buttons added per-field in PHP)
+                            if (questionResult.reading_text_id !== null && 
+                                questionResult.reading_text_id !== undefined &&
+                                questionResult.question_type !== 'open_question') {
+                                
+                                // Check if button already exists to avoid duplicates
+                                if (questionElement.find('.show-in-reading-passage-link').length === 0) {
+                                    var readingLink = $('<a>')
+                                        .attr('href', '#')
+                                        .addClass('show-in-reading-passage-link')
+                                        .attr('data-reading-text', questionResult.reading_text_id)
+                                        .attr('data-question', questionNum)
+                                        .text('Show me the section of the reading passage');
+                                    
+                                    // Append button to the question element
+                                    questionElement.append('<br>').append(readingLink);
+                                }
+                            }
+                        });
+                        
                         // Show results in a modal for all quiz types (both standard and CBT)
                         showCBTResultModal(html, result.next_url, result.course_url);
                         form.find('button[type="submit"]').hide();
