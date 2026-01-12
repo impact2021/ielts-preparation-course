@@ -1483,9 +1483,14 @@
             
             if ($questionMarker.length) {
                 // Highlight the answer text associated with this question
-                // Use a consolidated selector to find answer highlight by data-question attribute
+                // Look for both auto-generated (.reading-answer-highlight) and manual (.transcript-answer-marker) markers
                 var $container = $questionMarker.closest('.reading-text');
-                var $answerHighlight = $container.find('.reading-answer-highlight[data-question="' + questionNumber + '"]').first();
+                var $answerHighlight = $container.find('.reading-answer-highlight[data-question="' + questionNumber + '"], .transcript-answer-marker[data-question="' + questionNumber + '"]').first();
+                
+                // If no data-question attribute, try finding the next sibling .transcript-answer-marker (manual format without data-question)
+                if (!$answerHighlight.length) {
+                    $answerHighlight = $questionMarker.next('.transcript-answer-marker');
+                }
                 
                 if ($answerHighlight.length) {
                     $answerHighlight.addClass('reading-passage-highlight');
