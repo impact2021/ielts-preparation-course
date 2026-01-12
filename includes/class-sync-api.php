@@ -282,8 +282,8 @@ class IELTS_CM_Sync_API {
                     $is_serialized = true;
                 }
             }
-            // If not serialized, try JSON decode
-            elseif (!is_array($ids)) {
+            // Try JSON decode as fallback
+            else {
                 $ids = json_decode($meta_value, true);
             }
             
@@ -303,12 +303,13 @@ class IELTS_CM_Sync_API {
             // Return in the same format it came in
             // If it was already an array (from JSON), return array (WordPress will serialize it)
             // If it was serialized, return serialized
-            // Otherwise return JSON (shouldn't happen, but for safety)
+            // Otherwise, encode as JSON (fallback for edge cases like manually set JSON strings)
             if ($is_already_array) {
                 return $mapped_ids;
             } elseif ($is_serialized) {
                 return serialize($mapped_ids);
             } else {
+                // This handles the JSON string case
                 $json = wp_json_encode($mapped_ids);
                 return $json !== false ? $json : $meta_value;
             }
