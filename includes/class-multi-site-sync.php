@@ -507,6 +507,32 @@ class IELTS_CM_Multi_Site_Sync {
             }
         }
         
+        // If it's a lesson, push all resources and exercises for this lesson
+        if ($content_type === 'lesson') {
+            $results['resources'] = array();
+            $results['exercises'] = array();
+            
+            // Push all resources (sub-lessons) for this lesson
+            $resources = $this->get_lesson_resources($content_id);
+            foreach ($resources as $resource) {
+                $resource_results = $this->push_content_to_subsites($resource->ID, 'resource');
+                $results['resources'][$resource->ID] = array(
+                    'title' => $resource->post_title,
+                    'sync_results' => $resource_results
+                );
+            }
+            
+            // Push all exercises (quizzes) for this lesson
+            $exercises = $this->get_lesson_exercises($content_id);
+            foreach ($exercises as $exercise) {
+                $exercise_results = $this->push_content_to_subsites($exercise->ID, 'quiz');
+                $results['exercises'][$exercise->ID] = array(
+                    'title' => $exercise->post_title,
+                    'sync_results' => $exercise_results
+                );
+            }
+        }
+        
         return $results;
     }
 }

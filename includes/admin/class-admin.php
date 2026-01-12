@@ -4774,8 +4774,8 @@ class IELTS_CM_Admin {
         }
         
         // Push content to all subsites
-        // For courses, push all child content (lessons, sublessons, exercises)
-        if ($content_type === 'course') {
+        // For courses and lessons, push all child content (lessons, sublessons, exercises)
+        if ($content_type === 'course' || $content_type === 'lesson') {
             $results = $sync_manager->push_content_with_children($post_id, $content_type);
         } else {
             $results = $sync_manager->push_content_to_subsites($post_id, $content_type);
@@ -4835,6 +4835,34 @@ class IELTS_CM_Admin {
                 'results' => $formatted_results,
                 'stats' => array(
                     'lessons' => $lesson_count,
+                    'resources' => $resource_count,
+                    'exercises' => $exercise_count
+                )
+            );
+        } elseif ($content_type === 'lesson' && isset($results['main'])) {
+            // Handle lesson results with children
+            // Format main lesson results
+            foreach ($results['main'] as $site_id => $result) {
+                $formatted_results[$site_id] = array(
+                    'site_name' => isset($subsite_names[$site_id]) ? $subsite_names[$site_id] : 'Unknown Site',
+                    'success' => !is_wp_error($result) && isset($result['success']) && $result['success'],
+                    'message' => is_wp_error($result) ? $result->get_error_message() : (isset($result['message']) ? $result['message'] : 'Success'),
+                    'error' => is_wp_error($result) ? $result->get_error_message() : null
+                );
+            }
+            
+            // Count synced items
+            $resource_count = isset($results['resources']) ? count($results['resources']) : 0;
+            $exercise_count = isset($results['exercises']) ? count($results['exercises']) : 0;
+            
+            $response_data = array(
+                'message' => sprintf(
+                    __('Lesson and all child content pushed successfully: %d sublesson(s), %d exercise(s)', 'ielts-course-manager'),
+                    $resource_count,
+                    $exercise_count
+                ),
+                'results' => $formatted_results,
+                'stats' => array(
                     'resources' => $resource_count,
                     'exercises' => $exercise_count
                 )
