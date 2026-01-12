@@ -12,6 +12,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "form_completion_l",
             "field_count": 5,
             "field_answers": {
@@ -59,6 +61,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
@@ -91,6 +95,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
@@ -123,6 +129,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
@@ -155,6 +163,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "form_completion_l",
             "mc_options": [
                 {
@@ -192,6 +202,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 0,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "form_completion_l",
             "mc_options": [
                 {
@@ -229,6 +241,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 1,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "sentence_completion_l",
             "field_count": 4,
             "field_answers": {
@@ -262,14 +276,16 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 15-16: Choose TWO letters A-E.\r\n\r\nWhat TWO rules must visitors to Gorgona Island obey? Visitors must...",
-            "question": "A. stay on jungle trails\r\nB. not take prohibited items to the island\r\nC. take all rubbish away with them\r\nD. meet medical requirements\r\nE. carry a first aid kit",
+            "instructions": "Questions 15-16: Choose TWO letters A-E.\r\n\r\n",
+            "question": "What TWO rules must visitors to Gorgona Island obey? \r\n\r\nVisitors must...",
             "points": 2,
             "no_answer_feedback": "The correct answers are B and D. Visitors must not take prohibited items to the island (such as electrical appliances, alcoholic beverages, sprays and contaminants, arms, and articles for hunting or capturing animals), and they must meet medical requirements (getting vaccinated against yellow fever, tetanus, and hepatitis B at least 10 days before arriving). In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 1,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
@@ -312,6 +328,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 1,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
@@ -344,6 +362,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 1,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
@@ -376,6 +396,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 1,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
@@ -408,6 +430,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 1,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
@@ -432,14 +456,16 @@
         },
         {
             "type": "open_question",
-            "instructions": "Questions 21-25: Answer the following questions using NO MORE THAN THREE WORDS AND/OR A NUMBER.\r\n\r\nChanges in New Zealand Family Structures",
-            "question": "<p>21. A divorce rate of slightly below what has been recorded for couples who married in 1970 in New Zealand? </p> <p>[field 1]</p>\r\n\r\n\r\n<p>22. Types of family and what have been changing since the 1960s? </p> <p>[field 2]</p>\r\n\r\n<p>23. What has dropped significantly since the 1960s?</p> <p>[field 3]</p>\r\n\r\n<p>24. What type of household was at 23% in 2006 and is expected to reach 26% in 2021?</p> <p>[field 4]</p>\r\n\r\n<p>25. What percentage of households do not have children?</p> <p>[field 5]</p>\r\n\r\n",
+            "instructions": "Questions 21-25: Answer the following questions using NO MORE THAN THREE WORDS AND/OR A NUMBER.\r\n\r\n",
+            "question": "<strong>Changes in New Zealand Family Structures\r\n\r\n<p>21. A divorce rate of slightly below what has been recorded for couples who married in 1970 in New Zealand? </p> <p>[field 1]</p>\r\n\r\n\r\n<p>22. Types of family and what have been changing since the 1960s? </p> <p>[field 2]</p>\r\n\r\n<p>23. What has dropped significantly since the 1960s?</p> <p>[field 3]</p>\r\n\r\n<p>24. What type of household was at 23% in 2006 and is expected to reach 26% in 2021?</p> <p>[field 4]</p>\r\n\r\n<p>25. What percentage of households do not have children?</p> <p>[field 5]</p>\r\n\r\n",
             "points": 5,
             "no_answer_feedback": "The correct answer is: one third. Make sure to listen carefully for key information and take notes while listening.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 2,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "short_answer_l",
             "field_count": 5,
             "field_answers": {
@@ -487,6 +513,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 2,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
@@ -519,6 +547,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 2,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
@@ -551,6 +581,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 2,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "short_answer_r",
             "field_count": 3,
             "field_answers": {
@@ -586,6 +618,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 3,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "form_completion_l",
             "field_count": 4,
             "field_answers": {
@@ -627,6 +661,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 3,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "multiple_choice_l",
             "mc_options": [
                 {
@@ -669,6 +705,8 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "audio_section_id": 3,
+            "audio_start_time": null,
+            "audio_end_time": null,
             "ielts_question_category": "form_completion_l",
             "field_count": 4,
             "field_answers": {
@@ -735,9 +773,9 @@
         ]
     },
     "_metadata": {
-        "exported_at": "2026-01-05 14:31:28",
+        "exported_at": "2026-01-13 10:03:16",
         "exported_by": "impact",
-        "plugin_version": "11.4",
+        "plugin_version": "11.17",
         "format_version": "1.0"
     }
 }
