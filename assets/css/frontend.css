@@ -1896,14 +1896,15 @@ select.answer-select-inline.answer-incorrect {
     margin: 0 2px;
 }
 
-/* Reading passage answer markers (for reading tests) - same styling as transcript markers */
+/* Reading passage answer markers (for reading tests) - transparent by default, only highlighted on button click */
 .reading-answer-marker {
     position: relative;
     display: inline;
-    background-color: #fff9c4; /* Yellow highlight background for the answer section */
+    background-color: transparent; /* Transparent by default - only highlighted when clicking "Show me the section" button */
     padding: 2px 8px;
     border-radius: 3px;
     margin: 0 2px;
+    transition: background-color 0.3s ease; /* Smooth transition when highlighting */
 }
 
 .question-marker-badge {
@@ -1929,10 +1930,16 @@ select.answer-select-inline.answer-incorrect {
     background-color: transparent; /* No highlighting before submission */
 }
 
-/* Show answer marker highlighting after quiz submission (both listening and reading) */
-.quiz-submitted .transcript-answer-marker,
+/* Show answer marker highlighting after quiz submission (ONLY for listening tests - transcripts) */
+/* Reading tests should only show highlighting when clicking "Show me the section" button */
+.quiz-submitted .transcript-answer-marker {
+    background-color: #fff9c4; /* Yellow highlight after submission for listening tests */
+}
+
+/* For reading tests, keep markers transparent even after submission */
+/* Highlighting only appears when .reading-passage-highlight class is added via button click */
 .quiz-submitted .reading-answer-marker {
-    background-color: #fff9c4; /* Yellow highlight after submission */
+    background-color: transparent; /* Remains transparent - only highlighted on button click */
 }
 
 .transcript-highlight {
