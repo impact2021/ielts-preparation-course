@@ -1171,7 +1171,7 @@
             "instructions": "Reading Passage 3\r\n\r\nYou should spend about 20 minutes on Questions 27 \u2013 40 which are based on Reading Passage 3.\r\n\r\nQuestions 27-33\r\n\r\nReading Passage 3 has ten paragraphs, A-J.\r\n\r\nWhich paragraph contains the following information?\r\n\r\nWrite the correct letter, A-J, in boxes 27-32 on our answer sheet.\r\n\r\nNB    You may use any letter more than once.",
             "question": "Drone technology for use in farming",
             "points": 2,
-            "no_answer_feedback": "The correct answers are Paragraph A and Paragraph C. Paragraph C states: 'A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.'",
+            "no_answer_feedback": "The correct answers are Paragraph A and Paragraph C (as per the answer key). Paragraph C explicitly states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1183,7 +1183,7 @@
                 {
                     "text": "Paragraph A",
                     "is_correct": true,
-                    "feedback": "This is one correct answer. Paragraph A mentions agricultural uses are 'credited with being both more cost-effective.'"
+                    "feedback": "Correct per the answer key. The primary reference is Paragraph C which explicitly mentions agricultural applications."
                 },
                 {
                     "text": "Paragraph B",
@@ -1193,7 +1193,7 @@
                 {
                     "text": "Paragraph C",
                     "is_correct": true,
-                    "feedback": "This is one correct answer. Paragraph C states agricultural applications will account for 'approximately 80 percent of commercial drone use.'"
+                    "feedback": "Correct! Paragraph C states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'"
                 },
                 {
                     "text": "Paragraph D",
@@ -1240,7 +1240,7 @@
             "instructions": "",
             "question": "Potential drawbacks of non-military drones",
             "points": 2,
-            "no_answer_feedback": "The correct answers are Paragraph A and Paragraph I. Paragraph I discusses drawbacks including 'comparatively short flight times' and 'safety risks, in the potential for collisions.'",
+            "no_answer_feedback": "The correct answers are Paragraph A and Paragraph I (as per the answer key). Paragraph I explicitly discusses drawbacks including 'comparatively short flight times' and 'safety risks, in the potential for collisions across increasingly crowded airspace.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1252,7 +1252,7 @@
                 {
                     "text": "Paragraph A",
                     "is_correct": true,
-                    "feedback": "This is mentioned in Paragraph A which discusses cost-effectiveness."
+                    "feedback": "Correct per the answer key. The primary reference is Paragraph I which discusses drawbacks."
                 },
                 {
                     "text": "Paragraph B",
@@ -1292,7 +1292,7 @@
                 {
                     "text": "Paragraph I",
                     "is_correct": true,
-                    "feedback": "This is correct. Paragraph I lists several negative aspects and drawbacks of drone technology."
+                    "feedback": "Correct! Paragraph I discusses several drawbacks including 'comparatively short flight times,' 'safety risks,' and 'adverse effects on the natural environment.'"
                 },
                 {
                     "text": "Paragraph J",
@@ -1341,7 +1341,7 @@
                 {
                     "text": "Paragraph E",
                     "is_correct": true,
-                    "feedback": "This is correct. Paragraph E mentions 'taking promotional photos and videos for commercial and residential properties on the market.'"
+                    "feedback": "Correct! Paragraph E explicitly mentions 'taking promotional photos and videos for commercial and residential properties on the market.'"
                 },
                 {
                     "text": "Paragraph F",
