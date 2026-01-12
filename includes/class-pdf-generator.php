@@ -1,7 +1,7 @@
 <?php
 /**
  * PDF Generator for Receipts
- * Uses TCPDF library
+ * Uses FPDF library
  */
 
 if (!defined('ABSPATH')) {
@@ -42,6 +42,11 @@ class IELTS_CM_PDF_Generator {
             if ($logo_path && file_exists($logo_path)) {
                 $pdf->Image($logo_path, 15, 15, 50);
                 $pdf->Ln(30);
+            } else {
+                // Log warning if logo cannot be loaded
+                if (defined('WP_DEBUG') && WP_DEBUG) {
+                    error_log('IELTS CM: Could not load company logo from: ' . $company_logo);
+                }
             }
         }
         

@@ -342,7 +342,7 @@ class IELTS_CM_Membership {
                             <label for="company_name"><?php _e('Company Name', 'ielts-course-manager'); ?></label>
                         </th>
                         <td>
-                            <input type="text" id="company_name" name="company_name" value="<?php echo esc_attr($company_name); ?>" class="regular-text" required>
+                            <input type="text" id="company_name" name="company_name" value="<?php echo esc_attr($company_name); ?>" class="regular-text" required aria-required="true">
                         </td>
                     </tr>
                     
@@ -351,8 +351,8 @@ class IELTS_CM_Membership {
                             <label for="company_address"><?php _e('Company Address', 'ielts-course-manager'); ?></label>
                         </th>
                         <td>
-                            <textarea id="company_address" name="company_address" rows="4" class="large-text" required><?php echo esc_textarea($company_address); ?></textarea>
-                            <p class="description"><?php _e('Full address including city, state, and postal code.', 'ielts-course-manager'); ?></p>
+                            <textarea id="company_address" name="company_address" rows="4" class="large-text" required aria-required="true" aria-describedby="company-address-description"><?php echo esc_textarea($company_address); ?></textarea>
+                            <p class="description" id="company-address-description"><?php _e('Full address including city, state, and postal code.', 'ielts-course-manager'); ?></p>
                         </td>
                     </tr>
                     
@@ -380,7 +380,7 @@ class IELTS_CM_Membership {
                             <label for="company_email"><?php _e('Email Address', 'ielts-course-manager'); ?></label>
                         </th>
                         <td>
-                            <input type="email" id="company_email" name="company_email" value="<?php echo esc_attr($company_email); ?>" class="regular-text" required>
+                            <input type="email" id="company_email" name="company_email" value="<?php echo esc_attr($company_email); ?>" class="regular-text" required aria-required="true">
                         </td>
                     </tr>
                     
