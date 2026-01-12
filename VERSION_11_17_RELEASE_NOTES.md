@@ -35,8 +35,10 @@ This release fixes the missing "Show me the section of the reading passage" butt
 ## Technical Changes
 
 ### Files Modified:
-1. `assets/js/frontend.js` (lines 1031-1058)
-   - Added unified button creation loop after question processing
+1. `assets/js/frontend.js`
+   - **Lines 1023-1048**: Added unified button creation loop after question processing
+   - **Lines 984-1017**: Removed duplicate reading passage button logic from generic handler
+   - The unified approach ensures buttons appear for ALL question types consistently
    - Checks for duplicate buttons to avoid adding multiple times
    - Only processes questions with `reading_text_id` present
    - Skips `open_question` type (those buttons are added per-field in PHP)

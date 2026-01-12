@@ -982,7 +982,8 @@
                                 }
                                 
                                 // Add "Show in transcript" link if audio_section_id is available (for listening tests)
-                                // Add "Show me the section of the reading passage" link if reading_text_id is available (for reading tests)
+                                // Note: "Show me the section of the reading passage" links are added in a unified manner
+                                // after all question processing (see lines 1032+) to handle all question types consistently
                                 // Skip for open_question type since links are added per-field in PHP
                                 if (questionResult.question_type !== 'open_question') {
                                     if (questionResult.audio_section_id !== null && 
@@ -1012,16 +1013,6 @@
                                             
                                             feedbackDiv.append(listenLink);
                                         }
-                                    } else if (questionResult.reading_text_id !== null && 
-                                               questionResult.reading_text_id !== undefined) {
-                                        var readingLink = $('<a>')
-                                            .attr('href', '#')
-                                            .addClass('show-in-reading-passage-link')
-                                            .attr('data-reading-text', questionResult.reading_text_id)
-                                            .attr('data-question', questionNum)
-                                            .text('Show me the section of the reading passage');
-                                        
-                                        feedbackDiv.append('<br>').append(readingLink);
                                     }
                                 }
                                 
