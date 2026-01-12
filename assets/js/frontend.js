@@ -1042,7 +1042,7 @@
                                         .text('Show me the section of the reading passage');
                                     
                                     // Append button to the question element
-                                    questionElement.append('<br>').append(readingLink);
+                                    questionElement.append($('<br>')).append(readingLink);
                                 }
                             }
                         });

@@ -9,7 +9,7 @@ This release fixes the missing "Show me the section of the reading passage" butt
 **Problem:** After submitting a reading test, the "Show me the section of the reading passage" button was not appearing for most questions, even though the backend was correctly returning the `reading_text_id` data.
 
 **Root Cause:** 
-- The frontend JavaScript had the button creation logic only in the generic "else if" handler (line 966+) that processes "other question types"
+- The frontend JavaScript had the button creation logic only in the generic "else if" handler (around line 966) that processes "other question types"
 - Reading tests primarily use specific question types like:
   - `closed_question` (TRUE/FALSE/NOT GIVEN questions)
   - `multiple_choice`
