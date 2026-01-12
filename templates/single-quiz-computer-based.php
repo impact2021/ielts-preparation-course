@@ -418,7 +418,13 @@ if ($lesson_id) {
                                             <h3 class="reading-title"><?php echo esc_html($text['title']); ?></h3>
                                         <?php endif; ?>
                                         <div class="reading-text">
-                                            <?php echo wp_kses_post(wpautop($text['content'])); ?>
+                                            <?php 
+                                            // Process [Q#] markers in reading text content to enable highlighting
+                                            // Markers are hidden by default and only shown after quiz submission via CSS
+                                            $reading_content = isset($text['content']) ? $text['content'] : '';
+                                            $processed_content = process_transcript_markers_cbt($reading_content, $starting_question_number);
+                                            echo wp_kses_post(wpautop($processed_content)); 
+                                            ?>
                                         </div>
                                     </div>
                                 <?php endforeach; ?>

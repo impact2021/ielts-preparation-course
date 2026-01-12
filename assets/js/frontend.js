@@ -255,6 +255,9 @@
                         var result = response.data;
                         var isPassing = result.percentage >= 70;
                         
+                        // Mark the quiz container as submitted to reveal question markers and highlights
+                        quizContainer.addClass('quiz-submitted');
+                        
                         // Check if this is a CBT quiz or listening quiz (they share the same layout features)
                         var isCBT = quizContainer.hasClass('ielts-computer-based-quiz') || 
                                     quizContainer.hasClass('ielts-listening-practice-quiz') || 
