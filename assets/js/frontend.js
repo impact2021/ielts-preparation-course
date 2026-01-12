@@ -982,7 +982,8 @@
                                 }
                                 
                                 // Add "Show in transcript" link if audio_section_id is available (for listening tests)
-                                // Add "Show me the section of the reading passage" link if reading_text_id is available (for reading tests)
+                                // Note: "Show me the section of the reading passage" links are added in a unified manner
+                                // after all question processing (see lines 1032+) to handle all question types consistently
                                 // Skip for open_question type since links are added per-field in PHP
                                 if (questionResult.question_type !== 'open_question') {
                                     if (questionResult.audio_section_id !== null && 
@@ -1012,20 +1013,37 @@
                                             
                                             feedbackDiv.append(listenLink);
                                         }
-                                    } else if (questionResult.reading_text_id !== null && 
-                                               questionResult.reading_text_id !== undefined) {
-                                        var readingLink = $('<a>')
-                                            .attr('href', '#')
-                                            .addClass('show-in-reading-passage-link')
-                                            .attr('data-reading-text', questionResult.reading_text_id)
-                                            .attr('data-question', questionNum)
-                                            .text('Show me the section of the reading passage');
-                                        
-                                        feedbackDiv.append('<br>').append(readingLink);
                                     }
                                 }
                                 
                                 questionElement.append(feedbackDiv);
+                            }
+                        });
+                        
+                        // Add "Show me the section of the reading passage" buttons for reading tests
+                        // This applies to ALL question types that have a reading_text_id
+                        $.each(result.question_results, function(index, questionResult) {
+                            var questionNum = parseInt(index, 10) + 1;
+                            var questionElement = $('#question-' + index);
+                            
+                            // Only add button if reading_text_id is present and this is not an open_question
+                            // (open_question has the buttons added per-field in PHP)
+                            if (questionResult.reading_text_id !== null && 
+                                questionResult.reading_text_id !== undefined &&
+                                questionResult.question_type !== 'open_question') {
+                                
+                                // Check if button already exists to avoid duplicates
+                                if (questionElement.find('.show-in-reading-passage-link').length === 0) {
+                                    var readingLink = $('<a>')
+                                        .attr('href', '#')
+                                        .addClass('show-in-reading-passage-link')
+                                        .attr('data-reading-text', questionResult.reading_text_id)
+                                        .attr('data-question', questionNum)
+                                        .text('Show me the section of the reading passage');
+                                    
+                                    // Append button to the question element
+                                    questionElement.append($('<br>')).append(readingLink);
+                                }
                             }
                         });
                         
