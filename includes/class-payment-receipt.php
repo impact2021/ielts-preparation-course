@@ -98,6 +98,11 @@ class IELTS_CM_Payment_Receipt {
             wp_die(__('You must be logged in to download receipts.', 'ielts-course-manager'));
         }
         
+        // Verify nonce
+        if (!isset($_GET['nonce']) || !wp_verify_nonce($_GET['nonce'], 'download_receipt_' . (isset($_GET['payment_id']) ? intval($_GET['payment_id']) : 0))) {
+            wp_die(__('Invalid security token.', 'ielts-course-manager'));
+        }
+        
         $payment_id = isset($_GET['payment_id']) ? intval($_GET['payment_id']) : 0;
         
         if (!$payment_id) {
@@ -137,14 +142,7 @@ class IELTS_CM_Payment_Receipt {
             $course_name = $course ? $course->post_title : '';
         }
         
-        // Set headers for PDF download
-        header('Content-Type: application/pdf');
-        header('Content-Disposition: attachment; filename="receipt-' . $payment->id . '.pdf"');
-        
-        // Since we don't want to add external dependencies, we'll generate a simple HTML-based receipt
-        // that browsers can print/save as PDF. For a real PDF, you'd need a library like TCPDF or FPDF.
-        
-        // Instead, let's generate an HTML receipt that can be printed as PDF
+        // Generate HTML receipt that can be printed as PDF
         header('Content-Type: text/html; charset=utf-8');
         header('Content-Disposition: inline; filename="receipt-' . $payment->id . '.html"');
         

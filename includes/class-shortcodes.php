@@ -503,15 +503,9 @@ class IELTS_CM_Shortcodes {
                 <h3><?php _e('Payment History & Receipts', 'ielts-course-manager'); ?></h3>
                 
                 <?php
-                global $wpdb;
-                $db = new IELTS_CM_Database();
-                $payments_table = $db->get_payments_table();
-                
-                // Get user's payment history
-                $payments = $wpdb->get_results($wpdb->prepare(
-                    "SELECT * FROM $payments_table WHERE user_id = %d ORDER BY payment_date DESC",
-                    $user_id
-                ));
+                // Get user's payment history using the payment receipt class
+                $payment_receipt = new IELTS_CM_Payment_Receipt();
+                $payments = $payment_receipt->get_user_payments($user_id);
                 
                 if (empty($payments)): ?>
                     <p><?php _e('You have no payment history yet.', 'ielts-course-manager'); ?></p>
@@ -534,6 +528,8 @@ class IELTS_CM_Shortcodes {
                                     $course_name = $course ? $course->post_title : __('Course', 'ielts-course-manager');
                                 }
                                 $description = $payment->description ? $payment->description : ($course_name ? sprintf(__('Payment for %s', 'ielts-course-manager'), $course_name) : __('Course Payment', 'ielts-course-manager'));
+                                // Generate nonce for this specific payment
+                                $receipt_nonce = wp_create_nonce('download_receipt_' . $payment->id);
                             ?>
                                 <tr>
                                     <td><?php echo date('F j, Y', strtotime($payment->payment_date)); ?></td>
@@ -545,7 +541,7 @@ class IELTS_CM_Shortcodes {
                                         </span>
                                     </td>
                                     <td>
-                                        <a href="<?php echo admin_url('admin-ajax.php?action=ielts_cm_download_receipt&payment_id=' . $payment->id); ?>" 
+                                        <a href="<?php echo esc_url(admin_url('admin-ajax.php?action=ielts_cm_download_receipt&payment_id=' . $payment->id . '&nonce=' . $receipt_nonce)); ?>" 
                                            class="download-receipt-link" 
                                            target="_blank">
                                             <?php _e('Download PDF', 'ielts-course-manager'); ?>
