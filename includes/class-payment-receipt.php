@@ -14,8 +14,9 @@ class IELTS_CM_Payment_Receipt {
     public function __construct() {
         $this->db = new IELTS_CM_Database();
         
-        // AJAX handlers
+        // AJAX handlers for logged in and logged out users
         add_action('wp_ajax_ielts_cm_download_receipt', array($this, 'download_receipt'));
+        add_action('wp_ajax_nopriv_ielts_cm_download_receipt', array($this, 'download_receipt'));
     }
     
     /**
@@ -289,11 +290,11 @@ class IELTS_CM_Payment_Receipt {
                     <h3><?php _e('Payment Information', 'ielts-course-manager'); ?></h3>
                     <div class="info-row">
                         <span class="info-label"><?php _e('Date:', 'ielts-course-manager'); ?></span>
-                        <span class="info-value"><?php echo date('F j, Y', strtotime($payment->payment_date)); ?></span>
+                        <span class="info-value"><?php echo date_i18n(get_option('date_format'), strtotime($payment->payment_date)); ?></span>
                     </div>
                     <div class="info-row">
                         <span class="info-label"><?php _e('Time:', 'ielts-course-manager'); ?></span>
-                        <span class="info-value"><?php echo date('g:i A', strtotime($payment->payment_date)); ?></span>
+                        <span class="info-value"><?php echo date_i18n(get_option('time_format'), strtotime($payment->payment_date)); ?></span>
                     </div>
                     <?php if ($payment->transaction_id): ?>
                     <div class="info-row">

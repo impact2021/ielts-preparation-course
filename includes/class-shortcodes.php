@@ -532,7 +532,7 @@ class IELTS_CM_Shortcodes {
                                 $receipt_nonce = wp_create_nonce('download_receipt_' . $payment->id);
                             ?>
                                 <tr>
-                                    <td><?php echo date('F j, Y', strtotime($payment->payment_date)); ?></td>
+                                    <td><?php echo date_i18n(get_option('date_format'), strtotime($payment->payment_date)); ?></td>
                                     <td><?php echo esc_html($description); ?></td>
                                     <td><?php echo esc_html($payment->currency . ' ' . number_format($payment->amount, 2)); ?></td>
                                     <td>
@@ -541,7 +541,11 @@ class IELTS_CM_Shortcodes {
                                         </span>
                                     </td>
                                     <td>
-                                        <a href="<?php echo esc_url(admin_url('admin-ajax.php?action=ielts_cm_download_receipt&payment_id=' . $payment->id . '&nonce=' . $receipt_nonce)); ?>" 
+                                        <a href="<?php echo esc_url(add_query_arg(array(
+                                            'action' => 'ielts_cm_download_receipt',
+                                            'payment_id' => $payment->id,
+                                            'nonce' => $receipt_nonce
+                                        ), admin_url('admin-ajax.php'))); ?>" 
                                            class="download-receipt-link" 
                                            target="_blank">
                                             <?php _e('Download PDF', 'ielts-course-manager'); ?>
