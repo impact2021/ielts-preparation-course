@@ -20,6 +20,7 @@ class IELTS_Course_Manager {
     protected $sync_manager;
     protected $sync_api;
     protected $sync_settings_page;
+    protected $payment_receipt;
     
     public function __construct() {
         $this->load_dependencies();
@@ -42,6 +43,7 @@ class IELTS_Course_Manager {
         $this->sync_manager = new IELTS_CM_Multi_Site_Sync();
         $this->sync_api = new IELTS_CM_Sync_API();
         $this->sync_settings_page = new IELTS_CM_Sync_Settings_Page();
+        $this->payment_receipt = new IELTS_CM_Payment_Receipt();
     }
     
     public function run() {

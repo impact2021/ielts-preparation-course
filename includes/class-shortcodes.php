@@ -498,6 +498,65 @@ class IELTS_CM_Shortcodes {
                     </div>
                 <?php endif; ?>
             </div>
+            
+            <div class="account-section payment-history">
+                <h3><?php _e('Payment History & Receipts', 'ielts-course-manager'); ?></h3>
+                
+                <?php
+                global $wpdb;
+                $db = new IELTS_CM_Database();
+                $payments_table = $db->get_payments_table();
+                
+                // Get user's payment history
+                $payments = $wpdb->get_results($wpdb->prepare(
+                    "SELECT * FROM $payments_table WHERE user_id = %d ORDER BY payment_date DESC",
+                    $user_id
+                ));
+                
+                if (empty($payments)): ?>
+                    <p><?php _e('You have no payment history yet.', 'ielts-course-manager'); ?></p>
+                <?php else: ?>
+                    <table class="payment-history-table">
+                        <thead>
+                            <tr>
+                                <th><?php _e('Date', 'ielts-course-manager'); ?></th>
+                                <th><?php _e('Description', 'ielts-course-manager'); ?></th>
+                                <th><?php _e('Amount', 'ielts-course-manager'); ?></th>
+                                <th><?php _e('Status', 'ielts-course-manager'); ?></th>
+                                <th><?php _e('Receipt', 'ielts-course-manager'); ?></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($payments as $payment): 
+                                $course_name = '';
+                                if ($payment->course_id) {
+                                    $course = get_post($payment->course_id);
+                                    $course_name = $course ? $course->post_title : __('Course', 'ielts-course-manager');
+                                }
+                                $description = $payment->description ? $payment->description : ($course_name ? sprintf(__('Payment for %s', 'ielts-course-manager'), $course_name) : __('Course Payment', 'ielts-course-manager'));
+                            ?>
+                                <tr>
+                                    <td><?php echo date('F j, Y', strtotime($payment->payment_date)); ?></td>
+                                    <td><?php echo esc_html($description); ?></td>
+                                    <td><?php echo esc_html($payment->currency . ' ' . number_format($payment->amount, 2)); ?></td>
+                                    <td>
+                                        <span class="payment-status <?php echo esc_attr($payment->status); ?>">
+                                            <?php echo esc_html(ucfirst($payment->status)); ?>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <a href="<?php echo admin_url('admin-ajax.php?action=ielts_cm_download_receipt&payment_id=' . $payment->id); ?>" 
+                                           class="download-receipt-link" 
+                                           target="_blank">
+                                            <?php _e('Download PDF', 'ielts-course-manager'); ?>
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                <?php endif; ?>
+            </div>
         </div>
         
         <style>
@@ -638,6 +697,62 @@ class IELTS_CM_Shortcodes {
         .expired-notice {
             color: #dc3232;
             font-style: italic;
+        }
+        .payment-history-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            margin-top: 15px;
+        }
+        .payment-history-table th {
+            background: #f0f0f0;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #555;
+            border-bottom: 2px solid #ddd;
+        }
+        .payment-history-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            color: #333;
+        }
+        .payment-history-table tbody tr:hover {
+            background: #f9f9f9;
+        }
+        .payment-status {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .payment-status.completed {
+            background: #d4edda;
+            color: #155724;
+        }
+        .payment-status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .payment-status.failed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .download-receipt-link {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #0073aa;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 3px;
+            font-size: 13px;
+            transition: background 0.3s;
+        }
+        .download-receipt-link:hover {
+            background: #005177;
+            color: #fff;
         }
         </style>
         <?php
