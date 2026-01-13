@@ -1681,7 +1681,35 @@
                 e.preventDefault();
                 $('#cbt-result-modal').fadeOut(300);
                 $('body').css('overflow', '');
-                // Modal closes and user can see the highlighted answers in the form
+                
+                // Scroll to show feedback after modal closes
+                setTimeout(function() {
+                    var questionsColumn = $('.questions-column');
+                    var firstQuestion = $('#question-0');
+                    
+                    if (questionsColumn.length && firstQuestion.length) {
+                        // For CBT layouts: scroll the questions column to the first question
+                        // Using the same absolute positioning logic as question navigation
+                        var questionAbsoluteTop = firstQuestion.offset().top;
+                        var columnAbsoluteTop = questionsColumn.offset().top;
+                        var columnScrollTop = questionsColumn.scrollTop();
+                        var questionPositionInContainer = questionAbsoluteTop - columnAbsoluteTop + columnScrollTop;
+                        
+                        // Calculate target scroll position to center the first question
+                        var columnHeight = questionsColumn.height();
+                        var questionHeight = firstQuestion.outerHeight();
+                        var targetScrollTop = questionPositionInContainer - (columnHeight / 2) + (questionHeight / 2);
+                        
+                        questionsColumn.animate({
+                            scrollTop: targetScrollTop
+                        }, 300);
+                    } else if (firstQuestion.length) {
+                        // For non-CBT layouts: scroll the page to the first question
+                        $('html, body').animate({
+                            scrollTop: firstQuestion.offset().top - 100
+                        }, 300);
+                    }
+                }, 350); // Wait for modal fadeOut (300ms) to complete
             });
         }
         
