@@ -7,6 +7,12 @@
     
     $(document).ready(function() {
         
+        // Constants for scroll behavior and animations
+        var SCROLL_ANIMATION_DURATION = 300;
+        var MODAL_FADEOUT_DURATION = 300;
+        var MODAL_FADEOUT_BUFFER = 50;
+        var SCROLL_OFFSET_NON_CBT = 100;
+        
         // Helper function to force reload from server, bypassing cache
         function forceReload() {
             var url = new URL(window.location);
@@ -1142,12 +1148,6 @@
             }, 5000);
         }
         
-        // Constants for scroll behavior
-        var SCROLL_ANIMATION_DURATION = 300;
-        var MODAL_FADEOUT_DURATION = 300;
-        var MODAL_FADEOUT_BUFFER = 50;
-        var SCROLL_OFFSET_NON_CBT = 100;
-        
         // Helper function to scroll to a question in CBT or non-CBT layouts
         function scrollToQuestion(questionElement) {
             var questionsColumn = $('.questions-column');
@@ -1698,7 +1698,12 @@
                 
                 // Scroll to show feedback after modal closes
                 setTimeout(function() {
-                    var firstQuestion = $('#question-0');
+                    // Find the first question dynamically (more robust than assuming #question-0)
+                    var firstQuestion = $('.quiz-question[id^="question-"]').first();
+                    if (firstQuestion.length === 0) {
+                        // Fallback to #question-0 if dynamic selector doesn't work
+                        firstQuestion = $('#question-0');
+                    }
                     scrollToQuestion(firstQuestion);
                 }, MODAL_FADEOUT_DURATION + MODAL_FADEOUT_BUFFER);
             });
