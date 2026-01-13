@@ -1,0 +1,1831 @@
+{
+    "title": "Academic IELTS Reading Test 04",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 1 – 13 which are based on <strong>Reading Passage 1.</strong>\r\n\r\nQuestions 1 – 5\r\n\r\nDo the following statements agree with the information given in Reading Passage 1?\r\n\r\nIn boxes 1 – 5 on your answer sheet write\r\n\r\nTRUE if the statement agrees with the information\r\n\r\nFALSE if the statement contradicts the information\r\n\r\nNOT GIVEN if there is no information on this in the passage",
+            "question": "1. The 1556 China earthquake was determined to be the largest recorded earthquake.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. Para 1: 'The biggest earthquake to be measured occurred in 1960, in Chile, and registered 9.5 on the Richter Scale'",
+            "correct_feedback": "Correct! The passage states that the biggest earthquake to be measured occurred in 1960 in Chile, not the 1556 China earthquake.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Para 1 states: 'The biggest earthquake to be measured occurred in 1960, in Chile, and registered 9.5 on the Richter Scale'",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: FALSE. Para 1: 'The biggest earthquake to be measured occurred in 1960, in Chile, and registered 9.5 on the Richter Scale'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that the biggest earthquake to be measured occurred in 1960 in Chile, not the 1556 China earthquake."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: FALSE. Para 1: 'The biggest earthquake to be measured occurred in 1960, in Chile, and registered 9.5 on the Richter Scale'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "2. There have been a range of theories as to the cause of earthquakes.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. Para 2 mentions multiple theories: Greek philosophers believed earthquakes could be attributed to air escaping from cavities or water imbalances; ancient Norse, Japanese and Peruvian people believed the gods were unhappy; and Pliny the Elder called them 'underground thunderstorms'.",
+            "correct_feedback": "Correct! The passage describes various theories from different cultures and philosophers about the causes of earthquakes.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Para 2 describes several theories: Greek philosophers (air escaping from cavities / water imbalances), ancient Norse, Japanese and Peruvian people (the gods were unhappy), and Pliny the Elder ('underground thunderstorms').",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage describes various theories from different cultures and philosophers about the causes of earthquakes."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: TRUE. Para 2 mentions multiple theories from Greek philosophers, ancient Norse, Japanese and Peruvian people, and Pliny the Elder."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: TRUE. Para 2 clearly describes a range of theories about earthquake causes from different cultures and time periods."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "3. Alfred Wegener was involved in later developments of the seismograph.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: NOT GIVEN. Para 4 refers to Wegener and his theory of continental drift, but there is no reference to his work on the seismograph.",
+            "correct_feedback": "Correct! The passage mentions Wegener's theory of continental drift but does not mention any involvement with seismograph development.",
+            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. Para 4 refers to Wegener, but there is no reference to his work on the seismograph.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: NOT GIVEN. Para 4 refers to Wegener, but there is no reference to his work on the seismograph."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: NOT GIVEN. Para 4 refers to Wegener, but there is no reference to his work on the seismograph."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions Wegener's theory of continental drift but does not mention any involvement with seismograph development."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "4. The Prince William Sound earthquake was five times as powerful as the 1960 Chilean earthquake.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. Para 5 states: 'the 1960 Chile earthquake, measuring 9.5, was five times more powerful as the next highest recorded earthquake, the 1964 Prince William Sound earthquake in Alaska, which was recorded at 9.0.'",
+            "correct_feedback": "Correct! The passage states the opposite - the 1960 Chilean earthquake was five times more powerful than the Prince William Sound earthquake.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Para 5 states: 'the 1960 Chile earthquake... was five times more powerful as the... 1964 Prince William Sound earthquake'",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: FALSE. Para 5 states the opposite - the Chile earthquake was five times more powerful than the Prince William Sound earthquake."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the opposite - the 1960 Chilean earthquake was five times more powerful than the Prince William Sound earthquake."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: FALSE. Para 5 clearly states: 'the 1960 Chile earthquake... was five times more powerful as the... 1964 Prince William Sound earthquake'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "5. Microquakes are usually not detected by humans.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. Para 7 states: 'Earthquakes measuring less than 2 on the Richter Scale are known as microquakes, and are often not felt by humans'",
+            "correct_feedback": "Correct! The passage states that microquakes are often not felt by humans.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Para 7 states: 'microquakes... are often not felt by humans'",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that microquakes are often not felt by humans."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: TRUE. Para 7 states: 'microquakes... are often not felt by humans'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: TRUE. Para 7 clearly states: 'microquakes... are often not felt by humans'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 6 – 9\r\n\r\nChoose the appropriate letters A – D and write them in boxes 6 – 9 on your answer sheet.",
+            "question": "6. The earthquake in Haiti in 2010",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. C is correct because the first para says that the 'Haiti earthquake [killed] more than 300,000 people'. A is not correct because there is no mention in this paragraph about the second largest earthquake, while para 5 mentions that the Alaska earthquake was the 'next highest recorded earthquake…' B is not correct, because there is no mention of what the magnitude of the earthquake was. D is not right because there is no mention of the amount of damage, other than the number of people killed.",
+            "correct_feedback": "Correct! The first paragraph states the Haiti earthquake killed more than 300,000 people.",
+            "incorrect_feedback": "Incorrect. The correct answer is C. The first paragraph says that the 'Haiti earthquake [killed] more than 300,000 people'. A is not correct because there is no mention about it being the second largest earthquake. B is not correct, because the passage does not state the magnitude of the Haiti earthquake. D is not right because there is no mention of it being the largest quake to occur on the island.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "was the biggest earthquake since the 1960 Chile earthquake.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. There is no mention in the passage that the Haiti earthquake was the second largest. Para 5 mentions that the Alaska earthquake was the 'next highest recorded earthquake' after Chile."
+                },
+                {
+                    "text": "measured a magnitude of 9.1.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does not mention what the magnitude of the Haiti earthquake was."
+                },
+                {
+                    "text": "saw more than 300,000 people perish.",
+                    "is_correct": true,
+                    "feedback": "Correct! The first paragraph states the Haiti earthquake killed more than 300,000 people."
+                },
+                {
+                    "text": "was the largest quake ever to have occurred on the island.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. There is no mention in the passage about the Haiti earthquake being the largest ever to occur on that island."
+                }
+            ],
+            "options": "was the biggest earthquake since the 1960 Chile earthquake.\nmeasured a magnitude of 9.1.\nsaw more than 300,000 people perish.\nwas the largest quake ever to have occurred on the island.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "7. The existence of plate tectonics",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. Para 4 mentions plate tectonics and has the sentence 'Tectonic plate movement provided that answer' in reference to Wegener's theory of 'continental drift'. A is not correct because there is no mention of Japanese researchers in relation to plate tectonics. C is not correct because there is no mention of a relationship in the research of the 'Ring of Fire' and earthquakes and plate tectonics. D is not correct because the text states that he could not substantiate his theory with scientific proof, so it was therefore not confirmed.",
+            "correct_feedback": "Correct! Para 4 states that tectonic plate movement provided the answer to substantiate Wegener's theory of continental drift.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. Para 4 mentions plate tectonics and has the sentence 'Tectonic plate movement provided that answer' in reference to his theory of 'continental drift'. C is not correct because there is no mention of the 'Ring of Fire' leading to the discovery. D is not correct because the text states that he could not substantiate his theory with scientific proof in 1912, so it was therefore not confirmed then.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "was first predicted by the Japanese.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. There is no mention of Japanese researchers in relation to plate tectonics theory."
+                },
+                {
+                    "text": "proved that a theory from a German geophysicist was correct.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 4 states that tectonic plate movement provided the answer to substantiate Wegener's theory of continental drift."
+                },
+                {
+                    "text": "was discovered by researchers examining the 'Ring of Fire' fault.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. There is no mention of a relationship between the research of the 'Ring of Fire' and the discovery of plate tectonics."
+                },
+                {
+                    "text": "was confirmed in 1912.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text states that in 1912 Wegener presented his theory but could not substantiate it with scientific proof, so it was not confirmed at that time."
+                }
+            ],
+            "options": "was first predicted by the Japanese.\nproved that a theory from a German geophysicist was correct.\nwas discovered by researchers examining the 'Ring of Fire' fault.\nwas confirmed in 1912.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "8. Measuring the magnitude of an earthquake by the Richter Scale",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D. The fifth para lists a number of factors that determine intensity of a quake, including depth and whether the quake is below the earth or under the ocean. A is not correct because para 5 states that the measurement is based on the energy released, not needed to cause the earthquake. B is not correct because, although there is mention of the depth of earthquakes, there is no comment on whether the depth makes measurement more difficult. C is not correct because there is no mention of measurement being impossible beneath the ocean, although oceans are mentioned.",
+            "correct_feedback": "Correct! Para 5 states: 'Many factors are involved in this calculation, including the depth of the earthquake and whether the quake is below the earth or under the ocean.'",
+            "incorrect_feedback": "Incorrect. The correct answer is D. The fifth para lists a number of factors that determine intensity of a quake. A is not correct because para 5 states that the measurement is based on the energy released, not needed to cause the earthquake. B is not correct because there is no comment on whether depth makes measurement more difficult. C is not correct because there is no mention of it not being possible if the earthquake is beneath the ocean.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "depends on how much energy is required to cause the earthquake.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Para 5 states that the Richter Scale records the energy released, not the energy required to cause the earthquake."
+                },
+                {
+                    "text": "becomes more difficult the deeper the earthquake is.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Although the passage mentions the depth of earthquakes, there is no comment on whether depth makes measurement more difficult."
+                },
+                {
+                    "text": "is not possible if the earthquake is below the ocean floor.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. There is no mention of measurement being impossible beneath the ocean, although oceans are mentioned as a factor."
+                },
+                {
+                    "text": "depends on a range of factors.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 5 states: 'Many factors are involved in this calculation, including the depth of the earthquake and whether the quake is below the earth or under the ocean.'"
+                }
+            ],
+            "options": "depends on how much energy is required to cause the earthquake.\nbecomes more difficult the deeper the earthquake is.\nis not possible if the earthquake is below the ocean floor.\ndepends on a range of factors.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "9. The Mercalli Scale",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. The seventh para mentions the Mercalli Scale and states that it '…measures the extent of damage…' and further mentions slippages and natural disasters. A is not correct because there is no mention of the financial loss. C is not right because para 7 states that '…Mercalli levels… are determined well after earthquakes…' (therefore they cannot predict). D is not correct because there is no mention of a comparison between different natural disasters, although they are mentioned.",
+            "correct_feedback": "Correct! Para 7 states the Mercalli Scale 'measures the extent of damage' and mentions property damage and physical alterations to the landscape.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. The seventh para mentions the Mercalli Scale and states that it '…measures the extent of damage…'. A is not correct because there is no mention of assessing financial loss. C is not right because para 7 states that '…Mercalli levels… are determined well after earthquakes…' (therefore they cannot predict). D is not correct because there is no mention of comparing different natural disasters.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "is used to assess financial loss.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. There is no mention of the Mercalli Scale being used to assess financial loss."
+                },
+                {
+                    "text": "is the measurement employed to determine physical damage.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 7 states the Mercalli Scale 'measures the extent of damage' and mentions property damage and physical alterations to the landscape."
+                },
+                {
+                    "text": "can be used to predict levels of property damage.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Para 7 states that '…Mercalli levels… are determined well after earthquakes…' so they cannot predict damage."
+                },
+                {
+                    "text": "compares the extent of energy release of different natural disasters.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. There is no mention of the Mercalli Scale comparing different natural disasters, although natural disasters like landslides and tsunamis are mentioned."
+                }
+            ],
+            "options": "is used to assess financial loss.\nis the measurement employed to determine physical damage.\ncan be used to predict levels of property damage.\ncompares the extent of energy release of different natural disasters.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 10 – 13\r\n\r\nThe writer refers to various countries and regions and facts associated with them. Match the country or region (A – H) with the information provided.\r\n\r\nNB: Some letters might not be used.\r\n\r\nWrite the appropriate letter A-H in boxes 10 – 13 on your answer sheet.\r\n\r\nA: Greece\r\nB: China\r\nC: Alaska\r\nD: The United States\r\nE: Germany\r\nF: Chile\r\nG: Haiti\r\nH: Peru",
+            "question": "10. Scientists modified an existing measuring device to more accurately record energy levels",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D (The United States). The third para mentions that the seismograph was modified by researchers at the California Institute of Technology in the U.S., used to '…record the energy released…'.",
+            "correct_feedback": "Correct! Para 3 mentions that Charles Richter and Beno Gutenberg of the California Institute of Technology in the USA modified the seismograph to record energy released by earthquakes.",
+            "incorrect_feedback": "Incorrect. The correct answer is D (The United States). The third para mentions that the seismograph was modified by researchers at the California Institute of Technology in the U.S., used to '…record the energy released…'.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Greece",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D (The United States). Para 3 mentions that researchers at the California Institute of Technology modified the seismograph."
+                },
+                {
+                    "text": "China",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D (The United States). Para 3 mentions that researchers at the California Institute of Technology modified the seismograph."
+                },
+                {
+                    "text": "Alaska",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D (The United States). Para 3 mentions that researchers at the California Institute of Technology modified the seismograph."
+                },
+                {
+                    "text": "The United States",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 3 mentions that Charles Richter and Beno Gutenberg of the California Institute of Technology in the USA modified the seismograph to record energy released by earthquakes."
+                },
+                {
+                    "text": "Germany",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D (The United States). Para 3 mentions that researchers at the California Institute of Technology modified the seismograph."
+                },
+                {
+                    "text": "Chile",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D (The United States). Para 3 mentions that researchers at the California Institute of Technology modified the seismograph."
+                },
+                {
+                    "text": "Haiti",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D (The United States). Para 3 mentions that researchers at the California Institute of Technology modified the seismograph."
+                },
+                {
+                    "text": "Peru",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D (The United States). Para 3 mentions that researchers at the California Institute of Technology modified the seismograph."
+                }
+            ],
+            "options": "Greece\nChina\nAlaska\nThe United States\nGermany\nChile\nHaiti\nPeru",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "11. Early beliefs that Gods were the cause of earthquakes",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is H (Peru). The second para states '…Norse, Japanese and Peruvian … theories abounding that the Gods were unhappy with the Earth…'.",
+            "correct_feedback": "Correct! Para 2 mentions that ancient Norse, Japanese and Peruvian people believed that earthquakes showed the gods were unhappy.",
+            "incorrect_feedback": "Incorrect. The correct answer is H (Peru). The second para states '…Norse, Japanese and Peruvian people believing that the earthquakes showed that the gods were unhappy with the Earth…'.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Greece",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is H (Peru). Para 2 mentions ancient Norse, Japanese and Peruvian people believed the gods were unhappy."
+                },
+                {
+                    "text": "China",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is H (Peru). Para 2 mentions ancient Norse, Japanese and Peruvian people believed the gods were unhappy."
+                },
+                {
+                    "text": "Alaska",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is H (Peru). Para 2 mentions ancient Norse, Japanese and Peruvian people believed the gods were unhappy."
+                },
+                {
+                    "text": "The United States",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is H (Peru). Para 2 mentions ancient Norse, Japanese and Peruvian people believed the gods were unhappy."
+                },
+                {
+                    "text": "Germany",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is H (Peru). Para 2 mentions ancient Norse, Japanese and Peruvian people believed the gods were unhappy."
+                },
+                {
+                    "text": "Chile",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is H (Peru). Para 2 mentions ancient Norse, Japanese and Peruvian people believed the gods were unhappy."
+                },
+                {
+                    "text": "Haiti",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is H (Peru). Para 2 mentions ancient Norse, Japanese and Peruvian people believed the gods were unhappy."
+                },
+                {
+                    "text": "Peru",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 2 mentions that ancient Norse, Japanese and Peruvian people believed that earthquakes showed the gods were unhappy."
+                }
+            ],
+            "options": "Greece\nChina\nAlaska\nThe United States\nGermany\nChile\nHaiti\nPeru",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "12. Early analysis by academics helped modern researchers",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B (China). The first para has the sentence 'With the analysis of the quake by scholars at the time…' referring to the 1556 China earthquake, and mentions that they helped '…scientists and historians today…'.",
+            "correct_feedback": "Correct! Para 1 mentions that analysis of the 1556 China earthquake by scholars at the time helped scientists and historians today estimate the power of the quake.",
+            "incorrect_feedback": "Incorrect. The correct answer is B (China). The first para has the sentence 'With the analysis of the quake by scholars at the time…' referring to the 1556 China earthquake, and mentions that they helped '…scientists and historians today…'.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Greece",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B (China). Para 1 mentions analysis by scholars of the 1556 China earthquake helped modern scientists and historians."
+                },
+                {
+                    "text": "China",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 1 mentions that analysis of the 1556 China earthquake by scholars at the time helped scientists and historians today estimate the power of the quake."
+                },
+                {
+                    "text": "Alaska",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B (China). Para 1 mentions analysis by scholars of the 1556 China earthquake helped modern scientists and historians."
+                },
+                {
+                    "text": "The United States",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B (China). Para 1 mentions analysis by scholars of the 1556 China earthquake helped modern scientists and historians."
+                },
+                {
+                    "text": "Germany",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B (China). Para 1 mentions analysis by scholars of the 1556 China earthquake helped modern scientists and historians."
+                },
+                {
+                    "text": "Chile",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B (China). Para 1 mentions analysis by scholars of the 1556 China earthquake helped modern scientists and historians."
+                },
+                {
+                    "text": "Haiti",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B (China). Para 1 mentions analysis by scholars of the 1556 China earthquake helped modern scientists and historians."
+                },
+                {
+                    "text": "Peru",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B (China). Para 1 mentions analysis by scholars of the 1556 China earthquake helped modern scientists and historians."
+                }
+            ],
+            "options": "Greece\nChina\nAlaska\nThe United States\nGermany\nChile\nHaiti\nPeru",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "13. Experienced the second most powerful recorded earthquake",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C (Alaska). Para 5 has the sentence '…the 1960 Chile earthquake… was twice as powerful as the next… earthquake, the 1964… earthquake in Alaska…', indicating Alaska had the second most powerful recorded earthquake.",
+            "correct_feedback": "Correct! Para 5 mentions the 1964 Prince William Sound earthquake in Alaska was the next highest recorded earthquake after the 1960 Chile earthquake.",
+            "incorrect_feedback": "Incorrect. The correct answer is C (Alaska). Para 5 has the sentence '…the 1960 Chile earthquake… was five times more powerful as the next highest recorded earthquake, the 1964 Prince William Sound earthquake in Alaska…'.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Greece",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C (Alaska). Para 5 mentions the 1964 Alaska earthquake was the next highest recorded earthquake after Chile."
+                },
+                {
+                    "text": "China",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C (Alaska). Para 5 mentions the 1964 Alaska earthquake was the next highest recorded earthquake after Chile."
+                },
+                {
+                    "text": "Alaska",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 5 mentions the 1964 Prince William Sound earthquake in Alaska was the next highest recorded earthquake after the 1960 Chile earthquake."
+                },
+                {
+                    "text": "The United States",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C (Alaska). Para 5 mentions the 1964 Alaska earthquake was the next highest recorded earthquake after Chile."
+                },
+                {
+                    "text": "Germany",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C (Alaska). Para 5 mentions the 1964 Alaska earthquake was the next highest recorded earthquake after Chile."
+                },
+                {
+                    "text": "Chile",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C (Alaska). Para 5 mentions the 1964 Alaska earthquake was the next highest recorded earthquake after Chile."
+                },
+                {
+                    "text": "Haiti",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C (Alaska). Para 5 mentions the 1964 Alaska earthquake was the next highest recorded earthquake after Chile."
+                },
+                {
+                    "text": "Peru",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C (Alaska). Para 5 mentions the 1964 Alaska earthquake was the next highest recorded earthquake after Chile."
+                }
+            ],
+            "options": "Greece\nChina\nAlaska\nThe United States\nGermany\nChile\nHaiti\nPeru",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 14 – 26 which are based on <strong>Reading Passage 2.</strong>\r\n\r\nQuestions 14 – 19\r\n\r\nReading Passage 2 has eight paragraphs A – H.\r\n\r\nFor paragraphs B – G, choose the most suitable heading from the list of headings below.\r\n\r\nWrite the appropriate numbers I – X in boxes 14 – 19 on your answer sheet.\r\n\r\nNB There are more headings than paragraphs, so some headings will not be used.\r\n\r\nList of Headings\r\n\r\nI: Fashioning their environment\r\nII: An animal explained\r\nIII: Details regarding their dwellings\r\nIV: Early facts\r\nV: Beavers causing pollution\r\nVI: Recognition of an industrious nature\r\nVII: How keystone species contribute to the environment\r\nVIII: The beaver as pest\r\nIX: Animals thrive through the beaver's hard work\r\nX: The beaver as conservationist\r\n\r\nExample: Paragraph A Answer: II",
+            "question": "14. Paragraph B",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is IV (Early facts). Paragraph B discusses the distribution of beavers, their history, population numbers, hunting, and current conservation status.",
+            "correct_feedback": "Correct! Paragraph B provides early facts about beaver distribution, population history, hunting, and current numbers.",
+            "incorrect_feedback": "Incorrect. The correct answer is IV (Early facts). Paragraph B discusses the distribution of beavers, their history, population numbers, hunting, and current conservation status.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I: Fashioning their environment",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B discusses historical facts about beaver populations and distribution, not how they fashion their environment."
+                },
+                {
+                    "text": "II: An animal explained",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Paragraph B mentions beavers, it focuses on historical facts and population data rather than explaining the animal itself."
+                },
+                {
+                    "text": "III: Details regarding their dwellings",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B does not discuss beaver dwellings; it focuses on distribution, population, and history."
+                },
+                {
+                    "text": "IV: Early facts",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B provides early facts about beaver distribution, population history, hunting, and current numbers."
+                },
+                {
+                    "text": "V: Beavers causing pollution",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B does not discuss pollution."
+                },
+                {
+                    "text": "VI: Recognition of an industrious nature",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This would better suit a paragraph about recognition or cultural significance."
+                },
+                {
+                    "text": "VII: How keystone species contribute to the environment",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B does not discuss environmental contributions."
+                },
+                {
+                    "text": "VIII: The beaver as pest",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Paragraph B mentions ecological damage in South America, the overall focus is on population facts."
+                },
+                {
+                    "text": "IX: Animals thrive through the beaver's hard work",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B does not discuss how other animals benefit from beavers."
+                },
+                {
+                    "text": "X: The beaver as conservationist",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B discusses conservation of beavers, not beavers as conservationists."
+                }
+            ],
+            "options": "I: Fashioning their environment\nII: An animal explained\nIII: Details regarding their dwellings\nIV: Early facts\nV: Beavers causing pollution\nVI: Recognition of an industrious nature\nVII: How keystone species contribute to the environment\nVIII: The beaver as pest\nIX: Animals thrive through the beaver's hard work\nX: The beaver as conservationist",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "15. Paragraph C",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is I (Fashioning their environment). Paragraph C describes how beavers build dams, fell trees, and create ponds - literally fashioning their environment.",
+            "correct_feedback": "Correct! Paragraph C describes how beavers fashion their environment by building dams, felling trees, and creating ponds.",
+            "incorrect_feedback": "Incorrect. The correct answer is I (Fashioning their environment). Paragraph C describes how beavers build dams, fell trees, and create ponds - literally fashioning their environment.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I: Fashioning their environment",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C describes how beavers fashion their environment by building dams, felling trees, and creating ponds."
+                },
+                {
+                    "text": "II: An animal explained",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C focuses on dam-building activities, not explaining the animal."
+                },
+                {
+                    "text": "III: Details regarding their dwellings",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C focuses on dam construction, not lodges or dwellings."
+                },
+                {
+                    "text": "IV: Early facts",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C describes current beaver behavior, not historical facts."
+                },
+                {
+                    "text": "V: Beavers causing pollution",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C does not discuss pollution."
+                },
+                {
+                    "text": "VI: Recognition of an industrious nature",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While the paragraph shows industrious behavior, it focuses on the actual work, not recognition."
+                },
+                {
+                    "text": "VII: How keystone species contribute to the environment",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C describes dam-building but does not discuss broader environmental contributions."
+                },
+                {
+                    "text": "VIII: The beaver as pest",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C does not portray beavers as pests."
+                },
+                {
+                    "text": "IX: Animals thrive through the beaver's hard work",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C does not discuss other animals."
+                },
+                {
+                    "text": "X: The beaver as conservationist",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C describes dam-building, not conservation benefits."
+                }
+            ],
+            "options": "I: Fashioning their environment\nII: An animal explained\nIII: Details regarding their dwellings\nIV: Early facts\nV: Beavers causing pollution\nVI: Recognition of an industrious nature\nVII: How keystone species contribute to the environment\nVIII: The beaver as pest\nIX: Animals thrive through the beaver's hard work\nX: The beaver as conservationist",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "16. Paragraph D",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is III (Details regarding their dwellings). Paragraph D describes beaver lodges, dens, how they are built, family groups, and territory protection.",
+            "correct_feedback": "Correct! Paragraph D provides details about beaver lodges, dens, construction materials, and living arrangements.",
+            "incorrect_feedback": "Incorrect. The correct answer is III (Details regarding their dwellings). Paragraph D describes beaver lodges, dens, how they are built, family groups, and territory protection.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I: Fashioning their environment",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While lodges are mentioned, the focus is on dwelling details rather than environmental modification."
+                },
+                {
+                    "text": "II: An animal explained",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D focuses on dwellings, not explaining the animal itself."
+                },
+                {
+                    "text": "III: Details regarding their dwellings",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D provides details about beaver lodges, dens, construction materials, and living arrangements."
+                },
+                {
+                    "text": "IV: Early facts",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D describes current dwelling practices, not historical facts."
+                },
+                {
+                    "text": "V: Beavers causing pollution",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D does not discuss pollution."
+                },
+                {
+                    "text": "VI: Recognition of an industrious nature",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D focuses on dwellings, not recognition."
+                },
+                {
+                    "text": "VII: How keystone species contribute to the environment",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D does not discuss environmental contributions."
+                },
+                {
+                    "text": "VIII: The beaver as pest",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D does not portray beavers as pests."
+                },
+                {
+                    "text": "IX: Animals thrive through the beaver's hard work",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D does not discuss other animals."
+                },
+                {
+                    "text": "X: The beaver as conservationist",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D focuses on dwellings, not conservation."
+                }
+            ],
+            "options": "I: Fashioning their environment\nII: An animal explained\nIII: Details regarding their dwellings\nIV: Early facts\nV: Beavers causing pollution\nVI: Recognition of an industrious nature\nVII: How keystone species contribute to the environment\nVIII: The beaver as pest\nIX: Animals thrive through the beaver's hard work\nX: The beaver as conservationist",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "17. Paragraph E",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is X (The beaver as conservationist). Paragraph E describes how beaver dam-building benefits the environment through wetland restoration, flood control, water filtration, and soil enrichment.",
+            "correct_feedback": "Correct! Paragraph E portrays beavers as conservationists through their positive environmental impacts including wetland restoration and water filtration.",
+            "incorrect_feedback": "Incorrect. The correct answer is X (The beaver as conservationist). Paragraph E describes how beaver dam-building benefits the environment through wetland restoration, flood control, water filtration, and soil enrichment.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I: Fashioning their environment",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E focuses on environmental benefits, not the construction process."
+                },
+                {
+                    "text": "II: An animal explained",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E discusses environmental benefits, not the animal itself."
+                },
+                {
+                    "text": "III: Details regarding their dwellings",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E does not discuss dwellings."
+                },
+                {
+                    "text": "IV: Early facts",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E discusses current environmental benefits, not historical facts."
+                },
+                {
+                    "text": "V: Beavers causing pollution",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E discusses how beavers help remove pollution, not cause it."
+                },
+                {
+                    "text": "VI: Recognition of an industrious nature",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E focuses on environmental benefits, not cultural recognition."
+                },
+                {
+                    "text": "VII: How keystone species contribute to the environment",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While this is close, heading X is more specific to the conservation theme of the paragraph."
+                },
+                {
+                    "text": "VIII: The beaver as pest",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E portrays beavers positively, not as pests."
+                },
+                {
+                    "text": "IX: Animals thrive through the beaver's hard work",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E focuses on environmental benefits, not specifically other animals."
+                },
+                {
+                    "text": "X: The beaver as conservationist",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E portrays beavers as conservationists through their positive environmental impacts including wetland restoration and water filtration."
+                }
+            ],
+            "options": "I: Fashioning their environment\nII: An animal explained\nIII: Details regarding their dwellings\nIV: Early facts\nV: Beavers causing pollution\nVI: Recognition of an industrious nature\nVII: How keystone species contribute to the environment\nVIII: The beaver as pest\nIX: Animals thrive through the beaver's hard work\nX: The beaver as conservationist",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "18. Paragraph F",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is IX (Animals thrive through the beaver's hard work). Paragraph F describes how fish, frogs, toads, and birds all benefit from beaver ponds and wetlands.",
+            "correct_feedback": "Correct! Paragraph F describes how various animals including fish, amphibians, and birds thrive due to the wetlands created by beavers.",
+            "incorrect_feedback": "Incorrect. The correct answer is IX (Animals thrive through the beaver's hard work). Paragraph F describes how fish, frogs, toads, and birds all benefit from beaver ponds and wetlands.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I: Fashioning their environment",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F focuses on how animals benefit, not how beavers modify their environment."
+                },
+                {
+                    "text": "II: An animal explained",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F discusses multiple animals benefiting, not explaining a single animal."
+                },
+                {
+                    "text": "III: Details regarding their dwellings",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F does not discuss beaver dwellings."
+                },
+                {
+                    "text": "IV: Early facts",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F discusses current ecological benefits, not historical facts."
+                },
+                {
+                    "text": "V: Beavers causing pollution",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F discusses positive benefits, not pollution."
+                },
+                {
+                    "text": "VI: Recognition of an industrious nature",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F focuses on animal benefits, not cultural recognition."
+                },
+                {
+                    "text": "VII: How keystone species contribute to the environment",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While this is related, heading IX is more specific about animals thriving."
+                },
+                {
+                    "text": "VIII: The beaver as pest",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F portrays beavers positively, not as pests."
+                },
+                {
+                    "text": "IX: Animals thrive through the beaver's hard work",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F describes how various animals including fish, amphibians, and birds thrive due to the wetlands created by beavers."
+                },
+                {
+                    "text": "X: The beaver as conservationist",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While related to conservation, the focus is specifically on how other animals thrive."
+                }
+            ],
+            "options": "I: Fashioning their environment\nII: An animal explained\nIII: Details regarding their dwellings\nIV: Early facts\nV: Beavers causing pollution\nVI: Recognition of an industrious nature\nVII: How keystone species contribute to the environment\nVIII: The beaver as pest\nIX: Animals thrive through the beaver's hard work\nX: The beaver as conservationist",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "19. Paragraph G",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is VIII (The beaver as pest). Paragraph G describes the negative impacts of beaver activity including flooding, property damage, commercial disruption, and crop/timber losses.",
+            "correct_feedback": "Correct! Paragraph G portrays the beaver as a pest by describing property damage, flooding, and economic losses caused by their activities.",
+            "incorrect_feedback": "Incorrect. The correct answer is VIII (The beaver as pest). Paragraph G describes the negative impacts of beaver activity including flooding, property damage, commercial disruption, and crop/timber losses.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I: Fashioning their environment",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G focuses on negative impacts, not environmental modification."
+                },
+                {
+                    "text": "II: An animal explained",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G discusses negative impacts, not explaining the animal."
+                },
+                {
+                    "text": "III: Details regarding their dwellings",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G does not discuss dwellings."
+                },
+                {
+                    "text": "IV: Early facts",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G discusses current problems, not historical facts."
+                },
+                {
+                    "text": "V: Beavers causing pollution",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G discusses flooding and property damage, not pollution."
+                },
+                {
+                    "text": "VI: Recognition of an industrious nature",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G focuses on negative impacts, not recognition."
+                },
+                {
+                    "text": "VII: How keystone species contribute to the environment",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G discusses negative impacts, not positive contributions."
+                },
+                {
+                    "text": "VIII: The beaver as pest",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G portrays the beaver as a pest by describing property damage, flooding, and economic losses caused by their activities."
+                },
+                {
+                    "text": "IX: Animals thrive through the beaver's hard work",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G does not discuss other animals thriving."
+                },
+                {
+                    "text": "X: The beaver as conservationist",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G focuses on negative impacts, not conservation benefits."
+                }
+            ],
+            "options": "I: Fashioning their environment\nII: An animal explained\nIII: Details regarding their dwellings\nIV: Early facts\nV: Beavers causing pollution\nVI: Recognition of an industrious nature\nVII: How keystone species contribute to the environment\nVIII: The beaver as pest\nIX: Animals thrive through the beaver's hard work\nX: The beaver as conservationist",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 20 – 22\r\n\r\nDo the following statements agree with the information given in Reading Passage 2?\r\n\r\nIn boxes 20 – 22 on your answer sheet write\r\n\r\nTRUE if the statement agrees with the information\r\n\r\nFALSE if the statement contradicts the information\r\n\r\nNOT GIVEN if there is no information on this in the passage",
+            "question": "20. Beavers live in dams.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. Para A states that 'Beavers are well-known for their habit of building barriers (known as dams) in waterways in order create a deep pool of water behind the dam in which to build their homes (known as lodges).'",
+            "correct_feedback": "Correct! Beavers build dams to create pools of water, but they live in lodges, not in the dams themselves.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Para A states that beavers build dams to create pools 'in which to build their homes (known as lodges).'",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Beavers build dams but live in lodges, which are built in the pool of water behind the dam."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Beavers build dams to create pools of water, but they live in lodges, not in the dams themselves."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage clearly states that beavers build dams and live in lodges."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "21. Beavers are native animals throughout the Americas.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. Para B opens with 'Beavers, native to North America...[and] were introduced into South America...'.",
+            "correct_feedback": "Correct! The passage states beavers are native to North America but were introduced (not native) to South America.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Para B states 'Beavers, native to North America...' and 'Beavers were introduced into South America...'.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Beavers are native to North America but were introduced to South America."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states beavers are native to North America but were introduced (not native) to South America."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage clearly distinguishes between beavers being native to North America and introduced to South America."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "22. The population of beavers is still at a worryingly low rate.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. Para B states that 'Today, the numbers have recovered and conservationists put the current population at a healthy 10 to 15 million.'",
+            "correct_feedback": "Correct! The passage states the beaver population has recovered and is at a healthy level of 10 to 15 million.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Para B states that 'Today, the numbers have recovered and conservationists put the current population at a healthy 10 to 15 million.'",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states the population has recovered and is healthy."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the beaver population has recovered and is at a healthy level of 10 to 15 million."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Para B clearly states the current population is at a 'healthy 10 to 15 million.'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 23 – 26\r\n\r\nChoose the appropriate letters A – C and write them in boxes 23 – 26 on your answer sheet.",
+            "question": "23. Beavers have sharp front teeth, similar to a",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B (rat). Para C states that beavers have '…strong front rodent teeth'.",
+            "correct_feedback": "Correct! Para C states that beavers have strong front rodent teeth, and rats are rodents.",
+            "incorrect_feedback": "Incorrect. The correct answer is B (rat). Para C states that beavers have '…strong front rodent teeth'.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "lion.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Lions are not rodents. The passage states beavers have 'front rodent teeth'."
+                },
+                {
+                    "text": "rat.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para C states that beavers have strong front rodent teeth, and rats are rodents."
+                },
+                {
+                    "text": "human.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Humans are not rodents. The passage states beavers have 'front rodent teeth'."
+                }
+            ],
+            "options": "lion.\nrat.\nhuman.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "24. Beavers",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A (mate for life). Para D has the statement 'Beavers mate for life…'.",
+            "correct_feedback": "Correct! Para D states 'Beavers mate for life'.",
+            "incorrect_feedback": "Incorrect. The correct answer is A (mate for life). Para D has the statement 'Beavers mate for life…'.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "mate for life.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para D states 'Beavers mate for life'."
+                },
+                {
+                    "text": "defend their territory against extended-family groups.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Para D states they live in extended-family groups and defend against others of the same species and predators."
+                },
+                {
+                    "text": "build new homes every year.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. There is no mention of beavers building new homes annually."
+                }
+            ],
+            "options": "mate for life.\ndefend their territory against extended-family groups.\nbuild new homes every year.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "25. The industriousness of the beaver is of great benefit to other animals because it",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C (adds to the variety of animal life). Paras E and F give beneficial examples of the beaver's work, and para F gives examples of the increase in animal species.",
+            "correct_feedback": "Correct! Para F describes how beaver activities increase wetlands which 'adds to the rich diversity of animal life'.",
+            "incorrect_feedback": "Incorrect. The correct answer is C (adds to the variety of animal life). Para F gives examples of the increase in animal species due to beaver activities.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "reduces the frog and toad numbers.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Para F states that frog and toad populations increase, not reduce."
+                },
+                {
+                    "text": "helps dry out the wetlands.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Beavers create and restore wetlands, they don't dry them out."
+                },
+                {
+                    "text": "adds to the variety of animal life.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para F describes how beaver activities increase wetlands which 'adds to the rich diversity of animal life'."
+                }
+            ],
+            "options": "reduces the frog and toad numbers.\nhelps dry out the wetlands.\nadds to the variety of animal life.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "26. There are some problems associated with the beaver's activities, such as",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B (the destruction of agriculture and timber). Para G states there is a '…loss of farm crops and timber resources.'",
+            "correct_feedback": "Correct! Para G mentions 'the loss of farm crops and timber resources' as problems caused by beaver activities.",
+            "incorrect_feedback": "Incorrect. The correct answer is B (the destruction of agriculture and timber). Para G states there is a '…loss of farm crops and timber resources.'",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "their gnawing through wooden bridges.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While bridges are mentioned as threatened, there is no mention of beavers gnawing through them."
+                },
+                {
+                    "text": "the destruction of agriculture and timber.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para G mentions 'the loss of farm crops and timber resources' as problems caused by beaver activities."
+                },
+                {
+                    "text": "governments and conservationists arguing over the best way to limit the damage.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Para G mentions they work together to manage beaver activities, not that they argue."
+                }
+            ],
+            "options": "their gnawing through wooden bridges.\nthe destruction of agriculture and timber.\ngovernments and conservationists arguing over the best way to limit the damage.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 27 – 40 which are based on <strong>Reading Passage 3.</strong>\r\n\r\nQuestions 27 – 31\r\n\r\nComplete each sentence with the correct ending, A – I, below.\r\n\r\nWrite the correct letter, A – I, in boxes 27 – 31 on your answer sheet.\r\n\r\nA: have been determined by the International Maritime Organisation.\r\nB: must be capped at 5,000 ppm by 2020 in certain areas.\r\nC: are 600 times more dangerous than other fuels.\r\nD: suffer from high levels of sulphur.\r\nE: has been as high as 1,000 ppm.\r\nF: were not recognised by the Exclusive Economic Zones.\r\nG: impact severely on large port cities.\r\nH: accounts for 90% of all vessels in international waters.\r\nI: relies heavily on HFO.",
+            "question": "27. Populous port cities, such as Hong Kong,",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D (suffer from high levels of sulphur). Para 1 mentions that port cities like Hong Kong suffer from sulphur dioxide emissions from the shipping industry.",
+            "correct_feedback": "Correct! Para 1 states that densely-populated port cities like Hong Kong suffer from high sulphur dioxide emissions from shipping.",
+            "incorrect_feedback": "Incorrect. The correct answer is D (suffer from high levels of sulphur). Para 1 mentions that port cities like Hong Kong suffer from sulphur dioxide emissions.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "have been determined by the International Maritime Organisation.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to guidelines, not port cities."
+                },
+                {
+                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to sulphur content regulations, not port cities."
+                },
+                {
+                    "text": "are 600 times more dangerous than other fuels.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to fuel comparison, not port cities."
+                },
+                {
+                    "text": "suffer from high levels of sulphur.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 1 states that densely-populated port cities like Hong Kong suffer from high sulphur dioxide emissions from shipping."
+                },
+                {
+                    "text": "has been as high as 1,000 ppm.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to sulphur content levels, not port cities."
+                },
+                {
+                    "text": "were not recognised by the Exclusive Economic Zones.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This does not relate to port cities."
+                },
+                {
+                    "text": "impact severely on large port cities.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While this is related, the port cities are the subject being impacted, not doing the impacting."
+                },
+                {
+                    "text": "accounts for 90% of all vessels in international waters.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to the merchant fleet, not port cities."
+                },
+                {
+                    "text": "relies heavily on HFO.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to the shipping industry, not port cities."
+                }
+            ],
+            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "28. Particulate matter emissions",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is G (impact severely on large port cities). Para 1 states that PM emissions have contributed to premature deaths and large port cities have borne the brunt of health issues.",
+            "correct_feedback": "Correct! Para 1 states that PM emissions contributed to 87,000 premature deaths and large port cities have borne the brunt of health issues.",
+            "incorrect_feedback": "Incorrect. The correct answer is G (impact severely on large port cities). Para 1 discusses how PM emissions severely impact large port cities.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "have been determined by the International Maritime Organisation.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The IMO determines guidelines, not PM emissions."
+                },
+                {
+                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to sulphur content, not PM emissions."
+                },
+                {
+                    "text": "are 600 times more dangerous than other fuels.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to fuel comparison, not PM emissions."
+                },
+                {
+                    "text": "suffer from high levels of sulphur.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to port cities, not PM emissions."
+                },
+                {
+                    "text": "has been as high as 1,000 ppm.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to sulphur content in fuel, not PM emissions."
+                },
+                {
+                    "text": "were not recognised by the Exclusive Economic Zones.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This does not relate to PM emissions."
+                },
+                {
+                    "text": "impact severely on large port cities.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 1 states that PM emissions contributed to 87,000 premature deaths and large port cities have borne the brunt of health issues."
+                },
+                {
+                    "text": "accounts for 90% of all vessels in international waters.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to the merchant fleet, not PM emissions."
+                },
+                {
+                    "text": "relies heavily on HFO.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to the shipping industry, not PM emissions."
+                }
+            ],
+            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "29. The global merchant marine fleet",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is I (relies heavily on HFO). Para 2 states that heavy fuel oil has been the mainstay of energy and propulsion requirements for the global merchant fleet.",
+            "correct_feedback": "Correct! Para 2 states that heavy fuel oil has been the mainstay of energy and propulsion requirements.",
+            "incorrect_feedback": "Incorrect. The correct answer is I (relies heavily on HFO). Para 2 states that HFO has been the mainstay of energy for the global merchant fleet.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "have been determined by the International Maritime Organisation.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The IMO determines guidelines, not the merchant fleet."
+                },
+                {
+                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to emission regulations, not the merchant fleet."
+                },
+                {
+                    "text": "are 600 times more dangerous than other fuels.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to fuel comparison, not the merchant fleet."
+                },
+                {
+                    "text": "suffer from high levels of sulphur.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to port cities, not the merchant fleet."
+                },
+                {
+                    "text": "has been as high as 1,000 ppm.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to sulphur content, not the merchant fleet."
+                },
+                {
+                    "text": "were not recognised by the Exclusive Economic Zones.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This does not relate to the merchant fleet."
+                },
+                {
+                    "text": "impact severely on large port cities.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to emissions, not the merchant fleet as a subject."
+                },
+                {
+                    "text": "accounts for 90% of all vessels in international waters.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the fleet handles 90% of international trade, not that it accounts for 90% of vessels."
+                },
+                {
+                    "text": "relies heavily on HFO.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 2 states that heavy fuel oil has been the mainstay of energy and propulsion requirements."
+                }
+            ],
+            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "30. Guidelines to set safe standards of emissions",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A (have been determined by the International Maritime Organisation). Para 3 states the IMO began formulating guidelines to determine and control safe standards for emissions.",
+            "correct_feedback": "Correct! Para 3 states the International Maritime Organisation began formulating guidelines to determine and control safe standards for emissions.",
+            "incorrect_feedback": "Incorrect. The correct answer is A (have been determined by the International Maritime Organisation). Para 3 mentions the IMO formulating guidelines for emissions.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "have been determined by the International Maritime Organisation.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 3 states the International Maritime Organisation began formulating guidelines to determine and control safe standards for emissions."
+                },
+                {
+                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to sulphur content regulations, not guidelines themselves."
+                },
+                {
+                    "text": "are 600 times more dangerous than other fuels.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to fuel comparison, not guidelines."
+                },
+                {
+                    "text": "suffer from high levels of sulphur.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to port cities, not guidelines."
+                },
+                {
+                    "text": "has been as high as 1,000 ppm.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to sulphur content, not guidelines."
+                },
+                {
+                    "text": "were not recognised by the Exclusive Economic Zones.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. ECAs implement guidelines, they don't fail to recognize them."
+                },
+                {
+                    "text": "impact severely on large port cities.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to emissions, not guidelines."
+                },
+                {
+                    "text": "accounts for 90% of all vessels in international waters.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to trade statistics, not guidelines."
+                },
+                {
+                    "text": "relies heavily on HFO.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to the shipping industry, not guidelines."
+                }
+            ],
+            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "31. The sulphur content of bunker fuels",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B (must be capped at 5,000 ppm by 2020 in certain areas). Para 3 states that from 2020, all vessels sailing outside any ECA must cap their emissions at 5,000 ppm.",
+            "correct_feedback": "Correct! Para 3 states that from 2020, the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm.",
+            "incorrect_feedback": "Incorrect. The correct answer is B (must be capped at 5,000 ppm by 2020 in certain areas). Para 3 mentions this regulation for bunker fuels.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "have been determined by the International Maritime Organisation.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While the IMO sets regulations, this doesn't complete the sentence about sulphur content."
+                },
+                {
+                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 3 states that from 2020, the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm."
+                },
+                {
+                    "text": "are 600 times more dangerous than other fuels.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This comparison relates to ocean fuel versus land transport diesel, not bunker fuels specifically."
+                },
+                {
+                    "text": "suffer from high levels of sulphur.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to port cities, not bunker fuels."
+                },
+                {
+                    "text": "has been as high as 1,000 ppm.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states bunker fuels ranged as high as 35,000 ppm, not 1,000 ppm."
+                },
+                {
+                    "text": "were not recognised by the Exclusive Economic Zones.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This does not make sense with bunker fuels."
+                },
+                {
+                    "text": "impact severely on large port cities.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to emissions from fuels, not the fuels themselves."
+                },
+                {
+                    "text": "accounts for 90% of all vessels in international waters.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to trade statistics, not bunker fuels."
+                },
+                {
+                    "text": "relies heavily on HFO.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Bunker fuels are HFO, so they don't rely on themselves."
+                }
+            ],
+            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 32 – 38\r\n\r\nDo the following statements agree with the information given in Reading Passage 3?\r\n\r\nIn boxes 32 – 38 on your answer sheet write\r\n\r\nTRUE if the statement agrees with the information\r\n\r\nFALSE if the statement contradicts the information\r\n\r\nNOT GIVEN if there is no information on this in the passage",
+            "question": "32. The costs involved with 'cleaning up' the heavy fuel oil will be met by only the shipping lines.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. Para 4 states the economic cost comes to 'not only for the commercial enterprises, but also the shipping companies and, by extension, their shippers, and the national economies of the countries involved.'",
+            "correct_feedback": "Correct! The passage states the costs will be borne by multiple parties, not only shipping lines.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Para 4 mentions costs for commercial enterprises, shipping companies, shippers, and national economies.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Multiple parties will bear the costs, not only shipping lines."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the costs will be borne by multiple parties, not only shipping lines."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Para 4 clearly states multiple parties will bear the costs."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "33. The easiest approach to reduce emissions is to drop the sulphur content of fuel.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: NOT GIVEN. While Para 4 mentions dropping sulphur content as one approach, there is no statement about which approach is easiest.",
+            "correct_feedback": "Correct! The passage mentions approaches but doesn't state which is easiest.",
+            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. While dropping sulphur content is mentioned as an approach, the passage doesn't state which method is easiest.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't state which approach is easiest."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While approaches are mentioned, no comparison of difficulty is made."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions approaches but doesn't state which is easiest."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "34. One alternative fuel source would mean returning to a previous method of power.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. Para 5 mentions wind as an alternative fuel and describes it as 'an ironic twist on where shipping originally began', indicating a return to a previous method.",
+            "correct_feedback": "Correct! Para 5 mentions wind power as 'an ironic twist on where shipping originally began', indicating a return to a previous method.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Para 5 mentions wind as an alternative and describes it as 'an ironic twist on where shipping originally began'.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 5 mentions wind power as 'an ironic twist on where shipping originally began', indicating a return to a previous method."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Wind power is mentioned as returning to where shipping originally began."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Para 5 clearly refers to wind as an 'ironic twist on where shipping originally began'."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "35. Nuclear energy is used mostly in naval fleets of many countries.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: NOT GIVEN. Para 5 states nuclear energy is 'used in many naval fleets' but doesn't say it is used 'mostly' in naval fleets or provide comparison with other uses.",
+            "correct_feedback": "Correct! The passage mentions nuclear energy is used in naval fleets but doesn't state this is its primary use.",
+            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. While the passage mentions nuclear energy is used in naval fleets, it doesn't state this is its primary or 'mostly' use.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't state nuclear energy is used 'mostly' in naval fleets."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While nuclear use in naval fleets is mentioned, no comparison is made."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions nuclear energy is used in naval fleets but doesn't state this is its primary use."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "36. With 90% of international trade being carried on ships, the shipping industry is experiencing huge growth and profit levels.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. Para 6 states that the shipping trade is experiencing a serious down-turn in profits, with daily revenue dropping from US$34,000 in 2007 to US$9,800 in 2017.",
+            "correct_feedback": "Correct! The passage states the shipping industry is experiencing a serious down-turn in profits, not growth.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Para 6 describes a serious down-turn in profits, with revenues dropping significantly.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The shipping industry is experiencing a down-turn in profits, not growth."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the shipping industry is experiencing a serious down-turn in profits, not growth."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Para 6 clearly describes a serious down-turn in profits."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "37. One factor that is slowing down the move to cleaner fuels is that there are no significant direct economic benefits to the parties concerned.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. Para 6 states 'there will be a reluctance on the part of ship-owners, national state carriers and major shippers to contribute towards a scheme that, while benefiting the global environment and national health interests, sees little direct economic return.'",
+            "correct_feedback": "Correct! Para 6 states parties are reluctant to contribute to a scheme that sees little direct economic return.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Para 6 describes reluctance due to little direct economic return from cleaner fuel schemes.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 6 states parties are reluctant to contribute to a scheme that sees little direct economic return."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Para 6 states there is reluctance due to little direct economic return."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Para 6 clearly states the scheme sees little direct economic return."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "38. The 2008 financial crisis helped introduce cost-saving measures for shipping lines.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. Para 7 states 'during the 2008 global crisis in finance and costs, sailing speeds on ocean vessels were reduced by oftentimes up to half, which resulted in massive fuel savings.'",
+            "correct_feedback": "Correct! Para 7 describes how the 2008 financial crisis led to reduced sailing speeds and massive fuel savings.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Para 7 describes cost-saving measures like reduced sailing speeds introduced during the 2008 crisis.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 7 describes how the 2008 financial crisis led to reduced sailing speeds and massive fuel savings."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Para 7 describes cost-saving measures introduced during the 2008 crisis."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Para 7 clearly states cost-saving measures were introduced during the 2008 crisis."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 39 – 40\r\n\r\nComplete the following sentences, using NO MORE THAN THREE WORDS from the passage.\r\n\r\nWrite your answers in boxes 39 – 40 on your answer sheet.",
+            "question": "Complete the following sentences:",
+            "points": 2,
+            "no_answer_feedback": "39: scrubbers, 40: heavy fuel oil|HFO",
+            "correct_feedback": "Excellent! You answered both questions correctly.",
+            "incorrect_feedback": "Review the passage and try again. Question 39 is found in Para 4, and Question 40 is in Para 8.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 2,
+            "field_labels": [
+                "39. In order to comply with regulations regarding lowering emissions, shipping companies have the option of installing ________ to clean emissions.",
+                "40. Even with all the restrictions and guidelines, most industry analysts, such as Lloyds Registry, feel that ________ will still be the shipping industry's main source of energy in the future."
+            ],
+            "field_answers": [
+                "scrubbers",
+                "heavy fuel oil|HFO|heavy fuel oils|HFOs"
+            ]
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Passage 1",
+            "content": "Earthquakes and how we measure them\r\n\r\nIn the year 1556, an earthquake occurred in China's Shanxi province, and the records show that more than 800,000 people perished. City walls, government buildings, commercial premises, domestic dwellings and temples all collapsed. With the analysis of the quake by scholars at the time, scientists and historians today have estimated the power of the quake was particularly strong, registering a magnitude of 8.0. More recent earthquakes have had similarly devastating effects, with 2010's Haiti earthquake killing more than 300,000 people, and the Indonesian quake in 2004 leading to the loss of more than 225,000 lives, with a magnitude of 9.1. The biggest earthquake to be measured occurred in 1960, in Chile, and registered 9.5 on the Richter Scale, as it was used then. This resulted in 1900 deaths and caused an estimated US$4 billion in damage.\r\n\r\nUntil the last few hundred years, very little was known regarding the cause of these natural disasters. Early beliefs regarding the causes of earthquakes were put forward by Greek philosophers, who believed that earthquakes could be attributed to air escaping from cavities buried deep in the Earth's centre, or to imbalances between levels of water under the earth. Other theories in other cultures revolved around religious beliefs, with ancient Norse, Japanese and Peruvian people believing that the earthquakes showed that the gods were unhappy with the Earth, and the people on it. Pliny the Elder, an ancient Roman philosopher, (32 AD) labelled earthquakes as 'underground thunderstorms', and, interestingly, he was probably not far from the truth.\r\n\r\nIn the mid-19th century, Italian researchers developed what was called a seismograph, which was used to measure the motion of the ground during an earthquake. This device recorded what are known as 'ground oscillations' or movements of the earth, and research began to pick up pace. The sensitivity of seismographs improved considerably over the next 50 or so years, but the next major development came in the early 20th century with Charles Richter and Beno Gutenberg of the California Institute of Technology in the USA. They modified the seismograph and built what is now known as the Richter Scale, a measuring device used to record the energy released by an earthquake, and further, to compare earthquakes.\r\n\r\nWith this accumulation of data, and further technological advances, British and American researchers put forward a theory in the 1960s to define the causes of earthquakes, a theory referred to as plate tectonics. Simply put, plate tectonics refers to movements gigantic continent-sized geological plates on the Earth's outer shell moving, sometimes imperceptibly, over the layer of the Earth's inner core. It is worth noting that in 1912 the German geophysicist and meteorologist Alfred Wegener presented a theory of 'continental drift' – that is, the movement of continents away from and towards each other – but he could not substantiate his theory with scientific proof. Tectonic plate movement provided that answer. All of this is based on the idea of the earth's having a liquid centre (the molten core), with heat rising in various forms, through magma, sometimes erupting in volcanoes, and the plates sliding back and forth along boundaries, referred to as fault lines. Possibly one of the most famous is the San Andreas fault running through California, which is part of the greater 'Ring of Fire' fault, encircling the Pacific Ocean.\r\n\r\nThe Richter Scale, the product of Richter and Gutenberg's research, measures the level of energy released, garnering data from seismographs, and comparing them. The way that the scale is designed means that a level 6 earthquake is 10 times more powerful than a level 5 earthquake, and a level 7 earthquake is 10 times more powerful than a level 6, and so on. Using this scale of measurement, the 1960 Chile earthquake, measuring 9.5, was five times more powerful as the next highest recorded earthquake, the 1964 Prince William Sound earthquake in Alaska, which was recorded at 9.0. Many factors are involved in this calculation, including the depth of the earthquake and whether the quake is below the earth or under the ocean. With regards the depth of the earthquake, standards classify a shallow earthquake as between 9 and 70 kms deep, an intermediate quake is 70 to 300 kms below the earth's surface, and deep earthquakes are 300 – 700 kms deep.\r\n\r\nAnother scale used by scientists is the Mercalli scale, which measures the extent of damage, and is a much more subjective measurement. Mercalli measurements are given in Roman numerals from I to XII, with a II registering no noticeable property damage, and a XII recognising major property loss, significant physical alteration to the landscape such as slippages, and related natural disasters, including landslides and tsunamis. Mercalli levels, by their very nature, are determined well after earthquakes, as many other factors need to be included to determine levels which can be substantiated.\r\n\r\nEarthquakes measuring less than 2 on the Richter Scale are known as microquakes, and are often not felt by humans (although animals have a much more perceptive feel for earthquakes, both those that are occurring and those about to occur). Microquakes are frequent, with thousands occurring each year, and moderate earthquakes, those less than 6.0 on the measurable scales, happening less frequently. Major earthquakes occur on the average of once a year, and scientists have noted that an earthquake at the level of 10 or more, which would equate to the major fault lines rupturing simultaneously, would be catastrophic to a hugely disruptive degree, and would be the absolute upper limit. Work continues to both predict, and to understand, earthquakes, and for that, the general public are thankful."
+        },
+        {
+            "title": "Reading Passage 2",
+            "content": "The secrets of the beaver and their famous dams\r\n\r\nA: 'Busy as a beaver.' An expression used in English to indicate a person who is very industrious. But is the beaver, described as a 'giant hyperactive stream-dwelling aquatic rodent', really that busy? The answer is yes, and ingenious as well. The North American beaver (Castor canadensis) and its European cousin, the Eurasian beaver (Castor fiber), are what are known as keystone species – that is, animals that have a disproportionately profound effect on their environment compared to their numbers, playing a crucial role in the maintenance of their ecological habitat. Beavers are well-known for their habit of building barriers (known as dams) in waterways in order create a deep pool of water behind the dam in which to build their homes (known as lodges). Another common characteristic of the beaver is the use of its large flat tail, which is slaps loudly on the water as a warning to others, to ward off danger or when startled.\r\n\r\nB: Beavers, native to North America, can be found as far south as Mexico, and also in Europe. Beavers were introduced into South America to be farmed and hunted for their fur, but this was not successful as there were no natural predators of the beaver in the areas of South America where they were introduced. As a result, they multiplied and caused serious ecological damage. In total, worldwide numbers of beavers were estimated to once be as many as nearly 100 million. However, in North America, the beaver was hunted and trapped, by the indigenous people for its meat and by the settlers for its fur, so that in many areas the beaver was on the verge of extinction. Today, the numbers have recovered and conservationists put the current population at a healthy 10 to 15 million.\r\n\r\nC: Beavers build dams in order to create a pond of water large enough and deep enough to create a moat, to isolate their lodge, or home, from predators and to create an underwater entrance to their lodge. Working at night, beavers fell trees up to 30 or 40 centimetres in diameter, gnawing through the wood with sharp, strong front rodent teeth, breaking trees into smaller lengths and then dragging them to narrow stretches of a stream, forcing them into the stream bed. Then, all forms of natural materials are used to reinforce the structure, ranging from sticks and branches to rocks, mud, and leaves, creating a dam of up to two metres in height, and creating a pool of water up to metres in depth.\r\n\r\nD: The beaver's lodge is usually built using the same materials as the dam, and each autumn, fresh mud is layered on to cover the lodge, which freezes in the colder climes, providing extra protection from predators. In locations where the river is too wide to build a suitable dam, beavers will build into the side of a riverbank to create a home, which is called a 'den', but this process is only used when the natural water level is deep enough to keep underwater entrances hidden from predators. Beavers mate for life and often live in large extended-family groups, with more than one lodge built close together in units to house the families. As well, beavers mark and protect their territories well, safeguarding their area and their lodges against others of the same species, as well as predators, using their large powerful front teeth to defend their well-built homes and dams.\r\n\r\nE: The benefits of the beavers' dam-building skills are plentiful, and the most noticeable is the restoration of large areas of wetlands, which in turn creates more advantages. Flood control increases as a result of the creation of large ponds behind dams, with the dual action of water being released slowly through the dam during periods of heavy rain, and, equally, in dry stretches, stored water continues to flow, aiding irrigation. Other ecological benefits are the removal of various agricultural chemicals which seep into the water system from farmland runoff, chemicals such as excess nutrients like phosphates and nitrates in fertilizers, and toxins in pesticides and herbicides, the dam acting as a natural filter. In addition, there is a rich build-up of silt which aids farm productivity and becomes available when beavers abandon their dams.\r\n\r\nF: Animal life, in particular, benefits greatly from the role of the beaver as a keystone species. The increase in wetlands adds to the rich diversity of animal life, with one claim stating that almost half of North America's endangered species are dependent on wetlands for their survival. Further, the water build-up behind dams acts as a nursery for fish species, such as trout and salmon, while frog and toad populations increase because beaver ponds create a protected environment for larva and tadpoles to mature in warm water rich in oxygen. Finally, birdlife prospers in a thriving environment full of plantlife, foodstocks and a protected habitat.\r\n\r\nG: However, the industriousness of the beaver does present some downsides. Beaver ponds which are created behind dams can actually cause flooding when the dam breaks, releasing a large amount of water in a very short space of time. This can result in property damage, commercial disruption with roads, railway tracks and bridges threatened, and the loss of farm crops and timber resources. One report for the U.S. timber industry estimated losses at more than US$22 million in a single year. Felled trees can also present hazards to power lines or lead to power outages. There is a fine line to be managed as governments and conservationists look to control beaver activities, not losing their beneficial outputs but at the same time limiting their damage, so various human trapping and re-location approaches are employed to allow the animal to work its environmental magic in the most efficient manner.\r\n\r\nH: Recognising the beaver as an important animal in the early days of Canada's economic development through its integral part in the fur trade, 1975 saw the beaver adopted as Canada's national animal, now appearing on the 5- cent coin. Various U.S. states have used the beaver as an organizational symbol and it is also used by many educational institutes in their logos and coats of arms, including the London School of Economics, with its Latin inscription: Rerum Cognoscere Causas, meaning, 'To know the cause of things'. With the beaver, it is the cause of much good in the grand environmental scheme."
+        },
+        {
+            "title": "Reading Passage 3",
+            "content": "Maritime Shipping's Heavy Fuel Oil Debate\r\n\r\nIn a world growing more and more concerned with pollution and the accompanying health issues, attention has turned to the heavy fuel oil (HFO) used by the world's shipping industry. In a densely-populated port city such as Hong Kong, the shipping industry, from local tugs to ocean-going container and bulk cargo vessels, accounts for the largest amount of sulphur dioxide (SO2) emissions as well as the emission of particulate matter (PM), the mixture of minute particles and liquid droplets suspended in air. One estimate put forward is that PM emissions contributed to 87,000 global premature deaths in 2012 and these large port cities like Hong Kong and Busan in Asia, Rotterdam and Antwerp in Europe and Los Angeles/Long Beach in the Americas have borne the brunt of the health issues created by the growing volume of heavy emissions from the maritime industry.\r\n\r\nGlobally, there are more than 90,000 vessels in the international marine fleet, handling over 90% of international trade. Heavy fuel oil has been the mainstay of energy and propulsion requirements through the second half of the 20th century as global trade has become the lifeblood of economic growth, but it is acknowledged that this same shipping now accounts for nearly 10% of the total emissions of SO2, which has been responsible for the environmentally devastating acid rain, and is a heavy contributor to respiratory problems and other illnesses in humans. In the United States alone, the Environmental Protection Agency estimates that there are 14,000 premature deaths annually owing to toxic emissions, and it is noted that the fuel used by ocean-plying vessels is 600 times dirtier than land transport diesel fuel.\r\n\r\nOnce it was recognised that there was a strong causal relationship between pollutant emissions and health issues, the International Maritime Organisation, or IMO, a UN agency that sets and regulates industry standards for safety and the environment, began formulating guidelines to determine and control safe standards for emissions. Beginning in 2015, the IMO ruled that the first areas to be designated as Emission Control Areas, or ECAs, would be the Exclusive Economic Zones of North America and Northern Europe, where Marine Gas Oil with a permitted sulphur content of only 1,000 ppm (parts per million) would be allowed. This was a dramatic proposal, as the then-current sulphur content of what are called bunker fuels ranged as high as 35,000 ppm. Further, from the year 2020, the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm.\r\n\r\nBut all this comes at a huge economic cost, not only for the commercial enterprises, but also the shipping companies and, by extension, their shippers, and the national economies of the countries involved. As a result, much research has gone into determining the best approach to 'clean up', or even change, the fuel, and ultimately there seems to be two main approaches to comply with the requirements. Firstly, the oil industry would have to drop the sulphur content of the fuel from 3.5% to 0.5%, which would achieve the required emissions levels, or vessels would have to be fitted with what are known as 'scrubbers', technology that can clean the emissions. However, it is recognised that the refining industry is not yet moving towards complying with the regulations regarding sulphur content, and as far as scrubbing is concerned, at an estimated US$4 million per engine fit out, the cost is often too high for many shipping countries.\r\n\r\nIn addition, along with other industries such as land transport and airline companies, much research is being conducted into looking at alternative fuels. For shipping, this revolves around investigating alternative sources such as Liquid (or Liquefied) Natural Gas, solar fuel cells, wind (an ironic twist on where shipping originally began) and the controversial nuclear energy, used in many naval fleets. However, apart from the view that HFO is the cheapest alternative and that the merchant fleet is geared towards the continuing use of HFO, each alternative also presents some challenges. Natural gas takes up a large amount of storage on a vessel, thus reducing cargo-carrying capacity. Likewise, solar fuel cells, although effective, require huge amount of space and wind is not considered reliable enough. Nuclear energy remains a contentious issue, and many ports will restrict or deny entry to nuclear-powered vessels.\r\n\r\nAt the same time, the international shipping trade is experiencing a serious down-turn in profits. In 2007, the average daily revenue of a merchant vessel was US$34,000 but in 2017 that same figure was just US$9800, according to Clarkson Research, a global shipping consultancy firm. Part of this decline in profits is due to an excess of shipping vessels, but it also relates to the 2008 global financial crisis, and changes in the oil and export markets. All this means there will be a reluctance on the part of ship-owners, national state carriers and major shippers to contribute towards a scheme that, while benefiting the global environment and national health interests, sees little direct economic return.\r\n\r\nBut the way forward is appearing. Gas-powered vessels are now operating, with its cleaner and more efficient fuel. Which, interestingly, has given rise to what is known as the \"fifth fuel\", that is energy efficiency. Because fuel traditionally accounts for up to half of all costs involved in shipping, there have always been innovative energy-saving approaches. One example is that during the 2008 global crisis in finance and costs, sailing speeds on ocean vessels were reduced by oftentimes up to half, which resulted in massive fuel savings. This has given rise to what is known as the Energy Efficiency Design Index, a compulsory outline of regulations that means that all new ships will be required to adhere to it from 2015.\r\n\r\nHeavy Fuel Oil, however, will be the backbone of energy for the foreseeable future. If engine scrubbers are deployed, and are as effective as engineered, they can capture more than 90% of exhaust sulphur and they will continue to be the main force in energy requirements. Lloyds Registry, the industry classification organisation, believes that HFO will still make up nearly half of all fuels used in the maritime industry in 2030, albeit with the agreed-upon restrictions set out."
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "ielts_academic_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-13 08:40:00",
+        "exported_by": "copilot",
+        "plugin_version": "11.15",
+        "format_version": "1.0"
+    }
+}
