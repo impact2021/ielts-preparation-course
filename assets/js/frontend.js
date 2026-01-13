@@ -1151,11 +1151,22 @@
             if (questionElement.length) {
                 // Scroll to the question in the right column
                 var questionsColumn = $('.questions-column');
-                var questionOffset = questionElement.position().top;
+                // Get absolute position within the scrollable container
+                // Using offset().top gives absolute position from document top
+                // Subtracting column's offset gives position within the container
+                var questionAbsoluteTop = questionElement.offset().top;
+                var columnAbsoluteTop = questionsColumn.offset().top;
                 var columnScrollTop = questionsColumn.scrollTop();
+                // Calculate the question's position within the scrollable content
+                var questionPositionInContainer = questionAbsoluteTop - columnAbsoluteTop + columnScrollTop;
+                
+                // Calculate target scroll position to center the question
+                var columnHeight = questionsColumn.height();
+                var questionHeight = questionElement.outerHeight();
+                var targetScrollTop = questionPositionInContainer - (columnHeight / 2) + (questionHeight / 2);
                 
                 questionsColumn.animate({
-                    scrollTop: columnScrollTop + questionOffset - 50
+                    scrollTop: targetScrollTop
                 }, 300);
                 
                 // Highlight the question briefly
