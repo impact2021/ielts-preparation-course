@@ -1541,11 +1541,11 @@
                 
                 // Scroll to the question marker, centering the highlighted section
                 // Wait for fadeIn to complete, then use requestAnimationFrame to ensure layout is stable
-                // This fixes the issue where single clicks fail but double clicks work
-                // Same pattern as the v11.24 scrollToQuestion fix
+                // Simulate double-click behavior: scroll twice to ensure accurate positioning
+                // Double-click works because the second scroll recalculates from the new position
                 $targetText.promise().done(function() {
                     requestAnimationFrame(function() {
-                        // For CBT layout, scroll within the reading column
+                        // First scroll - initial positioning
                         var $readingColumn = $targetText.closest('.reading-column');
                         if ($readingColumn.length) {
                             // CBT layout - scroll to center the marker/highlight within the column viewport
@@ -1558,7 +1558,18 @@
                             var targetScrollTop = columnScrollTop + markerOffset - (columnHeight / 2) + (elementHeight / 2);
                             $readingColumn.animate({
                                 scrollTop: targetScrollTop
-                            }, 500);
+                            }, 500, function() {
+                                // Second scroll after first completes - recalculate from new position
+                                // Using 300ms (shorter than initial 500ms) for smoother final positioning
+                                requestAnimationFrame(function() {
+                                    var markerOffset2 = elementToCenter.position().top;
+                                    var columnScrollTop2 = $readingColumn.scrollTop();
+                                    var targetScrollTop2 = columnScrollTop2 + markerOffset2 - (columnHeight / 2) + (elementHeight / 2);
+                                    $readingColumn.animate({
+                                        scrollTop: targetScrollTop2
+                                    }, 300);
+                                });
+                            });
                         } else {
                             // Standard layout - scroll the whole page to center the marker/highlight
                             var elementToCenter = $answerHighlight.length ? $answerHighlight : $questionMarker;
@@ -1568,7 +1579,16 @@
                             var targetScrollTop = elementToCenter.offset().top - (windowHeight / 2) + (elementHeight / 2);
                             $('html, body').animate({
                                 scrollTop: targetScrollTop
-                            }, 500);
+                            }, 500, function() {
+                                // Second scroll after first completes - recalculate from new position
+                                // Using 300ms (shorter than initial 500ms) for smoother final positioning
+                                requestAnimationFrame(function() {
+                                    var targetScrollTop2 = elementToCenter.offset().top - (windowHeight / 2) + (elementHeight / 2);
+                                    $('html, body').animate({
+                                        scrollTop: targetScrollTop2
+                                    }, 300);
+                                });
+                            });
                         }
                     });
                 });
