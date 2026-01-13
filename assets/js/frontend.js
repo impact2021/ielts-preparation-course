@@ -2624,66 +2624,6 @@
             $('body').addClass('ielts-quiz-focus-mode');
             $('html').addClass('ielts-quiz-focus-mode');
             
-            // Store last known dimensions to detect real changes
-            var lastWidth = 0;
-            var lastHeight = 0;
-            
-            // Function to recalculate and apply dynamic heights
-            function updateDynamicHeights(force) {
-                // Force a fresh read of current viewport dimensions
-                var vh = window.innerHeight;
-                var vw = window.innerWidth;
-                
-                // Only update if dimensions actually changed (unless forced)
-                if (!force && vh === lastHeight && vw === lastWidth) {
-                    return;
-                }
-                
-                lastHeight = vh;
-                lastWidth = vw;
-                
-                var isFocusMode = $('body').hasClass('ielts-quiz-focus-mode');
-                // Check if header is visible - use single source of truth
-                var isHeaderVisible = $('.quiz-header').hasClass('header-visible');
-                
-                // Calculate appropriate offset based on focus mode, header visibility, and screen size
-                var offset;
-                if (isFocusMode) {
-                    if (isHeaderVisible) {
-                        // When header is visible in focus mode, add extra offset for header height
-                        if (vw <= 768) {
-                            offset = 400; // Mobile focus mode with header
-                        } else if (vw <= 1024) {
-                            offset = 350; // Tablet focus mode with header
-                        } else {
-                            offset = 300; // Desktop focus mode with header
-                        }
-                    } else {
-                        // Focus mode without header
-                        if (vw <= 768) {
-                            offset = 220; // Mobile focus mode
-                        } else if (vw <= 1024) {
-                            offset = 200; // Tablet focus mode
-                        } else {
-                            offset = 180; // Desktop focus mode
-                        }
-                    }
-                } else {
-                    if (vw <= 768) {
-                        offset = 450; // Mobile normal mode
-                    } else if (vw <= 1024) {
-                        offset = 400; // Tablet normal mode
-                    } else {
-                        offset = 300; // Desktop normal mode
-                    }
-                }
-                
-                var maxHeight = vh - offset;
-                
-                // Apply the calculated height to the columns
-                $('.reading-column, .questions-column, .listening-audio-column').css('max-height', maxHeight + 'px');
-            }
-            
             // Header toggle functionality
             $('#header-toggle-btn').on('click', function(e) {
                 e.preventDefault();
@@ -2712,67 +2652,6 @@
                     }
                     $toggleIcon.text('▲');
                     $toggleBtn.attr('title', 'Hide header');
-                }
-                
-                // Trigger height recalculation after header toggle
-                // Use short delay to allow CSS transitions/rendering to complete before measuring
-                var HEADER_TOGGLE_DELAY_MS = 50;
-                setTimeout(function() {
-                    // Force recalculation regardless of cached dimensions
-                    updateDynamicHeights(true);
-                }, HEADER_TOGGLE_DELAY_MS);
-            });
-            
-            // Initial calculation with small delay to ensure page is fully loaded
-            setTimeout(function() {
-                updateDynamicHeights();
-            }, 100);
-            
-            // Recalculate on window resize (includes moving to different monitor)
-            var resizeTimeout;
-            $(window).on('resize', function() {
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(function() {
-                    updateDynamicHeights();
-                }, 50); // Reduced debounce time for faster response
-            });
-            
-            // Additional listener for screen changes (moving between monitors)
-            // This catches monitor changes that might not trigger resize
-            if (window.matchMedia) {
-                var mediaQueryList = window.matchMedia('(min-width: 0px)');
-                var mediaHandler = function() {
-                    setTimeout(function() {
-                        updateDynamicHeights();
-                    }, 100);
-                };
-                
-                // Modern browsers
-                if (mediaQueryList.addEventListener) {
-                    mediaQueryList.addEventListener('change', mediaHandler);
-                } else if (mediaQueryList.addListener) {
-                    // Older browsers
-                    mediaQueryList.addListener(mediaHandler);
-                }
-            }
-            
-            // Periodic check for dimension changes (fallback for extended monitor issues)
-            // Check every second for height changes when window is focused and page is visible
-            var intervalCheck = setInterval(function() {
-                if (document.hasFocus() && !document.hidden) {
-                    var currentHeight = window.innerHeight;
-                    var currentWidth = window.innerWidth;
-                    if (currentHeight !== lastHeight || currentWidth !== lastWidth) {
-                        updateDynamicHeights();
-                    }
-                }
-            }, 1000);
-            
-            // Clean up interval on page unload
-            $(window).on('beforeunload', function() {
-                if (intervalCheck) {
-                    clearInterval(intervalCheck);
-                    intervalCheck = null;
                 }
             });
         }

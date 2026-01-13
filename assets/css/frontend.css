@@ -3194,26 +3194,26 @@ body.ielts-quiz-focus-mode .content-area {
     margin-bottom: 0 !important;
 }
 
+/* Focus mode: Use flex-based layout to ensure navigation bar sits at absolute bottom */
 body.ielts-quiz-focus-mode .ielts-computer-based-quiz,
 body.ielts-quiz-focus-mode .ielts-listening-practice-quiz,
 body.ielts-quiz-focus-mode .ielts-listening-exercise-quiz {
-    min-height: 100vh;
+    height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 /* Maximize available space in focus mode */
 body.ielts-quiz-focus-mode .computer-based-container {
+    flex: 1 !important;
     margin-bottom: 0 !important;
     border-radius: 0 !important;
     border-left: none !important;
     border-right: none !important;
-}
-
-/* Force no bottom spacing on quiz containers and their children */
-body.ielts-quiz-focus-mode .ielts-computer-based-quiz,
-body.ielts-quiz-focus-mode .ielts-listening-practice-quiz,
-body.ielts-quiz-focus-mode .ielts-listening-exercise-quiz {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
 }
 
 /* Ensure questions column and content have no bottom spacing */
@@ -3227,32 +3227,16 @@ body.ielts-quiz-focus-mode .questions-content {
     margin-bottom: 0 !important;
 }
 
-/* Force navigation bar to stick to absolute bottom */
+/* Question navigation bar as flex child - will stick to bottom automatically */
 body.ielts-quiz-focus-mode .question-navigation {
+    flex-shrink: 0 !important;
     margin-bottom: 0 !important;
-    position: sticky;
-    bottom: 0 !important;
+    position: static !important; /* Don't use sticky - flex layout handles positioning */
 }
 
+/* Columns fill available space without fixed height calculations */
 body.ielts-quiz-focus-mode .reading-column,
 body.ielts-quiz-focus-mode .questions-column,
 body.ielts-quiz-focus-mode .listening-audio-column {
-    max-height: calc(100vh - 12rem) !important;
-}
-
-/* Focus mode responsive optimizations */
-@media (max-width: 1024px) {
-    body.ielts-quiz-focus-mode .reading-column,
-    body.ielts-quiz-focus-mode .questions-column,
-    body.ielts-quiz-focus-mode .listening-audio-column {
-        max-height: calc(100vh - 13rem) !important;
-    }
-}
-
-@media (max-width: 768px) {
-    body.ielts-quiz-focus-mode .reading-column,
-    body.ielts-quiz-focus-mode .questions-column,
-    body.ielts-quiz-focus-mode .listening-audio-column {
-        max-height: calc(100vh - 14rem) !important;
-    }
+    max-height: 100% !important;
 }
