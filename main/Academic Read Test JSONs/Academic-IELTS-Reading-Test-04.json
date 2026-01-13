@@ -48,7 +48,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -82,7 +82,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -109,14 +109,14 @@
             "instructions": "",
             "question": "4. The Prince William Sound earthquake was five times as powerful as the 1960 Chilean earthquake.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: FALSE. Para 5 states: 'the 1960 Chile earthquake, measuring 9.5, was five times more powerful as the next highest recorded earthquake, the 1964 Prince William Sound earthquake in Alaska, which was recorded at 9.0.'",
+            "no_answer_feedback": "The correct answer is: FALSE. Para 5 states: 'the 1960 Chile earthquake, measuring 9.5, was five times more powerful than the next highest recorded earthquake, the 1964 Prince William Sound earthquake in Alaska, which was recorded at 9.0.'",
             "correct_feedback": "Correct! The passage states the opposite - the 1960 Chilean earthquake was five times more powerful than the Prince William Sound earthquake.",
-            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Para 5 states: 'the 1960 Chile earthquake... was five times more powerful as the... 1964 Prince William Sound earthquake'",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Para 5 states: 'the 1960 Chile earthquake... was five times more powerful than the... 1964 Prince William Sound earthquake'",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -131,7 +131,7 @@
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is: FALSE. Para 5 clearly states: 'the 1960 Chile earthquake... was five times more powerful as the... 1964 Prince William Sound earthquake'"
+                    "feedback": "Incorrect. The correct answer is: FALSE. Para 5 clearly states: 'the 1960 Chile earthquake... was five times more powerful than the... 1964 Prince William Sound earthquake'"
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -150,7 +150,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -223,7 +223,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "was first predicted by the Japanese.",
@@ -262,7 +262,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "depends on how much energy is required to cause the earthquake.",
@@ -301,7 +301,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "is used to assess financial loss.",
@@ -340,7 +340,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "Greece",
@@ -399,7 +399,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "Greece",
@@ -458,7 +458,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "Greece",
@@ -512,12 +512,12 @@
             "points": 1,
             "no_answer_feedback": "The correct answer is C (Alaska). Para 5 has the sentence '…the 1960 Chile earthquake… was twice as powerful as the next… earthquake, the 1964… earthquake in Alaska…', indicating Alaska had the second most powerful recorded earthquake.",
             "correct_feedback": "Correct! Para 5 mentions the 1964 Prince William Sound earthquake in Alaska was the next highest recorded earthquake after the 1960 Chile earthquake.",
-            "incorrect_feedback": "Incorrect. The correct answer is C (Alaska). Para 5 has the sentence '…the 1960 Chile earthquake… was five times more powerful as the next highest recorded earthquake, the 1964 Prince William Sound earthquake in Alaska…'.",
+            "incorrect_feedback": "Incorrect. The correct answer is C (Alaska). Para 5 has the sentence '…the 1960 Chile earthquake… was five times more powerful than the next highest recorded earthquake, the 1964 Prince William Sound earthquake in Alaska…'.",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "Greece",
@@ -576,7 +576,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "I: Fashioning their environment",
@@ -645,7 +645,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "I: Fashioning their environment",
@@ -714,7 +714,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "I: Fashioning their environment",
@@ -783,7 +783,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "I: Fashioning their environment",
@@ -852,7 +852,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "I: Fashioning their environment",
@@ -921,7 +921,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "I: Fashioning their environment",
@@ -990,7 +990,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1024,7 +1024,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1058,7 +1058,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1126,7 +1126,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "mate for life.",
@@ -1160,7 +1160,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "reduces the frog and toad numbers.",
@@ -1194,7 +1194,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "their gnawing through wooden bridges.",
@@ -1228,7 +1228,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "have been determined by the International Maritime Organisation.",
@@ -1292,7 +1292,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "have been determined by the International Maritime Organisation.",
@@ -1356,7 +1356,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "have been determined by the International Maritime Organisation.",
@@ -1420,7 +1420,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "have been determined by the International Maritime Organisation.",
@@ -1484,7 +1484,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "have been determined by the International Maritime Organisation.",
@@ -1548,7 +1548,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1582,7 +1582,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1616,7 +1616,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1650,7 +1650,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1684,7 +1684,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1718,7 +1718,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1752,7 +1752,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1801,7 +1801,7 @@
     "reading_texts": [
         {
             "title": "Reading Passage 1",
-            "content": "Earthquakes and how we measure them\r\n\r\n<span id=\"reading-text-q12\" data-question=\"12\"><span class=\"question-marker-badge\">Q12</span></span>In the year 1556, an earthquake occurred in China's Shanxi province, and the records show that more than 800,000 people perished. City walls, government buildings, commercial premises, domestic dwellings and temples all collapsed. <span class=\"reading-text-answer-marker\">With the analysis of the quake by scholars at the time, scientists and historians today have estimated the power of the quake was particularly strong</span>, registering a magnitude of 8.0. <span id=\"reading-text-q6\" data-question=\"6\"><span class=\"question-marker-badge\">Q6</span></span>More recent earthquakes have had similarly devastating effects, with <span class=\"reading-text-answer-marker\">2010's Haiti earthquake killing more than 300,000 people</span>, and the Indonesian quake in 2004 leading to the loss of more than 225,000 lives, with a magnitude of 9.1. <span id=\"reading-text-q1\" data-question=\"1\"><span class=\"question-marker-badge\">Q1</span></span><span class=\"reading-text-answer-marker\">The biggest earthquake to be measured occurred in 1960, in Chile, and registered 9.5 on the Richter Scale</span>, as it was used then. This resulted in 1900 deaths and caused an estimated US$4 billion in damage.\r\n\r\n<span id=\"reading-text-q2\" data-question=\"2\"><span class=\"question-marker-badge\">Q2</span></span>Until the last few hundred years, very little was known regarding the cause of these natural disasters. <span class=\"reading-text-answer-marker\">Early beliefs regarding the causes of earthquakes were put forward by Greek philosophers, who believed that earthquakes could be attributed to air escaping from cavities buried deep in the Earth's centre, or to imbalances between levels of water under the earth. Other theories in other cultures revolved around religious beliefs, with <span id=\"reading-text-q11\" data-question=\"11\"><span class=\"question-marker-badge\">Q11</span></span>ancient Norse, Japanese and Peruvian people believing that the earthquakes showed that the gods were unhappy with the Earth, and the people on it</span>. Pliny the Elder, an ancient Roman philosopher, (32 AD) labelled earthquakes as 'underground thunderstorms', and, interestingly, he was probably not far from the truth.\r\n\r\n<span id=\"reading-text-q10\" data-question=\"10\"><span class=\"question-marker-badge\">Q10</span></span>In the mid-19th century, Italian researchers developed what was called a seismograph, which was used to measure the motion of the ground during an earthquake. This device recorded what are known as 'ground oscillations' or movements of the earth, and research began to pick up pace. The sensitivity of seismographs improved considerably over the next 50 or so years, but the next major development came in the early 20th century with <span class=\"reading-text-answer-marker\">Charles Richter and Beno Gutenberg of the California Institute of Technology in the USA. They modified the seismograph and built what is now known as the Richter Scale, a measuring device used to record the energy released by an earthquake</span>, and further, to compare earthquakes.\r\n\r\n<span id=\"reading-text-q7\" data-question=\"7\"><span class=\"question-marker-badge\">Q7</span></span>With this accumulation of data, and further technological advances, British and American researchers put forward a theory in the 1960s to define the causes of earthquakes, a theory referred to as plate tectonics. Simply put, plate tectonics refers to movements gigantic continent-sized geological plates on the Earth's outer shell moving, sometimes imperceptibly, over the layer of the Earth's inner core. <span id=\"reading-text-q3\" data-question=\"3\"><span class=\"question-marker-badge\">Q3</span></span>It is worth noting that in 1912 the German geophysicist and meteorologist Alfred Wegener presented a theory of 'continental drift' – that is, the movement of continents away from and towards each other – but he could not substantiate his theory with scientific proof. <span class=\"reading-text-answer-marker\">Tectonic plate movement provided that answer</span>. All of this is based on the idea of the earth's having a liquid centre (the molten core), with heat rising in various forms, through magma, sometimes erupting in volcanoes, and the plates sliding back and forth along boundaries, referred to as fault lines. Possibly one of the most famous is the San Andreas fault running through California, which is part of the greater 'Ring of Fire' fault, encircling the Pacific Ocean.\r\n\r\n<span id=\"reading-text-q8\" data-question=\"8\"><span class=\"question-marker-badge\">Q8</span></span>The Richter Scale, the product of Richter and Gutenberg's research, measures the level of energy released, garnering data from seismographs, and comparing them. The way that the scale is designed means that a level 6 earthquake is 10 times more powerful than a level 5 earthquake, and a level 7 earthquake is 10 times more powerful than a level 6, and so on. <span id=\"reading-text-q4\" data-question=\"4\"><span class=\"question-marker-badge\">Q4</span></span><span id=\"reading-text-q13\" data-question=\"13\"><span class=\"question-marker-badge\">Q13</span></span>Using this scale of measurement, <span class=\"reading-text-answer-marker\">the 1960 Chile earthquake, measuring 9.5, was five times more powerful as the next highest recorded earthquake, the 1964 Prince William Sound earthquake in Alaska</span>, which was recorded at 9.0. <span class=\"reading-text-answer-marker\">Many factors are involved in this calculation, including the depth of the earthquake and whether the quake is below the earth or under the ocean.</span> With regards the depth of the earthquake, standards classify a shallow earthquake as between 9 and 70 kms deep, an intermediate quake is 70 to 300 kms below the earth's surface, and deep earthquakes are 300 – 700 kms deep.\r\n\r\n<span id=\"reading-text-q9\" data-question=\"9\"><span class=\"question-marker-badge\">Q9</span></span>Another scale used by scientists is the Mercalli scale, which <span class=\"reading-text-answer-marker\">measures the extent of damage</span>, and is a much more subjective measurement. Mercalli measurements are given in Roman numerals from I to XII, with a II registering no noticeable property damage, and a XII recognising major property loss, significant physical alteration to the landscape such as slippages, and related natural disasters, including landslides and tsunamis. Mercalli levels, by their very nature, are determined well after earthquakes, as many other factors need to be included to determine levels which can be substantiated.\r\n\r\n<span id=\"reading-text-q5\" data-question=\"5\"><span class=\"question-marker-badge\">Q5</span></span><span class=\"reading-text-answer-marker\">Earthquakes measuring less than 2 on the Richter Scale are known as microquakes, and are often not felt by humans</span> (although animals have a much more perceptive feel for earthquakes, both those that are occurring and those about to occur). Microquakes are frequent, with thousands occurring each year, and moderate earthquakes, those less than 6.0 on the measurable scales, happening less frequently. Major earthquakes occur on the average of once a year, and scientists have noted that an earthquake at the level of 10 or more, which would equate to the major fault lines rupturing simultaneously, would be catastrophic to a hugely disruptive degree, and would be the absolute upper limit. Work continues to both predict, and to understand, earthquakes, and for that, the general public are thankful."
+            "content": "Earthquakes and how we measure them\r\n\r\n<span id=\"reading-text-q12\" data-question=\"12\"><span class=\"question-marker-badge\">Q12</span></span>In the year 1556, an earthquake occurred in China's Shanxi province, and the records show that more than 800,000 people perished. City walls, government buildings, commercial premises, domestic dwellings and temples all collapsed. <span class=\"reading-text-answer-marker\">With the analysis of the quake by scholars at the time, scientists and historians today have estimated the power of the quake was particularly strong</span>, registering a magnitude of 8.0. <span id=\"reading-text-q6\" data-question=\"6\"><span class=\"question-marker-badge\">Q6</span></span>More recent earthquakes have had similarly devastating effects, with <span class=\"reading-text-answer-marker\">2010's Haiti earthquake killing more than 300,000 people</span>, and the Indonesian quake in 2004 leading to the loss of more than 225,000 lives, with a magnitude of 9.1. <span id=\"reading-text-q1\" data-question=\"1\"><span class=\"question-marker-badge\">Q1</span></span><span class=\"reading-text-answer-marker\">The biggest earthquake to be measured occurred in 1960, in Chile, and registered 9.5 on the Richter Scale</span>, as it was used then. This resulted in 1900 deaths and caused an estimated US$4 billion in damage.\r\n\r\n<span id=\"reading-text-q2\" data-question=\"2\"><span class=\"question-marker-badge\">Q2</span></span>Until the last few hundred years, very little was known regarding the cause of these natural disasters. <span class=\"reading-text-answer-marker\">Early beliefs regarding the causes of earthquakes were put forward by Greek philosophers, who believed that earthquakes could be attributed to air escaping from cavities buried deep in the Earth's centre, or to imbalances between levels of water under the earth. Other theories in other cultures revolved around religious beliefs, with <span id=\"reading-text-q11\" data-question=\"11\"><span class=\"question-marker-badge\">Q11</span></span>ancient Norse, Japanese and Peruvian people believing that the earthquakes showed that the gods were unhappy with the Earth, and the people on it</span>. Pliny the Elder, an ancient Roman philosopher, (32 AD) labelled earthquakes as 'underground thunderstorms', and, interestingly, he was probably not far from the truth.\r\n\r\n<span id=\"reading-text-q10\" data-question=\"10\"><span class=\"question-marker-badge\">Q10</span></span>In the mid-19th century, Italian researchers developed what was called a seismograph, which was used to measure the motion of the ground during an earthquake. This device recorded what are known as 'ground oscillations' or movements of the earth, and research began to pick up pace. The sensitivity of seismographs improved considerably over the next 50 or so years, but the next major development came in the early 20th century with <span class=\"reading-text-answer-marker\">Charles Richter and Beno Gutenberg of the California Institute of Technology in the USA. They modified the seismograph and built what is now known as the Richter Scale, a measuring device used to record the energy released by an earthquake</span>, and further, to compare earthquakes.\r\n\r\n<span id=\"reading-text-q7\" data-question=\"7\"><span class=\"question-marker-badge\">Q7</span></span>With this accumulation of data, and further technological advances, British and American researchers put forward a theory in the 1960s to define the causes of earthquakes, a theory referred to as plate tectonics. Simply put, plate tectonics refers to movements gigantic continent-sized geological plates on the Earth's outer shell moving, sometimes imperceptibly, over the layer of the Earth's inner core. <span id=\"reading-text-q3\" data-question=\"3\"><span class=\"question-marker-badge\">Q3</span></span>It is worth noting that in 1912 the German geophysicist and meteorologist Alfred Wegener presented a theory of 'continental drift' – that is, the movement of continents away from and towards each other – but he could not substantiate his theory with scientific proof. <span class=\"reading-text-answer-marker\">Tectonic plate movement provided that answer</span>. All of this is based on the idea of the earth's having a liquid centre (the molten core), with heat rising in various forms, through magma, sometimes erupting in volcanoes, and the plates sliding back and forth along boundaries, referred to as fault lines. Possibly one of the most famous is the San Andreas fault running through California, which is part of the greater 'Ring of Fire' fault, encircling the Pacific Ocean.\r\n\r\n<span id=\"reading-text-q8\" data-question=\"8\"><span class=\"question-marker-badge\">Q8</span></span>The Richter Scale, the product of Richter and Gutenberg's research, measures the level of energy released, garnering data from seismographs, and comparing them. The way that the scale is designed means that a level 6 earthquake is 10 times more powerful than a level 5 earthquake, and a level 7 earthquake is 10 times more powerful than a level 6, and so on. <span id=\"reading-text-q4\" data-question=\"4\"><span class=\"question-marker-badge\">Q4</span></span><span id=\"reading-text-q13\" data-question=\"13\"><span class=\"question-marker-badge\">Q13</span></span>Using this scale of measurement, <span class=\"reading-text-answer-marker\">the 1960 Chile earthquake, measuring 9.5, was five times more powerful than the next highest recorded earthquake, the 1964 Prince William Sound earthquake in Alaska</span>, which was recorded at 9.0. <span class=\"reading-text-answer-marker\">Many factors are involved in this calculation, including the depth of the earthquake and whether the quake is below the earth or under the ocean.</span> With regards the depth of the earthquake, standards classify a shallow earthquake as between 9 and 70 kms deep, an intermediate quake is 70 to 300 kms below the earth's surface, and deep earthquakes are 300 – 700 kms deep.\r\n\r\n<span id=\"reading-text-q9\" data-question=\"9\"><span class=\"question-marker-badge\">Q9</span></span>Another scale used by scientists is the Mercalli scale, which <span class=\"reading-text-answer-marker\">measures the extent of damage</span>, and is a much more subjective measurement. Mercalli measurements are given in Roman numerals from I to XII, with a II registering no noticeable property damage, and a XII recognising major property loss, significant physical alteration to the landscape such as slippages, and related natural disasters, including landslides and tsunamis. Mercalli levels, by their very nature, are determined well after earthquakes, as many other factors need to be included to determine levels which can be substantiated.\r\n\r\n<span id=\"reading-text-q5\" data-question=\"5\"><span class=\"question-marker-badge\">Q5</span></span><span class=\"reading-text-answer-marker\">Earthquakes measuring less than 2 on the Richter Scale are known as microquakes, and are often not felt by humans</span> (although animals have a much more perceptive feel for earthquakes, both those that are occurring and those about to occur). Microquakes are frequent, with thousands occurring each year, and moderate earthquakes, those less than 6.0 on the measurable scales, happening less frequently. Major earthquakes occur on the average of once a year, and scientists have noted that an earthquake at the level of 10 or more, which would equate to the major fault lines rupturing simultaneously, would be catastrophic to a hugely disruptive degree, and would be the absolute upper limit. Work continues to both predict, and to understand, earthquakes, and for that, the general public are thankful."
         },
         {
             "title": "Reading Passage 2",
