@@ -7,6 +7,12 @@
     
     $(document).ready(function() {
         
+        // Constants for scroll behavior and animations
+        var SCROLL_ANIMATION_DURATION = 300;
+        var MODAL_FADEOUT_DURATION = 300;
+        var MODAL_FADEOUT_BUFFER = 50;
+        var SCROLL_OFFSET_NON_CBT = 100;
+        
         // Helper function to force reload from server, bypassing cache
         function forceReload() {
             var url = new URL(window.location);
@@ -1142,25 +1148,16 @@
             }, 5000);
         }
         
-        // Computer-Based Quiz Layout: Question Navigation
-        $('.question-nav-btn').on('click', function(e) {
-            e.preventDefault();
-            var questionIndex = $(this).data('question');
-            var questionElement = $('#question-' + questionIndex);
+        // Helper function to scroll to a question in CBT or non-CBT layouts
+        function scrollToQuestion(questionElement) {
+            var questionsColumn = $('.questions-column');
             
-            if (questionElement.length) {
-                // Scroll to the question in the right column
-                var questionsColumn = $('.questions-column');
-                // Get absolute position within the scrollable container
-                // - offset().top gives the element's position from the document top
-                // - We subtract the column's offset to get position relative to column
-                // - We add columnScrollTop because the column's content extends beyond viewport
-                // - This gives us the element's true position within the scrollable content area
+            if (questionsColumn.length && questionElement.length) {
+                // For CBT layouts: scroll the questions column to center the question
+                // Using absolute positioning to avoid cumulative scroll errors (v11.22 fix)
                 var questionAbsoluteTop = questionElement.offset().top;
                 var columnAbsoluteTop = questionsColumn.offset().top;
                 var columnScrollTop = questionsColumn.scrollTop();
-                // Example: If question is at document position 2000px, column at 1000px, and scrolled 500px down:
-                // questionPositionInContainer = 2000 - 1000 + 500 = 1500px from content start
                 var questionPositionInContainer = questionAbsoluteTop - columnAbsoluteTop + columnScrollTop;
                 
                 // Calculate target scroll position to center the question
@@ -1170,7 +1167,24 @@
                 
                 questionsColumn.animate({
                     scrollTop: targetScrollTop
-                }, 300);
+                }, SCROLL_ANIMATION_DURATION);
+            } else if (questionElement.length) {
+                // For non-CBT layouts: scroll the page to the question
+                $('html, body').animate({
+                    scrollTop: questionElement.offset().top - SCROLL_OFFSET_NON_CBT
+                }, SCROLL_ANIMATION_DURATION);
+            }
+        }
+        
+        // Computer-Based Quiz Layout: Question Navigation
+        $('.question-nav-btn').on('click', function(e) {
+            e.preventDefault();
+            var questionIndex = $(this).data('question');
+            var questionElement = $('#question-' + questionIndex);
+            
+            if (questionElement.length) {
+                // Scroll to the question using the helper function
+                scrollToQuestion(questionElement);
                 
                 // Highlight the question briefly
                 questionElement.addClass('highlight-question');
@@ -1664,14 +1678,14 @@
             
             // Handle modal close (use event delegation)
             $(document).on('click', '.cbt-result-modal-close, .cbt-result-modal-overlay', function() {
-                $('#cbt-result-modal').fadeOut(300);
+                $('#cbt-result-modal').fadeOut(MODAL_FADEOUT_DURATION);
                 $('body').css('overflow', '');
             });
             
             // Handle retake button (use event delegation)
             $(document).on('click', '#cbt-result-modal .quiz-retake-btn', function(e) {
                 e.preventDefault();
-                $('#cbt-result-modal').fadeOut(300);
+                $('#cbt-result-modal').fadeOut(MODAL_FADEOUT_DURATION);
                 $('body').css('overflow', '');
                 forceReload();
             });
@@ -1679,9 +1693,28 @@
             // Handle "Review my answers" button (use event delegation)
             $(document).on('click', '.cbt-review-answers-btn', function(e) {
                 e.preventDefault();
-                $('#cbt-result-modal').fadeOut(300);
+                $('#cbt-result-modal').fadeOut(MODAL_FADEOUT_DURATION);
                 $('body').css('overflow', '');
-                // Modal closes and user can see the highlighted answers in the form
+                
+                // Scroll to show feedback after modal closes
+                setTimeout(function() {
+                    // Find the first question dynamically (more robust than assuming #question-0)
+                    var firstQuestion = $('.quiz-question[id^="question-"]').first();
+                    if (firstQuestion.length === 0) {
+                        // Fallback to #question-0 if dynamic selector doesn't work
+                        firstQuestion = $('#question-0');
+                    }
+                    if (firstQuestion.length === 0) {
+                        // Final fallback: try to find any element with class quiz-question
+                        firstQuestion = $('.quiz-question').first();
+                    }
+                    
+                    // Only scroll if we found a question element
+                    if (firstQuestion.length > 0) {
+                        scrollToQuestion(firstQuestion);
+                    }
+                    // If no question found, modal closes without scrolling (graceful degradation)
+                }, MODAL_FADEOUT_DURATION + MODAL_FADEOUT_BUFFER);
             });
         }
         
