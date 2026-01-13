@@ -1152,28 +1152,33 @@
         function scrollToQuestion(questionElement) {
             var questionsColumn = $('.questions-column');
             
-            if (questionsColumn.length && questionElement.length) {
-                // For CBT layouts: scroll the questions column to center the question
-                // Using absolute positioning to avoid cumulative scroll errors (v11.22 fix)
-                var questionAbsoluteTop = questionElement.offset().top;
-                var columnAbsoluteTop = questionsColumn.offset().top;
-                var columnScrollTop = questionsColumn.scrollTop();
-                var questionPositionInContainer = questionAbsoluteTop - columnAbsoluteTop + columnScrollTop;
-                
-                // Calculate target scroll position to center the question
-                var columnHeight = questionsColumn.height();
-                var questionHeight = questionElement.outerHeight();
-                var targetScrollTop = questionPositionInContainer - (columnHeight / 2) + (questionHeight / 2);
-                
-                questionsColumn.animate({
-                    scrollTop: targetScrollTop
-                }, SCROLL_ANIMATION_DURATION);
-            } else if (questionElement.length) {
-                // For non-CBT layouts: scroll the page to the question
-                $('html, body').animate({
-                    scrollTop: questionElement.offset().top - SCROLL_OFFSET_NON_CBT
-                }, SCROLL_ANIMATION_DURATION);
-            }
+            // Defer position calculations to next animation frame to ensure layout is stable
+            // This fixes the issue where scrolling back up requires a double-click
+            // The browser needs to finish any pending layout updates before positions are accurate
+            requestAnimationFrame(function() {
+                if (questionsColumn.length && questionElement.length) {
+                    // For CBT layouts: scroll the questions column to center the question
+                    // Using absolute positioning to avoid cumulative scroll errors (v11.22 fix)
+                    var questionAbsoluteTop = questionElement.offset().top;
+                    var columnAbsoluteTop = questionsColumn.offset().top;
+                    var columnScrollTop = questionsColumn.scrollTop();
+                    var questionPositionInContainer = questionAbsoluteTop - columnAbsoluteTop + columnScrollTop;
+                    
+                    // Calculate target scroll position to center the question
+                    var columnHeight = questionsColumn.height();
+                    var questionHeight = questionElement.outerHeight();
+                    var targetScrollTop = questionPositionInContainer - (columnHeight / 2) + (questionHeight / 2);
+                    
+                    questionsColumn.animate({
+                        scrollTop: targetScrollTop
+                    }, SCROLL_ANIMATION_DURATION);
+                } else if (questionElement.length) {
+                    // For non-CBT layouts: scroll the page to the question
+                    $('html, body').animate({
+                        scrollTop: questionElement.offset().top - SCROLL_OFFSET_NON_CBT
+                    }, SCROLL_ANIMATION_DURATION);
+                }
+            });
         }
         
         // Computer-Based Quiz Layout: Question Navigation
