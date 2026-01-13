@@ -131,9 +131,25 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'In the 1960s, the then-Hong Kong government commissioned a study on finding solutions to the worrying road congestion which accompanied Hong Kong's growing economic status.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states that the government commissioned a study due to Hong Kong's growing economic status, so the statement is TRUE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information in paragraph 3, stating the government commissioned a study due to road congestion accompanying Hong Kong's growth."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -149,9 +165,25 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'The system was an instant success,' which contradicts a slow initial reaction."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'The system was an instant success, and trains were immediately upgraded to six carriages to accommodate the increased passenger numbers.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide information about the initial reaction, describing it as 'an instant success.'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -167,9 +199,25 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions: 'the plans for extension, which had been drawn up along with the original proposals, were soon actioned with further construction undertaken.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states that extension plans 'had been drawn up along with the original proposals,' indicating future growth was anticipated."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information, stating that plans for extension were drawn up along with the original proposals."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -185,9 +233,25 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions tunnels connecting Kowloon with Hong Kong Island but does not specify whether they were designed for both rail and vehicle traffic."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does not contradict this statement; it simply does not provide information about whether the tunnels were designed for both rail and vehicle traffic."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions tunnels connecting mainland Kowloon with Hong Kong Island but does not specify whether they were designed for both rail and vehicle traffic."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -203,9 +267,25 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'With the planned move of Hong Kong's International airport... it was recognized that mass transit was necessary for the movement of people to make the airport viable.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states that mass transit was 'necessary for the movement of people to make the airport viable,' indicating the airport was reliant on rail links."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information, stating that mass transit was recognized as necessary to make the airport viable."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
