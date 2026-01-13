@@ -1686,7 +1686,7 @@
             "show_option_letters": false
         },
         {
-            "type": "closed_question",
+            "type": "open_question",
             "instructions": "Questions 33 – 37\r\n\r\nComplete the sentences. Use NO MORE THAN TWO WORDS OR A NUMBER from the passage for each answer.",
             "question": "33. Many consider William Shakespeare to be the ___ in the world.",
             "points": 1,
@@ -1701,10 +1701,11 @@
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1
         },
         {
-            "type": "closed_question",
+            "type": "open_question",
             "instructions": "",
             "question": "34. A total of ___ plays were published for the first time in the First Folio.",
             "points": 1,
@@ -1719,10 +1720,11 @@
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1
         },
         {
-            "type": "closed_question",
+            "type": "open_question",
             "instructions": "",
             "question": "35. A performance of The Tempest was given in the ___ in 1613.",
             "points": 1,
@@ -1737,10 +1739,11 @@
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1
         },
         {
-            "type": "closed_question",
+            "type": "open_question",
             "instructions": "",
             "question": "36. Some viewed Prospero’s last monologue as an expression of Shakespeare’s plan ___ .",
             "points": 1,
@@ -1755,10 +1758,11 @@
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1
         },
         {
-            "type": "closed_question",
+            "type": "open_question",
             "instructions": "",
             "question": "37. Colonial and ___ themes were prominent topics in The Tempest.",
             "points": 1,
@@ -1773,7 +1777,8 @@
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1
         },
         {
             "type": "closed_question",
