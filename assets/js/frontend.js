@@ -1151,11 +1151,25 @@
             if (questionElement.length) {
                 // Scroll to the question in the right column
                 var questionsColumn = $('.questions-column');
-                var questionOffset = questionElement.position().top;
+                // Get absolute position within the scrollable container
+                // - offset().top gives the element's position from the document top
+                // - We subtract the column's offset to get position relative to column
+                // - We add columnScrollTop because the column's content extends beyond viewport
+                // - This gives us the element's true position within the scrollable content area
+                var questionAbsoluteTop = questionElement.offset().top;
+                var columnAbsoluteTop = questionsColumn.offset().top;
                 var columnScrollTop = questionsColumn.scrollTop();
+                // Example: If question is at document position 2000px, column at 1000px, and scrolled 500px down:
+                // questionPositionInContainer = 2000 - 1000 + 500 = 1500px from content start
+                var questionPositionInContainer = questionAbsoluteTop - columnAbsoluteTop + columnScrollTop;
+                
+                // Calculate target scroll position to center the question
+                var columnHeight = questionsColumn.height();
+                var questionHeight = questionElement.outerHeight();
+                var targetScrollTop = questionPositionInContainer - (columnHeight / 2) + (questionHeight / 2);
                 
                 questionsColumn.animate({
-                    scrollTop: columnScrollTop + questionOffset - 50
+                    scrollTop: targetScrollTop
                 }, 300);
                 
                 // Highlight the question briefly

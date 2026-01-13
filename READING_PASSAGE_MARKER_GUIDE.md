@@ -3,6 +3,8 @@
 ## Overview
 This guide explains how to add question markers to reading passages so that the "Show in the reading passage" button can highlight the correct text for students.
 
+**⚠️ CRITICAL: Always use the NEW format with `passage-q#` IDs, NOT the old `reading-text-q#` format!**
+
 ## Two Methods for Adding Markers
 
 You can use either automatic markers or manual markers, depending on your needs.
@@ -103,15 +105,27 @@ When a student clicks "Show in the reading passage":
 3. It adds the `.reading-passage-highlight` class (yellow background)
 4. It scrolls to that location in the passage
 
-## Migration from Old Formats
+## Migration from Old Formats ⚠️ IMPORTANT
 
-If you have existing reading passages using:
-- `id="transcript-q#"` → Change to `id="passage-q#"` (new format)
-- `id="reading-text-q#"` → Change to `id="passage-q#"` (new format)
-- `class="transcript-answer-marker"` → Change to `class="reading-answer-marker"`
-- `class="reading-text-answer-marker"` → Change to `class="reading-answer-marker"`
+**OLD FORMATS - DO NOT USE:**
+- ❌ `id="reading-text-q#" data-question="#"><span class="question-marker-badge">Q#</span></span>` - DEPRECATED
+- ❌ `class="reading-text-answer-marker"` - DEPRECATED
+- ❌ `class="question-marker-badge"` in reading passages - DEPRECATED
 
-The system maintains backward compatibility with `transcript-q#` IDs but `passage-q#` is preferred for reading passages.
+**NEW FORMAT - ALWAYS USE THIS:**
+- ✅ `id="passage-q#" data-question="#"></span>` - CORRECT
+- ✅ `class="reading-answer-marker"` - CORRECT
+
+**Migration Steps:**
+If you have existing reading passages using old formats, update them:
+1. Replace `<span id="reading-text-q#" data-question="#"><span class="question-marker-badge">Q#</span></span>` 
+   with `<span id="passage-q#" data-question="#"></span>`
+2. Replace all `class="reading-text-answer-marker"` with `class="reading-answer-marker"`
+3. Remove any `<span class="question-marker-badge">` elements from reading passages
+
+**For Reference Only** (backward compatibility exists but should not be relied upon):
+- `id="transcript-q#"` - Old format from listening tests, works but use `passage-q#` for reading
+- `class="transcript-answer-marker"` - Old format from listening tests
 
 ## Visual Comparison
 
