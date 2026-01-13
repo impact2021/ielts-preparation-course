@@ -1704,7 +1704,16 @@
                         // Fallback to #question-0 if dynamic selector doesn't work
                         firstQuestion = $('#question-0');
                     }
-                    scrollToQuestion(firstQuestion);
+                    if (firstQuestion.length === 0) {
+                        // Final fallback: try to find any element with class quiz-question
+                        firstQuestion = $('.quiz-question').first();
+                    }
+                    
+                    // Only scroll if we found a question element
+                    if (firstQuestion.length > 0) {
+                        scrollToQuestion(firstQuestion);
+                    }
+                    // If no question found, modal closes without scrolling (graceful degradation)
                 }, MODAL_FADEOUT_DURATION + MODAL_FADEOUT_BUFFER);
             });
         }
