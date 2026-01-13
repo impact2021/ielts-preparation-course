@@ -2,6 +2,11 @@
  * Frontend styles for IELTS Course Manager
  */
 
+/* Global smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Course List */
 .ielts-courses-list {
     display: grid;

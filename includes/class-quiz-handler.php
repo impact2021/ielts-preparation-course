@@ -276,7 +276,7 @@ class IELTS_CM_Quiz_Handler {
                                         $feedback_text .= ' <a href="#" class="listen-to-answer-link" data-start-time="' . esc_attr($field_audio_times['start']) . '" data-end-time="' . esc_attr($field_audio_times['end']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Listen to this answer', 'ielts-course-manager') . '</a>';
                                     }
                                 } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null) {
-                                    $feedback_text .= ' <a href="#" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show me the section of the reading passage', 'ielts-course-manager') . '</a>';
+                                    $feedback_text .= ' <a href="#passage-q' . esc_attr($field_question_num) . '" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show me the section of the reading passage', 'ielts-course-manager') . '</a>';
                                 }
                                 
                                 $field_feedbacks[] = $feedback_text;
@@ -298,7 +298,7 @@ class IELTS_CM_Quiz_Handler {
                                         $feedback_text .= ' <a href="#" class="listen-to-answer-link" data-start-time="' . esc_attr($field_audio_times['start']) . '" data-end-time="' . esc_attr($field_audio_times['end']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Listen to this answer', 'ielts-course-manager') . '</a>';
                                     }
                                 } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null) {
-                                    $feedback_text .= ' <a href="#" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show me the section of the reading passage', 'ielts-course-manager') . '</a>';
+                                    $feedback_text .= ' <a href="#passage-q' . esc_attr($field_question_num) . '" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show me the section of the reading passage', 'ielts-course-manager') . '</a>';
                                 }
                                 
                                 $field_feedbacks[] = $feedback_text;
@@ -321,7 +321,7 @@ class IELTS_CM_Quiz_Handler {
                                     $feedback_text .= ' <a href="#" class="listen-to-answer-link" data-start-time="' . esc_attr($field_audio_times['start']) . '" data-end-time="' . esc_attr($field_audio_times['end']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Listen to this answer', 'ielts-course-manager') . '</a>';
                                 }
                             } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null) {
-                                $feedback_text .= ' <a href="#" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show me the section of the reading passage', 'ielts-course-manager') . '</a>';
+                                $feedback_text .= ' <a href="#passage-q' . esc_attr($field_question_num) . '" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show me the section of the reading passage', 'ielts-course-manager') . '</a>';
                             }
                             
                             $field_feedbacks[] = $feedback_text;

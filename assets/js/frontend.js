@@ -1041,7 +1041,7 @@
                                 // Check if button already exists to avoid duplicates
                                 if (questionElement.find('.show-in-reading-passage-link').length === 0) {
                                     var readingLink = $('<a>')
-                                        .attr('href', '#')
+                                        .attr('href', '#passage-q' + questionNum)
                                         .addClass('show-in-reading-passage-link')
                                         .attr('data-reading-text', questionResult.reading_text_id)
                                         .attr('data-question', questionNum)
@@ -1496,20 +1496,19 @@
         });
         
         // Delegated event handler for "Show me the section of the reading passage" links (for reading tests)
+        // Simple anchor link behavior - just show the correct reading text section and let the browser scroll
         $(document).on('click', '.show-in-reading-passage-link', function(e) {
-            e.preventDefault();
             var readingTextId = $(this).data('reading-text');
             var questionNumber = $(this).data('question');
             
             // Hide all reading text sections
             $('.reading-text-section').hide();
             
-            // Show the linked reading text section
+            // Show the linked reading text section with a fade-in for visual consistency
             var $targetText = $('#reading-text-' + readingTextId);
             $targetText.fadeIn(300);
             
             // Find the question marker in the reading passage
-            // Try passage-q# first (new format), then transcript-q# (old format for backward compatibility)
             var $questionMarker = $('#passage-q' + questionNumber);
             if (!$questionMarker.length) {
                 $questionMarker = $('#transcript-q' + questionNumber);
@@ -1520,11 +1519,9 @@
             
             if ($questionMarker.length) {
                 // Highlight the answer text associated with this question
-                // Look for reading-answer-marker (new manual format) or reading-answer-highlight (auto-generated)
                 var $container = $questionMarker.closest('.reading-text');
                 var $answerHighlight = $container.find('.reading-answer-highlight[data-question="' + questionNumber + '"], .reading-answer-marker[data-question="' + questionNumber + '"]').first();
                 
-                // If no data-question attribute, try finding the next sibling .reading-answer-marker (manual format without data-question)
                 if (!$answerHighlight.length) {
                     $answerHighlight = $questionMarker.next('.reading-answer-marker');
                 }
@@ -1532,87 +1529,15 @@
                 if ($answerHighlight.length) {
                     $answerHighlight.addClass('reading-passage-highlight');
                 } else {
-                    // Fallback: highlight the containing paragraph
                     var $paragraph = $questionMarker.closest('p');
                     if ($paragraph.length) {
                         $paragraph.addClass('reading-passage-highlight');
                     }
                 }
-                
-                // Scroll to the question marker, centering the highlighted section
-                // Wait for fadeIn to complete, then use requestAnimationFrame to ensure layout is stable
-                // Simulate double-click behavior: scroll twice to ensure accurate positioning
-                // Double-click works because the second scroll recalculates from the new position
-                $targetText.promise().done(function() {
-                    requestAnimationFrame(function() {
-                        // First scroll - initial positioning
-                        var $readingColumn = $targetText.closest('.reading-column');
-                        if ($readingColumn.length) {
-                            // CBT layout - scroll to center the marker/highlight within the column viewport
-                            var elementToCenter = $answerHighlight.length ? $answerHighlight : $questionMarker;
-                            var markerOffset = elementToCenter.position().top;
-                            var columnScrollTop = $readingColumn.scrollTop();
-                            var columnHeight = $readingColumn.height();
-                            var elementHeight = elementToCenter.outerHeight();
-                            // Center the element: scroll so element center aligns with viewport center
-                            var targetScrollTop = columnScrollTop + markerOffset - (columnHeight / 2) + (elementHeight / 2);
-                            $readingColumn.animate({
-                                scrollTop: targetScrollTop
-                            }, 500, function() {
-                                // Second scroll after first completes - recalculate from new position
-                                // Using 300ms (shorter than initial 500ms) for smoother final positioning
-                                requestAnimationFrame(function() {
-                                    var markerOffset2 = elementToCenter.position().top;
-                                    var columnScrollTop2 = $readingColumn.scrollTop();
-                                    var targetScrollTop2 = columnScrollTop2 + markerOffset2 - (columnHeight / 2) + (elementHeight / 2);
-                                    $readingColumn.animate({
-                                        scrollTop: targetScrollTop2
-                                    }, 300);
-                                });
-                            });
-                        } else {
-                            // Standard layout - scroll the whole page to center the marker/highlight
-                            var elementToCenter = $answerHighlight.length ? $answerHighlight : $questionMarker;
-                            var windowHeight = $(window).height();
-                            var elementHeight = elementToCenter.outerHeight();
-                            // Center the element: scroll so element center aligns with viewport center
-                            var targetScrollTop = elementToCenter.offset().top - (windowHeight / 2) + (elementHeight / 2);
-                            $('html, body').animate({
-                                scrollTop: targetScrollTop
-                            }, 500, function() {
-                                // Second scroll after first completes - recalculate from new position
-                                // Using 300ms (shorter than initial 500ms) for smoother final positioning
-                                requestAnimationFrame(function() {
-                                    var targetScrollTop2 = elementToCenter.offset().top - (windowHeight / 2) + (elementHeight / 2);
-                                    $('html, body').animate({
-                                        scrollTop: targetScrollTop2
-                                    }, 300);
-                                });
-                            });
-                        }
-                    });
-                });
-            } else {
-                // If no marker found, just scroll to the reading text
-                // Wait for fadeIn to complete, then use requestAnimationFrame
-                $targetText.promise().done(function() {
-                    requestAnimationFrame(function() {
-                        // For CBT layout, scroll within the reading column
-                        var $readingColumn = $targetText.closest('.reading-column');
-                        if ($readingColumn.length) {
-                            // CBT layout - scroll to top of the column to show the reading text
-                            $readingColumn.animate({
-                                scrollTop: 0
-                            }, 500);
-                        } else {
-                            // Standard layout - scroll the whole page to the reading text
-                            $('html, body').animate({
-                                scrollTop: $targetText.offset().top - 100
-                            }, 500);
-                        }
-                    });
-                });
             }
+            
+            // Let the browser handle scrolling via the anchor link (href="#passage-q1" etc.)
+            // No need for custom scroll logic!
         });
         
         // Track answered questions in computer-based layout using event delegation
