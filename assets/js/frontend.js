@@ -1560,6 +1560,7 @@
                                 scrollTop: targetScrollTop
                             }, 500, function() {
                                 // Second scroll after first completes - recalculate from new position
+                                // Using 300ms (shorter than initial 500ms) for smoother final positioning
                                 requestAnimationFrame(function() {
                                     var markerOffset2 = elementToCenter.position().top;
                                     var columnScrollTop2 = $readingColumn.scrollTop();
@@ -1580,6 +1581,7 @@
                                 scrollTop: targetScrollTop
                             }, 500, function() {
                                 // Second scroll after first completes - recalculate from new position
+                                // Using 300ms (shorter than initial 500ms) for smoother final positioning
                                 requestAnimationFrame(function() {
                                     var targetScrollTop2 = elementToCenter.offset().top - (windowHeight / 2) + (elementHeight / 2);
                                     $('html, body').animate({
