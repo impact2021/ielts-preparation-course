@@ -1901,7 +1901,7 @@ select.answer-select-inline.answer-incorrect {
     position: relative;
     display: inline;
     background-color: transparent; /* Transparent by default - only highlighted when clicking "Show me the section" button */
-    padding: 2px 8px;
+    padding: 2px 0;
     border-radius: 3px;
     margin: 0 2px;
     transition: background-color 0.3s ease; /* Smooth transition when highlighting */
