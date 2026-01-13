@@ -154,11 +154,11 @@ Kept only the essential header toggle functionality.
 ## Related Files Changed
 
 1. **assets/css/frontend.css**:
-   - Lines 3197-3243: Replaced calc-based heights with flex layout
+   - Focus mode CSS section: Replaced calc-based heights with flex layout
    - Removed responsive media queries for fixed heights
 
 2. **assets/js/frontend.js**:
-   - Lines 2620-2778: Removed dynamic height calculation code
+   - Focus mode JavaScript section: Removed dynamic height calculation code
    - Kept header toggle functionality
 
 ## Backward Compatibility
