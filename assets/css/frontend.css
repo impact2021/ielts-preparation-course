@@ -3205,6 +3205,20 @@ body.ielts-quiz-focus-mode .ielts-listening-exercise-quiz {
     padding-bottom: 0 !important;
 }
 
+/* Form element needs to be flex container too and grow to fill space */
+body.ielts-quiz-focus-mode .quiz-form {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Timer should not grow, just take its natural height */
+body.ielts-quiz-focus-mode .quiz-timer-fullscreen {
+    flex-shrink: 0 !important;
+}
+
 /* Maximize available space in focus mode */
 body.ielts-quiz-focus-mode .computer-based-container {
     flex: 1 !important;
