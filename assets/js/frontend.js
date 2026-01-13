@@ -1504,9 +1504,9 @@
             // Hide all reading text sections
             $('.reading-text-section').hide();
             
-            // Show the linked reading text section
+            // Show the linked reading text section with a fade-in for visual consistency
             var $targetText = $('#reading-text-' + readingTextId);
-            $targetText.show();
+            $targetText.fadeIn(300);
             
             // Find the question marker in the reading passage
             var $questionMarker = $('#passage-q' + questionNumber);
