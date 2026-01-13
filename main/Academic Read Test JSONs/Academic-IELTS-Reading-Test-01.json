@@ -1596,7 +1596,7 @@
             "instructions": "",
             "question": "Employment opportunities related to UAVs",
             "points": 1,
-            "no_answer_feedback": "The correct answer is Paragraph C. It states: 'the economic value of the commercial drone market will... create as many as 150,000 new jobs by 2025.'",
+            "no_answer_feedback": "The correct answer is Paragraph C. It states: 'the economic value of the commercial drone market will... create as many as 150,000 new jobs by 2035.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1608,52 +1608,52 @@
                 {
                     "text": "Paragraph A",
                     "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2025.”"
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
                 },
                 {
                     "text": "Paragraph B",
                     "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2025.”"
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
                 },
                 {
                     "text": "Paragraph C",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph C mentions the drone market will 'create as many as 150,000 new jobs by 2025.'"
+                    "feedback": "Correct! Paragraph C mentions the drone market will 'create as many as 150,000 new jobs by 2035.'"
                 },
                 {
                     "text": "Paragraph D",
                     "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2025.”"
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
                 },
                 {
                     "text": "Paragraph E",
                     "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2025.”"
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
                 },
                 {
                     "text": "Paragraph F",
                     "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2025.”"
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
                 },
                 {
                     "text": "Paragraph G",
                     "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2025.”"
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
                 },
                 {
                     "text": "Paragraph H",
                     "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2025.”"
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
                 },
                 {
                     "text": "Paragraph I",
                     "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2025.”"
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
                 },
                 {
                     "text": "Paragraph J",
                     "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2025.”"
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
                 }
             ],
             "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
@@ -1741,9 +1741,25 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph A states drones 'are generally credited with being both more cost-effective to operate and maintain, as well as safer to use, than piloted aircraft.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states drones are 'more cost-effective to operate and maintain' than piloted aircraft."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information in Paragraph A."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1759,9 +1775,25 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states agricultural applications will account for approximately 80 percent of commercial drone use."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information in Paragraph C."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1770,16 +1802,32 @@
             "instructions": "",
             "question": "Amazon is presently using drones to deliver items purchased online.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE. Paragraph D states: 'Amazon Prime Air's drone-based delivery system for its customers' purchases remains very much a work in progress.'",
+            "no_answer_feedback": "The correct answer is TRUE. Paragraph D states: 'Amazon Prime Air's drone-based delivery system for its customers' purchases is now operational, though it's still growing and faces regulatory considerations. Deliveries occur during daylight hours and in good weather conditions.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D states: 'Amazon Prime Air's drone-based delivery system for its customers' purchases is now operational, though it's still growing and faces regulatory considerations.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Amazon Prime Air's drone-based delivery system is now operational."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide information about Amazon's drone delivery system being operational in Paragraph D."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1795,9 +1843,25 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F states: 'Drone-mounted cameras enable unmanned aerial vehicles to follow pre-programmed search patterns when looking for missing persons... across a variety of otherwise inaccessible terrain types, including marine environments.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states drones are used for search and rescue in marine environments (at sea)."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information in Paragraph F."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1813,9 +1877,25 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Paragraph I mentions noise pollution, air pollution is not mentioned in the passage."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does not contradict this statement; it simply does not provide information about air pollution."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! While Paragraph I mentions 'adverse effects drones may have on the natural environment, particularly as contributors to noise pollution,' air pollution is not mentioned."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1867,7 +1947,7 @@
     "reading_texts": [
         {
             "title": "Reading Passage 1",
-            "content": "Hong Kong's World-Beating Subway System – the MTR\r\n\r\n<span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Everywhere around the world, in many major urban centres, subway systems are struggling to cover costs, to invest capital in maintenance systems and expensive upgrades, and to attract passengers. Metro systems go cap-in-hand to central and municipal governments seeking funds and guarantees of continued existence</span>, while plans of development and extension of lines and services are often shelved. In New York, for example, fares cover only 45% of operating costs, which means transport taxes and government grants are required to keep the trains operating, and the transit system must go into debt if it considers upgrades or expansion, and, worryingly, often just to keep trains rolling with repairs and maintenance. However, one system, in one major metropolitan centre, has bucked the trend, and is operating not only at a profit, but at a standard so high that other cities can only look on with envy. <span id=\"passage-q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">Hong Kong's 'farebox recovery ratio' – the percentage of operating costs covered by fares – is at an astonishingly high level of 185%. The next highest urban ratio, that of Singapore, is healthy, but, next to Hong Kong, it has a ways to go, at 125%.</span>\r\n\r\nHong Kong's Mass Transit Railway Corporation, which manages the MTR and the bus system, is acknowledged to have set the benchmark for transit management worldwide, and in 2012 the MTR generated revenue of 36 billion Hong Kong dollars – roughly USD5 billion – and that included a profit of HKD2 billion. How do they do it, and with a system that is so advanced that it is a model for many other cities, when so many other mass transit systems struggle? The answer is not an easy formula, but a complex arrangement of business acumen, wise investment, tough management and innovative concepts.\r\n\r\nThe history of Hong Kong's MTR is relatively short when compared with London or Paris or other large urban centres. <span id=\"passage-q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">In the 1960s, the then-Hong Kong government commissioned a study on finding solutions to the worrying road congestion which accompanied Hong Kong's growing economic status as a regional, and increasingly global, industrial and commercial hub.</span> Construction began on rapid transit after the study was tabled in 1967, and the first line, running from Shek Kip Mei Stationto Kwun Tong Station, began carrying passengers in 1979, and in 1980 the first harbour crossing was undertaken to Chater Station, now called Central Station. <span id=\"passage-q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">The system was an instant success, and trains were immediately upgraded to six carriages to accommodate the increased passenger numbers</span>, and <span id=\"passage-q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">the plans for extension, which had been drawn up along with the original proposals, were soon actioned with further construction undertaken.</span> In the early 1980s, further plans for construction were put in place, and then begun, for tunnels to be built connecting mainland Kowloon with Hong Kong Island. <span id=\"passage-q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">With the planned move of Hong Kong's International airport, Kai Tak International, to Lantau Island, it was recognized that mass transit was necessary for the movement of people to make the airport viable.</span> Both the new Chek Lap Kok International Airport, and the new Lantau Airport Railway, opened in July, 1998.\r\n\r\n<span id=\"passage-q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">Hong Kong's MTR's success has been carefully built on a series of successful business innovations</span> which have all contributed to the remarkable return on investment, the successful integration of the transport system into the day-to-day functioning of the city, and the long-term involvement of the system in the projected growth of the district. Examples of this are the low fares, the multiple-fare system, the use of the Octopus Card and its ultra-modern 'wave-and-go' technology, modern rolling stock (carriages and engines), and high-level, and highly publicized, on-time achievement rates. <span id=\"passage-q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">The MTR has consistently reached a 99.9% on-time rate, one of the highest for major metropolitan centres, and this concept is taken so seriously that the corporation is penalized if it fails to meet pre-determined targets.</span> <span id=\"passage-q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">Other areas that the MTR has targeted to encourage patronage have included the promotion of Art projects, including live performances and art exhibitions, by students and emerging and established artists</span>, and open galleries. Modernisation goals have seen the introduction of PSDs, Platform Screen Doors, to control air conditioning, and for platform security, and visual identity systems for logos, signage and delivery systems for service vehicles, and for passenger information.\r\n\r\nHowever, the area of greatest commercial growth has been in what has been termed 'Value Capture'. <span id=\"passage-q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">The MTR has recognized that it is part of an urban environment, with its own unique dynamic window, its requirements, opportunities and growth possibilities.</span> Being part of one of the world's most densely-populated urban environments, and being a relatively new transit system, with a modern outlook, has given the MTR the chance to capitalize on a constantly changing, and growing, transportation environment which is increasingly recognized as essential in a functioning urban location. 'Value Capture' has been most noticeably recognized in the concept of the MTR working with separate business entities, such as shopping malls, as part of an integrated business entity, that is, metro lines have been designed to work with, and be placed in conjunction with, shopping malls, office towers and business properties, some of which the MTR even owns. <span id=\"passage-q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">In other words, the MTR has a direct interest in not only controlling the means of how passengers travel, but also recognizing the destinations to which they travel.</span> Further, many of the MTR's stations located within Hong Kong central itself have multi-storey shopping complexes, again, a draw, and a means of transport, for consumers and passengers.\r\n\r\nIt is interesting to note that the rules have changed, and Hong Kong's MTR is one of the game changers. From being an urban transit system, the corporation has moved beyond a metropolitan environment to embrace a global business plan, and beyond. <span id=\"passage-q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">The urban rail corporation is now running Australia's Melbourne rail system, Sweden's Stockholm rail system, it has controlling interests in lines on the London Underground, and its planning department is contracted to design and run light rail systems in mainland China.</span> Property management is another key development area, as it was recognized earlier that carrying passengers is only one aspect of a transit system—the other being the recognition of the destination, which helps determine the placement of lines, and purposes. Carrying nine million passengers daily, just below Tokyo's record-setting tallies, Hong Kong's Mass Transit Railway is a model for the present, and with continued good business direction, for the future as well."
+            "content": "Hong Kong's World-Beating Subway System – the MTR\r\n\r\n<span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Everywhere around the world, in many major urban centres, subway systems are struggling to cover costs, to invest capital in maintenance systems and expensive upgrades, and to attract passengers. Metro systems go cap-in-hand to central and municipal governments seeking funds and guarantees of continued existence</span>, while plans of development and extension of lines and services are often shelved. In New York, for example, fares cover only 45% of operating costs, which means transport taxes and government grants are required to keep the trains operating, and the transit system must go into debt if it considers upgrades or expansion, and, worryingly, often just to keep trains rolling with repairs and maintenance. However, one system, in one major metropolitan centre, has bucked the trend, and is operating not only at a profit, but at a standard so high that other cities can only look on with envy. <span id=\"passage-q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">Hong Kong's 'farebox recovery ratio' – the percentage of operating costs covered by fares – is at an astonishingly high level of 185%. The next highest urban ratio, that of Singapore, is healthy, but, next to Hong Kong, it has a ways to go, at 125%.</span>\r\n\r\nHong Kong's Mass Transit Railway Corporation, which manages the MTR and the bus system, is acknowledged to have set the benchmark for transit management worldwide, and in 2022 the MTR generated revenue of 36 billion Hong Kong dollars – roughly USD5 billion – and that included a profit of HKD2 billion. How do they do it, and with a system that is so advanced that it is a model for many other cities, when so many other mass transit systems struggle? The answer is not an easy formula, but a complex arrangement of business acumen, wise investment, tough management and innovative concepts.\r\n\r\nThe history of Hong Kong's MTR is relatively short when compared with London or Paris or other large urban centres. <span id=\"passage-q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">In the 1960s, the then-Hong Kong government commissioned a study on finding solutions to the worrying road congestion which accompanied Hong Kong's growing economic status as a regional, and increasingly global, industrial and commercial hub.</span> Construction began on rapid transit after the study was tabled in 1967, and the first line, running from Shek Kip Mei Stationto Kwun Tong Station, began carrying passengers in 1979, and in 1980 the first harbour crossing was undertaken to Chater Station, now called Central Station. <span id=\"passage-q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">The system was an instant success, and trains were immediately upgraded to six carriages to accommodate the increased passenger numbers</span>, and <span id=\"passage-q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">the plans for extension, which had been drawn up along with the original proposals, were soon actioned with further construction undertaken.</span> <span id=\"passage-q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">In the early 1980s, further plans for construction were put in place, and then begun, for tunnels to be built connecting mainland Kowloon with Hong Kong Island.</span> <span id=\"passage-q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">With the planned move of Hong Kong's International airport, Kai Tak International, to Lantau Island, it was recognized that mass transit was necessary for the movement of people to make the airport viable.</span> Both the new Chek Lap Kok International Airport, and the new Lantau Airport Railway, opened in July, 1998.\r\n\r\n<span id=\"passage-q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">Hong Kong's MTR's success has been carefully built on a series of successful business innovations</span> which have all contributed to the remarkable return on investment, the successful integration of the transport system into the day-to-day functioning of the city, and the long-term involvement of the system in the projected growth of the district. Examples of this are the low fares, the multiple-fare system, the use of the Octopus Card and its ultra-modern 'wave-and-go' technology, modern rolling stock (carriages and engines), and high-level, and highly publicized, on-time achievement rates. <span id=\"passage-q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">The MTR has consistently reached a 99.9% on-time rate, one of the highest for major metropolitan centres, and this concept is taken so seriously that the corporation is penalized if it fails to meet pre-determined targets.</span> <span id=\"passage-q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">Other areas that the MTR has targeted to encourage patronage have included the promotion of Art projects, including live performances and art exhibitions, by students and emerging and established artists</span>, and open galleries. Modernisation goals have seen the introduction of PSDs, Platform Screen Doors, to control air conditioning, and for platform security, and visual identity systems for logos, signage and delivery systems for service vehicles, and for passenger information.\r\n\r\nHowever, the area of greatest commercial growth has been in what has been termed 'Value Capture'. <span id=\"passage-q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">The MTR has recognized that it is part of an urban environment, with its own unique dynamic window, its requirements, opportunities and growth possibilities.</span> Being part of one of the world's most densely-populated urban environments, and being a relatively new transit system, with a modern outlook, has given the MTR the chance to capitalize on a constantly changing, and growing, transportation environment which is increasingly recognized as essential in a functioning urban location. 'Value Capture' has been most noticeably recognized in the concept of the MTR working with separate business entities, such as shopping malls, as part of an integrated business entity, that is, metro lines have been designed to work with, and be placed in conjunction with, shopping malls, office towers and business properties, some of which the MTR even owns. <span id=\"passage-q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">In other words, the MTR has a direct interest in not only controlling the means of how passengers travel, but also recognizing the destinations to which they travel.</span> Further, many of the MTR's stations located within Hong Kong central itself have multi-storey shopping complexes, again, a draw, and a means of transport, for consumers and passengers.\r\n\r\nIt is interesting to note that the rules have changed, and Hong Kong's MTR is one of the game changers. From being an urban transit system, the corporation has moved beyond a metropolitan environment to embrace a global business plan, and beyond. <span id=\"passage-q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">The urban rail corporation is now running Australia's Melbourne rail system, Sweden's Stockholm rail system, it has controlling interests in lines on the London Underground, and its planning department is contracted to design and run light rail systems in mainland China.</span> Property management is another key development area, as it was recognized earlier that carrying passengers is only one aspect of a transit system—the other being the recognition of the destination, which helps determine the placement of lines, and purposes. Carrying nine million passengers daily, just below Tokyo's record-setting tallies, Hong Kong's Mass Transit Railway is a model for the present, and with continued good business direction, for the future as well."
         },
         {
             "title": "Reading Passage 2",
@@ -1875,7 +1955,7 @@
         },
         {
             "title": "Reading Passage 3",
-            "content": "THE NON-MILITARY USES OF UNMANNED AERIAL VEHICLES\r\n\r\nA) The use of unmanned aerial vehicles has grown dramatically over the past decade or so, in no small part due to the fact that some of these machines are able to remain airborne for longer periods of time than more conventional manned aircraft. At the same time, <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">unmanned aerial vehicles (UAVs), also known as unmanned aircraft systems (UASs), and remotely piloted aircraft (RPAs), nowadays commonly referred to as drones, are generally credited with being both more cost-effective to operate and maintain, as well as safer to use, than piloted aircraft.</span> The term drone may also refer to small electric helicopters fitted with two or more rotors which are flown by remote control.\r\n\r\nB) Today, drones are being used with increasing frequency for military operations by a number of countries in combat, surveillance and reconnaissance roles. These machines tend to be larger than non-military drones and are, in the main, powered by jet or gas engines. Perhaps unsurprisingly, the use of drone technology has gained a measure of notoriety as a result of their growing prominence in military roles, which have been widely publicised in television, online and print media during the last decade and a half, leading to criticism of their application in this arena on both ethical and legal grounds.\r\n\r\nC) While originally and currently still primarily used for military purposes, the rapid growth and development in drone technology during the early twenty-first century has led some experts to predict that, by 2020, there will be approximately 30,000 licensed drones operating in the skies above the United States alone. It has also been estimated that the economic value of the commercial drone market will rise in value to around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2025. <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.</span>\r\n\r\nD) One development related to the commercial use of drones which has perhaps received the greatest amount of news and media coverage in recent years is the establishment of Amazon Prime Air in December 2013 by the US-based online retail giant, Amazon.com. <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">At this stage, Amazon Prime Air's drone-based delivery system for its customers' purchases remains very much a work in progress</span>, although the company has been granted permission by the US Federal Aviation Authority (FAA) to begin testing its current prototypes under certain restrictions.\r\n\r\nE) As far as aerial filming and photography are concerned, commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market, filming breaking-news stories and live sports events, producing footage from unique perspectives for movies and carrying out security and surveillance functions in the detection of criminal activity and identification of criminals.\r\n\r\nF) In addition to the delivery of consumer products and other commercial applications, non-military drones are gaining popularity for use in search and rescue operations. <span id=\"passage-q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">Drone-mounted cameras enable unmanned aerial vehicles to follow pre-programmed search patterns when looking for missing persons and victims of natural disasters across a variety of otherwise inaccessible terrain types, including marine environments.</span> With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example.\r\n\r\nG) These days, drones are increasingly being used by national government agencies and local authorities for a variety of purposes outside of the private sector. Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work. Fire departments in some jurisdictions now rely on UAVs to help them reduce risks and costs when fighting fires in both urban and rural areas, while customs and law enforcement agencies also employ drone technology in protecting citizens and borders through monitoring and surveillance.\r\n\r\nH) In terms of the natural world, scientists and researchers are turning to drones with greater frequency to monitor, document and assess changes in the health, movement and distribution of flora and fauna, as well as pollution, weather and the climate, both conveniently and cost-effectively. Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts. In the latter capacity, drone technology is now being used by both governmental agencies and non-governmental organisations in the surveillance and prevention of illegal hunting and poaching of a number of endangered species.\r\n\r\nI) While advocates of drones are quick to point out all of the many benefits that the machines can bring to society and the planet, the technology is not without its critics. Those opposed to the growing use of unmanned aerial vehicles cite a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives. <span id=\"passage-q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">These include logistical concerns such as the comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes) and their operational limitations in terms of spatial mobility. Other perceived disadvantages are safety risks, in the potential for collisions across increasingly crowded airspace</span>, and even the adverse effects drones may have on the natural environment, particularly as contributors to noise pollution.\r\n\r\nJ) Whether for commercial or recreational applications or being used as tools to assist those working in the public sector, it would appear that the numerical proliferation of unmanned aerial vehicles, as well as their numerous potential uses, means that the impact of drone technology in our lives is only set to increase. While there are undoubtedly issues yet to be resolved regarding the use of drones, particularly in relation to regulatory oversight and legal restrictions on the part of relevant authorities, the futuristic technology afforded us in the form of these robotic vehicles indicates that not the sky, but rather the solar system and beyond, may be the limit."
+            "content": "THE NON-MILITARY USES OF UNMANNED AERIAL VEHICLES\r\n\r\nA) The use of unmanned aerial vehicles has grown dramatically over the past decade or so, in no small part due to the fact that some of these machines are able to remain airborne for longer periods of time than more conventional manned aircraft. At the same time, <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">unmanned aerial vehicles (UAVs), also known as unmanned aircraft systems (UASs), and remotely piloted aircraft (RPAs), nowadays commonly referred to as drones, are generally credited with being both more cost-effective to operate and maintain, as well as safer to use, than piloted aircraft.</span> The term drone may also refer to small electric helicopters fitted with two or more rotors which are flown by remote control.\r\n\r\nB) Today, drones are being used with increasing frequency for military operations by a number of countries in combat, surveillance and reconnaissance roles. These machines tend to be larger than non-military drones and are, in the main, powered by jet or gas engines. Perhaps unsurprisingly, the use of drone technology has gained a measure of notoriety as a result of their growing prominence in military roles, which have been widely publicised in television, online and print media during the last decade and a half, leading to criticism of their application in this arena on both ethical and legal grounds.\r\n\r\nC) While originally and currently still primarily used for military purposes, the rapid growth and development in drone technology during the early twenty-first century has led some experts to predict that, by 2030, there will be approximately 30,000 licensed drones operating in the skies above the United States alone. It has also been estimated that the economic value of the commercial drone market will rise in value to around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035. <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.</span>\r\n\r\nD) One development related to the commercial use of drones which has perhaps received the greatest amount of news and media coverage in recent years is the establishment of Amazon Prime Air in the early 2020s by the US-based online retail giant, Amazon.com. <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">Amazon Prime Air's drone-based delivery system for its customers' purchases is now operational, though it's still growing and faces regulatory considerations. Deliveries occur during daylight hours and in good weather conditions</span>, although the company has been granted permission by the US Federal Aviation Authority (FAA) to begin testing its current prototypes under certain restrictions.\r\n\r\nE) As far as aerial filming and photography are concerned, commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market, filming breaking-news stories and live sports events, producing footage from unique perspectives for movies and carrying out security and surveillance functions in the detection of criminal activity and identification of criminals.\r\n\r\nF) In addition to the delivery of consumer products and other commercial applications, non-military drones are gaining popularity for use in search and rescue operations. <span id=\"passage-q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">Drone-mounted cameras enable unmanned aerial vehicles to follow pre-programmed search patterns when looking for missing persons and victims of natural disasters across a variety of otherwise inaccessible terrain types, including marine environments.</span> With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example.\r\n\r\nG) These days, drones are increasingly being used by national government agencies and local authorities for a variety of purposes outside of the private sector. Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work. Fire departments in some jurisdictions now rely on UAVs to help them reduce risks and costs when fighting fires in both urban and rural areas, while customs and law enforcement agencies also employ drone technology in protecting citizens and borders through monitoring and surveillance.\r\n\r\nH) In terms of the natural world, scientists and researchers are turning to drones with greater frequency to monitor, document and assess changes in the health, movement and distribution of flora and fauna, as well as pollution, weather and the climate, both conveniently and cost-effectively. Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts. In the latter capacity, drone technology is now being used by both governmental agencies and non-governmental organisations in the surveillance and prevention of illegal hunting and poaching of a number of endangered species.\r\n\r\nI) While advocates of drones are quick to point out all of the many benefits that the machines can bring to society and the planet, the technology is not without its critics. Those opposed to the growing use of unmanned aerial vehicles cite a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives. <span id=\"passage-q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">These include logistical concerns such as the comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes) and their operational limitations in terms of spatial mobility. Other perceived disadvantages are safety risks, in the potential for collisions across increasingly crowded airspace</span>, and even the adverse effects drones may have on the natural environment, particularly as contributors to noise pollution.\r\n\r\nJ) Whether for commercial or recreational applications or being used as tools to assist those working in the public sector, it would appear that the numerical proliferation of unmanned aerial vehicles, as well as their numerous potential uses, means that the impact of drone technology in our lives is only set to increase. While there are undoubtedly issues yet to be resolved regarding the use of drones, particularly in relation to regulatory oversight and legal restrictions on the part of relevant authorities, the futuristic technology afforded us in the form of these robotic vehicles indicates that not the sky, but rather the solar system and beyond, may be the limit."
         }
     ],
     "settings": {
