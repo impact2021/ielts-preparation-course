@@ -29,52 +29,77 @@ $(document).on('click', '.cbt-review-answers-btn', function(e) {
 The comment "user can see the highlighted answers" was incorrect - users could only see them if they manually scrolled.
 
 ### Solution
-Enhanced the button handler to automatically scroll to the first question after the modal closes, using the same scrolling logic as the question navigation buttons.
+Enhanced the button handler to automatically scroll to the first question after the modal closes, using a refactored helper function that eliminates code duplication.
 
-**New Code:**
+**New Implementation:**
+
+1. **Added constants for maintainability:**
+```javascript
+var SCROLL_ANIMATION_DURATION = 300;
+var MODAL_FADEOUT_DURATION = 300;
+var MODAL_FADEOUT_BUFFER = 50;
+var SCROLL_OFFSET_NON_CBT = 100;
+```
+
+2. **Created reusable helper function:**
+```javascript
+// Helper function to scroll to a question in CBT or non-CBT layouts
+function scrollToQuestion(questionElement) {
+    var questionsColumn = $('.questions-column');
+    
+    if (questionsColumn.length && questionElement.length) {
+        // For CBT layouts: scroll the questions column to center the question
+        // Using absolute positioning to avoid cumulative scroll errors (v11.22 fix)
+        var questionAbsoluteTop = questionElement.offset().top;
+        var columnAbsoluteTop = questionsColumn.offset().top;
+        var columnScrollTop = questionsColumn.scrollTop();
+        var questionPositionInContainer = questionAbsoluteTop - columnAbsoluteTop + columnScrollTop;
+        
+        // Calculate target scroll position to center the question
+        var columnHeight = questionsColumn.height();
+        var questionHeight = questionElement.outerHeight();
+        var targetScrollTop = questionPositionInContainer - (columnHeight / 2) + (questionHeight / 2);
+        
+        questionsColumn.animate({
+            scrollTop: targetScrollTop
+        }, SCROLL_ANIMATION_DURATION);
+    } else if (questionElement.length) {
+        // For non-CBT layouts: scroll the page to the question
+        $('html, body').animate({
+            scrollTop: questionElement.offset().top - SCROLL_OFFSET_NON_CBT
+        }, SCROLL_ANIMATION_DURATION);
+    }
+}
+```
+
+3. **Updated "Review my answers" button handler:**
 ```javascript
 $(document).on('click', '.cbt-review-answers-btn', function(e) {
     e.preventDefault();
-    $('#cbt-result-modal').fadeOut(300);
+    $('#cbt-result-modal').fadeOut(MODAL_FADEOUT_DURATION);
     $('body').css('overflow', '');
     
     // Scroll to show feedback after modal closes
     setTimeout(function() {
-        var questionsColumn = $('.questions-column');
         var firstQuestion = $('#question-0');
-        
-        if (questionsColumn.length && firstQuestion.length) {
-            // For CBT layouts: scroll the questions column to the first question
-            // Using the same absolute positioning logic as question navigation
-            var questionAbsoluteTop = firstQuestion.offset().top;
-            var columnAbsoluteTop = questionsColumn.offset().top;
-            var columnScrollTop = questionsColumn.scrollTop();
-            var questionPositionInContainer = questionAbsoluteTop - columnAbsoluteTop + columnScrollTop;
-            
-            // Calculate target scroll position to center the first question
-            var columnHeight = questionsColumn.height();
-            var questionHeight = firstQuestion.outerHeight();
-            var targetScrollTop = questionPositionInContainer - (columnHeight / 2) + (questionHeight / 2);
-            
-            questionsColumn.animate({
-                scrollTop: targetScrollTop
-            }, 300);
-        } else if (firstQuestion.length) {
-            // For non-CBT layouts: scroll the page to the first question
-            $('html, body').animate({
-                scrollTop: firstQuestion.offset().top - 100
-            }, 300);
-        }
-    }, 350); // Wait for modal fadeOut (300ms) to complete
+        scrollToQuestion(firstQuestion);
+    }, MODAL_FADEOUT_DURATION + MODAL_FADEOUT_BUFFER);
 });
 ```
 
+4. **Refactored question navigation to use the same helper function:**
+- Eliminates code duplication
+- Ensures consistent scrolling behavior
+- Easier to maintain and test
+
 **Key improvements:**
-1. **Waits for modal to close**: Uses `setTimeout(350)` to ensure the modal's fadeOut (300ms) completes before scrolling
-2. **Handles CBT layouts**: Scrolls the `.questions-column` using the same absolute positioning calculation as question navigation (avoiding the cumulative scroll errors that were fixed in v11.22)
-3. **Handles non-CBT layouts**: Scrolls the page to the first question with a 100px offset for better visibility
-4. **Centers the first question**: For CBT layouts, the first question is centered in the viewport (same UX as question navigation buttons)
-5. **Smooth animation**: Uses 300ms animation for smooth scrolling
+1. **Waits for modal to close**: Uses `setTimeout(MODAL_FADEOUT_DURATION + MODAL_FADEOUT_BUFFER)` to ensure the modal's fadeOut completes before scrolling
+2. **Reusable helper function**: Created `scrollToQuestion()` to eliminate code duplication between question navigation and feedback review
+3. **Named constants**: Replaced magic numbers with named constants for better maintainability
+4. **Handles CBT layouts**: Scrolls the `.questions-column` using the same absolute positioning calculation as question navigation (avoiding the cumulative scroll errors that were fixed in v11.22)
+5. **Handles non-CBT layouts**: Scrolls the page to the first question with a configurable offset for better visibility
+6. **Centers the first question**: For CBT layouts, the first question is centered in the viewport (same UX as question navigation buttons)
+7. **Smooth animation**: Uses configurable animation duration for smooth scrolling
 
 ### Technical Details
 

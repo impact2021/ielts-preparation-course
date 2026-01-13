@@ -1142,25 +1142,22 @@
             }, 5000);
         }
         
-        // Computer-Based Quiz Layout: Question Navigation
-        $('.question-nav-btn').on('click', function(e) {
-            e.preventDefault();
-            var questionIndex = $(this).data('question');
-            var questionElement = $('#question-' + questionIndex);
+        // Constants for scroll behavior
+        var SCROLL_ANIMATION_DURATION = 300;
+        var MODAL_FADEOUT_DURATION = 300;
+        var MODAL_FADEOUT_BUFFER = 50;
+        var SCROLL_OFFSET_NON_CBT = 100;
+        
+        // Helper function to scroll to a question in CBT or non-CBT layouts
+        function scrollToQuestion(questionElement) {
+            var questionsColumn = $('.questions-column');
             
-            if (questionElement.length) {
-                // Scroll to the question in the right column
-                var questionsColumn = $('.questions-column');
-                // Get absolute position within the scrollable container
-                // - offset().top gives the element's position from the document top
-                // - We subtract the column's offset to get position relative to column
-                // - We add columnScrollTop because the column's content extends beyond viewport
-                // - This gives us the element's true position within the scrollable content area
+            if (questionsColumn.length && questionElement.length) {
+                // For CBT layouts: scroll the questions column to center the question
+                // Using absolute positioning to avoid cumulative scroll errors (v11.22 fix)
                 var questionAbsoluteTop = questionElement.offset().top;
                 var columnAbsoluteTop = questionsColumn.offset().top;
                 var columnScrollTop = questionsColumn.scrollTop();
-                // Example: If question is at document position 2000px, column at 1000px, and scrolled 500px down:
-                // questionPositionInContainer = 2000 - 1000 + 500 = 1500px from content start
                 var questionPositionInContainer = questionAbsoluteTop - columnAbsoluteTop + columnScrollTop;
                 
                 // Calculate target scroll position to center the question
@@ -1170,7 +1167,24 @@
                 
                 questionsColumn.animate({
                     scrollTop: targetScrollTop
-                }, 300);
+                }, SCROLL_ANIMATION_DURATION);
+            } else if (questionElement.length) {
+                // For non-CBT layouts: scroll the page to the question
+                $('html, body').animate({
+                    scrollTop: questionElement.offset().top - SCROLL_OFFSET_NON_CBT
+                }, SCROLL_ANIMATION_DURATION);
+            }
+        }
+        
+        // Computer-Based Quiz Layout: Question Navigation
+        $('.question-nav-btn').on('click', function(e) {
+            e.preventDefault();
+            var questionIndex = $(this).data('question');
+            var questionElement = $('#question-' + questionIndex);
+            
+            if (questionElement.length) {
+                // Scroll to the question using the helper function
+                scrollToQuestion(questionElement);
                 
                 // Highlight the question briefly
                 questionElement.addClass('highlight-question');
@@ -1664,14 +1678,14 @@
             
             // Handle modal close (use event delegation)
             $(document).on('click', '.cbt-result-modal-close, .cbt-result-modal-overlay', function() {
-                $('#cbt-result-modal').fadeOut(300);
+                $('#cbt-result-modal').fadeOut(MODAL_FADEOUT_DURATION);
                 $('body').css('overflow', '');
             });
             
             // Handle retake button (use event delegation)
             $(document).on('click', '#cbt-result-modal .quiz-retake-btn', function(e) {
                 e.preventDefault();
-                $('#cbt-result-modal').fadeOut(300);
+                $('#cbt-result-modal').fadeOut(MODAL_FADEOUT_DURATION);
                 $('body').css('overflow', '');
                 forceReload();
             });
@@ -1679,37 +1693,14 @@
             // Handle "Review my answers" button (use event delegation)
             $(document).on('click', '.cbt-review-answers-btn', function(e) {
                 e.preventDefault();
-                $('#cbt-result-modal').fadeOut(300);
+                $('#cbt-result-modal').fadeOut(MODAL_FADEOUT_DURATION);
                 $('body').css('overflow', '');
                 
                 // Scroll to show feedback after modal closes
                 setTimeout(function() {
-                    var questionsColumn = $('.questions-column');
                     var firstQuestion = $('#question-0');
-                    
-                    if (questionsColumn.length && firstQuestion.length) {
-                        // For CBT layouts: scroll the questions column to the first question
-                        // Using the same absolute positioning logic as question navigation
-                        var questionAbsoluteTop = firstQuestion.offset().top;
-                        var columnAbsoluteTop = questionsColumn.offset().top;
-                        var columnScrollTop = questionsColumn.scrollTop();
-                        var questionPositionInContainer = questionAbsoluteTop - columnAbsoluteTop + columnScrollTop;
-                        
-                        // Calculate target scroll position to center the first question
-                        var columnHeight = questionsColumn.height();
-                        var questionHeight = firstQuestion.outerHeight();
-                        var targetScrollTop = questionPositionInContainer - (columnHeight / 2) + (questionHeight / 2);
-                        
-                        questionsColumn.animate({
-                            scrollTop: targetScrollTop
-                        }, 300);
-                    } else if (firstQuestion.length) {
-                        // For non-CBT layouts: scroll the page to the first question
-                        $('html, body').animate({
-                            scrollTop: firstQuestion.offset().top - 100
-                        }, 300);
-                    }
-                }, 350); // Wait for modal fadeOut (300ms) to complete
+                    scrollToQuestion(firstQuestion);
+                }, MODAL_FADEOUT_DURATION + MODAL_FADEOUT_BUFFER);
             });
         }
         
