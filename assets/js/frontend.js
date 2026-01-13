@@ -1540,50 +1540,58 @@
                 }
                 
                 // Scroll to the question marker, centering the highlighted section
-                setTimeout(function() {
-                    // For CBT layout, scroll within the reading column
-                    var $readingColumn = $targetText.closest('.reading-column');
-                    if ($readingColumn.length) {
-                        // CBT layout - scroll to center the marker/highlight within the column viewport
-                        var elementToCenter = $answerHighlight.length ? $answerHighlight : $questionMarker;
-                        var markerOffset = elementToCenter.position().top;
-                        var columnScrollTop = $readingColumn.scrollTop();
-                        var columnHeight = $readingColumn.height();
-                        var elementHeight = elementToCenter.outerHeight();
-                        // Center the element: scroll so element center aligns with viewport center
-                        var targetScrollTop = columnScrollTop + markerOffset - (columnHeight / 2) + (elementHeight / 2);
-                        $readingColumn.animate({
-                            scrollTop: targetScrollTop
-                        }, 500);
-                    } else {
-                        // Standard layout - scroll the whole page to center the marker/highlight
-                        var elementToCenter = $answerHighlight.length ? $answerHighlight : $questionMarker;
-                        var windowHeight = $(window).height();
-                        var elementHeight = elementToCenter.outerHeight();
-                        // Center the element: scroll so element center aligns with viewport center
-                        var targetScrollTop = elementToCenter.offset().top - (windowHeight / 2) + (elementHeight / 2);
-                        $('html, body').animate({
-                            scrollTop: targetScrollTop
-                        }, 500);
-                    }
-                }, 350); // Wait for section fade-in
+                // Wait for fadeIn to complete, then use requestAnimationFrame to ensure layout is stable
+                // This fixes the issue where single clicks fail but double clicks work
+                // Same pattern as the v11.24 scrollToQuestion fix
+                $targetText.promise().done(function() {
+                    requestAnimationFrame(function() {
+                        // For CBT layout, scroll within the reading column
+                        var $readingColumn = $targetText.closest('.reading-column');
+                        if ($readingColumn.length) {
+                            // CBT layout - scroll to center the marker/highlight within the column viewport
+                            var elementToCenter = $answerHighlight.length ? $answerHighlight : $questionMarker;
+                            var markerOffset = elementToCenter.position().top;
+                            var columnScrollTop = $readingColumn.scrollTop();
+                            var columnHeight = $readingColumn.height();
+                            var elementHeight = elementToCenter.outerHeight();
+                            // Center the element: scroll so element center aligns with viewport center
+                            var targetScrollTop = columnScrollTop + markerOffset - (columnHeight / 2) + (elementHeight / 2);
+                            $readingColumn.animate({
+                                scrollTop: targetScrollTop
+                            }, 500);
+                        } else {
+                            // Standard layout - scroll the whole page to center the marker/highlight
+                            var elementToCenter = $answerHighlight.length ? $answerHighlight : $questionMarker;
+                            var windowHeight = $(window).height();
+                            var elementHeight = elementToCenter.outerHeight();
+                            // Center the element: scroll so element center aligns with viewport center
+                            var targetScrollTop = elementToCenter.offset().top - (windowHeight / 2) + (elementHeight / 2);
+                            $('html, body').animate({
+                                scrollTop: targetScrollTop
+                            }, 500);
+                        }
+                    });
+                });
             } else {
                 // If no marker found, just scroll to the reading text
-                setTimeout(function() {
-                    // For CBT layout, scroll within the reading column
-                    var $readingColumn = $targetText.closest('.reading-column');
-                    if ($readingColumn.length) {
-                        // CBT layout - scroll to top of the column to show the reading text
-                        $readingColumn.animate({
-                            scrollTop: 0
-                        }, 500);
-                    } else {
-                        // Standard layout - scroll the whole page to the reading text
-                        $('html, body').animate({
-                            scrollTop: $targetText.offset().top - 100
-                        }, 500);
-                    }
-                }, 350); // Wait for section fade-in
+                // Wait for fadeIn to complete, then use requestAnimationFrame
+                $targetText.promise().done(function() {
+                    requestAnimationFrame(function() {
+                        // For CBT layout, scroll within the reading column
+                        var $readingColumn = $targetText.closest('.reading-column');
+                        if ($readingColumn.length) {
+                            // CBT layout - scroll to top of the column to show the reading text
+                            $readingColumn.animate({
+                                scrollTop: 0
+                            }, 500);
+                        } else {
+                            // Standard layout - scroll the whole page to the reading text
+                            $('html, body').animate({
+                                scrollTop: $targetText.offset().top - 100
+                            }, 500);
+                        }
+                    });
+                });
             }
         });
         
