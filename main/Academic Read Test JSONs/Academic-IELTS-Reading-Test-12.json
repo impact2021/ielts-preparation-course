@@ -4,7 +4,7 @@
     "questions": [
         {
             "type": "closed_question",
-            "instructions": "You should spend about 20 minutes on Questions 1 \u2013 15 which are based on Reading Passage 1.\n\nThe reading passage has six paragraphs A \u2013 F.\n\nChoose the correct heading for paragraphs B-D and F from the list of headings below.\n\nType the correct number I-VIII in boxes 1 \u2013 4.\n\nList of Headings:\nI. Customer inequality\nII. Monopoly control\nIII. Historic changes in dependence\nIV. State statistics\nV. Shift in responsibilities increases vulnerability\nVI. Preying on the unemployed\nVII. Identifying worst-hit victims\nVIII. Already expensive, yet always on the increase",
+            "instructions": "You should spend about 20 minutes on Questions 1 \u2013 15 which are based on Reading Passage 1.\n\nThe reading passage has six paragraphs A \u2013 F.\n\nChoose the correct heading for paragraphs B-D and F from the list of headings below.\n\nType the correct number I-VIII in boxes 1 \u2013 4.",
             "question": "Paragraph B",
             "points": 1,
             "no_answer_feedback": "The correct answer is VIII (Already expensive, yet always on the increase). Paragraph B discusses how pharmaceutical companies defend high prices and explains that prices are increased regularly - the paragraph mentions Claritin's price was 'raised thirteen times over five years, for a cumulative increase of more than 50 percent'. Remember to always make a guess in IELTS\u2014there's no penalty for wrong answers.",
@@ -240,7 +240,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Look at the following list of statements based on pharmaceuticals. Match the statement with the correct person A-E.\n\nA. Susan Miller\nB. Simon Bell\nC. Lynne Bennett\nD. Janet Abbotts\nE. Peter Stantham",
+            "instructions": "Look at the following list of statements based on pharmaceuticals. Match the statement with the correct person.",
             "question": "Research indicates that medicines are not being taken correctly due to financial concerns.",
             "points": 1,
             "no_answer_feedback": "The correct answer is E (Peter Stantham). Paragraph E states: 'Stantham references one study which was conducted as far back as 2001 in the U.S. which disclosed that nearly one in four senior citizens reported that they deliberately skipped some doses of their medication or did not even take prescriptions given to them by doctors to pharmacies for pick up at all because of the cost.' Remember to always make a guess in IELTS\u2014there's no penalty for wrong answers.",
