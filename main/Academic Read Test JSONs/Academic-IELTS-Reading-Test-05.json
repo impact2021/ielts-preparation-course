@@ -803,7 +803,7 @@
         {
             "type": "open_question",
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
-            "question": "The idea of the bar code began with the concept of  which were used in the 1890 U.S. census, and experimented with in the 1930s.",
+            "question": "The idea of the bar code began with the concept of [field 1] which were used in the 1890 U.S. census, and experimented with in the 1930s.",
             "points": 1,
             "no_answer_feedback": "The correct answer is: PUNCH CARDS. This answer is found in Paragraph A, which mentions 'punch cards being used in the 1890 U.S. census'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
@@ -823,7 +823,7 @@
         {
             "type": "open_question",
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
-            "question": "In the 1940s, grocery stores wanted an automated device that would capture  for inventory records and to speed up the checkout process.",
+            "question": "In the 1940s, grocery stores wanted an automated device that would capture [field 1] for inventory records and to speed up the checkout process.",
             "points": 1,
             "no_answer_feedback": "The correct answer is: PRODUCT INFORMATION. This answer is found in Paragraph B, where it explains that grocery stores wanted 'an automated system to record product information during the checkout stage'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
@@ -843,7 +843,7 @@
         {
             "type": "open_question",
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
-            "question": "Two men worked on the concept and one came up with an idea based on the Morse Code, and the first barcode was actually a  design, shaped in a circle.",
+            "question": "Two men worked on the concept and one came up with an idea based on the Morse Code, and the first barcode was actually a [field 1] design, shaped in a circle.",
             "points": 1,
             "no_answer_feedback": "The correct answer is: BULLS-EYE. This answer is found in Paragraph B, which describes: 'He then swept his fingers in a circle, creating a bulls-eye figure'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
@@ -863,7 +863,7 @@
         {
             "type": "open_question",
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
-            "question": "At the same time, the Railroad companies were looking for an automated system to keep track of their , and a colour-coded numbering system was introduced, with the designer looking for a way to simplify it to black-and-white lines.",
+            "question": "At the same time, the Railroad companies were looking for an automated system to keep track of their [field 1], and a colour-coded numbering system was introduced, with the designer looking for a way to simplify it to black-and-white lines.",
             "points": 1,
             "no_answer_feedback": "The correct answer is: RAILWAY CARS. This answer is found in Paragraph D, which states: 'there was a big move in the American railroad industry for a system to identify railway cars'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
@@ -883,7 +883,7 @@
         {
             "type": "open_question",
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
-            "question": "With the invention of the  light, the final innovation was made and in the 1960s, early bar code systems for inventory were introduced in car companies.",
+            "question": "With the invention of the [field 1] light, the final innovation was made and in the 1960s, early bar code systems for inventory were introduced in car companies.",
             "points": 1,
             "no_answer_feedback": "The correct answer is: LASER. This answer is found in Paragraph D, which mentions 'incorporating the new laser light system, one of the missing links'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
@@ -903,7 +903,7 @@
         {
             "type": "open_question",
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
-            "question": "The first retail product purchased using a bar code was in .",
+            "question": "The first retail product purchased using a bar code was in [field 1].",
             "points": 1,
             "no_answer_feedback": "The correct answer is: 1974. This answer is found in Paragraph E, which states: 'In 1974, in Ohio, in the U.S., a package of chewing gum was scanned'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
@@ -923,7 +923,7 @@
         {
             "type": "open_question",
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
-            "question": "Today bar codes are used for a wide range of purposes, as well as reducing .",
+            "question": "Today bar codes are used for a wide range of purposes, as well as reducing [field 1].",
             "points": 1,
             "no_answer_feedback": "The correct answer is: FRAUD. This answer is found in Paragraph F, which mentions bar codes are 'an important tool in the reduction in fraud'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
