@@ -903,7 +903,7 @@
         {
             "type": "open_question",
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
-            "question": "The first retail product purchased using a bar code was in , and today bar codes are used for a wide range of purposes, as well as reducing .",
+            "question": "The first retail product purchased using a bar code was in .",
             "points": 1,
             "no_answer_feedback": "The correct answer is: 1974. This answer is found in Paragraph E, which states: 'In 1974, in Ohio, in the U.S., a package of chewing gum was scanned'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
