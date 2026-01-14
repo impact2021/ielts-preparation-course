@@ -1239,7 +1239,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Choose the most suitable headings for Paragraphs A-E from the list below. Use each heading once only.\r\nList of headings\r\ni. Effect on modern industry\r\nii. New payment procedures\r\niii. Labour problems\r\niv. The Model-T\r\nv. Creating a market\r\nvi. Revolutionary production techniques\r\nvii. The Ford family today\r\nviii. Impact on the global economy\r\nix. Overseas competition\r\nYou should spend about 20 minutes on Questions 28 \u2013 40 which are based on Reading Passage 3.",
+            "instructions": "Choose the most suitable headings for Paragraphs A-E from the list below. Use each heading once only.\r\nList of headings\r\nI. Effect on modern industry\r\nII. New payment procedures\r\nIII. Labour problems\r\nIV. The Model-T\r\nV. Creating a market\r\nVI. Revolutionary production techniques\r\nVII. The Ford family today\r\nVIII. Impact on the global economy\r\nIX. Overseas competition\r\nYou should spend about 20 minutes on Questions 28 \u2013 40 which are based on Reading Passage 3.",
             "question": "Paragraph A",
             "points": 1,
             "no_answer_feedback": "",
