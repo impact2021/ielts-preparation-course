@@ -14,7 +14,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -48,7 +48,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -75,29 +75,29 @@
             "instructions": "",
             "question": "Exercise fads in the 20th century, such as jogging and home gyms, have not been effective in increasing general fitness levels.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions these fads in paragraph 5 but does not state whether they were effective or not in increasing fitness levels. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions these fads exist ('jogging, jazzercise, celebrity aerobics, home gyms and Zumba workouts') but never discusses whether they were effective or ineffective at increasing fitness levels—that information is simply not provided. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions these fads in paragraph 5 but does not state whether they were effective or not in increasing fitness levels."
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While the passage mentions these exercise fads ('jogging, jazzercise, celebrity aerobics, home gyms and Zumba workouts'), it never states whether they were effective or ineffective at increasing fitness levels. The word 'fads' does not mean they were ineffective—it simply refers to popular trends. The passage lists them as preceding the modern gym concept, without evaluating their effectiveness."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions these fads in paragraph 5 but does not state whether they were effective or not in increasing fitness levels."
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions exercise fads like jogging and home gyms but does not state whether they were effective or ineffective at increasing fitness levels. Be careful not to make assumptions—the term 'fads' refers to trends, not effectiveness."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": true,
-                    "feedback": "Correct! The passage mentions these fads in paragraph 5 but does not state whether they were effective or not in increasing fitness levels."
+                    "feedback": "Correct! The passage mentions these fads in paragraph 5 ('jogging, jazzercise, celebrity aerobics, home gyms and Zumba workouts') but does not state whether they were effective or not in increasing fitness levels. The passage only states that the modern gym concept 'predates' these fads, without evaluating their effectiveness."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -116,7 +116,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -150,7 +150,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -184,7 +184,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -194,12 +194,12 @@
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph 6 states: 'physical fitness has emerged as a recognized science, a necessity for health and a government responsibility to ensure well-being for its citizenry'."
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage explicitly states that ensuring the health of citizens is a government responsibility. Paragraph 6 says: 'physical fitness has emerged as a recognized science, a necessity for health and a government responsibility to ensure well-being for its citizenry'."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph 6 states: 'physical fitness has emerged as a recognized science, a necessity for health and a government responsibility to ensure well-being for its citizenry'."
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage clearly addresses this topic and states that physical fitness is a government responsibility. Paragraph 6 says: 'a government responsibility to ensure well-being for its citizenry'. This is not left unaddressed in the passage."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -218,7 +218,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "yoga classes",
@@ -272,7 +272,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "A: ...that a better diet leads to improved health.",
@@ -311,7 +311,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "are worried that, despite the increase in gyms, the general health of the population is not improving.",
@@ -350,7 +350,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "arose from such innovations as jogging, jazzercise and other 20th century fads.",
@@ -370,7 +370,7 @@
                 {
                     "text": "was recorded in athletic competitions, such as by the Greeks and the first Olympic Games.",
                     "is_correct": false,
-                    "feedback": "Incorrect. Greek competitions recorded fitness, but they did not start the idea. The correct answer is B."
+                    "feedback": "Incorrect. The correct answer is C. While personal trainers assist participants, improvement ultimately depends on the individual's dedication to the program. The passage states that 'planning and perseverance result in quantifiable improvement in health', emphasizing individual effort rather than trainers being necessary for improvement."
                 }
             ],
             "options": "arose from such innovations as jogging, jazzercise and other 20th century fads.\ncan be traced back to the first instincts for humans to run, to hunt and to fight.\nwas first found in early Chinese writings.\nwas recorded in athletic competitions, such as by the Greeks and the first Olympic Games.",
@@ -389,27 +389,27 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "the Western world turned to the church as a means to improve fitness.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is B. The passage states the Western world ignored fitness during this period, and the church was part of the power structure that 'conspired to turn the focus away from the body's fitness requirements', not a means to improve fitness."
                 },
                 {
                     "text": "there was a revitalization in the interest of physical health.",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! The Renaissance era saw renewed interest in health, the anatomy and physical education, as stated in paragraph 6."
                 },
                 {
                     "text": "it was recognized that the Greeks and Romans knew more about health than contemporary beliefs.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is B. While the Renaissance era revisited Greek and Roman ideas about health (paragraph 6 mentions 'some even drawing on the writings of the ancient Greeks and Romans'), the passage focuses on renewed interest in health rather than stating that Greeks and Romans knew more about health than contemporary beliefs."
                 },
                 {
                     "text": "European cultures argued with each other to establish the best fitness programs.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is B. The passage does not mention European cultures arguing with each other to establish fitness programs. Instead, paragraph 6 states that European cultures were 'learning and feeding off each other' collaboratively."
                 }
             ],
             "options": "the Western world turned to the church as a means to improve fitness.\nthere was a revitalization in the interest of physical health.\nit was recognized that the Greeks and Romans knew more about health than contemporary beliefs.\nEuropean cultures argued with each other to establish the best fitness programs.",
@@ -428,12 +428,12 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "I. The original concept sees many modern applications",
                     "is_correct": false,
-                    "feedback": "This is not correct because paragraph A talks about the start of the system, not how it is used today. The correct answer is Heading III (Early ideas lead to modern concepts) because paragraph A explains the early ideas that led to modern bar codes."
+                    "feedback": "Incorrect. The correct answer is B. The passage does not attribute the modern gym concept to 20th century fads like jogging and jazzercise; instead, it states the concept predates these trends by thousands of years."
                 },
                 {
                     "text": "II. Grocery stores worry about the costs",
@@ -443,12 +443,12 @@
                 {
                     "text": "III. Early ideas lead to modern concepts",
                     "is_correct": true,
-                    "feedback": "Correct. Paragraph A explains the first ideas and attempts that started the bar code system."
+                    "feedback": "Incorrect. The correct answer is B. While the Renaissance period saw renewed interest in health and references to Greek and Roman ideas (paragraph 6), the passage focuses on renewed interest in health rather than stating that Greeks and Romans knew more about health than contemporary beliefs."
                 },
                 {
                     "text": "IV. A different industry provides a new stimulus",
                     "is_correct": false,
-                    "feedback": "This is not correct because paragraph A does not talk about another industry helping the system. The correct answer is Heading III (Early ideas lead to modern concepts) because paragraph A explains the early ideas that led to modern bar codes."
+                    "feedback": "Incorrect. The correct answer is B. The passage does not mention European cultures arguing with each other about fitness programs. Paragraph 6 mentions various European cultures 'learning and feeding off each other' collaboratively, not competitively."
                 },
                 {
                     "text": "V. Different Technological Institutes compete",
@@ -492,37 +492,37 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "I. The original concept sees many modern applications",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VII. Paragraph B focuses on how Norman Woodland was inspired by Morse Code to create the bar code concept, not on modern applications of the system."
                 },
                 {
                     "text": "II. Grocery stores worry about the costs",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VII. Paragraph B describes Norman Woodland's inspiration for the bar code design, not economic concerns of grocery stores."
                 },
                 {
                     "text": "III. Early ideas lead to modern concepts",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VII. While Paragraph B discusses early work, it specifically focuses on one man (Norman Woodland) being inspired by an old system (Morse Code), not on early ideas leading to modern concepts generally."
                 },
                 {
                     "text": "IV. A different industry provides a new stimulus",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VII. Paragraph B is about the grocery industry inspiring the bar code work, not about a different industry providing stimulus."
                 },
                 {
                     "text": "V. Different Technological Institutes compete",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VII. Paragraph B does not mention competition between technological institutes."
                 },
                 {
                     "text": "VI. Early setbacks",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VII. While setbacks are discussed later, Paragraph B focuses on Woodland's inspiration from Morse Code."
                 },
                 {
                     "text": "VII. An old system inspires one man",
@@ -537,7 +537,7 @@
                 {
                     "text": "IX. Theory becomes reality",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VII. Paragraph B describes the inspiration and concept phase, not the implementation into reality."
                 }
             ],
             "options": "I. The original concept sees many modern applications\nII. Grocery stores worry about the costs\nIII. Early ideas lead to modern concepts\nIV. A different industry provides a new stimulus\nV. Different Technological Institutes compete\nVI. Early setbacks\nVII. An old system inspires one man\nVIII. Railways lead the way\nIX. Theory becomes reality",
@@ -556,32 +556,32 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "I. The original concept sees many modern applications",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). Paragraph C discusses the patent and challenges, not modern applications."
                 },
                 {
                     "text": "II. Grocery stores worry about the costs",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). Paragraph C focuses on technical limitations that prevented implementation, not grocery store concerns."
                 },
                 {
                     "text": "III. Early ideas lead to modern concepts",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). While Paragraph C mentions early work, it specifically focuses on the setbacks—the technology being '20 years ahead of its time' and lacking computers and proper light sources."
                 },
                 {
                     "text": "IV. A different industry provides a new stimulus",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). Paragraph C discusses setbacks in the original bar code project, not a different industry providing stimulus."
                 },
                 {
                     "text": "V. Different Technological Institutes compete",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). Paragraph C does not mention competition between institutes."
                 },
                 {
                     "text": "VI. Early setbacks",
@@ -591,17 +591,17 @@
                 {
                     "text": "VII. An old system inspires one man",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). Paragraph C discusses the challenges faced after the initial inspiration, not the inspiration itself."
                 },
                 {
                     "text": "VIII. Railways lead the way",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). Paragraph C focuses on the grocery industry's bar code challenges, not railways."
                 },
                 {
                     "text": "IX. Theory becomes reality",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). Paragraph C describes obstacles preventing implementation, not the theory becoming reality."
                 }
             ],
             "options": "I. The original concept sees many modern applications\nII. Grocery stores worry about the costs\nIII. Early ideas lead to modern concepts\nIV. A different industry provides a new stimulus\nV. Different Technological Institutes compete\nVI. Early setbacks\nVII. An old system inspires one man\nVIII. Railways lead the way\nIX. Theory becomes reality",
@@ -620,7 +620,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "I. The original concept sees many modern applications",
@@ -684,7 +684,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "I. The original concept sees many modern applications",
@@ -748,7 +748,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "I. The original concept sees many modern applications",
@@ -758,42 +758,42 @@
                 {
                     "text": "II. Grocery stores worry about the costs",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). Paragraph F does not discuss grocery store costs; it describes the wide variety of modern uses for bar codes."
                 },
                 {
                     "text": "III. Early ideas lead to modern concepts",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). Paragraph F is about current applications, not early development of concepts."
                 },
                 {
                     "text": "IV. A different industry provides a new stimulus",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). Paragraph F focuses on diverse modern uses of bar codes, not on a different industry providing stimulus."
                 },
                 {
                     "text": "V. Different Technological Institutes compete",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). Paragraph F does not mention competition between institutes."
                 },
                 {
                     "text": "VI. Early setbacks",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). Paragraph F describes successful modern implementations, not setbacks."
                 },
                 {
                     "text": "VII. An old system inspires one man",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). Paragraph F is about modern widespread use, not the original inspiration."
                 },
                 {
                     "text": "VIII. Railways lead the way",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). Paragraph F mentions many industries using bar codes, not specifically railways leading the way."
                 },
                 {
                     "text": "IX. Theory becomes reality",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). While implementation happened earlier, Paragraph F specifically describes the variety of modern applications across many fields."
                 }
             ],
             "options": "I. The original concept sees many modern applications\nII. Grocery stores worry about the costs\nIII. Early ideas lead to modern concepts\nIV. A different industry provides a new stimulus\nV. Different Technological Institutes compete\nVI. Early setbacks\nVII. An old system inspires one man\nVIII. Railways lead the way\nIX. Theory becomes reality",
@@ -805,14 +805,14 @@
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
             "question": "The idea of the bar code began with the concept of  which were used in the 1890 U.S. census, and experimented with in the 1930s.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: PUNCH CARDS. Paragraph A mentions 'punch cards being used in the 1890 U.S. census' Always try to answer even if unsure—there's no penalty in IELTS.",
+            "no_answer_feedback": "The correct answer is: PUNCH CARDS. This answer is found in Paragraph A, which mentions 'punch cards being used in the 1890 U.S. census'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
-            "incorrect_feedback": "Incorrect. The correct answer is: PUNCH CARDS. Paragraph A mentions 'punch cards being used in the 1890 U.S. census'",
+            "incorrect_feedback": "Incorrect. The correct answer is: PUNCH CARDS. This answer is found in Paragraph A, which mentions 'punch cards being used in the 1890 U.S. census'.",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -825,14 +825,14 @@
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
             "question": "In the 1940s, grocery stores wanted an automated device that would capture  for inventory records and to speed up the checkout process.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: PRODUCT INFORMATION. Paragraph B states the grocery stores wanted 'an automated system to record product information during the checkout stage' Always try to answer even if unsure—there's no penalty in IELTS.",
+            "no_answer_feedback": "The correct answer is: PRODUCT INFORMATION. This answer is found in Paragraph B, where it explains that grocery stores wanted 'an automated system to record product information during the checkout stage'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
-            "incorrect_feedback": "Incorrect. The correct answer is: PRODUCT INFORMATION. Paragraph B states the grocery stores wanted 'an automated system to record product information during the checkout stage'",
+            "incorrect_feedback": "Incorrect. The correct answer is: PRODUCT INFORMATION. This answer is found in Paragraph B, where it explains that grocery stores wanted 'an automated system to record product information during the checkout stage'.",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -845,14 +845,14 @@
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
             "question": "Two men worked on the concept and one came up with an idea based on the Morse Code, and the first barcode was actually a  design, shaped in a circle.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: BULLS-EYE|BULL'S-EYE. Paragraph B describes: 'He then swept his fingers in a circle, creating a bulls-eye figure' Always try to answer even if unsure—there's no penalty in IELTS.",
+            "no_answer_feedback": "The correct answer is: BULLS-EYE. This answer is found in Paragraph B, which describes: 'He then swept his fingers in a circle, creating a bulls-eye figure'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
-            "incorrect_feedback": "Incorrect. The correct answer is: BULLS-EYE|BULL'S-EYE. Paragraph B describes: 'He then swept his fingers in a circle, creating a bulls-eye figure'",
+            "incorrect_feedback": "Incorrect. The correct answer is: BULLS-EYE. This answer is found in Paragraph B, which describes: 'He then swept his fingers in a circle, creating a bulls-eye figure'.",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -865,14 +865,14 @@
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
             "question": "At the same time, the Railroad companies were looking for an automated system to keep track of their , and a colour-coded numbering system was introduced, with the designer looking for a way to simplify it to black-and-white lines.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: RAILWAY CARS. Paragraph D states: 'there was a big move in the American railroad industry for a system to identify railway cars' Always try to answer even if unsure—there's no penalty in IELTS.",
+            "no_answer_feedback": "The correct answer is: RAILWAY CARS. This answer is found in Paragraph D, which states: 'there was a big move in the American railroad industry for a system to identify railway cars'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
-            "incorrect_feedback": "Incorrect. The correct answer is: RAILWAY CARS. Paragraph D states: 'there was a big move in the American railroad industry for a system to identify railway cars'",
+            "incorrect_feedback": "Incorrect. The correct answer is: RAILWAY CARS. This answer is found in Paragraph D, which states: 'there was a big move in the American railroad industry for a system to identify railway cars'.",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -885,14 +885,14 @@
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
             "question": "With the invention of the  light, the final innovation was made and in the 1960s, early bar code systems for inventory were introduced in car companies.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: LASER|LASER LIGHT. Paragraph D mentions 'incorporating the new laser light system, one of the missing links' Always try to answer even if unsure—there's no penalty in IELTS.",
+            "no_answer_feedback": "The correct answer is: LASER. This answer is found in Paragraph D, which mentions 'incorporating the new laser light system, one of the missing links'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
-            "incorrect_feedback": "Incorrect. The correct answer is: LASER|LASER LIGHT. Paragraph D mentions 'incorporating the new laser light system, one of the missing links'",
+            "incorrect_feedback": "Incorrect. The correct answer is: LASER. This answer is found in Paragraph D, which mentions 'incorporating the new laser light system, one of the missing links'.",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -903,16 +903,16 @@
         {
             "type": "open_question",
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
-            "question": "The first retail product purchased using a bar code was in , and today bar codes are used for a wide range of purposes, as well as reducing .",
+            "question": "The first retail product purchased using a bar code was in .",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: 1974. Paragraph F states: 'In 1974, in Ohio, in the U.S., a package of chewing gum was scanned' Always try to answer even if unsure—there's no penalty in IELTS.",
+            "no_answer_feedback": "The correct answer is: 1974. This answer is found in Paragraph E, which states: 'In 1974, in Ohio, in the U.S., a package of chewing gum was scanned'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
-            "incorrect_feedback": "Incorrect. The correct answer is: 1974. Paragraph F states: 'In 1974, in Ohio, in the U.S., a package of chewing gum was scanned'",
+            "incorrect_feedback": "Incorrect. The correct answer is: 1974. This answer is found in Paragraph E, which states: 'In 1974, in Ohio, in the U.S., a package of chewing gum was scanned'.",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -925,14 +925,14 @@
             "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
             "question": "Today bar codes are used for a wide range of purposes, as well as reducing .",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: FRAUD. Paragraph F mentions bar codes are 'an important tool in the reduction in fraud' Always try to answer even if unsure—there's no penalty in IELTS.",
+            "no_answer_feedback": "The correct answer is: FRAUD. This answer is found in Paragraph F, which mentions bar codes are 'an important tool in the reduction in fraud'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
-            "incorrect_feedback": "Incorrect. The correct answer is: FRAUD. Paragraph F mentions bar codes are 'an important tool in the reduction in fraud'",
+            "incorrect_feedback": "Incorrect. The correct answer is: FRAUD. This answer is found in Paragraph F, which mentions bar codes are 'an important tool in the reduction in fraud'.",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -952,7 +952,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -986,7 +986,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1020,7 +1020,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1054,7 +1054,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1088,7 +1088,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1115,29 +1115,29 @@
             "instructions": "",
             "question": "Eris has insufficient mass to clear its orbit of smaller objects.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. Paragraph D states that Pluto 'did not meet one of the three formal conditions required to be classed as a planet' and 'Failing to meet the third of these criteria' (clearing its orbit), implying Eris also has this issue as a dwarf planet. Always take a guess—there's no penalty for wrong answers in IELTS.",
+            "no_answer_feedback": "The correct answer is TRUE. Paragraph D explains that Eris, like Pluto, fails to clear its orbit, which is why it is not classified as a planet. Always take a guess—there's no penalty for wrong answers in IELTS.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph D states that Pluto 'did not meet one of the three formal conditions required to be classed as a planet' and 'Failing to meet the third of these criteria' (clearing its orbit), implying Eris also has this issue as a dwarf planet."
+                    "feedback": "Correct! Paragraph D explains that Eris, like Pluto, fails to clear its orbit, which is why it is classified as a dwarf planet rather than a full planet."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph D states that Pluto 'did not meet one of the three formal conditions required to be classed as a planet' and 'Failing to meet the third of these criteria' (clearing its orbit), implying Eris also has this issue as a dwarf planet."
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph D explains that Eris, like Pluto, fails to meet the criteria of clearing its orbit of smaller objects, which is why both are classified as dwarf planets."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph D states that Pluto 'did not meet one of the three formal conditions required to be classed as a planet' and 'Failing to meet the third of these criteria' (clearing its orbit), implying Eris also has this issue as a dwarf planet."
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph D specifically addresses this, explaining that dwarf planets like Eris do not have sufficient mass to clear their orbits."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -1149,14 +1149,14 @@
             "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
             "question": "Charles Tombaugh used a piece of specialist equipment called a .",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: BLINK MICROSCOPE. Paragraph B states: 'Tombaugh... detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope' Remember to review the passage carefully for specific details.",
+            "no_answer_feedback": "The correct answer is: BLINK MICROSCOPE. This answer is found in Paragraph B, where Tombaugh's use of specialist equipment is highlighted: 'detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'. Remember to review the passage carefully for specific details.",
             "correct_feedback": "Correct! Well done.",
-            "incorrect_feedback": "Incorrect. The correct answer is: BLINK MICROSCOPE. Paragraph B states: 'Tombaugh... detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'",
+            "incorrect_feedback": "Incorrect. The correct answer is: BLINK MICROSCOPE. This answer is found in Paragraph B, where Tombaugh's use of specialist equipment is highlighted: 'detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'.",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -1169,14 +1169,14 @@
             "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
             "question": "Pluto's largest satellite was discovered by .",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: JAMES CHRISTY. Paragraph C states: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy' Remember to review the passage carefully for specific details.",
+            "no_answer_feedback": "The correct answer is: JAMES CHRISTY. This answer is found in Paragraph C, which states: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'. Remember to review the passage carefully for specific details.",
             "correct_feedback": "Correct! Well done.",
-            "incorrect_feedback": "Incorrect. The correct answer is: JAMES CHRISTY. Paragraph C states: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'",
+            "incorrect_feedback": "Incorrect. The correct answer is: JAMES CHRISTY. This answer is found in Paragraph C, which states: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'.",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -1189,14 +1189,14 @@
             "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
             "question": "Eris is located in an area of the Kuiper belt called the .",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: SCATTERED DISC. Paragraph D mentions 'the discovery in 2005 of a minor planet... Eris, in an outlying region of the Kuiper belt known as the scattered disc' Remember to review the passage carefully for specific details.",
+            "no_answer_feedback": "The correct answer is: SCATTERED DISC. This answer is found in Paragraph D, which mentions 'the discovery in 2005 of a minor planet... Eris, in an outlying region of the Kuiper belt known as the scattered disc'. Remember to review the passage carefully for specific details.",
             "correct_feedback": "Correct! Well done.",
-            "incorrect_feedback": "Incorrect. The correct answer is: SCATTERED DISC. Paragraph D mentions 'the discovery in 2005 of a minor planet... Eris, in an outlying region of the Kuiper belt known as the scattered disc'",
+            "incorrect_feedback": "Incorrect. The correct answer is: SCATTERED DISC. This answer is found in Paragraph D, which mentions 'the discovery in 2005 of a minor planet... Eris, in an outlying region of the Kuiper belt known as the scattered disc'.",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -1209,14 +1209,14 @@
             "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
             "question": "The International Astronomical Union came up with a formal definition for planets at a meeting held in the .",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: CZECH REPUBLIC. Paragraph E states: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic' Remember to review the passage carefully for specific details.",
+            "no_answer_feedback": "The correct answer is: CZECH REPUBLIC. This answer is found in Paragraph E, which states: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic'. Remember to review the passage carefully for specific details.",
             "correct_feedback": "Correct! Well done.",
-            "incorrect_feedback": "Incorrect. The correct answer is: CZECH REPUBLIC. Paragraph E states: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic'",
+            "incorrect_feedback": "Incorrect. The correct answer is: CZECH REPUBLIC. This answer is found in Paragraph E, which states: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic'.",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -1229,14 +1229,14 @@
             "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
             "question": "The name of one area on the surface of Pluto, called , was inspired by the creation of a particular writer.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: CTHULHU REGIO. Paragraph F mentions 'Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft' Remember to review the passage carefully for specific details.",
+            "no_answer_feedback": "The correct answer is: CTHULHU REGIO. This answer is found in Paragraph F, which mentions 'Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'. Remember to review the passage carefully for specific details.",
             "correct_feedback": "Correct! Well done.",
-            "incorrect_feedback": "Incorrect. The correct answer is: CTHULHU REGIO. Paragraph F mentions 'Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'",
+            "incorrect_feedback": "Incorrect. The correct answer is: CTHULHU REGIO. This answer is found in Paragraph F, which mentions 'Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'.",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -1256,42 +1256,42 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is G. Paragraph A describes the mission and equipment, but Paragraph G discusses the significance of the mission to space exploration."
                 },
                 {
                     "text": "B",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is G. Paragraph B discusses Pluto's discovery and naming, not the significance of New Horizons."
                 },
                 {
                     "text": "C",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is G. Paragraph C discusses Pluto's moons, not the New Horizons mission's significance."
                 },
                 {
                     "text": "D",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is G. Paragraph D discusses Pluto's reclassification, not the New Horizons mission's significance."
                 },
                 {
                     "text": "E",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is G. Paragraph E discusses the IAU definition of planets, not the New Horizons mission's significance."
                 },
                 {
                     "text": "F",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is G. Paragraph F describes Pluto's terrain, not the significance of the New Horizons mission."
                 },
                 {
                     "text": "G",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph G discusses how the mission represents 'the culmination of more than a decade's worth of preparation' and 'the beginning of a new chapter in space exploration'."
                 }
             ],
             "options": "A\nB\nC\nD\nE\nF\nG",
@@ -1310,42 +1310,42 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph A lists the technological equipment on board New Horizons: 'cameras for high resolution imagery', 'remote sensors, radio transmitters, computer subsystems, a large satellite dish and a radioisotope thermoelectric generator'."
                 },
                 {
                     "text": "B",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is A. Paragraph B discusses Pluto's discovery, not New Horizons equipment."
                 },
                 {
                     "text": "C",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is A. Paragraph C discusses Pluto's moons, not New Horizons equipment."
                 },
                 {
                     "text": "D",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is A. Paragraph D discusses Pluto's reclassification, not New Horizons equipment."
                 },
                 {
                     "text": "E",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is A. Paragraph E discusses the IAU planet definition, not New Horizons equipment."
                 },
                 {
                     "text": "F",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is A. Paragraph F describes Pluto's terrain from New Horizons images, but Paragraph A specifically lists the technological equipment on board."
                 },
                 {
                     "text": "G",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is A. Paragraph G discusses the mission's significance, not the equipment details."
                 }
             ],
             "options": "A\nB\nC\nD\nE\nF\nG",
@@ -1364,42 +1364,42 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is E. Paragraph A discusses the New Horizons mission, not the count of dwarf planets."
                 },
                 {
                     "text": "B",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is E. Paragraph B discusses Pluto's discovery, not the number of dwarf planets."
                 },
                 {
                     "text": "C",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is E. Paragraph C discusses Pluto's moons, not dwarf planet counts."
                 },
                 {
                     "text": "D",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is E. Paragraph D discusses the discovery of Eris and reclassification but does not provide the total count of dwarf planets."
                 },
                 {
                     "text": "E",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph E states 'there are five known bodies in the Solar System that have been recognised by the IAU as dwarf planets' and lists them: Ceres, Pluto, Haumea, Makemake and Eris."
                 },
                 {
                     "text": "F",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is E. Paragraph F describes Pluto's terrain, not the number of dwarf planets."
                 },
                 {
                     "text": "G",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is E. Paragraph G discusses the mission's significance, not dwarf planet counts."
                 }
             ],
             "options": "A\nB\nC\nD\nE\nF\nG",
@@ -1434,7 +1434,7 @@
     "_metadata": {
         "exported_at": "2026-01-14 11:45:43",
         "exported_by": "impact",
-        "plugin_version": "11.25",
+        "plugin_version": "11.27",
         "format_version": "1.0"
     }
 }
