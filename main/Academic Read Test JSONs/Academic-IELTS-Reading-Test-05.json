@@ -14,7 +14,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -48,7 +48,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -75,29 +75,29 @@
             "instructions": "",
             "question": "Exercise fads in the 20th century, such as jogging and home gyms, have not been effective in increasing general fitness levels.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions these fads in paragraph 5 but does not state whether they were effective or not in increasing fitness levels. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions these fads exist ('jogging, jazzercise, celebrity aerobics, home gyms and Zumba workouts') but never discusses whether they were effective or ineffective at increasing fitness levels—that information is simply not provided. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions these fads in paragraph 5 but does not state whether they were effective or not in increasing fitness levels."
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While the passage mentions these exercise fads ('jogging, jazzercise, celebrity aerobics, home gyms and Zumba workouts'), it never states whether they were effective or ineffective at increasing fitness levels. The passage simply lists them as preceding the modern gym concept, without evaluating their effectiveness."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions these fads in paragraph 5 but does not state whether they were effective or not in increasing fitness levels."
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions these fads in paragraph 5 ('jogging, jazzercise, celebrity aerobics, home gyms and Zumba workouts') but provides no information about whether they were effective or not at increasing fitness levels. Be careful not to make assumptions about information that isn't actually stated."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": true,
-                    "feedback": "Correct! The passage mentions these fads in paragraph 5 but does not state whether they were effective or not in increasing fitness levels."
+                    "feedback": "Correct! The passage mentions these fads in paragraph 5 ('jogging, jazzercise, celebrity aerobics, home gyms and Zumba workouts') but does not state whether they were effective or not in increasing fitness levels. The passage only states that the modern gym concept 'predates' these fads, without evaluating their effectiveness."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -116,7 +116,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -150,7 +150,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -184,7 +184,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -218,7 +218,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "yoga classes",
@@ -272,7 +272,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "A: ...that a better diet leads to improved health.",
@@ -311,7 +311,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "are worried that, despite the increase in gyms, the general health of the population is not improving.",
@@ -350,7 +350,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "arose from such innovations as jogging, jazzercise and other 20th century fads.",
@@ -389,7 +389,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "the Western world turned to the church as a means to improve fitness.",
@@ -428,7 +428,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "I. The original concept sees many modern applications",
@@ -492,7 +492,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "I. The original concept sees many modern applications",
@@ -556,7 +556,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "I. The original concept sees many modern applications",
@@ -620,7 +620,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "I. The original concept sees many modern applications",
@@ -684,7 +684,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "I. The original concept sees many modern applications",
@@ -748,7 +748,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "I. The original concept sees many modern applications",
@@ -812,7 +812,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -832,7 +832,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -852,7 +852,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -872,7 +872,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -892,7 +892,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -912,7 +912,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -932,7 +932,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -952,7 +952,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -986,7 +986,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1020,7 +1020,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1054,7 +1054,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1088,7 +1088,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1122,7 +1122,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -1156,7 +1156,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -1176,7 +1176,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -1196,7 +1196,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -1216,7 +1216,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -1236,7 +1236,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
@@ -1256,7 +1256,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
@@ -1310,7 +1310,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
@@ -1364,7 +1364,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
@@ -1434,7 +1434,7 @@
     "_metadata": {
         "exported_at": "2026-01-14 11:45:43",
         "exported_by": "impact",
-        "plugin_version": "11.25",
+        "plugin_version": "11.27",
         "format_version": "1.0"
     }
 }
