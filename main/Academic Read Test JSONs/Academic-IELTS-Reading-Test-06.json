@@ -3,11 +3,11 @@
     "content": "",
     "questions": [
         {
-            "type": "headings",
+            "type": "closed_question",
             "instructions": "Choose the most suitable headings for sections A and C – F from the list below.\r\nList of headings\r\ni. Why New Zealand?\r\nii. Course requirements\r\niii. Government funding\r\niv. Cost of further education\r\nv. Further education options\r\nvi. Overseeing authorities\r\nvii. Specialisation\r\nviii. Prestigious contribution\r\nix. Postgraduate choices\r\nExample Section B Answer: vi\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 – 15 which are based on Reading Passage 1.",
             "question": "Section A",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is: i. Why New Zealand?. Section A explains why students choose to study in New Zealand, including the excellent education system, English language immersion opportunities, and international language offerings. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -59,25 +59,16 @@
                 }
             ],
             "options": "i. Why New Zealand?\nii. Course requirements\niii. Government funding\niv. Cost of further education\nv. Further education options\nvi. Overseeing authorities\nvii. Specialisation\nviii. Prestigious contribution\nix. Postgraduate choices",
-            "correct_answer": "0",
-            "option_feedback": [
-                "Section A explains why students choose to study in New Zealand, including the excellent education system, English language immersion opportunities, and international language offerings.",
-                "Section A does not discuss course requirements.",
-                "Section A does not focus on government funding.",
-                "Section A does not discuss costs of further education.",
-                "Section A does not discuss further education options.",
-                "Section A does not discuss overseeing authorities - that's Section B.",
-                "Section A does not discuss specialisation in specific fields.",
-                "Section A does not discuss research contributions.",
-                "Section A does not discuss postgraduate options."
-            ]
+            "ielts_question_category": "matching_headings",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "headings",
+            "type": "closed_question",
             "instructions": "Choose the most suitable headings for sections A and C – F from the list below.\r\nList of headings\r\ni. Why New Zealand?\r\nii. Course requirements\r\niii. Government funding\r\niv. Cost of further education\r\nv. Further education options\r\nvi. Overseeing authorities\r\nvii. Specialisation\r\nviii. Prestigious contribution\r\nix. Postgraduate choices\r\nExample Section B Answer: vi\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 – 15 which are based on Reading Passage 1.",
             "question": "Section C",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is: iii. Government funding. Section C discusses state-funded tertiary institutions and universities, explaining the government's role in funding education. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -129,25 +120,16 @@
                 }
             ],
             "options": "i. Why New Zealand?\nii. Course requirements\niii. Government funding\niv. Cost of further education\nv. Further education options\nvi. Overseeing authorities\nvii. Specialisation\nviii. Prestigious contribution\nix. Postgraduate choices",
-            "correct_answer": "2",
-            "option_feedback": [
-                "Section C does not explain why to choose New Zealand - that's Section A.",
-                "Section C does not focus on specific course requirements.",
-                "Section C discusses state-funded tertiary institutions and universities, explaining the government's role in funding education.",
-                "Section C does not discuss the costs of education.",
-                "Section C discusses the education system structure but not specific further education options - that's Section D.",
-                "Section C does not discuss overseeing authorities - that's Section B.",
-                "Section C does not discuss specialisation - that's Section D.",
-                "Section C does not discuss research contributions - that's Section F.",
-                "Section C does not discuss postgraduate choices - that's Section E."
-            ]
+            "ielts_question_category": "matching_headings",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "headings",
+            "type": "closed_question",
             "instructions": "Choose the most suitable headings for sections A and C – F from the list below.\r\nList of headings\r\ni. Why New Zealand?\r\nii. Course requirements\r\niii. Government funding\r\niv. Cost of further education\r\nv. Further education options\r\nvi. Overseeing authorities\r\nvii. Specialisation\r\nviii. Prestigious contribution\r\nix. Postgraduate choices\r\nExample Section B Answer: vi\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 – 15 which are based on Reading Passage 1.",
             "question": "Section D",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is: v. Further education options. Section D outlines the range of degree options available including Bachelors, Masters, Doctorates, and diploma programmes. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -199,25 +181,16 @@
                 }
             ],
             "options": "i. Why New Zealand?\nii. Course requirements\niii. Government funding\niv. Cost of further education\nv. Further education options\nvi. Overseeing authorities\nvii. Specialisation\nviii. Prestigious contribution\nix. Postgraduate choices",
-            "correct_answer": "4",
-            "option_feedback": [
-                "Section D does not explain why to choose New Zealand - that's Section A.",
-                "Section D does not focus on specific course requirements.",
-                "Section D does not discuss government funding - that's Section C.",
-                "Section D does not discuss costs.",
-                "Section D outlines the range of degree options available including Bachelors, Masters, Doctorates, and diploma programmes.",
-                "Section D does not discuss overseeing authorities - that's Section B.",
-                "Section D mentions specialisation but focuses more broadly on the range of options available. It's close but option E is more accurate.",
-                "Section D does not discuss research contributions - that's Section F.",
-                "Section D discusses all degree levels, not specifically postgraduate choices - that's Section E."
-            ]
+            "ielts_question_category": "matching_headings",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "headings",
+            "type": "closed_question",
             "instructions": "Choose the most suitable headings for sections A and C – F from the list below.\r\nList of headings\r\ni. Why New Zealand?\r\nii. Course requirements\r\niii. Government funding\r\niv. Cost of further education\r\nv. Further education options\r\nvi. Overseeing authorities\r\nvii. Specialisation\r\nviii. Prestigious contribution\r\nix. Postgraduate choices\r\nExample Section B Answer: vi\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 – 15 which are based on Reading Passage 1.",
             "question": "Section E",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is: ix. Postgraduate choices. Section E specifically details the postgraduate pathway from Postgraduate Diploma to Masters to Doctorate, explaining duration and requirements for each. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -269,25 +242,16 @@
                 }
             ],
             "options": "i. Why New Zealand?\nii. Course requirements\niii. Government funding\niv. Cost of further education\nv. Further education options\nvi. Overseeing authorities\nvii. Specialisation\nviii. Prestigious contribution\nix. Postgraduate choices",
-            "correct_answer": "8",
-            "option_feedback": [
-                "Section E does not explain why to choose New Zealand - that's Section A.",
-                "Section E discusses postgraduate programmes but not general course requirements.",
-                "Section E does not discuss government funding - that's Section C.",
-                "Section E does not discuss costs.",
-                "Section E is more specific about postgraduate pathways rather than all further education options - that's Section D.",
-                "Section E does not discuss overseeing authorities - that's Section B.",
-                "Section E does not discuss specialisation - that's mentioned in Section D.",
-                "Section E does not discuss research contributions - that's Section F.",
-                "Section E specifically details the postgraduate pathway from Postgraduate Diploma to Masters to Doctorate, explaining duration and requirements for each."
-            ]
+            "ielts_question_category": "matching_headings",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "headings",
+            "type": "closed_question",
             "instructions": "Choose the most suitable headings for sections A and C – F from the list below.\r\nList of headings\r\ni. Why New Zealand?\r\nii. Course requirements\r\niii. Government funding\r\niv. Cost of further education\r\nv. Further education options\r\nvi. Overseeing authorities\r\nvii. Specialisation\r\nviii. Prestigious contribution\r\nix. Postgraduate choices\r\nExample Section B Answer: vi\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 – 15 which are based on Reading Passage 1.",
             "question": "Section F",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is: viii. Prestigious contribution. Section F discusses New Zealand's pride in research quality and the many awards presented to researchers from New Zealand universities - a prestigious contribution to academia. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -339,229 +303,373 @@
                 }
             ],
             "options": "i. Why New Zealand?\nii. Course requirements\niii. Government funding\niv. Cost of further education\nv. Further education options\nvi. Overseeing authorities\nvii. Specialisation\nviii. Prestigious contribution\nix. Postgraduate choices",
-            "correct_answer": "7",
-            "option_feedback": [
-                "Section F does not explain why to choose New Zealand - that's Section A.",
-                "Section F does not discuss course requirements.",
-                "Section F does not discuss government funding - that's Section C.",
-                "Section F does not discuss costs.",
-                "Section F focuses on research rather than education options - that's Section D.",
-                "Section F does not discuss overseeing authorities - that's Section B.",
-                "Section F does not discuss specialisation - that's mentioned in Section D.",
-                "Section F discusses New Zealand's pride in research quality and the many awards presented to researchers from New Zealand universities - a prestigious contribution to academia.",
-                "Section F does not discuss postgraduate choices - that's Section E."
-            ]
+            "ielts_question_category": "matching_headings",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS.",
-            "question": "The field of study in which New Zealand excels is . [FEEDBACK: Section A states \"it has an excellent education system, especially in English language teaching.\"]",
+            "question": "The field of study in which New Zealand excels is .",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: ENGLISH LANGUAGE TEACHING. Section A states \"it has an excellent education system, especially in English language teaching.\" Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: ENGLISH LANGUAGE TEACHING. Section A states \"it has an excellent education system, especially in English language teaching.\"",
             "reading_text_id": 0,
             "options": "",
-            "correct_answer": "ENGLISH LANGUAGE TEACHING|ENGLISH LANGUAGE|LANGUAGE TEACHING"
+            "correct_answer": "ENGLISH LANGUAGE TEACHING|ENGLISH LANGUAGE|LANGUAGE TEACHING",
+            "ielts_question_category": "sentence_completion_r",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS.",
-            "question": "Full immersion learning can only happen in an . [FEEDBACK: Section A states \"This is only possible in a country where English is the spoken language.\"]",
+            "question": "Full immersion learning can only happen in an .",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: ENGLISH SPEAKING COUNTRY. Section A states \"This is only possible in a country where English is the spoken language.\" Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: ENGLISH SPEAKING COUNTRY. Section A states \"This is only possible in a country where English is the spoken language.\"",
             "reading_text_id": 0,
             "options": "",
-            "correct_answer": "ENGLISH SPEAKING COUNTRY|ENGLISH-SPEAKING COUNTRY"
+            "correct_answer": "ENGLISH SPEAKING COUNTRY|ENGLISH-SPEAKING COUNTRY",
+            "ielts_question_category": "sentence_completion_r",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS.",
-            "question": "Educational standards are monitored by three . [FEEDBACK: Section B states \"it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office\" - these are three government bodies.]",
+            "question": "Educational standards are monitored by three .",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: GOVERNMENT BODIES. Section B states \"it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office\" - these are three government bodies. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: GOVERNMENT BODIES. Section B states \"it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office\" - these are three government bodies.",
             "reading_text_id": 0,
             "options": "",
-            "correct_answer": "GOVERNMENT BODIES|GOVERNMENT AGENCIES"
+            "correct_answer": "GOVERNMENT BODIES|GOVERNMENT AGENCIES",
+            "ielts_question_category": "sentence_completion_r",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "true_false",
+            "type": "closed_question",
             "instructions": "Look at the following statements and decide if they are right or wrong according to the information given.\r\nWrite TRUE if the statement is true, FALSE if the statement is false, or NOT GIVEN if the information is not given in the passage.",
             "question": "Most international students start their studies in a secondary school. ",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is FALSE. Section C states 'Although a majority of international students spend some time in a language school' - this means most start in language schools, NOT secondary schools. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
-            "options": "",
-            "correct_answer": "true"
+            "options": "TRUE\\nFALSE\\nNOT GIVEN",
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Section C states 'Although a majority of international students spend some time in a language school' - most start in language schools, not secondary schools."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Section C states 'Although a majority of international students spend some time in a language school' - so most do NOT start in secondary schools."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Section C clearly states where most international students start their studies."
+                }
+            ],
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null
         },
         {
-            "type": "true_false",
+            "type": "closed_question",
             "instructions": "Look at the following statements and decide if they are right or wrong according to the information given.\r\n",
             "question": "Postgraduate students undertaking a diploma course extend what they have learned during their Bachelor ’s degree. ",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is TRUE. Section E states 'The Postgraduate Diploma course...is designed for graduates building on the academic field of their previous degree.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
-            "options": "",
-            "correct_answer": "true"
+            "options": "TRUE\\nFALSE\\nNOT GIVEN",
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Section E states 'The Postgraduate Diploma course...is designed for graduates building on the academic field of their previous degree.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Section E clearly states the Postgraduate Diploma builds on previous study."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Section E specifically addresses this."
+                }
+            ],
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null
         },
         {
-            "type": "true_false",
+            "type": "closed_question",
             "instructions": "",
             "question": "All quality control at a tertiary level is done by the universities themselves. ",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is TRUE. Section C states 'In addition to a centrally coordinated system of quality assurance audits at both institution and programme level, each university undertakes internal quality checks.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
-            "options": "",
-            "correct_answer": "true"
+            "options": "TRUE\\nFALSE\\nNOT GIVEN",
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Section C states 'In addition to a centrally coordinated system of quality assurance audits at both institution and programme level, each university undertakes internal quality checks.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Section C confirms universities perform their own quality control."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Section C provides this information."
+                }
+            ],
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Complete the flow chart below using NO MORE THAN TWO WORDS from the text.",
-            "question": "[FEEDBACK: Section D states \"The first degree a student is able to gain in New Zealand is, as elsewhere, a Bachelors degree.\" This is the starting point of the postgraduate pathway shown in the flow chart.]",
+            "question": "",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: BACHELORS DEGREE. Section D states \"The first degree a student is able to gain in New Zealand is, as elsewhere, a Bachelors degree.\" This is the starting point of the postgraduate pathway shown in the flow chart. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: BACHELORS DEGREE. Section D states \"The first degree a student is able to gain in New Zealand is, as elsewhere, a Bachelors degree.\" This is the starting point of the postgraduate pathway shown in the flow chart.",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "BACHELORS DEGREE|BACHELOR'S DEGREE|BACHELORS|BACHELOR DEGREE"
+            "correct_answer": "BACHELORS DEGREE|BACHELOR'S DEGREE|BACHELORS|BACHELOR DEGREE",
+            "ielts_question_category": "flow_chart_completion",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Complete the flow chart below using NO MORE THAN TWO WORDS from the text.",
-            "question": "[FEEDBACK: Section D mentions \"There are Postgraduate Diploma courses\" as the first postgraduate option after a Bachelors degree. Section E provides more detail about this one-year programme.]",
+            "question": "",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: POSTGRADUATE DIPLOMA. Section D mentions \"There are Postgraduate Diploma courses\" as the first postgraduate option after a Bachelors degree. Section E provides more detail about this one-year programme. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: POSTGRADUATE DIPLOMA. Section D mentions \"There are Postgraduate Diploma courses\" as the first postgraduate option after a Bachelors degree. Section E provides more detail about this one-year programme.",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "POSTGRADUATE DIPLOMA|POSTGRADUATE DIPLOMAS"
+            "correct_answer": "POSTGRADUATE DIPLOMA|POSTGRADUATE DIPLOMAS",
+            "ielts_question_category": "flow_chart_completion",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Complete the flow chart below using NO MORE THAN TWO WORDS from the text.",
-            "question": "[FEEDBACK: Section E states \"The Masters degree, like the Postgraduate Diploma, builds on a Bachelors degree\" and describes it as \"the conventional pathway to the next level of education – the Doctorate.\"]",
+            "question": "",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: MASTERS DEGREE. Section E states \"The Masters degree, like the Postgraduate Diploma, builds on a Bachelors degree\" and describes it as \"the conventional pathway to the next level of education – the Doctorate.\" Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: MASTERS DEGREE. Section E states \"The Masters degree, like the Postgraduate Diploma, builds on a Bachelors degree\" and describes it as \"the conventional pathway to the next level of education – the Doctorate.\"",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "MASTERS DEGREE|MASTER'S DEGREE|MASTERS|MASTER DEGREE"
+            "correct_answer": "MASTERS DEGREE|MASTER'S DEGREE|MASTERS|MASTER DEGREE",
+            "ielts_question_category": "flow_chart_completion",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Complete the flow chart below using NO MORE THAN TWO WORDS from the text.",
-            "question": "[FEEDBACK: Section E describes the Doctorate as requiring \"a research-based thesis as part of a course that takes a minimum of two years, and is by far the most challenging.\" This is the final level in the educational pathway.]",
+            "question": "",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: DOCTORATE. Section E describes the Doctorate as requiring \"a research-based thesis as part of a course that takes a minimum of two years, and is by far the most challenging.\" This is the final level in the educational pathway. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: DOCTORATE. Section E describes the Doctorate as requiring \"a research-based thesis as part of a course that takes a minimum of two years, and is by far the most challenging.\" This is the final level in the educational pathway.",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "DOCTORATE|DOCTORATES"
+            "correct_answer": "DOCTORATE|DOCTORATES",
+            "ielts_question_category": "flow_chart_completion",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "true_false",
+            "type": "closed_question",
             "instructions": "Do the following statements agree with the information given in reading passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.\r\nYou should spend about 20 minutes on Questions 16 – 27 which are based on Reading Passage 2.",
             "question": "Only a few people believe that 'cyberpoets' are becoming part of our popular culture.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is FALSE. Paragraph F states 'Very few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture' - meaning MOST people believe it, not just a few. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
-            "options": "",
-            "correct_answer": "true"
+            "options": "TRUE\\nFALSE\\nNOT GIVEN",
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Paragraph F states 'Very few people would disagree' - meaning most people DO believe cyberpoets are part of popular culture."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F states 'Very few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture' - meaning MOST people believe it."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage clearly addresses this topic in Paragraph F."
+                }
+            ],
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
-            "question": "The range of resources available online are far wider than traditional mediums  [FEEDBACK: Paragraph C (third paragraph) states \"we can read almost anything that has ever been written\" and discusses how works of art \"Previously available to be viewed only in museums...are now replicated on the Internet\" - showing the wider range online.]",
+            "question": "The range of resources available online are far wider than traditional mediums",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: C. Paragraph C (third paragraph) states \"we can read almost anything that has ever been written\" and discusses how works of art \"Previously available to be viewed only in museums...are now replicated on the Internet\" - showing the wider range online. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: C. Paragraph C (third paragraph) states \"we can read almost anything that has ever been written\" and discusses how works of art \"Previously available to be viewed only in museums...are now replicated on the Internet\" - showing the wider range online.",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "C|PARAGRAPH C"
+            "correct_answer": "C|PARAGRAPH C",
+            "ielts_question_category": "matching_information",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
-            "question": "Lack of clarity regarding the person responsible has an effect on cultural value of some web based resources  [FEEDBACK: Paragraph H (eighth/last paragraph) discusses how \"the authorship of online content is now far less moderated\" and \"The anonymous nature of a large percentage of internet interactions\" affects the reliability and cultural value of web content.]",
+            "question": "Lack of clarity regarding the person responsible has an effect on cultural value of some web based resources",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: H. Paragraph H (eighth/last paragraph) discusses how \"the authorship of online content is now far less moderated\" and \"The anonymous nature of a large percentage of internet interactions\" affects the reliability and cultural value of web content. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: H. Paragraph H (eighth/last paragraph) discusses how \"the authorship of online content is now far less moderated\" and \"The anonymous nature of a large percentage of internet interactions\" affects the reliability and cultural value of web content.",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "H|PARAGRAPH H"
+            "correct_answer": "H|PARAGRAPH H",
+            "ielts_question_category": "matching_information",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
-            "question": "Providing the ability to cross boundaries and be available worldwide  [FEEDBACK: Paragraph E (fifth paragraph) states \"the Internet is remarkable in its ability to share, on an almost global scale, all the factors that constitute culture\" - describing its ability to cross boundaries and be available worldwide.]",
+            "question": "Providing the ability to cross boundaries and be available worldwide",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: E. Paragraph E (fifth paragraph) states \"the Internet is remarkable in its ability to share, on an almost global scale, all the factors that constitute culture\" - describing its ability to cross boundaries and be available worldwide. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: E. Paragraph E (fifth paragraph) states \"the Internet is remarkable in its ability to share, on an almost global scale, all the factors that constitute culture\" - describing its ability to cross boundaries and be available worldwide.",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "E|PARAGRAPH E"
+            "correct_answer": "E|PARAGRAPH E",
+            "ielts_question_category": "matching_information",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
-            "question": "The emergence of new forms of culture thanks to digital possibilities  [FEEDBACK: Paragraph D (fourth paragraph) states \"the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right\" and mentions \"'Kinetic art' and other such computerised art forms\" - new forms of culture from digital possibilities.]",
+            "question": "The emergence of new forms of culture thanks to digital possibilities",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: D. Paragraph D (fourth paragraph) states \"the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right\" and mentions \"'Kinetic art' and other such computerised art forms\" - new forms of culture from digital possibilities. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: D. Paragraph D (fourth paragraph) states \"the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right\" and mentions \"'Kinetic art' and other such computerised art forms\" - new forms of culture from digital possibilities.",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "D|PARAGRAPH D"
+            "correct_answer": "D|PARAGRAPH D",
+            "ielts_question_category": "matching_information",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
-            "question": "The wealth of online resources can mean difficulties in identifying areas of cultural significance  [FEEDBACK: Paragraph G (seventh paragraph) discusses \"the many millions of hours of footage that cannot be classified as having any cultural significance\" - the difficulty of identifying what has cultural significance among the wealth of online resources.]",
+            "question": "The wealth of online resources can mean difficulties in identifying areas of cultural significance",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: G. Paragraph G (seventh paragraph) discusses \"the many millions of hours of footage that cannot be classified as having any cultural significance\" - the difficulty of identifying what has cultural significance among the wealth of online resources. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: G. Paragraph G (seventh paragraph) discusses \"the many millions of hours of footage that cannot be classified as having any cultural significance\" - the difficulty of identifying what has cultural significance among the wealth of online resources.",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "G|PARAGRAPH G"
+            "correct_answer": "G|PARAGRAPH G",
+            "ielts_question_category": "matching_information",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
-            "question": "The self proclaimed title of supporters of internet culture  [FEEDBACK: Paragraph B (second paragraph) states \"active supporters of the Internet as a culture have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets\" - describing the self-proclaimed title \"cyberpoets.\"]",
+            "question": "The self proclaimed title of supporters of internet culture",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: B. Paragraph B (second paragraph) states \"active supporters of the Internet as a culture have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets\" - describing the self-proclaimed title \"cyberpoets.\" Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: B. Paragraph B (second paragraph) states \"active supporters of the Internet as a culture have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets\" - describing the self-proclaimed title \"cyberpoets.\"",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "B|PARAGRAPH B"
+            "correct_answer": "B|PARAGRAPH B",
+            "ielts_question_category": "matching_information",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "headings",
+            "type": "closed_question",
             "instructions": "Choose the most suitable headings for Paragraphs A-E from the list below. Use each heading once only.\r\nList of headings\r\ni. Effect on modern industry\r\nii. New payment procedures\r\niii. Labour problems\r\niv. The Model-T\r\nv. Creating a market\r\nvi. Revolutionary production techniques\r\nvii. The Ford family today\r\nviii. Impact on the global economy\r\nix. Overseas competition\r\nYou should spend about 20 minutes on Questions 28 – 40 which are based on Reading Passage 3.",
             "question": "Paragraph A",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is: vi. Revolutionary production techniques. Correct! Paragraph A describes Ford's innovative production line system that \"changed the nature of American industry forever\" - a revolutionary production technique. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -613,25 +721,16 @@
                 }
             ],
             "options": "i. Effect on modern industry\nii. New payment procedures\niii. Labour problems\niv. The Model-T\nv. Creating a market\nvi. Revolutionary production techniques\nvii. The Ford family today\nviii. Impact on the global economy\nix. Overseas competition",
-            "correct_answer": "5",
-            "option_feedback": [
-                "Paragraph A introduces Ford's production line but doesn't discuss its effect on modern industry - that's Paragraph D.",
-                "Paragraph A does not discuss payment or wages - that's Paragraph B.",
-                "Paragraph A does not discuss labour problems - that's Paragraph C.",
-                "While the Model-T is mentioned, the paragraph focuses on the production line technique rather than the car itself.",
-                "Paragraph A does not discuss creating a market - that's Paragraph B.",
-                "Correct! Paragraph A describes Ford's innovative production line system that \"changed the nature of American industry forever\" - a revolutionary production technique.",
-                "Paragraph A does not discuss the Ford family.",
-                "Paragraph A does not discuss global economic impact - that's Paragraph E.",
-                "Paragraph A does not discuss overseas competition."
-            ]
+            "ielts_question_category": "matching_headings",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "headings",
+            "type": "closed_question",
             "instructions": "Choose the most suitable headings for Paragraphs A-E from the list below. Use each heading once only.\r\nList of headings\r\ni. Effect on modern industry\r\nii. New payment procedures\r\niii. Labour problems\r\niv. The Model-T\r\nv. Creating a market\r\nvi. Revolutionary production techniques\r\nvii. The Ford family today\r\nviii. Impact on the global economy\r\nix. Overseas competition\r\nYou should spend about 20 minutes on Questions 28 – 40 which are based on Reading Passage 3.",
             "question": "Paragraph B",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is: v. Creating a market. Correct! Paragraph B explains how Ford raised wages to $5/hour, creating both a stable workforce AND potential customers who could afford to buy his cars - \"he also had potential customers.\" Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -683,25 +782,16 @@
                 }
             ],
             "options": "i. Effect on modern industry\nii. New payment procedures\niii. Labour problems\niv. The Model-T\nv. Creating a market\nvi. Revolutionary production techniques\nvii. The Ford family today\nviii. Impact on the global economy\nix. Overseas competition",
-            "correct_answer": "4",
-            "option_feedback": [
-                "Paragraph B does not discuss effects on modern industry - that's Paragraph D.",
-                "While wages are discussed, the main focus is on creating a market of employee-customers, not just payment procedures.",
-                "Paragraph B mentions labour turnover but focuses on the solution and its market-creating effect, not the problems themselves.",
-                "The Model-T is mentioned as part of the market creation strategy, but this is not the main focus.",
-                "Correct! Paragraph B explains how Ford raised wages to $5/hour, creating both a stable workforce AND potential customers who could afford to buy his cars - \"he also had potential customers.\"",
-                "Paragraph B does not focus on production techniques - that's Paragraph A.",
-                "Paragraph B does not discuss the Ford family.",
-                "Paragraph B does not discuss global impact - that's Paragraph E.",
-                "Paragraph B does not discuss overseas competition."
-            ]
+            "ielts_question_category": "matching_headings",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "headings",
+            "type": "closed_question",
             "instructions": "Choose the most suitable headings for Paragraphs A-E from the list below. Use each heading once only.\r\nList of headings\r\ni. Effect on modern industry\r\nii. New payment procedures\r\niii. Labour problems\r\niv. The Model-T\r\nv. Creating a market\r\nvi. Revolutionary production techniques\r\nvii. The Ford family today\r\nviii. Impact on the global economy\r\nix. Overseas competition\r\nYou should spend about 20 minutes on Questions 28 – 40 which are based on Reading Passage 3.",
             "question": "Paragraph C",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is: iii. Labour problems. Correct! Paragraph C describes Ford's problems with labour unions, his refusal to deal with them, the use of spies, and the eventual strike that forced him to negotiate - all labour problems. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -753,26 +843,17 @@
                 }
             ],
             "options": "i. Effect on modern industry\nii. New payment procedures\niii. Labour problems\niv. The Model-T\nv. Creating a market\nvi. Revolutionary production techniques\nvii. The Ford family today\nviii. Impact on the global economy\nix. Overseas competition",
-            "correct_answer": "2",
-            "option_feedback": [
-                "Paragraph C does not discuss effects on modern industry - that's Paragraph D.",
-                "Paragraph C does not discuss payment procedures - that's Paragraph B.",
-                "Correct! Paragraph C describes Ford's problems with labour unions, his refusal to deal with them, the use of spies, and the eventual strike that forced him to negotiate - all labour problems.",
-                "While the Model-T's lack of variety is mentioned, the paragraph's main focus is on labour and adaptation issues.",
-                "Paragraph C does not discuss creating a market - that's Paragraph B.",
-                "Paragraph C does not discuss production techniques - that's Paragraph A.",
-                "The paragraph mentions leaving the company to his grandson but does not focus on the family today.",
-                "Paragraph C does not discuss global impact - that's Paragraph E.",
-                "Paragraph C mentions competitors but not specifically overseas competition."
-            ]
+            "ielts_question_category": "matching_headings",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "headings",
+            "type": "closed_question",
             "instructions": "Choose the most suitable headings for Paragraphs A-E from the list below. Use each heading once only.\r\nList of headings\r\ni. Effect on modern industry\r\nii. New payment procedures\r\niii. Labour problems\r\niv. The Model-T\r\nv. Creating a market\r\nvi. Revolutionary production techniques\r\nvii. The Ford family today\r\nviii. Impact on the global economy\r\nix. Overseas competition\r\nYou should spend about 20 minutes on Questions 28 – 40 which are based on Reading Passage 3.",
             "question": "Paragraph D",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
+            "no_answer_feedback": "The correct answer is: i. Effect on modern industry. Correct! Paragraph D describes how \"the legacy of Fordism lives on\" and explains how mass production \"transformed the organisation of work in a number of important ways\" - the effect on modern industry. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "mc_options": [
@@ -823,25 +904,16 @@
                 }
             ],
             "options": "i. Effect on modern industry\nii. New payment procedures\niii. Labour problems\niv. The Model-T\nv. Creating a market\nvi. Revolutionary production techniques\nvii. The Ford family today\nviii. Impact on the global economy\nix. Overseas competition",
-            "correct_answer": "0",
-            "option_feedback": [
-                "Correct! Paragraph D describes how \"the legacy of Fordism lives on\" and explains how mass production \"transformed the organisation of work in a number of important ways\" - the effect on modern industry.",
-                "Paragraph D does not discuss payment procedures - that's Paragraph B.",
-                "Paragraph D does not discuss labour problems - that's Paragraph C.",
-                "Paragraph D does not focus on the Model-T.",
-                "Paragraph D does not discuss creating a market - that's Paragraph B.",
-                "Paragraph D discusses the legacy and effects of the techniques, not the techniques themselves - that's Paragraph A.",
-                "Paragraph D does not discuss the Ford family.",
-                "While international division of labour is mentioned, the main focus is on industry organization, not global economy specifically - that's more Paragraph E.",
-                "Paragraph D does not discuss overseas competition."
-            ]
+            "ielts_question_category": "matching_headings",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "headings",
+            "type": "closed_question",
             "instructions": "Choose the most suitable headings for Paragraphs A-E from the list below. Use each heading once only.\r\nList of headings\r\ni. Effect on modern industry\r\nii. New payment procedures\r\niii. Labour problems\r\niv. The Model-T\r\nv. Creating a market\r\nvi. Revolutionary production techniques\r\nvii. The Ford family today\r\nviii. Impact on the global economy\r\nix. Overseas competition\r\nYou should spend about 20 minutes on Questions 28 – 40 which are based on Reading Passage 3.",
             "question": "Paragraph E",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is: viii. Impact on the global economy. Correct! Paragraph E describes how developing countries in Asia and South America became industrialised through outsourcing, and how they are \"rapidly becoming integrated into the world economic community\" - the global economic impact. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -893,97 +965,113 @@
                 }
             ],
             "options": "i. Effect on modern industry\nii. New payment procedures\niii. Labour problems\niv. The Model-T\nv. Creating a market\nvi. Revolutionary production techniques\nvii. The Ford family today\nviii. Impact on the global economy\nix. Overseas competition",
-            "correct_answer": "7",
-            "option_feedback": [
-                "Paragraph E does not focus on effects on modern industry - that's Paragraph D.",
-                "Paragraph E does not discuss payment procedures - that's Paragraph B.",
-                "Paragraph E does not discuss labour problems - that's Paragraph C.",
-                "Paragraph E does not discuss the Model-T.",
-                "Paragraph E does not discuss creating a market - that's Paragraph B.",
-                "Paragraph E does not discuss production techniques - that's Paragraph A.",
-                "Paragraph E does not discuss the Ford family.",
-                "Correct! Paragraph E describes how developing countries in Asia and South America became industrialised through outsourcing, and how they are \"rapidly becoming integrated into the world economic community\" - the global economic impact.",
-                "Paragraph E discusses outsourcing to developing nations, not competition from overseas."
-            ]
+            "ielts_question_category": "matching_headings",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Answer the following questions using NO MORE THAN TWO WORDS.",
-            "question": "What was used to move parts around the factory under Ford's production techniques?  [FEEDBACK: Paragraph A states \"Ford's production-line techniques relied on machine parts being moved around the factory on a conveyor belt.\"]",
+            "question": "What was used to move parts around the factory under Ford's production techniques?",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: CONVEYOR BELT. Paragraph A states \"Ford's production-line techniques relied on machine parts being moved around the factory on a conveyor belt.\" Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: CONVEYOR BELT. Paragraph A states \"Ford's production-line techniques relied on machine parts being moved around the factory on a conveyor belt.\"",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "CONVEYOR BELT|CONVEYOR-BELT|A CONVEYOR BELT"
+            "correct_answer": "CONVEYOR BELT|CONVEYOR-BELT|A CONVEYOR BELT",
+            "ielts_question_category": "short_answer_r",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Answer the following questions using NO MORE THAN TWO WORDS.",
-            "question": "What did Ford reduce by 90% compared with more traditional methods of the time?  [FEEDBACK: Paragraph A states \"Ford was able to mass produce the now famous Model-T car for only 10% of traditional labour costs\" - meaning he reduced labour costs by 90%.]",
+            "question": "What did Ford reduce by 90% compared with more traditional methods of the time?",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "KYLIE",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: LABOUR COSTS. Paragraph A states \"Ford was able to mass produce the now famous Model-T car for only 10% of traditional labour costs\" - meaning he reduced labour costs by 90%. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: LABOUR COSTS. Paragraph A states \"Ford was able to mass produce the now famous Model-T car for only 10% of traditional labour costs\" - meaning he reduced labour costs by 90%.",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "LABOUR COSTS|LABOR COSTS|TRADITIONAL LABOUR COSTS"
+            "correct_answer": "LABOUR COSTS|LABOR COSTS|TRADITIONAL LABOUR COSTS",
+            "ielts_question_category": "short_answer_r",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Answer the following questions using NO MORE THAN TWO WORDS.",
-            "question": "When was the last Model-T Ford produced?  [FEEDBACK: Paragraph B states \"Until 1927 when the last Model-T rolled off the production line.\"]",
+            "question": "When was the last Model-T Ford produced?",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: 1927. Paragraph B states \"Until 1927 when the last Model-T rolled off the production line.\" Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: 1927. Paragraph B states \"Until 1927 when the last Model-T rolled off the production line.\"",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "1927"
+            "correct_answer": "1927",
+            "ielts_question_category": "short_answer_r",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Answer the following questions using NO MORE THAN TWO WORDS.",
-            "question": "What did Ford unsuccessfully oppose the organisation of?  [FEEDBACK: Paragraph C states \"Ford flatly refused to get involved\" with Labour Unions and \"employed spies in the workplace to sabotage any plans for a union within his factories.\"]",
+            "question": "What did Ford unsuccessfully oppose the organisation of?",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: LABOUR UNIONS. Paragraph C states \"Ford flatly refused to get involved\" with Labour Unions and \"employed spies in the workplace to sabotage any plans for a union within his factories.\" Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: LABOUR UNIONS. Paragraph C states \"Ford flatly refused to get involved\" with Labour Unions and \"employed spies in the workplace to sabotage any plans for a union within his factories.\"",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "LABOUR UNIONS|LABOR UNIONS|UNIONS"
+            "correct_answer": "LABOUR UNIONS|LABOR UNIONS|UNIONS",
+            "ielts_question_category": "short_answer_r",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         },
         {
-            "type": "short_answer",
+            "type": "open_question",
             "instructions": "Answer the following questions using NO MORE THAN TWO WORDS.",
-            "question": "What is the name given to the principles of mass production and associated practices?  [FEEDBACK: Paragraph D states \"Yet the legacy of Fordism lives on\" - Fordism is the term for Ford's principles of mass production.]",
+            "question": "What is the name given to the principles of mass production and associated practices?",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: FORDISM. Paragraph D states \"Yet the legacy of Fordism lives on\" - Fordism is the term for Ford's principles of mass production. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! Well done.",
+            "incorrect_feedback": "Incorrect. The correct answer is: FORDISM. Paragraph D states \"Yet the legacy of Fordism lives on\" - Fordism is the term for Ford's principles of mass production.",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": "FORDISM"
+            "correct_answer": "FORDISM",
+            "ielts_question_category": "short_answer_r",
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "mc_options": []
         }
     ],
     "reading_texts": [
         {
             "title": "Reading Passage 1 - Studying in New Zealand",
-            "content": "A<br />\r\n<br />\r\nA relatively small island with a population of less than a quarter of that of Tokyo, New Zealand has a huge overseas student population. With over half a million fee-paying foreign students, an ever-increasing range of academic, professional and vocational courses and English language services are being created or expanded. But why do so many people come from overseas to study in New Zealand? Primarily, there is the fact that it has an excellent education system, especially in English language teaching. With its many British connections as well as the adoption of language from America, New Zealand offers a very international language. Language students are also enticed to New Zealand as they can fully immerse themselves in the language. This is only possible in a country where English is the spoken language.<br />\r\n<br />\r\nB<br />\r\n<br />\r\nThere are also strict government controls and standards on the quality of education offered. The government controls the education system, and it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office, to license and control schools. These government bodies ensure that standards are as high in New Zealand as anywhere in the world. In addition, they decide whether or not language schools have the credentials and quality to operate. This allows students to have some peace of mind when choosing a school, but there are other reasons to choose New Zealand first. Independent reports have proven New Zealand to be the most cost-effective country in the western world for study fees, accommodation, cost of living, and recreation. It also has a reputation for safety and security, perhaps the best amongst western countries. Auckland City offers a multicultural and cosmopolitan place to shop, eat and be entertained. Less than an hour out of the city and you find yourself on beaches or mountains famous for their cleanliness and lack of pollution.<br />\r\n<br />\r\nC<br />\r\n<br />\r\nAlthough a majority of international students spend some time in a language school, for those aged 13 to 18 New Zealand secondary schools provide a broad education. Other students take advantage of one of the many tertiary education institutions which form the New Zealand polytechnic system. These institutions are state-funded and provide education and training at many levels, from introductory studies to full degree programmes. University education was established in New Zealand in 1870 and has a similar tradition to the British university system. There are eight state-funded universities in New Zealand, all of them internationally respected for their academic and research performance. In addition to a centrally coordinated system of quality assurance audits at both institution and programme level, each university undertakes internal quality checks.<br />\r\n<br />\r\nD<br />\r\n<br />\r\nAll New Zealand universities offer a broad range of subjects in arts, commerce and science, but they have also specialised in narrower fields of study such as computer studies, medicine or environmental studies. Bachelors, Masters and Doctorate degrees are offered by all New Zealand universities. A range of undergraduate and postgraduate diplomas are also available, along with Honours programmes (usually requiring an additional year of study). The first degree a student is able to gain in New Zealand is, as elsewhere, a Bachelors degree. With a completed Bachelors degree, a graduate may be able to go on to a number of other options. There are Postgraduate Diploma courses, Masters degrees, Doctorates and even research positions available.<br />\r\n<br />\r\nE<br />\r\n<br />\r\nThe Postgraduate Diploma course takes one year on a full-time programme and is designed for graduates building on the academic field of their previous degree. The Masters degree, like the Postgraduate Diploma, builds on a Bachelors degree but can take up to two years, by which time a thesis must be completed. The Master's is the conventional pathway to the next level of education – the Doctorate. For this course, graduates are required to produce a research-based thesis as part of a course that takes a minimum of two years, and is by far the most challenging.<br />\r\n<br />\r\nF<br />\r\n<br />\r\nFinally there is the possibility of research in New Zealand universities. Research is the main characteristic that distinguishes a university as opposed to a polytechnic or other tertiary education institution. New Zealand remains justifiably proud of the quality of its research as a large number of awards are presented to researchers from New Zealand universities."
+            "content": "A<br />\r\n<br />\r\nA relatively small island with a population of less than a quarter of that of Tokyo, New Zealand has a huge overseas student population. With over half a million fee-paying foreign students, an ever-increasing range of academic, professional and vocational courses and English language services are being created or expanded. But why do so many people come from overseas to study in New Zealand? Primarily, there is the fact that [Q6]it has an excellent education system, especially in English language teaching. With its many British connections as well as the adoption of language from America, New Zealand offers a very international language. Language students are also enticed to New Zealand as they can fully immerse themselves in the language. [Q7]This is only possible in a country where English is the spoken language.<br />\r\n<br />\r\nB<br />\r\n<br />\r\nThere are also strict government controls and standards on the quality of education offered. The government controls the education system, and [Q8]it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office, to license and control schools. These government bodies ensure that standards are as high in New Zealand as anywhere in the world. In addition, they decide whether or not language schools have the credentials and quality to operate. This allows students to have some peace of mind when choosing a school, but there are other reasons to choose New Zealand first. Independent reports have proven New Zealand to be the most cost-effective country in the western world for study fees, accommodation, cost of living, and recreation. It also has a reputation for safety and security, perhaps the best amongst western countries. Auckland City offers a multicultural and cosmopolitan place to shop, eat and be entertained. Less than an hour out of the city and you find yourself on beaches or mountains famous for their cleanliness and lack of pollution.<br />\r\n<br />\r\nC<br />\r\n<br />\r\n[Q9]Although a majority of international students spend some time in a language school, for those aged 13 to 18 New Zealand secondary schools provide a broad education. Other students take advantage of one of the many tertiary education institutions which form the New Zealand polytechnic system. These institutions are state-funded and provide education and training at many levels, from introductory studies to full degree programmes. University education was established in New Zealand in 1870 and has a similar tradition to the British university system. There are eight state-funded universities in New Zealand, all of them internationally respected for their academic and research performance. [Q11]In addition to a centrally coordinated system of quality assurance audits at both institution and programme level, each university undertakes internal quality checks.<br />\r\n<br />\r\nD<br />\r\n<br />\r\nAll New Zealand universities offer a broad range of subjects in arts, commerce and science, but they have also specialised in narrower fields of study such as computer studies, medicine or environmental studies. Bachelors, Masters and Doctorate degrees are offered by all New Zealand universities. A range of undergraduate and postgraduate diplomas are also available, along with Honours programmes (usually requiring an additional year of study). [Q12]The first degree a student is able to gain in New Zealand is, as elsewhere, a Bachelors degree. With a completed Bachelors degree, a graduate may be able to go on to a number of other options. [Q13]There are Postgraduate Diploma courses, Masters degrees, Doctorates and even research positions available.<br />\r\n<br />\r\nE<br />\r\n<br />\r\n[Q10]The Postgraduate Diploma course takes one year on a full-time programme and is designed for graduates building on the academic field of their previous degree. [Q14]The Masters degree, like the Postgraduate Diploma, builds on a Bachelors degree but can take up to two years, by which time a thesis must be completed. The Master's is the conventional pathway to the next level of education – the Doctorate. [Q15]For this course, graduates are required to produce a research-based thesis as part of a course that takes a minimum of two years, and is by far the most challenging.<br />\r\n<br />\r\nF<br />\r\n<br />\r\nFinally there is the possibility of research in New Zealand universities. Research is the main characteristic that distinguishes a university as opposed to a polytechnic or other tertiary education institution. New Zealand remains justifiably proud of the quality of its research as a large number of awards are presented to researchers from New Zealand universities."
         },
         {
             "title": "Reading Passage 2 - Virtual culture",
-            "content": "A<br />\r\n<br />\r\nCulture is defined as the 'socially transmitted behaviour patterns, arts, beliefs, and institutions that are the expression of a particular class, community or period' (www.dictionary.com). To most people, this is seen in terms of books, paintings, rituals and ceremonies, but recently there has been a new entrant in the field of what is considered to be 'culture' – the Internet.<br />\r\n<br />\r\nB<br />\r\n<br />\r\nOn the Internet, science and art, media and mind combine to create a modern culture which is far more widespread than any of its predecessors. Not referring to the casual user who has no particular interest in the Internet, active supporters of the Internet as a culture have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets. A cyberpoet can be defined as 'one who makes frequent trips to the edge of technology, society and traditional culture and strives to be artful in their use of virtual space'.<br />\r\n<br />\r\nC<br />\r\n<br />\r\nSupporter or opponent of this new culture, there is little doubt that the Internet offers a lot to our traditional view of culture. In just a few minutes in front of a keyboard, we can read almost anything that has ever been written, yet no paper had to be made, no library had to stay open and thus the cost remains minimal. All of this encourages even the casual surfer to explore further than he or she otherwise would have. The same effect can be observed with works of art. Previously available to be viewed only in museums if they were not in the hands of private collectors, all but a few famous works are now replicated on the Internet.<br />\r\n<br />\r\nD<br />\r\n<br />\r\nYet the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right. The medium of the Net allows for wider distribution and new platforms for most forms of art. 'Kinetic art' and other such computerised art forms occur with increasing regularity, both motivated by and generating an upsurge in popular and computer-mediated art.<br />\r\n<br />\r\nE<br />\r\n<br />\r\nIn addition, if culture is said to be 'socially transmitted', then the Internet is remarkable in its ability to share, on an almost global scale, all the factors that constitute culture. We have only to hear the influence of jargon as we visit dub-dub-dub dot sites and surf the web to see how international the Internet has become to the majority.<br />\r\n<br />\r\nF<br />\r\n<br />\r\nVery few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture. What is not so certain is how far this will go, as the Internet continues to assimilate more and more forms of culture, rising to a point where it is not inconceivable that our entire perception of culture will soon become cyber-focused.<br />\r\n<br />\r\nG<br />\r\n<br />\r\nThere is also a significant increase in transient imagery from photographs, videos and other media uploaded to many social networking sites. The rise of the term 'selfie', referring to a photograph taken by the person in the picture, is just one example – there are also applications for smartphones and tablet devices that allow instant video uploads, meaning that 'looped' videos lasting just a few seconds can be created to great effect. The problem, of course, is wading through the many millions of hours of footage that cannot be classified as having any cultural significance.<br />\r\n<br />\r\nH<br />\r\n<br />\r\nReliance on the internet itself has inherent risks, as the authorship of online content is now far less moderated. It is possible to set up a website in as little as an hour, populated with content which may be presented as accurate, impartial information but is in reality an ill considered, poorly researched collection of opinions and incorrect facts. Even established websites which allow users to contribute content can quickly become unreliable sources. Not only is there wider room for error, there is now a heightened concern that web pages and social media can reduce popular culture into a series of illogical and often abusive arguments, which do not need to be supported with facts or even ascribed to a specific purpose. The anonymous nature of a large percentage of internet interactions means that even the most bigoted point of view can find a forum, even if reactions to it are negative."
+            "content": "A<br />\r\n<br />\r\nCulture is defined as the 'socially transmitted behaviour patterns, arts, beliefs, and institutions that are the expression of a particular class, community or period' (www.dictionary.com). To most people, this is seen in terms of books, paintings, rituals and ceremonies, but recently there has been a new entrant in the field of what is considered to be 'culture' – the Internet.<br />\r\n<br />\r\nB<br />\r\n<br />\r\nOn the Internet, science and art, media and mind combine to create a modern culture which is far more widespread than any of its predecessors. Not referring to the casual user who has no particular interest in the Internet, active supporters of the Internet as a culture have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets. A cyberpoet can be defined as 'one who makes frequent trips to the edge of technology, society and traditional culture and strives to be artful in their use of virtual space'.<br />\r\n<br />\r\nC<br />\r\n<br />\r\nSupporter or opponent of this new culture, there is little doubt that the Internet offers a lot to our traditional view of culture. In just a few minutes in front of a keyboard, we can read almost anything that has ever been written, yet no paper had to be made, no library had to stay open and thus the cost remains minimal. All of this encourages even the casual surfer to explore further than he or she otherwise would have. The same effect can be observed with works of art. Previously available to be viewed only in museums if they were not in the hands of private collectors, all but a few famous works are now replicated on the Internet.<br />\r\n<br />\r\nD<br />\r\n<br />\r\nYet the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right. The medium of the Net allows for wider distribution and new platforms for most forms of art. 'Kinetic art' and other such computerised art forms occur with increasing regularity, both motivated by and generating an upsurge in popular and computer-mediated art.<br />\r\n<br />\r\nE<br />\r\n<br />\r\nIn addition, if culture is said to be 'socially transmitted', then the Internet is remarkable in its ability to share, on an almost global scale, all the factors that constitute culture. We have only to hear the influence of jargon as we visit dub-dub-dub dot sites and surf the web to see how international the Internet has become to the majority.<br />\r\n<br />\r\nF<br />\r\n<br />\r\n[Q16]Very few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture. What is not so certain is how far this will go, as the Internet continues to assimilate more and more forms of culture, rising to a point where it is not inconceivable that our entire perception of culture will soon become cyber-focused.<br />\r\n<br />\r\nG<br />\r\n<br />\r\nThere is also a significant increase in transient imagery from photographs, videos and other media uploaded to many social networking sites. The rise of the term 'selfie', referring to a photograph taken by the person in the picture, is just one example – there are also applications for smartphones and tablet devices that allow instant video uploads, meaning that 'looped' videos lasting just a few seconds can be created to great effect. The problem, of course, is wading through the many millions of hours of footage that cannot be classified as having any cultural significance.<br />\r\n<br />\r\nH<br />\r\n<br />\r\nReliance on the internet itself has inherent risks, as the authorship of online content is now far less moderated. It is possible to set up a website in as little as an hour, populated with content which may be presented as accurate, impartial information but is in reality an ill considered, poorly researched collection of opinions and incorrect facts. Even established websites which allow users to contribute content can quickly become unreliable sources. Not only is there wider room for error, there is now a heightened concern that web pages and social media can reduce popular culture into a series of illogical and often abusive arguments, which do not need to be supported with facts or even ascribed to a specific purpose. The anonymous nature of a large percentage of internet interactions means that even the most bigoted point of view can find a forum, even if reactions to it are negative."
         },
         {
             "title": "Reading Passage 3 - Ford – driving innovation",
-            "content": "A: In 1913 an American industrialist named Henry Ford employed an innovative system in his factory that changed the nature of American industry forever – the production line. Instead of a group of workers constructing a complete product, Ford's production-line techniques relied on machine parts being moved around the factory on a conveyor belt, passing each employee who had a single task to perform before the component moved down the line. This saved time in that employees were not required to move around, collect materials or change tools; they simply stood in one place and repeated the same procedure over and over again until the end of their shift. In this way, Ford was able to mass produce the now famous Model-T car for only 10% of traditional labour costs.<br />\r\n<br />\r\nB: Working on a production line was monotonous work, undoubtedly, but it was not in the production line alone that Ford was something of a pioneer. In 1913 the average hourly rate for unskilled labour was under $2.50 and for such low wages and repetitive work, the labour turnover in Ford's factory was high, with many employees lasting less than a month. In order to combat this problem, he took a step that was condemned by other industrialists of the time, fearful that they would lose their own workforce – he raised wages to $5 an hour. The benefits were twofold. Not only did Ford now have a stable and eager workforce, he also had potential customers. It was his intention 'to build a motorcar for the great multitude', and the Model-T car was one of the cheapest cars on the market at the time. At $5 an hour, many of his employees now found themselves in a position to feasibly afford a car of their own. Ford's production practices meant that production time was reduced from 14 hours to a mere 93 minutes. In 1914 company profits were $30 million, yet just two years later this figure had doubled. Until 1927 when the last Model-T rolled off the production line, the company produced and sold about 15 million cars.<br />\r\n<br />\r\nC: Although Ford was without doubt successful, times changed and the company began losing its edge. One problem came from the labour force. Ford was a demanding employer who insisted that the majority of his staff remained on their feet during their shift. One error meant that the whole production line was often kept waiting, and Ford felt that workers were more attentive standing than sitting. Yet the 1930s saw some radical changes in the relationships between employer and employee, as an increasing number of industries were forming Labour Unions. Ford flatly refused to get involved, employing spies in the workplace to sabotage any plans for a union within his factories. Eventually a strike in the early 1940s forced Ford to deal with unions. Another example of Ford being unable to adapt came from his unwillingness to branch out. Ford's competitors began operating the same systems and practices, but also introduced the variety Ford was lacking. The Model-T had remained essentially the same, even down to the colour, and by the time he realised his error, he had already lost his pre-eminence in the industry. Subsequent involvement in aeroplane manufacturing, politics and publishing was a failure. Leaving the company to his grandson in 1945, he died two years later leaving an inheritance estimated at $700 million.<br />\r\n<br />\r\nD: Yet the legacy of Fordism lives on. The development of mass production transformed the organisation of work in a number of important ways. Tasks were minutely subdivided and performed by unskilled workers, or at least semiskilled workers, since much of the skill was built into the machine. Second, manufacturing concerns grew to such a size that a large hierarchy of supervisors and managers became necessary. Third, the increasing complexity of operations required employment of a large management staff of accountants, engineers, chemists, and, later, social psychologists, in addition to a large distribution and sales force. Mass production also heightened the trend towards an international division of labour. The huge new factories often needed raw materials from abroad, while saturation of national markets led to a search for customers overseas. Thus, some countries became exporters of raw materials and importers of finished goods, while others did the reverse.<br />\r\n<br />\r\nE: In the 1970s and '80s some countries, particularly in Asia and South America, that had hitherto been largely agricultural and that had imported manufactured goods, began industrialising. The skills needed by workers on assembly-line tasks required little training, and standards of living in these developing countries were so low that wages could be kept below those of the already industrialised nations. Many large manufacturers in the United States and elsewhere therefore began 'outsourcing' – that is, having parts made or whole products assembled in developing nations. Consequently, those countries are rapidly becoming integrated into the world economic community."
+            "content": "A: In 1913 an American industrialist named Henry Ford employed an innovative system in his factory that changed the nature of American industry forever – the production line. Instead of a group of workers constructing a complete product, [Q33]Ford's production-line techniques relied on machine parts being moved around the factory on a conveyor belt, passing each employee who had a single task to perform before the component moved down the line. This saved time in that employees were not required to move around, collect materials or change tools; they simply stood in one place and repeated the same procedure over and over again until the end of their shift. In this way, [Q34]Ford was able to mass produce the now famous Model-T car for only 10% of traditional labour costs.<br />\r\n<br />\r\nB: Working on a production line was monotonous work, undoubtedly, but it was not in the production line alone that Ford was something of a pioneer. In 1913 the average hourly rate for unskilled labour was under $2.50 and for such low wages and repetitive work, the labour turnover in Ford's factory was high, with many employees lasting less than a month. In order to combat this problem, he took a step that was condemned by other industrialists of the time, fearful that they would lose their own workforce – he raised wages to $5 an hour. The benefits were twofold. Not only did Ford now have a stable and eager workforce, he also had potential customers. It was his intention 'to build a motorcar for the great multitude', and the Model-T car was one of the cheapest cars on the market at the time. At $5 an hour, many of his employees now found themselves in a position to feasibly afford a car of their own. Ford's production practices meant that production time was reduced from 14 hours to a mere 93 minutes. In 1914 company profits were $30 million, yet just two years later this figure had doubled. [Q35]Until 1927 when the last Model-T rolled off the production line, the company produced and sold about 15 million cars.<br />\r\n<br />\r\nC: Although Ford was without doubt successful, times changed and the company began losing its edge. One problem came from the labour force. Ford was a demanding employer who insisted that the majority of his staff remained on their feet during their shift. One error meant that the whole production line was often kept waiting, and Ford felt that workers were more attentive standing than sitting. Yet the 1930s saw some radical changes in the relationships between employer and employee, as an increasing number of industries were forming Labour Unions. [Q36]Ford flatly refused to get involved, employing spies in the workplace to sabotage any plans for a union within his factories. Eventually a strike in the early 1940s forced Ford to deal with unions. Another example of Ford being unable to adapt came from his unwillingness to branch out. Ford's competitors began operating the same systems and practices, but also introduced the variety Ford was lacking. The Model-T had remained essentially the same, even down to the colour, and by the time he realised his error, he had already lost his pre-eminence in the industry. Subsequent involvement in aeroplane manufacturing, politics and publishing was a failure. Leaving the company to his grandson in 1945, he died two years later leaving an inheritance estimated at $700 million.<br />\r\n<br />\r\nD: [Q37]Yet the legacy of Fordism lives on. The development of mass production transformed the organisation of work in a number of important ways. Tasks were minutely subdivided and performed by unskilled workers, or at least semiskilled workers, since much of the skill was built into the machine. Second, manufacturing concerns grew to such a size that a large hierarchy of supervisors and managers became necessary. Third, the increasing complexity of operations required employment of a large management staff of accountants, engineers, chemists, and, later, social psychologists, in addition to a large distribution and sales force. Mass production also heightened the trend towards an international division of labour. The huge new factories often needed raw materials from abroad, while saturation of national markets led to a search for customers overseas. Thus, some countries became exporters of raw materials and importers of finished goods, while others did the reverse.<br />\r\n<br />\r\nE: In the 1970s and '80s some countries, particularly in Asia and South America, that had hitherto been largely agricultural and that had imported manufactured goods, began industrialising. The skills needed by workers on assembly-line tasks required little training, and standards of living in these developing countries were so low that wages could be kept below those of the already industrialised nations. Many large manufacturers in the United States and elsewhere therefore began 'outsourcing' – that is, having parts made or whole products assembled in developing nations. Consequently, those countries are rapidly becoming integrated into the world economic community."
         }
     ],
     "settings": {
         "pass_percentage": "70",
-        "layout_type": "computer_based",
+        "layout_type": "two_column_reading",
         "cbt_test_type": "",
         "exercise_label": "practice_test",
         "open_as_popup": "1",
@@ -992,7 +1080,7 @@
         "starting_question_number": 1
     },
     "_metadata": {
-        "exported_at": "2026-01-14 18:54:40",
+        "exported_at": "2026-01-14 06:14:01",
         "exported_by": "impact",
         "plugin_version": "11.27",
         "format_version": "1.0"
