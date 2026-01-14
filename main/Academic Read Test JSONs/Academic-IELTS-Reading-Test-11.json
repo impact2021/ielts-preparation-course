@@ -1,0 +1,293 @@
+{
+    "title": "Academic IELTS Reading Test 11",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.\n\nDo the following statements agree with the information given in Reading Passage 1?\n\nSelect:\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this in the passage",
+            "question": "The Rugby Union's World Cup is held every four years.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states 'Rugby union also holds a quadrennial World Cup' (quadrennial means every four years). Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'Rugby union also holds a quadrennial World Cup' (quadrennial means every four years)."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'Rugby union also holds a quadrennial World Cup' (quadrennial means every four years)."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'Rugby union also holds a quadrennial World Cup' (quadrennial means every four years)."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Lord Stanley became coach of the Ottawa ice hockey team because he enjoyed hockey.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions Lord Stanley's three sons played for the Ottawa Rebels team and he took an interest in promoting ice hockey, but there is no information about him becoming a coach. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions Lord Stanley's three sons played for the Ottawa Rebels team and he took an interest in promoting ice hockey, but there is no information about him becoming a coach."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions Lord Stanley's three sons played for the Ottawa Rebels team and he took an interest in promoting ice hockey, but there is no information about him becoming a coach."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions Lord Stanley's three sons played for the Ottawa Rebels team and he took an interest in promoting ice hockey, but there is no information about him becoming a coach."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Lord Stanley amended the rules regarding the requirements for winning the ice hockey championship.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states 'He set a series of rules for the competition of his Cup'—he created the rules, he didn't amend (change) existing rules. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states 'He set a series of rules for the competition of his Cup'—he created the rules, he didn't amend (change) existing rules."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'He set a series of rules for the competition of his Cup'—he created the rules, he didn't amend (change) existing rules."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states 'He set a series of rules for the competition of his Cup'—he created the rules, he didn't amend (change) existing rules."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Only teams from the USA and Canada compete to win the Stanley Cup.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states 'to this day the Cup is competed for by the 30 teams from Canada and the United States in the NHL.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'to this day the Cup is competed for by the 30 teams from Canada and the United States in the NHL.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'to this day the Cup is competed for by the 30 teams from Canada and the United States in the NHL.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'to this day the Cup is competed for by the 30 teams from Canada and the United States in the NHL.'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Today, the Stanley Cup is held in security in a museum to protect it from players and fans.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states 'each player from the winning team gets to personally keep the Cup for one day'—it is not kept in a museum. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states 'each player from the winning team gets to personally keep the Cup for one day'—it is not kept in a museum."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'each player from the winning team gets to personally keep the Cup for one day'—it is not kept in a museum."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states 'each player from the winning team gets to personally keep the Cup for one day'—it is not kept in a museum."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the summary.\n\nChoose NO MORE THAN TWO WORDS from the passage for each answer.\n\nWrite your answers in boxes 6 – 10 on your answer sheet.",
+            "question": "Globally, sporting success is rewarded with a trophy for the winning team, nation or [field 1], and there is a wide range of trophies, cups and forms of [field 2], such as the Green Jacket or Yellow Jersey. Lord Preston, who was at the time the [field 3] of Canada, purchased and donated a trophy to be awarded to the winning ice hockey team after a series of national competitions. When the game changed from its amateur roots and developed into a [field 4] sport, the Stanley Cup is now competed for by the thirty teams in the National Hockey League. The Stanley Cup is one of the most famous trophies in sport, and has been enlarged with new [field 5] to fit the increasing list of past winners.",
+            "points": 5.0,
+            "no_answer_feedback": "Please provide answers for all fields. The correct answers are: Field 1: INDIVIDUAL, Field 2: APPAREL, Field 3: GOVERNOR-GENERAL (or GOVERNOR GENERAL), Field 4: PROFESSIONAL, Field 5: SILVER RINGS (or RINGS). Review the passage carefully to find these exact words.",
+            "correct_feedback": "Excellent! You've correctly identified all the key words from the passage.",
+            "incorrect_feedback": "Some of your answers are incorrect. Review the passage to find the exact words. The correct answers are: Field 1: INDIVIDUAL, Field 2: APPAREL, Field 3: GOVERNOR-GENERAL (or GOVERNOR GENERAL), Field 4: PROFESSIONAL, Field 5: SILVER RINGS (or RINGS).",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "summary_completion",
+            "field_count": 5,
+            "field_answers": {
+                "1": "INDIVIDUAL|individual",
+                "2": "APPAREL|apparel",
+                "3": "GOVERNOR-GENERAL|GOVERNOR GENERAL|governor-general|governor general",
+                "4": "PROFESSIONAL|professional",
+                "5": "SILVER RINGS|RINGS|silver rings|rings"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states trophies are awarded to 'the winning individual, team or country'.",
+                    "incorrect": "Incorrect. The correct answer is INDIVIDUAL. The passage states trophies are awarded to 'the winning individual, team or country'.",
+                    "no_answer": "The correct answer is INDIVIDUAL. The passage states trophies are awarded to 'the winning individual, team or country'."
+                },
+                "2": {
+                    "correct": "Correct! The passage mentions 'a wide range of trophies, cups and forms of apparel'.",
+                    "incorrect": "Incorrect. The correct answer is APPAREL. The passage mentions 'a wide range of trophies, cups and forms of apparel'.",
+                    "no_answer": "The correct answer is APPAREL. The passage mentions 'a wide range of trophies, cups and forms of apparel'."
+                },
+                "3": {
+                    "correct": "Correct! The passage states Lord Stanley was 'nominated by Queen Victoria as the Governor-General of Canada'.",
+                    "incorrect": "Incorrect. The correct answer is GOVERNOR-GENERAL (or GOVERNOR GENERAL). The passage states Lord Stanley was 'nominated by Queen Victoria as the Governor-General of Canada'.",
+                    "no_answer": "The correct answer is GOVERNOR-GENERAL (or GOVERNOR GENERAL). The passage states Lord Stanley was 'nominated by Queen Victoria as the Governor-General of Canada'."
+                },
+                "4": {
+                    "correct": "Correct! The passage states 'professionalism making its mark' in ice hockey.",
+                    "incorrect": "Incorrect. The correct answer is PROFESSIONAL. The passage states 'professionalism making its mark' in ice hockey.",
+                    "no_answer": "The correct answer is PROFESSIONAL. The passage states 'professionalism making its mark' in ice hockey."
+                },
+                "5": {
+                    "correct": "Correct! The passage states the Cup has grown in size 'with new silver rings being added'.",
+                    "incorrect": "Incorrect. The correct answer is SILVER RINGS (or RINGS). The passage states the Cup has grown in size 'with new silver rings being added'.",
+                    "no_answer": "The correct answer is SILVER RINGS (or RINGS). The passage states the Cup has grown in size 'with new silver rings being added'."
+                }
+            },
+            "ielts_question_type": "Summary Completion"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose THREE letters A – H.\n\nWhich THREE of the following statements are true of Lord Stanley and the Stanley Cup?\n\nA. Queen Victoria suggested that Lord Stanley present a trophy for the ice hockey champions in Canada.\nB. The Stanley Cup is professional sports' oldest trophy.\nC. In its early years, the Stanley Cup was usually won by amateur teams.\nD. Individual players from the winning team have been responsible for the Cup for one day each.\nE. Lord Stanley's proposal for the rules regarding the Cup was met with opposition.\nF. Because of its value, the Stanley Cup is heavily protected and kept away from players and the public.\nG. Lord Stanley had little interest in sports.\nH. The Stanley Cup is larger today than when it was first presented.",
+            "question": "Select three correct statements:",
+            "points": 3.0,
+            "no_answer_feedback": "The correct answers are C, D, and H. Review the passage carefully: C is correct because early competitions were amateur; D is correct because 'each player from the winning team gets to personally keep the Cup for one day'; H is correct because 'the Cup has grown in size, with new silver rings being added'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Excellent! You've correctly identified all three true statements about Lord Stanley and the Stanley Cup.",
+            "incorrect_feedback": "Some of your selections are incorrect. The correct answers are C, D, and H. Review the passage carefully: C is correct because early competitions were amateur; D is correct because 'each player from the winning team gets to personally keep the Cup for one day'; H is correct because 'the Cup has grown in size, with new silver rings being added'.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "multiple_choice_multiple_answers",
+            "mc_options": [
+                {
+                    "text": "Queen Victoria suggested that Lord Stanley present a trophy for the ice hockey champions in Canada.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states Lord Stanley advised the Association, not that Queen Victoria suggested it to him."
+                },
+                {
+                    "text": "The Stanley Cup is professional sports' oldest trophy.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states it is 'the oldest professional North American sports trophy', not the oldest in all professional sports."
+                },
+                {
+                    "text": "In its early years, the Stanley Cup was usually won by amateur teams.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage indicates professionalism came later, so early competitions were amateur."
+                },
+                {
+                    "text": "Individual players from the winning team have been responsible for the Cup for one day each.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'each player from the winning team gets to personally keep the Cup for one day'."
+                },
+                {
+                    "text": "Lord Stanley's proposal for the rules regarding the Cup was met with opposition.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'his proposal was accepted by the sports foundations throughout the country'."
+                },
+                {
+                    "text": "Because of its value, the Stanley Cup is heavily protected and kept away from players and the public.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Players keep the Cup for a day, though now with security guards to oversee it."
+                },
+                {
+                    "text": "Lord Stanley had little interest in sports.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage describes him as 'an avid sports fan'."
+                },
+                {
+                    "text": "The Stanley Cup is larger today than when it was first presented.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'the Cup has grown in size, with new silver rings being added'."
+                }
+            ],
+            "options": "Queen Victoria suggested that Lord Stanley present a trophy for the ice hockey champions in Canada.\nThe Stanley Cup is professional sports' oldest trophy.\nIn its early years, the Stanley Cup was usually won by amateur teams.\nIndividual players from the winning team have been responsible for the Cup for one day each.\nLord Stanley's proposal for the rules regarding the Cup was met with opposition.\nBecause of its value, the Stanley Cup is heavily protected and kept away from players and the public.\nLord Stanley had little interest in sports.\nThe Stanley Cup is larger today than when it was first presented.",
+            "correct_answer_count": 3,
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Multiple Answers)"
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Passage 1",
+            "content": "<h3>Reading Passage 1</h3>\n<h4>You should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.</h4>\n\n<h2>Ice Hockey's Stanley Cup</h2>\n\n<p>Lord Stanley's famous Cup has become the symbol of professional hockey, and its ultimate prize.</p>\n\n<p>In global sport, there are a number of trophies presented to the winning <span id=\"passage-q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">individual, team or country</span>, and each trophy or cup is the symbol of supremacy for the winner. Some of the more famous trophies are the World Cup for football, held every four years, which was inaugurated in 1930 in Uruguay, and won for the first time by the host nation. <span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Rugby union also holds a quadrennial World Cup</span>, and the trophy is called the Webb-Ellis Trophy, which has been held aloft by New Zealand, Australia and South Africa each twice, and by England once. The symbol of supremacy in American football, called 'gridiron', is the Vince Lombardi Trophy, named after the legendary coach of the Green Bay Packers, while the Ryder Cup is given to one of two golfing teams, the United States or the European team, that emerges victorious in their biennial competition. Individually, the Green Jacket is awarded to the winner of the Masters Golf tournament while the Claret Jug is presented to the British Open Golf champion. Another famous variation on a trophy is the Yellow Jersey, taken by the winner of each stage in the famous Tour de France cycle race, and to the overall victor. Horse racing has its famous Melbourne Cup and tennis the Davis Cup, while sailing has the America's Cup and the Admiral's Cup. The list is endless, with each sport having its competitors striving relentlessly to emerge the champion, and to lay claim to the sporting prize, the trophy, the cup or the <span id=\"passage-q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">winning apparel</span>. The storied history of the Stanley Cup, the oldest professional North American sports trophy, presented to the winner of the National Hockey League's ice hockey champions, is long, and fabled.</p>\n\n<p>Frederick Arthur Stanley, Lord Stanley of Preston, Earl of Derby, was born in London, England, in 1841, and established a career as a Conservative Party politician. In 1888, he was <span id=\"passage-q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">nominated by Queen Victoria as the Governor-General of Canada</span>, a position he served until 1893. In his first year on arriving in Canada, Lord Stanley, an avid sports fan, attended the Montreal Winter Carnival which featured an ice hockey match between the Montreal Victorias and the Montreal Amateur Athletic Association, won by the Victorias in a close contest, 2-1. It was reported that Lord Stanley was impressed with the skill of the players and thoroughly enjoyed the game. <span id=\"passage-q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">Three of his sons went on to play for the Ottawa Rebels team</span> and Lord Stanley took a particular interest in promoting the sport of ice hockey. One way that he felt that more interest could be generated would be if there was a trophy that could be competed for by all teams in Canada. In 1892, <span id=\"passage-q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">Lord Stanley advised the Amateur Athletic Association that because there was not an organized championship, and with a bid to standardize the rules of ice hockey, he would donate a trophy which would be competed for across the Dominion of the then-young Canada, and his proposal was accepted by the sports foundations throughout the country</span>.</p>\n\n<p>In 1893, Lord Stanley purchased a silver punch bowl, approximately 18 cms high and 25 cms wide, for ten guineas, which was equal to $50.00, and had the words \"From Stanley of Preston\" engraved on the side. He set a series of rules for the competition of his Cup, the main one being that the winning team would hold the Cup for one year, and then return it to be competed for again in an annual nation-wide series of competitions. <span id=\"passage-q11-13\" data-question=\"11\"></span><span class=\"reading-answer-marker\">In the early years, the Cup was mainly contested by teams in the eastern part of Canada, with the Montreal Amateur Athletic Association being the first champions in 1893</span>. In 1915, an understanding was reached between the National Hockey Association in the east of Canada and the Pacific Coast Hockey Association in the west whereby the respective winners of these leagues would meet to compete for the Cup. Over the years, the face of hockey changed in Canada, with more teams being added, and <span id=\"passage-q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">professionalism making its mark</span>. The National Hockey League, or NHL, became the predominant sporting organization for professional hockey, and in 1926 the Stanley Cup became the symbol of the championship of the NHL season, and <span id=\"passage-q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">to this day the Cup is competed for by the 30 teams from Canada and the United States in the NHL</span>. One feature of the Stanley Cup is that it <span id=\"passage-q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">has grown in size, with new silver rings being added</span>, as the names of the players on the winning team are engraved onto the trophy.</p>\n\n<p>Perhaps unique among major sporting trophies, the Stanley Cup has a long and sometimes infamous history, including being lost, thrown in a river, stolen, and being used as a popcorn holder. In 1907, a photographer was given the Cup as he was documenting the winning team's victorious season, and while the Cup was at his home, his mother, unsure of what to make of it, filled it with soil and turned it into a flower-pot. Another story is recounted of the winner of the Kentucky Derby, a famous American horse race, named 'Go For Gin', who ate oats from the Cup. Or, in recent times, when the Cup spent the night at the bottom of one of the winning team's player's swimming pool, because <span id=\"passage-q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">tradition dictates that each player from the winning team gets to personally keep the Cup for one day, provided it is looked after and returned in pristine condition</span>, a rule often not always adhered to. Which is why the NHL has now hired security guards to administer and look after the Stanley Cup.</p>\n\n<p>Lord Stanley of Preston would surely now look upon his famous trophy with a sense of both wonderment and bewilderment. The Stanley Cup is fought for and prized by both players and fans alike, and the ultimate reward in professional hockey is to be a player on the winning team skating around the arena with the Stanley Cup held high for the fans, and players themselves, to see and cherish.</p>"
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "reading",
+        "exercise_label": "practice_test",
+        "open_as_popup": "1",
+        "scoring_type": "ielts_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    }
+}
