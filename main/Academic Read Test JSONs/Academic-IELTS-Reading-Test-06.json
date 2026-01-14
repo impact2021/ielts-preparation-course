@@ -96,7 +96,7 @@
                     "feedback": "Section C discusses state-funded tertiary institutions and universities, explaining the government's role in funding education."
                 },
                 {
-                    "text": "iV. Cost of further education",
+                    "text": "IV. Cost of further education",
                     "is_correct": false,
                     "feedback": "Section C does not discuss the costs of education."
                 },
@@ -126,7 +126,7 @@
                     "feedback": "Section C does not discuss postgraduate choices - that's Section E."
                 }
             ],
-            "options": "I. Why New Zealand?\nII. Course requirements\nIII. Government funding\niV. Cost of further education\nV. Further education options\nVI. Overseeing authorities\nVII. Specialisation\nVIII. Prestigious contribution\nIX. Postgraduate choices",
+            "options": "I. Why New Zealand?\nII. Course requirements\nIII. Government funding\nIV. Cost of further education\nV. Further education options\nVI. Overseeing authorities\nVII. Specialisation\nVIII. Prestigious contribution\nIX. Postgraduate choices",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -160,7 +160,7 @@
                     "feedback": "Section D does not discuss government funding - that's Section C."
                 },
                 {
-                    "text": "iV. Cost of further education",
+                    "text": "IV. Cost of further education",
                     "is_correct": false,
                     "feedback": "Section D does not discuss costs."
                 },
@@ -190,7 +190,7 @@
                     "feedback": "Section D discusses all degree levels, not specifically postgraduate choices - that's Section E."
                 }
             ],
-            "options": "I. Why New Zealand?\nII. Course requirements\nIII. Government funding\niV. Cost of further education\nV. Further education options\nVI. Overseeing authorities\nVII. Specialisation\nVIII. Prestigious contribution\nIX. Postgraduate choices",
+            "options": "I. Why New Zealand?\nII. Course requirements\nIII. Government funding\nIV. Cost of further education\nV. Further education options\nVI. Overseeing authorities\nVII. Specialisation\nVIII. Prestigious contribution\nIX. Postgraduate choices",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -224,7 +224,7 @@
                     "feedback": "Section E does not discuss government funding - that's Section C."
                 },
                 {
-                    "text": "iV. Cost of further education",
+                    "text": "IV. Cost of further education",
                     "is_correct": false,
                     "feedback": "Section E does not discuss costs."
                 },
@@ -254,7 +254,7 @@
                     "feedback": "Section E specifically details the postgraduate pathway from Postgraduate Diploma to Masters to Doctorate, explaining duration and requirements for each."
                 }
             ],
-            "options": "I. Why New Zealand?\nII. Course requirements\nIII. Government funding\niV. Cost of further education\nV. Further education options\nVI. Overseeing authorities\nVII. Specialisation\nVIII. Prestigious contribution\nIX. Postgraduate choices",
+            "options": "I. Why New Zealand?\nII. Course requirements\nIII. Government funding\nIV. Cost of further education\nV. Further education options\nVI. Overseeing authorities\nVII. Specialisation\nVIII. Prestigious contribution\nIX. Postgraduate choices",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -288,7 +288,7 @@
                     "feedback": "Section F does not discuss government funding - that's Section C."
                 },
                 {
-                    "text": "iV. Cost of further education",
+                    "text": "IV. Cost of further education",
                     "is_correct": false,
                     "feedback": "Section F does not discuss costs."
                 },
@@ -318,7 +318,7 @@
                     "feedback": "Section F does not discuss postgraduate choices - that's Section E."
                 }
             ],
-            "options": "I. Why New Zealand?\nII. Course requirements\nIII. Government funding\niV. Cost of further education\nV. Further education options\nVI. Overseeing authorities\nVII. Specialisation\nVIII. Prestigious contribution\nIX. Postgraduate choices",
+            "options": "I. Why New Zealand?\nII. Course requirements\nIII. Government funding\nIV. Cost of further education\nV. Further education options\nVI. Overseeing authorities\nVII. Specialisation\nVIII. Prestigious contribution\nIX. Postgraduate choices",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
