@@ -1026,6 +1026,16 @@
                             }
                         });
                         
+                        // Helper function to check if a passage marker exists for a question
+                        function hasPassageMarker(questionNum) {
+                            var passageMarker = $('#passage-q' + questionNum);
+                            if (passageMarker.length === 0) {
+                                // Also check for transcript marker as fallback
+                                passageMarker = $('#transcript-q' + questionNum);
+                            }
+                            return passageMarker.length > 0;
+                        }
+                        
                         // Add "Show me the section of the reading passage" buttons for reading tests
                         // This applies to ALL question types that have a reading_text_id
                         $.each(result.question_results, function(index, questionResult) {
@@ -1038,16 +1048,9 @@
                                 questionResult.reading_text_id !== undefined &&
                                 questionResult.question_type !== 'open_question') {
                                 
-                                // Check if a passage marker exists for this question
-                                // Some answers (e.g., "Not Given") won't have a marker in the passage
-                                var passageMarker = $('#passage-q' + questionNum);
-                                if (passageMarker.length === 0) {
-                                    // Also check for transcript marker as fallback
-                                    passageMarker = $('#transcript-q' + questionNum);
-                                }
-                                
                                 // Only create button if marker exists and button doesn't already exist
-                                if (passageMarker.length > 0 && 
+                                // Some answers (e.g., "Not Given") won't have a marker in the passage
+                                if (hasPassageMarker(questionNum) && 
                                     questionElement.find('.show-in-reading-passage-link').length === 0) {
                                     var readingLink = $('<a>')
                                         .attr('href', '#passage-q' + questionNum)
@@ -1067,14 +1070,9 @@
                         // This handles open_question types where links are added server-side
                         $('.show-in-reading-passage-link').each(function() {
                             var questionNum = $(this).data('question');
-                            var passageMarker = $('#passage-q' + questionNum);
-                            if (passageMarker.length === 0) {
-                                // Also check for transcript marker as fallback
-                                passageMarker = $('#transcript-q' + questionNum);
-                            }
                             
                             // Remove the link if no marker exists
-                            if (passageMarker.length === 0) {
+                            if (!hasPassageMarker(questionNum)) {
                                 // Also remove the preceding <br> tag if it exists
                                 var prev = $(this).prev();
                                 if (prev.is('br')) {
