@@ -1,0 +1,100 @@
+{
+    "title": "Academic IELTS Reading Test 14",
+    "content": "",
+    "questions": [
+        {
+            "type": "open_question",
+            "ielts_question_type": "Diagram Label Completion",
+            "instructions": "You should spend about 20 minutes on Questions 1 – 10 which are based on Reading Passage 1.\n\nQuestions 1 – 4\n\nLabel the diagram below using NO MORE THAN TWO WORDS.",
+            "question": "Complete the diagram labeling (Questions 1-4):",
+            "field_count": 4,
+            "field_labels": [
+                "1. Fill in the blank 1 of 10 (stimulant)",
+                "2. Fill in the blank 2 of 10 (build body strength)",
+                "3. Fill in the blank 3 of 10 (cope with stress/boost confidence)",
+                "4. Fill in the blank 4 of 10 (purpose)"
+            ],
+            "field_answers": [
+                "cocaine",
+                "anabolic steroids|anabolic steriods",
+                "relaxants",
+                "mask pain"
+            ],
+            "correct_feedback": "Excellent! You correctly identified all the categories.",
+            "incorrect_feedback": "Review the passage carefully. Look for sections that describe different types of performance-enhancing drugs and their purposes.",
+            "no_answer_feedback": "The correct answers are: 1. cocaine, 2. anabolic steroids, 3. relaxants, 4. mask pain. These are found in paragraph 3 of Reading Passage 1.",
+            "points": 4,
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null
+        },
+        {
+            "type": "open_question",
+            "ielts_question_type": "Short Answer",
+            "instructions": "Questions 5 – 8\n\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+            "question": "Answer the questions (Questions 5-8):",
+            "field_count": 4,
+            "field_labels": [
+                "5. Why are sportspeople under such pressure to succeed quickly?",
+                "6. What has subsequently become necessary in a number of sports?",
+                "7. What does Ron Clarke claim drugs can balance?",
+                "8. What are drug companies becoming more able to do?"
+            ],
+            "field_answers": [
+                "short careers|short career",
+                "drug testing|testing for drugs|drugs test|drugs testing|drug tests",
+                "natural advantages|natural advantage",
+                "evade detection|avoid detection"
+            ],
+            "correct_feedback": "Well done! You found all the answers in the passage.",
+            "incorrect_feedback": "Not quite. Check the passage again for these specific details.",
+            "no_answer_feedback": "The correct answers are: 5. short careers, 6. drug testing, 7. natural advantages, 8. evade detection. Review Reading Passage 1 to find where each answer appears.",
+            "points": 4,
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null
+        },
+        {
+            "type": "open_question",
+            "ielts_question_type": "Summary Completion",
+            "instructions": "Questions 9 and 10\n\nComplete the summary using words from the text. USE NO MORE THAN ONE WORD.",
+            "question": "Complete the summary (Questions 9-10):",
+            "field_count": 2,
+            "field_labels": [
+                "9. The main failure of drug testing is its increasing (9) _____",
+                "10. (10) _____ of drug use have serious side effects on sportspeople even if they are subsequently proved wrong."
+            ],
+            "field_answers": [
+                "inaccuracy",
+                "allegations"
+            ],
+            "correct_feedback": "Correct! You've completed the summary accurately.",
+            "incorrect_feedback": "Review the summary context in the passage carefully.",
+            "no_answer_feedback": "The correct answers are: 9. inaccuracy, 10. allegations. These complete the summary about drug testing failures mentioned in Reading Passage 1.",
+            "points": 2,
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "ielts_academic_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-14 06:30:00",
+        "exported_by": "copilot",
+        "plugin_version": "11.19",
+        "format_version": "1.0"
+    }
+}

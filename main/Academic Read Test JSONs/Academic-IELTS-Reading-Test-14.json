@@ -1,0 +1,22 @@
+{
+    "title": "Academic IELTS Reading Test 14",
+    "content": "",
+    "questions": [],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "ielts_academic_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-14 06:30:00",
+        "exported_by": "copilot",
+        "plugin_version": "11.19",
+        "format_version": "1.0"
+    }
+}
