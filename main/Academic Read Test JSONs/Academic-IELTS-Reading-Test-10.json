@@ -498,7 +498,7 @@
             "type": "open_question",
             "instructions": "Label the diagram using NO MORE THAN TWO WORDS from the text for each answer.\n\nHow a Bionic Limb Works\n\nComponents of a bionic prosthetic arm:",
             "question": "The bionic arm contains [field 1] that detect electrical signals from the remaining muscles. These signals are processed by a [field 2] that controls the movement of [field 3] in the hand and wrist. The device is powered by a [field 4], and covered with [field 5] for a natural appearance.",
-            "points": 1.0,
+            "points": 5,
             "no_answer_feedback": "Please provide answers for all fields. The correct answers are: Field 1: SENSORS (or ELECTRODES), Field 2: MICROPROCESSOR (or COMPUTER CHIP), Field 3: MOTORS, Field 4: RECHARGEABLE BATTERY (or BATTERY), Field 5: SILICONE SKIN (or SYNTHETIC SKIN or SKIN).",
             "correct_feedback": "Correct! All components have been correctly identified.",
             "incorrect_feedback": "Incorrect. Review Paragraph D which describes the components and operation of a bionic limb. Check each field carefully.",
