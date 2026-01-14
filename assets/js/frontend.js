@@ -1038,8 +1038,17 @@
                                 questionResult.reading_text_id !== undefined &&
                                 questionResult.question_type !== 'open_question') {
                                 
-                                // Check if button already exists to avoid duplicates
-                                if (questionElement.find('.show-in-reading-passage-link').length === 0) {
+                                // Check if a passage marker exists for this question
+                                // Some answers (e.g., "Not Given") won't have a marker in the passage
+                                var passageMarker = $('#passage-q' + questionNum);
+                                if (passageMarker.length === 0) {
+                                    // Also check for transcript marker as fallback
+                                    passageMarker = $('#transcript-q' + questionNum);
+                                }
+                                
+                                // Only create button if marker exists and button doesn't already exist
+                                if (passageMarker.length > 0 && 
+                                    questionElement.find('.show-in-reading-passage-link').length === 0) {
                                     var readingLink = $('<a>')
                                         .attr('href', '#passage-q' + questionNum)
                                         .addClass('show-in-reading-passage-link')
@@ -1050,6 +1059,28 @@
                                     // Append button to the question element
                                     questionElement.append($('<br>')).append(readingLink);
                                 }
+                            }
+                        });
+                        
+                        // Clean up any "Show me the section of the reading passage" links that were added by PHP
+                        // but don't have a corresponding passage marker (e.g., for "Not Given" answers)
+                        // This handles open_question types where links are added server-side
+                        $('.show-in-reading-passage-link').each(function() {
+                            var questionNum = $(this).data('question');
+                            var passageMarker = $('#passage-q' + questionNum);
+                            if (passageMarker.length === 0) {
+                                // Also check for transcript marker as fallback
+                                passageMarker = $('#transcript-q' + questionNum);
+                            }
+                            
+                            // Remove the link if no marker exists
+                            if (passageMarker.length === 0) {
+                                // Also remove the preceding <br> tag if it exists
+                                var prev = $(this).prev();
+                                if (prev.is('br')) {
+                                    prev.remove();
+                                }
+                                $(this).remove();
                             }
                         });
                         
