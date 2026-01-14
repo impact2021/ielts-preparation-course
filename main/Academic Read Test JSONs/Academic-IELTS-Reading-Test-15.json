@@ -1,0 +1,435 @@
+{
+    "title": "Academic IELTS Reading Test 15",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.\n\nQuestions 1 – 6\n\nDo the following statements agree with the information given in Reading Passage 1?\n\nIn boxes 1 – 6 on your answer sheet write\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this in the passage",
+            "question": "The kauri tree is found in the North Island of New Zealand and throughout the South Pacific.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states that the kauri is located in 'the north half of the North Island of New Zealand', not throughout the South Pacific. Other Agatha specimens are spread throughout the southern Pacific, but the kauri specifically is in New Zealand. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states that the kauri is located in 'the north half of the North Island of New Zealand', not throughout the South Pacific."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the kauri is found in the north half of the North Island of New Zealand, while other Agatha specimens are spread throughout the southern Pacific—not the kauri itself."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage clearly states where the kauri is located."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Some kauri trees still alive today have been around as long as people have been in New Zealand.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states that kauri trees have a 'life-span surpassing 2,000 years, which means some trees were 1,000 years old when the first peoples arrived in New Zealand.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that kauri trees can live for over 2,000 years, and 'some trees were 1,000 years old when the first peoples arrived in New Zealand.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage mentions that kauri trees have a life-span surpassing 2,000 years, with some trees being 1,000 years old when first peoples arrived."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage provides this information clearly."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Logging of kauri was done exclusively by Europeans because the Maori valued it as a spiritual commodity.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states that 'logging of kauri...began in earnest in the 1800s, by both the European settlers and the Maori.' The Maori understood its value as a trade commodity, not exclusively spiritual. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states logging was done 'by both the European settlers and the Maori.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage clearly states that logging was done 'by both the European settlers and the Maori', not exclusively by Europeans."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage provides clear information about who did the logging."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "House builders quickly realized the value of kauri because of its grain and natural colour.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. While the passage mentions that kauri was valued for house-building and for its parallel grain and elasticity, it does not mention natural colour as a reason for its value. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While grain is mentioned, natural colour is not stated as a reason for kauri's value in the passage."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't provide information about whether natural colour was a reason for its value."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions the grain and elasticity of kauri timber, but does not mention natural colour as a reason for its value."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Animals pose the greatest threat to the survival of the kauri.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states that over-logging is the main problem, with animals being a lesser threat: 'Other problems, besides over-logging, beset the kauri, although to a lesser extent.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states that over-logging is the main problem, with animals being 'to a lesser extent.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage clearly states that 'Other problems, besides over-logging, beset the kauri, although to a lesser extent', indicating that over-logging is the greatest threat, not animals."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage provides clear information about the relative threats."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Citizen action, as well as protection from the authorities, has begun to protect the kauri.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states: 'Both government intervention and volunteer work are underway to ensure a healthy future for kauri forests.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'Both government intervention and volunteer work are underway to ensure a healthy future for kauri forests.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage clearly mentions both government intervention and volunteer work."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage provides this information explicitly."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 7 – 11\n\nComplete the summary of information below.\n\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\n\nWrite your answers in boxes 7 – 11 on your answer sheet.\n\nThe Growth of the Kauri",
+            "question": "Kauri trees can live for more than 2,000 years, which makes them the _______ trees in New Zealand.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is LONGEST LIVING or LONGEST-LIVING. The passage states kauri trees have a 'life-span surpassing 2,000 years', making them the longest living trees. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion",
+            "summary_fields": [
+                {
+                    "answer": "longest living|longest-living",
+                    "correct_feedback": "Correct! The passage states the kauri is 'the largest- and longest-living' tree in New Zealand.",
+                    "incorrect_feedback": "Incorrect. The correct answer is LONGEST LIVING or LONGEST-LIVING.",
+                    "no_answer_feedback": "The correct answer is LONGEST LIVING or LONGEST-LIVING. The passage states kauri trees have a 'life-span surpassing 2,000 years', making them the longest living trees."
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "One of the biggest recorded kauri trees was nearly _______ metres around.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 27 (or TWENTY SEVEN/TWENTY-SEVEN). The passage mentions 'The Great Ghost' growing to 'more than 27 metres in girth'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion",
+            "summary_fields": [
+                {
+                    "answer": "27|twenty seven|twenty-seven",
+                    "correct_feedback": "Correct! The passage states 'The Great Ghost' grew to 'more than 27 metres in girth'.",
+                    "incorrect_feedback": "Incorrect. The correct answer is 27 (or TWENTY SEVEN/TWENTY-SEVEN).",
+                    "no_answer_feedback": "The correct answer is 27 (or TWENTY SEVEN/TWENTY-SEVEN). The passage mentions 'The Great Ghost' growing to 'more than 27 metres in girth'."
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The young trees have a strong vertical growth pattern, losing _______ at lower levels as the tree grows.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is BRANCHES. The passage states 'the lower branches are shed as the tree reaches greater heights'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion",
+            "summary_fields": [
+                {
+                    "answer": "branches",
+                    "correct_feedback": "Correct! The passage states 'the lower branches are shed as the tree reaches greater heights'.",
+                    "incorrect_feedback": "Incorrect. The correct answer is BRANCHES.",
+                    "no_answer_feedback": "The correct answer is BRANCHES. The passage states 'the lower branches are shed as the tree reaches greater heights'."
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Some trunks are free of branches as high as _______ metres.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 25 (or TWENTY FIVE/TWENTY-FIVE). The passage states 'Some of the largest kauri trees had clean trunks reaching up to 25 metres'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion",
+            "summary_fields": [
+                {
+                    "answer": "25|twenty five|twenty-five",
+                    "correct_feedback": "Correct! The passage states 'Some of the largest kauri trees had clean trunks reaching up to 25 metres'.",
+                    "incorrect_feedback": "Incorrect. The correct answer is 25 (or TWENTY FIVE/TWENTY-FIVE).",
+                    "no_answer_feedback": "The correct answer is 25 (or TWENTY FIVE/TWENTY-FIVE). The passage states 'Some of the largest kauri trees had clean trunks reaching up to 25 metres'."
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The kauri tree produces both male and female seeds, and has flat leaves which are the strength of _______.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is LEATHER. The passage states the leaves 'are flat and leather-tough'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion",
+            "summary_fields": [
+                {
+                    "answer": "leather",
+                    "correct_feedback": "Correct! The passage states the leaves 'are flat and leather-tough'.",
+                    "incorrect_feedback": "Incorrect. The correct answer is LEATHER.",
+                    "no_answer_feedback": "The correct answer is LEATHER. The passage states the leaves 'are flat and leather-tough'."
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 12 – 13\n\nChoose the appropriate letters A – D and write them in boxes 12 – 13 on your answer sheet.",
+            "question": "Maori recognized the value of kauri",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: 'and were able to use it as a trading commodity.' The passage states 'Maori leaders understood its value, and they exchanged it for European provisions, such as food products and muskets.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "before European settlers did.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. While the Maori did use kauri, the passage states both the Maori and European settlers recognized its value."
+                },
+                {
+                    "text": "and were able to use it as a trading commodity.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'kauri became a commodity for trade, as Maori leaders understood its value, and they exchanged it for European provisions, such as food products and muskets.'"
+                },
+                {
+                    "text": "because of its resistance to rot.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. While the passage mentions resistance to rot, it doesn't say this was why the Maori recognized its value."
+                },
+                {
+                    "text": "owing to the strength and durability of the resin gum.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The resin gum is mentioned, but not as the reason Maori recognized kauri's value."
+                }
+            ],
+            "options": "before European settlers did.\nand were able to use it as a trading commodity.\nbecause of its resistance to rot.\nowing to the strength and durability of the resin gum.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Logging of the kauri tree",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: 'has seen changes to the landscape in the north of the country.' The passage states 'massive deforestation of the kauri saw the northern part of New Zealand transformed.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "has been a major industry for Maori for over a thousand years.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage states logging began in earnest in the 1800s, not over a thousand years ago."
+                },
+                {
+                    "text": "has brought financial benefits for both Maori and Europeans because of the relative ease of logging operations.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage actually states that moving the logs was 'difficult and dangerous', not relatively easy."
+                },
+                {
+                    "text": "has kept pace with the regeneration of kauri forests.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage indicates that kauri forests were 'devastated' and are now 'scarce', showing logging did not keep pace with regeneration."
+                },
+                {
+                    "text": "has seen changes to the landscape in the north of the country.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'massive deforestation of the kauri saw the northern part of New Zealand transformed.'"
+                }
+            ],
+            "options": "has been a major industry for Maori for over a thousand years.\nhas brought financial benefits for both Maori and Europeans because of the relative ease of logging operations.\nhas kept pace with the regeneration of kauri forests.\nhas seen changes to the landscape in the north of the country.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Passage 1",
+            "content": "New Zealand's Mighty Kauri Tree\n\n<span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Found north of the 38 degree South latitude, the native coniferous—meaning cone-bearing and evergreen—Agatha Australis tree is more commonly referred to by its Maori name, the kauri.  A protected species, the indigenous New Zealand kauri trees and kauri forests are amongst the oldest known to man, dating back some 20 million years, with the forerunners of the New Zealand native being placed in the Jurassic period, approximately 150 million years ago.  Other Agatha specimens are spread throughout the southern Pacific regions, but the kauri is located the furthest south, in the north half of the North Island of New Zealand</span>, where it grows from sea level to climates as high as 600 metres.\n\n<span id=\"passage-q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">The kauri tree is not the tallest tree in New Zealand, but it is the largest- and longest-living, growing as high as 50 metres, with a trunk girth that can be measured at over 16 metres and a life-span surpassing 2,000 years, which means some trees were 1,000 years old when the first peoples arrived in New Zealand.</span>  The diameter of the trunk can exceed five metres, which is equal to the giant California sequoias, and is amongst the highest timber-producing trees, owing to their continuous thick trunks extending upwards.  Historians claim that some notable trees reached record measurements, with 'The Great Ghost' near Thames in the Coromandel region growing to over 8 metres in diameter and more than 27 metres in girth, before being lost in a fire around 1890.\n\nYoung kauri trees grow straight up, with branches sprouting the length of the trunk, but, interestingly, the lower branches are shed as the tree reaches greater heights, with huge, clean trunks, and a root structure that burrows up to five metres into the ground.  Some of the largest kauri trees had clean trunks reaching up to 25 metres, and beyond, before the first branches.  The bark of the tree is grey-brown in colour, and flakes off, with a 1- to 2-metre build-up around the base of the tree.  The leaves are oblong, around 5 centimetres in length, and are flat and leather-tough, and the kauri has both male and female seed cones, which are wind-dispersed, and pollinated by either the cone-generating tree or by other trees.\n\nThe uses of the kauri tree are many.  In the 18th and 19th centuries, the Maori recognized the value of the wood, and made good use of it for house-building purposes, for their native carving, and, importantly, for boat-building.  European settlers also realized the importance of kauri timber.  With its parallel grain and noticeable elasticity and strong length, kauri trunks were honed into superb sailing masts, and the timber was used for the hulls and decks of ships because of its strength and water-tightness, stemming from its resistance to rot.  In addition, kauri became a commodity for trade, as Maori leaders understood its value, and they exchanged it for European provisions, such as food products and muskets.  Finally, kauri gum, which is semi-fossilised kauri resin, was used widely as a varnish and linoleum product, and was dug from marshland areas, and even prized as an export commodity.  It is interesting to note that the gum is also used by the tree to protect itself, because, once hardened, it adds to the tree's strength and durability.\n\n<span id=\"passage-q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">The logging of kauri, after the value of the tree was realised, began in earnest in the 1800s, by both the European settlers and the Maori, who understood its value as an in-demand product and, thus, an exchange commodity, as well as its cultural value.</span>  Because of their size, the trees and logs were both difficult and dangerous to move from the rugged native bush country.  They were floated downstream and, ironically, they were also used to construct dams and locks, to define waterways and to construct aquatic pathways to assist the movement of the massive logs.  Over 3,000 dams and waterways were put together after 1850 to move the felled trees and a growing industry evolved.  However, massive deforestation of the kauri saw the northern part of New Zealand transformed.  By the early 20th Century, kauri forests were devastated, and once it was realised that protection measures would need to be put in place, logging of the tree pushed ahead to ensure the most short-term gain, and, as a result, kauri forests today are scarce and invaluable, and their protection and ongoing viability is a concern.\n\n<span id=\"passage-q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Other problems, besides over-logging, beset the kauri, although to a lesser extent.  Animals, in particular introduced species such as the possum, are a threat to not only the kauri but also other flora.</span>  Other natural predators are the numerous weeds that endanger the native bush because of the warm and wet climate, and, more recently, a fungus mould called Phytophthora taxon Agathis which has taken hold since the 1970s and has caused widespread devastation in many areas, attacking trees at their base and causing them to die.  Worryingly, there appears to be no known cure, and the 'dieback' disease is still being researched by scientists with a view to managing, and understanding, the disease.  Because the disease is easily spread, action has been taken to protect the kauri by limiting human access to the tree in its natural environment and by ensuring a 'clean' approach, as spores and soil are the main medium for the spread of the disease.  <span id=\"passage-q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">Both government intervention and volunteer work are underway to ensure a healthy future for kauri forests.</span>"
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "ielts_academic_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-14 06:21:00",
+        "exported_by": "impact",
+        "plugin_version": "11.19",
+        "format_version": "1.0"
+    }
+}
