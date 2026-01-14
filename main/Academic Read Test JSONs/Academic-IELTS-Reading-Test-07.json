@@ -3,7 +3,7 @@
     "content": "",
     "questions": [
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "List of headings",
             "points": 1,
@@ -12,10 +12,17 @@
             "incorrect_feedback": "",
             "reading_text_id": null,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [],
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "I) Harmony through competition",
             "points": 1,
@@ -23,23 +30,131 @@
             "correct_feedback": "Excellent! Paragraph A discusses the origins of the Olympics, explaining how it \"first began in Ancient Greece nearly 2700 years ago as a religious occasion\" dedicated to Zeus.",
             "incorrect_feedback": "The correct answer is D (Origins). Paragraph A focuses on how the Olympics started in Ancient Greece as a religious festival celebrating Zeus, making \"Origins\" the most suitable heading.",
             "reading_text_id": 0,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (Re-emergence of the Games)\nB (Traditional discrimination)\nC (An inferior substitute)\nD (Origins)\nE (The contemporary Olympiad)\nF (The ancient ideal in a modern world)\nG (Dissolution through conquest)\nH (An Olympic rebirth)\nI (Harmony through competition)",
+            "correct_answer": "3",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (Re-emergence of the Games)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Origins). Paragraph A focuses on how the Olympics started in Ancient Greece as a religious festival celebrating Zeus, making \"Origins\" the most suitable heading."
+                },
+                {
+                    "text": "B (Traditional discrimination)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Origins). Paragraph A focuses on how the Olympics started in Ancient Greece as a religious festival celebrating Zeus, making \"Origins\" the most suitable heading."
+                },
+                {
+                    "text": "C (An inferior substitute)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Origins). Paragraph A focuses on how the Olympics started in Ancient Greece as a religious festival celebrating Zeus, making \"Origins\" the most suitable heading."
+                },
+                {
+                    "text": "D (Origins)",
+                    "is_correct": true,
+                    "feedback": "Excellent! Paragraph A discusses the origins of the Olympics, explaining how it \"first began in Ancient Greece nearly 2700 years ago as a religious occasion\" dedicated to Zeus."
+                },
+                {
+                    "text": "E (The contemporary Olympiad)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Origins). Paragraph A focuses on how the Olympics started in Ancient Greece as a religious festival celebrating Zeus, making \"Origins\" the most suitable heading."
+                },
+                {
+                    "text": "F (The ancient ideal in a modern world)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Origins). Paragraph A focuses on how the Olympics started in Ancient Greece as a religious festival celebrating Zeus, making \"Origins\" the most suitable heading."
+                },
+                {
+                    "text": "G (Dissolution through conquest)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Origins). Paragraph A focuses on how the Olympics started in Ancient Greece as a religious festival celebrating Zeus, making \"Origins\" the most suitable heading."
+                },
+                {
+                    "text": "H (An Olympic rebirth)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Origins). Paragraph A focuses on how the Olympics started in Ancient Greece as a religious festival celebrating Zeus, making \"Origins\" the most suitable heading."
+                },
+                {
+                    "text": "I (Harmony through competition)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Origins). Paragraph A focuses on how the Olympics started in Ancient Greece as a religious festival celebrating Zeus, making \"Origins\" the most suitable heading."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "I) Harmony through competition",
             "points": 1,
             "no_answer_feedback": "The correct answer is I (Harmony through competition). Paragraph B focuses on the peaceful period during the Olympic Games.",
             "correct_feedback": "Correct! Paragraph B emphasizes how the Olympics created peace during the festival, with wars suspended and conflicts halted, making \"Harmony through competition\" the perfect heading.",
-            "incorrect_feedback": "The correct answer is I (Harmony through competition). Paragraph B describes how \"for the duration of the festival, there was peace\" and \"All wars – domestic and international – had to be suspended.\"",
+            "incorrect_feedback": "The correct answer is I (Harmony through competition). Paragraph B describes how \"for the duration of the festival, there was peace\" and \"All wars \u2013 domestic and international \u2013 had to be suspended.\"",
             "reading_text_id": 0,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (Re-emergence of the Games)\nB (Traditional discrimination)\nC (An inferior substitute)\nD (Origins)\nE (The contemporary Olympiad)\nF (The ancient ideal in a modern world)\nG (Dissolution through conquest)\nH (An Olympic rebirth)\nI (Harmony through competition)",
+            "correct_answer": "8",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (Re-emergence of the Games)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is I (Harmony through competition). Paragraph B describes how \"for the duration of the festival, there was peace\" and \"All wars \u2013 domestic and international \u2013 had to be suspended.\""
+                },
+                {
+                    "text": "B (Traditional discrimination)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is I (Harmony through competition). Paragraph B describes how \"for the duration of the festival, there was peace\" and \"All wars \u2013 domestic and international \u2013 had to be suspended.\""
+                },
+                {
+                    "text": "C (An inferior substitute)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is I (Harmony through competition). Paragraph B describes how \"for the duration of the festival, there was peace\" and \"All wars \u2013 domestic and international \u2013 had to be suspended.\""
+                },
+                {
+                    "text": "D (Origins)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is I (Harmony through competition). Paragraph B describes how \"for the duration of the festival, there was peace\" and \"All wars \u2013 domestic and international \u2013 had to be suspended.\""
+                },
+                {
+                    "text": "E (The contemporary Olympiad)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is I (Harmony through competition). Paragraph B describes how \"for the duration of the festival, there was peace\" and \"All wars \u2013 domestic and international \u2013 had to be suspended.\""
+                },
+                {
+                    "text": "F (The ancient ideal in a modern world)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is I (Harmony through competition). Paragraph B describes how \"for the duration of the festival, there was peace\" and \"All wars \u2013 domestic and international \u2013 had to be suspended.\""
+                },
+                {
+                    "text": "G (Dissolution through conquest)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is I (Harmony through competition). Paragraph B describes how \"for the duration of the festival, there was peace\" and \"All wars \u2013 domestic and international \u2013 had to be suspended.\""
+                },
+                {
+                    "text": "H (An Olympic rebirth)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is I (Harmony through competition). Paragraph B describes how \"for the duration of the festival, there was peace\" and \"All wars \u2013 domestic and international \u2013 had to be suspended.\""
+                },
+                {
+                    "text": "I (Harmony through competition)",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B emphasizes how the Olympics created peace during the festival, with wars suspended and conflicts halted, making \"Harmony through competition\" the perfect heading."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "I) Harmony through competition",
             "points": 1,
@@ -47,11 +162,65 @@
             "correct_feedback": "Well done! Paragraph C discusses how \"women and slaves, who were not allowed within the stadium,\" showing the traditional discrimination of the ancient Games.",
             "incorrect_feedback": "The correct answer is B (Traditional discrimination). Paragraph C explains the exclusion of women and slaves from the Olympics, which was a form of traditional discrimination.",
             "reading_text_id": 0,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (Re-emergence of the Games)\nB (Traditional discrimination)\nC (An inferior substitute)\nD (Origins)\nE (The contemporary Olympiad)\nF (The ancient ideal in a modern world)\nG (Dissolution through conquest)\nH (An Olympic rebirth)\nI (Harmony through competition)",
+            "correct_answer": "1",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (Re-emergence of the Games)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Traditional discrimination). Paragraph C explains the exclusion of women and slaves from the Olympics, which was a form of traditional discrimination."
+                },
+                {
+                    "text": "B (Traditional discrimination)",
+                    "is_correct": true,
+                    "feedback": "Well done! Paragraph C discusses how \"women and slaves, who were not allowed within the stadium,\" showing the traditional discrimination of the ancient Games."
+                },
+                {
+                    "text": "C (An inferior substitute)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Traditional discrimination). Paragraph C explains the exclusion of women and slaves from the Olympics, which was a form of traditional discrimination."
+                },
+                {
+                    "text": "D (Origins)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Traditional discrimination). Paragraph C explains the exclusion of women and slaves from the Olympics, which was a form of traditional discrimination."
+                },
+                {
+                    "text": "E (The contemporary Olympiad)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Traditional discrimination). Paragraph C explains the exclusion of women and slaves from the Olympics, which was a form of traditional discrimination."
+                },
+                {
+                    "text": "F (The ancient ideal in a modern world)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Traditional discrimination). Paragraph C explains the exclusion of women and slaves from the Olympics, which was a form of traditional discrimination."
+                },
+                {
+                    "text": "G (Dissolution through conquest)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Traditional discrimination). Paragraph C explains the exclusion of women and slaves from the Olympics, which was a form of traditional discrimination."
+                },
+                {
+                    "text": "H (An Olympic rebirth)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Traditional discrimination). Paragraph C explains the exclusion of women and slaves from the Olympics, which was a form of traditional discrimination."
+                },
+                {
+                    "text": "I (Harmony through competition)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Traditional discrimination). Paragraph C explains the exclusion of women and slaves from the Olympics, which was a form of traditional discrimination."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "I) Harmony through competition",
             "points": 1,
@@ -59,11 +228,65 @@
             "correct_feedback": "Excellent! Paragraph D explains how \"the original Games were abolished after the Roman invasion in AD356,\" which is a dissolution through conquest.",
             "incorrect_feedback": "The correct answer is G (Dissolution through conquest). Paragraph D states that \"the original Games were abolished after the Roman invasion,\" ending the ancient Olympics.",
             "reading_text_id": 0,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (Re-emergence of the Games)\nB (Traditional discrimination)\nC (An inferior substitute)\nD (Origins)\nE (The contemporary Olympiad)\nF (The ancient ideal in a modern world)\nG (Dissolution through conquest)\nH (An Olympic rebirth)\nI (Harmony through competition)",
+            "correct_answer": "6",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (Re-emergence of the Games)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Dissolution through conquest). Paragraph D states that \"the original Games were abolished after the Roman invasion,\" ending the ancient Olympics."
+                },
+                {
+                    "text": "B (Traditional discrimination)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Dissolution through conquest). Paragraph D states that \"the original Games were abolished after the Roman invasion,\" ending the ancient Olympics."
+                },
+                {
+                    "text": "C (An inferior substitute)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Dissolution through conquest). Paragraph D states that \"the original Games were abolished after the Roman invasion,\" ending the ancient Olympics."
+                },
+                {
+                    "text": "D (Origins)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Dissolution through conquest). Paragraph D states that \"the original Games were abolished after the Roman invasion,\" ending the ancient Olympics."
+                },
+                {
+                    "text": "E (The contemporary Olympiad)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Dissolution through conquest). Paragraph D states that \"the original Games were abolished after the Roman invasion,\" ending the ancient Olympics."
+                },
+                {
+                    "text": "F (The ancient ideal in a modern world)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Dissolution through conquest). Paragraph D states that \"the original Games were abolished after the Roman invasion,\" ending the ancient Olympics."
+                },
+                {
+                    "text": "G (Dissolution through conquest)",
+                    "is_correct": true,
+                    "feedback": "Excellent! Paragraph D explains how \"the original Games were abolished after the Roman invasion in AD356,\" which is a dissolution through conquest."
+                },
+                {
+                    "text": "H (An Olympic rebirth)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Dissolution through conquest). Paragraph D states that \"the original Games were abolished after the Roman invasion,\" ending the ancient Olympics."
+                },
+                {
+                    "text": "I (Harmony through competition)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Dissolution through conquest). Paragraph D states that \"the original Games were abolished after the Roman invasion,\" ending the ancient Olympics."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "I) Harmony through competition",
             "points": 1,
@@ -71,11 +294,65 @@
             "correct_feedback": "Correct! Paragraph E describes how \"in 1896 that Baron Pierre de Coubertin...and Dimitrios Vikelas...revived the games,\" marking the re-emergence of the Olympics.",
             "incorrect_feedback": "The correct answer is A (Re-emergence of the Games). Paragraph E explains how the Olympics were revived in 1896 after being abolished for over 1,500 years.",
             "reading_text_id": 0,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (Re-emergence of the Games)\nB (Traditional discrimination)\nC (An inferior substitute)\nD (Origins)\nE (The contemporary Olympiad)\nF (The ancient ideal in a modern world)\nG (Dissolution through conquest)\nH (An Olympic rebirth)\nI (Harmony through competition)",
+            "correct_answer": "0",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (Re-emergence of the Games)",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E describes how \"in 1896 that Baron Pierre de Coubertin...and Dimitrios Vikelas...revived the games,\" marking the re-emergence of the Olympics."
+                },
+                {
+                    "text": "B (Traditional discrimination)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Re-emergence of the Games). Paragraph E explains how the Olympics were revived in 1896 after being abolished for over 1,500 years."
+                },
+                {
+                    "text": "C (An inferior substitute)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Re-emergence of the Games). Paragraph E explains how the Olympics were revived in 1896 after being abolished for over 1,500 years."
+                },
+                {
+                    "text": "D (Origins)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Re-emergence of the Games). Paragraph E explains how the Olympics were revived in 1896 after being abolished for over 1,500 years."
+                },
+                {
+                    "text": "E (The contemporary Olympiad)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Re-emergence of the Games). Paragraph E explains how the Olympics were revived in 1896 after being abolished for over 1,500 years."
+                },
+                {
+                    "text": "F (The ancient ideal in a modern world)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Re-emergence of the Games). Paragraph E explains how the Olympics were revived in 1896 after being abolished for over 1,500 years."
+                },
+                {
+                    "text": "G (Dissolution through conquest)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Re-emergence of the Games). Paragraph E explains how the Olympics were revived in 1896 after being abolished for over 1,500 years."
+                },
+                {
+                    "text": "H (An Olympic rebirth)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Re-emergence of the Games). Paragraph E explains how the Olympics were revived in 1896 after being abolished for over 1,500 years."
+                },
+                {
+                    "text": "I (Harmony through competition)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Re-emergence of the Games). Paragraph E explains how the Olympics were revived in 1896 after being abolished for over 1,500 years."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "I) Harmony through competition",
             "points": 1,
@@ -83,23 +360,85 @@
             "correct_feedback": "Well done! Paragraph F discusses the modern Olympics with \"nearly 200 nationalities,\" the Winter Olympics, and Paralympics, perfectly described by \"The contemporary Olympiad.\"",
             "incorrect_feedback": "The correct answer is E (The contemporary Olympiad). Paragraph F focuses on today's Olympics, including its expansion to Winter Olympics and Paralympics.",
             "reading_text_id": 0,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (Re-emergence of the Games)\nB (Traditional discrimination)\nC (An inferior substitute)\nD (Origins)\nE (The contemporary Olympiad)\nF (The ancient ideal in a modern world)\nG (Dissolution through conquest)\nH (An Olympic rebirth)\nI (Harmony through competition)",
+            "correct_answer": "4",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (Re-emergence of the Games)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (The contemporary Olympiad). Paragraph F focuses on today's Olympics, including its expansion to Winter Olympics and Paralympics."
+                },
+                {
+                    "text": "B (Traditional discrimination)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (The contemporary Olympiad). Paragraph F focuses on today's Olympics, including its expansion to Winter Olympics and Paralympics."
+                },
+                {
+                    "text": "C (An inferior substitute)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (The contemporary Olympiad). Paragraph F focuses on today's Olympics, including its expansion to Winter Olympics and Paralympics."
+                },
+                {
+                    "text": "D (Origins)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (The contemporary Olympiad). Paragraph F focuses on today's Olympics, including its expansion to Winter Olympics and Paralympics."
+                },
+                {
+                    "text": "E (The contemporary Olympiad)",
+                    "is_correct": true,
+                    "feedback": "Well done! Paragraph F discusses the modern Olympics with \"nearly 200 nationalities,\" the Winter Olympics, and Paralympics, perfectly described by \"The contemporary Olympiad.\""
+                },
+                {
+                    "text": "F (The ancient ideal in a modern world)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (The contemporary Olympiad). Paragraph F focuses on today's Olympics, including its expansion to Winter Olympics and Paralympics."
+                },
+                {
+                    "text": "G (Dissolution through conquest)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (The contemporary Olympiad). Paragraph F focuses on today's Olympics, including its expansion to Winter Olympics and Paralympics."
+                },
+                {
+                    "text": "H (An Olympic rebirth)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (The contemporary Olympiad). Paragraph F focuses on today's Olympics, including its expansion to Winter Olympics and Paralympics."
+                },
+                {
+                    "text": "I (Harmony through competition)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (The contemporary Olympiad). Paragraph F focuses on today's Olympics, including its expansion to Winter Olympics and Paralympics."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "How many times has war cancelled the modern Olympics?",
             "points": 1,
             "no_answer_feedback": "The correct answer is \"three\". Check paragraph E which discusses war cancellations of the modern Olympics.",
-            "correct_feedback": "Excellent! Paragraph E states \"World War I caused one game to be cancelled and World War II caused the cancellation of another two\" – totaling three cancellations.",
+            "correct_feedback": "Excellent! Paragraph E states \"World War I caused one game to be cancelled and World War II caused the cancellation of another two\" \u2013 totaling three cancellations.",
             "incorrect_feedback": "The correct answer is \"three\". Paragraph E explains that World War I cancelled one Olympics and World War II cancelled two, totaling three cancellations.",
             "reading_text_id": 0,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "three",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "Why were there no Olympics between 356 and 1896?",
             "points": 1,
@@ -108,10 +447,18 @@
             "incorrect_feedback": "The correct answer is \"Roman invasion\". Paragraph D explains that the Games were abolished after the Roman invasion in AD356.",
             "reading_text_id": 0,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "roman invasion",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "To whom specifically were the original Olympics dedicated?",
             "points": 1,
@@ -120,10 +467,18 @@
             "incorrect_feedback": "The correct answer is \"Zeus\". Paragraph A explains that the Olympics were \"in praise of the god Zeus.\"",
             "reading_text_id": 0,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "zeus",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "Before AD356, how long was each Olympics?",
             "points": 1,
@@ -132,10 +487,18 @@
             "incorrect_feedback": "The correct answer is \"five days\". Paragraph D states the Olympics lasted \"for only five days.\"",
             "reading_text_id": 0,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "five days",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "How many countries are represented in the modern Olympics?",
             "points": 1,
@@ -144,10 +507,18 @@
             "incorrect_feedback": "The correct answer is \"nearly 200\". Paragraph F mentions \"nearly 200 nationalities\" participate in the modern Olympics.",
             "reading_text_id": 0,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "nearly 200",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "I) Problems overcome",
             "points": 1,
@@ -155,11 +526,65 @@
             "correct_feedback": "Excellent! Paragraph B discusses various energy options like solar and wind, then introduces geothermal as \"a viable alternative to fossil fuels,\" making \"Looking at alternatives\" the perfect heading.",
             "incorrect_feedback": "The correct answer is E (Looking at alternatives). Paragraph B explores different renewable energy options before focusing on geothermal energy as an alternative.",
             "reading_text_id": 1,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (The science of geothermal energy)\nB (An industry develops)\nC (Pollution and mining)\nD (Past environmental degradation)\nE (Looking at alternatives)\nF (Global use)\nG (Uncertain future)\nH (Unresolved drawbacks)\nI (Problems overcome)",
+            "correct_answer": "4",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (The science of geothermal energy)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (Looking at alternatives). Paragraph B explores different renewable energy options before focusing on geothermal energy as an alternative."
+                },
+                {
+                    "text": "B (An industry develops)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (Looking at alternatives). Paragraph B explores different renewable energy options before focusing on geothermal energy as an alternative."
+                },
+                {
+                    "text": "C (Pollution and mining)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (Looking at alternatives). Paragraph B explores different renewable energy options before focusing on geothermal energy as an alternative."
+                },
+                {
+                    "text": "D (Past environmental degradation)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (Looking at alternatives). Paragraph B explores different renewable energy options before focusing on geothermal energy as an alternative."
+                },
+                {
+                    "text": "E (Looking at alternatives)",
+                    "is_correct": true,
+                    "feedback": "Excellent! Paragraph B discusses various energy options like solar and wind, then introduces geothermal as \"a viable alternative to fossil fuels,\" making \"Looking at alternatives\" the perfect heading."
+                },
+                {
+                    "text": "F (Global use)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (Looking at alternatives). Paragraph B explores different renewable energy options before focusing on geothermal energy as an alternative."
+                },
+                {
+                    "text": "G (Uncertain future)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (Looking at alternatives). Paragraph B explores different renewable energy options before focusing on geothermal energy as an alternative."
+                },
+                {
+                    "text": "H (Unresolved drawbacks)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (Looking at alternatives). Paragraph B explores different renewable energy options before focusing on geothermal energy as an alternative."
+                },
+                {
+                    "text": "I (Problems overcome)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is E (Looking at alternatives). Paragraph B explores different renewable energy options before focusing on geothermal energy as an alternative."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "I) Problems overcome",
             "points": 1,
@@ -167,11 +592,65 @@
             "correct_feedback": "Correct! Paragraph C explains the scientific process of geothermal energy, describing temperatures at different depths, pressure, steam turbines, and heat exchangers.",
             "incorrect_feedback": "The correct answer is A (The science of geothermal energy). Paragraph C provides technical details about how geothermal energy works underground.",
             "reading_text_id": 1,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (The science of geothermal energy)\nB (An industry develops)\nC (Pollution and mining)\nD (Past environmental degradation)\nE (Looking at alternatives)\nF (Global use)\nG (Uncertain future)\nH (Unresolved drawbacks)\nI (Problems overcome)",
+            "correct_answer": "0",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (The science of geothermal energy)",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C explains the scientific process of geothermal energy, describing temperatures at different depths, pressure, steam turbines, and heat exchangers."
+                },
+                {
+                    "text": "B (An industry develops)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (The science of geothermal energy). Paragraph C provides technical details about how geothermal energy works underground."
+                },
+                {
+                    "text": "C (Pollution and mining)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (The science of geothermal energy). Paragraph C provides technical details about how geothermal energy works underground."
+                },
+                {
+                    "text": "D (Past environmental degradation)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (The science of geothermal energy). Paragraph C provides technical details about how geothermal energy works underground."
+                },
+                {
+                    "text": "E (Looking at alternatives)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (The science of geothermal energy). Paragraph C provides technical details about how geothermal energy works underground."
+                },
+                {
+                    "text": "F (Global use)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (The science of geothermal energy). Paragraph C provides technical details about how geothermal energy works underground."
+                },
+                {
+                    "text": "G (Uncertain future)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (The science of geothermal energy). Paragraph C provides technical details about how geothermal energy works underground."
+                },
+                {
+                    "text": "H (Unresolved drawbacks)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (The science of geothermal energy). Paragraph C provides technical details about how geothermal energy works underground."
+                },
+                {
+                    "text": "I (Problems overcome)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (The science of geothermal energy). Paragraph C provides technical details about how geothermal energy works underground."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "I) Problems overcome",
             "points": 1,
@@ -179,11 +658,65 @@
             "correct_feedback": "Well done! Paragraph D discusses geothermal use globally, mentioning multiple countries and including a table showing international generating capacity.",
             "incorrect_feedback": "The correct answer is F (Global use). Paragraph D lists various countries using geothermal energy and provides comparative data in a table.",
             "reading_text_id": 1,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (The science of geothermal energy)\nB (An industry develops)\nC (Pollution and mining)\nD (Past environmental degradation)\nE (Looking at alternatives)\nF (Global use)\nG (Uncertain future)\nH (Unresolved drawbacks)\nI (Problems overcome)",
+            "correct_answer": "5",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (The science of geothermal energy)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (Global use). Paragraph D lists various countries using geothermal energy and provides comparative data in a table."
+                },
+                {
+                    "text": "B (An industry develops)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (Global use). Paragraph D lists various countries using geothermal energy and provides comparative data in a table."
+                },
+                {
+                    "text": "C (Pollution and mining)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (Global use). Paragraph D lists various countries using geothermal energy and provides comparative data in a table."
+                },
+                {
+                    "text": "D (Past environmental degradation)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (Global use). Paragraph D lists various countries using geothermal energy and provides comparative data in a table."
+                },
+                {
+                    "text": "E (Looking at alternatives)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (Global use). Paragraph D lists various countries using geothermal energy and provides comparative data in a table."
+                },
+                {
+                    "text": "F (Global use)",
+                    "is_correct": true,
+                    "feedback": "Well done! Paragraph D discusses geothermal use globally, mentioning multiple countries and including a table showing international generating capacity."
+                },
+                {
+                    "text": "G (Uncertain future)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (Global use). Paragraph D lists various countries using geothermal energy and provides comparative data in a table."
+                },
+                {
+                    "text": "H (Unresolved drawbacks)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (Global use). Paragraph D lists various countries using geothermal energy and provides comparative data in a table."
+                },
+                {
+                    "text": "I (Problems overcome)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (Global use). Paragraph D lists various countries using geothermal energy and provides comparative data in a table."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "I) Problems overcome",
             "points": 1,
@@ -191,11 +724,65 @@
             "correct_feedback": "Excellent! Paragraph E discusses problems like sites needing recovery time, corrosion, radioactive gases requiring \"further research,\" and geological effects - all unresolved drawbacks.",
             "incorrect_feedback": "The correct answer is H (Unresolved drawbacks). Paragraph E details various problems with geothermal energy that remain unsolved.",
             "reading_text_id": 1,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (The science of geothermal energy)\nB (An industry develops)\nC (Pollution and mining)\nD (Past environmental degradation)\nE (Looking at alternatives)\nF (Global use)\nG (Uncertain future)\nH (Unresolved drawbacks)\nI (Problems overcome)",
+            "correct_answer": "7",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (The science of geothermal energy)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is H (Unresolved drawbacks). Paragraph E details various problems with geothermal energy that remain unsolved."
+                },
+                {
+                    "text": "B (An industry develops)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is H (Unresolved drawbacks). Paragraph E details various problems with geothermal energy that remain unsolved."
+                },
+                {
+                    "text": "C (Pollution and mining)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is H (Unresolved drawbacks). Paragraph E details various problems with geothermal energy that remain unsolved."
+                },
+                {
+                    "text": "D (Past environmental degradation)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is H (Unresolved drawbacks). Paragraph E details various problems with geothermal energy that remain unsolved."
+                },
+                {
+                    "text": "E (Looking at alternatives)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is H (Unresolved drawbacks). Paragraph E details various problems with geothermal energy that remain unsolved."
+                },
+                {
+                    "text": "F (Global use)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is H (Unresolved drawbacks). Paragraph E details various problems with geothermal energy that remain unsolved."
+                },
+                {
+                    "text": "G (Uncertain future)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is H (Unresolved drawbacks). Paragraph E details various problems with geothermal energy that remain unsolved."
+                },
+                {
+                    "text": "H (Unresolved drawbacks)",
+                    "is_correct": true,
+                    "feedback": "Excellent! Paragraph E discusses problems like sites needing recovery time, corrosion, radioactive gases requiring \"further research,\" and geological effects - all unresolved drawbacks."
+                },
+                {
+                    "text": "I (Problems overcome)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is H (Unresolved drawbacks). Paragraph E details various problems with geothermal energy that remain unsolved."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "Geothermal energy is the result of extracting heat from water passed through ______.",
             "points": 1,
@@ -204,10 +791,18 @@
             "incorrect_feedback": "The correct answer is \"rocks\". Paragraph B explains that water is \"heated by the rocks\" beneath the earth's surface.",
             "reading_text_id": 1,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "rocks",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "This energy may provide an alternative to ______.",
             "points": 1,
@@ -216,22 +811,38 @@
             "incorrect_feedback": "The correct answer is \"fossil fuels\". Paragraph B describes geothermal as an alternative to fossil fuels.",
             "reading_text_id": 1,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "fossil fuels",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "Not a new discovery, geothermal energy was first tapped by ______.",
             "points": 1,
             "no_answer_feedback": "The correct answer is \"the Romans\". Paragraph D provides historical information about early geothermal use.",
-            "correct_feedback": "Well done! Paragraph D states \"People have been using hot spring water for a very long time – most famously, the Romans 2000 years ago at Bath in England.\"",
+            "correct_feedback": "Well done! Paragraph D states \"People have been using hot spring water for a very long time \u2013 most famously, the Romans 2000 years ago at Bath in England.\"",
             "incorrect_feedback": "The correct answer is \"the Romans\". Paragraph D mentions the Romans used hot spring water 2000 years ago.",
             "reading_text_id": 1,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "the romans",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "Only one quarter of a per cent of energy is extracted through this method in ______.",
             "points": 1,
@@ -240,10 +851,18 @@
             "incorrect_feedback": "The correct answer is \"USA\". Check the table in paragraph D which shows 0.25% for USA.",
             "reading_text_id": 1,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "usa",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "As well as blockages, water heated through aquifers is not used in boilers as it causes ______.",
             "points": 1,
@@ -252,10 +871,18 @@
             "incorrect_feedback": "The correct answer is \"corrosion\". Paragraph E explains that mineral salts in the water cause corrosion and blockages.",
             "reading_text_id": 1,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "corrosion",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "Potential effects to the surrounding land also have to be taken into account by ______.",
             "points": 1,
@@ -264,10 +891,18 @@
             "incorrect_feedback": "The correct answer is \"engineers\". Paragraph E mentions that engineers must consider geological effects.",
             "reading_text_id": 1,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "engineers",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "The cost is the main drawback for which form of power?",
             "points": 1,
@@ -276,22 +911,38 @@
             "incorrect_feedback": "The correct answer is \"solar power\". Paragraph B mentions that solar power's cost is prohibitive.",
             "reading_text_id": 1,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "solar power",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "What is the advantage in boring deeper into the rock?",
             "points": 1,
             "no_answer_feedback": "The correct answer is \"higher temperature\". Paragraph C compares temperatures at different depths.",
-            "correct_feedback": "Correct! Paragraph C explains \"at 3 km it may exceed 200 °C\" compared to 100°C at 2km, showing higher temperature is the advantage of going deeper.",
+            "correct_feedback": "Correct! Paragraph C explains \"at 3 km it may exceed 200 \u00b0C\" compared to 100\u00b0C at 2km, showing higher temperature is the advantage of going deeper.",
             "incorrect_feedback": "The correct answer is \"higher temperature\". Paragraph C shows that deeper depths produce higher temperatures.",
             "reading_text_id": 1,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "higher temperature",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "Why is New Zealand using geothermal energy more than any other country is?",
             "points": 1,
@@ -300,10 +951,18 @@
             "incorrect_feedback": "The correct answer is \"volcanic environment\". Paragraph D explains New Zealand's advantage is due to its volcanic nature.",
             "reading_text_id": 1,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "volcanic environment",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "What potential emissions from boreholes need further investigation?",
             "points": 1,
@@ -312,10 +971,18 @@
             "incorrect_feedback": "The correct answer is \"radioactive gases\". Paragraph E states that radioactive gases need further research before they're considered safe.",
             "reading_text_id": 1,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "radioactive gases",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "J) Effects of the natural environment",
             "points": 1,
@@ -323,11 +990,70 @@
             "correct_feedback": "Excellent! Paragraph B discusses \"the principal chemicals\" causing acid rain and explains \"the majority is unsurprisingly manmade,\" detailing artificial/manmade sources.",
             "incorrect_feedback": "The correct answer is D (Artificial causes of acid rain). Paragraph B focuses on manmade sources like transportation, power plants, and industry.",
             "reading_text_id": 2,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (Impact on the urban landscape)\nB (Higher dispersal creates a global problem)\nC (Natural sources)\nD (Artificial causes of acid rain)\nE (Research into acid rain)\nF (International reactions)\nG (Secondary impact on flora and fauna)\nH (The neutralising effect of natural elements)\nI (Public awareness and education)\nJ (Effects of the natural environment)",
+            "correct_answer": "3",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (Impact on the urban landscape)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Artificial causes of acid rain). Paragraph B focuses on manmade sources like transportation, power plants, and industry."
+                },
+                {
+                    "text": "B (Higher dispersal creates a global problem)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Artificial causes of acid rain). Paragraph B focuses on manmade sources like transportation, power plants, and industry."
+                },
+                {
+                    "text": "C (Natural sources)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Artificial causes of acid rain). Paragraph B focuses on manmade sources like transportation, power plants, and industry."
+                },
+                {
+                    "text": "D (Artificial causes of acid rain)",
+                    "is_correct": true,
+                    "feedback": "Excellent! Paragraph B discusses \"the principal chemicals\" causing acid rain and explains \"the majority is unsurprisingly manmade,\" detailing artificial/manmade sources."
+                },
+                {
+                    "text": "E (Research into acid rain)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Artificial causes of acid rain). Paragraph B focuses on manmade sources like transportation, power plants, and industry."
+                },
+                {
+                    "text": "F (International reactions)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Artificial causes of acid rain). Paragraph B focuses on manmade sources like transportation, power plants, and industry."
+                },
+                {
+                    "text": "G (Secondary impact on flora and fauna)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Artificial causes of acid rain). Paragraph B focuses on manmade sources like transportation, power plants, and industry."
+                },
+                {
+                    "text": "H (The neutralising effect of natural elements)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Artificial causes of acid rain). Paragraph B focuses on manmade sources like transportation, power plants, and industry."
+                },
+                {
+                    "text": "I (Public awareness and education)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Artificial causes of acid rain). Paragraph B focuses on manmade sources like transportation, power plants, and industry."
+                },
+                {
+                    "text": "J (Effects of the natural environment)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is D (Artificial causes of acid rain). Paragraph B focuses on manmade sources like transportation, power plants, and industry."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "J) Effects of the natural environment",
             "points": 1,
@@ -335,11 +1061,70 @@
             "correct_feedback": "Correct! Paragraph C discusses how \"naturally occurring substances such as limestone\" can neutralize acid rain, showing effects of the natural environment.",
             "incorrect_feedback": "The correct answer is J (Effects of the natural environment). Paragraph C explains how natural geology either protects against or worsens acid rain effects.",
             "reading_text_id": 2,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (Impact on the urban landscape)\nB (Higher dispersal creates a global problem)\nC (Natural sources)\nD (Artificial causes of acid rain)\nE (Research into acid rain)\nF (International reactions)\nG (Secondary impact on flora and fauna)\nH (The neutralising effect of natural elements)\nI (Public awareness and education)\nJ (Effects of the natural environment)",
+            "correct_answer": "9",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (Impact on the urban landscape)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is J (Effects of the natural environment). Paragraph C explains how natural geology either protects against or worsens acid rain effects."
+                },
+                {
+                    "text": "B (Higher dispersal creates a global problem)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is J (Effects of the natural environment). Paragraph C explains how natural geology either protects against or worsens acid rain effects."
+                },
+                {
+                    "text": "C (Natural sources)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is J (Effects of the natural environment). Paragraph C explains how natural geology either protects against or worsens acid rain effects."
+                },
+                {
+                    "text": "D (Artificial causes of acid rain)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is J (Effects of the natural environment). Paragraph C explains how natural geology either protects against or worsens acid rain effects."
+                },
+                {
+                    "text": "E (Research into acid rain)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is J (Effects of the natural environment). Paragraph C explains how natural geology either protects against or worsens acid rain effects."
+                },
+                {
+                    "text": "F (International reactions)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is J (Effects of the natural environment). Paragraph C explains how natural geology either protects against or worsens acid rain effects."
+                },
+                {
+                    "text": "G (Secondary impact on flora and fauna)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is J (Effects of the natural environment). Paragraph C explains how natural geology either protects against or worsens acid rain effects."
+                },
+                {
+                    "text": "H (The neutralising effect of natural elements)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is J (Effects of the natural environment). Paragraph C explains how natural geology either protects against or worsens acid rain effects."
+                },
+                {
+                    "text": "I (Public awareness and education)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is J (Effects of the natural environment). Paragraph C explains how natural geology either protects against or worsens acid rain effects."
+                },
+                {
+                    "text": "J (Effects of the natural environment)",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C discusses how \"naturally occurring substances such as limestone\" can neutralize acid rain, showing effects of the natural environment."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "J) Effects of the natural environment",
             "points": 1,
@@ -347,11 +1132,70 @@
             "correct_feedback": "Well done! Paragraph D discusses environmental impact on lakes, animals like otters, and farmland with reduced crop yields - all secondary impacts on flora and fauna.",
             "incorrect_feedback": "The correct answer is G (Secondary impact on flora and fauna). Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage.",
             "reading_text_id": 2,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (Impact on the urban landscape)\nB (Higher dispersal creates a global problem)\nC (Natural sources)\nD (Artificial causes of acid rain)\nE (Research into acid rain)\nF (International reactions)\nG (Secondary impact on flora and fauna)\nH (The neutralising effect of natural elements)\nI (Public awareness and education)\nJ (Effects of the natural environment)",
+            "correct_answer": "6",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (Impact on the urban landscape)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Secondary impact on flora and fauna). Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
+                },
+                {
+                    "text": "B (Higher dispersal creates a global problem)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Secondary impact on flora and fauna). Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
+                },
+                {
+                    "text": "C (Natural sources)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Secondary impact on flora and fauna). Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
+                },
+                {
+                    "text": "D (Artificial causes of acid rain)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Secondary impact on flora and fauna). Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
+                },
+                {
+                    "text": "E (Research into acid rain)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Secondary impact on flora and fauna). Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
+                },
+                {
+                    "text": "F (International reactions)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Secondary impact on flora and fauna). Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
+                },
+                {
+                    "text": "G (Secondary impact on flora and fauna)",
+                    "is_correct": true,
+                    "feedback": "Well done! Paragraph D discusses environmental impact on lakes, animals like otters, and farmland with reduced crop yields - all secondary impacts on flora and fauna."
+                },
+                {
+                    "text": "H (The neutralising effect of natural elements)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Secondary impact on flora and fauna). Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
+                },
+                {
+                    "text": "I (Public awareness and education)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Secondary impact on flora and fauna). Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
+                },
+                {
+                    "text": "J (Effects of the natural environment)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is G (Secondary impact on flora and fauna). Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "J) Effects of the natural environment",
             "points": 1,
@@ -359,11 +1203,70 @@
             "correct_feedback": "Excellent! Paragraph E focuses on cities, discussing monuments, structures, pipes, drinking water, visibility, and smog - all urban landscape impacts.",
             "incorrect_feedback": "The correct answer is A (Impact on the urban landscape). Paragraph E describes how acid rain affects cities and urban infrastructure.",
             "reading_text_id": 2,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (Impact on the urban landscape)\nB (Higher dispersal creates a global problem)\nC (Natural sources)\nD (Artificial causes of acid rain)\nE (Research into acid rain)\nF (International reactions)\nG (Secondary impact on flora and fauna)\nH (The neutralising effect of natural elements)\nI (Public awareness and education)\nJ (Effects of the natural environment)",
+            "correct_answer": "0",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (Impact on the urban landscape)",
+                    "is_correct": true,
+                    "feedback": "Excellent! Paragraph E focuses on cities, discussing monuments, structures, pipes, drinking water, visibility, and smog - all urban landscape impacts."
+                },
+                {
+                    "text": "B (Higher dispersal creates a global problem)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Impact on the urban landscape). Paragraph E describes how acid rain affects cities and urban infrastructure."
+                },
+                {
+                    "text": "C (Natural sources)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Impact on the urban landscape). Paragraph E describes how acid rain affects cities and urban infrastructure."
+                },
+                {
+                    "text": "D (Artificial causes of acid rain)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Impact on the urban landscape). Paragraph E describes how acid rain affects cities and urban infrastructure."
+                },
+                {
+                    "text": "E (Research into acid rain)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Impact on the urban landscape). Paragraph E describes how acid rain affects cities and urban infrastructure."
+                },
+                {
+                    "text": "F (International reactions)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Impact on the urban landscape). Paragraph E describes how acid rain affects cities and urban infrastructure."
+                },
+                {
+                    "text": "G (Secondary impact on flora and fauna)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Impact on the urban landscape). Paragraph E describes how acid rain affects cities and urban infrastructure."
+                },
+                {
+                    "text": "H (The neutralising effect of natural elements)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Impact on the urban landscape). Paragraph E describes how acid rain affects cities and urban infrastructure."
+                },
+                {
+                    "text": "I (Public awareness and education)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Impact on the urban landscape). Paragraph E describes how acid rain affects cities and urban infrastructure."
+                },
+                {
+                    "text": "J (Effects of the natural environment)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A (Impact on the urban landscape). Paragraph E describes how acid rain affects cities and urban infrastructure."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "J) Effects of the natural environment",
             "points": 1,
@@ -371,11 +1274,70 @@
             "correct_feedback": "Correct! Paragraph F explains how \"tall chimneys dispersing pollutants high into the atmosphere\" allow wind to blow acid rain \"hundreds of miles\" creating a global problem.",
             "incorrect_feedback": "The correct answer is B (Higher dispersal creates a global problem). Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions.",
             "reading_text_id": 2,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (Impact on the urban landscape)\nB (Higher dispersal creates a global problem)\nC (Natural sources)\nD (Artificial causes of acid rain)\nE (Research into acid rain)\nF (International reactions)\nG (Secondary impact on flora and fauna)\nH (The neutralising effect of natural elements)\nI (Public awareness and education)\nJ (Effects of the natural environment)",
+            "correct_answer": "1",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (Impact on the urban landscape)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Higher dispersal creates a global problem). Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
+                },
+                {
+                    "text": "B (Higher dispersal creates a global problem)",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F explains how \"tall chimneys dispersing pollutants high into the atmosphere\" allow wind to blow acid rain \"hundreds of miles\" creating a global problem."
+                },
+                {
+                    "text": "C (Natural sources)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Higher dispersal creates a global problem). Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
+                },
+                {
+                    "text": "D (Artificial causes of acid rain)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Higher dispersal creates a global problem). Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
+                },
+                {
+                    "text": "E (Research into acid rain)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Higher dispersal creates a global problem). Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
+                },
+                {
+                    "text": "F (International reactions)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Higher dispersal creates a global problem). Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
+                },
+                {
+                    "text": "G (Secondary impact on flora and fauna)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Higher dispersal creates a global problem). Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
+                },
+                {
+                    "text": "H (The neutralising effect of natural elements)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Higher dispersal creates a global problem). Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
+                },
+                {
+                    "text": "I (Public awareness and education)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Higher dispersal creates a global problem). Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
+                },
+                {
+                    "text": "J (Effects of the natural environment)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is B (Higher dispersal creates a global problem). Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "headings",
             "instructions": "",
             "question": "J) Effects of the natural environment",
             "points": 1,
@@ -383,11 +1345,70 @@
             "correct_feedback": "Well done! Paragraph G discusses \"transboundary pollution\" prompting \"international responses\" and \"International legislation during the 1980s and 1990s.\"",
             "incorrect_feedback": "The correct answer is F (International reactions). Paragraph G focuses on global legislative responses to acid rain pollution.",
             "reading_text_id": 2,
-            "options": "",
-            "correct_answer": ""
+            "options": "A (Impact on the urban landscape)\nB (Higher dispersal creates a global problem)\nC (Natural sources)\nD (Artificial causes of acid rain)\nE (Research into acid rain)\nF (International reactions)\nG (Secondary impact on flora and fauna)\nH (The neutralising effect of natural elements)\nI (Public awareness and education)\nJ (Effects of the natural environment)",
+            "correct_answer": "5",
+            "ielts_question_category": "matching_headings",
+            "ielts_question_type": "Matching Headings",
+            "mc_options": [
+                {
+                    "text": "A (Impact on the urban landscape)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (International reactions). Paragraph G focuses on global legislative responses to acid rain pollution."
+                },
+                {
+                    "text": "B (Higher dispersal creates a global problem)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (International reactions). Paragraph G focuses on global legislative responses to acid rain pollution."
+                },
+                {
+                    "text": "C (Natural sources)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (International reactions). Paragraph G focuses on global legislative responses to acid rain pollution."
+                },
+                {
+                    "text": "D (Artificial causes of acid rain)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (International reactions). Paragraph G focuses on global legislative responses to acid rain pollution."
+                },
+                {
+                    "text": "E (Research into acid rain)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (International reactions). Paragraph G focuses on global legislative responses to acid rain pollution."
+                },
+                {
+                    "text": "F (International reactions)",
+                    "is_correct": true,
+                    "feedback": "Well done! Paragraph G discusses \"transboundary pollution\" prompting \"international responses\" and \"International legislation during the 1980s and 1990s.\""
+                },
+                {
+                    "text": "G (Secondary impact on flora and fauna)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (International reactions). Paragraph G focuses on global legislative responses to acid rain pollution."
+                },
+                {
+                    "text": "H (The neutralising effect of natural elements)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (International reactions). Paragraph G focuses on global legislative responses to acid rain pollution."
+                },
+                {
+                    "text": "I (Public awareness and education)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (International reactions). Paragraph G focuses on global legislative responses to acid rain pollution."
+                },
+                {
+                    "text": "J (Effects of the natural environment)",
+                    "is_correct": false,
+                    "feedback": "The correct answer is F (International reactions). Paragraph G focuses on global legislative responses to acid rain pollution."
+                }
+            ],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "A deterioration in lakes and forests in northern Europe was first noticed in ______.",
             "points": 1,
@@ -396,10 +1417,18 @@
             "incorrect_feedback": "The correct answer is \"the late 1970s\". Paragraph A states when the changes were first observed.",
             "reading_text_id": 2,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "the late 1970s",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "Pollution in rain is a result of ______.",
             "points": 1,
@@ -408,10 +1437,18 @@
             "incorrect_feedback": "The correct answer is \"sulphuric and nitric acids\". Paragraph A identifies these as the cause of pollution in rain.",
             "reading_text_id": 2,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "sulphuric and nitric acids",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "Nearly half of manmade sources of acid rain are due to ______.",
             "points": 1,
@@ -420,10 +1457,18 @@
             "incorrect_feedback": "The correct answer is \"transportation sources\". Paragraph B shows transportation accounts for 40% of manmade acid rain.",
             "reading_text_id": 2,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "transportation sources",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "Some animals have declined in number by over 50% because of scarcer ______.",
             "points": 1,
@@ -432,10 +1477,18 @@
             "incorrect_feedback": "The correct answer is \"fish\". Paragraph D connects declining fish populations to animal population decreases.",
             "reading_text_id": 2,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "fish",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "Land used for farming is becoming ______.",
             "points": 1,
@@ -444,10 +1497,18 @@
             "incorrect_feedback": "The correct answer is \"less productive\". Paragraph D describes how acid rain reduces farmland productivity.",
             "reading_text_id": 2,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "less productive",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "Urban household water supplies are contaminated by ______.",
             "points": 1,
@@ -456,10 +1517,18 @@
             "incorrect_feedback": "The correct answer is \"toxic metals\". Paragraph E explains how acidity releases toxic metals from pipes into drinking water.",
             "reading_text_id": 2,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "toxic metals",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "Air pollution is travelling further as it is disgorged through ______.",
             "points": 1,
@@ -468,10 +1537,18 @@
             "incorrect_feedback": "The correct answer is \"tall chimneys\". Paragraph F explains that tall chimneys allow pollution to travel much farther.",
             "reading_text_id": 2,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "tall chimneys",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "Legislation passed in the 1980s and the 1990s was a response to ______.",
             "points": 1,
@@ -480,10 +1557,18 @@
             "incorrect_feedback": "The correct answer is \"transboundary pollution\". Paragraph G links international legislation to the cross-border nature of acid rain.",
             "reading_text_id": 2,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "transboundary pollution",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         },
         {
-            "type": "true_false",
+            "type": "open_question",
             "instructions": "",
             "question": "A solution to the problem must involve a ______.",
             "points": 1,
@@ -492,21 +1577,29 @@
             "incorrect_feedback": "The correct answer is \"cooperative global effort\". Paragraph G emphasizes that global cooperation is essential to solve acid rain.",
             "reading_text_id": 2,
             "options": "",
-            "correct_answer": ""
+            "correct_answer": "cooperative global effort",
+            "ielts_question_category": "sentence_completion_r",
+            "ielts_question_type": "Sentence Completion",
+            "mc_options": [],
+            "show_option_letters": false,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "correct_answer_count": 1
         }
     ],
     "reading_texts": [
         {
             "title": "Reading Passage 1 - A brief history of the Olympics",
-            "content": "A. Most people have heard of the Olympics, a sporting event held every four years, where people from around the world congregate in one place to compete in various sporting events. But how much is known of its history? The Olympics first began in Ancient Greece nearly 2700 years ago as a religious occasion, very different from the secular event we see now. It was primarily a festival celebrating the ancient Greek gods. Named after the goddess Olympia, the festival was actually in praise of the god Zeus and was held in a specially constructed stadium called The Hippodrome. Unlike the modern Olympics, there were very few events, the most popular being running, fighting and javelin throwing.<br />\r\n<br />\r\nB. For the athletes, the honour of winning was the reason for participation, not only for themselves, but also for their city, as the winner of each competition was given prizes to bestow on the citizens of his hometown. Prizes were often food – grain and meat – but occasionally also precious metals. Naturally, this engendered a degree of rivalry amongst competitors and cities, but one of the most notable aspects of the Olympics was that, for the duration of the festival, there was peace, at least outside the arena. By government decree, there were no arguments or hostilities, convicted criminals were to be treated well and the death penalty was not carried out. All wars – domestic and international – had to be suspended. Nothing of importance was discussed as the games became the paramount focus of the nation.<br />\r\n<br />\r\nC. Despite the prizes, the honours and the enforcement of peace, the Games were not entirely philanthropic in nature. In accordance with the customs of the time, they still carried the traditional exclusion of women and slaves, who were not allowed within the stadium. Transgression of this rule resulted in severe punishment. It was not until 1900 that women were finally allowed to compete.<br />\r\n<br />\r\nD. Nonetheless, for nearly 700 years, the Olympics represented something noble in that it promoted, albeit for only five days, a period of peace around which the whole country could gather. It was somewhat ironic, then, that the original Games were abolished after the Roman invasion in AD356, and for a period of just over a millennium and a half, there were no more Olympics.<br />\r\n<br />\r\nE. It was in 1896 that Baron Pierre de Coubertin, a Frenchman, and Dimitrios Vikelas, a Greek, revived the games. Fittingly, the first of the modern Olympics was held in Greece, but although the intentions of the Games were good, they no longer represented the original ideals of the Olympics. World War I caused one game to be cancelled and World War II caused the cancellation of another two – a far cry from the period of peace the games first inspired. To try and revive the spirit of peace and understanding that the original games represented, Baron de Coubertin designed an Olympic flag with five intertwining rings which symbolised the union of the five continents. This was first used at the Antwerp Olympics in 1920 together with the release of doves at the beginning of the Games as a symbol of peace. However, athletes competing to be the best in the world, financial rewards in the form of sponsorship, financial problems and allegations of drug abuse have further tarnished what was once the embodiment of a desire to bring people together harmoniously.<br />\r\n<br />\r\nF. However, there is still much to admire in the Olympics of today. It has become an opportunity for people of nearly 200 nationalities to come together in the spirit of friendly competition, much as they did nearly 3000 years ago. Now the rewards come in the form of medals and the knowledge that the athlete is one of the best in the world. The importance of the games has been reinforced with the introduction of the Winter Olympics and the Paralympics Games, the latter of which is specifically for people with physical disabilities. It can now be said that the Olympic Games is truly a competition for all people."
+            "content": "A. Most people have heard of the Olympics, a sporting event held every four years, where people from around the world congregate in one place to compete in various sporting events. But how much is known of its history? The Olympics first began in Ancient Greece nearly 2700 years ago as a religious occasion, very different from the secular event we see now. It was primarily a festival celebrating the ancient Greek gods. Named after the goddess Olympia, the festival was actually in praise of [Q10]the god Zeus and was held in a specially constructed stadium called The Hippodrome. Unlike the modern Olympics, there were very few events, the most popular being running, fighting and javelin throwing.<br />\r\n<br />\r\nB. For the athletes, the honour of winning was the reason for participation, not only for themselves, but also for their city, as the winner of each competition was given prizes to bestow on the citizens of his hometown. Prizes were often food \u2013 grain and meat \u2013 but occasionally also precious metals. Naturally, this engendered a degree of rivalry amongst competitors and cities, but one of the most notable aspects of the Olympics was that, for the duration of the festival, there was peace, at least outside the arena. By government decree, there were no arguments or hostilities, convicted criminals were to be treated well and the death penalty was not carried out. All wars \u2013 domestic and international \u2013 had to be suspended. Nothing of importance was discussed as the games became the paramount focus of the nation.<br />\r\n<br />\r\nC. Despite the prizes, the honours and the enforcement of peace, the Games were not entirely philanthropic in nature. In accordance with the customs of the time, they still carried the traditional exclusion of women and slaves, who were not allowed within the stadium. Transgression of this rule resulted in severe punishment. It was not until 1900 that women were finally allowed to compete.<br />\r\n<br />\r\nD. Nonetheless, for nearly 700 years, the Olympics represented something noble in that it promoted, albeit for [Q11]only five days, a period of peace around which the whole country could gather. It was somewhat ironic, then, that the original Games were abolished after [Q9]the Roman invasion in AD356, and for a period of just over a millennium and a half, there were no more Olympics.<br />\r\n<br />\r\nE. It was in 1896 that Baron Pierre de Coubertin, a Frenchman, and Dimitrios Vikelas, a Greek, revived the games. Fittingly, the first of the modern Olympics was held in Greece, but although the intentions of the Games were good, they no longer represented the original ideals of the Olympics. [Q8]World War I caused one game to be cancelled and World War II caused the cancellation of another two \u2013 a far cry from the period of peace the games first inspired. To try and revive the spirit of peace and understanding that the original games represented, Baron de Coubertin designed an Olympic flag with five intertwining rings which symbolised the union of the five continents. This was first used at the Antwerp Olympics in 1920 together with the release of doves at the beginning of the Games as a symbol of peace. However, athletes competing to be the best in the world, financial rewards in the form of sponsorship, financial problems and allegations of drug abuse have further tarnished what was once the embodiment of a desire to bring people together harmoniously.<br />\r\n<br />\r\nF. However, there is still much to admire in the Olympics of today. It has become an opportunity for people of [Q12]nearly 200 nationalities to come together in the spirit of friendly competition, much as they did nearly 3000 years ago. Now the rewards come in the form of medals and the knowledge that the athlete is one of the best in the world. The importance of the games has been reinforced with the introduction of the Winter Olympics and the Paralympics Games, the latter of which is specifically for people with physical disabilities. It can now be said that the Olympic Games is truly a competition for all people."
         },
         {
             "title": "Reading Passage 2 - Tapping the depths",
-            "content": "A: It has been predicted that, at the current rate, New Zealand will increase its energy demand by 20% in the next 10 years. It has also been predicted that emissions from fossil fuels could rise by as much as 45%, a statistic that has prompted the government to announce plans to increase renewable energy supplies by nearly 50% as part of a NZ$79 million energy strategy.<br />\r\n<br />\r\nB: Of the available options, the cost of establishing efficient solar power sources remains prohibitive and there is opposition to the location of wind farms near populated areas. Most of New Zealand's renewable energy currently comes from hydro schemes, but this solution alone is not sufficient. Indeed, the Energy Minister of New Zealand stated that the country has been slow to utilise its sustainable forms of energy production. However, there is one renewable source of energy that is currently proving itself a viable alternative to fossil fuels: geothermal energy, the heat contained in rocks beneath the earth's surface. Water is injected down a borehole and retrieved after being heated by the rocks.<br />\r\n<br />\r\nC: In aquifers (porous rocks like limestone and sandstone about 2 km beneath the earth's surface), the water temperature may reach 100 °C, and at 3 km it may exceed 200 °C. The high pressure underground prevents the water from turning to steam, but at the surface it can be allowed to expand and drive a steam turbine linked to an electricity generator. The water is then pumped from the borehole to a heat exchanger from which it can be used for a number of purposes.<br />\r\n<br />\r\nD: People have been using hot spring water for a very long time – most famously, the Romans 2000 years ago at Bath in England. If sufficiently hot, spring water can be used to provide heating for buildings. It is also possible to use geothermal energy to generate electricity. Of all countries experimenting with its exploitation, New Zealand is leading the field, with geothermal energy accounting for nearly 30% of its total needs as a result of its naturally volcanic environment. No other country has reached 1% as yet, although in the UK it is estimated that geothermal power could supply 10% of electricity for 125 years if it could be exploited efficiently. The world's largest geothermal power station is at Geyserville, California, which generates 1500 MW. Other nations generating electricity this way include China, Indonesia, Japan, Kenya, Mexico, New Zealand, the Philippines and Russia.<br />\r\n<br />\r\nGenerating capacity (GW) | % of total<br />\r\nNew Zealand | 2.21 | 29.4<br />\r\nUSA | 1.74 | 0.25<br />\r\nPacific region | 0.50 | 0.22<br />\r\nJapan | 0.24 | 0.13<br />\r\nTurkey | 0.02 | 0.11<br />\r\n<br />\r\nE: Although it fulfils most of the requirements demanded of an alternative energy source, geothermal energy is not a perfect solution. Extracting the heat in large quantities at a particular site lowers the temperature, meaning the site must then be abandoned at least until it recovers, which could take many years. The water contains mineral salts which would eventually corrode or block the boiler systems that extract the energy from the water. In addition, although using geothermal energy does not release carbon dioxide or pollutants, there is the problem of the sulphurous smell of hot aquifers and possibility of radioactive gases such as radon rising in boreholes. This latter issue requires further research before it is considered safe. Engineers would also need to consider any possible effects on the local geology in unstable regions, such as subsidence or slippage."
+            "content": "A: It has been predicted that, at the current rate, New Zealand will increase its energy demand by 20% in the next 10 years. It has also been predicted that emissions from fossil fuels could rise by as much as 45%, a statistic that has prompted the government to announce plans to increase renewable energy supplies by nearly 50% as part of a NZ$79 million energy strategy.<br />\r\n<br />\r\nB: Of the available options, the cost of establishing efficient [Q23]solar power sources remains prohibitive and there is opposition to the location of wind farms near populated areas. Most of New Zealand's renewable energy currently comes from hydro schemes, but this solution alone is not sufficient. Indeed, the Energy Minister of New Zealand stated that the country has been slow to utilise its sustainable forms of energy production. However, there is one renewable source of energy that is currently proving itself a viable alternative to [Q18]fossil fuels: geothermal energy, the heat contained in rocks beneath the earth's surface. Water is injected down a borehole and retrieved after being heated by [Q17]the rocks.<br />\r\n<br />\r\nC: In aquifers (porous rocks like limestone and sandstone about 2 km beneath the earth's surface), the water temperature may reach 100 \u00b0C, and at 3 km it may exceed [Q24]200 \u00b0C. The high pressure underground prevents the water from turning to steam, but at the surface it can be allowed to expand and drive a steam turbine linked to an electricity generator. The water is then pumped from the borehole to a heat exchanger from which it can be used for a number of purposes.<br />\r\n<br />\r\nD: People have been using hot spring water for a very long time \u2013 most famously, [Q19]the Romans 2000 years ago at Bath in England. If sufficiently hot, spring water can be used to provide heating for buildings. It is also possible to use geothermal energy to generate electricity. Of all countries experimenting with its exploitation, New Zealand is leading the field, with geothermal energy accounting for nearly 30% of its total needs as a result of its naturally [Q25]volcanic environment. No other country has reached 1% as yet, although in the UK it is estimated that geothermal power could supply 10% of electricity for 125 years if it could be exploited efficiently. The world's largest geothermal power station is at Geyserville, California, which generates 1500 MW. Other nations generating electricity this way include China, Indonesia, Japan, Kenya, Mexico, New Zealand, the Philippines and Russia.<br />\r\n<br />\r\nGenerating capacity (GW) | % of total<br />\r\nNew Zealand | 2.21 | 29.4<br />\r\n[Q20]USA | 1.74 | 0.25<br />\r\nPacific region | 0.50 | 0.22<br />\r\nJapan | 0.24 | 0.13<br />\r\nTurkey | 0.02 | 0.11<br />\r\n<br />\r\nE: Although it fulfils most of the requirements demanded of an alternative energy source, geothermal energy is not a perfect solution. Extracting the heat in large quantities at a particular site lowers the temperature, meaning the site must then be abandoned at least until it recovers, which could take many years. The water contains mineral salts which would eventually [Q21]corrode or block the boiler systems that extract the energy from the water. In addition, although using geothermal energy does not release carbon dioxide or pollutants, there is the problem of the sulphurous smell of hot aquifers and possibility of [Q26]radioactive gases such as radon rising in boreholes. This latter issue requires further research before it is considered safe. [Q22]Engineers would also need to consider any possible effects on the local geology in unstable regions, such as subsidence or slippage."
         },
         {
             "title": "Reading Passage 3 - Poison rain",
-            "content": "A: In the late 1970s, people in northern Europe were observing a change in the lakes and forests around them. Areas once famous for the quality and quantity of their fish began to decline, and areas of once-green forest were dying. The phenomenon they witnessed was acid rain – pollutants in rain, snow, hail and fog caused by sulphuric and nitric acids.<br />\r\n<br />\r\nB: The principal chemicals that cause these acids are sulphur dioxide and oxides of nitrogen, both by-products of burning fossil fuels (coal, oil and gas). A percentage of acid rain is natural, from volcanoes, forest fires and biological decay, but the majority is unsurprisingly manmade. Of this, transportation sources account for 40%; power plants 30%; industrial sources 25%; and commercial institutions and residues 5%. What makes these figures particularly disturbing is that since the 1970s, nitrogen oxide emissions have tripled. Each year the global atmosphere is polluted with 20 billion tons of carbon dioxide, 130 million tons of sulphur dioxide, more than three million tons of toxic metals, and a wealth of synthetic organic compounds, many of which are proven causes of cancer, genetic mutations and birth defects.<br />\r\n<br />\r\nC: For natural causes of acid rain, nature has provided a filter. Naturally occurring substances such as limestone or other antacids can neutralise this acid rain before it enters the water cycle, thereby protecting it. However, areas with a predominantly quartzite- or granite-based geology and little top soil have no such effect, and the basic environment shifts from an alkaline to an acidic one. Recycled and intensified through the water table, acid rain has reached such a degree in some parts of the world that rainfall is now 40 times more acidic than normal – the same acidic classification as vinegar.<br />\r\n<br />\r\nD: Environmentally, the impact is devastating. Lakes and the life they support are dying, unable to withstand such a battering. This has a direct effect on the animals that rely on fish as a food source. Certain species of American otter have had their numbers reduced by over half in the last 20 years, for example. Yet this is not the only effect. Nitrogen oxides, the principal reagent in acid rain, react with other pollutants to produce ozone, a major air pollutant responsible for destroying the effectiveness of farmland, making it significantly less productive. With scientists working on producing ever bigger and longer lasting genetically modified foods, some farmers are reporting abnormally low yields. Tomatoes grow to only half their full weight and the leaves, stalks and roots of other crops never reach full maturity.<br />\r\n<br />\r\nE: Naturally it rains on cities too, eating away stone monuments and concrete structures, and corroding the pipes which channel the water away to the lakes where the cycle is repeated. Paint exposed to rain is not lasting as long due to the pollution in the atmosphere speeding up the corrosion process. In some communities the drinking water is laced with toxic metals freed from metal pipes by the acidity. After any period of non-use, we are encouraged to run taps for at least 60 seconds to flush any excess debris, as increased concentrations of metals in plumbing such as lead, copper and zinc result in adverse health effects. As if urban skies were not already grey enough, typical visibility has declined from ten to four miles, in many American cities, as acid rain turns into smog. Also, now there are indicators that the components of acid rain are a health risk, linked to human respiratory disease.<br />\r\n<br />\r\nF: Acid rain itself is not an entirely new phenomenon. In the nineteenth century, acid rain fell both in towns and cities. What is new, and of great concern, is that it can be transported thousands of kilometres due to the introduction of tall chimneys dispersing pollutants high into the atmosphere, allowing strong wind currents to blow the acid rain hundreds of miles from its source. Thus the areas where acid rain falls are not necessarily the areas where the pollution comes from. Pollution from industrial areas of England are damaging forests in Scotland and Scandinavia. Acids from the Midwest United States are blown into northwest Canada. More and more regions are beginning to be affected, and given that 13 of the world's most polluted cities are in neighbouring Asia, countries like Australia and New Zealand are increasingly under threat.<br />\r\n<br />\r\nG: Transboundary pollution, the spread of acid rain across political and international borders, has prompted a number of international responses. International legislation during the 1980s and 1990s has led to reductions in sulphur dioxide emissions in many countries but reductions in emissions of nitrogen oxides have been much less, leading to the conclusion that without a cooperative global effort, the problem of acid rain will not simply blow away."
+            "content": "A: In [Q33]the late 1970s, people in northern Europe were observing a change in the lakes and forests around them. Areas once famous for the quality and quantity of their fish began to decline, and areas of once-green forest were dying. The phenomenon they witnessed was acid rain \u2013 pollutants in rain, snow, hail and fog caused by [Q34]sulphuric and nitric acids.<br />\r\n<br />\r\nB: The principal chemicals that cause these acids are sulphur dioxide and oxides of nitrogen, both by-products of burning fossil fuels (coal, oil and gas). A percentage of acid rain is natural, from volcanoes, forest fires and biological decay, but the majority is unsurprisingly manmade. Of this, [Q35]transportation sources account for 40%; power plants 30%; industrial sources 25%; and commercial institutions and residues 5%. What makes these figures particularly disturbing is that since the 1970s, nitrogen oxide emissions have tripled. Each year the global atmosphere is polluted with 20 billion tons of carbon dioxide, 130 million tons of sulphur dioxide, more than three million tons of toxic metals, and a wealth of synthetic organic compounds, many of which are proven causes of cancer, genetic mutations and birth defects.<br />\r\n<br />\r\nC: For natural causes of acid rain, nature has provided a filter. Naturally occurring substances such as limestone or other antacids can neutralise this acid rain before it enters the water cycle, thereby protecting it. However, areas with a predominantly quartzite- or granite-based geology and little top soil have no such effect, and the basic environment shifts from an alkaline to an acidic one. Recycled and intensified through the water table, acid rain has reached such a degree in some parts of the world that rainfall is now 40 times more acidic than normal \u2013 the same acidic classification as vinegar.<br />\r\n<br />\r\nD: Environmentally, the impact is devastating. Lakes and the life they support are dying, unable to withstand such a battering. This has a direct effect on the animals that rely on [Q36]fish as a food source. Certain species of American otter have had their numbers reduced by over half in the last 20 years, for example. Yet this is not the only effect. Nitrogen oxides, the principal reagent in acid rain, react with other pollutants to produce ozone, a major air pollutant responsible for destroying the effectiveness of farmland, making it significantly [Q37]less productive. With scientists working on producing ever bigger and longer lasting genetically modified foods, some farmers are reporting abnormally low yields. Tomatoes grow to only half their full weight and the leaves, stalks and roots of other crops never reach full maturity.<br />\r\n<br />\r\nE: Naturally it rains on cities too, eating away stone monuments and concrete structures, and corroding the pipes which channel the water away to the lakes where the cycle is repeated. Paint exposed to rain is not lasting as long due to the pollution in the atmosphere speeding up the corrosion process. In some communities the drinking water is laced with [Q38]toxic metals freed from metal pipes by the acidity. After any period of non-use, we are encouraged to run taps for at least 60 seconds to flush any excess debris, as increased concentrations of metals in plumbing such as lead, copper and zinc result in adverse health effects. As if urban skies were not already grey enough, typical visibility has declined from ten to four miles, in many American cities, as acid rain turns into smog. Also, now there are indicators that the components of acid rain are a health risk, linked to human respiratory disease.<br />\r\n<br />\r\nF: Acid rain itself is not an entirely new phenomenon. In the nineteenth century, acid rain fell both in towns and cities. What is new, and of great concern, is that it can be transported thousands of kilometres due to the introduction of [Q39]tall chimneys dispersing pollutants high into the atmosphere, allowing strong wind currents to blow the acid rain hundreds of miles from its source. Thus the areas where acid rain falls are not necessarily the areas where the pollution comes from. Pollution from industrial areas of England are damaging forests in Scotland and Scandinavia. Acids from the Midwest United States are blown into northwest Canada. More and more regions are beginning to be affected, and given that 13 of the world's most polluted cities are in neighbouring Asia, countries like Australia and New Zealand are increasingly under threat.<br />\r\n<br />\r\nG: [Q40]Transboundary pollution, the spread of acid rain across political and international borders, has prompted a number of international responses. International legislation during the 1980s and 1990s has led to reductions in sulphur dioxide emissions in many countries but reductions in emissions of nitrogen oxides have been much less, leading to the conclusion that without a [Q41]cooperative global effort, the problem of acid rain will not simply blow away."
         }
     ],
     "settings": {
