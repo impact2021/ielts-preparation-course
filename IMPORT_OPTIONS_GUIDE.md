@@ -107,6 +107,27 @@ See `TEMPLATES/example-exercise.json` for a complete working example.
 }
 ```
 
+**Example Heading-Style Question (matching headings):**
+```json
+{
+  "type": "closed_question",
+  "instructions": "Choose the correct heading for paragraphs B-D from the list below.\n\nType the correct number I-VIII in boxes 1 – 3.",
+  "question": "Paragraph B",
+  "ielts_question_category": "matching_information",
+  "mc_options": [
+    {"text": "I. Customer inequality", "is_correct": false, "feedback": "Incorrect..."},
+    {"text": "II. Monopoly control", "is_correct": false, "feedback": "Incorrect..."},
+    {"text": "VIII. Already expensive, yet always on the increase", "is_correct": true, "feedback": "Correct!"}
+  ],
+  "options": "I. Customer inequality\nII. Monopoly control\nIII. Historic changes\nIV. State statistics\nV. Shift in responsibilities\nVI. Preying on the unemployed\nVII. Identifying victims\nVIII. Already expensive, yet always on the increase",
+  "correct_answer_count": 1,
+  "show_option_letters": false,
+  "points": 1
+}
+```
+
+**⚠️ Important:** For heading-style questions, the `mc_options[].text` field MUST include both the numeral/letter AND the full heading text. See `HEADINGS-QUESTIONS-GUIDE.md` for detailed guidelines.
+
 ### Export to JSON
 
 1. Edit the exercise in WordPress admin

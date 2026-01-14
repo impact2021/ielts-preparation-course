@@ -17,42 +17,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "I",
+                    "text": "I. Customer inequality",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is VIII. While paragraph B mentions pricing, paragraph F specifically discusses customer inequality and how different groups pay different prices."
                 },
                 {
-                    "text": "II",
+                    "text": "II. Monopoly control",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is VIII. Paragraph B focuses on high prices and price increases, not monopoly control."
                 },
                 {
-                    "text": "III",
+                    "text": "III. Historic changes in dependence",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is VIII. Paragraph B discusses current pricing practices, not historic changes."
                 },
                 {
-                    "text": "IV",
+                    "text": "IV. State statistics",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is VIII. While paragraph B mentions some facts, it's not primarily about statistics."
                 },
                 {
-                    "text": "V",
+                    "text": "V. Shift in responsibilities increases vulnerability",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is VIII. Paragraph C discusses shift in responsibilities, not paragraph B."
                 },
                 {
-                    "text": "VI",
+                    "text": "VI. Preying on the unemployed",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is VIII. Paragraph B doesn't focus on the unemployed."
                 },
                 {
-                    "text": "VII",
+                    "text": "VII. Identifying worst-hit victims",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is VIII. Paragraph D identifies the worst-hit victims (the elderly), not paragraph B."
                 },
                 {
-                    "text": "VIII",
+                    "text": "VIII. Already expensive, yet always on the increase",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph B discusses how drugs are 'already expensive' and explains that prices are 'always on the increase' - it mentions Claritin's price was 'raised thirteen times over five years, for a cumulative increase of more than 50 percent'."
                 }
@@ -76,42 +76,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "I",
+                    "text": "I. Customer inequality",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is V. Paragraph F discusses customer inequality, not paragraph C."
                 },
                 {
-                    "text": "II",
+                    "text": "II. Monopoly control",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is V. Paragraph C doesn't discuss monopoly control."
                 },
                 {
-                    "text": "III",
+                    "text": "III. Historic changes in dependence",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is V. Paragraph C discusses current shifts in responsibility, not historic changes in dependence."
                 },
                 {
-                    "text": "IV",
+                    "text": "IV. State statistics",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is V. Paragraph C isn't primarily about state statistics."
                 },
                 {
-                    "text": "V",
+                    "text": "V. Shift in responsibilities increases vulnerability",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph C explains the 'shift in responsibilities' - from employers to employees paying for healthcare - which 'increases vulnerability' as 'many businesses are going as far as dropping health benefits for workers altogether'."
                 },
                 {
-                    "text": "VI",
+                    "text": "VI. Preying on the unemployed",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is V. Paragraph C discusses employed people whose employers are reducing benefits, not specifically the unemployed."
                 },
                 {
-                    "text": "VII",
+                    "text": "VII. Identifying worst-hit victims",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is V. Paragraph D identifies the worst-hit victims, not paragraph C."
                 },
                 {
-                    "text": "VIII",
+                    "text": "VIII. Already expensive, yet always on the increase",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is V. Paragraph B discusses prices being always on the increase, not paragraph C."
                 }
@@ -135,42 +135,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "I",
+                    "text": "I. Customer inequality",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is VII. Paragraph F discusses customer inequality, not paragraph D."
                 },
                 {
-                    "text": "II",
+                    "text": "II. Monopoly control",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is VII. Paragraph D doesn't discuss monopoly control."
                 },
                 {
-                    "text": "III",
+                    "text": "III. Historic changes in dependence",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is VII. Paragraph E discusses historic changes, not paragraph D."
                 },
                 {
-                    "text": "IV",
+                    "text": "IV. State statistics",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is VII. Paragraph D isn't primarily about state statistics."
                 },
                 {
-                    "text": "V",
+                    "text": "V. Shift in responsibilities increases vulnerability",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is VII. Paragraph C discusses shift in responsibilities, not paragraph D."
                 },
                 {
-                    "text": "VI",
+                    "text": "VI. Preying on the unemployed",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is VII. Paragraph D focuses on the elderly, not the unemployed."
                 },
                 {
-                    "text": "VII",
+                    "text": "VII. Identifying worst-hit victims",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph D 'identifies the worst-hit victims' by stating 'the sector of society most often adversely affected by higher pharmaceutical prices are retired people with no, or restricted, earning potential'."
                 },
                 {
-                    "text": "VIII",
+                    "text": "VIII. Already expensive, yet always on the increase",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is VII. Paragraph B discusses prices being always on the increase, not paragraph D."
                 }
@@ -194,42 +194,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "I",
+                    "text": "I. Customer inequality",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph F demonstrates 'customer inequality' by explaining that some customers (like HMOs) 'are able to bargain for significant discounts' while 'people without insurance have no bargaining power and so they pay the highest prices'."
                 },
                 {
-                    "text": "II",
+                    "text": "II. Monopoly control",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is I. Paragraph F doesn't discuss monopoly control."
                 },
                 {
-                    "text": "III",
+                    "text": "III. Historic changes in dependence",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is I. Paragraph F discusses current pricing practices, not historic changes."
                 },
                 {
-                    "text": "IV",
+                    "text": "IV. State statistics",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is I. Paragraph F isn't primarily about state statistics."
                 },
                 {
-                    "text": "V",
+                    "text": "V. Shift in responsibilities increases vulnerability",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is I. Paragraph C discusses shift in responsibilities, not paragraph F."
                 },
                 {
-                    "text": "VI",
+                    "text": "VI. Preying on the unemployed",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is I. Paragraph F doesn't focus on the unemployed."
                 },
                 {
-                    "text": "VII",
+                    "text": "VII. Identifying worst-hit victims",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is I. Paragraph D identifies the worst-hit victims, not paragraph F."
                 },
                 {
-                    "text": "VIII",
+                    "text": "VIII. Already expensive, yet always on the increase",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is I. Paragraph B discusses prices being always on the increase, not paragraph F."
                 }
@@ -617,42 +617,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "i",
+                    "text": "i. Aesthetic design",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is v. Paragraph B discusses how Alcatraz changed uses over time - from lighthouse to military to federal prison to tourist site."
                 },
                 {
-                    "text": "ii",
+                    "text": "ii. Current significance",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is v. Paragraph H discusses current significance, not paragraph B."
                 },
                 {
-                    "text": "iii",
+                    "text": "iii. The man behind the achievement",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is v. Paragraph D discusses the man behind the bridge, not paragraph B."
                 },
                 {
-                    "text": "iv",
+                    "text": "iv. Penitentiary statistics",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is v. Paragraph C contains penitentiary statistics, not paragraph B."
                 },
                 {
-                    "text": "v",
+                    "text": "v. Changing uses",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph B describes the 'changing uses' of Alcatraz Island - 'initially as a lighthouse, then later a military fortification, a military prison, and most famously as a federal prison until 1963. Later, in 1972, Alcatraz became a national recreation area'."
                 },
                 {
-                    "text": "vi",
+                    "text": "vi. Defending the city",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is v. Paragraph G discusses defending the city, not paragraph B."
                 },
                 {
-                    "text": "vii",
+                    "text": "vii. Realising a dream",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is v. Paragraph D discusses realising a dream, not paragraph B."
                 },
                 {
-                    "text": "viii",
+                    "text": "viii. Alternative methods of transportation",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is v. Paragraph F discusses alternative transportation, not paragraph B."
                 }
@@ -676,42 +676,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "i",
+                    "text": "i. Aesthetic design",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is iv. Paragraph B discusses changing uses, not paragraph C."
                 },
                 {
-                    "text": "ii",
+                    "text": "ii. Current significance",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is iv. Paragraph H discusses current significance, not paragraph C."
                 },
                 {
-                    "text": "iii",
+                    "text": "iii. The man behind the achievement",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is iv. Paragraph D discusses the man behind the bridge, not paragraph C."
                 },
                 {
-                    "text": "iv",
+                    "text": "iv. Penitentiary statistics",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph C contains 'penitentiary statistics' - it provides detailed numbers about the prison: 'fourteen escape attempts, two men trying twice. Twenty three would-be escapees were caught, six were shot and killed during their escape, and three were lost at sea'."
                 },
                 {
-                    "text": "v",
+                    "text": "v. Changing uses",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is iv. Paragraph B discusses changing uses, not paragraph C."
                 },
                 {
-                    "text": "vi",
+                    "text": "vi. Defending the city",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is iv. Paragraph G discusses defending the city, not paragraph C."
                 },
                 {
-                    "text": "vii",
+                    "text": "vii. Realising a dream",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is iv. Paragraph D discusses realising a dream, not paragraph C."
                 },
                 {
-                    "text": "viii",
+                    "text": "viii. Alternative methods of transportation",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is iv. Paragraph F discusses alternative transportation, not paragraph C."
                 }
@@ -735,42 +735,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "i",
+                    "text": "i. Aesthetic design",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is vii. Paragraph E discusses aesthetic design, not paragraph D."
                 },
                 {
-                    "text": "ii",
+                    "text": "ii. Current significance",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is vii. Paragraph H discusses current significance, not paragraph D."
                 },
                 {
-                    "text": "iii",
+                    "text": "iii. The man behind the achievement",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is vii. While paragraph D mentions the Chief Engineer, it's more about realising the dream than just the man."
                 },
                 {
-                    "text": "iv",
+                    "text": "iv. Penitentiary statistics",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is vii. Paragraph C contains penitentiary statistics, not paragraph D."
                 },
                 {
-                    "text": "v",
+                    "text": "v. Changing uses",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is vii. Paragraph B discusses changing uses, not paragraph D."
                 },
                 {
-                    "text": "vi",
+                    "text": "vi. Defending the city",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is vii. Paragraph G discusses defending the city, not paragraph D."
                 },
                 {
-                    "text": "vii",
+                    "text": "vii. Realising a dream",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph D is about 'realising a dream' - it describes how Strauss 'spent his life envisaging building a bridge' and then 'decided to make his dream a reality. The Golden Gate Bridge was completed'."
                 },
                 {
-                    "text": "viii",
+                    "text": "viii. Alternative methods of transportation",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is vii. Paragraph F discusses alternative transportation, not paragraph D."
                 }
@@ -794,42 +794,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "i",
+                    "text": "i. Aesthetic design",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is viii. Paragraph E discusses aesthetic design, not paragraph F."
                 },
                 {
-                    "text": "ii",
+                    "text": "ii. Current significance",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is viii. Paragraph H discusses current significance, not paragraph F."
                 },
                 {
-                    "text": "iii",
+                    "text": "iii. The man behind the achievement",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is viii. Paragraph D discusses the man behind the bridge, not paragraph F."
                 },
                 {
-                    "text": "iv",
+                    "text": "iv. Penitentiary statistics",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is viii. Paragraph C contains penitentiary statistics, not paragraph F."
                 },
                 {
-                    "text": "v",
+                    "text": "v. Changing uses",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is viii. Paragraph B discusses changing uses, not paragraph F."
                 },
                 {
-                    "text": "vi",
+                    "text": "vi. Defending the city",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is viii. Paragraph G discusses defending the city, not paragraph F."
                 },
                 {
-                    "text": "vii",
+                    "text": "vii. Realising a dream",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is viii. Paragraph D discusses realising a dream, not paragraph F."
                 },
                 {
-                    "text": "viii",
+                    "text": "viii. Alternative methods of transportation",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph F discusses 'alternative methods of transportation' - specifically the ferry that existed 'Before the bridge existed, the only way to travel between San Francisco and Marin County was by ferry boat'."
                 }
@@ -853,42 +853,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "i",
+                    "text": "i. Aesthetic design",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is ii. Paragraph E discusses aesthetic design, not paragraph H."
                 },
                 {
-                    "text": "ii",
+                    "text": "ii. Current significance",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph H discusses the 'current significance' of the bridge - 'About 40 million crossings over the Golden Gate Bridge are made per year' and 'An unbelievable amount of visitors and each day the list continues to grow'."
                 },
                 {
-                    "text": "iii",
+                    "text": "iii. The man behind the achievement",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is ii. Paragraph D discusses the man behind the bridge, not paragraph H."
                 },
                 {
-                    "text": "iv",
+                    "text": "iv. Penitentiary statistics",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is ii. Paragraph C contains penitentiary statistics, not paragraph H."
                 },
                 {
-                    "text": "v",
+                    "text": "v. Changing uses",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is ii. Paragraph B discusses changing uses, not paragraph H."
                 },
                 {
-                    "text": "vi",
+                    "text": "vi. Defending the city",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is ii. Paragraph G discusses defending the city, not paragraph H."
                 },
                 {
-                    "text": "vii",
+                    "text": "vii. Realising a dream",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is ii. Paragraph D discusses realising a dream, not paragraph H."
                 },
                 {
-                    "text": "viii",
+                    "text": "viii. Alternative methods of transportation",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is ii. Paragraph F discusses alternative transportation, not paragraph H."
                 }
@@ -1129,42 +1129,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "should be divided amongst the community",
+                    "text": "A. should be divided amongst the community",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is F. Paragraph describing beliefs mentions community sharing, but not what 'Luau' originally meant."
                 },
                 {
-                    "text": "has changed over time",
+                    "text": "B. has changed over time",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is F. The passage discusses how luaus changed, but the word 'Luau' originally referred to a vegetable."
                 },
                 {
-                    "text": "a celebration of the success of a warrior.",
+                    "text": "C. a celebration of the success of a warrior.",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is F. This is a reason for celebrations, not what 'Luau' meant."
                 },
                 {
-                    "text": "as a sign of warmth and kindness",
+                    "text": "D. as a sign of warmth and kindness",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is F. This describes the Lei, not 'Luau'."
                 },
                 {
-                    "text": "only to women",
+                    "text": "E. only to women",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is F. 'Luau' isn't related to gender restrictions."
                 },
                 {
-                    "text": "a vegetable used in Hawai'ian cuisine.",
+                    "text": "F. a vegetable used in Hawai'ian cuisine.",
                     "is_correct": true,
                     "feedback": "Correct! The passage states: 'The Luau was so named due to an ingredient present in one of Hawaii's favourite dishes – the young and tender leaves of the taro plant (luau)' - a vegetable used in Hawai'ian cuisine."
                 },
                 {
-                    "text": "to indicate marital status",
+                    "text": "G. to indicate marital status",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is F. Flowers indicate marital status, not the word 'Luau'."
                 },
                 {
-                    "text": "must be shared with the gods",
+                    "text": "H. must be shared with the gods",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is F. This relates to Hawaiian beliefs, not what 'Luau' meant."
                 }
@@ -1188,42 +1188,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "should be divided amongst the community",
+                    "text": "A. should be divided amongst the community",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is D. Prosperity is shared, but this isn't why necklaces are presented."
                 },
                 {
-                    "text": "has changed over time",
+                    "text": "B. has changed over time",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is D. The passage discusses how practices changed, but not why necklaces are given."
                 },
                 {
-                    "text": "a celebration of the success of a warrior.",
+                    "text": "C. a celebration of the success of a warrior.",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is D. This is a reason for celebrations, not why necklaces are given."
                 },
                 {
-                    "text": "as a sign of warmth and kindness",
+                    "text": "D. as a sign of warmth and kindness",
                     "is_correct": true,
                     "feedback": "Correct! The passage states: 'a Lei – a necklace made out of woven flowers or shells that is given as a display of affection' - as a sign of warmth and kindness."
                 },
                 {
-                    "text": "only to women",
+                    "text": "E. only to women",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is D. Necklaces are given to all guests, not only to women."
                 },
                 {
-                    "text": "a vegetable used in Hawai'ian cuisine.",
+                    "text": "F. a vegetable used in Hawai'ian cuisine.",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is D. This describes what 'Luau' means, not why necklaces are given."
                 },
                 {
-                    "text": "to indicate marital status",
+                    "text": "G. to indicate marital status",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is D. Flowers indicate marital status, not necklaces."
                 },
                 {
-                    "text": "must be shared with the gods",
+                    "text": "H. must be shared with the gods",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is D. This relates to Hawaiian beliefs, not why necklaces are given."
                 }
@@ -1247,42 +1247,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "should be divided amongst the community",
+                    "text": "A. should be divided amongst the community",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is G. This relates to beliefs about prosperity, not flowers."
                 },
                 {
-                    "text": "has changed over time",
+                    "text": "B. has changed over time",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is G. This describes how practices evolved, not why flowers are worn differently."
                 },
                 {
-                    "text": "a celebration of the success of a warrior.",
+                    "text": "C. a celebration of the success of a warrior.",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is G. This is a celebration reason, not why flowers are worn differently."
                 },
                 {
-                    "text": "as a sign of warmth and kindness",
+                    "text": "D. as a sign of warmth and kindness",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is G. This describes necklaces, not flowers."
                 },
                 {
-                    "text": "only to women",
+                    "text": "E. only to women",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is G. Flowers aren't restricted to women only."
                 },
                 {
-                    "text": "a vegetable used in Hawai'ian cuisine.",
+                    "text": "F. a vegetable used in Hawai'ian cuisine.",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is G. This describes 'Luau', not flowers."
                 },
                 {
-                    "text": "to indicate marital status",
+                    "text": "G. to indicate marital status",
                     "is_correct": true,
                     "feedback": "Correct! The passage states: 'placing a flower over the left ear indicates that one is 'taken' or in a relationship, and placing a flower over the right ear indicates that one is single and available' - to indicate marital status."
                 },
                 {
-                    "text": "must be shared with the gods",
+                    "text": "H. must be shared with the gods",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is G. This relates to beliefs, not flowers."
                 }
@@ -1306,42 +1306,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "should be divided amongst the community",
+                    "text": "A. should be divided amongst the community",
                     "is_correct": true,
                     "feedback": "Correct! The passage states: 'They also believed that prosperity should be divided amongst the community' (paraphrased as 'prosperity should be shared with family and friends')."
                 },
                 {
-                    "text": "has changed over time",
+                    "text": "B. has changed over time",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is A. This describes how practices changed, not beliefs about prosperity."
                 },
                 {
-                    "text": "a celebration of the success of a warrior.",
+                    "text": "C. a celebration of the success of a warrior.",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is A. This is a celebration reason, not a belief about prosperity."
                 },
                 {
-                    "text": "as a sign of warmth and kindness",
+                    "text": "D. as a sign of warmth and kindness",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is A. This describes necklaces, not prosperity beliefs."
                 },
                 {
-                    "text": "only to women",
+                    "text": "E. only to women",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is A. This relates to eating restrictions, not prosperity beliefs."
                 },
                 {
-                    "text": "a vegetable used in Hawai'ian cuisine.",
+                    "text": "F. a vegetable used in Hawai'ian cuisine.",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is A. This describes 'Luau', not prosperity beliefs."
                 },
                 {
-                    "text": "to indicate marital status",
+                    "text": "G. to indicate marital status",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is A. This relates to flowers, not prosperity beliefs."
                 },
                 {
-                    "text": "must be shared with the gods",
+                    "text": "H. must be shared with the gods",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is A. While the passage mentions honoring gods, the question asks about 'good luck' (prosperity), which 'should be shared with family and friends' (divided amongst the community)."
                 }
