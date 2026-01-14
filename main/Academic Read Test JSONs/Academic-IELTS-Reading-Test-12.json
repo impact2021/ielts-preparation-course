@@ -1116,7 +1116,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "You should spend about 20 minutes on Questions 29 –40 which are based on Reading Passage 3.\n\nComplete each sentence with the correct ending A-H below\n\nList of endings:\nA. should be divided amongst the community\nB. has changed over time\nC. a celebration of the success of a warrior.\nD. as a sign of warmth and kindness\nE. only to women\nF. a vegetable used in Hawai'ian cuisine.\nG. to indicate marital status\nH. must be shared with the gods",
+            "instructions": "You should spend about 20 minutes on Questions 29 –40 which are based on Reading Passage 3.\n\nComplete each sentence with the correct ending A-H below",
             "question": "The meaning of 'Luau' traditionally referred to…",
             "points": 1,
             "no_answer_feedback": "The correct answer is F (a vegetable used in Hawai'ian cuisine). The passage states: 'The Luau was so named due to an ingredient present in one of Hawaii's favourite dishes – the young and tender leaves of the taro plant (luau)'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
@@ -1129,42 +1129,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "should be divided amongst the community",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is F. Paragraph describing beliefs mentions community sharing, but not what 'Luau' originally meant."
                 },
                 {
-                    "text": "B",
+                    "text": "has changed over time",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is F. The passage discusses how luaus changed, but the word 'Luau' originally referred to a vegetable."
                 },
                 {
-                    "text": "C",
+                    "text": "a celebration of the success of a warrior.",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is F. This is a reason for celebrations, not what 'Luau' meant."
                 },
                 {
-                    "text": "D",
+                    "text": "as a sign of warmth and kindness",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is F. This describes the Lei, not 'Luau'."
                 },
                 {
-                    "text": "E",
+                    "text": "only to women",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is F. 'Luau' isn't related to gender restrictions."
                 },
                 {
-                    "text": "F",
+                    "text": "a vegetable used in Hawai'ian cuisine.",
                     "is_correct": true,
                     "feedback": "Correct! The passage states: 'The Luau was so named due to an ingredient present in one of Hawaii's favourite dishes – the young and tender leaves of the taro plant (luau)' - a vegetable used in Hawai'ian cuisine."
                 },
                 {
-                    "text": "G",
+                    "text": "to indicate marital status",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is F. Flowers indicate marital status, not the word 'Luau'."
                 },
                 {
-                    "text": "H",
+                    "text": "must be shared with the gods",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is F. This relates to Hawaiian beliefs, not what 'Luau' meant."
                 }
@@ -1188,42 +1188,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "should be divided amongst the community",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is D. Prosperity is shared, but this isn't why necklaces are presented."
                 },
                 {
-                    "text": "B",
+                    "text": "has changed over time",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is D. The passage discusses how practices changed, but not why necklaces are given."
                 },
                 {
-                    "text": "C",
+                    "text": "a celebration of the success of a warrior.",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is D. This is a reason for celebrations, not why necklaces are given."
                 },
                 {
-                    "text": "D",
+                    "text": "as a sign of warmth and kindness",
                     "is_correct": true,
                     "feedback": "Correct! The passage states: 'a Lei – a necklace made out of woven flowers or shells that is given as a display of affection' - as a sign of warmth and kindness."
                 },
                 {
-                    "text": "E",
+                    "text": "only to women",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is D. Necklaces are given to all guests, not only to women."
                 },
                 {
-                    "text": "F",
+                    "text": "a vegetable used in Hawai'ian cuisine.",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is D. This describes what 'Luau' means, not why necklaces are given."
                 },
                 {
-                    "text": "G",
+                    "text": "to indicate marital status",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is D. Flowers indicate marital status, not necklaces."
                 },
                 {
-                    "text": "H",
+                    "text": "must be shared with the gods",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is D. This relates to Hawaiian beliefs, not why necklaces are given."
                 }
@@ -1247,42 +1247,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "should be divided amongst the community",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is G. This relates to beliefs about prosperity, not flowers."
                 },
                 {
-                    "text": "B",
+                    "text": "has changed over time",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is G. This describes how practices evolved, not why flowers are worn differently."
                 },
                 {
-                    "text": "C",
+                    "text": "a celebration of the success of a warrior.",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is G. This is a celebration reason, not why flowers are worn differently."
                 },
                 {
-                    "text": "D",
+                    "text": "as a sign of warmth and kindness",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is G. This describes necklaces, not flowers."
                 },
                 {
-                    "text": "E",
+                    "text": "only to women",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is G. Flowers aren't restricted to women only."
                 },
                 {
-                    "text": "F",
+                    "text": "a vegetable used in Hawai'ian cuisine.",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is G. This describes 'Luau', not flowers."
                 },
                 {
-                    "text": "G",
+                    "text": "to indicate marital status",
                     "is_correct": true,
                     "feedback": "Correct! The passage states: 'placing a flower over the left ear indicates that one is 'taken' or in a relationship, and placing a flower over the right ear indicates that one is single and available' - to indicate marital status."
                 },
                 {
-                    "text": "H",
+                    "text": "must be shared with the gods",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is G. This relates to beliefs, not flowers."
                 }
@@ -1306,42 +1306,42 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "should be divided amongst the community",
                     "is_correct": true,
                     "feedback": "Correct! The passage states: 'They also believed that prosperity should be divided amongst the community' (paraphrased as 'prosperity should be shared with family and friends')."
                 },
                 {
-                    "text": "B",
+                    "text": "has changed over time",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is A. This describes how practices changed, not beliefs about prosperity."
                 },
                 {
-                    "text": "C",
+                    "text": "a celebration of the success of a warrior.",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is A. This is a celebration reason, not a belief about prosperity."
                 },
                 {
-                    "text": "D",
+                    "text": "as a sign of warmth and kindness",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is A. This describes necklaces, not prosperity beliefs."
                 },
                 {
-                    "text": "E",
+                    "text": "only to women",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is A. This relates to eating restrictions, not prosperity beliefs."
                 },
                 {
-                    "text": "F",
+                    "text": "a vegetable used in Hawai'ian cuisine.",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is A. This describes 'Luau', not prosperity beliefs."
                 },
                 {
-                    "text": "G",
+                    "text": "to indicate marital status",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is A. This relates to flowers, not prosperity beliefs."
                 },
                 {
-                    "text": "H",
+                    "text": "must be shared with the gods",
                     "is_correct": false,
                     "feedback": "Incorrect. The correct answer is A. While the passage mentions honoring gods, the question asks about 'good luck' (prosperity), which 'should be shared with family and friends' (divided amongst the community)."
                 }
@@ -1353,7 +1353,7 @@
         {
             "type": "open_question",
             "instructions": "Complete the flowchart.\n\nChoose NO MORE THAN ONE WORD from Reading Passage 3 for each answer.",
-            "question": "The imu is lined with [answer]",
+            "question": "The imu is lined with [field 1]",
             "points": 1,
             "no_answer_feedback": "The correct answer is: LOGS. The passage states: 'The imu is dug and lined with logs'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
@@ -1373,7 +1373,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "A [answer] is lit in the pit",
+            "question": "A [field 2] is lit in the pit",
             "points": 1,
             "no_answer_feedback": "The correct answer is: FIRE. The passage states: 'A fire is lit in the pit'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
@@ -1393,7 +1393,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "The rocks are [answer]",
+            "question": "The rocks are [field 3]",
             "points": 1,
             "no_answer_feedback": "The correct answer is: HEATED. The passage states: 'the rocks are heated'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
@@ -1413,7 +1413,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "The [answer] turns to coal",
+            "question": "The [field 4] turns to coal",
             "points": 1,
             "no_answer_feedback": "The correct answer is: WOOD. The passage states: 'The heat turns the wood to coal'. Always try to answer even if unsure—there's no penalty in IELTS.",
             "correct_feedback": "Correct! Well done.",
