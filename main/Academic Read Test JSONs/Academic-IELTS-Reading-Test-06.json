@@ -323,74 +323,123 @@
             "show_option_letters": false
         },
         {
-            "type": "closed_question",
+            "type": "open_question",
             "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS.",
-            "question": "The field of study in which New Zealand excels is . [FEEDBACK: Section A states \"it has an excellent education system, especially in English language teaching.\"]",
+            "question": "The field of study in which New Zealand excels is .",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: English language teaching. Section A states \"it has an excellent education system, especially in English language teaching.\"",
+            "correct_feedback": "Correct! Section A confirms New Zealand has an excellent education system, especially in English language teaching.",
+            "incorrect_feedback": "Incorrect. The correct answer is: English language teaching. Section A states \"it has an excellent education system, especially in English language teaching.\"",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "English language teaching"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Section A confirms New Zealand has an excellent education system, especially in English language teaching.",
+                    "incorrect": "Incorrect. The correct answer is: English language teaching. Section A states \"it has an excellent education system, especially in English language teaching.\"",
+                    "no_answer": "The correct answer is: English language teaching. Section A states \"it has an excellent education system, especially in English language teaching.\""
+                }
+            }
         },
         {
-            "type": "closed_question",
+            "type": "open_question",
             "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS.",
-            "question": "Full immersion learning can only happen in an . [FEEDBACK: Section A states \"This is only possible in a country where English is the spoken language.\"]",
+            "question": "Full immersion learning can only happen in an .",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: English-speaking country. Section A states \"This is only possible in a country where English is the spoken language.\"",
+            "correct_feedback": "Correct! Section A confirms full immersion is only possible in a country where English is the spoken language.",
+            "incorrect_feedback": "Incorrect. The correct answer is: English-speaking country. Section A states \"This is only possible in a country where English is the spoken language.\"",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "English-speaking country"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Section A confirms full immersion is only possible in a country where English is the spoken language.",
+                    "incorrect": "Incorrect. The correct answer is: English-speaking country. Section A states \"This is only possible in a country where English is the spoken language.\"",
+                    "no_answer": "The correct answer is: English-speaking country. Section A states \"This is only possible in a country where English is the spoken language.\""
+                }
+            }
         },
         {
-            "type": "closed_question",
+            "type": "open_question",
             "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS.",
-            "question": "Educational standards are monitored by three . [FEEDBACK: Section B states \"it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office\" - these are three government bodies.]",
+            "question": "Educational standards are monitored by three .",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: government bodies. Section B states \"it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office\" - these are three government bodies.",
+            "correct_feedback": "Correct! Section B mentions the three government bodies that monitor educational standards.",
+            "incorrect_feedback": "Incorrect. The correct answer is: government bodies. Section B states \"it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office\" - these are three government bodies.",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "government bodies"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Section B mentions the three government bodies that monitor educational standards.",
+                    "incorrect": "Incorrect. The correct answer is: government bodies. Section B states \"it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office\" - these are three government bodies.",
+                    "no_answer": "The correct answer is: government bodies. Section B states \"it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office\" - these are three government bodies."
+                }
+            }
         },
         {
             "type": "closed_question",
             "instructions": "Look at the following statements and decide if they are right or wrong according to the information given.\r\nWrite TRUE if the statement is true, FALSE if the statement is false, or NOT GIVEN if the information is not given in the passage.",
             "question": "Most international students start their studies in a secondary school. ",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: FALSE. Section C states \"Although a majority of international students spend some time in a language school\" - not secondary school.",
+            "correct_feedback": "Correct! Section C confirms most international students spend time in a language school, not secondary school.",
+            "incorrect_feedback": "Incorrect. The correct answer is: FALSE. Section C states \"Although a majority of international students spend some time in a language school\" - not secondary school.",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Section C states \"Although a majority of international students spend some time in a language school\" - not secondary school. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Section C states \"Although a majority of international students spend some time in a language school\" - not secondary school."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Section C provides clear information about where most international students start. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -399,16 +448,32 @@
             "instructions": "Look at the following statements and decide if they are right or wrong according to the information given.\r\n",
             "question": "Postgraduate students undertaking a diploma course extend what they have learned during their Bachelor ’s degree. ",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: TRUE. Section E states \"The Postgraduate Diploma course...is designed for graduates building on the academic field of their previous degree.\"",
+            "correct_feedback": "Correct! Section E confirms the Postgraduate Diploma builds on the academic field of the previous degree.",
+            "incorrect_feedback": "Incorrect. The correct answer is: TRUE. Section E states \"The Postgraduate Diploma course...is designed for graduates building on the academic field of their previous degree.\"",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Section E states \"The Postgraduate Diploma course...is designed for graduates building on the academic field of their previous degree.\""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Section E confirms that the Postgraduate Diploma course builds on the previous degree. The correct answer is TRUE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Section E provides clear information about the Postgraduate Diploma. The correct answer is TRUE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -417,16 +482,32 @@
             "instructions": "",
             "question": "All quality control at a tertiary level is done by the universities themselves. ",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: FALSE. Section C states there is \"a centrally coordinated system of quality assurance audits at both institution and programme level\" in addition to internal checks.",
+            "correct_feedback": "Correct! Section C mentions both centrally coordinated quality assurance audits AND internal university checks - not just universities alone.",
+            "incorrect_feedback": "Incorrect. The correct answer is: FALSE. Section C states there is \"a centrally coordinated system of quality assurance audits at both institution and programme level\" in addition to internal checks.",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Section C mentions both centrally coordinated quality assurance AND internal university checks. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Section C states there is \"a centrally coordinated system of quality assurance audits\" in addition to internal university checks - not just universities alone."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Section C provides clear information about quality control systems. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -444,27 +525,32 @@
             "audio_end_time": null,
             "ielts_question_category": "summary_completion_r",
             "field_count": 4,
-            "field_answers": [],
+            "field_answers": {
+                "1": "Postgraduate Diploma",
+                "2": "Masters|Masters degree",
+                "3": "Doctorate",
+                "4": "research positions|research"
+            },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Section E states the Postgraduate Diploma takes one year.",
+                    "incorrect": "Incorrect. The correct answer is: Postgraduate Diploma. Section E mentions the 1-year Postgraduate Diploma course.",
+                    "no_answer": "The correct answer is: Postgraduate Diploma. Section E states the Postgraduate Diploma takes one year."
                 },
                 "2": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Section E states the Masters degree takes 1 to 2 years.",
+                    "incorrect": "Incorrect. The correct answer is: Masters or Masters degree. Section E mentions the Masters degree takes up to two years.",
+                    "no_answer": "The correct answer is: Masters or Masters degree. Section E states the Masters degree takes 1 to 2 years."
                 },
                 "3": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Section E states the Doctorate is the next level after the Master's.",
+                    "incorrect": "Incorrect. The correct answer is: Doctorate. Section E states 'The Master's is the conventional pathway to the next level of education – the Doctorate.'",
+                    "no_answer": "The correct answer is: Doctorate. Section E states this comes after the Master's degree."
                 },
                 "4": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Section D mentions research positions are available after completing degrees.",
+                    "incorrect": "Incorrect. The correct answer is: research positions or research. Section D states 'There are Postgraduate Diploma courses, Masters degrees, Doctorates and even research positions available.'",
+                    "no_answer": "The correct answer is: research positions or research. This is mentioned in Section D."
                 }
             }
         },
@@ -473,214 +559,386 @@
             "instructions": "Do the following statements agree with the information given in reading passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.\r\nYou should spend about 20 minutes on Questions 16 – 27 which are based on Reading Passage 2.",
             "question": "Only a few people believe that 'cyberpoets' are becoming part of our popular culture.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: FALSE. Paragraph F states \"Very few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture\" - meaning most people DO believe it.",
+            "correct_feedback": "Correct! Paragraph F confirms that very few people would disagree about cyberpoets becoming part of popular culture.",
+            "incorrect_feedback": "Incorrect. The correct answer is: FALSE. Paragraph F states \"Very few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture\".",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F states that very few people would DISAGREE - meaning most people DO believe it. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F states \"Very few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture\" - meaning most people DO believe it."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F provides clear information. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
-            "question": "The range of resources available online are far wider than traditional mediums  [FEEDBACK: Paragraph C (third paragraph) states \"we can read almost anything that has ever been written\" and discusses how works of art \"Previously available to be viewed only in museums...are now replicated on the Internet\" - showing the wider range online.]",
+            "question": "The range of resources available online are far wider than traditional mediums",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
+            "no_answer_feedback": "The correct answer is: C. Paragraph C discusses how \"we can read almost anything that has ever been written\" and works of art \"Previously available to be viewed only in museums...are now replicated on the Internet\".",
+            "correct_feedback": "Correct! Paragraph C shows the wider range of resources online.",
+            "incorrect_feedback": "Incorrect. The correct answer is: C. Paragraph C discusses the extensive range of resources.",
+            "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "matching_information_r",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "C",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C describes the extensive range of online resources."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
-            "question": "Lack of clarity regarding the person responsible has an effect on cultural value of some web based resources  [FEEDBACK: Paragraph H (eighth/last paragraph) discusses how \"the authorship of online content is now far less moderated\" and \"The anonymous nature of a large percentage of internet interactions\" affects the reliability and cultural value of web content.]",
+            "question": "Lack of clarity regarding the person responsible has an effect on cultural value of some web based resources",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
+            "no_answer_feedback": "The correct answer is: H. Paragraph H discusses authorship and anonymity issues.",
+            "correct_feedback": "Correct! Paragraph H discusses unclear authorship affecting cultural value.",
+            "incorrect_feedback": "Incorrect. The correct answer is: H. Paragraph H discusses authorship issues.",
+            "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "matching_information_r",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is H."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is H."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is H."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is H."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is H."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is H."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is H."
+                },
+                {
+                    "text": "H",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph H discusses authorship and anonymity affecting reliability."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
-            "question": "Providing the ability to cross boundaries and be available worldwide  [FEEDBACK: Paragraph E (fifth paragraph) states \"the Internet is remarkable in its ability to share, on an almost global scale, all the factors that constitute culture\" - describing its ability to cross boundaries and be available worldwide.]",
+            "question": "Providing the ability to cross boundaries and be available worldwide",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
+            "no_answer_feedback": "The correct answer is: E. Paragraph E discusses global scale sharing.",
+            "correct_feedback": "Correct! Paragraph E describes crossing boundaries worldwide.",
+            "incorrect_feedback": "Incorrect. The correct answer is: E.",
+            "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
-            "question": "The emergence of new forms of culture thanks to digital possibilities  [FEEDBACK: Paragraph D (fourth paragraph) states \"the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right\" and mentions \"'Kinetic art' and other such computerised art forms\" - new forms of culture from digital possibilities.]",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
-            "question": "The wealth of online resources can mean difficulties in identifying areas of cultural significance  [FEEDBACK: Paragraph G (seventh paragraph) discusses \"the many millions of hours of footage that cannot be classified as having any cultural significance\" - the difficulty of identifying what has cultural significance among the wealth of online resources.]",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
-            "question": "The range of resources available online are far wider than traditional mediums.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "matching_information_r",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E."
+                },
+                {
+                    "text": "E",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E states \"the Internet is remarkable in its ability to share, on an almost global scale\"."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Lack of clarity regarding the person responsible has an effect on cultural value of some web based resources. ",
+            "question": "The emergence of new forms of culture thanks to digital possibilities",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
+            "no_answer_feedback": "The correct answer is: D. Paragraph D states \"the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right\" and mentions \"Kinetic art\" and computerised art forms.",
+            "correct_feedback": "Correct! Paragraph D discusses new forms of culture emerging from digital possibilities.",
+            "incorrect_feedback": "Incorrect. The correct answer is: D. Paragraph D discusses kinetic art and new digital art forms.",
+            "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "matching_information_r",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "D",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D states \"the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right\" and mentions \"Kinetic art\" and computerised art forms."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Providing the ability to cross boundaries and be available worldwide ",
+            "question": "The wealth of online resources can mean difficulties in identifying areas of cultural significance",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
+            "no_answer_feedback": "The correct answer is: G. Paragraph G discusses \"the many millions of hours of footage that cannot be classified as having any cultural significance\".",
+            "correct_feedback": "Correct! Paragraph G discusses the difficulty of identifying what has cultural significance among the wealth of online resources.",
+            "incorrect_feedback": "Incorrect. The correct answer is: G. Paragraph G discusses the problem of wading through content that lacks cultural significance.",
+            "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "matching_information_r",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G."
+                },
+                {
+                    "text": "G",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G discusses \"the many millions of hours of footage that cannot be classified as having any cultural significance\"."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "The emergence of new forms of culture thanks to digital possibilities.",
+            "question": "The self proclaimed title of supporters of internet culture",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
+            "no_answer_feedback": "The correct answer is: B. Paragraph B states that supporters \"have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets\".",
+            "correct_feedback": "Correct! Paragraph B discusses how supporters call themselves \"cyberpoets\".",
+            "incorrect_feedback": "Incorrect. The correct answer is: B. Paragraph B discusses the term \"cyberpoets\".",
+            "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The wealth of online resources can mean difficulties in identifying areas of cultural significance.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The self proclaimed title of supporters of internet culture.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "matching_information_r",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B."
+                },
+                {
+                    "text": "B",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B states that supporters \"have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets\"."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -692,7 +950,7 @@
             "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 2,
+            "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -756,7 +1014,7 @@
             "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 2,
+            "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -820,7 +1078,7 @@
             "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 2,
+            "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -1012,18 +1270,20 @@
             "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": null,
+            "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "sentence_completion_r",
             "field_count": 1,
-            "field_answers": [],
+            "field_answers": {
+                "1": "conveyor belt"
+            },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Paragraph A states that machine parts were moved around the factory on a conveyor belt.",
+                    "incorrect": "Incorrect. The correct answer is: conveyor belt. Paragraph A describes how parts were moved on a conveyor belt.",
+                    "no_answer": "The correct answer is: conveyor belt. Paragraph A mentions the conveyor belt system."
                 }
             }
         },
@@ -1041,12 +1301,14 @@
             "audio_end_time": null,
             "ielts_question_category": "sentence_completion_r",
             "field_count": 1,
-            "field_answers": [],
+            "field_answers": {
+                "1": "labour costs|labor costs"
+            },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Paragraph A states Ford mass produced the Model-T for only 10% of traditional labour costs.",
+                    "incorrect": "Incorrect. The correct answer is: labour costs (or labor costs). Paragraph A mentions 10% of traditional labour costs.",
+                    "no_answer": "The correct answer is: labour costs (or labor costs). Paragraph A states production was at 10% of traditional labour costs."
                 }
             }
         },
@@ -1058,18 +1320,20 @@
             "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": null,
+            "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "sentence_completion_r",
             "field_count": 1,
-            "field_answers": [],
+            "field_answers": {
+                "1": "1927"
+            },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Paragraph B states 'Until 1927 when the last Model-T rolled off the production line'.",
+                    "incorrect": "Incorrect. The correct answer is: 1927. Paragraph B mentions the last Model-T was produced in 1927.",
+                    "no_answer": "The correct answer is: 1927. Paragraph B states the last Model-T rolled off the production line in 1927."
                 }
             }
         },
@@ -1081,18 +1345,20 @@
             "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": null,
+            "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "sentence_completion_r",
             "field_count": 1,
-            "field_answers": [],
+            "field_answers": {
+                "1": "Labour Unions|labor unions|unions"
+            },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Paragraph C discusses how Ford refused to deal with Labour Unions but eventually was forced to.",
+                    "incorrect": "Incorrect. The correct answer is: Labour Unions (or unions). Paragraph C describes Ford's opposition to unions.",
+                    "no_answer": "The correct answer is: Labour Unions (or unions). Paragraph C mentions Ford's opposition to unions."
                 }
             }
         },
@@ -1104,18 +1370,20 @@
             "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": null,
+            "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "sentence_completion_r",
             "field_count": 1,
-            "field_answers": [],
+            "field_answers": {
+                "1": "Fordism"
+            },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Paragraph D states 'the legacy of Fordism lives on'.",
+                    "incorrect": "Incorrect. The correct answer is: Fordism. Paragraph D uses the term 'Fordism' for mass production principles.",
+                    "no_answer": "The correct answer is: Fordism. Paragraph D refers to mass production principles as 'Fordism'."
                 }
             }
         },
@@ -1133,22 +1401,26 @@
             "audio_end_time": null,
             "ielts_question_category": "summary_completion_r",
             "field_count": 3,
-            "field_answers": [],
+            "field_answers": {
+                "1": "outsourcing",
+                "2": "assembly-line tasks",
+                "3": "training"
+            },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Paragraph E states that manufacturers began 'outsourcing' which led to industrialization.",
+                    "incorrect": "Incorrect. The correct answer is: outsourcing. Paragraph E discusses outsourcing to developing nations.",
+                    "no_answer": "The correct answer is: outsourcing. Paragraph E mentions outsourcing as a key practice."
                 },
                 "2": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Paragraph E states 'The skills needed by workers on assembly-line tasks'.",
+                    "incorrect": "Incorrect. The correct answer is: assembly-line tasks. Paragraph E mentions the skills for assembly-line tasks.",
+                    "no_answer": "The correct answer is: assembly-line tasks. Paragraph E discusses skills for assembly-line tasks."
                 },
                 "3": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Paragraph E states that the skills 'required little training'.",
+                    "incorrect": "Incorrect. The correct answer is: training. Paragraph E mentions that skills required little training.",
+                    "no_answer": "The correct answer is: training. Paragraph E states skills required little training."
                 }
             }
         }
