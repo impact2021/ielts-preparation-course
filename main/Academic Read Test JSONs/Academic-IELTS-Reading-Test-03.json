@@ -1268,6 +1268,7 @@
             "ielts_question_category": "summary_completion_r",
             "field_count": 2,
             "field_answers": {
+                "1": "environmental",
                 "2": "certified forests"
             },
             "field_feedback": {
@@ -1284,200 +1285,312 @@
             }
         },
         {
-            "type": "closed_question",
-            "instructions": "Complete the following sentence using NO MORE THAN TWO WORDS.",
-            "question": "IKEA, the global Swedish furniture company, claims to only use wood from .",
+            "type": "open_question",
+            "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS AND A NUMBER from the text.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
+            "question": "27. The Nobel prizes are awarded for [field 1] in a number of fields.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: outstanding contributions. Paragraph A states that the prizes are 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'.",
+            "correct_feedback": "Correct! Paragraph A states that the prizes are 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'.",
+            "incorrect_feedback": "Incorrect. The correct answer is: outstanding contributions. Paragraph A states that the prizes are 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'.",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "outstanding contributions"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph A states that the prizes are 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'.",
+                    "incorrect": "Incorrect. The correct answer is: outstanding contributions. Paragraph A states that the prizes are 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'.",
+                    "no_answer": "The correct answer is: outstanding contributions. Paragraph A states that the prizes are 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'."
+                }
+            }
         },
         {
-            "type": "closed_question",
-            "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS AND A NUMBER from the text.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
-            "question": "The Nobel prizes are awarded for  in a number of fields.",
+            "type": "open_question",
+            "instructions": "",
+            "question": "28. Nobel was inspired to establish the Prizes following an obituary issued in [field 1].",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: a French newspaper. Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes.",
+            "correct_feedback": "Correct! Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes.",
+            "incorrect_feedback": "Incorrect. The correct answer is: a French newspaper. Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes.",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "a French newspaper"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes.",
+                    "incorrect": "Incorrect. The correct answer is: a French newspaper. Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes.",
+                    "no_answer": "The correct answer is: a French newspaper. Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes."
+                }
+            }
         },
         {
-            "type": "closed_question",
-            "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS AND A NUMBER from the text.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
-            "question": "Nobel was inspired to establish the Prizes following a section issued in .",
+            "type": "open_question",
+            "instructions": "",
+            "question": "29. Family arguments were part of the reason why there was a delay of [field 1] before the first prizes.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'",
+            "correct_feedback": "Correct! Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'",
+            "incorrect_feedback": "Incorrect. The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "5 years|five years"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'",
+                    "incorrect": "Incorrect. The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'",
+                    "no_answer": "The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'"
+                }
+            }
         },
         {
-            "type": "closed_question",
-            "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS AND A NUMBER from the text.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
-            "question": "Family arguments were part of the reason why there was a delay of  before the first prizes.",
+            "type": "open_question",
+            "instructions": "",
+            "question": "30. In the middle of the last century, a Russian nominee was compelled into [field 1] the award.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: declining. Paragraph B states: 'the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958.'",
+            "correct_feedback": "Correct! Paragraph B states: 'the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958.'",
+            "incorrect_feedback": "Incorrect. The correct answer is: declining. Paragraph B states: 'the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958.'",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "declining"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph B states: 'the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958.'",
+                    "incorrect": "Incorrect. The correct answer is: declining. Paragraph B states: 'the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958.'",
+                    "no_answer": "The correct answer is: declining. Paragraph B states: 'the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958.'"
+                }
+            }
         },
         {
-            "type": "closed_question",
-            "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS AND A NUMBER from the text.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
-            "question": "In the middle of the last century, a Russian nominee was compelled into  the award.",
+            "type": "open_question",
+            "instructions": "",
+            "question": "31. [field 1] has earned a Prize on a number of occasions.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'",
+            "correct_feedback": "Correct! Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'",
+            "incorrect_feedback": "Incorrect. The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "the Red Cross"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'",
+                    "incorrect": "Incorrect. The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'",
+                    "no_answer": "The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'"
+                }
+            }
         },
         {
-            "type": "closed_question",
-            "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS AND A NUMBER from the text.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
-            "question": "has earned a Prize on a number of occasions.",
+            "type": "open_question",
+            "instructions": "",
+            "question": "32. In the early 1940s, there was [field 1] on two occasions.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942.'",
+            "correct_feedback": "Correct! Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942.'",
+            "incorrect_feedback": "Incorrect. The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942.'",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS AND A NUMBER from the text.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
-            "question": "In the early 1940s, there was  on two occasions.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "no winner"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942.'",
+                    "incorrect": "Incorrect. The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942.'",
+                    "no_answer": "The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942.'"
+                }
+            }
         },
         {
             "type": "closed_question",
             "instructions": "Are the following statements TRUE, FALSE, or NOT GIVEN according to the text.\r\nWrite TRUE if the statement agrees with the text, FALSE if the statement does not agree with the text, or NOT GIVEN if the information is not given in the passage.",
-            "question": "Marie Curie is the only female to have been awarded a Prize.",
+            "question": "33. Marie Curie is the only female to have been awarded a Prize.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is FALSE. Paragraph C states that 'less than 5 percent of Nobel prizes have been awarded to women, the first of whom was Marie Curie'. This means other women have also been awarded prizes, so Marie Curie is not the only one.",
+            "correct_feedback": "Correct! Paragraph C states that 'less than 5 percent of Nobel prizes have been awarded to women, the first of whom was Marie Curie'. This means other women have also been awarded prizes, so Marie Curie is not the only one.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Paragraph C states that 'less than 5 percent of Nobel prizes have been awarded to women, the first of whom was Marie Curie'. This means other women have also been awarded prizes.",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C states that 'less than 5 percent of Nobel prizes have been awarded to women', meaning multiple women have won, not just Marie Curie."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states that 'less than 5 percent of Nobel prizes have been awarded to women, the first of whom was Marie Curie'. This means other women have also been awarded prizes, so Marie Curie is not the only one."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information in Paragraph C, so the answer cannot be NOT GIVEN."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "There are currently 6 categories for which Prizes are awarded.",
+            "question": "34. There are currently 6 categories for which Prizes are awarded.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is TRUE. Paragraph A lists 5 original categories (chemistry, physics, literature, peace, and physiology or medicine), and Paragraph D states that 'In 1969...a sixth area was introduced to the Nobel Prizes – economics', making a total of 6 categories.",
+            "correct_feedback": "Correct! Paragraph A lists 5 original categories (chemistry, physics, literature, peace, and physiology or medicine), and Paragraph D states that 'In 1969...a sixth area was introduced to the Nobel Prizes – economics', making a total of 6 categories.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph A lists 5 original categories, and Paragraph D states that economics was added in 1969 as a sixth category.",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph A lists 5 original categories (chemistry, physics, literature, peace, and physiology or medicine), and Paragraph D states that 'In 1969...a sixth area was introduced to the Nobel Prizes – economics', making a total of 6 categories."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states there are 6 categories: the 5 original ones plus economics added in 1969."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information across Paragraphs A and D, so the answer cannot be NOT GIVEN."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Prizes cannot be awarded to people who have died.",
+            "question": "35. Prizes cannot be awarded to people who have died.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "The correct answer is FALSE. Paragraph E states: 'However, it is possible to award a prize to someone who is dead as long as they were alive during the nomination process.' This directly contradicts the statement.",
+            "correct_feedback": "Correct! Paragraph E states: 'However, it is possible to award a prize to someone who is dead as long as they were alive during the nomination process.' This directly contradicts the statement.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Paragraph E clearly states that prizes CAN be awarded to people who have died, as long as they were alive during the nomination process.",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E states that prizes CAN be awarded to dead people if they were alive during the nomination process."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E states: 'However, it is possible to award a prize to someone who is dead as long as they were alive during the nomination process.' This directly contradicts the statement."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information in Paragraph E, so the answer cannot be NOT GIVEN."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Some members of the judging panel have resigned because they disagreed with how the winner was chosen.",
+            "question": "36. Some members of the judging panel have resigned because they disagreed with how the winner was chosen.",
             "points": 1,
             "no_answer_feedback": "The correct answer is TRUE. Paragraph H explains that some members of the judging panel resigned because they disagreed with how the winner was chosen. Even if you’re unsure, it’s better to make a guess in the IELTS test — you won’t lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "correct_feedback": "Correct! Paragraph H states: 'In fact, some of the judging panel have resigned following a final decision that they felt was not correct'. This confirms the statement is true.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph H clearly states that members of the judging panel have resigned due to disagreements.",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph H states: 'In fact, some of the judging panel have resigned following a final decision that they felt was not correct'. This confirms the statement is true."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph H clearly states that members of the judging panel have resigned due to disagreements about the winner selection."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information in Paragraph H, so the answer cannot be NOT GIVEN."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1606,11 +1719,11 @@
         },
         {
             "title": "Reading Passage 2 - Scandinavian Design",
-            "content": "The story behind the furniture from the Nordic countries.<br />\r\n<br />\r\nTraditionally, Scandinavia was recognised as the three kingdoms of Sweden, Norway and Denmark, but today that scope has widened to include both Finland and Iceland as well. With an impressive international reputation, designers and craftspeople from all five countries are often grouped under the collective name 'Scandinavian design', creating furniture with a unique and often simple appeal. It is claimed that the expression 'Scandinavian design' first came from a design exhibition which toured Canada and the United States in the mid-20th century, from 1954 to 1957, although there had been earlier exhibitions in Europe and North America showcasing the works of Scandinavian designers.<br />\r\n<br />\r\nTo understand both the origins and the concepts of Scandinavian design it is perhaps best to look at the historical context with some of the major trends in art and manufacturing through the 19th and 20th centuries. During the Industrial Revolution, generally considered to have been at its height in the first half of the 19th century, design was focused purely on being useful and functional. At the same time, Realism, a form of art that sprang from the introduction of the photograph, was used as a way to capture 'reality', and was linked to the reality of the mass production of the Industrial Revolution.<br />\r\n<br />\r\nThe late 19th century saw the beginning of the Art Nouveau movement, which was seen as a reaction against the functional style of the industrial revolution. This new form of art incorporated not only art, but also architecture, design, furniture and jewellery, and was strongly based on nature with its fluid and natural shapes. Art Nouveau continued through the turn of the century and led to the birth of Modernism, the new movement which had links to social movements and political activism at the beginning of the 20th century. Events such as the horrors of the First World War drove the movement on, and there was a growing ideal which saw a tremendous reaction against the existing norms, which resulted in a range of art movements forming, all sharing a similar reactionary bent.<br />\r\n<br />\r\nIn 1914, a magazine was first published in Denmark called Skønvirke, which drew on the inspirations of traditional Danish, and by extension Scandinavian, design and local handicrafts. This design was seen as being functional, featuring simple lines and a minimalist element, while at the same time is was still designed to look appealing. It is noted that Scandinavian design is known as 'democratic design' because the masses are attracted to its affordability and accessibility, as well as the aesthetics (aesthetics being defined as the principle of nature and the appreciation of beauty). Wood was a major component in the construction of furniture from Scandinavian countries, and again this was driven by the constraining factors of the time: the difficulty in importing materials and economic issues leading to production problems. But, as a result, the finished products took on an identity of their own due to the signature wood design and the simplicity of the shape and the textures involved.<br />\r\n<br />\r\nIn the 1920s and 1930s, other Art Movements in Europe began exploring new concepts and, interestingly, their work embraced not only the final product but also the manufacturing process. Bauhaus in Germany and Dadaism in Switzerland were two of the more notable movements exploring these new concepts, along with Italy's Futurists and De Stijl in the Netherlands, who saw everything reduced to the simplest forms of lines and colour. As these ideas spread throughout the world, artists and designers from outside the region started integrating Scandinavian concepts of art and construction. However, as the 20th century progressed, the mass production techniques that were enveloping much of the rest of the world was not as prevalent in the Nordic countries, which were working to preserve the traditions of their crafts. In fact, preservation of these traditions had been a consideration in Scandinavia as far back as 1845, when the Swedish Society of Industrial Design was founded to ensure the highest levels of quality were maintained, while keeping safe the tradition of hand crafts. However, even Scandinavia was not immune to the need for mass production, and it is claimed that this focus on the detail of craftwork and merging it with commercial production has given rise to the term 'industrial arts'.<br />\r\n<br />\r\nA number of Scandinavian designers have now become household names, at least within the international household of design. Denmark's Verner Panton created, in 1960, the famous single-molded plastic chair, symbolising the emerging Pop Art movement and exemplifying the famous simple lines and designs. Alvar Aalto, from Finland, worked with wood in his furniture manufacturing, and established a company which also championed other Finnish designers, and branched out into the production of accessories, such as lamps and textiles. The Danish architect Arne Jacobson began working with plywood in the 1950s, and although this material had been used for time, Jacobson perfected new techniques which allowed the plywood to be bent, while keeping its inherent strength, and in 1955 created a chair design which is still sold today. Eero Aarnio, from Finland, worked with fibreglass and came up with such simple but futuristic shapes that some of his designs have been utilized in science-fiction films as props.<br />\r\n<br />\r\nIn addition to furniture, Scandinavian design has also been applied to crafts and accessories. Tappo Wirkkal, from Finland, and Sweden's Kosta Boda company both work with glass, and have created works which have drawn praise from art critics as well as withstanding the test of functional design criteria. Today, the design concepts of Scandinavia have progressed beyond product and furniture manufacture and production and now embrace environmental considerations as well. The iconic Swedish company IKEA, for example, is insistent on only using timber from certified forests – a guarantee that it has not been illegally logged – as well as supporting 14 projects run by the World Wildlife Federation."
+            "content": "The story behind the furniture from the Nordic countries.<br />\r\n<br />\r\n<span id=\"passage-q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">Traditionally, Scandinavia was recognised as the three kingdoms of Sweden, Norway and Denmark, but today that scope has widened to include both Finland and Iceland as well. With an impressive international reputation, designers and craftspeople from all five countries are often grouped under the collective name 'Scandinavian design', creating furniture with a unique and often simple appeal. It is claimed that the expression 'Scandinavian design' first came from a design exhibition which toured Canada and the United States in the mid-20th century, from 1954 to 1957, although there had been earlier exhibitions in Europe and North America showcasing the works of Scandinavian designers.</span><br />\r\n<br />\r\nTo understand both the origins and the concepts of Scandinavian design it is perhaps best to look at the historical context with some of the major trends in art and manufacturing through the 19th and 20th centuries. During the Industrial Revolution, generally considered to have been at its height in the first half of the 19th century, design was focused purely on being useful and functional. At the same time, Realism, a form of art that sprang from the introduction of the photograph, was used as a way to capture 'reality', and was linked to the reality of the mass production of the Industrial Revolution.<br />\r\n<br />\r\nThe late 19th century saw the beginning of the Art Nouveau movement, which was seen as a reaction against the functional style of the industrial revolution. This new form of art incorporated not only art, but also architecture, design, furniture and jewellery, and was strongly based on nature with its fluid and natural shapes. Art Nouveau continued through the turn of the century and led to the birth of Modernism, the new movement which had links to social movements and political activism at the beginning of the 20th century. Events such as the horrors of the First World War drove the movement on, and there was a growing ideal which saw a tremendous reaction against the existing norms, which resulted in a range of art movements forming, all sharing a similar reactionary bent.<br />\r\n<br />\r\n<span id=\"passage-q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">In 1914, a magazine was first published in Denmark called Skønvirke, which drew on the inspirations of traditional Danish, and by extension Scandinavian, design and local handicrafts.</span> This design was seen as being functional, featuring simple lines and a minimalist element, while at the same time is was still designed to look appealing. <span id=\"passage-q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">It is noted that Scandinavian design is known as 'democratic design' because the masses are attracted to its affordability and accessibility, as well as the aesthetics</span> (aesthetics being defined as the principle of nature and the appreciation of beauty). Wood was a major component in the construction of furniture from Scandinavian countries, and again this was driven by the constraining factors of the time: the difficulty in importing materials and economic issues leading to production problems. But, as a result, the finished products took on an identity of their own due to the signature wood design and the simplicity of the shape and the textures involved.<br />\r\n<br />\r\n<span id=\"passage-q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">In the 1920s and 1930s, other Art Movements in Europe began exploring new concepts and, interestingly, their work embraced not only the final product but also the manufacturing process. Bauhaus in Germany and Dadaism in Switzerland were two of the more notable movements exploring these new concepts</span>, along with Italy's Futurists and De Stijl in the Netherlands, who saw everything reduced to the simplest forms of lines and colour. As these ideas spread throughout the world, artists and designers from outside the region started integrating Scandinavian concepts of art and construction. However, as the 20th century progressed, the mass production techniques that were enveloping much of the rest of the world was not as prevalent in the Nordic countries, which were working to preserve the traditions of their crafts. <span id=\"passage-q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">In fact, preservation of these traditions had been a consideration in Scandinavia as far back as 1845, when the Swedish Society of Industrial Design was founded to ensure the highest levels of quality were maintained, while keeping safe the tradition of hand crafts.</span> However, even Scandinavia was not immune to the need for mass production, and <span id=\"passage-q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">it is claimed that this focus on the detail of craftwork and merging it with commercial production has given rise to the term 'industrial arts'</span>.<br />\r\n<br />\r\nA number of Scandinavian designers have now become household names, at least within the international household of design. <span id=\"passage-q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">Denmark's Verner Panton created, in 1960, the famous single-molded plastic chair, symbolising the emerging Pop Art movement and exemplifying the famous simple lines and designs.</span> <span id=\"passage-q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">Alvar Aalto, from Finland, worked with wood in his furniture manufacturing, and established a company which also championed other Finnish designers, and branched out into the production of accessories, such as lamps and textiles.</span> <span id=\"passage-q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">The Danish architect Arne Jacobson began working with plywood in the 1950s, and although this material had been used for time, Jacobson perfected new techniques which allowed the plywood to be bent, while keeping its inherent strength</span>, and in 1955 created a chair design which is still sold today. Eero Aarnio, from Finland, worked with fibreglass and came up with such simple but futuristic shapes that some of his designs have been utilized in science-fiction films as props.<br />\r\n<br />\r\n<span id=\"passage-q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">In addition to furniture, Scandinavian design has also been applied to crafts and accessories. Tappo Wirkkal, from Finland, and Sweden's Kosta Boda company both work with glass, and have created works which have drawn praise from art critics as well as withstanding the test of functional design criteria.</span> <span id=\"passage-q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">Today, the design concepts of Scandinavia have progressed beyond product and furniture manufacture and production and now embrace environmental considerations as well. The iconic Swedish company IKEA, for example, is insistent on only using timber from certified forests – a guarantee that it has not been illegally logged – as well as supporting 14 projects run by the World Wildlife Federation.</span>"
         },
         {
             "title": "Reading Passage 3 - The Nobel Prize",
-            "content": "A: The Nobel Prize was first introduced in 1895, and now, over a century later, they are still highly respected awards. Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine, they are named after Alfred Nobel, the man who initially pioneered the idea. Yet the Prizes had an unlikely start; Nobel's contribution to science was actually the creation of dynamite. It was only when a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the 'Merchant of Death', that Nobel realised the full impact of the legacy he was leaving behind. He decided that after his death, a significant portion of his wealth should be devoted to seeking out and acknowledging those who had made 'the greatest contribution to mankind'. However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.<br />\r\n<br />\r\nB: Each recipient received – and still receives – a medal, a diploma and a monetary award. As of 2010, 817 individuals and 23 organizations had been awarded a Nobel Prize. Yet not every winner, referred to as a 'laureate', has actually accepted the award. In the 1930s, three German winners were not permitted by their government to accept the Nobel Prize, and the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958. In 1964, Jean Paul Sartre, a French writer, also declined the award, although this was not politically motivated – he simply did not accept any official honour.<br />\r\n<br />\r\nC: Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times). Another interesting statistic is that less than 5 percent of Nobel prizes have been awarded to women, the first of whom was Marie Curie, who won the Nobel Prize in Physics in 1903. Also, since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942. This was largely due to the world war that was being waged at the time.<br />\r\n<br />\r\nD: In 1969, having been running for nearly seventy years, a sixth area was introduced to the Nobel Prizes – economics. This was not a category defined in Nobel's will, but was established by Sweden's central bank in 1968 on the Bank's 300th anniversary. Since this time, no categories have been added or removed from the prizegiving.<br />\r\n<br />\r\nE: There are of course certain rules governing who can be selected for a Nobel prize. You cannot nominate yourself, nor can a person be nominated after their death. However, it is possible to award a prize to someone who is dead as long as they were alive during the nomination process. Each year, between 100 and 250 people are nominated.<br />\r\n<br />\r\nF: Arguably the most well-known of the Nobel prizes is the Nobel Peace Prize. According to the terms of Nobel's will, it is not the Swedish Academy of Science nor the Academy of Arts (both of which select the recipient for the other prizes); instead, the Peace Prize is awarded by 5 people selected by the Norwegian parliament. But it is not just these 5 people who are carefully chosen – even those who have the right to nominate others are selected from a narrow selection of candidates. Members of national assemblies and governments, as well as selected international governmental bodies, university professors of history, political science, philosophy, law and theology, university presidents and directors of peace research and international affairs institutes, as well as former recipients are among the privileged few.<br />\r\n<br />\r\nG: For a nomination to be considered, only one acceptable nominator needs to suggest the name, but a shortlist of nominees, and the final recipient, is decided by the Nobel Institute, comprising of the 5 people selected by the Norwegian Parliament, as mentioned before.<br />\r\n<br />\r\nH: Although there is always the aim of reaching a unanimous verdict amongst those judging, there are times when this has not always been the case. In fact, some of the judging panel have resigned following a final decision that they felt was not correct; since its inception, the Peace Prize nominees have included people like Adolf Hitler, Joseph Stalin and Benito Mussolini (although they were not awarded the prize). On the other side, there are certain people who are in many ways synonymous with the struggle for peace yet have not been recognised – Mahatma Gandhi, for example, was nominated 5 times but never actually won an award.<br />\r\n<br />\r\nI: Unsurprisingly, there have been a number of controversial winners of the Nobel Peace prize over the last 100 years. In the 1940s, Cordell Hull won the Peace Prize for his efforts in putting together the United Nations, but this was in many respects overshadowed by allegations that he campaigned against allowing a boat of Jewish refugees fleeing the Nazi regime to seek asylum in America. Anti-Semitic allegations tarnished the prize awarded to John Forbes Nash, who was himself suffering from schizophrenia (a disease which is considered to have impacted on some of his more public comments). Rumours also surrounded Wangari Maathai, a scientist and the first African woman to receive the award, with some claiming that she had aimed certain aggressive remarks at non-African scientists. A claim was also publicly made against the successful nomination of Barack Obama, with the award being given for 'outstanding international diplomatic efforts' only 12 days after he took office, with many claiming that the nomination and award were politically motivated.<br />\r\n<br />\r\nJ: But regardless of the controversies, allegations and history of Nobel, there is no doubt that for many countries, and many people, the Nobel Prizes are a welcome recognition of efforts in a wide range of fields. The award ceremony has, in recent years, become something of a global media event. There is a 'Peace Prize Concert' which is broadcast to over 450 million households in over 150 countries."
+            "content": "A: <span id=\"passage-q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">The Nobel Prize was first introduced in 1895, and now, over a century later, they are still highly respected awards. Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine</span>, they are named after Alfred Nobel, the man who initially pioneered the idea. Yet the Prizes had an unlikely start; Nobel's contribution to science was actually the creation of dynamite. <span id=\"passage-q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">It was only when a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the 'Merchant of Death', that Nobel realised the full impact of the legacy he was leaving behind. He decided that after his death, a significant portion of his wealth should be devoted to seeking out and acknowledging those who had made 'the greatest contribution to mankind'.</span> <span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.</span><br />\r\n<br />\r\nB: Each recipient received – and still receives – a medal, a diploma and a monetary award. As of 2010, 817 individuals and 23 organizations had been awarded a Nobel Prize. Yet not every winner, referred to as a 'laureate', has actually accepted the award. In the 1930s, three German winners were not permitted by their government to accept the Nobel Prize, and <span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958</span>. In 1964, Jean Paul Sartre, a French writer, also declined the award, although this was not politically motivated – he simply did not accept any official honour.<br />\r\n<br />\r\nC: <span id=\"passage-q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).</span> <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">Another interesting statistic is that less than 5 percent of Nobel prizes have been awarded to women, the first of whom was Marie Curie, who won the Nobel Prize in Physics in 1903.</span> Also, <span id=\"passage-q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942</span>. This was largely due to the world war that was being waged at the time.<br />\r\n<br />\r\nD: <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">In 1969, having been running for nearly seventy years, a sixth area was introduced to the Nobel Prizes – economics. This was not a category defined in Nobel's will, but was established by Sweden's central bank in 1968 on the Bank's 300th anniversary. Since this time, no categories have been added or removed from the prizegiving.</span><br />\r\n<br />\r\nE: There are of course certain rules governing who can be selected for a Nobel prize. You cannot nominate yourself, nor can a person be nominated after their death. <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">However, it is possible to award a prize to someone who is dead as long as they were alive during the nomination process.</span> Each year, between 100 and 250 people are nominated.<br />\r\n<br />\r\nF: Arguably the most well-known of the Nobel prizes is the Nobel Peace Prize. According to the terms of Nobel's will, it is not the Swedish Academy of Science nor the Academy of Arts (both of which select the recipient for the other prizes); instead, the Peace Prize is awarded by 5 people selected by the Norwegian parliament. But it is not just these 5 people who are carefully chosen – even those who have the right to nominate others are selected from a narrow selection of candidates. Members of national assemblies and governments, as well as selected international governmental bodies, university professors of history, political science, philosophy, law and theology, university presidents and directors of peace research and international affairs institutes, as well as former recipients are among the privileged few.<br />\r\n<br />\r\nG: For a nomination to be considered, only one acceptable nominator needs to suggest the name, but a shortlist of nominees, and the final recipient, is decided by the Nobel Institute, comprising of the 5 people selected by the Norwegian Parliament, as mentioned before.<br />\r\n<br />\r\nH: <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">Although there is always the aim of reaching a unanimous verdict amongst those judging, there are times when this has not always been the case. In fact, some of the judging panel have resigned following a final decision that they felt was not correct</span>; since its inception, the Peace Prize nominees have included people like Adolf Hitler, Joseph Stalin and Benito Mussolini (although they were not awarded the prize). On the other side, there are certain people who are in many ways synonymous with the struggle for peace yet have not been recognised – Mahatma Gandhi, for example, was nominated 5 times but never actually won an award.<br />\r\n<br />\r\nI: <span id=\"passage-q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">Unsurprisingly, there have been a number of controversial winners of the Nobel Peace prize over the last 100 years. In the 1940s, Cordell Hull won the Peace Prize for his efforts in putting together the United Nations, but this was in many respects overshadowed by allegations that he campaigned against allowing a boat of Jewish refugees fleeing the Nazi regime to seek asylum in America.</span> <span id=\"passage-q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">Anti-Semitic allegations tarnished the prize awarded to John Forbes Nash, who was himself suffering from schizophrenia (a disease which is considered to have impacted on some of his more public comments).</span> Rumours also surrounded Wangari Maathai, a scientist and the first African woman to receive the award, with some claiming that she had aimed certain aggressive remarks at non-African scientists. <span id=\"passage-q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">A claim was also publicly made against the successful nomination of Barack Obama, with the award being given for 'outstanding international diplomatic efforts' only 12 days after he took office, with many claiming that the nomination and award were politically motivated.</span><br />\r\n<br />\r\nJ: But regardless of the controversies, allegations and history of Nobel, there is no doubt that for many countries, and many people, the Nobel Prizes are a welcome recognition of efforts in a wide range of fields. The award ceremony has, in recent years, become something of a global media event. There is a 'Peace Prize Concert' which is broadcast to over 450 million households in over 150 countries."
         }
     ],
     "settings": {
