@@ -7003,6 +7003,35 @@ class IELTS_CM_Admin {
     }
     
     /**
+     * Reindex field_answers array to be 1-based
+     * Converts 0-based arrays to 1-based for consistent handling
+     * 
+     * @param array $field_answers The field answers array (may be 0-based or 1-based)
+     * @return array 1-based field answers array
+     */
+    private function reindex_field_answers_to_one_based($field_answers) {
+        if (!is_array($field_answers)) {
+            return array();
+        }
+        
+        // Check if already 1-based (has key "1") or 0-based (has key "0")
+        if (isset($field_answers[0]) && !isset($field_answers[1])) {
+            // 0-based, need to re-index
+            $original_answers = array_values($field_answers);
+            $reindexed = array();
+            
+            foreach ($original_answers as $index => $answer) {
+                $reindexed[$index + 1] = $answer;
+            }
+            
+            return $reindexed;
+        }
+        
+        // Already 1-based (has key "1"), return as is
+        return $field_answers;
+    }
+    
+    /**
      * Transform questions from JSON format to admin format
      * Handles conversion of field_labels to question text and creates per-field feedback
      * 
@@ -7058,14 +7087,7 @@ class IELTS_CM_Admin {
                 
                 // Ensure field_answers is properly indexed (1-based, not 0-based)
                 if (isset($question['field_answers']) && is_array($question['field_answers'])) {
-                    // Use array_values to ensure sequential 0-based input before re-indexing
-                    $original_answers = array_values($question['field_answers']);
-                    $question['field_answers'] = array();
-                    
-                    // Re-index to 1-based array
-                    foreach ($original_answers as $index => $answer) {
-                        $question['field_answers'][$index + 1] = $answer;
-                    }
+                    $question['field_answers'] = $this->reindex_field_answers_to_one_based($question['field_answers']);
                 }
                 
                 // Create per-field feedback from question-level feedback
@@ -7097,11 +7119,14 @@ class IELTS_CM_Admin {
                 } elseif (isset($question['question'])) {
                     // Check for [field N] markers in question text
                     preg_match_all('/\[field\s+(\d+)\]/i', $question['question'], $field_matches);
-                    if (!empty($field_matches[1])) {
-                        $max_field_num = max(array_map('intval', $field_matches[1]));
-                        if ($max_field_num > 1) {
-                            $is_multi_field = true;
-                            $field_count = $max_field_num;
+                    if (!empty($field_matches[1]) && is_array($field_matches[1])) {
+                        $field_numbers = array_map('intval', $field_matches[1]);
+                        if (!empty($field_numbers)) {
+                            $max_field_num = max($field_numbers);
+                            if ($max_field_num > 1) {
+                                $is_multi_field = true;
+                                $field_count = $max_field_num;
+                            }
                         }
                     }
                 }
@@ -7125,17 +7150,7 @@ class IELTS_CM_Admin {
                 } else {
                     // Multi-field question: ensure field_answers is properly indexed (1-based)
                     if (isset($question['field_answers']) && is_array($question['field_answers'])) {
-                        // Check if already 1-based (has key "1") or 0-based (has key "0")
-                        if (isset($question['field_answers'][0]) && !isset($question['field_answers'][1])) {
-                            // 0-based, need to re-index
-                            $original_answers = array_values($question['field_answers']);
-                            $question['field_answers'] = array();
-                            
-                            foreach ($original_answers as $index => $answer) {
-                                $question['field_answers'][$index + 1] = $answer;
-                            }
-                        }
-                        // If already 1-based (has key "1"), keep as is
+                        $question['field_answers'] = $this->reindex_field_answers_to_one_based($question['field_answers']);
                     }
                 }
                 
