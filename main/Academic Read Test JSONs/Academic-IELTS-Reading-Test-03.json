@@ -647,8 +647,24 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that while there was a touring exhibition from 1954 to 1957, 'there had been earlier exhibitions in Europe and North America showcasing the works of Scandinavian designers', so this was not the first exhibition."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The opening paragraph mentions a touring exhibition in Canada and the U.S. from 1954 to 1957, but it also states that 'there had been earlier exhibitions' there, making this statement false."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information in the opening paragraph, which explicitly mentions earlier exhibitions, so the answer is FALSE, not NOT GIVEN."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -657,7 +673,7 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nYou should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "The first ideas of a 'Scandinavian design' came about at the same time as new emerging movements in Art, such as Bauhaus and Dadaism.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is NOT GIVEN. While the passage mentions Skønvirke magazine in 1914 and states that Bauhaus and Dadaism emerged in the 1920s and 1930s, it also indicates that Skønvirke 'drew on the inspirations of traditional...Scandinavian design', meaning these ideas existed before 1914. The passage does not specify when these first ideas actually originated, so we cannot determine if they came about at the same time as Bauhaus and Dadaism. Note that you should always take a guess in the IELTS test even if you don't know the answer - you don't lose points for a wrong answer, and you may get lucky!",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -665,8 +681,24 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage indicates that Skønvirke magazine (1914) drew on traditional Scandinavian design, and Bauhaus/Dadaism emerged in the 1920s-30s. However, the passage doesn't specify when the first ideas of Scandinavian design originated, only that they existed before 1914."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Skønvirke magazine appeared in 1914 and Bauhaus/Dadaism in the 1920s-30s, the passage states Skønvirke 'drew on the inspirations of traditional...Scandinavian design', meaning the ideas predated 1914. Since we don't know when these first ideas originated, we cannot say the statement is definitively false."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! While the passage mentions Skønvirke magazine in 1914 and Bauhaus/Dadaism in the 1920s-30s, it states that Skønvirke 'drew on the inspirations of traditional...Scandinavian design', indicating these ideas existed before 1914. The passage does not specify when these first ideas actually originated, so we cannot determine if they came about at the same time as Bauhaus and Dadaism."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -675,7 +707,7 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nYou should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "The term 'industrial arts' was coined by Scandinavian designers and artists in the Art Nouveau movement together.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions that the term 'industrial arts' arose from merging craftwork with commercial production, but it does not specify who actually coined the term or whether it was Scandinavian designers and Art Nouveau artists together. Note that you should always take a guess in the IELTS test even if you don't know the answer - you don't lose points for a wrong answer, and you may get lucky!",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -683,8 +715,24 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that the term 'industrial arts' arose from merging craftwork with commercial production, but it does not specify who coined the term or that it was done by Scandinavian designers and Art Nouveau artists together."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While the passage does not support this statement, it also doesn't provide enough information to contradict it definitively. The passage mentions the term 'industrial arts' but doesn't specify who coined it."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions that 'it is claimed that this focus on the detail of craftwork and merging it with commercial production has given rise to the term industrial arts', but it does not specify who actually coined the term or whether it was Scandinavian designers and Art Nouveau artists together."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -693,7 +741,7 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nYou should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "As well as furniture and accessories, Scandinavian design philosophies now also include environmentalism.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is TRUE. The final paragraph of Reading Passage 2 clearly states: 'Today, the design concepts of Scandinavia have progressed beyond product and furniture manufacture and production and now embrace environmental considerations as well.' Note that you should always take a guess in the IELTS test even if you don't know the answer - you don't lose points for a wrong answer, and you may get lucky!",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -701,8 +749,24 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The final paragraph of Reading Passage 2 clearly states: 'Today, the design concepts of Scandinavia have progressed beyond product and furniture manufacture and production and now embrace environmental considerations as well.' The passage then provides examples such as IKEA using timber from certified forests."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage explicitly states in the final paragraph that Scandinavian design concepts 'now embrace environmental considerations as well', and provides examples like IKEA's use of certified forest timber and support for World Wildlife Federation projects."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information in the final paragraph, which clearly states that the design concepts now 'embrace environmental considerations', so the answer is TRUE, not NOT GIVEN."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
