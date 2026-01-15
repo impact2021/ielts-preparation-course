@@ -1563,18 +1563,34 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Some members of the judging panel have resigned because they disagreed with how the winner was chosen.",
+            "question": "36. Some members of the judging panel have resigned because they disagreed with how the winner was chosen.",
             "points": 1,
             "no_answer_feedback": "The correct answer is TRUE. Paragraph H explains that some members of the judging panel resigned because they disagreed with how the winner was chosen. Even if you’re unsure, it’s better to make a guess in the IELTS test — you won’t lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "correct_feedback": "Correct! Paragraph H states: 'In fact, some of the judging panel have resigned following a final decision that they felt was not correct'. This confirms the statement is true.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph H clearly states that members of the judging panel have resigned due to disagreements.",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "ielts_question_category": "true_false_not_given_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph H states: 'In fact, some of the judging panel have resigned following a final decision that they felt was not correct'. This confirms the statement is true."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph H clearly states that members of the judging panel have resigned due to disagreements about the winner selection."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information in Paragraph H, so the answer cannot be NOT GIVEN."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
