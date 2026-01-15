@@ -7003,6 +7003,35 @@ class IELTS_CM_Admin {
     }
     
     /**
+     * Reindex field_answers array to be 1-based
+     * Converts 0-based arrays to 1-based for consistent handling
+     * 
+     * @param array $field_answers The field answers array (may be 0-based or 1-based)
+     * @return array 1-based field answers array
+     */
+    private function reindex_field_answers_to_one_based($field_answers) {
+        if (!is_array($field_answers)) {
+            return array();
+        }
+        
+        // Check if already 1-based (has key "1") or 0-based (has key "0")
+        if (isset($field_answers[0]) && !isset($field_answers[1])) {
+            // 0-based, need to re-index
+            $original_answers = array_values($field_answers);
+            $reindexed = array();
+            
+            foreach ($original_answers as $index => $answer) {
+                $reindexed[$index + 1] = $answer;
+            }
+            
+            return $reindexed;
+        }
+        
+        // Already 1-based (has key "1"), return as is
+        return $field_answers;
+    }
+    
+    /**
      * Transform questions from JSON format to admin format
      * Handles conversion of field_labels to question text and creates per-field feedback
      * 
@@ -7058,14 +7087,7 @@ class IELTS_CM_Admin {
                 
                 // Ensure field_answers is properly indexed (1-based, not 0-based)
                 if (isset($question['field_answers']) && is_array($question['field_answers'])) {
-                    // Use array_values to ensure sequential 0-based input before re-indexing
-                    $original_answers = array_values($question['field_answers']);
-                    $question['field_answers'] = array();
-                    
-                    // Re-index to 1-based array
-                    foreach ($original_answers as $index => $answer) {
-                        $question['field_answers'][$index + 1] = $answer;
-                    }
+                    $question['field_answers'] = $this->reindex_field_answers_to_one_based($question['field_answers']);
                 }
                 
                 // Create per-field feedback from question-level feedback
@@ -7081,32 +7103,65 @@ class IELTS_CM_Admin {
                 // Remove field_labels as it's now incorporated into question text
                 unset($question['field_labels']);
             } elseif ($type === 'open_question' && !isset($question['field_labels'])) {
-                // Handle single-field open questions without field_labels
-                // These questions use correct_answer instead of field_answers
+                // Handle open questions without field_labels
+                // This can be either:
+                // 1. Single-field questions using correct_answer
+                // 2. Multi-field questions with [field N] markers already in question text
                 
-                // Set field_count to 1
-                $question['field_count'] = 1;
+                // Check if this is a multi-field question by looking for field_count or [field N] markers
+                $is_multi_field = false;
+                $field_count = 1;
                 
-                // Convert correct_answer to field_answers[1]
-                if (isset($question['correct_answer'])) {
-                    $question['field_answers'] = array(
-                        1 => $question['correct_answer']
-                    );
-                    unset($question['correct_answer']);
+                if (isset($question['field_count']) && intval($question['field_count']) > 1) {
+                    // field_count explicitly set in JSON
+                    $is_multi_field = true;
+                    $field_count = intval($question['field_count']);
+                } elseif (isset($question['question'])) {
+                    // Check for [field N] markers in question text
+                    preg_match_all('/\[field\s+(\d+)\]/i', $question['question'], $field_matches);
+                    if (!empty($field_matches[1]) && is_array($field_matches[1])) {
+                        $field_numbers = array_map('intval', $field_matches[1]);
+                        if (!empty($field_numbers)) {
+                            $max_field_num = max($field_numbers);
+                            if ($max_field_num > 1) {
+                                $is_multi_field = true;
+                                $field_count = $max_field_num;
+                            }
+                        }
+                    }
                 }
                 
-                // Create field_feedback[1] from question-level feedback
-                $question['field_feedback'] = array(
-                    1 => array(
+                // Set field_count
+                $question['field_count'] = $field_count;
+                
+                if (!$is_multi_field) {
+                    // Single-field question: convert correct_answer to field_answers[1]
+                    if (isset($question['correct_answer'])) {
+                        $question['field_answers'] = array(
+                            1 => $question['correct_answer']
+                        );
+                        unset($question['correct_answer']);
+                    }
+                    
+                    // Replace ________ (8 or more underscores) with [field 1] in question text
+                    if (isset($question['question'])) {
+                        $question['question'] = preg_replace('/_{8,}/', '[field 1]', $question['question']);
+                    }
+                } else {
+                    // Multi-field question: ensure field_answers is properly indexed (1-based)
+                    if (isset($question['field_answers']) && is_array($question['field_answers'])) {
+                        $question['field_answers'] = $this->reindex_field_answers_to_one_based($question['field_answers']);
+                    }
+                }
+                
+                // Create per-field feedback from question-level feedback
+                $question['field_feedback'] = array();
+                for ($i = 1; $i <= $field_count; $i++) {
+                    $question['field_feedback'][$i] = array(
                         'correct' => isset($question['correct_feedback']) ? $question['correct_feedback'] : '',
                         'incorrect' => isset($question['incorrect_feedback']) ? $question['incorrect_feedback'] : '',
                         'no_answer' => isset($question['no_answer_feedback']) ? $question['no_answer_feedback'] : ''
-                    )
-                );
-                
-                // Replace ________ (8 or more underscores) with [field 1] in question text
-                if (isset($question['question'])) {
-                    $question['question'] = preg_replace('/_{8,}/', '[field 1]', $question['question']);
+                    );
                 }
             } elseif ($type === 'closed_question') {
                 // Transform closed_question format
