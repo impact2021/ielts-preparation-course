@@ -84,7 +84,12 @@ Test 07 uses automatic markers that the system converts:
 [Q1]Most people have heard of the Olympics, a sporting event held every four years...
 ```
 
-This automatically converts to proper HTML with `passage-q1` ID and highlights "Most people have heard of the Olympics, a sporting event held every four years" (up to the first natural boundary).
+This automatically converts to:
+```html
+<span id="passage-q1" data-question="1"></span><span class="reading-answer-marker">Most people have heard of the Olympics</span>, a sporting event held every four years...
+```
+
+The system uses smart boundary detection to highlight only the relevant answer portion (stops at commas, periods, or after 50 characters - whichever comes first).
 
 **Markers**: All 40 questions ([Q1] through [Q40] in source, auto-converted to passage-q1 through passage-q40)
 
@@ -255,7 +260,7 @@ Both **Test 02** and **Test 07** are complete implementations:
 
 **Test 07**:
 - Uses automatic `[Q#]` markers in the passage content
-- System auto-converts to proper HTML: `<span id="passage-q#">...</span><span class="reading-answer-marker">text</span>`
+- System auto-converts to proper HTML: `<span id="passage-q#"></span><span class="reading-answer-marker">text</span>`
 - Faster to create, smart boundary detection
 - Good for straightforward answer locations
 
