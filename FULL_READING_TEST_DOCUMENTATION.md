@@ -89,7 +89,14 @@ This automatically converts to:
 <span id="passage-q1" data-question="1"></span><span class="reading-answer-marker">Most people have heard of the Olympics</span>, a sporting event held every four years...
 ```
 
-The system uses smart boundary detection to stop highlighting at the first comma (", a sporting event"). Other boundaries include: semicolons, periods followed by capital letters, newlines, or a maximum of 50 characters.
+The system uses smart boundary detection to stop highlighting at the first comma (", a sporting event"). Other boundaries include:
+- Commas (`,`)
+- Semicolons (`;`)
+- Period followed by space and capital letter (`. A`) - indicates sentence boundary
+- Newlines (`\n`)
+- Maximum of 50 characters
+
+Example: `[Q1]Most people have heard` stops at first boundary or 50 chars.
 
 **Markers**: All 40 questions ([Q1] through [Q40] in source, auto-converted to passage-q1 through passage-q40)
 
@@ -108,6 +115,8 @@ The "Show me the section of the reading passage" button functionality is fully i
 6. Switches to the correct reading passage tab if needed
 
 ### ✅ Proper Layout Settings
+
+**Both Test 02 and Test 07 use the same settings:**
 
 ```json
 {
@@ -240,14 +249,17 @@ jq -r '.reading_texts[].content' 'main/Academic Read Test JSONs/Academic-IELTS-R
 # Output: passage-q1 through passage-q40
 ```
 
-## Other Complete Tests
+## Other Tests Status (For Reference)
 
-### Tests with 40 Questions:
-- **Test 02**: ✅ 40 questions, ✅ 40 markers (manual HTML), ✅ Full feedback ⭐ RECOMMENDED
-- **Test 07**: ✅ 40 questions, ✅ 40 markers (automatic [Q#]), ✅ Full feedback ⭐ RECOMMENDED
-- **Test 12**: ✅ 40 questions, ⚠️ 37 markers, ✅ Full feedback (3 markers missing)
-- **Test 13**: ✅ 40 questions, ✅ 40 markers, ⚠️ 14 missing feedback (needs feedback)
-- **Test 15**: ✅ 40 questions, ⚠️ 29 markers, ✅ Full feedback (11 markers missing)
+### Tests with 40 Questions but Incomplete:
+- **Test 12**: `Academic-IELTS-Reading-Test-12.json`
+  - ✅ 40 questions, ⚠️ 37 markers, ✅ Full feedback (3 markers missing)
+  
+- **Test 13**: `Academic-IELTS-Reading-Test-13.json`
+  - ✅ 40 questions, ✅ 40 markers, ⚠️ 14 missing feedback (needs feedback)
+  
+- **Test 15**: `Academic-IELTS-Reading-Test-15.json`
+  - ✅ 40 questions, ⚠️ 29 markers, ✅ Full feedback (11 markers missing)
 
 ### Two Fully Complete Tests Available
 
