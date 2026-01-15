@@ -7,7 +7,7 @@
             "instructions": "Choose the most suitable headings for sections A–F from the list.\r\n\r\nParagraph A",
             "question": "Paragraph A",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is 'iv. History of prosthetics'. Paragraph A discusses the historical development of artificial limbs from ancient times.",
+            "no_answer_feedback": "Please select an answer. The correct answer is 'IV. History of prosthetics'. Paragraph A discusses the historical development of artificial limbs from ancient times.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -17,52 +17,52 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. The leading authority",
+                    "text": "I. The leading authority",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ii. Financial concerns",
+                    "text": "II. Financial concerns",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iii. Surgical implantation",
+                    "text": "III. Surgical implantation",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iv. History of prosthetics",
+                    "text": "IV. History of prosthetics",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph A traces the development of prosthetics from ancient civilizations to modern technology."
                 },
                 {
-                    "text": "v. Commonplace miracles",
+                    "text": "V. Commonplace miracles",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vi. Other applications",
+                    "text": "VI. Other applications",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vii. A perfect solution",
+                    "text": "VII. A perfect solution",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "viii. Improving realism",
+                    "text": "VIII. Improving realism",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ix. A second chance",
+                    "text": "IX. A second chance",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 }
             ],
-            "options": "i. The leading authority\nii. Financial concerns\niii. Surgical implantation\niv. History of prosthetics\nv. Commonplace miracles\nvi. Other applications\nvii. A perfect solution\nviii. Improving realism\nix. A second chance",
+            "options": "I. The leading authority\nII. Financial concerns\nIII. Surgical implantation\nIV. History of prosthetics\nV. Commonplace miracles\nVI. Other applications\nVII. A perfect solution\nVIII. Improving realism\nIX. A second chance",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -71,7 +71,7 @@
             "instructions": "",
             "question": "Paragraph B",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is 'ix. A second chance'. Paragraph B describes how prosthetics give amputees the opportunity to regain their mobility.",
+            "no_answer_feedback": "Please select an answer. The correct answer is 'IX. A second chance'. Paragraph B describes how prosthetics give amputees the opportunity to regain their mobility.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -81,52 +81,52 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. The leading authority",
+                    "text": "I. The leading authority",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ii. Financial concerns",
+                    "text": "II. Financial concerns",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iii. Surgical implantation",
+                    "text": "III. Surgical implantation",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iv. History of prosthetics",
+                    "text": "IV. History of prosthetics",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "v. Commonplace miracles",
+                    "text": "V. Commonplace miracles",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vi. Other applications",
+                    "text": "VI. Other applications",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vii. A perfect solution",
+                    "text": "VII. A perfect solution",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "viii. Improving realism",
+                    "text": "VIII. Improving realism",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ix. A second chance",
+                    "text": "IX. A second chance",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph B describes how prosthetics give people like Mr Baird a second chance at normal life."
                 }
             ],
-            "options": "i. The leading authority\nii. Financial concerns\niii. Surgical implantation\niv. History of prosthetics\nv. Commonplace miracles\nvi. Other applications\nvii. A perfect solution\nviii. Improving realism\nix. A second chance",
+            "options": "I. The leading authority\nII. Financial concerns\nIII. Surgical implantation\nIV. History of prosthetics\nV. Commonplace miracles\nVI. Other applications\nVII. A perfect solution\nVIII. Improving realism\nIX. A second chance",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -135,7 +135,7 @@
             "instructions": "",
             "question": "Paragraph C",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is 'viii. Improving realism'. Paragraph C discusses advances in making prosthetic limbs more life-like.",
+            "no_answer_feedback": "Please select an answer. The correct answer is 'VIII. Improving realism'. Paragraph C discusses advances in making prosthetic limbs more life-like.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -145,52 +145,52 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. The leading authority",
+                    "text": "I. The leading authority",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ii. Financial concerns",
+                    "text": "II. Financial concerns",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iii. Surgical implantation",
+                    "text": "III. Surgical implantation",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iv. History of prosthetics",
+                    "text": "IV. History of prosthetics",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "v. Commonplace miracles",
+                    "text": "V. Commonplace miracles",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vi. Other applications",
+                    "text": "VI. Other applications",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vii. A perfect solution",
+                    "text": "VII. A perfect solution",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "viii. Improving realism",
+                    "text": "VIII. Improving realism",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph C discusses how advances in technology are making prosthetics more realistic."
                 },
                 {
-                    "text": "ix. A second chance",
+                    "text": "IX. A second chance",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 }
             ],
-            "options": "i. The leading authority\nii. Financial concerns\niii. Surgical implantation\niv. History of prosthetics\nv. Commonplace miracles\nvi. Other applications\nvii. A perfect solution\nviii. Improving realism\nix. A second chance",
+            "options": "I. The leading authority\nII. Financial concerns\nIII. Surgical implantation\nIV. History of prosthetics\nV. Commonplace miracles\nVI. Other applications\nVII. A perfect solution\nVIII. Improving realism\nIX. A second chance",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -199,7 +199,7 @@
             "instructions": "",
             "question": "Paragraph D",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is 'iii. Surgical implantation'. Paragraph D describes the surgical process of attaching bionic limbs.",
+            "no_answer_feedback": "Please select an answer. The correct answer is 'III. Surgical implantation'. Paragraph D describes the surgical process of attaching bionic limbs.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -209,52 +209,52 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. The leading authority",
+                    "text": "I. The leading authority",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ii. Financial concerns",
+                    "text": "II. Financial concerns",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iii. Surgical implantation",
+                    "text": "III. Surgical implantation",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph D describes the surgical process of connecting bionic limbs to nerves, muscles and bone structure."
                 },
                 {
-                    "text": "iv. History of prosthetics",
+                    "text": "IV. History of prosthetics",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "v. Commonplace miracles",
+                    "text": "V. Commonplace miracles",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vi. Other applications",
+                    "text": "VI. Other applications",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vii. A perfect solution",
+                    "text": "VII. A perfect solution",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "viii. Improving realism",
+                    "text": "VIII. Improving realism",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ix. A second chance",
+                    "text": "IX. A second chance",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 }
             ],
-            "options": "i. The leading authority\nii. Financial concerns\niii. Surgical implantation\niv. History of prosthetics\nv. Commonplace miracles\nvi. Other applications\nvii. A perfect solution\nviii. Improving realism\nix. A second chance",
+            "options": "I. The leading authority\nII. Financial concerns\nIII. Surgical implantation\nIV. History of prosthetics\nV. Commonplace miracles\nVI. Other applications\nVII. A perfect solution\nVIII. Improving realism\nIX. A second chance",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -263,7 +263,7 @@
             "instructions": "",
             "question": "Paragraph E",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is 'ii. Financial concerns'. Paragraph E discusses the cost barriers to accessing bionic limbs.",
+            "no_answer_feedback": "Please select an answer. The correct answer is 'II. Financial concerns'. Paragraph E discusses the cost barriers to accessing bionic limbs.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -273,52 +273,52 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. The leading authority",
+                    "text": "I. The leading authority",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ii. Financial concerns",
+                    "text": "II. Financial concerns",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph E discusses how cost is the main obstacle preventing widespread adoption of bionic limbs."
                 },
                 {
-                    "text": "iii. Surgical implantation",
+                    "text": "III. Surgical implantation",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iv. History of prosthetics",
+                    "text": "IV. History of prosthetics",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "v. Commonplace miracles",
+                    "text": "V. Commonplace miracles",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vi. Other applications",
+                    "text": "VI. Other applications",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vii. A perfect solution",
+                    "text": "VII. A perfect solution",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "viii. Improving realism",
+                    "text": "VIII. Improving realism",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ix. A second chance",
+                    "text": "IX. A second chance",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 }
             ],
-            "options": "i. The leading authority\nii. Financial concerns\niii. Surgical implantation\niv. History of prosthetics\nv. Commonplace miracles\nvi. Other applications\nvii. A perfect solution\nviii. Improving realism\nix. A second chance",
+            "options": "I. The leading authority\nII. Financial concerns\nIII. Surgical implantation\nIV. History of prosthetics\nV. Commonplace miracles\nVI. Other applications\nVII. A perfect solution\nVIII. Improving realism\nIX. A second chance",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -327,7 +327,7 @@
             "instructions": "",
             "question": "Paragraph F",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is 'vi. Other applications'. Paragraph F discusses how bionic technology is being applied to other organs and body parts.",
+            "no_answer_feedback": "Please select an answer. The correct answer is 'VI. Other applications'. Paragraph F discusses how bionic technology is being applied to other organs and body parts.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -337,52 +337,52 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. The leading authority",
+                    "text": "I. The leading authority",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ii. Financial concerns",
+                    "text": "II. Financial concerns",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iii. Surgical implantation",
+                    "text": "III. Surgical implantation",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iv. History of prosthetics",
+                    "text": "IV. History of prosthetics",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "v. Commonplace miracles",
+                    "text": "V. Commonplace miracles",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vi. Other applications",
+                    "text": "VI. Other applications",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph F discusses how bionic technology is being used for hearts, eyes, ears and other organs."
                 },
                 {
-                    "text": "vii. A perfect solution",
+                    "text": "VII. A perfect solution",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "viii. Improving realism",
+                    "text": "VIII. Improving realism",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ix. A second chance",
+                    "text": "IX. A second chance",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 }
             ],
-            "options": "i. The leading authority\nii. Financial concerns\niii. Surgical implantation\niv. History of prosthetics\nv. Commonplace miracles\nvi. Other applications\nvii. A perfect solution\nviii. Improving realism\nix. A second chance",
+            "options": "I. The leading authority\nII. Financial concerns\nIII. Surgical implantation\nIV. History of prosthetics\nV. Commonplace miracles\nVI. Other applications\nVII. A perfect solution\nVIII. Improving realism\nIX. A second chance",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1103,7 +1103,7 @@
             "instructions": "Choose the appropriate heading for each paragraph of the following text from the list below.\r\n\r\nList of headings\r\n\r\nParagraph A",
             "question": "Paragraph A",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is 'i. Time for a change?'. Paragraph A asks questions about wanting change and suggests working from home.",
+            "no_answer_feedback": "Please select an answer. The correct answer is 'I. Time for a change?'. Paragraph A asks questions about wanting change and suggests working from home.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1113,57 +1113,57 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Time for a change?",
+                    "text": "I. Time for a change?",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph A asks questions about wanting change and suggests making a career change to work from home."
                 },
                 {
-                    "text": "ii. Social impact",
+                    "text": "II. Social impact",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iii. Management decisions",
+                    "text": "III. Management decisions",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iv. Flexibility of technology",
+                    "text": "IV. Flexibility of technology",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "v. Wasted time on the road",
+                    "text": "V. Wasted time on the road",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vi. Technology keeping us at home",
+                    "text": "VI. Technology keeping us at home",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vii. Benefits for all",
+                    "text": "VII. Benefits for all",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "viii. Business in the workplace",
+                    "text": "VIII. Business in the workplace",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ix. Keeping it clean",
+                    "text": "IX. Keeping it clean",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "x. The best of both worlds",
+                    "text": "X. The best of both worlds",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 }
             ],
-            "options": "i. Time for a change?\nii. Social impact\niii. Management decisions\niv. Flexibility of technology\nv. Wasted time on the road\nvi. Technology keeping us at home\nvii. Benefits for all\nviii. Business in the workplace\nix. Keeping it clean\nx. The best of both worlds",
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1172,7 +1172,7 @@
             "instructions": "",
             "question": "Paragraph B",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is 'iv. Flexibility of technology'. Paragraph B discusses how technology enables working from home.",
+            "no_answer_feedback": "Please select an answer. The correct answer is 'IV. Flexibility of technology'. Paragraph B discusses how technology enables working from home.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1182,57 +1182,57 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Time for a change?",
+                    "text": "I. Time for a change?",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ii. Social impact",
+                    "text": "II. Social impact",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iii. Management decisions",
+                    "text": "III. Management decisions",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iv. Flexibility of technology",
+                    "text": "IV. Flexibility of technology",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph B discusses how technology enables flexible work arrangements and communication from any location."
                 },
                 {
-                    "text": "v. Wasted time on the road",
+                    "text": "V. Wasted time on the road",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vi. Technology keeping us at home",
+                    "text": "VI. Technology keeping us at home",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vii. Benefits for all",
+                    "text": "VII. Benefits for all",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "viii. Business in the workplace",
+                    "text": "VIII. Business in the workplace",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ix. Keeping it clean",
+                    "text": "IX. Keeping it clean",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "x. The best of both worlds",
+                    "text": "X. The best of both worlds",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 }
             ],
-            "options": "i. Time for a change?\nii. Social impact\niii. Management decisions\niv. Flexibility of technology\nv. Wasted time on the road\nvi. Technology keeping us at home\nvii. Benefits for all\nviii. Business in the workplace\nix. Keeping it clean\nx. The best of both worlds",
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1241,7 +1241,7 @@
             "instructions": "",
             "question": "Paragraph C",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is 'vii. Benefits for all'. Paragraph C discusses benefits for both companies and employees.",
+            "no_answer_feedback": "Please select an answer. The correct answer is 'VII. Benefits for all'. Paragraph C discusses benefits for both companies and employees.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1251,57 +1251,57 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Time for a change?",
+                    "text": "I. Time for a change?",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ii. Social impact",
+                    "text": "II. Social impact",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iii. Management decisions",
+                    "text": "III. Management decisions",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iv. Flexibility of technology",
+                    "text": "IV. Flexibility of technology",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "v. Wasted time on the road",
+                    "text": "V. Wasted time on the road",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vi. Technology keeping us at home",
+                    "text": "VI. Technology keeping us at home",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vii. Benefits for all",
+                    "text": "VII. Benefits for all",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph C discusses the benefits for both companies (reduced costs) and employees (flexibility, time with family)."
                 },
                 {
-                    "text": "viii. Business in the workplace",
+                    "text": "VIII. Business in the workplace",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ix. Keeping it clean",
+                    "text": "IX. Keeping it clean",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "x. The best of both worlds",
+                    "text": "X. The best of both worlds",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 }
             ],
-            "options": "i. Time for a change?\nii. Social impact\niii. Management decisions\niv. Flexibility of technology\nv. Wasted time on the road\nvi. Technology keeping us at home\nvii. Benefits for all\nviii. Business in the workplace\nix. Keeping it clean\nx. The best of both worlds",
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1310,7 +1310,7 @@
             "instructions": "",
             "question": "Paragraph D",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is 'ix. Keeping it clean'. Paragraph D discusses environmental benefits and pollution reduction.",
+            "no_answer_feedback": "Please select an answer. The correct answer is 'IX. Keeping it clean'. Paragraph D discusses environmental benefits and pollution reduction.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1320,57 +1320,57 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Time for a change?",
+                    "text": "I. Time for a change?",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ii. Social impact",
+                    "text": "II. Social impact",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iii. Management decisions",
+                    "text": "III. Management decisions",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iv. Flexibility of technology",
+                    "text": "IV. Flexibility of technology",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "v. Wasted time on the road",
+                    "text": "V. Wasted time on the road",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vi. Technology keeping us at home",
+                    "text": "VI. Technology keeping us at home",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vii. Benefits for all",
+                    "text": "VII. Benefits for all",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "viii. Business in the workplace",
+                    "text": "VIII. Business in the workplace",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ix. Keeping it clean",
+                    "text": "IX. Keeping it clean",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph D discusses environmental benefits of working from home, including reduced pollution and CO2 levels."
                 },
                 {
-                    "text": "x. The best of both worlds",
+                    "text": "X. The best of both worlds",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 }
             ],
-            "options": "i. Time for a change?\nii. Social impact\niii. Management decisions\niv. Flexibility of technology\nv. Wasted time on the road\nvi. Technology keeping us at home\nvii. Benefits for all\nviii. Business in the workplace\nix. Keeping it clean\nx. The best of both worlds",
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1379,7 +1379,7 @@
             "instructions": "",
             "question": "Paragraph E",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is 'ii. Social impact'. Paragraph E discusses workplace relationships and social interactions.",
+            "no_answer_feedback": "Please select an answer. The correct answer is 'II. Social impact'. Paragraph E discusses workplace relationships and social interactions.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1389,57 +1389,57 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Time for a change?",
+                    "text": "I. Time for a change?",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ii. Social impact",
+                    "text": "II. Social impact",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph E discusses the social aspects of work, relationships with colleagues, and the psychological impact of isolation."
                 },
                 {
-                    "text": "iii. Management decisions",
+                    "text": "III. Management decisions",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iv. Flexibility of technology",
+                    "text": "IV. Flexibility of technology",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "v. Wasted time on the road",
+                    "text": "V. Wasted time on the road",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vi. Technology keeping us at home",
+                    "text": "VI. Technology keeping us at home",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vii. Benefits for all",
+                    "text": "VII. Benefits for all",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "viii. Business in the workplace",
+                    "text": "VIII. Business in the workplace",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ix. Keeping it clean",
+                    "text": "IX. Keeping it clean",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "x. The best of both worlds",
+                    "text": "X. The best of both worlds",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 }
             ],
-            "options": "i. Time for a change?\nii. Social impact\niii. Management decisions\niv. Flexibility of technology\nv. Wasted time on the road\nvi. Technology keeping us at home\nvii. Benefits for all\nviii. Business in the workplace\nix. Keeping it clean\nx. The best of both worlds",
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1448,7 +1448,7 @@
             "instructions": "",
             "question": "Paragraph F",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is 'x. The best of both worlds'. Paragraph F suggests combining home-based work with regular meetings.",
+            "no_answer_feedback": "Please select an answer. The correct answer is 'X. The best of both worlds'. Paragraph F suggests combining home-based work with regular meetings.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1458,57 +1458,57 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Time for a change?",
+                    "text": "I. Time for a change?",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ii. Social impact",
+                    "text": "II. Social impact",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iii. Management decisions",
+                    "text": "III. Management decisions",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "iv. Flexibility of technology",
+                    "text": "IV. Flexibility of technology",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "v. Wasted time on the road",
+                    "text": "V. Wasted time on the road",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vi. Technology keeping us at home",
+                    "text": "VI. Technology keeping us at home",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "vii. Benefits for all",
+                    "text": "VII. Benefits for all",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "viii. Business in the workplace",
+                    "text": "VIII. Business in the workplace",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "ix. Keeping it clean",
+                    "text": "IX. Keeping it clean",
                     "is_correct": false,
                     "feedback": "Incorrect. This heading better describes a different paragraph."
                 },
                 {
-                    "text": "x. The best of both worlds",
+                    "text": "X. The best of both worlds",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph F suggests that a balance combining home-based work with regular office meetings is the best solution."
                 }
             ],
-            "options": "i. Time for a change?\nii. Social impact\niii. Management decisions\niv. Flexibility of technology\nv. Wasted time on the road\nvi. Technology keeping us at home\nvii. Benefits for all\nviii. Business in the workplace\nix. Keeping it clean\nx. The best of both worlds",
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
             "correct_answer_count": 1,
             "show_option_letters": false
         }
@@ -1542,5 +1542,6 @@
         "exported_by": "impact",
         "plugin_version": "11.27",
         "format_version": "1.0"
-    }
+    },
+    "version": "1.1"
 }
