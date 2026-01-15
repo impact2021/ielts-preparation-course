@@ -17,7 +17,17 @@ All 40 questions include complete feedback:
 - **Incorrect Feedback**: Shown when the answer is wrong  
 - **No Answer Feedback**: Shows the correct answer when no answer is provided
 
-**Verification**: `jq '[.questions[] | select(.no_answer_feedback == null or .no_answer_feedback == "")] | length'` returns `0` (all questions have feedback)
+**Verification for Test 02**: 
+```bash
+jq '[.questions[] | select(.no_answer_feedback == null or .no_answer_feedback == "")] | length' 'main/Academic Read Test JSONs/Academic-IELTS-Reading-Test-02.json'
+# Returns: 0 (all questions have feedback)
+```
+
+**Verification for Test 07**:
+```bash
+jq '[.questions[] | select(.no_answer_feedback == null or .no_answer_feedback == "")] | length' 'main/Academic Read Test JSONs/Academic-IELTS-Reading-Test-07.json'
+# Returns: 0 (all questions have feedback)
+```
 
 ### ✅ 3 Reading Passages
 
