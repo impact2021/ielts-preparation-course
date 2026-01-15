@@ -23,6 +23,8 @@ All 40 questions include complete feedback:
 
 The test contains three reading passages distributed as:
 
+#### Test 02 Passages:
+
 1. **Reading Passage 1** (Questions 1-13)
    - Title: "Base Erosion and Profit Shifting – does the corporate world avoid paying its fair share of tax?"
    - 13 questions covering TRUE/FALSE/NOT GIVEN, sentence completion, and matching
@@ -33,20 +35,60 @@ The test contains three reading passages distributed as:
 3. **Reading Passage 3** (Questions 27-40)
    - 14 questions
 
+#### Test 07 Passages:
+
+1. **Reading Passage 1** (Questions 1-11)
+   - Title: "The Olympics"
+   - 11 questions covering matching headings, TRUE/FALSE/NOT GIVEN, and sentence completion
+
+2. **Reading Passage 2** (Questions 12-25)
+   - 14 questions
+
+3. **Reading Passage 3** (Questions 26-40)
+   - 15 questions
+
 ### ✅ Complete Reading Passage Markers
 
-All 40 questions have corresponding passage markers for the "Show me the section of the reading passage" button functionality:
+All 40 questions have corresponding passage markers for the "Show me the section of the reading passage" button functionality.
 
-- **Passage 1 Markers**: passage-q1, passage-q2, passage-q3, passage-q4, passage-q5, passage-q6, passage-q7, passage-q8, passage-q9, passage-q10, passage-q11, passage-q12, passage-q13
-- **Passage 2 Markers**: passage-q14 through passage-q26
-- **Passage 3 Markers**: passage-q27 through passage-q40
+#### Test 02 - Manual HTML Markers
+Test 02 uses manual HTML markers for precise control:
 
-**Format Used**: 
+**Format**: 
 ```html
 <span id="passage-q#" data-question="#"></span><span class="reading-answer-marker">highlighted text</span>
 ```
 
-This follows the standard from `READING_PASSAGE_MARKER_GUIDE.md`.
+**Example from Test 02**:
+```html
+<span id="passage-q1" data-question="1"></span><span class="reading-answer-marker">statistics in New Zealand show that a list of 20 of the top multi-national earners in New Zealand reported an average profit of just 1.3 per cent for New Zealand-generated revenue</span>
+```
+
+**Markers**: passage-q1 through passage-q40 (all manually coded in HTML)
+
+#### Test 07 - Automatic [Q#] Markers
+Test 07 uses automatic markers that the system converts:
+
+**Format in JSON**:
+```
+[Q#]answer text here
+```
+
+**Auto-converts to**:
+```html
+<span id="passage-q#" data-question="#"></span><span class="reading-answer-marker">answer text</span>
+```
+
+**Example from Test 07**:
+```
+[Q1]Most people have heard of the Olympics, a sporting event held every four years...
+```
+
+This automatically converts to proper HTML with `passage-q1` ID and highlights "Most people have heard of the Olympics, a sporting event held every four years" (up to the first natural boundary).
+
+**Markers**: All 40 questions ([Q1] through [Q40] in source, auto-converted to passage-q1 through passage-q40)
+
+**Both formats** follow the standard from `READING_PASSAGE_MARKER_GUIDE.md` and work identically for students.
 
 ### ✅ Button Functionality
 
@@ -196,14 +238,29 @@ jq -r '.reading_texts[].content' main/Academic\ Read\ Test\ JSONs/Academic-IELTS
 ## Other Complete Tests
 
 ### Tests with 40 Questions:
-- **Test 02**: ✅ 40 questions, ✅ 40 markers, ✅ Full feedback (RECOMMENDED)
-- **Test 07**: ✅ 40 questions, ❌ 0 markers, ✅ Full feedback (needs markers added)
-- **Test 12**: ✅ 40 questions, ✅ 37 markers, ✅ Full feedback (3 markers missing)
-- **Test 13**: ✅ 40 questions, ✅ 40 markers, ❌ 14 missing feedback (needs feedback)
-- **Test 15**: ✅ 40 questions, ✅ 29 markers, ✅ Full feedback (11 markers missing)
+- **Test 02**: ✅ 40 questions, ✅ 40 markers (manual HTML), ✅ Full feedback ⭐ RECOMMENDED
+- **Test 07**: ✅ 40 questions, ✅ 40 markers (automatic [Q#]), ✅ Full feedback ⭐ RECOMMENDED
+- **Test 12**: ✅ 40 questions, ⚠️ 37 markers, ✅ Full feedback (3 markers missing)
+- **Test 13**: ✅ 40 questions, ✅ 40 markers, ⚠️ 14 missing feedback (needs feedback)
+- **Test 15**: ✅ 40 questions, ⚠️ 29 markers, ✅ Full feedback (11 markers missing)
+
+### Two Fully Complete Tests Available
+
+Both **Test 02** and **Test 07** are complete implementations:
+
+**Test 02**:
+- Uses manual HTML markers: `<span id="passage-q#"></span><span class="reading-answer-marker">text</span>`
+- More precise control over highlighted text
+- Good for complex answer locations
+
+**Test 07**:
+- Uses automatic `[Q#]` markers in the passage content
+- System auto-converts to proper HTML: `<span id="passage-q#">...</span><span class="reading-answer-marker">text</span>`
+- Faster to create, smart boundary detection
+- Good for straightforward answer locations
 
 ### Recommendation
-**Use Test 02** as it is the only test with all components complete:
+**Use either Test 02 or Test 07** - both have all components complete:
 - 40 questions
 - 40 passage markers
 - Full feedback for all questions
@@ -217,9 +274,21 @@ jq -r '.reading_texts[].content' main/Academic\ Read\ Test\ JSONs/Academic-IELTS
 
 ## Summary
 
-✅ **Academic IELTS Reading Test 02 is complete and ready to use.**
+✅ **Two complete 40-question IELTS reading tests are available:**
 
-It provides:
+### Test 02 - Manual HTML Markers
+- **File**: `main/Academic Read Test JSONs/Academic-IELTS-Reading-Test-02.json`
+- **Marker Style**: Manual HTML `<span id="passage-q#"></span><span class="reading-answer-marker">text</span>`
+- **Best For**: Precise control over highlighted text, complex passages
+- **Topic**: "Base Erosion and Profit Shifting" (taxation)
+
+### Test 07 - Automatic [Q#] Markers  
+- **File**: `main/Academic Read Test JSONs/Academic-IELTS-Reading-Test-07.json`
+- **Marker Style**: Automatic `[Q#]` converted to HTML by system
+- **Best For**: Quick creation, standard answer locations
+- **Topic**: "The Olympics" (sports history)
+
+Both provide:
 - A full 40-question IELTS reading test
 - 3 authentic reading passages
 - Complete feedback for every question
