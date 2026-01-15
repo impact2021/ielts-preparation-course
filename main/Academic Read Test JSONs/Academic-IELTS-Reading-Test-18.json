@@ -1,0 +1,1766 @@
+{
+    "title": "Academic IELTS Reading Test 18",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 1\n\nYou should spend about 20 minutes on Questions 1-13 which are based on Reading Passage 1.\n\nQuestions 1-6\n\nDo the following statements agree with the information given in Reading Passage 1?\n\nWrite TRUE, FALSE or NOT GIVEN.",
+            "question": "1. Machine learning algorithms require explicit programming for every task they perform.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. The passage states that machine learning algorithms can learn from data without being explicitly programmed for each task.",
+            "correct_feedback": "Correct! The passage clearly states that machine learning differs from traditional programming because it can learn from data without explicit programming for each task.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Machine learning algorithms learn from patterns in data rather than requiring explicit programming for every task.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Machine learning algorithms learn from patterns in data rather than requiring explicit programming for every task."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage clearly states that machine learning differs from traditional programming because it can learn from data without explicit programming for each task."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Machine learning algorithms learn from patterns in data rather than requiring explicit programming for every task."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "2. The primary goal of machine learning is to enable computers to learn without human help.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. The passage explicitly states that 'the primary aim is to allow computers to learn automatically without human intervention or assistance.'",
+            "correct_feedback": "Correct! The passage clearly states that the primary aim is to allow computers to learn automatically without human intervention.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. The passage specifically mentions that machine learning aims for computers to learn without human intervention.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage clearly states that the primary aim is to allow computers to learn automatically without human intervention."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage specifically mentions that machine learning aims for computers to learn without human intervention."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage specifically mentions that machine learning aims for computers to learn without human intervention."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "3. Clustering is mentioned as an example of supervised learning.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. The passage states that clustering is a type of unsupervised learning problem, not supervised learning.",
+            "correct_feedback": "Correct! The passage identifies clustering as a type of unsupervised learning, not supervised learning.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Clustering is described in the passage as part of unsupervised learning, not supervised learning.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Clustering is described in the passage as part of unsupervised learning, not supervised learning."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage identifies clustering as a type of unsupervised learning, not supervised learning."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Clustering is described in the passage as part of unsupervised learning, not supervised learning."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "4. Financial institutions use machine learning to detect fraudulent transactions as they occur.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. The passage mentions that financial institutions employ ML 'for fraud detection systems that can identify suspicious transactions in real-time.'",
+            "correct_feedback": "Correct! The passage states that financial institutions use machine learning for fraud detection that identifies suspicious transactions in real-time.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. The passage specifically mentions real-time fraud detection systems in financial institutions.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that financial institutions use machine learning for fraud detection that identifies suspicious transactions in real-time."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage specifically mentions real-time fraud detection systems in financial institutions."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage specifically mentions real-time fraud detection systems in financial institutions."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "5. Machine learning systems need large amounts of personal data to work properly.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. The passage states that 'ML systems require vast amounts of personal data to function effectively,' which has raised privacy concerns.",
+            "correct_feedback": "Correct! The passage explicitly mentions that ML systems require vast amounts of personal data to function effectively.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. The passage clearly states that ML systems require vast amounts of personal data.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage explicitly mentions that ML systems require vast amounts of personal data to function effectively."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage clearly states that ML systems require vast amounts of personal data."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage clearly states that ML systems require vast amounts of personal data."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "6. Scientists are working on AI systems that can explain their decision-making processes.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. The passage mentions that 'researchers are developing explainable AI systems that can provide human-understandable explanations for their decisions.'",
+            "correct_feedback": "Correct! The passage states that researchers are developing explainable AI systems to address the 'black box' problem.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. The passage specifically mentions researchers developing explainable AI systems.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that researchers are developing explainable AI systems to address the 'black box' problem."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage specifically mentions researchers developing explainable AI systems."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage specifically mentions researchers developing explainable AI systems."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 7-13\n\nComplete each sentence with the correct option A-E.",
+            "question": "Machine learning is described as a subset of artificial intelligence focused on...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. The passage states that 'machine learning is a subset of artificial intelligence that focuses on developing systems that can access data and use it to learn for themselves.'",
+            "correct_feedback": "Correct! The passage defines machine learning as focusing on developing systems that can learn for themselves from data.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. Machine learning focuses on developing self-learning systems according to the passage.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A creating robots",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Machine learning focuses on developing self-learning systems according to the passage."
+                },
+                {
+                    "text": "B developing self-learning systems",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage defines machine learning as focusing on developing systems that can learn for themselves from data."
+                },
+                {
+                    "text": "C replacing human workers",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Machine learning focuses on developing self-learning systems according to the passage."
+                },
+                {
+                    "text": "D writing computer code",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Machine learning focuses on developing self-learning systems according to the passage."
+                },
+                {
+                    "text": "E designing hardware",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Machine learning focuses on developing self-learning systems according to the passage."
+                }
+            ],
+            "options": "A creating robots\nB developing self-learning systems\nC replacing human workers\nD writing computer code\nE designing hardware",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Supervised learning requires algorithms to be trained using...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. The passage states that 'supervised learning involves training algorithms on labeled datasets, where the desired output is already known.'",
+            "correct_feedback": "Correct! Supervised learning uses labeled datasets where the desired output is already known.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. Supervised learning requires labeled datasets according to the passage.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A unlabeled datasets",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Supervised learning requires labeled datasets according to the passage."
+                },
+                {
+                    "text": "B labeled datasets",
+                    "is_correct": true,
+                    "feedback": "Correct! Supervised learning uses labeled datasets where the desired output is already known."
+                },
+                {
+                    "text": "C random data",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Supervised learning requires labeled datasets according to the passage."
+                },
+                {
+                    "text": "D human observations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Supervised learning requires labeled datasets according to the passage."
+                },
+                {
+                    "text": "E sensor information",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Supervised learning requires labeled datasets according to the passage."
+                }
+            ],
+            "options": "A unlabeled datasets\nB labeled datasets\nC random data\nD human observations\nE sensor information",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "In healthcare, machine learning algorithms are being used to...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. The passage mentions that 'ML algorithms analyze medical images to detect diseases such as cancer at earlier stages.'",
+            "correct_feedback": "Correct! The passage specifically mentions ML algorithms analyzing medical images to detect diseases.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. The passage describes ML algorithms analyzing medical images in healthcare.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A replace doctors",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage describes ML algorithms analyzing medical images in healthcare."
+                },
+                {
+                    "text": "B analyze medical images",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage specifically mentions ML algorithms analyzing medical images to detect diseases."
+                },
+                {
+                    "text": "C perform surgery",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage describes ML algorithms analyzing medical images in healthcare."
+                },
+                {
+                    "text": "D prescribe medication",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage describes ML algorithms analyzing medical images in healthcare."
+                },
+                {
+                    "text": "E train nurses",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage describes ML algorithms analyzing medical images in healthcare."
+                }
+            ],
+            "options": "A replace doctors\nB analyze medical images\nC perform surgery\nD prescribe medication\nE train nurses",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Algorithmic bias happens when machine learning systems reflect...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. The passage states that 'algorithmic bias occurs when machine learning systems reflect the implicit values of the humans who create or train them.'",
+            "correct_feedback": "Correct! Algorithmic bias reflects the implicit values of humans who create or train the systems.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. The passage explains that algorithmic bias reflects human creators' values.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A computer errors",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage explains that algorithmic bias reflects human creators' values."
+                },
+                {
+                    "text": "B the values of their human creators",
+                    "is_correct": true,
+                    "feedback": "Correct! Algorithmic bias reflects the implicit values of humans who create or train the systems."
+                },
+                {
+                    "text": "C random patterns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage explains that algorithmic bias reflects human creators' values."
+                },
+                {
+                    "text": "D natural laws",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage explains that algorithmic bias reflects human creators' values."
+                },
+                {
+                    "text": "E mathematical principles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage explains that algorithmic bias reflects human creators' values."
+                }
+            ],
+            "options": "A computer errors\nB the values of their human creators\nC random patterns\nD natural laws\nE mathematical principles",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The 'black box' problem refers to the difficulty in...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. The passage describes the 'black box' problem as ML models being so complex that even creators cannot fully explain how they arrive at specific decisions.",
+            "correct_feedback": "Correct! The 'black box' problem involves the inability to explain how ML models reach their decisions.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. The black box problem concerns understanding decision-making processes.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A storing data",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The black box problem concerns understanding decision-making processes."
+                },
+                {
+                    "text": "B understanding how decisions are made",
+                    "is_correct": true,
+                    "feedback": "Correct! The 'black box' problem involves the inability to explain how ML models reach their decisions."
+                },
+                {
+                    "text": "C programming computers",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The black box problem concerns understanding decision-making processes."
+                },
+                {
+                    "text": "D collecting information",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The black box problem concerns understanding decision-making processes."
+                },
+                {
+                    "text": "E testing systems",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The black box problem concerns understanding decision-making processes."
+                }
+            ],
+            "options": "A storing data\nB understanding how decisions are made\nC programming computers\nD collecting information\nE testing systems",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Future developments in AI are expected to be enhanced by integration with...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. The passage states that 'experts predict that the integration of AI with other emerging technologies such as quantum computing and 5G networks will unlock new possibilities.'",
+            "correct_feedback": "Correct! The passage mentions quantum computing and 5G as technologies that will integrate with AI.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. The passage specifically mentions quantum computing as a future integration.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A traditional programming",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage specifically mentions quantum computing as a future integration."
+                },
+                {
+                    "text": "B quantum computing",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions quantum computing and 5G as technologies that will integrate with AI."
+                },
+                {
+                    "text": "C mechanical systems",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage specifically mentions quantum computing as a future integration."
+                },
+                {
+                    "text": "D paper records",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage specifically mentions quantum computing as a future integration."
+                },
+                {
+                    "text": "E analog technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage specifically mentions quantum computing as a future integration."
+                }
+            ],
+            "options": "A traditional programming\nB quantum computing\nC mechanical systems\nD paper records\nE analog technology",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The passage suggests that artificial general intelligence (AGI) is...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. The passage states that AGI 'remains a distant goal, with experts disagreeing on whether and when it might be achieved.'",
+            "correct_feedback": "Correct! The passage describes AGI as a distant goal with uncertain timeline and feasibility.",
+            "incorrect_feedback": "Incorrect. The correct answer is C. AGI is described as a distant goal in the passage.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A already achieved",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. AGI is described as a distant goal in the passage."
+                },
+                {
+                    "text": "B a near-term goal",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. AGI is described as a distant goal in the passage."
+                },
+                {
+                    "text": "C a distant objective",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage describes AGI as a distant goal with uncertain timeline and feasibility."
+                },
+                {
+                    "text": "D impossible to achieve",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. AGI is described as a distant goal in the passage."
+                },
+                {
+                    "text": "E currently being tested",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. AGI is described as a distant goal in the passage."
+                }
+            ],
+            "options": "A already achieved\nB a near-term goal\nC a distant objective\nD impossible to achieve\nE currently being tested",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 2\n\nYou should spend about 20 minutes on Questions 14-27 which are based on Reading Passage 2.\n\nQuestions 14-19\n\nReading Passage 2 has seven paragraphs, A-G.\n\nChoose the correct heading for each paragraph from the list of headings below.",
+            "question": "Paragraph A",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is i. Paragraph A introduces the concept and defines what urban sustainability involves.",
+            "correct_feedback": "Correct! Paragraph A focuses on defining urban sustainability and its three dimensions.",
+            "incorrect_feedback": "Incorrect. Paragraph A primarily defines urban sustainability. Review the opening paragraph.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "i The definition of urban sustainability",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph A focuses on defining urban sustainability and its three dimensions."
+                },
+                {
+                    "text": "ii Transportation innovations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A primarily defines urban sustainability. Review the opening paragraph."
+                },
+                {
+                    "text": "iii Smart technology implementation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A primarily defines urban sustainability. Review the opening paragraph."
+                },
+                {
+                    "text": "iv Social housing programs",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A primarily defines urban sustainability. Review the opening paragraph."
+                },
+                {
+                    "text": "v Environmental pollution statistics",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A primarily defines urban sustainability. Review the opening paragraph."
+                },
+                {
+                    "text": "vi Green building standards",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A primarily defines urban sustainability. Review the opening paragraph."
+                },
+                {
+                    "text": "vii Governance and participation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A primarily defines urban sustainability. Review the opening paragraph."
+                },
+                {
+                    "text": "viii Historical urban development",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A primarily defines urban sustainability. Review the opening paragraph."
+                }
+            ],
+            "options": "i The definition of urban sustainability\nii Transportation innovations\niii Smart technology implementation\niv Social housing programs\nv Environmental pollution statistics\nvi Green building standards\nvii Governance and participation\nviii Historical urban development",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph B",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is v. Paragraph B discusses environmental challenges including carbon emissions, energy consumption, and pollution.",
+            "correct_feedback": "Correct! Paragraph B details the environmental challenges facing modern cities.",
+            "incorrect_feedback": "Incorrect. Paragraph B focuses on environmental challenges. Look for statistics about emissions and pollution.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "i The definition of urban sustainability",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B focuses on environmental challenges. Look for statistics about emissions and pollution."
+                },
+                {
+                    "text": "ii Transportation innovations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B focuses on environmental challenges. Look for statistics about emissions and pollution."
+                },
+                {
+                    "text": "iii Smart technology implementation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B focuses on environmental challenges. Look for statistics about emissions and pollution."
+                },
+                {
+                    "text": "iv Social housing programs",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B focuses on environmental challenges. Look for statistics about emissions and pollution."
+                },
+                {
+                    "text": "v Environmental challenges in cities",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B details the environmental challenges facing modern cities."
+                },
+                {
+                    "text": "vi Green building standards",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B focuses on environmental challenges. Look for statistics about emissions and pollution."
+                },
+                {
+                    "text": "vii Governance and participation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B focuses on environmental challenges. Look for statistics about emissions and pollution."
+                },
+                {
+                    "text": "viii Historical urban development",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B focuses on environmental challenges. Look for statistics about emissions and pollution."
+                }
+            ],
+            "options": "i The definition of urban sustainability\nii Transportation innovations\niii Smart technology implementation\niv Social housing programs\nv Environmental challenges in cities\nvi Green building standards\nvii Governance and participation\nviii Historical urban development",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph C",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is vi. Paragraph C discusses green building practices, LEED certification, and Singapore's urban greening.",
+            "correct_feedback": "Correct! Paragraph C focuses on green building practices and urban greening strategies.",
+            "incorrect_feedback": "Incorrect. Paragraph C describes green buildings and urban greening initiatives like Singapore's program.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "i The definition of urban sustainability",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C describes green buildings and urban greening initiatives like Singapore's program."
+                },
+                {
+                    "text": "ii Transportation innovations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C describes green buildings and urban greening initiatives like Singapore's program."
+                },
+                {
+                    "text": "iii Smart technology implementation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C describes green buildings and urban greening initiatives like Singapore's program."
+                },
+                {
+                    "text": "iv Social housing programs",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C describes green buildings and urban greening initiatives like Singapore's program."
+                },
+                {
+                    "text": "v Environmental challenges in cities",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C describes green buildings and urban greening initiatives like Singapore's program."
+                },
+                {
+                    "text": "vi Green building and urban greening",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C focuses on green building practices and urban greening strategies."
+                },
+                {
+                    "text": "vii Governance and participation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C describes green buildings and urban greening initiatives like Singapore's program."
+                },
+                {
+                    "text": "viii Historical urban development",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C describes green buildings and urban greening initiatives like Singapore's program."
+                }
+            ],
+            "options": "i The definition of urban sustainability\nii Transportation innovations\niii Smart technology implementation\niv Social housing programs\nv Environmental challenges in cities\nvi Green building and urban greening\nvii Governance and participation\nviii Historical urban development",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph D",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is ii. Paragraph D discusses transportation solutions including cycling infrastructure and BRT systems.",
+            "correct_feedback": "Correct! Paragraph D examines sustainable transportation, including Copenhagen's cycling and Curitiba's BRT.",
+            "incorrect_feedback": "Incorrect. Paragraph D focuses on transportation solutions. Look for examples about cycling and public transit.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "i The definition of urban sustainability",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D focuses on transportation solutions. Look for examples about cycling and public transit."
+                },
+                {
+                    "text": "ii Sustainable transportation solutions",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D examines sustainable transportation, including Copenhagen's cycling and Curitiba's BRT."
+                },
+                {
+                    "text": "iii Smart technology implementation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D focuses on transportation solutions. Look for examples about cycling and public transit."
+                },
+                {
+                    "text": "iv Social housing programs",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D focuses on transportation solutions. Look for examples about cycling and public transit."
+                },
+                {
+                    "text": "v Environmental challenges in cities",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D focuses on transportation solutions. Look for examples about cycling and public transit."
+                },
+                {
+                    "text": "vi Green building standards",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D focuses on transportation solutions. Look for examples about cycling and public transit."
+                },
+                {
+                    "text": "vii Governance and participation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D focuses on transportation solutions. Look for examples about cycling and public transit."
+                },
+                {
+                    "text": "viii Historical urban development",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D focuses on transportation solutions. Look for examples about cycling and public transit."
+                }
+            ],
+            "options": "i The definition of urban sustainability\nii Sustainable transportation solutions\niii Smart technology implementation\niv Social housing programs\nv Environmental challenges in cities\nvi Green building standards\nvii Governance and participation\nviii Historical urban development",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph E",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is iii. Paragraph E describes smart city technologies like Barcelona's intelligent systems.",
+            "correct_feedback": "Correct! Paragraph E discusses smart city technologies and their applications.",
+            "incorrect_feedback": "Incorrect. Paragraph E focuses on smart city technologies. Look for Barcelona's example.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "i The definition of urban sustainability",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E focuses on smart city technologies. Look for Barcelona's example."
+                },
+                {
+                    "text": "ii Transportation innovations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E focuses on smart city technologies. Look for Barcelona's example."
+                },
+                {
+                    "text": "iii Smart city technologies",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E discusses smart city technologies and their applications."
+                },
+                {
+                    "text": "iv Social housing programs",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E focuses on smart city technologies. Look for Barcelona's example."
+                },
+                {
+                    "text": "v Environmental challenges in cities",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E focuses on smart city technologies. Look for Barcelona's example."
+                },
+                {
+                    "text": "vi Green building standards",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E focuses on smart city technologies. Look for Barcelona's example."
+                },
+                {
+                    "text": "vii Governance and participation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E focuses on smart city technologies. Look for Barcelona's example."
+                },
+                {
+                    "text": "viii Historical urban development",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E focuses on smart city technologies. Look for Barcelona's example."
+                }
+            ],
+            "options": "i The definition of urban sustainability\nii Transportation innovations\niii Smart city technologies\niv Social housing programs\nv Environmental challenges in cities\nvi Green building standards\nvii Governance and participation\nviii Historical urban development",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph F and G",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is iv. These paragraphs discuss social dimensions including affordable housing, public services, and governance.",
+            "correct_feedback": "Correct! These paragraphs cover social sustainability including housing, equity, and governance.",
+            "incorrect_feedback": "Incorrect. These paragraphs focus on social equity, housing, and governance. Look for Vienna and Porto Alegre examples.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "i The definition of urban sustainability",
+                    "is_correct": false,
+                    "feedback": "Incorrect. These paragraphs focus on social equity, housing, and governance. Look for Vienna and Porto Alegre examples."
+                },
+                {
+                    "text": "ii Transportation innovations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. These paragraphs focus on social equity, housing, and governance. Look for Vienna and Porto Alegre examples."
+                },
+                {
+                    "text": "iii Smart technology implementation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. These paragraphs focus on social equity, housing, and governance. Look for Vienna and Porto Alegre examples."
+                },
+                {
+                    "text": "iv Social equity and governance",
+                    "is_correct": true,
+                    "feedback": "Correct! These paragraphs cover social sustainability including housing, equity, and governance."
+                },
+                {
+                    "text": "v Environmental challenges in cities",
+                    "is_correct": false,
+                    "feedback": "Incorrect. These paragraphs focus on social equity, housing, and governance. Look for Vienna and Porto Alegre examples."
+                },
+                {
+                    "text": "vi Green building standards",
+                    "is_correct": false,
+                    "feedback": "Incorrect. These paragraphs focus on social equity, housing, and governance. Look for Vienna and Porto Alegre examples."
+                },
+                {
+                    "text": "vii Citizen participation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. These paragraphs focus on social equity, housing, and governance. Look for Vienna and Porto Alegre examples."
+                },
+                {
+                    "text": "viii Historical urban development",
+                    "is_correct": false,
+                    "feedback": "Incorrect. These paragraphs focus on social equity, housing, and governance. Look for Vienna and Porto Alegre examples."
+                }
+            ],
+            "options": "i The definition of urban sustainability\nii Transportation innovations\niii Smart technology implementation\niv Social equity and governance\nv Environmental challenges in cities\nvi Green building standards\nvii Citizen participation\nviii Historical urban development",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 20-27\n\nChoose the correct answer A-E.",
+            "question": "20. According to the passage, urban sustainability is primarily concerned with",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. The passage defines urban sustainability as 'creating cities that meet the needs of present residents without compromising the ability of future generations to meet their own needs.'",
+            "correct_feedback": "Correct! Urban sustainability balances present and future needs according to the passage.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. Review the definition of urban sustainability in the passage.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A reducing the global population",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Review the definition of urban sustainability in the passage."
+                },
+                {
+                    "text": "B meeting current needs without harming future generations",
+                    "is_correct": true,
+                    "feedback": "Correct! Urban sustainability balances present and future needs according to the passage."
+                },
+                {
+                    "text": "C building more cities",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Review the definition of urban sustainability in the passage."
+                },
+                {
+                    "text": "D eliminating all carbon emissions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Review the definition of urban sustainability in the passage."
+                },
+                {
+                    "text": "E increasing urban density",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Review the definition of urban sustainability in the passage."
+                }
+            ],
+            "options": "A reducing the global population\nB meeting current needs without harming future generations\nC building more cities\nD eliminating all carbon emissions\nE increasing urban density",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "21. What proportion of global energy is consumed by cities?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. The passage states that 'cities consume two-thirds of the world's energy.'",
+            "correct_feedback": "Correct! Cities consume two-thirds of the world's energy according to the passage.",
+            "incorrect_feedback": "Incorrect. The correct answer is C. The passage specifically mentions two-thirds.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A one-third",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage specifically mentions two-thirds."
+                },
+                {
+                    "text": "B one-half",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage specifically mentions two-thirds."
+                },
+                {
+                    "text": "C two-thirds",
+                    "is_correct": true,
+                    "feedback": "Correct! Cities consume two-thirds of the world's energy according to the passage."
+                },
+                {
+                    "text": "D three-quarters",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage specifically mentions two-thirds."
+                },
+                {
+                    "text": "E all of it",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage specifically mentions two-thirds."
+                }
+            ],
+            "options": "A one-third\nB one-half\nC two-thirds\nD three-quarters\nE all of it",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "22. LEED certification is described as",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. The passage describes LEED as 'a globally recognized standard for green buildings.'",
+            "correct_feedback": "Correct! LEED is presented as a standard for green building certification.",
+            "incorrect_feedback": "Incorrect. The correct answer is C. LEED is described as a standard for green buildings.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A a type of building material",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. LEED is described as a standard for green buildings."
+                },
+                {
+                    "text": "B a construction company",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. LEED is described as a standard for green buildings."
+                },
+                {
+                    "text": "C a green building standard",
+                    "is_correct": true,
+                    "feedback": "Correct! LEED is presented as a standard for green building certification."
+                },
+                {
+                    "text": "D an architectural style",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. LEED is described as a standard for green buildings."
+                },
+                {
+                    "text": "E a government agency",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. LEED is described as a standard for green buildings."
+                }
+            ],
+            "options": "A a type of building material\nB a construction company\nC a green building standard\nD an architectural style\nE a government agency",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "23. Traditional car-centric planning has resulted in",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. The passage states that car-centric planning 'has contributed to traffic congestion, air pollution, and sprawling development patterns.'",
+            "correct_feedback": "Correct! Car-centric planning led to congestion, pollution, and sprawl.",
+            "incorrect_feedback": "Incorrect. The correct answer is C. The passage lists negative consequences of car-centric planning.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A improved air quality",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage lists negative consequences of car-centric planning."
+                },
+                {
+                    "text": "B reduced pollution",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage lists negative consequences of car-centric planning."
+                },
+                {
+                    "text": "C traffic congestion and sprawl",
+                    "is_correct": true,
+                    "feedback": "Correct! Car-centric planning led to congestion, pollution, and sprawl."
+                },
+                {
+                    "text": "D better public health",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage lists negative consequences of car-centric planning."
+                },
+                {
+                    "text": "E lower emissions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage lists negative consequences of car-centric planning."
+                }
+            ],
+            "options": "A improved air quality\nB reduced pollution\nC traffic congestion and sprawl\nD better public health\nE lower emissions",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "24. Smart city technologies primarily function by",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. The passage explains that smart city technologies 'use data collected from sensors, devices, and citizens to manage assets and resources efficiently.'",
+            "correct_feedback": "Correct! Smart city technologies use data to manage resources efficiently.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. Smart cities use data for efficient resource management.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A replacing human workers",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Smart cities use data for efficient resource management."
+                },
+                {
+                    "text": "B using collected data to manage resources",
+                    "is_correct": true,
+                    "feedback": "Correct! Smart city technologies use data to manage resources efficiently."
+                },
+                {
+                    "text": "C eliminating all pollution",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Smart cities use data for efficient resource management."
+                },
+                {
+                    "text": "D increasing energy consumption",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Smart cities use data for efficient resource management."
+                },
+                {
+                    "text": "E reducing city populations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Smart cities use data for efficient resource management."
+                }
+            ],
+            "options": "A replacing human workers\nB using collected data to manage resources\nC eliminating all pollution\nD increasing energy consumption\nE reducing city populations",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "25. What concern does the passage mention about smart city technologies?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. The passage states that smart city technologies 'raise concerns about data privacy and the digital divide.'",
+            "correct_feedback": "Correct! The passage mentions concerns about data privacy and the digital divide.",
+            "incorrect_feedback": "Incorrect. The correct answer is C. Privacy and digital divide are the stated concerns.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A They are too expensive",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. Privacy and digital divide are the stated concerns."
+                },
+                {
+                    "text": "B They don't work properly",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. Privacy and digital divide are the stated concerns."
+                },
+                {
+                    "text": "C Data privacy and digital divide issues",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions concerns about data privacy and the digital divide."
+                },
+                {
+                    "text": "D They consume too much energy",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. Privacy and digital divide are the stated concerns."
+                },
+                {
+                    "text": "E They are difficult to install",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. Privacy and digital divide are the stated concerns."
+                }
+            ],
+            "options": "A They are too expensive\nB They don't work properly\nC Data privacy and digital divide issues\nD They consume too much energy\nE They are difficult to install",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "26. Affordable housing is described as a critical challenge because",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. The passage states that 'rapid urbanization and gentrification have pushed housing costs beyond the reach of many residents.'",
+            "correct_feedback": "Correct! Rapid urbanization and gentrification have made housing unaffordable.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. Urbanization has driven up housing costs.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A there are too many houses",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Urbanization has driven up housing costs."
+                },
+                {
+                    "text": "B urbanization has made housing unaffordable for many",
+                    "is_correct": true,
+                    "feedback": "Correct! Rapid urbanization and gentrification have made housing unaffordable."
+                },
+                {
+                    "text": "C people prefer renting",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Urbanization has driven up housing costs."
+                },
+                {
+                    "text": "D construction costs are falling",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Urbanization has driven up housing costs."
+                },
+                {
+                    "text": "E cities are shrinking",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Urbanization has driven up housing costs."
+                }
+            ],
+            "options": "A there are too many houses\nB urbanization has made housing unaffordable for many\nC people prefer renting\nD construction costs are falling\nE cities are shrinking",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "27. Participatory budgeting allows citizens to",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. The passage describes participatory budgeting as allowing 'citizens to directly influence how public funds are spent in their communities.'",
+            "correct_feedback": "Correct! Participatory budgeting enables citizens to influence spending decisions.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. Citizens influence how public funds are spent.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A vote for mayor",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Citizens influence how public funds are spent."
+                },
+                {
+                    "text": "B influence public spending decisions",
+                    "is_correct": true,
+                    "feedback": "Correct! Participatory budgeting enables citizens to influence spending decisions."
+                },
+                {
+                    "text": "C design buildings",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Citizens influence how public funds are spent."
+                },
+                {
+                    "text": "D create laws",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Citizens influence how public funds are spent."
+                },
+                {
+                    "text": "E elect judges",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Citizens influence how public funds are spent."
+                }
+            ],
+            "options": "A vote for mayor\nB influence public spending decisions\nC design buildings\nD create laws\nE elect judges",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 3\n\nYou should spend about 20 minutes on Questions 28-40 which are based on Reading Passage 3.\n\nQuestions 28-33\n\nDo the following statements agree with the information given in Reading Passage 3?\n\nWrite TRUE, FALSE or NOT GIVEN.",
+            "question": "28. The earliest timekeeping devices were based on observing natural phenomena.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. The passage states that ancient civilizations developed methods 'based on observing natural phenomena such as the movement of celestial bodies.'",
+            "correct_feedback": "Correct! The passage confirms that early timekeeping was based on natural phenomena observations.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Early devices were based on natural phenomena.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage confirms that early timekeeping was based on natural phenomena observations."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Early devices were based on natural phenomena."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Early devices were based on natural phenomena."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "29. Water clocks could function both day and night.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. The passage mentions that water clocks measured time 'regardless of weather or time of day,' overcoming sundial limitations.",
+            "correct_feedback": "Correct! Water clocks worked day and night, unlike sundials.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Water clocks functioned regardless of time of day.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Water clocks worked day and night, unlike sundials."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Water clocks functioned regardless of time of day."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Water clocks functioned regardless of time of day."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "30. Water clocks were completely accurate in all temperature conditions.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. The passage states that 'water flow rates could vary with temperature changes,' indicating they were not accurate in all conditions.",
+            "correct_feedback": "Correct! Water clocks faced accuracy challenges due to temperature variations.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Temperature changes affected water clock accuracy.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Temperature changes affected water clock accuracy."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Water clocks faced accuracy challenges due to temperature variations."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Temperature changes affected water clock accuracy."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "31. The first mechanical clocks were small and portable.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. The passage states that early mechanical clocks 'were large, expensive, and primarily used to regulate prayer times.'",
+            "correct_feedback": "Correct! Early mechanical clocks were large, not small and portable.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. The first mechanical clocks were large.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The first mechanical clocks were large."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Early mechanical clocks were large, not small and portable."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The first mechanical clocks were large."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "32. Accurate timekeeping was essential for determining longitude at sea.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. The passage explains that 'determining longitude at sea required precise timekeeping.'",
+            "correct_feedback": "Correct! Precise timekeeping was necessary for longitude determination.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Longitude calculation required accurate timekeeping.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Precise timekeeping was necessary for longitude determination."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Longitude calculation required accurate timekeeping."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Longitude calculation required accurate timekeeping."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "33. John Harrison's H4 chronometer could keep time to within one second per day.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. The passage states it was 'accurate to within one-fifth of a second per day,' which is more precise than one second.",
+            "correct_feedback": "Correct! The H4 was accurate to one-fifth of a second, not one full second.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. It was accurate to one-fifth of a second.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. It was accurate to one-fifth of a second."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The H4 was accurate to one-fifth of a second, not one full second."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. It was accurate to one-fifth of a second."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 34-40\n\nComplete the summary below.\n\nChoose the correct answer A-E for each gap.",
+            "question": "Ancient civilizations created the first timekeeping devices using observations of...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. The passage mentions 'observing natural phenomena such as the movement of celestial bodies.'",
+            "correct_feedback": "Correct! Early devices were based on observing celestial bodies.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. Ancient people observed celestial bodies.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A mechanical parts",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Ancient people observed celestial bodies."
+                },
+                {
+                    "text": "B celestial bodies",
+                    "is_correct": true,
+                    "feedback": "Correct! Early devices were based on observing celestial bodies."
+                },
+                {
+                    "text": "C water temperature",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Ancient people observed celestial bodies."
+                },
+                {
+                    "text": "D spring mechanisms",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Ancient people observed celestial bodies."
+                },
+                {
+                    "text": "E atomic vibrations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Ancient people observed celestial bodies."
+                }
+            ],
+            "options": "A mechanical parts\nB celestial bodies\nC water temperature\nD spring mechanisms\nE atomic vibrations",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Water clocks measured time through the controlled...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. The passage states water clocks 'measured time by the regulated flow of water from one container to another.'",
+            "correct_feedback": "Correct! Water clocks used the regulated flow of water.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. Water flow was the measuring mechanism.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A rotation of gears",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Water flow was the measuring mechanism."
+                },
+                {
+                    "text": "B flow of liquid",
+                    "is_correct": true,
+                    "feedback": "Correct! Water clocks used the regulated flow of water."
+                },
+                {
+                    "text": "C movement of shadows",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Water flow was the measuring mechanism."
+                },
+                {
+                    "text": "D vibration of crystals",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Water flow was the measuring mechanism."
+                },
+                {
+                    "text": "E oscillation of atoms",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. Water flow was the measuring mechanism."
+                }
+            ],
+            "options": "A rotation of gears\nB flow of liquid\nC movement of shadows\nD vibration of crystals\nE oscillation of atoms",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The first mechanical clocks appeared in European monasteries during the...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D. The passage states 'the first mechanical clocks appeared in European monasteries during the 13th century.'",
+            "correct_feedback": "Correct! Mechanical clocks first appeared in the 13th century.",
+            "incorrect_feedback": "Incorrect. The correct answer is D. The passage specifies the 13th century.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A 10th century",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage specifies the 13th century."
+                },
+                {
+                    "text": "B 11th century",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage specifies the 13th century."
+                },
+                {
+                    "text": "C 12th century",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage specifies the 13th century."
+                },
+                {
+                    "text": "D 13th century",
+                    "is_correct": true,
+                    "feedback": "Correct! Mechanical clocks first appeared in the 13th century."
+                },
+                {
+                    "text": "E 14th century",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage specifies the 13th century."
+                }
+            ],
+            "options": "A 10th century\nB 11th century\nC 12th century\nD 13th century\nE 14th century",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The invention of the mainspring enabled the development of...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. The passage states 'the mainspring allowed for the development of domestic clocks and eventually watches, making personal timekeeping possible.'",
+            "correct_feedback": "Correct! The mainspring enabled portable timepieces like watches.",
+            "incorrect_feedback": "Incorrect. The correct answer is C. Mainsprings allowed portable timepieces.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A water clocks",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. Mainsprings allowed portable timepieces."
+                },
+                {
+                    "text": "B sundials",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. Mainsprings allowed portable timepieces."
+                },
+                {
+                    "text": "C portable timepieces",
+                    "is_correct": true,
+                    "feedback": "Correct! The mainspring enabled portable timepieces like watches."
+                },
+                {
+                    "text": "D atomic clocks",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. Mainsprings allowed portable timepieces."
+                },
+                {
+                    "text": "E quartz watches",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. Mainsprings allowed portable timepieces."
+                }
+            ],
+            "options": "A water clocks\nB sundials\nC portable timepieces\nD atomic clocks\nE quartz watches",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "A four-minute error in time measurement at sea could cause a navigational error of approximately...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. The passage states 'a four-minute error in time measurement could result in a navigational error of one degree longitude, or about 60 nautical miles at the equator.'",
+            "correct_feedback": "Correct! A four-minute error equals about 60 nautical miles.",
+            "incorrect_feedback": "Incorrect. The correct answer is C. The passage specifies 60 nautical miles.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A 10 nautical miles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage specifies 60 nautical miles."
+                },
+                {
+                    "text": "B 30 nautical miles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage specifies 60 nautical miles."
+                },
+                {
+                    "text": "C 60 nautical miles",
+                    "is_correct": true,
+                    "feedback": "Correct! A four-minute error equals about 60 nautical miles."
+                },
+                {
+                    "text": "D 100 nautical miles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage specifies 60 nautical miles."
+                },
+                {
+                    "text": "E 200 nautical miles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage specifies 60 nautical miles."
+                }
+            ],
+            "options": "A 10 nautical miles\nB 30 nautical miles\nC 60 nautical miles\nD 100 nautical miles\nE 200 nautical miles",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The first quartz clock was developed in...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. The passage states 'in 1927, the first quartz clock was developed.'",
+            "correct_feedback": "Correct! The first quartz clock appeared in 1927.",
+            "incorrect_feedback": "Incorrect. The correct answer is C. The passage gives 1927 as the date.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A 1714",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage gives 1927 as the date."
+                },
+                {
+                    "text": "B 1761",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage gives 1927 as the date."
+                },
+                {
+                    "text": "C 1927",
+                    "is_correct": true,
+                    "feedback": "Correct! The first quartz clock appeared in 1927."
+                },
+                {
+                    "text": "D 1955",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage gives 1927 as the date."
+                },
+                {
+                    "text": "E 1967",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. The passage gives 1927 as the date."
+                }
+            ],
+            "options": "A 1714\nB 1761\nC 1927\nD 1955\nE 1967",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Atomic clocks, which represent the highest level of timekeeping precision, were first developed in...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D. The passage states 'the development of atomic clocks in 1955 represented the pinnacle of timekeeping precision.'",
+            "correct_feedback": "Correct! Atomic clocks were developed in 1955.",
+            "incorrect_feedback": "Incorrect. The correct answer is D. The passage specifies 1955.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A 1714",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage specifies 1955."
+                },
+                {
+                    "text": "B 1761",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage specifies 1955."
+                },
+                {
+                    "text": "C 1927",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage specifies 1955."
+                },
+                {
+                    "text": "D 1955",
+                    "is_correct": true,
+                    "feedback": "Correct! Atomic clocks were developed in 1955."
+                },
+                {
+                    "text": "E 1967",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage specifies 1955."
+                }
+            ],
+            "options": "A 1714\nB 1761\nC 1927\nD 1955\nE 1967",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Passage 1",
+            "content": "Artificial Intelligence and Machine Learning\n\nThe advent of artificial intelligence (AI) and machine learning (ML) has fundamentally transformed the technological landscape of the 21st century. <span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Unlike traditional programming, where computers follow explicitly programmed instructions, machine learning algorithms can learn from data and improve their performance over time without being explicitly programmed for each specific task</span>. This paradigm shift has enabled computers to tackle complex problems that were previously thought to require human intelligence.\n\n<span id=\"passage-q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">At its core, machine learning is a subset of artificial intelligence that focuses on developing systems that can access data and use it to learn for themselves</span>. The process begins with observations or data, such as examples, direct experience, or instruction, to look for patterns in data and make better decisions in the future based on the examples provided. <span id=\"passage-q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">The primary aim is to allow computers to learn automatically without human intervention or assistance</span> and adjust actions accordingly.\n\nThere are three main types of machine learning approaches. <span id=\"passage-q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">Supervised learning involves training algorithms on labeled datasets, where the desired output is already known</span>. The algorithm learns by comparing its actual output with correct outputs to find errors and modify the model accordingly. This method is commonly used for classification tasks such as email spam detection or medical diagnosis. Unsupervised learning, by contrast, deals with unlabeled data, where the system tries to learn without a teacher. The algorithm must find structure in the input on its own by extracting useful features and analyzing its structure. <span id=\"passage-q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">Clustering and association are two types of unsupervised learning problems</span>. The third approach, reinforcement learning, involves an agent that learns to behave in an environment by performing actions and seeing the results, receiving rewards or penalties.\n\n<span id=\"passage-q9\" data-question=\"9\"></span>The applications of machine learning are vast and continue to expand rapidly. In healthcare, ML algorithms analyze medical images to detect diseases such as cancer at earlier stages than traditional methods. <span id=\"passage-q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">Financial institutions employ machine learning for fraud detection systems that can identify suspicious transactions in real-time</span>. The retail industry uses ML for personalized product recommendations, while autonomous vehicles rely on machine learning to navigate roads safely. Natural language processing, a branch of AI that helps computers understand, interpret and manipulate human language, powers virtual assistants like Siri and Alexa.\n\nHowever, the rise of AI and machine learning also presents significant challenges. <span id=\"passage-q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">One major concern is algorithmic bias, which occurs when machine learning systems reflect the implicit values of the humans who create or train them</span>. If training data contains biases, the resulting model will likely perpetuate or even amplify these biases. For instance, facial recognition systems have been shown to have higher error rates for people of color, largely because the training datasets were not sufficiently diverse. <span id=\"passage-q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Privacy concerns have emerged as ML systems require vast amounts of personal data to function effectively</span>.\n\n<span id=\"passage-q11\" data-question=\"11\"></span>Another challenge is the \"black box\" problem. Many machine learning models, particularly deep neural networks, are so complex that even their creators cannot fully explain how they arrive at specific decisions. This lack of transparency raises concerns in high-stakes applications like medical diagnosis or criminal justice, where understanding the reasoning behind a decision is crucial. <span id=\"passage-q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">Researchers are developing explainable AI systems that can provide human-understandable explanations for their decisions</span>.\n\n<span id=\"passage-q12\" data-question=\"12\"></span>Looking ahead, the future of AI and machine learning appears promising yet uncertain. <span id=\"passage-q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">Experts predict that the integration of AI with other emerging technologies such as quantum computing and 5G networks will unlock new possibilities</span>. Quantum machine learning could solve problems that are currently intractable for classical computers, while 5G will enable real-time AI applications at scale. However, realizing this potential will require addressing current limitations in computational power, data quality, and ethical frameworks. The development of artificial general intelligence (AGI)—machines with human-level intelligence across all domains—remains a distant goal, with experts disagreeing on whether and when it might be achieved."
+        },
+        {
+            "title": "Reading Passage 2",
+            "content": "Sustainable Urban Development\n\n<span id=\"passage-q14\" data-question=\"14\"></span>As the global population continues to urbanize at an unprecedented rate, with the United Nations projecting that 68% of the world's population will live in urban areas by 2050, the concept of sustainable urban development has become increasingly critical. <span id=\"passage-q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">Urban sustainability involves creating cities that meet the needs of present residents without compromising the ability of future generations to meet their own needs</span>. This encompasses environmental, economic, and social dimensions, requiring integrated approaches to urban planning and management.\n\n<span id=\"passage-q15\" data-question=\"15\"></span>The environmental challenges facing modern cities are substantial. Urban areas account for approximately 75% of global carbon dioxide emissions, despite occupying only 3% of the Earth's land surface. <span id=\"passage-q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Cities consume two-thirds of the world's energy and produce more than 70% of global greenhouse gas emissions</span>. The concentration of buildings, transportation systems, and industrial activities creates urban heat islands, where temperatures can be several degrees higher than surrounding rural areas. Additionally, cities face challenges related to air and water pollution, waste management, and loss of green spaces. <span id=\"passage-q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">The World Health Organization estimates that 9 out of 10 people worldwide breathe polluted air, with urban residents particularly affected</span>.\n\n<span id=\"passage-q17\" data-question=\"17\"></span>To address these challenges, cities around the world are implementing innovative sustainable development strategies. Green building practices have gained prominence, with structures designed to minimize environmental impact through energy efficiency, water conservation, and use of sustainable materials. <span id=\"passage-q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">The LEED (Leadership in Energy and Environmental Design) certification system has become a globally recognized standard for green buildings</span>, encouraging developers to adopt environmentally responsible construction practices. Singapore's \"City in a Garden\" vision exemplifies integrated urban greening, where vegetation is incorporated into buildings and infrastructure throughout the city, reducing the urban heat island effect while improving air quality and biodiversity.\n\n<span id=\"passage-q18\" data-question=\"18\"></span>Transportation represents another crucial area for sustainable urban development. <span id=\"passage-q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">Traditional car-centric urban planning has contributed to traffic congestion, air pollution, and sprawling development patterns</span>. In response, many cities are prioritizing public transit, cycling infrastructure, and pedestrian-friendly design. Copenhagen has become renowned for its cycling culture, with 62% of residents commuting by bicycle daily. The city's extensive network of cycle tracks, traffic-prioritized intersections for cyclists, and bicycle parking facilities demonstrate how infrastructure investment can shift transportation patterns. Similarly, Curitiba, Brazil, revolutionized urban transport through its Bus Rapid Transit (BRT) system, which combines the capacity of a metro with the flexibility of buses, serving as a model for cities worldwide.\n\n<span id=\"passage-q19\" data-question=\"19\"></span>Smart city technologies are increasingly being deployed to enhance urban sustainability. <span id=\"passage-q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">These technologies use data collected from sensors, devices, and citizens to manage assets and resources efficiently</span>. Barcelona's smart city initiative includes intelligent street lighting that adjusts based on pedestrian presence, smart waste bins that signal when they need emptying, and sensors that monitor air quality and noise levels. Such systems optimize resource use, reduce operational costs, and improve quality of life for residents. <span id=\"passage-q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">However, smart city technologies also raise concerns about data privacy and the digital divide between those with access to technology and those without</span>.\n\nThe social dimension of sustainable urban development focuses on creating inclusive, equitable cities. <span id=\"passage-q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">Affordable housing remains a critical challenge, as rapid urbanization and gentrification have pushed housing costs beyond the reach of many residents in major cities</span>. Vienna's social housing program, which provides high-quality, affordable homes for 62% of the city's population, demonstrates that well-designed public housing can promote social mixing and community cohesion. <span id=\"passage-q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">Access to public spaces, healthcare, education, and employment opportunities are also essential components of socially sustainable cities</span>.\n\nThe success of sustainable urban development depends on effective governance and stakeholder engagement. Top-down planning alone is insufficient; meaningful participation from residents, businesses, and civil society organizations is essential. Participatory budgeting, pioneered in Porto Alegre, Brazil, allows citizens to directly influence how public funds are spent in their communities, fostering democratic engagement and ensuring that development priorities reflect local needs. Furthermore, sustainable urban development requires coordination across different government levels and sectors, as urban challenges transcend administrative boundaries and involve multiple policy areas."
+        },
+        {
+            "title": "Reading Passage 3",
+            "content": "The History of Timekeeping\n\n<span id=\"passage-q28\" data-question=\"28\"></span>The human fascination with measuring time stretches back thousands of years, driven by practical needs for agriculture, navigation, and social coordination. <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">Ancient civilizations developed various methods to track time, with the earliest devices based on observing natural phenomena such as the movement of celestial bodies</span>. The Egyptians, around 3500 BCE, created one of the first timekeeping instruments: the shadow clock or sundial, which used the sun's position to indicate time of day. However, these devices were limited by their dependence on sunlight and clear weather conditions.\n\n<span id=\"passage-q29\" data-question=\"29\"></span>To overcome the limitations of sundials, ancient peoples developed water clocks, or clepsydras. <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">These devices measured time by the regulated flow of water from one container to another</span>, allowing timekeeping to continue regardless of weather or time of day. The Greeks and Romans refined water clock technology, creating elaborate mechanisms with gears and indicators. In China, around 725 CE, the Buddhist monk Yi Xing created an advanced water-powered astronomical clock that could track celestial movements. <span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">Despite their improvements over sundials, water clocks still faced challenges, as water flow rates could vary with temperature changes</span>.\n\n<span id=\"passage-q31\" data-question=\"31\"></span>The mechanical clock represented a revolutionary advancement in timekeeping technology. <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">The first mechanical clocks appeared in European monasteries during the 13th century, driven by falling weights and regulated by an escapement mechanism</span>. These early clocks were large, expensive, and primarily used to regulate prayer times. The invention of the coiled spring in the 15th century enabled the creation of smaller, portable timepieces. <span id=\"passage-q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">The mainspring allowed for the development of domestic clocks and eventually watches, making personal timekeeping possible for the first time</span>. However, early mechanical timepieces were notoriously inaccurate, losing or gaining several minutes per day.\n\n<span id=\"passage-q32\" data-question=\"32\"></span>The quest for greater accuracy became particularly urgent with the expansion of maritime exploration. <span id=\"passage-q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">Determining longitude at sea required precise timekeeping, as a four-minute error in time measurement could result in a navigational error of one degree longitude, or about 60 nautical miles at the equator</span>. This problem was so critical that the British government established the Longitude Prize in 1714, offering a substantial reward for a reliable solution. John Harrison, an English carpenter and clockmaker, devoted his life to solving this problem, eventually creating the H4 marine chronometer in 1761. <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">Harrison's chronometer was accurate to within one-fifth of a second per day, revolutionary precision for the era</span>.\n\nThe 20th century brought dramatic advances in timekeeping accuracy. <span id=\"passage-q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">In 1927, the first quartz clock was developed, utilizing the piezoelectric properties of quartz crystals to keep time</span>. When an electric current is applied to a quartz crystal, it vibrates at an extremely consistent frequency. These vibrations can be counted and converted into regular time intervals, providing accuracy far superior to mechanical clocks. Quartz technology eventually miniaturized into the affordable, accurate wristwatches that became ubiquitous by the 1980s.\n\n<span id=\"passage-q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">The development of atomic clocks in 1955 represented the pinnacle of timekeeping precision</span>. These devices measure time based on the oscillations of atoms, typically cesium-133, which vibrates at an extraordinarily stable frequency. Modern atomic clocks are so accurate that they would neither gain nor lose a second in millions of years. In 1967, the definition of a second was officially redefined based on atomic oscillations rather than astronomical observations, reflecting the superior precision of atomic timekeeping. Today, atomic clocks form the basis of Coordinated Universal Time (UTC), which synchronizes time worldwide and enables technologies such as GPS navigation, telecommunications networks, and financial trading systems that require nanosecond-level precision. Recent developments in optical atomic clocks, which use visible light frequencies rather than microwave frequencies, promise even greater accuracy, potentially losing less than one second over the age of the universe."
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "ielts_academic_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-12 20:00:00",
+        "exported_by": "impact",
+        "plugin_version": "11.26",
+        "format_version": "1.0"
+    }
+}
