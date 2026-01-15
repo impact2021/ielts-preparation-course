@@ -1316,7 +1316,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "28. Nobel was inspired to establish the Prizes following a section issued in [field 1].",
+            "question": "28. Nobel was inspired to establish the Prizes following an obituary issued in [field 1].",
             "points": 1,
             "no_answer_feedback": "The correct answer is: a French newspaper. Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes.",
             "correct_feedback": "Correct! Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes.",
