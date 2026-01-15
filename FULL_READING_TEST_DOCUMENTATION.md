@@ -89,7 +89,7 @@ This automatically converts to:
 <span id="passage-q1" data-question="1"></span><span class="reading-answer-marker">Most people have heard of the Olympics</span>, a sporting event held every four years...
 ```
 
-The system uses smart boundary detection to highlight only the relevant answer portion (stops at commas, periods, or after 50 characters - whichever comes first).
+The system uses smart boundary detection to stop highlighting at the first comma (", a sporting event"). Other boundaries include: semicolons, periods followed by capital letters, newlines, or a maximum of 50 characters.
 
 **Markers**: All 40 questions ([Q1] through [Q40] in source, auto-converted to passage-q1 through passage-q40)
 
@@ -218,25 +218,25 @@ When a student clicks "Show me the section of the reading passage" for Question 
 
 ### Count Questions
 ```bash
-jq '.questions | length' main/Academic\ Read\ Test\ JSONs/Academic-IELTS-Reading-Test-02.json
+jq '.questions | length' 'main/Academic Read Test JSONs/Academic-IELTS-Reading-Test-02.json'
 # Output: 40
 ```
 
 ### Count Reading Passages
 ```bash
-jq '.reading_texts | length' main/Academic\ Read\ Test\ JSONs/Academic-IELTS-Reading-Test-02.json
+jq '.reading_texts | length' 'main/Academic Read Test JSONs/Academic-IELTS-Reading-Test-02.json'
 # Output: 3
 ```
 
 ### Verify All Questions Have Feedback
 ```bash
-jq '[.questions[] | select(.no_answer_feedback == null or .no_answer_feedback == "")] | length' main/Academic\ Read\ Test\ JSONs/Academic-IELTS-Reading-Test-02.json
+jq '[.questions[] | select(.no_answer_feedback == null or .no_answer_feedback == "")] | length' 'main/Academic Read Test JSONs/Academic-IELTS-Reading-Test-02.json'
 # Output: 0 (meaning all have feedback)
 ```
 
 ### List All Passage Markers
 ```bash
-jq -r '.reading_texts[].content' main/Academic\ Read\ Test\ JSONs/Academic-IELTS-Reading-Test-02.json | grep -o 'passage-q[0-9]*' | sort -u
+jq -r '.reading_texts[].content' 'main/Academic Read Test JSONs/Academic-IELTS-Reading-Test-02.json' | grep -o 'passage-q[0-9]*' | sort -u
 # Output: passage-q1 through passage-q40
 ```
 
