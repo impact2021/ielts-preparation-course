@@ -29,9 +29,16 @@
 - Example: "The bionic arm contains [field 1] that detect electrical signals..."
 
 ### Multi-Field Questions
-- Some open questions have multiple placeholders (e.g., Q11-15 in a single question)
+- Some open questions have multiple placeholders (e.g., Q11-15 in a single question, Q30-34)
 - Each field should be numbered sequentially: `[field 1]`, `[field 2]`, `[field 3]`, etc.
-- The question number should reflect the range (e.g., "Q11-15" for a 5-field question)
+- The question number should reflect the range (e.g., "Q11" for a 5-field question that spans Q11-15, or "Q30" for Q30-34)
+
+### Validation Rule - CRITICAL
+**The number of entries in `field_answers` MUST equal `field_count`**
+- If `field_count: 5`, then `field_answers` must have keys "1", "2", "3", "4", "5"
+- Each field must also have corresponding entries in `field_feedback` with "correct", "incorrect", and "no_answer" messages
+- **This is a common error - always verify after adding/updating multi-field questions**
+
 
 ---
 
@@ -98,6 +105,8 @@
 - [ ] Have I reviewed this EXERCISE_JSON_STANDARDS.md document?
 - [ ] Are heading questions using UPPERCASE ROMAN NUMERALS (I., II., III., etc.)?
 - [ ] Do open questions have proper `[field n]` placeholders?
+- [ ] **For multi-field questions: Does `field_answers` have all fields matching `field_count`?**
+- [ ] **For multi-field questions: Does `field_feedback` have all fields with correct/incorrect/no_answer messages?**
 - [ ] Am I using the correct format for Reading vs Listening?
 - [ ] For heading questions, does the highlight span cover the entire paragraph?
 - [ ] For specific answer questions, does the highlighted text include helpful context?

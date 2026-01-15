@@ -519,33 +519,37 @@
             "ielts_question_category": "",
             "field_count": 5,
             "field_answers": {
-                "1": "SENSORS|ELECTRODES"
+                "1": "SENSORS|ELECTRODES",
+                "2": "MICROPROCESSOR|COMPUTER CHIP",
+                "3": "MOTORS",
+                "4": "RECHARGEABLE BATTERY|BATTERY",
+                "5": "SILICONE SKIN|SYNTHETIC SKIN|SKIN"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! All components have been correctly identified.",
-                    "incorrect": "Incorrect. Review Paragraph D which describes the components and operation of a bionic limb. Check each field carefully.",
-                    "no_answer": "Please provide answers for all fields. The correct answers are: Field 1: SENSORS (or ELECTRODES), Field 2: MICROPROCESSOR (or COMPUTER CHIP), Field 3: MOTORS, Field 4: RECHARGEABLE BATTERY (or BATTERY), Field 5: SILICONE SKIN (or SYNTHETIC SKIN or SKIN)."
+                    "correct": "Correct! The bionic arm uses sensors or electrodes to detect electrical signals.",
+                    "incorrect": "Incorrect. Review Paragraph D which describes how electrodes or sensors detect electrical signals from the remaining muscles.",
+                    "no_answer": "Please provide an answer. The correct answer is SENSORS or ELECTRODES."
                 },
                 "2": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! A microprocessor processes the electrical signals.",
+                    "incorrect": "Incorrect. Review Paragraph D which mentions the microprocessor that processes the signals.",
+                    "no_answer": "Please provide an answer. The correct answer is MICROPROCESSOR or COMPUTER CHIP."
                 },
                 "3": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Motors control the movement of the hand and wrist.",
+                    "incorrect": "Incorrect. Review Paragraph D which describes the motors that control the joints, hand, and fingers.",
+                    "no_answer": "Please provide an answer. The correct answer is MOTORS."
                 },
                 "4": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The device is powered by a rechargeable battery.",
+                    "incorrect": "Incorrect. Review Paragraph D which mentions the rechargeable battery that powers the system.",
+                    "no_answer": "Please provide an answer. The correct answer is RECHARGEABLE BATTERY or BATTERY."
                 },
                 "5": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Silicone skin provides a natural appearance.",
+                    "incorrect": "Incorrect. Review Paragraph C which describes the silicone skin that matches the user's skin tone.",
+                    "no_answer": "Please provide an answer. The correct answer is SILICONE SKIN, SYNTHETIC SKIN, or SKIN."
                 }
             }
         },
@@ -1543,5 +1547,5 @@
         "plugin_version": "11.27",
         "format_version": "1.0"
     },
-    "version": "1.1"
+    "version": "1.2"
 }
