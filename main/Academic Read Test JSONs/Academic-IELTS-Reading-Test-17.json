@@ -994,16 +994,32 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
             "question": "Red increases appetite, which is why it is commonly used in restaurant branding.",
             "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is VII) Cultural differences in color meaning. Paragraph G discusses how color interpretation varies across cultures.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph B states red \"stimulates appetite, which explains its prevalent use by fast-food chains.\"",
+            "correct_feedback": "Correct! Paragraph B explicitly states red \"stimulates appetite, which explains its prevalent use by fast-food chains.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph B clearly states red increases appetite.",
+            "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B states red \"stimulates appetite, which explains its prevalent use by fast-food chains like McDonald's and KFC.\""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage explicitly states red stimulates appetite."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This information is clearly stated in Paragraph B."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1580,16 +1596,32 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 3?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
             "question": "The COVID-19 pandemic demonstrated the resilience of urban farms when traditional supply chains were disrupted.",
             "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is F) can produce crops throughout the year using controlled environments. Paragraph H describes vertical farms using climate control for year-round production.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph C states \"During the COVID-19 pandemic, for instance, urban farms in many cities proved resilient when conventional food supply chains were disrupted.\"",
+            "correct_feedback": "Correct! Paragraph C states urban farms \"proved resilient when conventional food supply chains were disrupted\" during COVID-19.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. This is stated in Paragraph C.",
+            "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states \"During the COVID-19 pandemic, for instance, urban farms in many cities proved resilient when conventional food supply chains were disrupted.\""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage explicitly states urban farms proved resilient during COVID-19."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This information is clearly stated in Paragraph C."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
