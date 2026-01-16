@@ -799,12 +799,12 @@
                 {
                     "text": "Colors should be used sparingly in marketing",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The Isolation Effect is about visual distinction, not limiting color use."
                 },
                 {
                     "text": "Bright colors are always more effective than dark colors",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The effect doesn't compare bright versus dark colors; it's about items standing out."
                 },
                 {
                     "text": "Items that stand out visually are more memorable",
@@ -814,7 +814,7 @@
                 {
                     "text": "Isolated brands perform better than competitive brands",
                     "is_correct": false,
-                    "feedback": "This misinterprets the concept. The effect is about visual distinction, not market isolation."
+                    "feedback": "Incorrect. This misinterprets the concept; 'isolation' refers to visual distinction, not market position."
                 }
             ],
             "options": "Colors should be used sparingly in marketing\nBright colors are always more effective than dark colors\nItems that stand out visually are more memorable\nIsolated brands perform better than competitive brands",
@@ -839,12 +839,12 @@
                 {
                     "text": "Color is processed after shape and text",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage states the opposite: color is processed BEFORE shape and text, not after."
                 },
                 {
                     "text": "Color is processed at the same time as logos",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage states color is processed before shape and text, not simultaneously."
                 },
                 {
                     "text": "Color is processed before shape and text",
@@ -854,7 +854,7 @@
                 {
                     "text": "Color processing varies between individuals",
                     "is_correct": false,
-                    "feedback": "While individual preferences are mentioned, the passage clearly states color is processed before shape and text."
+                    "feedback": "Incorrect. While preferences vary, the passage clearly states color is universally processed before shape and text."
                 }
             ],
             "options": "Color is processed after shape and text\nColor is processed at the same time as logos\nColor is processed before shape and text\nColor processing varies between individuals",
@@ -879,7 +879,7 @@
                 {
                     "text": "Only activate the visual cortex",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage states color activates multiple brain regions, not only the visual cortex."
                 },
                 {
                     "text": "Activate regions associated with emotion and memory as well as vision",
@@ -889,12 +889,12 @@
                 {
                     "text": "Have no effect on memory formation",
                     "is_correct": false,
-                    "feedback": "This contradicts the passage, which states color affects memory formation."
+                    "feedback": "Incorrect. This contradicts the passage, which explicitly states color affects memory formation."
                 },
                 {
                     "text": "Work differently in commercial contexts than in nature",
                     "is_correct": false,
-                    "feedback": "The passage doesn't make this comparison."
+                    "feedback": "Incorrect. The passage doesn't make this comparison between commercial and natural contexts."
                 }
             ],
             "options": "Only activate the visual cortex\nActivate regions associated with emotion and memory as well as vision\nHave no effect on memory formation\nWork differently in commercial contexts than in nature",
@@ -919,12 +919,12 @@
                 {
                     "text": "Abandoning color psychology principles entirely",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage doesn't suggest abandoning established principles; rather, it discusses new applications."
                 },
                 {
                     "text": "Using only primary colors for clarity",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage doesn't suggest limiting color palettes to primary colors."
                 },
                 {
                     "text": "Presenting different colors to different users based on data",
@@ -934,7 +934,7 @@
                 {
                     "text": "Returning to black and white designs",
                     "is_correct": false,
-                    "feedback": "This isn't suggested anywhere in the passage."
+                    "feedback": "Incorrect. This isn't suggested anywhere in the passage; the focus is on personalization and technology."
                 }
             ],
             "options": "Abandoning color psychology principles entirely\nUsing only primary colors for clarity\nPresenting different colors to different users based on data\nReturning to black and white designs",
@@ -951,7 +951,7 @@
             "instructions": "Complete the summary below.\r\nChoose NO MORE THAN TWO WORDS from the passage for each answer.",
             "question": "Water scarcity affects billions globally, with only [field 1] of Earth's freshwater readily accessible. Agriculture consumes about [field 2] of global freshwater, with traditional methods being highly inefficient. The [field 3] of different foods varies greatly—beef production requires far more water than wheat. Advanced technologies like [field 4] can reduce agricultural water use by 30-50%. In urban areas, [field 5] through leaking pipes represents a major problem, with some cities losing up to 60% of their supply. [field 6] removes salt from seawater but requires substantial energy input.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. Check Reading Passage 3 for the correct answers.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1651,6 +1651,122 @@
                 "Incorrect. This describes desalination, not drip irrigation.",
                 "Incorrect. This is not mentioned in the passage."
             ]
+        },
+        {
+            "type": "multiple_choice",
+            "instructions": "Choose the correct letter, A, B, C or D.",
+            "question": "According to the passage, the concept of 'virtual water' refers to",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is B) the amount of water needed to produce food items. Paragraph B explains that virtual water is the water required to produce different foods.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "mc_options": [
+                {
+                    "text": "water that is wasted during food transportation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Virtual water refers to production requirements, not transportation waste."
+                },
+                {
+                    "text": "the amount of water needed to produce food items",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B explains that different foods require vastly different amounts of water, known as 'virtual water' content."
+                },
+                {
+                    "text": "water saved through drip irrigation systems",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes water conservation technology, not the virtual water concept."
+                },
+                {
+                    "text": "the theoretical maximum water efficiency",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Virtual water is about actual water consumption in food production, not theoretical efficiency."
+                }
+            ],
+            "options": "water that is wasted during food transportation\nthe amount of water needed to produce food items\nwater saved through drip irrigation systems\nthe theoretical maximum water efficiency",
+            "correct_answer": "1",
+            "option_feedback": [
+                "Incorrect. Virtual water refers to production requirements, not transportation waste.",
+                "Correct! Paragraph B explains that different foods require vastly different amounts of water, known as 'virtual water' content.",
+                "Incorrect. This describes water conservation technology, not the virtual water concept.",
+                "Incorrect. Virtual water is about actual water consumption in food production, not theoretical efficiency."
+            ]
+        },
+        {
+            "type": "multiple_choice",
+            "instructions": "",
+            "question": "The passage describes Singapore's water management approach as",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is A) combining technology, regulation, and public education. Paragraph D states Singapore has become a global leader through \"a combination of technological innovation, strict regulations, and public education.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "mc_options": [
+                {
+                    "text": "combining technology, regulation, and public education",
+                    "is_correct": true,
+                    "feedback": "Excellent! Paragraph D states Singapore has become a global leader through \"a combination of technological innovation, strict regulations, and public education.\""
+                },
+                {
+                    "text": "relying primarily on desalination plants",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Singapore uses various technologies, the passage emphasizes their comprehensive approach, not just desalination."
+                },
+                {
+                    "text": "depending mainly on water imports from neighbors",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage describes Singapore's efforts to develop local water solutions, not reliance on imports."
+                },
+                {
+                    "text": "focusing exclusively on reducing consumption",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Singapore's approach is multifaceted, including technology, regulation, and education, not just consumption reduction."
+                }
+            ],
+            "options": "combining technology, regulation, and public education\nrelying primarily on desalination plants\ndepending mainly on water imports from neighbors\nfocusing exclusively on reducing consumption",
+            "correct_answer": "0",
+            "option_feedback": [
+                "Excellent! Paragraph D states Singapore has become a global leader through \"a combination of technological innovation, strict regulations, and public education.\"",
+                "Incorrect. While Singapore uses various technologies, the passage emphasizes their comprehensive approach, not just desalination.",
+                "Incorrect. The passage describes Singapore's efforts to develop local water solutions, not reliance on imports.",
+                "Incorrect. Singapore's approach is multifaceted, including technology, regulation, and education, not just consumption reduction."
+            ]
+        },
+        {
+            "type": "true_false",
+            "instructions": "Do the following statements agree with the information given in Reading Passage 3?\r\nWrite TRUE if the statement agrees with the information\r\nWrite FALSE if the statement contradicts the information\r\nWrite NOT GIVEN if there is no information on this",
+            "question": "Climate change mitigation strategies must be integrated into water resource planning.",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph H states \"climate change mitigation and adaptation strategies must be integrated into water resource planning.\"",
+            "correct_feedback": "Correct! Paragraph H explicitly states \"climate change mitigation and adaptation strategies must be integrated into water resource planning.\"",
+            "incorrect_feedback": "Incorrect. Check Paragraph H: it clearly states that climate change strategies must be integrated into water resource planning.",
+            "reading_text_id": 2,
+            "options": "",
+            "correct_answer": "true"
+        },
+        {
+            "type": "true_false",
+            "instructions": "",
+            "question": "Metal-organic frameworks can extract water from air with humidity as low as 20%.",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph G states MIT developed a device using MOFs \"that can pull water from air with humidity as low as 20%.\"",
+            "correct_feedback": "Perfect! Paragraph G states the MIT device using MOFs \"can pull water from air with humidity as low as 20%.\"",
+            "incorrect_feedback": "Incorrect. Paragraph G clearly states that MOFs can extract water from air with humidity as low as 20%.",
+            "reading_text_id": 2,
+            "options": "",
+            "correct_answer": "true"
+        },
+        {
+            "type": "short_answer",
+            "instructions": "Answer the question below.\r\nWrite NO MORE THAN TWO WORDS AND/OR A NUMBER for your answer.",
+            "question": "By what percentage can drip irrigation reduce water use compared to traditional methods?",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is 30-50% or 30-50 PERCENT. Paragraph C states drip irrigation \"can reduce water use by 30-50% compared to traditional methods.\"",
+            "correct_feedback": "Excellent! Paragraph C states drip irrigation \"can reduce water use by 30-50% compared to traditional methods.\"",
+            "incorrect_feedback": "Incorrect. Check Paragraph C: drip irrigation can reduce water use by \"30-50%\" compared to traditional methods.",
+            "reading_text_id": 2,
+            "options": "",
+            "correct_answer": "30-50%|30-50 PERCENT"
         }
     ],
     "reading_texts": [
