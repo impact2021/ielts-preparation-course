@@ -7,16 +7,32 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 1?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nThe file uses mixed question formats (Headings, Matching, True/False, and Short Answer)\r\nwhich are automatically detected and parsed correctly by the text import tool.\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.",
             "question": "Coffee houses in the Middle East were called \"Schools of the Wise\" because they offered formal education.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is FALSE. Paragraph B states coffee houses were called \"Schools of the Wise\" because of the intellectual discussions that took place, not because they offered formal education.",
+            "correct_feedback": "Correct! Paragraph B states coffee houses were called \"Schools of the Wise\" because of the intellectual discussions, not formal education.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Coffee houses earned this nickname due to intellectual discussions, not formal education programs.",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Paragraph B states they were called \"Schools of the Wise\" because of intellectual discussions, not formal education."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B explains that coffee houses were called \"Schools of the Wise\" because of the intellectual discussions that took place within their walls, not because they offered formal education."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly explains why coffee houses were called \"Schools of the Wise\" - it was due to intellectual discussions."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -25,16 +41,32 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 1?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nThe file uses mixed question formats (Headings, Matching, True/False, and Short Answer)\r\nwhich are automatically detected and parsed correctly by the text import tool.\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.",
             "question": "Pope Clement VIII initially rejected coffee as unsuitable for Christians.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is FALSE. Paragraph C states that Pope Clement VIII tasted coffee and gave it papal approval, declaring it a Christian beverage.",
+            "correct_feedback": "Correct! Paragraph C states Pope Clement VIII gave coffee papal approval, declaring it a Christian beverage.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. The Pope approved coffee; he didn't reject it.",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Pope Clement VIII actually approved coffee and declared it a Christian beverage."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states that Pope Clement VIII tasted coffee and gave it papal approval, calling it a Christian beverage. He did not reject it."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states the Pope's position on coffee - he approved it."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -43,16 +75,32 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 1?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nThe file uses mixed question formats (Headings, Matching, True/False, and Short Answer)\r\nwhich are automatically detected and parsed correctly by the text import tool.\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.",
             "question": "English coffee houses were nicknamed \"penny universities.\"",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph C states that in England, coffee houses \"became known as 'penny universities' because for the price of a penny, one could purchase a cup of coffee and engage in stimulating conversation.\"",
+            "correct_feedback": "Correct! Paragraph C states coffee houses \"became known as 'penny universities' because for the price of a penny, one could purchase a cup of coffee and engage in stimulating conversation.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph C clearly states they were nicknamed \"penny universities.\"",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states that in England, coffee houses \"became known as 'penny universities' because for the price of a penny, one could purchase a cup of coffee and engage in stimulating conversation.\""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage explicitly states English coffee houses were nicknamed \"penny universities.\""
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This information is clearly stated in Paragraph C."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -61,16 +109,32 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 1?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nThe file uses mixed question formats (Headings, Matching, True/False, and Short Answer)\r\nwhich are automatically detected and parsed correctly by the text import tool.\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.",
             "question": "The Dutch were the first Europeans to successfully cultivate coffee outside Arabia.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph D states \"The Dutch were among the first to succeed, establishing coffee plantations in their colonies in Indonesia in the late 17th century.\"",
+            "correct_feedback": "Correct! Paragraph D states \"The Dutch were among the first to succeed, establishing coffee plantations in their colonies in Indonesia in the late 17th century.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph D clearly identifies the Dutch as among the first Europeans to succeed.",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D states \"The Dutch were among the first to succeed, establishing coffee plantations in their colonies in Indonesia in the late 17th century.\""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph D explicitly states the Dutch were among the first to successfully cultivate coffee outside Arabia."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This information is clearly stated in Paragraph D."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -79,16 +143,32 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 1?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nThe file uses mixed question formats (Headings, Matching, True/False, and Short Answer)\r\nwhich are automatically detected and parsed correctly by the text import tool.\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.",
             "question": "Fair trade coffee was introduced in the 1960s.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is NOT GIVEN. While Paragraph E mentions fair trade practices as part of the specialty coffee movement, it doesn't specify when fair trade coffee was introduced.",
+            "correct_feedback": "Correct! While the passage mentions fair trade practices, it doesn't specify when they were introduced.",
+            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions fair trade but doesn't state when it was introduced.",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't specify when fair trade coffee was introduced."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions fair trade but doesn't give a specific date."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! While Paragraph E mentions fair trade practices as part of the specialty coffee movement, it doesn't specify when fair trade coffee was introduced."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -97,7 +177,7 @@
             "instructions": "Reading Passage 1 has seven paragraphs A – G.\r\nFor paragraphs C – F, choose the most suitable heading from the list of headings below.\r\nWrite the appropriate numbers I – IX in boxes 7 – 10 on your answer sheet.\r\nList of Headings:\r\nI. The origins of coffee in Africa\r\nII. Coffee's arrival and reception in Europe\r\nIII. The expansion of coffee cultivation worldwide\r\nIV. Modern developments in coffee culture\r\nV. Coffee houses as centers of intellectual life\r\nVI. The economic importance of coffee today\r\nVII. The role of religion in coffee's spread\r\nVIII. Climate change threatens coffee production\r\nIX. Coffee's influence on the slave trade\r\nExample: Paragraph A - Answer: I\r\nExample: Paragraph B - Answer: V",
             "question": "Paragraph C",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is II. Coffee's arrival and reception in Europe. Check Reading Passage 1 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -109,47 +189,47 @@
                 {
                     "text": "I. The origins of coffee in Africa",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "II. Coffee's arrival and reception in Europe",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! This heading/option best matches the paragraph/item based on Reading Passage 1."
                 },
                 {
                     "text": "III. The expansion of coffee cultivation worldwide",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "IV. Modern developments in coffee culture",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "V. Coffee houses as centers of intellectual life",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "VI. The economic importance of coffee today",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "VII. The role of religion in coffee's spread",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "VIII. Climate change threatens coffee production",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "IX. Coffee's influence on the slave trade",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 }
             ],
             "options": "I. The origins of coffee in Africa\nII. Coffee's arrival and reception in Europe\nIII. The expansion of coffee cultivation worldwide\nIV. Modern developments in coffee culture\nV. Coffee houses as centers of intellectual life\nVI. The economic importance of coffee today\nVII. The role of religion in coffee's spread\nVIII. Climate change threatens coffee production\nIX. Coffee's influence on the slave trade",
@@ -161,7 +241,7 @@
             "instructions": "Reading Passage 1 has seven paragraphs A – G.\r\nFor paragraphs C – F, choose the most suitable heading from the list of headings below.\r\nWrite the appropriate numbers I – IX in boxes 7 – 10 on your answer sheet.\r\nList of Headings:\r\nI. The origins of coffee in Africa\r\nII. Coffee's arrival and reception in Europe\r\nIII. The expansion of coffee cultivation worldwide\r\nIV. Modern developments in coffee culture\r\nV. Coffee houses as centers of intellectual life\r\nVI. The economic importance of coffee today\r\nVII. The role of religion in coffee's spread\r\nVIII. Climate change threatens coffee production\r\nIX. Coffee's influence on the slave trade\r\nExample: Paragraph A - Answer: I\r\nExample: Paragraph B - Answer: V",
             "question": "Paragraph D",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is III. The expansion of coffee cultivation worldwide. Check Reading Passage 1 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -173,47 +253,47 @@
                 {
                     "text": "I. The origins of coffee in Africa",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "II. Coffee's arrival and reception in Europe",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "III. The expansion of coffee cultivation worldwide",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! This heading/option best matches the paragraph/item based on Reading Passage 1."
                 },
                 {
                     "text": "IV. Modern developments in coffee culture",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "V. Coffee houses as centers of intellectual life",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "VI. The economic importance of coffee today",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "VII. The role of religion in coffee's spread",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "VIII. Climate change threatens coffee production",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "IX. Coffee's influence on the slave trade",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 }
             ],
             "options": "I. The origins of coffee in Africa\nII. Coffee's arrival and reception in Europe\nIII. The expansion of coffee cultivation worldwide\nIV. Modern developments in coffee culture\nV. Coffee houses as centers of intellectual life\nVI. The economic importance of coffee today\nVII. The role of religion in coffee's spread\nVIII. Climate change threatens coffee production\nIX. Coffee's influence on the slave trade",
@@ -225,7 +305,7 @@
             "instructions": "Reading Passage 1 has seven paragraphs A – G.\r\nFor paragraphs C – F, choose the most suitable heading from the list of headings below.\r\nWrite the appropriate numbers I – IX in boxes 7 – 10 on your answer sheet.\r\nList of Headings:\r\nI. The origins of coffee in Africa\r\nII. Coffee's arrival and reception in Europe\r\nIII. The expansion of coffee cultivation worldwide\r\nIV. Modern developments in coffee culture\r\nV. Coffee houses as centers of intellectual life\r\nVI. The economic importance of coffee today\r\nVII. The role of religion in coffee's spread\r\nVIII. Climate change threatens coffee production\r\nIX. Coffee's influence on the slave trade\r\nExample: Paragraph A - Answer: I\r\nExample: Paragraph B - Answer: V",
             "question": "Paragraph E",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is IV. Modern developments in coffee culture. Check Reading Passage 1 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -237,47 +317,47 @@
                 {
                     "text": "I. The origins of coffee in Africa",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "II. Coffee's arrival and reception in Europe",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "III. The expansion of coffee cultivation worldwide",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "IV. Modern developments in coffee culture",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! This heading/option best matches the paragraph/item based on Reading Passage 1."
                 },
                 {
                     "text": "V. Coffee houses as centers of intellectual life",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "VI. The economic importance of coffee today",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "VII. The role of religion in coffee's spread",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "VIII. Climate change threatens coffee production",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "IX. Coffee's influence on the slave trade",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 }
             ],
             "options": "I. The origins of coffee in Africa\nII. Coffee's arrival and reception in Europe\nIII. The expansion of coffee cultivation worldwide\nIV. Modern developments in coffee culture\nV. Coffee houses as centers of intellectual life\nVI. The economic importance of coffee today\nVII. The role of religion in coffee's spread\nVIII. Climate change threatens coffee production\nIX. Coffee's influence on the slave trade",
@@ -289,7 +369,7 @@
             "instructions": "Reading Passage 1 has seven paragraphs A – G.\r\nFor paragraphs C – F, choose the most suitable heading from the list of headings below.\r\nWrite the appropriate numbers I – IX in boxes 7 – 10 on your answer sheet.\r\nList of Headings:\r\nI. The origins of coffee in Africa\r\nII. Coffee's arrival and reception in Europe\r\nIII. The expansion of coffee cultivation worldwide\r\nIV. Modern developments in coffee culture\r\nV. Coffee houses as centers of intellectual life\r\nVI. The economic importance of coffee today\r\nVII. The role of religion in coffee's spread\r\nVIII. Climate change threatens coffee production\r\nIX. Coffee's influence on the slave trade\r\nExample: Paragraph A - Answer: I\r\nExample: Paragraph B - Answer: V",
             "question": "Paragraph F",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is VI. The economic importance of coffee today. Check Reading Passage 1 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -301,47 +381,47 @@
                 {
                     "text": "I. The origins of coffee in Africa",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "II. Coffee's arrival and reception in Europe",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "III. The expansion of coffee cultivation worldwide",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "IV. Modern developments in coffee culture",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "V. Coffee houses as centers of intellectual life",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "VI. The economic importance of coffee today",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! This heading/option best matches the paragraph/item based on Reading Passage 1."
                 },
                 {
                     "text": "VII. The role of religion in coffee's spread",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "VIII. Climate change threatens coffee production",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 },
                 {
                     "text": "IX. Coffee's influence on the slave trade",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 1."
                 }
             ],
             "options": "I. The origins of coffee in Africa\nII. Coffee's arrival and reception in Europe\nIII. The expansion of coffee cultivation worldwide\nIV. Modern developments in coffee culture\nV. Coffee houses as centers of intellectual life\nVI. The economic importance of coffee today\nVII. The role of religion in coffee's spread\nVIII. Climate change threatens coffee production\nIX. Coffee's influence on the slave trade",
@@ -353,7 +433,7 @@
             "instructions": "Choose the appropriate letters A – D and write them in boxes 11 – 13 on your answer sheet.",
             "question": "According to the passage, coffee houses in the Middle East",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is B) served as important social and cultural centers. Paragraph B describes coffee houses as centers for social activity, conversation, music, and news.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -365,22 +445,22 @@
                 {
                     "text": "were primarily religious institutions.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. While intellectual discussions occurred, they weren't primarily religious institutions."
                 },
                 {
                     "text": "served as important social and cultural centers.",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph B states coffee houses \"quickly became important centers for social activity and communication\" where people gathered for conversation, music, and news."
                 },
                 {
                     "text": "were restricted to the wealthy elite.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage doesn't suggest they were restricted to the wealthy."
                 },
                 {
                     "text": "focused exclusively on business transactions.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. While business may have occurred, the passage emphasizes their broader social and cultural role."
                 }
             ],
             "options": "were primarily religious institutions.\nserved as important social and cultural centers.\nwere restricted to the wealthy elite.\nfocused exclusively on business transactions.",
@@ -392,7 +472,7 @@
             "instructions": "Choose the appropriate letters A – D and write them in boxes 11 – 13 on your answer sheet.",
             "question": "The specialty coffee movement emphasized",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is C) quality, sustainability, and regional characteristics. Paragraph E describes the specialty coffee movement emphasizing these aspects.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -404,22 +484,22 @@
                 {
                     "text": "mass production and affordability.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This contradicts the specialty coffee movement, which opposed mass production."
                 },
                 {
                     "text": "instant coffee and convenience.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. Instant coffee was the opposite of what the specialty movement promoted."
                 },
                 {
                     "text": "quality, sustainability, and regional characteristics.",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph E states the specialty coffee movement \"emphasized quality, sustainability, and the unique characteristics of coffee from different regions.\""
                 },
                 {
                     "text": "traditional brewing methods only.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The movement included both traditional and modern brewing methods."
                 }
             ],
             "options": "mass production and affordability.\ninstant coffee and convenience.\nquality, sustainability, and regional characteristics.\ntraditional brewing methods only.",
@@ -431,7 +511,7 @@
             "instructions": "Choose the appropriate letters A – D and write them in boxes 11 – 13 on your answer sheet.",
             "question": "According to the passage, the coffee industry currently faces challenges including",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is D) climate change and price volatility. Paragraph F states \"the industry faces significant challenges, including climate change, which threatens coffee-growing regions, price volatility that affects farmers' incomes.\"",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -443,22 +523,22 @@
                 {
                     "text": "declining global consumption.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage doesn't mention declining consumption as a challenge."
                 },
                 {
                     "text": "oversupply of coffee beans.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage doesn't mention oversupply as a challenge."
                 },
                 {
                     "text": "lack of skilled baristas.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. Lack of skilled baristas isn't mentioned as a challenge."
                 },
                 {
                     "text": "climate change and price volatility.",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph F explicitly states \"the industry faces significant challenges, including climate change, which threatens coffee-growing regions, price volatility that affects farmers' incomes.\""
                 }
             ],
             "options": "declining global consumption.\noversupply of coffee beans.\nlack of skilled baristas.\nclimate change and price volatility.",
@@ -470,7 +550,7 @@
             "instructions": "You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "Paragraph B",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is II) The effects and uses of red. Paragraph B discusses red's psychological effects and marketing applications.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -482,57 +562,57 @@
                 {
                     "text": "I. The significance of color in branding",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This heading doesn't match the main content of Paragraph B. Review the paragraph carefully."
                 },
                 {
                     "text": "II. The effects and uses of red",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph B focuses on red's effects including energy, urgency, appetite stimulation, and its use in marketing."
                 },
                 {
                     "text": "III. Blue's role in establishing trust",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This heading doesn't match the main content of Paragraph B. Review the paragraph carefully."
                 },
                 {
                     "text": "IV. The natural associations of green",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This heading doesn't match the main content of Paragraph B. Review the paragraph carefully."
                 },
                 {
                     "text": "V. Yellow's visibility and limitations",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This heading doesn't match the main content of Paragraph B. Review the paragraph carefully."
                 },
                 {
                     "text": "VI. The importance of color combinations",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This heading doesn't match the main content of Paragraph B. Review the paragraph carefully."
                 },
                 {
                     "text": "VII. Cultural differences in color meaning",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This heading doesn't match the main content of Paragraph B. Review the paragraph carefully."
                 },
                 {
                     "text": "VIII. Future applications of color psychology",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This heading doesn't match the main content of Paragraph B. Review the paragraph carefully."
                 },
                 {
                     "text": "IX. The history of color theory",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This heading doesn't match the main content of Paragraph B. Review the paragraph carefully."
                 },
                 {
                     "text": "X. Personal preferences in color selection",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This heading doesn't match the main content of Paragraph B. Review the paragraph carefully."
                 },
                 {
                     "text": "XI. Color in digital technology",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This heading doesn't match the main content of Paragraph B. Review the paragraph carefully."
                 }
             ],
             "options": "I. The significance of color in branding\nII. The effects and uses of red\nIII. Blue's role in establishing trust\nIV. The natural associations of green\nV. Yellow's visibility and limitations\nVI. The importance of color combinations\nVII. Cultural differences in color meaning\nVIII. Future applications of color psychology\nIX. The history of color theory\nX. Personal preferences in color selection\nXI. Color in digital technology",
@@ -544,7 +624,7 @@
             "instructions": "You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "Paragraph C",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is III. Blue's role in establishing trust. Check Reading Passage 2 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -556,57 +636,57 @@
                 {
                     "text": "I. The significance of color in branding",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "II. The effects and uses of red",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "III. Blue's role in establishing trust",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! This heading/option best matches the paragraph/item based on Reading Passage 2."
                 },
                 {
                     "text": "IV. The natural associations of green",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "V. Yellow's visibility and limitations",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "VI. The importance of color combinations",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "VII. Cultural differences in color meaning",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "VIII. Future applications of color psychology",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "IX. The history of color theory",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "X. Personal preferences in color selection",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "XI. Color in digital technology",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 }
             ],
             "options": "I. The significance of color in branding\nII. The effects and uses of red\nIII. Blue's role in establishing trust\nIV. The natural associations of green\nV. Yellow's visibility and limitations\nVI. The importance of color combinations\nVII. Cultural differences in color meaning\nVIII. Future applications of color psychology\nIX. The history of color theory\nX. Personal preferences in color selection\nXI. Color in digital technology",
@@ -618,7 +698,7 @@
             "instructions": "You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "Paragraph D",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is IV. The natural associations of green. Check Reading Passage 2 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -630,57 +710,57 @@
                 {
                     "text": "I. The significance of color in branding",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "II. The effects and uses of red",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "III. Blue's role in establishing trust",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "IV. The natural associations of green",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! This heading/option best matches the paragraph/item based on Reading Passage 2."
                 },
                 {
                     "text": "V. Yellow's visibility and limitations",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "VI. The importance of color combinations",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "VII. Cultural differences in color meaning",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "VIII. Future applications of color psychology",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "IX. The history of color theory",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "X. Personal preferences in color selection",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "XI. Color in digital technology",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 }
             ],
             "options": "I. The significance of color in branding\nII. The effects and uses of red\nIII. Blue's role in establishing trust\nIV. The natural associations of green\nV. Yellow's visibility and limitations\nVI. The importance of color combinations\nVII. Cultural differences in color meaning\nVIII. Future applications of color psychology\nIX. The history of color theory\nX. Personal preferences in color selection\nXI. Color in digital technology",
@@ -692,7 +772,7 @@
             "instructions": "You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "Paragraph E",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is V. Yellow's visibility and limitations. Check Reading Passage 2 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -704,57 +784,57 @@
                 {
                     "text": "I. The significance of color in branding",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "II. The effects and uses of red",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "III. Blue's role in establishing trust",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "IV. The natural associations of green",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "V. Yellow's visibility and limitations",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! This heading/option best matches the paragraph/item based on Reading Passage 2."
                 },
                 {
                     "text": "VI. The importance of color combinations",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "VII. Cultural differences in color meaning",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "VIII. Future applications of color psychology",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "IX. The history of color theory",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "X. Personal preferences in color selection",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "XI. Color in digital technology",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 }
             ],
             "options": "I. The significance of color in branding\nII. The effects and uses of red\nIII. Blue's role in establishing trust\nIV. The natural associations of green\nV. Yellow's visibility and limitations\nVI. The importance of color combinations\nVII. Cultural differences in color meaning\nVIII. Future applications of color psychology\nIX. The history of color theory\nX. Personal preferences in color selection\nXI. Color in digital technology",
@@ -766,7 +846,7 @@
             "instructions": "You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "Paragraph F",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is VI. The importance of color combinations. Check Reading Passage 2 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -778,57 +858,57 @@
                 {
                     "text": "I. The significance of color in branding",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "II. The effects and uses of red",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "III. Blue's role in establishing trust",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "IV. The natural associations of green",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "V. Yellow's visibility and limitations",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "VI. The importance of color combinations",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! This heading/option best matches the paragraph/item based on Reading Passage 2."
                 },
                 {
                     "text": "VII. Cultural differences in color meaning",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "VIII. Future applications of color psychology",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "IX. The history of color theory",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "X. Personal preferences in color selection",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "XI. Color in digital technology",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 }
             ],
             "options": "I. The significance of color in branding\nII. The effects and uses of red\nIII. Blue's role in establishing trust\nIV. The natural associations of green\nV. Yellow's visibility and limitations\nVI. The importance of color combinations\nVII. Cultural differences in color meaning\nVIII. Future applications of color psychology\nIX. The history of color theory\nX. Personal preferences in color selection\nXI. Color in digital technology",
@@ -840,7 +920,7 @@
             "instructions": "You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "Paragraph G",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is VII. Cultural differences in color meaning. Check Reading Passage 2 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -852,57 +932,57 @@
                 {
                     "text": "I. The significance of color in branding",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "II. The effects and uses of red",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "III. Blue's role in establishing trust",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "IV. The natural associations of green",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "V. Yellow's visibility and limitations",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "VI. The importance of color combinations",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "VII. Cultural differences in color meaning",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! This heading/option best matches the paragraph/item based on Reading Passage 2."
                 },
                 {
                     "text": "VIII. Future applications of color psychology",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "IX. The history of color theory",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "X. Personal preferences in color selection",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 },
                 {
                     "text": "XI. Color in digital technology",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 2."
                 }
             ],
             "options": "I. The significance of color in branding\nII. The effects and uses of red\nIII. Blue's role in establishing trust\nIV. The natural associations of green\nV. Yellow's visibility and limitations\nVI. The importance of color combinations\nVII. Cultural differences in color meaning\nVIII. Future applications of color psychology\nIX. The history of color theory\nX. Personal preferences in color selection\nXI. Color in digital technology",
@@ -914,7 +994,7 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
             "question": "Red increases appetite, which is why it is commonly used in restaurant branding.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is VII) Cultural differences in color meaning. Paragraph G discusses how color interpretation varies across cultures.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -932,16 +1012,32 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
             "question": "Blue is the most popular color worldwide.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph B states red \"stimulates appetite, which explains its prevalent use by fast-food chains.\"",
+            "correct_feedback": "Correct! Paragraph B explicitly states red \"stimulates appetite, which explains its prevalent use by fast-food chains.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph B clearly states red increases appetite.",
             "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B states red \"stimulates appetite, which explains its prevalent use by fast-food chains like McDonald's and KFC.\""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage explicitly states red stimulates appetite."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This information is clearly stated in Paragraph B."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -950,16 +1046,32 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
             "question": "The human eye can detect more variations of green than any other color.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is NOT GIVEN. While Paragraph C states blue is \"one of the most universally favored colors,\" it doesn't claim it's THE most popular worldwide.",
+            "correct_feedback": "Correct! While the passage says blue is universally favored, it doesn't state it's the most popular color worldwide.",
+            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't make this specific claim.",
             "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While the passage says blue is universally favored, it doesn't claim it's THE most popular color worldwide."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage doesn't contradict this; it simply doesn't provide this information."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! While Paragraph C states blue is \"one of the most universally favored colors,\" it doesn't claim it's THE most popular worldwide."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -968,16 +1080,32 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
             "question": "Paragraph D: \"The human eye can distinguish more shades of green than any other color\"",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph D states \"The human eye can distinguish more shades of green than any other color.\"",
+            "correct_feedback": "Correct! Paragraph D explicitly states \"The human eye can distinguish more shades of green than any other color.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph D clearly makes this statement.",
             "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D states \"The human eye can distinguish more shades of green than any other color, possibly because our ancestors needed to differentiate between various types of vegetation for survival.\""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage explicitly states this in Paragraph D."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This information is clearly stated in Paragraph D."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -986,130 +1114,128 @@
             "instructions": "Complete the sentences below.\r\nChoose NO MORE THAN THREE WORDS from the passage for each answer.\r\nWrite your answers in boxes 24 – 26 on your answer sheet.",
             "question": "According to the passage, color can increase  by up to 80%.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph D states \"The human eye can distinguish more shades of green than any other color.\"",
+            "correct_feedback": "Correct! Paragraph D explicitly states \"The human eye can distinguish more shades of green than any other color.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. This is stated in Paragraph D.",
             "reading_text_id": null,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Complete the sentences below.\r\nChoose NO MORE THAN THREE WORDS from the passage for each answer.\r\nWrite your answers in boxes 24 – 26 on your answer sheet.",
-            "question": "High contrast color combinations such as black and white are described as highly .",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Complete the sentences below.\r\nChoose NO MORE THAN THREE WORDS from the passage for each answer.\r\nWrite your answers in boxes 24 – 26 on your answer sheet.",
-            "question": "In ancient times, purple was associated with royalty because purple dye was .",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Complete each sentence with the correct ending, A – J, below.\r\nWrite the correct letter, A – J, in boxes 27 – 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
-            "question": "The United Nations projects that",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "the carbon footprint of food through reduced transportation.",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "the majority of people will live in cities by 2050.",
+                    "text": "TRUE",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph D states \"The human eye can distinguish more shades of green than any other color.\""
                 },
                 {
-                    "text": "many urban residents lack access to vehicles.",
+                    "text": "FALSE",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage explicitly states this fact."
                 },
                 {
-                    "text": "schools have improved science education programs.",
+                    "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "provided a significant portion of vegetables consumed.",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "can produce crops throughout the year using controlled environments.",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "residents have limited access to healthy, affordable food.",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "encourage social interaction among diverse community members.",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "require large amounts of land and water.",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "were first developed in ancient Rome.",
-                    "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This is clearly stated in Paragraph D."
                 }
             ],
-            "options": "the carbon footprint of food through reduced transportation.\nthe majority of people will live in cities by 2050.\nmany urban residents lack access to vehicles.\nschools have improved science education programs.\nprovided a significant portion of vegetables consumed.\ncan produce crops throughout the year using controlled environments.\nresidents have limited access to healthy, affordable food.\nencourage social interaction among diverse community members.\nrequire large amounts of land and water.\nwere first developed in ancient Rome.",
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the sentences below.\r\nChoose NO MORE THAN THREE WORDS from the passage for each answer.",
+            "question": "24. According to the passage, color can increase [field 1] by up to 80%.",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is BRAND RECOGNITION. Paragraph A states \"color increases brand recognition by up to 80%.\"",
+            "correct_feedback": "Excellent! Paragraph A states \"color increases brand recognition by up to 80%.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is BRAND RECOGNITION. Check Paragraph A.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "brand recognition"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Excellent! Paragraph A states \"color increases brand recognition by up to 80%.\"",
+                    "incorrect": "Incorrect. The correct answer is BRAND RECOGNITION. Paragraph A states \"color increases brand recognition by up to 80%.\"",
+                    "no_answer": "The correct answer is BRAND RECOGNITION. Paragraph A states \"color increases brand recognition by up to 80%.\""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "25. High contrast color combinations such as black and white are described as highly [field 1].",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is READABLE. Paragraph F states \"High contrast combinations, such as black and white or blue and orange, tend to be highly readable.\"",
+            "correct_feedback": "Perfect! Paragraph F states high contrast combinations \"tend to be highly readable and attention-grabbing.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is READABLE. Check Paragraph F.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "readable"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Perfect! Paragraph F states high contrast combinations \"tend to be highly readable and attention-grabbing.\"",
+                    "incorrect": "Incorrect. The correct answer is READABLE. Paragraph F states high contrast combinations \"tend to be highly readable.\"",
+                    "no_answer": "The correct answer is READABLE. Paragraph F states high contrast combinations \"tend to be highly readable and attention-grabbing.\""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "26. In ancient times, purple was associated with royalty because purple dye was [field 1].",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is RARE AND EXPENSIVE or EXPENSIVE. Paragraph G states purple \"has historically been associated with royalty and luxury due to the rarity and expense of purple dye in ancient times.\"",
+            "correct_feedback": "Correct! Paragraph G explains purple's association with royalty was \"due to the rarity and expense of purple dye in ancient times.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is RARE AND EXPENSIVE. Check Paragraph G.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "rare and expensive|expensive"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph G explains purple's association with royalty was \"due to the rarity and expense of purple dye in ancient times.\"",
+                    "incorrect": "Incorrect. The correct answer is RARE AND EXPENSIVE. Paragraph G states purple dye was rare and expensive in ancient times.",
+                    "no_answer": "The correct answer is RARE AND EXPENSIVE or EXPENSIVE. Paragraph G states this was \"due to the rarity and expense of purple dye in ancient times.\""
+                }
+            }
         },
         {
             "type": "closed_question",
             "instructions": "Complete each sentence with the correct ending, A – J, below.\r\nWrite the correct letter, A – J, in boxes 27 – 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
             "question": "During World War II, victory gardens",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is provided a significant portion of vegetables consumed.. Check Reading Passage 3 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1121,52 +1247,52 @@
                 {
                     "text": "the carbon footprint of food through reduced transportation.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "the majority of people will live in cities by 2050.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "many urban residents lack access to vehicles.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "schools have improved science education programs.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "provided a significant portion of vegetables consumed.",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! This heading/option best matches the paragraph/item based on Reading Passage 3."
                 },
                 {
                     "text": "can produce crops throughout the year using controlled environments.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "residents have limited access to healthy, affordable food.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "encourage social interaction among diverse community members.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "require large amounts of land and water.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "were first developed in ancient Rome.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 }
             ],
             "options": "the carbon footprint of food through reduced transportation.\nthe majority of people will live in cities by 2050.\nmany urban residents lack access to vehicles.\nschools have improved science education programs.\nprovided a significant portion of vegetables consumed.\ncan produce crops throughout the year using controlled environments.\nresidents have limited access to healthy, affordable food.\nencourage social interaction among diverse community members.\nrequire large amounts of land and water.\nwere first developed in ancient Rome.",
@@ -1178,7 +1304,7 @@
             "instructions": "Complete each sentence with the correct ending, A – J, below.\r\nWrite the correct letter, A – J, in boxes 27 – 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
             "question": "Food deserts are areas where",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is residents have limited access to healthy, affordable food.. Check Reading Passage 3 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1190,52 +1316,52 @@
                 {
                     "text": "the carbon footprint of food through reduced transportation.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "the majority of people will live in cities by 2050.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "many urban residents lack access to vehicles.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "schools have improved science education programs.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "provided a significant portion of vegetables consumed.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "can produce crops throughout the year using controlled environments.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "residents have limited access to healthy, affordable food.",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! This heading/option best matches the paragraph/item based on Reading Passage 3."
                 },
                 {
                     "text": "encourage social interaction among diverse community members.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "require large amounts of land and water.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "were first developed in ancient Rome.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 }
             ],
             "options": "the carbon footprint of food through reduced transportation.\nthe majority of people will live in cities by 2050.\nmany urban residents lack access to vehicles.\nschools have improved science education programs.\nprovided a significant portion of vegetables consumed.\ncan produce crops throughout the year using controlled environments.\nresidents have limited access to healthy, affordable food.\nencourage social interaction among diverse community members.\nrequire large amounts of land and water.\nwere first developed in ancient Rome.",
@@ -1247,7 +1373,7 @@
             "instructions": "Complete each sentence with the correct ending, A – J, below.\r\nWrite the correct letter, A – J, in boxes 27 – 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
             "question": "Urban agriculture can help reduce",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is the carbon footprint of food through reduced transportation.. Check Reading Passage 3 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1259,52 +1385,52 @@
                 {
                     "text": "the carbon footprint of food through reduced transportation.",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! This heading/option best matches the paragraph/item based on Reading Passage 3."
                 },
                 {
                     "text": "the majority of people will live in cities by 2050.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "many urban residents lack access to vehicles.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "schools have improved science education programs.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "provided a significant portion of vegetables consumed.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "can produce crops throughout the year using controlled environments.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "residents have limited access to healthy, affordable food.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "encourage social interaction among diverse community members.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "require large amounts of land and water.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "were first developed in ancient Rome.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 }
             ],
             "options": "the carbon footprint of food through reduced transportation.\nthe majority of people will live in cities by 2050.\nmany urban residents lack access to vehicles.\nschools have improved science education programs.\nprovided a significant portion of vegetables consumed.\ncan produce crops throughout the year using controlled environments.\nresidents have limited access to healthy, affordable food.\nencourage social interaction among diverse community members.\nrequire large amounts of land and water.\nwere first developed in ancient Rome.",
@@ -1316,7 +1442,7 @@
             "instructions": "Complete each sentence with the correct ending, A – J, below.\r\nWrite the correct letter, A – J, in boxes 27 – 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
             "question": "Community gardens have been found to",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is encourage social interaction among diverse community members.. Check Reading Passage 3 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1328,52 +1454,52 @@
                 {
                     "text": "the carbon footprint of food through reduced transportation.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "the majority of people will live in cities by 2050.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "many urban residents lack access to vehicles.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "schools have improved science education programs.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "provided a significant portion of vegetables consumed.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "can produce crops throughout the year using controlled environments.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "residents have limited access to healthy, affordable food.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "encourage social interaction among diverse community members.",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! This heading/option best matches the paragraph/item based on Reading Passage 3."
                 },
                 {
                     "text": "require large amounts of land and water.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "were first developed in ancient Rome.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 }
             ],
             "options": "the carbon footprint of food through reduced transportation.\nthe majority of people will live in cities by 2050.\nmany urban residents lack access to vehicles.\nschools have improved science education programs.\nprovided a significant portion of vegetables consumed.\ncan produce crops throughout the year using controlled environments.\nresidents have limited access to healthy, affordable food.\nencourage social interaction among diverse community members.\nrequire large amounts of land and water.\nwere first developed in ancient Rome.",
@@ -1385,7 +1511,7 @@
             "instructions": "Complete each sentence with the correct ending, A – J, below.\r\nWrite the correct letter, A – J, in boxes 27 – 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
             "question": "Vertical farming systems",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is can produce crops throughout the year using controlled environments.. Check Reading Passage 3 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1397,52 +1523,52 @@
                 {
                     "text": "the carbon footprint of food through reduced transportation.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "the majority of people will live in cities by 2050.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "many urban residents lack access to vehicles.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "schools have improved science education programs.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "provided a significant portion of vegetables consumed.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "can produce crops throughout the year using controlled environments.",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! This heading/option best matches the paragraph/item based on Reading Passage 3."
                 },
                 {
                     "text": "residents have limited access to healthy, affordable food.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "encourage social interaction among diverse community members.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "require large amounts of land and water.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 },
                 {
                     "text": "were first developed in ancient Rome.",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. This option doesn't accurately reflect the main idea or content. Review Reading Passage 3."
                 }
             ],
             "options": "the carbon footprint of food through reduced transportation.\nthe majority of people will live in cities by 2050.\nmany urban residents lack access to vehicles.\nschools have improved science education programs.\nprovided a significant portion of vegetables consumed.\ncan produce crops throughout the year using controlled environments.\nresidents have limited access to healthy, affordable food.\nencourage social interaction among diverse community members.\nrequire large amounts of land and water.\nwere first developed in ancient Rome.",
@@ -1454,7 +1580,7 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 3?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
             "question": "The COVID-19 pandemic demonstrated the resilience of urban farms when traditional supply chains were disrupted.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is F) can produce crops throughout the year using controlled environments. Paragraph H describes vertical farms using climate control for year-round production.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -1472,16 +1598,32 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 3?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
             "question": "Urban farms always require less water than traditional agricultural operations.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph C states \"During the COVID-19 pandemic, for instance, urban farms in many cities proved resilient when conventional food supply chains were disrupted.\"",
+            "correct_feedback": "Correct! Paragraph C states urban farms \"proved resilient when conventional food supply chains were disrupted\" during COVID-19.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. This is stated in Paragraph C.",
             "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states \"During the COVID-19 pandemic, for instance, urban farms in many cities proved resilient when conventional food supply chains were disrupted.\""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage explicitly states this in Paragraph C."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This information is clearly stated in Paragraph C."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1490,16 +1632,32 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 3?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
             "question": "Schools with gardens have reported improved student performance in science subjects.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is NOT GIVEN. While the passage discusses water efficiency in some urban farming methods, it doesn't state that ALL urban farms always use less water.",
+            "correct_feedback": "Correct! The passage discusses water efficiency but doesn't make this absolute claim about all urban farms.",
+            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't make this blanket statement.",
             "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage doesn't make this absolute claim about all urban farms."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While the passage doesn't claim this is always true, it doesn't contradict it either."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! While the passage discusses water efficiency in some urban farming methods, it doesn't state that ALL urban farms always use less water than traditional operations."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1508,16 +1666,32 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 3?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
             "question": "Most urban farms operate as profitable commercial businesses.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph E states \"Schools with gardens have reported improved student engagement, better understanding of nutrition and food systems, and enhanced academic performance in science subjects.\"",
+            "correct_feedback": "Correct! Paragraph E states schools with gardens reported \"enhanced academic performance in science subjects.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. This is stated in Paragraph E.",
             "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E states \"Schools with gardens have reported improved student engagement, better understanding of nutrition and food systems, and enhanced academic performance in science subjects.\""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage explicitly states this in Paragraph E."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This information is clearly stated in Paragraph E."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1526,52 +1700,158 @@
             "instructions": "Complete the sentences below.\r\nChoose NO MORE THAN TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 38 – 40 on your answer sheet.",
             "question": "Urban farms can help cities manage  and reduce the urban heat island effect.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is NOT GIVEN. Paragraph G states \"While some urban farms operate as successful commercial enterprises, many rely on volunteers, grants, or subsidies,\" but doesn't specify if MOST are profitable.",
+            "correct_feedback": "Correct! While the passage discusses economic viability, it doesn't state whether most urban farms are profitable.",
+            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't provide this specific information.",
             "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage doesn't state this; in fact, it suggests many rely on grants or subsidies."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Close, but the correct answer is NOT GIVEN. While the passage suggests challenges, it doesn't definitively state most are unprofitable."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G states \"While some urban farms operate as successful commercial enterprises, many rely on volunteers, grants, or subsidies,\" but doesn't specify what proportion are profitable."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
-            "type": "closed_question",
-            "instructions": "Complete the sentences below.\r\nChoose NO MORE THAN TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 38 – 40 on your answer sheet.",
-            "question": "is a serious concern in older industrial cities where harmful substances may be present in the ground.",
+            "type": "open_question",
+            "instructions": "Complete the sentences below.\r\nChoose NO MORE THAN TWO WORDS from the passage for each answer.",
+            "question": "38. Urban farms can help cities manage [field 1] and reduce the urban heat island effect.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is STORMWATER RUNOFF. Paragraph D states \"urban farms can help manage stormwater runoff, improve air quality, reduce the urban heat island effect.\"",
+            "correct_feedback": "Excellent! Paragraph D states urban farms \"can help manage stormwater runoff, improve air quality, reduce the urban heat island effect.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is STORMWATER RUNOFF. Check Paragraph D.",
+            "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "stormwater runoff"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Excellent! Paragraph D lists this as one of urban agriculture's environmental benefits.",
+                    "incorrect": "Incorrect. The correct answer is STORMWATER RUNOFF. Paragraph D states urban farms \"can help manage stormwater runoff.\"",
+                    "no_answer": "The correct answer is STORMWATER RUNOFF. Paragraph D states urban farms can help manage stormwater runoff."
+                }
+            }
         },
         {
-            "type": "closed_question",
-            "instructions": "Complete the sentences below.\r\nChoose NO MORE THAN TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 38 – 40 on your answer sheet.",
-            "question": "Singapore aims to produce 30% of its nutritional needs locally by .",
+            "type": "open_question",
+            "instructions": "",
+            "question": "39. [field 1] is a serious concern in older industrial cities where harmful substances may be present in the ground.",
             "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is SOIL CONTAMINATION. Paragraph F states \"Soil contamination is another serious issue, particularly in older industrial cities where soil may contain heavy metals or other pollutants.\"",
+            "correct_feedback": "Perfect! Paragraph F states \"Soil contamination is another serious issue, particularly in older industrial cities.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is SOIL CONTAMINATION. Check Paragraph F.",
+            "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "sentence_completion_r",
             "mc_options": [],
             "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "soil contamination"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Perfect! Paragraph F identifies soil contamination as a serious issue in older industrial cities.",
+                    "incorrect": "Incorrect. The correct answer is SOIL CONTAMINATION. Paragraph F states \"Soil contamination is another serious issue, particularly in older industrial cities.\"",
+                    "no_answer": "The correct answer is SOIL CONTAMINATION. Paragraph F discusses this as a challenge for urban agriculture."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "40. Singapore aims to produce 30% of its nutritional needs locally by [field 1].",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is 2030. Paragraph I states \"Singapore, for example, aims to produce 30% of its nutritional needs locally by 2030.\"",
+            "correct_feedback": "Correct! Paragraph I states Singapore \"aims to produce 30% of its nutritional needs locally by 2030.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is 2030. Check Paragraph I.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "2030"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph I states Singapore \"aims to produce 30% of its nutritional needs locally by 2030.\"",
+                    "incorrect": "Incorrect. The correct answer is 2030. Paragraph I states this goal clearly.",
+                    "no_answer": "The correct answer is 2030. Paragraph I states Singapore aims to achieve this goal by 2030."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose the correct letter, A, B, C or D.",
+            "question": "According to the passage, vertical farming systems",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is C) use LED lighting and climate control for year-round production. Paragraph H states vertical farms \"use LED lighting, hydroponics or aeroponics, and climate control to optimize growing conditions and enable year-round production.\"",
+            "correct_feedback": "Excellent! Paragraph H states vertical farms \"use LED lighting, hydroponics or aeroponics, and climate control to optimize growing conditions and enable year-round production regardless of external weather conditions.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is C. Check Paragraph H for details about vertical farming technology.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "are now cheaper to operate than traditional farms",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph H states these systems are \"currently energy-intensive and expensive to establish.\""
+                },
+                {
+                    "text": "require large amounts of outdoor space",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states vertical farming \"can produce high yields in small footprints\" by using stacked layers."
+                },
+                {
+                    "text": "use LED lighting and climate control for year-round production",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph H states these systems \"use LED lighting, hydroponics or aeroponics, and climate control to optimize growing conditions and enable year-round production regardless of external weather conditions.\""
+                },
+                {
+                    "text": "have been widely adopted in most urban areas",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage describes vertical farming as innovative but doesn't claim widespread adoption."
+                }
+            ],
+            "options": "are now cheaper to operate than traditional farms\nrequire large amounts of outdoor space\nuse LED lighting and climate control for year-round production\nhave been widely adopted in most urban areas",
             "correct_answer_count": 1,
             "show_option_letters": false
         }
