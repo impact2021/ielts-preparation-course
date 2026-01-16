@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Reading Test Demo Files - Index</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 40px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .stat-box {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #0073aa;
+        }
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #0073aa;
+        }
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .demo-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        .demo-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        .demo-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+        }
+        .demo-number {
+            display: inline-block;
+            background: rgba(255,255,255,0.3);
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-right: 8px;
+            font-size: 0.9em;
+        }
+        .demo-body {
+            padding: 20px;
+        }
+        .demo-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .demo-description {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        .demo-features {
+            font-size: 0.85em;
+            color: #0073aa;
+            background: #e7f3ff;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .demo-link {
+            display: inline-block;
+            background: #0073aa;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: background 0.2s ease;
+        }
+        .demo-link:hover {
+            background: #005a87;
+        }
+        .section-title {
+            font-size: 1.8em;
+            color: #333;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #0073aa;
+            padding-bottom: 10px;
+        }
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .doc-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        .doc-card:hover {
+            border-color: #0073aa;
+            box-shadow: 0 2px 8px rgba(0,115,170,0.1);
+        }
+        .doc-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .doc-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .doc-desc {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 12px;
+        }
+        .success-badge {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .category-badge {
+            display: inline-block;
+            background: #e7f3ff;
+            color: #0073aa;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-right: 5px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 IELTS Reading Test Demo Files</h1>
+        <p class="subtitle">12 Distinct HTML Demo Files for Screenshot Capture</p>
+        
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Demo Files</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Total Resources</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">1280x720</div>
+                <div class="stat-label">Optimal Resolution</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">7.5</div>
+                <div class="stat-label">Band Score</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">📋 Demo Files</h2>
+        
+        <div class="demo-grid">
+            <!-- 01 -->
+            <div class="demo-card">
+                <div class="demo-header"><span class="demo-number">01</span>CBT Main Interface</div>
+                <div class="demo-body">
+                    <div class="demo-title">Clean Interface</div>
+                    <div class="demo-description">Split-screen layout with passage and questions, no modal overlay</div>
+                    <div class="demo-features">Split screen • Timer • Navigation</div>
+                    <a href="01-cbt-main-interface.html" class="demo-link" target="_blank">Open Demo →</a>
+                </div>
+            </div>
+
+            <!-- 02 -->
+            <div class="demo-card">
+                <div class="demo-header"><span class="demo-number">02</span>Band 7.5 Modal</div>
+                <div class="demo-body">
+                    <div class="demo-title">Result Screen</div>
+                    <div class="demo-description">Centered modal showing Band 7.5 score (32/40 correct)</div>
+                    <div class="demo-features">Modal • Score Display • Actions</div>
+                    <a href="02-band-score-7-5-modal.html" class="demo-link" target="_blank">Open Demo →</a>
+                </div>
+            </div>
+
+            <!-- 03 -->
+            <div class="demo-card">
+                <div class="demo-header"><span class="demo-number">03</span>Correct Feedback</div>
+                <div class="demo-body">
+                    <div class="demo-title">Green Answer</div>
+                    <div class="demo-description">Correct answer highlighted in green with checkmark (✓)</div>
+                    <div class="demo-features">Green Style • Checkmark • Feedback</div>
+                    <a href="03-correct-answer-feedback.html" class="demo-link" target="_blank">Open Demo →</a>
+                </div>
+            </div>
+
+            <!-- 04 -->
+            <div class="demo-card">
+                <div class="demo-header"><span class="demo-number">04</span>Incorrect Feedback</div>
+                <div class="demo-body">
+                    <div class="demo-title">Red Answer</div>
+                    <div class="demo-description">Incorrect answer in red with X mark (✗), correct answer shown</div>
+                    <div class="demo-features">Red Style • X Mark • Correction</div>
+                    <a href="04-incorrect-answer-feedback.html" class="demo-link" target="_blank">Open Demo →</a>
+                </div>
+            </div>
+
+            <!-- 05 -->
+            <div class="demo-card">
+                <div class="demo-header"><span class="demo-number">05</span>Show Me Button</div>
+                <div class="demo-body">
+                    <div class="demo-title">Navigation Helper</div>
+                    <div class="demo-description">Feedback with "Show me the section" button for guided learning</div>
+                    <div class="demo-features">CTA Button • Navigation • Help</div>
+                    <a href="05-show-me-button.html" class="demo-link" target="_blank">Open Demo →</a>
+                </div>
+            </div>
+
+            <!-- 06 -->
+            <div class="demo-card">
+                <div class="demo-header"><span class="demo-number">06</span>Highlighted Passage</div>
+                <div class="demo-body">
+                    <div class="demo-title">Text Highlighting</div>
+                    <div class="demo-description">Yellow highlights on key text phrases in reading passage</div>
+                    <div class="demo-features">Yellow Highlight • Clear Button • Selection</div>
+                    <a href="06-highlighted-passage.html" class="demo-link" target="_blank">Open Demo →</a>
+                </div>
+            </div>
+
+            <!-- 07 -->
+            <div class="demo-card">
+                <div class="demo-header"><span class="demo-number">07</span>Multiple Choice</div>
+                <div class="demo-body">
+                    <div class="demo-title">Question Type</div>
+                    <div class="demo-description">Classic A, B, C, D multiple choice question format</div>
+                    <div class="demo-features">Radio Buttons • 4 Options • Instructions</div>
+                    <a href="07-multiple-choice-question.html" class="demo-link" target="_blank">Open Demo →</a>
+                </div>
+            </div>
+
+            <!-- 08 -->
+            <div class="demo-card">
+                <div class="demo-header"><span class="demo-number">08</span>True/False/Not Given</div>
+                <div class="demo-body">
+                    <div class="demo-title">IELTS Format</div>
+                    <div class="demo-description">True/False/Not Given question type unique to IELTS reading</div>
+                    <div class="demo-features">3 Options • IELTS Format • Multiple Questions</div>
+                    <a href="08-true-false-question.html" class="demo-link" target="_blank">Open Demo →</a>
+                </div>
+            </div>
+
+            <!-- 09 -->
+            <div class="demo-card">
+                <div class="demo-header"><span class="demo-number">09</span>Timer Countdown</div>
+                <div class="demo-body">
+                    <div class="demo-title">Low Time Warning</div>
+                    <div class="demo-description">Timer showing 15:30 in RED to indicate time pressure</div>
+                    <div class="demo-features">Red Timer • Warning State • Urgency</div>
+                    <a href="09-timer-countdown.html" class="demo-link" target="_blank">Open Demo →</a>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="demo-card">
+                <div class="demo-header"><span class="demo-number">10</span>Font Controls</div>
+                <div class="demo-body">
+                    <div class="demo-title">Accessibility</div>
+                    <div class="demo-description">Font size controls (A−, A, A+) for readability options</div>
+                    <div class="demo-features">A− A A+ • Active State • Accessibility</div>
+                    <a href="10-font-controls.html" class="demo-link" target="_blank">Open Demo →</a>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="demo-card">
+                <div class="demo-header"><span class="demo-number">11</span>Detailed Feedback (✓)</div>
+                <div class="demo-body">
+                    <div class="demo-title">Learning Content</div>
+                    <div class="demo-description">Comprehensive explanation and key learning for correct answer</div>
+                    <div class="demo-features">Green Box • Explanation • Learning</div>
+                    <a href="11-detailed-feedback-correct.html" class="demo-link" target="_blank">Open Demo →</a>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="demo-card">
+                <div class="demo-header"><span class="demo-number">12</span>Detailed Feedback (✗)</div>
+                <div class="demo-body">
+                    <div class="demo-title">Correction Guidance</div>
+                    <div class="demo-description">Detailed explanation why incorrect, shows correct answer</div>
+                    <div class="demo-features">Red Box • Explanation • Correction</div>
+                    <a href="12-detailed-feedback-incorrect.html" class="demo-link" target="_blank">Open Demo →</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">📚 Documentation & Guides</h2>
+        
+        <div class="docs-grid">
+            <div class="doc-card">
+                <div class="doc-icon">📖</div>
+                <div class="doc-title">DEMO_GUIDE.md</div>
+                <div class="doc-desc">Comprehensive guide to all demo files with feature descriptions and usage instructions</div>
+                <a href="DEMO_GUIDE.md" class="demo-link" target="_blank">Read Guide →</a>
+            </div>
+            <div class="doc-card">
+                <div class="doc-icon">✅</div>
+                <div class="doc-title">COMPLETION_REPORT.md</div>
+                <div class="doc-desc">Detailed completion report with file verification, statistics, and quality assurance checklist</div>
+                <a href="COMPLETION_REPORT.md" class="demo-link" target="_blank">Read Report →</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">🎯 Features Covered</h2>
+        
+        <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                <div><span class="category-badge">✓</span> CBT Interface</div>
+                <div><span class="category-badge">✓</span> Split Screen</div>
+                <div><span class="category-badge">✓</span> Question Types</div>
+                <div><span class="category-badge">✓</span> Answer Feedback</div>
+                <div><span class="category-badge">✓</span> Score Modal</div>
+                <div><span class="category-badge">✓</span> Band 7.5</div>
+                <div><span class="category-badge">✓</span> Timer Display</div>
+                <div><span class="category-badge">✓</span> Font Controls</div>
+                <div><span class="category-badge">✓</span> Text Highlight</div>
+                <div><span class="category-badge">✓</span> Navigation</div>
+                <div><span class="category-badge">✓</span> Detailed Feedback</div>
+                <div><span class="category-badge">✓</span> Accessibility</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">✨ Quality Assurance</h2>
+        
+        <div style="background: #f0f9f0; padding: 20px; border-radius: 8px; border-left: 4px solid #4caf50; margin-bottom: 20px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                <div>✅ <strong>Self-Contained:</strong> No external dependencies</div>
+                <div>✅ <strong>1280x720:</strong> Optimized viewport size</div>
+                <div>✅ <strong>Band 7.5:</strong> Consistent throughout</div>
+                <div>✅ <strong>Production CSS:</strong> Matches frontend.css</div>
+                <div>✅ <strong>Realistic Content:</strong> IELTS-style passages</div>
+                <div>✅ <strong>Professional Styling:</strong> Ready for screenshots</div>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Created:</strong> January 16, 2025 | <strong>Status:</strong> <span class="success-badge">Production Ready</span></p>
+            <p>All files are self-contained HTML documents optimized for screenshot capture at 1280x720 resolution</p>
+        </footer>
+    </div>
+</body>
+</html>

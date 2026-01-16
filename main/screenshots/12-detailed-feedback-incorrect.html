@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Reading Test - Detailed Feedback Incorrect</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #fff; }
+        
+        .ielts-computer-based-quiz { max-width: 1280px; margin: 0; padding: 0; }
+        .computer-based-container { display: flex; gap: 8px; min-height: 600px; margin-bottom: 0; margin-top: 0; }
+        
+        .reading-column { flex: 0 0 48%; border-right: 2px solid #e0e0e0; background: #f9f9f9; overflow-y: auto; }
+        .reading-content { padding: 20px; }
+        .reading-text { font-size: 1em; line-height: 1.8; color: #333; }
+        .reading-text p { margin-bottom: 15px; }
+        
+        .questions-column { flex: 0 0 52%; background: #fff; overflow-y: auto; }
+        .questions-content { padding: 20px; padding-bottom: 0; }
+        
+        .ielts-computer-based-quiz .quiz-question {
+            padding: 20px; margin-bottom: 25px; background: #f9f9f9;
+            border: 1px solid #ddd; border-radius: 5px;
+        }
+        
+        .question-number { font-size: 1.1em; font-weight: 600; color: #0073aa; margin: 0 0 10px 0; }
+        .question-text { margin: 15px 0; font-size: 1em; line-height: 1.6; color: #333; }
+        .question-options { display: flex; flex-direction: column; gap: 10px; margin: 15px 0; }
+        
+        .option-label {
+            display: flex; flex-wrap: wrap; align-items: flex-start; padding: 12px 15px;
+            margin-bottom: 8px; background: #fff; border: 2px solid #ddd;
+            border-radius: 5px; cursor: pointer; transition: all 0.2s ease; width: 100%;
+        }
+        
+        .option-label:hover { background: #f0f7ff; border-color: #0073aa; }
+        .option-label input[type="radio"] { margin-right: 10px; }
+        
+        /* INCORRECT ANSWER STYLING */
+        .option-label.answer-incorrect {
+            background: #f44336 !important;
+            border: 3px solid #f44336 !important;
+            color: #fff !important;
+        }
+        
+        .option-label.answer-incorrect input[type="radio"] { accent-color: #fff; }
+        .option-label.answer-incorrect > span::after { content: ' ✗'; display: inline; margin-left: 5px; font-size: 20px; font-weight: bold; color: #fff; }
+        
+        /* CORRECT ANSWER HIGHLIGHT */
+        .option-label.answer-correct-highlight {
+            background: transparent !important;
+            border: 3px solid #4caf50 !important;
+            color: inherit !important;
+            margin-top: 15px;
+            padding: 12px 15px;
+        }
+        
+        .option-label.answer-correct-highlight input[type="radio"] { accent-color: #4caf50; }
+        
+        /* Detailed feedback message */
+        .question-feedback-message {
+            margin-top: 15px; margin-bottom: 20px; padding: 15px;
+            background: rgba(244, 67, 54, 0.1);
+            border-left: 4px solid #f44336;
+            border-radius: 3px; font-size: 0.95em; line-height: 1.6;
+        }
+        
+        .feedback-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .feedback-icon {
+            font-size: 20px;
+            font-weight: bold;
+            color: #f44336;
+        }
+        
+        .feedback-status {
+            font-weight: 600;
+            color: #c62828;
+        }
+        
+        .feedback-message {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(244, 67, 54, 0.3);
+            color: #333;
+        }
+        
+        .correct-answer-section {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(244, 67, 54, 0.3);
+        }
+        
+        .correct-answer-label {
+            font-weight: 600;
+            color: #2e7d32;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ielts-computer-based-quiz">
+        <div class="computer-based-container">
+            <div class="reading-column">
+                <div class="reading-content">
+                    <h2 style="font-size: 1.3em; font-weight: 600; color: #333; margin: 0 0 15px 0; padding-bottom: 10px; border-bottom: 2px solid #0073aa;">Reading Passage</h2>
+                    <div class="reading-text">
+                        <p>Renewable energy sources have become crucial in the global effort to combat climate change and reduce carbon emissions. Solar and wind energy are the fastest-growing renewable technologies, with installed capacity increasing exponentially over the past decade.</p>
+                        <p>Unlike fossil fuel power plants that require continuous fuel supply and generate significant pollution, renewable energy systems produce electricity from naturally replenished sources. This fundamental difference makes renewables essential for sustainable energy production.</p>
+                        <p>However, renewable energy adoption faces several challenges. Intermittency remains a significant issue, as solar and wind power depend on weather conditions. Battery storage technology is advancing rapidly to address this challenge, but still requires substantial investment.</p>
+                        <p>Despite these obstacles, many countries have committed to transitioning to 100% renewable energy. Denmark, for example, already generates over 80% of its electricity from wind power, demonstrating the viability of renewable energy systems at scale.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="questions-column">
+                <div class="questions-content">
+                    <div class="quiz-question">
+                        <div class="question-number">Question 40</div>
+                        <div class="question-text">What is mentioned as a primary challenge to renewable energy adoption?</div>
+                        <div class="question-options">
+                            <label class="option-label answer-incorrect">
+                                <input type="radio" name="q40" value="a" checked>
+                                <span>High construction costs of power plants</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q40" value="b">
+                                <span>Excessive noise pollution from turbines</span>
+                            </label>
+                            <label class="option-label answer-correct-highlight">
+                                <input type="radio" name="q40" value="c">
+                                <span>Intermittency due to weather dependency</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q40" value="d">
+                                <span>Lack of government support</span>
+                            </label>
+                        </div>
+                        <div class="question-feedback-message">
+                            <div class="feedback-header">
+                                <span class="feedback-icon">✗</span>
+                                <span class="feedback-status">Incorrect</span>
+                            </div>
+                            <div class="feedback-message">
+                                <strong>Explanation:</strong> While construction costs can be a factor, the passage specifically identifies "intermittency" as the primary challenge to renewable energy adoption. The passage states: "Intermittency remains a significant issue, as solar and wind power depend on weather conditions."<br/><br/>
+                                <strong>Why your answer is wrong:</strong> The passage does not mention "high construction costs of power plants" as a primary challenge. This option represents a different concern that is not emphasized in the text.
+                            </div>
+                            <div class="correct-answer-section">
+                                <div class="correct-answer-label">✓ Correct Answer:</div>
+                                <label class="option-label answer-correct-highlight" style="margin-top: 0;">
+                                    <input type="radio" disabled>
+                                    <span><strong>"Intermittency due to weather dependency"</strong> - This is explicitly mentioned as a significant challenge because solar and wind power depend on weather conditions.</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

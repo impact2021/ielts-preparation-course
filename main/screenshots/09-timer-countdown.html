@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Reading Test - Timer Countdown</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #fff; }
+        
+        .ielts-computer-based-quiz { max-width: 1280px; margin: 0; padding: 0; display: flex; flex-direction: column; }
+        
+        .quiz-timer-fullscreen {
+            position: sticky; top: 0; background: #fff; border-bottom: 2px solid #0073aa;
+            padding: 8px 20px; display: flex; justify-content: space-between; align-items: center;
+            font-size: 16px; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .timer-left-section { display: flex; align-items: center; gap: 12px; }
+        .timer-right-section { display: flex; align-items: center; gap: 12px; }
+        .quiz-timer-fullscreen strong { margin-right: 10px; }
+        
+        /* Timer display - warning color when time is low */
+        .timer-content span {
+            font-family: monospace;
+            font-size: 24px;
+            font-weight: bold;
+            color: #d32f2f; /* RED for low time warning */
+            padding: 4px 8px;
+            background: rgba(211, 47, 47, 0.1);
+            border-radius: 4px;
+        }
+        
+        .computer-based-container {
+            display: flex; gap: 8px; flex: 1; overflow: hidden;
+            margin: 0; border: none; border-radius: 0; background: #fff;
+        }
+        
+        .reading-column { flex: 0 0 48%; border-right: 2px solid #e0e0e0; background: #f9f9f9; overflow-y: auto; }
+        .reading-content { padding: 20px; }
+        .reading-text { font-size: 1em; line-height: 1.8; color: #333; }
+        .reading-text p { margin-bottom: 15px; }
+        
+        .questions-column { flex: 0 0 52%; background: #fff; overflow-y: auto; display: flex; flex-direction: column; }
+        .questions-content { padding: 20px; flex: 1; }
+        
+        .ielts-computer-based-quiz .quiz-question {
+            padding: 20px; margin-bottom: 25px; background: #f9f9f9;
+            border: 1px solid #ddd; border-radius: 5px;
+        }
+        
+        .question-number { font-size: 1.1em; font-weight: 600; color: #0073aa; margin: 0 0 10px 0; }
+        .question-text { margin: 15px 0; font-size: 1em; line-height: 1.6; color: #333; }
+        .question-options { display: flex; flex-direction: column; gap: 10px; margin: 15px 0; }
+        
+        .option-label {
+            display: flex; flex-wrap: wrap; align-items: flex-start; padding: 12px 15px;
+            margin-bottom: 8px; background: #fff; border: 2px solid #ddd;
+            border-radius: 5px; cursor: pointer; transition: all 0.2s ease; width: 100%;
+        }
+        
+        .option-label:hover { background: #f0f7ff; border-color: #0073aa; }
+        .option-label input[type="radio"] { margin-right: 10px; }
+        
+        .question-navigation {
+            position: sticky; bottom: 0; display: flex; align-items: center; gap: 15px;
+            padding: 8px 20px; background: #f5f5f5; border: 1px solid #ddd;
+            margin-bottom: 0 !important; margin-top: 0; z-index: 100;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .question-buttons { display: flex; flex-wrap: nowrap; gap: 3px; flex: 1; overflow-x: auto; }
+        .question-nav-btn {
+            min-width: 28px; height: 32px; padding: 4px 2px; background: #fff; border: 2px solid #ddd;
+            border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 11px; color: #333;
+            transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center;
+        }
+        
+        .quiz-submit-btn { margin-left: auto; padding: 10px 30px; font-size: 16px; font-weight: 600; background: #0073aa; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="ielts-computer-based-quiz">
+        <div class="quiz-timer-fullscreen">
+            <div class="timer-left-section">
+                <strong>⏱ Time Remaining:</strong>
+                <div class="timer-content"><span>15:30</span></div>
+            </div>
+            <div class="timer-right-section">
+                <button class="quiz-submit-btn">Submit Quiz</button>
+            </div>
+        </div>
+        
+        <div class="computer-based-container">
+            <div class="reading-column">
+                <div class="reading-content">
+                    <h2 style="font-size: 1.3em; font-weight: 600; color: #333; margin: 0 0 15px 0; padding-bottom: 10px; border-bottom: 2px solid #0073aa;">Reading Passage 1</h2>
+                    <div class="reading-text">
+                        <p>Conservation efforts have become increasingly important as biodiversity faces unprecedented threats from habitat loss, pollution, and climate change. Protected areas such as national parks and wildlife reserves play a crucial role in preserving endangered species and maintaining ecosystem integrity.</p>
+                        <p>The effectiveness of conservation strategies depends on several factors including adequate funding, local community involvement, and international cooperation. Many successful conservation programs combine habitat restoration with species-specific protection measures.</p>
+                        <p>Technology has revolutionized conservation monitoring, allowing researchers to track animal populations and habitat changes in real-time. Satellite imagery, GPS tracking, and environmental DNA analysis provide unprecedented insights into ecosystem dynamics.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="questions-column">
+                <div class="questions-content">
+                    <div class="quiz-question">
+                        <div class="question-number">Question 18</div>
+                        <div class="question-text">Why have protected areas become important?</div>
+                        <div class="question-options">
+                            <label class="option-label">
+                                <input type="radio" name="q18" value="a">
+                                <span>To provide recreational facilities</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q18" value="b">
+                                <span>To preserve endangered species and maintain ecosystem integrity</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q18" value="c">
+                                <span>To generate tourism revenue</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q18" value="d">
+                                <span>To establish borders between countries</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-question">
+                        <div class="question-number">Question 19</div>
+                        <div class="question-text">Which technology is used for conservation monitoring?</div>
+                        <div class="question-options">
+                            <label class="option-label">
+                                <input type="radio" name="q19" value="a">
+                                <span>Satellite imagery and GPS tracking</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q19" value="b">
+                                <span>Manual field surveys only</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q19" value="c">
+                                <span>Community interviews</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q19" value="d">
+                                <span>Newspaper reports</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question-navigation">
+                    <div class="question-buttons">
+                        <button class="question-nav-btn">1</button>
+                        <button class="question-nav-btn">2</button>
+                        <button class="question-nav-btn">3</button>
+                        <button class="question-nav-btn">4</button>
+                        <button class="question-nav-btn">5</button>
+                    </div>
+                    <button class="quiz-submit-btn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

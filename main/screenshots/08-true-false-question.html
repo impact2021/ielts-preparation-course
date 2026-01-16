@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Reading Test - True/False/Not Given Question</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #fff; }
+        
+        .ielts-computer-based-quiz { max-width: 1280px; margin: 0; padding: 0; }
+        .computer-based-container { display: flex; gap: 8px; min-height: 600px; margin-bottom: 0; margin-top: 0; }
+        
+        .reading-column { flex: 0 0 48%; border-right: 2px solid #e0e0e0; background: #f9f9f9; overflow-y: auto; }
+        .reading-content { padding: 20px; }
+        .reading-text { font-size: 1em; line-height: 1.8; color: #333; }
+        .reading-text p { margin-bottom: 15px; }
+        
+        .questions-column { flex: 0 0 52%; background: #fff; overflow-y: auto; }
+        .questions-content { padding: 20px; padding-bottom: 0; }
+        
+        .ielts-computer-based-quiz .quiz-question {
+            padding: 20px; margin-bottom: 25px; background: #f9f9f9;
+            border: 1px solid #ddd; border-radius: 5px;
+        }
+        
+        .question-number { font-size: 1.1em; font-weight: 600; color: #0073aa; margin: 0 0 10px 0; }
+        .question-text { margin: 15px 0; font-size: 1em; line-height: 1.6; color: #333; font-weight: 500; }
+        
+        .question-instructions {
+            margin: 0 0 15px 0;
+            padding: 12px 15px;
+            background: #e7f3ff;
+            border-left: 4px solid #0073aa;
+            font-size: 0.95em;
+            line-height: 1.6;
+            color: #333;
+            font-style: italic;
+        }
+        
+        .question-options { display: flex; flex-direction: column; gap: 10px; margin: 15px 0; }
+        
+        .option-label {
+            display: flex; flex-wrap: wrap; align-items: flex-start; padding: 12px 15px;
+            margin-bottom: 8px; background: #fff; border: 2px solid #ddd;
+            border-radius: 5px; cursor: pointer; transition: all 0.2s ease; width: 100%;
+        }
+        
+        .option-label:hover { background: #f0f7ff; border-color: #0073aa; }
+        .option-label input[type="radio"] { margin-right: 10px; accent-color: #0073aa; }
+        
+        .option-value { margin-left: 4px; margin-right: 4px; font-weight: 600; color: #0073aa; }
+    </style>
+</head>
+<body>
+    <div class="ielts-computer-based-quiz">
+        <div class="computer-based-container">
+            <div class="reading-column">
+                <div class="reading-content">
+                    <h2 style="font-size: 1.3em; font-weight: 600; color: #333; margin: 0 0 15px 0; padding-bottom: 10px; border-bottom: 2px solid #0073aa;">Reading Passage</h2>
+                    <div class="reading-text">
+                        <p>Photosynthesis is the process by which plants convert light energy into chemical energy that is later released to fuel the plant's activities. This process involves the absorption of light by chlorophyll in the plant's leaves.</p>
+                        <p>The process occurs in two main stages: the light-dependent reactions and the light-independent reactions (Calvin cycle). During the light-dependent reactions, energy from sunlight is captured and used to split water molecules, releasing oxygen as a byproduct.</p>
+                        <p>The Calvin cycle uses the energy captured during the light-dependent reactions to fix carbon dioxide into glucose. This glucose then serves as an energy source for the plant and forms the basis of most food chains on Earth.</p>
+                        <p>Environmental factors such as light intensity, carbon dioxide concentration, and temperature all affect the rate of photosynthesis. Understanding these factors is crucial for optimizing crop production in agriculture.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="questions-column">
+                <div class="questions-content">
+                    <div class="quiz-question">
+                        <div class="question-number">Question 25</div>
+                        <div class="question-instructions">Do the following statements agree with the information in the passage? Write TRUE, FALSE or NOT GIVEN.</div>
+                        <div class="question-text">Photosynthesis converts light energy into chemical energy.</div>
+                        <div class="question-options">
+                            <label class="option-label">
+                                <input type="radio" name="q25" value="a">
+                                <span><span class="option-value">TRUE</span> Agrees with the passage</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q25" value="b">
+                                <span><span class="option-value">FALSE</span> Contradicts the passage</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q25" value="c">
+                                <span><span class="option-value">NOT GIVEN</span> No information provided</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-question">
+                        <div class="question-number">Question 26</div>
+                        <div class="question-instructions">Do the following statements agree with the information in the passage? Write TRUE, FALSE or NOT GIVEN.</div>
+                        <div class="question-text">Oxygen is released during the light-independent reactions of photosynthesis.</div>
+                        <div class="question-options">
+                            <label class="option-label">
+                                <input type="radio" name="q26" value="a">
+                                <span><span class="option-value">TRUE</span> Agrees with the passage</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q26" value="b">
+                                <span><span class="option-value">FALSE</span> Contradicts the passage</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q26" value="c">
+                                <span><span class="option-value">NOT GIVEN</span> No information provided</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-question">
+                        <div class="question-number">Question 27</div>
+                        <div class="question-instructions">Do the following statements agree with the information in the passage? Write TRUE, FALSE or NOT GIVEN.</div>
+                        <div class="question-text">Photosynthesis can only occur in direct sunlight at midday.</div>
+                        <div class="question-options">
+                            <label class="option-label">
+                                <input type="radio" name="q27" value="a">
+                                <span><span class="option-value">TRUE</span> Agrees with the passage</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q27" value="b">
+                                <span><span class="option-value">FALSE</span> Contradicts the passage</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q27" value="c">
+                                <span><span class="option-value">NOT GIVEN</span> No information provided</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
