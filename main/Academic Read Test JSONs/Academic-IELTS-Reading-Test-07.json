@@ -514,7 +514,7 @@
         {
             "type": "closed_question",
             "instructions": "Reading Passage 2\r\n\r\nYou should spend about 20 minutes on Questions 12 – 25 which are based on Reading Passage 2.\r\n\r\nQuestions 12 – 15\r\n\r\nChoose the most suitable headings for sections A–F from the list below. Use each heading once only.",
-            "question": "Example   Paragraph A   Answer  III\r\n\r\nParagraph B",
+            "question": "Example Paragraph A Answer III\r\n\r\nParagraph B",
             "points": 1,
             "no_answer_feedback": "The correct answer is E (Looking at alternatives). Paragraph B examines various energy alternatives.",
             "correct_feedback": "",

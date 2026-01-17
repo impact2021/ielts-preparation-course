@@ -1128,7 +1128,7 @@
         {
             "type": "closed_question",
             "instructions": "Complete the sentences below.\r\nChoose NO MORE THAN THREE WORDS from the passage for each answer.\r\nWrite your answers in boxes 24 – 26 on your answer sheet.",
-            "question": "According to the passage, color can increase  by up to 80%.",
+            "question": "According to the passage, color can increase by up to 80%.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph D states \"The human eye can distinguish more shades of green than any other color.\"",
             "correct_feedback": "Correct! Paragraph D explicitly states \"The human eye can distinguish more shades of green than any other color.\"",
@@ -1730,7 +1730,7 @@
         {
             "type": "closed_question",
             "instructions": "Complete the sentences below.\r\nChoose NO MORE THAN TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 38 – 40 on your answer sheet.",
-            "question": "Urban farms can help cities manage  and reduce the urban heat island effect.",
+            "question": "Urban farms can help cities manage and reduce the urban heat island effect.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is NOT GIVEN. Paragraph G states \"While some urban farms operate as successful commercial enterprises, many rely on volunteers, grants, or subsidies,\" but doesn't specify if MOST are profitable.",
             "correct_feedback": "Correct! While the passage discusses economic viability, it doesn't state whether most urban farms are profitable.",

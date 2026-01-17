@@ -496,24 +496,24 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Refer to the passage describing different clock components and their functions.",
+                    "incorrect": "Incorrect. The correct answer is 'clock mechanism'. Refer to the passage describing different clock components and their functions.",
+                    "no_answer": "You didn't provide an answer. Refer to the passage describing different clock components and their functions."
                 },
                 "2": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Refer to the passage describing different clock components and their functions.",
+                    "incorrect": "Incorrect. The correct answer is 'clock mechanism'. Refer to the passage describing different clock components and their functions.",
+                    "no_answer": "You didn't provide an answer. Refer to the passage describing different clock components and their functions."
                 },
                 "3": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Refer to the passage describing different clock components and their functions.",
+                    "incorrect": "Incorrect. The correct answer is 'clock mechanism'. Refer to the passage describing different clock components and their functions.",
+                    "no_answer": "You didn't provide an answer. Refer to the passage describing different clock components and their functions."
                 },
                 "4": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Refer to the passage describing different clock components and their functions.",
+                    "incorrect": "Incorrect. The correct answer is 'clock mechanism'. Refer to the passage describing different clock components and their functions.",
+                    "no_answer": "You didn't provide an answer. Refer to the passage describing different clock components and their functions."
                 }
             }
         },
@@ -538,19 +538,19 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage compares the accuracy of quartz and atomic clocks.",
+                    "incorrect": "Incorrect. The correct answer is 'accurate / precise'. The passage compares the accuracy of quartz and atomic clocks.",
+                    "no_answer": "You didn't provide an answer. The passage compares the accuracy of quartz and atomic clocks."
                 },
                 "2": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage compares the accuracy of quartz and atomic clocks.",
+                    "incorrect": "Incorrect. The correct answer is 'accurate / precise'. The passage compares the accuracy of quartz and atomic clocks.",
+                    "no_answer": "You didn't provide an answer. The passage compares the accuracy of quartz and atomic clocks."
                 },
                 "3": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage compares the accuracy of quartz and atomic clocks.",
+                    "incorrect": "Incorrect. The correct answer is 'accurate / precise'. The passage compares the accuracy of quartz and atomic clocks.",
+                    "no_answer": "You didn't provide an answer. The passage compares the accuracy of quartz and atomic clocks."
                 }
             }
         },
@@ -641,9 +641,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage explains that melatonin is the chemical responsible for lethargy in SAD sufferers.",
+                    "incorrect": "Incorrect. The correct answer is 'melatonin'. The passage explains that melatonin is the chemical responsible for lethargy in SAD sufferers.",
+                    "no_answer": "You didn't provide an answer. The passage explains that melatonin is the chemical responsible for lethargy in SAD sufferers."
                 }
             }
         },
@@ -666,9 +666,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage discusses how lack of sunlight during long winters affects mental health in Scandinavia.",
+                    "incorrect": "Incorrect. The correct answer is 'lack of sunlight / reduced daylight'. The passage discusses how lack of sunlight during long winters affects mental health in Scandinavia.",
+                    "no_answer": "You didn't provide an answer. The passage discusses how lack of sunlight during long winters affects mental health in Scandinavia."
                 }
             }
         },
@@ -691,9 +691,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! Light therapy is mentioned as an effective daily treatment for SAD sufferers.",
+                    "incorrect": "Incorrect. The correct answer is 'light therapy / phototherapy'. Light therapy is mentioned as an effective daily treatment for SAD sufferers.",
+                    "no_answer": "You didn't provide an answer. Light therapy is mentioned as an effective daily treatment for SAD sufferers."
                 }
             }
         },
@@ -716,9 +716,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage indicates that therapists and counselors are busiest during holiday periods.",
+                    "incorrect": "Incorrect. The correct answer is 'therapists / counselors'. The passage indicates that therapists and counselors are busiest during holiday periods.",
+                    "no_answer": "You didn't provide an answer. The passage indicates that therapists and counselors are busiest during holiday periods."
                 }
             }
         },
@@ -1647,19 +1647,19 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "incorrect": "Incorrect. The correct answer is 'facts / rote learning'. The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "no_answer": "You didn't provide an answer. The passage critiques the modern curriculum's emphasis on certain types of knowledge."
                 },
                 "2": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "incorrect": "Incorrect. The correct answer is 'facts / rote learning'. The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "no_answer": "You didn't provide an answer. The passage critiques the modern curriculum's emphasis on certain types of knowledge."
                 },
                 "3": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "incorrect": "Incorrect. The correct answer is 'facts / rote learning'. The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "no_answer": "You didn't provide an answer. The passage critiques the modern curriculum's emphasis on certain types of knowledge."
                 }
             }
         }
