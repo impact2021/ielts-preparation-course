@@ -1,0 +1,717 @@
+<strong>Read the texts and answer the questions. Type your answers in the spaces provided.</strong></span></p>
+					</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1768" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <p align="center"><strong>CHARITY FUN RUN</strong></p>
+    <table border="1" width="100%" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="100%">
+            Dear Supporter,<br><br>
+            I am writing to invite you to join us for our Annual Fun Run which will be held this year on Sunday 18th August. The run starts from the school grounds and participants are able to choose to take part in a 2, 5 or 10 kilometre run.<br><br>
+            Last year we raised a total of $15,450 which was donated to the children’s hospital and this year we expect to raise $16,000. This year, we are raising money which will be used to develop the village recreational centre.<br><br>
+            To confirm your registration, email <em>funrunsuccess@edu.com</em> or telephone 01784 5337841.&nbsp; As soon as you are registered you simply start collecting your sponsors and come along on the day!<br><br>
+            Further instructions are found below, please read them carefully.<br><br>
+            Looking forward to seeing you on Sunday 18th August,<br><br>
+            <em>D. Jackson</em><br>
+            Fun Run Co-ordinator<br>
+            Thanks in advance for your support!
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table border="1" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="100%">
+            Moorfields School Fun Run<br><br>
+            START TIMES<br>
+            10 Kilometre Run – 8am<br>
+            5 Kilometre Run – 8.30am<br>
+            2 Kilometre Run – 9am<br><br>
+            ROUTE MAPS<br>
+            Details are available on our website <i>www.moorfieldsschool.com</i> and will also be available on the day from school reception. All routes will be signposted and there will be marshals stationed along the routes providing cold drinks for runners. If you feel ill or need assistance at any time during the run, please let one of the marshals know and they will be able to help you.<br><br>
+            WHAT TO WEAR<br>
+            Shorts and tee-shirts should be fine; however, we recommend you bring a light raincoat in case of bad weather. Comfortable running shoes are a must!&nbsp; Please avoid wearing new trainers on the day to avoid foot problems.<br><br>
+            PARKING<br>
+            The school car park behind C-block (the language department) will be open on the day. Drive in through the main gates then turn right.&nbsp; Westhill Leisure Centre (across the road from the school) will also allow runners to park their cars there on the day.<br><br>
+            WHAT HAPPENS AFTER THE RUN?<br>
+            There will be a number of entertainers including face-painting and the school band. Food and drink stalls will be available. There will also be a prize-giving event for runners who finish 1st and 2nd in each of the runs and two cinema tickets are available for the best fancy dress if you are interested in running in a special costume!<br><br>
+            We expect the whole day to finish at around 4pm.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ito-scroll-box">
+    <strong>Section 1</strong>
+    <br><br>
+    <strong>Questions 1-7</strong>
+    <br><br>
+    Look at the information on the right about a charity fun run.<br>
+    Answer the questions below using <em><strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong> </em>from the text for each answer.<br>
+    Write your answers in boxes <strong>1-7</strong> on your answer sheet.<br><br>
+    1. How many different lengths of route are there?&nbsp; BLANK 1 of 7<br><br>
+    2. Where was money raised in last year’s event given to? BLANK 2 of 7<br><br>
+    3. How much money do the organisers expect to raise this year? BLANK 3 of 7<br><br>
+    4. What refreshments will be available from the officials stationed along the route? BLANK 4 of 7<br><br>
+    5. What do all runners have to wear on the day? BLANK 5 of 7<br><br>
+    6. Where can participants leave their cars if they do not park at the school? BLANK 6 of 7<br><br>
+    7. What prize can the runner wearing the best costume win? BLANK 7 of 7<br>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<p align="center"><strong>CHARITY FUN RUN</strong></p>
+<table border="1" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" width="100%">
+            Dear Supporter,<p></p>
+<p>            I am writing to invite you to join us for our Annual Fun Run which will be held this year on Sunday 18th August. The run starts from the school grounds and participants are able to choose to take part in a 2, 5 or 10 kilometre run.</p>
+<p>            Last year we raised a total of $15,450 which was donated to the children’s hospital and this year we expect to raise $16,000. This year, we are raising money which will be used to develop the village recreational centre.</p>
+<p>            To confirm your registration, email <em>funrunsuccess@edu.com</em> or telephone 01784 5337841.&nbsp; As soon as you are registered you simply start collecting your sponsors and come along on the day!</p>
+<p>            Further instructions are found below, please read them carefully.</p>
+<p>            Looking forward to seeing you on Sunday 18th August,</p>
+<p>            <em>D. Jackson</em><br>
+            Fun Run Co-ordinator<br>
+            Thanks in advance for your support!
+          </p></td>
+</tr>
+</tbody>
+</table>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" width="100%">
+            Moorfields School Fun Run<p></p>
+<p>            START TIMES<br>
+            10 Kilometre Run – 8am<br>
+            5 Kilometre Run – 8.30am<br>
+            2 Kilometre Run – 9am</p>
+<p>            ROUTE MAPS<br>
+            Details are available on our website <i>www.moorfieldsschool.com</i> and will also be available on the day from school reception. All routes will be signposted and there will be marshals stationed along the routes providing cold drinks for runners. If you feel ill or need assistance at any time during the run, please let one of the marshals know and they will be able to help you.</p>
+<p>            WHAT TO WEAR<br>
+            Shorts and tee-shirts should be fine; however, we recommend you bring a light raincoat in case of bad weather. Comfortable running shoes are a must!&nbsp; Please avoid wearing new trainers on the day to avoid foot problems.</p>
+<p>            PARKING<br>
+            The school car park behind C-block (the language department) will be open on the day. Drive in through the main gates then turn right.&nbsp; Westhill Leisure Centre (across the road from the school) will also allow runners to park their cars there on the day.</p>
+<p>            WHAT HAPPENS AFTER THE RUN?<br>
+            There will be a number of entertainers including face-painting and the school band. Food and drink stalls will be available. There will also be a prize-giving event for runners who finish 1st and 2nd in each of the runs and two cinema tickets are available for the best fancy dress if you are interested in running in a special costume!</p>
+<p>            We expect the whole day to finish at around 4pm.
+          </p></td>
+</tr>
+</tbody>
+</table></div>
+<div class="ito-scroll-box">
+    <strong>Section 1</strong><p></p>
+<p>    <strong>Questions 1-7</strong></p>
+<p>    Look at the information on the right about a charity fun run.<br>
+    Answer the questions below using <em><strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong> </em>from the text for each answer.<br>
+    Write your answers in boxes <strong>1-7</strong> on your answer sheet.</p>
+<p>    1. How many different lengths of route are there?&nbsp; <label><span class="screen-reader-text">Fill in the blank 1 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(3,three)</span></span></span></label></p>
+<p>    2. Where was money raised in last year’s event given to? <label><span class="screen-reader-text">Fill in the blank 2 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="25" type="text" value="" size="25" maxlength="30" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(the childrens hospital,the children's hospital,children's hospital,childrens hospital,children’s hospital,the children’s hospital)</span></span></span></label></p>
+<p>    3. How much money do the organisers expect to raise this year? <label><span class="screen-reader-text">Fill in the blank 3 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="19" type="text" value="" size="19" maxlength="24" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">($16 thousand,£16000,£16,000,$16,000,$ 16000,$ 16,000,$ 16 thousand,16000 dollars,16 thousand dollars)</span></span></span></label></p>
+<p>    4. What refreshments will be available from the officials stationed along the route? <label><span class="screen-reader-text">Fill in the blank 4 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="11" type="text" value="" size="11" maxlength="16" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(cold drinks)</span></span></span></label></p>
+<p>    5. What do all runners have to wear on the day? <label><span class="screen-reader-text">Fill in the blank 5 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="25" type="text" value="" size="25" maxlength="30" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(comfortable running shoes)</span></span></span></label></p>
+<p>    6. Where can participants leave their cars if they do not park at the school? <label><span class="screen-reader-text">Fill in the blank 6 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="23" type="text" value="" size="23" maxlength="28" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(westhill leisure center,westhill leisure centre)</span></span></span></label></p>
+<p>    7. What prize can the runner wearing the best costume win? <label><span class="screen-reader-text">Fill in the blank 7 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="18" type="text" value="" size="18" maxlength="23" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(2 cinema tickets,two cinema tickets,cinema tickets)</span></span></span></label>
+  </p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 7										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 7									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><p>1. 3 </p>
+<p>‘…participants are able to choose to take part in a 2, 5 or 10 kilometre run.’</p>
+<p>2. The children’s hospital</p>
+<p>‘Last year we raised a total of ₤15,450 which was donated to the children’s hospital ‘</p>
+<p>3. $16,000</p>
+<p>this year we expect to raise $16,000</p>
+<p>NOTE: You must include the currency sign ($) </p>
+<p>4. Cold drinks</p>
+<p>‘…there will be marshals stationed along the routes providing cold drinks for runners.’</p>
+<p>5. Comfortable running shoes</p>
+<p>Shorts and tee-shirts should be fine; however, we recommend you bring a light raincoat in case of bad weather. <em><u>Comfortable running shoes are a must!</u></em> </p>
+<p>NOTE: The questions asks what runners <em><strong>have to</strong></em> wear. Shorts, Tee-shirts and a light raincoat are only <strong><em>recommended</em></strong>.</p>
+<p>6. Westhill Leisure Centre</p>
+<p>‘Westhill Leisure Centre (across the road from the school) will also allow runners to park their cars there on the day’</p>
+<p>7. Two cinema tickets</p>
+<p>‘two cinema tickets are available for the best fancy dress if you are interested in running in a special costume!’</p>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1769,&quot;question_post_id&quot;:71970492}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>2</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>2</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1769">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1769" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <p align="center"><strong>Tour Details</strong></p>
+    <p><strong>Tour A</strong>. Learn more about Maori culture, food, dance, performing arts and the internationally famous Haka. The tour involves lectures on Maori traditions an etiquette; particularly customs for welcoming to and visiting a marae – the meeting house of Maori tribes. Experience an authentic cultural show in one of the country’s best-known Maori performance venues.</p>
+    <p><strong>Tour B</strong>. Whether your motivation is to be eco-friendly or simply to enjoy the great outdoors and keep fit while on holiday, our cycling tours of NZ can cater to your needs. Coaches are on hand to transport the group from A to B where distances are far and discounts on wine tours and quad bike tours are also available.</p>
+    <p><strong>Tour C</strong>. Ornithologists unite for this spectacular trip which focuses on the wide variety of species that share our home.&nbsp; Visit the nesting areas of our native birds and the north island gannet colony of Muriwai.&nbsp; Guest lecturers will also give an insight into the now extinct species – the Great Moa – the largest bird ever known to have lived on our shores.</p>
+    <p><strong>Tour D</strong>. This tour is a must for appreciators of the outdoors and lovers of what is known in New Zealand as ‘tramping’. Ideal for those who prefer to make their own way, not reliant on transport! See some of the most beautiful countryside Aotearoa (Maori for New Zealand) has to offer.&nbsp; A reasonable fitness level is required though no steep paths or climbing is involved.</p>
+    <p><strong>Tour E</strong>. An education programme which focuses on lectures and field trips based on the natural world. Visit the Auckland museum to see the informative display of animals and plants of New Zealand. Guest speakers include professors and researchers from our most prominent universities.</p>
+    <p><strong>Tour F</strong>. Where two oceans meet; experience the beauty of nature, the expanse of the land and endless beaches and coastline. Often described as the ‘winterless north’ due to the mild climate, we offer a variety of trips year round.</p>
+    <p><strong>Tour G.</strong> The centre of the north island offers many opportunities to experience naturally occurring thermal phenomenon such as the hot pools, mud pools, and geysers in national parks alive with sub-terranean activity. The tour is three days in duration and accommodation in Rotorua is provided for our clients.</p>
+    <p><strong>Tour H.</strong> Travelling by luxury, air-conditioned tour bus, we partake in some of the best food and beverages New Zealand has to offer. Visit 5 of the country’s largest exporting vineyards and take advantage of the discount pricing available to our clients.</p>
+    <p><strong>Tour I.</strong> We take you to spots inaccessible to regular vehicles. Small group sizes. Plenty of off road travel but made as comfortable as possible in our custom made jeeps. Optional walking tours each day or just relaxation if preferred at our breath-taking picnic stops. N.B. We will soon also be offering excursions in the northern tip of the North island.</p>
+  </div>
+  <div class="ito-scroll-box">
+    <strong>Questions 8-14</strong>
+    <br><br>
+    The list of tour options for holiday-makers on the following page has nine tour descriptions <strong>A-I.</strong>
+    <br><br>
+    Choose the correct title for each tour from the list of tour names below.
+    <br><br>
+    Write the correct number <strong>I-XI</strong> in boxes <strong>8-14</strong> on your answer sheet.
+    <table border="1" width="100%" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td valign="top">
+            <p class="style1">Names of tours</p>
+            <ol style="list-style-type: upper-roman" type="I">
+              <li>Wine Lovers Explore</li>
+              <li>Hiking in NZ</li>
+              <li>4-wheel drive South Island Extravaganza</li>
+              <li>The Traditional Culture of Rotorua</li>
+              <li>Aotearoa on two-wheels</li>
+              <li>An introduction to New Zealand Birdlife</li>
+              <li>The History of the Moa</li>
+              <li>Flora and Fauna Education tour</li>
+              <li>Thermal Wonderland tour</li>
+              <li>Northern Exposure</li>
+              <li>Come Scale the Peaks!</li>
+            </ol>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table border="1" width="100%" cellspacing="1" cellpadding="1">
+      <tbody>
+        <tr>
+          <td valign="top"><strong>EXAMPLE</strong> Tour A <em><strong>Answer</strong>:</em> <em>IV</em></td>
+        </tr>
+      </tbody>
+    </table>
+    8 Tour B BLANK 1 of 7<br>
+    9 Tour C BLANK 2 of 7<br>
+    10 Tour D BLANK 3 of 7<br>
+    11 Tour E&nbsp; BLANK 4 of 7
+    <table border="1" width="100%" cellspacing="1" cellpadding="1">
+      <tbody>
+        <tr>
+          <td valign="top"><strong>EXAMPLE</strong> Tour F <em><strong>Answer</strong>:</em> <em>X</em></td>
+        </tr>
+      </tbody>
+    </table>
+    12 Tour G BLANK 5 of 7<br>
+    13 Tour H BLANK 6 of 7<br>
+    14 Tour I BLANK 7 of 7
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<p align="center"><strong>Tour Details</strong></p>
+<p><strong>Tour A</strong>. Learn more about Maori culture, food, dance, performing arts and the internationally famous Haka. The tour involves lectures on Maori traditions an etiquette; particularly customs for welcoming to and visiting a marae – the meeting house of Maori tribes. Experience an authentic cultural show in one of the country’s best-known Maori performance venues.</p>
+<p><strong>Tour B</strong>. Whether your motivation is to be eco-friendly or simply to enjoy the great outdoors and keep fit while on holiday, our cycling tours of NZ can cater to your needs. Coaches are on hand to transport the group from A to B where distances are far and discounts on wine tours and quad bike tours are also available.</p>
+<p><strong>Tour C</strong>. Ornithologists unite for this spectacular trip which focuses on the wide variety of species that share our home.&nbsp; Visit the nesting areas of our native birds and the north island gannet colony of Muriwai.&nbsp; Guest lecturers will also give an insight into the now extinct species – the Great Moa – the largest bird ever known to have lived on our shores.</p>
+<p><strong>Tour D</strong>. This tour is a must for appreciators of the outdoors and lovers of what is known in New Zealand as ‘tramping’. Ideal for those who prefer to make their own way, not reliant on transport! See some of the most beautiful countryside Aotearoa (Maori for New Zealand) has to offer.&nbsp; A reasonable fitness level is required though no steep paths or climbing is involved.</p>
+<p><strong>Tour E</strong>. An education programme which focuses on lectures and field trips based on the natural world. Visit the Auckland museum to see the informative display of animals and plants of New Zealand. Guest speakers include professors and researchers from our most prominent universities.</p>
+<p><strong>Tour F</strong>. Where two oceans meet; experience the beauty of nature, the expanse of the land and endless beaches and coastline. Often described as the ‘winterless north’ due to the mild climate, we offer a variety of trips year round.</p>
+<p><strong>Tour G.</strong> The centre of the north island offers many opportunities to experience naturally occurring thermal phenomenon such as the hot pools, mud pools, and geysers in national parks alive with sub-terranean activity. The tour is three days in duration and accommodation in Rotorua is provided for our clients.</p>
+<p><strong>Tour H.</strong> Travelling by luxury, air-conditioned tour bus, we partake in some of the best food and beverages New Zealand has to offer. Visit 5 of the country’s largest exporting vineyards and take advantage of the discount pricing available to our clients.</p>
+<p><strong>Tour I.</strong> We take you to spots inaccessible to regular vehicles. Small group sizes. Plenty of off road travel but made as comfortable as possible in our custom made jeeps. Optional walking tours each day or just relaxation if preferred at our breath-taking picnic stops. N.B. We will soon also be offering excursions in the northern tip of the North island.</p>
+<p></p></div>
+<div class="ito-scroll-box">
+    <strong>Questions 8-14</strong><p></p>
+<p>    The list of tour options for holiday-makers on the following page has nine tour descriptions <strong>A-I.</strong></p>
+<p>    Choose the correct title for each tour from the list of tour names below.</p>
+<p>    Write the correct number <strong>I-XI</strong> in boxes <strong>8-14</strong> on your answer sheet.</p>
+<table border="1" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top">
+<p class="style1">Names of tours</p>
+<ol style="list-style-type: upper-roman;" type="I">
+<li>Wine Lovers Explore</li>
+<li>Hiking in NZ</li>
+<li>4-wheel drive South Island Extravaganza</li>
+<li>The Traditional Culture of Rotorua</li>
+<li>Aotearoa on two-wheels</li>
+<li>An introduction to New Zealand Birdlife</li>
+<li>The History of the Moa</li>
+<li>Flora and Fauna Education tour</li>
+<li>Thermal Wonderland tour</li>
+<li>Northern Exposure</li>
+<li>Come Scale the Peaks!</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" width="100%" cellspacing="1" cellpadding="1">
+<tbody>
+<tr>
+<td valign="top"><strong>EXAMPLE</strong> Tour A <em><strong>Answer</strong>:</em> <em>IV</em></td>
+</tr>
+</tbody>
+</table>
+<p>    8 Tour B <label><span class="screen-reader-text">Fill in the blank 1 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(v)</span></span></span></label><br>
+    9 Tour C <label><span class="screen-reader-text">Fill in the blank 2 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="2" type="text" value="" size="2" maxlength="7" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(vi)</span></span></span></label><br>
+    10 Tour D <label><span class="screen-reader-text">Fill in the blank 3 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="2" type="text" value="" size="2" maxlength="7" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(ii)</span></span></span></label><br>
+    11 Tour E&nbsp; <label><span class="screen-reader-text">Fill in the blank 4 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(viii)</span></span></span></label></p>
+<table border="1" width="100%" cellspacing="1" cellpadding="1">
+<tbody>
+<tr>
+<td valign="top"><strong>EXAMPLE</strong> Tour F <em><strong>Answer</strong>:</em> <em>X</em></td>
+</tr>
+</tbody>
+</table>
+<p>    12 Tour G <label><span class="screen-reader-text">Fill in the blank 5 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="2" type="text" value="" size="2" maxlength="7" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(ix)</span></span></span></label><br>
+    13 Tour H <label><span class="screen-reader-text">Fill in the blank 6 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(i)</span></span></span></label><br>
+    14 Tour I <label><span class="screen-reader-text">Fill in the blank 7 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="3" type="text" value="" size="3" maxlength="8" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(iii)</span></span></span></label>
+  </p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 7										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 7									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><p>8. v</p>
+<p>‘cycling tours of NZ can cater to your needs.’ (Paragraph D mentions that Aotearoa is the Maori name for NZ)</p>
+<p>9. vi</p>
+<ul>
+<li>‘Ornithologists’ are bird watchers </li>
+<li>the nesting areas of our native birds and the north island gannet colony of Muriwai.’ </li>
+<li>Guest lecturers will also give an insight into the now extinct species – the Great Moa – the largest bird ever known to have lived on our shores. </li>
+</ul>
+<p>NOTE: vii (‘The History of the Moa’) is NOT the correct answer as this refers to only one species of bird</p>
+<p>10. ii</p>
+<p>‘not reliant on transport ….A reasonable fitness level is required though no steep paths or climbing is involved (tramping is a New Zealand word for hiking).</p>
+<p>11. viii</p>
+<p>The paragraph talks about the natural world. Flora and fauna means ‘ animals and plants’. The tour is educational (involving lectures).</p>
+<p>12. ix</p>
+<p>The paragraph refers to ‘thermal phenomenon’ </p>
+<p>NOTE: iv (‘The Traditional Culture of Rotorua ‘) is NOT the correct answer as the paragraph talks about the natural world, not culture.</p>
+<p>13. i</p>
+<p>‘we partake in some of the best food and beverages New Zealand has to offer. Visit 5 of the country’s largest exporting vineyards…’ </p>
+<p>14. iii</p>
+<p>The paragraph refers to ‘off road travel’ and ‘custom made jeeps’, also adding that ‘We will soon also be offering excursions in the northern tip of the North island.’ (therefore <strong><em>South Island Extravaganza</em></strong> and NOT <strong><em>Northern Exposure)</em></strong></p>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1770,&quot;question_post_id&quot;:71970493}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>3</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>3</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1770">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1770" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <div align="center"><em><strong>CHILDCARE SOLUTIONS</strong></em></div>
+    <p align="center"><strong>NANNYING POSITIONS WORLDWIDE</strong></p>
+    <p align="center">Are you a qualified nanny and have at least 1 year’s post-qualification experience looking after children?</p>
+    <p align="center">We can help you find a suitable employment position in one of 16 destination countries.</p>
+    <p align="center">No registration fee applies for job applicants.</p>
+    What do our services include?
+    <ul>
+      <li>An online ‘matching service’ which allows you to post your CV and we will contact you if any families are interested in offering you a position.</li>
+      <li>We conduct interviews on behalf of our clients at one of our 4 offices in the U.K.</li>
+      <li>Arrangement of a return flight, the cost of which will be covered by your employer.</li>
+      <li>Many positions also include medical insurance for the length of your contract.</li>
+      <li>Arrangement of full employment contracts between you and your new employer prior to leaving the UK.</li>
+      <li>A visa assistance service is available for countries where visas are required (additional costs apply)</li>
+    </ul>
+    You are also entitled to:
+    <ul>
+      <li>On-going support throughout your contract in the unlikely event of experiencing difficulties</li>
+      <li>Access to our ‘Nannies Abroad’ online network and discussion forum.</li>
+      <li>Access to an agency staff member via our 24-hour emergency contact facility.</li>
+    </ul>
+    <p align="center"><em>Call us for more information on 1800 222 649</em></p>
+    <strong>About us</strong>
+    <p>Childcare Solutions was established in 1985 by three qualified nannies who returned to the UK after 5 year’s working overseas. We understand that the opportunity to work abroad appeals to many; however, due to language barriers and safety concerns we realise that many experienced professionals are dissuaded from going ahead with their dream.</p>
+    <p>Through our established partnerships with sister organisations in 16 countries worldwide, we are able to match child care professionals with appropriate families across the globe.</p>
+    <p>We have different sized families and different lengths of contract available, so contact us today and let us know what type of work, in which location you are looking for.</p>
+    <strong>Additional requirements to register with Childcare Solutions.</strong>
+    <p>You must:</p>
+    <ul>
+      <li>Be 18 years of age or older</li>
+      <li>Be able to provide evidence of a clear criminal record in the UK and any other country you have resided in for more than 6 months.</li>
+      <li>Provide 2 references (at least one from a former position)*</li>
+      <li>*Where pre-written references are provided we will contact your referees personally to reconfirm.</li>
+      <li>Provide evidence of qualifications</li>
+      <li>Be enthusiastic, reliable, flexible and hard-working!</li>
+    </ul>
+    <em>So call us today and let us assist you in fulfilling your career goals overseas. </em>
+  </div>
+  <div class="ito-scroll-box">
+    <strong><span class="nolink">Section</span> 2 </strong>
+    <br><br>
+    <strong>Questions 15-27</strong>
+    <br><br>
+    Read the advertisement and answer Questions <strong>15-20</strong>
+    <br><br>
+    <strong>Questions 15-20</strong>
+    <br><br>
+    Do the following statements agree with the information given in the advertisement?<br>
+    In boxes <strong>15-20</strong> on your answer sheet write<br>
+    <strong>TRUE</strong> if the statement agrees with the information<br>
+    <strong>FALSE</strong> if the statement contradicts the information<br>
+    <strong>NOT GIVEN</strong> if there is no information on this<br><br>
+    15. Applicants are required to attend an interview with the family interested in offering a work position. BLANK 1 of 6<br><br>
+    16. Childcare Solutions pays for flights for nannies placed in positions overseas. BLANK 2 of 6<br><br>
+    17. Costs of visas vary depending on destination. BLANK 3 of 6<br><br>
+    18. The organisation was set up by experienced childcare workers. BLANK 4 of 6<br><br>
+    19. Nannies are employed for a minimum of 6 months. BLANK 5 of 6<br><br>
+    20. The organisation requires recommendations from two previous employers. BLANK 6 of 6<br>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<div align="center"><em><strong>CHILDCARE SOLUTIONS</strong></em></div>
+<p align="center"><strong>NANNYING POSITIONS WORLDWIDE</strong></p>
+<p align="center">Are you a qualified nanny and have at least 1 year’s post-qualification experience looking after children?</p>
+<p align="center">We can help you find a suitable employment position in one of 16 destination countries.</p>
+<p align="center">No registration fee applies for job applicants.</p>
+<p>    What do our services include?</p>
+<ul>
+<li>An online ‘matching service’ which allows you to post your CV and we will contact you if any families are interested in offering you a position.</li>
+<li>We conduct interviews on behalf of our clients at one of our 4 offices in the U.K.</li>
+<li>Arrangement of a return flight, the cost of which will be covered by your employer.</li>
+<li>Many positions also include medical insurance for the length of your contract.</li>
+<li>Arrangement of full employment contracts between you and your new employer prior to leaving the UK.</li>
+<li>A visa assistance service is available for countries where visas are required (additional costs apply)</li>
+</ul>
+<p>    You are also entitled to:</p>
+<ul>
+<li>On-going support throughout your contract in the unlikely event of experiencing difficulties</li>
+<li>Access to our ‘Nannies Abroad’ online network and discussion forum.</li>
+<li>Access to an agency staff member via our 24-hour emergency contact facility.</li>
+</ul>
+<p align="center"><em>Call us for more information on 1800 222 649</em></p>
+<p>    <strong>About us</strong></p>
+<p>Childcare Solutions was established in 1985 by three qualified nannies who returned to the UK after 5 year’s working overseas. We understand that the opportunity to work abroad appeals to many; however, due to language barriers and safety concerns we realise that many experienced professionals are dissuaded from going ahead with their dream.</p>
+<p>Through our established partnerships with sister organisations in 16 countries worldwide, we are able to match child care professionals with appropriate families across the globe.</p>
+<p>We have different sized families and different lengths of contract available, so contact us today and let us know what type of work, in which location you are looking for.</p>
+<p>    <strong>Additional requirements to register with Childcare Solutions.</strong></p>
+<p>You must:</p>
+<ul>
+<li>Be 18 years of age or older</li>
+<li>Be able to provide evidence of a clear criminal record in the UK and any other country you have resided in for more than 6 months.</li>
+<li>Provide 2 references (at least one from a former position)*</li>
+<li>*Where pre-written references are provided we will contact your referees personally to reconfirm.</li>
+<li>Provide evidence of qualifications</li>
+<li>Be enthusiastic, reliable, flexible and hard-working!</li>
+</ul>
+<p>    <em>So call us today and let us assist you in fulfilling your career goals overseas. </em>
+  </p></div>
+<div class="ito-scroll-box">
+    <strong><span class="nolink">Section</span> 2 </strong><p></p>
+<p>    <strong>Questions 15-27</strong></p>
+<p>    Read the advertisement and answer Questions <strong>15-20</strong></p>
+<p>    <strong>Questions 15-20</strong></p>
+<p>    Do the following statements agree with the information given in the advertisement?<br>
+    In boxes <strong>15-20</strong> on your answer sheet write<br>
+    <strong>TRUE</strong> if the statement agrees with the information<br>
+    <strong>FALSE</strong> if the statement contradicts the information<br>
+    <strong>NOT GIVEN</strong> if there is no information on this</p>
+<p>    15. Applicants are required to attend an interview with the family interested in offering a work position. <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></p>
+<p>    16. Childcare Solutions pays for flights for nannies placed in positions overseas. <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></p>
+<p>    17. Costs of visas vary depending on destination. <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(not given)</span></span></span></label></p>
+<p>    18. The organisation was set up by experienced childcare workers. <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></p>
+<p>    19. Nannies are employed for a minimum of 6 months. <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(not given)</span></span></span></label></p>
+<p>    20. The organisation requires recommendations from two previous employers. <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label>
+  </p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 6										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 6									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><p>15. FALSE</p>
+<p>‘We conduct interviews <u><strong><em>on behalf of</em></strong></u> our clients at one of our 4 offices in the U.K. ‘</p>
+<p>16. FALSE</p>
+<p>‘Arrangement of a return flight, the cost of which will be covered <strong><em><u>by your employer</u></em></strong>.’ Childcare solutions offers a service connecting employee and employer – they are not the employer.</p>
+<p>17. NOT GIVEN</p>
+<p>The text refers to ‘A visa assistance service is available for countries where visas are required (additional costs apply)’ but DOES NOT talk about differences in cost.</p>
+<p>18. TRUE</p>
+<p>‘Childcare Solutions was established in 1985 by three qualified nannies who returned to the UK after 5 year’s working overseas. ‘</p>
+<p>19. NOT GIVEN</p>
+<p>The text states ‘different lengths of contract available’ but DOES NOT say what the minimum period is.</p>
+<p>20. FALSE</p>
+<p>‘Provide 2 references (at least one from a former position)*’ 2 references are required but ONLY ONE has to be from a former employer.</p><p></p>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1771,&quot;question_post_id&quot;:71970494}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>4</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>4</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1771">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1771" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <p align="center"><strong>Language Express Student Prospectus</strong></p>
+    <strong>A:</strong> Language Express provides students with access to a state-of-the-art computer laboratory, extensive library, comfortable and tranquil private study area and Language Support Tutors in the Learning Support Centre. Should you be experiencing any difficulties with your course, make an appointment with a tutor and they will be able to offer you one-to-one advice and help you plan a study schedule and access resources to assist you in meeting your learning goals.
+    <p class="style1"><strong>B:</strong> Members are elected by their peers at the beginning of each academic year. They are on hand to communicate between the student body and academic and management staff of the school. Their role is to keep us informed of any requests or complaints from our students that may not be raised on an individual level. Members often also recommend social activities and are active in ensuring that everyone also enjoys their recreation time.</p>
+    <strong>C:</strong> As far as we are aware, we are the only institution in our city that has such extensive links with industry. We are able to place our students in work experience positions during semester breaks which provide you with an opportunity to gain valuable work experience which will differentiate you from other applicants and help you to secure the employment position you deserve.
+
+    <strong>D:</strong> Language Express was established in 1990 and cooperates with 10 other prestigious education institutions in various countries. Graduates from our business programmes are able to cross-credit their courses into a number of nominated courses on offer at our sister institutions. Our goal is to provide quality education to our students and to assist them in achieving their goals.
+
+    <strong>E:</strong> Students of any level can join our classes; we offer instruction from beginner to advanced level. During Orientation, one of the first priorities is to arrange a test for our students so that we know which class is most suitable for them. Our weekly tests will allow you to measure your progress for yourself. Many of our students go on to enroll in one of our professional qualification courses; but whatever your interest or goals we can help you fulfil your potential.
+
+    <strong>F:</strong> Several courses are assessed purely via assignments and presentations; however, should your course involve a final test, they are held two weeks after lectures finish – this means you have a two week period in which to prepare and revise. Graduation ceremonies are held twice a year; the largest being in April and smaller ceremony in November for students who successfully finish at the end of Semester 2.
+
+    <strong>G:</strong> Semester start dates for business courses vary slightly from year to year (dates for this year and the following year are found on our website). There are three semesters each year (though students may decide to study for only two terms and take a summer school holiday). The language school intake is more flexible and students are able to begin their course on any Monday apart from in December when the institution closes for a three week holiday.
+  </div>
+  <div class="ito-scroll-box">
+    <strong>Questions 21-27</strong>
+    <br><br>
+    Each of the short paragraphs in the reading text gives information about an education institution called Language Express.<br><br>
+    Choose which of the paragraphs contain information about the points below.<br><br>
+    Write the correct number <strong>I-XII</strong> in boxes <strong>21-27</strong> on your answer sheet.
+    <ol style="list-style-type: upper-roman" type="I">
+      <li>About Language Express</li>
+      <li>Entry Requirements for Language Students</li>
+      <li>Entry Requirements for Business Students</li>
+      <li>Course Commencement</li>
+      <li>Orientation for New Students</li>
+      <li>Unique Opportunities</li>
+      <li>International Links</li>
+      <li>Additional Academic Support</li>
+      <li>The Facilities</li>
+      <li>Examinations and Graduation</li>
+      <li>Social Activities</li>
+      <li>The Student Council</li>
+    </ol>
+    21. Paragraph A: BLANK 1 of 7<br>
+    22. Paragraph B: BLANK 2 of 7<br>
+    23. Paragraph C: BLANK 3 of 7<br>
+    24. Paragraph D: BLANK 4 of 7<br>
+    25. Paragraph E: BLANK 5 of 7<br>
+    26. Paragraph F: BLANK 6 of 7<br>
+    27. Paragraph G: BLANK 7 of 7<br>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<p align="center"><strong>Language Express Student Prospectus</strong></p>
+<p>    <strong>A:</strong> Language Express provides students with access to a state-of-the-art computer laboratory, extensive library, comfortable and tranquil private study area and Language Support Tutors in the Learning Support Centre. Should you be experiencing any difficulties with your course, make an appointment with a tutor and they will be able to offer you one-to-one advice and help you plan a study schedule and access resources to assist you in meeting your learning goals.</p>
+<p class="style1"><strong>B:</strong> Members are elected by their peers at the beginning of each academic year. They are on hand to communicate between the student body and academic and management staff of the school. Their role is to keep us informed of any requests or complaints from our students that may not be raised on an individual level. Members often also recommend social activities and are active in ensuring that everyone also enjoys their recreation time.</p>
+<p>    <strong>C:</strong> As far as we are aware, we are the only institution in our city that has such extensive links with industry. We are able to place our students in work experience positions during semester breaks which provide you with an opportunity to gain valuable work experience which will differentiate you from other applicants and help you to secure the employment position you deserve.</p>
+<p>    <strong>D:</strong> Language Express was established in 1990 and cooperates with 10 other prestigious education institutions in various countries. Graduates from our business programmes are able to cross-credit their courses into a number of nominated courses on offer at our sister institutions. Our goal is to provide quality education to our students and to assist them in achieving their goals.</p>
+<p>    <strong>E:</strong> Students of any level can join our classes; we offer instruction from beginner to advanced level. During Orientation, one of the first priorities is to arrange a test for our students so that we know which class is most suitable for them. Our weekly tests will allow you to measure your progress for yourself. Many of our students go on to enroll in one of our professional qualification courses; but whatever your interest or goals we can help you fulfil your potential.</p>
+<p>    <strong>F:</strong> Several courses are assessed purely via assignments and presentations; however, should your course involve a final test, they are held two weeks after lectures finish – this means you have a two week period in which to prepare and revise. Graduation ceremonies are held twice a year; the largest being in April and smaller ceremony in November for students who successfully finish at the end of Semester 2.</p>
+<p>    <strong>G:</strong> Semester start dates for business courses vary slightly from year to year (dates for this year and the following year are found on our website). There are three semesters each year (though students may decide to study for only two terms and take a summer school holiday). The language school intake is more flexible and students are able to begin their course on any Monday apart from in December when the institution closes for a three week holiday.
+  </p></div>
+<div class="ito-scroll-box">
+    <strong>Questions 21-27</strong><p></p>
+<p>    Each of the short paragraphs in the reading text gives information about an education institution called Language Express.</p>
+<p>    Choose which of the paragraphs contain information about the points below.</p>
+<p>    Write the correct number <strong>I-XII</strong> in boxes <strong>21-27</strong> on your answer sheet.</p>
+<ol style="list-style-type: upper-roman;" type="I">
+<li>About Language Express</li>
+<li>Entry Requirements for Language Students</li>
+<li>Entry Requirements for Business Students</li>
+<li>Course Commencement</li>
+<li>Orientation for New Students</li>
+<li>Unique Opportunities</li>
+<li>International Links</li>
+<li>Additional Academic Support</li>
+<li>The Facilities</li>
+<li>Examinations and Graduation</li>
+<li>Social Activities</li>
+<li>The Student Council</li>
+</ol>
+<p>    21. Paragraph A: <label><span class="screen-reader-text">Fill in the blank 1 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(viii)</span></span></span></label><br>
+    22. Paragraph B: <label><span class="screen-reader-text">Fill in the blank 2 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="3" type="text" value="" size="3" maxlength="8" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(xii)</span></span></span></label><br>
+    23. Paragraph C: <label><span class="screen-reader-text">Fill in the blank 3 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="2" type="text" value="" size="2" maxlength="7" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(vi)</span></span></span></label><br>
+    24. Paragraph D: <label><span class="screen-reader-text">Fill in the blank 4 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(i)</span></span></span></label><br>
+    25. Paragraph E: <label><span class="screen-reader-text">Fill in the blank 5 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="2" type="text" value="" size="2" maxlength="7" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(ii)</span></span></span></label><br>
+    26. Paragraph F: <label><span class="screen-reader-text">Fill in the blank 6 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(x)</span></span></span></label><br>
+    27. Paragraph G: <label><span class="screen-reader-text">Fill in the blank 7 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="2" type="text" value="" size="2" maxlength="7" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(iv)</span></span></span></label>
+  </p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 7										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 7									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><p>21. VIII ( Additional Academic Support)</p>
+<p>The paragraph refers to both the facilities (computer lab etc) <strong><em><u>and</u></em></strong> the services (Support Tutors) which give students additional academic support outside class.</p>
+<p>22. XII (The Student Council)</p>
+<p>The paragraph refers to ‘Members’ who are ‘on hand to communicate between the student body and academic and management staff of the school’.</p>
+<p>23. VI (Unique Opportunities)</p>
+<p>The paragraph refers to being ‘the only institution in our city that has such extensive links with industry’ which allows students ‘to gain valuable work experience which will differentiate you from other applicants’. Although the paragraph refers to links, they are local and not international.</p>
+<p>24. I (About Language Express)</p>
+<p>The paragraph gives an overview of the institution – when it started, opportunities for students and the goals of the school.</p>
+<p>25. II (Entry Requirements for Language Students)</p>
+<p>The paragraph refers to the following points:Students of any level can join our classes / instruction from beginner to advanced level /Orientation / Many of our students go on to enroll in one of our professional qualification courses</p>
+<p>26. X (Examinations and Graduatio)</p>
+<p>The paragraph refers to ‘assignments and presentations’, ‘a final test’ and ‘Graduation ceremonies’</p>
+<p>27. IV (Course commencement)</p>
+<p>The paragraph refers to ‘Semester start dates for business courses… There are three semesters each year’ and that ‘The language school intake is more flexible and students are able to begin their course on any Monday apart from in December when the institution closes for a three week holiday.’</p>

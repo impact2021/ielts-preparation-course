@@ -1,0 +1,1178 @@
+<strong>Read the texts and answer the questions. Type your answers in the spaces provided.</strong></span></p>
+					</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="2746" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <table border="1" width="99%" cellspacing="0" cellpadding="2">
+      <tbody>
+        <tr>
+          <td colspan="3" valign="top">
+            <p align="center">Passenger Ferry Timetable<br>
+            City Harbour Ferry Terminal to Marine Island Resort<br>
+            Ferry Terminal 102 Wharf Street</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">Monday-Friday Service</td>
+          <td valign="top" width="34%">Saturday Service</td>
+          <td valign="top" width="33%">Sundays and Public Holidays</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">05:20 am*</td>
+          <td valign="top" width="33%">06:30 am</td>
+          <td valign="top" width="34%">07:00 am</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">05:50 am</td>
+          <td valign="top" width="33%">07:00 am</td>
+          <td valign="top" width="34%">08:15 am</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">06:30 am</td>
+          <td valign="top" width="33%">08:15 am</td>
+          <td valign="top" width="34%">09:00am*</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">07:15 am</td>
+          <td valign="top" width="33%">09:00am*</td>
+          <td valign="top" width="34%">10:00 am</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">08:15 am</td>
+          <td valign="top" width="33%">10:00 am</td>
+          <td valign="top" width="34%">11:00 am*</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">09.00 am*</td>
+          <td valign="top" width="33%">11:00 am*</td>
+          <td valign="top" width="34%">12:00 pm</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">10:00 am</td>
+          <td valign="top" width="33%">12:00 pm</td>
+          <td valign="top" width="34%">1:00 pm*</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">11:00 am*</td>
+          <td valign="top" width="33%">1:00 pm*</td>
+          <td valign="top" width="34%">2:00 pm</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">12:00 pm</td>
+          <td valign="top" width="33%">2:00 pm</td>
+          <td valign="top" width="34%">3:00 pm*</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">1:00 pm*</td>
+          <td valign="top" width="33%">3:00 pm*</td>
+          <td valign="top" width="34%">4:00 pm</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">2:00 pm</td>
+          <td valign="top" width="33%">4:00 pm</td>
+          <td valign="top" width="34%">5:00 pm*</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">3:00 pm*</td>
+          <td valign="top" width="33%">5:00 pm*</td>
+          <td valign="top" width="34%">6:00 pm</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">4:00 pm</td>
+          <td valign="top" width="33%">6:00 pm</td>
+          <td valign="top" width="34%">7:30 pm</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">5:00 pm</td>
+          <td valign="top" width="33%">7:30 pm</td>
+          <td valign="top" width="34%">9:30 pm</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">5:30 pm</td>
+          <td valign="top" width="33%">9:30 pm</td>
+          <td valign="top" width="34%"></td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">6:30 pm</td>
+          <td valign="top" width="33%">11:45 pm</td>
+          <td valign="top" width="34%"></td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">7:15 pm</td>
+          <td valign="top" width="33%"></td>
+          <td valign="top" width="34%"></td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">8:45 pm</td>
+          <td valign="top" width="33%"></td>
+          <td valign="top" width="34%"></td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">10:15 pm</td>
+          <td valign="top" width="33%"></td>
+          <td valign="top" width="34%"></td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">11:45 pm</td>
+          <td valign="top" width="33%"></td>
+          <td valign="top" width="34%"></td>
+        </tr>
+        <tr>
+          <td colspan="3" valign="top">
+            * sails via Taylor Peninsula. Leaves Taylor Peninsula approx 10 minutes after City Harbour departure time.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table border="1" width="99%" cellspacing="0" cellpadding="2">
+      <tbody>
+        <tr>
+          <td colspan="3" valign="top">
+            <p align="center">Passenger Ferry Timetable<br>
+            Marine Island Resort to City Harbour Ferry Terminal<br>
+            Island Wharf – 12 Quay Road</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">Monday-Friday Service</td>
+          <td valign="top" width="33%">Saturday Service</td>
+          <td valign="top" width="34%">Sundays and Public Holidays</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">06:05 am*</td>
+          <td valign="top" width="33%">07:20 am</td>
+          <td valign="top" width="34%">08:00 am</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">06:40 am</td>
+          <td valign="top" width="33%">08:00 am</td>
+          <td valign="top" width="34%">09:00 am</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">07:20 am</td>
+          <td valign="top" width="33%">09:00 am</td>
+          <td valign="top" width="34%">10:00 am*</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">08:00 am</td>
+          <td valign="top" width="33%">10:00 am*</td>
+          <td valign="top" width="34%">11:00 am</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">09:00 am</td>
+          <td valign="top" width="33%">11:00 am</td>
+          <td valign="top" width="34%">12:00 pm*</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">10:00 am*</td>
+          <td valign="top" width="33%">12:00 pm*</td>
+          <td valign="top" width="34%">1:00 pm</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">11:00 am</td>
+          <td valign="top" width="33%">1:00 pm</td>
+          <td valign="top" width="34%">2:00 pm*</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">12:00 pm*</td>
+          <td valign="top" width="33%">2:00 pm*</td>
+          <td valign="top" width="34%">3:00 pm</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">1:00 pm</td>
+          <td valign="top" width="33%">3:00 pm</td>
+          <td valign="top" width="34%">4:00 pm*</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">2:00 pm*</td>
+          <td valign="top" width="33%">4:00 pm*</td>
+          <td valign="top" width="34%">5:00 pm</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">3:00 pm</td>
+          <td valign="top" width="33%">5:00 pm</td>
+          <td valign="top" width="34%">6:00 pm*</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">4:00 pm*</td>
+          <td valign="top" width="33%">6:00 pm*</td>
+          <td valign="top" width="34%">6:45 pm</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">4:45 pm</td>
+          <td valign="top" width="33%">6:45 pm</td>
+          <td valign="top" width="34%">8:15 pm</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">5:35 pm</td>
+          <td valign="top" width="33%">8:15 pm</td>
+          <td valign="top" width="34%">10:15 pm</td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">6:15 pm</td>
+          <td valign="top" width="33%">10:15 pm</td>
+          <td valign="top" width="34%"></td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">7:15 pm</td>
+          <td valign="top" width="33%">12:30 am</td>
+          <td valign="top" width="34%"></td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">8:00 pm</td>
+          <td valign="top" width="33%"></td>
+          <td valign="top" width="34%"></td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">9:30 pm</td>
+          <td valign="top" width="33%"></td>
+          <td valign="top" width="34%"></td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">11:00 pm</td>
+          <td valign="top" width="33%"></td>
+          <td valign="top" width="34%"></td>
+        </tr>
+        <tr>
+          <td valign="top" width="33%">12:30 am</td>
+          <td valign="top" width="33%"></td>
+          <td valign="top" width="34%"></td>
+        </tr>
+        <tr>
+          <td colspan="3" valign="top">
+            * sails via Taylor Peninsula. Leaves Taylor Peninsula approx 15 minutes after Marine Island departure time.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table border="1" width="99%" cellspacing="0" cellpadding="2">
+      <tbody>
+        <tr>
+          <td colspan="2" valign="top">
+            <p align="center">Ferry Prices</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" valign="top">
+            <p>Return</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="295">Adult</td>
+          <td valign="top" width="507">$25.50</td>
+        </tr>
+        <tr>
+          <td valign="top" width="295">Senior Citizen</td>
+          <td valign="top" width="507">$15.20</td>
+        </tr>
+        <tr>
+          <td valign="top" width="295">Child (under 14 years of age)</td>
+          <td valign="top" width="507">$14.25</td>
+        </tr>
+        <tr>
+          <td colspan="2" valign="top">
+            <p>One Way</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="295">Adult</td>
+          <td valign="top" width="507">$14.50</td>
+        </tr>
+        <tr>
+          <td valign="top" width="295">Senior Citizen</td>
+          <td valign="top" width="507">$8.90</td>
+        </tr>
+        <tr>
+          <td valign="top" width="295">Child (under 14 years of age)</td>
+          <td valign="top" width="507">$8.50</td>
+        </tr>
+        <tr>
+          <td colspan="2" valign="top">
+            <p align="center">Service Information</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" valign="top">
+            <p>Travel time between City Harbour and Marine Island is approximately 45 minutes. Routes via Taylor Peninsula take approximately 60 minutes.</p>
+            <p>All itineraries are subject to change or cancellation at the ferry operator’s discretion (for example, for reasons related to weather or sea conditions and/or operational interference).</p>
+            Prices and departure times may be changed without notice.<br>
+            All travel and use of services is subject to Terms and Conditions of Sale and Carriage and Carriage of Freight. Detailed information regarding these conditions is available from our ticket offices.<br>
+            <p>Ticket payment can be made by credit card or cash payment only. Payment by cheque is not available.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ito-scroll-box">
+    <p><strong>Section 1</strong></p>
+    <p><strong>Questions 1-14</strong></p>
+    <p>Read the information and answer Questions <strong>1-7</strong></p>
+    <p>Do the following statements agree with the information given in the text on the previous page?</p>
+    <p>In boxes <strong>1 – 7</strong> on your answer sheet, write</p>
+    <p><strong>TRUE</strong> if the statement agrees with the information</p>
+    <p><strong>FALSE</strong> if the statement contradicts the information</p>
+    <p><strong>NOT GIVEN</strong> if there is no information on this</p>
+    <ol type="1">
+      <li>Passengers can get from City Harbour to Taylor’s Peninsula every day of the week. BLANK 1 of 7</li>
+      <li>Ferries from City Harbour to Marine Island resort finish earliest on Saturdays.&nbsp; BLANK 2 of 7</li>
+      <li>A ferry from Marine Island leaves Taylor Peninsula for City Harbour at around 10.15 on Wednesday mornings.&nbsp; BLANK 3 of 7</li>
+      <li>A one way adult ferry ticket is less expensive than a child’s return.&nbsp; BLANK 4 of 7</li>
+      <li>Senior citizens pay the least for ferry travel. BLANK 5 of 7</li>
+      <li>The direct route is fifteen minutes quicker than the journey via the peninsula. BLANK 6 of 7</li>
+      <li>Tickets can be purchased on the ferry.&nbsp; BLANK 7 of 7</li>
+    </ol>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<table border="1" width="99%" cellspacing="0" cellpadding="2">
+<tbody>
+<tr>
+<td colspan="3" valign="top">
+<p align="center">Passenger Ferry Timetable<br>
+            City Harbour Ferry Terminal to Marine Island Resort<br>
+            Ferry Terminal 102 Wharf Street</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="33%">Monday-Friday Service</td>
+<td valign="top" width="34%">Saturday Service</td>
+<td valign="top" width="33%">Sundays and Public Holidays</td>
+</tr>
+<tr>
+<td valign="top" width="33%">05:20 am*</td>
+<td valign="top" width="33%">06:30 am</td>
+<td valign="top" width="34%">07:00 am</td>
+</tr>
+<tr>
+<td valign="top" width="33%">05:50 am</td>
+<td valign="top" width="33%">07:00 am</td>
+<td valign="top" width="34%">08:15 am</td>
+</tr>
+<tr>
+<td valign="top" width="33%">06:30 am</td>
+<td valign="top" width="33%">08:15 am</td>
+<td valign="top" width="34%">09:00am*</td>
+</tr>
+<tr>
+<td valign="top" width="33%">07:15 am</td>
+<td valign="top" width="33%">09:00am*</td>
+<td valign="top" width="34%">10:00 am</td>
+</tr>
+<tr>
+<td valign="top" width="33%">08:15 am</td>
+<td valign="top" width="33%">10:00 am</td>
+<td valign="top" width="34%">11:00 am*</td>
+</tr>
+<tr>
+<td valign="top" width="33%">09.00 am*</td>
+<td valign="top" width="33%">11:00 am*</td>
+<td valign="top" width="34%">12:00 pm</td>
+</tr>
+<tr>
+<td valign="top" width="33%">10:00 am</td>
+<td valign="top" width="33%">12:00 pm</td>
+<td valign="top" width="34%">1:00 pm*</td>
+</tr>
+<tr>
+<td valign="top" width="33%">11:00 am*</td>
+<td valign="top" width="33%">1:00 pm*</td>
+<td valign="top" width="34%">2:00 pm</td>
+</tr>
+<tr>
+<td valign="top" width="33%">12:00 pm</td>
+<td valign="top" width="33%">2:00 pm</td>
+<td valign="top" width="34%">3:00 pm*</td>
+</tr>
+<tr>
+<td valign="top" width="33%">1:00 pm*</td>
+<td valign="top" width="33%">3:00 pm*</td>
+<td valign="top" width="34%">4:00 pm</td>
+</tr>
+<tr>
+<td valign="top" width="33%">2:00 pm</td>
+<td valign="top" width="33%">4:00 pm</td>
+<td valign="top" width="34%">5:00 pm*</td>
+</tr>
+<tr>
+<td valign="top" width="33%">3:00 pm*</td>
+<td valign="top" width="33%">5:00 pm*</td>
+<td valign="top" width="34%">6:00 pm</td>
+</tr>
+<tr>
+<td valign="top" width="33%">4:00 pm</td>
+<td valign="top" width="33%">6:00 pm</td>
+<td valign="top" width="34%">7:30 pm</td>
+</tr>
+<tr>
+<td valign="top" width="33%">5:00 pm</td>
+<td valign="top" width="33%">7:30 pm</td>
+<td valign="top" width="34%">9:30 pm</td>
+</tr>
+<tr>
+<td valign="top" width="33%">5:30 pm</td>
+<td valign="top" width="33%">9:30 pm</td>
+<td valign="top" width="34%"></td>
+</tr>
+<tr>
+<td valign="top" width="33%">6:30 pm</td>
+<td valign="top" width="33%">11:45 pm</td>
+<td valign="top" width="34%"></td>
+</tr>
+<tr>
+<td valign="top" width="33%">7:15 pm</td>
+<td valign="top" width="33%"></td>
+<td valign="top" width="34%"></td>
+</tr>
+<tr>
+<td valign="top" width="33%">8:45 pm</td>
+<td valign="top" width="33%"></td>
+<td valign="top" width="34%"></td>
+</tr>
+<tr>
+<td valign="top" width="33%">10:15 pm</td>
+<td valign="top" width="33%"></td>
+<td valign="top" width="34%"></td>
+</tr>
+<tr>
+<td valign="top" width="33%">11:45 pm</td>
+<td valign="top" width="33%"></td>
+<td valign="top" width="34%"></td>
+</tr>
+<tr>
+<td colspan="3" valign="top">
+            * sails via Taylor Peninsula. Leaves Taylor Peninsula approx 10 minutes after City Harbour departure time.
+          </td>
+</tr>
+</tbody>
+</table>
+<table border="1" width="99%" cellspacing="0" cellpadding="2">
+<tbody>
+<tr>
+<td colspan="3" valign="top">
+<p align="center">Passenger Ferry Timetable<br>
+            Marine Island Resort to City Harbour Ferry Terminal<br>
+            Island Wharf – 12 Quay Road</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="33%">Monday-Friday Service</td>
+<td valign="top" width="33%">Saturday Service</td>
+<td valign="top" width="34%">Sundays and Public Holidays</td>
+</tr>
+<tr>
+<td valign="top" width="33%">06:05 am*</td>
+<td valign="top" width="33%">07:20 am</td>
+<td valign="top" width="34%">08:00 am</td>
+</tr>
+<tr>
+<td valign="top" width="33%">06:40 am</td>
+<td valign="top" width="33%">08:00 am</td>
+<td valign="top" width="34%">09:00 am</td>
+</tr>
+<tr>
+<td valign="top" width="33%">07:20 am</td>
+<td valign="top" width="33%">09:00 am</td>
+<td valign="top" width="34%">10:00 am*</td>
+</tr>
+<tr>
+<td valign="top" width="33%">08:00 am</td>
+<td valign="top" width="33%">10:00 am*</td>
+<td valign="top" width="34%">11:00 am</td>
+</tr>
+<tr>
+<td valign="top" width="33%">09:00 am</td>
+<td valign="top" width="33%">11:00 am</td>
+<td valign="top" width="34%">12:00 pm*</td>
+</tr>
+<tr>
+<td valign="top" width="33%">10:00 am*</td>
+<td valign="top" width="33%">12:00 pm*</td>
+<td valign="top" width="34%">1:00 pm</td>
+</tr>
+<tr>
+<td valign="top" width="33%">11:00 am</td>
+<td valign="top" width="33%">1:00 pm</td>
+<td valign="top" width="34%">2:00 pm*</td>
+</tr>
+<tr>
+<td valign="top" width="33%">12:00 pm*</td>
+<td valign="top" width="33%">2:00 pm*</td>
+<td valign="top" width="34%">3:00 pm</td>
+</tr>
+<tr>
+<td valign="top" width="33%">1:00 pm</td>
+<td valign="top" width="33%">3:00 pm</td>
+<td valign="top" width="34%">4:00 pm*</td>
+</tr>
+<tr>
+<td valign="top" width="33%">2:00 pm*</td>
+<td valign="top" width="33%">4:00 pm*</td>
+<td valign="top" width="34%">5:00 pm</td>
+</tr>
+<tr>
+<td valign="top" width="33%">3:00 pm</td>
+<td valign="top" width="33%">5:00 pm</td>
+<td valign="top" width="34%">6:00 pm*</td>
+</tr>
+<tr>
+<td valign="top" width="33%">4:00 pm*</td>
+<td valign="top" width="33%">6:00 pm*</td>
+<td valign="top" width="34%">6:45 pm</td>
+</tr>
+<tr>
+<td valign="top" width="33%">4:45 pm</td>
+<td valign="top" width="33%">6:45 pm</td>
+<td valign="top" width="34%">8:15 pm</td>
+</tr>
+<tr>
+<td valign="top" width="33%">5:35 pm</td>
+<td valign="top" width="33%">8:15 pm</td>
+<td valign="top" width="34%">10:15 pm</td>
+</tr>
+<tr>
+<td valign="top" width="33%">6:15 pm</td>
+<td valign="top" width="33%">10:15 pm</td>
+<td valign="top" width="34%"></td>
+</tr>
+<tr>
+<td valign="top" width="33%">7:15 pm</td>
+<td valign="top" width="33%">12:30 am</td>
+<td valign="top" width="34%"></td>
+</tr>
+<tr>
+<td valign="top" width="33%">8:00 pm</td>
+<td valign="top" width="33%"></td>
+<td valign="top" width="34%"></td>
+</tr>
+<tr>
+<td valign="top" width="33%">9:30 pm</td>
+<td valign="top" width="33%"></td>
+<td valign="top" width="34%"></td>
+</tr>
+<tr>
+<td valign="top" width="33%">11:00 pm</td>
+<td valign="top" width="33%"></td>
+<td valign="top" width="34%"></td>
+</tr>
+<tr>
+<td valign="top" width="33%">12:30 am</td>
+<td valign="top" width="33%"></td>
+<td valign="top" width="34%"></td>
+</tr>
+<tr>
+<td colspan="3" valign="top">
+            * sails via Taylor Peninsula. Leaves Taylor Peninsula approx 15 minutes after Marine Island departure time.
+          </td>
+</tr>
+</tbody>
+</table>
+<table border="1" width="99%" cellspacing="0" cellpadding="2">
+<tbody>
+<tr>
+<td colspan="2" valign="top">
+<p align="center">Ferry Prices</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+<p>Return</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="295">Adult</td>
+<td valign="top" width="507">$25.50</td>
+</tr>
+<tr>
+<td valign="top" width="295">Senior Citizen</td>
+<td valign="top" width="507">$15.20</td>
+</tr>
+<tr>
+<td valign="top" width="295">Child (under 14 years of age)</td>
+<td valign="top" width="507">$14.25</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+<p>One Way</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="295">Adult</td>
+<td valign="top" width="507">$14.50</td>
+</tr>
+<tr>
+<td valign="top" width="295">Senior Citizen</td>
+<td valign="top" width="507">$8.90</td>
+</tr>
+<tr>
+<td valign="top" width="295">Child (under 14 years of age)</td>
+<td valign="top" width="507">$8.50</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+<p align="center">Service Information</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+<p>Travel time between City Harbour and Marine Island is approximately 45 minutes. Routes via Taylor Peninsula take approximately 60 minutes.</p>
+<p>All itineraries are subject to change or cancellation at the ferry operator’s discretion (for example, for reasons related to weather or sea conditions and/or operational interference).</p>
+<p>            Prices and departure times may be changed without notice.<br>
+            All travel and use of services is subject to Terms and Conditions of Sale and Carriage and Carriage of Freight. Detailed information regarding these conditions is available from our ticket offices.</p>
+<p>Ticket payment can be made by credit card or cash payment only. Payment by cheque is not available.</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<div class="ito-scroll-box">
+<p><strong>Section 1</strong></p>
+<p><strong>Questions 1-14</strong></p>
+<p>Read the information and answer Questions <strong>1-7</strong></p>
+<p>Do the following statements agree with the information given in the text on the previous page?</p>
+<p>In boxes <strong>1 – 7</strong> on your answer sheet, write</p>
+<p><strong>TRUE</strong> if the statement agrees with the information</p>
+<p><strong>FALSE</strong> if the statement contradicts the information</p>
+<p><strong>NOT GIVEN</strong> if there is no information on this</p>
+<ol type="1">
+<li>Passengers can get from City Harbour to Taylor’s Peninsula every day of the week. <label><span class="screen-reader-text">Fill in the blank 1 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></li>
+<li>Ferries from City Harbour to Marine Island resort finish earliest on Saturdays.&nbsp; <label><span class="screen-reader-text">Fill in the blank 2 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>A ferry from Marine Island leaves Taylor Peninsula for City Harbour at around 10.15 on Wednesday mornings.&nbsp; <label><span class="screen-reader-text">Fill in the blank 3 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></li>
+<li>A one way adult ferry ticket is less expensive than a child’s return.&nbsp; <label><span class="screen-reader-text">Fill in the blank 4 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>Senior citizens pay the least for ferry travel. <label><span class="screen-reader-text">Fill in the blank 5 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>The direct route is fifteen minutes quicker than the journey via the peninsula. <label><span class="screen-reader-text">Fill in the blank 6 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></li>
+<li>Tickets can be purchased on the ferry.&nbsp; <label><span class="screen-reader-text">Fill in the blank 7 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(not given)</span></span></span></label></li>
+</ol></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 7										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 7									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><p>1. TRUE</p>
+<p>Each of the ferries marked with an asterisk (*) pass through Taylor’s Peninsula, and there is at least one sailing every day.</p>
+<p>2. FALSE</p>
+<p>The ferries finish earliest on Sundays and Public Holidays (9:30 pm)</p>
+<p>3. TRUE</p>
+<p>‘10.00a.m.*’ + ‘Leaves Taylor Peninsula approx 15 minutes after Marine Island departure time.’ = 10.15 a.m.</p>
+<p>4. FALSE</p>
+<p>Adults one way = $14.50; Child’s return = $14.25.</p>
+<p>5. FALSE</p>
+<p>Children pay less than senior citizens.</p>
+<p>6. TRUE</p>
+<p>‘Travel time between City Harbour and Marine Island is approximately 45 minutes. Routes via Taylor Peninsula take approximately 60 minutes.’</p>
+<p>7. NOT GIVEN</p>
+<p>No mention is made of where the tickets can be bought.</p>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:2747,&quot;question_post_id&quot;:71971684}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>2</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>2</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--2747">
+						<p>&nbsp;</p>
+					</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="2747" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <p align="center"><strong>Accommodation Guide for Marine Island</strong></p>
+    <p><strong>Budget Accommodation (less than $30 per person per night)</strong></p>
+    <p><em>Ocean View Camping Resort</em></p>
+    <p>Enjoy the unspoilt beauty of our natural environment. Join us on our late night hikes through local bush and learn more about our native animals. Repeat winners of the Eco-friendly Tourism Award and winners last year of the MarineIsland Hospitality Award.</p>
+    <p>Tent pitches only (no electrically powered sites) – $12 per person per night/$10 per&nbsp; person per night for bookings over 4 nights.</p>
+    <p><em>MarineIslandVillagePark</em></p>
+    <p>We are the closest campsite to the ferry terminal, just 5-10 minutes walk along the picturesque ocean views walkway. Swimming pool and hot pools onsite which are complementary for use by our guests.</p>
+    <p>Tent pitches – $14 per person per night. Discounts available for bookings of one week or more.</p>
+    <p>Caravan/motorhome sites – $25 per night (based on two people) Extra charge of $5 per night for additional campers. Small and medium sized dogs allowed of bookings made in advance.</p>
+    <p><em>Backpacker Haven</em></p>
+    <p>Come enjoy the beauty of MarineIsland in the company of travellers from all over the world. Pick up service from the ferry port available by arrangement (we are located 2 minutes from Ocean View Camping Resort).&nbsp; Free BBQ party on Friday evenings.</p>
+    <p>Dormitory beds (shared room of 8) – $18 per night per person<br>
+    Private twin room – $25 per night per person</p>
+    <p><strong>Mid-range Accommodation ($30-50 dollars per night)</strong></p>
+    <p><em>Marine Paradise Bed &amp; Breakfast </em></p>
+    <p>A friendly welcome is given to visitors by husband and wife Jayne and Brendon Sawyer. Babysitting service available by arrangement. Our central location means highlights of the island are easily accessible by bicycle or taxi for longer trips.</p>
+    <p>$35 per night per person (based on two people sharing a room, continental breakfast (rolls, jams, cereal, tea, coffee and orange juice) included.</p>
+    <p><em>Value Inn</em></p>
+    <p>Luxury at discount prices! Our award-winning inn welcomes you – voted best value for money in the National Tourism Awards two years running! Situated on the south-coast of the island – an ideal location for surfing and wind-surfing enthusiasts – 5 mins from the beach!</p>
+    <p>Single room $45 per night.&nbsp; Double room (two people sharing) $30 per night per person.</p>
+    <p>Family room (up to 4 people) $30 per night per person.&nbsp; Breakfast is not included, but available for an additional charge from inn restaurant. All rooms include tea/coffee making facilities and small kitchen area.</p>
+    <p><strong>Top-End Accommodation</strong></p>
+    <p><em>Marine Island Hotel</em></p>
+    <p>Come and enjoy our secluded paradise! Guests can enjoy access to the beautiful beaches reserved for MarineIsland Guests only (2 minutes walk away only!).&nbsp; Situated in the north-east tip the island enjoy tranquility, fine cuisine and excellent views. Luxury transport service for guest arriving at the ferry terminal.</p>
+    <p>Single room, $125 per night. Double room $170* per night. All rooms en-suite (own toilet and shower facility). Marine Island Suite $280* per night.</p>
+    <span>Price based on two people sharing.&nbsp; Discounts are available for pre-booking online. </span>
+  </div>
+  <div class="ito-scroll-box">
+    <p>Read the information about accommodation on Marine Island and answer the questions <strong>8-14</strong>.</p>
+    <strong>Questions 8-10</strong>
+    <br><br>
+    Label the map below.<br>
+    Choose your answer from the box below and write the letters <strong>A-F</strong> next to questions <strong>8-10.</strong>
+    <ol style="list-style-type: upper-alpha" type="A">
+      <li>Ocean View Camping Resort</li>
+      <li>Marine Island Village Park</li>
+      <li>Backpacker Haven</li>
+      <li>Marine Paradise Bed and Breakfast</li>
+      <li>Value Inn</li>
+      <li>Marine Island Hotel</li>
+    </ol>
+    <strong><img class="aligncenter size-full wp-image-68925" src="https://ieltstestonline.com/wp-content/uploads/2018/12/ferry_map.jpg" alt="" width="570" height="293"></strong>
+    <br><br>
+    8. BLANK 1 of 7<br>
+    9. BLANK 2 of 7<br>
+    10. BLANK 3 of 7
+    <hr>
+    <strong>Questions 11-14</strong>
+    <br><br>
+    Look at the information about accommodation on Marine Island.<br>
+    Answer the question below using <em><strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong></em> from the text for each answer.<br>
+    Write your answers in boxes <strong>11 – 14</strong> on your answer sheet.<br><br>
+    <strong>11.</strong> What has Ocean View Camping Resort won more than once? BLANK 4 of 7<br><br>
+    <strong>12.</strong> What is the shortest period of time visitors must book for at Marine Island Park to qualify for a cheaper rate? BLANK 5 of 7<br><br>
+    <strong>13.</strong> What entertainment is available to guests at one of the accommodation places at no extra charge on Friday evenings? BLANK 6 of 7<br><br>
+    <strong>14.</strong> How long does it take on foot to get to the beach from the island’s most expensive accommodation? BLANK 7 of 7<br>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<p align="center"><strong>Accommodation Guide for Marine Island</strong></p>
+<p><strong>Budget Accommodation (less than $30 per person per night)</strong></p>
+<p><em>Ocean View Camping Resort</em></p>
+<p>Enjoy the unspoilt beauty of our natural environment. Join us on our late night hikes through local bush and learn more about our native animals. Repeat winners of the Eco-friendly Tourism Award and winners last year of the MarineIsland Hospitality Award.</p>
+<p>Tent pitches only (no electrically powered sites) – $12 per person per night/$10 per&nbsp; person per night for bookings over 4 nights.</p>
+<p><em>MarineIslandVillagePark</em></p>
+<p>We are the closest campsite to the ferry terminal, just 5-10 minutes walk along the picturesque ocean views walkway. Swimming pool and hot pools onsite which are complementary for use by our guests.</p>
+<p>Tent pitches – $14 per person per night. Discounts available for bookings of one week or more.</p>
+<p>Caravan/motorhome sites – $25 per night (based on two people) Extra charge of $5 per night for additional campers. Small and medium sized dogs allowed of bookings made in advance.</p>
+<p><em>Backpacker Haven</em></p>
+<p>Come enjoy the beauty of MarineIsland in the company of travellers from all over the world. Pick up service from the ferry port available by arrangement (we are located 2 minutes from Ocean View Camping Resort).&nbsp; Free BBQ party on Friday evenings.</p>
+<p>Dormitory beds (shared room of 8) – $18 per night per person<br>
+    Private twin room – $25 per night per person</p>
+<p><strong>Mid-range Accommodation ($30-50 dollars per night)</strong></p>
+<p><em>Marine Paradise Bed &amp; Breakfast </em></p>
+<p>A friendly welcome is given to visitors by husband and wife Jayne and Brendon Sawyer. Babysitting service available by arrangement. Our central location means highlights of the island are easily accessible by bicycle or taxi for longer trips.</p>
+<p>$35 per night per person (based on two people sharing a room, continental breakfast (rolls, jams, cereal, tea, coffee and orange juice) included.</p>
+<p><em>Value Inn</em></p>
+<p>Luxury at discount prices! Our award-winning inn welcomes you – voted best value for money in the National Tourism Awards two years running! Situated on the south-coast of the island – an ideal location for surfing and wind-surfing enthusiasts – 5 mins from the beach!</p>
+<p>Single room $45 per night.&nbsp; Double room (two people sharing) $30 per night per person.</p>
+<p>Family room (up to 4 people) $30 per night per person.&nbsp; Breakfast is not included, but available for an additional charge from inn restaurant. All rooms include tea/coffee making facilities and small kitchen area.</p>
+<p><strong>Top-End Accommodation</strong></p>
+<p><em>Marine Island Hotel</em></p>
+<p>Come and enjoy our secluded paradise! Guests can enjoy access to the beautiful beaches reserved for MarineIsland Guests only (2 minutes walk away only!).&nbsp; Situated in the north-east tip the island enjoy tranquility, fine cuisine and excellent views. Luxury transport service for guest arriving at the ferry terminal.</p>
+<p>Single room, $125 per night. Double room $170* per night. All rooms en-suite (own toilet and shower facility). Marine Island Suite $280* per night.</p>
+<p>    <span>Price based on two people sharing.&nbsp; Discounts are available for pre-booking online. </span>
+  </p></div>
+<div class="ito-scroll-box">
+<p>Read the information about accommodation on Marine Island and answer the questions <strong>8-14</strong>.</p>
+<p>    <strong>Questions 8-10</strong></p>
+<p>    Label the map below.<br>
+    Choose your answer from the box below and write the letters <strong>A-F</strong> next to questions <strong>8-10.</strong></p>
+<ol style="list-style-type: upper-alpha;" type="A">
+<li>Ocean View Camping Resort</li>
+<li>Marine Island Village Park</li>
+<li>Backpacker Haven</li>
+<li>Marine Paradise Bed and Breakfast</li>
+<li>Value Inn</li>
+<li>Marine Island Hotel</li>
+</ol>
+<p>    <strong><img class="aligncenter size-full wp-image-68925" src="https://ieltstestonline.com/wp-content/uploads/2018/12/ferry_map.jpg" alt="" width="570" height="293"></strong></p>
+<p>    8. <label><span class="screen-reader-text">Fill in the blank 1 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(f)</span></span></span></label><br>
+    9. <label><span class="screen-reader-text">Fill in the blank 2 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(a)</span></span></span></label><br>
+    10. <label><span class="screen-reader-text">Fill in the blank 3 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(d)</span></span></span></label></p>
+<hr>
+<p>    <strong>Questions 11-14</strong></p>
+<p>    Look at the information about accommodation on Marine Island.<br>
+    Answer the question below using <em><strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong></em> from the text for each answer.<br>
+    Write your answers in boxes <strong>11 – 14</strong> on your answer sheet.</p>
+<p>    <strong>11.</strong> What has Ocean View Camping Resort won more than once? <label><span class="screen-reader-text">Fill in the blank 4 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="26" type="text" value="" size="26" maxlength="31" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(eco-friendly tourism award,eco-friendly award,eco-friendly tourism)</span></span></span></label></p>
+<p>    <strong>12.</strong> What is the shortest period of time visitors must book for at Marine Island Park to qualify for a cheaper rate? <label><span class="screen-reader-text">Fill in the blank 5 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="8" type="text" value="" size="8" maxlength="13" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(1 week,one week)</span></span></span></label></p>
+<p>    <strong>13.</strong> What entertainment is available to guests at one of the accommodation places at no extra charge on Friday evenings? <label><span class="screen-reader-text">Fill in the blank 6 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="19" type="text" value="" size="19" maxlength="24" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(free barbecue party,free barbecue,free bbq party,bbq party,free bbq party)</span></span></span></label></p>
+<p>    <strong>14.</strong> How long does it take on foot to get to the beach from the island’s most expensive accommodation? <label><span class="screen-reader-text">Fill in the blank 7 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="17" type="text" value="" size="17" maxlength="22" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(2 minutes,two minutes,2 minutes walk,two minutes walk,2 minute walk,two minute walk,2 minutes' walk,two minutes' walk)</span></span></span></label>
+  </p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 7										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 7									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><div class="generalfeedback">
+<p>8. F</p>
+<p>‘<em>Situated in the north-east tip the island ‘</em></p>
+<p>9. A</p>
+<p><em>Marine Island Village Park says ‘</em><em>We are the closest campsite to the ferry terminal’, therefore the campsite for number 9 must be Ocean View as there are only 2 campsites mentioned. </em></p>
+<p>10. D</p>
+<p>‘<em>Our central location means highlights of the island are easily accessible by bicycle or taxi for longer trips’</em></p>
+<p>11. Eco-friendly Tourism Award</p>
+<p><em><u><strong>‘Repeat winners</strong> of the Eco-friendly Tourism Award</u> and winners last year of the MarineIsland Hospitality Award.’</em></p>
+<p>12. one week</p>
+<p>‘Tent pitches – $14 per person per night. <u><em>Discounts available for bookings of one week or more</em></u>.’</p>
+<p>13. (free) BBQ party</p>
+<p>‘<em><u>Free BBQ party</u> on Friday evenings’</em> at the Backpacker Haven</p>
+<p>14. 2 minutes</p>
+<p>Guests can enjoy access to the beautiful beaches reserved for Marine Island Guests only <em><u>(2 minutes walk away only!).</u></em></p>
+</div>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:2748,&quot;question_post_id&quot;:71971685}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>3</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>3</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--2748">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="2748" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <p align="center"><strong>University Graduates’ Careers Conference</strong></p>
+    <p align="center">September 23-27th</p>
+    <p>Dear students,</p>
+    <p>Your final year examination results will be available from August 15th and it is now time to be thinking ahead to what you will be doing once your studies are complete.&nbsp; The university careers conference is designed to assist you in making these crucial decisions and all final year students from the city’s three universities are invited to attend. Industry predictions for the year ahead are positive, with a predicted rise of 15% in graduate work vacancies.</p>
+    <p>The conference will be held at the North City Campus and will be attended by over 500 exhibitors in the following areas:</p>
+    <ol style="list-style-type: upper-alpha" type="A">
+      <li>Business and Commerce</li>
+      <li>Healthcare &amp; Social work</li>
+      <li>Teaching</li>
+      <li>Computing &amp; Information Technology</li>
+      <li>Post-graduate study opportunities</li>
+    </ol>
+    <span><strong>A.</strong> Business &amp; Commerce
+    Over 1/3 of the universities graduates this year have completed a degree in this field. There will be over 20 graduate recruitment companies attending the conference along with 30 corporate organizations who will be recruiting students direct into their Graduate Training programmes. Details of positions available under Graduate Training Schemes are found in this month’s Student Gazette, the starting salary for most positions is £23,000 per annum (higher than the national average starting salary of $21,500 for graduates entering employment). Last year over 85% of our business graduates obtained what they considered to be ‘challenging and appropriate’ positions within 6 months of graduation. </span>
+    <p><strong>B</strong>. Health and Social Work
+    Representatives from both the public and private sector will attend the seminar. Please note that there will also be information available regarding Government funding and grants for applicable areas post-graduate of study.</p>
+    <p><strong>C</strong>. Teaching
+    The university is proud to announce that over 300 newly qualified teachers are expected to graduate at the end of this semester. Representatives of a number of schools nationwide will be attending the seminar along with ‘Academic Relief’ and ‘Teacher Teachers’ two of the countries largest recruitment agencies for relief teaching and permanent positions in education. Quality Academic Staff which specializes in placing teachers in short-term international will also be in attendance which may be of interest to graduates wishing to experience some time overseas.</p>
+    <p><strong>D.</strong> Computing and Information Technology
+    Last year more than 90% of IT and Computing graduates reported that they secured a position within 6 months of graduation (our highest success rate). Over 50% of exhibitors in this field this year will also be presenting opportunities to work abroad; however, whether wishing to seek employment here or overseas, the conference should present a large number of opportunities as this is the most heavily represented area at this year’s conference.</p>
+    <p><strong>E</strong>. Post-Graduate Studies
+    Last year 8% of our graduates from their first degree went on to study a post-graduate programme here at the university.&nbsp; The majority of further study information booths will be devoted to internal opportunities at the university; however, extensive information regarding courses in other institutions can be found in the Career’s Guidance Department on the Redhill Rd Campus.</p>
+  </div>
+  <div class="ito-scroll-box">
+    <p><strong>Section 2 </strong></p>
+    <p><strong>Questions 15-26</strong></p>
+    <p>Read the information below and answer Questions <strong>15-20</strong></p>
+    <p>Look at the information about the professional fields <strong>A-E</strong>. For which options are following statement true?</p>
+    <p>Write the correct letter <strong>A-E</strong> in boxes <strong>15 – 20 </strong>on your answer sheet.</p>
+    <p>NB. You may use any letter more than once.</p>
+    <p>15. Certain areas of the field may qualify for government sponsorship for students wishing to continue their studies. BLANK 1 of 6</p>
+    <p>16. In the previous year, the highest number of graduates gaining employment in the first half year after completing their studies studied in this area. BLANK 2 of 6</p>
+    <p>17. Details of opportunities in this area are found in a university publication. BLANK 3 of 6</p>
+    <p>18. Limited information will be available at the conference though more details can be obtained elsewhere. BLANK 4 of 6</p>
+    <p>19. Information about temporary as well as long-term positions will be available. BLANK 5 of 6</p>
+    <p>20. Less than half of the exhibitors will be domestic. BLANK 6 of 6</p>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<p align="center"><strong>University Graduates’ Careers Conference</strong></p>
+<p align="center">September 23-27th</p>
+<p>Dear students,</p>
+<p>Your final year examination results will be available from August 15th and it is now time to be thinking ahead to what you will be doing once your studies are complete.&nbsp; The university careers conference is designed to assist you in making these crucial decisions and all final year students from the city’s three universities are invited to attend. Industry predictions for the year ahead are positive, with a predicted rise of 15% in graduate work vacancies.</p>
+<p>The conference will be held at the North City Campus and will be attended by over 500 exhibitors in the following areas:</p>
+<ol style="list-style-type: upper-alpha;" type="A">
+<li>Business and Commerce</li>
+<li>Healthcare &amp; Social work</li>
+<li>Teaching</li>
+<li>Computing &amp; Information Technology</li>
+<li>Post-graduate study opportunities</li>
+</ol>
+<p>    <span><strong>A.</strong> Business &amp; Commerce<br>
+    Over 1/3 of the universities graduates this year have completed a degree in this field. There will be over 20 graduate recruitment companies attending the conference along with 30 corporate organizations who will be recruiting students direct into their Graduate Training programmes. Details of positions available under Graduate Training Schemes are found in this month’s Student Gazette, the starting salary for most positions is £23,000 per annum (higher than the national average starting salary of $21,500 for graduates entering employment). Last year over 85% of our business graduates obtained what they considered to be ‘challenging and appropriate’ positions within 6 months of graduation. </span></p>
+<p><strong>B</strong>. Health and Social Work<br>
+    Representatives from both the public and private sector will attend the seminar. Please note that there will also be information available regarding Government funding and grants for applicable areas post-graduate of study.</p>
+<p><strong>C</strong>. Teaching<br>
+    The university is proud to announce that over 300 newly qualified teachers are expected to graduate at the end of this semester. Representatives of a number of schools nationwide will be attending the seminar along with ‘Academic Relief’ and ‘Teacher Teachers’ two of the countries largest recruitment agencies for relief teaching and permanent positions in education. Quality Academic Staff which specializes in placing teachers in short-term international will also be in attendance which may be of interest to graduates wishing to experience some time overseas.</p>
+<p><strong>D.</strong> Computing and Information Technology<br>
+    Last year more than 90% of IT and Computing graduates reported that they secured a position within 6 months of graduation (our highest success rate). Over 50% of exhibitors in this field this year will also be presenting opportunities to work abroad; however, whether wishing to seek employment here or overseas, the conference should present a large number of opportunities as this is the most heavily represented area at this year’s conference.</p>
+<p><strong>E</strong>. Post-Graduate Studies<br>
+    Last year 8% of our graduates from their first degree went on to study a post-graduate programme here at the university.&nbsp; The majority of further study information booths will be devoted to internal opportunities at the university; however, extensive information regarding courses in other institutions can be found in the Career’s Guidance Department on the Redhill Rd Campus.</p>
+<p></p></div>
+<div class="ito-scroll-box">
+<p><strong>Section 2 </strong></p>
+<p><strong>Questions 15-26</strong></p>
+<p>Read the information below and answer Questions <strong>15-20</strong></p>
+<p>Look at the information about the professional fields <strong>A-E</strong>. For which options are following statement true?</p>
+<p>Write the correct letter <strong>A-E</strong> in boxes <strong>15 – 20 </strong>on your answer sheet.</p>
+<p>NB. You may use any letter more than once.</p>
+<p>15. Certain areas of the field may qualify for government sponsorship for students wishing to continue their studies. <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(b)</span></span></span></label></p>
+<p>16. In the previous year, the highest number of graduates gaining employment in the first half year after completing their studies studied in this area. <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(d)</span></span></span></label></p>
+<p>17. Details of opportunities in this area are found in a university publication. <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(a)</span></span></span></label></p>
+<p>18. Limited information will be available at the conference though more details can be obtained elsewhere. <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(e)</span></span></span></label></p>
+<p>19. Information about temporary as well as long-term positions will be available. <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(c)</span></span></span></label></p>
+<p>20. Less than half of the exhibitors will be domestic. <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(d)</span></span></span></label></p>
+<p></p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 6										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 6									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><p>15. B (Health and Social Work)</p>
+<p>‘Please note that there will also be information available regarding <em><u>Government funding and grants for applicable areas post-graduate of study</u></em>.’</p>
+<p>16. D (Computing and Information Technology)</p>
+<p><em>‘Last year more than 90% of IT and Computing graduates reported that they secured a position within 6 months of graduation (our highest success rate). ‘</em></p>
+<p>17. A (Business &amp; Commerce)</p>
+<p>‘Details of positions available under Graduate Training Schemes are found in this month’s Student Gazette’</p>
+<p>18. E (Post-Graduate Studies)</p>
+<p>‘The <u><em>majority of further study information booths will be devoted to internal opportunities</em></u> at the university; <em><u>however, extensive information regarding courses in other institutions can be found in the Career’s Guidance Department on the Redhill Rd Campus</u></em>.’</p>
+<p>19. C (Teaching)</p>
+<p>‘Representatives of a number of schools nationwide will be attending the seminar along with ‘Academic Relief’ and ‘Teacher Teachers’ two of the countries largest recruitment agencies <em><u>for relief teaching and permanent positions</u></em> in education. Quality Academic Staff which specializes in placing teachers <em><u>in short-term international</u></em> will also be in attendance’</p>
+<p>20. D (Computing and Information Technology)</p>
+<p><em><u>‘Over 50%</u></em> of exhibitors in this field this year will also be <u><em>presenting opportunities to work abroad’</em></u></p>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:2749,&quot;question_post_id&quot;:71971686}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>4</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>4</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--2749">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="2749" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <p align="center"><strong>Graduates’ Newsletter</strong><span>
+    <strong>Edition 204</strong></span></p>
+    <p><strong>Do you have what it takes?</strong></p>
+    <p>Recent reports from graduate employers has shown that one of the biggest complaints companies experience with workers direct out of university is lack of ‘soft skills’.&nbsp; This refers to the ability to problem solve, get along with colleagues, communicating with others and verbal reasoning.</p>
+    <p>Industry research indicates that while graduates may excel in technical or academic areas of knowledge, certain companies have reservations about employing university graduates in ‘real-life roles’ due to these issues in the work place – particularly if students possess a purely academic background. It is important for new employees to remember that working as part of a team and gaining the respect of not only superiors but also peers is vital to career success. Happily, due to our highly popular work experience programme, many of our students have the advantage of having experienced the workplace environment – an attribute many competitors for those lucrative positions may be without.</p>
+    <p><strong>Do you feel you need to develop your skills further?</strong>
+    A two day workshop running on Wednesday and Thursday of the last week of the semester can help you!&nbsp; The programme is being led by one of the country’s leading career development trainers Steve Brighthall of Progress Solutions.&nbsp; The seminar is restricted to 50 places and an enrollment fee of £15 applies for students currently studying at the university (£25 for non-enrolled students).</p>
+    <p><strong>Seminar Details</strong>
+    The programme is structured as follows</p>
+    <p>Tutorial 1&nbsp; – Making an Impact with your curriculum vitae<br>
+    Tutorial 2 – Make the most of your positive attributes during an interview<br>
+    Tutorial 3 – How to achieve success in the workplace</p>
+    <p>Workshop 1 – Logical thinking<br>
+    Workshop 2 – Team-building<br>
+    Workshop 3 – Problem solving</p>
+    <p>To enroll, please register at reception in the Careers Guidance Centre.</p>
+    <p>Take steps to help yourself achieve success.</p>
+  </div>
+  <div class="ito-scroll-box">
+    <p><strong>Questions 21-23</strong></p>
+    <p>Do the following statements agree with the information given in the text on the previous page?</p>
+    <p>In boxes <strong>21 – 23</strong> on your answer sheet, write</p>
+    <p><strong>TRUE</strong> if the statement agrees with the information</p>
+    <p><strong>FALSE</strong> if the statement contradicts the information</p>
+    <p><strong>NOT GIVEN</strong> if there is no information on this</p>
+    <p>21. Students may not possess social skills necessary for success in the workplace due to lack of emphasis placed on these areas in university degrees. BLANK 1 of 6</p>
+    <p>22. Research shows that employers may be reluctant to employ graduates without work experience. BLANK 2 of 6</p>
+    <p>23. The university’s students are given valuable opportunities many studying at other institutions are not. BLANK 3 of 6</p>
+    <hr>
+    <p><strong>Questions 24-26</strong></p>
+    <p>Complete the summary.</p>
+    <p>Choose <em><strong>NO MORE THAN ONE WORD OR A NUMBER</strong></em> from the passage for each answer.</p>
+    <p>Write your answers in boxes <strong>24 – 26</strong> on your answer sheet.</p>
+    <p>The seminar is restricted to 50 places and costs 24.£BLANK 4 of 6 for attendees who are not presently studying internally. The three tutorial sessions focus on not only success in the workplace, but also securing a position through presenting yourself well at 25. BLANK 5 of 6 and developing an attractive resume. Potential weaknesses (as perceived by employers according to recent research) including finding solutions to problems, reasoning in a 26. BLANK 6 of 6 manner and working cooperatively with others are explored in the workshops.</p>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<p align="center"><strong>Graduates’ Newsletter</strong><span><br>
+    <strong>Edition 204</strong></span></p>
+<p><strong>Do you have what it takes?</strong></p>
+<p>Recent reports from graduate employers has shown that one of the biggest complaints companies experience with workers direct out of university is lack of ‘soft skills’.&nbsp; This refers to the ability to problem solve, get along with colleagues, communicating with others and verbal reasoning.</p>
+<p>Industry research indicates that while graduates may excel in technical or academic areas of knowledge, certain companies have reservations about employing university graduates in ‘real-life roles’ due to these issues in the work place – particularly if students possess a purely academic background. It is important for new employees to remember that working as part of a team and gaining the respect of not only superiors but also peers is vital to career success. Happily, due to our highly popular work experience programme, many of our students have the advantage of having experienced the workplace environment – an attribute many competitors for those lucrative positions may be without.</p>
+<p><strong>Do you feel you need to develop your skills further?</strong><br>
+    A two day workshop running on Wednesday and Thursday of the last week of the semester can help you!&nbsp; The programme is being led by one of the country’s leading career development trainers Steve Brighthall of Progress Solutions.&nbsp; The seminar is restricted to 50 places and an enrollment fee of £15 applies for students currently studying at the university (£25 for non-enrolled students).</p>
+<p><strong>Seminar Details</strong><br>
+    The programme is structured as follows</p>
+<p>Tutorial 1&nbsp; – Making an Impact with your curriculum vitae<br>
+    Tutorial 2 – Make the most of your positive attributes during an interview<br>
+    Tutorial 3 – How to achieve success in the workplace</p>
+<p>Workshop 1 – Logical thinking<br>
+    Workshop 2 – Team-building<br>
+    Workshop 3 – Problem solving</p>
+<p>To enroll, please register at reception in the Careers Guidance Centre.</p>
+<p>Take steps to help yourself achieve success.</p>
+<p></p></div>
+<div class="ito-scroll-box">
+<p><strong>Questions 21-23</strong></p>
+<p>Do the following statements agree with the information given in the text on the previous page?</p>
+<p>In boxes <strong>21 – 23</strong> on your answer sheet, write</p>
+<p><strong>TRUE</strong> if the statement agrees with the information</p>
+<p><strong>FALSE</strong> if the statement contradicts the information</p>
+<p><strong>NOT GIVEN</strong> if there is no information on this</p>
+<p>21. Students may not possess social skills necessary for success in the workplace due to lack of emphasis placed on these areas in university degrees. <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(not given)</span></span></span></label></p>
+<p>22. Research shows that employers may be reluctant to employ graduates without work experience. <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></p>
+<p>23. The university’s students are given valuable opportunities many studying at other institutions are not. <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></p>
+<hr>
+<p><strong>Questions 24-26</strong></p>
+<p>Complete the summary.</p>
+<p>Choose <em><strong>NO MORE THAN ONE WORD OR A NUMBER</strong></em> from the passage for each answer.</p>
+<p>Write your answers in boxes <strong>24 – 26</strong> on your answer sheet.</p>
+<p>The seminar is restricted to 50 places and costs 24.£<label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(25,25.00)</span></span></span></label> for attendees who are not presently studying internally. The three tutorial sessions focus on not only success in the workplace, but also securing a position through presenting yourself well at 25. <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="12" type="text" value="" size="12" maxlength="17" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(interviews,interview,an interview)</span></span></span></label> and developing an attractive resume. Potential weaknesses (as perceived by employers according to recent research) including finding solutions to problems, reasoning in a 26. <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="7" type="text" value="" size="7" maxlength="12" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(logical)</span></span></span></label> manner and working cooperatively with others are explored in the workshops.</p>
+<p></p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 6										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 6									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><p>21. NOT GIVEN</p>
+<p>The first paragraph of the text talks about skills sometimes missing in graduates, but does not give reasons why.</p>
+<p>22. TRUE</p>
+<p>‘…<u><em>certain companies have reservations about employing university graduates</em></u> in ‘real-life roles’ due to these issues in the work place – particularly if students possess a purely academic background.’</p>
+<p>23. TRUE</p>
+<p>‘Happily, due to our highly popular work experience programme, many of our students have the advantage of having experienced the workplace environment – <em><u>an attribute many competitors for those lucrative positions may be without</u></em>.’</p>
+<p>24. £25</p>
+<p>‘The seminar is restricted to 50 places and an enrollment fee of £15 applies for students currently studying at the university (<em><u>£25 for non-enrolled students</u></em>).’</p>
+<p>25. interview</p>
+<p>‘Tutorial 2 – Make the most of your positive attributes during an <em><u>interview’</u></em> NOTE: Success in the workplace and writing a CV (resume) are already mentioned in the summary.</p>
+<p>26. logical</p>
+<p>‘Workshop 1 – <u><em>Logical</em></u> thinking’ NOTE: finding solutions to problems and working cooperatively with others are already mentioned in the summary.</p>

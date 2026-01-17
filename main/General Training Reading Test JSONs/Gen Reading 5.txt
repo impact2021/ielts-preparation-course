@@ -1,0 +1,959 @@
+<strong>Read the texts and answer the questions. Type your answers in the spaces provided.</strong></span></p>
+					</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1776" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <table border="1" width="100%" cellspacing="0" cellpadding="2">
+      <tbody>
+        <tr>
+          <td colspan="4" valign="top" align="center">
+            <p align="center">Term-time Weekday Schedule for City University Gym</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top" align="center">
+            <p align="center">Semesters 1&amp;2</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top" align="center">
+            <p align="center">Mondays &amp; Wednesdays</p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">Activity / Sport</td>
+          <td align="center">Time</td>
+          <td align="center">Location</td>
+          <td align="center">Teacher</td>
+        </tr>
+        <tr>
+          <td align="center">Abdominal strengthening (1-2-3)</td>
+          <td align="center">07.45 – 8.15</td>
+          <td align="center">Main Gym</td>
+          <td align="center">Joanna</td>
+        </tr>
+        <tr>
+          <td align="center">Gym Circuit (2)</td>
+          <td align="center">12.00 – 13.00</td>
+          <td align="center">Main Gym</td>
+          <td align="center">Steve</td>
+        </tr>
+        <tr>
+          <td align="center">Five a side football (1-2-3)</td>
+          <td align="center">12.00 – 13.00</td>
+          <td align="center">Indoor Sports Hall</td>
+          <td align="center">Karl</td>
+        </tr>
+        <tr>
+          <td align="center">Aerobics (1-2-3)</td>
+          <td align="center">17.30 – 18.30</td>
+          <td align="center">Recreation Hall</td>
+          <td align="center">Kerry</td>
+        </tr>
+        <tr>
+          <td align="center">Yoga (1-2-3)</td>
+          <td align="center">18.00 – 19.30</td>
+          <td align="center">Indoor Sports Hall</td>
+          <td align="center">Denise</td>
+        </tr>
+        <tr>
+          <td align="center">Pilates (1-2-3)</td>
+          <td align="center">18.00 – 19.00</td>
+          <td align="center">Power Room</td>
+          <td align="center">Helen</td>
+        </tr>
+        <tr>
+          <td align="center">Running Club (1-2-3)</td>
+          <td align="center">18.30 – 19.30</td>
+          <td align="center">Meet in Main Gym</td>
+          <td align="center">Steve</td>
+        </tr>
+        <tr>
+          <td align="center">Karate (n/a)</td>
+          <td align="center">19.30 – 21.30</td>
+          <td align="center">Recreation Hall</td>
+          <td align="center">Private club members only</td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top" align="center">
+            <p align="center"><strong>Tuesdays &amp; Thursdays</strong></p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><strong>Activity/Sport</strong></td>
+          <td align="center"><strong>Time</strong></td>
+          <td align="center"><strong>Location</strong></td>
+          <td align="center"><strong>Teacher</strong></td>
+        </tr>
+        <tr>
+          <td align="center">Morning Stretching (1-2-3)</td>
+          <td align="center">07.45 – 8.15</td>
+          <td align="center">Main Gym</td>
+          <td align="center">Denise</td>
+        </tr>
+        <tr>
+          <td align="center">Circuit Training (3)</td>
+          <td align="center">9.00 – 10.00</td>
+          <td align="center">Sports Field</td>
+          <td align="center">Max</td>
+        </tr>
+        <tr>
+          <td align="center">Badminton (1-2-3)</td>
+          <td align="center">12.00 – 1.00</td>
+          <td align="center">Recreation Hall</td>
+          <td align="center">Jenny</td>
+        </tr>
+        <tr>
+          <td align="center">Aerobics (2)</td>
+          <td align="center">17.30 – 18.30</td>
+          <td align="center">Recreation Hall</td>
+          <td align="center">Kerry</td>
+        </tr>
+        <tr>
+          <td align="center">Gymnastics (2)</td>
+          <td align="center">18.00 – 19.30</td>
+          <td align="center">Main Gym</td>
+          <td align="center">Bethany</td>
+        </tr>
+        <tr>
+          <td align="center">Tae Kwon Do (1-2-3)</td>
+          <td align="center">18.00 – 19.00</td>
+          <td align="center">Power Room</td>
+          <td align="center">Peter</td>
+        </tr>
+        <tr>
+          <td align="center">Kick-boxing (3)</td>
+          <td align="center">18.30 – 19.30</td>
+          <td align="center">Indoor Sports Hall</td>
+          <td align="center">Pat</td>
+        </tr>
+        <tr>
+          <td align="center">Fencing (n/a)</td>
+          <td align="center">19.00 – 21.30</td>
+          <td align="center">Recreation Hall</td>
+          <td align="center">Private club members only</td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top" align="center">
+            <p align="center"><strong>Fridays</strong></p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><strong>Activity/Sport</strong></td>
+          <td align="center"><strong>Time</strong></td>
+          <td align="center"><strong>Location</strong></td>
+          <td align="center"><strong>Teacher</strong></td>
+        </tr>
+        <tr>
+          <td align="center">Thighs &amp; Hips Toning (1-2-3)</td>
+          <td align="center">07.45 – 8.15</td>
+          <td align="center">Main Gym</td>
+          <td align="center">Joanna</td>
+        </tr>
+        <tr>
+          <td align="center">Basketball (1-2-3)</td>
+          <td align="center">12.00 – 13.00</td>
+          <td align="center">Recreation Hall</td>
+          <td align="center">Simon</td>
+        </tr>
+        <tr>
+          <td align="center">Table Tennis (1-2-3)</td>
+          <td align="center">12.00 – 1.00</td>
+          <td align="center">Indoor Sports Hall</td>
+          <td align="center">John</td>
+        </tr>
+        <tr>
+          <td align="center">Yoga (3)</td>
+          <td align="center">17.45 – 18.30</td>
+          <td align="center">Recreation Hall</td>
+          <td align="center">Eric</td>
+        </tr>
+        <tr>
+          <td align="center">Water Aerobics (1-2-3)</td>
+          <td align="center">18.00 – 19.30</td>
+          <td align="center">Swimming Pool</td>
+          <td align="center">Kathy</td>
+        </tr>
+        <tr>
+          <td align="center">Street Hip Hop (1-2-3)</td>
+          <td align="center">18.00 – 19.00</td>
+          <td align="center">Indoor Sports Hall</td>
+          <td align="center">Peter</td>
+        </tr>
+        <tr>
+          <td align="center">Salsa (1-2)</td>
+          <td align="center">18.00 – 19.00</td>
+          <td align="center">Recreation Hall</td>
+          <td align="center">Christina</td>
+        </tr>
+        <tr>
+          <td align="center">Salsa (3)</td>
+          <td align="center">19.30 – 20.30</td>
+          <td align="center">Recreation Hall</td>
+          <td align="center">Christina</td>
+        </tr>
+        <tr>
+          <td colspan="4" valign="top" align="center">
+            <p align="center">N.B. 1 = Beginners, 2 = Intermediate, 3 = Advanced, 1-2-3 = all levels welcome.</p>
+            <p align="center">For information on university run classes call reception (01782) 566 973.&nbsp; For information on private clubs call Simon (01782 589 254).</p>
+            <p align="center">Information regarding classes during semester breaks will be available by February 24th.</p>
+            <p align="center">Information regarding classes in Semester 3 will be available by September 22nd.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ito-scroll-box">
+    <p><strong>Section 1 </strong></p>
+    <p><strong>Questions 1-14 </strong></p>
+    <p>Read the information below and answer Questions<strong> 1-7</strong></p>
+    <p>Do the following statements agree with the information given in the text on the previous page?</p>
+    <p>In boxes <strong>1 – 7</strong> on your answer sheet, write</p>
+    <strong>TRUE </strong>if the statement agrees with the information.<br>
+    <strong>FALSE </strong>if the statement contradicts the information<br>
+    <strong>NOT GIVEN </strong>if there is no information on this.<br>
+    <ol type="1">
+      <li>On Wednesdays the shortest class is Abdominal Strengthening. BLANK 1 of 7</li>
+      <li>The class on Mondays which is open to private members only is held in the Indoor Sports Hall. BLANK 2 of 7</li>
+      <li>Only one of the Tuesday classes is held outside. BLANK 3 of 7</li>
+      <li>The Aerobics and Tae Kwon Do classes are of the same duration. BLANK 4 of 7</li>
+      <li>There is only one class held on each day (Monday to Friday) before midday . BLANK 5 of 7</li>
+      <li>No experience is required to attend the Yoga class held on Fridays. BLANK 6 of 7</li>
+      <li>There are fewer classes available during university holidays. BLANK 7 of 7</li>
+    </ol>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<table border="1" width="100%" cellspacing="0" cellpadding="2">
+<tbody>
+<tr>
+<td colspan="4" valign="top" align="center">
+<p align="center">Term-time Weekday Schedule for City University Gym</p>
+</td>
+</tr>
+<tr>
+<td colspan="4" valign="top" align="center">
+<p align="center">Semesters 1&amp;2</p>
+</td>
+</tr>
+<tr>
+<td colspan="4" valign="top" align="center">
+<p align="center">Mondays &amp; Wednesdays</p>
+</td>
+</tr>
+<tr>
+<td align="center">Activity / Sport</td>
+<td align="center">Time</td>
+<td align="center">Location</td>
+<td align="center">Teacher</td>
+</tr>
+<tr>
+<td align="center">Abdominal strengthening (1-2-3)</td>
+<td align="center">07.45 – 8.15</td>
+<td align="center">Main Gym</td>
+<td align="center">Joanna</td>
+</tr>
+<tr>
+<td align="center">Gym Circuit (2)</td>
+<td align="center">12.00 – 13.00</td>
+<td align="center">Main Gym</td>
+<td align="center">Steve</td>
+</tr>
+<tr>
+<td align="center">Five a side football (1-2-3)</td>
+<td align="center">12.00 – 13.00</td>
+<td align="center">Indoor Sports Hall</td>
+<td align="center">Karl</td>
+</tr>
+<tr>
+<td align="center">Aerobics (1-2-3)</td>
+<td align="center">17.30 – 18.30</td>
+<td align="center">Recreation Hall</td>
+<td align="center">Kerry</td>
+</tr>
+<tr>
+<td align="center">Yoga (1-2-3)</td>
+<td align="center">18.00 – 19.30</td>
+<td align="center">Indoor Sports Hall</td>
+<td align="center">Denise</td>
+</tr>
+<tr>
+<td align="center">Pilates (1-2-3)</td>
+<td align="center">18.00 – 19.00</td>
+<td align="center">Power Room</td>
+<td align="center">Helen</td>
+</tr>
+<tr>
+<td align="center">Running Club (1-2-3)</td>
+<td align="center">18.30 – 19.30</td>
+<td align="center">Meet in Main Gym</td>
+<td align="center">Steve</td>
+</tr>
+<tr>
+<td align="center">Karate (n/a)</td>
+<td align="center">19.30 – 21.30</td>
+<td align="center">Recreation Hall</td>
+<td align="center">Private club members only</td>
+</tr>
+<tr>
+<td colspan="4" valign="top" align="center">
+<p align="center"><strong>Tuesdays &amp; Thursdays</strong></p>
+</td>
+</tr>
+<tr>
+<td align="center"><strong>Activity/Sport</strong></td>
+<td align="center"><strong>Time</strong></td>
+<td align="center"><strong>Location</strong></td>
+<td align="center"><strong>Teacher</strong></td>
+</tr>
+<tr>
+<td align="center">Morning Stretching (1-2-3)</td>
+<td align="center">07.45 – 8.15</td>
+<td align="center">Main Gym</td>
+<td align="center">Denise</td>
+</tr>
+<tr>
+<td align="center">Circuit Training (3)</td>
+<td align="center">9.00 – 10.00</td>
+<td align="center">Sports Field</td>
+<td align="center">Max</td>
+</tr>
+<tr>
+<td align="center">Badminton (1-2-3)</td>
+<td align="center">12.00 – 1.00</td>
+<td align="center">Recreation Hall</td>
+<td align="center">Jenny</td>
+</tr>
+<tr>
+<td align="center">Aerobics (2)</td>
+<td align="center">17.30 – 18.30</td>
+<td align="center">Recreation Hall</td>
+<td align="center">Kerry</td>
+</tr>
+<tr>
+<td align="center">Gymnastics (2)</td>
+<td align="center">18.00 – 19.30</td>
+<td align="center">Main Gym</td>
+<td align="center">Bethany</td>
+</tr>
+<tr>
+<td align="center">Tae Kwon Do (1-2-3)</td>
+<td align="center">18.00 – 19.00</td>
+<td align="center">Power Room</td>
+<td align="center">Peter</td>
+</tr>
+<tr>
+<td align="center">Kick-boxing (3)</td>
+<td align="center">18.30 – 19.30</td>
+<td align="center">Indoor Sports Hall</td>
+<td align="center">Pat</td>
+</tr>
+<tr>
+<td align="center">Fencing (n/a)</td>
+<td align="center">19.00 – 21.30</td>
+<td align="center">Recreation Hall</td>
+<td align="center">Private club members only</td>
+</tr>
+<tr>
+<td colspan="4" valign="top" align="center">
+<p align="center"><strong>Fridays</strong></p>
+</td>
+</tr>
+<tr>
+<td align="center"><strong>Activity/Sport</strong></td>
+<td align="center"><strong>Time</strong></td>
+<td align="center"><strong>Location</strong></td>
+<td align="center"><strong>Teacher</strong></td>
+</tr>
+<tr>
+<td align="center">Thighs &amp; Hips Toning (1-2-3)</td>
+<td align="center">07.45 – 8.15</td>
+<td align="center">Main Gym</td>
+<td align="center">Joanna</td>
+</tr>
+<tr>
+<td align="center">Basketball (1-2-3)</td>
+<td align="center">12.00 – 13.00</td>
+<td align="center">Recreation Hall</td>
+<td align="center">Simon</td>
+</tr>
+<tr>
+<td align="center">Table Tennis (1-2-3)</td>
+<td align="center">12.00 – 1.00</td>
+<td align="center">Indoor Sports Hall</td>
+<td align="center">John</td>
+</tr>
+<tr>
+<td align="center">Yoga (3)</td>
+<td align="center">17.45 – 18.30</td>
+<td align="center">Recreation Hall</td>
+<td align="center">Eric</td>
+</tr>
+<tr>
+<td align="center">Water Aerobics (1-2-3)</td>
+<td align="center">18.00 – 19.30</td>
+<td align="center">Swimming Pool</td>
+<td align="center">Kathy</td>
+</tr>
+<tr>
+<td align="center">Street Hip Hop (1-2-3)</td>
+<td align="center">18.00 – 19.00</td>
+<td align="center">Indoor Sports Hall</td>
+<td align="center">Peter</td>
+</tr>
+<tr>
+<td align="center">Salsa (1-2)</td>
+<td align="center">18.00 – 19.00</td>
+<td align="center">Recreation Hall</td>
+<td align="center">Christina</td>
+</tr>
+<tr>
+<td align="center">Salsa (3)</td>
+<td align="center">19.30 – 20.30</td>
+<td align="center">Recreation Hall</td>
+<td align="center">Christina</td>
+</tr>
+<tr>
+<td colspan="4" valign="top" align="center">
+<p align="center">N.B. 1 = Beginners, 2 = Intermediate, 3 = Advanced, 1-2-3 = all levels welcome.</p>
+<p align="center">For information on university run classes call reception (01782) 566 973.&nbsp; For information on private clubs call Simon (01782 589 254).</p>
+<p align="center">Information regarding classes during semester breaks will be available by February 24th.</p>
+<p align="center">Information regarding classes in Semester 3 will be available by September 22nd.</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<div class="ito-scroll-box">
+<p><strong>Section 1 </strong></p>
+<p><strong>Questions 1-14 </strong></p>
+<p>Read the information below and answer Questions<strong> 1-7</strong></p>
+<p>Do the following statements agree with the information given in the text on the previous page?</p>
+<p>In boxes <strong>1 – 7</strong> on your answer sheet, write</p>
+<p>    <strong>TRUE </strong>if the statement agrees with the information.<br>
+    <strong>FALSE </strong>if the statement contradicts the information<br>
+    <strong>NOT GIVEN </strong>if there is no information on this.</p>
+<ol type="1">
+<li>On Wednesdays the shortest class is Abdominal Strengthening. <label><span class="screen-reader-text">Fill in the blank 1 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></li>
+<li>The class on Mondays which is open to private members only is held in the Indoor Sports Hall. <label><span class="screen-reader-text">Fill in the blank 2 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>Only one of the Tuesday classes is held outside. <label><span class="screen-reader-text">Fill in the blank 3 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></li>
+<li>The Aerobics and Tae Kwon Do classes are of the same duration. <label><span class="screen-reader-text">Fill in the blank 4 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></li>
+<li>There is only one class held on each day (Monday to Friday) before midday . <label><span class="screen-reader-text">Fill in the blank 5 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>No experience is required to attend the Yoga class held on Fridays. <label><span class="screen-reader-text">Fill in the blank 6 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>There are fewer classes available during university holidays. <label><span class="screen-reader-text">Fill in the blank 7 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(not given)</span></span></span></label></li>
+</ol></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 7										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 7									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><p>1. TRUE </p>
+<p>Abdominal strengthening is from 07.45-8.15 (30 minutes). All other classes are an hour or longer. </p>
+<p>2. FALSE </p>
+<p>The private class is karate and it is held in the Recreation Hall</p>
+<p>3. TRUE </p>
+<p>Only Circuit Training is held outside (sports field)</p>
+<p>4. TRUE </p>
+<p>Both classes take one hour.</p>
+<p>5. FALSE </p>
+<p>On Tuesdays and Thursdays there are 2 classses held before midday. </p>
+<p>6. FALSE </p>
+<p>Yoga on Friday has a number 3, which is explained at the bottom of the page as being ‘Advanced’</p>
+<p>7. NOT GIVEN </p>
+<p>We are told that ‘Information regarding classes during semester breaks will be available by February 24th.’ but not whether there will be fewer classes. </p>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1777,&quot;question_post_id&quot;:71970502}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>2</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>2</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1777">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1777" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      <tbody>
+        <tr>
+          <td colspan="2" valign="top">
+            <p align="center"><strong>Coming Soon – New Movies at Star Cinema for Next Month</strong></p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="50%">
+            <p class="style2">A<br>
+            <strong>Blakewater</strong> – November 4th<br>
+            Horror meets sci-fi! Fans of both genres will be delighted by this intelligent and unique creation – is this really the fate of generations to come? The believable and enthralling plot is enhanced by excellent special effects and tremendous acting. Almost certainly a contender for nomination for a number of awards this year.</p>
+          </td>
+          <td valign="top" width="50%">
+            <p class="style2">E<br>
+            <strong>Tina and Bree</strong> – November 14th<br>
+            Following the story of two first year university students leaving their home town for the first time and settling into life on the university campus.</p>
+            <p class="style2">Many genuinely funny moments that will bring back fond memories of university days.</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="50%">
+            <p class="style2">B<br>
+            <strong>The Adventures of Genie</strong> – November 7th<br>
+            This animated adventure is the sequel to last summer’s hit A Canine Tale.&nbsp; The story continues to follow the travels of Genie the spaniel and the other creatures he meets on his journey. Excellent graphics and lots of laughs for all members of the family. A variety of stars provide voices for their animal characters.</p>
+          </td>
+          <td valign="top" width="50%">
+            <p class="style2">F<br>
+            <strong>Unimaginable</strong> – November 15th<br>
+            Set in a different universe, this fantasy film – although having some great special effects – doesn’t bring anything new to the cinema screen that has not already been presented in several other films of this genre. For true fantasy movie fanatics only!</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="50%">
+            <p class="style2">C<br>
+            <strong>Between Two Points</strong> – November 10th<br>
+            James Burgen’s real-life account of his journey across Antarctica reaches the cinema.&nbsp; This documentary-style motion picture is an education in itself and highlights the importance of environmental protection.</p>
+          </td>
+          <td valign="top" width="50%">
+            <p class="style2">G<br>
+            <strong>Family Planet</strong> – November 21st<br>
+            Starring Jack Mason and Sue Caterham. An enjoyable remake of the 1960s hit The Jamesons, this is great family entertainment with elements that should appeal to all age groups. Overall a light-hearted look at family life with underlying messages of importance for us all.</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="50%">
+            <p class="style2">D<br>
+            <strong>The Strangest Summe</strong>r – November 14th<br>
+            Tim Brown and Jennifer Nelson once again team up in the roles of a couple destined for romance. Set in the 1960s, the film gives us a light-hearted and nostalgic trip back in time.&nbsp; An excellent supporting cast and sound-track will no doubt make this one of the month’s more popular offerings.</p>
+          </td>
+          <td valign="top" width="50%">
+            <p class="style2">H<br>
+            <strong>Bastion Creek</strong> – November 23rd<br>
+            Not yet reviewed</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ito-scroll-box">
+    <p><strong>Questions 8-14</strong></p>
+    <p>Look at the eight movies <strong>A-H</strong> on the previous page and answer <strong>questions 8-14</strong>.</p>
+    <p>For which movie are the following statements true?</p>
+    <p>Write the correct letter <strong>A-G</strong> in boxes <strong>8 – 14</strong> on your answer sheet.</p>
+    <p>8. This movie is a modern version of an older film. BLANK 1 of 7</p>
+    <p>9. This film is likely to be honoured by the film industry. BLANK 2 of 7</p>
+    <p>10. This is a cartoon animation. BLANK 3 of 7</p>
+    <p>11. This film is based upon a true story. BLANK 4 of 7</p>
+    <p>12. This film has a predictable plot. BLANK 5 of 7</p>
+    <p>13. This film is enhanced by its accompanying music. BLANK 6 of 7</p>
+    <p>14. This film is set in the future. BLANK 7 of 7</p>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<table border="1" width="100%" cellspacing="2" cellpadding="3">
+<tbody>
+<tr>
+<td colspan="2" valign="top">
+<p align="center"><strong>Coming Soon – New Movies at Star Cinema for Next Month</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="50%">
+<p class="style2">A<br>
+            <strong>Blakewater</strong> – November 4th<br>
+            Horror meets sci-fi! Fans of both genres will be delighted by this intelligent and unique creation – is this really the fate of generations to come? The believable and enthralling plot is enhanced by excellent special effects and tremendous acting. Almost certainly a contender for nomination for a number of awards this year.</p>
+</td>
+<td valign="top" width="50%">
+<p class="style2">E<br>
+            <strong>Tina and Bree</strong> – November 14th<br>
+            Following the story of two first year university students leaving their home town for the first time and settling into life on the university campus.</p>
+<p class="style2">Many genuinely funny moments that will bring back fond memories of university days.</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="50%">
+<p class="style2">B<br>
+            <strong>The Adventures of Genie</strong> – November 7th<br>
+            This animated adventure is the sequel to last summer’s hit A Canine Tale.&nbsp; The story continues to follow the travels of Genie the spaniel and the other creatures he meets on his journey. Excellent graphics and lots of laughs for all members of the family. A variety of stars provide voices for their animal characters.</p>
+</td>
+<td valign="top" width="50%">
+<p class="style2">F<br>
+            <strong>Unimaginable</strong> – November 15th<br>
+            Set in a different universe, this fantasy film – although having some great special effects – doesn’t bring anything new to the cinema screen that has not already been presented in several other films of this genre. For true fantasy movie fanatics only!</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="50%">
+<p class="style2">C<br>
+            <strong>Between Two Points</strong> – November 10th<br>
+            James Burgen’s real-life account of his journey across Antarctica reaches the cinema.&nbsp; This documentary-style motion picture is an education in itself and highlights the importance of environmental protection.</p>
+</td>
+<td valign="top" width="50%">
+<p class="style2">G<br>
+            <strong>Family Planet</strong> – November 21st<br>
+            Starring Jack Mason and Sue Caterham. An enjoyable remake of the 1960s hit The Jamesons, this is great family entertainment with elements that should appeal to all age groups. Overall a light-hearted look at family life with underlying messages of importance for us all.</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="50%">
+<p class="style2">D<br>
+            <strong>The Strangest Summe</strong>r – November 14th<br>
+            Tim Brown and Jennifer Nelson once again team up in the roles of a couple destined for romance. Set in the 1960s, the film gives us a light-hearted and nostalgic trip back in time.&nbsp; An excellent supporting cast and sound-track will no doubt make this one of the month’s more popular offerings.</p>
+</td>
+<td valign="top" width="50%">
+<p class="style2">H<br>
+            <strong>Bastion Creek</strong> – November 23rd<br>
+            Not yet reviewed</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<div class="ito-scroll-box">
+<p><strong>Questions 8-14</strong></p>
+<p>Look at the eight movies <strong>A-H</strong> on the previous page and answer <strong>questions 8-14</strong>.</p>
+<p>For which movie are the following statements true?</p>
+<p>Write the correct letter <strong>A-G</strong> in boxes <strong>8 – 14</strong> on your answer sheet.</p>
+<p>8. This movie is a modern version of an older film. <label><span class="screen-reader-text">Fill in the blank 1 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(g)</span></span></span></label></p>
+<p>9. This film is likely to be honoured by the film industry. <label><span class="screen-reader-text">Fill in the blank 2 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(a)</span></span></span></label></p>
+<p>10. This is a cartoon animation. <label><span class="screen-reader-text">Fill in the blank 3 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(b)</span></span></span></label></p>
+<p>11. This film is based upon a true story. <label><span class="screen-reader-text">Fill in the blank 4 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(c)</span></span></span></label></p>
+<p>12. This film has a predictable plot. <label><span class="screen-reader-text">Fill in the blank 5 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(f)</span></span></span></label></p>
+<p>13. This film is enhanced by its accompanying music. <label><span class="screen-reader-text">Fill in the blank 6 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(d)</span></span></span></label></p>
+<p>14. This film is set in the future. <label><span class="screen-reader-text">Fill in the blank 7 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(a)</span></span></span></label></p>
+<p></p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 7										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 7									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><div class="generalfeedback">
+<p>8. G</p>
+<p>‘An enjoyable <em><u>remake of the 1960s hit</u></em> The Jamesons’</p>
+<p>9. A</p>
+<p>‘Almost certainly a contender for <em><u>nomination for a number of awards</u></em> this year.’</p>
+<p>10. B</p>
+<p>‘This <em><u>animated adventure</u></em> is the sequel to last summer’s hit A Canine Tale’</p>
+<p>11. C</p>
+<p>‘James Burgen’s <em><u>real-life account</u></em> ‘</p>
+<p>12. F</p>
+<p>‘…this sci-fi offerings <u><em>fails to bring anything new</em></u> to the cinema screen <u><em>that has not already been presented in several other films</em></u> of this genre.’</p>
+<p>13. D</p>
+<p><em><u>‘An excellent</u></em> supporting cast and <em><u>sound-track</u></em> will no doubt make this one of the month’s more popular offerings</p>
+<p>14. A</p>
+<p>‘Fans of both genres will be delighted by this intelligent and unique creation <em><u>– is this really the fate of generations to come</u></em>?<u></u></p>
+</div>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1778,&quot;question_post_id&quot;:71970503}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>3</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>3</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1778">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1778" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <p align="center"><strong>Dressed for work</strong></p>
+    <p>For some people, especially when starting in a new job, the decision of how to dress can be a difficult one. Dress too casually, and your colleagues and employer can get the impression that you are not taking the role seriously and your future prospects within the company can rapidly narrow. Dress too formally and colleagues may take this as a sign that you have too high an opinion of your role, that you are not relaxed and won’t be much fun to work with.</p>
+    <p>If possible, always check the dress code after you have been offered a position. In fact, when attending interviews, take the opportunity to see what others around are wearing. However, there are some useful tips to help you get started.</p>
+    <p>The rules for men are generally quite simple – in an office based environment, dark trousers, shoes and a simple shirt are generally acceptable. On the first day, you can wear a tie but be alert to the people around you. If you are the only one wearing a tie, you might want to reconsider on your second day. Take a suit jacket in case the workplace is formal, but you may not want to wear it.</p>
+    <p>For women, the situation can be a little more complicated. In some companies, a sleeveless top may be considered acceptable and in others it may lead to suggestions that you are under-dressed. Again, a good indicator is to look at what other people in the same office and in similar positions wear and adjust accordingly.</p>
+    <p>One thing to bear in mind is that, at least in America and Europe, there has been a shift away from casual attire in the office to more formal business attire. Larger corporate businesses are instituting new and more stringent dress codes, even going so far as to mandate employee uniforms for management.</p>
+    <p>Here are some more tips:</p>
+    <ul>
+      <li>Colour plays a big part in professional image. Traditional career colours are navy (trustworthy), gray (conservative) and black (chic). Be careful with loud colours or prints – not to say that you shouldn’t wear them, just be sure that they are not going to get you any unwanted attention.</li>
+      <li>Larger, hanging jewellery should generally be avoided. &nbsp;Opt for stud earrings or single bracelets, rather than pendulous earrings or stacks of bangles.</li>
+      <li>Good hygiene is also important in office attire. Clean and tidy hair, clean and trimmed or manicured nails, even scuff-free shoes are important.</li>
+      <li>Be careful with designer labels. Small, discrete logos on well fitted clothing or accessories looks fine, but heavily logoed clothing and accessories look out of place at work. Choose well-made items that are free from obvious designer labels for the most professional look.</li>
+    </ul>
+  </div>
+  <div class="ito-scroll-box">
+    <p class="style1"><strong>Section 2</strong></p>
+    <span class="style1"><strong>Questions 15-20 </strong></span>
+    <p class="style1">Answer the questions below using <em><strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong> </em>from the text for each answer.</p>
+    <ol start="15">
+      <li>During what should you start looking at the dress code employees seem to be following? BLANK 1 of 6</li>
+      <li>What might men want to think about wearing or not wearing on the second day? BLANK 2 of 6</li>
+      <li>Apart from being in the same office, what other factor makes a colleague a useful guide for what to wear? BLANK 3 of 6</li>
+      <li>What type of company is introducing the idea of a management uniform? BLANK 4 of 6</li>
+      <li>What might wearing brighter colours or printed clothing get you at work? BLANK 5 of 6</li>
+      <li>Accessories or clothing from well known brands are acceptable if what is not too obvious? BLANK 6 of 6</li>
+    </ol>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<p align="center"><strong>Dressed for work</strong></p>
+<p>For some people, especially when starting in a new job, the decision of how to dress can be a difficult one. Dress too casually, and your colleagues and employer can get the impression that you are not taking the role seriously and your future prospects within the company can rapidly narrow. Dress too formally and colleagues may take this as a sign that you have too high an opinion of your role, that you are not relaxed and won’t be much fun to work with.</p>
+<p>If possible, always check the dress code after you have been offered a position. In fact, when attending interviews, take the opportunity to see what others around are wearing. However, there are some useful tips to help you get started.</p>
+<p>The rules for men are generally quite simple – in an office based environment, dark trousers, shoes and a simple shirt are generally acceptable. On the first day, you can wear a tie but be alert to the people around you. If you are the only one wearing a tie, you might want to reconsider on your second day. Take a suit jacket in case the workplace is formal, but you may not want to wear it.</p>
+<p>For women, the situation can be a little more complicated. In some companies, a sleeveless top may be considered acceptable and in others it may lead to suggestions that you are under-dressed. Again, a good indicator is to look at what other people in the same office and in similar positions wear and adjust accordingly.</p>
+<p>One thing to bear in mind is that, at least in America and Europe, there has been a shift away from casual attire in the office to more formal business attire. Larger corporate businesses are instituting new and more stringent dress codes, even going so far as to mandate employee uniforms for management.</p>
+<p>Here are some more tips:</p>
+<ul>
+<li>Colour plays a big part in professional image. Traditional career colours are navy (trustworthy), gray (conservative) and black (chic). Be careful with loud colours or prints – not to say that you shouldn’t wear them, just be sure that they are not going to get you any unwanted attention.</li>
+<li>Larger, hanging jewellery should generally be avoided. &nbsp;Opt for stud earrings or single bracelets, rather than pendulous earrings or stacks of bangles.</li>
+<li>Good hygiene is also important in office attire. Clean and tidy hair, clean and trimmed or manicured nails, even scuff-free shoes are important.</li>
+<li>Be careful with designer labels. Small, discrete logos on well fitted clothing or accessories looks fine, but heavily logoed clothing and accessories look out of place at work. Choose well-made items that are free from obvious designer labels for the most professional look.</li>
+</ul></div>
+<div class="ito-scroll-box">
+<p class="style1"><strong>Section 2</strong></p>
+<p>    <span class="style1"><strong>Questions 15-20 </strong></span></p>
+<p class="style1">Answer the questions below using <em><strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong> </em>from the text for each answer.</p>
+<ol start="15">
+<li>During what should you start looking at the dress code employees seem to be following? <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="25" type="text" value="" size="25" maxlength="30" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(when attending interviews,when attending interview,interview,the interview,interviews,the interviews)</span></span></span></label></li>
+<li>What might men want to think about wearing or not wearing on the second day? <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(a tie,tie)</span></span></span></label></li>
+<li>Apart from being in the same office, what other factor makes a colleague a useful guide for what to wear? <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="20" type="text" value="" size="20" maxlength="25" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(similar positions,a similar position,similar position,position,same position,the same position,in similar positions,a similar position,in similar position,position,in same position,the same position)</span></span></span></label></li>
+<li>What type of company is introducing the idea of a management uniform? <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="27" type="text" value="" size="27" maxlength="32" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(larger corporate businesses)</span></span></span></label></li>
+<li>What might wearing brighter colours or printed clothing get you at work? <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="18" type="text" value="" size="18" maxlength="23" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(unwanted attention)</span></span></span></label></li>
+<li>Accessories or clothing from well known brands are acceptable if what is not too obvious? <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="15" type="text" value="" size="15" maxlength="20" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(the logo,logo,a logo,label,the label,designer label,designer labels)</span></span></span></label></li>
+</ol></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 6										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 6									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><ol start="15">
+<li>INTERVIEW </li>
+<li>A TIE </li>
+<li>SIMILAR POSITIONS </li>
+<li>LARGER CORPORATE BUSINESSES </li>
+<li>UNWANTED ATTENTION </li>
+<li>THE LOGO / THE LABEL </li>
+</ol>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1779,&quot;question_post_id&quot;:71970504}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>4</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>4</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1779">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1779" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <p><strong>Training and development</strong></p>
+    <span>Traditionally, training and development was instigated as a direct result of identifying a weakness or area that requires improvement, largely because of information gathered from staff appraisals. However, in more recent years, the concept of training as a tool for positive growth, expansion and development has become far more common.</span>
+    <span>The potential for employees to upskill with training is used as a way of retaining staff who may have otherwise looked for opportunities with other companies. Learning new skills that can be applied in the workplace tends to make employees feel more motivated and more highly valued within the company. There is also an element of training involved when a company expands and diversifies. Not wishing to employ new staff, many companies now opt to train existing staff in new areas rather than advertise externally.</span>
+    <span>However, perhaps the most pressing need for training has come about due to changing technologies in the workplace. Some 50 years back, a secretary may have required some typing training at the commencement of their employment and this was sufficient for them right up to the point of retirement. These days, knowledge of word processing software and other peripherals such as handheld devices and conference calling equipment all need to be learned and regularly updated. For many companies, it is essential for staff to remain abreast of changes in technology as this may prove to be a point of comparison with other companies, with the significant risk of losing business.</span>
+    <span>There are a number of common areas that staff may require training in. There is, as previously mentioned, a technological imperative to training, but there are also other factors to be considered. Customer service training, for example, is prioritised in the majority of industries, as increased competition in today’s global marketplace makes it critical that employees understand and meet the needs of customers. Also related to global workplace, training in understanding and working in ethnically diverse companies has also become a common form of training. These training seminars focus on how people have different perspectives and views, and include techniques to value diversity, thus offering a significant advantage to the company.</span>
+    <span>With increasingly tight government regulations in place to protect employees, health and safety training has also become a significant part of any training and development programme. Risk management, correct procedures and basic first aid, especially in industries with heavy equipment or dangerous working environment is becoming increasingly important. Training and development, as previously mentioned, is significant in the retention of key staff as it leads to increased job satisfaction and morale among employees. This in turn leads to a general feeling of motivation among staff, and the feeling that the company is interested in their wellbeing and development. There are, of course, improvements in efficiency, but also in innovation and employee support of the company. The image of the company also benefits, as better trained staff reflect well on the employer.</span>
+  </div>
+  <div class="ito-scroll-box">
+    <p class="style1"><strong>Questions 21-27</strong></p>
+    <div>
+      Do the following statements agree with the information given in the text on the opposite page?
+      <br><br>
+      In boxes <strong>21 – 27</strong> on your answer sheet, write
+      <br><br>
+      <strong>TRUE </strong>if the statement agrees with the information.<br>
+      <strong>FALSE </strong>if the statement contradicts the information.<br>
+      <strong>NOT GIVEN </strong>if there is no information on this.<br>
+      <ol start="21">
+        <li>Training commonly highlighted areas of weakness. BLANK 1 of 6</li>
+        <li>Employees often look for promotion after having received training. BLANK 2 of 6</li>
+        <li>When companies are expanding, current staff are often overlooked in favour of recruiting external experience. BLANK 3 of 6</li>
+        <li>The main demand for training is a direct result of the need to understand equipment in the office. BLANK 4 of 6</li>
+        <li>Customer service training is often overlooked. BLANK 5 of 6</li>
+        <li>Training employees to work with people from different cultural backgrounds is more advantageous than most companies realise. BLANK 6 of 6</li>
+      </ol>
+    </div>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<p><strong>Training and development</strong></p>
+<p>    <span>Traditionally, training and development was instigated as a direct result of identifying a weakness or area that requires improvement, largely because of information gathered from staff appraisals. However, in more recent years, the concept of training as a tool for positive growth, expansion and development has become far more common.</span><br>
+    <span>The potential for employees to upskill with training is used as a way of retaining staff who may have otherwise looked for opportunities with other companies. Learning new skills that can be applied in the workplace tends to make employees feel more motivated and more highly valued within the company. There is also an element of training involved when a company expands and diversifies. Not wishing to employ new staff, many companies now opt to train existing staff in new areas rather than advertise externally.</span><br>
+    <span>However, perhaps the most pressing need for training has come about due to changing technologies in the workplace. Some 50 years back, a secretary may have required some typing training at the commencement of their employment and this was sufficient for them right up to the point of retirement. These days, knowledge of word processing software and other peripherals such as handheld devices and conference calling equipment all need to be learned and regularly updated. For many companies, it is essential for staff to remain abreast of changes in technology as this may prove to be a point of comparison with other companies, with the significant risk of losing business.</span><br>
+    <span>There are a number of common areas that staff may require training in. There is, as previously mentioned, a technological imperative to training, but there are also other factors to be considered. Customer service training, for example, is prioritised in the majority of industries, as increased competition in today’s global marketplace makes it critical that employees understand and meet the needs of customers. Also related to global workplace, training in understanding and working in ethnically diverse companies has also become a common form of training. These training seminars focus on how people have different perspectives and views, and include techniques to value diversity, thus offering a significant advantage to the company.</span><br>
+    <span>With increasingly tight government regulations in place to protect employees, health and safety training has also become a significant part of any training and development programme. Risk management, correct procedures and basic first aid, especially in industries with heavy equipment or dangerous working environment is becoming increasingly important. Training and development, as previously mentioned, is significant in the retention of key staff as it leads to increased job satisfaction and morale among employees. This in turn leads to a general feeling of motivation among staff, and the feeling that the company is interested in their wellbeing and development. There are, of course, improvements in efficiency, but also in innovation and employee support of the company. The image of the company also benefits, as better trained staff reflect well on the employer.</span>
+  </p></div>
+<div class="ito-scroll-box">
+<p class="style1"><strong>Questions 21-27</strong></p>
+<div>
+      Do the following statements agree with the information given in the text on the opposite page?<p></p>
+<p>      In boxes <strong>21 – 27</strong> on your answer sheet, write</p>
+<p>      <strong>TRUE </strong>if the statement agrees with the information.<br>
+      <strong>FALSE </strong>if the statement contradicts the information.<br>
+      <strong>NOT GIVEN </strong>if there is no information on this.</p>
+<ol start="21">
+<li>Training commonly highlighted areas of weakness. <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>Employees often look for promotion after having received training. <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(not given)</span></span></span></label></li>
+<li>When companies are expanding, current staff are often overlooked in favour of recruiting external experience. <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>The main demand for training is a direct result of the need to understand equipment in the office. <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></li>
+<li>Customer service training is often overlooked. <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>Training employees to work with people from different cultural backgrounds is more advantageous than most companies realise. <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(not given)</span></span></span></label></li>
+</ol></div>
+<p></p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 6										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 6									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><ol start="21">
+<li><b>FALSE </b>– training and development was instigated as a direct result of identifying a weakness</li>
+<li><b>NOT GIVEN</b> – only states that employees feel more motivated and it may help to retain staff.</li>
+<li><b>FALSE </b>– Not wishing to employ new staff, many companies will opt to train existing staff in new areas</li>
+<li><b>TRUE </b>– However, perhaps the most pressing need for training has come about due to changing technologies in the workplace.</li>
+<li><b>FALSE </b>– Customer service training, for example, is prioritised in the majority of industries</li>
+<li><b>NOT GIVEN</b> – simply says that diversity training offers ‘ a significant advantage to the company’. Not that most companies don’t realise this.</li>

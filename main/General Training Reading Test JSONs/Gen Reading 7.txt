@@ -1,0 +1,738 @@
+<strong>Read the texts and answer the questions. Type your answers in the spaces provided.</strong></span></p>
+					</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="2831" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <h2 align="center">Masley Pets sale</h2>
+    <p align="center">Come and see Eric and the team at Masley Pets to get a bargain! All pets are currently on sale with up to 20% off*!</p>
+    <p align="center"><sup>*excludes fish</sup></p>
+    <p align="center">Our knowledgeable staff will be able to advise you on which pet would suit your requirements best and how to keep your pet fit and healthy. Kane is our resident fish expert and Laura will tell you all you need to know about any of our four legged friends!</p>
+    <p align="center">We currently have the following in stock:</p>
+    <table border="1" width="100%" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td width="20%"><h4 align="center">Pet</h4></td>
+          <td width="30%"><h4 align="center">Breed</h4></td>
+          <td width="25%"><h4 align="center">Quantity</h4></td>
+          <td width="25%"><h4 align="center">Price</h4></td>
+        </tr>
+        <!-- Dogs -->
+        <tr>
+          <td rowspan="3" align="center">Dogs</td>
+          <td align="center">Cocker Spaniels</td>
+          <td align="center">3</td>
+          <td align="center">£700</td>
+        </tr>
+        <tr>
+          <td align="center">German Shepherd</td>
+          <td align="center">1</td>
+          <td align="center">£750</td>
+        </tr>
+        <tr>
+          <td align="center">Poodle</td>
+          <td align="center">3</td>
+          <td align="center">£650</td>
+        </tr>
+        <!-- Cats -->
+        <tr>
+          <td rowspan="3" align="center">Cats</td>
+          <td align="center">Persian</td>
+          <td align="center">2</td>
+          <td align="center">£500</td>
+        </tr>
+        <tr>
+          <td align="center">Siamese</td>
+          <td align="center">1</td>
+          <td align="center">£450</td>
+        </tr>
+        <tr>
+          <td align="center">Moggie</td>
+          <td align="center">2</td>
+          <td align="center">£90</td>
+        </tr>
+        <!-- Fish -->
+        <tr>
+          <td rowspan="3" align="center">Fish</td>
+          <td align="center">Angel Fish</td>
+          <td align="center">40 +</td>
+          <td align="center">£30</td>
+        </tr>
+        <tr>
+          <td align="center">Firemouth</td>
+          <td align="center">12</td>
+          <td align="center">£20</td>
+        </tr>
+        <tr>
+          <td align="center">Goldfish</td>
+          <td align="center">20</td>
+          <td align="center">£8</td>
+        </tr>
+        <!-- Birds -->
+        <tr>
+          <td rowspan="4" align="center">Birds</td>
+          <td align="center">Budgie</td>
+          <td align="center">OUT OF STOCK</td>
+          <td align="center">£25</td>
+        </tr>
+        <tr>
+          <td align="center">Canary</td>
+          <td align="center">6</td>
+          <td align="center">£25</td>
+        </tr>
+        <tr>
+          <td align="center">Finch</td>
+          <td align="center">12</td>
+          <td align="center">£22</td>
+        </tr>
+        <tr>
+          <td align="center">Lovebird</td>
+          <td align="center">4</td>
+          <td align="center">£28</td>
+        </tr>
+        <!-- Small animals -->
+        <tr>
+          <td rowspan="4" align="center">Small animals</td>
+          <td align="center">Mouse</td>
+          <td align="center">5</td>
+          <td align="center">£7</td>
+        </tr>
+        <tr>
+          <td align="center">Guinea pigs</td>
+          <td align="center">2</td>
+          <td align="center">£20</td>
+        </tr>
+        <tr>
+          <td align="center">Hamsters</td>
+          <td align="center">1</td>
+          <td align="center">£7.50</td>
+        </tr>
+        <tr>
+          <td align="center">Rats</td>
+          <td align="center">3</td>
+          <td align="center">£8.50</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="text-align: center"><strong>We also have a wide range of accessories in stock.</strong></p>
+  </div>
+  <div class="ito-scroll-box">
+    <p class="style1"><strong>Section 1</strong></p>
+    <em><strong>Questions 1 – 6</strong></em>
+    <p>Answer the questions below using <em><strong>NO MORE THAN TWO WORDS</strong></em> from the passage for each answer.</p>
+    <ol>
+      <li>What pets are not included in the sale? BLANK 1 of 6</li>
+      <li>What pet is currently unavailable? BLANK 2 of 6</li>
+      <li>What is the most expensive dog? BLANK 3 of 6</li>
+      <li>Apart from pets, what else can you buy at Masley Pets? BLANK 4 of 6</li>
+      <li>Who is the best person to ask about cats? BLANK 5 of 6</li>
+      <li>What is the cheapest pet in the shop? BLANK 6 of 6</li>
+    </ol>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<h2 align="center">Masley Pets sale</h2>
+<p align="center">Come and see Eric and the team at Masley Pets to get a bargain! All pets are currently on sale with up to 20% off*!</p>
+<p align="center"><sup>*excludes fish</sup></p>
+<p align="center">Our knowledgeable staff will be able to advise you on which pet would suit your requirements best and how to keep your pet fit and healthy. Kane is our resident fish expert and Laura will tell you all you need to know about any of our four legged friends!</p>
+<p align="center">We currently have the following in stock:</p>
+<p>        <!-- Dogs --></p><p>        <!-- Cats --></p><p>        <!-- Fish --></p><p>        <!-- Birds --></p><p>        <!-- Small animals --></p><table border="1" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="20%">
+<h4 align="center">Pet</h4>
+</td>
+<td width="30%">
+<h4 align="center">Breed</h4>
+</td>
+<td width="25%">
+<h4 align="center">Quantity</h4>
+</td>
+<td width="25%">
+<h4 align="center">Price</h4>
+</td>
+</tr>
+
+<tr>
+<td rowspan="3" align="center">Dogs</td>
+<td align="center">Cocker Spaniels</td>
+<td align="center">3</td>
+<td align="center">£700</td>
+</tr>
+<tr>
+<td align="center">German Shepherd</td>
+<td align="center">1</td>
+<td align="center">£750</td>
+</tr>
+<tr>
+<td align="center">Poodle</td>
+<td align="center">3</td>
+<td align="center">£650</td>
+</tr>
+
+<tr>
+<td rowspan="3" align="center">Cats</td>
+<td align="center">Persian</td>
+<td align="center">2</td>
+<td align="center">£500</td>
+</tr>
+<tr>
+<td align="center">Siamese</td>
+<td align="center">1</td>
+<td align="center">£450</td>
+</tr>
+<tr>
+<td align="center">Moggie</td>
+<td align="center">2</td>
+<td align="center">£90</td>
+</tr>
+
+<tr>
+<td rowspan="3" align="center">Fish</td>
+<td align="center">Angel Fish</td>
+<td align="center">40 +</td>
+<td align="center">£30</td>
+</tr>
+<tr>
+<td align="center">Firemouth</td>
+<td align="center">12</td>
+<td align="center">£20</td>
+</tr>
+<tr>
+<td align="center">Goldfish</td>
+<td align="center">20</td>
+<td align="center">£8</td>
+</tr>
+
+<tr>
+<td rowspan="4" align="center">Birds</td>
+<td align="center">Budgie</td>
+<td align="center">OUT OF STOCK</td>
+<td align="center">£25</td>
+</tr>
+<tr>
+<td align="center">Canary</td>
+<td align="center">6</td>
+<td align="center">£25</td>
+</tr>
+<tr>
+<td align="center">Finch</td>
+<td align="center">12</td>
+<td align="center">£22</td>
+</tr>
+<tr>
+<td align="center">Lovebird</td>
+<td align="center">4</td>
+<td align="center">£28</td>
+</tr>
+
+<tr>
+<td rowspan="4" align="center">Small animals</td>
+<td align="center">Mouse</td>
+<td align="center">5</td>
+<td align="center">£7</td>
+</tr>
+<tr>
+<td align="center">Guinea pigs</td>
+<td align="center">2</td>
+<td align="center">£20</td>
+</tr>
+<tr>
+<td align="center">Hamsters</td>
+<td align="center">1</td>
+<td align="center">£7.50</td>
+</tr>
+<tr>
+<td align="center">Rats</td>
+<td align="center">3</td>
+<td align="center">£8.50</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;"><strong>We also have a wide range of accessories in stock.</strong></p>
+<p></p></div>
+<div class="ito-scroll-box">
+<p class="style1"><strong>Section 1</strong></p>
+<p>    <em><strong>Questions 1 – 6</strong></em></p>
+<p>Answer the questions below using <em><strong>NO MORE THAN TWO WORDS</strong></em> from the passage for each answer.</p>
+<ol>
+<li>What pets are not included in the sale? <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="6" type="text" value="" size="6" maxlength="11" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(fish,a fish,fishes)</span></span></span></label></li>
+<li>What pet is currently unavailable? <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="8" type="text" value="" size="8" maxlength="13" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(a budgie,budgie,budgies)</span></span></span></label></li>
+<li>What is the most expensive dog? <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="17" type="text" value="" size="17" maxlength="22" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(german shepherd,a german shepherd,german shepherds)</span></span></span></label></li>
+<li>Apart from pets, what else can you buy at Masley Pets? <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="11" type="text" value="" size="11" maxlength="16" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(accessories)</span></span></span></label></li>
+<li>Who is the best person to ask about cats? <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(laura)</span></span></span></label></li>
+<li>What is the cheapest pet in the shop? <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="7" type="text" value="" size="7" maxlength="12" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(mouse,a mouse,mice)</span></span></span></label></li>
+</ol></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<span>
+								Correct								</span>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<span>
+								Incorrect							</span>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:2832,&quot;question_post_id&quot;:71971808}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>2</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>2</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--2832">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="2832" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <h3>Tarner’s auction house</h3>
+    <h4>Entering the auction:</h4>
+    <p>Inspecting the vehicles is free, but to enter the auction room you need to purchase a buyer ID card. This card has a unique number to identify you during the bidding process. As part of the payment, you will also receive an auction listing, detailing vehicles coming up for auction (number of previous owners, year of manufacture etc) and approximate auction times.</p>
+    <h4>Inspecting a vehicle:</h4>
+    <p>Before the auction starts, you will have time to look over the vehicle and, if required, have a mechanic perform a brief check. You are not allowed to test drive the vehicle. If you are interested in the vehicle, you will need to take a note of the lot number (a unique number assigned to each item in the auction). The lot number and approximate timing of when that car will be auctioned should be stuck to the front windscreen, as well as being in the auction listing.</p>
+    <h4>Bidding at the auction:</h4>
+    <em>NOTE: The time a vehicle will be auctioned is estimated – please ensure you are in the auction area at least 15 minutes beforehand in case the vehicle you are interested is called early.</em>
+    <p>The bidding for a vehicle will begin once the vehicle has been brought into the auction room and the auctioneer has given a brief description of the lot. Anyone wishing to place a bid will need to have their buyer ID card clearly displayed so the auctioneer can determine who is making the bid. Remember that standard auction rules apply in that if you are successful in your bidding you are legally required to purchase the vehicle. &nbsp;You must be over 20 to bid in a Tarner’s auction.</p>
+    <h4>Collecting your newly purchased vehicle:</h4>
+    <p>If you win the bid, go to the Collections desk to make payment. Credit cards and cash are accepted – sorry, no cheques. Once payment has been completed, you can take the vehicle away or arrange for collection at a later date. Remember that vehicles are sold as seen and once the last bid is final.</p>
+    <h4>Rights and responsibilities:</h4>
+    <p>Tarner’s take no responsibility for the state of the vehicle, and any warranties are a private matter between the seller and the buyer. Our only obligation is to check that all outstanding finance has been paid on the vehicle.</p>
+    <h4>Additional information:</h4>
+    <ul>
+      <li>The general public and trade purchases are welcome</li>
+      <li>We suggest you have a clear idea of what you are willing to spend before the auction to avoid disappointment</li>
+      <li>Tarner’s deals solely in cars. Please do not bring any other type of vehicle for auction.</li>
+    </ul>
+    <h4>Selling at auction:</h4>
+    <p>If you are bringing a vehicle to sell, we strongly suggest that you contact us before bringing the vehicle. Although this is not mandatory, we cannot guarantee that we can auction all vehicles brought without advance notice. All vehicles must be at the auction house a minimum of 4 hours before the auction begins and a listing fee for each vehicle must be paid regardless of whether the vehicle sells. Vehicles should be presented in a tidy fashion or will not be accepted for auction. All registration papers will need to be handed to the auction house before the auction begins.</p>
+    <p>Sellers may set a reserve price beneath which the vehicle will not be sold. The reserve must within reasonable market value. Payment for successful sales will be transferred within three working days of the auction.</p>
+    <p>Contact us for information on pricing.</p>
+  </div>
+  <div class="ito-scroll-box">
+    <em><strong>Questions 7 – 12</strong></em>
+    <em>Choose the correct letter, <strong>A, B, C or D.</strong></em>
+    <em>Write your answers in boxes 7 to 12 on your answer sheet.</em>
+    <br><br>
+    <strong>7.</strong> There is no charge to
+    <ol style="list-style-type: upper-alpha" type="A">
+      <li>bid for a vehicle</li>
+      <li>sell a vehicle</li>
+      <li>look over the vehicles</li>
+      <li>receive an auction listing</li>
+    </ol>
+    7. BLANK 1 of 6
+    <br><br>
+    <strong>8.</strong> The auction listing
+    <ol style="list-style-type: upper-alpha" type="A">
+      <li>tells you the year of the vehicle</li>
+      <li>has a mechanics report on the vehicles</li>
+      <li>gives the exact time of the auction</li>
+      <li>will give an estimated price</li>
+    </ol>
+    8. BLANK 2 of 6
+    <br><br>
+    <strong>9.</strong> Bidders
+    <ol style="list-style-type: upper-alpha" type="A">
+      <li>need to clearly display the lot number of the vehicle</li>
+      <li>should be in the auction room before the bidding is expected to start</li>
+      <li>do not have to purchase a vehicle they have won the bid for</li>
+      <li>can be any age</li>
+    </ol>
+    9. BLANK 3 of 6
+    <br><br>
+    <strong>10.</strong> Winning bidders
+    <ol style="list-style-type: upper-alpha" type="A">
+      <li>Must remove the vehicle immediately</li>
+      <li>Can use any form of payment</li>
+      <li>Need to go to the Collections area</li>
+      <li>Can decide not to buy if the vehicle fails a mechanical inspection</li>
+    </ol>
+    10. BLANK 4 of 6
+    <br><br>
+    <strong>11.</strong> Tarner’s auction house
+    <ol style="list-style-type: upper-alpha" type="A">
+      <li>Provide a warranty on vehicles sold</li>
+      <li>Ensure that there is no debt owed on the vehicles</li>
+      <li>Do not allow people in the car industry to bid</li>
+      <li>Auctions motorcycles and trucks</li>
+    </ol>
+    11. BLANK 5 of 6
+    <br><br>
+    <strong>12.</strong> Sellers
+    <ol style="list-style-type: upper-alpha" type="A">
+      <li>Must contact the auction house before they bring a vehicle</li>
+      <li>Do not have to pay if their vehicle does not sell</li>
+      <li>Must give the auction house the vehicles paperwork if it sells</li>
+      <li>Must bring their vehicles in clean condition</li>
+    </ol>
+    12. BLANK 6 of 6
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<h3>Tarner’s auction house</h3>
+<h4>Entering the auction:</h4>
+<p>Inspecting the vehicles is free, but to enter the auction room you need to purchase a buyer ID card. This card has a unique number to identify you during the bidding process. As part of the payment, you will also receive an auction listing, detailing vehicles coming up for auction (number of previous owners, year of manufacture etc) and approximate auction times.</p>
+<h4>Inspecting a vehicle:</h4>
+<p>Before the auction starts, you will have time to look over the vehicle and, if required, have a mechanic perform a brief check. You are not allowed to test drive the vehicle. If you are interested in the vehicle, you will need to take a note of the lot number (a unique number assigned to each item in the auction). The lot number and approximate timing of when that car will be auctioned should be stuck to the front windscreen, as well as being in the auction listing.</p>
+<h4>Bidding at the auction:</h4>
+<p>    <em>NOTE: The time a vehicle will be auctioned is estimated – please ensure you are in the auction area at least 15 minutes beforehand in case the vehicle you are interested is called early.</em></p>
+<p>The bidding for a vehicle will begin once the vehicle has been brought into the auction room and the auctioneer has given a brief description of the lot. Anyone wishing to place a bid will need to have their buyer ID card clearly displayed so the auctioneer can determine who is making the bid. Remember that standard auction rules apply in that if you are successful in your bidding you are legally required to purchase the vehicle. &nbsp;You must be over 20 to bid in a Tarner’s auction.</p>
+<h4>Collecting your newly purchased vehicle:</h4>
+<p>If you win the bid, go to the Collections desk to make payment. Credit cards and cash are accepted – sorry, no cheques. Once payment has been completed, you can take the vehicle away or arrange for collection at a later date. Remember that vehicles are sold as seen and once the last bid is final.</p>
+<h4>Rights and responsibilities:</h4>
+<p>Tarner’s take no responsibility for the state of the vehicle, and any warranties are a private matter between the seller and the buyer. Our only obligation is to check that all outstanding finance has been paid on the vehicle.</p>
+<h4>Additional information:</h4>
+<ul>
+<li>The general public and trade purchases are welcome</li>
+<li>We suggest you have a clear idea of what you are willing to spend before the auction to avoid disappointment</li>
+<li>Tarner’s deals solely in cars. Please do not bring any other type of vehicle for auction.</li>
+</ul>
+<h4>Selling at auction:</h4>
+<p>If you are bringing a vehicle to sell, we strongly suggest that you contact us before bringing the vehicle. Although this is not mandatory, we cannot guarantee that we can auction all vehicles brought without advance notice. All vehicles must be at the auction house a minimum of 4 hours before the auction begins and a listing fee for each vehicle must be paid regardless of whether the vehicle sells. Vehicles should be presented in a tidy fashion or will not be accepted for auction. All registration papers will need to be handed to the auction house before the auction begins.</p>
+<p>Sellers may set a reserve price beneath which the vehicle will not be sold. The reserve must within reasonable market value. Payment for successful sales will be transferred within three working days of the auction.</p>
+<p>Contact us for information on pricing.</p>
+<p></p></div>
+<div class="ito-scroll-box">
+    <em><strong>Questions 7 – 12</strong></em><br>
+    <em>Choose the correct letter, <strong>A, B, C or D.</strong></em><br>
+    <em>Write your answers in boxes 7 to 12 on your answer sheet.</em><p></p>
+<p>    <strong>7.</strong> There is no charge to</p>
+<ol style="list-style-type: upper-alpha;" type="A">
+<li>bid for a vehicle</li>
+<li>sell a vehicle</li>
+<li>look over the vehicles</li>
+<li>receive an auction listing</li>
+</ol>
+<p>    7. <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(c)</span></span></span></label></p>
+<p>    <strong>8.</strong> The auction listing</p>
+<ol style="list-style-type: upper-alpha;" type="A">
+<li>tells you the year of the vehicle</li>
+<li>has a mechanics report on the vehicles</li>
+<li>gives the exact time of the auction</li>
+<li>will give an estimated price</li>
+</ol>
+<p>    8. <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(a)</span></span></span></label></p>
+<p>    <strong>9.</strong> Bidders</p>
+<ol style="list-style-type: upper-alpha;" type="A">
+<li>need to clearly display the lot number of the vehicle</li>
+<li>should be in the auction room before the bidding is expected to start</li>
+<li>do not have to purchase a vehicle they have won the bid for</li>
+<li>can be any age</li>
+</ol>
+<p>    9. <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(b)</span></span></span></label></p>
+<p>    <strong>10.</strong> Winning bidders</p>
+<ol style="list-style-type: upper-alpha;" type="A">
+<li>Must remove the vehicle immediately</li>
+<li>Can use any form of payment</li>
+<li>Need to go to the Collections area</li>
+<li>Can decide not to buy if the vehicle fails a mechanical inspection</li>
+</ol>
+<p>    10. <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(c)</span></span></span></label></p>
+<p>    <strong>11.</strong> Tarner’s auction house</p>
+<ol style="list-style-type: upper-alpha;" type="A">
+<li>Provide a warranty on vehicles sold</li>
+<li>Ensure that there is no debt owed on the vehicles</li>
+<li>Do not allow people in the car industry to bid</li>
+<li>Auctions motorcycles and trucks</li>
+</ol>
+<p>    11. <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(b)</span></span></span></label></p>
+<p>    <strong>12.</strong> Sellers</p>
+<ol style="list-style-type: upper-alpha;" type="A">
+<li>Must contact the auction house before they bring a vehicle</li>
+<li>Do not have to pay if their vehicle does not sell</li>
+<li>Must give the auction house the vehicles paperwork if it sells</li>
+<li>Must bring their vehicles in clean condition</li>
+</ol>
+<p>    12. <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(d)</span></span></span></label>
+  </p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<span>
+								Correct								</span>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<span>
+								Incorrect							</span>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:2834,&quot;question_post_id&quot;:71971812}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>3</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>3</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--2834">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="2834" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <h4>Workplace harassment</h4>
+    <p>If you believe that you are being subjected to undue pressure from a colleague or manager, there are clear guidelines you can follow to find a resolution.</p>
+    <em>How do I know if I am being harassed?</em>
+    <ul>
+      <li>is being verbally hostile – making unfair comments or criticising you or your work unduly or in an excessively public manner.</li>
+      <li>is withholding resources without clear explanation (‘resources’ can refer to information, training or equipment so you can’t complete your job properly).</li>
+      <li>encourages co-workers to contribute to the harassment.</li>
+    </ul>
+    <em>What should I do if I feel I am being harassed?</em>
+    <ul>
+      <li><strong>Keep records</strong></li>
+    </ul>
+    <p style="padding-left: 30px">Every time you feel you are being harassed, make a note of it – where, when, who was responsible, potential witnesses etc. This is invaluable evidence in a harassment case if you decide to take action.</p>
+    <ul>
+      <li><strong>Talk to your manager</strong></li>
+    </ul>
+    <ul>Assuming this is not the person concerned, you should report the situation to your manager.&nbsp; Remember that you are entitled to confidentiality and in the majority of cases the issue can be resolved without compromising this. If the problem is with your manager, you can approach senior management in writing with the issue.</ul>
+    <ul>
+      <li><strong>Avoid directly responding to the harassment</strong></li>
+    </ul>
+    <p style="padding-left: 30px">As soon as you retaliate against the person harassing you, the company is unable to successfully support your case. If you feel that the situation has become intolerable and you cannot work with the person concerned, you need to discuss the matter immediately with your manager.</p>
+    <ul>
+      <li><strong>Don’t feel that you would better off if you left </strong></li>
+    </ul>
+    <p style="padding-left: 30px">The company prides itself on providing a welcoming, positive atmosphere for staff. If someone is acting in a manner which means this is not possible, we need to know! Remember that if you quit, the person concerned will more than likely repeat the behaviour with the next member of staff, but with additional confidence in having been successful in intimidating other staff.</p>
+  </div>
+  <div class="ito-scroll-box">
+    <p class="style1"><strong>Section 2</strong></p>
+    <strong>Questions 13 – 16</strong>
+    <p>Complete the summary using <em><strong>NO MORE THAN ONE WORD</strong></em> from the reading text for each answer.</p>
+    <em>Write your answers in boxes <strong>13 to 16</strong> on your answer sheet.</em>
+    <p>Feelings of unfair [13] BLANK 1 of 9 from workmates or superiors may come from being the victim of workplace harassment. &nbsp;This is characterised by having your work or yourself overly criticised in [14] BLANK 2 of 9, or by being prevented from the completion of your job through lack of access to proper [15] BLANK 3 of 9.&nbsp; You may also find that [16]BLANK 4 of 9 support (and are motivated by) the perpetrator in actions against you.</p>
+    <hr>
+    <strong>Questions 17 – 21</strong>
+    <p>Complete the summary using <em><strong>NO MORE THAN TWO WORD</strong></em>S from the reading text for each answer.</p>
+    <em>Write your answers in boxes 17 to 21 on your answer sheet.</em>
+    <img class="aligncenter" src="https://www.ilsnz.com/wp-content/uploads/2018/12/workplace_harassment.jpg" alt="" width="329" height="268">
+    <p style="text-align: left" align="center">17.&nbsp; BLANK 5 of 9</p>
+    <p style="text-align: left" align="center">18.&nbsp; BLANK 6 of 9</p>
+    <p style="text-align: left" align="center">19.&nbsp; BLANK 7 of 9</p>
+    <p style="text-align: left" align="center">20.&nbsp; BLANK 8 of 9</p>
+    <p style="text-align: left" align="center">21.&nbsp; BLANK 9 of 9</p>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<h4>Workplace harassment</h4>
+<p>If you believe that you are being subjected to undue pressure from a colleague or manager, there are clear guidelines you can follow to find a resolution.</p>
+<p>    <em>How do I know if I am being harassed?</em></p>
+<ul>
+<li>is being verbally hostile – making unfair comments or criticising you or your work unduly or in an excessively public manner.</li>
+<li>is withholding resources without clear explanation (‘resources’ can refer to information, training or equipment so you can’t complete your job properly).</li>
+<li>encourages co-workers to contribute to the harassment.</li>
+</ul>
+<p>    <em>What should I do if I feel I am being harassed?</em></p>
+<ul>
+<li><strong>Keep records</strong></li>
+</ul>
+<p style="padding-left: 30px;">Every time you feel you are being harassed, make a note of it – where, when, who was responsible, potential witnesses etc. This is invaluable evidence in a harassment case if you decide to take action.</p>
+<ul>
+<li><strong>Talk to your manager</strong></li>
+</ul>
+<ul>Assuming this is not the person concerned, you should report the situation to your manager.&nbsp; Remember that you are entitled to confidentiality and in the majority of cases the issue can be resolved without compromising this. If the problem is with your manager, you can approach senior management in writing with the issue.</ul>
+<ul>
+<li><strong>Avoid directly responding to the harassment</strong></li>
+</ul>
+<p style="padding-left: 30px;">As soon as you retaliate against the person harassing you, the company is unable to successfully support your case. If you feel that the situation has become intolerable and you cannot work with the person concerned, you need to discuss the matter immediately with your manager.</p>
+<ul>
+<li><strong>Don’t feel that you would better off if you left </strong></li>
+</ul>
+<p style="padding-left: 30px;">The company prides itself on providing a welcoming, positive atmosphere for staff. If someone is acting in a manner which means this is not possible, we need to know! Remember that if you quit, the person concerned will more than likely repeat the behaviour with the next member of staff, but with additional confidence in having been successful in intimidating other staff.</p>
+<p></p></div>
+<div class="ito-scroll-box">
+<p class="style1"><strong>Section 2</strong></p>
+<p>    <strong>Questions 13 – 16</strong></p>
+<p>Complete the summary using <em><strong>NO MORE THAN ONE WORD</strong></em> from the reading text for each answer.</p>
+<p>    <em>Write your answers in boxes <strong>13 to 16</strong> on your answer sheet.</em></p>
+<p>Feelings of unfair [13] <label><span class="screen-reader-text">Fill in the blank 1 of 9</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="8" type="text" value="" size="8" maxlength="13" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(pressure)</span></span></span></label> from workmates or superiors may come from being the victim of workplace harassment. &nbsp;This is characterised by having your work or yourself overly criticised in [14] <label><span class="screen-reader-text">Fill in the blank 2 of 9</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="6" type="text" value="" size="6" maxlength="11" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(public)</span></span></span></label>, or by being prevented from the completion of your job through lack of access to proper [15] <label><span class="screen-reader-text">Fill in the blank 3 of 9</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(resources)</span></span></span></label>.&nbsp; You may also find that [16]<label><span class="screen-reader-text">Fill in the blank 4 of 9</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="10" type="text" value="" size="10" maxlength="15" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(co-workers,co workers,coworkers)</span></span></span></label> support (and are motivated by) the perpetrator in actions against you.</p>
+<hr>
+<p>    <strong>Questions 17 – 21</strong></p>
+<p>Complete the summary using <em><strong>NO MORE THAN TWO WORD</strong></em>S from the reading text for each answer.</p>
+<p>    <em>Write your answers in boxes 17 to 21 on your answer sheet.</em><br>
+    <img class="aligncenter" src="https://www.ilsnz.com/wp-content/uploads/2018/12/workplace_harassment.jpg" alt="" width="329" height="268"></p>
+<p style="text-align: left;" align="center">17.&nbsp; <label><span class="screen-reader-text">Fill in the blank 5 of 9</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="19" type="text" value="" size="19" maxlength="24" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(invaluable evidence,evidence)</span></span></span></label></p>
+<p style="text-align: left;" align="center">18.&nbsp; <label><span class="screen-reader-text">Fill in the blank 6 of 9</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="17" type="text" value="" size="17" maxlength="22" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(senior management)</span></span></span></label></p>
+<p style="text-align: left;" align="center">19.&nbsp; <label><span class="screen-reader-text">Fill in the blank 7 of 9</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(retaliate)</span></span></span></label></p>
+<p style="text-align: left;" align="center">20.&nbsp; <label><span class="screen-reader-text">Fill in the blank 8 of 9</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(quit)</span></span></span></label></p>
+<p style="text-align: left;" align="center">21.&nbsp; <label><span class="screen-reader-text">Fill in the blank 9 of 9</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="10" type="text" value="" size="10" maxlength="15" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(confidence)</span></span></span></label></p>
+<p></p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<span>
+								Correct								</span>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<span>
+								Incorrect							</span>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:2833,&quot;question_post_id&quot;:71971810}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>4</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>4</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--2833">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="2833" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <p style="text-align: center"><strong>DK Building supplies</strong></p>
+    <em>Rules and regulations</em>
+    <p><strong>Clothing and equipment</strong></p>
+    <p>All members of staff working on the site are required to wear their personal protection equipment at all times. This includes a high visibility vest and strong shoes with steel reinforced toes.&nbsp; When entering the factories, hard hats and safety glasses must also be worn.</p>
+    <p><strong>Visitors</strong></p>
+    <p>Visitors are NOT to walk unattended around the site; they must be escorted by an employee at all times. Visitors must also sign the Visitor Register in reception before being allowed onto the site. Note that friends or family or employees should be encouraged to wait outside the site and may not use car parking on the company grounds. The visitor section is reserved for deliveries, customers or staff from our other branches.</p>
+    <p><strong>Car parking</strong></p>
+    <p>Employees can use the staff car park off Quay Street. An access card is needed to enter this car park (access cards are available for all employees from the reception). Parking is not permitted in front of the reception area, or near the loading docks. Any staff cars found in these areas will be towed at the owner’s expense.</p>
+    <p><strong>Break areas</strong></p>
+    <p>There are designated areas for taking breaks. Employees are not to remain in or around the factories when on the break. All food should be consumed in one of the three break rooms, although bottled drinks are acceptable in the work area. Smoking is permitted in marked areas only. Due to the flammable nature of the materials in the factories, anyone found smoking outside the designated areas will be disciplined.</p>
+  </div>
+  <div class="ito-scroll-box">
+    <em><strong>Questions 22 to 25</strong></em>
+    <p>Do the following statements agree with the information given in the reading passage?</p>
+    <p>In boxes 22-25 on your answer sheet write</p>
+    <strong>TRUE</strong> if the statement agrees with the information<br>
+    <strong>FALSE</strong> if the statement contradicts the information<br>
+    <strong>NOT GIVEN</strong> if there is no information on this
+    <ol start="22">
+      <li>Safety glasses are mandatory at all times for staff on site. BLANK 1 of 4</li>
+      <li>Visitors must sign the visitor book before being allowed to walk around the site without an employee. BLANK 2 of 4</li>
+      <li>Food and drink is not permitted in the factories. BLANK 3 of 4</li>
+      <li>Smoking is allowed only in certain areas. BLANK 4 of 4</li>
+    </ol>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<p style="text-align: center;"><strong>DK Building supplies</strong></p>
+<p>    <em>Rules and regulations</em></p>
+<p><strong>Clothing and equipment</strong></p>
+<p>All members of staff working on the site are required to wear their personal protection equipment at all times. This includes a high visibility vest and strong shoes with steel reinforced toes.&nbsp; When entering the factories, hard hats and safety glasses must also be worn.</p>
+<p><strong>Visitors</strong></p>
+<p>Visitors are NOT to walk unattended around the site; they must be escorted by an employee at all times. Visitors must also sign the Visitor Register in reception before being allowed onto the site. Note that friends or family or employees should be encouraged to wait outside the site and may not use car parking on the company grounds. The visitor section is reserved for deliveries, customers or staff from our other branches.</p>
+<p><strong>Car parking</strong></p>
+<p>Employees can use the staff car park off Quay Street. An access card is needed to enter this car park (access cards are available for all employees from the reception). Parking is not permitted in front of the reception area, or near the loading docks. Any staff cars found in these areas will be towed at the owner’s expense.</p>
+<p><strong>Break areas</strong></p>
+<p>There are designated areas for taking breaks. Employees are not to remain in or around the factories when on the break. All food should be consumed in one of the three break rooms, although bottled drinks are acceptable in the work area. Smoking is permitted in marked areas only. Due to the flammable nature of the materials in the factories, anyone found smoking outside the designated areas will be disciplined.</p>
+<p></p></div>
+<div class="ito-scroll-box">
+    <em><strong>Questions 22 to 25</strong></em><p></p>
+<p>Do the following statements agree with the information given in the reading passage?</p>
+<p>In boxes 22-25 on your answer sheet write</p>
+<p>    <strong>TRUE</strong> if the statement agrees with the information<br>
+    <strong>FALSE</strong> if the statement contradicts the information<br>
+    <strong>NOT GIVEN</strong> if there is no information on this</p>
+<ol start="22">
+<li>Safety glasses are mandatory at all times for staff on site. <label><span class="screen-reader-text">Fill in the blank 1 of 4</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>Visitors must sign the visitor book before being allowed to walk around the site without an employee. <label><span class="screen-reader-text">Fill in the blank 2 of 4</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>Food and drink is not permitted in the factories. <label><span class="screen-reader-text">Fill in the blank 3 of 4</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>Smoking is allowed only in certain areas. <label><span class="screen-reader-text">Fill in the blank 4 of 4</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></li>
+</ol></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<span>
+								Correct								</span>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<span>
+								Incorrect							</span>

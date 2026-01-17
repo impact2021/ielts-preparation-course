@@ -1,0 +1,878 @@
+<strong>Read the texts and answer the questions. Type your answers in the spaces provided.</strong></span></p>
+					</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="2740" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <p align="center"><strong>Hidden Treasures Music Store September Edition Members’ Newsletter</strong></p>
+    <p align="center"><strong><em>Stockists of rare and collectors’ items – take a walk down Memory Lane!</em></strong></p>
+    <p><strong>J – Jazz   B – Blues  R – Rock &amp; Roll</strong></p>
+    <p><strong>New arrivals this month</strong></p>
+    <table border="1" width="100%" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td colspan="3">Under £20</td>
+        </tr>
+        <tr>
+          <td width="30%">Bill Benjamin</td>
+          <td width="8%"><div align="center">J</div></td>
+          <td width="62%">– a rare chance to buy the artist’s first album, 5 copies in stock.</td>
+        </tr>
+        <tr>
+          <td>Gerome and the Jives</td>
+          <td><div align="center">R</div></td>
+          <td>– 10 copies remaining – reduced from £30.</td>
+        </tr>
+        <tr>
+          <td>Giles Bertram*</td>
+          <td><div align="center">B</div></td>
+          <td>– *Currently out of stock. Expected delivery 25/09</td>
+        </tr>
+        <tr>
+          <td>The Rockerbillies</td>
+          <td><div align="center">R</div></td>
+          <td>– Digitally remastered for enhanced quality.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    <table border="2" width="100%" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td colspan="3">Under £30</td>
+        </tr>
+        <tr>
+          <td width="30%">Clyde Forstrum</td>
+          <td width="8%"><div align="center">J/B</div></td>
+          <td width="62%">-A mix of cover songs from a variety of Jazz  and Blues’ best known artists.</td>
+        </tr>
+        <tr>
+          <td>The Kings of Temple Street</td>
+          <td><div align="center">B</div></td>
+          <td>– Award winning Blues band from New Orleans.</td>
+        </tr>
+        <tr>
+          <td>Brian Jefferson</td>
+          <td><div align="center">B</div></td>
+          <td>– included the chart-topping song “Forever Yours’.</td>
+        </tr>
+        <tr>
+          <td>Janine Reynard</td>
+          <td><div align="center">R</div></td>
+          <td>– Special offer this month only – usually £55</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    <table border="2" width="100%" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td colspan="3">Under £50</td>
+        </tr>
+        <tr>
+          <td width="30%">The Real McCoy</td>
+          <td width="8%"><div align="center">R</div></td>
+          <td width="62%">– voted their best album of all time by K20  radio listeners.</td>
+        </tr>
+        <tr>
+          <td>Seeking Solitude</td>
+          <td><div align="center">J</div></td>
+          <td>– first time available in store</td>
+        </tr>
+        <tr>
+          <td>Johnny Baxter</td>
+          <td><div align="center">B</div></td>
+          <td>– new arrival from the USA, only available from Hidden Treasures here in the UK</td>
+        </tr>
+        <tr>
+          <td>Jessica Wilson</td>
+          <td><div align="center">B/J</div></td>
+          <td>–  the UK’s best known female jazz and blues star.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Additional Special Offers   </strong>
+    £20 voucher available with any purchase over £100 (Available until 5th October)
+    Free delivery only for orders within the UK over £6 (valid until September 30th)
+    Customers making purchases over £60 are automatically entered into our prize draw (1st prize £100 music voucher, 2nd prize £50).</p>
+    <p><strong>Delivery Details</strong></p>
+    <p>A postage and packing charge applies to all deliveries unless otherwise specified in a special offer.</p>
+    <p><em>Within the United Kingdom:</em>
+    £6.50 regular post
+    £16.80 Courier Service (next day delivery)</p>
+    <p><em>Outside the United Kingdom</em> – Contact us for prices to your destination as charges vary or visit <em><strong>www.hiddentreasuresms.co.uk</strong></em> for more details.</p>
+    <p>Surface Delivery (allow approximately 6-8 weeks for delivery)
+    Airmail Delivery (between 1-2 weeks for most countries)</p>
+  </div>
+  <div class="ito-scroll-box">
+    <p><strong>Section 1 </strong></p>
+    <p><strong>Questions 1-14</strong></p>
+    <p>Read the information on the right and answer Questions 1-7</p>
+    <p><strong>Questions 1-7</strong></p>
+    <p>Do the following statements agree with the information given in the text on the previous page?</p>
+    <p>In boxes <strong>1-7</strong> on your answer sheet write</p>
+    <p><strong>TRUE</strong> if the statement agrees with the information</p>
+    <p><strong>FALSE</strong> if the statement contradicts the information</p>
+    <p><strong>NOT GIVEN</strong> if there is no information on this</p>
+    <p>1. There are more available copies of the Bill Benjamin album than the Gerome and the Jives album. BLANK 1 of 7</p>
+    <p>2. The Blues album on sale for less than £20 will be available from the middle of September. BLANK 2 of 7</p>
+    <p>3. The Janine Reynard album is only available at the cheaper price for a limited time. BLANK 3 of 7</p>
+    <p>4. The Seeking Solitude jazz album is available for the first time in the U.K. BLANK 4 of 7</p>
+    <p>5. Jessica Wilson is a famous female blues and jazz artist from the U.K. BLANK 5 of 7</p>
+    <p>6. Not all special offers are available to customers outside the U.K. BLANK 6 of 7</p>
+    <p>7. Express delivery in the UK costs £6.50. BLANK 7 of 7</p>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<p align="center"><strong>Hidden Treasures Music Store September Edition Members’ Newsletter</strong></p>
+<p align="center"><strong><em>Stockists of rare and collectors’ items – take a walk down Memory Lane!</em></strong></p>
+<p><strong>J – Jazz   B – Blues  R – Rock &amp; Roll</strong></p>
+<p><strong>New arrivals this month</strong></p>
+<table border="1" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td colspan="3">Under £20</td>
+</tr>
+<tr>
+<td width="30%">Bill Benjamin</td>
+<td width="8%">
+<div align="center">J</div>
+</td>
+<td width="62%">– a rare chance to buy the artist’s first album, 5 copies in stock.</td>
+</tr>
+<tr>
+<td>Gerome and the Jives</td>
+<td>
+<div align="center">R</div>
+</td>
+<td>– 10 copies remaining – reduced from £30.</td>
+</tr>
+<tr>
+<td>Giles Bertram*</td>
+<td>
+<div align="center">B</div>
+</td>
+<td>– *Currently out of stock. Expected delivery 25/09</td>
+</tr>
+<tr>
+<td>The Rockerbillies</td>
+<td>
+<div align="center">R</div>
+</td>
+<td>– Digitally remastered for enhanced quality.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table border="2" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td colspan="3">Under £30</td>
+</tr>
+<tr>
+<td width="30%">Clyde Forstrum</td>
+<td width="8%">
+<div align="center">J/B</div>
+</td>
+<td width="62%">-A mix of cover songs from a variety of Jazz  and Blues’ best known artists.</td>
+</tr>
+<tr>
+<td>The Kings of Temple Street</td>
+<td>
+<div align="center">B</div>
+</td>
+<td>– Award winning Blues band from New Orleans.</td>
+</tr>
+<tr>
+<td>Brian Jefferson</td>
+<td>
+<div align="center">B</div>
+</td>
+<td>– included the chart-topping song “Forever Yours’.</td>
+</tr>
+<tr>
+<td>Janine Reynard</td>
+<td>
+<div align="center">R</div>
+</td>
+<td>– Special offer this month only – usually £55</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table border="2" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td colspan="3">Under £50</td>
+</tr>
+<tr>
+<td width="30%">The Real McCoy</td>
+<td width="8%">
+<div align="center">R</div>
+</td>
+<td width="62%">– voted their best album of all time by K20  radio listeners.</td>
+</tr>
+<tr>
+<td>Seeking Solitude</td>
+<td>
+<div align="center">J</div>
+</td>
+<td>– first time available in store</td>
+</tr>
+<tr>
+<td>Johnny Baxter</td>
+<td>
+<div align="center">B</div>
+</td>
+<td>– new arrival from the USA, only available from Hidden Treasures here in the UK</td>
+</tr>
+<tr>
+<td>Jessica Wilson</td>
+<td>
+<div align="center">B/J</div>
+</td>
+<td>–  the UK’s best known female jazz and blues star.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Additional Special Offers   </strong><br>
+    £20 voucher available with any purchase over £100 (Available until 5th October)<br>
+    Free delivery only for orders within the UK over £6 (valid until September 30th)<br>
+    Customers making purchases over £60 are automatically entered into our prize draw (1st prize £100 music voucher, 2nd prize £50).</p>
+<p><strong>Delivery Details</strong></p>
+<p>A postage and packing charge applies to all deliveries unless otherwise specified in a special offer.</p>
+<p><em>Within the United Kingdom:</em><br>
+    £6.50 regular post<br>
+    £16.80 Courier Service (next day delivery)</p>
+<p><em>Outside the United Kingdom</em> – Contact us for prices to your destination as charges vary or visit <em><strong>www.hiddentreasuresms.co.uk</strong></em> for more details.</p>
+<p>Surface Delivery (allow approximately 6-8 weeks for delivery)<br>
+    Airmail Delivery (between 1-2 weeks for most countries)</p>
+<p></p></div>
+<div class="ito-scroll-box">
+<p><strong>Section 1 </strong></p>
+<p><strong>Questions 1-14</strong></p>
+<p>Read the information on the right and answer Questions 1-7</p>
+<p><strong>Questions 1-7</strong></p>
+<p>Do the following statements agree with the information given in the text on the previous page?</p>
+<p>In boxes <strong>1-7</strong> on your answer sheet write</p>
+<p><strong>TRUE</strong> if the statement agrees with the information</p>
+<p><strong>FALSE</strong> if the statement contradicts the information</p>
+<p><strong>NOT GIVEN</strong> if there is no information on this</p>
+<p>1. There are more available copies of the Bill Benjamin album than the Gerome and the Jives album. <label><span class="screen-reader-text">Fill in the blank 1 of 7</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>2. The Blues album on sale for less than £20 will be available from the middle of September. <label><span class="screen-reader-text">Fill in the blank 2 of 7</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>3. The Janine Reynard album is only available at the cheaper price for a limited time. <label><span class="screen-reader-text">Fill in the blank 3 of 7</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>4. The Seeking Solitude jazz album is available for the first time in the U.K. <label><span class="screen-reader-text">Fill in the blank 4 of 7</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>5. Jessica Wilson is a famous female blues and jazz artist from the U.K. <label><span class="screen-reader-text">Fill in the blank 5 of 7</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>6. Not all special offers are available to customers outside the U.K. <label><span class="screen-reader-text">Fill in the blank 6 of 7</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>7. Express delivery in the UK costs £6.50. <label><span class="screen-reader-text">Fill in the blank 7 of 7</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p></p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="display: none;">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints"></span>
+										 / 7										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="display: none;" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints"></span> / 7									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1456,&quot;question_post_id&quot;:71970066}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>2</span> of <span>6</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>2</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1456">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1456" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <p align="center"><strong>Rules and Regulations for Members of Brightwood Leisure Centre</strong></p>
+    <p>Membership allows an individual to use the leisure centre’s facilities subject to the conditions of their membership and availability. Please note prices may change and/or increase from time to time.</p>
+    <p>All members must read and agree to follow the rules below before using the leisure centre facilities.</p>
+    <p><strong>Membership Rules<br>
+    General</strong></p>
+    <ol>
+      <li>The owners reserve the right to terminate membership for breach of the rules, or behaviour which is damaging to the character or interests of the club or offensive to other members or staff.</li>
+      <li>Members must advise staff of any personal disability or illness such as a heart condition, eye or hearing problems and other conditions before using the facilities to help to avoid accidents or injuries to themselves and others.</li>
+      <li>Whilst using the club facilities all Members accept responsibility for their state of health and physical condition.</li>
+      <li>The owners’ responsibility or liability for damage or loss to Members’ property is strictly limited to any damage or loss occurring as a direct result of the negligence of owners or their staff.</li>
+      <li>No pets will be allowed in the club or its grounds with the exception of guide dogs.</li>
+      <li>Entry to the club is permitted only through the main reception entrance.</li>
+      <li>The owners may at any time withdraw all or any part of the club facilities for any period or periods where and when it is necessary for repair, maintenance, alteration or for safety reasons.</li>
+    </ol>
+    <p><strong>Making Changes to Membership</strong></p>
+    <p>All memberships are payable monthly by Direct Debit – normally taken on the 5th of each month.</p>
+    <p>If you wish to cancel your membership, you must contact the Membership Secretary in writing giving 2 weeks’ notice. Joining fees will not be refunded unless you cancel within 14 days of joining.</p>
+    <p>In the case of having to temporarily suspend membership due to long/medium term injury, illness or pregnancy, you must obtain written acceptance of the suspension from the Club Manager.</p>
+    <p>All membership is personal to each Member, however it is possible to transfer membership to another named person providing notice is given to the Membership Secretary by the 15th of the month. The transferee will be required to complete a Membership Application form but will not be required to pay a joining fee or pay any of the membership subscriptions which have been paid in advance by the original member.</p>
+    <p>A Member who wishes to transfer membership may not actively market such a transfer (for example on the internet) and may only transfer to a friend or family member.</p>
+    <p><strong>Lockers</strong></p>
+    <p>Lockers are provided to secure and protect your personal belongings and valuables while exercising. For security reasons and the benefits of other members all lockers must be emptied by the end of each visit.</p>
+    <p>All lockers will be checked and emptied by leisure centre staff at the end of every day and any contents will be disposed of for security reasons. This policy is adopted for Member’s safety and security.</p>
+    <p><strong>Personal Belongings</strong></p>
+    <p>Our liability to compensate you in the case of loss or damage other than death or personal injury is limited to a reasonable amount having regard to such factors as to whether the damage was due to a negligent act or omission by us.</p>
+    <p>If any personal property is found please hand in at the reception. Any property that is not claimed within 28 days will be donated to a local charity.</p>
+    <p>Cars must be parked correctly in the car park. No liability is accepted for loss or damage to cars or property and are left at the owners risk.</p>
+  </div>
+  <div class="ito-scroll-box">
+    <p><strong>Questions 8-10</strong></p>
+    <p>Read the information about rules and regulations for members of a leisure centre and answer the questions that follow.</p>
+    <p>Questions 8-10</p>
+    <p>Choose the correct letter <strong>A, B, C</strong> or <strong>D</strong>.</p>
+    <p>Write your answers in boxes 8-10 on your answer sheet.</p>
+    <p>8. Members who upset other users of the leisure centre</p>
+    <p style="padding-left: 30px">(a) will be reported to the Club Manager<br>
+    (b) will be given a warning<br>
+    (c) will have their membership cancelled<br>
+    (d) will be reported to the Membership Secretary</p>
+    <p>8. BLANK 1 of 3</p>
+    <p>9. Membership may be put on hold</p>
+    <p style="padding-left: 30px">(a) within 14 days of joining<br>
+    (b) through arrangement with the manager of the club<br>
+    (c) if the Membership Secretary agrees<br>
+    (d) in cases of injury only</p>
+    <p>9. BLANK 2 of 3</p>
+    <p>10. Damage to members’ vehicles</p>
+    <p style="padding-left: 30px">(a) is unlikely due to secure parking<br>
+    (b) will be paid for by the centre if it is their fault<br>
+    (c) is not the responsibility of the centre<br>
+    (d) may result due to negligence</p>
+    <p>10. BLANK 3 of 3</p>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<p align="center"><strong>Rules and Regulations for Members of Brightwood Leisure Centre</strong></p>
+<p>Membership allows an individual to use the leisure centre’s facilities subject to the conditions of their membership and availability. Please note prices may change and/or increase from time to time.</p>
+<p>All members must read and agree to follow the rules below before using the leisure centre facilities.</p>
+<p><strong>Membership Rules<br>
+    General</strong></p>
+<ol>
+<li>The owners reserve the right to terminate membership for breach of the rules, or behaviour which is damaging to the character or interests of the club or offensive to other members or staff.</li>
+<li>Members must advise staff of any personal disability or illness such as a heart condition, eye or hearing problems and other conditions before using the facilities to help to avoid accidents or injuries to themselves and others.</li>
+<li>Whilst using the club facilities all Members accept responsibility for their state of health and physical condition.</li>
+<li>The owners’ responsibility or liability for damage or loss to Members’ property is strictly limited to any damage or loss occurring as a direct result of the negligence of owners or their staff.</li>
+<li>No pets will be allowed in the club or its grounds with the exception of guide dogs.</li>
+<li>Entry to the club is permitted only through the main reception entrance.</li>
+<li>The owners may at any time withdraw all or any part of the club facilities for any period or periods where and when it is necessary for repair, maintenance, alteration or for safety reasons.</li>
+</ol>
+<p><strong>Making Changes to Membership</strong></p>
+<p>All memberships are payable monthly by Direct Debit – normally taken on the 5th of each month.</p>
+<p>If you wish to cancel your membership, you must contact the Membership Secretary in writing giving 2 weeks’ notice. Joining fees will not be refunded unless you cancel within 14 days of joining.</p>
+<p>In the case of having to temporarily suspend membership due to long/medium term injury, illness or pregnancy, you must obtain written acceptance of the suspension from the Club Manager.</p>
+<p>All membership is personal to each Member, however it is possible to transfer membership to another named person providing notice is given to the Membership Secretary by the 15th of the month. The transferee will be required to complete a Membership Application form but will not be required to pay a joining fee or pay any of the membership subscriptions which have been paid in advance by the original member.</p>
+<p>A Member who wishes to transfer membership may not actively market such a transfer (for example on the internet) and may only transfer to a friend or family member.</p>
+<p><strong>Lockers</strong></p>
+<p>Lockers are provided to secure and protect your personal belongings and valuables while exercising. For security reasons and the benefits of other members all lockers must be emptied by the end of each visit.</p>
+<p>All lockers will be checked and emptied by leisure centre staff at the end of every day and any contents will be disposed of for security reasons. This policy is adopted for Member’s safety and security.</p>
+<p><strong>Personal Belongings</strong></p>
+<p>Our liability to compensate you in the case of loss or damage other than death or personal injury is limited to a reasonable amount having regard to such factors as to whether the damage was due to a negligent act or omission by us.</p>
+<p>If any personal property is found please hand in at the reception. Any property that is not claimed within 28 days will be donated to a local charity.</p>
+<p>Cars must be parked correctly in the car park. No liability is accepted for loss or damage to cars or property and are left at the owners risk.</p>
+<p></p></div>
+<div class="ito-scroll-box">
+<p><strong>Questions 8-10</strong></p>
+<p>Read the information about rules and regulations for members of a leisure centre and answer the questions that follow.</p>
+<p>Questions 8-10</p>
+<p>Choose the correct letter <strong>A, B, C</strong> or <strong>D</strong>.</p>
+<p>Write your answers in boxes 8-10 on your answer sheet.</p>
+<p>8. Members who upset other users of the leisure centre</p>
+<p style="padding-left: 30px;">(a) will be reported to the Club Manager<br>
+    (b) will be given a warning<br>
+    (c) will have their membership cancelled<br>
+    (d) will be reported to the Membership Secretary</p>
+<p>8. <label><span class="screen-reader-text">Fill in the blank 1 of 3</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>9. Membership may be put on hold</p>
+<p style="padding-left: 30px;">(a) within 14 days of joining<br>
+    (b) through arrangement with the manager of the club<br>
+    (c) if the Membership Secretary agrees<br>
+    (d) in cases of injury only</p>
+<p>9. <label><span class="screen-reader-text">Fill in the blank 2 of 3</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>10. Damage to members’ vehicles</p>
+<p style="padding-left: 30px;">(a) is unlikely due to secure parking<br>
+    (b) will be paid for by the centre if it is their fault<br>
+    (c) is not the responsibility of the centre<br>
+    (d) may result due to negligence</p>
+<p>10. <label><span class="screen-reader-text">Fill in the blank 3 of 3</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p></p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="display: none;">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints"></span>
+										 / 3										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="display: none;" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints"></span> / 3									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1457,&quot;question_post_id&quot;:71970067}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>3</span> of <span>6</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>3</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1457">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1457" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <p align="center"><strong>
+    Rules and Regulations for Members Bringing Guests and Children to the Leisure Centre</strong></p>
+    <p><strong>Members’ Guests over 18.</strong></p>
+    <p>Members are welcome to introduce guests to the club. Guests are required to register, pay the current guest fee and must be accompanied by a Member.</p>
+    <p>Members must ensure that their guests are fully aware of the clubs Terms &amp; Conditions and Rules &amp; Regulations.</p>
+    <p>Each Member can introduce the same person no more than 6 times per year as a guest.</p>
+    <p>The owners take no responsibility for accidents, injuries, misadventure, theft or damage to personal belongings experienced by guests of the club.</p>
+    <p><strong>Children</strong></p>
+    <p>Members are allowed to bring their children to the leisure centre during certain hours. Children’s hours are Monday to Friday 10am – 12noon and 3pm – 5pm. At weekends and on national holidays children are allowed to use the centre between 12 noon – 4pm.</p>
+    <p>A child is any individual under 16. All under 16’s should be supervised by an adult (over 18) when using the facilities during children’s hours. At age 17 all users must pay an adult membership fee.</p>
+    <p>Children under the age of 12 are not allowed to use the steam room, hot spa or sauna.</p>
+  </div>
+  <div class="ito-scroll-box">
+    <p><strong>Questions 11-14</strong></p>
+    <p>Complete each sentence with the correct ending <strong>A-G</strong> below.</p>
+    <p>Write the correct letter <strong>A-G</strong> in boxes <strong>11-14</strong> on your answer sheet.</p>
+    <table border="1" width="100%" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td valign="top">
+            <ol style="list-style-type: upper-alpha" type="A">
+              <li>before 12 noon on workdays.</li>
+              <li>cannot use all leisure centre facilities</li>
+              <li>up to six occasions under guest terms.</li>
+              <li>may use the spa in the company of an adult.</li>
+              <li>unless a member is with them</li>
+              <li>during times it is open to children.</li>
+              <li>after 5pm on week days</li>
+            </ol>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>11. Adult guests are not allowed to use the facilities… BLANK 1 of 4</p>
+    <p>12. Non members can visit the gym… BLANK 2 of 4</p>
+    <p>13. Children are not allowed to use the leisure centre… BLANK 3 of 4</p>
+    <p>14. 11 year olds… BLANK 4 of 4</p>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<p align="center"><strong><br>
+    Rules and Regulations for Members Bringing Guests and Children to the Leisure Centre</strong></p>
+<p><strong>Members’ Guests over 18.</strong></p>
+<p>Members are welcome to introduce guests to the club. Guests are required to register, pay the current guest fee and must be accompanied by a Member.</p>
+<p>Members must ensure that their guests are fully aware of the clubs Terms &amp; Conditions and Rules &amp; Regulations.</p>
+<p>Each Member can introduce the same person no more than 6 times per year as a guest.</p>
+<p>The owners take no responsibility for accidents, injuries, misadventure, theft or damage to personal belongings experienced by guests of the club.</p>
+<p><strong>Children</strong></p>
+<p>Members are allowed to bring their children to the leisure centre during certain hours. Children’s hours are Monday to Friday 10am – 12noon and 3pm – 5pm. At weekends and on national holidays children are allowed to use the centre between 12 noon – 4pm.</p>
+<p>A child is any individual under 16. All under 16’s should be supervised by an adult (over 18) when using the facilities during children’s hours. At age 17 all users must pay an adult membership fee.</p>
+<p>Children under the age of 12 are not allowed to use the steam room, hot spa or sauna.</p>
+<p></p></div>
+<div class="ito-scroll-box">
+<p><strong>Questions 11-14</strong></p>
+<p>Complete each sentence with the correct ending <strong>A-G</strong> below.</p>
+<p>Write the correct letter <strong>A-G</strong> in boxes <strong>11-14</strong> on your answer sheet.</p>
+<table border="1" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top">
+<ol style="list-style-type: upper-alpha;" type="A">
+<li>before 12 noon on workdays.</li>
+<li>cannot use all leisure centre facilities</li>
+<li>up to six occasions under guest terms.</li>
+<li>may use the spa in the company of an adult.</li>
+<li>unless a member is with them</li>
+<li>during times it is open to children.</li>
+<li>after 5pm on week days</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+<p>11. Adult guests are not allowed to use the facilities… <label><span class="screen-reader-text">Fill in the blank 1 of 4</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>12. Non members can visit the gym… <label><span class="screen-reader-text">Fill in the blank 2 of 4</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>13. Children are not allowed to use the leisure centre… <label><span class="screen-reader-text">Fill in the blank 3 of 4</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>14. 11 year olds… <label><span class="screen-reader-text">Fill in the blank 4 of 4</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p></p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="display: none;">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints"></span>
+										 / 4										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="display: none;" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints"></span> / 4									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1458,&quot;question_post_id&quot;:71970068}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>4</span> of <span>6</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>4</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1458">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1458" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <p><strong>Negotiating a pay rise</strong></p>
+    <p>For many people, one of the hardest discussions they have with senior management is about a raise in pay. Employees often choose to look for a better paid position within another company rather than face their own boss, but that is a situation that can have a negative impact on the employee (who is seen to lack loyalty to the company) and the employer (who stands to lose a trained staff member who works well and has a good knowledge of the company). However, there are some salary negotiation tactics that might just help.</p>
+    <p>The most common error is, when finally gathering the courage to address the situation, many employees simply immediately accept whatever offer is first made. Research shows that younger job-seekers and female job-seekers often make this mistake – either from not completely understanding the negotiation process or from a dislike or discomfort with the idea of negotiating. There is, of course, the financial aspect of not receiving a higher compensation, but more importantly this can have a significant effect on motivation and morale and can eventually lead an employee who hastily accepted an inadequate offer to begin to resent both the job and the employer.</p>
+    <p>Another common error is rating your required raise based on a value you personally need or would like. Few employers care whether you have enough money to pay for your mortgage or other bills, so negotiations should be based on your value to the company, based on good research of similar companies. Also, if possible, the actual figure aimed for in the negotiation should not be revealed until the last possible moment, giving as much flexibility as possible. Immediately blurting out a figure it then becomes clear the company will not meet puts both the employer and employee in an uncomfortable position.
+    As previously mentioned, one of the key factors in a successful salary negotiation is research and preparation. With the number and variety of salary resources available online — from salary.com and salaryexpert.com to professional associations – there should be no reason not to have an accurate market value in mind.</p>
+    <p>However, despite all the preparation and right attitude in the negotiation, there is another pitfall – declining an offer too quickly as it was lower than expected. A careful balance needs to be struck here; we have looked at the risks of accepting too quickly, but declining an offer can mean that the negotiation has nowhere to go. There are two points to consider at this juncture: a raise can also come in the form of other benefits such as better health cover, so if the money offered is low, think about discussing the perks of the job. The second point is that you have to be realistic – if the job market is low and the company is not having a particularly outstanding year, you may have to accept a lower offer. However, if this is the case, it is common to request a review of the salary at a time in the not-too-distant future.</p>
+    <p>The final point that is essential in any business negotiation is not to take any rejection or low offers personally. Employees should maintain a professional approach to their job, and a salary negotiation is no exception. If negotiations break down between you and the employer, move on graciously, thanking the employer again for the opportunity — because you never want to burn any bridges.</p>
+  </div>
+  <div class="ito-scroll-box">
+    <p><strong>Section 2 </strong></p>
+    <p><strong>Questions 15-20</strong></p>
+    <p>Read the information below and answer Questions <strong>15-20</strong></p>
+    <p>Do the following statements agree with the information given in the text on the previous page?</p>
+    <p>In boxes 15-20 on your answer sheet, write</p>
+    <p><strong>TRUE</strong> if the statement agrees with the information</p>
+    <p><strong>FALSE</strong> if the statement contradicts the information</p>
+    <p><strong>NOT GIVEN</strong> if there is no information on this</p>
+    <p>15. A mistake equally common across all types of employee is the premature acceptance of the first offer for a pay rise. BLANK 1 of 6</p>
+    <p>16. Employees can become demoralised despite having a pay raise. BLANK 2 of 6</p>
+    <p>17. Many people are unsuccessful in salary discussions because of poor research. BLANK 3 of 6</p>
+    <p>18. It is important to clearly state what pay rise is expected at the beginning of the negotiation. BLANK 4 of 6</p>
+    <p>19. A negotiation could include a discussion of other benefits as well as salary. BLANK 5 of 6</p>
+    <p>20. You should avoid a pay negotiation when the employment market is not strong. BLANK 6 of 6</p>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<p><strong>Negotiating a pay rise</strong></p>
+<p>For many people, one of the hardest discussions they have with senior management is about a raise in pay. Employees often choose to look for a better paid position within another company rather than face their own boss, but that is a situation that can have a negative impact on the employee (who is seen to lack loyalty to the company) and the employer (who stands to lose a trained staff member who works well and has a good knowledge of the company). However, there are some salary negotiation tactics that might just help.</p>
+<p>The most common error is, when finally gathering the courage to address the situation, many employees simply immediately accept whatever offer is first made. Research shows that younger job-seekers and female job-seekers often make this mistake – either from not completely understanding the negotiation process or from a dislike or discomfort with the idea of negotiating. There is, of course, the financial aspect of not receiving a higher compensation, but more importantly this can have a significant effect on motivation and morale and can eventually lead an employee who hastily accepted an inadequate offer to begin to resent both the job and the employer.</p>
+<p>Another common error is rating your required raise based on a value you personally need or would like. Few employers care whether you have enough money to pay for your mortgage or other bills, so negotiations should be based on your value to the company, based on good research of similar companies. Also, if possible, the actual figure aimed for in the negotiation should not be revealed until the last possible moment, giving as much flexibility as possible. Immediately blurting out a figure it then becomes clear the company will not meet puts both the employer and employee in an uncomfortable position.<br>
+    As previously mentioned, one of the key factors in a successful salary negotiation is research and preparation. With the number and variety of salary resources available online — from salary.com and salaryexpert.com to professional associations – there should be no reason not to have an accurate market value in mind.</p>
+<p>However, despite all the preparation and right attitude in the negotiation, there is another pitfall – declining an offer too quickly as it was lower than expected. A careful balance needs to be struck here; we have looked at the risks of accepting too quickly, but declining an offer can mean that the negotiation has nowhere to go. There are two points to consider at this juncture: a raise can also come in the form of other benefits such as better health cover, so if the money offered is low, think about discussing the perks of the job. The second point is that you have to be realistic – if the job market is low and the company is not having a particularly outstanding year, you may have to accept a lower offer. However, if this is the case, it is common to request a review of the salary at a time in the not-too-distant future.</p>
+<p>The final point that is essential in any business negotiation is not to take any rejection or low offers personally. Employees should maintain a professional approach to their job, and a salary negotiation is no exception. If negotiations break down between you and the employer, move on graciously, thanking the employer again for the opportunity — because you never want to burn any bridges.</p>
+<p></p></div>
+<div class="ito-scroll-box">
+<p><strong>Section 2 </strong></p>
+<p><strong>Questions 15-20</strong></p>
+<p>Read the information below and answer Questions <strong>15-20</strong></p>
+<p>Do the following statements agree with the information given in the text on the previous page?</p>
+<p>In boxes 15-20 on your answer sheet, write</p>
+<p><strong>TRUE</strong> if the statement agrees with the information</p>
+<p><strong>FALSE</strong> if the statement contradicts the information</p>
+<p><strong>NOT GIVEN</strong> if there is no information on this</p>
+<p>15. A mistake equally common across all types of employee is the premature acceptance of the first offer for a pay rise. <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>16. Employees can become demoralised despite having a pay raise. <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>17. Many people are unsuccessful in salary discussions because of poor research. <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>18. It is important to clearly state what pay rise is expected at the beginning of the negotiation. <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>19. A negotiation could include a discussion of other benefits as well as salary. <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p>20. You should avoid a pay negotiation when the employment market is not strong. <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></p>
+<p></p></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="display: none;">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints"></span>
+										 / 6										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="display: none;" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints"></span> / 6									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1459,&quot;question_post_id&quot;:71970069}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>5</span> of <span>6</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>5</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1459">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1459" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <p align="center"><strong>6 Rules for writing a successful cover letter</strong></p>
+    <p><strong>Rule #1</strong><br>
+    The first rule of most job applications is simple –never send your CV without a cover letter. Without it, your application will seem unprofessional and unprepared, and equally importantly, you will miss out on an opportunity to start ‘selling’ your abilities and qualifications to the potential employer.</p>
+    <p><strong>Rule #2</strong><br>
+    When starting your cover letter, it is important to address it to a named individual rather than a general salutation like ‘Dear Sir or Madam’. It is, of course, very important that your cover letter is tailored specifically for the position you are applying for – sending an almost identical cover letter and CV to 10 employers is less likely to success than specifically targeting 2 or 3 and adapting your application to highlight the key features you feel are most relevant for the position.</p>
+    <p><strong>Rule #3</strong><br>
+    From there, the next step is the first paragraph, and this is the point at which employers often make the crucial decision whether to consider your application or reject it. Avoid beginning with a standard, non-specific phrase such as ‘I am writing with regard the position advertised in…’; instead, try to be a little more dynamic – ‘My experience in the service industry offers much to a company that seeks motivated individuals in its employment, and am eager to put my solid education to work in a position such as the one you advertised in ..’. Obvious statements such as ‘Please find my CV enclosed’ written in a cover letter should also be avoided – the potential employer will be well aware of what has been enclosed. In total, the cover letter should never spill on to a second page – if it does, then you haven’t been succinct enough.</p>
+    <p><strong>Rule #4</strong><br>
+    In your letter, your aim should be to highlight the areas in which the company would benefit from having you as an employee; make sure that you don’t make the mistake of writing about how the job would be of benefit to you. For example, ‘I feel that working for such a dynamic company would suit my personality’ would be better phrased as ‘I feel that I could contribute to such a dynamic company.’</p>
+    <p><strong>Rule #5</strong><br>
+    Other points to bear in mind about your letter are that you should always avoid negativity in any form, and make sure you have included a number of ways that the employer can contact you, even if that same information is on your CV. The more work you make the employer do to offer you the job, the less inclined they may be to actually offer it. When you have finished your cover letter, read it again carefully (ideally, ask a friend to read it as you might not notice typographical or grammatical errors you have made). Once that’s done, make sure that you sign the letter by hand, preferably in blue ink to stand out from darker, printed text.</p>
+    <p><strong>Rule #6</strong><br>
+    The final point is that if you are serious about applying for the position and are keen to get an interview, you should take the initiative in your letter and tell the employer that you will follow up. Opinions vary, but it is generally acceptable to call 3 days after sending the CV, without necessarily waiting for the closing date for applications.</p>
+  </div>
+  <div class="ito-scroll-box">
+    <p><strong>Questions 21-27</strong></p>
+    <p>For which rules are the following statements true?</p>
+    <p>Write the correct letter <strong>A-F</strong> in boxes <strong>21 – 27</strong> on your answer sheet.</p>
+    <p>NB You may use any letter more than once.</p>
+    <ol style="list-style-type: upper-alpha" type="A">
+      <li>Rule #1</li>
+      <li>Rule #2</li>
+      <li>Rule #3</li>
+      <li>Rule #4</li>
+      <li>Rule #5</li>
+      <li>Rule #6</li>
+    </ol>
+    <ol start="21">
+      <li>Simplify for the employer BLANK 1 of 6</li>
+      <li>Don’t use redundant phrases BLANK 2 of 6</li>
+      <li>Avoid generalisations BLANK 3 of 6</li>
+      <li>Highlight your abilities to your employer BLANK 4 of 6</li>
+      <li>Focus on the employer BLANK 5 of 6</li>
+      <li>Keep it concise BLANK 6 of 6</li>
+    </ol>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<p align="center"><strong>6 Rules for writing a successful cover letter</strong></p>
+<p><strong>Rule #1</strong><br>
+    The first rule of most job applications is simple –never send your CV without a cover letter. Without it, your application will seem unprofessional and unprepared, and equally importantly, you will miss out on an opportunity to start ‘selling’ your abilities and qualifications to the potential employer.</p>
+<p><strong>Rule #2</strong><br>
+    When starting your cover letter, it is important to address it to a named individual rather than a general salutation like ‘Dear Sir or Madam’. It is, of course, very important that your cover letter is tailored specifically for the position you are applying for – sending an almost identical cover letter and CV to 10 employers is less likely to success than specifically targeting 2 or 3 and adapting your application to highlight the key features you feel are most relevant for the position.</p>
+<p><strong>Rule #3</strong><br>
+    From there, the next step is the first paragraph, and this is the point at which employers often make the crucial decision whether to consider your application or reject it. Avoid beginning with a standard, non-specific phrase such as ‘I am writing with regard the position advertised in…’; instead, try to be a little more dynamic – ‘My experience in the service industry offers much to a company that seeks motivated individuals in its employment, and am eager to put my solid education to work in a position such as the one you advertised in ..’. Obvious statements such as ‘Please find my CV enclosed’ written in a cover letter should also be avoided – the potential employer will be well aware of what has been enclosed. In total, the cover letter should never spill on to a second page – if it does, then you haven’t been succinct enough.</p>
+<p><strong>Rule #4</strong><br>
+    In your letter, your aim should be to highlight the areas in which the company would benefit from having you as an employee; make sure that you don’t make the mistake of writing about how the job would be of benefit to you. For example, ‘I feel that working for such a dynamic company would suit my personality’ would be better phrased as ‘I feel that I could contribute to such a dynamic company.’</p>
+<p><strong>Rule #5</strong><br>
+    Other points to bear in mind about your letter are that you should always avoid negativity in any form, and make sure you have included a number of ways that the employer can contact you, even if that same information is on your CV. The more work you make the employer do to offer you the job, the less inclined they may be to actually offer it. When you have finished your cover letter, read it again carefully (ideally, ask a friend to read it as you might not notice typographical or grammatical errors you have made). Once that’s done, make sure that you sign the letter by hand, preferably in blue ink to stand out from darker, printed text.</p>
+<p><strong>Rule #6</strong><br>
+    The final point is that if you are serious about applying for the position and are keen to get an interview, you should take the initiative in your letter and tell the employer that you will follow up. Opinions vary, but it is generally acceptable to call 3 days after sending the CV, without necessarily waiting for the closing date for applications.</p>
+<p></p></div>
+<div class="ito-scroll-box">
+<p><strong>Questions 21-27</strong></p>
+<p>For which rules are the following statements true?</p>
+<p>Write the correct letter <strong>A-F</strong> in boxes <strong>21 – 27</strong> on your answer sheet.</p>
+<p>NB You may use any letter more than once.</p>
+<ol style="list-style-type: upper-alpha;" type="A">
+<li>Rule #1</li>
+<li>Rule #2</li>
+<li>Rule #3</li>
+<li>Rule #4</li>
+<li>Rule #5</li>
+<li>Rule #6</li>
+</ol>
+<ol start="21">
+<li>Simplify for the employer <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></li>
+<li>Don’t use redundant phrases <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></li>
+<li>Avoid generalisations <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></li>
+<li>Highlight your abilities to your employer <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></li>
+<li>Focus on the employer <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></li>
+<li>Keep it concise <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6"> <span class="wpProQuiz_clozeCorrect" style="display: none;"></span></span></label></li>
+</ol></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="display: none;">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints"></span>
+										 / 6										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="display: none;" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints"></span> / 6									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1460,&quot;question_post_id&quot;:71970070}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>6</span> of <span>6</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>6</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1460">
+						<p>&nbsp;</p>

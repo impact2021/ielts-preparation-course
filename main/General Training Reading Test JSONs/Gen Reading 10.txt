@@ -1,0 +1,611 @@
+<strong>Read the texts and answer the questions. Type your answers in the spaces provided.</strong></span></p>
+					</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1726" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<p class="style1" style="text-align: center"><strong>WWW.TRADE WITH ME.COM</strong></p>
+
+<ol style="list-style-type: upper-alpha" type="A">
+ 	<li><span class="style1">For sale: iPhone X. In very good condition without protective rubber case. Headphones are gone but otherwise in perfect working order. Looking for £150 but willing to accept offers.</span></li>
+ 	<li><span class="style1">52 inch flat screen LCD television for sale. Small scratch on the top but the screen is OK. Have to sell because I am leaving the country, so will consider any offer.</span></li>
+ 	<li><span class="style1">Playstation games (20 different games). Brand new, in box with manuals. Unwanted gift. All reasonable offers considered.</span></li>
+ 	<li><span class="style1">For sale – complete dining room set (6 chairs and table). In reasonable condition although may need repainting. Table can fold for storage. Buyer will need to collect. £250 (price is non-negotiable)</span></li>
+ 	<li><span class="style1">Zanussi Fridge Freezer. 1.6 metres tall. Four years old. Motor still works but door is not sealing closed (will need new seal). Free to anyone willing to collect.</span></li>
+ 	<li><span class="style1">Wanted: cheap laptop computer. Doesn’t need to be in very good condition so long as it works. Needed for word processing and surfing the internet, but not much more. Willing to pay up to £200 for the right machine. Must have all cables and accessories, as well as a carry bag.</span></li>
+ 	<li><span class="style1">Boat trailer needed. Must be able to take small boat (2 metres long).&nbsp; Must be in good condition with no rust or damage. Will pay up to £250 depending on size. I can collect from anywhere in the country.</span></li>
+ 	<li><span class="style1">I am looking for any antique figurines from the Lladro collection. Will pay a good price for any authentic pieces in good condition. We will come to you to evaluate any piece that you are interested in selling, but please send a photograph of the figurine first. </span></li>
+</ol>
+</div>
+</div>
+</div>
+<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<p class="style1"><strong>Section 1
+</strong></p>
+
+<div id="text" class="style1">
+
+<em><strong>Questions 1 – 7</strong></em>
+
+Classify the following as relating to which advertisement.
+
+Write A-H in your answer sheet. Use each advert once only.
+
+The advertiser…
+<ol>
+ 	<li>…is willing to travel after they have seen the item. BLANK 1 of 7</li>
+ 	<li>…does not require payment BLANK 2 of 7</li>
+ 	<li>…is selling something they were given BLANK 3 of 7</li>
+ 	<li>…is selling because they are relocating BLANK 4 of 7</li>
+ 	<li>…is missing an accessory BLANK 5 of 7</li>
+ 	<li>…is not willing to change their price BLANK 6 of 7</li>
+ 	<li>…is indifferent to the condition of the item BLANK 7 of 7</li>
+</ol>
+</div>
+</div>											</legend>
+
+											<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<p class="style1" style="text-align: center"><strong>WWW.TRADE WITH ME.COM</strong></p>
+<ol style="list-style-type: upper-alpha" type="A">
+<li><span class="style1">For sale: iPhone X. In very good condition without protective rubber case. Headphones are gone but otherwise in perfect working order. Looking for £150 but willing to accept offers.</span></li>
+<li><span class="style1">52 inch flat screen LCD television for sale. Small scratch on the top but the screen is OK. Have to sell because I am leaving the country, so will consider any offer.</span></li>
+<li><span class="style1">Playstation games (20 different games). Brand new, in box with manuals. Unwanted gift. All reasonable offers considered.</span></li>
+<li><span class="style1">For sale – complete dining room set (6 chairs and table). In reasonable condition although may need repainting. Table can fold for storage. Buyer will need to collect. £250 (price is non-negotiable)</span></li>
+<li><span class="style1">Zanussi Fridge Freezer. 1.6 metres tall. Four years old. Motor still works but door is not sealing closed (will need new seal). Free to anyone willing to collect.</span></li>
+<li><span class="style1">Wanted: cheap laptop computer. Doesn’t need to be in very good condition so long as it works. Needed for word processing and surfing the internet, but not much more. Willing to pay up to £200 for the right machine. Must have all cables and accessories, as well as a carry bag.</span></li>
+<li><span class="style1">Boat trailer needed. Must be able to take small boat (2 metres long).&nbsp; Must be in good condition with no rust or damage. Will pay up to £250 depending on size. I can collect from anywhere in the country.</span></li>
+<li><span class="style1">I am looking for any antique figurines from the Lladro collection. Will pay a good price for any authentic pieces in good condition. We will come to you to evaluate any piece that you are interested in selling, but please send a photograph of the figurine first. </span></li>
+</ol>
+</div>
+</div>
+</div>
+<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<p class="style1"><strong>Section 1<br>
+</strong></p>
+<div id="text" class="style1">
+<p><em><strong>Questions 1 – 7</strong></em></p>
+<p>Classify the following as relating to which advertisement.</p>
+<p>Write A-H in your answer sheet. Use each advert once only.</p>
+<p>The advertiser…</p>
+<ol>
+<li>…is willing to travel after they have seen the item. <label><span class="screen-reader-text">Fill in the blank 1 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(h)</span></span></span></label></li>
+<li>…does not require payment <label><span class="screen-reader-text">Fill in the blank 2 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(e)</span></span></span></label></li>
+<li>…is selling something they were given <label><span class="screen-reader-text">Fill in the blank 3 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(c)</span></span></span></label></li>
+<li>…is selling because they are relocating <label><span class="screen-reader-text">Fill in the blank 4 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(b)</span></span></span></label></li>
+<li>…is missing an accessory <label><span class="screen-reader-text">Fill in the blank 5 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(a)</span></span></span></label></li>
+<li>…is not willing to change their price <label><span class="screen-reader-text">Fill in the blank 6 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(d)</span></span></span></label></li>
+<li>…is indifferent to the condition of the item <label><span class="screen-reader-text">Fill in the blank 7 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(f)</span></span></span></label></li>
+</ol>
+</div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 7										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 7									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><p>1. H (We will come to you to evaluate any piece …send a photograph of the figurine first)<br>
+2. E (Free to anyone willing to collect.)<br>
+3. C (unwanted gift)<br>
+4. B (Have to sell because I am leaving the country)<br>
+5. A (Headphones are gone but otherwise in perfect working order)<br>
+6. D (price is non-negotiable)<br>
+7. F (Doesn’t need to be in very good condition)</p>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1727,&quot;question_post_id&quot;:71970438}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>2</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>2</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1727">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1727" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<p style="text-align: center"><strong>GREAT BARRIER TOURISM INFO</strong></p>
+<em><strong>Great Barrier Island water taxis</strong></em>
+
+Wharf to wharf at a time that suits you – 24 hours a day, 7 days a week, 365 days of the year. Great Barrier water taxis can take you from the main harbour to any of the local marinas for a set fee using our on-demand service – you call us and tell us when you want to leave and where you want to go, and we’ll be there. Our fleet of safe, high speed and comfortable Water Taxis are driven by professional skippers who have years of local experience.
+
+<em><strong>Fishing charter</strong></em>
+
+Unlike road taxis, we can deliver you to more than just your final destination – we service the Hauraki Gulf so can drop you on one of the secret, secluded beaches or perfect fishing spots. Catch your own fish for dinner!&nbsp; The clean and sparkling blue waters in the local area are abundant with sea life, and our knowledgeable skippers can guarantee you won’t return empty handed. Fishing charters are aboard our high speed boat, comfortable for a maximum of 4 people. A half-day fishing charter costs $275, which includes fuel and skipper.
+
+<em><strong>Harbour tours</strong></em>
+
+We also offer the best in harbour tours, taking you from the Great Barrier wharf to all the places of interest. Get perfect views of the city, as well as the harbour bridge, before setting off to the see the internationally famous Dorin Cliffs. From here we sail to Westhaven Marina, one of the largest marinas in the southern hemisphere and home to a wide range of pleasure boats of all shapes and sizes. Then on to Golden Sands beach before returning to the wharf via the Marble, a stunning rock formation that can’t be seen without a boat. The whole trip takes two hours, with an option to stop at Golden Sands beach and catch the next water taxi back to the wharf. The harbour tour costs $45 per person and includes tea, coffee and light snacks.
+
+</div>
+</div>
+</div>
+</div>
+<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+<p class="style1"><em><strong>Questions 8 – 14</strong></em></p>
+<em>Answer the questions below using <strong>NO MORE THAN THREE WORDS </strong> from the passage for each answer.</em>
+
+<em>Type your in boxes 8 – 14 on your answer sheet.</em>
+<ol start="8">
+ 	<li>The cost to visit any of the local BLANK 1 of 7 is fixed.</li>
+ 	<li>You can book a water taxi using their BLANK 2 of 7</li>
+ 	<li>You can go fishing or spend some time on little known BLANK 3 of 7</li>
+ 	<li>The driver and the cost of&nbsp; BLANK 4 of 7 are included in the half day fishing trip.</li>
+ 	<li>The Harbour tour includes a visit to the world renowned BLANK 5 of 7.</li>
+ 	<li>The last thing passengers can see on the Harbour tour before going back to the wharf is BLANK 6 of 7.</li>
+ 	<li>The harbour trip costs $45 and includes drinks and BLANK 7 of 7.</li>
+</ol>
+</div>
+</div>											</legend>
+
+											<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<p style="text-align: center"><strong>GREAT BARRIER TOURISM INFO</strong></p>
+<p><em><strong>Great Barrier Island water taxis</strong></em></p>
+<p>Wharf to wharf at a time that suits you – 24 hours a day, 7 days a week, 365 days of the year. Great Barrier water taxis can take you from the main harbour to any of the local marinas for a set fee using our on-demand service – you call us and tell us when you want to leave and where you want to go, and we’ll be there. Our fleet of safe, high speed and comfortable Water Taxis are driven by professional skippers who have years of local experience.</p>
+<p><em><strong>Fishing charter</strong></em></p>
+<p>Unlike road taxis, we can deliver you to more than just your final destination – we service the Hauraki Gulf so can drop you on one of the secret, secluded beaches or perfect fishing spots. Catch your own fish for dinner!&nbsp; The clean and sparkling blue waters in the local area are abundant with sea life, and our knowledgeable skippers can guarantee you won’t return empty handed. Fishing charters are aboard our high speed boat, comfortable for a maximum of 4 people. A half-day fishing charter costs $275, which includes fuel and skipper.</p>
+<p><em><strong>Harbour tours</strong></em></p>
+<p>We also offer the best in harbour tours, taking you from the Great Barrier wharf to all the places of interest. Get perfect views of the city, as well as the harbour bridge, before setting off to the see the internationally famous Dorin Cliffs. From here we sail to Westhaven Marina, one of the largest marinas in the southern hemisphere and home to a wide range of pleasure boats of all shapes and sizes. Then on to Golden Sands beach before returning to the wharf via the Marble, a stunning rock formation that can’t be seen without a boat. The whole trip takes two hours, with an option to stop at Golden Sands beach and catch the next water taxi back to the wharf. The harbour tour costs $45 per person and includes tea, coffee and light snacks.</p>
+</div>
+</div>
+</div>
+</div>
+<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+<p class="style1"><em><strong>Questions 8 – 14</strong></em></p>
+<p><em>Answer the questions below using <strong>NO MORE THAN THREE WORDS </strong> from the passage for each answer.</em></p>
+<p><em>Type your in boxes 8 – 14 on your answer sheet.</em></p>
+<ol start="8">
+<li>The cost to visit any of the local <label><span class="screen-reader-text">Fill in the blank 1 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="7" type="text" value="" size="7" maxlength="12" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(marinas,marina)</span></span></span></label> is fixed.</li>
+<li>You can book a water taxi using their <label><span class="screen-reader-text">Fill in the blank 2 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="18" type="text" value="" size="18" maxlength="23" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(on-demand service,on demand service,on -demand service,on- demand service)</span></span></span></label></li>
+<li>You can go fishing or spend some time on little known <label><span class="screen-reader-text">Fill in the blank 3 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="16" type="text" value="" size="16" maxlength="21" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(secluded beaches,beaches)</span></span></span></label></li>
+<li>The driver and the cost of&nbsp; <label><span class="screen-reader-text">Fill in the blank 4 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(fuel)</span></span></span></label> are included in the half day fishing trip.</li>
+<li>The Harbour tour includes a visit to the world renowned <label><span class="screen-reader-text">Fill in the blank 5 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="12" type="text" value="" size="12" maxlength="17" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(dorin cliffs)</span></span></span></label>.</li>
+<li>The last thing passengers can see on the Harbour tour before going back to the wharf is <label><span class="screen-reader-text">Fill in the blank 6 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="10" type="text" value="" size="10" maxlength="15" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(the marble)</span></span></span></label>.</li>
+<li>The harbour trip costs $45 and includes drinks and <label><span class="screen-reader-text">Fill in the blank 7 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="12" type="text" value="" size="12" maxlength="17" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(light snacks,snacks)</span></span></span></label>.</li>
+</ol>
+</div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 7										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 7									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><ol start="8">
+<li>Marinas – ‘to any of the local marinas for a set fee’</li>
+<li>On demand service – ‘using our on-demand service’</li>
+<li>secluded beaches / beaches – ‘…drop you on one of the secret, secluded beaches or perfect fishing spots.’</li>
+<li>Fuel – ‘A half-day fishing charter costs $275, which includes fuel and skipper’</li>
+<li>Dorin Cliffs – ‘see the internationally famous Dorin Cliffs’</li>
+<li>The Marble – ‘Then on to Golden Sands beach before returning to the wharf via the Marble’</li>
+<li>Light snacks – ‘The harbour tour costs $45 per person and includes tea, coffee and light snacks’</li>
+</ol>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1728,&quot;question_post_id&quot;:71970439}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>3</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>3</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1728">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1728" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+<div id="text" class="style1">
+
+Grievance procedures
+
+A good contract that clearly lays out the terms and conditions of employment is essential in reducing frictions and grievances in the workplaces. However, there are times when despite the most comprehensive contract, disagreements can arise between employer and employee. A key element in reducing the impact of such problems is often the establishment of a formal grievance procedure – a standardized set of procedures to follow when someone has a complaint or a grievance. This needs to be clearly laid out at the outset of any working relationship.
+
+For grievance procedures to be effective, both the employer and the employee should see them as positive, a method of facilitating the open discussion of areas that could possibly cause ill feeling. When managed poorly, grievance procedures, even when only laid out in a contract and not actually being used, can create a feeling amongst employees that the employer is not offering support, but is instead protecting their interests through legal means. Even further, some employees are hesitant to use the grievance process out of fear of recrimination. Some studies have shown that employees who raise grievances tend to have lower performance evaluations, promotion rates, and work attendance afterwards. This suggests that some employers may retaliate against employees who raise complaints. It is vital that a company’s grievance procedures include steps to prevent a backlash against those who choose to use them.
+
+From the manager’s side, when an employee raises a grievance, it can be perceived as lack of managerial capability, causing the manager to overreact at the perceived suggestion that they have done something unfair or unethical to require the grievance at all.
+
+There are two key factors in establishing a workable grievance procedure. The first is the concept of a progression of levels at which a given complaint may be handled. Typically this begins with a step that provides for rapid and informal addressing of a complaint by those immediately involved, with appeals to successively higher levels of management or other representatives possible in the event that lower-level resolution doesn’t work. The second factor is the availability of an alternative procedure, to be used if several successive attempts at negotiation have failed. Typically this will be mediation – negotiation with a third party – or arbitration – the introduction of a neutral party to preside over discussions.
+Many grievances can be resolved quickly by correcting a misunderstanding, or with a simple negotiation. In this case the grievance procedure saves time, money, and the relationship between the parties. Having the issue handled by those immediately involved is a benefit as well, as they know more about the problem at hand than do people at higher levels.
+
+However, a given grievance may involve a more difficult issue, or one or more of the parties may refuse to settle with a simple negotiation. The availability of appeals to a higher level not only provides an end to what might otherwise become frustrating and obstinate refusal to compromise, but often serves to remind a given representative at any level that reasonableness at this stage will eliminate the need for review of his or her actions by someone higher up. By limiting the time allotted to each step of the grievance process, neither party can stall the process indefinitely.
+
+In the event that the parties have discussed the matter internally at all levels provided in the procedure and are still unable to come to satisfactory solution, it is important that the mediator or arbitrator select has been agreed upon by both parties. The arbitrator or mediator should be familiar with the industry concerned, and should have access to a set of standards against which the reasonableness of proposals made in grievance negotiations can be measured. Previous arbitrators’ decisions (generally known as “awards”) are indexed and published, meaning that the intermediary has access to previous cases in order to make as informed a decision as possible.
+
+</div>
+</div>
+</div>
+<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<p class="style1"><strong>Section 2
+</strong></p>
+
+<div id="text" class="style1">
+
+<em><strong>Question 15 – 19</strong></em>
+
+<em>Choose the correct letter, <strong>A, B, C or D.</strong></em>
+
+<em>Write your answer in box <strong>15 – 19</strong> on your answer sheet.</em>
+
+15. Employee grievances
+<ol style="list-style-type: upper-alpha" type="A">
+ 	<li>are avoided by a carefully worded contract.</li>
+ 	<li>can be minimised by having a clear procedure.</li>
+ 	<li>are often seen as positive.</li>
+ 	<li>must be responded to formally.</li>
+</ol>
+15. BLANK 1 of 5
+
+16. The establishment of&nbsp; a grievance process
+<ol style="list-style-type: upper-alpha" type="A">
+ 	<li>often leads to friction.</li>
+ 	<li>can lead employees to feel victimised.</li>
+ 	<li>needs to be put in place at the beginning of a working relationship.</li>
+ 	<li>give the company the appearance of not being supportive.</li>
+</ol>
+16. BLANK 2 of 5
+
+17. A grievance
+<ol style="list-style-type: upper-alpha" type="A">
+ 	<li>should first be addressed by those concerned.</li>
+ 	<li>can be mistaken for a lack of ability from the employee.</li>
+ 	<li>should go directly to senior management.</li>
+ 	<li>can only be raised at a management level.</li>
+</ol>
+17. BLANK 3 of 5
+
+18. Resolutions to grievances
+<ol style="list-style-type: upper-alpha" type="A">
+ 	<li>need to be negotiated with a third party.</li>
+ 	<li>can often be found by clearing up a point of confusion.</li>
+ 	<li>are better found by senior management.</li>
+ 	<li>have a high cost.</li>
+</ol>
+18. BLANK 4 of 5
+
+19. Mediators or arbitrators can help resolve a difficult grievance because
+<ol style="list-style-type: upper-alpha" type="A">
+ 	<li>they have more knowledge of the problem.</li>
+ 	<li>awards given are normally higher.</li>
+ 	<li>they have a time limit in place.</li>
+ 	<li>they are commonly selected by agreement from both parties.</li>
+</ol>
+19. BLANK 5 of 5
+
+</div>
+</div>											</legend>
+
+											<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<p>Grievance procedures</p>
+<p>A good contract that clearly lays out the terms and conditions of employment is essential in reducing frictions and grievances in the workplaces. However, there are times when despite the most comprehensive contract, disagreements can arise between employer and employee. A key element in reducing the impact of such problems is often the establishment of a formal grievance procedure – a standardized set of procedures to follow when someone has a complaint or a grievance. This needs to be clearly laid out at the outset of any working relationship.</p>
+<p>For grievance procedures to be effective, both the employer and the employee should see them as positive, a method of facilitating the open discussion of areas that could possibly cause ill feeling. When managed poorly, grievance procedures, even when only laid out in a contract and not actually being used, can create a feeling amongst employees that the employer is not offering support, but is instead protecting their interests through legal means. Even further, some employees are hesitant to use the grievance process out of fear of recrimination. Some studies have shown that employees who raise grievances tend to have lower performance evaluations, promotion rates, and work attendance afterwards. This suggests that some employers may retaliate against employees who raise complaints. It is vital that a company’s grievance procedures include steps to prevent a backlash against those who choose to use them.</p>
+<p>From the manager’s side, when an employee raises a grievance, it can be perceived as lack of managerial capability, causing the manager to overreact at the perceived suggestion that they have done something unfair or unethical to require the grievance at all.</p>
+<p>There are two key factors in establishing a workable grievance procedure. The first is the concept of a progression of levels at which a given complaint may be handled. Typically this begins with a step that provides for rapid and informal addressing of a complaint by those immediately involved, with appeals to successively higher levels of management or other representatives possible in the event that lower-level resolution doesn’t work. The second factor is the availability of an alternative procedure, to be used if several successive attempts at negotiation have failed. Typically this will be mediation – negotiation with a third party – or arbitration – the introduction of a neutral party to preside over discussions.<br>
+Many grievances can be resolved quickly by correcting a misunderstanding, or with a simple negotiation. In this case the grievance procedure saves time, money, and the relationship between the parties. Having the issue handled by those immediately involved is a benefit as well, as they know more about the problem at hand than do people at higher levels.</p>
+<p>However, a given grievance may involve a more difficult issue, or one or more of the parties may refuse to settle with a simple negotiation. The availability of appeals to a higher level not only provides an end to what might otherwise become frustrating and obstinate refusal to compromise, but often serves to remind a given representative at any level that reasonableness at this stage will eliminate the need for review of his or her actions by someone higher up. By limiting the time allotted to each step of the grievance process, neither party can stall the process indefinitely.</p>
+<p>In the event that the parties have discussed the matter internally at all levels provided in the procedure and are still unable to come to satisfactory solution, it is important that the mediator or arbitrator select has been agreed upon by both parties. The arbitrator or mediator should be familiar with the industry concerned, and should have access to a set of standards against which the reasonableness of proposals made in grievance negotiations can be measured. Previous arbitrators’ decisions (generally known as “awards”) are indexed and published, meaning that the intermediary has access to previous cases in order to make as informed a decision as possible.</p>
+</div>
+</div>
+</div>
+<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<p class="style1"><strong>Section 2<br>
+</strong></p>
+<div id="text" class="style1">
+<p><em><strong>Question 15 – 19</strong></em></p>
+<p><em>Choose the correct letter, <strong>A, B, C or D.</strong></em></p>
+<p><em>Write your answer in box <strong>15 – 19</strong> on your answer sheet.</em></p>
+<p>15. Employee grievances</p>
+<ol style="list-style-type: upper-alpha" type="A">
+<li>are avoided by a carefully worded contract.</li>
+<li>can be minimised by having a clear procedure.</li>
+<li>are often seen as positive.</li>
+<li>must be responded to formally.</li>
+</ol>
+<p>15. <label><span class="screen-reader-text">Fill in the blank 1 of 5</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(b)</span></span></span></label></p>
+<p>16. The establishment of&nbsp; a grievance process</p>
+<ol style="list-style-type: upper-alpha" type="A">
+<li>often leads to friction.</li>
+<li>can lead employees to feel victimised.</li>
+<li>needs to be put in place at the beginning of a working relationship.</li>
+<li>give the company the appearance of not being supportive.</li>
+</ol>
+<p>16. <label><span class="screen-reader-text">Fill in the blank 2 of 5</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(c)</span></span></span></label></p>
+<p>17. A grievance</p>
+<ol style="list-style-type: upper-alpha" type="A">
+<li>should first be addressed by those concerned.</li>
+<li>can be mistaken for a lack of ability from the employee.</li>
+<li>should go directly to senior management.</li>
+<li>can only be raised at a management level.</li>
+</ol>
+<p>17. <label><span class="screen-reader-text">Fill in the blank 3 of 5</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(a)</span></span></span></label></p>
+<p>18. Resolutions to grievances</p>
+<ol style="list-style-type: upper-alpha" type="A">
+<li>need to be negotiated with a third party.</li>
+<li>can often be found by clearing up a point of confusion.</li>
+<li>are better found by senior management.</li>
+<li>have a high cost.</li>
+</ol>
+<p>18. <label><span class="screen-reader-text">Fill in the blank 4 of 5</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(b)</span></span></span></label></p>
+<p>19. Mediators or arbitrators can help resolve a difficult grievance because</p>
+<ol style="list-style-type: upper-alpha" type="A">
+<li>they have more knowledge of the problem.</li>
+<li>awards given are normally higher.</li>
+<li>they have a time limit in place.</li>
+<li>they are commonly selected by agreement from both parties.</li>
+</ol>
+<p>19. <label><span class="screen-reader-text">Fill in the blank 5 of 5</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(d)</span></span></span></label></p>
+</div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 5										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 5									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><ol start="15">
+<li>B – ‘A key element in reducing the impact of such problems is often the establishment of a formal grievance procedure – a standardized set of procedures to follow’</li>
+<li>C – ‘This needs to be clearly laid out at the outset of any working relationship.’</li>
+<li>A – ‘Having the issue handled by those immediately involved is a benefit as well,’</li>
+<li>B – ‘Many grievances can be resolved quickly by correcting a misunderstanding’</li>
+<li>D – ‘it is important that the mediator or arbitrator select has been agreed upon by both parties.’</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1729,&quot;question_post_id&quot;:71970440}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>4</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>4</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1729">
+						<p>&nbsp;</p>
+					</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1729" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<h3>Job advertising</h3>
+It can be useful to think of a job advertisement as a function of advertising. The job is your product; the readers of the job advert are your potential customers. Job adverts and recruitment processes should follow the traditional AIDA selling format: Attention, Interest, Desire and Action. This means that good job advertisements must first attract attention (from appropriate job-seekers); attract relevant interest (by establishing relevance in the minds of the ideal candidates); create desire (to pursue what looks like a great opportunity), and finally provide a clear instruction for the next action or response.
+
+Unfortunately for those recruiting, these simple steps are often lost in the process of writing, designing and placing a job advertisement. A quick glance on a Sunday morning through almost any of the main broadsheet newspapers will demonstrate perhaps the most common mistake – the layout of the advert. Too many different font styles, logos or other graphics and layouts can be distracting, slowing the reader; smaller font styles, when combined with the generally low quality paper found in newspapers, mean that some people can’t actually read the message at all. The same is true of using upper case letters lettering, a feature some mistakenly believe will make the reader keener to read what is written. The key to successful job advertising is to follow the ‘less is more’ approach. Keep your text to a minimum and, unless necessary, avoid too much technical depth. Keep enough space around the text to attract attention to it. Giving text some space is a very powerful way of attracting the eye, and also a way of ensuring the advert is written – and therefore can be read – efficiently.
+
+Obscure headlines that do not clearly communicate the nature of the position can also make many potential viable candidates give up and move to the next job advert. It is far more effective to use one simple headline, and make the job advert headline relevant and clear. Normally the logical headline is the job title itself – this is after all what people will be looking for. If the job title does not implicitly describe the job function, then use a subheading to do so. Better still, if you find yourself writing a job advert for a truly obscure job title which does not convey what the job function is, consider changing the job title.
+
+Another common error is trying to make your advertisement stand out by using irregular box sizes, or even half page or full page advertisements. The problem here is largely one of expectation – people become familiar with the general layout of the job advertisements and subconsciously dismiss shapes and sizes that do not conform to what has become accepted as ‘standard’.
+
+A useful point to keep in mind is that you are recruiting a person to do a job, so focus on attracting the person. It is common for many job adverts to aim solely on the job itself, with no specific direction towards the person. Refer to the reader as ‘you’ and use the second person (‘you’, ‘your’ and ‘yours’ etc) in the description of the requirements and expectations of the candidate and the job role. This helps people to visualise themselves in the role.
+
+</div>
+</div>
+</div>
+</div>
+<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+
+<em><strong>Questions 20 to 25</strong></em>
+
+Do the following statements agree with the information given in the reading passage?
+
+In boxes 20-25 on your answer sheet write
+
+<strong>TRUE</strong> if the statement agrees with the information
+
+<strong>FALSE</strong> if the statement contradicts the information
+
+<strong>NOT </strong><strong>GIVEN</strong> if there is no information on this
+<ol start="20">
+ 	<li>Writing a good job advertisement follows the common pattern for selling a product. BLANK 1 of 6<strong>
+</strong></li>
+ 	<li>The medium on which it is printed can affect the appearance of the advertisement. BLANK 2 of 6</li>
+ 	<li>Using upper case letters can make your message clearer to read. BLANK 3 of 6</li>
+ 	<li>The content should fill all of the advertising space. BLANK 4 of 6</li>
+ 	<li>Headings or subheadings should clearly define the job. BLANK 5 of 6</li>
+ 	<li>Readers often choose to ignore irregularly shaped advertisements. BLANK 6 of 6</li>
+</ol>
+</div>
+&nbsp;
+
+</div>											</legend>
+
+											<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<h3>Job advertising</h3>
+<p>It can be useful to think of a job advertisement as a function of advertising. The job is your product; the readers of the job advert are your potential customers. Job adverts and recruitment processes should follow the traditional AIDA selling format: Attention, Interest, Desire and Action. This means that good job advertisements must first attract attention (from appropriate job-seekers); attract relevant interest (by establishing relevance in the minds of the ideal candidates); create desire (to pursue what looks like a great opportunity), and finally provide a clear instruction for the next action or response.</p>
+<p>Unfortunately for those recruiting, these simple steps are often lost in the process of writing, designing and placing a job advertisement. A quick glance on a Sunday morning through almost any of the main broadsheet newspapers will demonstrate perhaps the most common mistake – the layout of the advert. Too many different font styles, logos or other graphics and layouts can be distracting, slowing the reader; smaller font styles, when combined with the generally low quality paper found in newspapers, mean that some people can’t actually read the message at all. The same is true of using upper case letters lettering, a feature some mistakenly believe will make the reader keener to read what is written. The key to successful job advertising is to follow the ‘less is more’ approach. Keep your text to a minimum and, unless necessary, avoid too much technical depth. Keep enough space around the text to attract attention to it. Giving text some space is a very powerful way of attracting the eye, and also a way of ensuring the advert is written – and therefore can be read – efficiently.</p>
+<p>Obscure headlines that do not clearly communicate the nature of the position can also make many potential viable candidates give up and move to the next job advert. It is far more effective to use one simple headline, and make the job advert headline relevant and clear. Normally the logical headline is the job title itself – this is after all what people will be looking for. If the job title does not implicitly describe the job function, then use a subheading to do so. Better still, if you find yourself writing a job advert for a truly obscure job title which does not convey what the job function is, consider changing the job title.</p>
+<p>Another common error is trying to make your advertisement stand out by using irregular box sizes, or even half page or full page advertisements. The problem here is largely one of expectation – people become familiar with the general layout of the job advertisements and subconsciously dismiss shapes and sizes that do not conform to what has become accepted as ‘standard’.</p>
+<p>A useful point to keep in mind is that you are recruiting a person to do a job, so focus on attracting the person. It is common for many job adverts to aim solely on the job itself, with no specific direction towards the person. Refer to the reader as ‘you’ and use the second person (‘you’, ‘your’ and ‘yours’ etc) in the description of the requirements and expectations of the candidate and the job role. This helps people to visualise themselves in the role.</p>
+</div>
+</div>
+</div>
+</div>
+<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+<p><em><strong>Questions 20 to 25</strong></em></p>
+<p>Do the following statements agree with the information given in the reading passage?</p>
+<p>In boxes 20-25 on your answer sheet write</p>
+<p><strong>TRUE</strong> if the statement agrees with the information</p>
+<p><strong>FALSE</strong> if the statement contradicts the information</p>
+<p><strong>NOT </strong><strong>GIVEN</strong> if there is no information on this</p>
+<ol start="20">
+<li>Writing a good job advertisement follows the common pattern for selling a product. <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label><strong><br>
+</strong></li>
+<li>The medium on which it is printed can affect the appearance of the advertisement. <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></li>
+<li>Using upper case letters can make your message clearer to read. <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(not given)</span></span></span></label></li>
+<li>The content should fill all of the advertising space. <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>Headings or subheadings should clearly define the job. <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></li>
+<li>Readers often choose to ignore irregularly shaped advertisements. <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+</ol>
+</div>
+<p>&nbsp;</p>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 6										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 6									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><ol start="20">
+<li>True (should follow the traditional AIDA selling format)</li>
+<li>True (with the generally low quality paper found in newspapers)</li>
+<li>Not given (the text does say that ‘…upper case letters lettering, a feature some mistakenly believe will make the reader keener to read what is written’, but ‘keener to read’ does not necessarily mean that the message is clearer.)</li>
+<li>False (Keep enough space around the text to attract attention to it. Giving text some space is a very powerful way of attracting the eye)</li>
+<li>True (Normally the logical headline is the job title itself – this is after all what people will be looking for. If the job title does not implicitly describe the job function, then use a subheading to do so.)</li>
+<li>False (The key to this answer is that in the question, it states that the reader ‘chooses’ to ignore the advert, whereas the text states that people ‘<i>subconsciously </i>dismiss shapes and sizes that do not conform to what has become accepted as ‘standard’)</li>

@@ -1,0 +1,747 @@
+<strong>Read the texts and answer the questions. Type your answers in the spaces provided.</strong></span></p>
+					</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1461" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div class="ito-scroll-container">
+  <div class="ito-scroll-box">
+    <h4><strong>Travelling around the country with bus passes</strong></h4>
+    <h5>Travel Rider pass</h5>
+    The Travel Rider pass is valid for one month from the day it is purchased and allows travel on any NorWest and Metro Link bus within the city. Photo identification is required to purchase a Travel Rider pass. Prices are £42 for adults, £30 for students and pensioners. Passes can be purchased from any of our branches. Please note that replacement passes can only be issued from the main office in Queen Street.
+    <hr>
+    <h5>Flexi-Pass</h5>
+    Flexi-Pass allows travel between cities with an hours-based pass that can be topped up just like a pre paid phone card. With freedom to explore the national network of InterCity Coachlines, you can set your own itinerary and travel around the country, when and where you want. The more hours you buy, the cheaper each trip becomes and you can even use Flexi-Pass on the cross-channel ferry. You have three months to use the hours you purchase, so you don’t have to pack too much travelling into a short time frame. The flexi-pass can be purchased from any of our branch offices.
+    Prices:
+    <ul>
+      <li>Up to 15 hours – £52</li>
+      <li>16 to 20 hours – £64</li>
+      <li>21 to 25 hours – £72</li>
+    </ul>
+    NOTE: No concessions are available on tickets.
+    <hr>
+    <h5>Destination Pass</h5>
+    The Destination Pass offers a range of 12 “hop on and off” fixed itinerary passes, based on the most popular touring routes throughout the country. The Destination Pass includes coach and ferry travel, as well as the additional options to sail on Brentwood Lake, all in the one pass. The destination Pass is available through travel agents worldwide or can be purchased through our website. When you’re ready to travel, simply call us or log in online to book one of the 12 individual journeys. You can amend your travel plans up to two hours prior to departure without penalty. All trips must be taken within 6 months.
+    Prices:
+    <ul>
+      <li>4 trips – £115</li>
+      <li>8 trips – £215</li>
+      <li>12 trips – £390</li>
+    </ul>
+    Student and group (5 people or more) discounts are available. Contact us for more details.
+  </div>
+  <div class="ito-scroll-box">
+    <strong>Section 1</strong>
+    <br><br>
+    <strong>Questions 1 – 6</strong>
+    <br><br>
+    According to the information in the reading passage ‘Travelling around the country with bus passes’, classify the following as relating to
+    <ol style="list-style-type: upper-alpha" type="A">
+      <li>The Travel Rider pass</li>
+      <li>The Flexi pass</li>
+      <li>The Destination pass</li>
+      <li>None of the above</li>
+    </ol>
+    Select the correct letter <strong><em>A-D</em></strong> in boxes 1-6.
+    <ol>
+      <li>Offers reductions for older people BLANK 1 of 6</li>
+      <li>Can be bought online BLANK 2 of 6</li>
+      <li>Allows travel by train BLANK 3 of 6</li>
+      <li>Has the option to take a cruise BLANK 4 of 6</li>
+      <li>Can be added to for more travel if required BLANK 5 of 6</li>
+      <li>Is designed for urban transport BLANK 6 of 6</li>
+    </ol>
+  </div>
+</div>											</legend>
+
+											<div class="ito-scroll-container">
+<div class="ito-scroll-box">
+<h4><strong>Travelling around the country with bus passes</strong></h4>
+<h5>Travel Rider pass</h5>
+<p>    The Travel Rider pass is valid for one month from the day it is purchased and allows travel on any NorWest and Metro Link bus within the city. Photo identification is required to purchase a Travel Rider pass. Prices are £42 for adults, £30 for students and pensioners. Passes can be purchased from any of our branches. Please note that replacement passes can only be issued from the main office in Queen Street.</p>
+<hr>
+<h5>Flexi-Pass</h5>
+<p>    Flexi-Pass allows travel between cities with an hours-based pass that can be topped up just like a pre paid phone card. With freedom to explore the national network of InterCity Coachlines, you can set your own itinerary and travel around the country, when and where you want. The more hours you buy, the cheaper each trip becomes and you can even use Flexi-Pass on the cross-channel ferry. You have three months to use the hours you purchase, so you don’t have to pack too much travelling into a short time frame. The flexi-pass can be purchased from any of our branch offices.<br>
+    Prices:</p>
+<ul>
+<li>Up to 15 hours – £52</li>
+<li>16 to 20 hours – £64</li>
+<li>21 to 25 hours – £72</li>
+</ul>
+<p>    NOTE: No concessions are available on tickets.</p>
+<hr>
+<h5>Destination Pass</h5>
+<p>    The Destination Pass offers a range of 12 “hop on and off” fixed itinerary passes, based on the most popular touring routes throughout the country. The Destination Pass includes coach and ferry travel, as well as the additional options to sail on Brentwood Lake, all in the one pass. The destination Pass is available through travel agents worldwide or can be purchased through our website. When you’re ready to travel, simply call us or log in online to book one of the 12 individual journeys. You can amend your travel plans up to two hours prior to departure without penalty. All trips must be taken within 6 months.<br>
+    Prices:</p>
+<ul>
+<li>4 trips – £115</li>
+<li>8 trips – £215</li>
+<li>12 trips – £390</li>
+</ul>
+<p>    Student and group (5 people or more) discounts are available. Contact us for more details.
+  </p></div>
+<div class="ito-scroll-box">
+    <strong>Section 1</strong><p></p>
+<p>    <strong>Questions 1 – 6</strong></p>
+<p>    According to the information in the reading passage ‘Travelling around the country with bus passes’, classify the following as relating to</p>
+<ol style="list-style-type: upper-alpha;" type="A">
+<li>The Travel Rider pass</li>
+<li>The Flexi pass</li>
+<li>The Destination pass</li>
+<li>None of the above</li>
+</ol>
+<p>    Select the correct letter <strong><em>A-D</em></strong> in boxes 1-6.</p>
+<ol>
+<li>Offers reductions for older people <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(a)</span></span></span></label></li>
+<li>Can be bought online <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(c)</span></span></span></label></li>
+<li>Allows travel by train <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(d)</span></span></span></label></li>
+<li>Has the option to take a cruise <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(c)</span></span></span></label></li>
+<li>Can be added to for more travel if required <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(b)</span></span></span></label></li>
+<li>Is designed for urban transport <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(a)</span></span></span></label></li>
+</ol></div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 6										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 6									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><ol>
+<li>A (£42 for adults, £30 for students and pensioners.)</li>
+<li>C (The destination Pass is available through travel agents worldwide or can be purchased through our website.)</li>
+<li>D</li>
+<li>C (additional options to sail on Brentwood Lake)</li>
+<li>B (can be topped up just like a pre paid phone card)</li>
+<li>A (travel on any NorWest and Metro Link bus within the city)</li>
+</ol>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1462,&quot;question_post_id&quot;:71970073}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>2</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>2</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1462">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1462" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+<h3>Gaston Community College evening classes</h3>
+This semester, the following classes will be available.
+
+This semester, the following classes will be available.
+
+&nbsp;
+
+<strong>Class</strong>: English for beginners
+
+<strong>Description</strong>: An English language class to help new arrivals to the country learn better English. The course looks at using English in everyday situations, such as shopping, going to the doctors or getting a haircut.
+
+<strong>Times and days:</strong> Mondays and Thursdays at 7 p.m. to 8 p.m.
+
+<strong>Minimum-maximum class sizes:</strong> 5 – 12
+
+<strong>Duration:</strong> 6 weeks
+
+<strong>Fee:</strong> £45
+
+<hr>
+
+<strong>Class</strong>: Intermediate Spanish
+
+<strong>Description</strong>: This class is ideally suited for students who have a basic knowledge of Spanish or who completed the Beginner’s Spanish class held last semester
+
+<strong>Times and days:</strong> Tuesdays and Fridays at 7.30 p.m. to 8.30 p.m.
+
+<strong>Minimum-maximum class sizes:</strong> 5-18
+
+<strong>Duration:</strong> 8 weeks
+
+<strong>Fee:</strong> £55
+
+<hr>
+
+<strong>Class</strong>: Using your computer
+
+<strong>Description</strong>: No idea how to use a computer? Then this class if for you! It covers the basics of surfing the internet, sending and receiving emails, typing and understanding files and folders.
+
+<strong>Times and days:</strong> Wednesdays at 6.30 p.m. to 7.15 p.m.
+
+<strong>Minimum-maximum class sizes:</strong> 2-8
+
+<strong>Duration:</strong> 4 weeks
+
+<strong>Fee:</strong> £25
+
+<hr>
+
+<strong>Class</strong>: Beginners watercolour painting
+
+<strong>Description</strong>: Back by popular demand and once again run by local artist Ted Heath, this class gives you an opportunity to show your more creative side.
+NB: you will need to provide your own paper, paint and brushes
+
+Thursdays from 7.30 p.m. to 8.30 p.m.
+
+<strong>Minimum-maximum class sizes:</strong> 4-12
+
+<strong>Duration:</strong> 8 weeks
+
+<strong>Fee:</strong> £40
+
+<hr>
+
+<strong>Class</strong>: Better public speaking
+
+<strong>Description</strong>: For all those who have completed public speaking or presentation skills courses, or who have some experience and wish to brush up on their skills. Practise connecting with your audience and communicating your message with full effectiveness.
+
+<strong>Times and days:</strong> Tuesdays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.
+
+<strong>Minimum-maximum class sizes:</strong> 2-8
+
+<strong>Duration:</strong> 4 weeks
+
+<strong>Fee:</strong> £30
+
+<hr>
+
+<strong>Class</strong>: Successful interview techniques
+
+<strong>Description</strong>: Many courses focus on presenting yourself well at an interview, but this course will help you become a better interviewer – ideal for those perhaps run a small business and would like to be sure they are recruiting the right person. We will cover preparation, body language and good interview questions.
+
+<strong>Times and days:</strong> Mondays and Fridays at 7.30 p.m. to 8.30 p.m.
+
+<strong>Minimum-maximum class sizes:</strong> 4-10
+
+<strong>Duration:</strong> 5 weeks
+
+<strong>Fee:</strong> £35
+
+<hr>
+
+<strong>Class</strong>: Authentic Thai cooking
+
+<strong>Description</strong>: Learn to cook Thai food the fun way with a native, experienced chef. A hands-on and demonstration course covering exciting dishes from all regions of Thailand. Aspects of Thai culture will be covered and all recipes and ingredients supplied.
+
+<strong>Times and days:</strong> Tuesdays from 7.00 p.m. to 8.30 p.m.
+
+<strong>Minimum-maximum class sizes:</strong> 4-10
+
+<strong>Duration:</strong> 8 weeks
+
+<strong>Fee:</strong> £35 + £55 food costs
+
+<hr>
+
+<strong>Class</strong>: Beginners guitar
+
+<strong>Description</strong>: Learn to play both classical and popular techniques. Please bring your own guitar, and a music stand and floor step if you have one. You will need to buy a textbook. Even if you’ve never played a note before, you should be able to play a tune by the end of the course.
+
+<strong>Times and days:</strong> Wednesdays from 7.30 p.m. to 8.30 p.m.
+
+<strong>Minimum-maximum class sizes:</strong> 2-6
+
+<strong>Duration:</strong> 5 weeks
+
+<strong>Fee:</strong> £20
+
+<hr>
+
+<strong>Class</strong>: Digital photos
+
+<strong>Description</strong>: A fun &amp; practical workshop just for digital camera users. Learn how to use the main functions of your camera. Lots of practice with portraits, action shots, night scenes &amp; landscapes. Learn different ways to transfer your photos on to the computer – emailing, printing, resizing photos, changing colour or contrast, convert colour to black &amp; white.
+
+<strong>Times and days:</strong> Mondays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.
+
+<strong>Minimum-maximum class sizes:</strong> 4-10
+
+<strong>Duration:</strong> 6 weeks
+
+<strong>Fee:</strong> £40
+
+</div>
+</div>
+<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+
+<em><strong>Questions 7 – 12</strong></em>
+
+Answer the questions below using <em><strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong></em> from the passage for each answer.
+
+Type your in boxes <strong>7 – 12</strong> on your answer sheet.
+<ol start="7">
+ 	<li>Which class is the cheapest? BLANK 1 of 6</li>
+ 	<li>Which class has been designed for new migrants? BLANK 2 of 6</li>
+ 	<li>How long is each computing class? BLANK 3 of 6</li>
+ 	<li>What is the maximum number of students allowed in the Spanish class? BLANK 4 of 6</li>
+ 	<li>Which class will help you use a modern camera better? BLANK 5 of 6</li>
+ 	<li>Which local painter will teach students how to use watercolours? BLANK 6 of 6</li>
+</ol>
+</div>											</legend>
+
+											<div style="float: right; width: 47%; height: 350px; border: 1px solid #000; overflow-y: scroll; padding: 1%;">
+<div id="text" class="style1">
+<h3>Gaston Community College evening classes</h3>
+<p>This semester, the following classes will be available.</p>
+<p>This semester, the following classes will be available.</p>
+<p>&nbsp;</p>
+<p><strong>Class</strong>: English for beginners</p>
+<p><strong>Description</strong>: An English language class to help new arrivals to the country learn better English. The course looks at using English in everyday situations, such as shopping, going to the doctors or getting a haircut.</p>
+<p><strong>Times and days:</strong> Mondays and Thursdays at 7 p.m. to 8 p.m.</p>
+<p><strong>Minimum-maximum class sizes:</strong> 5 – 12</p>
+<p><strong>Duration:</strong> 6 weeks</p>
+<p><strong>Fee:</strong> £45</p>
+<hr>
+<p><strong>Class</strong>: Intermediate Spanish</p>
+<p><strong>Description</strong>: This class is ideally suited for students who have a basic knowledge of Spanish or who completed the Beginner’s Spanish class held last semester</p>
+<p><strong>Times and days:</strong> Tuesdays and Fridays at 7.30 p.m. to 8.30 p.m.</p>
+<p><strong>Minimum-maximum class sizes:</strong> 5-18</p>
+<p><strong>Duration:</strong> 8 weeks</p>
+<p><strong>Fee:</strong> £55</p>
+<hr>
+<p><strong>Class</strong>: Using your computer</p>
+<p><strong>Description</strong>: No idea how to use a computer? Then this class if for you! It covers the basics of surfing the internet, sending and receiving emails, typing and understanding files and folders.</p>
+<p><strong>Times and days:</strong> Wednesdays at 6.30 p.m. to 7.15 p.m.</p>
+<p><strong>Minimum-maximum class sizes:</strong> 2-8</p>
+<p><strong>Duration:</strong> 4 weeks</p>
+<p><strong>Fee:</strong> £25</p>
+<hr>
+<p><strong>Class</strong>: Beginners watercolour painting</p>
+<p><strong>Description</strong>: Back by popular demand and once again run by local artist Ted Heath, this class gives you an opportunity to show your more creative side.<br>
+NB: you will need to provide your own paper, paint and brushes</p>
+<p>Thursdays from 7.30 p.m. to 8.30 p.m.</p>
+<p><strong>Minimum-maximum class sizes:</strong> 4-12</p>
+<p><strong>Duration:</strong> 8 weeks</p>
+<p><strong>Fee:</strong> £40</p>
+<hr>
+<p><strong>Class</strong>: Better public speaking</p>
+<p><strong>Description</strong>: For all those who have completed public speaking or presentation skills courses, or who have some experience and wish to brush up on their skills. Practise connecting with your audience and communicating your message with full effectiveness.</p>
+<p><strong>Times and days:</strong> Tuesdays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.</p>
+<p><strong>Minimum-maximum class sizes:</strong> 2-8</p>
+<p><strong>Duration:</strong> 4 weeks</p>
+<p><strong>Fee:</strong> £30</p>
+<hr>
+<p><strong>Class</strong>: Successful interview techniques</p>
+<p><strong>Description</strong>: Many courses focus on presenting yourself well at an interview, but this course will help you become a better interviewer – ideal for those perhaps run a small business and would like to be sure they are recruiting the right person. We will cover preparation, body language and good interview questions.</p>
+<p><strong>Times and days:</strong> Mondays and Fridays at 7.30 p.m. to 8.30 p.m.</p>
+<p><strong>Minimum-maximum class sizes:</strong> 4-10</p>
+<p><strong>Duration:</strong> 5 weeks</p>
+<p><strong>Fee:</strong> £35</p>
+<hr>
+<p><strong>Class</strong>: Authentic Thai cooking</p>
+<p><strong>Description</strong>: Learn to cook Thai food the fun way with a native, experienced chef. A hands-on and demonstration course covering exciting dishes from all regions of Thailand. Aspects of Thai culture will be covered and all recipes and ingredients supplied.</p>
+<p><strong>Times and days:</strong> Tuesdays from 7.00 p.m. to 8.30 p.m.</p>
+<p><strong>Minimum-maximum class sizes:</strong> 4-10</p>
+<p><strong>Duration:</strong> 8 weeks</p>
+<p><strong>Fee:</strong> £35 + £55 food costs</p>
+<hr>
+<p><strong>Class</strong>: Beginners guitar</p>
+<p><strong>Description</strong>: Learn to play both classical and popular techniques. Please bring your own guitar, and a music stand and floor step if you have one. You will need to buy a textbook. Even if you’ve never played a note before, you should be able to play a tune by the end of the course.</p>
+<p><strong>Times and days:</strong> Wednesdays from 7.30 p.m. to 8.30 p.m.</p>
+<p><strong>Minimum-maximum class sizes:</strong> 2-6</p>
+<p><strong>Duration:</strong> 5 weeks</p>
+<p><strong>Fee:</strong> £20</p>
+<hr>
+<p><strong>Class</strong>: Digital photos</p>
+<p><strong>Description</strong>: A fun &amp; practical workshop just for digital camera users. Learn how to use the main functions of your camera. Lots of practice with portraits, action shots, night scenes &amp; landscapes. Learn different ways to transfer your photos on to the computer – emailing, printing, resizing photos, changing colour or contrast, convert colour to black &amp; white.</p>
+<p><strong>Times and days:</strong> Mondays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.</p>
+<p><strong>Minimum-maximum class sizes:</strong> 4-10</p>
+<p><strong>Duration:</strong> 6 weeks</p>
+<p><strong>Fee:</strong> £40</p>
+</div>
+</div>
+<div style="width: 47%; height: 350px; border: 1px solid #000; overflow-y: scroll; padding: 1%;">
+<p><em><strong>Questions 7 – 12</strong></em></p>
+<p>Answer the questions below using <em><strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong></em> from the passage for each answer.</p>
+<p>Type your in boxes <strong>7 – 12</strong> on your answer sheet.</p>
+<ol start="7">
+<li>Which class is the cheapest? <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="21" type="text" value="" size="21" maxlength="26" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(beginners guitar,beginner's guitar,guitar for beginners,guitar for beginner's)</span></span></span></label></li>
+<li>Which class has been designed for new migrants? <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="22" type="text" value="" size="22" maxlength="27" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(english for beginners,english for beginner's,beginners english,beginner's english)</span></span></span></label></li>
+<li>How long is each computing class? <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="18" type="text" value="" size="18" maxlength="23" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(45 minutes,forty five minutes,forty-five minutes,fortyfive minutes,45 mins,forty five mins,forty-five mins)</span></span></span></label></li>
+<li>What is the maximum number of students allowed in the Spanish class? <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="17" type="text" value="" size="17" maxlength="22" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(18,eighteen,18 students,eighteen students)</span></span></span></label></li>
+<li>Which class will help you use a modern camera better? <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="14" type="text" value="" size="14" maxlength="19" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(digital photos)</span></span></span></label></li>
+<li>Which local painter will teach students how to use watercolours? <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(ted heath,heath,t heath,t. heath)</span></span></span></label></li>
+</ol>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 6										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 6									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><ol start="7">
+<li>Beginners guitar (£20)</li>
+<li>English for beginners (‘class to help new arrivals to the country’)</li>
+<li>45 minutes (‘Wednesdays at 6.30 p.m. to 7.15 p.m.’)</li>
+<li>18 (Minimum / Maximum class size = 5-18)</li>
+<li>Digital photos (‘Learn how to use the main functions of your camera’)</li>
+<li>Ted Heath (‘Back by popular demand and once again run by local artist Ted Heath’)</li>
+</ol>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1463,&quot;question_post_id&quot;:71970074}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>3</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>3</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1463">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1463" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<h3>ESITO dress code</h3>
+The personal appearance of office workers and employees who have regular contact with the public is laid out in the company dress code. In brief, the code requires all employees to observe the following:
+<ul>
+ 	<li>Clean, pressed, properly fitting business casual attire is appropriate.</li>
+ 	<li>Hair should be clean, combed and neatly arranged. Long hair is acceptable if it is tied back.</li>
+ 	<li>Moustaches and beards should be neatly trimmed.</li>
+ 	<li>Good personal hygiene must be maintained.</li>
+ 	<li>Use perfume or cologne in small quantities or not at all (some people are allergic to various scents).</li>
+</ul>
+The personal appearance of employees who do not regularly meet the public is to be decided by the requirements of safety, comfort and supervisor approval. Even so, because all employees are a representative of the company, they should be as neat and business-like as working conditions permit. The following are some examples of inappropriate dress at all times:
+<ul>
+ 	<li>Faded and/or tattered/torn jeans; t-shirts displaying advertising or writing</li>
+ 	<li>Faded overalls, cotton/fleece pants and jogging suits, shorts, tank tops or recreational attire</li>
+ 	<li>Clothing revealing bare backs, midriffs or shoulders; or any revealing clothing.</li>
+</ul>
+Casual Fridays: The Company has designated Fridays as casual days. Some clothing is still considered inappropriate even on casual days. Employees are requested to use good sense in this regard.
+
+Bad weather days: The Company understands that inclement weather conditions can require different attire for the day. Use good judgment when dressing for weather conditions. NOTE: This only impacts on employees working in the yard.
+
+The supervisor is responsible for evaluating the dress and appearance of employees under his or her supervision. If an employee is not dressed appropriately, the supervisor should take the following steps:
+
+On the first occasion, a documented verbal warning should be given to the employee, and the department’s dress and appearance standards should be reviewed. If the supervisor deems it necessary, the employee may be sent home to change into appropriate clothing.
+
+On the second occasion, the employee must be sent home to change clothes immediately as well as given a written warning. Further violations may result in discipline up to and including discharge.
+</div>
+<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+<div id="text" class="style1">
+
+<em><strong>Section 2</strong></em>
+
+<em><strong>Questions 13 – 20</strong></em>
+
+<em>Answer the questions below using <strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong> from the passage for each answer.</em>
+
+<em>Type your in boxes 13 – 20 on your answer sheet.</em>
+<ol start="13">
+ 	<li>Long hair must be BLANK 1 of 8.</li>
+ 	<li>Facial hair should be BLANK 2 of 8.</li>
+ 	<li>Employees should use little or no perfume or cologne because other staff may be BLANK 3 of 8.</li>
+ 	<li>A more relaxed approach to clothing is acceptable on BLANK 4 of 8</li>
+ 	<li>Seasonal changes only affect the appearance of people working BLANK 5 of 8</li>
+ 	<li>Ripped jeans and t-shirts with lettering are considered BLANK 6 of 8</li>
+ 	<li>If in doubt, the decision about appropriate dress is made by a BLANK 7 of 8.</li>
+ 	<li>If an employee is considered to be improperly dressed on a second occasion, they are required to be BLANK 8 of 8 without delay.</li>
+</ol>
+</div>
+&nbsp;
+
+</div>
+</div>											</legend>
+
+											<div style="float: right; width: 47%; height: 350px; border: 1px solid #000; overflow-y: scroll; padding: 1%;">
+<h3>ESITO dress code</h3>
+<p>The personal appearance of office workers and employees who have regular contact with the public is laid out in the company dress code. In brief, the code requires all employees to observe the following:</p>
+<ul>
+<li>Clean, pressed, properly fitting business casual attire is appropriate.</li>
+<li>Hair should be clean, combed and neatly arranged. Long hair is acceptable if it is tied back.</li>
+<li>Moustaches and beards should be neatly trimmed.</li>
+<li>Good personal hygiene must be maintained.</li>
+<li>Use perfume or cologne in small quantities or not at all (some people are allergic to various scents).</li>
+</ul>
+<p>The personal appearance of employees who do not regularly meet the public is to be decided by the requirements of safety, comfort and supervisor approval. Even so, because all employees are a representative of the company, they should be as neat and business-like as working conditions permit. The following are some examples of inappropriate dress at all times:</p>
+<ul>
+<li>Faded and/or tattered/torn jeans; t-shirts displaying advertising or writing</li>
+<li>Faded overalls, cotton/fleece pants and jogging suits, shorts, tank tops or recreational attire</li>
+<li>Clothing revealing bare backs, midriffs or shoulders; or any revealing clothing.</li>
+</ul>
+<p>Casual Fridays: The Company has designated Fridays as casual days. Some clothing is still considered inappropriate even on casual days. Employees are requested to use good sense in this regard.</p>
+<p>Bad weather days: The Company understands that inclement weather conditions can require different attire for the day. Use good judgment when dressing for weather conditions. NOTE: This only impacts on employees working in the yard.</p>
+<p>The supervisor is responsible for evaluating the dress and appearance of employees under his or her supervision. If an employee is not dressed appropriately, the supervisor should take the following steps:</p>
+<p>On the first occasion, a documented verbal warning should be given to the employee, and the department’s dress and appearance standards should be reviewed. If the supervisor deems it necessary, the employee may be sent home to change into appropriate clothing.</p>
+<p>On the second occasion, the employee must be sent home to change clothes immediately as well as given a written warning. Further violations may result in discipline up to and including discharge.
+</p></div>
+<div style="width: 47%; height: 350px; border: 1px solid #000; overflow-y: scroll; padding: 1%;">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<p><em><strong>Section 2</strong></em></p>
+<p><em><strong>Questions 13 – 20</strong></em></p>
+<p><em>Answer the questions below using <strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong> from the passage for each answer.</em></p>
+<p><em>Type your in boxes 13 – 20 on your answer sheet.</em></p>
+<ol start="13">
+<li>Long hair must be <label><span class="screen-reader-text">Fill in the blank 1 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(tied back)</span></span></span></label>.</li>
+<li>Facial hair should be <label><span class="screen-reader-text">Fill in the blank 2 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="14" type="text" value="" size="14" maxlength="19" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(neatly trimmed,trimmed)</span></span></span></label>.</li>
+<li>Employees should use little or no perfume or cologne because other staff may be <label><span class="screen-reader-text">Fill in the blank 3 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="8" type="text" value="" size="8" maxlength="13" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(allergic)</span></span></span></label>.</li>
+<li>A more relaxed approach to clothing is acceptable on <label><span class="screen-reader-text">Fill in the blank 4 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="14" type="text" value="" size="14" maxlength="19" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(casual friday,casual fridays,friday,fridays)</span></span></span></label></li>
+<li>Seasonal changes only affect the appearance of people working <label><span class="screen-reader-text">Fill in the blank 5 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="11" type="text" value="" size="11" maxlength="16" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(in the yard,the yard)</span></span></span></label></li>
+<li>Ripped jeans and t-shirts with lettering are considered <label><span class="screen-reader-text">Fill in the blank 6 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="22" type="text" value="" size="22" maxlength="27" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(inappropriate dress,inappropriate,as inappropriate dress)</span></span></span></label></li>
+<li>If in doubt, the decision about appropriate dress is made by a <label><span class="screen-reader-text">Fill in the blank 7 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="10" type="text" value="" size="10" maxlength="15" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(supervisor)</span></span></span></label>.</li>
+<li>If an employee is considered to be improperly dressed on a second occasion, they are required to be <label><span class="screen-reader-text">Fill in the blank 8 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(sent home)</span></span></span></label> without delay.</li>
+</ol>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 8										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 8									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><ol start="13">
+<li>Tied back (‘Long hair is acceptable if it is tied back.’)</li>
+<li>Neatly trimmed / trimmed (‘Moustaches and beards should be neatly trimmed.’)</li>
+<li>Allergic (‘Use perfume or cologne in small quantities or not at all (some people are allergic to various scents’)</li>
+<li>Casual Fridays (‘Casual Fridays: The Company has designated Fridays as casual days.’)</li>
+<li>In the yard (‘The Company understands that inclement weather conditions can require different attire for the day. Use good judgment when dressing for weather conditions. NOTE: This only impacts on employees working in the yard.’)</li>
+<li>Inappropriate / inappropriate dress (‘The following are some examples of inappropriate dress at all times: Faded and/or tattered/torn jeans; t-shirts displaying advertising or writing’)</li>
+<li>Supervisor (‘The supervisor is responsible for evaluating the dress and appearance of employees under his or her supervision’</li>
+<li>Sent home (‘On the second occasion, the employee must be sent home to change clothes immediately’)</li>
+</ol>
+</div>
+						</div>
+					</div>
+				
+				
+												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+
+									<div style="margin-bottom: 20px;"></div>
+							</li>
+
+		
+			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1464,&quot;question_post_id&quot;:71970075}">
+				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
+				Question <span>4</span> of <span>5</span>				</div>
+				<h5 style="display: none;" class="wpProQuiz_header">
+					<span>4</span>. Question
+				</h5>
+
+				
+								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
+					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1464">
+											</legend>
+
+					<div class="wpProQuiz_clear" style="clear:both;"></div>
+
+										
+										<div class="wpProQuiz_questionList" data-question_id="1464" data-type="cloze_answer">
+						
+								<div class="wpProQuiz_questionListItem" data-pos="0">
+																			<fieldset>
+											<legend class="screen-reader-text">
+												<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<h4>Benefits and amendment to benefits for Glyph Interactive employees</h4>
+<h4>Pension scheme</h4>
+All employees are automatically included in our pension scheme, although there is an ‘opt out’ policy for employees with private pension plans. The pension scheme is no longer non-contributory, with employees now being asked to pay 25% of the annual payment. Government contributions will amount to an additional 25%, with Glyph Interactive continuing to support employees by covering the remaining 50%. Employees need to pay into the pension scheme for a minimum of 20 years. Once an employee reaches the age of 65, the pension payments begin. Employees who do not reach the twenty year mark will be paid pro rata (that is, an employee who has worked only ten years will receive only 50% of that received by an employee with twenty years experience).
+<h4>Medical insurance</h4>
+Due to rising costs, we can no longer support offering medical insurance to retiring employees. Standard cover still applies to all active employees, with one important addition. The immediate family (spouse and children) of the employee can also be covered for the same benefits and services. This will attract an additional payment depending on the current health of those wishing to be covered, but will be well below the cost of seeking insurance with a private company.
+<h4>Access to company vehicles</h4>
+All staff with a legitimate need to travel will have access to one of the company vehicles. Please note that this is to be used for company purposes only, and must be applied for in writing at least two days before the vehicle is needed. For urgent and unexpected requirements, please consult your manager. The only exception to this is for sales staff, who have already been issued their own vehicles.
+<h4>Communication</h4>
+All members of staff have a laptop which is issued on the first day of employment. This will now be supplemented by the addition of a Smartphone. Please note, however, that all calls and communications using the Smartphone should be for company purposes only unless in an emergency. Training events will be posted in the next few weeks to help you get to grips with the new phone.
+<h4>Working from home</h4>
+We are now in the second year of the trial of some employees working from home for at least a part of the week. Despite some earlier difficulties, the scheme has proven successful and will now be offered as an option for all staff (although final approval must be given by your manager).
+
+</div>
+</div>
+</div>
+</div>
+<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
+
+<em><strong>Questions 21 to 26</strong></em>
+
+Do the following statements agree with the information given in the reading passage?
+
+In boxes 21-26 on your answer sheet write
+
+<strong>TRUE</strong> if the statement agrees with the information
+
+<strong>FALSE</strong> if the statement contradicts the information
+
+<strong>NOT </strong><strong>GIVEN</strong> if there is no information on this
+<ol start="21">
+ 	<li>All employees must belong to the company’s pension plan. BLANK 1 of 6</li>
+ 	<li>No pension scheme payments need to be made after 20 years of employment. BLANK 2 of 6</li>
+ 	<li>Employees can now have their families covered under the company insurance for cheaper than doing so privately. BLANK 3 of 6</li>
+ 	<li>All staff must request to use a company car 48 hours before required. BLANK 4 of 6</li>
+ 	<li>Laptops must only be used for company business only. BLANK 5 of 6</li>
+ 	<li>The working from home option is not a success. BLANK 6 of 6</li>
+</ol>
+&nbsp;
+
+</div>											</legend>
+
+											<div style="float: right; width: 47%; height: 350px; border: 1px solid #000; overflow-y: scroll; padding: 1%;">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<div id="text" class="style1">
+<h4>Benefits and amendment to benefits for Glyph Interactive employees</h4>
+<h4>Pension scheme</h4>
+<p>All employees are automatically included in our pension scheme, although there is an ‘opt out’ policy for employees with private pension plans. The pension scheme is no longer non-contributory, with employees now being asked to pay 25% of the annual payment. Government contributions will amount to an additional 25%, with Glyph Interactive continuing to support employees by covering the remaining 50%. Employees need to pay into the pension scheme for a minimum of 20 years. Once an employee reaches the age of 65, the pension payments begin. Employees who do not reach the twenty year mark will be paid pro rata (that is, an employee who has worked only ten years will receive only 50% of that received by an employee with twenty years experience).</p>
+<h4>Medical insurance</h4>
+<p>Due to rising costs, we can no longer support offering medical insurance to retiring employees. Standard cover still applies to all active employees, with one important addition. The immediate family (spouse and children) of the employee can also be covered for the same benefits and services. This will attract an additional payment depending on the current health of those wishing to be covered, but will be well below the cost of seeking insurance with a private company.</p>
+<h4>Access to company vehicles</h4>
+<p>All staff with a legitimate need to travel will have access to one of the company vehicles. Please note that this is to be used for company purposes only, and must be applied for in writing at least two days before the vehicle is needed. For urgent and unexpected requirements, please consult your manager. The only exception to this is for sales staff, who have already been issued their own vehicles.</p>
+<h4>Communication</h4>
+<p>All members of staff have a laptop which is issued on the first day of employment. This will now be supplemented by the addition of a Smartphone. Please note, however, that all calls and communications using the Smartphone should be for company purposes only unless in an emergency. Training events will be posted in the next few weeks to help you get to grips with the new phone.</p>
+<h4>Working from home</h4>
+<p>We are now in the second year of the trial of some employees working from home for at least a part of the week. Despite some earlier difficulties, the scheme has proven successful and will now be offered as an option for all staff (although final approval must be given by your manager).</p>
+</div>
+</div>
+</div>
+</div>
+<div style="width: 47%; height: 350px; border: 1px solid #000; overflow-y: scroll; padding: 1%;">
+<p><em><strong>Questions 21 to 26</strong></em></p>
+<p>Do the following statements agree with the information given in the reading passage?</p>
+<p>In boxes 21-26 on your answer sheet write</p>
+<p><strong>TRUE</strong> if the statement agrees with the information</p>
+<p><strong>FALSE</strong> if the statement contradicts the information</p>
+<p><strong>NOT </strong><strong>GIVEN</strong> if there is no information on this</p>
+<ol start="21">
+<li>All employees must belong to the company’s pension plan. <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>No pension scheme payments need to be made after 20 years of employment. <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(not given)</span></span></span></label></li>
+<li>Employees can now have their families covered under the company insurance for cheaper than doing so privately. <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></li>
+<li>All staff must request to use a company car 48 hours before required. <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+<li>Laptops must only be used for company business only. <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(not given)</span></span></span></label></li>
+<li>The working from home option is not a success. <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
+</ol>
+<p>&nbsp;</p>
+</div>
+										</fieldset>
+
+																		</div>
+													</div>
+									</fieldset>
+									<div class="wpProQuiz_response" style="">
+						<div style="display: none;" class="wpProQuiz_correct">
+															<div>
+									<span class="wpProQuiz_response_correct_label" style="float: left;">
+									Correct									</span>
+									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
+										<span class="wpProQuiz_responsePoints">0</span>
+										 / 6										Points									</span>
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"></div>
+						</div>
+						<div style="" class="wpProQuiz_incorrect">
+															<div>
+									<span style="float: left;">
+										Incorrect									</span>
+									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 6									Points									</span>
+
+									<div style="clear: both;"></div>
+								</div>
+														<div class="wpProQuiz_AnswerMessage"><ol start="21">
+<li>False (staff can opt out)</li>
+<li>Not Given – the text states that ‘Employees need to pay into the pension scheme for a minimum of 20 years’ but it does not state that they no longer need to make further payments)</li>
+<li>True (‘The immediate family (spouse and children) of the employee can also be covered…well below the cost of seeking insurance with a private company.’)</li>
+<li>False (sales staff have their own)</li>
+<li>Not given (only told that Smartphones can only be used for company business)</li>
+<li>False (despite earlier difficulties)</li>
