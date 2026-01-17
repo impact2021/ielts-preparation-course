@@ -529,7 +529,7 @@
     {
       "type": "open_question",
       "instructions": "",
-      "question": "Retail prices are [field 2] increased by pharmaceutical manufacturers, often several times a year.",
+      "question": "Retail prices are [field 1] increased by pharmaceutical manufacturers, often several times a year.",
       "points": 1,
       "reading_text_id": 0,
       "audio_section_id": null,
@@ -553,7 +553,7 @@
     {
       "type": "open_question",
       "instructions": "",
-      "question": "The price of Claritin increased overall by more than 50% during its time on the market and prior to its [field 3] expiring.",
+      "question": "The price of Claritin increased overall by more than 50% during its time on the market and prior to its [field 1] expiring.",
       "points": 1,
       "reading_text_id": 0,
       "audio_section_id": null,
@@ -577,7 +577,7 @@
     {
       "type": "open_question",
       "instructions": "",
-      "question": "Traditional expectations of who will provide healthcare is being affected by [field 4].",
+      "question": "Traditional expectations of who will provide healthcare is being affected by [field 1].",
       "points": 1,
       "reading_text_id": 0,
       "audio_section_id": null,
@@ -601,7 +601,7 @@
     {
       "type": "open_question",
       "instructions": "",
-      "question": "Due to concerns over the need to reduce [field 5], employers may not cover healthcare to the extent it has been covered in the past.",
+      "question": "Due to concerns over the need to reduce [field 1], employers may not cover healthcare to the extent it has been covered in the past.",
       "points": 1,
       "reading_text_id": 0,
       "audio_section_id": null,
@@ -1417,7 +1417,7 @@
     {
       "type": "open_question",
       "instructions": "",
-      "question": "A [field 2] is lit in the pit",
+      "question": "A [field 1] is lit in the pit",
       "points": 1,
       "reading_text_id": 2,
       "audio_section_id": null,
@@ -1441,7 +1441,7 @@
     {
       "type": "open_question",
       "instructions": "",
-      "question": "The rocks are [field 3]",
+      "question": "The rocks are [field 1]",
       "points": 1,
       "reading_text_id": 2,
       "audio_section_id": null,
@@ -1465,7 +1465,7 @@
     {
       "type": "open_question",
       "instructions": "",
-      "question": "The [field 4] turns to coal",
+      "question": "The [field 1] turns to coal",
       "points": 1,
       "reading_text_id": 2,
       "audio_section_id": null,
