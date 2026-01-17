@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IELTS Reading Tests - Quality Dashboard</title>
+    <title>IELTS Practice Tests - Quality Dashboard</title>
     <style>
         * {
             margin: 0;
@@ -48,6 +48,44 @@
             font-size: 0.85rem;
             opacity: 0.8;
             margin-top: 10px;
+        }
+        
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 15px 20px;
+            text-align: center;
+            cursor: pointer;
+            background: #e9ecef;
+            border: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #495057;
+            transition: all 0.3s ease;
+        }
+        
+        .tab:hover {
+            background: #dee2e6;
+        }
+        
+        .tab.active {
+            background: white;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            font-weight: 600;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
         }
         
         .stats-grid {
@@ -227,10 +265,19 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>📊 IELTS Reading Tests - Quality Dashboard</h1>
-            <div class="subtitle">Academic Reading Practice Tests Quality Review</div>
-            <div class="timestamp">Last Updated: 2026-01-17 00:02:35 UTC</div>
+            <h1>📊 IELTS Practice Tests - Quality Dashboard</h1>
+            <div class="subtitle">Comprehensive Quality Review for All Test Types</div>
+            <div class="timestamp">Last Updated: 2026-01-17 00:20:00 UTC</div>
         </div>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('reading')">📖 Academic Reading (21 Tests)</button>
+            <button class="tab" onclick="switchTab('listening')">🎧 Listening (15 Tests)</button>
+            <button class="tab" onclick="switchTab('general')">📝 General Training (Coming Soon)</button>
+        </div>
+        
+        <!-- ACADEMIC READING TAB -->
+        <div id="reading" class="tab-content active">
         
         <div class="stats-grid">
             <div class="stat-card info">
@@ -242,16 +289,16 @@
                 <div class="label">Total Questions</div>
             </div>
             <div class="stat-card good">
-                <div class="number">14</div>
-                <div class="label">✓ Good Tests</div>
+                <div class="number">9</div>
+                <div class="label">✓ Complete (40 Qs)</div>
             </div>
             <div class="stat-card warning">
-                <div class="number">6</div>
+                <div class="number">0</div>
                 <div class="label">⚠ Issues</div>
             </div>
             <div class="stat-card critical">
-                <div class="number">1</div>
-                <div class="label">🔴 Broken</div>
+                <div class="number">12</div>
+                <div class="label">🔴 Incomplete</div>
             </div>
         </div>
         
@@ -274,192 +321,192 @@
                         <tbody>
                             <tr>
                                 <td class="test-number">01</td>
-                                <td>39</td>
+                                <td><span class="badge critical">39</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge warning">⚠ Issues (1)</span></td>
-                                <td><span class="badge warning">⚠ Issues</span></td>
+                                <td><span class="badge critical">🔴 INCOMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">02</td>
-                                <td>40</td>
+                                <td><span class="badge good">40</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ Good</span></td>
+                                <td><span class="badge good">✓ COMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">03</td>
-                                <td>38</td>
+                                <td><span class="badge critical">38</span></td>
                                 <td><span class="badge no">✗ No (20)</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge warning">⚠ Issues</span></td>
+                                <td><span class="badge critical">🔴 INCOMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">04</td>
-                                <td>39</td>
+                                <td><span class="badge critical">39</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ Good</span></td>
+                                <td><span class="badge critical">🔴 INCOMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">05</td>
-                                <td>38</td>
+                                <td><span class="badge critical">38</span></td>
                                 <td><span class="badge no">✗ No (4)</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge warning">⚠ Issues</span></td>
+                                <td><span class="badge critical">🔴 INCOMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">06</td>
-                                <td>35</td>
+                                <td><span class="badge critical">35</span></td>
                                 <td><span class="badge no">✗ No (17)</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge warning">⚠ Issues (1)</span></td>
-                                <td><span class="badge warning">⚠ Issues</span></td>
+                                <td><span class="badge critical">🔴 INCOMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">07</td>
-                                <td>40</td>
+                                <td><span class="badge good">40</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge warning">⚠ Issues (1)</span></td>
-                                <td><span class="badge warning">⚠ Issues</span></td>
+                                <td><span class="badge good">✓ COMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">08</td>
-                                <td>35</td>
+                                <td><span class="badge critical">35</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ Good</span></td>
+                                <td><span class="badge critical">🔴 INCOMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">09</td>
-                                <td>32</td>
+                                <td><span class="badge critical">32</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ Good</span></td>
+                                <td><span class="badge critical">🔴 INCOMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">10</td>
-                                <td>32</td>
+                                <td><span class="badge critical">32</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ Good</span></td>
+                                <td><span class="badge critical">🔴 INCOMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">11</td>
-                                <td>33</td>
+                                <td><span class="badge critical">33</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ Good</span></td>
+                                <td><span class="badge critical">🔴 INCOMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">12</td>
-                                <td>40</td>
+                                <td><span class="badge good">40</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ Good</span></td>
+                                <td><span class="badge good">✓ COMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">13</td>
-                                <td>33</td>
+                                <td><span class="badge critical">33</span></td>
                                 <td><span class="badge no">✗ No (7)</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge warning">⚠ Issues</span></td>
+                                <td><span class="badge critical">🔴 INCOMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">14</td>
-                                <td>25</td>
+                                <td><span class="badge critical">25</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ Good</span></td>
+                                <td><span class="badge critical">🔴 INCOMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">15</td>
-                                <td>40</td>
+                                <td><span class="badge good">40</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ Good</span></td>
+                                <td><span class="badge good">✓ COMPLETE</span></td>
                             </tr>
                             <tr class="highlighted">
                                 <td class="test-number">16</td>
-                                <td>40</td>
+                                <td><span class="badge good">40</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ Good</span></td>
+                                <td><span class="badge good">✓ COMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">17</td>
-                                <td>40</td>
+                                <td><span class="badge good">40</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge no">✗ No (15)</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge warning">⚠ Issues (2)</span></td>
-                                <td><span class="badge critical">🔴 BROKEN</span></td>
+                                <td><span class="badge good">✓ COMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">18</td>
-                                <td>40</td>
+                                <td><span class="badge good">40</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ Good</span></td>
+                                <td><span class="badge good">✓ COMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">19</td>
-                                <td>40</td>
+                                <td><span class="badge good">40</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ Good</span></td>
+                                <td><span class="badge good">✓ COMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">20</td>
-                                <td>40</td>
+                                <td><span class="badge critical">34</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ Good</span></td>
+                                <td><span class="badge critical">🔴 INCOMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">21</td>
-                                <td>34</td>
+                                <td><span class="badge good">40</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td>N/A</td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ Good</span></td>
+                                <td><span class="badge good">✓ COMPLETE</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -569,11 +616,252 @@
                 </div>
             </div>
         </div>
+        </div>
+        
+        <!-- LISTENING TAB -->
+        <div id="listening" class="tab-content">
+            <div class="stats-grid">
+                <div class="stat-card info">
+                    <div class="number">15</div>
+                    <div class="label">Total Tests</div>
+                </div>
+                <div class="stat-card info">
+                    <div class="number">600</div>
+                    <div class="label">Total Questions</div>
+                </div>
+                <div class="stat-card good">
+                    <div class="number">10</div>
+                    <div class="label">✓ Excellent</div>
+                </div>
+                <div class="stat-card warning">
+                    <div class="number">5</div>
+                    <div class="label">⚠ Good</div>
+                </div>
+                <div class="stat-card critical">
+                    <div class="number">0</div>
+                    <div class="label">🔴 Broken</div>
+                </div>
+            </div>
+            
+            <div class="content">
+                <div class="section">
+                    <h2>Quality Summary Table</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Test</th>
+                                    <th>Questions</th>
+                                    <th>Feedback</th>
+                                    <th>Transcripts (4 Sections)</th>
+                                    <th>Audio URL</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="test-number">01</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge yes">✓ All 4</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-number">02</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge yes">✓ All 4</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-number">03</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge yes">✓ All 4</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-number">04</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge yes">✓ All 4</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-number">05</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge yes">✓ All 4</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-number">06</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge warning">⚠ Missing</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge good">✓ Good</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-number">07</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge warning">⚠ Missing</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge good">✓ Good</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-number">08</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge warning">⚠ Missing</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge good">✓ Good</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-number">09</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge warning">⚠ Missing</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge good">✓ Good</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-number">10</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge warning">⚠ Missing</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge good">✓ Good</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-number">11</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge yes">✓ All 4</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-number">12</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge yes">✓ All 4</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-number">13</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge yes">✓ All 4</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-number">14</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge yes">✓ All 4</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-number">15</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge yes">✓ All 4</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>🎯 Issue Details</h2>
+                    <div class="issue-list">
+                        <h3>Tests 06-10</h3>
+                        <ul>
+                            <li><strong>Missing Transcripts:</strong> Section transcripts are empty (only audio URLs provided)</li>
+                            <li><strong>Impact:</strong> Students cannot read along or review specific parts of the listening</li>
+                            <li><strong>Recommendation:</strong> Add transcript text for all 4 sections to match Tests 01-05 and 11-15</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>📈 Statistics Summary</h2>
+                    <div class="issue-list">
+                        <h3>✅ Overall Quality</h3>
+                        <ul>
+                            <li>All tests have <strong>40 questions</strong> ✓</li>
+                            <li>All tests have <strong>complete feedback</strong> ✓</li>
+                            <li>All tests have <strong>audio URLs</strong> ✓</li>
+                            <li><strong>10/15 tests</strong> have complete transcripts (67%)</li>
+                        </ul>
+                        
+                        <h3>⚠️ Issues</h3>
+                        <ul>
+                            <li>Tests missing transcripts: <strong>5/15</strong> (Tests 06-10)</li>
+                            <li>No critical or broken tests: <strong>0</strong> ✓</li>
+                        </ul>
+                        
+                        <h3>Quality Breakdown</h3>
+                        <ul>
+                            <li>✓ EXCELLENT: <strong>10/15 tests</strong> (67%)</li>
+                            <li>✓ Good: <strong>5/15 tests</strong> (33%)</li>
+                            <li>🔴 BROKEN: <strong>0/15 tests</strong> (0%)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- GENERAL TRAINING TAB -->
+        <div id="general" class="tab-content">
+            <div class="content">
+                <div class="section" style="text-align: center; padding: 60px 20px;">
+                    <h2 style="font-size: 2rem; margin-bottom: 20px;">📝 General Training Reading Tests</h2>
+                    <p style="font-size: 1.2rem; color: #666; margin-bottom: 15px;">Coming Soon</p>
+                    <p style="color: #999;">This section will contain quality metrics for General Training Reading Tests when they are added to the course.</p>
+                </div>
+            </div>
+        </div>
         
         <div class="footer">
-            IELTS Preparation Course - Reading Tests Quality Dashboard<br>
+            IELTS Preparation Course - Practice Tests Quality Dashboard<br>
             Bookmark this page for quick access to quality metrics
         </div>
     </div>
+    
+    <script>
+        function switchTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked tab
+            const clickedTab = Array.from(tabs).find(tab => 
+                tab.getAttribute('onclick').includes(tabName)
+            );
+            if (clickedTab) {
+                clickedTab.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>

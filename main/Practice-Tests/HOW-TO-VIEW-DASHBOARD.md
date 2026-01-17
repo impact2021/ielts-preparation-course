@@ -1,5 +1,14 @@
 # How to View the Quality Dashboard HTML
 
+## ✨ New Features
+The quality dashboard now includes:
+- **Tabbed Interface**: Switch between Academic Reading, Listening, and General Training tests
+- **21 Academic Reading Tests**: 9 complete (40 questions), 12 incomplete
+- **15 Listening Tests**: 10 excellent, 5 good (missing transcripts)
+- **Color-coded badges**: Red for incomplete tests, green for complete tests
+
+---
+
 ## 🔗 Quick Access Links
 
 ### Immediate Access (No Setup Required)
