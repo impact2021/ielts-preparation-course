@@ -4,7 +4,7 @@
     "questions": [
         {
             "type": "closed_question",
-            "instructions": "Reading Passage 1 has seven paragraphs A – G.\r\nFor paragraphs B – F, choose the most suitable heading from the list of headings below.\r\n",
+            "instructions": "Reading Passage 1 has seven paragraphs A \u2013 G.\r\nFor paragraphs B \u2013 F, choose the most suitable heading from the list of headings below.\r\n",
             "question": "Paragraph B",
             "points": 1,
             "no_answer_feedback": "",
@@ -327,7 +327,7 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 1?\r\nWrite TRUE if the statement is true according to the passage, FALSE if the statement is false according to the passage, or NOT GIVEN if the information is not given in the passage.",
             "question": "Before the driverless car can navigate, a human driver must first drive the route.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. Paragraph B says ‘that before any route is driven using automated technology, a manned vehicle is first driven along the roads’. Note that you should always take a guess in the IELTS test even if you don't know the answer - you don't lose points for a wrong answer, and you may get lucky!",
+            "no_answer_feedback": "The correct answer is TRUE. Paragraph B says \u2018that before any route is driven using automated technology, a manned vehicle is first driven along the roads\u2019. Note that you should always take a guess in the IELTS test even if you don't know the answer - you don't lose points for a wrong answer, and you may get lucky!",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -636,10 +636,10 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nYou should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
+            "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nYou should spend about 20 minutes on Questions 14 \u2013 26 which are based on Reading Passage 2.",
             "question": "The first exhibition of Scandinavian design in Canada and the United States was from 1954 to 1957. ",
             "points": 1,
-            "no_answer_feedback": "This is FALSE. The opening paragraph mentions a touring exhibition in Canada and the U.S. from 1954 to 1957, but further that there ‘…had been earlier exhibitions’ there.",
+            "no_answer_feedback": "This is FALSE. The opening paragraph mentions a touring exhibition in Canada and the U.S. from 1954 to 1957, but further that there \u2018\u2026had been earlier exhibitions\u2019 there.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -670,10 +670,10 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nYou should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
+            "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nYou should spend about 20 minutes on Questions 14 \u2013 26 which are based on Reading Passage 2.",
             "question": "The first ideas of a 'Scandinavian design' came about at the same time as new emerging movements in Art, such as Bauhaus and Dadaism.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. While the passage mentions Skønvirke magazine in 1914 and states that Bauhaus and Dadaism emerged in the 1920s and 1930s, it also indicates that Skønvirke 'drew on the inspirations of traditional...Scandinavian design', meaning these ideas existed before 1914. The passage does not specify when these first ideas actually originated, so we cannot determine if they came about at the same time as Bauhaus and Dadaism. Note that you should always take a guess in the IELTS test even if you don't know the answer - you don't lose points for a wrong answer, and you may get lucky!",
+            "no_answer_feedback": "The correct answer is NOT GIVEN. While the passage mentions Sk\u00f8nvirke magazine in 1914 and states that Bauhaus and Dadaism emerged in the 1920s and 1930s, it also indicates that Sk\u00f8nvirke 'drew on the inspirations of traditional...Scandinavian design', meaning these ideas existed before 1914. The passage does not specify when these first ideas actually originated, so we cannot determine if they came about at the same time as Bauhaus and Dadaism. Note that you should always take a guess in the IELTS test even if you don't know the answer - you don't lose points for a wrong answer, and you may get lucky!",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -685,17 +685,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage indicates that Skønvirke magazine (1914) drew on traditional Scandinavian design, and Bauhaus/Dadaism emerged in the 1920s-30s. However, the passage doesn't specify when the first ideas of Scandinavian design originated, only that they existed before 1914."
+                    "feedback": "Incorrect. The passage indicates that Sk\u00f8nvirke magazine (1914) drew on traditional Scandinavian design, and Bauhaus/Dadaism emerged in the 1920s-30s. However, the passage doesn't specify when the first ideas of Scandinavian design originated, only that they existed before 1914."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. While Skønvirke magazine appeared in 1914 and Bauhaus/Dadaism in the 1920s-30s, the passage states Skønvirke 'drew on the inspirations of traditional...Scandinavian design', meaning the ideas predated 1914. Since we don't know when these first ideas originated, we cannot say the statement is definitively false."
+                    "feedback": "Incorrect. While Sk\u00f8nvirke magazine appeared in 1914 and Bauhaus/Dadaism in the 1920s-30s, the passage states Sk\u00f8nvirke 'drew on the inspirations of traditional...Scandinavian design', meaning the ideas predated 1914. Since we don't know when these first ideas originated, we cannot say the statement is definitively false."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": true,
-                    "feedback": "Correct! While the passage mentions Skønvirke magazine in 1914 and Bauhaus/Dadaism in the 1920s-30s, it states that Skønvirke 'drew on the inspirations of traditional...Scandinavian design', indicating these ideas existed before 1914. The passage does not specify when these first ideas actually originated, so we cannot determine if they came about at the same time as Bauhaus and Dadaism."
+                    "feedback": "Correct! While the passage mentions Sk\u00f8nvirke magazine in 1914 and Bauhaus/Dadaism in the 1920s-30s, it states that Sk\u00f8nvirke 'drew on the inspirations of traditional...Scandinavian design', indicating these ideas existed before 1914. The passage does not specify when these first ideas actually originated, so we cannot determine if they came about at the same time as Bauhaus and Dadaism."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -704,7 +704,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nYou should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
+            "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nYou should spend about 20 minutes on Questions 14 \u2013 26 which are based on Reading Passage 2.",
             "question": "The term 'industrial arts' was coined by Scandinavian designers and artists in the Art Nouveau movement together.",
             "points": 1,
             "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions that the term 'industrial arts' arose from merging craftwork with commercial production, but it does not specify who actually coined the term or whether it was Scandinavian designers and Art Nouveau artists together. Note that you should always take a guess in the IELTS test even if you don't know the answer - you don't lose points for a wrong answer, and you may get lucky!",
@@ -738,7 +738,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nYou should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
+            "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nYou should spend about 20 minutes on Questions 14 \u2013 26 which are based on Reading Passage 2.",
             "question": "As well as furniture and accessories, Scandinavian design philosophies now also include environmentalism.",
             "points": 1,
             "no_answer_feedback": "The correct answer is TRUE. The final paragraph of Reading Passage 2 clearly states: 'Today, the design concepts of Scandinavia have progressed beyond product and furniture manufacture and production and now embrace environmental considerations as well.' Note that you should always take a guess in the IELTS test even if you don't know the answer - you don't lose points for a wrong answer, and you may get lucky!",
@@ -772,7 +772,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 – 24 with the Art movement or designer A – J.",
+            "instructions": "The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 \u2013 24 with the Art movement or designer A \u2013 J.",
             "question": "has been praised by art critics for the artistic achievements as well as being functional.",
             "points": 1,
             "no_answer_feedback": "",
@@ -805,7 +805,7 @@
                     "feedback": "Incorrect. Tappo Wirkkal is noted for achieving both artistic merit and functional design excellence."
                 },
                 {
-                    "text": "Skønvirke magazine",
+                    "text": "Sk\u00f8nvirke magazine",
                     "is_correct": false,
                     "feedback": "Incorrect. Tappo Wirkkal is noted for achieving both artistic merit and functional design excellence."
                 },
@@ -835,13 +835,13 @@
                     "feedback": "Incorrect. Tappo Wirkkal is noted for achieving both artistic merit and functional design excellence."
                 }
             ],
-            "options": "Dadaism\nAlvar Aalto\nTappo Wirkkal\nModernism\nSkønvirke magazine\ndemocratic design\nSwedish Society of Industrial Design\nVerner Panton\nArne Jacobson\nPop Art",
+            "options": "Dadaism\nAlvar Aalto\nTappo Wirkkal\nModernism\nSk\u00f8nvirke magazine\ndemocratic design\nSwedish Society of Industrial Design\nVerner Panton\nArne Jacobson\nPop Art",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
-            "instructions": "The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 – 24 with the Art movement or designer A – J.\r\nA: Dadaism\r\nB: Alvar Aalto\r\nC: Tappo Wirkkal\r\nD: Modernism\r\nE: Skønvirke magazine\r\nF: democratic design\r\nG: Swedish Society of Industrial Design\r\nH: Verner Panton\r\nI: Arne Jacobson\r\nJ: Pop Art",
+            "instructions": "The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 \u2013 24 with the Art movement or designer A \u2013 J.\r\nA: Dadaism\r\nB: Alvar Aalto\r\nC: Tappo Wirkkal\r\nD: Modernism\r\nE: Sk\u00f8nvirke magazine\r\nF: democratic design\r\nG: Swedish Society of Industrial Design\r\nH: Verner Panton\r\nI: Arne Jacobson\r\nJ: Pop Art",
             "question": "is now another name for 'Scandinavian design'.",
             "points": 1,
             "no_answer_feedback": "",
@@ -874,7 +874,7 @@
                     "feedback": "Incorrect. The term 'democratic design' has become synonymous with Scandinavian design principles."
                 },
                 {
-                    "text": "Skønvirke magazine",
+                    "text": "Sk\u00f8nvirke magazine",
                     "is_correct": false,
                     "feedback": "Incorrect. The term 'democratic design' has become synonymous with Scandinavian design principles."
                 },
@@ -904,13 +904,13 @@
                     "feedback": "Incorrect. The term 'democratic design' has become synonymous with Scandinavian design principles."
                 }
             ],
-            "options": "Dadaism\nAlvar Aalto\nTappo Wirkkal\nModernism\nSkønvirke magazine\ndemocratic design\nSwedish Society of Industrial Design\nVerner Panton\nArne Jacobson\nPop Art",
+            "options": "Dadaism\nAlvar Aalto\nTappo Wirkkal\nModernism\nSk\u00f8nvirke magazine\ndemocratic design\nSwedish Society of Industrial Design\nVerner Panton\nArne Jacobson\nPop Art",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
-            "instructions": "The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 – 24 with the Art movement or designer A – J.\r\nA: Dadaism\r\nB: Alvar Aalto\r\nC: Tappo Wirkkal\r\nD: Modernism\r\nE: Skønvirke magazine\r\nF: democratic design\r\nG: Swedish Society of Industrial Design\r\nH: Verner Panton\r\nI: Arne Jacobson\r\nJ: Pop Art",
+            "instructions": "The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 \u2013 24 with the Art movement or designer A \u2013 J.\r\nA: Dadaism\r\nB: Alvar Aalto\r\nC: Tappo Wirkkal\r\nD: Modernism\r\nE: Sk\u00f8nvirke magazine\r\nF: democratic design\r\nG: Swedish Society of Industrial Design\r\nH: Verner Panton\r\nI: Arne Jacobson\r\nJ: Pop Art",
             "question": "came up with new ways to shape and use a traditional construction material.",
             "points": 1,
             "no_answer_feedback": "",
@@ -943,7 +943,7 @@
                     "feedback": "Incorrect. Arne Jacobson pioneered innovative methods for shaping traditional materials like wood."
                 },
                 {
-                    "text": "Skønvirke magazine",
+                    "text": "Sk\u00f8nvirke magazine",
                     "is_correct": false,
                     "feedback": "Incorrect. Arne Jacobson pioneered innovative methods for shaping traditional materials like wood."
                 },
@@ -973,13 +973,13 @@
                     "feedback": "Incorrect. Arne Jacobson pioneered innovative methods for shaping traditional materials like wood."
                 }
             ],
-            "options": "Dadaism\nAlvar Aalto\nTappo Wirkkal\nModernism\nSkønvirke magazine\ndemocratic design\nSwedish Society of Industrial Design\nVerner Panton\nArne Jacobson\nPop Art",
+            "options": "Dadaism\nAlvar Aalto\nTappo Wirkkal\nModernism\nSk\u00f8nvirke magazine\ndemocratic design\nSwedish Society of Industrial Design\nVerner Panton\nArne Jacobson\nPop Art",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
-            "instructions": "The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 – 24 with the Art movement or designer A – J.\r\nA: Dadaism\r\nB: Alvar Aalto\r\nC: Tappo Wirkkal\r\nD: Modernism\r\nE: Skønvirke magazine\r\nF: democratic design\r\nG: Swedish Society of Industrial Design\r\nH: Verner Panton\r\nI: Arne Jacobson\r\nJ: Pop Art",
+            "instructions": "The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 \u2013 24 with the Art movement or designer A \u2013 J.\r\nA: Dadaism\r\nB: Alvar Aalto\r\nC: Tappo Wirkkal\r\nD: Modernism\r\nE: Sk\u00f8nvirke magazine\r\nF: democratic design\r\nG: Swedish Society of Industrial Design\r\nH: Verner Panton\r\nI: Arne Jacobson\r\nJ: Pop Art",
             "question": "emerged in the 1920s and 1930s, along with other European movements.",
             "points": 1,
             "no_answer_feedback": "",
@@ -1012,7 +1012,7 @@
                     "feedback": "Incorrect. Dadaism emerged during the 1920s and 1930s alongside other European art movements."
                 },
                 {
-                    "text": "Skønvirke magazine",
+                    "text": "Sk\u00f8nvirke magazine",
                     "is_correct": false,
                     "feedback": "Incorrect. Dadaism emerged during the 1920s and 1930s alongside other European art movements."
                 },
@@ -1042,13 +1042,13 @@
                     "feedback": "Incorrect. Dadaism emerged during the 1920s and 1930s alongside other European art movements."
                 }
             ],
-            "options": "Dadaism\nAlvar Aalto\nTappo Wirkkal\nModernism\nSkønvirke magazine\ndemocratic design\nSwedish Society of Industrial Design\nVerner Panton\nArne Jacobson\nPop Art",
+            "options": "Dadaism\nAlvar Aalto\nTappo Wirkkal\nModernism\nSk\u00f8nvirke magazine\ndemocratic design\nSwedish Society of Industrial Design\nVerner Panton\nArne Jacobson\nPop Art",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
-            "instructions": "The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 – 24 with the Art movement or designer A – J.\r\nA: Dadaism\r\nB: Alvar Aalto\r\nC: Tappo Wirkkal\r\nD: Modernism\r\nE: Skønvirke magazine\r\nF: democratic design\r\nG: Swedish Society of Industrial Design\r\nH: Verner Panton\r\nI: Arne Jacobson\r\nJ: Pop Art",
+            "instructions": "The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 \u2013 24 with the Art movement or designer A \u2013 J.\r\nA: Dadaism\r\nB: Alvar Aalto\r\nC: Tappo Wirkkal\r\nD: Modernism\r\nE: Sk\u00f8nvirke magazine\r\nF: democratic design\r\nG: Swedish Society of Industrial Design\r\nH: Verner Panton\r\nI: Arne Jacobson\r\nJ: Pop Art",
             "question": "was originally created to maintain standards of perfection.",
             "points": 1,
             "no_answer_feedback": "",
@@ -1081,7 +1081,7 @@
                     "feedback": "Incorrect. The Swedish Society of Industrial Design was established to uphold quality standards."
                 },
                 {
-                    "text": "Skønvirke magazine",
+                    "text": "Sk\u00f8nvirke magazine",
                     "is_correct": false,
                     "feedback": "Incorrect. The Swedish Society of Industrial Design was established to uphold quality standards."
                 },
@@ -1111,13 +1111,13 @@
                     "feedback": "Incorrect. The Swedish Society of Industrial Design was established to uphold quality standards."
                 }
             ],
-            "options": "Dadaism\nAlvar Aalto\nTappo Wirkkal\nModernism\nSkønvirke magazine\ndemocratic design\nSwedish Society of Industrial Design\nVerner Panton\nArne Jacobson\nPop Art",
+            "options": "Dadaism\nAlvar Aalto\nTappo Wirkkal\nModernism\nSk\u00f8nvirke magazine\ndemocratic design\nSwedish Society of Industrial Design\nVerner Panton\nArne Jacobson\nPop Art",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
-            "instructions": "The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 – 24 with the Art movement or designer A – J.\r\nA: Dadaism\r\nB: Alvar Aalto\r\nC: Tappo Wirkkal\r\nD: Modernism\r\nE: Skønvirke magazine\r\nF: democratic design\r\nG: Swedish Society of Industrial Design\r\nH: Verner Panton\r\nI: Arne Jacobson\r\nJ: Pop Art",
+            "instructions": "The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 \u2013 24 with the Art movement or designer A \u2013 J.\r\nA: Dadaism\r\nB: Alvar Aalto\r\nC: Tappo Wirkkal\r\nD: Modernism\r\nE: Sk\u00f8nvirke magazine\r\nF: democratic design\r\nG: Swedish Society of Industrial Design\r\nH: Verner Panton\r\nI: Arne Jacobson\r\nJ: Pop Art",
             "question": "moved from designing only furniture to accessories.",
             "points": 1,
             "no_answer_feedback": "",
@@ -1150,7 +1150,7 @@
                     "feedback": "Incorrect. Alvar Aalto expanded from furniture design into creating accessories and smaller items."
                 },
                 {
-                    "text": "Skønvirke magazine",
+                    "text": "Sk\u00f8nvirke magazine",
                     "is_correct": false,
                     "feedback": "Incorrect. Alvar Aalto expanded from furniture design into creating accessories and smaller items."
                 },
@@ -1180,13 +1180,13 @@
                     "feedback": "Incorrect. Alvar Aalto expanded from furniture design into creating accessories and smaller items."
                 }
             ],
-            "options": "Dadaism\nAlvar Aalto\nTappo Wirkkal\nModernism\nSkønvirke magazine\ndemocratic design\nSwedish Society of Industrial Design\nVerner Panton\nArne Jacobson\nPop Art",
+            "options": "Dadaism\nAlvar Aalto\nTappo Wirkkal\nModernism\nSk\u00f8nvirke magazine\ndemocratic design\nSwedish Society of Industrial Design\nVerner Panton\nArne Jacobson\nPop Art",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
-            "instructions": "The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 – 24 with the Art movement or designer A – J.\r\nA: Dadaism\r\nB: Alvar Aalto\r\nC: Tappo Wirkkal\r\nD: Modernism\r\nE: Skønvirke magazine\r\nF: democratic design\r\nG: Swedish Society of Industrial Design\r\nH: Verner Panton\r\nI: Arne Jacobson\r\nJ: Pop Art",
+            "instructions": "The passage refers to a number of movements in Art as well as some notable Scandinavian designers and institutions. Match the statement 18 \u2013 24 with the Art movement or designer A \u2013 J.\r\nA: Dadaism\r\nB: Alvar Aalto\r\nC: Tappo Wirkkal\r\nD: Modernism\r\nE: Sk\u00f8nvirke magazine\r\nF: democratic design\r\nG: Swedish Society of Industrial Design\r\nH: Verner Panton\r\nI: Arne Jacobson\r\nJ: Pop Art",
             "question": "designed a chair based on a new movement in Art.",
             "points": 1,
             "no_answer_feedback": "",
@@ -1219,7 +1219,7 @@
                     "feedback": "Incorrect. Verner Panton created chair designs influenced by new artistic movements."
                 },
                 {
-                    "text": "Skønvirke magazine",
+                    "text": "Sk\u00f8nvirke magazine",
                     "is_correct": false,
                     "feedback": "Incorrect. Verner Panton created chair designs influenced by new artistic movements."
                 },
@@ -1249,7 +1249,7 @@
                     "feedback": "Incorrect. Verner Panton created chair designs influenced by new artistic movements."
                 }
             ],
-            "options": "Dadaism\nAlvar Aalto\nTappo Wirkkal\nModernism\nSkønvirke magazine\ndemocratic design\nSwedish Society of Industrial Design\nVerner Panton\nArne Jacobson\nPop Art",
+            "options": "Dadaism\nAlvar Aalto\nTappo Wirkkal\nModernism\nSk\u00f8nvirke magazine\ndemocratic design\nSwedish Society of Industrial Design\nVerner Panton\nArne Jacobson\nPop Art",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1286,8 +1286,8 @@
         },
         {
             "type": "open_question",
-            "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS AND A NUMBER from the text.\r\nYou should spend about 20 minutes on Questions 27 – 39 which are based on Reading Passage 3.",
-            "question": "27. The Nobel prizes are awarded for [field 1] in a number of fields.",
+            "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS AND A NUMBER from the text.\r\nYou should spend about 20 minutes on Questions 27 \u2013 39 which are based on Reading Passage 3.",
+            "question": "26. The Nobel prizes are awarded for [field 1] in a number of fields.",
             "points": 1,
             "no_answer_feedback": "The correct answer is: outstanding contributions. Paragraph A states that the prizes are 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'.",
             "correct_feedback": "",
@@ -1312,7 +1312,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "28. Nobel was inspired to establish the Prizes following an obituary issued in [field 1].",
+            "question": "27. Nobel was inspired to establish the Prizes following an obituary issued in [field 1].",
             "points": 1,
             "no_answer_feedback": "The correct answer is: a French newspaper. Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes.",
             "correct_feedback": "",
@@ -1337,9 +1337,9 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "29. Family arguments were part of the reason why there was a delay of [field 1] before the first prizes.",
+            "question": "28. Family arguments were part of the reason why there was a delay of [field 1] before the first prizes.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'",
+            "no_answer_feedback": "The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out \u2013 complications with the will and disagreements among his surviving relatives meant that the process was set back.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1353,16 +1353,16 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'",
-                    "incorrect": "Incorrect. The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'",
-                    "no_answer": "The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'"
+                    "correct": "Correct! Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out \u2013 complications with the will and disagreements among his surviving relatives meant that the process was set back.'",
+                    "incorrect": "Incorrect. The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out \u2013 complications with the will and disagreements among his surviving relatives meant that the process was set back.'",
+                    "no_answer": "The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out \u2013 complications with the will and disagreements among his surviving relatives meant that the process was set back.'"
                 }
             }
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "30. In the middle of the last century, a Russian nominee was compelled into [field 1] the award.",
+            "question": "29. In the middle of the last century, a Russian nominee was compelled into [field 1] the award.",
             "points": 1,
             "no_answer_feedback": "The correct answer is: declining. Paragraph B states: 'the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958.'",
             "correct_feedback": "",
@@ -1387,9 +1387,9 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "31. [field 1] has earned a Prize on a number of occasions.",
+            "question": "30. [field 1] has earned a Prize on a number of occasions.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'",
+            "no_answer_feedback": "The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times \u2013 the Red Cross (which has been awarded a Prize three times).'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1403,18 +1403,18 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'",
-                    "incorrect": "Incorrect. The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'",
-                    "no_answer": "The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'"
+                    "correct": "Correct! Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times \u2013 the Red Cross (which has been awarded a Prize three times).'",
+                    "incorrect": "Incorrect. The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times \u2013 the Red Cross (which has been awarded a Prize three times).'",
+                    "no_answer": "The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times \u2013 the Red Cross (which has been awarded a Prize three times).'"
                 }
             }
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "32. In the early 1940s, there was [field 1] on two occasions.",
+            "question": "31. In the early 1940s, there was [field 1] on two occasions.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942.'",
+            "no_answer_feedback": "The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes \u2013 in 1941 and 1942.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1428,18 +1428,18 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942.'",
-                    "incorrect": "Incorrect. The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942.'",
-                    "no_answer": "The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942.'"
+                    "correct": "Correct! Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes \u2013 in 1941 and 1942.'",
+                    "incorrect": "Incorrect. The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes \u2013 in 1941 and 1942.'",
+                    "no_answer": "The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes \u2013 in 1941 and 1942.'"
                 }
             }
         },
         {
             "type": "closed_question",
             "instructions": "Do the following statements agree with the information given in the reading passage?<br>\r\nWrite <strong>TRUE</strong> if the statement agrees with the information.<br>\r\nWrite <strong>FALSE</strong> if the statement contradicts the information.<br>\r\nWrite <strong>NOT GIVEN</strong> if there is no information on this.</p>",
-            "question": "Every winner of a Prize is referred to as a ‘laureate’. ",
+            "question": "Every winner of a Prize is referred to as a \u2018laureate\u2019. ",
             "points": 1,
-            "no_answer_feedback": "The correct answers is TRUE. Paragraph B says “not every winner, referred to as a ‘laureate’, has actually accepted the award.” This shows that winners are referred to as ‘laureates’, even if they later refuse the prize.",
+            "no_answer_feedback": "The correct answers is TRUE. Paragraph B says \u201cnot every winner, referred to as a \u2018laureate\u2019, has actually accepted the award.\u201d This shows that winners are referred to as \u2018laureates\u2019, even if they later refuse the prize.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1451,17 +1451,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": true,
-                    "feedback": "That's right! Paragraph B says “not every winner, referred to as a ‘laureate’, has actually accepted the award.”\r\nThis shows that winners are referred to as ‘laureates’, even if they later refuse the prize."
+                    "feedback": "That's right! Paragraph B says \u201cnot every winner, referred to as a \u2018laureate\u2019, has actually accepted the award.\u201d\r\nThis shows that winners are referred to as \u2018laureates\u2019, even if they later refuse the prize."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "The correct answers is TRUE. Paragraph B says “not every winner, referred to as a ‘laureate’, has actually accepted the award.” This shows that winners are referred to as ‘laureates’, even if they later refuse the prize."
+                    "feedback": "The correct answers is TRUE. Paragraph B says \u201cnot every winner, referred to as a \u2018laureate\u2019, has actually accepted the award.\u201d This shows that winners are referred to as \u2018laureates\u2019, even if they later refuse the prize."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "The correct answers is TRUE. Paragraph B says “not every winner, referred to as a ‘laureate’, has actually accepted the award.” This shows that winners are referred to as ‘laureates’, even if they later refuse the prize."
+                    "feedback": "The correct answers is TRUE. Paragraph B says \u201cnot every winner, referred to as a \u2018laureate\u2019, has actually accepted the award.\u201d This shows that winners are referred to as \u2018laureates\u2019, even if they later refuse the prize."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -1507,7 +1507,7 @@
             "instructions": "",
             "question": "34. There are currently 6 categories for which Prizes are awarded.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. Paragraph A lists 5 original categories (chemistry, physics, literature, peace, and physiology or medicine), and Paragraph D states that 'In 1969...a sixth area was introduced to the Nobel Prizes – economics', making a total of 6 categories.",
+            "no_answer_feedback": "The correct answer is TRUE. Paragraph A lists 5 original categories (chemistry, physics, literature, peace, and physiology or medicine), and Paragraph D states that 'In 1969...a sixth area was introduced to the Nobel Prizes \u2013 economics', making a total of 6 categories.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1519,7 +1519,7 @@
                 {
                     "text": "TRUE",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph A lists 5 original categories (chemistry, physics, literature, peace, and physiology or medicine), and Paragraph D states that 'In 1969...a sixth area was introduced to the Nobel Prizes – economics', making a total of 6 categories."
+                    "feedback": "Correct! Paragraph A lists 5 original categories (chemistry, physics, literature, peace, and physiology or medicine), and Paragraph D states that 'In 1969...a sixth area was introduced to the Nobel Prizes \u2013 economics', making a total of 6 categories."
                 },
                 {
                     "text": "FALSE",
@@ -1575,7 +1575,7 @@
             "instructions": "",
             "question": "36. Some members of the judging panel have resigned because they disagreed with how the winner was chosen.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. Paragraph H explains that some members of the judging panel resigned because they disagreed with how the winner was chosen. Even if you’re unsure, it’s better to make a guess in the IELTS test — you won’t lose points for a wrong answer.",
+            "no_answer_feedback": "The correct answer is TRUE. Paragraph H explains that some members of the judging panel resigned because they disagreed with how the winner was chosen. Even if you\u2019re unsure, it\u2019s better to make a guess in the IELTS test \u2014 you won\u2019t lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -1725,15 +1725,15 @@
     "reading_texts": [
         {
             "title": "Reading Passage 1 - Driverless cars",
-            "content": "A: Could driving yourself soon be a thing of the past? Internet giant Google certainly thinks so. It started work on a driverless car back in 2010, and now the US state of Nevada has granted it a licence to trial them on public roads, bringing self-driving vehicles one step closer to reality. The car is based on a Toyota Prius, but it's fitted with a wide range of technologies that allows it to drive itself. The most notable is the large, roof-mounted LIDAR (light detection and ranging) unit, which spins around at high speed to give the computers a constant 360-degree view of the car's immediate surroundings. This combines with another radar in the grille (which detects objects in front of the car) and positioning sensors that pinpoint the Toyota's exact location, while a computer works out whether the car should brake, speed up or steer to avoid obstacles.<br />\r\n<br />\r\nB:  <span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Google themselves have stated that <span id=\"passage-q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">before any route is driven using automated technology, a manned vehicle is first driven along the roads to create a detailed digital map of all of the features on the way (much the same as Google Maps street view is recorded).</span> By mapping things like lane markers and traffic signs, the software in the car becomes familiar with the environment and characteristics in advance. When the car later tackles the route without driver assistance, all previously recorded data is used, as well as current obstacles such as where other cars are and how fast they're moving. Acceleration and deceleration are controlled accordingly and can interpret traffic lights, sign and road signs. The challenge of how to get the right information to the cars at the right time has been made possible by Google's vase network of data centres, which can process enormous amounts of info gathered by these vehicles.</span><br />\r\n<br />\r\nC:  <span id=\"passage-q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">The potential benefits of the driverless car are significant. The majority of road incidents are related to driver error – perhaps a lack of concentration or slower reflexes. In fact, driver error is responsible for over 60% of all traffic accidents. The use of computers making calculated decisions in microseconds means that reaction times are greatly reduced and collisions avoided – clearly a step in the right direction given that <span id=\"passage-q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">traffic accidents involving human error claim over one million fatalities annually</span>. With the concept of the driver becoming the passenger, there are also personal benefits and advantages – the daily commute could be used in a much more productive manner as the people previously spending time slowly moving through morning traffic jams are now able to work as they are driven to the office. With people in larger urban areas often spending an hour or more simply in trying to get to work, this would mean a significant boost in productivity as well as reduction in stress. Road rage, where one driver becomes irritated and acts aggressively towards (or because of) the actions of another driver, would be reduced if not eliminated.</span><br />\r\n<br />\r\nD:  <span id=\"passage-q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">Driverless cars would also mean a much greater level of mobility for people who previously were unable to operate a car. Those with disabilities or issues like epilepsy, as well as the visually impaired, would be independently mobile. Children would also benefit, as they could be driven to school without a parent or guardian having to drive them. But the gains aren't purely for the person being driven – there are also environmental gains. As driverless cars are controlled by highly sensitive computers, excess fuel that a human driver often wastes with over acceleration or heavy braking will be saved. <span id=\"passage-q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">The cars would be able to maintain a constant speed, again allowing for better fuel consumption and therefore fewer emissions.</span></span><br />\r\n<br />\r\nE: The idea for a vehicle that no longer needs a human driver is the brainchild of Sebastian Thrun, a professor at Stanford University who was also part of the team that developed Google Street View. In the early days of this developing technology, Thrun led a Stanford team to victory in the 2005 DARPA Challenge, a race for driverless vehicles sponsored by the US Department of Defence. He has used the knowledge gained in that event to develop the Google driverless car. During its development the self-driving Prius has clocked up more than 200,000 miles, traversed the Golden Gate Bridge and driven down San Francisco's notoriously tricky Lombard Street one of the steepest, twistiest urban roads in the world.<br />\r\n<br />\r\nF: There's been one accident, but Google claims the car was being driven manually at the time. It happened just outside company HQ in California, when another driver hit the back of the Prius at traffic lights. This shows the main impetus for driverless cars: taking humans out of the equation to improve safety. Thrun is naturally a strong supporter of driverless cars, but some people go even further – Google Chairman Eric Schmidt has commented that he thinks it's amazing humans were allowed to drive cars at all, and regards the need for a driver as a bug to be fixed. Driving enthusiasts may disagree with this view (the Hot Rod Association of Alberta, a group of car enthusiasts, have actually petitioned against further testing and development of the driverless car claiming that it would make car travel less interesting), but Tim Groesner, the director of the Nevada Department of Motor Vehicles, doesn't. He approved a driverless car licence for Google after riding in a Prius down the Las Vegas strip and seeing how much better it was than him at spotting hazards.<br />\r\n<br />\r\nG: <span id=\"passage-q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">There is still considerable work to be done, but the potential advantages make this a concept well worth pursuing, even if some of us will miss being behind the wheel!</span>"
+            "content": "A: Could driving yourself soon be a thing of the past? Internet giant Google certainly thinks so. It started work on a driverless car back in 2010, and now the US state of Nevada has granted it a licence to trial them on public roads, bringing self-driving vehicles one step closer to reality. The car is based on a Toyota Prius, but it's fitted with a wide range of technologies that allows it to drive itself. The most notable is the large, roof-mounted LIDAR (light detection and ranging) unit, which spins around at high speed to give the computers a constant 360-degree view of the car's immediate surroundings. This combines with another radar in the grille (which detects objects in front of the car) and positioning sensors that pinpoint the Toyota's exact location, while a computer works out whether the car should brake, speed up or steer to avoid obstacles.<br />\r\n<br />\r\nB:  <span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Google themselves have stated that <span id=\"passage-q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">before any route is driven using automated technology, a manned vehicle is first driven along the roads to create a detailed digital map of all of the features on the way (much the same as Google Maps street view is recorded).</span> By mapping things like lane markers and traffic signs, the software in the car becomes familiar with the environment and characteristics in advance. When the car later tackles the route without driver assistance, all previously recorded data is used, as well as current obstacles such as where other cars are and how fast they're moving. Acceleration and deceleration are controlled accordingly and can interpret traffic lights, sign and road signs. The challenge of how to get the right information to the cars at the right time has been made possible by Google's vase network of data centres, which can process enormous amounts of info gathered by these vehicles.</span><br />\r\n<br />\r\nC:  <span id=\"passage-q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">The potential benefits of the driverless car are significant. The majority of road incidents are related to driver error \u2013 perhaps a lack of concentration or slower reflexes. In fact, driver error is responsible for over 60% of all traffic accidents. The use of computers making calculated decisions in microseconds means that reaction times are greatly reduced and collisions avoided \u2013 clearly a step in the right direction given that <span id=\"passage-q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">traffic accidents involving human error claim over one million fatalities annually</span>. With the concept of the driver becoming the passenger, there are also personal benefits and advantages \u2013 the daily commute could be used in a much more productive manner as the people previously spending time slowly moving through morning traffic jams are now able to work as they are driven to the office. With people in larger urban areas often spending an hour or more simply in trying to get to work, this would mean a significant boost in productivity as well as reduction in stress. Road rage, where one driver becomes irritated and acts aggressively towards (or because of) the actions of another driver, would be reduced if not eliminated.</span><br />\r\n<br />\r\nD:  <span id=\"passage-q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">Driverless cars would also mean a much greater level of mobility for people who previously were unable to operate a car. Those with disabilities or issues like epilepsy, as well as the visually impaired, would be independently mobile. Children would also benefit, as they could be driven to school without a parent or guardian having to drive them. But the gains aren't purely for the person being driven \u2013 there are also environmental gains. As driverless cars are controlled by highly sensitive computers, excess fuel that a human driver often wastes with over acceleration or heavy braking will be saved. <span id=\"passage-q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">The cars would be able to maintain a constant speed, again allowing for better fuel consumption and therefore fewer emissions.</span></span><br />\r\n<br />\r\nE: The idea for a vehicle that no longer needs a human driver is the brainchild of Sebastian Thrun, a professor at Stanford University who was also part of the team that developed Google Street View. In the early days of this developing technology, Thrun led a Stanford team to victory in the 2005 DARPA Challenge, a race for driverless vehicles sponsored by the US Department of Defence. He has used the knowledge gained in that event to develop the Google driverless car. During its development the self-driving Prius has clocked up more than 200,000 miles, traversed the Golden Gate Bridge and driven down San Francisco's notoriously tricky Lombard Street one of the steepest, twistiest urban roads in the world.<br />\r\n<br />\r\nF: There's been one accident, but Google claims the car was being driven manually at the time. It happened just outside company HQ in California, when another driver hit the back of the Prius at traffic lights. This shows the main impetus for driverless cars: taking humans out of the equation to improve safety. Thrun is naturally a strong supporter of driverless cars, but some people go even further \u2013 Google Chairman Eric Schmidt has commented that he thinks it's amazing humans were allowed to drive cars at all, and regards the need for a driver as a bug to be fixed. Driving enthusiasts may disagree with this view (the Hot Rod Association of Alberta, a group of car enthusiasts, have actually petitioned against further testing and development of the driverless car claiming that it would make car travel less interesting), but Tim Groesner, the director of the Nevada Department of Motor Vehicles, doesn't. He approved a driverless car licence for Google after riding in a Prius down the Las Vegas strip and seeing how much better it was than him at spotting hazards.<br />\r\n<br />\r\nG: <span id=\"passage-q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">There is still considerable work to be done, but the potential advantages make this a concept well worth pursuing, even if some of us will miss being behind the wheel!</span>"
         },
         {
             "title": "Reading Passage 2 - Scandinavian Design",
-            "content": "The story behind the furniture from the Nordic countries.<br />\r\n<br />\r\n<span id=\"passage-q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">Traditionally, Scandinavia was recognised as the three kingdoms of Sweden, Norway and Denmark, but today that scope has widened to include both Finland and Iceland as well. With an impressive international reputation, designers and craftspeople from all five countries are often grouped under the collective name 'Scandinavian design', creating furniture with a unique and often simple appeal. It is claimed that the expression 'Scandinavian design' first came from a design exhibition which toured Canada and the United States in the mid-20th century, from 1954 to 1957, although there had been earlier exhibitions in Europe and North America showcasing the works of Scandinavian designers.</span><br />\r\n<br />\r\nTo understand both the origins and the concepts of Scandinavian design it is perhaps best to look at the historical context with some of the major trends in art and manufacturing through the 19th and 20th centuries. During the Industrial Revolution, generally considered to have been at its height in the first half of the 19th century, design was focused purely on being useful and functional. At the same time, Realism, a form of art that sprang from the introduction of the photograph, was used as a way to capture 'reality', and was linked to the reality of the mass production of the Industrial Revolution.<br />\r\n<br />\r\nThe late 19th century saw the beginning of the Art Nouveau movement, which was seen as a reaction against the functional style of the industrial revolution. This new form of art incorporated not only art, but also architecture, design, furniture and jewellery, and was strongly based on nature with its fluid and natural shapes. Art Nouveau continued through the turn of the century and led to the birth of Modernism, the new movement which had links to social movements and political activism at the beginning of the 20th century. Events such as the horrors of the First World War drove the movement on, and there was a growing ideal which saw a tremendous reaction against the existing norms, which resulted in a range of art movements forming, all sharing a similar reactionary bent.<br />\r\n<br />\r\n<span id=\"passage-q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">In 1914, a magazine was first published in Denmark called Skønvirke, which drew on the inspirations of traditional Danish, and by extension Scandinavian, design and local handicrafts.</span> This design was seen as being functional, featuring simple lines and a minimalist element, while at the same time is was still designed to look appealing. <span id=\"passage-q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">It is noted that Scandinavian design is known as 'democratic design' because the masses are attracted to its affordability and accessibility, as well as the aesthetics</span> (aesthetics being defined as the principle of nature and the appreciation of beauty). Wood was a major component in the construction of furniture from Scandinavian countries, and again this was driven by the constraining factors of the time: the difficulty in importing materials and economic issues leading to production problems. But, as a result, the finished products took on an identity of their own due to the signature wood design and the simplicity of the shape and the textures involved.<br />\r\n<br />\r\n<span id=\"passage-q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">In the 1920s and 1930s, other Art Movements in Europe began exploring new concepts and, interestingly, their work embraced not only the final product but also the manufacturing process. Bauhaus in Germany and Dadaism in Switzerland were two of the more notable movements exploring these new concepts</span>, along with Italy's Futurists and De Stijl in the Netherlands, who saw everything reduced to the simplest forms of lines and colour. As these ideas spread throughout the world, artists and designers from outside the region started integrating Scandinavian concepts of art and construction. However, as the 20th century progressed, the mass production techniques that were enveloping much of the rest of the world was not as prevalent in the Nordic countries, which were working to preserve the traditions of their crafts. <span id=\"passage-q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">In fact, preservation of these traditions had been a consideration in Scandinavia as far back as 1845, when the Swedish Society of Industrial Design was founded to ensure the highest levels of quality were maintained, while keeping safe the tradition of hand crafts.</span> However, even Scandinavia was not immune to the need for mass production, and <span id=\"passage-q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">it is claimed that this focus on the detail of craftwork and merging it with commercial production has given rise to the term 'industrial arts'</span>.<br />\r\n<br />\r\nA number of Scandinavian designers have now become household names, at least within the international household of design. <span id=\"passage-q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">Denmark's Verner Panton created, in 1960, the famous single-molded plastic chair, symbolising the emerging Pop Art movement and exemplifying the famous simple lines and designs.</span> <span id=\"passage-q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">Alvar Aalto, from Finland, worked with wood in his furniture manufacturing, and established a company which also championed other Finnish designers, and branched out into the production of accessories, such as lamps and textiles.</span> <span id=\"passage-q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">The Danish architect Arne Jacobson began working with plywood in the 1950s, and although this material had been used for time, Jacobson perfected new techniques which allowed the plywood to be bent, while keeping its inherent strength</span>, and in 1955 created a chair design which is still sold today. Eero Aarnio, from Finland, worked with fibreglass and came up with such simple but futuristic shapes that some of his designs have been utilized in science-fiction films as props.<br />\r\n<br />\r\n<span id=\"passage-q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">In addition to furniture, Scandinavian design has also been applied to crafts and accessories. Tappo Wirkkal, from Finland, and Sweden's Kosta Boda company both work with glass, and have created works which have drawn praise from art critics as well as withstanding the test of functional design criteria.</span> <span id=\"passage-q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">Today, the design concepts of Scandinavia have progressed beyond product and furniture manufacture and production and now embrace environmental considerations as well. The iconic Swedish company IKEA, for example, is insistent on only using timber from certified forests – a guarantee that it has not been illegally logged – as well as supporting 14 projects run by the World Wildlife Federation.</span>"
+            "content": "The story behind the furniture from the Nordic countries.<br />\r\n<br />\r\n<span id=\"passage-q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">Traditionally, Scandinavia was recognised as the three kingdoms of Sweden, Norway and Denmark, but today that scope has widened to include both Finland and Iceland as well. With an impressive international reputation, designers and craftspeople from all five countries are often grouped under the collective name 'Scandinavian design', creating furniture with a unique and often simple appeal. It is claimed that the expression 'Scandinavian design' first came from a design exhibition which toured Canada and the United States in the mid-20th century, from 1954 to 1957, although there had been earlier exhibitions in Europe and North America showcasing the works of Scandinavian designers.</span><br />\r\n<br />\r\nTo understand both the origins and the concepts of Scandinavian design it is perhaps best to look at the historical context with some of the major trends in art and manufacturing through the 19th and 20th centuries. During the Industrial Revolution, generally considered to have been at its height in the first half of the 19th century, design was focused purely on being useful and functional. At the same time, Realism, a form of art that sprang from the introduction of the photograph, was used as a way to capture 'reality', and was linked to the reality of the mass production of the Industrial Revolution.<br />\r\n<br />\r\nThe late 19th century saw the beginning of the Art Nouveau movement, which was seen as a reaction against the functional style of the industrial revolution. This new form of art incorporated not only art, but also architecture, design, furniture and jewellery, and was strongly based on nature with its fluid and natural shapes. Art Nouveau continued through the turn of the century and led to the birth of Modernism, the new movement which had links to social movements and political activism at the beginning of the 20th century. Events such as the horrors of the First World War drove the movement on, and there was a growing ideal which saw a tremendous reaction against the existing norms, which resulted in a range of art movements forming, all sharing a similar reactionary bent.<br />\r\n<br />\r\n<span id=\"passage-q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">In 1914, a magazine was first published in Denmark called Sk\u00f8nvirke, which drew on the inspirations of traditional Danish, and by extension Scandinavian, design and local handicrafts.</span> This design was seen as being functional, featuring simple lines and a minimalist element, while at the same time is was still designed to look appealing. <span id=\"passage-q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">It is noted that Scandinavian design is known as 'democratic design' because the masses are attracted to its affordability and accessibility, as well as the aesthetics</span> (aesthetics being defined as the principle of nature and the appreciation of beauty). Wood was a major component in the construction of furniture from Scandinavian countries, and again this was driven by the constraining factors of the time: the difficulty in importing materials and economic issues leading to production problems. But, as a result, the finished products took on an identity of their own due to the signature wood design and the simplicity of the shape and the textures involved.<br />\r\n<br />\r\n<span id=\"passage-q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">In the 1920s and 1930s, other Art Movements in Europe began exploring new concepts and, interestingly, their work embraced not only the final product but also the manufacturing process. Bauhaus in Germany and Dadaism in Switzerland were two of the more notable movements exploring these new concepts</span>, along with Italy's Futurists and De Stijl in the Netherlands, who saw everything reduced to the simplest forms of lines and colour. As these ideas spread throughout the world, artists and designers from outside the region started integrating Scandinavian concepts of art and construction. However, as the 20th century progressed, the mass production techniques that were enveloping much of the rest of the world was not as prevalent in the Nordic countries, which were working to preserve the traditions of their crafts. <span id=\"passage-q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">In fact, preservation of these traditions had been a consideration in Scandinavia as far back as 1845, when the Swedish Society of Industrial Design was founded to ensure the highest levels of quality were maintained, while keeping safe the tradition of hand crafts.</span> However, even Scandinavia was not immune to the need for mass production, and <span id=\"passage-q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">it is claimed that this focus on the detail of craftwork and merging it with commercial production has given rise to the term 'industrial arts'</span>.<br />\r\n<br />\r\nA number of Scandinavian designers have now become household names, at least within the international household of design. <span id=\"passage-q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">Denmark's Verner Panton created, in 1960, the famous single-molded plastic chair, symbolising the emerging Pop Art movement and exemplifying the famous simple lines and designs.</span> <span id=\"passage-q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">Alvar Aalto, from Finland, worked with wood in his furniture manufacturing, and established a company which also championed other Finnish designers, and branched out into the production of accessories, such as lamps and textiles.</span> <span id=\"passage-q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">The Danish architect Arne Jacobson began working with plywood in the 1950s, and although this material had been used for time, Jacobson perfected new techniques which allowed the plywood to be bent, while keeping its inherent strength</span>, and in 1955 created a chair design which is still sold today. Eero Aarnio, from Finland, worked with fibreglass and came up with such simple but futuristic shapes that some of his designs have been utilized in science-fiction films as props.<br />\r\n<br />\r\n<span id=\"passage-q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">In addition to furniture, Scandinavian design has also been applied to crafts and accessories. Tappo Wirkkal, from Finland, and Sweden's Kosta Boda company both work with glass, and have created works which have drawn praise from art critics as well as withstanding the test of functional design criteria.</span> <span id=\"passage-q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">Today, the design concepts of Scandinavia have progressed beyond product and furniture manufacture and production and now embrace environmental considerations as well. The iconic Swedish company IKEA, for example, is insistent on only using timber from certified forests \u2013 a guarantee that it has not been illegally logged \u2013 as well as supporting 14 projects run by the World Wildlife Federation.</span>"
         },
         {
             "title": "Reading Passage 3 - The Nobel Prize",
-            "content": "A: <span id=\"passage-q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">The Nobel Prize was first introduced in 1895, and now, over a century later, they are still highly respected awards. Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine</span>, they are named after Alfred Nobel, the man who initially pioneered the idea. Yet the Prizes had an unlikely start; Nobel’s contribution to science was actually the creation of dynamite. <span id=\"passage-q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">It was only when a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the ‘Merchant of Death’, that Nobel realised the full impact of the legacy he was leaving behind. He decided that after his death, a significant portion of his wealth should be devoted to seeking out and acknowledging those who had made ‘the greatest contribution to mankind’.</span> <span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.</span><br /><br />\r\n\r\nB: Each recipient received – and still receives – a medal, a diploma and a monetary award. As of 2010, 817 individuals and 23 organizations had been awarded a Nobel Prize. <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">Yet not every winner, referred to as a ‘laureate’, has actually accepted the award.</span> In the 1930s, three German winners were not permitted by their government to accept the Nobel Prize, and <span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958</span>. In 1964, Jean Paul Sartre, a French writer, also declined the award, although this was not politically motivated – he simply did not accept any official honour.<br /><br />\r\n\r\nC: <span id=\"passage-q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).</span> <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">Another interesting statistic is that less than 5 percent of Nobel prizes have been awarded to women, the first of whom was Marie Curie, who won the Nobel Prize in Physics in 1903.</span> Also, <span id=\"passage-q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942</span>. This was largely due to the world war that was being waged at the time.<br /><br />\r\n\r\nD: <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">In 1969, having been running for nearly seventy years, a sixth area was introduced to the Nobel Prizes – economics. This was not a category defined in Nobel’s will, but was established by Sweden’s central bank in 1968 on the Bank’s 300th anniversary. Since this time, no categories have been added or removed from the prizegiving.</span><br /><br />\r\n\r\nE: There are of course certain rules governing who can be selected for a Nobel prize. You cannot nominate yourself, nor can a person be nominated after their death. <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">However, it is possible to award a prize to someone who is dead as long as they were alive during the nomination process.</span> Each year, between 100 and 250 people are nominated.<br /><br />\r\n\r\nF: Arguably the most well-known of the Nobel prizes is the Nobel Peace Prize. According to the terms of Nobel’s will, it is not the Swedish Academy of Science nor the Academy of Arts (both of which select the recipient for the other prizes); instead, the Peace Prize is awarded by 5 people selected by the Norwegian parliament. But it is not just these 5 people who are carefully chosen – even those who have the right to nominate others are selected from a narrow selection of candidates. Members of national assemblies and governments, as well as selected international governmental bodies, university professors of history, political science, philosophy, law and theology, university presidents and directors of peace research and international affairs institutes, as well as former recipients are among the privileged few.<br /><br />\r\n\r\nG: For a nomination to be considered, only one acceptable nominator needs to suggest the name, but a shortlist of nominees, and the final recipient, is decided by the Nobel Institute, comprising of the 5 people selected by the Norwegian Parliament, as mentioned before.<br /><br />\r\n\r\nH: <span id=\"passage-q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">Although there is always the aim of reaching a unanimous verdict amongst those judging, there are times when this has not always been the case. In fact, some of the judging panel have resigned following a final decision that they felt was not correct</span>; since its inception, the Peace Prize nominees have included people like Adolf Hitler, Joseph Stalin and Benito Mussolini (although they were not awarded the prize). On the other side, there are certain people who are in many ways synonymous with the struggle for peace yet have not been recognised – Mahatma Gandhi, for example, was nominated 5 times but never actually won an award.<br /><br />\r\n\r\nI: <span id=\"passage-q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">Unsurprisingly, there have been a number of controversial winners of the Nobel Peace prize over the last 100 years. In the 1940s, Cordell Hull won the Peace Prize for his efforts in putting together the United Nations, but this was in many respects overshadowed by allegations that he campaigned against allowing a boat of Jewish refugees fleeing the Nazi regime to seek asylum in America.</span> <span id=\"passage-q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">Anti-Semitic allegations tarnished the prize awarded to John Forbes Nash, who was himself suffering from schizophrenia (a disease which is considered to have impacted on some of his more public comments).</span> Rumours also surrounded Wangari Maathai, a scientist and the first African woman to receive the award, with some claiming that she had aimed certain aggressive remarks at non-African scientists. <span id=\"passage-q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">A claim was also publicly made against the successful nomination of Barack Obama, with the award being given for ‘outstanding international diplomatic efforts’ only 12 days after he took office, with many claiming that the nomination and award were politically motivated.</span><br /><br />\r\n\r\nJ: But regardless of the controversies, allegations and history of Nobel, there is no doubt that for many countries, and many people, the Nobel Prizes are a welcome recognition of efforts in a wide range of fields. The award ceremony has, in recent years, become something of a global media event. There is a ‘Peace Prize Concert’ which is broadcast to over 450 million households in over 150 countries.\r\n"
+            "content": "A: <span id=\"passage-q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">The Nobel Prize was first introduced in 1895, and now, over a century later, they are still highly respected awards. Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine</span>, they are named after Alfred Nobel, the man who initially pioneered the idea. Yet the Prizes had an unlikely start; Nobel\u2019s contribution to science was actually the creation of dynamite. <span id=\"passage-q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">It was only when a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \u2018Merchant of Death\u2019, that Nobel realised the full impact of the legacy he was leaving behind. He decided that after his death, a significant portion of his wealth should be devoted to seeking out and acknowledging those who had made \u2018the greatest contribution to mankind\u2019.</span> <span id=\"passage-q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">However, it was not until 5 years after his death that the first prizes were handed out \u2013 complications with the will and disagreements among his surviving relatives meant that the process was set back.</span><br /><br />\r\n\r\nB: Each recipient received \u2013 and still receives \u2013 a medal, a diploma and a monetary award. As of 2010, 817 individuals and 23 organizations had been awarded a Nobel Prize. <span id=\"passage-q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">Yet not every winner, referred to as a \u2018laureate\u2019, has actually accepted the award.</span> In the 1930s, three German winners were not permitted by their government to accept the Nobel Prize, and <span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958</span>. In 1964, Jean Paul Sartre, a French writer, also declined the award, although this was not politically motivated \u2013 he simply did not accept any official honour.<br /><br />\r\n\r\nC: <span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times \u2013 the Red Cross (which has been awarded a Prize three times).</span> <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">Another interesting statistic is that less than 5 percent of Nobel prizes have been awarded to women, the first of whom was Marie Curie, who won the Nobel Prize in Physics in 1903.</span> Also, <span id=\"passage-q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">since its inception, there have been two occasions where no winner was found for the prizes \u2013 in 1941 and 1942</span>. This was largely due to the world war that was being waged at the time.<br /><br />\r\n\r\nD: <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">In 1969, having been running for nearly seventy years, a sixth area was introduced to the Nobel Prizes \u2013 economics. This was not a category defined in Nobel\u2019s will, but was established by Sweden\u2019s central bank in 1968 on the Bank\u2019s 300th anniversary. Since this time, no categories have been added or removed from the prizegiving.</span><br /><br />\r\n\r\nE: There are of course certain rules governing who can be selected for a Nobel prize. You cannot nominate yourself, nor can a person be nominated after their death. <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">However, it is possible to award a prize to someone who is dead as long as they were alive during the nomination process.</span> Each year, between 100 and 250 people are nominated.<br /><br />\r\n\r\nF: Arguably the most well-known of the Nobel prizes is the Nobel Peace Prize. According to the terms of Nobel\u2019s will, it is not the Swedish Academy of Science nor the Academy of Arts (both of which select the recipient for the other prizes); instead, the Peace Prize is awarded by 5 people selected by the Norwegian parliament. But it is not just these 5 people who are carefully chosen \u2013 even those who have the right to nominate others are selected from a narrow selection of candidates. Members of national assemblies and governments, as well as selected international governmental bodies, university professors of history, political science, philosophy, law and theology, university presidents and directors of peace research and international affairs institutes, as well as former recipients are among the privileged few.<br /><br />\r\n\r\nG: For a nomination to be considered, only one acceptable nominator needs to suggest the name, but a shortlist of nominees, and the final recipient, is decided by the Nobel Institute, comprising of the 5 people selected by the Norwegian Parliament, as mentioned before.<br /><br />\r\n\r\nH: <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">Although there is always the aim of reaching a unanimous verdict amongst those judging, there are times when this has not always been the case. In fact, some of the judging panel have resigned following a final decision that they felt was not correct</span>; since its inception, the Peace Prize nominees have included people like Adolf Hitler, Joseph Stalin and Benito Mussolini (although they were not awarded the prize). On the other side, there are certain people who are in many ways synonymous with the struggle for peace yet have not been recognised \u2013 Mahatma Gandhi, for example, was nominated 5 times but never actually won an award.<br /><br />\r\n\r\nI: <span id=\"passage-q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">Unsurprisingly, there have been a number of controversial winners of the Nobel Peace prize over the last 100 years. In the 1940s, Cordell Hull won the Peace Prize for his efforts in putting together the United Nations, but this was in many respects overshadowed by allegations that he campaigned against allowing a boat of Jewish refugees fleeing the Nazi regime to seek asylum in America.</span> <span id=\"passage-q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">Anti-Semitic allegations tarnished the prize awarded to John Forbes Nash, who was himself suffering from schizophrenia (a disease which is considered to have impacted on some of his more public comments).</span> Rumours also surrounded Wangari Maathai, a scientist and the first African woman to receive the award, with some claiming that she had aimed certain aggressive remarks at non-African scientists. <span id=\"passage-q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">A claim was also publicly made against the successful nomination of Barack Obama, with the award being given for \u2018outstanding international diplomatic efforts\u2019 only 12 days after he took office, with many claiming that the nomination and award were politically motivated.</span><br /><br />\r\n\r\nJ: But regardless of the controversies, allegations and history of Nobel, there is no doubt that for many countries, and many people, the Nobel Prizes are a welcome recognition of efforts in a wide range of fields. The award ceremony has, in recent years, become something of a global media event. There is a \u2018Peace Prize Concert\u2019 which is broadcast to over 450 million households in over 150 countries.\r\n"
         }
     ],
     "settings": {
