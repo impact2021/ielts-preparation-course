@@ -496,24 +496,24 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! Refer to the passage describing different clock components and their functions.",
-                    "incorrect": "Incorrect. The correct answer is 'clock mechanism'. Refer to the passage describing different clock components and their functions.",
-                    "no_answer": "You didn't provide an answer. Refer to the passage describing different clock components and their functions."
+                    "correct": "Correct! The headboard is the panel at the top of the clock that supports the mechanism.",
+                    "incorrect": "Incorrect. The correct answer is 'headboard'. This is the panel at the top of the clock that supports the mechanism.",
+                    "no_answer": "You didn't provide an answer. The correct answer is 'headboard', which is the panel at the top of the clock."
                 },
                 "2": {
-                    "correct": "Correct! Refer to the passage describing different clock components and their functions.",
-                    "incorrect": "Incorrect. The correct answer is 'clock mechanism'. Refer to the passage describing different clock components and their functions.",
-                    "no_answer": "You didn't provide an answer. Refer to the passage describing different clock components and their functions."
+                    "correct": "Correct! The weight provides the driving force for the clock mechanism.",
+                    "incorrect": "Incorrect. The correct answer is 'weight'. This provides the driving force for the clock mechanism.",
+                    "no_answer": "You didn't provide an answer. The correct answer is 'weight', which provides the driving force."
                 },
                 "3": {
-                    "correct": "Correct! Refer to the passage describing different clock components and their functions.",
-                    "incorrect": "Incorrect. The correct answer is 'clock mechanism'. Refer to the passage describing different clock components and their functions.",
-                    "no_answer": "You didn't provide an answer. Refer to the passage describing different clock components and their functions."
+                    "correct": "Correct! The pendulum regulates the timekeeping by swinging back and forth.",
+                    "incorrect": "Incorrect. The correct answer is 'pendulum'. This regulates the timekeeping by swinging back and forth.",
+                    "no_answer": "You didn't provide an answer. The correct answer is 'pendulum', which regulates the timekeeping."
                 },
                 "4": {
-                    "correct": "Correct! Refer to the passage describing different clock components and their functions.",
-                    "incorrect": "Incorrect. The correct answer is 'clock mechanism'. Refer to the passage describing different clock components and their functions.",
-                    "no_answer": "You didn't provide an answer. Refer to the passage describing different clock components and their functions."
+                    "correct": "Correct! The bellows produce the sound when the clock chimes.",
+                    "incorrect": "Incorrect. The correct answer is 'bellows'. These produce the sound when the clock chimes.",
+                    "no_answer": "You didn't provide an answer. The correct answer is 'bellows', which produce the chiming sound."
                 }
             }
         },
@@ -538,19 +538,19 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! The passage compares the accuracy of quartz and atomic clocks.",
-                    "incorrect": "Incorrect. The correct answer is 'accurate / precise'. The passage compares the accuracy of quartz and atomic clocks.",
-                    "no_answer": "You didn't provide an answer. The passage compares the accuracy of quartz and atomic clocks."
+                    "correct": "Correct! Quartz clocks are cheaper than atomic clocks.",
+                    "incorrect": "Incorrect. The correct answer is 'cheaper'. The passage states that quartz clocks are more affordable.",
+                    "no_answer": "You didn't provide an answer. The correct answer is 'cheaper', as quartz clocks are more affordable."
                 },
                 "2": {
-                    "correct": "Correct! The passage compares the accuracy of quartz and atomic clocks.",
-                    "incorrect": "Incorrect. The correct answer is 'accurate / precise'. The passage compares the accuracy of quartz and atomic clocks.",
-                    "no_answer": "You didn't provide an answer. The passage compares the accuracy of quartz and atomic clocks."
+                    "correct": "Correct! The atomic clock is the most accurate timepiece.",
+                    "incorrect": "Incorrect. The correct answer is 'accurate'. The passage states that atomic clocks are the most accurate.",
+                    "no_answer": "You didn't provide an answer. The correct answer is 'accurate', as atomic clocks are most precise."
                 },
                 "3": {
-                    "correct": "Correct! The passage compares the accuracy of quartz and atomic clocks.",
-                    "incorrect": "Incorrect. The correct answer is 'accurate / precise'. The passage compares the accuracy of quartz and atomic clocks.",
-                    "no_answer": "You didn't provide an answer. The passage compares the accuracy of quartz and atomic clocks."
+                    "correct": "Correct! Atomic clocks don't rely on moving parts.",
+                    "incorrect": "Incorrect. The correct answer is 'moving parts'. The passage explains that atomic clocks operate without mechanical components.",
+                    "no_answer": "You didn't provide an answer. The correct answer is 'moving parts', as atomic clocks have no mechanical components."
                 }
             }
         },
