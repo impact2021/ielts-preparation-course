@@ -836,7 +836,7 @@
         </div>
         
         <div class="footer">
-            IELTS Preparation Course - Reading Tests Quality Dashboard<br>
+            IELTS Preparation Course - Practice Tests Quality Dashboard<br>
             Bookmark this page for quick access to quality metrics
         </div>
     </div>
@@ -855,7 +855,12 @@
             document.getElementById(tabName).classList.add('active');
             
             // Add active class to clicked tab
-            event.target.classList.add('active');
+            const clickedTab = Array.from(tabs).find(tab => 
+                tab.getAttribute('onclick').includes(tabName)
+            );
+            if (clickedTab) {
+                clickedTab.classList.add('active');
+            }
         }
     </script>
 </body>
