@@ -5,68 +5,102 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "The Travel Rider pass",
+            "question": "Offers reductions for older people",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "A (£42 for adults, £30 for students and pensioners.)",
             "correct_feedback": "Correct!",
-            "incorrect_feedback": "",
+            "incorrect_feedback": "A (£42 for adults, £30 for students and pensioners.)",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "short_answer",
-            "correct_answer": "",
+            "correct_answer": "a",
             "case_sensitive": false,
             "exact_match": false
         },
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "The Flexi pass",
+            "question": "Can be bought online",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "C (The destination Pass is available through travel agents worldwide or can be purchased through our website.)",
             "correct_feedback": "Correct!",
-            "incorrect_feedback": "",
+            "incorrect_feedback": "C (The destination Pass is available through travel agents worldwide or can be purchased through our website.)",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "short_answer",
-            "correct_answer": "",
+            "correct_answer": "c",
             "case_sensitive": false,
             "exact_match": false
         },
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "The Destination pass",
+            "question": "Allows travel by train",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "D",
             "correct_feedback": "Correct!",
-            "incorrect_feedback": "",
+            "incorrect_feedback": "D",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "short_answer",
-            "correct_answer": "",
+            "correct_answer": "d",
             "case_sensitive": false,
             "exact_match": false
         },
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "None of the above",
+            "question": "Has the option to take a cruise",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "C (additional options to sail on Brentwood Lake)",
             "correct_feedback": "Correct!",
-            "incorrect_feedback": "",
+            "incorrect_feedback": "C (additional options to sail on Brentwood Lake)",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "short_answer",
-            "correct_answer": "",
+            "correct_answer": "c",
+            "case_sensitive": false,
+            "exact_match": false
+        },
+        {
+            "type": "open_answer",
+            "instructions": "",
+            "question": "Can be added to for more travel if required",
+            "points": 1,
+            "no_answer_feedback": "B (can be topped up just like a pre paid phone card)",
+            "correct_feedback": "Correct!",
+            "incorrect_feedback": "B (can be topped up just like a pre paid phone card)",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer",
+            "correct_answer": "b",
+            "case_sensitive": false,
+            "exact_match": false
+        },
+        {
+            "type": "open_answer",
+            "instructions": "",
+            "question": "Is designed for urban transport",
+            "points": 1,
+            "no_answer_feedback": "A (travel on any NorWest and Metro Link bus within the city)",
+            "correct_feedback": "Correct!",
+            "incorrect_feedback": "A (travel on any NorWest and Metro Link bus within the city)",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer",
+            "correct_answer": "a",
             "case_sensitive": false,
             "exact_match": false
         },
@@ -1061,94 +1095,6 @@
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 39-40\r\n\r\nChoose TWO letters, A-E.",
-            "question": "Which TWO of the following are mentioned as being risks or drawbacks associated with drone technology?",
-            "points": 2,
-            "no_answer_feedback": "The correct answers are B: 'Duration of flights' and D: 'Mid-air collisions.' Paragraph I explicitly mentions 'comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes)' and 'safety risks, in the potential for collisions across increasingly crowded airspace.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "A: The cost of fighting fires",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The cost of fighting fires is not mentioned as a drawback. The passage states fire departments use UAVs to 'reduce risks and costs.'"
-                },
-                {
-                    "text": "B: Duration of flights",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph I mentions 'comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes)' as a limitation."
-                },
-                {
-                    "text": "C: Criminal activity",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Criminal activity is not mentioned as a drawback; rather, drones are used to help detect criminal activity."
-                },
-                {
-                    "text": "D: Mid-air collisions",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph I mentions 'safety risks, in the potential for collisions across increasingly crowded airspace.'"
-                },
-                {
-                    "text": "E: The inevitable rise of drones",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The 'inexorable rise of drones' is described as a trend, not a specific risk or drawback."
-                }
-            ],
-            "options": "A: The cost of fighting fires\nB: Duration of flights\nC: Criminal activity\nD: Mid-air collisions\nE: The inevitable rise of drones",
-            "correct_answer_count": 2,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 39-40\r\n\r\nChoose TWO letters, A-E.",
-            "question": "Which TWO of the following are mentioned as being risks or drawbacks associated with drone technology?",
-            "points": 2,
-            "no_answer_feedback": "The correct answers are B: 'Duration of flights' and D: 'Mid-air collisions.' Paragraph I explicitly mentions 'comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes)' and 'safety risks, in the potential for collisions across increasingly crowded airspace.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "A: The cost of fighting fires",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The cost of fighting fires is not mentioned as a drawback. The passage states fire departments use UAVs to 'reduce risks and costs.'"
-                },
-                {
-                    "text": "B: Duration of flights",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph I mentions 'comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes)' as a limitation."
-                },
-                {
-                    "text": "C: Criminal activity",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Criminal activity is not mentioned as a drawback; rather, drones are used to help detect criminal activity."
-                },
-                {
-                    "text": "D: Mid-air collisions",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph I mentions 'safety risks, in the potential for collisions across increasingly crowded airspace.'"
-                },
-                {
-                    "text": "E: The inevitable rise of drones",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The 'inexorable rise of drones' is described as a trend, not a specific risk or drawback."
-                }
-            ],
-            "options": "A: The cost of fighting fires\nB: Duration of flights\nC: Criminal activity\nD: Mid-air collisions\nE: The inevitable rise of drones",
-            "correct_answer_count": 2,
             "show_option_letters": false
         },
         {
