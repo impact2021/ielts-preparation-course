@@ -102,10 +102,47 @@ def analyze_test(file_path):
         'file_path': file_path
     }
 
-def generate_html_dashboard(test_results):
+def generate_gt_test_row(result):
+    """Generate a table row for a General Training test"""
+    test_num = result['test_num']
+    questions = result['student_questions']
+    complete = '✓ Complete' if questions == 40 else f'{questions}/40'
+    
+    # Feedback status
+    missing_fb = len(result['missing_feedback'])
+    feedback_status = '✓ All' if missing_fb == 0 else f'⚠ {missing_fb} missing'
+    feedback_class = 'yes' if missing_fb == 0 else 'warning'
+    
+    # Link status
+    not_linked = len(result['not_linked'])
+    link_status = '✓ Present' if not_linked == 0 else f'⚠ {not_linked} missing'
+    link_class = 'yes' if not_linked == 0 else 'warning'
+    
+    # Overall status
+    if questions == 40 and missing_fb == 0 and not_linked == 0:
+        status = '✓ EXCELLENT'
+        status_class = 'excellent'
+    elif questions == 40:
+        status = '✓ Good'
+        status_class = 'good'
+    else:
+        status = '⚠ Incomplete'
+        status_class = 'warning'
+    
+    return f'''
+                                <tr>
+                                    <td class="test-number">{test_num}</td>
+                                    <td>{questions}</td>
+                                    <td><span class="badge {'yes' if questions == 40 else 'warning'}">{complete}</span></td>
+                                    <td><span class="badge {feedback_class}">{feedback_status}</span></td>
+                                    <td><span class="badge {link_class}">{link_status}</span></td>
+                                    <td><span class="badge {status_class}">{status}</span></td>
+                                </tr>'''
+
+def generate_html_dashboard(test_results, gt_test_results):
     """Generate the HTML quality dashboard"""
     
-    # Calculate statistics
+    # Calculate statistics for Academic tests
     total_tests = len(test_results)
     total_questions = sum(r['student_questions'] for r in test_results)
     complete_tests = sum(1 for r in test_results if r['student_questions'] == 40)
@@ -787,10 +824,60 @@ def generate_html_dashboard(test_results):
         <!-- GENERAL TRAINING TAB -->
         <div id="general" class="tab-content">
             <div class="content">
-                <div class="section" style="text-align: center; padding: 60px 20px;">
-                    <h2 style="font-size: 2rem; margin-bottom: 20px;">📝 General Training Reading Tests</h2>
-                    <p style="font-size: 1.2rem; color: #666; margin-bottom: 15px;">Coming Soon</p>
-                    <p style="color: #999;">This section will contain quality metrics for General Training Reading Tests when they are added to the course.</p>
+                <div class="stats-grid">
+                    <div class="stat-card info">
+                        <div class="number">{len(gt_test_results)}</div>
+                        <div class="label">Total Tests</div>
+                    </div>
+                    <div class="stat-card {'good' if sum(r['student_questions'] for r in gt_test_results) else 'info'}">
+                        <div class="number">{sum(r['student_questions'] for r in gt_test_results)}</div>
+                        <div class="label">Total Questions</div>
+                    </div>
+                    <div class="stat-card {'good' if sum(1 for r in gt_test_results if r['student_questions'] == 40) else 'warning'}">
+                        <div class="number">{sum(1 for r in gt_test_results if r['student_questions'] == 40)}</div>
+                        <div class="label">Complete Tests (40Q)</div>
+                    </div>
+                    <div class="stat-card {'good' if sum(len(r['missing_feedback']) for r in gt_test_results) == 0 else 'warning'}">
+                        <div class="number">{sum(len(r['missing_feedback']) for r in gt_test_results)}</div>
+                        <div class="label">Missing Feedback</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>📊 General Training Tests Overview</h2>
+                    <div class="table-container">
+                        <table class="test-table">
+                            <thead>
+                                <tr>
+                                    <th>Test</th>
+                                    <th>Questions</th>
+                                    <th>Complete</th>
+                                    <th>Feedback</th>
+                                    <th>Linked</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {''.join(generate_gt_test_row(r) for r in sorted(gt_test_results, key=lambda x: x['test_num']))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>📋 Summary</h2>
+                    <div class="summary-box">
+                        <h3>✅ Accomplishments</h3>
+                        <ul>
+                            {'<li>Test 1: <strong>40 questions</strong> ✓</li>' if any(r['student_questions'] == 40 for r in gt_test_results) else '<li>No complete tests yet</li>'}
+                            {'<li>Test 1: <strong>All questions have feedback</strong> ✓</li>' if any(len(r['missing_feedback']) == 0 for r in gt_test_results) else ''}
+                        </ul>
+                        
+                        <h3>Quality Breakdown</h3>
+                        <ul>
+                            <li>{'✓ EXCELLENT' if sum(1 for r in gt_test_results if len(r['missing_feedback']) == 0 and len(r['not_linked']) == 0 and r['student_questions'] == 40) > 0 else '⚠ Working on it'}: <strong>{sum(1 for r in gt_test_results if len(r['missing_feedback']) == 0 and len(r['not_linked']) == 0 and r['student_questions'] == 40)}/{len(gt_test_results)} tests</strong></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -831,18 +918,30 @@ def generate_html_dashboard(test_results):
 
 def main():
     """Main execution"""
-    test_dir = '/home/runner/work/ielts-preparation-course/ielts-preparation-course/main/Academic Read Test JSONs'
-    test_files = sorted(glob.glob(f'{test_dir}/Academic-IELTS-Reading-Test-*.json'))
+    # Analyze Academic Reading Tests
+    academic_test_dir = '/home/runner/work/ielts-preparation-course/ielts-preparation-course/main/Academic Read Test JSONs'
+    academic_test_files = sorted(glob.glob(f'{academic_test_dir}/Academic-IELTS-Reading-Test-*.json'))
     
-    print("Analyzing all reading tests...")
-    test_results = []
-    for test_file in test_files:
+    print("Analyzing Academic reading tests...")
+    academic_test_results = []
+    for test_file in academic_test_files:
         result = analyze_test(test_file)
-        test_results.append(result)
-        print(f"Test {result['test_num']}: {result['student_questions']} questions")
+        academic_test_results.append(result)
+        print(f"Academic Test {result['test_num']}: {result['student_questions']} questions")
+    
+    # Analyze General Training Reading Tests
+    gt_test_dir = '/home/runner/work/ielts-preparation-course/ielts-preparation-course/main/General Training Reading Test JSONs'
+    gt_test_files = sorted(glob.glob(f'{gt_test_dir}/General Training Reading Test*.json'))
+    
+    print("\nAnalyzing General Training reading tests...")
+    gt_test_results = []
+    for test_file in gt_test_files:
+        result = analyze_test(test_file)
+        gt_test_results.append(result)
+        print(f"General Training Test {result['test_num']}: {result['student_questions']} questions")
     
     print("\nGenerating quality dashboard HTML...")
-    html_content = generate_html_dashboard(test_results)
+    html_content = generate_html_dashboard(academic_test_results, gt_test_results)
     
     output_path = '/home/runner/work/ielts-preparation-course/ielts-preparation-course/main/Practice-Tests/quality-dashboard.html'
     with open(output_path, 'w', encoding='utf-8') as f:
@@ -851,12 +950,15 @@ def main():
     print(f"\n✓ Quality dashboard generated: {output_path}")
     
     # Summary
-    total = len(test_results)
-    complete = sum(1 for r in test_results if r['student_questions'] == 40)
-    print(f"\nSummary:")
-    print(f"  Total tests: {total}")
-    print(f"  Complete tests (40 questions): {complete}")
-    print(f"  Incomplete tests: {total - complete}")
+    print(f"\nAcademic Tests Summary:")
+    print(f"  Total tests: {len(academic_test_results)}")
+    print(f"  Complete tests (40 questions): {sum(1 for r in academic_test_results if r['student_questions'] == 40)}")
+    print(f"  Incomplete tests: {len(academic_test_results) - sum(1 for r in academic_test_results if r['student_questions'] == 40)}")
+    
+    print(f"\nGeneral Training Tests Summary:")
+    print(f"  Total tests: {len(gt_test_results)}")
+    print(f"  Complete tests (40 questions): {sum(1 for r in gt_test_results if r['student_questions'] == 40)}")
+    print(f"  Incomplete tests: {len(gt_test_results) - sum(1 for r in gt_test_results if r['student_questions'] == 40)}")
 
 if __name__ == '__main__':
     main()

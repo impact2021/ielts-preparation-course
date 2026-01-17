@@ -267,7 +267,7 @@
         <div class="header">
             <h1>📊 IELTS Practice Tests - Quality Dashboard</h1>
             <div class="subtitle">Comprehensive Quality Review for All Test Types</div>
-            <div class="timestamp">Last Updated: 2026-01-17 04:02:34 UTC</div>
+            <div class="timestamp">Last Updated: 2026-01-17 23:50:56 UTC</div>
         </div>
         
         <div class="tabs">
@@ -281,11 +281,11 @@
         
         <div class="stats-grid">
             <div class="stat-card info">
-                <div class="number">22</div>
+                <div class="number">21</div>
                 <div class="label">Total Tests</div>
             </div>
             <div class="stat-card info">
-                <div class="number">879</div>
+                <div class="number">840</div>
                 <div class="label">Total Questions</div>
             </div>
             <div class="stat-card good">
@@ -297,7 +297,7 @@
                 <div class="label">⚠ Issues</div>
             </div>
             <div class="stat-card critical">
-                <div class="number">1</div>
+                <div class="number">0</div>
                 <div class="label">🔴 Incomplete</div>
             </div>
         </div>
@@ -336,11 +336,11 @@
                             </tr>
                             <tr>
                                 <td class="test-number">03</td>
-                                <td><span class="badge critical">39</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge good">40</span></td>
+                                <td><span class="badge no">✗ No (1)</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge critical">🔴 INCOMPLETE</span></td>
+                                <td><span class="badge good">✓ COMPLETE</span></td>
                             </tr>
                             <tr>
                                 <td class="test-number">04</td>
@@ -361,7 +361,7 @@
                             <tr>
                                 <td class="test-number">06</td>
                                 <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge no">✗ No (7)</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
                                 <td><span class="badge excellent">✓ EXCELLENT</span></td>
                                 <td><span class="badge good">✓ COMPLETE</span></td>
@@ -447,14 +447,6 @@
                                 <td><span class="badge good">✓ COMPLETE</span></td>
                             </tr>
                             <tr>
-                                <td class="test-number">backup</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge no">✗ No (15)</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
                                 <td class="test-number">17</td>
                                 <td><span class="badge good">40</span></td>
                                 <td><span class="badge yes">✓ Yes</span></td>
@@ -500,14 +492,22 @@
             </div>
             
             <div class="section">
-                <h2>🚨 Critical Issues</h2>
+                <h2>⚠️ Other Issues</h2>
+                
                 <div class="issue-list">
-                    <h3>🔴 Test backup - CRITICAL</h3>
+                    <h3>Test 03</h3>
                     <ul>
-                        <li><strong>⚠️ Not Linked to Reading Passage:</strong> Questions 6, 7, 8, 9, 10, 11, 12, 20, 21, 22, 23, 33, 34, 35, 36</li>
-                        <li>reading_text_id is null or invalid</li>
+                        <li><strong>Missing Feedback:</strong> Questions 25</li>
                     </ul>
                 </div>
+                
+                <div class="issue-list">
+                    <h3>Test 06</h3>
+                    <ul>
+                        <li><strong>Missing Feedback:</strong> Questions 12, 30, 31, 32, 33, 34, 35</li>
+                    </ul>
+                </div>
+                
             </div>
             
             <div class="section">
@@ -515,21 +515,21 @@
                 <div class="issue-list">
                     <h3>🚨 Critical Issues</h3>
                     <ul>
-                        <li>Tests with BROKEN questions: <strong>1/22</strong></li>
-                        <li>Total questions not linked: <strong>15</strong></li>
+                        <li>Tests with BROKEN questions: <strong>0/21</strong></li>
+                        <li>Total questions not linked: <strong>0</strong></li>
                     </ul>
                     
                     <h3>⚠️ Other Issues</h3>
                     <ul>
-                        <li>Questions missing feedback: <strong>0</strong></li>
+                        <li>Questions missing feedback: <strong>8</strong></li>
                         <li>Questions with grammar issues: <strong>0</strong></li>
                     </ul>
                     
                     <h3>Overall Quality</h3>
                     <ul>
-                        <li>✓ Complete: <strong>21/22 tests</strong> (95%)</li>
-                        <li>⚠ Issues: <strong>2/22 tests</strong> (9%)</li>
-                        <li>🔴 BROKEN: <strong>1/22 tests</strong> (4%)</li>
+                        <li>✓ Complete: <strong>21/21 tests</strong> (100%)</li>
+                        <li>⚠ Issues: <strong>2/21 tests</strong> (9%)</li>
+                        <li>🔴 BROKEN: <strong>0/21 tests</strong> (0%)</li>
                     </ul>
                 </div>
             </div>
@@ -745,10 +745,68 @@
         <!-- GENERAL TRAINING TAB -->
         <div id="general" class="tab-content">
             <div class="content">
-                <div class="section" style="text-align: center; padding: 60px 20px;">
-                    <h2 style="font-size: 2rem; margin-bottom: 20px;">📝 General Training Reading Tests</h2>
-                    <p style="font-size: 1.2rem; color: #666; margin-bottom: 15px;">Coming Soon</p>
-                    <p style="color: #999;">This section will contain quality metrics for General Training Reading Tests when they are added to the course.</p>
+                <div class="stats-grid">
+                    <div class="stat-card info">
+                        <div class="number">1</div>
+                        <div class="label">Total Tests</div>
+                    </div>
+                    <div class="stat-card good">
+                        <div class="number">40</div>
+                        <div class="label">Total Questions</div>
+                    </div>
+                    <div class="stat-card good">
+                        <div class="number">1</div>
+                        <div class="label">Complete Tests (40Q)</div>
+                    </div>
+                    <div class="stat-card good">
+                        <div class="number">0</div>
+                        <div class="label">Missing Feedback</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>📊 General Training Tests Overview</h2>
+                    <div class="table-container">
+                        <table class="test-table">
+                            <thead>
+                                <tr>
+                                    <th>Test</th>
+                                    <th>Questions</th>
+                                    <th>Complete</th>
+                                    <th>Feedback</th>
+                                    <th>Linked</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td class="test-number">General Training Reading Test 1</td>
+                                    <td>40</td>
+                                    <td><span class="badge yes">✓ Complete</span></td>
+                                    <td><span class="badge yes">✓ All</span></td>
+                                    <td><span class="badge yes">✓ Present</span></td>
+                                    <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>📋 Summary</h2>
+                    <div class="summary-box">
+                        <h3>✅ Accomplishments</h3>
+                        <ul>
+                            <li>Test 1: <strong>40 questions</strong> ✓</li>
+                            <li>Test 1: <strong>All questions have feedback</strong> ✓</li>
+                        </ul>
+                        
+                        <h3>Quality Breakdown</h3>
+                        <ul>
+                            <li>✓ EXCELLENT: <strong>1/1 tests</strong></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
