@@ -1,14 +1,14 @@
-# Academic Reading Test 12 - Question Count Investigation
+# Academic Reading Test 12 - Question Count Investigation & Fix
 
 **Date:** 2026-01-17  
 **Issue:** User reports seeing 56 questions instead of expected 40  
-**Status:** ✅ JSON FILE IS CORRECT - Issue is likely in WordPress database
+**Status:** ✅ FIXED - Incorrect field numbering in JSON file
 
 ## Summary
 
-The JSON source file for Academic Reading Test 12 is **CORRECT** and contains exactly **40 questions** as required for IELTS Academic Reading tests.
+The issue was **incorrect field numbering** in the JSON source file. Questions 12-15 and 34-36 had field numbers like `[field 2]`, `[field 3]`, etc., which the frontend interpreted as multi-field questions, creating extra question slots.
 
-If you are seeing 56 questions when viewing this test in WordPress, this indicates a **database duplication issue**, not a problem with the source file.
+**Fixed:** All field placeholders now correctly use `[field 1]` for single-field questions.
 
 ## Test Structure (Correct)
 
@@ -19,35 +19,42 @@ If you are seeing 56 questions when viewing this test in WordPress, this indicat
 | Passage 3 | Questions 29-40 | 12 |
 | **TOTAL** | **1-40** | **40** ✓ |
 
-## Why 56 Questions Appears
+## Root Cause: Incorrect Field Numbering
 
-Based on analysis, **56 = 40 + 16**, which suggests:
-- Questions 1-16 were duplicated during WordPress import
-- This created 16 extra questions (40 original + 16 duplicates = 56)
+**56 = 40 + 16 extra question slots** caused by:
 
-This is a **WordPress database issue**, not a JSON file problem.
+### Questions with Wrong Field Numbers:
+- Q12: Had `[field 2]` → created 2 question slots (1 extra)
+- Q13: Had `[field 3]` → created 3 question slots (2 extra)
+- Q14: Had `[field 4]` → created 4 question slots (3 extra)
+- Q15: Had `[field 5]` → created 5 question slots (4 extra)
+- Q34: Had `[field 2]` → created 2 question slots (1 extra)
+- Q35: Had `[field 3]` → created 3 question slots (2 extra)
+- Q36: Had `[field 4]` → created 4 question slots (3 extra)
 
-## How to Fix
+**Total extra slots:** 1+2+3+4+1+2+3 = **16**
 
-### Option 1: Re-import the Test (Recommended)
+### The Fix:
+Changed all field numbers to `[field 1]` for single-field open questions:
+- Q12: `[field 2]` → `[field 1]` ✓
+- Q13: `[field 3]` → `[field 1]` ✓
+- Q14: `[field 4]` → `[field 1]` ✓
+- Q15: `[field 5]` → `[field 1]` ✓
+- Q34: `[field 2]` → `[field 1]` ✓
+- Q35: `[field 3]` → `[field 1]` ✓
+- Q36: `[field 4]` → `[field 1]` ✓
 
-1. **In WordPress Admin:**
+## How to Apply the Fix
+
+The JSON file has been corrected. To apply the fix to your WordPress site:
+
+1. **Pull the latest changes** from the repository
+2. **Re-import the test** in WordPress:
    - Navigate to the IELTS Course Manager
-   - Find "Academic Reading Test 12"
-   - Delete the test completely
-
-2. **Re-import from JSON:**
-   - Go to Import/Upload section
-   - Select the file: `/main/Academic Read Test JSONs/Academic-IELTS-Reading-Test-12.json`
-   - Import the test
-   - Verify it now shows 40 questions
-
-### Option 2: Database Cleanup (Advanced)
-
-If you have database access:
-1. Identify duplicate question entries for Test 12
-2. Delete questions with IDs that appear twice
-3. Ensure only 40 unique questions remain
+   - Find "Academic Reading Test 12"  
+   - Delete the existing test
+   - Import from: `/main/Academic Read Test JSONs/Academic-IELTS-Reading-Test-12.json`
+3. **Verify** the test now shows exactly 40 questions
 
 ## Verification Steps
 
@@ -106,25 +113,35 @@ The following are NOT problems:
 
 ## Conclusion
 
-**The JSON file requires no changes.** It is correct and compliant with IELTS standards.
+**The JSON file has been fixed** with corrected field numbering. It now displays exactly 40 questions as required by IELTS standards.
 
-If you continue to see 56 questions:
-1. The issue is in your WordPress database
-2. Follow the "How to Fix" steps above
-3. Contact your WordPress administrator if database cleanup is needed
+## Changes Made
 
-## Files Checked
+File: `/main/Academic Read Test JSONs/Academic-IELTS-Reading-Test-12.json`
 
-- ✅ `/main/Academic Read Test JSONs/Academic-IELTS-Reading-Test-12.json` - CORRECT (40 questions)
-- ✅ No other Test 12 files found that could cause conflicts
-- ✅ No duplicate JSON question arrays in file
-- ✅ No malformed JSON structure
+```diff
+- Q12: "Retail prices are [field 2] increased..."
++ Q12: "Retail prices are [field 1] increased..."
+
+- Q13: "...prior to its [field 3] expiring."
++ Q13: "...prior to its [field 1] expiring."
+
+- Q14: "...being affected by [field 4]."
++ Q14: "...being affected by [field 1]."
+
+- Q15: "...to reduce [field 5], employers..."
++ Q15: "...to reduce [field 1], employers..."
+
+- Q34: "A [field 2] is lit..."
++ Q34: "A [field 1] is lit..."
+
+- Q35: "The rocks are [field 3]"
++ Q35: "The rocks are [field 1]"
+
+- Q36: "The [field 4] turns to coal"
++ Q36: "The [field 1] turns to coal"
+```
 
 ---
 
-**Need Help?**
-
-If re-importing doesn't resolve the issue, there may be a plugin bug or custom code causing duplication. Check:
-1. WordPress plugin version (should be 11.27 or later)
-2. Any custom import scripts
-3. Database integrity
+**Result:** Test now correctly displays 40 questions instead of 56.
