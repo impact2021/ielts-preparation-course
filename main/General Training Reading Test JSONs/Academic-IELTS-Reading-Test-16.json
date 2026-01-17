@@ -1,0 +1,1533 @@
+{
+    "title": "Academic IELTS Reading Test 16",
+    "content": "",
+    "questions": [
+        {
+            "type": "headings",
+            "instructions": "Reading Passage 1 has seven paragraphs, A-G.\r\nChoose the correct heading for each paragraph from the list of headings below.\r\nList of Headings:\r\ni. The birth of AI as an academic field\r\nii. Renewed success through specialized applications\r\niii. Current achievements and everyday integration\r\niv. Early achievements and excessive optimism\r\nv. Fundamental changes in research approaches\r\nvi. Commercial applications restore confidence\r\nvii. Limitations exposed and funding withdrawn\r\nviii. Ongoing concerns despite progress",
+            "question": "Paragraph B",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is D) iv. Early achievements and excessive optimism. Paragraph B describes the \"remarkable enthusiasm and ambitious goals\" of early AI research and the \"widespread optimism\" that followed initial successes.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "mc_options": [
+                {
+                    "text": "i. The birth of AI as an academic field",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While AI research is mentioned, Paragraph A covers the birth of AI as a field at the Dartmouth Conference, not Paragraph B."
+                },
+                {
+                    "text": "ii. Renewed success through specialized applications",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes later periods when AI focused on specific domains, not the early years of broad optimism."
+                },
+                {
+                    "text": "iii. Current achievements and everyday integration",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading describes modern AI applications, not the 1950s-1960s period covered in Paragraph B."
+                },
+                {
+                    "text": "iv. Early achievements and excessive optimism",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B describes the \"remarkable enthusiasm and ambitious goals\" of early AI research and the \"widespread optimism\" that followed initial successes."
+                },
+                {
+                    "text": "v. Fundamental changes in research approaches",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B discusses early methods, not changes in methodology which came later."
+                },
+                {
+                    "text": "vi. Commercial applications restore confidence",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This refers to the expert systems boom of the 1980s, not the early research period."
+                },
+                {
+                    "text": "vii. Limitations exposed and funding withdrawn",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B focuses on optimism and success, not limitations and failures."
+                },
+                {
+                    "text": "viii. Ongoing concerns despite progress",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes current challenges, not the early optimistic period."
+                }
+            ],
+            "options": "i. The birth of AI as an academic field\nii. Renewed success through specialized applications\niii. Current achievements and everyday integration\niv. Early achievements and excessive optimism\nv. Fundamental changes in research approaches\nvi. Commercial applications restore confidence\nvii. Limitations exposed and funding withdrawn\nviii. Ongoing concerns despite progress",
+            "correct_answer": "3",
+            "option_feedback": [
+                "Incorrect. While AI research is mentioned, Paragraph A covers the birth of AI as a field at the Dartmouth Conference, not Paragraph B.",
+                "Incorrect. This describes later periods when AI focused on specific domains, not the early years of broad optimism.",
+                "Incorrect. This heading describes modern AI applications, not the 1950s-1960s period covered in Paragraph B.",
+                "Correct! Paragraph B describes the \"remarkable enthusiasm and ambitious goals\" of early AI research and the \"widespread optimism\" that followed initial successes.",
+                "Incorrect. Paragraph B discusses early methods, not changes in methodology which came later.",
+                "Incorrect. This refers to the expert systems boom of the 1980s, not the early research period.",
+                "Incorrect. Paragraph B focuses on optimism and success, not limitations and failures.",
+                "Incorrect. This describes current challenges, not the early optimistic period."
+            ]
+        },
+        {
+            "type": "headings",
+            "instructions": "",
+            "question": "Paragraph C",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is G) vii. Limitations exposed and funding withdrawn. This paragraph discusses the \"AI winter\" when \"progress stalled, funding dried up\" and the Lighthill Report \"led to severe cuts in AI funding\".",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "mc_options": [
+                {
+                    "text": "i. The birth of AI as an academic field",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The field's founding occurred earlier at the Dartmouth Conference, not during the AI winter."
+                },
+                {
+                    "text": "ii. Renewed success through specialized applications",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph describes failure and disappointment, not renewed success."
+                },
+                {
+                    "text": "iii. Current achievements and everyday integration",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses the 1970s-1980s AI winter, not current achievements."
+                },
+                {
+                    "text": "iv. Early achievements and excessive optimism",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While chronologically after the early period, this paragraph focuses on disappointment, not optimism."
+                },
+                {
+                    "text": "v. Fundamental changes in research approaches",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Changes in methodology came later; this paragraph describes why the original approaches failed."
+                },
+                {
+                    "text": "vi. Commercial applications restore confidence",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph describes loss of confidence and funding cuts, not commercial success."
+                },
+                {
+                    "text": "vii. Limitations exposed and funding withdrawn",
+                    "is_correct": true,
+                    "feedback": "Correct! This paragraph discusses the \"AI winter\" when \"progress stalled, funding dried up\" and the Lighthill Report \"led to severe cuts in AI funding\"."
+                },
+                {
+                    "text": "viii. Ongoing concerns despite progress",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph is about complete failure, not concerns despite progress."
+                }
+            ],
+            "options": "i. The birth of AI as an academic field\nii. Renewed success through specialized applications\niii. Current achievements and everyday integration\niv. Early achievements and excessive optimism\nv. Fundamental changes in research approaches\nvi. Commercial applications restore confidence\nvii. Limitations exposed and funding withdrawn\nviii. Ongoing concerns despite progress",
+            "correct_answer": "6",
+            "option_feedback": [
+                "Incorrect. The field's founding occurred earlier at the Dartmouth Conference, not during the AI winter.",
+                "Incorrect. This paragraph describes failure and disappointment, not renewed success.",
+                "Incorrect. This paragraph discusses the 1970s-1980s AI winter, not current achievements.",
+                "Incorrect. While chronologically after the early period, this paragraph focuses on disappointment, not optimism.",
+                "Incorrect. Changes in methodology came later; this paragraph describes why the original approaches failed.",
+                "Incorrect. This paragraph describes loss of confidence and funding cuts, not commercial success.",
+                "Correct! This paragraph discusses the \"AI winter\" when \"progress stalled, funding dried up\" and the Lighthill Report \"led to severe cuts in AI funding\".",
+                "Incorrect. This paragraph is about complete failure, not concerns despite progress."
+            ]
+        },
+        {
+            "type": "headings",
+            "instructions": "",
+            "question": "Paragraph D",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is F) vi. Commercial applications restore confidence. Paragraph D describes how \"expert systems\" led to \"renewed interest and investment\" with \"commercial success\" before another downturn.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "mc_options": [
+                {
+                    "text": "i. The birth of AI as an academic field",
+                    "is_correct": false,
+                    "feedback": "Incorrect. AI was founded earlier; this paragraph describes the 1980s revival through expert systems."
+                },
+                {
+                    "text": "ii. Renewed success through specialized applications",
+                    "is_correct": false,
+                    "feedback": "Close, but not the best fit. While expert systems were specialized, this heading doesn't capture the commercial emphasis mentioned in the paragraph."
+                },
+                {
+                    "text": "iii. Current achievements and everyday integration",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph covers the 1980s expert systems boom, not current modern AI."
+                },
+                {
+                    "text": "iv. Early achievements and excessive optimism",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes the 1950s-1960s period, not the 1980s expert systems era."
+                },
+                {
+                    "text": "v. Fundamental changes in research approaches",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Expert systems used similar symbolic approaches; the fundamental shift to machine learning came later."
+                },
+                {
+                    "text": "vi. Commercial applications restore confidence",
+                    "is_correct": true,
+                    "feedback": "Excellent! Paragraph D describes how \"expert systems\" led to \"renewed interest and investment\" with \"commercial success\" before another downturn."
+                },
+                {
+                    "text": "vii. Limitations exposed and funding withdrawn",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While the paragraph mentions another AI winter at the end, the main focus is on the commercial revival."
+                },
+                {
+                    "text": "viii. Ongoing concerns despite progress",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph is about a temporary boom period, not ongoing concerns."
+                }
+            ],
+            "options": "i. The birth of AI as an academic field\nii. Renewed success through specialized applications\niii. Current achievements and everyday integration\niv. Early achievements and excessive optimism\nv. Fundamental changes in research approaches\nvi. Commercial applications restore confidence\nvii. Limitations exposed and funding withdrawn\nviii. Ongoing concerns despite progress",
+            "correct_answer": "5",
+            "option_feedback": [
+                "Incorrect. AI was founded earlier; this paragraph describes the 1980s revival through expert systems.",
+                "Close, but not the best fit. While expert systems were specialized, this heading doesn't capture the commercial emphasis mentioned in the paragraph.",
+                "Incorrect. This paragraph covers the 1980s expert systems boom, not current modern AI.",
+                "Incorrect. This describes the 1950s-1960s period, not the 1980s expert systems era.",
+                "Incorrect. Expert systems used similar symbolic approaches; the fundamental shift to machine learning came later.",
+                "Excellent! Paragraph D describes how \"expert systems\" led to \"renewed interest and investment\" with \"commercial success\" before another downturn.",
+                "Incorrect. While the paragraph mentions another AI winter at the end, the main focus is on the commercial revival.",
+                "Incorrect. This paragraph is about a temporary boom period, not ongoing concerns."
+            ]
+        },
+        {
+            "type": "headings",
+            "instructions": "",
+            "question": "Paragraph E",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is E) v. Fundamental changes in research approaches. This paragraph describes \"a fundamental shift in AI research methodology\" from rule-based programming to machine learning approaches.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "mc_options": [
+                {
+                    "text": "i. The birth of AI as an academic field",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The field was born in 1956; this paragraph discusses changes in the 1990s-2000s."
+                },
+                {
+                    "text": "ii. Renewed success through specialized applications",
+                    "is_correct": false,
+                    "feedback": "Partially correct but misses the key point. The paragraph emphasizes the methodological shift to machine learning, not just specialized applications."
+                },
+                {
+                    "text": "iii. Current achievements and everyday integration",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph covers the 1990s-2000s transition period, not the current era which begins around 2010."
+                },
+                {
+                    "text": "iv. Early achievements and excessive optimism",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes the initial period of AI research, not the 1990s-2000s."
+                },
+                {
+                    "text": "v. Fundamental changes in research approaches",
+                    "is_correct": true,
+                    "feedback": "Correct! This paragraph describes \"a fundamental shift in AI research methodology\" from rule-based programming to machine learning approaches."
+                },
+                {
+                    "text": "vi. Commercial applications restore confidence",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While successes like Deep Blue are mentioned, the focus is on methodological changes, not commercial applications."
+                },
+                {
+                    "text": "vii. Limitations exposed and funding withdrawn",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph describes progress and new approaches, not failure or funding cuts."
+                },
+                {
+                    "text": "viii. Ongoing concerns despite progress",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph is about progress and methodological shifts, not concerns."
+                }
+            ],
+            "options": "i. The birth of AI as an academic field\nii. Renewed success through specialized applications\niii. Current achievements and everyday integration\niv. Early achievements and excessive optimism\nv. Fundamental changes in research approaches\nvi. Commercial applications restore confidence\nvii. Limitations exposed and funding withdrawn\nviii. Ongoing concerns despite progress",
+            "correct_answer": "4",
+            "option_feedback": [
+                "Incorrect. The field was born in 1956; this paragraph discusses changes in the 1990s-2000s.",
+                "Partially correct but misses the key point. The paragraph emphasizes the methodological shift to machine learning, not just specialized applications.",
+                "Incorrect. This paragraph covers the 1990s-2000s transition period, not the current era which begins around 2010.",
+                "Incorrect. This describes the initial period of AI research, not the 1990s-2000s.",
+                "Correct! This paragraph describes \"a fundamental shift in AI research methodology\" from rule-based programming to machine learning approaches.",
+                "Incorrect. While successes like Deep Blue are mentioned, the focus is on methodological changes, not commercial applications.",
+                "Incorrect. This paragraph describes progress and new approaches, not failure or funding cuts.",
+                "Incorrect. This paragraph is about progress and methodological shifts, not concerns."
+            ]
+        },
+        {
+            "type": "headings",
+            "instructions": "",
+            "question": "Paragraph F",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is C) iii. Current achievements and everyday integration. Paragraph F discusses the current era with AI achieving \"superhuman performance in numerous domains\" and becoming \"embedded in everyday technologies\".",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "mc_options": [
+                {
+                    "text": "i. The birth of AI as an academic field",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses the current era starting around 2010, not the field's founding in 1956."
+                },
+                {
+                    "text": "ii. Renewed success through specialized applications",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While success is mentioned, the paragraph emphasizes current widespread integration, not just specialized applications."
+                },
+                {
+                    "text": "iii. Current achievements and everyday integration",
+                    "is_correct": true,
+                    "feedback": "Exactly right! Paragraph F discusses the current era with AI achieving \"superhuman performance in numerous domains\" and becoming \"embedded in everyday technologies\"."
+                },
+                {
+                    "text": "iv. Early achievements and excessive optimism",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph covers modern achievements from 2010 onward, not the early period of the 1950s-1960s."
+                },
+                {
+                    "text": "v. Fundamental changes in research approaches",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While deep learning is mentioned, the focus is on achievements and integration, not the methodological shift itself."
+                },
+                {
+                    "text": "vi. Commercial applications restore confidence",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes an earlier period (1980s); Paragraph F is about widespread current deployment, not restoration of confidence."
+                },
+                {
+                    "text": "vii. Limitations exposed and funding withdrawn",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph celebrates current successes, not limitations or funding problems."
+                },
+                {
+                    "text": "viii. Ongoing concerns despite progress",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While challenges exist, this paragraph focuses on achievements and integration, not concerns."
+                }
+            ],
+            "options": "i. The birth of AI as an academic field\nii. Renewed success through specialized applications\niii. Current achievements and everyday integration\niv. Early achievements and excessive optimism\nv. Fundamental changes in research approaches\nvi. Commercial applications restore confidence\nvii. Limitations exposed and funding withdrawn\nviii. Ongoing concerns despite progress",
+            "correct_answer": "2",
+            "option_feedback": [
+                "Incorrect. This paragraph discusses the current era starting around 2010, not the field's founding in 1956.",
+                "Incorrect. While success is mentioned, the paragraph emphasizes current widespread integration, not just specialized applications.",
+                "Exactly right! Paragraph F discusses the current era with AI achieving \"superhuman performance in numerous domains\" and becoming \"embedded in everyday technologies\".",
+                "Incorrect. This paragraph covers modern achievements from 2010 onward, not the early period of the 1950s-1960s.",
+                "Incorrect. While deep learning is mentioned, the focus is on achievements and integration, not the methodological shift itself.",
+                "Incorrect. This describes an earlier period (1980s); Paragraph F is about widespread current deployment, not restoration of confidence.",
+                "Incorrect. This paragraph celebrates current successes, not limitations or funding problems.",
+                "Incorrect. While challenges exist, this paragraph focuses on achievements and integration, not concerns."
+            ]
+        },
+        {
+            "type": "headings",
+            "instructions": "",
+            "question": "Paragraph G",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is H) viii. Ongoing concerns despite progress. Despite impressive achievements, this paragraph outlines \"significant challenges\" including transparency, bias, job displacement, and privacy concerns.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "mc_options": [
+                {
+                    "text": "i. The birth of AI as an academic field",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses current limitations and future challenges, not the founding of the field."
+                },
+                {
+                    "text": "ii. Renewed success through specialized applications",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph focuses on ongoing problems and challenges, not successes."
+                },
+                {
+                    "text": "iii. Current achievements and everyday integration",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Paragraph G acknowledges achievements, its focus is on the challenges that remain despite progress."
+                },
+                {
+                    "text": "iv. Early achievements and excessive optimism",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses current concerns and future directions, not early achievements."
+                },
+                {
+                    "text": "v. Fundamental changes in research approaches",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph mentions future research approaches but focuses mainly on current challenges."
+                },
+                {
+                    "text": "vi. Commercial applications restore confidence",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph raises concerns about AI, not commercial confidence."
+                },
+                {
+                    "text": "vii. Limitations exposed and funding withdrawn",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While limitations are discussed, there's no mention of funding withdrawal; the paragraph discusses ongoing challenges."
+                },
+                {
+                    "text": "viii. Ongoing concerns despite progress",
+                    "is_correct": true,
+                    "feedback": "Perfect! Despite impressive achievements, this paragraph outlines \"significant challenges\" including transparency, bias, job displacement, and privacy concerns."
+                }
+            ],
+            "options": "i. The birth of AI as an academic field\nii. Renewed success through specialized applications\niii. Current achievements and everyday integration\niv. Early achievements and excessive optimism\nv. Fundamental changes in research approaches\nvi. Commercial applications restore confidence\nvii. Limitations exposed and funding withdrawn\nviii. Ongoing concerns despite progress",
+            "correct_answer": "7",
+            "option_feedback": [
+                "Incorrect. This paragraph discusses current limitations and future challenges, not the founding of the field.",
+                "Incorrect. This paragraph focuses on ongoing problems and challenges, not successes.",
+                "Incorrect. While Paragraph G acknowledges achievements, its focus is on the challenges that remain despite progress.",
+                "Incorrect. This paragraph discusses current concerns and future directions, not early achievements.",
+                "Incorrect. This paragraph mentions future research approaches but focuses mainly on current challenges.",
+                "Incorrect. This paragraph raises concerns about AI, not commercial confidence.",
+                "Incorrect. While limitations are discussed, there's no mention of funding withdrawal; the paragraph discusses ongoing challenges.",
+                "Perfect! Despite impressive achievements, this paragraph outlines \"significant challenges\" including transparency, bias, job displacement, and privacy concerns."
+            ]
+        },
+        {
+            "type": "true_false",
+            "instructions": "Do the following statements agree with the information given in Reading Passage 1?\r\nWrite TRUE if the statement agrees with the information\r\nWrite FALSE if the statement contradicts the information\r\nWrite NOT GIVEN if there is no information on this",
+            "question": "The term 'artificial intelligence' was first used at the Dartmouth Conference in 1956.",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph A states that John McCarthy \"coined the term 'artificial intelligence'\" at the 1956 Dartmouth Conference.",
+            "correct_feedback": "Correct! Paragraph A states that John McCarthy \"coined the term 'artificial intelligence'\" at the 1956 Dartmouth Conference.",
+            "incorrect_feedback": "Check paragraph A: it clearly states John McCarthy coined the term at the Dartmouth Conference in 1956.",
+            "reading_text_id": 0,
+            "options": "",
+            "correct_answer": "true"
+        },
+        {
+            "type": "true_false",
+            "instructions": "",
+            "question": "Early AI researchers believed machines would achieve human-level intelligence within 20 years.",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph B mentions that \"some researchers making bold predictions that machines would achieve human-level intelligence within 20 years.\"",
+            "correct_feedback": "Exactly! Paragraph B mentions that \"some researchers making bold predictions that machines would achieve human-level intelligence within 20 years.\"",
+            "incorrect_feedback": "Paragraph B clearly states researchers predicted machines would reach human-level intelligence within 20 years.",
+            "reading_text_id": 0,
+            "options": "",
+            "correct_answer": "true"
+        },
+        {
+            "type": "true_false",
+            "instructions": "",
+            "question": "The Lighthill Report was published in the United States.",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is FALSE. Paragraph C states the Lighthill Report \"led to severe cuts in AI funding in the United Kingdom,\" not the United States.",
+            "correct_feedback": "Correct! Paragraph C states the Lighthill Report \"led to severe cuts in AI funding in the United Kingdom,\" not the United States.",
+            "incorrect_feedback": "Review paragraph C: the Lighthill Report affected AI funding in the United Kingdom, not the US.",
+            "reading_text_id": 0,
+            "options": "",
+            "correct_answer": "false"
+        },
+        {
+            "type": "true_false",
+            "instructions": "",
+            "question": "Expert systems were easy and inexpensive to maintain.",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is FALSE. Paragraph D states expert systems \"proved difficult and expensive to maintain and update.\"",
+            "correct_feedback": "Perfect! Paragraph D states expert systems \"proved difficult and expensive to maintain and update.\"",
+            "incorrect_feedback": "Paragraph D clearly indicates expert systems were \"difficult and expensive to maintain and update.\"",
+            "reading_text_id": 0,
+            "options": "",
+            "correct_answer": "false"
+        },
+        {
+            "type": "true_false",
+            "instructions": "",
+            "question": "IBM's Deep Blue defeated Garry Kasparov in 1997.",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph E specifically mentions \"IBM's Deep Blue defeating world chess champion Garry Kasparov in 1997.\"",
+            "correct_feedback": "Excellent! Paragraph E specifically mentions \"IBM's Deep Blue defeating world chess champion Garry Kasparov in 1997.\"",
+            "incorrect_feedback": "Check paragraph E: it clearly states Deep Blue defeated Kasparov in 1997.",
+            "reading_text_id": 0,
+            "options": "",
+            "correct_answer": "true"
+        },
+        {
+            "type": "true_false",
+            "instructions": "",
+            "question": "Deep learning systems require specialized quantum computers to function effectively.",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is NOT GIVEN. While paragraph F mentions GPUs (graphics processing units) for training deep learning systems, quantum computers are never mentioned.",
+            "correct_feedback": "Correct! While paragraph F mentions GPUs (graphics processing units) for training deep learning systems, quantum computers are never mentioned.",
+            "incorrect_feedback": "There's no mention of quantum computers in the passage. Paragraph F only mentions GPUs.",
+            "reading_text_id": 0,
+            "options": "",
+            "correct_answer": "not_given"
+        },
+        {
+            "type": "true_false",
+            "instructions": "",
+            "question": "Current AI systems possess the same general intelligence and flexibility as humans.",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is FALSE. Paragraph G clearly states that current AI systems \"excel at narrow tasks but lack the general intelligence, common sense reasoning, and flexibility that humans possess.\"",
+            "correct_feedback": "Perfect! Paragraph G clearly states that current AI systems \"excel at narrow tasks but lack the general intelligence, common sense reasoning, and flexibility that humans possess.\"",
+            "incorrect_feedback": "Review paragraph G: it explicitly says AI lacks \"the general intelligence, common sense reasoning, and flexibility that humans possess.\"",
+            "reading_text_id": 0,
+            "options": "",
+            "correct_answer": "false"
+        },
+        {
+            "type": "short_answer",
+            "instructions": "Answer the questions below.\r\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+            "question": "What percentage of snap judgments about products can be attributed to color?",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is 90%. The first paragraph states color \"can account for up to 90% of snap judgments made about products.\"",
+            "correct_feedback": "Excellent! The first paragraph states color \"can account for up to 90% of snap judgments made about products.\"",
+            "incorrect_feedback": "Check the first paragraph: it states color accounts for \"up to 90%\" of snap judgments.",
+            "reading_text_id": 1,
+            "options": "",
+            "correct_answer": "90%"
+        },
+        {
+            "type": "short_answer",
+            "instructions": "",
+            "question": "In many East Asian cultures, what does the color white represent?",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is MOURNING AND DEATH. The second paragraph mentions white \"represents mourning and death in many East Asian cultures.\"",
+            "correct_feedback": "Perfect! The second paragraph mentions \"it represents mourning and death in many East Asian cultures.\"",
+            "incorrect_feedback": "Review paragraph 2: white represents \"mourning and death\" in many East Asian cultures.",
+            "reading_text_id": 1,
+            "options": "",
+            "correct_answer": "MOURNING AND DEATH"
+        },
+        {
+            "type": "short_answer",
+            "instructions": "",
+            "question": "What effect does the color blue have on appetite?",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is SUPPRESSES. Paragraph 3 states \"blue can also suppress appetite, making it rare in food branding.\"",
+            "correct_feedback": "Correct! Paragraph 3 states \"blue can also suppress appetite, making it rare in food branding.\"",
+            "incorrect_feedback": "Paragraph 3 mentions that blue \"can also suppress appetite.\"",
+            "reading_text_id": 1,
+            "options": "",
+            "correct_answer": "SUPPRESSES"
+        },
+        {
+            "type": "short_answer",
+            "instructions": "",
+            "question": "By what percentage can consistent use of color increase brand recognition?",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is 80%. Paragraph 5 states \"consistent use of color increases brand recognition by up to 80%.\"",
+            "correct_feedback": "Excellent! Paragraph 5 states \"consistent use of color increases brand recognition by up to 80%.\"",
+            "incorrect_feedback": "Check paragraph 5: it clearly states color consistency increases brand recognition \"by up to 80%.\"",
+            "reading_text_id": 1,
+            "options": "",
+            "correct_answer": "80%"
+        },
+        {
+            "type": "short_answer",
+            "instructions": "",
+            "question": "What percentage of men are affected by color vision deficiencies?",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is 8%. Paragraph 6 mentions \"color vision deficiencies, which affect approximately 8% of men.\"",
+            "correct_feedback": "Perfect! Paragraph 6 mentions \"color vision deficiencies, which affect approximately 8% of men.\"",
+            "incorrect_feedback": "Paragraph 6 states that color vision deficiencies \"affect approximately 8% of men.\"",
+            "reading_text_id": 1,
+            "options": "",
+            "correct_answer": "8%"
+        },
+        {
+            "type": "matching_classifying",
+            "instructions": "Match each color with the correct association according to the passage.\r\nChoose the correct letter, A-H.",
+            "question": "Red",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is B) Urgency and appetite stimulation. Paragraph 3 states red \"creates a sense of urgency\" and \"stimulates appetite.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "mc_options": [
+                {
+                    "text": "Trust and security",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Blue evokes trust and security, not red. Red is associated with urgency and stimulation."
+                },
+                {
+                    "text": "Urgency and appetite stimulation",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph 3 states red \"creates a sense of urgency\" and \"stimulates appetite.\""
+                },
+                {
+                    "text": "Nature and sustainability",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Green is associated with nature and sustainability, not red."
+                },
+                {
+                    "text": "Optimism but potential anxiety",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Yellow conveys optimism but can cause anxiety, not red."
+                },
+                {
+                    "text": "Luxury and exclusivity",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This association is not mentioned for red in the passage."
+                },
+                {
+                    "text": "Creativity and imagination",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This association is not discussed in the passage."
+                },
+                {
+                    "text": "Energy and excitement",
+                    "is_correct": false,
+                    "feedback": "Partially correct as red does grab attention, but the passage specifically emphasizes urgency and appetite stimulation."
+                },
+                {
+                    "text": "Calmness and relaxation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Red increases heart rate and creates urgency, the opposite of calmness."
+                }
+            ],
+            "options": "Trust and security\nUrgency and appetite stimulation\nNature and sustainability\nOptimism but potential anxiety\nLuxury and exclusivity\nCreativity and imagination\nEnergy and excitement\nCalmness and relaxation",
+            "correct_answer": "1",
+            "option_feedback": [
+                "Incorrect. Blue evokes trust and security, not red. Red is associated with urgency and stimulation.",
+                "Correct! Paragraph 3 states red \"creates a sense of urgency\" and \"stimulates appetite.\"",
+                "Incorrect. Green is associated with nature and sustainability, not red.",
+                "Incorrect. Yellow conveys optimism but can cause anxiety, not red.",
+                "Incorrect. This association is not mentioned for red in the passage.",
+                "Incorrect. This association is not discussed in the passage.",
+                "Partially correct as red does grab attention, but the passage specifically emphasizes urgency and appetite stimulation.",
+                "Incorrect. Red increases heart rate and creates urgency, the opposite of calmness."
+            ]
+        },
+        {
+            "type": "matching_classifying",
+            "instructions": "",
+            "question": "Blue",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is A) Trust and security. Paragraph 3 mentions blue \"evokes feelings of trust, security, and professionalism.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "mc_options": [
+                {
+                    "text": "Trust and security",
+                    "is_correct": true,
+                    "feedback": "Excellent! Paragraph 3 mentions blue \"evokes feelings of trust, security, and professionalism.\""
+                },
+                {
+                    "text": "Urgency and appetite stimulation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Red creates urgency and stimulates appetite. Blue actually suppresses appetite."
+                },
+                {
+                    "text": "Nature and sustainability",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Green is associated with nature and sustainability, not blue."
+                },
+                {
+                    "text": "Optimism but potential anxiety",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Yellow conveys optimism and can cause anxiety, not blue."
+                },
+                {
+                    "text": "Luxury and exclusivity",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Tiffany's blue is mentioned, the passage doesn't associate blue with luxury generally."
+                },
+                {
+                    "text": "Creativity and imagination",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This association is not mentioned in the passage."
+                },
+                {
+                    "text": "Energy and excitement",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Blue is described as conveying trust and professionalism, not energy."
+                },
+                {
+                    "text": "Calmness and relaxation",
+                    "is_correct": false,
+                    "feedback": "While blue is associated with tranquility (paragraph 2), the specific association given is trust and security (paragraph 3)."
+                }
+            ],
+            "options": "Trust and security\nUrgency and appetite stimulation\nNature and sustainability\nOptimism but potential anxiety\nLuxury and exclusivity\nCreativity and imagination\nEnergy and excitement\nCalmness and relaxation",
+            "correct_answer": "0",
+            "option_feedback": [
+                "Excellent! Paragraph 3 mentions blue \"evokes feelings of trust, security, and professionalism.\"",
+                "Incorrect. Red creates urgency and stimulates appetite. Blue actually suppresses appetite.",
+                "Incorrect. Green is associated with nature and sustainability, not blue.",
+                "Incorrect. Yellow conveys optimism and can cause anxiety, not blue.",
+                "Incorrect. While Tiffany's blue is mentioned, the passage doesn't associate blue with luxury generally.",
+                "Incorrect. This association is not mentioned in the passage.",
+                "Incorrect. Blue is described as conveying trust and professionalism, not energy.",
+                "While blue is associated with tranquility (paragraph 2), the specific association given is trust and security (paragraph 3)."
+            ]
+        },
+        {
+            "type": "matching_classifying",
+            "instructions": "",
+            "question": "Green",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is C) Nature and sustainability. Paragraph 3 states green is \"strongly associated with nature, health, and sustainability.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "mc_options": [
+                {
+                    "text": "Trust and security",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Blue evokes trust and security, not green."
+                },
+                {
+                    "text": "Urgency and appetite stimulation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Red creates urgency and stimulates appetite, not green."
+                },
+                {
+                    "text": "Nature and sustainability",
+                    "is_correct": true,
+                    "feedback": "Perfect! Paragraph 3 states green is \"strongly associated with nature, health, and sustainability.\""
+                },
+                {
+                    "text": "Optimism but potential anxiety",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Yellow conveys optimism and potential anxiety, not green."
+                },
+                {
+                    "text": "Luxury and exclusivity",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This association is not mentioned for green in the passage."
+                },
+                {
+                    "text": "Creativity and imagination",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This association is not discussed in the passage."
+                },
+                {
+                    "text": "Energy and excitement",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Green is associated with nature and health, not energy."
+                },
+                {
+                    "text": "Calmness and relaxation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While green may be calming, the passage specifically emphasizes nature and sustainability."
+                }
+            ],
+            "options": "Trust and security\nUrgency and appetite stimulation\nNature and sustainability\nOptimism but potential anxiety\nLuxury and exclusivity\nCreativity and imagination\nEnergy and excitement\nCalmness and relaxation",
+            "correct_answer": "2",
+            "option_feedback": [
+                "Incorrect. Blue evokes trust and security, not green.",
+                "Incorrect. Red creates urgency and stimulates appetite, not green.",
+                "Perfect! Paragraph 3 states green is \"strongly associated with nature, health, and sustainability.\"",
+                "Incorrect. Yellow conveys optimism and potential anxiety, not green.",
+                "Incorrect. This association is not mentioned for green in the passage.",
+                "Incorrect. This association is not discussed in the passage.",
+                "Incorrect. Green is associated with nature and health, not energy.",
+                "Incorrect. While green may be calming, the passage specifically emphasizes nature and sustainability."
+            ]
+        },
+        {
+            "type": "matching_classifying",
+            "instructions": "",
+            "question": "Yellow",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is D) Optimism but potential anxiety. Paragraph 3 says yellow \"conveys optimism, warmth, and youth\" but \"in excess, may evoke feelings of anxiety.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "mc_options": [
+                {
+                    "text": "Trust and security",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Blue evokes trust and security, not yellow."
+                },
+                {
+                    "text": "Urgency and appetite stimulation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Red creates urgency and stimulates appetite, not yellow."
+                },
+                {
+                    "text": "Nature and sustainability",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Green is associated with nature and sustainability, not yellow."
+                },
+                {
+                    "text": "Optimism but potential anxiety",
+                    "is_correct": true,
+                    "feedback": "Exactly right! Paragraph 3 says yellow \"conveys optimism, warmth, and youth\" but \"in excess, may evoke feelings of anxiety.\""
+                },
+                {
+                    "text": "Luxury and exclusivity",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This association is not mentioned for yellow in the passage."
+                },
+                {
+                    "text": "Creativity and imagination",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This association is not discussed in the passage."
+                },
+                {
+                    "text": "Energy and excitement",
+                    "is_correct": false,
+                    "feedback": "While yellow conveys warmth and youth, the specific association given is optimism with potential anxiety."
+                },
+                {
+                    "text": "Calmness and relaxation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Yellow can cause eye fatigue and anxiety, the opposite of calmness."
+                }
+            ],
+            "options": "Trust and security\nUrgency and appetite stimulation\nNature and sustainability\nOptimism but potential anxiety\nLuxury and exclusivity\nCreativity and imagination\nEnergy and excitement\nCalmness and relaxation",
+            "correct_answer": "3",
+            "option_feedback": [
+                "Incorrect. Blue evokes trust and security, not yellow.",
+                "Incorrect. Red creates urgency and stimulates appetite, not yellow.",
+                "Incorrect. Green is associated with nature and sustainability, not yellow.",
+                "Exactly right! Paragraph 3 says yellow \"conveys optimism, warmth, and youth\" but \"in excess, may evoke feelings of anxiety.\"",
+                "Incorrect. This association is not mentioned for yellow in the passage.",
+                "Incorrect. This association is not discussed in the passage.",
+                "While yellow conveys warmth and youth, the specific association given is optimism with potential anxiety.",
+                "Incorrect. Yellow can cause eye fatigue and anxiety, the opposite of calmness."
+            ]
+        },
+        {
+            "type": "multiple_choice",
+            "instructions": "Choose the correct letter, A, B, C or D.",
+            "question": "According to the passage, the Isolation Effect suggests that:",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is C) Items that stand out visually are more memorable. Paragraph 4 states the Isolation Effect demonstrates \"items standing out visually are more likely to be remembered.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "mc_options": [
+                {
+                    "text": "Colors should be used sparingly in marketing",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Isolation Effect is about visual distinction, not limiting color use."
+                },
+                {
+                    "text": "Bright colors are always more effective than dark colors",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The effect doesn't compare bright versus dark colors; it's about items standing out."
+                },
+                {
+                    "text": "Items that stand out visually are more memorable",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph 4 states the Isolation Effect demonstrates \"items standing out visually are more likely to be remembered.\""
+                },
+                {
+                    "text": "Isolated brands perform better than competitive brands",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This misinterprets the concept; 'isolation' refers to visual distinction, not market position."
+                }
+            ],
+            "options": "Colors should be used sparingly in marketing\nBright colors are always more effective than dark colors\nItems that stand out visually are more memorable\nIsolated brands perform better than competitive brands",
+            "correct_answer": "2",
+            "option_feedback": [
+                "",
+                "",
+                "Correct! Paragraph 4 states the Isolation Effect demonstrates \"items standing out visually are more likely to be remembered.\"",
+                "This misinterprets the concept. The effect is about visual distinction, not market isolation."
+            ]
+        },
+        {
+            "type": "multiple_choice",
+            "instructions": "",
+            "question": "What does the passage say about color processing in the brain?",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is C) Color is processed before shape and text. Paragraph 5 states \"The human brain processes color before shape and text.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "mc_options": [
+                {
+                    "text": "Color is processed after shape and text",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the opposite: color is processed BEFORE shape and text, not after."
+                },
+                {
+                    "text": "Color is processed at the same time as logos",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states color is processed before shape and text, not simultaneously."
+                },
+                {
+                    "text": "Color is processed before shape and text",
+                    "is_correct": true,
+                    "feedback": "Excellent! Paragraph 5 states \"The human brain processes color before shape and text.\""
+                },
+                {
+                    "text": "Color processing varies between individuals",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While preferences vary, the passage clearly states color is universally processed before shape and text."
+                }
+            ],
+            "options": "Color is processed after shape and text\nColor is processed at the same time as logos\nColor is processed before shape and text\nColor processing varies between individuals",
+            "correct_answer": "2",
+            "option_feedback": [
+                "",
+                "",
+                "Excellent! Paragraph 5 states \"The human brain processes color before shape and text.\"",
+                "While individual preferences are mentioned, the passage clearly states color is processed before shape and text."
+            ]
+        },
+        {
+            "type": "multiple_choice",
+            "instructions": "",
+            "question": "According to the passage, neuroscience research shows that color stimuli:",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is B) Activate regions associated with emotion and memory as well as vision. Paragraph 7 states color stimuli activate \"not only visual cortex regions but also areas associated with emotion and memory formation.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "mc_options": [
+                {
+                    "text": "Only activate the visual cortex",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states color activates multiple brain regions, not only the visual cortex."
+                },
+                {
+                    "text": "Activate regions associated with emotion and memory as well as vision",
+                    "is_correct": true,
+                    "feedback": "Perfect! Paragraph 7 states color stimuli activate \"not only visual cortex regions but also areas associated with emotion and memory formation.\""
+                },
+                {
+                    "text": "Have no effect on memory formation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This contradicts the passage, which explicitly states color affects memory formation."
+                },
+                {
+                    "text": "Work differently in commercial contexts than in nature",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage doesn't make this comparison between commercial and natural contexts."
+                }
+            ],
+            "options": "Only activate the visual cortex\nActivate regions associated with emotion and memory as well as vision\nHave no effect on memory formation\nWork differently in commercial contexts than in nature",
+            "correct_answer": "1",
+            "option_feedback": [
+                "",
+                "Perfect! Paragraph 7 states color stimuli activate \"not only visual cortex regions but also areas associated with emotion and memory formation.\"",
+                "This contradicts the passage, which states color affects memory formation.",
+                "The passage doesn't make this comparison."
+            ]
+        },
+        {
+            "type": "multiple_choice",
+            "instructions": "",
+            "question": "The passage suggests that future color marketing might involve:",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is C) Presenting different colors to different users based on data. The final paragraph mentions \"personalization technology may allow brands to present different color schemes to different user segments.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "mc_options": [
+                {
+                    "text": "Abandoning color psychology principles entirely",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage doesn't suggest abandoning established principles; rather, it discusses new applications."
+                },
+                {
+                    "text": "Using only primary colors for clarity",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage doesn't suggest limiting color palettes to primary colors."
+                },
+                {
+                    "text": "Presenting different colors to different users based on data",
+                    "is_correct": true,
+                    "feedback": "Exactly! The final paragraph mentions \"personalization technology may allow brands to present different color schemes to different user segments.\""
+                },
+                {
+                    "text": "Returning to black and white designs",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This isn't suggested anywhere in the passage; the focus is on personalization and technology."
+                }
+            ],
+            "options": "Abandoning color psychology principles entirely\nUsing only primary colors for clarity\nPresenting different colors to different users based on data\nReturning to black and white designs",
+            "correct_answer": "2",
+            "option_feedback": [
+                "",
+                "",
+                "Exactly! The final paragraph mentions \"personalization technology may allow brands to present different color schemes to different user segments.\"",
+                "This isn't suggested anywhere in the passage."
+            ]
+        },
+        {
+            "type": "summary_completion",
+            "instructions": "Complete the summary below.\r\nChoose NO MORE THAN TWO WORDS from the passage for each answer.",
+            "question": "Water scarcity affects billions globally, with only [field 1] of Earth's freshwater readily accessible. Agriculture consumes about [field 2] of global freshwater, with traditional methods being highly inefficient. The [field 3] of different foods varies greatly\u2014beef production requires far more water than wheat. Advanced technologies like [field 4] can reduce agricultural water use by 30-50%. In urban areas, [field 5] through leaking pipes represents a major problem, with some cities losing up to 60% of their supply. [field 6] removes salt from seawater but requires substantial energy input.",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. Check Reading Passage 3 for the correct answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "summary_fields": {
+                "1": {
+                    "answer": "1%",
+                    "correct_feedback": "",
+                    "incorrect_feedback": "",
+                    "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+                },
+                "2": {
+                    "answer": "70%",
+                    "correct_feedback": "",
+                    "incorrect_feedback": "",
+                    "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+                },
+                "3": {
+                    "answer": "virtual water",
+                    "correct_feedback": "",
+                    "incorrect_feedback": "",
+                    "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+                },
+                "4": {
+                    "answer": "drip irrigation",
+                    "correct_feedback": "",
+                    "incorrect_feedback": "",
+                    "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+                },
+                "5": {
+                    "answer": "non-revenue water",
+                    "correct_feedback": "",
+                    "incorrect_feedback": "",
+                    "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+                },
+                "6": {
+                    "answer": "Desalination",
+                    "correct_feedback": "",
+                    "incorrect_feedback": "",
+                    "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer."
+                }
+            },
+            "options": "",
+            "correct_answer": ""
+        },
+        {
+            "type": "matching_classifying",
+            "instructions": "Match each innovation or concept (Questions 33-40) with the correct description (A-K).",
+            "question": "Precision agriculture",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is A) Uses sensors and GPS to optimize water application. Paragraph C states \"Precision agriculture uses sensors, GPS technology, and data analytics to optimize water application.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "mc_options": [
+                {
+                    "text": "Uses sensors and GPS to optimize water application",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states \"Precision agriculture uses sensors, GPS technology, and data analytics to optimize water application.\""
+                },
+                {
+                    "text": "Captures water vapor from the air",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes atmospheric water harvesting using MOFs, not precision agriculture."
+                },
+                {
+                    "text": "Produces water meeting drinking standards from wastewater",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes the NEWater program, not precision agriculture."
+                },
+                {
+                    "text": "Can reduce water loss in cities by detecting leaks quickly",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes smart water meters, not precision agriculture."
+                },
+                {
+                    "text": "Uses large mesh nets to capture water from fog",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes fog harvesting, not precision agriculture."
+                },
+                {
+                    "text": "Inspired by water-filtering mechanisms of salt-tolerant plants",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes new desalination membranes, not precision agriculture."
+                },
+                {
+                    "text": "Delivers water directly to plant roots through tubes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes drip irrigation, not precision agriculture."
+                },
+                {
+                    "text": "Uses drones to identify crop stress",
+                    "is_correct": false,
+                    "feedback": "Close! While the passage mentions drones in the same paragraph, precision agriculture is specifically defined as using sensors and GPS."
+                },
+                {
+                    "text": "Recycles water from sinks and showers for other uses",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes greywater systems, not precision agriculture."
+                },
+                {
+                    "text": "Removes salt using reverse osmosis membranes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes desalination, not precision agriculture."
+                },
+                {
+                    "text": "Stores water in underground aquifers",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned in the passage."
+                }
+            ],
+            "options": "Uses sensors and GPS to optimize water application\nCaptures water vapor from the air\nProduces water meeting drinking standards from wastewater\nCan reduce water loss in cities by detecting leaks quickly\nUses large mesh nets to capture water from fog\nInspired by water-filtering mechanisms of salt-tolerant plants\nDelivers water directly to plant roots through tubes\nUses drones to identify crop stress\nRecycles water from sinks and showers for other uses\nRemoves salt using reverse osmosis membranes\nStores water in underground aquifers",
+            "correct_answer": "0",
+            "option_feedback": [
+                "Correct! Paragraph C states \"Precision agriculture uses sensors, GPS technology, and data analytics to optimize water application.\"",
+                "Incorrect. This describes atmospheric water harvesting using MOFs, not precision agriculture.",
+                "Incorrect. This describes the NEWater program, not precision agriculture.",
+                "Incorrect. This describes smart water meters, not precision agriculture.",
+                "Incorrect. This describes fog harvesting, not precision agriculture.",
+                "Incorrect. This describes new desalination membranes, not precision agriculture.",
+                "Incorrect. This describes drip irrigation, not precision agriculture.",
+                "Close! While the passage mentions drones in the same paragraph, precision agriculture is specifically defined as using sensors and GPS.",
+                "Incorrect. This describes greywater systems, not precision agriculture.",
+                "Incorrect. This describes desalination, not precision agriculture.",
+                "Incorrect. This is not mentioned in the passage."
+            ]
+        },
+        {
+            "type": "matching_classifying",
+            "instructions": "",
+            "question": "Smart water meters",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is D) Can reduce water loss in cities by detecting leaks quickly. Paragraph D mentions \"Smart water meters and sensor networks can help cities detect leaks quickly.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "mc_options": [
+                {
+                    "text": "Uses sensors and GPS to optimize water application",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes precision agriculture, not smart water meters."
+                },
+                {
+                    "text": "Captures water vapor from the air",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes atmospheric water harvesting, not smart water meters."
+                },
+                {
+                    "text": "Produces water meeting drinking standards from wastewater",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes the NEWater program, not smart water meters."
+                },
+                {
+                    "text": "Can reduce water loss in cities by detecting leaks quickly",
+                    "is_correct": true,
+                    "feedback": "Excellent! Paragraph D mentions \"Smart water meters and sensor networks can help cities detect leaks quickly.\""
+                },
+                {
+                    "text": "Uses large mesh nets to capture water from fog",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes fog harvesting, not smart water meters."
+                },
+                {
+                    "text": "Inspired by water-filtering mechanisms of salt-tolerant plants",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes new desalination membranes, not smart water meters."
+                },
+                {
+                    "text": "Delivers water directly to plant roots through tubes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes drip irrigation, not smart water meters."
+                },
+                {
+                    "text": "Uses drones to identify crop stress",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Drones are used in agriculture, not for urban water monitoring."
+                },
+                {
+                    "text": "Recycles water from sinks and showers for other uses",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes greywater systems, not smart water meters."
+                },
+                {
+                    "text": "Removes salt using reverse osmosis membranes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes desalination, not smart water meters."
+                },
+                {
+                    "text": "Stores water in underground aquifers",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned in the passage."
+                }
+            ],
+            "options": "Uses sensors and GPS to optimize water application\nCaptures water vapor from the air\nProduces water meeting drinking standards from wastewater\nCan reduce water loss in cities by detecting leaks quickly\nUses large mesh nets to capture water from fog\nInspired by water-filtering mechanisms of salt-tolerant plants\nDelivers water directly to plant roots through tubes\nUses drones to identify crop stress\nRecycles water from sinks and showers for other uses\nRemoves salt using reverse osmosis membranes\nStores water in underground aquifers",
+            "correct_answer": "3",
+            "option_feedback": [
+                "Incorrect. This describes precision agriculture, not smart water meters.",
+                "Incorrect. This describes atmospheric water harvesting, not smart water meters.",
+                "Incorrect. This describes the NEWater program, not smart water meters.",
+                "Excellent! Paragraph D mentions \"Smart water meters and sensor networks can help cities detect leaks quickly.\"",
+                "Incorrect. This describes fog harvesting, not smart water meters.",
+                "Incorrect. This describes new desalination membranes, not smart water meters.",
+                "Incorrect. This describes drip irrigation, not smart water meters.",
+                "Incorrect. Drones are used in agriculture, not for urban water monitoring.",
+                "Incorrect. This describes greywater systems, not smart water meters.",
+                "Incorrect. This describes desalination, not smart water meters.",
+                "Incorrect. This is not mentioned in the passage."
+            ]
+        },
+        {
+            "type": "matching_classifying",
+            "instructions": "",
+            "question": "New desalination membranes",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is F) Inspired by water-filtering mechanisms of salt-tolerant plants. Paragraph E mentions new membranes \"inspired by how mangrove trees and other salt-tolerant plants filter water.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "mc_options": [
+                {
+                    "text": "Uses sensors and GPS to optimize water application",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes precision agriculture, not new desalination membranes."
+                },
+                {
+                    "text": "Captures water vapor from the air",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes atmospheric water harvesting, not new desalination membranes."
+                },
+                {
+                    "text": "Produces water meeting drinking standards from wastewater",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes the NEWater program, not new desalination membranes."
+                },
+                {
+                    "text": "Can reduce water loss in cities by detecting leaks quickly",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes smart water meters, not new desalination membranes."
+                },
+                {
+                    "text": "Uses large mesh nets to capture water from fog",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes fog harvesting, not new desalination membranes."
+                },
+                {
+                    "text": "Inspired by water-filtering mechanisms of salt-tolerant plants",
+                    "is_correct": true,
+                    "feedback": "Perfect! Paragraph E mentions new membranes \"inspired by how mangrove trees and other salt-tolerant plants filter water.\""
+                },
+                {
+                    "text": "Delivers water directly to plant roots through tubes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes drip irrigation, not new desalination membranes."
+                },
+                {
+                    "text": "Uses drones to identify crop stress",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Drones are used in agriculture, not in desalination technology."
+                },
+                {
+                    "text": "Recycles water from sinks and showers for other uses",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes greywater systems, not new desalination membranes."
+                },
+                {
+                    "text": "Removes salt using reverse osmosis membranes",
+                    "is_correct": false,
+                    "feedback": "Close! While these new membranes are used in desalination, the specific description is about being inspired by plant mechanisms."
+                },
+                {
+                    "text": "Stores water in underground aquifers",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned in the passage."
+                }
+            ],
+            "options": "Uses sensors and GPS to optimize water application\nCaptures water vapor from the air\nProduces water meeting drinking standards from wastewater\nCan reduce water loss in cities by detecting leaks quickly\nUses large mesh nets to capture water from fog\nInspired by water-filtering mechanisms of salt-tolerant plants\nDelivers water directly to plant roots through tubes\nUses drones to identify crop stress\nRecycles water from sinks and showers for other uses\nRemoves salt using reverse osmosis membranes\nStores water in underground aquifers",
+            "correct_answer": "5",
+            "option_feedback": [
+                "Incorrect. This describes precision agriculture, not new desalination membranes.",
+                "Incorrect. This describes atmospheric water harvesting, not new desalination membranes.",
+                "Incorrect. This describes the NEWater program, not new desalination membranes.",
+                "Incorrect. This describes smart water meters, not new desalination membranes.",
+                "Incorrect. This describes fog harvesting, not new desalination membranes.",
+                "Perfect! Paragraph E mentions new membranes \"inspired by how mangrove trees and other salt-tolerant plants filter water.\"",
+                "Incorrect. This describes drip irrigation, not new desalination membranes.",
+                "Incorrect. Drones are used in agriculture, not in desalination technology.",
+                "Incorrect. This describes greywater systems, not new desalination membranes.",
+                "Close! While these new membranes are used in desalination, the specific description is about being inspired by plant mechanisms.",
+                "Incorrect. This is not mentioned in the passage."
+            ]
+        },
+        {
+            "type": "matching_classifying",
+            "instructions": "",
+            "question": "NEWater program",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is C) Produces water meeting drinking standards from wastewater. Paragraph F describes NEWater as producing reclaimed water through advanced treatment that \"meets or exceeds drinking water standards.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "mc_options": [
+                {
+                    "text": "Uses sensors and GPS to optimize water application",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes precision agriculture, not the NEWater program."
+                },
+                {
+                    "text": "Captures water vapor from the air",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes atmospheric water harvesting, not the NEWater program."
+                },
+                {
+                    "text": "Produces water meeting drinking standards from wastewater",
+                    "is_correct": true,
+                    "feedback": "Exactly right! Paragraph F describes NEWater as producing reclaimed water through advanced treatment that \"meets or exceeds drinking water standards.\""
+                },
+                {
+                    "text": "Can reduce water loss in cities by detecting leaks quickly",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes smart water meters, not the NEWater program."
+                },
+                {
+                    "text": "Uses large mesh nets to capture water from fog",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes fog harvesting, not the NEWater program."
+                },
+                {
+                    "text": "Inspired by water-filtering mechanisms of salt-tolerant plants",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes biomimetic membranes, not the NEWater program."
+                },
+                {
+                    "text": "Delivers water directly to plant roots through tubes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes drip irrigation, not the NEWater program."
+                },
+                {
+                    "text": "Uses drones to identify crop stress",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Drones are used in agriculture, not water recycling programs."
+                },
+                {
+                    "text": "Recycles water from sinks and showers for other uses",
+                    "is_correct": false,
+                    "feedback": "Close! NEWater does recycle water, but from wastewater (sewage), not specifically sinks and showers like greywater systems."
+                },
+                {
+                    "text": "Removes salt using reverse osmosis membranes",
+                    "is_correct": false,
+                    "feedback": "Partially correct as NEWater uses reverse osmosis, but it's treating wastewater, not removing salt from seawater."
+                },
+                {
+                    "text": "Stores water in underground aquifers",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned in the passage."
+                }
+            ],
+            "options": "Uses sensors and GPS to optimize water application\nCaptures water vapor from the air\nProduces water meeting drinking standards from wastewater\nCan reduce water loss in cities by detecting leaks quickly\nUses large mesh nets to capture water from fog\nInspired by water-filtering mechanisms of salt-tolerant plants\nDelivers water directly to plant roots through tubes\nUses drones to identify crop stress\nRecycles water from sinks and showers for other uses\nRemoves salt using reverse osmosis membranes\nStores water in underground aquifers",
+            "correct_answer": "2",
+            "option_feedback": [
+                "Incorrect. This describes precision agriculture, not the NEWater program.",
+                "Incorrect. This describes atmospheric water harvesting, not the NEWater program.",
+                "Exactly right! Paragraph F describes NEWater as producing reclaimed water through advanced treatment that \"meets or exceeds drinking water standards.\"",
+                "Incorrect. This describes smart water meters, not the NEWater program.",
+                "Incorrect. This describes fog harvesting, not the NEWater program.",
+                "Incorrect. This describes biomimetic membranes, not the NEWater program.",
+                "Incorrect. This describes drip irrigation, not the NEWater program.",
+                "Incorrect. Drones are used in agriculture, not water recycling programs.",
+                "Close! NEWater does recycle water, but from wastewater (sewage), not specifically sinks and showers like greywater systems.",
+                "Partially correct as NEWater uses reverse osmosis, but it's treating wastewater, not removing salt from seawater.",
+                "Incorrect. This is not mentioned in the passage."
+            ]
+        },
+        {
+            "type": "matching_classifying",
+            "instructions": "",
+            "question": "Greywater systems",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is I) Recycles water from sinks and showers for other uses. Paragraph F explains \"Greywater systems...recycle water from sinks, showers, and washing machines for use in toilet flushing and irrigation.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "mc_options": [
+                {
+                    "text": "Uses sensors and GPS to optimize water application",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes precision agriculture, not greywater systems."
+                },
+                {
+                    "text": "Captures water vapor from the air",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes atmospheric water harvesting, not greywater systems."
+                },
+                {
+                    "text": "Produces water meeting drinking standards from wastewater",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes the NEWater program; greywater is not treated to drinking standards."
+                },
+                {
+                    "text": "Can reduce water loss in cities by detecting leaks quickly",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes smart water meters, not greywater systems."
+                },
+                {
+                    "text": "Uses large mesh nets to capture water from fog",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes fog harvesting, not greywater systems."
+                },
+                {
+                    "text": "Inspired by water-filtering mechanisms of salt-tolerant plants",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes biomimetic membranes, not greywater systems."
+                },
+                {
+                    "text": "Delivers water directly to plant roots through tubes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes drip irrigation, not greywater systems."
+                },
+                {
+                    "text": "Uses drones to identify crop stress",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Drones are used in agriculture monitoring, not greywater recycling."
+                },
+                {
+                    "text": "Recycles water from sinks and showers for other uses",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F explains \"Greywater systems...recycle water from sinks, showers, and washing machines for use in toilet flushing and irrigation.\""
+                },
+                {
+                    "text": "Removes salt using reverse osmosis membranes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes desalination, not greywater systems."
+                },
+                {
+                    "text": "Stores water in underground aquifers",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned in the passage."
+                }
+            ],
+            "options": "Uses sensors and GPS to optimize water application\nCaptures water vapor from the air\nProduces water meeting drinking standards from wastewater\nCan reduce water loss in cities by detecting leaks quickly\nUses large mesh nets to capture water from fog\nInspired by water-filtering mechanisms of salt-tolerant plants\nDelivers water directly to plant roots through tubes\nUses drones to identify crop stress\nRecycles water from sinks and showers for other uses\nRemoves salt using reverse osmosis membranes\nStores water in underground aquifers",
+            "correct_answer": "8",
+            "option_feedback": [
+                "Incorrect. This describes precision agriculture, not greywater systems.",
+                "Incorrect. This describes atmospheric water harvesting, not greywater systems.",
+                "Incorrect. This describes the NEWater program; greywater is not treated to drinking standards.",
+                "Incorrect. This describes smart water meters, not greywater systems.",
+                "Incorrect. This describes fog harvesting, not greywater systems.",
+                "Incorrect. This describes biomimetic membranes, not greywater systems.",
+                "Incorrect. This describes drip irrigation, not greywater systems.",
+                "Incorrect. Drones are used in agriculture monitoring, not greywater recycling.",
+                "Correct! Paragraph F explains \"Greywater systems...recycle water from sinks, showers, and washing machines for use in toilet flushing and irrigation.\"",
+                "Incorrect. This describes desalination, not greywater systems.",
+                "Incorrect. This is not mentioned in the passage."
+            ]
+        },
+        {
+            "type": "multiple_choice",
+            "instructions": "Choose the correct letter, A, B, C or D.",
+            "question": "According to the passage, the concept of 'virtual water' refers to",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is B) the amount of water needed to produce food items. Paragraph B explains that virtual water is the water required to produce different foods.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "mc_options": [
+                {
+                    "text": "water that is wasted during food transportation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Virtual water refers to production requirements, not transportation waste."
+                },
+                {
+                    "text": "the amount of water needed to produce food items",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B explains that different foods require vastly different amounts of water, known as 'virtual water' content."
+                },
+                {
+                    "text": "water saved through drip irrigation systems",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This describes water conservation technology, not the virtual water concept."
+                },
+                {
+                    "text": "the theoretical maximum water efficiency",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Virtual water is about actual water consumption in food production, not theoretical efficiency."
+                }
+            ],
+            "options": "water that is wasted during food transportation\nthe amount of water needed to produce food items\nwater saved through drip irrigation systems\nthe theoretical maximum water efficiency",
+            "correct_answer": "1",
+            "option_feedback": [
+                "Incorrect. Virtual water refers to production requirements, not transportation waste.",
+                "Correct! Paragraph B explains that different foods require vastly different amounts of water, known as 'virtual water' content.",
+                "Incorrect. This describes water conservation technology, not the virtual water concept.",
+                "Incorrect. Virtual water is about actual water consumption in food production, not theoretical efficiency."
+            ]
+        },
+        {
+            "type": "multiple_choice",
+            "instructions": "",
+            "question": "The passage describes Singapore's water management approach as",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is A) combining technology, regulation, and public education. Paragraph D states Singapore has become a global leader through \"a combination of technological innovation, strict regulations, and public education.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "mc_options": [
+                {
+                    "text": "combining technology, regulation, and public education",
+                    "is_correct": true,
+                    "feedback": "Excellent! Paragraph D states Singapore has become a global leader through \"a combination of technological innovation, strict regulations, and public education.\""
+                },
+                {
+                    "text": "relying primarily on desalination plants",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Singapore uses various technologies, the passage emphasizes their comprehensive approach, not just desalination."
+                },
+                {
+                    "text": "depending mainly on water imports from neighbors",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage describes Singapore's efforts to develop local water solutions, not reliance on imports."
+                },
+                {
+                    "text": "focusing exclusively on reducing consumption",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Singapore's approach is multifaceted, including technology, regulation, and education, not just consumption reduction."
+                }
+            ],
+            "options": "combining technology, regulation, and public education\nrelying primarily on desalination plants\ndepending mainly on water imports from neighbors\nfocusing exclusively on reducing consumption",
+            "correct_answer": "0",
+            "option_feedback": [
+                "Excellent! Paragraph D states Singapore has become a global leader through \"a combination of technological innovation, strict regulations, and public education.\"",
+                "Incorrect. While Singapore uses various technologies, the passage emphasizes their comprehensive approach, not just desalination.",
+                "Incorrect. The passage describes Singapore's efforts to develop local water solutions, not reliance on imports.",
+                "Incorrect. Singapore's approach is multifaceted, including technology, regulation, and education, not just consumption reduction."
+            ]
+        },
+        {
+            "type": "short_answer",
+            "instructions": "Answer the question below.\r\nWrite NO MORE THAN TWO WORDS AND/OR A NUMBER for your answer.",
+            "question": "By what percentage can drip irrigation reduce water use compared to traditional methods?",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is 30-50% or 30-50 PERCENT. Paragraph C states drip irrigation \"can reduce water use by 30-50% compared to traditional methods.\"",
+            "correct_feedback": "Excellent! Paragraph C states drip irrigation \"can reduce water use by 30-50% compared to traditional methods.\"",
+            "incorrect_feedback": "Incorrect. Check Paragraph C: drip irrigation can reduce water use by \"30-50%\" compared to traditional methods.",
+            "reading_text_id": 2,
+            "options": "",
+            "correct_answer": "30-50%|30-50 PERCENT"
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "The History of Artificial Intelligence",
+            "content": "A: The concept of artificial intelligence (AI) has fascinated people for centuries, from ancient myths about mechanical servants to modern robots and computer systems. However, AI as an official field of study began in 1956 at the Dartmouth Conference, where computer scientist John McCarthy created the term 'artificial intelligence'. This important event brought together researchers who believed that machines could be programmed to think like humans. The conference marked the beginning of AI as an academic subject, with participants predicting that intelligent machines would be developed within a generation.<br />\r\n<br />\r\nB: The early years of AI research, from the late 1950s through the 1960s, showed great enthusiasm and ambitious goals. Researchers developed programs that could solve algebra problems, prove mathematical theorems, and even learn to play checkers at a good level. Pioneers like Herbert Simon and Allen Newell created the Logic Theorist, a program that could prove theorems, while Arthur Samuel developed a checkers program that improved with practice. The success of these early programs led to widespread optimism about AI's future, with some researchers predicting that machines would achieve human-level intelligence within 20 years. Government funding, particularly from the United States Defense Advanced Research Projects Agency (DARPA), supported AI research at leading universities.<br />\r\n<br />\r\nC: However, the initial optimism gave way to what became known as the 'AI winter' during the 1970s and early 1980s. This period saw significant disappointment as AI systems failed to live up to expectations. The limitations of early AI became clear: programs that worked well in laboratories struggled with real-world problems. The available computer power was not enough for the ambitious goals researchers had set, and the approaches being used proved inadequate for tasks requiring common sense or understanding context. As progress slowed, funding decreased, and many researchers left the field. The British government's Lighthill Report in 1973 was particularly damaging, criticizing AI research for failing to meet its goals and leading to severe cuts in AI funding in the United Kingdom.<br />\r\n<br />\r\nD: The field experienced a revival in the 1980s with the commercial success of expert systems\u2014programs designed to copy the decision-making of human experts in specific areas. Companies like Digital Equipment Corporation reported saving millions of dollars annually through expert systems that configured computer orders. This success led to renewed interest and investment in AI, with corporations worldwide investing billions in AI divisions and startups. Japan's Fifth Generation Computer Project, launched in 1982, aimed to create computers that could understand natural language and reason like humans, encouraging competitive responses from the United States and Europe. However, this boom was short-lived. By the late 1980s, another AI winter began as expert systems proved difficult and expensive to maintain, and the specialized hardware they needed became outdated with the rise of desktop computers.<br />\r\n<br />\r\nE: The 1990s and early 2000s saw a major shift in AI research methods. Rather than programming computers with explicit rules, researchers increasingly turned to machine learning approaches that allowed computers to learn from data. This shift was enabled by several factors: the rapid increase in computer power, the availability of large datasets through the internet, and advances in learning algorithms. During this period, AI achieved notable successes in specific areas, such as IBM's Deep Blue defeating world chess champion Garry Kasparov in 1997. These successes focused on narrow, well-defined problems rather than trying to create general artificial intelligence. The field also benefited from using more specific terms like 'machine learning' or 'neural networks' instead of 'artificial intelligence', partly to distance itself from the field's history of unfulfilled promises.<br />\r\n<br />\r\nF: The current era of AI, beginning around 2010, has been defined by the remarkable success of deep learning\u2014a machine learning approach based on artificial neural networks with multiple layers. The breakthrough came when researchers discovered that very large neural networks, trained on massive datasets using powerful graphics processing units (GPUs), could achieve excellent performance on tasks like image recognition, speech recognition, and natural language processing. In 2012, a deep learning system achieved a major improvement in image recognition in the ImageNet competition, leading to widespread adoption of deep learning techniques. Since then, AI has achieved superhuman performance in many areas, from playing complex games like Go to diagnosing medical conditions from images. Major technology companies have made AI central to their strategies, and AI applications have become part of everyday technologies, from smartphone assistants to recommendation systems.<br />\r\n<br />\r\nG: Despite these impressive achievements, significant challenges remain. Current AI systems excel at narrow tasks but lack the general intelligence, common sense, and flexibility that humans possess. The 'black box' nature of many modern AI systems, particularly deep learning models, raises concerns about transparency\u2014it is often difficult to understand why these systems make particular decisions. There are also growing concerns about bias in AI systems, which can continue or increase societal prejudices present in their training data. Issues of job loss, privacy, and the concentration of AI expertise in a few large companies have sparked debates about AI regulation. Looking forward, researchers are exploring ways to address these challenges, including developing more understandable AI systems, ensuring fairness, and working toward artificial general intelligence that can match human abilities across diverse tasks. The future of AI remains both exciting and uncertain, with potential applications from scientific discovery to addressing global challenges like climate change and disease."
+        },
+        {
+            "title": "The Psychology of Color in Marketing and Branding",
+            "content": "Color is far more than a visual phenomenon\u2014it is a powerful communication tool that influences human psychology, emotions, and behavior in profound ways. In the realms of marketing and branding, the strategic use of color has become a sophisticated science, with companies investing heavily in research to understand how different colors affect consumer perceptions and purchasing decisions. The impact of color on consumer behavior is so significant that studies have shown it can account for up to 90% of snap judgments made about products, making it one of the most critical elements in marketing strategy.<br />\r\n<br />\r\nThe psychological effects of color are rooted in both biological responses and cultural conditioning. From an evolutionary perspective, certain color associations developed to aid survival\u2014for instance, red signals danger or ripeness, while blue is associated with water and sky, suggesting openness and tranquility. However, cultural factors heavily influence color perception and meaning. While white symbolizes purity and innocence in Western cultures, often worn at weddings, it represents mourning and death in many East Asian cultures. Similarly, red is associated with luck and prosperity in China but can signify danger or warning in Western contexts. These cultural variations mean that global brands must carefully adapt their color strategies for different markets, and what works in one cultural context may be ineffective or even counterproductive in another.<br />\r\n<br />\r\nDifferent colors evoke distinct psychological responses that marketers leverage strategically. Red is perhaps the most powerful color in marketing, known to increase heart rate and create a sense of urgency. It stimulates appetite, which explains its prevalent use by fast-food chains like McDonald's and KFC. Red also grabs attention effectively, making it popular for clearance sales and call-to-action buttons. Blue, conversely, evokes feelings of trust, security, and professionalism, explaining its dominance in corporate branding, particularly in the financial sector where companies like American Express, IBM, and PayPal use it extensively. Research indicates that blue can also suppress appetite, making it rare in food branding. Green is strongly associated with nature, health, and sustainability, making it the preferred choice for organic products, environmental organizations, and health-related brands. Yellow conveys optimism, warmth, and youth but must be used carefully as it can cause eye fatigue and, in excess, may evoke feelings of anxiety or caution.<br />\r\n<br />\r\nThe phenomenon known as the 'Isolation Effect' demonstrates that items that stand out visually are more likely to be remembered. This principle guides many branding decisions, where companies choose colors that differentiate them from competitors. When most competitors use similar colors, selecting a contrasting color can make a brand much more memorable. However, color choices must also match category expectations\u2014using colors that feel wrong for a product type can confuse consumers and harm brand perception. For instance, while purple might help a chocolate brand stand out, it might seem unsuitable for a bank trying to show stability and trustworthiness.<br />\r\n<br />\r\nColor consistency across all brand touchpoints\u2014from logos and packaging to websites and retail environments\u2014is crucial for building brand recognition. Studies show that consistent use of color increases brand recognition by up to 80%. This is why major brands like Coca-Cola's red, Tiffany's distinctive blue, and Cadbury's purple are so carefully protected and consistently applied. The human brain processes color before shape and text, meaning color recognition often occurs before conscious identification of a logo or brand name. This makes color a brand's most immediate identifier and explains why companies defend their signature colors so vigorously, sometimes even securing trademarks for specific shades.<br />\r\n<br />\r\nThe digital age has introduced new considerations for color in marketing. Colors appear differently on various screens and devices, requiring brands to test how their colors render across platforms. Additionally, the importance of accessibility has gained recognition, with designers needing to ensure sufficient contrast for users with color vision deficiencies, which affect approximately 8% of men and 0.5% of women globally. The rise of dark mode in apps and websites has also required brands to reconsider how their colors appear against different backgrounds.<br />\r\n<br />\r\nRecent neuroscience research has provided deeper insights into how the brain processes color in marketing. Brain imaging studies reveal that color activates not only visual areas but also regions linked to emotion and memory. This explains why color can create such strong brand connections and emotional responses. However, individual preferences and personal experiences also play important roles\u2014someone who had a negative experience with a product in blue packaging might develop a dislike for that color in similar contexts, regardless of general color psychology principles.<br />\r\n<br />\r\nLooking forward, personalization technology may allow brands to present different color schemes to different user segments based on demographic data, past behavior, or even real-time emotional states detected through biometric data. Advances in color science, including new pigments and display technologies, will expand the palette available to marketers. As virtual and augmented reality become more prevalent, the role of color in creating immersive brand experiences will likely grow. Understanding the psychology of color will remain essential for marketers seeking to influence consumer perception, emotion, and behavior in an increasingly visual and digital marketplace."
+        },
+        {
+            "title": "The Global Water Crisis and Innovative Solutions",
+            "content": "Paragraph A: Water scarcity represents one of the most pressing challenges facing humanity in the 21st century. Although water covers approximately 71% of Earth's surface, only 2.5% is freshwater, and just 1% of that is readily accessible for human use\u2014the rest is locked in glaciers and ice caps. Currently, more than 2 billion people live in countries experiencing high water stress, and the United Nations projects that by 2050, up to 5.7 billion people could be living in areas where water is scarce for at least one month per year. This crisis is driven by multiple interconnected factors: population growth, urbanization, industrial development, agricultural expansion, and climate change. The problem is not merely one of physical scarcity but also of economic scarcity, where communities lack the infrastructure to access available water resources.<br />\r\n<br />\r\nParagraph B: Agriculture accounts for approximately 70% of global freshwater withdrawals, making it the largest consumer of water resources worldwide. Traditional irrigation methods are notoriously inefficient, with up to 60% of water lost through evaporation, runoff, or by watering areas that don't require irrigation. In many developing countries, farmers still rely on flood irrigation, where entire fields are submerged, resulting in massive water waste. The production of different foods requires vastly different amounts of water\u2014known as 'virtual water' content. For instance, producing one kilogram of beef requires approximately 15,000 liters of water when accounting for the water needed to grow feed crops, while one kilogram of wheat requires about 1,500 liters. As global meat consumption rises with increasing affluence, the water footprint of food production grows proportionally.<br />\r\n<br />\r\nParagraph C: Innovative agricultural technologies are emerging to address water inefficiency. Drip irrigation, which delivers water directly to plant roots through a network of tubes, can reduce water use by 30-50% compared to traditional methods while actually increasing crop yields. Israeli farmers, facing severe water scarcity, pioneered many of these technologies and now achieve remarkable productivity with minimal water use. Precision agriculture uses sensors, GPS technology, and data analytics to optimize water application, ensuring crops receive exactly the amount of water they need, when they need it. Some farmers are even using drones equipped with multispectral cameras to identify areas of crop stress before they're visible to the human eye, allowing for targeted irrigation. Drought-resistant crop varieties developed through both traditional breeding and genetic modification offer another avenue, potentially reducing agricultural water requirements by 20-40% for certain crops.<br />\r\n<br />\r\nParagraph D: Urban water systems face distinct challenges, particularly in rapidly growing cities in developing countries where infrastructure cannot keep pace with population growth. Water loss through leaking pipes\u2014known as non-revenue water\u2014is staggering, with some cities losing 40-60% of their water supply before it reaches consumers. In many urban areas, especially informal settlements, residents lack access to piped water and must purchase water from vendors at prices 10-20 times higher than what connected households pay. Smart water meters and sensor networks can help cities detect leaks quickly and monitor consumption patterns, potentially reducing water loss significantly. Singapore, facing severe water scarcity due to its small size and lack of natural water sources, has become a global leader in water management through a combination of technological innovation, strict regulations, and public education.<br />\r\n<br />\r\nParagraph E: Desalination\u2014the process of removing salt from seawater\u2014represents a promising but energy-intensive solution to water scarcity. Currently, over 16,000 desalination plants operate worldwide, primarily in water-scarce regions like the Middle East, producing about 95 million cubic meters of freshwater daily. Traditional desalination methods require a lot of energy, making them expensive and environmentally concerning. However, technology is improving efficiency. New membranes can reduce energy use by up to 40%, and some facilities are using renewable energy sources, particularly solar power, to reduce environmental impact. Researchers are also exploring new membranes inspired by how mangrove trees and other salt-tolerant plants filter water, which could make desalination much more efficient.<br />\r\n<br />\r\nParagraph F: Water recycling and reuse, once considered taboo in many cultures, is gaining acceptance as technology advances. Modern wastewater treatment can produce water that meets or exceeds drinking water standards, though psychological barriers to 'toilet-to-tap' systems remain strong in many communities. Singapore's NEWater program successfully overcame this resistance through transparent communication, public education, and high-profile endorsements. The reclaimed water, which undergoes microfiltration, reverse osmosis, and ultraviolet disinfection, now meets up to 40% of Singapore's water needs and is used in both industrial applications and, blended with reservoir water, for drinking. In California, Orange County operates the world's largest water purification system for indirect potable reuse, producing enough water for 850,000 people. Greywater systems, which recycle water from sinks, showers, and washing machines for use in toilet flushing and irrigation, are becoming more common in both residential and commercial buildings, potentially reducing household water consumption by 30%.<br />\r\n<br />\r\nParagraph G: Atmospheric water harvesting, while still in early development, offers an innovative approach to water generation. This technology captures water vapor from the air through various methods. A team at MIT developed a solar-powered device using specialized materials (metal-organic frameworks or MOFs) that can pull water from air with humidity as low as 20%, potentially providing water for remote or disaster-affected areas. Fog harvesting, practiced in some coastal regions of Chile, Peru, and Morocco, uses large mesh nets to capture water droplets from fog, providing extra water for communities where traditional water sources are limited.<br />\r\n<br />\r\nParagraph H: Addressing the global water crisis will require a multifaceted approach combining technological innovation, policy reform, behavior change, and significant investment in infrastructure. Water pricing reform, while politically sensitive, could incentivize conservation by ensuring prices reflect water's true value and scarcity. Currently, many agricultural and domestic water users pay heavily subsidized rates that encourage wasteful consumption. Strengthening water governance and management institutions is crucial, particularly for transboundary water resources where cooperation between nations is essential. Education and awareness campaigns can shift behaviors, reducing per capita water consumption. Most importantly, climate change mitigation and adaptation strategies must be integrated into water resource planning, as changing precipitation patterns and increased drought frequency will fundamentally alter water availability in many regions. The solutions exist, but implementing them at the necessary scale requires political will, financial resources, and global cooperation. The question is not whether we can solve the water crisis, but whether we will act quickly enough to prevent catastrophic shortages that could trigger conflict, mass migration, and humanitarian disasters."
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "computer_based",
+        "cbt_test_type": "",
+        "exercise_label": "practice_test",
+        "open_as_popup": "1",
+        "scoring_type": "ielts_academic_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-17 00:14:02",
+        "exported_by": "impact",
+        "plugin_version": "11.27",
+        "format_version": "1.0",
+        "note": "Fixed: Corrected from 45 to 40 questions by fixing passage assignments and removing 5 excess questions"
+    }
+}

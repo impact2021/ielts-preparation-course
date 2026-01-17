@@ -1,0 +1,1557 @@
+{
+    "title": "Academic IELTS Reading Test 21",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 1 – 12 which are based on <strong>Reading Passage 1.</strong>\r\n\r\nQuestions 1 – 3\r\n\r\nChoose the correct letter, A, B, C or D.\r\nWrite your answer in boxes 1 – 3 on your answer sheet.\r\n\r\n<strong>Honeybees</strong>",
+            "question": "1. Honeybees...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. The passage states '...they maintain strict divisions of labour, based on sex'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "have a rudimentary ability to convey information",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage indicates honeybees have a 'sophisticated system of communication'."
+                },
+                {
+                    "text": "have clearly segregated roles",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states '...they maintain strict divisions of labour, based on sex'"
+                },
+                {
+                    "text": "are found in equal numbers of male and female",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions 'all females, with the exception of the single fertile queen' suggesting there are many females."
+                },
+                {
+                    "text": "often relocate to areas with certain types of flower",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage discusses finding nectar but not relocation."
+                }
+            ],
+            "options": "have a rudimentary ability to convey information\nhave clearly segregated roles\nare found in equal numbers of male and female\noften relocate to areas with certain types of flower",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "2. Research conducted in the 1970s...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. The passage states: 'This so-called honeybee dance was first interpreted by German zoologist Karl von Frisch in the early 1970s' and describes how he 'carefully recorded their movements'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "was undertaken using traditional hives",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The research used 'glass walled hives'."
+                },
+                {
+                    "text": "determined that forager bees had special markings",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Von Frisch marked the bees himself with paint."
+                },
+                {
+                    "text": "closely studied the phenomenon of the honeybee body language",
+                    "is_correct": true,
+                    "feedback": "Correct! Von Frisch 'carefully recorded their movements, the angle and direction of their flight, and any additional visual cues'."
+                },
+                {
+                    "text": "concluded that there was no discernible pattern to the movement of the bees",
+                    "is_correct": false,
+                    "feedback": "Incorrect. He discovered that 'each aspect of the dance indicated certain details about the location of the nectar reserves'."
+                }
+            ],
+            "options": "was undertaken using traditional hives\ndetermined that forager bees had special markings\nclosely studied the phenomenon of the honeybee body language\nconcluded that there was no discernible pattern to the movement of the bees",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "3. To identify that the source of nectar is close, forager bees...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D. The passage states: 'the bee will fly around in narrow circles, and then suddenly fly in the opposite direction'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "will repeatedly fly the same direction",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The bee flies in circles and reverses direction."
+                },
+                {
+                    "text": "will begin to move only when other bees are watching",
+                    "is_correct": false,
+                    "feedback": "Incorrect. No mention of waiting for observers."
+                },
+                {
+                    "text": "will run straight forward",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Running straight forward is part of the waggle dance for distant sources."
+                },
+                {
+                    "text": "will repeat a pattern of flying in one direction then abruptly reversing direction",
+                    "is_correct": true,
+                    "feedback": "Correct! For sources less than 50 meters away, 'the bee will fly around in narrow circles, and then suddenly fly in the opposite direction'."
+                }
+            ],
+            "options": "will repeatedly fly the same direction\nwill begin to move only when other bees are watching\nwill run straight forward\nwill repeat a pattern of flying in one direction then abruptly reversing direction",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 4 – 8\r\n\r\nComplete the sentences below USING NO MORE THAN TWO WORDS AND/OR A NUMBER.\r\nWrite your answer in boxes 4 – 8 on your answer sheet.",
+            "question": "4. Von Frisch focussed on a number of _______ clues to deduce how bees communicated.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 'visual'. The passage states: 'von Frisch's findings, however, claim that visual cues are not enough to provide all the clues necessary'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [
+                {
+                    "text": "visual",
+                    "is_correct": true,
+                    "feedback": "Correct! Von Frisch studied visual cues from the bees' dance movements."
+                }
+            ],
+            "options": "visual",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "5. The bee will move forward for one _______ for every 1000 metres away the food source is.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is '1 second' or 'second'. The passage states: 'The length of the forward run coincides with the distance of the food supplies; for example, a 2.5 second run indicates that the nectar was found about 2500 meters way' (therefore 1 second for 1000 metres)",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [
+                {
+                    "text": "second",
+                    "is_correct": true,
+                    "feedback": "Correct! A 2.5 second run = 2500 meters, so 1 second = 1000 meters."
+                },
+                {
+                    "text": "1 second",
+                    "is_correct": true,
+                    "feedback": "Correct! A 2.5 second run = 2500 meters, so 1 second = 1000 meters."
+                }
+            ],
+            "options": "second\n1 second",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "6. To locate the direction of the nectar, the forager will base its movements on the position of ______.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 'the sun'. The passage states: 'It, however, is not a direct connection to the position of the food supplies from the hive, but its location relative to the sun.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [
+                {
+                    "text": "the sun",
+                    "is_correct": true,
+                    "feedback": "Correct! The bee's orientation is based on the position relative to the sun."
+                },
+                {
+                    "text": "sun",
+                    "is_correct": true,
+                    "feedback": "Correct! The bee's orientation is based on the position relative to the sun."
+                }
+            ],
+            "options": "the sun\nsun",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "7. For food sources over 150 metres away, the forager will indicate distance with a _______ dance.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 'waggle'. The passage states: 'If the field is farther than 150 meters, the forager will act out a waggle dance'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [
+                {
+                    "text": "waggle",
+                    "is_correct": true,
+                    "feedback": "Correct! For distances over 150 meters, bees perform a waggle dance."
+                }
+            ],
+            "options": "waggle",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "8. It has been argued that _______ as well as movement may help to locate food sources.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 'odour'. The passage states: 'Several scientists, among them Adrian Wenner, believe that the dance is only one component of honeybee communications; odour is the second key element.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [
+                {
+                    "text": "odour",
+                    "is_correct": true,
+                    "feedback": "Correct! Wenner believed odour is the second key element of honeybee communication."
+                },
+                {
+                    "text": "smell",
+                    "is_correct": true,
+                    "feedback": "Correct! Wenner believed odour/smell is the second key element of honeybee communication."
+                }
+            ],
+            "options": "odour\nsmell",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 9 – 12\r\n\r\nDo the following statements agree with the information given in the reading passage?\r\n\r\nIn boxes 9 -12 on your answer sheet write\r\n<strong>TRUE</strong> if the statement agrees with the information\r\n<strong>FALSE</strong> if the statement contradicts the information\r\n<strong>NOT GIVEN</strong> if there is no information on this",
+            "question": "9. Drone bees communicate using a complicated set of movements.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states that only the female forager bees perform the dance, not drone bees.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Only female forager bees perform the dance."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage indicates only female worker bees perform the dance, not drones."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states female workers perform the dance."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "10. The honeybee dance is performed until a number of other bees join in the collection of the nectar.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states: 'until she has recruited several other workers to return with her to the field.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The bee performs the dance 'until she has recruited several other workers'."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage confirms the dance continues until recruitment is successful."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states this information."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "11. The honeybee dance is only performed when the sun is visible.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. We only know that the position of the sun is relevant, but the passage doesn't state whether the sun must be visible.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage doesn't state the sun must be visible."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. There's no information contradicting this."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! While the sun's position is important, the passage doesn't specify if it must be visible."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "12. Wenner concluded that a matching smell will help bees find the rough area of the nectar but not the specific source.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states: '...odour must be representative of the actual flowers containing the food source; otherwise the bees will arrive at the site, but not know which ones will be profitable.' This means bees need the exact matching smell to find the specific source.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The odour must match the actual flowers to find the specific source."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Wenner found that bees need the exact matching odour to identify which specific flowers to use."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage provides clear information about this."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 13 – 25 which are based on <strong>Reading Passage 2.</strong>\r\n\r\nQuestions 13-15\r\n\r\nChoose THREE letters A-G.\r\nWrite your answers in boxes 13-15 on your answer sheet. NB Your answers may be given in any order.\r\n\r\nWhich THREE of the following statements are true of the research in Hong Kong?",
+            "question": "Which THREE of the following statements are true of the research in Hong Kong?",
+            "points": 3,
+            "no_answer_feedback": "The correct answers are B, C, and E. B: 'researchers have found sleeping in at weekends to be a key factor in helping 'reset' children's sleeping patterns.' C: 'Overweight and obese children tended to wake up earlier and had shorter sleep durations' E: 'However, the researchers were not quite sure why obese and overweight children were less likely to sleep late on weekends'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A: Researchers discovered that overweight children tend to sleep more.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states overweight children actually sleep less."
+                },
+                {
+                    "text": "B: The researchers believe the weekend lie-in is very important for busy children.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'the weekend lie-in is vital for school-age children'."
+                },
+                {
+                    "text": "C: The findings show that overweight children tend to wake up earlier and sleep less.",
+                    "is_correct": true,
+                    "feedback": "Correct! 'Overweight and obese children tended to wake up earlier and had shorter sleep durations'."
+                },
+                {
+                    "text": "D: Obesity in children may be triggered by a fluctuation in sleep patterns.",
+                    "is_correct": false,
+                    "feedback": "While sleep patterns are related, the passage doesn't specifically say 'fluctuation' triggers obesity."
+                },
+                {
+                    "text": "E: The researchers do not know the reasons why obese children are less likely to sleep late on weekends.",
+                    "is_correct": true,
+                    "feedback": "Correct! 'the researchers were not quite sure why obese and overweight children were less likely to sleep late on weekends'."
+                },
+                {
+                    "text": "F: The researchers interviewed the children's teachers to gain information.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. They 'questioned the parents', not teachers."
+                },
+                {
+                    "text": "G: All children investigated slept more than eight hours a day.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'a surprising number of kids slept well under eight hours a night'."
+                }
+            ],
+            "options": "A: Researchers discovered that overweight children tend to sleep more.\nB: The researchers believe the weekend lie-in is very important for busy children.\nC: The findings show that overweight children tend to wake up earlier and sleep less.\nD: Obesity in children may be triggered by a fluctuation in sleep patterns.\nE: The researchers do not know the reasons why obese children are less likely to sleep late on weekends.\nF: The researchers interviewed the children's teachers to gain information.\nG: All children investigated slept more than eight hours a day.",
+            "correct_answer_count": 3,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 16-21\r\n\r\nReading Passage 2 has seven paragraphs A-G.\r\nWhich paragraph contains the following information?\r\nType the correct letter A-G in boxes 16-21.",
+            "question": "16. Predictions on rates of obesity in children.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. Paragraph C states: 'Although estimates for obesity rates have recently been lowered, current expectations are that close to one in three boys aged from two to eleven are likely to be overweight or obese by the year 2020'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A introduces the research findings."
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B discusses the importance of weekend sleep."
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C contains predictions about obesity rates for 2020."
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D discusses the relationship between sleep and obesity."
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E discusses research findings."
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F discusses modern sleep duration trends."
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G discusses unclear links and provides advice."
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "17. An outline of the most notable research finding.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is E. Paragraph E states: 'What the researchers found most interesting was that those children who managed to catch up on missed sleep on the weekend actually remained relatively slim while those who did not had a higher probability of putting on weight'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E describes what researchers 'found most interesting'."
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "18. Ideas on why overweight children don't sleep in on weekends.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is F. Paragraph F states: 'they tended to spend more time doing their homework and watching television than their normal-weight peers'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F discusses possible reasons (homework, TV)."
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "19. How sleeping in on weekends can help a child keep slim.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. Paragraph B states: 'This catch up sleep helps the children to regulate calorie consumption by cutting down on eating snacks during waking hours.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B explains how catch-up sleep regulates calorie consumption."
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "20. A study looking into sleep deprivation and the affect on body metabolism.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D. Paragraph D states: '...Yun Kwok Wing of Hong Kong university and other experts ...questioned the parents of over 5,000 schoolchildren and accumulated data on diet, lifestyle, weight and sleeping habits.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D describes the study investigating sleep and metabolism."
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "21. Advice for parents concerned about their children becoming overweight.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is G. Paragraph G states: 'parents should be observant of their children's wake-sleep cycles, and take steps to ensure they are getting enough sleep'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G provides advice for parents."
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 22-25\r\n\r\nComplete the summary with the list of words A-L below.\r\nWrite the correct letter A-L in boxes 22-25 on your answer sheet.\r\n\r\nThe main findings of the research showed that children who were able to catch up on [22]_____ sleep stayed fairly slim whereas children who did not were much more likely to [23]_____ weight. The researchers mentioned that in [24]_____ times a reduction in sleep time has become common with most people sleeping an hour or two less than in the past. However, the reasons why overweight children tended to sleep less on weekends than their slimmer peers [25]_____ a mystery.",
+            "question": "22. children who were able to catch up on _____ sleep",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C (missed). The passage discusses catching up on 'missed sleep on the weekend'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_l",
+            "mc_options": [
+                {
+                    "text": "A: modern",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "B: less",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "C: missed",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage refers to catching up on 'missed sleep'."
+                },
+                {
+                    "text": "D: gain",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "E: enough",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "F: lose",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "G: more",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "H: complete",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "I: remain",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "J: reduce",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "K: extra",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "L: sufficient",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                }
+            ],
+            "options": "A: modern\nB: less\nC: missed\nD: gain\nE: enough\nF: lose\nG: more\nH: complete\nI: remain\nJ: reduce\nK: extra\nL: sufficient",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "23. were much more likely to _____ weight",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D (gain). The passage states children 'had a higher probability of putting on weight'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_l",
+            "mc_options": [
+                {
+                    "text": "A: modern",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "B: less",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "C: missed",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "D: gain",
+                    "is_correct": true,
+                    "feedback": "Correct! Children were more likely to 'gain weight' (put on weight)."
+                },
+                {
+                    "text": "E: enough",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "F: lose",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "G: more",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "H: complete",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "I: remain",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "J: reduce",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "K: extra",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "L: sufficient",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                }
+            ],
+            "options": "A: modern\nB: less\nC: missed\nD: gain\nE: enough\nF: lose\nG: more\nH: complete\nI: remain\nJ: reduce\nK: extra\nL: sufficient",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "24. in _____ times a reduction in sleep time",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A (modern). The passage states: 'reduced sleep duration has become a hallmark of modern society'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_l",
+            "mc_options": [
+                {
+                    "text": "A: modern",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage refers to 'modern society'."
+                },
+                {
+                    "text": "B: less",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "C: missed",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "D: gain",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "E: enough",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "F: lose",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "G: more",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "H: complete",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "I: remain",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "J: reduce",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "K: extra",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "L: sufficient",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                }
+            ],
+            "options": "A: modern\nB: less\nC: missed\nD: gain\nE: enough\nF: lose\nG: more\nH: complete\nI: remain\nJ: reduce\nK: extra\nL: sufficient",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "25. _____ a mystery",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is I (remain). The passage states the reasons 'remain a mystery' as researchers were 'not quite sure why'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_l",
+            "mc_options": [
+                {
+                    "text": "A: modern",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "B: less",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "C: missed",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "D: gain",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "E: enough",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "F: lose",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "G: more",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "H: complete",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "I: remain",
+                    "is_correct": true,
+                    "feedback": "Correct! The reasons 'remain a mystery'."
+                },
+                {
+                    "text": "J: reduce",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "K: extra",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                },
+                {
+                    "text": "L: sufficient",
+                    "is_correct": false,
+                    "feedback": "Incorrect"
+                }
+            ],
+            "options": "A: modern\nB: less\nC: missed\nD: gain\nE: enough\nF: lose\nG: more\nH: complete\nI: remain\nJ: reduce\nK: extra\nL: sufficient",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 26 – 40 which are based on <strong>Reading Passage 3.</strong>\r\n\r\nQuestions 26 – 30\r\n\r\nDo the following statements agree with the information given in the reading passage?\r\n\r\nIn boxes 26 -30 on your answer sheet write\r\n<strong>TRUE</strong> if the statement agrees with the information\r\n<strong>FALSE</strong> if the statement contradicts the information\r\n<strong>NOT GIVEN</strong> if there is no information on this",
+            "question": "26. Typical stresses of working with different people are removed with the correct training.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states conflicts are 'limited' not removed: 'A cohesive unit that minimises friction...can however be developed'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Conflicts are minimised, not removed."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Conflicts are limited/minimised, not removed entirely."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly addresses this."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "27. Liaison Wizards claims that training has increased their income every year since the company started.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states revenue comes from advertising, not training: 'The company's own business model is based upon generating revenue from advertising on their popular website'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Their revenue comes from advertising, not training."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The company generates revenue from advertising, not training."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage provides clear information about their business model."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "28. Many companies are unsuccessful because they are dogmatic and take advantage of staff.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. While the passage states 'trying to exploit or dictate to personnel is sure to lead to failure', it doesn't say many companies are unsuccessful as a result.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. No information about many companies being unsuccessful."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This can't be contradicted with the given information."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage doesn't provide information about many companies being unsuccessful."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "29. In house training is more successful primarily because employees feel more involved in the planning.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states: 'Most importantly, he says, people are much easier to motivate if they themselves can be involved in designing and deciding activities'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Osbourne says employee involvement in planning is 'most importantly' the reason."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage confirms this is the primary reason."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage explicitly provides this information."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "30. The value of games as a training tool can be misunderstood.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states: 'many professionals, believing that such games are trite or patronising, are unable to appreciate the hidden benefits of building understanding and camaraderie within the group'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Many professionals are unable to appreciate the hidden benefits of games."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage confirms games are often misunderstood."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly addresses this topic."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 31 – 35\r\n\r\nLook at the following list of statements based on Reading Passage 3.\r\nMatch the statement with the correct person A-E. You can use each letter more than once.\r\n\r\nA: Louise Edwards\r\nB: Brenda Durham\r\nC: Jeff Blackshaw\r\nD: Brian Osborne\r\nE: Alan Kidman",
+            "question": "31. Many companies will experience friction between staff.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B (Brenda Durham). The passage states: 'Brenda Durham of Corporate Trouble-Shooters believes it inevitable that to some extent conflict will exist in a successful workplace'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Louise Edwards",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This statement is attributed to Brenda Durham."
+                },
+                {
+                    "text": "B: Brenda Durham",
+                    "is_correct": true,
+                    "feedback": "Correct! Durham believes conflict will inevitably exist."
+                },
+                {
+                    "text": "C: Jeff Blackshaw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This statement is attributed to Brenda Durham."
+                },
+                {
+                    "text": "D: Brian Osborne",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This statement is attributed to Brenda Durham."
+                },
+                {
+                    "text": "E: Alan Kidman",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This statement is attributed to Brenda Durham."
+                }
+            ],
+            "options": "A: Louise Edwards\nB: Brenda Durham\nC: Jeff Blackshaw\nD: Brian Osborne\nE: Alan Kidman",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "32. Training specifically tailored to a company is more efficient than generic training.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C (Jeff Blackshaw). The passage states: 'Liaison Wizards, established in 2001 and headed by Jeff Blackshaw, offers free training and development advice to companies wishing to offer motivation seminars designed in house, in the belief that contextualised training is always more effective.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Louise Edwards",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Jeff Blackshaw."
+                },
+                {
+                    "text": "B: Brenda Durham",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Jeff Blackshaw."
+                },
+                {
+                    "text": "C: Jeff Blackshaw",
+                    "is_correct": true,
+                    "feedback": "Correct! Blackshaw believes contextualised training is more effective."
+                },
+                {
+                    "text": "D: Brian Osborne",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Jeff Blackshaw."
+                },
+                {
+                    "text": "E: Alan Kidman",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Jeff Blackshaw."
+                }
+            ],
+            "options": "A: Louise Edwards\nB: Brenda Durham\nC: Jeff Blackshaw\nD: Brian Osborne\nE: Alan Kidman",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "33. Modern methods of training, although still only being piloted, can bring people from different perspectives together.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is E (Alan Kidman). The passage states: 'within the extremely diverse departments of the organisation...The programme, Kidman says, is experimental'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Louise Edwards",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Alan Kidman."
+                },
+                {
+                    "text": "B: Brenda Durham",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Alan Kidman."
+                },
+                {
+                    "text": "C: Jeff Blackshaw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Alan Kidman."
+                },
+                {
+                    "text": "D: Brian Osborne",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Alan Kidman."
+                },
+                {
+                    "text": "E: Alan Kidman",
+                    "is_correct": true,
+                    "feedback": "Correct! Kidman's experimental programme brings diverse departments together."
+                }
+            ],
+            "options": "A: Louise Edwards\nB: Brenda Durham\nC: Jeff Blackshaw\nD: Brian Osborne\nE: Alan Kidman",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "34. Successful team relationships are formed in a positive work environment.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C (Jeff Blackshaw). The passage states: '[Blackshaw] says that good team work is fostered by respect, encouragement, shared enthusiasm and a caring and supportive workplace.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Louise Edwards",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Jeff Blackshaw."
+                },
+                {
+                    "text": "B: Brenda Durham",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Jeff Blackshaw."
+                },
+                {
+                    "text": "C: Jeff Blackshaw",
+                    "is_correct": true,
+                    "feedback": "Correct! Blackshaw emphasizes a caring and supportive workplace."
+                },
+                {
+                    "text": "D: Brian Osborne",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Jeff Blackshaw."
+                },
+                {
+                    "text": "E: Alan Kidman",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Jeff Blackshaw."
+                }
+            ],
+            "options": "A: Louise Edwards\nB: Brenda Durham\nC: Jeff Blackshaw\nD: Brian Osborne\nE: Alan Kidman",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "35. A lack of clarity as to what the term 'team building' means.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A (Louise Edwards). The passage states: 'Louise Edwards of HR Success says that one of the barriers she comes across time and time again is that corporate heads often seem to understand that 'team building' is important but are not quite sure what it is or how to achieve it.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Louise Edwards",
+                    "is_correct": true,
+                    "feedback": "Correct! Edwards discusses the lack of clarity about team building."
+                },
+                {
+                    "text": "B: Brenda Durham",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Louise Edwards."
+                },
+                {
+                    "text": "C: Jeff Blackshaw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Louise Edwards."
+                },
+                {
+                    "text": "D: Brian Osborne",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Louise Edwards."
+                },
+                {
+                    "text": "E: Alan Kidman",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is attributed to Louise Edwards."
+                }
+            ],
+            "options": "A: Louise Edwards\nB: Brenda Durham\nC: Jeff Blackshaw\nD: Brian Osborne\nE: Alan Kidman",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 36 – 40\r\n\r\nComplete the summary USING NO MORE THAN TWO WORDS from Reading Passage 3 for each answer.\r\nWrite your answers in boxes 36 – 40 on your answer sheet.",
+            "question": "Team building can be considered to have [field 1] clear stages. Initially, it is essential to be clear as to the [field 2] of the entire team or company. Those barriers which are preventing the team from achieving these aims are identified as [field 3], and are addressed by introducing enablers. Here the use of [field 4] can be used to help build a cooperative relationship. Finally, success can be quantified and continually [field 5].",
+            "points": 5,
+            "no_answer_feedback": "The correct answers are: 1) four, 2) collective goals, 3) inhibitors, 4) humour, 5) monitored. These answers can be found in the team building passage.",
+            "correct_feedback": "Excellent! All answers are correct.",
+            "incorrect_feedback": "Not all answers are correct. Check the passage again for the missing information.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 5,
+            "show_option_letters": false,
+            "field_count": 5,
+            "field_answers": {
+                "1": "four|4",
+                "2": "collective goals",
+                "3": "inhibitors",
+                "4": "humour",
+                "5": "monitored"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Edwards describes four stages of team building.",
+                    "incorrect": "Incorrect. The answer is 'four'. Edwards describes four stages of team building.",
+                    "no_answer": "The correct answer is 'four'. Edwards describes four stages of team building."
+                },
+                "2": {
+                    "correct": "Correct! The first stage involves clarifying collective goals.",
+                    "incorrect": "Incorrect. The answer is 'collective goals'. The first stage involves clarifying collective goals.",
+                    "no_answer": "The correct answer is 'collective goals'. The first stage involves clarifying collective goals."
+                },
+                "3": {
+                    "correct": "Correct! Barriers are identified as inhibitors.",
+                    "incorrect": "Incorrect. The answer is 'inhibitors'. Barriers are identified as inhibitors.",
+                    "no_answer": "The correct answer is 'inhibitors'. Barriers are identified as inhibitors."
+                },
+                "4": {
+                    "correct": "Correct! Edwards believes humour helps build relationships.",
+                    "incorrect": "Incorrect. The answer is 'humour'. Edwards believes humour helps build relationships.",
+                    "no_answer": "The correct answer is 'humour'. Edwards believes humour helps build relationships."
+                },
+                "5": {
+                    "correct": "Correct! Outcomes are continually monitored.",
+                    "incorrect": "Incorrect. The answer is 'monitored'. Outcomes are continually monitored.",
+                    "no_answer": "The correct answer is 'monitored'. Outcomes are continually monitored."
+                }
+            }
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Passage 1",
+            "content": "<strong>Flight of the honeybee</strong>\r\n\r\nHoneybees are characterised by their ability to produce liquefied sugar (honey) and a propensity to construct colonial nests using wax, two tasks that necessitate a significant level of social integration among members.  As a result, they maintain strict divisions of labour, based on sex, with all males functioning as drones to fertilize and care for the eggs, and all females, with the exception of the single fertile queen, responsible for fetching nectar for the colony’s progeny.  In addition, honeybees have devised a sophisticated system of communication to relay important information from member to member.\r\n\r\nPerhaps the most intriguing feature of honeybee communication is a series of flight moves only performed by a female worker bee that has returned to the nest with nectar and needs to tell the rest of her colony that she has discovered food supplies and where they can be found.  This so-called honeybee dance was first interpreted by German zoologist Karl von Frisch in the early 1970s.  To facilitate observation, von Frisch and his students built several glass walled hives and marked a collection of worker bees, or foragers, with paint.  He then trained those foragers to find nectar at designated sources at various distances from the hives, and when the bees returned he carefully recorded their movements, the angle and direction of their flight, and any additional visual cues offered to the colony.  What von Frisch discovered was that each aspect of the dance indicated certain details about the location of the nectar reserves and recruited others to return to the site.\r\n\r\nThe first piece of information conveyed by dancing bees is the distance of the field to the hive, and they do this in one of three ways.   If it is less than 50 meters from the colony’s nest the bee will fly around in narrow circles, and then suddenly fly in the opposite direction.  She will repeat this pattern, which von Frisch’s team called the round dance, until she has recruited several other workers to return with her to the field.  When the distance is greater than 50 meters, but less than 150 meters, she will perform a sickle dance, a crescent shaped flight course.  If the field is farther than 150 meters, the forager will act out a waggle dance in which she will run straight ahead briefly before returning to her original position in a semi-circular movement.  Then, she will run forward again and return from the opposite side.  The length of the forward run coincides with the distance of the food supplies; for example, a 2.5 second run indicates that the nectar was found about 2500 meters way.\r\n\r\nRecruits also need to know the direction in which they should fly to arrive at the appropriate foraging location, and this information is communicated via the bee’s angular orientation to the hive.  It, however, is not a direct connection to the position of the food supplies from the hive, but its location relative to the sun.  Therefore if the food is situated directly opposite from the sun, the bee will fly a straight run vertically downward; if it is in the same direction as the sun, it will fly directly upward from the colony nest.  A position 60 degrees to the right of the sun will prompt the bee to fly downwards at a 60 degrees angle toward the right of the nest.  Moreover, because the sun is in constant motion throughout the day, the bee’s orientation will shift depending on the time at which the dance is performed.  Sceptics of von Frisch’s findings, however, claim that visual cues are not enough to provide all the clues necessary to convey the location of a food resource.  Several scientists, among them Adrian Wenner, believe that the dance is only one component of honeybee communications; odour is the second key element.  Using robotic bees to perform the same dances, Wenner was unable to attract new recruits to the foraging activities; however, when he added a bit of nectar to the robot, workers quickly followed.  He also discovered that the odour must be representative of the actual flowers containing the food source; otherwise the bees will arrive at the site, but not know which ones will be profitable."
+        },
+        {
+            "title": "Reading Passage 2",
+            "content": "Recent research in Hong Kong indicates that staying in bed after a long week at school is just what children need to avoid becoming obese. The research, which focused on children aged five to fifteen, discovered that those who slept late on Saturdays and Sundays decreased the probability of having weight problems as they grew up. Published in the journal Paediatrics, the findings add to previous research that indicated a connection between regular sleep deprivation and obesity.\r\n\r\nThe scientists involved believe the weekend lie-in is vital for school-age children to catch up on the sleep they lose during a busy week at school. This catch up sleep helps the children to regulate calorie consumption by cutting down on eating snacks during waking hours. Scientists and others in the medical fields have long known that a lack of sleep and irregular sleep patterns causes obesity as this combination affects the body's natural metabolism and tends to also encourage snacking to reduce the feeling of tiredness. However, this is thought to be the first time researchers have found sleeping in at weekends to be a key factor in helping 'reset' children's sleeping patterns.\r\n\r\nSince the 1980s, obesity rates among children in the UK and in the United States have been on the rise and medical and childcare experts fear a diabetes and heart disease epidemic is developing. Although estimates for obesity rates have recently been lowered, current expectations are that close to one in three boys aged from two to eleven are likely to be overweight or obese by the year 2020. The prediction for girls is slightly over one in four, a much lower prediction than ten years ago when forecasts were that almost half would be overweight.\r\n\r\nThe relationship between sleep deficiency and obesity has been drawing much attention in the past several years with studies showing that sleeping just a few hours a night can seriously disturb the body's natural metabolism, leading to an increase in overall calorie intake and a much greater danger of weight-related illnesses. Yun Kwok Wing of Hong Kong university and other experts investigated the possibility that catching up on sleep at the weekends would help youngsters to overcome such disruption of the bodies metabolism. They questioned the parents of over 5,000 schoolchildren and accumulated data on diet, lifestyle, weight and sleeping habits. During school time, the average amount of sleep was a little over nine hours on average. However, a surprising number of kids slept well under eight hours a night.\r\n\r\nWhat the researchers found most interesting was that those children who managed to catch up on missed sleep on the weekend actually remained relatively slim while those who did not had a higher probability of putting on weight (as measured by body mass index, or BMI). A report the researches published revealed: \"Overweight and obese children tended to wake up earlier and had shorter sleep durations throughout weekdays, weekends and holidays than their normal-weight peers. Our study suggests sleeping longer on weekends or holidays could lower the risk of being overweight or obese.\"\r\n\r\nThe study authors mentioned that reduced sleep duration has become a hallmark of modern society, with people generally sleeping one to two hours less than a few decades ago and children were no exception to this. However, the researchers were not quite sure why obese and overweight children were less likely to sleep late on weekends, but indicated that they tended to spend more time doing their homework and watching television than their normal-weight peers. Still, the researchers urged caution in the interpretation of their findings, acknowledging that \"an irregular sleep-wake schedule and insufficient sleep among school-aged children and adolescents has been documented with a variety of serious repercussions, including increased daytime sleepiness, academic difficulties, and mood and behavioral problems.\"\r\n\r\nThe precise nature of the link between short sleep duration and obesity remains unclear, said Mary A. Jackson, Professor of Psychiatry and Human Behavior at Brown University's Alpert Medical School in Providence, and Director of Chronobiology at Bradley Hospital in East Providence. \"Evidence has shown that there are changes in satiety and in levels of the hunger hormones leptin and ghrelin,\" Jackson said. \"But there's also evidence that kids who are not getting enough sleep get less physical activity, perhaps simply because they're too tired. It's just not cut-and-dried.\" The findings could be of help in slowing down the ongoing increase in childhood obesity, but for the time being, parents should be observant of their children's wake-sleep cycles, and take steps to ensure they are getting enough sleep, the researchers advised. Perhaps this is a reminder to us all that despite school, homework, extracurricular activities, and family time, sleep still needs to be a priority in a child’s life."
+        },
+        {
+            "title": "Reading Passage 3",
+            "content": "<strong>Team building</strong>\r\n\r\nParticularly in times of economic downturn, efficiency is of supreme importance across all industry bases; whilst companies may be looking to cut their costs, many still invest in staff motivation, training and development programmes, having developed an understanding of just how crucial strong internal relationships can be for success.\r\n\r\nLouise Edwards of HR Success says that one of the barriers she comes across time and time again is that corporate heads often seem to understand that ‘team building’ is important but are not quite sure what it is or how to achieve it. In the terms of a sports club, she says, the team (i.e. what it is and how it is defined) is obvious and easy to identify. In contrast, she says, within a company - particularly a multi-layered, larger organisation, definitions may become more confused. Many define a business ‘team’ as the group of people who report to the same boss - a department, for example. However, according to Edwards, it is more productive to define a team as a group of people working towards a common goal. In training terms, therefore, this group could be members of a department with the same roles and responsibilities, such as a sales team with the common goal of selling or even the organisation as a whole, whose ‘goal’ in this case is the continued success of the organisation, their many different skills and roles all contributing to this in a number of ways.\r\n\r\nBrenda Durham of Corporate Trouble-Shooters believes it inevitable that to some extent conflict will exist in a successful workplace since the necessary diversity of skills and personalities required for success will also unavoidably lead to misunderstandings and disharmony from time to time. A cohesive unit that minimises friction, she believes, can however be developed in any organisation committed to investment in its people. Whilst the taking on of external expertise for staff training and team building programmes can be costly, a number of companies, particularly those with a robust human resources department, are undertaking the training themselves. Liaison Wizards, established in 2001 and headed by Jeff Blackshaw, offers free training and development advice to companies wishing to offer motivation seminars designed in house, in the belief that contextualised training is always more effective. The company’s own business model is based upon generating revenue from advertising on their popular website – a great success, so far, having surpassed financial projections for each year it has been in operation to date.\r\n\r\nBlackshaw likens the key to successful corporate team building to the tactics employed in a less formal sporting environment.  He says that bonds, connections and empathy developed between members of a rugby team, for example, can also be developed within a department in the business world or even at company level. He says that good team work is fostered by respect, encouragement, shared enthusiasm and a caring and supportive workplace. Trying to exploit or dictate to personnel is sure to lead to failure, Blackshaw says.\r\n\r\nBrian Osbourne, Human Resources Director of Opmax Inc, believes that programmes developed in house are inherently more likely to be of greater success than external offerings for two main reasons. Most importantly, he says, people are much easier to motivate if they themselves can be involved in designing and deciding activities – this level of consultation at the planning stage being much easier to achieve for an internal department than an external consultant. Of only slightly less importance, says Osbourne, training activities must be perceived by participants as providing outcomes geared towards developing the individuals’ potential.  Once again, programmes developed by people with an insight into the personalities and culture at hand can be more easily tailored to suit the distinctive needs of that particular audience.\r\n\r\nAccording to Osbourne, one of the biggest barriers to successful staff training is the perception that activities are too game-focussed, with no real objectives; many professionals, believing that such games are trite or patronising, are unable to appreciate the hidden benefits of building understanding and camaraderie within the group. If presented correctly, within the correct context and in conjunction with other, more staid approaches, Louise Edwards holds that games can be an enormous asset in staff training. In simple terms, Edwards defines the objectives of team building activities as a process, starting with the first stage - the clarification of the <span id=\"passage-q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">collective goals</span>. This leads to the identification of the <span id=\"passage-q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">inhibitors</span> preventing achievement of those goals and the introduction of enablers which will assist in goal achievement. This is followed by <span id=\"passage-q36\" data-question=\"36\"></span>stage <span class=\"reading-answer-marker\">four</span> - the final stage, where outcomes are measured and from that point on are <span id=\"passage-q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">monitored</span> to ensure that goals are achieved and continue to be achieved. In stages 2 and 3 (identifying barriers and introducing positive alternatives) Edwards believes that the use of <span id=\"passage-q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">humour</span> goes a long way towards relationship building on a personal level  through development of empathy and removal of antipathy, ultimately fostering cooperation and support on a more formal level.\r\n\r\nAlan Kidman, HR Manager of Tellam Industries agrees that the use of humour and games within a training context can go a long way towards helping an organisation achieve its goals. He has recently designed a two month long in house team building programme for senior management and will soon be delivering the first of a series of 8 workshops and activities. The goal of the project, he says, was to strengthen communication and support within the extremely diverse departments of the organisation. Heads of six departments, collectively responsible for over 200 staff members, are to be involved in the series of seminars. The programme, Kidman says, is experimental and if it proves to be a success is also intended for use in the organisation’s branches overseas. Previously the organisation has taken a more formalised approach to staff development training relying on methods such as psychometric testing discussions, motivational conferences and formal appraisals. The new, and as yet untried, approach will challenge participants in, by comparison, rather radical ways. One initiative, for example, requiring the writing, organisation and delivery of a theatrical performance to which all staff members will be invited to view.\r\n\r\nTeam building and motivational approaches include a wide variety of methodologies, techniques, theories and tools. Experts generally agree that different options may succeed or fail depending upon the culture of the organisation in which they are implemented. A fit with the personalities involved in crucial to success.  Not only is delivery of appropriate training sessions themselves important but professional and measurable follow up is also a must."
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "exercise_label": "practice_test",
+        "scoring_type": "ielts_academic_reading",
+        "timer_minutes": "60"
+    },
+    "_metadata": {
+        "exported_from": "Complete assessment material AGI.docx",
+        "created_by": "ILSNZ",
+        "test_number": "21"
+    }
+}

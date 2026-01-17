@@ -1,0 +1,1697 @@
+{
+    "title": "Academic IELTS Reading Test 13",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 1\r\n\r\nYou should spend about 20 minutes on Questions 1 – 15 which are based on Reading Passage 1.\r\n\r\nQuestions 1 – 8\r\n\r\nMatch a type of clock to a description. Write a letter A – H in boxes 1 to 8 on your answer sheet.",
+            "question": "1. Quartz clock",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Is the most common method of timekeeping'. Quartz clocks are described as the most common method of timekeeping: 'Comparing performance to price, it is understandable that quartz clocks still dominate the market.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "Relied on basic scientific principles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the most common method of timekeeping'. Quartz clocks are described as the most common method of timekeeping: 'Comparing performance to price, it is understandable that quartz clocks still dominate the market.'"
+                },
+                {
+                    "text": "Was the first to replace the pendulum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the most common method of timekeeping'. Quartz clocks are described as the most common method of timekeeping: 'Comparing performance to price, it is understandable that quartz clocks still dominate the market.'"
+                },
+                {
+                    "text": "Is the most common method of timekeeping",
+                    "is_correct": true,
+                    "feedback": "Correct! Quartz clocks are described as the most common method of timekeeping: 'Comparing performance to price, it is understandable that quartz clocks still dominate the market.'"
+                },
+                {
+                    "text": "Is the most accurate clock",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the most common method of timekeeping'. Quartz clocks are described as the most common method of timekeeping: 'Comparing performance to price, it is understandable that quartz clocks still dominate the market.'"
+                },
+                {
+                    "text": "Is the earliest known method of measuring time during the day",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the most common method of timekeeping'. Quartz clocks are described as the most common method of timekeeping: 'Comparing performance to price, it is understandable that quartz clocks still dominate the market.'"
+                },
+                {
+                    "text": "Was inaccurate because of misconceptions of the age",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the most common method of timekeeping'. Quartz clocks are described as the most common method of timekeeping: 'Comparing performance to price, it is understandable that quartz clocks still dominate the market.'"
+                },
+                {
+                    "text": "Was often highly ornamental",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the most common method of timekeeping'. Quartz clocks are described as the most common method of timekeeping: 'Comparing performance to price, it is understandable that quartz clocks still dominate the market.'"
+                },
+                {
+                    "text": "Had only a 10-second margin of error per day",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the most common method of timekeeping'. Quartz clocks are described as the most common method of timekeeping: 'Comparing performance to price, it is understandable that quartz clocks still dominate the market.'"
+                }
+            ],
+            "options": "Relied on basic scientific principles\nWas the first to replace the pendulum\nIs the most common method of timekeeping\nIs the most accurate clock\nIs the earliest known method of measuring time during the day\nWas inaccurate because of misconceptions of the age\nWas often highly ornamental\nHad only a 10-second margin of error per day",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "2. Cuckoo clock",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Was often highly ornamental'. The cuckoo clock was often highly ornamental: 'The clock was mounted on a headboard, normally a very elaborate carving reflecting the tastes of the artist.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "Relied on basic scientific principles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was often highly ornamental'. The cuckoo clock was often highly ornamental: 'The clock was mounted on a headboard, normally a very elaborate carving reflecting the tastes of the artist.'"
+                },
+                {
+                    "text": "Was the first to replace the pendulum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was often highly ornamental'. The cuckoo clock was often highly ornamental: 'The clock was mounted on a headboard, normally a very elaborate carving reflecting the tastes of the artist.'"
+                },
+                {
+                    "text": "Is the most common method of timekeeping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was often highly ornamental'. The cuckoo clock was often highly ornamental: 'The clock was mounted on a headboard, normally a very elaborate carving reflecting the tastes of the artist.'"
+                },
+                {
+                    "text": "Is the most accurate clock",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was often highly ornamental'. The cuckoo clock was often highly ornamental: 'The clock was mounted on a headboard, normally a very elaborate carving reflecting the tastes of the artist.'"
+                },
+                {
+                    "text": "Is the earliest known method of measuring time during the day",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was often highly ornamental'. The cuckoo clock was often highly ornamental: 'The clock was mounted on a headboard, normally a very elaborate carving reflecting the tastes of the artist.'"
+                },
+                {
+                    "text": "Was inaccurate because of misconceptions of the age",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was often highly ornamental'. The cuckoo clock was often highly ornamental: 'The clock was mounted on a headboard, normally a very elaborate carving reflecting the tastes of the artist.'"
+                },
+                {
+                    "text": "Was often highly ornamental",
+                    "is_correct": true,
+                    "feedback": "Correct! The cuckoo clock was often highly ornamental: 'The clock was mounted on a headboard, normally a very elaborate carving reflecting the tastes of the artist.'"
+                },
+                {
+                    "text": "Had only a 10-second margin of error per day",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was often highly ornamental'. The cuckoo clock was often highly ornamental: 'The clock was mounted on a headboard, normally a very elaborate carving reflecting the tastes of the artist.'"
+                }
+            ],
+            "options": "Relied on basic scientific principles\nWas the first to replace the pendulum\nIs the most common method of timekeeping\nIs the most accurate clock\nIs the earliest known method of measuring time during the day\nWas inaccurate because of misconceptions of the age\nWas often highly ornamental\nHad only a 10-second margin of error per day",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "3. Sundial",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Is the earliest known method of measuring time during the day'. The sundial is the earliest known method of measuring time during the day: 'Then came the sundial, an Egyptian invention in which the shadow cast by the sun was used to measure the time not of the seasons but of the day.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "Relied on basic scientific principles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the earliest known method of measuring time during the day'. The sundial is the earliest known method of measuring time during the day: 'Then came the sundial, an Egyptian invention in which the shadow cast by the sun was used to measure the time not of the seasons but of the day.'"
+                },
+                {
+                    "text": "Was the first to replace the pendulum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the earliest known method of measuring time during the day'. The sundial is the earliest known method of measuring time during the day: 'Then came the sundial, an Egyptian invention in which the shadow cast by the sun was used to measure the time not of the seasons but of the day.'"
+                },
+                {
+                    "text": "Is the most common method of timekeeping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the earliest known method of measuring time during the day'. The sundial is the earliest known method of measuring time during the day: 'Then came the sundial, an Egyptian invention in which the shadow cast by the sun was used to measure the time not of the seasons but of the day.'"
+                },
+                {
+                    "text": "Is the most accurate clock",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the earliest known method of measuring time during the day'. The sundial is the earliest known method of measuring time during the day: 'Then came the sundial, an Egyptian invention in which the shadow cast by the sun was used to measure the time not of the seasons but of the day.'"
+                },
+                {
+                    "text": "Is the earliest known method of measuring time during the day",
+                    "is_correct": true,
+                    "feedback": "Correct! The sundial is the earliest known method of measuring time during the day: 'Then came the sundial, an Egyptian invention in which the shadow cast by the sun was used to measure the time not of the seasons but of the day.'"
+                },
+                {
+                    "text": "Was inaccurate because of misconceptions of the age",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the earliest known method of measuring time during the day'. The sundial is the earliest known method of measuring time during the day: 'Then came the sundial, an Egyptian invention in which the shadow cast by the sun was used to measure the time not of the seasons but of the day.'"
+                },
+                {
+                    "text": "Was often highly ornamental",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the earliest known method of measuring time during the day'. The sundial is the earliest known method of measuring time during the day: 'Then came the sundial, an Egyptian invention in which the shadow cast by the sun was used to measure the time not of the seasons but of the day.'"
+                },
+                {
+                    "text": "Had only a 10-second margin of error per day",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the earliest known method of measuring time during the day'. The sundial is the earliest known method of measuring time during the day: 'Then came the sundial, an Egyptian invention in which the shadow cast by the sun was used to measure the time not of the seasons but of the day.'"
+                }
+            ],
+            "options": "Relied on basic scientific principles\nWas the first to replace the pendulum\nIs the most common method of timekeeping\nIs the most accurate clock\nIs the earliest known method of measuring time during the day\nWas inaccurate because of misconceptions of the age\nWas often highly ornamental\nHad only a 10-second margin of error per day",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "4. Persian clock",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Was inaccurate because of misconceptions of the age'. The Persian clock was inaccurate because of misconceptions: 'this method suffered from incorrect astrological assumptions of the period, in which it was believed that the Earth was the centre of the universe.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "Relied on basic scientific principles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was inaccurate because of misconceptions of the age'. The Persian clock was inaccurate because of misconceptions: 'this method suffered from incorrect astrological assumptions of the period, in which it was believed that the Earth was the centre of the universe.'"
+                },
+                {
+                    "text": "Was the first to replace the pendulum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was inaccurate because of misconceptions of the age'. The Persian clock was inaccurate because of misconceptions: 'this method suffered from incorrect astrological assumptions of the period, in which it was believed that the Earth was the centre of the universe.'"
+                },
+                {
+                    "text": "Is the most common method of timekeeping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was inaccurate because of misconceptions of the age'. The Persian clock was inaccurate because of misconceptions: 'this method suffered from incorrect astrological assumptions of the period, in which it was believed that the Earth was the centre of the universe.'"
+                },
+                {
+                    "text": "Is the most accurate clock",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was inaccurate because of misconceptions of the age'. The Persian clock was inaccurate because of misconceptions: 'this method suffered from incorrect astrological assumptions of the period, in which it was believed that the Earth was the centre of the universe.'"
+                },
+                {
+                    "text": "Is the earliest known method of measuring time during the day",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was inaccurate because of misconceptions of the age'. The Persian clock was inaccurate because of misconceptions: 'this method suffered from incorrect astrological assumptions of the period, in which it was believed that the Earth was the centre of the universe.'"
+                },
+                {
+                    "text": "Was inaccurate because of misconceptions of the age",
+                    "is_correct": true,
+                    "feedback": "Correct! The Persian clock was inaccurate because of misconceptions: 'this method suffered from incorrect astrological assumptions of the period, in which it was believed that the Earth was the centre of the universe.'"
+                },
+                {
+                    "text": "Was often highly ornamental",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was inaccurate because of misconceptions of the age'. The Persian clock was inaccurate because of misconceptions: 'this method suffered from incorrect astrological assumptions of the period, in which it was believed that the Earth was the centre of the universe.'"
+                },
+                {
+                    "text": "Had only a 10-second margin of error per day",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was inaccurate because of misconceptions of the age'. The Persian clock was inaccurate because of misconceptions: 'this method suffered from incorrect astrological assumptions of the period, in which it was believed that the Earth was the centre of the universe.'"
+                }
+            ],
+            "options": "Relied on basic scientific principles\nWas the first to replace the pendulum\nIs the most common method of timekeeping\nIs the most accurate clock\nIs the earliest known method of measuring time during the day\nWas inaccurate because of misconceptions of the age\nWas often highly ornamental\nHad only a 10-second margin of error per day",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "5. Wristwatch",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Was the first to replace the pendulum'. The wristwatch was the first to replace the pendulum: 'Huygens abandoned the pendulum for a balance wheel and spring assembly which allowed for a whole new generation of time piece – the wristwatch.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "Relied on basic scientific principles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was the first to replace the pendulum'. The wristwatch was the first to replace the pendulum: 'Huygens abandoned the pendulum for a balance wheel and spring assembly which allowed for a whole new generation of time piece – the wristwatch.'"
+                },
+                {
+                    "text": "Was the first to replace the pendulum",
+                    "is_correct": true,
+                    "feedback": "Correct! The wristwatch was the first to replace the pendulum: 'Huygens abandoned the pendulum for a balance wheel and spring assembly which allowed for a whole new generation of time piece – the wristwatch.'"
+                },
+                {
+                    "text": "Is the most common method of timekeeping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was the first to replace the pendulum'. The wristwatch was the first to replace the pendulum: 'Huygens abandoned the pendulum for a balance wheel and spring assembly which allowed for a whole new generation of time piece – the wristwatch.'"
+                },
+                {
+                    "text": "Is the most accurate clock",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was the first to replace the pendulum'. The wristwatch was the first to replace the pendulum: 'Huygens abandoned the pendulum for a balance wheel and spring assembly which allowed for a whole new generation of time piece – the wristwatch.'"
+                },
+                {
+                    "text": "Is the earliest known method of measuring time during the day",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was the first to replace the pendulum'. The wristwatch was the first to replace the pendulum: 'Huygens abandoned the pendulum for a balance wheel and spring assembly which allowed for a whole new generation of time piece – the wristwatch.'"
+                },
+                {
+                    "text": "Was inaccurate because of misconceptions of the age",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was the first to replace the pendulum'. The wristwatch was the first to replace the pendulum: 'Huygens abandoned the pendulum for a balance wheel and spring assembly which allowed for a whole new generation of time piece – the wristwatch.'"
+                },
+                {
+                    "text": "Was often highly ornamental",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was the first to replace the pendulum'. The wristwatch was the first to replace the pendulum: 'Huygens abandoned the pendulum for a balance wheel and spring assembly which allowed for a whole new generation of time piece – the wristwatch.'"
+                },
+                {
+                    "text": "Had only a 10-second margin of error per day",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Was the first to replace the pendulum'. The wristwatch was the first to replace the pendulum: 'Huygens abandoned the pendulum for a balance wheel and spring assembly which allowed for a whole new generation of time piece – the wristwatch.'"
+                }
+            ],
+            "options": "Relied on basic scientific principles\nWas the first to replace the pendulum\nIs the most common method of timekeeping\nIs the most accurate clock\nIs the earliest known method of measuring time during the day\nWas inaccurate because of misconceptions of the age\nWas often highly ornamental\nHad only a 10-second margin of error per day",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "6. Pendulum",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Had only a 10-second margin of error per day'. The pendulum had only a 10-second margin of error per day: 'His later refinements reduced his clock's error to less than 10 seconds a day.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "Relied on basic scientific principles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Had only a 10-second margin of error per day'. The pendulum had only a 10-second margin of error per day: 'His later refinements reduced his clock's error to less than 10 seconds a day.'"
+                },
+                {
+                    "text": "Was the first to replace the pendulum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Had only a 10-second margin of error per day'. The pendulum had only a 10-second margin of error per day: 'His later refinements reduced his clock's error to less than 10 seconds a day.'"
+                },
+                {
+                    "text": "Is the most common method of timekeeping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Had only a 10-second margin of error per day'. The pendulum had only a 10-second margin of error per day: 'His later refinements reduced his clock's error to less than 10 seconds a day.'"
+                },
+                {
+                    "text": "Is the most accurate clock",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Had only a 10-second margin of error per day'. The pendulum had only a 10-second margin of error per day: 'His later refinements reduced his clock's error to less than 10 seconds a day.'"
+                },
+                {
+                    "text": "Is the earliest known method of measuring time during the day",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Had only a 10-second margin of error per day'. The pendulum had only a 10-second margin of error per day: 'His later refinements reduced his clock's error to less than 10 seconds a day.'"
+                },
+                {
+                    "text": "Was inaccurate because of misconceptions of the age",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Had only a 10-second margin of error per day'. The pendulum had only a 10-second margin of error per day: 'His later refinements reduced his clock's error to less than 10 seconds a day.'"
+                },
+                {
+                    "text": "Was often highly ornamental",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Had only a 10-second margin of error per day'. The pendulum had only a 10-second margin of error per day: 'His later refinements reduced his clock's error to less than 10 seconds a day.'"
+                },
+                {
+                    "text": "Had only a 10-second margin of error per day",
+                    "is_correct": true,
+                    "feedback": "Correct! The pendulum had only a 10-second margin of error per day: 'His later refinements reduced his clock's error to less than 10 seconds a day.'"
+                }
+            ],
+            "options": "Relied on basic scientific principles\nWas the first to replace the pendulum\nIs the most common method of timekeeping\nIs the most accurate clock\nIs the earliest known method of measuring time during the day\nWas inaccurate because of misconceptions of the age\nWas often highly ornamental\nHad only a 10-second margin of error per day",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "7. Atomic clock",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Is the most accurate clock'. The atomic clock is the most accurate: 'Yet they (quartz clocks) are no longer the most accurate. Scientists had long realised that each chemical element in the universe absorbs and emits electromagnetic radiation... these atomic clocks.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "Relied on basic scientific principles",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the most accurate clock'. The atomic clock is the most accurate: 'Yet they (quartz clocks) are no longer the most accurate. Scientists had long realised that each chemical element in the universe absorbs and emits electromagnetic radiation... these atomic clocks.'"
+                },
+                {
+                    "text": "Was the first to replace the pendulum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the most accurate clock'. The atomic clock is the most accurate: 'Yet they (quartz clocks) are no longer the most accurate. Scientists had long realised that each chemical element in the universe absorbs and emits electromagnetic radiation... these atomic clocks.'"
+                },
+                {
+                    "text": "Is the most common method of timekeeping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the most accurate clock'. The atomic clock is the most accurate: 'Yet they (quartz clocks) are no longer the most accurate. Scientists had long realised that each chemical element in the universe absorbs and emits electromagnetic radiation... these atomic clocks.'"
+                },
+                {
+                    "text": "Is the most accurate clock",
+                    "is_correct": true,
+                    "feedback": "Correct! The atomic clock is the most accurate: 'Yet they (quartz clocks) are no longer the most accurate. Scientists had long realised that each chemical element in the universe absorbs and emits electromagnetic radiation... these atomic clocks.'"
+                },
+                {
+                    "text": "Is the earliest known method of measuring time during the day",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the most accurate clock'. The atomic clock is the most accurate: 'Yet they (quartz clocks) are no longer the most accurate. Scientists had long realised that each chemical element in the universe absorbs and emits electromagnetic radiation... these atomic clocks.'"
+                },
+                {
+                    "text": "Was inaccurate because of misconceptions of the age",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the most accurate clock'. The atomic clock is the most accurate: 'Yet they (quartz clocks) are no longer the most accurate. Scientists had long realised that each chemical element in the universe absorbs and emits electromagnetic radiation... these atomic clocks.'"
+                },
+                {
+                    "text": "Was often highly ornamental",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the most accurate clock'. The atomic clock is the most accurate: 'Yet they (quartz clocks) are no longer the most accurate. Scientists had long realised that each chemical element in the universe absorbs and emits electromagnetic radiation... these atomic clocks.'"
+                },
+                {
+                    "text": "Had only a 10-second margin of error per day",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Is the most accurate clock'. The atomic clock is the most accurate: 'Yet they (quartz clocks) are no longer the most accurate. Scientists had long realised that each chemical element in the universe absorbs and emits electromagnetic radiation... these atomic clocks.'"
+                }
+            ],
+            "options": "Relied on basic scientific principles\nWas the first to replace the pendulum\nIs the most common method of timekeeping\nIs the most accurate clock\nIs the earliest known method of measuring time during the day\nWas inaccurate because of misconceptions of the age\nWas often highly ornamental\nHad only a 10-second margin of error per day",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "8. Water clock",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Relied on basic scientific principles'. The water clock relied on basic scientific principles: 'The simplest water clock consisted of a large urn that had a small hole located near the base, and a graduated stick attached to a floating base... the passage of time was measured as the stick descended farther into the urn.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "Relied on basic scientific principles",
+                    "is_correct": true,
+                    "feedback": "Correct! The water clock relied on basic scientific principles: 'The simplest water clock consisted of a large urn that had a small hole located near the base, and a graduated stick attached to a floating base... the passage of time was measured as the stick descended farther into the urn.'"
+                },
+                {
+                    "text": "Was the first to replace the pendulum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Relied on basic scientific principles'. The water clock relied on basic scientific principles: 'The simplest water clock consisted of a large urn that had a small hole located near the base, and a graduated stick attached to a floating base... the passage of time was measured as the stick descended farther into the urn.'"
+                },
+                {
+                    "text": "Is the most common method of timekeeping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Relied on basic scientific principles'. The water clock relied on basic scientific principles: 'The simplest water clock consisted of a large urn that had a small hole located near the base, and a graduated stick attached to a floating base... the passage of time was measured as the stick descended farther into the urn.'"
+                },
+                {
+                    "text": "Is the most accurate clock",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Relied on basic scientific principles'. The water clock relied on basic scientific principles: 'The simplest water clock consisted of a large urn that had a small hole located near the base, and a graduated stick attached to a floating base... the passage of time was measured as the stick descended farther into the urn.'"
+                },
+                {
+                    "text": "Is the earliest known method of measuring time during the day",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Relied on basic scientific principles'. The water clock relied on basic scientific principles: 'The simplest water clock consisted of a large urn that had a small hole located near the base, and a graduated stick attached to a floating base... the passage of time was measured as the stick descended farther into the urn.'"
+                },
+                {
+                    "text": "Was inaccurate because of misconceptions of the age",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Relied on basic scientific principles'. The water clock relied on basic scientific principles: 'The simplest water clock consisted of a large urn that had a small hole located near the base, and a graduated stick attached to a floating base... the passage of time was measured as the stick descended farther into the urn.'"
+                },
+                {
+                    "text": "Was often highly ornamental",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Relied on basic scientific principles'. The water clock relied on basic scientific principles: 'The simplest water clock consisted of a large urn that had a small hole located near the base, and a graduated stick attached to a floating base... the passage of time was measured as the stick descended farther into the urn.'"
+                },
+                {
+                    "text": "Had only a 10-second margin of error per day",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Relied on basic scientific principles'. The water clock relied on basic scientific principles: 'The simplest water clock consisted of a large urn that had a small hole located near the base, and a graduated stick attached to a floating base... the passage of time was measured as the stick descended farther into the urn.'"
+                }
+            ],
+            "options": "Relied on basic scientific principles\nWas the first to replace the pendulum\nIs the most common method of timekeeping\nIs the most accurate clock\nIs the earliest known method of measuring time during the day\nWas inaccurate because of misconceptions of the age\nWas often highly ornamental\nHad only a 10-second margin of error per day",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "open_question",
+            "instructions": "Label the diagram below using words from the text. Use NO MORE THAN ONE WORD.",
+            "question": "<img style=\"max-width: 450px\" src=\"https://www.ieltstestonline.com/2026/wp-content/uploads/2026/01/Reading-Test-13.png\" alt=\"Reading Test 13\" width=\"100%\" height=\"auto\" />\r\n\r\n<p>9. [field 1]</p>\r\n<p>10. [field 2]</p>\r\n<p>11. [field 3]</p>\r\n<p>12. [field 4]</p>",
+            "points": 4,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "diagram_label_r",
+            "field_count": 4,
+            "field_answers": {
+                "1": "headboard",
+                "2": "weight",
+                "3": "pendulum",
+                "4": "bellows"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The headboard is the panel at the top of the clock that supports the mechanism.",
+                    "incorrect": "Incorrect. The correct answer is 'headboard'. This is the panel at the top of the clock that supports the mechanism.",
+                    "no_answer": "You didn't provide an answer. The correct answer is 'headboard', which is the panel at the top of the clock."
+                },
+                "2": {
+                    "correct": "Correct! The weight provides the driving force for the clock mechanism.",
+                    "incorrect": "Incorrect. The correct answer is 'weight'. This provides the driving force for the clock mechanism.",
+                    "no_answer": "You didn't provide an answer. The correct answer is 'weight', which provides the driving force."
+                },
+                "3": {
+                    "correct": "Correct! The pendulum regulates the timekeeping by swinging back and forth.",
+                    "incorrect": "Incorrect. The correct answer is 'pendulum'. This regulates the timekeeping by swinging back and forth.",
+                    "no_answer": "You didn't provide an answer. The correct answer is 'pendulum', which regulates the timekeeping."
+                },
+                "4": {
+                    "correct": "Correct! The bellows produce the sound when the clock chimes.",
+                    "incorrect": "Incorrect. The correct answer is 'bellows'. These produce the sound when the clock chimes.",
+                    "no_answer": "You didn't provide an answer. The correct answer is 'bellows', which produce the chiming sound."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the following summary using NO MORE THAN TWO WORDS.\r\n\r\n",
+            "question": "Although quartz clocks are (13)[field 1], the atomic clock is the most (14)[field 2] as it does not rely on any (15)[field 3].",
+            "points": 3,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion_r",
+            "field_count": 3,
+            "field_answers": {
+                "1": "cheaper",
+                "2": "accurate",
+                "3": "moving parts"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Quartz clocks are cheaper than atomic clocks.",
+                    "incorrect": "Incorrect. The correct answer is 'cheaper'. The passage states that quartz clocks are more affordable.",
+                    "no_answer": "You didn't provide an answer. The correct answer is 'cheaper', as quartz clocks are more affordable."
+                },
+                "2": {
+                    "correct": "Correct! The atomic clock is the most accurate timepiece.",
+                    "incorrect": "Incorrect. The correct answer is 'accurate'. The passage states that atomic clocks are the most accurate.",
+                    "no_answer": "You didn't provide an answer. The correct answer is 'accurate', as atomic clocks are most precise."
+                },
+                "3": {
+                    "correct": "Correct! Atomic clocks don't rely on moving parts.",
+                    "incorrect": "Incorrect. The correct answer is 'moving parts'. The passage explains that atomic clocks operate without mechanical components.",
+                    "no_answer": "You didn't provide an answer. The correct answer is 'moving parts', as atomic clocks have no mechanical components."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 2\r\n\r\nYou should spend about 20 minutes on Questions 16 – 26 which are based on Reading Passage 2.\r\n\r\nQuestions 16 – 17\r\n\r\nSelect the correct answer A – C.",
+            "question": "16. Research has shown that",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'simple things can lead us to feel varying degrees of depression'. The passage states that people suffer holiday blues 'to varying extents, from a mild feeling of sadness to severe, sometimes even suicidal, depression.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "we become more depressed during the holidays",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'simple things can lead us to feel varying degrees of depression'. The passage states that people suffer holiday blues 'to varying extents, from a mild feeling of sadness to severe, sometimes even suicidal, depression.'"
+                },
+                {
+                    "text": "poor diet can lead to depression",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'simple things can lead us to feel varying degrees of depression'. The passage states that people suffer holiday blues 'to varying extents, from a mild feeling of sadness to severe, sometimes even suicidal, depression.'"
+                },
+                {
+                    "text": "simple things can lead us to feel varying degrees of depression",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'one in three people of varying ages suffer 'holiday blues' to varying extents, from a mild feeling of sadness to severe, sometimes even suicidal, depression.'"
+                }
+            ],
+            "options": "we become more depressed during the holidays\npoor diet can lead to depression\nsimple things can lead us to feel varying degrees of depression",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "17. Dr Pittman believes holiday depression comes from",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'over-compensation'. Dr Pittman states 'we count on the holidays to compensate for the rest of the year.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "feelings of inadequacy",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'over-compensation'. Dr Pittman states 'we count on the holidays to compensate for the rest of the year.'"
+                },
+                {
+                    "text": "being alone",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'over-compensation'. Dr Pittman states 'we count on the holidays to compensate for the rest of the year.'"
+                },
+                {
+                    "text": "over-compensation",
+                    "is_correct": true,
+                    "feedback": "Correct! Dr Pittman says 'we count on the holidays to compensate for the rest of the year.'"
+                }
+            ],
+            "options": "feelings of inadequacy\nbeing alone\nover-compensation",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 18 – 21\r\n\r\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+            "question": "18. What is the chemical cause for lethargy in SAD sufferers?\r\n\r\n[field 1]",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "melatonin"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage explains that melatonin is the chemical responsible for lethargy in SAD sufferers.",
+                    "incorrect": "Incorrect. The correct answer is 'melatonin'. The passage explains that melatonin is the chemical responsible for lethargy in SAD sufferers.",
+                    "no_answer": "You didn't provide an answer. The passage explains that melatonin is the chemical responsible for lethargy in SAD sufferers."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "19. Why is the Scandinavian suicide rate so high in winter?\r\n\r\n\r\n[field 1]",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "less sunlight"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage discusses how lack of sunlight during long winters affects mental health in Scandinavia.",
+                    "incorrect": "Incorrect. The correct answer is 'lack of sunlight / reduced daylight'. The passage discusses how lack of sunlight during long winters affects mental health in Scandinavia.",
+                    "no_answer": "You didn't provide an answer. The passage discusses how lack of sunlight during long winters affects mental health in Scandinavia."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "20. What daily treatment can SAD sufferers benefit from?\r\n\r\n[field 1]",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "light therapy"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Light therapy is mentioned as an effective daily treatment for SAD sufferers.",
+                    "incorrect": "Incorrect. The correct answer is 'light therapy / phototherapy'. Light therapy is mentioned as an effective daily treatment for SAD sufferers.",
+                    "no_answer": "You didn't provide an answer. Light therapy is mentioned as an effective daily treatment for SAD sufferers."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "21. For whom are the holiday periods the busiest time?\r\n\r\n[field 1]",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "voluntary support services|support services"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage indicates that therapists and counselors are busiest during holiday periods.",
+                    "incorrect": "Incorrect. The correct answer is 'therapists / counselors'. The passage indicates that therapists and counselors are busiest during holiday periods.",
+                    "no_answer": "You didn't provide an answer. The passage indicates that therapists and counselors are busiest during holiday periods."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 3\r\n\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.\r\n\r\nQuestions 27 – 32\r\n\r\nChoose the most suitable headings for sections A–F from the list below. Use each heading once only.",
+            "question": "22. Section A",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Manifestations of depression'. Section A discusses the manifestations of depression: 'The effects can manifest themselves in many ways, such as an inability to sleep or sleeping too much, overeating or undereating, headaches or drinking too much.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "Family cures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Manifestations of depression'. Section A discusses the manifestations of depression: 'The effects can manifest themselves in many ways, such as an inability to sleep or sleeping too much, overeating or undereating, headaches or drinking too much.'"
+                },
+                {
+                    "text": "Addressing the problem",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Manifestations of depression'. Section A discusses the manifestations of depression: 'The effects can manifest themselves in many ways, such as an inability to sleep or sleeping too much, overeating or undereating, headaches or drinking too much.'"
+                },
+                {
+                    "text": "Impact of personality",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Manifestations of depression'. Section A discusses the manifestations of depression: 'The effects can manifest themselves in many ways, such as an inability to sleep or sleeping too much, overeating or undereating, headaches or drinking too much.'"
+                },
+                {
+                    "text": "Psychological factors",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Manifestations of depression'. Section A discusses the manifestations of depression: 'The effects can manifest themselves in many ways, such as an inability to sleep or sleeping too much, overeating or undereating, headaches or drinking too much.'"
+                },
+                {
+                    "text": "Biological factors",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Manifestations of depression'. Section A discusses the manifestations of depression: 'The effects can manifest themselves in many ways, such as an inability to sleep or sleeping too much, overeating or undereating, headaches or drinking too much.'"
+                },
+                {
+                    "text": "Avoiding stress",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Manifestations of depression'. Section A discusses the manifestations of depression: 'The effects can manifest themselves in many ways, such as an inability to sleep or sleeping too much, overeating or undereating, headaches or drinking too much.'"
+                },
+                {
+                    "text": "Manifestations of depression",
+                    "is_correct": true,
+                    "feedback": "Correct! Section A discusses the manifestations of depression: 'The effects can manifest themselves in many ways, such as an inability to sleep or sleeping too much, overeating or undereating, headaches or drinking too much.'"
+                },
+                {
+                    "text": "Depression in children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Manifestations of depression'. Section A discusses the manifestations of depression: 'The effects can manifest themselves in many ways, such as an inability to sleep or sleeping too much, overeating or undereating, headaches or drinking too much.'"
+                },
+                {
+                    "text": "Pressures of the holiday period",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Manifestations of depression'. Section A discusses the manifestations of depression: 'The effects can manifest themselves in many ways, such as an inability to sleep or sleeping too much, overeating or undereating, headaches or drinking too much.'"
+                }
+            ],
+            "options": "Family cures\nAddressing the problem\nImpact of personality\nPsychological factors\nBiological factors\nAvoiding stress\nManifestations of depression\nDepression in children\nPressures of the holiday period",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "23. Section B",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Psychological factors'. Section B focuses on psychological factors related to family: 'the most significant cause for holiday depression actually stems from our concerns about our family.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "Family cures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Psychological factors'. Section B focuses on psychological factors related to family: 'the most significant cause for holiday depression actually stems from our concerns about our family.'"
+                },
+                {
+                    "text": "Addressing the problem",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Psychological factors'. Section B focuses on psychological factors related to family: 'the most significant cause for holiday depression actually stems from our concerns about our family.'"
+                },
+                {
+                    "text": "Impact of personality",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Psychological factors'. Section B focuses on psychological factors related to family: 'the most significant cause for holiday depression actually stems from our concerns about our family.'"
+                },
+                {
+                    "text": "Psychological factors",
+                    "is_correct": true,
+                    "feedback": "Correct! Section B focuses on psychological factors related to family: 'the most significant cause for holiday depression actually stems from our concerns about our family.'"
+                },
+                {
+                    "text": "Biological factors",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Psychological factors'. Section B focuses on psychological factors related to family: 'the most significant cause for holiday depression actually stems from our concerns about our family.'"
+                },
+                {
+                    "text": "Avoiding stress",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Psychological factors'. Section B focuses on psychological factors related to family: 'the most significant cause for holiday depression actually stems from our concerns about our family.'"
+                },
+                {
+                    "text": "Manifestations of depression",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Psychological factors'. Section B focuses on psychological factors related to family: 'the most significant cause for holiday depression actually stems from our concerns about our family.'"
+                },
+                {
+                    "text": "Depression in children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Psychological factors'. Section B focuses on psychological factors related to family: 'the most significant cause for holiday depression actually stems from our concerns about our family.'"
+                },
+                {
+                    "text": "Pressures of the holiday period",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Psychological factors'. Section B focuses on psychological factors related to family: 'the most significant cause for holiday depression actually stems from our concerns about our family.'"
+                }
+            ],
+            "options": "Family cures\nAddressing the problem\nImpact of personality\nPsychological factors\nBiological factors\nAvoiding stress\nManifestations of depression\nDepression in children\nPressures of the holiday period",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "24. Section C",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Pressures of the holiday period'. Section C discusses pressures of the holiday period: 'Gift shopping, for example, does not help reduce tensions – crowded shops, long queues, the pressure of choosing just the right present.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "Family cures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Pressures of the holiday period'. Section C discusses pressures of the holiday period: 'Gift shopping, for example, does not help reduce tensions – crowded shops, long queues, the pressure of choosing just the right present.'"
+                },
+                {
+                    "text": "Addressing the problem",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Pressures of the holiday period'. Section C discusses pressures of the holiday period: 'Gift shopping, for example, does not help reduce tensions – crowded shops, long queues, the pressure of choosing just the right present.'"
+                },
+                {
+                    "text": "Impact of personality",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Pressures of the holiday period'. Section C discusses pressures of the holiday period: 'Gift shopping, for example, does not help reduce tensions – crowded shops, long queues, the pressure of choosing just the right present.'"
+                },
+                {
+                    "text": "Psychological factors",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Pressures of the holiday period'. Section C discusses pressures of the holiday period: 'Gift shopping, for example, does not help reduce tensions – crowded shops, long queues, the pressure of choosing just the right present.'"
+                },
+                {
+                    "text": "Biological factors",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Pressures of the holiday period'. Section C discusses pressures of the holiday period: 'Gift shopping, for example, does not help reduce tensions – crowded shops, long queues, the pressure of choosing just the right present.'"
+                },
+                {
+                    "text": "Avoiding stress",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Pressures of the holiday period'. Section C discusses pressures of the holiday period: 'Gift shopping, for example, does not help reduce tensions – crowded shops, long queues, the pressure of choosing just the right present.'"
+                },
+                {
+                    "text": "Manifestations of depression",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Pressures of the holiday period'. Section C discusses pressures of the holiday period: 'Gift shopping, for example, does not help reduce tensions – crowded shops, long queues, the pressure of choosing just the right present.'"
+                },
+                {
+                    "text": "Depression in children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Pressures of the holiday period'. Section C discusses pressures of the holiday period: 'Gift shopping, for example, does not help reduce tensions – crowded shops, long queues, the pressure of choosing just the right present.'"
+                },
+                {
+                    "text": "Pressures of the holiday period",
+                    "is_correct": true,
+                    "feedback": "Correct! Section C discusses pressures of the holiday period: 'Gift shopping, for example, does not help reduce tensions – crowded shops, long queues, the pressure of choosing just the right present.'"
+                }
+            ],
+            "options": "Family cures\nAddressing the problem\nImpact of personality\nPsychological factors\nBiological factors\nAvoiding stress\nManifestations of depression\nDepression in children\nPressures of the holiday period",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "25. Section D",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Biological factors'. Section D covers biological factors: 'Seasonal Affective Disorder, or SAD as it is more commonly known, is also held responsible for winter depression... the pineal gland secretes the hormone melatonin.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "Family cures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Biological factors'. Section D covers biological factors: 'Seasonal Affective Disorder, or SAD as it is more commonly known, is also held responsible for winter depression... the pineal gland secretes the hormone melatonin.'"
+                },
+                {
+                    "text": "Addressing the problem",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Biological factors'. Section D covers biological factors: 'Seasonal Affective Disorder, or SAD as it is more commonly known, is also held responsible for winter depression... the pineal gland secretes the hormone melatonin.'"
+                },
+                {
+                    "text": "Impact of personality",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Biological factors'. Section D covers biological factors: 'Seasonal Affective Disorder, or SAD as it is more commonly known, is also held responsible for winter depression... the pineal gland secretes the hormone melatonin.'"
+                },
+                {
+                    "text": "Psychological factors",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Biological factors'. Section D covers biological factors: 'Seasonal Affective Disorder, or SAD as it is more commonly known, is also held responsible for winter depression... the pineal gland secretes the hormone melatonin.'"
+                },
+                {
+                    "text": "Biological factors",
+                    "is_correct": true,
+                    "feedback": "Correct! Section D covers biological factors: 'Seasonal Affective Disorder, or SAD as it is more commonly known, is also held responsible for winter depression... the pineal gland secretes the hormone melatonin.'"
+                },
+                {
+                    "text": "Avoiding stress",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Biological factors'. Section D covers biological factors: 'Seasonal Affective Disorder, or SAD as it is more commonly known, is also held responsible for winter depression... the pineal gland secretes the hormone melatonin.'"
+                },
+                {
+                    "text": "Manifestations of depression",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Biological factors'. Section D covers biological factors: 'Seasonal Affective Disorder, or SAD as it is more commonly known, is also held responsible for winter depression... the pineal gland secretes the hormone melatonin.'"
+                },
+                {
+                    "text": "Depression in children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Biological factors'. Section D covers biological factors: 'Seasonal Affective Disorder, or SAD as it is more commonly known, is also held responsible for winter depression... the pineal gland secretes the hormone melatonin.'"
+                },
+                {
+                    "text": "Pressures of the holiday period",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Biological factors'. Section D covers biological factors: 'Seasonal Affective Disorder, or SAD as it is more commonly known, is also held responsible for winter depression... the pineal gland secretes the hormone melatonin.'"
+                }
+            ],
+            "options": "Family cures\nAddressing the problem\nImpact of personality\nPsychological factors\nBiological factors\nAvoiding stress\nManifestations of depression\nDepression in children\nPressures of the holiday period",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "26. Section E",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Addressing the problem'. Section E addresses the problem and its solution: 'The good news for SAD sufferers is that there is a cure... the treatment is to be in bright light every day.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "Family cures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Addressing the problem'. Section E addresses the problem and its solution: 'The good news for SAD sufferers is that there is a cure... the treatment is to be in bright light every day.'"
+                },
+                {
+                    "text": "Addressing the problem",
+                    "is_correct": true,
+                    "feedback": "Correct! Section E addresses the problem and its solution: 'The good news for SAD sufferers is that there is a cure... the treatment is to be in bright light every day.'"
+                },
+                {
+                    "text": "Impact of personality",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Addressing the problem'. Section E addresses the problem and its solution: 'The good news for SAD sufferers is that there is a cure... the treatment is to be in bright light every day.'"
+                },
+                {
+                    "text": "Psychological factors",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Addressing the problem'. Section E addresses the problem and its solution: 'The good news for SAD sufferers is that there is a cure... the treatment is to be in bright light every day.'"
+                },
+                {
+                    "text": "Biological factors",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Addressing the problem'. Section E addresses the problem and its solution: 'The good news for SAD sufferers is that there is a cure... the treatment is to be in bright light every day.'"
+                },
+                {
+                    "text": "Avoiding stress",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Addressing the problem'. Section E addresses the problem and its solution: 'The good news for SAD sufferers is that there is a cure... the treatment is to be in bright light every day.'"
+                },
+                {
+                    "text": "Manifestations of depression",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Addressing the problem'. Section E addresses the problem and its solution: 'The good news for SAD sufferers is that there is a cure... the treatment is to be in bright light every day.'"
+                },
+                {
+                    "text": "Depression in children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Addressing the problem'. Section E addresses the problem and its solution: 'The good news for SAD sufferers is that there is a cure... the treatment is to be in bright light every day.'"
+                },
+                {
+                    "text": "Pressures of the holiday period",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Addressing the problem'. Section E addresses the problem and its solution: 'The good news for SAD sufferers is that there is a cure... the treatment is to be in bright light every day.'"
+                }
+            ],
+            "options": "Family cures\nAddressing the problem\nImpact of personality\nPsychological factors\nBiological factors\nAvoiding stress\nManifestations of depression\nDepression in children\nPressures of the holiday period",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose the most suitable headings for sections A–F from the list below. Use each heading once only.",
+            "question": "27. Section A",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A question of time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "Lack of teacher training",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "Student success",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "The argument for flexibility",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "Importance of teaching experience",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "Extra-curricular pressures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "The benefits of a varied curriculum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "Imbalanced focus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "Overreliance on examinations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "Quality of quantity?",
+                    "is_correct": true,
+                    "feedback": "Correct! Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                }
+            ],
+            "options": "A question of time\nLack of teacher training\nStudent success\nThe argument for flexibility\nImportance of teaching experience\nExtra-curricular pressures\nThe benefits of a varied curriculum\nImbalanced focus\nOverreliance on examinations\nQuality of quantity?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "28. Section B",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A question of time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "Lack of teacher training",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "Student success",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "The argument for flexibility",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "Importance of teaching experience",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "Extra-curricular pressures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "The benefits of a varied curriculum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "Imbalanced focus",
+                    "is_correct": true,
+                    "feedback": "Correct! Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "Overreliance on examinations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "Quality of quantity?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                }
+            ],
+            "options": "A question of time\nLack of teacher training\nStudent success\nThe argument for flexibility\nImportance of teaching experience\nExtra-curricular pressures\nThe benefits of a varied curriculum\nImbalanced focus\nOverreliance on examinations\nQuality of quantity?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "29. Section C",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A question of time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "Lack of teacher training",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "Student success",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "The argument for flexibility",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "Importance of teaching experience",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "Extra-curricular pressures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "The benefits of a varied curriculum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "Imbalanced focus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "Overreliance on examinations",
+                    "is_correct": true,
+                    "feedback": "Correct! Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "Quality of quantity?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                }
+            ],
+            "options": "A question of time\nLack of teacher training\nStudent success\nThe argument for flexibility\nImportance of teaching experience\nExtra-curricular pressures\nThe benefits of a varied curriculum\nImbalanced focus\nOverreliance on examinations\nQuality of quantity?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "30. Section D",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A question of time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "Lack of teacher training",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "Student success",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "The argument for flexibility",
+                    "is_correct": true,
+                    "feedback": "Correct! Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "Importance of teaching experience",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "Extra-curricular pressures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "The benefits of a varied curriculum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "Imbalanced focus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "Overreliance on examinations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "Quality of quantity?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                }
+            ],
+            "options": "A question of time\nLack of teacher training\nStudent success\nThe argument for flexibility\nImportance of teaching experience\nExtra-curricular pressures\nThe benefits of a varied curriculum\nImbalanced focus\nOverreliance on examinations\nQuality of quantity?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "31. Section E",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A question of time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "Lack of teacher training",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "Student success",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "The argument for flexibility",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "Importance of teaching experience",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "Extra-curricular pressures",
+                    "is_correct": true,
+                    "feedback": "Correct! Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "The benefits of a varied curriculum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "Imbalanced focus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "Overreliance on examinations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "Quality of quantity?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                }
+            ],
+            "options": "A question of time\nLack of teacher training\nStudent success\nThe argument for flexibility\nImportance of teaching experience\nExtra-curricular pressures\nThe benefits of a varied curriculum\nImbalanced focus\nOverreliance on examinations\nQuality of quantity?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "32. Section F",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A question of time",
+                    "is_correct": true,
+                    "feedback": "Correct! Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "Lack of teacher training",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "Student success",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "The argument for flexibility",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "Importance of teaching experience",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "Extra-curricular pressures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "The benefits of a varied curriculum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "Imbalanced focus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "Overreliance on examinations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "Quality of quantity?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                }
+            ],
+            "options": "A question of time\nLack of teacher training\nStudent success\nThe argument for flexibility\nImportance of teaching experience\nExtra-curricular pressures\nThe benefits of a varied curriculum\nImbalanced focus\nOverreliance on examinations\nQuality of quantity?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "<p><em><strong>Questions 33 – 37</strong></em></p>\r\n<p>Do the following statements agree with the views of the writer?</p>\r\n<p>In boxes <strong>33 -37</strong> on your answer sheet write</p>\r\n<p>Write</p>\r\n<p><em><strong>YES</strong> </em>if the statement agrees with the writer<br>\r\n<em><strong>NO</strong> </em>if the statement does not agree with the writer<br>\r\n<em><strong>NOT GIVEN</strong> </em>if there is no information about this in the passage</p>",
+            "question": "33. Classes are often too short.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The passage mentions 'classes sometimes only 30 minutes long' but doesn't state an opinion on whether this is too short.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions 'classes sometimes only 30 minutes long' but doesn't state an opinion on whether this is too short."
+                },
+                {
+                    "text": "NO",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions 'classes sometimes only 30 minutes long' but doesn't state an opinion on whether this is too short."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions 'classes sometimes only 30 minutes long' but doesn't state an opinion on whether this is too short."
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "34. No subjects can be comprehensively learned without time to discuss and debate the facts.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is NO. The passage states 'There are, of course, certain aspects of education which need to be taught by simply inputting the information. Basic mathematics, for example.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NO. The passage states 'There are, of course, certain aspects of education which need to be taught by simply inputting the information. Basic mathematics, for example.'"
+                },
+                {
+                    "text": "NO",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'There are, of course, certain aspects of education which need to be taught by simply inputting the information. Basic mathematics, for example.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NO. The passage states 'There are, of course, certain aspects of education which need to be taught by simply inputting the information. Basic mathematics, for example.'"
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "35. Tests are a fair measure of ability.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is NO. The passage states 'there are many students who, despite clear intellectual ability, simply do not perform well in tests.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NO. The passage states 'there are many students who, despite clear intellectual ability, simply do not perform well in tests.'"
+                },
+                {
+                    "text": "NO",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'there are many students who, despite clear intellectual ability, simply do not perform well in tests.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NO. The passage states 'there are many students who, despite clear intellectual ability, simply do not perform well in tests.'"
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "36. Schools are trying to be responsible for too many aspects of a child's education.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is YES. The passage states 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "NO",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is YES. The passage states 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is YES. The passage states 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "37. Future changes in the curriculum will improve the situation.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The passage says 'change will be slow' but doesn't state whether changes will improve the situation.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage says 'change will be slow' but doesn't state whether changes will improve the situation."
+                },
+                {
+                    "text": "NO",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage says 'change will be slow' but doesn't state whether changes will improve the situation."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage says 'change will be slow' but doesn't state whether changes will improve the situation."
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "<p><em><strong>Questions 38 – 40</strong></em></p>\r\n<p>Complete the summary below using <strong>NO MORE THAN TWO WORDS</strong> from the text.</p>",
+            "question": "Too much emphasis is placed on learning (38)[field 1]. The modern school curriculum is largely a response to increased (39)[field 2] for which graduates are expected to have a much broader general knowledge. One potential solution to this could be to give individual schools (40)[field 3] regarding what is taught.",
+            "points": 3,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion_r",
+            "field_count": 3,
+            "field_answers": {
+                "1": "facts",
+                "2": "job mobility",
+                "3": "more discretion|discretion|freedom"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "incorrect": "Incorrect. The correct answer is 'facts / rote learning'. The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "no_answer": "You didn't provide an answer. The passage critiques the modern curriculum's emphasis on certain types of knowledge."
+                },
+                "2": {
+                    "correct": "Correct! The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "incorrect": "Incorrect. The correct answer is 'facts / rote learning'. The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "no_answer": "You didn't provide an answer. The passage critiques the modern curriculum's emphasis on certain types of knowledge."
+                },
+                "3": {
+                    "correct": "Correct! The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "incorrect": "Incorrect. The correct answer is 'facts / rote learning'. The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "no_answer": "You didn't provide an answer. The passage critiques the modern curriculum's emphasis on certain types of knowledge."
+                }
+            }
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Passage 1",
+            "content": "A very brief history of time\r\n\r\nThese days, time is everything. We worry about being late, we rush to get things done or to be somewhere and our daily schedules are often planned down to the minute. Of course, none of this would have been possible without the humble clock. The internationally accepted division of time into regular, predictable units has become an essential aspect of almost all modern societies yet the history of time keeping is almost as old as civilisation itself. Nearly 3000 years ago, societies were using the stars in order to keep track of time to indicate agricultural cycles. <span id=\"passage-q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">Then came the sundial, an Egyptian invention in which the shadow cast by the sun was used to measure the time not of the seasons but of the day.</span>\r\n\r\n<span id=\"passage-q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">The first manufactured clock, believed to have come from Persia, was a system which recreated the movements of the stars. All the celestial bodies which had been used to tell the time of year were plotted onto an intricate system in which the planets rotated around each other. Not being dependent on either sunlight or a clear night, this was one of the earliest systems to divide a complete day. Although ingenious for its time, this method suffered from incorrect astrological assumptions of the period, in which it was believed that the Earth was the centre of the universe.</span>\r\n\r\n<span id=\"passage-q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">The Greeks were next to develop a more accurate clock using water to power a mechanism that counted out the divisions of the day. The simplest water clock consisted of a large urn that had a small hole located near the base, and a graduated stick attached to a floating base. The hole would be plugged while the urn was being filled with water, and then the stick would be inserted into the urn. The stick would float perpendicular to the surface of the water, and when the hole at the base of the urn was unplugged, the passage of time was measured as the stick descended farther into the urn.</span>\r\n\r\nThen, for nearly one thousand years, there was little in the way of progress in time keeping until the European invention of spring-powered clocks in the late fourteenth century. Unreliable and inaccurate, the early models of these clocks were useful in that they gave direction to new advances. <span id=\"passage-q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">In 1656 Christiaan Huygens, a Dutch scientist, made the first pendulum clock, which had an error of less than one minute a day, the first time such accuracy had been achieved. His later refinements reduced his clock's error to less than 10 seconds a day.</span> <span id=\"passage-q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Some years later, Huygens abandoned the pendulum for a balance wheel and spring assembly which allowed for a whole new generation of time piece – the wristwatch.</span> Still found in some of today's wristwatches, this improvement allowed portable seventeenth-century watches to keep time to 10 minutes a day.\r\n\r\n<span id=\"passage-q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">While clock making and musical chime clocks became increasingly popular, it was the invention of the cuckoo clock, designed and made by Franz Anton Ketterer, which really caught people's imagination. The design was not particularly complex. The clock was mounted on a headboard, normally a very elaborate carving reflecting the tastes of the artist. Many of the original cuckoo clocks are still kept today because of the artwork on the headboard.</span> <span id=\"passage-q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">Using the traditional circular <span id=\"passage-q11\" data-question=\"11\"></span>pendulum design, the clock could run accurately for up to a week, using a <span id=\"passage-q10\" data-question=\"10\"></span>weight to keep the pendulum in motion. Again, the weight was often carved with a design making it as much an art form as a timepiece. The most innovative feature of these cuckoo clocks, as the name implies, is that a small carved cuckoo came out of the clock to chime the hour. Particularly ingenious was the placement of <span id=\"passage-q12\" data-question=\"12\"></span>bellows inside the clock, which were designed to recreate the sound made by the bird</span>, although later models included a lever on the bottom of the clock which could be used to stop this hourly chime.\r\n\r\nRefinements to this original pendulum concept meant that by 1721 the pendulum clock remained accurate to within one second per day by compensating for changes in the pendulum's length due to temperature variations. Over the next century, further refinements reduced this to a hundredth of a second a day. <span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">In the 1920s, a new era of clock making began which is still popular today – the quartz clock. When under pressure, quartz generates an electric field of relatively constant frequency, and it was discovered that this electric signal was sufficient to power a clock. Quartz crystal clocks were better because they had fewer moving parts to disturb their regular frequency. Even so, they still rely on a mechanical vibration and this depends on the size of the crystal, and as no two crystals can be exactly alike, there is a degree of difference in every quartz watch.</span>\r\n\r\n<span id=\"passage-q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">Comparing performance to price, it is understandable that quartz clocks still dominate the market as they are considerably cheaper than other alternatives.</span> <span id=\"passage-q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">Yet they are no longer the most <span id=\"passage-q14\" data-question=\"14\"></span>accurate. Scientists had long realised that each chemical element in the universe absorbs and emits electromagnetic radiation at its own specific frequencies. These resonances are inherently stable, thus forming the basis for a reliable system of time measurement, all the more so because <span id=\"passage-q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">no moving parts are needed to record these resonances</span>. Yet the cost of these atomic clocks mean that such timekeeping precision is a long way from becoming common.</span>"
+        },
+        {
+            "title": "Reading Passage 2",
+            "content": "Holiday Blues\r\n\r\nThe holiday season has always been a cause for celebration around the world. The opportunity to take a break from work, be frivolous, go on holiday, meet family and friends – all good reasons to look forward to the holidays with enthusiasm and anticipation. Or at least that is what we are led to believe.\r\n\r\n<strong>A:</strong> <span id=\"passage-q16\" data-question=\"16\"></span><span id=\"passage-q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">Research carried out in America suggests that these feelings of euphoria may be somewhat misplaced. A study recently carried out by New York University Child Study Centre has concluded that one in three people of varying ages suffer 'holiday blues' to varying extents, from a mild feeling of sadness to severe, sometimes even suicidal, depression. The effects can manifest themselves in many ways, such as an inability to sleep or sleeping too much, overeating or undereating, headaches or drinking too much. The report also concluded that not only are there a number of complex causes that can trigger such depression (psychological and biological), there are an equal number of opinions as to the best solution.</span>\r\n\r\n<strong>B:</strong> <span id=\"passage-q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">According to Dr Frank Pittman, a leading family psychiatrist, the most significant cause for holiday depression actually stems from our concerns about our family. During the holiday season, families meet, often for the first time since the last holiday season, and try to make these reunions 'perfect'. <span id=\"passage-q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">In fact, says Pittman, we count on the holidays to compensate for the rest of the year.</span> He himself comments that 'I wanted to make up to the family for not having been a good enough father and uncle all year'. However, such good intentions are often thwarted by old family arguments, feelings of not being appreciated or being used, all of which result in holiday stress. It seems that the idyllic picture of our family we wish to build in our minds cannot be sustained in reality.</span>\r\n\r\n<strong>C:</strong> <span id=\"passage-q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">Although Pittman holds family to be the source of much of the problem, others point to a more general social context. Gift shopping, for example, does not help reduce tensions – crowded shops, long queues, the pressure of choosing just the right present – all of these things contribute to a feeling of stress and anxiety. On the other end of the scale, there are those without family who experience a sense of extreme loneliness and isolation throughout this period, often spending the long holidays alone. Any feelings of inadequacy they may harbour throughout the year can often become unbearable at a time when friends are unavailable and enjoying an apparently cosy break with their loved ones. In fact, such is the extreme nature of this isolation that many organisations have been established to offer some help and support to those who feel most alone over what should be the 'festive' season.</span>\r\n\r\n<strong>D:</strong> <span id=\"passage-q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">Others, however, argue that more scientific explanations carry an equal weight in explaining holiday blues. Seasonal Affective Disorder, or SAD as it is more commonly known, is also held responsible for winter depression. A natural reaction to falling levels of sunlight, <span id=\"passage-q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">the pineal gland secretes the hormone melatonin, which has the effect of slowing the body down.</span> When days get shorter, more of the hormone is released causing sufferers to become lethargic and miserable. From being industrious people with plenty of energy, SAD sufferers find themselves increasingly weary and unable to sustain any prolonged activity, a situation which often leads to depression. In addition, for many people this has a major impact not only on their personal life but also on their professional life, as employers often see this lack of productivity in terms of laziness or unwillingness to work. <span id=\"passage-q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">As a result, SAD has been linked directly to the high rate of suicide in a number of Scandinavian countries during winter months, when there are often a few hours of sunlight a day.</span></span>\r\n\r\n<strong>E:</strong> <span id=\"passage-q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">The good news for SAD sufferers is that there is a cure, and as far as many medical cures go this is relatively simple. As the cause is lack of bright light, the treatment is to be in bright light every day. This can obviously be achieved by staying in a brightly lit climate, explaining why skiing holidays are so popular as they allow people to get plenty of sunlight as well as providing a stimulating activity. <span id=\"passage-q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">Another method is by using light therapy, in which patients sit in front of a lamp which acts in the same way as sunlight.</span> To be more specific, the light should be about as bright as early morning sunshine, and the user should allow the light to reach the eyes for anything up to one hour a day in order to alleviate the symptoms. There are a number of companies currently manufacturing these lights as a health aid and they are even being prescribed by some doctors. In addition, they can be bought at considerably less than the cost of a holiday.</span>\r\n\r\n<span id=\"passage-q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Whatever fundamental reason underpins holiday depression, it seems reasonable to argue that the phenomenon does indeed exist. Voluntary support services, offering counselling services to those who need the unbiased and friendly voice of a stranger to help them work through their unhappiness report a significant increased demand for their services during holiday periods such as Christmas and the New Year</span>"
+        },
+        {
+            "title": "Reading Passage 3",
+            "content": "Weakness of the school system\r\n\r\n<strong>A:</strong> <span id=\"passage-q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">By attempting to fit in as much as possible, the school day is continually being added to. In many ways, this would appear to be a good idea, as our knowledge and understanding of the world is always growing and it would seem logical to incorporate this into schools. The reality, however, has some decided drawbacks. There is a growing feeling amongst many that the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less. It seems that by constantly adding to what should be taught in the classroom, the classes are less focused, not offering the deeper learning that institutions perhaps should.</span>\r\n\r\n<strong>B:</strong> <span id=\"passage-q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\"><span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">With classes sometimes only 30 minutes long</span>, the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail about what they are being presented with. The problem is that students are not getting the opportunity to absorb what they are being taught as the curriculum expands in order to keep what has already been taught and supplement it with everything new that comes along. The weaknesses of such a system are clear – well informed though such students may be, there is the risk of an increasing number of graduates who have no real creative or intellectual ability. By denying students the opportunity to sit and think their way through problems, or even consider their own opinion, some schools are not always providing a truly educational atmosphere. <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">There are, of course, certain aspects of education which need to be taught by simply inputting the information. Basic mathematics, for example. But there are many other subjects which could be best learned by having an opportunity to think and discuss what is being taught. Literature, writing and the social sciences are good examples of subjects which cannot be considered as 'covered' by a mass of information without the opportunity to discuss, debate or consider meaning or implications.</span> There are also important social skills to be learned during such periods of open discussion, skills which are not addressed by an endless flow of teacher-centred information.</span>\r\n\r\n<strong>C:</strong> <span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">Teachers themselves have also voiced concerns about the amount of information they are required to impress upon their students. There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests. In a world where academic success is too often measured by examination results, this is a serious concern. If there is too much information to simply be memorised and not enough time to truly assimilate it, what happens to students who fail to meet the grade? By current standards, they are failures, yet they may have great potential in areas not covered by the test and <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">there are many students who, despite clear intellectual ability, simply do not perform well in tests.</span> Again, the problem is one of focus, as education authorities are looking at the outcome of schooling rather than the content presented in the class.</span>\r\n\r\n<strong>D:</strong> <span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">It is here that many teachers feel the situation could be addressed at a local level. <span id=\"passage-q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">By giving more discretion to teachers, school courses could be tailored to suit the students rather than tailoring students to meet ever-expanding course requirements.</span> In addition, by running a curriculum that gives options rather than defines an entire course, considerably more freedom would be possible. As it is, progression through most primary and secondary schools is regimented, and there is little room for students to identify and develop their own skills and strengths. If material could be chosen on the basis of its merits rather than simply because it has been put in the curriculum, then what is selected may be taught to a depth that would serve some purpose. There is, of course, a counter-argument, which claims that such open guidelines could lead to vast differences in standards between schools. What one teacher may see as essential for a student's education, another may see as irrelevant, and this will result in students with widely different educational strengths.</span>\r\n\r\n<strong>E:</strong> <span id=\"passage-q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">With such a high-pressure learning environment, there are also a number of social aspects to schooling which need to be considered. The increased student workload cannot be covered in the classroom alone for the simple reason that there is not enough time in the average school week, and much of this extra workload has been pushed into the realm of homework. At its best, homework should be the opportunity to look in greater detail at what has been studied. In other words, to actually think about it and its relevance. The reality, however, is often very different. Concerned parents and overextended students are finding that homework is taking an increasingly large part of a student's evening, cutting into time many feel should be spent as part of a child's social education. <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">Other social pressures have compounded the situation, as many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school. Drug awareness and health issues, for example, are occupying an increasingly large part of the school day, leaving increasingly less time for the more traditional academic subjects.</span></span>\r\n\r\n<strong>F:</strong> <span id=\"passage-q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">Many people believe that we should be teaching less, but teaching it better, and it is here that they think a solution can be found. Yet the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have, and would be considered by many to be a 'regressive' step. <span id=\"passage-q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">Changes in the curriculum have largely been motivated by changes in the nature of employment, as <span id=\"passage-q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">job mobility demands that people know something about considerably more areas than were traditionally necessary.</span> A little about a lot allows for the job mobility which has become so common.</span> <span id=\"passage-q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">No matter what the final verdict may be, one thing is for sure – change will be slow.</span></span>"
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_exercise",
+        "cbt_test_type": "",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-16 13:54:46",
+        "exported_by": "impact",
+        "plugin_version": "11.27",
+        "format_version": "1.0"
+    }
+}
