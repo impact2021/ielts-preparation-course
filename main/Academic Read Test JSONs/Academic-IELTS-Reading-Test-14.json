@@ -1,1046 +1,1093 @@
 {
-    "title": "Academic IELTS Reading Test 14",
-    "content": "",
-    "questions": [
-        {
-            "type": "open_question",
-            "ielts_question_type": "Diagram Label Completion",
-            "instructions": "You should spend about 20 minutes on Questions 1 – 10 which are based on Reading Passage 1.\n\nQuestions 1 – 4\n\nLabel the diagram below using NO MORE THAN TWO WORDS.",
-            "question": "Complete the diagram labeling (Questions 1-4):",
-            "field_count": 4,
-            "field_labels": [
-                "1. Fill in the blank 1 of 10 (stimulant)",
-                "2. Fill in the blank 2 of 10 (build body strength)",
-                "3. Fill in the blank 3 of 10 (cope with stress/boost confidence)",
-                "4. Fill in the blank 4 of 10 (purpose)"
-            ],
-            "field_answers": [
-                "cocaine",
-                "anabolic steroids|anabolic steriods",
-                "relaxants",
-                "mask pain"
-            ],
-            "correct_feedback": "Excellent! You correctly identified all the categories of performance-enhancing drugs and their purposes.",
-            "incorrect_feedback": "Review paragraph 3 of Reading Passage 1 carefully. Look for sections describing different types of performance-enhancing drugs: stimulants (cocaine), body-building drugs (anabolic steroids), relaxants, and pain maskers.",
-            "no_answer_feedback": "The correct answers are: 1. cocaine (stimulant), 2. anabolic steroids (for building body strength), 3. relaxants (to cope with stress/boost confidence), 4. mask pain (purpose of narcotics). These are all found in paragraph 3.",
-            "points": 4,
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null
+  "title": "Academic IELTS Reading Test 14",
+  "content": "",
+  "questions": [
+    {
+      "type": "open_question",
+      "ielts_question_type": "Diagram Label Completion",
+      "instructions": "You should spend about 20 minutes on Questions 1 – 10 which are based on Reading Passage 1.\n\nQuestions 1 – 4\n\nLabel the diagram below using NO MORE THAN TWO WORDS.",
+      "question": "Complete the diagram labeling (Questions 1-4):",
+      "field_count": 4,
+      "field_labels": [
+        "1. Fill in the blank 1 of 10 (stimulant)",
+        "2. Fill in the blank 2 of 10 (build body strength)",
+        "3. Fill in the blank 3 of 10 (cope with stress/boost confidence)",
+        "4. Fill in the blank 4 of 10 (purpose)"
+      ],
+      "field_answers": [
+        "cocaine",
+        "anabolic steroids|anabolic steriods",
+        "relaxants",
+        "mask pain"
+      ],
+      "points": 4,
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "field_feedback": {
+        "1": {
+          "correct": "Excellent! You correctly identified all the categories of performance-enhancing drugs and their purposes.",
+          "incorrect": "Review paragraph 3 of Reading Passage 1 carefully. Look for sections describing different types of performance-enhancing drugs: stimulants (cocaine), body-building drugs (anabolic steroids), relaxants, and pain maskers.",
+          "no_answer": "The correct answers are: 1. cocaine (stimulant), 2. anabolic steroids (for building body strength), 3. relaxants (to cope with stress/boost confidence), 4. mask pain (purpose of narcotics). These are all found in paragraph 3."
         },
-        {
-            "type": "open_question",
-            "ielts_question_type": "Short Answer",
-            "instructions": "Questions 5 – 8\n\nAnswer the following questions using NO MORE THAN THREE WORDS.",
-            "question": "Answer the questions (Questions 5-8):",
-            "field_count": 4,
-            "field_labels": [
-                "5. Why are sportspeople under such pressure to succeed quickly?",
-                "6. What has subsequently become necessary in a number of sports?",
-                "7. What does Ron Clarke claim drugs can balance?",
-                "8. What are drug companies becoming more able to do?"
-            ],
-            "field_answers": [
-                "short careers|short career",
-                "drug testing|testing for drugs|drugs test|drugs testing|drug tests",
-                "natural advantages|natural advantage",
-                "evade detection|avoid detection"
-            ],
-            "correct_feedback": "Well done! You found all the key information in the passage.",
-            "incorrect_feedback": "Not quite. Check these sections: paragraph 2 for pressure on sportspeople, paragraph 5 for what became necessary, paragraph 6 for Ron Clarke's view, and paragraph 5 for drug companies' abilities.",
-            "no_answer_feedback": "The correct answers are: 5. short careers (paragraph 2: 'sportspeople have short careers'), 6. drug testing (paragraph 5: 'Drug testing has become an accepted feature'), 7. natural advantages (paragraph 6: Ron Clarke said drugs 'level the playing field'), 8. evade detection (paragraph 5: creating drugs 'which evades detection').",
-            "points": 4,
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null
+        "2": {
+          "correct": "Excellent! You correctly identified all the categories of performance-enhancing drugs and their purposes.",
+          "incorrect": "Review paragraph 3 of Reading Passage 1 carefully. Look for sections describing different types of performance-enhancing drugs: stimulants (cocaine), body-building drugs (anabolic steroids), relaxants, and pain maskers.",
+          "no_answer": "The correct answers are: 1. cocaine (stimulant), 2. anabolic steroids (for building body strength), 3. relaxants (to cope with stress/boost confidence), 4. mask pain (purpose of narcotics). These are all found in paragraph 3."
         },
-        {
-            "type": "open_question",
-            "ielts_question_type": "Summary Completion",
-            "instructions": "Questions 9 and 10\n\nComplete the summary using words from the text. USE NO MORE THAN ONE WORD.",
-            "question": "Complete the summary (Questions 9-10):",
-            "field_count": 2,
-            "field_labels": [
-                "9. The main failure of drug testing is its increasing (9) _____",
-                "10. (10) _____ of drug use have serious side effects on sportspeople even if they are subsequently proved wrong."
-            ],
-            "field_answers": [
-                "inaccuracy",
-                "allegations"
-            ],
-            "correct_feedback": "Correct! You've accurately completed the summary about drug testing problems.",
-            "incorrect_feedback": "Review paragraph 6 which discusses the failures and consequences of drug testing.",
-            "no_answer_feedback": "The correct answers are: 9. inaccuracy (paragraph 6: 'the inaccuracy of drug tests'), 10. allegations (paragraph 7: 'Careers can be prematurely ended by false allegations'). Both words appear in the final paragraphs discussing drug testing issues.",
-            "points": 2,
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null
+        "3": {
+          "correct": "Excellent! You correctly identified all the categories of performance-enhancing drugs and their purposes.",
+          "incorrect": "Review paragraph 3 of Reading Passage 1 carefully. Look for sections describing different types of performance-enhancing drugs: stimulants (cocaine), body-building drugs (anabolic steroids), relaxants, and pain maskers.",
+          "no_answer": "The correct answers are: 1. cocaine (stimulant), 2. anabolic steroids (for building body strength), 3. relaxants (to cope with stress/boost confidence), 4. mask pain (purpose of narcotics). These are all found in paragraph 3."
         },
-        {
-            "type": "closed_question",
-            "instructions": "Reading Passage 2\n\nYou should spend about 20 minutes on Questions 11 – 22 which are based on Reading Passage 2.\n\nQuestions 11 – 14\n\nChoose the correct answer A–D",
-            "question": "11. The earliest magazines",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is D. Review Reading Passage 2 carefully.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "had a number of similarities with modern magazines",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "were intended for women",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "focused on hobbies",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "were very different from magazines today",
-                    "is_correct": true,
-                    "feedback": "Correct! See Reading Passage 2 for the answer."
-                }
-            ],
-            "options": "had a number of similarities with modern magazines\nwere intended for women\nfocused on hobbies\nwere very different from magazines today",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "12. Magazines became a highly profitable business when",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C. Review Reading Passage 2 carefully.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "they were exported around Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "they began including illustrations",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "advertisers began paying more for space",
-                    "is_correct": true,
-                    "feedback": "Correct! See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "they included short stories",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                }
-            ],
-            "options": "they were exported around Europe\nthey began including illustrations\nadvertisers began paying more for space\nthey included short stories",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "13. How have magazines retained their popularity despite increased competition?",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B. Review Reading Passage 2 carefully.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "By influencing popular opinion",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "By specialising",
-                    "is_correct": true,
-                    "feedback": "Correct! See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "Because of the war",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "Through cooperation with television",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                }
-            ],
-            "options": "By influencing popular opinion\nBy specialising\nBecause of the war\nThrough cooperation with television",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "14. McClure's magazine",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B. Review Reading Passage 2 carefully.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "was a respected political and social publication",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "was the first publication to specialise in invasive journalism",
-                    "is_correct": true,
-                    "feedback": "Correct! See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "was the most popular American publication of 1900",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "had the highest circulation of any magazine",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                }
-            ],
-            "options": "was a respected political and social publication\nwas the first publication to specialise in invasive journalism\nwas the most popular American publication of 1900\nhad the highest circulation of any magazine",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 15 – 18\n\nLook at the following statements and decide if they are right or wrong according to the information given.\n\nWrite TRUE if the statement is true\nFALSE if the statement is false\nNOT GIVEN if there is no information about this in the passage.",
-            "question": "15. Lady's Book was written by women",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. Review Reading Passage 2.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN.",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "16. After the Industrial Revolution, magazines sold more copies than newspapers",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. Review Reading Passage 2.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN.",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "17. Better education supported the rise of magazines",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. Review Reading Passage 2.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is TRUE.",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "18. Magazines began to influence popular opinion",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. Review Reading Passage 2.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is TRUE.",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "open_question",
-            "ielts_question_type": "Short Answer",
-            "instructions": "Questions 19 – 22\n\nAnswer the following questions using NO MORE THAN TWO WORDS",
-            "question": "Answer the questions (Questions 19-22):",
-            "field_count": 4,
-            "field_labels": [
-                "19. With what form of journalism did Samuel McClure guarantee more sales of his magazine?",
-                "20. What allowed the exploitation of new markets in the late 1800s?",
-                "21. Whose picture was in many magazines during World War I?",
-                "22. What stopped the increasing rise of magazines?"
-            ],
-            "field_answers": [
-                "muckraking journalism|muckraking",
-                "better transportation",
-                "kitchener",
-                "television"
-            ],
-            "correct_feedback": "Well done! You found all the key information.",
-            "incorrect_feedback": "Review Reading Passage 2 carefully to find these answers.",
-            "no_answer_feedback": "The correct answers are: 19. muckraking journalism, 20. better transportation, 21. Kitchener, 22. television. All are found in Reading Passage 2.",
-            "points": 4,
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Reading Passage 3\n\nYou should spend about 20 minutes on Questions 23 – 40 which are based on Reading Passage 3.\n\nQuestions 23 – 29\n\nDo the following statements agree with the opinion of the writer?\n\nWrite YES if the statement agrees with the writer\nNO if the statement does not agree with the writer\nNOT GIVEN if there is no information about this in the passage.",
-            "question": "23. People from all around the world are united by the way they think about culture",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NO. Review Reading Passage 3.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is NO.",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "24. Our 'values' are the most important aspect of ideology",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. Review Reading Passage 3.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN.",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": ""
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "25. Secularism is the most widely accepted system of beliefs, values and ideals",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. Review Reading Passage 3.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN.",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": ""
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "26. Shamans act as intermediaries between spirits and the living",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is YES. Review Reading Passage 3.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is YES.",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": true,
-                    "feedback": ""
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "27. Agricultural societies benefited from religion",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. Review Reading Passage 3.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN.",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": ""
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "28. All the people from the Aztec civilisation were rich",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NO. Review Reading Passage 3.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is NO.",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "29. In the seventeenth and eighteenth centuries, European people began turning towards science",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is YES. Review Reading Passage 3.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is YES.",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": true,
-                    "feedback": ""
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 30 – 34\n\nComplete the summary of the reading text using words from the box.\n\nA: belief  B: latter  C: religion  D: faith  E: ascendancy\nF: former  G: rational  H: decline  I: animism  J: shaman",
-            "question": "30. Fill in blank 30",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is belief.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is belief.",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": true,
-                    "feedback": ""
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "31. Fill in blank 31",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is former.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is former.",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "former",
-                    "is_correct": true,
-                    "feedback": ""
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "32. Fill in blank 32",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is rational.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is rational.",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "rational",
-                    "is_correct": true,
-                    "feedback": ""
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "33. Fill in blank 33",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is ascendancy.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is ascendancy.",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": true,
-                    "feedback": ""
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "34. Fill in blank 34",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is religion.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. The correct answer is religion.",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "religion",
-                    "is_correct": true,
-                    "feedback": ""
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "open_question",
-            "ielts_question_type": "Short Answer",
-            "instructions": "Questions 35 – 40\n\nAnswer the questions below using NO MORE THAN THREE WORDS.",
-            "question": "Answer the questions (Questions 35-40):",
-            "field_count": 6,
-            "field_labels": [
-                "35. What are beliefs, values and ideals specific categories of?",
-                "36. What was said to be necessary for the continuation of sunrise and sunset in ancient Mexico?",
-                "37. In Europe, what title was given to the advance of science and logic?",
-                "38. In addition to religion, what else influenced the development of capitalism?",
-                "39. Before modern advances in technology, what did anthropologists consider societies to be?",
-                "40. What theory is symbolic of the tensions between religion and science?"
-            ],
-            "field_answers": [
-                "ideology",
-                "human sacrifice|human blood",
-                "age of enlightenment|enlightenment",
-                "science",
-                "fully independent systems|independent systems|independent",
-                "natural evolution|evolution"
-            ],
-            "correct_feedback": "Excellent! You found all the answers.",
-            "incorrect_feedback": "Review Reading Passage 3 to find these answers.",
-            "no_answer_feedback": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3.",
-            "points": 6,
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null
+        "4": {
+          "correct": "Excellent! You correctly identified all the categories of performance-enhancing drugs and their purposes.",
+          "incorrect": "Review paragraph 3 of Reading Passage 1 carefully. Look for sections describing different types of performance-enhancing drugs: stimulants (cocaine), body-building drugs (anabolic steroids), relaxants, and pain maskers.",
+          "no_answer": "The correct answers are: 1. cocaine (stimulant), 2. anabolic steroids (for building body strength), 3. relaxants (to cope with stress/boost confidence), 4. mask pain (purpose of narcotics). These are all found in paragraph 3."
         }
-    ],
-    "reading_texts": [
-        {
-            "title": "Reading Passage 1",
-            "content": "A running controversy\n\n<span id=\"passage-q5\" data-question=\"5\"></span>In 1988, Canadian athlete Ben Johnson set a new world record for the 100 metres sprint and set the Seoul Olympics alight. Just a few days later, he was stripped of his medal and banned from competing after having failed a drug test, highlighting what has since become an international problem – drug use in sport.\n\n<span id=\"passage-q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Those involved in sports face enormous pressure to excel in competition, and often at a much faster rate than most people, primarily because the nature of sports often means that those competing have short careers.</span> By the time most sportspeople are in their forties, they are already considered to be past their prime, and as a result they need to earn their money as quickly as possible. In such a high-pressure environment, success has to come quickly and increasingly often drugs are playing a prominent role.\n\n<span id=\"passage-q1\" data-question=\"1\"></span><span id=\"passage-q2\" data-question=\"2\"></span><span id=\"passage-q3\" data-question=\"3\"></span><span id=\"passage-q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">There are a number of specific effects that sportspeople are aiming to achieve by taking performance-enhancing drugs. Caffeine and cocaine are commonly used as stimulants, getting the body ready for the mass expenditure of energy required. In addition, there are those who are looking to build their body strength and turn to the use of anabolic steroids. Having worked so hard and needing to unwind, sportspeople may misuse other drugs to cope with stress or boost their own confidence. These are generally categorised as relaxants, of which alcohol is the most common, but for sportspeople something more direct is often required, and this has led to an increase in the use of beta-blockers specifically to steady nerves.</span>\n\nIncreasingly accurate drug testing is leading to ever-more creative ways of avoiding detection, and there are a range of banned substances that are still taken by sportspeople in order to disguise the use of other, more potent drugs. Diuretics is a good example of this: in addition to allowing the body to lose excess weight, they are used to hide other substances.\n\n<span id=\"passage-q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">Drugs or not, the working life of the average sportsperson is hard and often painful. Either through training or on the field, injuries are common and can lead to the use of narcotics simply to mask pain.</span> There are examples of champion motorcyclists taking local anaesthetics to hide the pain of a crash that should have seen them taken straight to hospital, and though this is not directly banned, use is carefully monitored.\n\n<span id=\"passage-q6\" data-question=\"6\"></span><span id=\"passage-q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">Drug testing has since become an accepted feature of most major sporting events, and as soon as a new drug is detected and the user is banned from competitive sport, then a new drug is developed which evades detection.</span> <span id=\"passage-q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">Inevitably, this makes testing for such banned substances even more stringent, and has in recent years highlighted a new and disturbing problem – the inaccuracy of drug tests in the face of unscrupulous pharmaceutical companies.</span>\n\n<span id=\"passage-q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">Recent accusations of drug use have seen sportspeople in court attempt to overthrow decisions against them, claiming that they were unaware they had taken anything on the banned list.</span> A test recently carried out saw three non-athletes given dietary substances that were not on the banned list, and the two who didn't take exercise tested negative. However, the third person, who exercised regularly, tested positive. This, of course, has left the testing of sportspeople in a very difficult position. <span id=\"passage-q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">Careers can be prematurely ended by false allegations of drug abuse</span>, yet by not punishing those who test positive, the door would be open for anyone who wanted to take drugs.\n\nThe issue is becoming increasingly clouded as different schools of opinion are making themselves heard. There are some that argue that if the substance is not directly dangerous to the user, then it should not be banned, claiming that it is just another part of training and can be compared to eating the correct diet. <span id=\"passage-q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">Ron Clarke, a supporter of limited drug use in sport, commented that some drugs should be accepted as 'they just level the playing field'. He defended his opinion by pointing out that some competitors have a natural advantage.</span> Athletes born high above sea level or who work out in high altitudes actually produce more red blood cells, a condition which other athletes can only achieve by drug taking.\n\nOthers claim that drug use shouldn't be allowed because it contravenes the whole idea of fairly competing in a sporting event, adding that the drugs available to a wealthy American athlete, for example, would be far superior to those available to a struggling Nigerian competitor.\n\nGoverning bodies of the myriad of sporting worlds are trying to set some standards for competitors, but as drug companies become more adept at disguising illegal substances, the procedure is an endless race with no winner. In the face of an overwhelming drug and supplement industry, many are calling for a complete overhaul of the testing system."
-        },
-        {
-            "title": "Reading Passage 2",
-            "content": "The development of the magazine\n\nIn almost every kind of waiting room you can imagine, be it a dentist's or a car showroom, you will find them. No matter how much of a minority sport, interest or hobby you may have or take part in, you will almost certainly find one devoted to it. Over the past 20 years, magazines have become so popular that they are now outselling most newspapers.\n\n<span id=\"passage-q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">The forerunners of magazines were nothing like the glossy, colourful affairs they are now. They were small printed pages announcing forthcoming events and providing a little local information.</span> They became popular during the seventeenth century, when the idea was exported around Europe. Magazines became thicker, and were not only informative but also entertaining. In addition, literary magazines began to publish short literary works. Indeed, many classic authors of the period first published their material in magazines such as The Tatler and Gentleman's Magazine. However, they remained more of a hobby than a business, generating only enough income to cover production costs.\n\nThe American Magazine, first published in 1741, was the aptly named first magazine to be available in America. Launched in Philadelphia, it was available for only a few short months, and was soon replaced by more popular magazines. In the early nineteenth century, the nature of magazines changed as illustrated magazines and children's magazines made their appearance. The illustrations were immediately popular, and within a few years every magazine was brightening its pages with them.\n\n<span id=\"passage-q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">The Industrial Revolution that hit Europe around this time also had a great impact. With the advent of better quality printing processes, paper and colour printing techniques, magazines became lucrative as local businesses began to pay previously unimaginable prices for advertising space.</span> This heralded a new era within the industry as magazines now represented a significant source of income for publishers.\n\n<span id=\"passage-q17\" data-question=\"17\"></span><span id=\"passage-q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">Towards the end of the nineteenth century, better standards of education were resulting in a higher degree of literacy, and this of course meant that there was an increasing number of markets to be exploited, and with better transportation, the means developed with which to reach these markets.</span> The most conclusive factor, however, in the rise of magazines came about with the rise of national advertising. Previously, advertising in magazines had remained relatively local, but with the birth of the concept of national markets, where goods could be delivered to almost any destination and at previously unheard-of speeds, advertisers were willing to pay for as wide a coverage as possible in as many magazines as they thought would usefully promote their products.\n\n<span id=\"passage-q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">Competition inevitably increased and this led to the development of new magazines. In the following years, magazines became more specialised, significantly rivalling newspapers as the dominant form of media and paving the way for the wealth of choices available today.</span>\n\n<span id=\"passage-q14\" data-question=\"14\"></span><span id=\"passage-q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">It was at this point that magazine owners and editors found another area which would guarantee a wider circulation. Attributed to Samuel S. McClure, editor of the American magazine McClure's, the early 1900s saw the advent of the gossip column, in which the private lives of prominent political or social figures was investigated by those who specialised in what became known as 'muckraking journalism'.</span> They would invade the privacy of anyone they thought would interest the public, exposing secrets or even fabricating stories in order to raise the circulation of their magazine.\n\n<span id=\"passage-q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">As the circulation of magazines increased, they began at first to reflect, then to influence, popular opinion.</span> This led to them being heavily used by both sides during World War I and World War II as propaganda, inspiring people to join and fight against the enemy. <span id=\"passage-q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Most people have, at some time in their life, seen the ubiquitous picture of the British General Kitchener pointing out of the poster with the slogan 'Your Country Needs You!' printed below, exhorting people to join the army during World War I.</span> It was in magazines that this picture had such wide coverage.\n\n<span id=\"passage-q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">In the 1950s, magazines took a heavy blow at the hands of the new medium of advertising – television.</span> With sound and pictures now on offer, many magazines lost business and faced collapse as advertisers took their business to television studios. Magazines became even more specialised, hoping to still find new markets, and that is why today we find so many obscure titles on the shelves. There is no doubt that the magazine has come a long way from its humble beginnings, but when you can buy magazines devoted to the art of Body Painting or informing us of the latest Caravan Accessories, or read about the latest gossip from another Hollywood star, you have to wonder if magazines have actually come a long way in the right direction."
-        },
-        {
-            "title": "Reading Passage 3",
-            "content": "The dawn of culture\n\n<span id=\"passage-q23\" data-question=\"23\"></span>In every society, culturally unique ways of thinking about the world unite people in their behaviour. <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">Anthropologists often refer to the body of ideas that people share as ideology. Ideology can be broken down into at least three specific categories: beliefs, values and ideals.</span> People's beliefs give them an understanding of how the world works and how they should respond to the actions of others and their environments. Particular beliefs often tie in closely with the daily concerns of domestic life, such as making a living, health and sickness, happiness and sadness, interpersonal relationships, and death. People's values tell them the differences between right and wrong or good and bad. Ideals serve as models for what people hope to achieve in life.\n\n<span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">There are two accepted systems of belief.</span> Some rely on religion, even the supernatural (things beyond the natural world), to shape their values and ideals and to influence their behaviour. Others base their beliefs on observations of the natural world, a practice anthropologists commonly refer to as secularism.\n\n<span id=\"passage-q31\" data-question=\"31\"></span>Religion in its more extreme form allows people to know about and 'communicate' with supernatural beings, such as animal spirits, gods, and spirits of the dead. Small tribal societies believe that plants and animals, as well as people, can have souls or spirits that can take on different forms to help or harm people. Anthropologists refer to this kind of religious belief as animism, with believers often led by shamans. <span id=\"passage-q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">As religious specialists, shamans have special access to the spirit world, and are said to be able to receive stories from supernatural beings and later recite them to others or act them out in dramatic rituals.</span>\n\nIn larger, agricultural societies, religion has long been a means of asking for bountiful harvests, a source of power for rulers, or an inspiration to go to war. In early civilised societies, religious visionaries became leaders because people believed those leaders could communicate with the supernatural to control the fate of a civilization. This became their greatest source of power, and people often regarded leaders as actual gods. <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">For example, in the great civilisation of the Aztec, which flourished in what is now Mexico in the fifteenth and sixteenth centuries, rulers claimed privileged association with a powerful god that was said to require human blood to ensure that the sun would rise and set each day.</span> <span id=\"passage-q28\" data-question=\"28\"></span>Aztec rulers thus inspired great awe by regularly conducting human sacrifices. They also conspicuously displayed their vast power as wealth in luxury goods, such as fine jewels, clothing and palaces. <span class=\"reading-answer-marker\">Rulers obtained their wealth from the great numbers of craftspeople, traders and warriors under their control, often leaving them with very little in the way of material possessions.</span>\n\n<span id=\"passage-q29\" data-question=\"29\"></span><span id=\"passage-q37\" data-question=\"37\"></span><span id=\"passage-q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">During the period in seventeenth- and eighteenth-century Europe known as the Age of Enlightenment, science and logic became new sources of belief for many people living in civilised societies. Scientific studies of the natural world and rational philosophies led people to believe that they could explain natural and social phenomena without believing in gods or spirits. Religion remained an influential system of belief, and together both religion and science drove the development of capitalism</span>, the economic system of commerce-driven market exchange. <span id=\"passage-q32\" data-question=\"32\"></span>Capitalism itself influences people's beliefs, values and ideals in many present-day, large, civilised societies. In these societies, such as in the United States, many people view the world and shape their behaviour based on a belief that they can understand and control their environment and that work, commerce and the accumulation of wealth serve an ultimate good. The governments of most large societies today also assert that human well-being derives from the growth of economies and the development of technology.\n\nRapid changes in technology in the last several decades have changed the nature of culture and cultural exchange. People around the world can make economic transactions and transmit information to each other almost instantaneously through the use of computers and satellite communications. Governments and corporations have gained vast amounts of political power through military might and economic influence. Corporations have also created a form of global culture based on worldwide commercial markets. As a result, local culture and social structure are now shaped by large and powerful commercial interests in ways that earlier anthropologists could not have imagined. <span id=\"passage-q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">Early anthropologists thought of societies and their cultures as fully independent systems</span>, but today, many nations are multicultural societies, composed of numerous smaller subcultures. Cultures also cross national boundaries. For instance, people around the world now know a variety of English words and have contact with American cultural exports such as brand-name clothing and technological products, films and music, and mass-produced foods.\n\nIn addition, many people have come to believe in the fundamental nature of human rights and free will. These beliefs grew out of people's increasing ability to control the natural world through science and rationalism, and though religious beliefs continue to change to affirm or accommodate these other dominant beliefs, sometimes the two are at odds with each other. <span id=\"passage-q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">For instance, many religious people have difficulty reconciling their belief in a supreme spiritual force with the theory of natural evolution, which requires no belief in the supernatural.</span> <span id=\"passage-q33\" data-question=\"33\"></span><span id=\"passage-q34\" data-question=\"34\"></span>As a result, societies in which many people do not practice any religion, such as China, may be known as secular societies. However, no society is entirely secular."
-        }
-    ],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_reading",
-        "cbt_test_type": "",
-        "exercise_label": "practice_test",
-        "open_as_popup": "",
-        "scoring_type": "ielts_academic_reading",
-        "timer_minutes": "60",
-        "starting_question_number": "1"
+      }
     },
-    "_metadata": {
-        "exported_at": "2026-01-14 06:45:00",
-        "exported_by": "copilot",
-        "plugin_version": "11.19",
-        "format_version": "1.0"
+    {
+      "type": "open_question",
+      "ielts_question_type": "Short Answer",
+      "instructions": "Questions 5 – 8\n\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+      "question": "Answer the questions (Questions 5-8):",
+      "field_count": 4,
+      "field_labels": [
+        "5. Why are sportspeople under such pressure to succeed quickly?",
+        "6. What has subsequently become necessary in a number of sports?",
+        "7. What does Ron Clarke claim drugs can balance?",
+        "8. What are drug companies becoming more able to do?"
+      ],
+      "field_answers": [
+        "short careers|short career",
+        "drug testing|testing for drugs|drugs test|drugs testing|drug tests",
+        "natural advantages|natural advantage",
+        "evade detection|avoid detection"
+      ],
+      "points": 4,
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "field_feedback": {
+        "1": {
+          "correct": "Well done! You found all the key information in the passage.",
+          "incorrect": "Not quite. Check these sections: paragraph 2 for pressure on sportspeople, paragraph 5 for what became necessary, paragraph 6 for Ron Clarke's view, and paragraph 5 for drug companies' abilities.",
+          "no_answer": "The correct answers are: 5. short careers (paragraph 2: 'sportspeople have short careers'), 6. drug testing (paragraph 5: 'Drug testing has become an accepted feature'), 7. natural advantages (paragraph 6: Ron Clarke said drugs 'level the playing field'), 8. evade detection (paragraph 5: creating drugs 'which evades detection')."
+        },
+        "2": {
+          "correct": "Well done! You found all the key information in the passage.",
+          "incorrect": "Not quite. Check these sections: paragraph 2 for pressure on sportspeople, paragraph 5 for what became necessary, paragraph 6 for Ron Clarke's view, and paragraph 5 for drug companies' abilities.",
+          "no_answer": "The correct answers are: 5. short careers (paragraph 2: 'sportspeople have short careers'), 6. drug testing (paragraph 5: 'Drug testing has become an accepted feature'), 7. natural advantages (paragraph 6: Ron Clarke said drugs 'level the playing field'), 8. evade detection (paragraph 5: creating drugs 'which evades detection')."
+        },
+        "3": {
+          "correct": "Well done! You found all the key information in the passage.",
+          "incorrect": "Not quite. Check these sections: paragraph 2 for pressure on sportspeople, paragraph 5 for what became necessary, paragraph 6 for Ron Clarke's view, and paragraph 5 for drug companies' abilities.",
+          "no_answer": "The correct answers are: 5. short careers (paragraph 2: 'sportspeople have short careers'), 6. drug testing (paragraph 5: 'Drug testing has become an accepted feature'), 7. natural advantages (paragraph 6: Ron Clarke said drugs 'level the playing field'), 8. evade detection (paragraph 5: creating drugs 'which evades detection')."
+        },
+        "4": {
+          "correct": "Well done! You found all the key information in the passage.",
+          "incorrect": "Not quite. Check these sections: paragraph 2 for pressure on sportspeople, paragraph 5 for what became necessary, paragraph 6 for Ron Clarke's view, and paragraph 5 for drug companies' abilities.",
+          "no_answer": "The correct answers are: 5. short careers (paragraph 2: 'sportspeople have short careers'), 6. drug testing (paragraph 5: 'Drug testing has become an accepted feature'), 7. natural advantages (paragraph 6: Ron Clarke said drugs 'level the playing field'), 8. evade detection (paragraph 5: creating drugs 'which evades detection')."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Summary Completion",
+      "instructions": "Questions 9 and 10\n\nComplete the summary using words from the text. USE NO MORE THAN ONE WORD.",
+      "question": "Complete the summary (Questions 9-10):",
+      "field_count": 2,
+      "field_labels": [
+        "9. The main failure of drug testing is its increasing (9) _____",
+        "10. (10) _____ of drug use have serious side effects on sportspeople even if they are subsequently proved wrong."
+      ],
+      "field_answers": [
+        "inaccuracy",
+        "allegations"
+      ],
+      "points": 2,
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! You've accurately completed the summary about drug testing problems.",
+          "incorrect": "Review paragraph 6 which discusses the failures and consequences of drug testing.",
+          "no_answer": "The correct answers are: 9. inaccuracy (paragraph 6: 'the inaccuracy of drug tests'), 10. allegations (paragraph 7: 'Careers can be prematurely ended by false allegations'). Both words appear in the final paragraphs discussing drug testing issues."
+        },
+        "2": {
+          "correct": "Correct! You've accurately completed the summary about drug testing problems.",
+          "incorrect": "Review paragraph 6 which discusses the failures and consequences of drug testing.",
+          "no_answer": "The correct answers are: 9. inaccuracy (paragraph 6: 'the inaccuracy of drug tests'), 10. allegations (paragraph 7: 'Careers can be prematurely ended by false allegations'). Both words appear in the final paragraphs discussing drug testing issues."
+        }
+      }
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Reading Passage 2\n\nYou should spend about 20 minutes on Questions 11 – 22 which are based on Reading Passage 2.\n\nQuestions 11 – 14\n\nChoose the correct answer A–D",
+      "question": "11. The earliest magazines",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is D. Review Reading Passage 2 carefully.",
+      "correct_feedback": "Correct!",
+      "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "had a number of similarities with modern magazines",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "were intended for women",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "focused on hobbies",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "were very different from magazines today",
+          "is_correct": true,
+          "feedback": "Correct! See Reading Passage 2 for the answer."
+        }
+      ],
+      "options": "had a number of similarities with modern magazines\nwere intended for women\nfocused on hobbies\nwere very different from magazines today",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "12. Magazines became a highly profitable business when",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C. Review Reading Passage 2 carefully.",
+      "correct_feedback": "Correct!",
+      "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "they were exported around Europe",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "they began including illustrations",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "advertisers began paying more for space",
+          "is_correct": true,
+          "feedback": "Correct! See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "they included short stories",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        }
+      ],
+      "options": "they were exported around Europe\nthey began including illustrations\nadvertisers began paying more for space\nthey included short stories",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "13. How have magazines retained their popularity despite increased competition?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B. Review Reading Passage 2 carefully.",
+      "correct_feedback": "Correct!",
+      "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "By influencing popular opinion",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "By specialising",
+          "is_correct": true,
+          "feedback": "Correct! See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "Because of the war",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "Through cooperation with television",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        }
+      ],
+      "options": "By influencing popular opinion\nBy specialising\nBecause of the war\nThrough cooperation with television",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "14. McClure's magazine",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B. Review Reading Passage 2 carefully.",
+      "correct_feedback": "Correct!",
+      "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "was a respected political and social publication",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "was the first publication to specialise in invasive journalism",
+          "is_correct": true,
+          "feedback": "Correct! See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "was the most popular American publication of 1900",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "had the highest circulation of any magazine",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        }
+      ],
+      "options": "was a respected political and social publication\nwas the first publication to specialise in invasive journalism\nwas the most popular American publication of 1900\nhad the highest circulation of any magazine",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 15 – 18\n\nLook at the following statements and decide if they are right or wrong according to the information given.\n\nWrite TRUE if the statement is true\nFALSE if the statement is false\nNOT GIVEN if there is no information about this in the passage.",
+      "question": "15. Lady's Book was written by women",
+      "points": 1,
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "16. After the Industrial Revolution, magazines sold more copies than newspapers",
+      "points": 1,
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "17. Better education supported the rise of magazines",
+      "points": 1,
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "18. Magazines began to influence popular opinion",
+      "points": 1,
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Short Answer",
+      "instructions": "Questions 19 – 22\n\nAnswer the following questions using NO MORE THAN TWO WORDS",
+      "question": "Answer the questions (Questions 19-22):",
+      "field_count": 4,
+      "field_labels": [
+        "19. With what form of journalism did Samuel McClure guarantee more sales of his magazine?",
+        "20. What allowed the exploitation of new markets in the late 1800s?",
+        "21. Whose picture was in many magazines during World War I?",
+        "22. What stopped the increasing rise of magazines?"
+      ],
+      "field_answers": [
+        "muckraking journalism|muckraking",
+        "better transportation",
+        "kitchener",
+        "television"
+      ],
+      "points": 4,
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "field_feedback": {
+        "1": {
+          "correct": "Well done! You found all the key information.",
+          "incorrect": "Review Reading Passage 2 carefully to find these answers.",
+          "no_answer": "The correct answers are: 19. muckraking journalism, 20. better transportation, 21. Kitchener, 22. television. All are found in Reading Passage 2."
+        },
+        "2": {
+          "correct": "Well done! You found all the key information.",
+          "incorrect": "Review Reading Passage 2 carefully to find these answers.",
+          "no_answer": "The correct answers are: 19. muckraking journalism, 20. better transportation, 21. Kitchener, 22. television. All are found in Reading Passage 2."
+        },
+        "3": {
+          "correct": "Well done! You found all the key information.",
+          "incorrect": "Review Reading Passage 2 carefully to find these answers.",
+          "no_answer": "The correct answers are: 19. muckraking journalism, 20. better transportation, 21. Kitchener, 22. television. All are found in Reading Passage 2."
+        },
+        "4": {
+          "correct": "Well done! You found all the key information.",
+          "incorrect": "Review Reading Passage 2 carefully to find these answers.",
+          "no_answer": "The correct answers are: 19. muckraking journalism, 20. better transportation, 21. Kitchener, 22. television. All are found in Reading Passage 2."
+        }
+      }
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Reading Passage 3\n\nYou should spend about 20 minutes on Questions 23 – 40 which are based on Reading Passage 3.\n\nQuestions 23 – 29\n\nDo the following statements agree with the opinion of the writer?\n\nWrite YES if the statement agrees with the writer\nNO if the statement does not agree with the writer\nNOT GIVEN if there is no information about this in the passage.",
+      "question": "23. People from all around the world are united by the way they think about culture",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "24. Our 'values' are the most important aspect of ideology",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "25. Secularism is the most widely accepted system of beliefs, values and ideals",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "26. Shamans act as intermediaries between spirits and the living",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "27. Agricultural societies benefited from religion",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "28. All the people from the Aztec civilisation were rich",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "29. In the seventeenth and eighteenth centuries, European people began turning towards science",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 30 – 34\n\nComplete the summary of the reading text using words from the box.\n\nA: belief  B: latter  C: religion  D: faith  E: ascendancy\nF: former  G: rational  H: decline  I: animism  J: shaman",
+      "question": "30. Fill in blank 30",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "31. Fill in blank 31",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "32. Fill in blank 32",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "33. Fill in blank 33",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "34. Fill in blank 34",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Short Answer",
+      "instructions": "Questions 35 – 40\n\nAnswer the questions below using NO MORE THAN THREE WORDS.",
+      "question": "Answer the questions (Questions 35-40):",
+      "field_count": 6,
+      "field_labels": [
+        "35. What are beliefs, values and ideals specific categories of?",
+        "36. What was said to be necessary for the continuation of sunrise and sunset in ancient Mexico?",
+        "37. In Europe, what title was given to the advance of science and logic?",
+        "38. In addition to religion, what else influenced the development of capitalism?",
+        "39. Before modern advances in technology, what did anthropologists consider societies to be?",
+        "40. What theory is symbolic of the tensions between religion and science?"
+      ],
+      "field_answers": [
+        "ideology",
+        "human sacrifice|human blood",
+        "age of enlightenment|enlightenment",
+        "science",
+        "fully independent systems|independent systems|independent",
+        "natural evolution|evolution"
+      ],
+      "points": 6,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "field_feedback": {
+        "1": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "2": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "3": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "4": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "5": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "6": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        }
+      }
     }
+  ],
+  "reading_texts": [
+    {
+      "title": "Reading Passage 1",
+      "content": "A running controversy\n\n<span id=\"passage-q5\" data-question=\"5\"></span>In 1988, Canadian athlete Ben Johnson set a new world record for the 100 metres sprint and set the Seoul Olympics alight. Just a few days later, he was stripped of his medal and banned from competing after having failed a drug test, highlighting what has since become an international problem – drug use in sport.\n\n<span id=\"passage-q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Those involved in sports face enormous pressure to excel in competition, and often at a much faster rate than most people, primarily because the nature of sports often means that those competing have short careers.</span> By the time most sportspeople are in their forties, they are already considered to be past their prime, and as a result they need to earn their money as quickly as possible. In such a high-pressure environment, success has to come quickly and increasingly often drugs are playing a prominent role.\n\n<span id=\"passage-q1\" data-question=\"1\"></span><span id=\"passage-q2\" data-question=\"2\"></span><span id=\"passage-q3\" data-question=\"3\"></span><span id=\"passage-q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">There are a number of specific effects that sportspeople are aiming to achieve by taking performance-enhancing drugs. Caffeine and cocaine are commonly used as stimulants, getting the body ready for the mass expenditure of energy required. In addition, there are those who are looking to build their body strength and turn to the use of anabolic steroids. Having worked so hard and needing to unwind, sportspeople may misuse other drugs to cope with stress or boost their own confidence. These are generally categorised as relaxants, of which alcohol is the most common, but for sportspeople something more direct is often required, and this has led to an increase in the use of beta-blockers specifically to steady nerves.</span>\n\nIncreasingly accurate drug testing is leading to ever-more creative ways of avoiding detection, and there are a range of banned substances that are still taken by sportspeople in order to disguise the use of other, more potent drugs. Diuretics is a good example of this: in addition to allowing the body to lose excess weight, they are used to hide other substances.\n\n<span id=\"passage-q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">Drugs or not, the working life of the average sportsperson is hard and often painful. Either through training or on the field, injuries are common and can lead to the use of narcotics simply to mask pain.</span> There are examples of champion motorcyclists taking local anaesthetics to hide the pain of a crash that should have seen them taken straight to hospital, and though this is not directly banned, use is carefully monitored.\n\n<span id=\"passage-q6\" data-question=\"6\"></span><span id=\"passage-q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">Drug testing has since become an accepted feature of most major sporting events, and as soon as a new drug is detected and the user is banned from competitive sport, then a new drug is developed which evades detection.</span> <span id=\"passage-q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">Inevitably, this makes testing for such banned substances even more stringent, and has in recent years highlighted a new and disturbing problem – the inaccuracy of drug tests in the face of unscrupulous pharmaceutical companies.</span>\n\n<span id=\"passage-q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">Recent accusations of drug use have seen sportspeople in court attempt to overthrow decisions against them, claiming that they were unaware they had taken anything on the banned list.</span> A test recently carried out saw three non-athletes given dietary substances that were not on the banned list, and the two who didn't take exercise tested negative. However, the third person, who exercised regularly, tested positive. This, of course, has left the testing of sportspeople in a very difficult position. <span id=\"passage-q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">Careers can be prematurely ended by false allegations of drug abuse</span>, yet by not punishing those who test positive, the door would be open for anyone who wanted to take drugs.\n\nThe issue is becoming increasingly clouded as different schools of opinion are making themselves heard. There are some that argue that if the substance is not directly dangerous to the user, then it should not be banned, claiming that it is just another part of training and can be compared to eating the correct diet. <span id=\"passage-q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">Ron Clarke, a supporter of limited drug use in sport, commented that some drugs should be accepted as 'they just level the playing field'. He defended his opinion by pointing out that some competitors have a natural advantage.</span> Athletes born high above sea level or who work out in high altitudes actually produce more red blood cells, a condition which other athletes can only achieve by drug taking.\n\nOthers claim that drug use shouldn't be allowed because it contravenes the whole idea of fairly competing in a sporting event, adding that the drugs available to a wealthy American athlete, for example, would be far superior to those available to a struggling Nigerian competitor.\n\nGoverning bodies of the myriad of sporting worlds are trying to set some standards for competitors, but as drug companies become more adept at disguising illegal substances, the procedure is an endless race with no winner. In the face of an overwhelming drug and supplement industry, many are calling for a complete overhaul of the testing system."
+    },
+    {
+      "title": "Reading Passage 2",
+      "content": "The development of the magazine\n\nIn almost every kind of waiting room you can imagine, be it a dentist's or a car showroom, you will find them. No matter how much of a minority sport, interest or hobby you may have or take part in, you will almost certainly find one devoted to it. Over the past 20 years, magazines have become so popular that they are now outselling most newspapers.\n\n<span id=\"passage-q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">The forerunners of magazines were nothing like the glossy, colourful affairs they are now. They were small printed pages announcing forthcoming events and providing a little local information.</span> They became popular during the seventeenth century, when the idea was exported around Europe. Magazines became thicker, and were not only informative but also entertaining. In addition, literary magazines began to publish short literary works. Indeed, many classic authors of the period first published their material in magazines such as The Tatler and Gentleman's Magazine. However, they remained more of a hobby than a business, generating only enough income to cover production costs.\n\nThe American Magazine, first published in 1741, was the aptly named first magazine to be available in America. Launched in Philadelphia, it was available for only a few short months, and was soon replaced by more popular magazines. In the early nineteenth century, the nature of magazines changed as illustrated magazines and children's magazines made their appearance. The illustrations were immediately popular, and within a few years every magazine was brightening its pages with them.\n\n<span id=\"passage-q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">The Industrial Revolution that hit Europe around this time also had a great impact. With the advent of better quality printing processes, paper and colour printing techniques, magazines became lucrative as local businesses began to pay previously unimaginable prices for advertising space.</span> This heralded a new era within the industry as magazines now represented a significant source of income for publishers.\n\n<span id=\"passage-q17\" data-question=\"17\"></span><span id=\"passage-q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">Towards the end of the nineteenth century, better standards of education were resulting in a higher degree of literacy, and this of course meant that there was an increasing number of markets to be exploited, and with better transportation, the means developed with which to reach these markets.</span> The most conclusive factor, however, in the rise of magazines came about with the rise of national advertising. Previously, advertising in magazines had remained relatively local, but with the birth of the concept of national markets, where goods could be delivered to almost any destination and at previously unheard-of speeds, advertisers were willing to pay for as wide a coverage as possible in as many magazines as they thought would usefully promote their products.\n\n<span id=\"passage-q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">Competition inevitably increased and this led to the development of new magazines. In the following years, magazines became more specialised, significantly rivalling newspapers as the dominant form of media and paving the way for the wealth of choices available today.</span>\n\n<span id=\"passage-q14\" data-question=\"14\"></span><span id=\"passage-q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">It was at this point that magazine owners and editors found another area which would guarantee a wider circulation. Attributed to Samuel S. McClure, editor of the American magazine McClure's, the early 1900s saw the advent of the gossip column, in which the private lives of prominent political or social figures was investigated by those who specialised in what became known as 'muckraking journalism'.</span> They would invade the privacy of anyone they thought would interest the public, exposing secrets or even fabricating stories in order to raise the circulation of their magazine.\n\n<span id=\"passage-q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">As the circulation of magazines increased, they began at first to reflect, then to influence, popular opinion.</span> This led to them being heavily used by both sides during World War I and World War II as propaganda, inspiring people to join and fight against the enemy. <span id=\"passage-q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Most people have, at some time in their life, seen the ubiquitous picture of the British General Kitchener pointing out of the poster with the slogan 'Your Country Needs You!' printed below, exhorting people to join the army during World War I.</span> It was in magazines that this picture had such wide coverage.\n\n<span id=\"passage-q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">In the 1950s, magazines took a heavy blow at the hands of the new medium of advertising – television.</span> With sound and pictures now on offer, many magazines lost business and faced collapse as advertisers took their business to television studios. Magazines became even more specialised, hoping to still find new markets, and that is why today we find so many obscure titles on the shelves. There is no doubt that the magazine has come a long way from its humble beginnings, but when you can buy magazines devoted to the art of Body Painting or informing us of the latest Caravan Accessories, or read about the latest gossip from another Hollywood star, you have to wonder if magazines have actually come a long way in the right direction."
+    },
+    {
+      "title": "Reading Passage 3",
+      "content": "The dawn of culture\n\n<span id=\"passage-q23\" data-question=\"23\"></span>In every society, culturally unique ways of thinking about the world unite people in their behaviour. <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">Anthropologists often refer to the body of ideas that people share as ideology. Ideology can be broken down into at least three specific categories: beliefs, values and ideals.</span> People's beliefs give them an understanding of how the world works and how they should respond to the actions of others and their environments. Particular beliefs often tie in closely with the daily concerns of domestic life, such as making a living, health and sickness, happiness and sadness, interpersonal relationships, and death. People's values tell them the differences between right and wrong or good and bad. Ideals serve as models for what people hope to achieve in life.\n\n<span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">There are two accepted systems of belief.</span> Some rely on religion, even the supernatural (things beyond the natural world), to shape their values and ideals and to influence their behaviour. Others base their beliefs on observations of the natural world, a practice anthropologists commonly refer to as secularism.\n\n<span id=\"passage-q31\" data-question=\"31\"></span>Religion in its more extreme form allows people to know about and 'communicate' with supernatural beings, such as animal spirits, gods, and spirits of the dead. Small tribal societies believe that plants and animals, as well as people, can have souls or spirits that can take on different forms to help or harm people. Anthropologists refer to this kind of religious belief as animism, with believers often led by shamans. <span id=\"passage-q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">As religious specialists, shamans have special access to the spirit world, and are said to be able to receive stories from supernatural beings and later recite them to others or act them out in dramatic rituals.</span>\n\nIn larger, agricultural societies, religion has long been a means of asking for bountiful harvests, a source of power for rulers, or an inspiration to go to war. In early civilised societies, religious visionaries became leaders because people believed those leaders could communicate with the supernatural to control the fate of a civilization. This became their greatest source of power, and people often regarded leaders as actual gods. <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">For example, in the great civilisation of the Aztec, which flourished in what is now Mexico in the fifteenth and sixteenth centuries, rulers claimed privileged association with a powerful god that was said to require human blood to ensure that the sun would rise and set each day.</span> <span id=\"passage-q28\" data-question=\"28\"></span>Aztec rulers thus inspired great awe by regularly conducting human sacrifices. They also conspicuously displayed their vast power as wealth in luxury goods, such as fine jewels, clothing and palaces. <span class=\"reading-answer-marker\">Rulers obtained their wealth from the great numbers of craftspeople, traders and warriors under their control, often leaving them with very little in the way of material possessions.</span>\n\n<span id=\"passage-q29\" data-question=\"29\"></span><span id=\"passage-q37\" data-question=\"37\"></span><span id=\"passage-q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">During the period in seventeenth- and eighteenth-century Europe known as the Age of Enlightenment, science and logic became new sources of belief for many people living in civilised societies. Scientific studies of the natural world and rational philosophies led people to believe that they could explain natural and social phenomena without believing in gods or spirits. Religion remained an influential system of belief, and together both religion and science drove the development of capitalism</span>, the economic system of commerce-driven market exchange. <span id=\"passage-q32\" data-question=\"32\"></span>Capitalism itself influences people's beliefs, values and ideals in many present-day, large, civilised societies. In these societies, such as in the United States, many people view the world and shape their behaviour based on a belief that they can understand and control their environment and that work, commerce and the accumulation of wealth serve an ultimate good. The governments of most large societies today also assert that human well-being derives from the growth of economies and the development of technology.\n\nRapid changes in technology in the last several decades have changed the nature of culture and cultural exchange. People around the world can make economic transactions and transmit information to each other almost instantaneously through the use of computers and satellite communications. Governments and corporations have gained vast amounts of political power through military might and economic influence. Corporations have also created a form of global culture based on worldwide commercial markets. As a result, local culture and social structure are now shaped by large and powerful commercial interests in ways that earlier anthropologists could not have imagined. <span id=\"passage-q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">Early anthropologists thought of societies and their cultures as fully independent systems</span>, but today, many nations are multicultural societies, composed of numerous smaller subcultures. Cultures also cross national boundaries. For instance, people around the world now know a variety of English words and have contact with American cultural exports such as brand-name clothing and technological products, films and music, and mass-produced foods.\n\nIn addition, many people have come to believe in the fundamental nature of human rights and free will. These beliefs grew out of people's increasing ability to control the natural world through science and rationalism, and though religious beliefs continue to change to affirm or accommodate these other dominant beliefs, sometimes the two are at odds with each other. <span id=\"passage-q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">For instance, many religious people have difficulty reconciling their belief in a supreme spiritual force with the theory of natural evolution, which requires no belief in the supernatural.</span> <span id=\"passage-q33\" data-question=\"33\"></span><span id=\"passage-q34\" data-question=\"34\"></span>As a result, societies in which many people do not practice any religion, such as China, may be known as secular societies. However, no society is entirely secular."
+    }
+  ],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_reading",
+    "cbt_test_type": "",
+    "exercise_label": "practice_test",
+    "open_as_popup": "",
+    "scoring_type": "ielts_academic_reading",
+    "timer_minutes": "60",
+    "starting_question_number": "1"
+  },
+  "_metadata": {
+    "exported_at": "2026-01-14 06:45:00",
+    "exported_by": "copilot",
+    "plugin_version": "11.19",
+    "format_version": "1.0"
+  }
 }

@@ -53,15 +53,15 @@ def analyze_test(file_path):
         q_type = q.get('type', '')
         has_feedback = False
         
-        if q_type == 'closed_question':
-            # Check mc_options for feedback
+        # For questions with mc_options (headings, matching_classifying, multiple_choice, etc.)
+        if q.get('mc_options'):
             mc_options = q.get('mc_options', [])
             for opt in mc_options:
                 if opt.get('feedback', '').strip():
                     has_feedback = True
                     break
-        elif q_type == 'open_question':
-            # Check field_feedback
+        # For open_question type with field_feedback
+        elif q_type == 'open_question' and q.get('field_feedback'):
             field_feedback = q.get('field_feedback', {})
             field_count = q.get('field_count', 1)
             for field_num in range(1, field_count + 1):
@@ -71,9 +71,8 @@ def analyze_test(file_path):
                     field_fb.get('no_answer', '').strip()):
                     has_feedback = True
                     break
-        
-        # Fallback: check legacy top-level feedback fields for all question types
-        if not has_feedback:
+        # For types that correctly use top-level feedback (true_false, short_answer, summary_completion, etc.)
+        else:
             no_answer = q.get('no_answer_feedback', '').strip()
             correct = q.get('correct_feedback', '').strip()
             incorrect = q.get('incorrect_feedback', '').strip()
@@ -125,7 +124,7 @@ def generate_html_dashboard(test_results):
                            len(r['grammar_issues']) > 0)
     good_tests = total_tests - tests_with_issues
     
-    timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+    timestamp = datetime.now(datetime.UTC).strftime('%Y-%m-%d %H:%M:%S UTC') if hasattr(datetime, 'UTC') else datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
     
     html = f'''<!DOCTYPE html>
 <html lang="en">
