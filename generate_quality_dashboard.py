@@ -49,12 +49,37 @@ def analyze_test(file_path):
     grammar_issues = []
     
     for i, q in enumerate(questions, 1):
-        # Check feedback
-        no_answer = q.get('no_answer_feedback', '').strip()
-        correct = q.get('correct_feedback', '').strip()
-        incorrect = q.get('incorrect_feedback', '').strip()
+        # Check feedback based on question type
+        q_type = q.get('type', '')
+        has_feedback = False
         
-        if not no_answer and (not correct or not incorrect):
+        if q_type == 'closed_question':
+            # Check mc_options for feedback
+            mc_options = q.get('mc_options', [])
+            for opt in mc_options:
+                if opt.get('feedback', '').strip():
+                    has_feedback = True
+                    break
+        elif q_type == 'open_question':
+            # Check field_feedback
+            field_feedback = q.get('field_feedback', {})
+            field_count = q.get('field_count', 1)
+            for field_num in range(1, field_count + 1):
+                field_fb = field_feedback.get(str(field_num), {})
+                if (field_fb.get('correct', '').strip() or 
+                    field_fb.get('incorrect', '').strip() or
+                    field_fb.get('no_answer', '').strip()):
+                    has_feedback = True
+                    break
+        else:
+            # Legacy check for top-level feedback fields
+            no_answer = q.get('no_answer_feedback', '').strip()
+            correct = q.get('correct_feedback', '').strip()
+            incorrect = q.get('incorrect_feedback', '').strip()
+            if no_answer or correct or incorrect:
+                has_feedback = True
+        
+        if not has_feedback:
             missing_feedback.append(i)
         
         # Check if linked to passage
