@@ -71,8 +71,9 @@ def analyze_test(file_path):
                     field_fb.get('no_answer', '').strip()):
                     has_feedback = True
                     break
-        else:
-            # Legacy check for top-level feedback fields
+        
+        # Fallback: check legacy top-level feedback fields for all question types
+        if not has_feedback:
             no_answer = q.get('no_answer_feedback', '').strip()
             correct = q.get('correct_feedback', '').strip()
             incorrect = q.get('incorrect_feedback', '').strip()
