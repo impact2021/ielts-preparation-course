@@ -13,7 +13,7 @@ See QUESTION_COUNTING_RULES.md for detailed explanation.
 import json
 import os
 import glob
-from datetime import datetime
+from datetime import datetime, timezone
 
 def count_student_questions(question):
     """Count actual student-facing questions according to IELTS standards"""
@@ -124,7 +124,7 @@ def generate_html_dashboard(test_results):
                            len(r['grammar_issues']) > 0)
     good_tests = total_tests - tests_with_issues
     
-    timestamp = datetime.now(datetime.UTC).strftime('%Y-%m-%d %H:%M:%S UTC') if hasattr(datetime, 'UTC') else datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+    timestamp = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
     
     html = f'''<!DOCTYPE html>
 <html lang="en">
