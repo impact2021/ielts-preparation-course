@@ -4,8 +4,18 @@ This folder contains quality review documentation for all IELTS practice tests i
 
 ## Files
 
+### quality-dashboard.html 🌟
+**Interactive HTML dashboard** for viewing test quality metrics - perfect for bookmarking!
+- Beautiful, easy-to-read interface with color-coded status badges
+- Quick stats overview at the top
+- Full quality table with all 21 tests
+- Detailed breakdown of critical issues and other problems
+- Works offline - just open in your browser
+
+**👉 Bookmark this file for quick access anytime!**
+
 ### READING_TESTS_QUALITY_REVIEW.md
-Comprehensive quality review table for all 21 Academic Reading Tests, showing:
+Comprehensive quality review table for all 21 Academic Reading Tests (Markdown format), showing:
 - Total questions per test
 - Feedback completeness
 - Passage linkage status

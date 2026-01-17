@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Reading Tests - Quality Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .header .timestamp {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .stat-card .number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .stat-card .label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .stat-card.good .number { color: #28a745; }
+        .stat-card.warning .number { color: #ffc107; }
+        .stat-card.critical .number { color: #dc3545; }
+        .stat-card.info .number { color: #667eea; }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 30px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            padding: 12px 8px;
+            text-align: center;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        td {
+            padding: 10px 8px;
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        tr.highlighted {
+            background: #fff3cd;
+            font-weight: bold;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .badge.good {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .badge.warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .badge.critical {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .badge.yes {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .badge.no {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .badge.excellent {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .section h3 {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        
+        .issue-list {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .issue-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .issue-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .issue-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .test-number {
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 IELTS Reading Tests - Quality Dashboard</h1>
+            <div class="subtitle">Academic Reading Practice Tests Quality Review</div>
+            <div class="timestamp">Last Updated: 2026-01-17 00:02:35 UTC</div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card info">
+                <div class="number">21</div>
+                <div class="label">Total Tests</div>
+            </div>
+            <div class="stat-card info">
+                <div class="number">773</div>
+                <div class="label">Total Questions</div>
+            </div>
+            <div class="stat-card good">
+                <div class="number">14</div>
+                <div class="label">✓ Good Tests</div>
+            </div>
+            <div class="stat-card warning">
+                <div class="number">6</div>
+                <div class="label">⚠ Issues</div>
+            </div>
+            <div class="stat-card critical">
+                <div class="number">1</div>
+                <div class="label">🔴 Broken</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>Quality Summary Table</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Test</th>
+                                <th>Questions</th>
+                                <th>Full Feedback</th>
+                                <th>Linked to Passage</th>
+                                <th>Field Placeholders</th>
+                                <th>Grammar</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="test-number">01</td>
+                                <td>39</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge warning">⚠ Issues (1)</span></td>
+                                <td><span class="badge warning">⚠ Issues</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">02</td>
+                                <td>40</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge good">✓ Good</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">03</td>
+                                <td>38</td>
+                                <td><span class="badge no">✗ No (20)</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge warning">⚠ Issues</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">04</td>
+                                <td>39</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge good">✓ Good</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">05</td>
+                                <td>38</td>
+                                <td><span class="badge no">✗ No (4)</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge warning">⚠ Issues</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">06</td>
+                                <td>35</td>
+                                <td><span class="badge no">✗ No (17)</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge warning">⚠ Issues (1)</span></td>
+                                <td><span class="badge warning">⚠ Issues</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">07</td>
+                                <td>40</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge warning">⚠ Issues (1)</span></td>
+                                <td><span class="badge warning">⚠ Issues</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">08</td>
+                                <td>35</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge good">✓ Good</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">09</td>
+                                <td>32</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge good">✓ Good</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">10</td>
+                                <td>32</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge good">✓ Good</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">11</td>
+                                <td>33</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge good">✓ Good</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">12</td>
+                                <td>40</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge good">✓ Good</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">13</td>
+                                <td>33</td>
+                                <td><span class="badge no">✗ No (7)</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge warning">⚠ Issues</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">14</td>
+                                <td>25</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge good">✓ Good</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">15</td>
+                                <td>40</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge good">✓ Good</span></td>
+                            </tr>
+                            <tr class="highlighted">
+                                <td class="test-number">16</td>
+                                <td>40</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge good">✓ Good</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">17</td>
+                                <td>40</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge no">✗ No (15)</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge warning">⚠ Issues (2)</span></td>
+                                <td><span class="badge critical">🔴 BROKEN</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">18</td>
+                                <td>40</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge good">✓ Good</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">19</td>
+                                <td>40</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge good">✓ Good</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">20</td>
+                                <td>40</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge good">✓ Good</span></td>
+                            </tr>
+                            <tr>
+                                <td class="test-number">21</td>
+                                <td>34</td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td><span class="badge yes">✓ Yes</span></td>
+                                <td>N/A</td>
+                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
+                                <td><span class="badge good">✓ Good</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🚨 Critical Issues</h2>
+                <div class="issue-list">
+                    <h3>🔴 Test 17 - CRITICAL</h3>
+                    <ul>
+                        <li><strong>⚠️ Not Linked to Reading Passage:</strong> Questions 6, 7, 8, 9, 10, 11, 12, 20, 21, 22, 23, 33, 34, 35, 36</li>
+                        <li>reading_text_id is null or invalid</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>⚠️ Other Issues</h2>
+                
+                <div class="issue-list">
+                    <h3>Test 01</h3>
+                    <ul>
+                        <li><strong>Grammar Issues (double spacing):</strong> Question 28</li>
+                    </ul>
+                </div>
+                
+                <div class="issue-list">
+                    <h3>Test 03</h3>
+                    <ul>
+                        <li><strong>Missing Feedback:</strong> Questions 1, 2, 3, 4, 5, 10, 11, 12, 13, 18 ... and 10 more</li>
+                    </ul>
+                </div>
+                
+                <div class="issue-list">
+                    <h3>Test 05</h3>
+                    <ul>
+                        <li><strong>Missing Feedback:</strong> Questions 7, 36, 37, 38</li>
+                    </ul>
+                </div>
+                
+                <div class="issue-list">
+                    <h3>Test 06</h3>
+                    <ul>
+                        <li><strong>Missing Feedback:</strong> Questions 1, 2, 3, 4, 5, 12, 25, 26, 27, 28 ... and 7 more</li>
+                        <li><strong>Grammar Issues (double spacing):</strong> Question 12</li>
+                    </ul>
+                </div>
+                
+                <div class="issue-list">
+                    <h3>Test 07</h3>
+                    <ul>
+                        <li><strong>Grammar Issues (double spacing):</strong> Question 12</li>
+                    </ul>
+                </div>
+                
+                <div class="issue-list">
+                    <h3>Test 13</h3>
+                    <ul>
+                        <li><strong>Missing Feedback:</strong> Questions 9, 10, 13, 14, 15, 16, 33</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📈 Statistics Summary</h2>
+                <div class="issue-list">
+                    <h3>🚨 Critical Issues</h3>
+                    <ul>
+                        <li>Tests with BROKEN questions: <strong>1/21</strong></li>
+                        <li>Total BROKEN questions: <strong>0</strong></li>
+                        <li>Total questions not linked: <strong>15</strong></li>
+                    </ul>
+                    
+                    <h3>⚠️ Other Issues</h3>
+                    <ul>
+                        <li>Questions missing feedback: <strong>48</strong></li>
+                        <li>Open questions missing field placeholders: <strong>0</strong></li>
+                        <li>Questions with grammar issues: <strong>5</strong></li>
+                    </ul>
+                    
+                    <h3>Overall Quality</h3>
+                    <ul>
+                        <li>✓ Good: <strong>14/21 tests</strong> (67%)</li>
+                        <li>⚠ Issues: <strong>6/21 tests</strong> (29%)</li>
+                        <li>🔴 BROKEN: <strong>1/21 tests</strong> (5%)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🎉 Recent Changes</h2>
+                <div class="issue-list">
+                    <h3>Test 16 - FIXED ✓</h3>
+                    <ul>
+                        <li><strong>Previous Status:</strong> 🔴 BROKEN</li>
+                        <li>Had 45 questions instead of 40</li>
+                        <li>5 questions (Q14-18) not linked to passage (reading_text_id was null)</li>
+                    </ul>
+                    <ul>
+                        <li><strong>Current Status:</strong> ✓ Good</li>
+                        <li>Now has exactly 40 questions ✓</li>
+                        <li>All questions properly linked to passages ✓</li>
+                        <li>Removed 5 excess questions from Passage 3</li>
+                        <li>Fixed reading_text_id for Q14-18 (color psychology questions)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            IELTS Preparation Course - Reading Tests Quality Dashboard<br>
+            Bookmark this page for quick access to quality metrics
+        </div>
+    </div>
+</body>
+</html>
