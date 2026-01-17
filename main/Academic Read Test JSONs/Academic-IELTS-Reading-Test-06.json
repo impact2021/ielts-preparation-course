@@ -4,7 +4,7 @@
     "questions": [
         {
             "type": "closed_question",
-            "instructions": "Choose the most suitable headings for sections A and C – F from the list below.\r\nList of headings\r\nI. Why New Zealand?\r\nII. Course requirements\r\nIII. Government funding\r\nIV. Cost of further education\r\nV. Further education options\r\nVI. Overseeing authorities\r\nVII. Specialisation\r\nVIII. Prestigious contribution\r\nIX. Postgraduate choices\r\nExample Section B Answer: VI\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 – 15 which are based on Reading Passage 1.",
+            "instructions": "<p><strong>Reading Passage 1</strong></p>\r\n<p><em>You should spend about 20 minutes on <strong>Questions 1 – 15</strong> which are based on Reading Passage 1.</em></p>\r\n<p><strong>Questions 1-5</strong></p>\r\n<p>Choose the most suitable headings for sections <strong>A</strong> and <strong>C –F</strong> from the list below.</p>",
             "question": "Section A",
             "points": 1,
             "no_answer_feedback": "",
@@ -68,7 +68,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "",
+            "instructions": "<p><strong>Example</strong> Section B <strong>VI</strong></p>",
             "question": "Section C",
             "points": 1,
             "no_answer_feedback": "",
@@ -328,17 +328,13 @@
             "question": "The field of study in which New Zealand excels is [field 1].",
             "points": 1,
             "no_answer_feedback": "The correct answer is: English language teaching. Section A states \"it has an excellent education system, especially in English language teaching.\"",
-            "correct_feedback": "Correct! Section A confirms New Zealand has an excellent education system, especially in English language teaching.",
-            "incorrect_feedback": "Incorrect. The correct answer is: English language teaching. Section A states \"it has an excellent education system, especially in English language teaching.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "sentence_completion_r",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
             "field_count": 1,
             "field_answers": {
                 "1": "English language teaching"
@@ -353,21 +349,17 @@
         },
         {
             "type": "open_question",
-            "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS.",
+            "instructions": "",
             "question": "Full immersion learning can only happen in an [field 1].",
             "points": 1,
             "no_answer_feedback": "The correct answer is: English-speaking country. Section A states \"This is only possible in a country where English is the spoken language.\"",
-            "correct_feedback": "Correct! Section A confirms full immersion is only possible in a country where English is the spoken language.",
-            "incorrect_feedback": "Incorrect. The correct answer is: English-speaking country. Section A states \"This is only possible in a country where English is the spoken language.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "sentence_completion_r",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
             "field_count": 1,
             "field_answers": {
                 "1": "English-speaking country"
@@ -382,21 +374,17 @@
         },
         {
             "type": "open_question",
-            "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS.",
+            "instructions": "",
             "question": "Educational standards are monitored by three [field 1].",
             "points": 1,
             "no_answer_feedback": "The correct answer is: government bodies. Section B states \"it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office\" - these are three government bodies.",
-            "correct_feedback": "Correct! Section B mentions the three government bodies that monitor educational standards.",
-            "incorrect_feedback": "Incorrect. The correct answer is: government bodies. Section B states \"it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office\" - these are three government bodies.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "sentence_completion_r",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
             "field_count": 1,
             "field_answers": {
                 "1": "government bodies"
@@ -411,17 +399,17 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Look at the following statements and decide if they are right or wrong according to the information given.\r\nWrite TRUE if the statement is true, FALSE if the statement is false, or NOT GIVEN if the information is not given in the passage.",
+            "instructions": "Do the following statements agree with the information given in the reading passage?<br><br>\r\nWrite <strong>TRUE</strong> if the statement agrees with the information.<br>\r\nWrite <strong>FALSE</strong> if the statement contradicts the information.<br>\r\nWrite <strong>NOT GIVEN</strong> if there is no information on this.</p>",
             "question": "Most international students start their studies in a secondary school. ",
             "points": 1,
             "no_answer_feedback": "The correct answer is: FALSE. Section C states \"Although a majority of international students spend some time in a language school\" - not secondary school.",
-            "correct_feedback": "Correct! Section C confirms most international students spend time in a language school, not secondary school.",
-            "incorrect_feedback": "Incorrect. The correct answer is: FALSE. Section C states \"Although a majority of international students spend some time in a language school\" - not secondary school.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given_r",
+            "ielts_question_category": "",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -445,17 +433,17 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Look at the following statements and decide if they are right or wrong according to the information given.\r\n",
+            "instructions": "",
             "question": "Postgraduate students undertaking a diploma course extend what they have learned during their Bachelor ’s degree. ",
             "points": 1,
             "no_answer_feedback": "The correct answer is: TRUE. Section E states \"The Postgraduate Diploma course...is designed for graduates building on the academic field of their previous degree.\"",
-            "correct_feedback": "Correct! Section E confirms the Postgraduate Diploma builds on the academic field of the previous degree.",
-            "incorrect_feedback": "Incorrect. The correct answer is: TRUE. Section E states \"The Postgraduate Diploma course...is designed for graduates building on the academic field of their previous degree.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given_r",
+            "ielts_question_category": "",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -483,13 +471,13 @@
             "question": "All quality control at a tertiary level is done by the universities themselves. ",
             "points": 1,
             "no_answer_feedback": "The correct answer is: FALSE. Section C states there is \"a centrally coordinated system of quality assurance audits at both institution and programme level\" in addition to internal checks.",
-            "correct_feedback": "Correct! Section C mentions both centrally coordinated quality assurance audits AND internal university checks - not just universities alone.",
-            "incorrect_feedback": "Incorrect. The correct answer is: FALSE. Section C states there is \"a centrally coordinated system of quality assurance audits at both institution and programme level\" in addition to internal checks.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given_r",
+            "ielts_question_category": "",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -533,40 +521,40 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! Section E states the Postgraduate Diploma takes one year.",
-                    "incorrect": "Incorrect. The correct answer is: Postgraduate Diploma. Section E mentions the 1-year Postgraduate Diploma course.",
-                    "no_answer": "The correct answer is: Postgraduate Diploma. Section E states the Postgraduate Diploma takes one year."
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
                 },
                 "2": {
-                    "correct": "Correct! Section E states the Masters degree takes 1 to 2 years.",
-                    "incorrect": "Incorrect. The correct answer is: Masters or Masters degree. Section E mentions the Masters degree takes up to two years.",
-                    "no_answer": "The correct answer is: Masters or Masters degree. Section E states the Masters degree takes 1 to 2 years."
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
                 },
                 "3": {
-                    "correct": "Correct! Section E states the Doctorate is the next level after the Master's.",
-                    "incorrect": "Incorrect. The correct answer is: Doctorate. Section E states 'The Master's is the conventional pathway to the next level of education – the Doctorate.'",
-                    "no_answer": "The correct answer is: Doctorate. Section E states this comes after the Master's degree."
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
                 },
                 "4": {
-                    "correct": "Correct! Section D mentions research positions are available after completing degrees.",
-                    "incorrect": "Incorrect. The correct answer is: research positions or research. Section D states 'There are Postgraduate Diploma courses, Masters degrees, Doctorates and even research positions available.'",
-                    "no_answer": "The correct answer is: research positions or research. This is mentioned in Section D."
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
                 }
             }
         },
         {
             "type": "closed_question",
-            "instructions": "Do the following statements agree with the information given in reading passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.\r\nYou should spend about 20 minutes on Questions 16 – 27 which are based on Reading Passage 2.",
+            "instructions": "Do the following statements agree with the information given in reading passage 2?\r\n\r\n\r\nWrite <strong>TRUE</strong> if the statement agrees with the information.<br>\r\nWrite <strong>FALSE</strong> if the statement contradicts the information.<br>\r\nWrite <strong>NOT GIVEN</strong> if there is no information on this.</p>",
             "question": "Only a few people believe that 'cyberpoets' are becoming part of our popular culture.",
             "points": 1,
             "no_answer_feedback": "The correct answer is: FALSE. Paragraph F states \"Very few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture\" - meaning most people DO believe it.",
-            "correct_feedback": "Correct! Paragraph F confirms that very few people would disagree about cyberpoets becoming part of popular culture.",
-            "incorrect_feedback": "Incorrect. The correct answer is: FALSE. Paragraph F states \"Very few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture\".",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given_r",
+            "ielts_question_category": "",
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -590,27 +578,27 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
+            "instructions": "<p><strong>Which paragraph contains the following information?</strong><br>\r\nChoose the correct letter <strong>A–H</strong>.</p>\r\n",
             "question": "The range of resources available online are far wider than traditional mediums",
             "points": 1,
             "no_answer_feedback": "The correct answer is: C. Paragraph C discusses how \"we can read almost anything that has ever been written\" and works of art \"Previously available to be viewed only in museums...are now replicated on the Internet\".",
-            "correct_feedback": "Correct! Paragraph C shows the wider range of resources online.",
-            "incorrect_feedback": "Incorrect. The correct answer is: C. Paragraph C discusses the extensive range of resources.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_information_r",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C."
+                    "feedback": "Incorrect. The correct answer is C. Paragraph C discusses how \"we can read almost anything that has ever been written\" and works of art \"Previously available to be viewed only in museums...are now replicated on the Internet\"."
                 },
                 {
                     "text": "B",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C."
+                    "feedback": "Incorrect. The correct answer is C. Paragraph C discusses how \"we can read almost anything that has ever been written\" and works of art \"Previously available to be viewed only in museums...are now replicated on the Internet\"."
                 },
                 {
                     "text": "C",
@@ -620,27 +608,27 @@
                 {
                     "text": "D",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C."
+                    "feedback": "Incorrect. The correct answer is C. Paragraph C discusses how \"we can read almost anything that has ever been written\" and works of art \"Previously available to be viewed only in museums...are now replicated on the Internet\"."
                 },
                 {
                     "text": "E",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C."
+                    "feedback": "Incorrect. The correct answer is C. Paragraph C discusses how \"we can read almost anything that has ever been written\" and works of art \"Previously available to be viewed only in museums...are now replicated on the Internet\"."
                 },
                 {
                     "text": "F",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C."
+                    "feedback": "Incorrect. The correct answer is C. Paragraph C discusses how \"we can read almost anything that has ever been written\" and works of art \"Previously available to be viewed only in museums...are now replicated on the Internet\"."
                 },
                 {
                     "text": "G",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C."
+                    "feedback": "Incorrect. The correct answer is C. Paragraph C discusses how \"we can read almost anything that has ever been written\" and works of art \"Previously available to be viewed only in museums...are now replicated on the Internet\"."
                 },
                 {
                     "text": "H",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C."
+                    "feedback": "Incorrect. The correct answer is C. Paragraph C discusses how \"we can read almost anything that has ever been written\" and works of art \"Previously available to be viewed only in museums...are now replicated on the Internet\"."
                 }
             ],
             "options": "A\nB\nC\nD\nE\nF\nG\nH",
@@ -649,17 +637,17 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
+            "instructions": "",
             "question": "Lack of clarity regarding the person responsible has an effect on cultural value of some web based resources",
             "points": 1,
             "no_answer_feedback": "The correct answer is: H. Paragraph H discusses authorship and anonymity issues.",
-            "correct_feedback": "Correct! Paragraph H discusses unclear authorship affecting cultural value.",
-            "incorrect_feedback": "Incorrect. The correct answer is: H. Paragraph H discusses authorship issues.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_information_r",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
@@ -708,17 +696,17 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
+            "instructions": "",
             "question": "Providing the ability to cross boundaries and be available worldwide",
             "points": 1,
             "no_answer_feedback": "The correct answer is: E. Paragraph E discusses global scale sharing.",
-            "correct_feedback": "Correct! Paragraph E describes crossing boundaries worldwide.",
-            "incorrect_feedback": "Incorrect. The correct answer is: E.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_information_r",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
@@ -771,13 +759,13 @@
             "question": "The emergence of new forms of culture thanks to digital possibilities",
             "points": 1,
             "no_answer_feedback": "The correct answer is: D. Paragraph D states \"the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right\" and mentions \"Kinetic art\" and computerised art forms.",
-            "correct_feedback": "Correct! Paragraph D discusses new forms of culture emerging from digital possibilities.",
-            "incorrect_feedback": "Incorrect. The correct answer is: D. Paragraph D discusses kinetic art and new digital art forms.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_information_r",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
@@ -830,13 +818,13 @@
             "question": "The wealth of online resources can mean difficulties in identifying areas of cultural significance",
             "points": 1,
             "no_answer_feedback": "The correct answer is: G. Paragraph G discusses \"the many millions of hours of footage that cannot be classified as having any cultural significance\".",
-            "correct_feedback": "Correct! Paragraph G discusses the difficulty of identifying what has cultural significance among the wealth of online resources.",
-            "incorrect_feedback": "Incorrect. The correct answer is: G. Paragraph G discusses the problem of wading through content that lacks cultural significance.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_information_r",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
@@ -885,17 +873,17 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
+            "instructions": "",
             "question": "The range of resources available online are far wider than traditional mediums",
             "points": 1,
             "no_answer_feedback": "The correct answer is: C. Paragraph C discusses how \"we can read almost anything that has ever been written\" and works of art \"Previously available to be viewed only in museums...are now replicated on the Internet\".",
-            "correct_feedback": "Correct! Paragraph C shows the wider range of resources online.",
-            "incorrect_feedback": "Incorrect. The correct answer is: C. Paragraph C discusses the extensive range of resources.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_information_r",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
@@ -944,17 +932,17 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
+            "instructions": "",
             "question": "Lack of clarity regarding the person responsible has an effect on cultural value of some web based resources",
             "points": 1,
             "no_answer_feedback": "The correct answer is: H. Paragraph H discusses authorship and anonymity issues.",
-            "correct_feedback": "Correct! Paragraph H discusses unclear authorship affecting cultural value.",
-            "incorrect_feedback": "Incorrect. The correct answer is: H. Paragraph H discusses authorship issues.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_information_r",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
@@ -1003,17 +991,17 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Which paragraph contains the following information. Write the correct letter A – H for answers 22 – 27.",
+            "instructions": "",
             "question": "Providing the ability to cross boundaries and be available worldwide",
             "points": 1,
             "no_answer_feedback": "The correct answer is: E. Paragraph E discusses global scale sharing.",
-            "correct_feedback": "Correct! Paragraph E describes crossing boundaries worldwide.",
-            "incorrect_feedback": "Incorrect. The correct answer is: E.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_information_r",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
@@ -1066,13 +1054,13 @@
             "question": "The emergence of new forms of culture thanks to digital possibilities",
             "points": 1,
             "no_answer_feedback": "The correct answer is: D. Paragraph D states \"the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right\" and mentions \"Kinetic art\" and computerised art forms.",
-            "correct_feedback": "Correct! Paragraph D discusses new forms of culture emerging from digital possibilities.",
-            "incorrect_feedback": "Incorrect. The correct answer is: D. Paragraph D discusses kinetic art and new digital art forms.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_information_r",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
@@ -1125,13 +1113,13 @@
             "question": "The wealth of online resources can mean difficulties in identifying areas of cultural significance",
             "points": 1,
             "no_answer_feedback": "The correct answer is: G. Paragraph G discusses \"the many millions of hours of footage that cannot be classified as having any cultural significance\".",
-            "correct_feedback": "Correct! Paragraph G discusses the difficulty of identifying what has cultural significance among the wealth of online resources.",
-            "incorrect_feedback": "Incorrect. The correct answer is: G. Paragraph G discusses the problem of wading through content that lacks cultural significance.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_information_r",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
@@ -1184,13 +1172,13 @@
             "question": "The self proclaimed title of supporters of internet culture",
             "points": 1,
             "no_answer_feedback": "The correct answer is: B. Paragraph B states that supporters \"have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets\".",
-            "correct_feedback": "Correct! Paragraph B discusses how supporters call themselves \"cyberpoets\".",
-            "incorrect_feedback": "Incorrect. The correct answer is: B. Paragraph B discusses the term \"cyberpoets\".",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_information_r",
+            "ielts_question_category": "matching_information",
             "mc_options": [
                 {
                     "text": "A",
@@ -1239,7 +1227,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Choose the most suitable headings for Paragraphs A-E from the list below. Use each heading once only.\r\nList of headings\r\nI. Effect on modern industry\r\nII. New payment procedures\r\nIII. Labour problems\r\nIV. The Model-T\r\nV. Creating a market\r\nVI. Revolutionary production techniques\r\nVII. The Ford family today\r\nVIII. Impact on the global economy\r\nIX. Overseas competition\r\nYou should spend about 20 minutes on Questions 28 – 40 which are based on Reading Passage 3.",
+            "instructions": "Choose the most suitable headings for Paragraphs A-E from the list below. Use each heading once only.\r\n",
             "question": "Paragraph A",
             "points": 1,
             "no_answer_feedback": "",
@@ -1249,7 +1237,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Effect on modern industry",
@@ -1313,7 +1301,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Effect on modern industry",
@@ -1377,7 +1365,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Effect on modern industry",
@@ -1441,7 +1429,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Effect on modern industry",
@@ -1505,7 +1493,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Effect on modern industry",
@@ -1576,9 +1564,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! Paragraph A states that machine parts were moved around the factory on a conveyor belt.",
-                    "incorrect": "Incorrect. The correct answer is: conveyor belt. Paragraph A describes how parts were moved on a conveyor belt.",
-                    "no_answer": "The correct answer is: conveyor belt. Paragraph A mentions the conveyor belt system."
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
                 }
             }
         },
@@ -1601,9 +1589,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! Paragraph A states Ford mass produced the Model-T for only 10% of traditional labour costs.",
-                    "incorrect": "Incorrect. The correct answer is: labour costs (or labor costs). Paragraph A mentions 10% of traditional labour costs.",
-                    "no_answer": "The correct answer is: labour costs (or labor costs). Paragraph A states production was at 10% of traditional labour costs."
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
                 }
             }
         },
@@ -1626,9 +1614,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! Paragraph B states 'Until 1927 when the last Model-T rolled off the production line'.",
-                    "incorrect": "Incorrect. The correct answer is: 1927. Paragraph B mentions the last Model-T was produced in 1927.",
-                    "no_answer": "The correct answer is: 1927. Paragraph B states the last Model-T rolled off the production line in 1927."
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
                 }
             }
         },
@@ -1651,9 +1639,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! Paragraph C discusses how Ford refused to deal with Labour Unions but eventually was forced to.",
-                    "incorrect": "Incorrect. The correct answer is: Labour Unions (or unions). Paragraph C describes Ford's opposition to unions.",
-                    "no_answer": "The correct answer is: Labour Unions (or unions). Paragraph C mentions Ford's opposition to unions."
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
                 }
             }
         },
@@ -1676,9 +1664,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! Paragraph D states 'the legacy of Fordism lives on'.",
-                    "incorrect": "Incorrect. The correct answer is: Fordism. Paragraph D uses the term 'Fordism' for mass production principles.",
-                    "no_answer": "The correct answer is: Fordism. Paragraph D refers to mass production principles as 'Fordism'."
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
                 }
             }
         },
@@ -1703,19 +1691,19 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! Paragraph E states that manufacturers began 'outsourcing' which led to industrialization.",
-                    "incorrect": "Incorrect. The correct answer is: outsourcing. Paragraph E discusses outsourcing to developing nations.",
-                    "no_answer": "The correct answer is: outsourcing. Paragraph E mentions outsourcing as a key practice."
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
                 },
                 "2": {
-                    "correct": "Correct! Paragraph E states 'The skills needed by workers on assembly-line tasks'.",
-                    "incorrect": "Incorrect. The correct answer is: assembly-line tasks. Paragraph E mentions the skills for assembly-line tasks.",
-                    "no_answer": "The correct answer is: assembly-line tasks. Paragraph E discusses skills for assembly-line tasks."
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
                 },
                 "3": {
-                    "correct": "Correct! Paragraph E states that the skills 'required little training'.",
-                    "incorrect": "Incorrect. The correct answer is: training. Paragraph E mentions that skills required little training.",
-                    "no_answer": "The correct answer is: training. Paragraph E states skills required little training."
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
                 }
             }
         }
@@ -1723,11 +1711,11 @@
     "reading_texts": [
         {
             "title": "Reading Passage 1 - Studying in New Zealand",
-            "content": "A<br />\r\n<br />\r\nA relatively small island with a population of less than a quarter of that of Tokyo, New Zealand has a huge overseas student population. With over half a million fee-paying foreign students, an ever-increasing range of academic, professional and vocational courses and English language services are being created or expanded. But why do so many people come from overseas to study in New Zealand? Primarily, there is the fact that it has an excellent education system, especially in English language teaching. With its many British connections as well as the adoption of language from America, New Zealand offers a very international language. Language students are also enticed to New Zealand as they can fully immerse themselves in the language. This is only possible in a country where English is the spoken language.<br />\r\n<br />\r\nB<br />\r\n<br />\r\nThere are also strict government controls and standards on the quality of education offered. The government controls the education system, and it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office, to license and control schools. These government bodies ensure that standards are as high in New Zealand as anywhere in the world. In addition, they decide whether or not language schools have the credentials and quality to operate. This allows students to have some peace of mind when choosing a school, but there are other reasons to choose New Zealand first. Independent reports have proven New Zealand to be the most cost-effective country in the western world for study fees, accommodation, cost of living, and recreation. It also has a reputation for safety and security, perhaps the best amongst western countries. Auckland City offers a multicultural and cosmopolitan place to shop, eat and be entertained. Less than an hour out of the city and you find yourself on beaches or mountains famous for their cleanliness and lack of pollution.<br />\r\n<br />\r\nC<br />\r\n<br />\r\nAlthough a majority of international students spend some time in a language school, for those aged 13 to 18 New Zealand secondary schools provide a broad education. Other students take advantage of one of the many tertiary education institutions which form the New Zealand polytechnic system. These institutions are state-funded and provide education and training at many levels, from introductory studies to full degree programmes. University education was established in New Zealand in 1870 and has a similar tradition to the British university system. There are eight state-funded universities in New Zealand, all of them internationally respected for their academic and research performance. In addition to a centrally coordinated system of quality assurance audits at both institution and programme level, each university undertakes internal quality checks.<br />\r\n<br />\r\nD<br />\r\n<br />\r\nAll New Zealand universities offer a broad range of subjects in arts, commerce and science, but they have also specialised in narrower fields of study such as computer studies, medicine or environmental studies. Bachelors, Masters and Doctorate degrees are offered by all New Zealand universities. A range of undergraduate and postgraduate diplomas are also available, along with Honours programmes (usually requiring an additional year of study). The first degree a student is able to gain in New Zealand is, as elsewhere, a Bachelors degree. With a completed Bachelors degree, a graduate may be able to go on to a number of other options. There are Postgraduate Diploma courses, Masters degrees, Doctorates and even research positions available.<br />\r\n<br />\r\nE<br />\r\n<br />\r\nThe Postgraduate Diploma course takes one year on a full-time programme and is designed for graduates building on the academic field of their previous degree. The Masters degree, like the Postgraduate Diploma, builds on a Bachelors degree but can take up to two years, by which time a thesis must be completed. The Master's is the conventional pathway to the next level of education – the Doctorate. For this course, graduates are required to produce a research-based thesis as part of a course that takes a minimum of two years, and is by far the most challenging.<br />\r\n<br />\r\nF<br />\r\n<br />\r\nFinally there is the possibility of research in New Zealand universities. Research is the main characteristic that distinguishes a university as opposed to a polytechnic or other tertiary education institution. New Zealand remains justifiably proud of the quality of its research as a large number of awards are presented to researchers from New Zealand universities."
+            "content": "<strong>A:</strong> A relatively small island with a population of less than a quarter of that of Tokyo, New Zealand has a huge overseas student population. With over half a million fee-paying foreign students, an ever-increasing range of academic, professional and vocational courses and English language services are being created or expanded. But why do so many people come from overseas to study in New Zealand? Primarily, there is the fact that it has an excellent education system, especially in English language teaching. With its many British connections as well as the adoption of language from America, New Zealand offers a very international language. Language students are also enticed to New Zealand as they can fully immerse themselves in the language. This is only possible in a country where English is the spoken language.<br />\r\n<br />\r\n<strong>B:</strong> There are also strict government controls and standards on the quality of education offered. The government controls the education system, and it has appointed the New Zealand Qualifications Authority, a Ministry of Education and an Education Review Office, to license and control schools. These government bodies ensure that standards are as high in New Zealand as anywhere in the world. In addition, they decide whether or not language schools have the credentials and quality to operate. This allows students to have some peace of mind when choosing a school, but there are other reasons to choose New Zealand first. Independent reports have proven New Zealand to be the most cost-effective country in the western world for study fees, accommodation, cost of living, and recreation. It also has a reputation for safety and security, perhaps the best amongst western countries. Auckland City offers a multicultural and cosmopolitan place to shop, eat and be entertained. Less than an hour out of the city and you find yourself on beaches or mountains famous for their cleanliness and lack of pollution.<br />\r\n<br />\r\n<strong>C:</strong> Although a majority of international students spend some time in a language school, for those aged 13 to 18 New Zealand secondary schools provide a broad education. Other students take advantage of one of the many tertiary education institutions which form the New Zealand polytechnic system. These institutions are state-funded and provide education and training at many levels, from introductory studies to full degree programmes. University education was established in New Zealand in 1870 and has a similar tradition to the British university system. There are eight state-funded universities in New Zealand, all of them internationally respected for their academic and research performance. In addition to a centrally coordinated system of quality assurance audits at both institution and programme level, each university undertakes internal quality checks.<br />\r\n<br />\r\n<strong>D:</strong> All New Zealand universities offer a broad range of subjects in arts, commerce and science, but they have also specialised in narrower fields of study such as computer studies, medicine or environmental studies. Bachelors, Masters and Doctorate degrees are offered by all New Zealand universities. A range of undergraduate and postgraduate diplomas are also available, along with Honours programmes (usually requiring an additional year of study). The first degree a student is able to gain in New Zealand is, as elsewhere, a Bachelors degree. With a completed Bachelors degree, a graduate may be able to go on to a number of other options. There are Postgraduate Diploma courses, Masters degrees, Doctorates and even research positions available.<br />\r\n<br />\r\n<strong>E:</strong> The Postgraduate Diploma course takes one year on a full-time programme and is designed for graduates building on the academic field of their previous degree. The Masters degree, like the Postgraduate Diploma, builds on a Bachelors degree but can take up to two years, by which time a thesis must be completed. The Master's is the conventional pathway to the next level of education – the Doctorate. For this course, graduates are required to produce a research-based thesis as part of a course that takes a minimum of two years, and is by far the most challenging.<br />\r\n<br />\r\n<strong>F:</strong> Finally there is the possibility of research in New Zealand universities. Research is the main characteristic that distinguishes a university as opposed to a polytechnic or other tertiary education institution. New Zealand remains justifiably proud of the quality of its research as a large number of awards are presented to researchers from New Zealand universities."
         },
         {
             "title": "Reading Passage 2 - Virtual culture",
-            "content": "A<br />\r\n<br />\r\nCulture is defined as the 'socially transmitted behaviour patterns, arts, beliefs, and institutions that are the expression of a particular class, community or period' (www.dictionary.com). To most people, this is seen in terms of books, paintings, rituals and ceremonies, but recently there has been a new entrant in the field of what is considered to be 'culture' – the Internet.<br />\r\n<br />\r\nB<br />\r\n<br />\r\nOn the Internet, science and art, media and mind combine to create a modern culture which is far more widespread than any of its predecessors. Not referring to the casual user who has no particular interest in the Internet, active supporters of the Internet as a culture have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets. A cyberpoet can be defined as 'one who makes frequent trips to the edge of technology, society and traditional culture and strives to be artful in their use of virtual space'.<br />\r\n<br />\r\nC<br />\r\n<br />\r\nSupporter or opponent of this new culture, there is little doubt that the Internet offers a lot to our traditional view of culture. In just a few minutes in front of a keyboard, we can read almost anything that has ever been written, yet no paper had to be made, no library had to stay open and thus the cost remains minimal. All of this encourages even the casual surfer to explore further than he or she otherwise would have. The same effect can be observed with works of art. Previously available to be viewed only in museums if they were not in the hands of private collectors, all but a few famous works are now replicated on the Internet.<br />\r\n<br />\r\nD<br />\r\n<br />\r\nYet the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right. The medium of the Net allows for wider distribution and new platforms for most forms of art. 'Kinetic art' and other such computerised art forms occur with increasing regularity, both motivated by and generating an upsurge in popular and computer-mediated art.<br />\r\n<br />\r\nE<br />\r\n<br />\r\nIn addition, if culture is said to be 'socially transmitted', then the Internet is remarkable in its ability to share, on an almost global scale, all the factors that constitute culture. We have only to hear the influence of jargon as we visit dub-dub-dub dot sites and surf the web to see how international the Internet has become to the majority.<br />\r\n<br />\r\nF<br />\r\n<br />\r\nVery few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture. What is not so certain is how far this will go, as the Internet continues to assimilate more and more forms of culture, rising to a point where it is not inconceivable that our entire perception of culture will soon become cyber-focused.<br />\r\n<br />\r\nG<br />\r\n<br />\r\nThere is also a significant increase in transient imagery from photographs, videos and other media uploaded to many social networking sites. The rise of the term 'selfie', referring to a photograph taken by the person in the picture, is just one example – there are also applications for smartphones and tablet devices that allow instant video uploads, meaning that 'looped' videos lasting just a few seconds can be created to great effect. The problem, of course, is wading through the many millions of hours of footage that cannot be classified as having any cultural significance.<br />\r\n<br />\r\nH<br />\r\n<br />\r\nReliance on the internet itself has inherent risks, as the authorship of online content is now far less moderated. It is possible to set up a website in as little as an hour, populated with content which may be presented as accurate, impartial information but is in reality an ill considered, poorly researched collection of opinions and incorrect facts. Even established websites which allow users to contribute content can quickly become unreliable sources. Not only is there wider room for error, there is now a heightened concern that web pages and social media can reduce popular culture into a series of illogical and often abusive arguments, which do not need to be supported with facts or even ascribed to a specific purpose. The anonymous nature of a large percentage of internet interactions means that even the most bigoted point of view can find a forum, even if reactions to it are negative."
+            "content": "<strong>A:</strong> Culture is defined as the 'socially transmitted behaviour patterns, arts, beliefs, and institutions that are the expression of a particular class, community or period' (www.dictionary.com). To most people, this is seen in terms of books, paintings, rituals and ceremonies, but recently there has been a new entrant in the field of what is considered to be 'culture' – the Internet.<br />\r\n<br />\r\n<strong>B:</strong> On the Internet, science and art, media and mind combine to create a modern culture which is far more widespread than any of its predecessors. Not referring to the casual user who has no particular interest in the Internet, active supporters of the Internet as a culture have given themselves nomenclature to reflect their cultural aspirations – they are the new cyberpoets. A cyberpoet can be defined as 'one who makes frequent trips to the edge of technology, society and traditional culture and strives to be artful in their use of virtual space'.<br />\r\n<br />\r\n<strong>C:</strong> Supporter or opponent of this new culture, there is little doubt that the Internet offers a lot to our traditional view of culture. In just a few minutes in front of a keyboard, we can read almost anything that has ever been written, yet no paper had to be made, no library had to stay open and thus the cost remains minimal. All of this encourages even the casual surfer to explore further than he or she otherwise would have. The same effect can be observed with works of art. Previously available to be viewed only in museums if they were not in the hands of private collectors, all but a few famous works are now replicated on the Internet.<br />\r\n<br />\r\n<strong>D:</strong> Yet the Internet is not merely a mirror of traditional culture – it is also a new culture in its own right. The medium of the Net allows for wider distribution and new platforms for most forms of art. 'Kinetic art' and other such computerised art forms occur with increasing regularity, both motivated by and generating an upsurge in popular and computer-mediated art.<br />\r\n<br />\r\n<strong>E:</strong> In addition, if culture is said to be 'socially transmitted', then the Internet is remarkable in its ability to share, on an almost global scale, all the factors that constitute culture. We have only to hear the influence of jargon as we visit dub-dub-dub dot sites and surf the web to see how international the Internet has become to the majority.<br />\r\n<br />\r\n<strong>F:</strong> Very few people would disagree that the cyberpoets are increasingly asserting themselves into popular culture. What is not so certain is how far this will go, as the Internet continues to assimilate more and more forms of culture, rising to a point where it is not inconceivable that our entire perception of culture will soon become cyber-focused.<br />\r\n<br />\r\n<strong>G:</strong> There is also a significant increase in transient imagery from photographs, videos and other media uploaded to many social networking sites. The rise of the term 'selfie', referring to a photograph taken by the person in the picture, is just one example – there are also applications for smartphones and tablet devices that allow instant video uploads, meaning that 'looped' videos lasting just a few seconds can be created to great effect. The problem, of course, is wading through the many millions of hours of footage that cannot be classified as having any cultural significance.<br />\r\n<br />\r\n<strong>H:</strong> Reliance on the internet itself has inherent risks, as the authorship of online content is now far less moderated. It is possible to set up a website in as little as an hour, populated with content which may be presented as accurate, impartial information but is in reality an ill considered, poorly researched collection of opinions and incorrect facts. Even established websites which allow users to contribute content can quickly become unreliable sources. Not only is there wider room for error, there is now a heightened concern that web pages and social media can reduce popular culture into a series of illogical and often abusive arguments, which do not need to be supported with facts or even ascribed to a specific purpose. The anonymous nature of a large percentage of internet interactions means that even the most bigoted point of view can find a forum, even if reactions to it are negative."
         },
         {
             "title": "Reading Passage 3 - Ford – driving innovation",
@@ -1745,9 +1733,9 @@
         "starting_question_number": "1"
     },
     "_metadata": {
-        "exported_at": "2026-01-15 09:54:24",
+        "exported_at": "2026-01-18 10:01:22",
         "exported_by": "impact",
-        "plugin_version": "11.28",
+        "plugin_version": "12.1",
         "format_version": "1.0"
     }
 }
