@@ -4,12 +4,12 @@
     "questions": [
         {
             "type": "closed_question",
-            "instructions": "Do the following statements agree with the information given in Reading Passage 1?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nThe file uses mixed question formats (Headings, Matching, True/False, and Short Answer)\r\nwhich are automatically detected and parsed correctly by the text import tool.\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 \u2013 13 which are based on Reading Passage 1.",
+            "instructions": "You should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.\r\n\r\nDo the following statements agree with the information given in the reading passage?<br>\r\nWrite <strong>TRUE</strong> if the statement agrees with the information.<br>\r\nWrite <strong>FALSE</strong> if the statement contradicts the information.<br>\r\nWrite <strong>NOT GIVEN</strong> if there is no information on this.</p>",
             "question": "Coffee houses in the Middle East were called \"Schools of the Wise\" because they offered formal education.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is FALSE. Paragraph B states coffee houses were called \"Schools of the Wise\" because of the intellectual discussions that took place, not because they offered formal education.",
-            "correct_feedback": "Correct! Paragraph B states coffee houses were called \"Schools of the Wise\" because of the intellectual discussions, not formal education.",
-            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Coffee houses earned this nickname due to intellectual discussions, not formal education programs.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -38,12 +38,12 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Do the following statements agree with the information given in Reading Passage 1?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nThe file uses mixed question formats (Headings, Matching, True/False, and Short Answer)\r\nwhich are automatically detected and parsed correctly by the text import tool.\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 \u2013 13 which are based on Reading Passage 1.",
+            "instructions": "",
             "question": "Pope Clement VIII initially rejected coffee as unsuitable for Christians.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is FALSE. Paragraph C states that Pope Clement VIII tasted coffee and gave it papal approval, declaring it a Christian beverage.",
-            "correct_feedback": "Correct! Paragraph C states Pope Clement VIII gave coffee papal approval, declaring it a Christian beverage.",
-            "incorrect_feedback": "Incorrect. The correct answer is FALSE. The Pope approved coffee; he didn't reject it.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -72,12 +72,12 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Do the following statements agree with the information given in Reading Passage 1?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nThe file uses mixed question formats (Headings, Matching, True/False, and Short Answer)\r\nwhich are automatically detected and parsed correctly by the text import tool.\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 \u2013 13 which are based on Reading Passage 1.",
+            "instructions": "",
             "question": "English coffee houses were nicknamed \"penny universities.\"",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph C states that in England, coffee houses \"became known as 'penny universities' because for the price of a penny, one could purchase a cup of coffee and engage in stimulating conversation.\"",
-            "correct_feedback": "Correct! Paragraph C states coffee houses \"became known as 'penny universities' because for the price of a penny, one could purchase a cup of coffee and engage in stimulating conversation.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph C clearly states they were nicknamed \"penny universities.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -106,12 +106,12 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Do the following statements agree with the information given in Reading Passage 1?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nThe file uses mixed question formats (Headings, Matching, True/False, and Short Answer)\r\nwhich are automatically detected and parsed correctly by the text import tool.\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 \u2013 13 which are based on Reading Passage 1.",
+            "instructions": "",
             "question": "The Dutch were the first Europeans to successfully cultivate coffee outside Arabia.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph D states \"The Dutch were among the first to succeed, establishing coffee plantations in their colonies in Indonesia in the late 17th century.\"",
-            "correct_feedback": "Correct! Paragraph D states \"The Dutch were among the first to succeed, establishing coffee plantations in their colonies in Indonesia in the late 17th century.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph D clearly identifies the Dutch as among the first Europeans to succeed.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -140,12 +140,12 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Do the following statements agree with the information given in Reading Passage 1?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.\r\nThe file uses mixed question formats (Headings, Matching, True/False, and Short Answer)\r\nwhich are automatically detected and parsed correctly by the text import tool.\r\nRead the texts and answer the questions. Type your answers in the spaces provided.\r\nYou should spend about 20 minutes on Questions 1 \u2013 13 which are based on Reading Passage 1.",
+            "instructions": "",
             "question": "Fair trade coffee was introduced in the 1960s.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is NOT GIVEN. While Paragraph E mentions fair trade practices as part of the specialty coffee movement, it doesn't specify when fair trade coffee was introduced.",
-            "correct_feedback": "Correct! While the passage mentions fair trade practices, it doesn't specify when they were introduced.",
-            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions fair trade but doesn't state when it was introduced.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -174,8 +174,8 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Reading Passage 1 has seven paragraphs A \u2013 G.\r\nFor paragraphs C \u2013 F, choose the most suitable heading from the list of headings below.\r\nWrite the appropriate numbers I \u2013 IX in boxes 7 \u2013 10 on your answer sheet.\r\nList of Headings:\r\nI. The origins of coffee in Africa\r\nII. Coffee's arrival and reception in Europe\r\nIII. The expansion of coffee cultivation worldwide\r\nIV. Modern developments in coffee culture\r\nV. Coffee houses as centers of intellectual life\r\nVI. The economic importance of coffee today\r\nVII. The role of religion in coffee's spread\r\nVIII. Climate change threatens coffee production\r\nIX. Coffee's influence on the slave trade\r\nExample: Paragraph A - Answer: I\r\nExample: Paragraph B - Answer: V",
-            "question": "Paragraph C",
+            "instructions": "Reading Passage 1 has seven paragraphs A – G.\r\nFor paragraphs C – F, choose the most suitable heading from the list of headings below.\r\nWrite the appropriate numbers I – IX in boxes 7 – 10 on your answer sheet.\r\n",
+            "question": "\r\nExample: Paragraph A - Answer: I\r\nExample: Paragraph B - Answer: V\r\n\r\nParagraph C",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is II. Coffee's arrival and reception in Europe. Check Reading Passage 1 carefully.",
             "correct_feedback": "",
@@ -184,7 +184,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. The origins of coffee in Africa",
@@ -238,7 +238,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Reading Passage 1 has seven paragraphs A \u2013 G.\r\nFor paragraphs C \u2013 F, choose the most suitable heading from the list of headings below.\r\nWrite the appropriate numbers I \u2013 IX in boxes 7 \u2013 10 on your answer sheet.\r\nList of Headings:\r\nI. The origins of coffee in Africa\r\nII. Coffee's arrival and reception in Europe\r\nIII. The expansion of coffee cultivation worldwide\r\nIV. Modern developments in coffee culture\r\nV. Coffee houses as centers of intellectual life\r\nVI. The economic importance of coffee today\r\nVII. The role of religion in coffee's spread\r\nVIII. Climate change threatens coffee production\r\nIX. Coffee's influence on the slave trade\r\nExample: Paragraph A - Answer: I\r\nExample: Paragraph B - Answer: V",
+            "instructions": "",
             "question": "Paragraph D",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is III. The expansion of coffee cultivation worldwide. Check Reading Passage 1 carefully.",
@@ -248,7 +248,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. The origins of coffee in Africa",
@@ -302,7 +302,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Reading Passage 1 has seven paragraphs A \u2013 G.\r\nFor paragraphs C \u2013 F, choose the most suitable heading from the list of headings below.\r\nWrite the appropriate numbers I \u2013 IX in boxes 7 \u2013 10 on your answer sheet.\r\nList of Headings:\r\nI. The origins of coffee in Africa\r\nII. Coffee's arrival and reception in Europe\r\nIII. The expansion of coffee cultivation worldwide\r\nIV. Modern developments in coffee culture\r\nV. Coffee houses as centers of intellectual life\r\nVI. The economic importance of coffee today\r\nVII. The role of religion in coffee's spread\r\nVIII. Climate change threatens coffee production\r\nIX. Coffee's influence on the slave trade\r\nExample: Paragraph A - Answer: I\r\nExample: Paragraph B - Answer: V",
+            "instructions": "",
             "question": "Paragraph E",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is IV. Modern developments in coffee culture. Check Reading Passage 1 carefully.",
@@ -312,7 +312,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. The origins of coffee in Africa",
@@ -366,7 +366,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Reading Passage 1 has seven paragraphs A \u2013 G.\r\nFor paragraphs C \u2013 F, choose the most suitable heading from the list of headings below.\r\nWrite the appropriate numbers I \u2013 IX in boxes 7 \u2013 10 on your answer sheet.\r\nList of Headings:\r\nI. The origins of coffee in Africa\r\nII. Coffee's arrival and reception in Europe\r\nIII. The expansion of coffee cultivation worldwide\r\nIV. Modern developments in coffee culture\r\nV. Coffee houses as centers of intellectual life\r\nVI. The economic importance of coffee today\r\nVII. The role of religion in coffee's spread\r\nVIII. Climate change threatens coffee production\r\nIX. Coffee's influence on the slave trade\r\nExample: Paragraph A - Answer: I\r\nExample: Paragraph B - Answer: V",
+            "instructions": "",
             "question": "Paragraph F",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is VI. The economic importance of coffee today. Check Reading Passage 1 carefully.",
@@ -376,7 +376,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. The origins of coffee in Africa",
@@ -430,7 +430,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Choose the appropriate letters A \u2013 D and write them in boxes 11 \u2013 13 on your answer sheet.",
+            "instructions": "Choose the appropriate letters A – D and write them in boxes 11 – 13 on your answer sheet.",
             "question": "According to the passage, coffee houses in the Middle East",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is B) served as important social and cultural centers. Paragraph B describes coffee houses as centers for social activity, conversation, music, and news.",
@@ -440,7 +440,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "were primarily religious institutions.",
@@ -469,7 +469,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Choose the appropriate letters A \u2013 D and write them in boxes 11 \u2013 13 on your answer sheet.",
+            "instructions": "",
             "question": "The specialty coffee movement emphasized",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is C) quality, sustainability, and regional characteristics. Paragraph E describes the specialty coffee movement emphasizing these aspects.",
@@ -479,7 +479,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "mass production and affordability.",
@@ -508,7 +508,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Choose the appropriate letters A \u2013 D and write them in boxes 11 \u2013 13 on your answer sheet.",
+            "instructions": "",
             "question": "According to the passage, the coffee industry currently faces challenges including",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is D) climate change and price volatility. Paragraph F states \"the industry faces significant challenges, including climate change, which threatens coffee-growing regions, price volatility that affects farmers' incomes.\"",
@@ -518,7 +518,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "multiple_choice_r",
             "mc_options": [
                 {
                     "text": "declining global consumption.",
@@ -547,7 +547,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Choose the appropriate letters A \u2013 D and write them in boxes 11 \u2013 13 on your answer sheet.",
+            "instructions": "",
             "question": "The passage suggests that modern coffee culture",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is D) reflects broader societal changes. Paragraph G states the evolution of coffee culture \"reflects broader changes in society.\"",
@@ -586,7 +586,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "You should spend about 20 minutes on Questions 14 \u2013 26 which are based on Reading Passage 2.",
+            "instructions": "You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "Paragraph B",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is II) The effects and uses of red. Paragraph B discusses red's psychological effects and marketing applications.",
@@ -660,7 +660,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "You should spend about 20 minutes on Questions 14 \u2013 26 which are based on Reading Passage 2.",
+            "instructions": "You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "Paragraph C",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is III. Blue's role in establishing trust. Check Reading Passage 2 carefully.",
@@ -734,7 +734,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "You should spend about 20 minutes on Questions 14 \u2013 26 which are based on Reading Passage 2.",
+            "instructions": "You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "Paragraph D",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is IV. The natural associations of green. Check Reading Passage 2 carefully.",
@@ -808,7 +808,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "You should spend about 20 minutes on Questions 14 \u2013 26 which are based on Reading Passage 2.",
+            "instructions": "You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "Paragraph E",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is V. Yellow's visibility and limitations. Check Reading Passage 2 carefully.",
@@ -882,7 +882,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "You should spend about 20 minutes on Questions 14 \u2013 26 which are based on Reading Passage 2.",
+            "instructions": "You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "Paragraph F",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is VI. The importance of color combinations. Check Reading Passage 2 carefully.",
@@ -956,7 +956,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "You should spend about 20 minutes on Questions 14 \u2013 26 which are based on Reading Passage 2.",
+            "instructions": "You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
             "question": "Paragraph G",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is VII. Cultural differences in color meaning. Check Reading Passage 2 carefully.",
@@ -1034,8 +1034,8 @@
             "question": "Red increases appetite, which is why it is commonly used in restaurant branding.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph B states red \"stimulates appetite, which explains its prevalent use by fast-food chains.\"",
-            "correct_feedback": "Correct! Paragraph B explicitly states red \"stimulates appetite, which explains its prevalent use by fast-food chains.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph B clearly states red increases appetite.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -1068,8 +1068,8 @@
             "question": "Blue is the most popular color worldwide.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is NOT GIVEN. While Paragraph C states blue is \"one of the most universally favored colors,\" it doesn't claim it's THE most popular worldwide.",
-            "correct_feedback": "Correct! While the passage says blue is universally favored, it doesn't state it's the most popular color worldwide.",
-            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't make this specific claim.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -1102,8 +1102,8 @@
             "question": "The human eye can distinguish more shades of green than any other color.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph D states \"The human eye can distinguish more shades of green than any other color.\"",
-            "correct_feedback": "Correct! Paragraph D explicitly states \"The human eye can distinguish more shades of green than any other color.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is TRUE. This is stated in Paragraph D.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -1136,8 +1136,8 @@
             "question": "Yellow is commonly used as an accent color rather than a primary color by successful brands.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph E states \"Many successful brands use yellow strategically as an accent color rather than a primary one.\"",
-            "correct_feedback": "Correct! Paragraph E states \"Many successful brands use yellow strategically as an accent color rather than a primary one.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is TRUE. This is stated in Paragraph E.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -1170,8 +1170,8 @@
             "question": "Paragraph D: \"The human eye can distinguish more shades of green than any other color\"",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph D states \"The human eye can distinguish more shades of green than any other color.\"",
-            "correct_feedback": "Correct! Paragraph D explicitly states \"The human eye can distinguish more shades of green than any other color.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph D clearly makes this statement.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -1204,17 +1204,13 @@
             "question": "24. According to the passage, color can increase [field 1] by up to 80%.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is BRAND RECOGNITION. Paragraph A states \"color increases brand recognition by up to 80%.\"",
-            "correct_feedback": "Excellent! Paragraph A states \"color increases brand recognition by up to 80%.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is BRAND RECOGNITION. Check Paragraph A.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "sentence_completion_r",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
             "field_count": 1,
             "field_answers": {
                 "1": "brand recognition"
@@ -1222,8 +1218,8 @@
             "field_feedback": {
                 "1": {
                     "correct": "Excellent! Paragraph A states \"color increases brand recognition by up to 80%.\"",
-                    "incorrect": "Incorrect. The correct answer is BRAND RECOGNITION. Paragraph A states \"color increases brand recognition by up to 80%.\"",
-                    "no_answer": "The correct answer is BRAND RECOGNITION. Paragraph A states \"color increases brand recognition by up to 80%.\""
+                    "incorrect": "Incorrect. The correct answer is BRAND RECOGNITION. Check Paragraph A.",
+                    "no_answer": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is BRAND RECOGNITION. Paragraph A states \"color increases brand recognition by up to 80%.\""
                 }
             }
         },
@@ -1233,17 +1229,13 @@
             "question": "25. High contrast color combinations such as black and white are described as highly [field 1].",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is READABLE. Paragraph F states \"High contrast combinations, such as black and white or blue and orange, tend to be highly readable.\"",
-            "correct_feedback": "Perfect! Paragraph F states high contrast combinations \"tend to be highly readable and attention-grabbing.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is READABLE. Check Paragraph F.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "sentence_completion_r",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
             "field_count": 1,
             "field_answers": {
                 "1": "readable"
@@ -1251,8 +1243,8 @@
             "field_feedback": {
                 "1": {
                     "correct": "Perfect! Paragraph F states high contrast combinations \"tend to be highly readable and attention-grabbing.\"",
-                    "incorrect": "Incorrect. The correct answer is READABLE. Paragraph F states high contrast combinations \"tend to be highly readable.\"",
-                    "no_answer": "The correct answer is READABLE. Paragraph F states high contrast combinations \"tend to be highly readable and attention-grabbing.\""
+                    "incorrect": "Incorrect. The correct answer is READABLE. Check Paragraph F.",
+                    "no_answer": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is READABLE. Paragraph F states \"High contrast combinations, such as black and white or blue and orange, tend to be highly readable.\""
                 }
             }
         },
@@ -1262,17 +1254,13 @@
             "question": "26. In ancient times, purple was associated with royalty because purple dye was [field 1].",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is RARE AND EXPENSIVE or EXPENSIVE. Paragraph G states purple \"has historically been associated with royalty and luxury due to the rarity and expense of purple dye in ancient times.\"",
-            "correct_feedback": "Correct! Paragraph G explains purple's association with royalty was \"due to the rarity and expense of purple dye in ancient times.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is RARE AND EXPENSIVE. Check Paragraph G.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "sentence_completion_r",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
             "field_count": 1,
             "field_answers": {
                 "1": "rare and expensive|expensive"
@@ -1280,14 +1268,14 @@
             "field_feedback": {
                 "1": {
                     "correct": "Correct! Paragraph G explains purple's association with royalty was \"due to the rarity and expense of purple dye in ancient times.\"",
-                    "incorrect": "Incorrect. The correct answer is RARE AND EXPENSIVE. Paragraph G states purple dye was rare and expensive in ancient times.",
-                    "no_answer": "The correct answer is RARE AND EXPENSIVE or EXPENSIVE. Paragraph G states this was \"due to the rarity and expense of purple dye in ancient times.\""
+                    "incorrect": "Incorrect. The correct answer is RARE AND EXPENSIVE. Check Paragraph G.",
+                    "no_answer": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is RARE AND EXPENSIVE or EXPENSIVE. Paragraph G states purple \"has historically been associated with royalty and luxury due to the rarity and expense of purple dye in ancient times.\""
                 }
             }
         },
         {
             "type": "closed_question",
-            "instructions": "Complete each sentence with the correct ending, A \u2013 J, below.\r\nWrite the correct letter, A \u2013 J, in boxes 27 \u2013 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 \u2013 40 which are based on Reading Passage 3.",
+            "instructions": "Complete each sentence with the correct ending, A – J, below.\r\nWrite the correct letter, A – J, in boxes 27 – 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
             "question": "During World War II, victory gardens",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is provided a significant portion of vegetables consumed.. Check Reading Passage 3 carefully.",
@@ -1356,7 +1344,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Complete each sentence with the correct ending, A \u2013 J, below.\r\nWrite the correct letter, A \u2013 J, in boxes 27 \u2013 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 \u2013 40 which are based on Reading Passage 3.",
+            "instructions": "Complete each sentence with the correct ending, A – J, below.\r\nWrite the correct letter, A – J, in boxes 27 – 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
             "question": "Food deserts are areas where",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is residents have limited access to healthy, affordable food.. Check Reading Passage 3 carefully.",
@@ -1425,7 +1413,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Complete each sentence with the correct ending, A \u2013 J, below.\r\nWrite the correct letter, A \u2013 J, in boxes 27 \u2013 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 \u2013 40 which are based on Reading Passage 3.",
+            "instructions": "Complete each sentence with the correct ending, A – J, below.\r\nWrite the correct letter, A – J, in boxes 27 – 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
             "question": "Urban agriculture can help reduce",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is the carbon footprint of food through reduced transportation.. Check Reading Passage 3 carefully.",
@@ -1494,7 +1482,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Complete each sentence with the correct ending, A \u2013 J, below.\r\nWrite the correct letter, A \u2013 J, in boxes 27 \u2013 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 \u2013 40 which are based on Reading Passage 3.",
+            "instructions": "Complete each sentence with the correct ending, A – J, below.\r\nWrite the correct letter, A – J, in boxes 27 – 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
             "question": "Community gardens have been found to",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is encourage social interaction among diverse community members.. Check Reading Passage 3 carefully.",
@@ -1563,7 +1551,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Complete each sentence with the correct ending, A \u2013 J, below.\r\nWrite the correct letter, A \u2013 J, in boxes 27 \u2013 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 \u2013 40 which are based on Reading Passage 3.",
+            "instructions": "Complete each sentence with the correct ending, A – J, below.\r\nWrite the correct letter, A – J, in boxes 27 – 32 on your answer sheet.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
             "question": "Vertical farming systems",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is can produce crops throughout the year using controlled environments.. Check Reading Passage 3 carefully.",
@@ -1636,8 +1624,8 @@
             "question": "The COVID-19 pandemic demonstrated the resilience of urban farms when traditional supply chains were disrupted.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph C states \"During the COVID-19 pandemic, for instance, urban farms in many cities proved resilient when conventional food supply chains were disrupted.\"",
-            "correct_feedback": "Correct! Paragraph C states urban farms \"proved resilient when conventional food supply chains were disrupted\" during COVID-19.",
-            "incorrect_feedback": "Incorrect. The correct answer is TRUE. This is stated in Paragraph C.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -1670,8 +1658,8 @@
             "question": "Urban farms always require less water than traditional agricultural operations.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph C states \"During the COVID-19 pandemic, for instance, urban farms in many cities proved resilient when conventional food supply chains were disrupted.\"",
-            "correct_feedback": "Correct! Paragraph C states urban farms \"proved resilient when conventional food supply chains were disrupted\" during COVID-19.",
-            "incorrect_feedback": "Incorrect. The correct answer is TRUE. This is stated in Paragraph C.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -1704,8 +1692,8 @@
             "question": "Schools with gardens have reported improved student performance in science subjects.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is NOT GIVEN. While the passage discusses water efficiency in some urban farming methods, it doesn't state that ALL urban farms always use less water.",
-            "correct_feedback": "Correct! The passage discusses water efficiency but doesn't make this absolute claim about all urban farms.",
-            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't make this blanket statement.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -1738,8 +1726,8 @@
             "question": "Most urban farms operate as profitable commercial businesses.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph E states \"Schools with gardens have reported improved student engagement, better understanding of nutrition and food systems, and enhanced academic performance in science subjects.\"",
-            "correct_feedback": "Correct! Paragraph E states schools with gardens reported \"enhanced academic performance in science subjects.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is TRUE. This is stated in Paragraph E.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -1772,26 +1760,22 @@
             "question": "38. Urban farms can help cities manage [field 1] and reduce the urban heat island effect.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is STORMWATER RUNOFF. Paragraph D states \"urban farms can help manage stormwater runoff, improve air quality, reduce the urban heat island effect.\"",
-            "correct_feedback": "Excellent! Paragraph D states urban farms \"can help manage stormwater runoff, improve air quality, reduce the urban heat island effect.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is STORMWATER RUNOFF. Check Paragraph D.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "sentence_completion_r",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
             "field_count": 1,
             "field_answers": {
                 "1": "stormwater runoff"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Excellent! Paragraph D lists this as one of urban agriculture's environmental benefits.",
-                    "incorrect": "Incorrect. The correct answer is STORMWATER RUNOFF. Paragraph D states urban farms \"can help manage stormwater runoff.\"",
-                    "no_answer": "The correct answer is STORMWATER RUNOFF. Paragraph D states urban farms can help manage stormwater runoff."
+                    "correct": "Excellent! Paragraph D states urban farms \"can help manage stormwater runoff, improve air quality, reduce the urban heat island effect.\"",
+                    "incorrect": "Incorrect. The correct answer is STORMWATER RUNOFF. Check Paragraph D.",
+                    "no_answer": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is STORMWATER RUNOFF. Paragraph D states \"urban farms can help manage stormwater runoff, improve air quality, reduce the urban heat island effect.\""
                 }
             }
         },
@@ -1801,26 +1785,22 @@
             "question": "39. [field 1] is a serious concern in older industrial cities where harmful substances may be present in the ground.",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is SOIL CONTAMINATION. Paragraph F states \"Soil contamination is another serious issue, particularly in older industrial cities where soil may contain heavy metals or other pollutants.\"",
-            "correct_feedback": "Perfect! Paragraph F states \"Soil contamination is another serious issue, particularly in older industrial cities.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is SOIL CONTAMINATION. Check Paragraph F.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "sentence_completion_r",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
             "field_count": 1,
             "field_answers": {
                 "1": "soil contamination"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Perfect! Paragraph F identifies soil contamination as a serious issue in older industrial cities.",
-                    "incorrect": "Incorrect. The correct answer is SOIL CONTAMINATION. Paragraph F states \"Soil contamination is another serious issue, particularly in older industrial cities.\"",
-                    "no_answer": "The correct answer is SOIL CONTAMINATION. Paragraph F discusses this as a challenge for urban agriculture."
+                    "correct": "Perfect! Paragraph F states \"Soil contamination is another serious issue, particularly in older industrial cities.\"",
+                    "incorrect": "Incorrect. The correct answer is SOIL CONTAMINATION. Check Paragraph F.",
+                    "no_answer": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is SOIL CONTAMINATION. Paragraph F states \"Soil contamination is another serious issue, particularly in older industrial cities where soil may contain heavy metals or other pollutants.\""
                 }
             }
         },
@@ -1830,17 +1810,13 @@
             "question": "40. Singapore aims to produce 30% of its nutritional needs locally by [field 1].",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is 2030. Paragraph I states \"Singapore, for example, aims to produce 30% of its nutritional needs locally by 2030.\"",
-            "correct_feedback": "Correct! Paragraph I states Singapore \"aims to produce 30% of its nutritional needs locally by 2030.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is 2030. Check Paragraph I.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "sentence_completion_r",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
             "field_count": 1,
             "field_answers": {
                 "1": "2030"
@@ -1848,8 +1824,8 @@
             "field_feedback": {
                 "1": {
                     "correct": "Correct! Paragraph I states Singapore \"aims to produce 30% of its nutritional needs locally by 2030.\"",
-                    "incorrect": "Incorrect. The correct answer is 2030. Paragraph I states this goal clearly.",
-                    "no_answer": "The correct answer is 2030. Paragraph I states Singapore aims to achieve this goal by 2030."
+                    "incorrect": "Incorrect. The correct answer is 2030. Check Paragraph I.",
+                    "no_answer": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is 2030. Paragraph I states \"Singapore, for example, aims to produce 30% of its nutritional needs locally by 2030.\""
                 }
             }
         },
@@ -1859,8 +1835,8 @@
             "question": "According to the passage, vertical farming systems",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is C) use LED lighting and climate control for year-round production. Paragraph H states vertical farms \"use LED lighting, hydroponics or aeroponics, and climate control to optimize growing conditions and enable year-round production.\"",
-            "correct_feedback": "Excellent! Paragraph H states vertical farms \"use LED lighting, hydroponics or aeroponics, and climate control to optimize growing conditions and enable year-round production regardless of external weather conditions.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is C. Check Paragraph H for details about vertical farming technology.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -1918,9 +1894,9 @@
         "starting_question_number": "1"
     },
     "_metadata": {
-        "exported_at": "2026-01-17 04:00:46",
-        "exported_by": "copilot-rebuild",
-        "plugin_version": "11.27",
+        "exported_at": "2026-01-18 10:56:57",
+        "exported_by": "impact",
+        "plugin_version": "12.1",
         "format_version": "1.0"
     }
 }
