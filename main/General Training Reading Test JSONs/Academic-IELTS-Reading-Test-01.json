@@ -1,0 +1,1977 @@
+{
+    "title": "Academic IELTS Reading Test 01",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 1 – 13 which are based on <strong>Reading Passage 1.</strong>\r\n\r\nQuestions 1 – 3\r\n\r\nChoose the appropriate letters A – D and write them in boxes 1 – 3 on your answer sheet.",
+            "question": "1. Many subway systems in major cities...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. ‘go cap-in-hand to central…governments… seeking funds’. Option A mentions extensions, but there is no mention of plans. Option B mentions attracting passengers, but says subway systems struggle to invest. Option D is not correct as there is no mention of subways being the dominant form.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "plan extensively for upgrades and expansions.",
+                    "is_correct": false,
+                    "feedback": "‘go cap-in-hand to central…governments… seeking funds’. Option A mentions extensions, but there is no mention of plans. Option B mentions attracting passengers, but says subway systems struggle to invest. Option D is not correct as there is no mention of subways being the dominant form."
+                },
+                {
+                    "text": "attract passengers by investing in maintenance and improvements.",
+                    "is_correct": false,
+                    "feedback": "‘go cap-in-hand to central…governments… seeking funds’. Option A mentions extensions, but there is no mention of plans. Option B mentions attracting passengers, but says subway systems struggle to invest. Option D is not correct as there is no mention of subways being the dominant form."
+                },
+                {
+                    "text": "rely on government assistance to continue operating.",
+                    "is_correct": true,
+                    "feedback": "‘go cap-in-hand to central…governments… seeking funds’. Option A mentions extensions, but there is no mention of plans. Option B mentions attracting passengers, but says subway systems struggle to invest. Option D is not correct as there is no mention of subways being the dominant form."
+                },
+                {
+                    "text": "are the dominant form of public transportation.",
+                    "is_correct": false,
+                    "feedback": "‘go cap-in-hand to central…governments… seeking funds’. Option A mentions extensions, but there is no mention of plans. Option B mentions attracting passengers, but says subway systems struggle to invest. Option D is not correct as there is no mention of subways being the dominant form."
+                }
+            ],
+            "options": "plan extensively for upgrades and expansions.\nattract passengers by investing in maintenance and improvements.\nrely on government assistance to continue operating.\nare the dominant form of public transportation.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The subway systems of Singapore and Hong Kong...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: 'recover more money in fares than they spend to operate.' The passage states that Hong Kong's 'farebox recovery ratio' is 185% and Singapore's is 125%, meaning both recover more than 100% of operating costs.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "are considered to be better than New York’s rail system.",
+                    "is_correct": false,
+                    "feedback": " Singapore and Hong Kong have above 100% fare recovery rates. A – New York is mentioned, but there is no comparison data. C – going into debt is not mentioned regarding Singapore and Hong Kong. D – Hong Kong operates bus systems, but no mention of Singapore"
+                },
+                {
+                    "text": "recover more money in fares than they spend to operate.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions that Hong Kong has a 185% fare recovery ratio and Singapore has 125%, meaning both 'recover more money in fares than they spend to operate.'"
+                },
+                {
+                    "text": "must go into debt when expanding or undergoing maintenance.",
+                    "is_correct": false,
+                    "feedback": " Singapore and Hong Kong have above 100% fare recovery rates. A – New York is mentioned, but there is no comparison data. C – going into debt is not mentioned regarding Singapore and Hong Kong. D – Hong Kong operates bus systems, but no mention of Singapore"
+                },
+                {
+                    "text": "operate both rail and bus systems.",
+                    "is_correct": false,
+                    "feedback": " Singapore and Hong Kong have above 100% fare recovery rates. A – New York is mentioned, but there is no comparison data. C – going into debt is not mentioned regarding Singapore and Hong Kong. D – Hong Kong operates bus systems, but no mention of Singapore"
+                }
+            ],
+            "options": "are considered to be better than New York’s rail system.\nrecover more money in fares than they spend to operate.\nmust go into debt when expanding or undergoing maintenance.\noperate both rail and bus systems.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Hong Kong’s MTR system is also involved in",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: 'managing rail systems in other cities.' The last paragraph states: 'The urban rail corporation is now running Australia's Melbourne rail system, Sweden's Stockholm rail system, it has controlling interests in lines on the London Underground.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "constructing housing and office premises.",
+                    "is_correct": false,
+                    "feedback": "The last paragraph mentions managing Melbourne and Stockholm. A – There is no mention of building houses. B says that the MTR will ‘design and run’, but not build. D mentions Tokyo, but the MTR is not connected."
+                },
+                {
+                    "text": "building light rail systems in mainland China.",
+                    "is_correct": false,
+                    "feedback": "The last paragraph mentions managing Melbourne and Stockholm. A – There is no mention of building houses. B says that the MTR will ‘design and run’, but not build. D mentions Tokyo, but the MTR is not connected."
+                },
+                {
+                    "text": "managing rail systems in other cities.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the MTR 'is now running Australia's Melbourne rail system, Sweden's Stockholm rail system, it has controlling interests in lines on the London Underground.'"
+                },
+                {
+                    "text": "designing extensions for Tokyo’s rail system.",
+                    "is_correct": false,
+                    "feedback": "The last paragraph mentions managing Melbourne and Stockholm. A – There is no mention of building houses. B says that the MTR will ‘design and run’, but not build. D mentions Tokyo, but the MTR is not connected."
+                }
+            ],
+            "options": "constructing housing and office premises.\nbuilding light rail systems in mainland China.\nmanaging rail systems in other cities.\ndesigning extensions for Tokyo’s rail system.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 4 – 8\r\n\r\nDo the following statements agree with the information given in Reading Passage 1?\r\n\r\nIn boxes 4 – 8 choose\r\n\r\nTRUE if the statement agrees with the information\r\nFALSE if the statement contradicts the information\r\nNOT GIVEN if there is no information on this in the passage",
+            "question": "Because of Hong Kong’s growth, plans were developed to introduce a rapid-transit rail system.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states: 'In the 1960s, the then-Hong Kong government commissioned a study on finding solutions to the worrying road congestion which accompanied Hong Kong's growing economic status.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'In the 1960s, the then-Hong Kong government commissioned a study on finding solutions to the worrying road congestion which accompanied Hong Kong's growing economic status.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states that the government commissioned a study due to Hong Kong's growing economic status, so the statement is TRUE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information in paragraph 3, stating the government commissioned a study due to road congestion accompanying Hong Kong's growth."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Initial reaction to the new rail lines was slow.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states: 'The system was an instant success, and trains were immediately upgraded to six carriages to accommodate the increased passenger numbers.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'The system was an instant success,' which contradicts a slow initial reaction."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'The system was an instant success, and trains were immediately upgraded to six carriages to accommodate the increased passenger numbers.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide information about the initial reaction, describing it as 'an instant success.'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Future growth was anticipated, with strategies outlined in the original proposal.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage mentions: 'the plans for extension, which had been drawn up along with the original proposals, were soon actioned with further construction undertaken.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions: 'the plans for extension, which had been drawn up along with the original proposals, were soon actioned with further construction undertaken.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states that extension plans 'had been drawn up along with the original proposals,' indicating future growth was anticipated."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information, stating that plans for extension were drawn up along with the original proposals."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The tunnels connecting Kowloon and Hong Kong were designed to carry both rail and vehicle traffic.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions tunnels connecting mainland Kowloon with Hong Kong Island but does not specify whether they were designed for both rail and vehicle traffic.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions tunnels connecting Kowloon with Hong Kong Island but does not specify whether they were designed for both rail and vehicle traffic."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does not contradict this statement; it simply does not provide information about whether the tunnels were designed for both rail and vehicle traffic."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions tunnels connecting mainland Kowloon with Hong Kong Island but does not specify whether they were designed for both rail and vehicle traffic."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The new airport was reliant on new rail links being developed.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states: 'With the planned move of Hong Kong's International airport... it was recognized that mass transit was necessary for the movement of people to make the airport viable.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'With the planned move of Hong Kong's International airport... it was recognized that mass transit was necessary for the movement of people to make the airport viable.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states that mass transit was 'necessary for the movement of people to make the airport viable,' indicating the airport was reliant on rail links."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information, stating that mass transit was recognized as necessary to make the airport viable."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 9 – 13\r\n\r\nComplete each of the following statements (Questions 9 – 13) using words from the box.\r\n\r\nWrite the appropriate letter A – H in boxes 9 – 13 on your answer sheet.",
+            "question": "The success of the MTR is due mainly to…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is E: 'new business concepts.' Paragraph 4 states: 'The MTR's success has been carefully built on a series of successful business innovations.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_l",
+            "mc_options": [
+                {
+                    "text": "A: key targets",
+                    "is_correct": false,
+                    "feedback": "Para 4 The first sentence."
+                },
+                {
+                    "text": "B: set goals",
+                    "is_correct": false,
+                    "feedback": "Para 4 The first sentence."
+                },
+                {
+                    "text": "C: artistic endeavours",
+                    "is_correct": false,
+                    "feedback": "Para 4 The first sentence."
+                },
+                {
+                    "text": "D: international systems",
+                    "is_correct": false,
+                    "feedback": "Para 4 The first sentence."
+                },
+                {
+                    "text": "E: new business concepts",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph 4 states the MTR's success has been built on 'successful business innovations,' which are new business concepts."
+                },
+                {
+                    "text": "F: the local economic environment",
+                    "is_correct": false,
+                    "feedback": "Para 4 The first sentence."
+                },
+                {
+                    "text": "G: destinations",
+                    "is_correct": false,
+                    "feedback": "Para 4 The first sentence."
+                },
+                {
+                    "text": "H: requirements and goals",
+                    "is_correct": false,
+                    "feedback": "Para 4 The first sentence."
+                }
+            ],
+            "options": "A: key targets\nB: set goals\nC: artistic endeavours\nD: international systems\nE: new business concepts\nF: the local economic environment\nG: destinations\nH: requirements and goals",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Transit times are important, so the MTR can be fined if it does not reach…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: 'set goals.' The passage states: 'this concept is taken so seriously that the corporation is penalized if it fails to meet pre-determined targets.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [
+                {
+                    "text": "A: key targets",
+                    "is_correct": false,
+                    "feedback": "Para 4 ‘…if it fails to meet pre-determined targets.’"
+                },
+                {
+                    "text": "B: set goals",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions the MTR 'is penalized if it fails to meet pre-determined targets,' which are set goals."
+                },
+                {
+                    "text": "C: artistic endeavours",
+                    "is_correct": false,
+                    "feedback": "Para 4 ‘…if it fails to meet pre-determined targets.’"
+                },
+                {
+                    "text": "D: international systems",
+                    "is_correct": false,
+                    "feedback": "Para 4 ‘…if it fails to meet pre-determined targets.’"
+                },
+                {
+                    "text": "E: new business concepts",
+                    "is_correct": false,
+                    "feedback": "Para 4 ‘…if it fails to meet pre-determined targets.’"
+                },
+                {
+                    "text": "F: the local economic environment",
+                    "is_correct": false,
+                    "feedback": "Para 4 ‘…if it fails to meet pre-determined targets.’"
+                },
+                {
+                    "text": "G: destinations",
+                    "is_correct": false,
+                    "feedback": "Para 4 ‘…if it fails to meet pre-determined targets.’"
+                },
+                {
+                    "text": "H: requirements and goals",
+                    "is_correct": false,
+                    "feedback": "Para 4 ‘…if it fails to meet pre-determined targets.’"
+                }
+            ],
+            "options": "A: key targets\nB: set goals\nC: artistic endeavours\nD: international systems\nE: new business concepts\nF: the local economic environment\nG: destinations\nH: requirements and goals",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "‘Value Capture’ means that the MTR recognizes that it must work in conjunction with…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is F: 'the local economic environment.' Paragraph 5 states: 'The MTR has recognized that it is part of an urban environment, with its own unique dynamic window, its requirements, opportunities and growth possibilities.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [
+                {
+                    "text": "A: key targets",
+                    "is_correct": false,
+                    "feedback": "Para 5 ‘The MTR… is part of an urban environment ‘ and the following sentences."
+                },
+                {
+                    "text": "B: set goals",
+                    "is_correct": false,
+                    "feedback": "Para 5 ‘The MTR… is part of an urban environment ‘ and the following sentences."
+                },
+                {
+                    "text": "C: artistic endeavours",
+                    "is_correct": false,
+                    "feedback": "Para 5 ‘The MTR… is part of an urban environment ‘ and the following sentences."
+                },
+                {
+                    "text": "D: international systems",
+                    "is_correct": false,
+                    "feedback": "Para 5 ‘The MTR… is part of an urban environment ‘ and the following sentences."
+                },
+                {
+                    "text": "E: new business concepts",
+                    "is_correct": false,
+                    "feedback": "Para 5 ‘The MTR… is part of an urban environment ‘ and the following sentences."
+                },
+                {
+                    "text": "F: the local economic environment",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage explains that 'Value Capture' means the MTR recognizes 'it is part of an urban environment,' which is the local economic environment."
+                },
+                {
+                    "text": "G: destinations",
+                    "is_correct": false,
+                    "feedback": "Para 5 ‘The MTR… is part of an urban environment ‘ and the following sentences."
+                },
+                {
+                    "text": "H: requirements and goals",
+                    "is_correct": false,
+                    "feedback": "Para 5 ‘The MTR… is part of an urban environment ‘ and the following sentences."
+                }
+            ],
+            "options": "A: key targets\nB: set goals\nC: artistic endeavours\nD: international systems\nE: new business concepts\nF: the local economic environment\nG: destinations\nH: requirements and goals",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Like other urban rail systems, Hong Kong realizes that it is important to understand their travelers …",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is G: 'destinations.' The passage states: 'the MTR has a direct interest in not only controlling the means of how passengers travel, but also recognizing the destinations to which they travel.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [
+                {
+                    "text": "A: key targets",
+                    "is_correct": false,
+                    "feedback": "Para 5 ‘…not only controlling the means of how passengers travel, but also recognizing the destinations."
+                },
+                {
+                    "text": "B: set goals",
+                    "is_correct": false,
+                    "feedback": "Para 5 ‘…not only controlling the means of how passengers travel, but also recognizing the destinations."
+                },
+                {
+                    "text": "C: artistic endeavours",
+                    "is_correct": false,
+                    "feedback": "Para 5 ‘…not only controlling the means of how passengers travel, but also recognizing the destinations."
+                },
+                {
+                    "text": "D: international systems",
+                    "is_correct": false,
+                    "feedback": "Para 5 ‘…not only controlling the means of how passengers travel, but also recognizing the destinations."
+                },
+                {
+                    "text": "E: new business concepts",
+                    "is_correct": false,
+                    "feedback": "Para 5 ‘…not only controlling the means of how passengers travel, but also recognizing the destinations."
+                },
+                {
+                    "text": "F: the local economic environment",
+                    "is_correct": false,
+                    "feedback": "Para 5 ‘…not only controlling the means of how passengers travel, but also recognizing the destinations."
+                },
+                {
+                    "text": "G: destinations",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions the MTR recognizes both 'how passengers travel' and 'the destinations to which they travel.'"
+                },
+                {
+                    "text": "H: requirements and goals",
+                    "is_correct": false,
+                    "feedback": "Para 5 ‘…not only controlling the means of how passengers travel, but also recognizing the destinations."
+                }
+            ],
+            "options": "A: key targets\nB: set goals\nC: artistic endeavours\nD: international systems\nE: new business concepts\nF: the local economic environment\nG: destinations\nH: requirements and goals",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "One feature of the subway system to attract passengers is to assist local…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: 'artistic endeavours.' Paragraph 4 mentions: 'the promotion of Art projects, including live performances and art exhibitions, by students and emerging and established artists.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [
+                {
+                    "text": "A: key targets",
+                    "is_correct": false,
+                    "feedback": " Para 4 ‘…including live performances… by students and emerging and established artists…’"
+                },
+                {
+                    "text": "B: set goals",
+                    "is_correct": false,
+                    "feedback": " Para 4 ‘…including live performances… by students and emerging and established artists…’"
+                },
+                {
+                    "text": "C: artistic endeavours",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions 'the promotion of Art projects, including live performances and art exhibitions, by students and emerging and established artists.'"
+                },
+                {
+                    "text": "D: international systems",
+                    "is_correct": false,
+                    "feedback": " Para 4 ‘…including live performances… by students and emerging and established artists…’"
+                },
+                {
+                    "text": "E: new business concepts",
+                    "is_correct": false,
+                    "feedback": " Para 4 ‘…including live performances… by students and emerging and established artists…’"
+                },
+                {
+                    "text": "F: the local economic environment",
+                    "is_correct": false,
+                    "feedback": " Para 4 ‘…including live performances… by students and emerging and established artists…’"
+                },
+                {
+                    "text": "G: destinations",
+                    "is_correct": false,
+                    "feedback": " Para 4 ‘…including live performances… by students and emerging and established artists…’"
+                },
+                {
+                    "text": "H: requirements and goals",
+                    "is_correct": false,
+                    "feedback": " Para 4 ‘…including live performances… by students and emerging and established artists…’"
+                }
+            ],
+            "options": "A: key targets\nB: set goals\nC: artistic endeavours\nD: international systems\nE: new business concepts\nF: the local economic environment\nG: destinations\nH: requirements and goals",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "<strong>Reading Passage 2\r\n</strong>\r\n\r\n<em>You should spend about 20 minutes on <strong>Questions 14 –26</strong> which are based on Reading Passage 2.</em>\r\n\r\n<strong><em>Questions 14 – 20</em></strong>\r\n\r\nReading Passage 2 has seven sections <strong>A – G.</strong>\r\n\r\n<em>Choose the most suitable headings for sections A – G from the list of headings below.</em>\r\n\r\n<em>Write the appropriate numbers <strong>i – ix</strong></em> <em>on your answer sheet.</em>",
+            "question": "<strong>Paragraph A</strong>",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is II: 'Wide-ranging facts about avalanches.' Paragraph A discusses speeds, causes, and occurrence of avalanches - providing a wide range of facts.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. The components which make up an avalanche.",
+                    "is_correct": false,
+                    "feedback": "II. ‘…a wide range of factors’, and the paragraph discusses many features of avalanches"
+                },
+                {
+                    "text": "II. Wide-ranging facts about avalanches.",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph A covers many aspects: speeds, gravity, causes, and worldwide occurrence - all wide-ranging facts about avalanches."
+                },
+                {
+                    "text": "III. Different systems at work to try to reduce risk and minimize loss.",
+                    "is_correct": false,
+                    "feedback": "II. ‘…a wide range of factors’, and the paragraph discusses many features of avalanches"
+                },
+                {
+                    "text": "IV. The worse avalanches in history.",
+                    "is_correct": false,
+                    "feedback": "II. ‘…a wide range of factors’, and the paragraph discusses many features of avalanches"
+                },
+                {
+                    "text": "V. Governments try to categorize different kinds of avalanches.",
+                    "is_correct": false,
+                    "feedback": "II. ‘…a wide range of factors’, and the paragraph discusses many features of avalanches"
+                },
+                {
+                    "text": "VI. More factors that lead to avalanches.",
+                    "is_correct": false,
+                    "feedback": "II. ‘…a wide range of factors’, and the paragraph discusses many features of avalanches"
+                },
+                {
+                    "text": "VII. Forecasting avalanches is not an exact science, and does not always prevent loss of human life.",
+                    "is_correct": false,
+                    "feedback": "II. ‘…a wide range of factors’, and the paragraph discusses many features of avalanches"
+                },
+                {
+                    "text": "VIII. What are governments doing to prevent the loss of human life?",
+                    "is_correct": false,
+                    "feedback": "II. ‘…a wide range of factors’, and the paragraph discusses many features of avalanches"
+                },
+                {
+                    "text": "IX. What constitutes the different kinds of avalanches?",
+                    "is_correct": false,
+                    "feedback": "II. ‘…a wide range of factors’, and the paragraph discusses many features of avalanches"
+                }
+            ],
+            "options": "I. The components which make up an avalanche.\nII. Wide-ranging facts about avalanches.\nIII. Different systems at work to try to reduce risk and minimize loss.\nIV. The worse avalanches in history.\nV. Governments try to categorize different kinds of avalanches.\nVI. More factors that lead to avalanches.\nVII. Forecasting avalanches is not an exact science, and does not always prevent loss of human life.\nVIII. What are governments doing to prevent the loss of human life?\nIX. What constitutes the different kinds of avalanches?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph B",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is I: 'The components which make up an avalanche.' Paragraph B describes the three main parts: the starting zone, the avalanche track, and the runout zone.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. The components which make up an avalanche.",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B explicitly states 'An avalanche has three main parts' and describes each component in detail."
+                },
+                {
+                    "text": "II. Wide-ranging facts about avalanches.",
+                    "is_correct": false,
+                    "feedback": "I ‘An avalanche has three main parts…’"
+                },
+                {
+                    "text": "III. Different systems at work to try to reduce risk and minimize loss.",
+                    "is_correct": false,
+                    "feedback": "I ‘An avalanche has three main parts…’"
+                },
+                {
+                    "text": "IV. The worse avalanches in history.",
+                    "is_correct": false,
+                    "feedback": "I ‘An avalanche has three main parts…’"
+                },
+                {
+                    "text": "V. Governments try to categorize different kinds of avalanches.",
+                    "is_correct": false,
+                    "feedback": "I ‘An avalanche has three main parts…’"
+                },
+                {
+                    "text": "VI. More factors that lead to avalanches.",
+                    "is_correct": false,
+                    "feedback": "I ‘An avalanche has three main parts…’"
+                },
+                {
+                    "text": "VII. Forecasting avalanches is not an exact science, and does not always prevent loss of human life.",
+                    "is_correct": false,
+                    "feedback": "I ‘An avalanche has three main parts…’"
+                },
+                {
+                    "text": "VIII. What are governments doing to prevent the loss of human life?",
+                    "is_correct": false,
+                    "feedback": "I ‘An avalanche has three main parts…’"
+                },
+                {
+                    "text": "IX. What constitutes the different kinds of avalanches?",
+                    "is_correct": false,
+                    "feedback": "I ‘An avalanche has three main parts…’"
+                }
+            ],
+            "options": "I. The components which make up an avalanche.\nII. Wide-ranging facts about avalanches.\nIII. Different systems at work to try to reduce risk and minimize loss.\nIV. The worse avalanches in history.\nV. Governments try to categorize different kinds of avalanches.\nVI. More factors that lead to avalanches.\nVII. Forecasting avalanches is not an exact science, and does not always prevent loss of human life.\nVIII. What are governments doing to prevent the loss of human life?\nIX. What constitutes the different kinds of avalanches?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph C",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is IX: 'What constitutes the different kinds of avalanches?' Paragraph C describes three main types: wet snow avalanches, dry snow avalanches, and slab avalanches.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. The components which make up an avalanche.",
+                    "is_correct": false,
+                    "feedback": "IX. ‘There are three main types of avalanches…’ and the paragraph describes the avalanches."
+                },
+                {
+                    "text": "II. Wide-ranging facts about avalanches.",
+                    "is_correct": false,
+                    "feedback": "IX. ‘There are three main types of avalanches…’ and the paragraph describes the avalanches."
+                },
+                {
+                    "text": "III. Different systems at work to try to reduce risk and minimize loss.",
+                    "is_correct": false,
+                    "feedback": "IX. ‘There are three main types of avalanches…’ and the paragraph describes the avalanches."
+                },
+                {
+                    "text": "IV. The worse avalanches in history.",
+                    "is_correct": false,
+                    "feedback": "IX. ‘There are three main types of avalanches…’ and the paragraph describes the avalanches."
+                },
+                {
+                    "text": "V. Governments try to categorize different kinds of avalanches.",
+                    "is_correct": false,
+                    "feedback": "IX. ‘There are three main types of avalanches…’ and the paragraph describes the avalanches."
+                },
+                {
+                    "text": "VI. More factors that lead to avalanches.",
+                    "is_correct": false,
+                    "feedback": "IX. ‘There are three main types of avalanches…’ and the paragraph describes the avalanches."
+                },
+                {
+                    "text": "VII. Forecasting avalanches is not an exact science, and does not always prevent loss of human life.",
+                    "is_correct": false,
+                    "feedback": "IX. ‘There are three main types of avalanches…’ and the paragraph describes the avalanches."
+                },
+                {
+                    "text": "VIII. What are governments doing to prevent the loss of human life?",
+                    "is_correct": false,
+                    "feedback": "IX. ‘There are three main types of avalanches…’ and the paragraph describes the avalanches."
+                },
+                {
+                    "text": "IX. What constitutes the different kinds of avalanches?",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states 'There are three main types of avalanches' and describes wet snow, dry snow, and slab avalanches in detail."
+                }
+            ],
+            "options": "I. The components which make up an avalanche.\nII. Wide-ranging facts about avalanches.\nIII. Different systems at work to try to reduce risk and minimize loss.\nIV. The worse avalanches in history.\nV. Governments try to categorize different kinds of avalanches.\nVI. More factors that lead to avalanches.\nVII. Forecasting avalanches is not an exact science, and does not always prevent loss of human life.\nVIII. What are governments doing to prevent the loss of human life?\nIX. What constitutes the different kinds of avalanches?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph D",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is VI: 'More factors that lead to avalanches.' Paragraph D discusses natural conditions like wind, weather, snow composition, storms, sunlight, and moisture.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. The components which make up an avalanche.",
+                    "is_correct": false,
+                    "feedback": "VI. The first sentence states ‘Other factors…’"
+                },
+                {
+                    "text": "II. Wide-ranging facts about avalanches.",
+                    "is_correct": false,
+                    "feedback": "VI. The first sentence states ‘Other factors…’"
+                },
+                {
+                    "text": "III. Different systems at work to try to reduce risk and minimize loss.",
+                    "is_correct": false,
+                    "feedback": "VI. The first sentence states ‘Other factors…’"
+                },
+                {
+                    "text": "IV. The worse avalanches in history.",
+                    "is_correct": false,
+                    "feedback": "VI. The first sentence states ‘Other factors…’"
+                },
+                {
+                    "text": "V. Governments try to categorize different kinds of avalanches.",
+                    "is_correct": false,
+                    "feedback": "VI. The first sentence states ‘Other factors…’"
+                },
+                {
+                    "text": "VI. More factors that lead to avalanches.",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D begins with 'Other factors that can cause avalanches include' and lists wind, weather, composition, storms, sunlight, and moisture."
+                },
+                {
+                    "text": "VII. Forecasting avalanches is not an exact science, and does not always prevent loss of human life.",
+                    "is_correct": false,
+                    "feedback": "VI. The first sentence states ‘Other factors…’"
+                },
+                {
+                    "text": "VIII. What are governments doing to prevent the loss of human life?",
+                    "is_correct": false,
+                    "feedback": "VI. The first sentence states ‘Other factors…’"
+                },
+                {
+                    "text": "IX. What constitutes the different kinds of avalanches?",
+                    "is_correct": false,
+                    "feedback": "VI. The first sentence states ‘Other factors…’"
+                }
+            ],
+            "options": "I. The components which make up an avalanche.\nII. Wide-ranging facts about avalanches.\nIII. Different systems at work to try to reduce risk and minimize loss.\nIV. The worse avalanches in history.\nV. Governments try to categorize different kinds of avalanches.\nVI. More factors that lead to avalanches.\nVII. Forecasting avalanches is not an exact science, and does not always prevent loss of human life.\nVIII. What are governments doing to prevent the loss of human life?\nIX. What constitutes the different kinds of avalanches?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph E",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is III: 'Different systems at work to try to reduce risk and minimize loss.' Paragraph E describes prevention methods including explosives, protective fences, avalanche dams, and snow shelters.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. The components which make up an avalanche.",
+                    "is_correct": false,
+                    "feedback": "III. The first sentence mentions ways to prevent, predict or control… avalanches."
+                },
+                {
+                    "text": "II. Wide-ranging facts about avalanches.",
+                    "is_correct": false,
+                    "feedback": "III. The first sentence mentions ways to prevent, predict or control… avalanches."
+                },
+                {
+                    "text": "III. Different systems at work to try to reduce risk and minimize loss.",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E discusses 'initiatives being introduced' including explosives, protective fences, dams, and shelters to reduce risk."
+                },
+                {
+                    "text": "IV. The worse avalanches in history.",
+                    "is_correct": false,
+                    "feedback": "III. The first sentence mentions ways to prevent, predict or control… avalanches."
+                },
+                {
+                    "text": "V. Governments try to categorize different kinds of avalanches.",
+                    "is_correct": false,
+                    "feedback": "III. The first sentence mentions ways to prevent, predict or control… avalanches."
+                },
+                {
+                    "text": "VI. More factors that lead to avalanches.",
+                    "is_correct": false,
+                    "feedback": "III. The first sentence mentions ways to prevent, predict or control… avalanches."
+                },
+                {
+                    "text": "VII. Forecasting avalanches is not an exact science, and does not always prevent loss of human life.",
+                    "is_correct": false,
+                    "feedback": "III. The first sentence mentions ways to prevent, predict or control… avalanches."
+                },
+                {
+                    "text": "VIII. What are governments doing to prevent the loss of human life?",
+                    "is_correct": false,
+                    "feedback": "III. The first sentence mentions ways to prevent, predict or control… avalanches."
+                },
+                {
+                    "text": "IX. What constitutes the different kinds of avalanches?",
+                    "is_correct": false,
+                    "feedback": "III. The first sentence mentions ways to prevent, predict or control… avalanches."
+                }
+            ],
+            "options": "I. The components which make up an avalanche.\nII. Wide-ranging facts about avalanches.\nIII. Different systems at work to try to reduce risk and minimize loss.\nIV. The worse avalanches in history.\nV. Governments try to categorize different kinds of avalanches.\nVI. More factors that lead to avalanches.\nVII. Forecasting avalanches is not an exact science, and does not always prevent loss of human life.\nVIII. What are governments doing to prevent the loss of human life?\nIX. What constitutes the different kinds of avalanches?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph F",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is VII: 'Forecasting avalanches is not an exact science, and does not always prevent loss of human life.' The paragraph states 'Avalanches cannot accurately be predicted' and describes historical disasters.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. The components which make up an avalanche.",
+                    "is_correct": false,
+                    "feedback": "VII. The first sentence mentions ‘predicted’ and discusses ‘forecasts’."
+                },
+                {
+                    "text": "II. Wide-ranging facts about avalanches.",
+                    "is_correct": false,
+                    "feedback": "VII. The first sentence mentions ‘predicted’ and discusses ‘forecasts’."
+                },
+                {
+                    "text": "III. Different systems at work to try to reduce risk and minimize loss.",
+                    "is_correct": false,
+                    "feedback": "VII. The first sentence mentions ‘predicted’ and discusses ‘forecasts’."
+                },
+                {
+                    "text": "IV. The worse avalanches in history.",
+                    "is_correct": false,
+                    "feedback": "VII. The first sentence mentions ‘predicted’ and discusses ‘forecasts’."
+                },
+                {
+                    "text": "V. Governments try to categorize different kinds of avalanches.",
+                    "is_correct": false,
+                    "feedback": "VII. The first sentence mentions ‘predicted’ and discusses ‘forecasts’."
+                },
+                {
+                    "text": "VI. More factors that lead to avalanches.",
+                    "is_correct": false,
+                    "feedback": "VII. The first sentence mentions ‘predicted’ and discusses ‘forecasts’."
+                },
+                {
+                    "text": "VII. Forecasting avalanches is not an exact science, and does not always prevent loss of human life.",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F states 'Avalanches cannot accurately be predicted' and describes disasters including WWI deaths and ski resort tragedies."
+                },
+                {
+                    "text": "VIII. What are governments doing to prevent the loss of human life?",
+                    "is_correct": false,
+                    "feedback": "VII. The first sentence mentions ‘predicted’ and discusses ‘forecasts’."
+                },
+                {
+                    "text": "IX. What constitutes the different kinds of avalanches?",
+                    "is_correct": false,
+                    "feedback": "VII. The first sentence mentions ‘predicted’ and discusses ‘forecasts’."
+                }
+            ],
+            "options": "I. The components which make up an avalanche.\nII. Wide-ranging facts about avalanches.\nIII. Different systems at work to try to reduce risk and minimize loss.\nIV. The worse avalanches in history.\nV. Governments try to categorize different kinds of avalanches.\nVI. More factors that lead to avalanches.\nVII. Forecasting avalanches is not an exact science, and does not always prevent loss of human life.\nVIII. What are governments doing to prevent the loss of human life?\nIX. What constitutes the different kinds of avalanches?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph G",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is V: 'Governments try to categorize different kinds of avalanches.' Paragraph G discusses 'various classification systems' used by different countries.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. The components which make up an avalanche.",
+                    "is_correct": false,
+                    "feedback": "V. This paragraph discusses different countries (governments) and categorizing avalanches."
+                },
+                {
+                    "text": "II. Wide-ranging facts about avalanches.",
+                    "is_correct": false,
+                    "feedback": "V. This paragraph discusses different countries (governments) and categorizing avalanches."
+                },
+                {
+                    "text": "III. Different systems at work to try to reduce risk and minimize loss.",
+                    "is_correct": false,
+                    "feedback": "V. This paragraph discusses different countries (governments) and categorizing avalanches."
+                },
+                {
+                    "text": "IV. The worse avalanches in history.",
+                    "is_correct": false,
+                    "feedback": "V. This paragraph discusses different countries (governments) and categorizing avalanches."
+                },
+                {
+                    "text": "V. Governments try to categorize different kinds of avalanches.",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G describes 'various classification systems for avalanches' used by Canada, US, Europe, and other alpine nations."
+                },
+                {
+                    "text": "VI. More factors that lead to avalanches.",
+                    "is_correct": false,
+                    "feedback": "V. This paragraph discusses different countries (governments) and categorizing avalanches."
+                },
+                {
+                    "text": "VII. Forecasting avalanches is not an exact science, and does not always prevent loss of human life.",
+                    "is_correct": false,
+                    "feedback": "V. This paragraph discusses different countries (governments) and categorizing avalanches."
+                },
+                {
+                    "text": "VIII. What are governments doing to prevent the loss of human life?",
+                    "is_correct": false,
+                    "feedback": "V. This paragraph discusses different countries (governments) and categorizing avalanches."
+                },
+                {
+                    "text": "IX. What constitutes the different kinds of avalanches?",
+                    "is_correct": false,
+                    "feedback": "V. This paragraph discusses different countries (governments) and categorizing avalanches."
+                }
+            ],
+            "options": "I. The components which make up an avalanche.\nII. Wide-ranging facts about avalanches.\nIII. Different systems at work to try to reduce risk and minimize loss.\nIV. The worse avalanches in history.\nV. Governments try to categorize different kinds of avalanches.\nVI. More factors that lead to avalanches.\nVII. Forecasting avalanches is not an exact science, and does not always prevent loss of human life.\nVIII. What are governments doing to prevent the loss of human life?\nIX. What constitutes the different kinds of avalanches?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 21 – 24\r\n\r\nClassify the following statements as characteristics of\r\n\r\nA   wet snow avalanches\r\nB   dry snow avalanches\r\nC   slab avalanches\r\n\r\nWrite the appropriate letters A – C in boxes 21 – 24 on your answer sheet.\r\n\r\nNB  You may use any letter more than once.",
+            "question": "Generally, there are two main parts to this type of avalanche.\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Slab avalanches. Paragraph C says 'A 'crown fracture' appears at the top and 'flank fractures' are created vertically' (hence '2 parts').",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A: Wet snow avalanches",
+                    "is_correct": false,
+                    "feedback": "The correct answer is C: Slab avalanches.  Para C says ‘A ‘crown fracture’ appears at the top and ‘flank fractures’ are created vertically’ (hence ‘2 parts’)"
+                },
+                {
+                    "text": "B: Dry snow avalanches",
+                    "is_correct": false,
+                    "feedback": "The correct answer is C: Slab avalanches.  Para C says ‘A ‘crown fracture’ appears at the top and ‘flank fractures’ are created vertically’ (hence ‘2 parts’)"
+                },
+                {
+                    "text": "C: Slab avalanches",
+                    "is_correct": true,
+                    "feedback": "Correct! Para C says ‘A ‘crown fracture’ appears at the top and ‘flank fractures’ are created vertically’ (hence ‘2 parts’)"
+                }
+            ],
+            "options": "A: Wet snow avalanches\nB: Dry snow avalanches\nC: Slab avalanches",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "This avalanche is common during one particular time of the year.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A: Wet snow avalanches. Paragraph C states they 'usually occurring naturally in the spring season because of melting snow from the increasing temperatures.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A: Wet snow avalanches",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C says ‘Wet snow avalanches… usually occurring… in the spring season…’"
+                },
+                {
+                    "text": "B: Dry snow avalanches",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A: Wet snow avalanches.  Paragraph C says ‘Wet snow avalanches… usually occurring… in the spring season…’"
+                },
+                {
+                    "text": "C: Slab avalanches",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A: Wet snow avalanches.  Paragraph C says ‘Wet snow avalanches… usually occurring… in the spring season…’"
+                }
+            ],
+            "options": "A: Wet snow avalanches\nB: Dry snow avalanches\nC: Slab avalanches",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Specific lines demarcating the actual avalanche are formed when it is created.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Slab avalanches. Paragraph C mentions 'these types of avalanches often leave 'walls' carved in the snow where the avalanche has broken away.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A: Wet snow avalanches",
+                    "is_correct": false,
+                    "feedback": "The correct answer is C: Slab avalanches.  Paragraph C states that ‘these types of avalanches often leave ‘walls’ carved in the snow where the avalanche has broken away.’"
+                },
+                {
+                    "text": "B: Dry snow avalanches",
+                    "is_correct": false,
+                    "feedback": "The correct answer is C: Slab avalanches.  Paragraph C states that ‘these types of avalanches often leave ‘walls’ carved in the snow where the avalanche has broken away.’"
+                },
+                {
+                    "text": "C: Slab avalanches",
+                    "is_correct": true,
+                    "feedback": "Correct!  Paragraph C states that ‘these types of avalanches often leave ‘walls’ carved in the snow where the avalanche has broken away.’"
+                }
+            ],
+            "options": "A: Wet snow avalanches\nB: Dry snow avalanches\nC: Slab avalanches",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "One key point, moisture, is necessary to generate the force to cause the avalanche to break away and begin to move.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A: Wet snow avalanches. Paragraph C states 'Water saturation is a key point, due to the melting' for wet snow avalanches.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A: Wet snow avalanches",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C says ‘Water saturation is a key point…’"
+                },
+                {
+                    "text": "B: Dry snow avalanches",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A: Wet snow avalanches. Paragraph C says ‘Water saturation is a key point…’"
+                },
+                {
+                    "text": "C: Slab avalanches",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A: Wet snow avalanches. Paragraph C says ‘Water saturation is a key point…’"
+                }
+            ],
+            "options": "A: Wet snow avalanches\nB: Dry snow avalanches\nC: Slab avalanches",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 25 – 26\r\n\r\nChoose the appropriate letters A – D to complete the sentence.",
+            "question": "25. Measures to control avalanches include...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A: 'large weapons being fired in mountainous areas to create huge sound waves to loosen the snow.' Paragraph E states: 'Explosives are regularly used in mountainous areas, armies being employed to fire high-decibal cannons which trigger shock waves to loosen snow packs.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "large weapons being fired in mountainous areas to create huge sound waves to loosen the snow.",
+                    "is_correct": true,
+                    "feedback": "Correct! A Para E mentions ‘control’ and A says ‘…cannons which trigger shock waves…’ B mentions helicopters, but not to blow off snow… C – there is no mention of teams of men. D says there are avalanche dams, but that they ‘re-direct’ snow, not stop it."
+                },
+                {
+                    "text": "helicopters being used to blow the snow off mountainsides.",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A.  Paragraph E mentions ‘control’ and A says ‘…cannons which trigger shock waves…’. The reading passage does talk about helicopters, but not to blow off snow."
+                },
+                {
+                    "text": "teams of men manually moving densely-packed snow away from inhabited areas.",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A.  Paragraph E mentions ‘control’ and A says ‘…cannons which trigger shock waves…’.  There is no mention of teams of men in the reading passage."
+                },
+                {
+                    "text": "avalanche dams stopping falling snow.",
+                    "is_correct": false,
+                    "feedback": "The correct answer is A.  Paragraph E mentions ‘control’ and A says ‘…cannons which trigger shock waves…’.  Although there are avalanche dams, they ‘re-direct’ snow, not stop it. The IELTS test will often set little traps like this, so make sure that all the important words match."
+                }
+            ],
+            "options": "large weapons being fired in mountainous areas to create huge sound waves to loosen the snow.\nhelicopters being used to blow the snow off mountainsides.\nteams of men manually moving densely-packed snow away from inhabited areas.\navalanche dams stopping falling snow.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The classification systems for avalanches...",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A: 'vary in different areas of the world.' Paragraph G states: 'There are various classification systems for avalanches, but none that is universally recognized. Canada and the United States use one system... while Europe employs a different rating system... and other alpine nations utilize varying systems.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "in Canada and the United States differ according to the mountain regions.",
+                    "is_correct": false,
+                    "feedback": "The correct answer is C Paragraph G talks about different classification systems in different countries. The text states that 'Canada and the US use one system' so this is not the correct answer."
+                },
+                {
+                    "text": "are used to determine the possibility of an avalanche.",
+                    "is_correct": false,
+                    "feedback": "The correct answer is C Paragraph G talks about different classification systems in different countries. There is no direct mention of possible forecasting of avalanches, just the risks."
+                },
+                {
+                    "text": "vary in different areas of the world.",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G talks about classification systems in 'different countries, such as Canada and the US use one system, Europe uses another', and ‘other alpine nations utilize varying systems…’ "
+                },
+                {
+                    "text": "use the European criteria to classify avalanches.",
+                    "is_correct": false,
+                    "feedback": "The correct answer is C Paragraph G talks about different classification systems in different countries. The reading passage mentions that Europe uses different criteria."
+                }
+            ],
+            "options": "in Canada and the United States differ according to the mountain regions.\nare used to determine the possibility of an avalanche.\nvary in different areas of the world.\nuse the European criteria to classify avalanches.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 3\r\n\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.\r\n\r\nQuestions 27-33\r\n\r\nReading Passage 3 has ten paragraphs, A-J.\r\n\r\nWhich paragraph contains the following information?\r\n\r\nWrite the correct letter, A-J, in boxes 27-32 on our answer sheet.\r\n\r\nNB    You may use any letter more than once.",
+            "question": "Drone technology for use in farming",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph C. Paragraph C explicitly states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "Correct per the answer key. The primary reference is Paragraph C which explicitly mentions agricultural applications."
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'"
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+                },
+                {
+                    "text": "Paragraph H",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+                },
+                {
+                    "text": "Paragraph I",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+                },
+                {
+                    "text": "Paragraph J",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Potential drawbacks of non-military drones",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is  Paragraph I. Paragraph I explicitly discusses drawbacks including 'comparatively short flight times' and 'safety risks, in the potential for collisions across increasingly crowded airspace.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+                },
+                {
+                    "text": "Paragraph H",
+                    "is_correct": false,
+                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+                },
+                {
+                    "text": "Paragraph I",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph I discusses several drawbacks including 'comparatively short flight times,' 'safety risks,' and 'adverse effects on the natural environment.'"
+                },
+                {
+                    "text": "Paragraph J",
+                    "is_correct": false,
+                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The sale of housing",
+            "points": 1,
+            "no_answer_feedback": "The correct answers are Paragraph E and Paragraph I (as per the answer key). Paragraph E explicitly mentions drones 'taking promotional photos and videos for commercial and residential properties on the market.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E explicitly mentions 'taking promotional photos and videos for commercial and residential properties on the market.'"
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+                },
+                {
+                    "text": "Paragraph H",
+                    "is_correct": false,
+                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+                },
+                {
+                    "text": "Paragraph I",
+                    "is_correct": false,
+                    "feedback": "The primary reference is Paragraph E which mentions 'taking promotional photos and videos for commercial and residential properties on the market.'"
+                },
+                {
+                    "text": "Paragraph J",
+                    "is_correct": false,
+                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The preservation of plants and animals",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph H. It states: 'scientists and researchers are turning to drones... to monitor, document and assess changes in the health, movement and distribution of flora and fauna' and mentions 'wildlife conservation efforts.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+                },
+                {
+                    "text": "Paragraph H",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph H discusses monitoring 'flora and fauna' and 'wildlife conservation efforts.'"
+                },
+                {
+                    "text": "Paragraph I",
+                    "is_correct": false,
+                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+                },
+                {
+                    "text": "Paragraph J",
+                    "is_correct": false,
+                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Using drones at night",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph F. It states: 'With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F mentions drones with infrared cameras 'can also carry out search and rescue missions after dark.'"
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+                },
+                {
+                    "text": "Paragraph H",
+                    "is_correct": false,
+                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+                },
+                {
+                    "text": "Paragraph I",
+                    "is_correct": false,
+                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+                },
+                {
+                    "text": "Paragraph J",
+                    "is_correct": false,
+                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Employment opportunities related to UAVs",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph C. It states: 'the economic value of the commercial drone market will... create as many as 150,000 new jobs by 2035.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C mentions the drone market will 'create as many as 150,000 new jobs by 2035.'"
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+                },
+                {
+                    "text": "Paragraph H",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+                },
+                {
+                    "text": "Paragraph I",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+                },
+                {
+                    "text": "Paragraph J",
+                    "is_correct": false,
+                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The use of drones in monitoring automobiles",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph G. It states: 'Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G mentions transport agencies use UAVs 'for monitoring traffic flow and reporting accidents and hazards.'"
+                },
+                {
+                    "text": "Paragraph H",
+                    "is_correct": false,
+                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+                },
+                {
+                    "text": "Paragraph I",
+                    "is_correct": false,
+                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+                },
+                {
+                    "text": "Paragraph J",
+                    "is_correct": false,
+                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 34-38\r\n\r\nDo the following statements agree with the information given in Reading Passage 3?\r\n\r\nIn boxes 38-40 on your answer sheet, write\r\n\r\nTRUE if the statement agrees with the information\r\nFALSE if the statement contradicts the information\r\nNOT GIVEN if there is no information on this",
+            "question": "Drones are often cheaper to use than manned aircraft.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. Paragraph A states drones 'are generally credited with being both more cost-effective to operate and maintain, as well as safer to use, than piloted aircraft.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph A states drones 'are generally credited with being both more cost-effective to operate and maintain, as well as safer to use, than piloted aircraft.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states drones are 'more cost-effective to operate and maintain' than piloted aircraft."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information in Paragraph A."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "In the future, the majority of private sector drones are likely to be used in farming.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. Paragraph C states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states agricultural applications will account for approximately 80 percent of commercial drone use."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information in Paragraph C."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Amazon is presently using drones to deliver items purchased online.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. Paragraph D states: 'Amazon Prime Air's drone-based delivery system for its customers' purchases is now operational, though it's still growing and faces regulatory considerations. Deliveries occur during daylight hours and in good weather conditions.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D states: 'Amazon Prime Air's drone-based delivery system for its customers' purchases is now operational, though it's still growing and faces regulatory considerations.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Amazon Prime Air's drone-based delivery system is now operational."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide information about Amazon's drone delivery system being operational in Paragraph D."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Drone technology is used to help rescue people lost at sea.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. Paragraph F states: 'Drone-mounted cameras enable unmanned aerial vehicles to follow pre-programmed search patterns when looking for missing persons... across a variety of otherwise inaccessible terrain types, including marine environments.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F states: 'Drone-mounted cameras enable unmanned aerial vehicles to follow pre-programmed search patterns when looking for missing persons... across a variety of otherwise inaccessible terrain types, including marine environments.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly states drones are used for search and rescue in marine environments (at sea)."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does provide this information in Paragraph F."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Drones contribute to air pollution.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. While Paragraph I mentions 'adverse effects drones may have on the natural environment, particularly as contributors to noise pollution,' air pollution is not mentioned.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Paragraph I mentions noise pollution, air pollution is not mentioned in the passage."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does not contradict this statement; it simply does not provide information about air pollution."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! While Paragraph I mentions 'adverse effects drones may have on the natural environment, particularly as contributors to noise pollution,' air pollution is not mentioned."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 39-40\r\n\r\nChoose TWO letters, A-E.",
+            "question": "Which TWO of the following are mentioned as being risks or drawbacks associated with drone technology?",
+            "points": 2,
+            "no_answer_feedback": "The correct answers are B: 'Duration of flights' and D: 'Mid-air collisions.' Paragraph I explicitly mentions 'comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes)' and 'safety risks, in the potential for collisions across increasingly crowded airspace.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A: The cost of fighting fires",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The cost of fighting fires is not mentioned as a drawback. The passage states fire departments use UAVs to 'reduce risks and costs.'"
+                },
+                {
+                    "text": "B: Duration of flights",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph I mentions 'comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes)' as a limitation."
+                },
+                {
+                    "text": "C: Criminal activity",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Criminal activity is not mentioned as a drawback; rather, drones are used to help detect criminal activity."
+                },
+                {
+                    "text": "D: Mid-air collisions",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph I mentions 'safety risks, in the potential for collisions across increasingly crowded airspace.'"
+                },
+                {
+                    "text": "E: The inevitable rise of drones",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The 'inexorable rise of drones' is described as a trend, not a specific risk or drawback."
+                }
+            ],
+            "options": "A: The cost of fighting fires\nB: Duration of flights\nC: Criminal activity\nD: Mid-air collisions\nE: The inevitable rise of drones",
+            "correct_answer_count": 2,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Passage 1",
+            "content": "<h4><strong>Travelling around the country with bus passes</strong></h4>\n<h5>Travel Rider pass</h5>\nThe Travel Rider pass is valid for one month from the day it is purchased and allows travel on any NorWest and Metro Link bus within the city. Photo identification is required to purchase a Travel Rider pass. Prices are £42 for adults, £30 for students and pensioners. Passes can be purchased from any of our branches. Please note that replacement passes can only be issued from the main office in Queen Street.\n<hr>\n<h5>Flexi-Pass</h5>\nFlexi-Pass allows travel between cities with an hours-based pass that can be topped up just like a pre paid phone card. With freedom to explore the national network of InterCity Coachlines, you can set your own itinerary and travel around the country, when and where you want. The more hours you buy, the cheaper each trip becomes and you can even use Flexi-Pass on the cross-channel ferry. You have three months to use the hours you purchase, so you don't have to pack too much travelling into a short time frame. The flexi-pass can be purchased from any of our branch offices.\nPrices:\n<ul>\n  <li>Up to 15 hours – £52</li>\n  <li>16 to 20 hours – £64</li>\n  <li>21 to 25 hours – £72</li>\n</ul>\nNOTE: No concessions are available on tickets.\n<hr>\n<h5>Destination Pass</h5>\nThe Destination Pass offers a range of 12 \"hop on and off\" fixed itinerary passes, based on the most popular touring routes throughout the country. The Destination Pass includes coach and ferry travel, as well as the additional options to sail on Brentwood Lake, all in the one pass. The destination Pass is available through travel agents worldwide or can be purchased through our website. When you're ready to travel, simply call us or log in online to book one of the 12 individual journeys. You can amend your travel plans up to two hours prior to departure without penalty. All trips must be taken within 6 months.\nPrices:\n<ul>\n  <li>4 trips – £115</li>\n  <li>8 trips – £215</li>\n  <li>12 trips – £390</li>\n</ul>\nStudent and group (5 people or more) discounts are available. Contact us for more details."
+        },
+        {
+            "title": "Reading Passage 2",
+            "content": "<h3>Gaston Community College evening classes</h3>\nThis semester, the following classes will be available.\n\n<strong>Class</strong>: English for beginners\n\n<strong>Description</strong>: An English language class to help new arrivals to the country learn better English. The course looks at using English in everyday situations, such as shopping, going to the doctors or getting a haircut.\n\n<strong>Times and days:</strong> Mondays and Thursdays at 7 p.m. to 8 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5 – 12\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £45\n\n<hr>\n\n<strong>Class</strong>: Intermediate Spanish\n\n<strong>Description</strong>: This class is ideally suited for students who have a basic knowledge of Spanish or who completed the Beginner's Spanish class held last semester\n\n<strong>Times and days:</strong> Tuesdays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5-18\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £55\n\n<hr>\n\n<strong>Class</strong>: Using your computer\n\n<strong>Description</strong>: No idea how to use a computer? Then this class if for you! It covers the basics of surfing the internet, sending and receiving emails, typing and understanding files and folders.\n\n<strong>Times and days:</strong> Wednesdays at 6.30 p.m. to 7.15 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £25\n\n<hr>\n\n<strong>Class</strong>: Beginners watercolour painting\n\n<strong>Description</strong>: Back by popular demand and once again run by local artist Ted Heath, this class gives you an opportunity to show your more creative side.\nNB: you will need to provide your own paper, paint and brushes\n\nThursdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-12\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<strong>Class</strong>: Better public speaking\n\n<strong>Description</strong>: For all those who have completed public speaking or presentation skills courses, or who have some experience and wish to brush up on their skills. Practise connecting with your audience and communicating your message with full effectiveness.\n\n<strong>Times and days:</strong> Tuesdays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £30\n\n<hr>\n\n<strong>Class</strong>: Successful interview techniques\n\n<strong>Description</strong>: Many courses focus on presenting yourself well at an interview, but this course will help you become a better interviewer – ideal for those perhaps run a small business and would like to be sure they are recruiting the right person. We will cover preparation, body language and good interview questions.\n\n<strong>Times and days:</strong> Mondays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £35\n\n<hr>\n\n<strong>Class</strong>: Authentic Thai cooking\n\n<strong>Description</strong>: Learn to cook Thai food the fun way with a native, experienced chef. A hands-on and demonstration course covering exciting dishes from all regions of Thailand. Aspects of Thai culture will be covered and all recipes and ingredients supplied.\n\n<strong>Times and days:</strong> Tuesdays from 7.00 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £35 + £55 food costs\n\n<hr>\n\n<strong>Class</strong>: Beginners guitar\n\n<strong>Description</strong>: Learn to play both classical and popular techniques. Please bring your own guitar, and a music stand and floor step if you have one. You will need to buy a textbook. Even if you've never played a note before, you should be able to play a tune by the end of the course.\n\n<strong>Times and days:</strong> Wednesdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-6\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £20\n\n<hr>\n\n<strong>Class</strong>: Digital photos\n\n<strong>Description</strong>: A fun & practical workshop just for digital camera users. Learn how to use the main functions of your camera. Lots of practice with portraits, action shots, night scenes & landscapes. Learn different ways to transfer your photos on to the computer – emailing, printing, resizing photos, changing colour or contrast, convert colour to black & white.\n\n<strong>Times and days:</strong> Mondays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<h3>ESITO dress code</h3>\nThe personal appearance of office workers and employees who have regular contact with the public is laid out in the company dress code. In brief, the code requires all employees to observe the following:\n<ul>\n  <li>Clean, pressed, properly fitting business casual attire is appropriate.</li>\n  <li>Hair should be clean, combed and neatly arranged. Long hair is acceptable if it is tied back.</li>\n  <li>Moustaches and beards should be neatly trimmed.</li>\n  <li>Good personal hygiene must be maintained.</li>\n  <li>Use perfume or cologne in small quantities or not at all (some people are allergic to various scents).</li>\n</ul>\nThe personal appearance of employees who do not regularly meet the public is to be decided by the requirements of safety, comfort and supervisor approval. Even so, because all employees are a representative of the company, they should be as neat and business-like as working conditions permit. The following are some examples of inappropriate dress at all times:\n<ul>\n  <li>Faded and/or tattered/torn jeans; t-shirts displaying advertising or writing</li>\n  <li>Faded overalls, cotton/fleece pants and jogging suits, shorts, tank tops or recreational attire</li>\n  <li>Clothing revealing bare backs, midriffs or shoulders; or any revealing clothing.</li>\n</ul>\nCasual Fridays: The Company has designated Fridays as casual days. Some clothing is still considered inappropriate even on casual days. Employees are requested to use good sense in this regard.\n\nBad weather days: The Company understands that inclement weather conditions can require different attire for the day. Use good judgment when dressing for weather conditions. NOTE: This only impacts on employees working in the yard.\n\nThe supervisor is responsible for evaluating the dress and appearance of employees under his or her supervision. If an employee is not dressed appropriately, the supervisor should take the following steps:\n\nOn the first occasion, a documented verbal warning should be given to the employee, and the department's dress and appearance standards should be reviewed. If the supervisor deems it necessary, the employee may be sent home to change into appropriate clothing.\n\nOn the second occasion, the employee must be sent home to change clothes immediately as well as given a written warning. Further violations may result in discipline up to and including discharge.\n\n<hr>\n\n<h4>Benefits and amendment to benefits for Glyph Interactive employees</h4>\n<h4>Pension scheme</h4>\nAll employees are automatically included in our pension scheme, although there is an 'opt out' policy for employees with private pension plans. The pension scheme is no longer non-contributory, with employees now being asked to pay 25% of the annual payment. Government contributions will amount to an additional 25%, with Glyph Interactive continuing to support employees by covering the remaining 50%. Employees need to pay into the pension scheme for a minimum of 20 years. Once an employee reaches the age of 65, the pension payments begin. Employees who do not reach the twenty year mark will be paid pro rata (that is, an employee who has worked only ten years will receive only 50% of that received by an employee with twenty years experience).\n<h4>Medical insurance</h4>\nDue to rising costs, we can no longer support offering medical insurance to retiring employees. Standard cover still applies to all active employees, with one important addition. The immediate family (spouse and children) of the employee can also be covered for the same benefits and services. This will attract an additional payment depending on the current health of those wishing to be covered, but will be well below the cost of seeking insurance with a private company.\n<h4>Access to company vehicles</h4>\nAll staff with a legitimate need to travel will have access to one of the company vehicles. Please note that this is to be used for company purposes only, and must be applied for in writing at least two days before the vehicle is needed. For urgent and unexpected requirements, please consult your manager. The only exception to this is for sales staff, who have already been issued their own vehicles.\n<h4>Communication</h4>\nAll members of staff have a laptop which is issued on the first day of employment. This will now be supplemented by the addition of a Smartphone. Please note, however, that all calls and communications using the Smartphone should be for company purposes only unless in an emergency. Training events will be posted in the next few weeks to help you get to grips with the new phone.\n<h4>Working from home</h4>\nWe are now in the second year of the trial of some employees working from home for at least a part of the week. Despite some earlier difficulties, the scheme has proven successful and will now be offered as an option for all staff (although final approval must be given by your manager)."
+        },
+        {
+            "title": "Reading Passage 3",
+            "content": "THE NON-MILITARY USES OF UNMANNED AERIAL VEHICLES\r\n\r\nA) The use of unmanned aerial vehicles has grown dramatically over the past decade or so, in no small part due to the fact that some of these machines are able to remain airborne for longer periods of time than more conventional manned aircraft. At the same time, <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">unmanned aerial vehicles (UAVs), also known as unmanned aircraft systems (UASs), and remotely piloted aircraft (RPAs), nowadays commonly referred to as drones, are generally credited with being both more cost-effective to operate and maintain, as well as safer to use, than piloted aircraft.</span> The term drone may also refer to small electric helicopters fitted with two or more rotors which are flown by remote control.\r\n\r\nB) Today, drones are being used with increasing frequency for military operations by a number of countries in combat, surveillance and reconnaissance roles. These machines tend to be larger than non-military drones and are, in the main, powered by jet or gas engines. Perhaps unsurprisingly, the use of drone technology has gained a measure of notoriety as a result of their growing prominence in military roles, which have been widely publicised in television, online and print media during the last decade and a half, leading to criticism of their application in this arena on both ethical and legal grounds.\r\n\r\nC) While originally and currently still primarily used for military purposes, the rapid growth and development in drone technology during the early twenty-first century has led some experts to predict that, by 2030, there will be approximately 30,000 licensed drones operating in the skies above the United States alone. It has also been estimated that the economic value of the commercial drone market will rise in value to around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035. <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.</span>\r\n\r\nD) One development related to the commercial use of drones which has perhaps received the greatest amount of news and media coverage in recent years is the establishment of Amazon Prime Air in the early 2020s by the US-based online retail giant, Amazon.com. <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">Amazon Prime Air's drone-based delivery system for its customers' purchases is now operational, though it's still growing and faces regulatory considerations. Deliveries occur during daylight hours and in good weather conditions</span>, although the company has been granted permission by the US Federal Aviation Authority (FAA) to begin testing its current prototypes under certain restrictions.\r\n\r\nE) As far as aerial filming and photography are concerned, commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market, filming breaking-news stories and live sports events, producing footage from unique perspectives for movies and carrying out security and surveillance functions in the detection of criminal activity and identification of criminals.\r\n\r\nF) In addition to the delivery of consumer products and other commercial applications, non-military drones are gaining popularity for use in search and rescue operations. <span id=\"passage-q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">Drone-mounted cameras enable unmanned aerial vehicles to follow pre-programmed search patterns when looking for missing persons and victims of natural disasters across a variety of otherwise inaccessible terrain types, including marine environments.</span> With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example.\r\n\r\nG) These days, drones are increasingly being used by national government agencies and local authorities for a variety of purposes outside of the private sector. Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work. Fire departments in some jurisdictions now rely on UAVs to help them reduce risks and costs when fighting fires in both urban and rural areas, while customs and law enforcement agencies also employ drone technology in protecting citizens and borders through monitoring and surveillance.\r\n\r\nH) In terms of the natural world, scientists and researchers are turning to drones with greater frequency to monitor, document and assess changes in the health, movement and distribution of flora and fauna, as well as pollution, weather and the climate, both conveniently and cost-effectively. Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts. In the latter capacity, drone technology is now being used by both governmental agencies and non-governmental organisations in the surveillance and prevention of illegal hunting and poaching of a number of endangered species.\r\n\r\nI) While advocates of drones are quick to point out all of the many benefits that the machines can bring to society and the planet, the technology is not without its critics. Those opposed to the growing use of unmanned aerial vehicles cite a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives. <span id=\"passage-q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">These include logistical concerns such as the comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes) and their operational limitations in terms of spatial mobility. Other perceived disadvantages are safety risks, in the potential for collisions across increasingly crowded airspace</span>, and even the adverse effects drones may have on the natural environment, particularly as contributors to noise pollution.\r\n\r\nJ) Whether for commercial or recreational applications or being used as tools to assist those working in the public sector, it would appear that the numerical proliferation of unmanned aerial vehicles, as well as their numerous potential uses, means that the impact of drone technology in our lives is only set to increase. While there are undoubtedly issues yet to be resolved regarding the use of drones, particularly in relation to regulatory oversight and legal restrictions on the part of relevant authorities, the futuristic technology afforded us in the form of these robotic vehicles indicates that not the sky, but rather the solar system and beyond, may be the limit."
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "ielts_academic_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-13 13:31:36",
+        "exported_by": "impact",
+        "plugin_version": "11.19",
+        "format_version": "1.0"
+    }
+}

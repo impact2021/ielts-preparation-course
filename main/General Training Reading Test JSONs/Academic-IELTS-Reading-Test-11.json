@@ -1,0 +1,1280 @@
+{
+    "title": "Academic IELTS Reading Test 11",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.\n\nDo the following statements agree with the information given in Reading Passage 1?\n\nSelect:\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this in the passage",
+            "question": "The Rugby Union's World Cup is held every four years.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states 'Rugby union also holds a quadrennial World Cup' (quadrennial means every four years). Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'Rugby union also holds a quadrennial World Cup' (quadrennial means every four years)."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'Rugby union also holds a quadrennial World Cup' (quadrennial means every four years)."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'Rugby union also holds a quadrennial World Cup' (quadrennial means every four years)."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Lord Stanley became coach of the Ottawa ice hockey team because he enjoyed hockey.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions Lord Stanley's three sons played for the Ottawa Rebels team and he took an interest in promoting ice hockey, but there is no information about him becoming a coach. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions Lord Stanley's three sons played for the Ottawa Rebels team and he took an interest in promoting ice hockey, but there is no information about him becoming a coach."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions Lord Stanley's three sons played for the Ottawa Rebels team and he took an interest in promoting ice hockey, but there is no information about him becoming a coach."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions Lord Stanley's three sons played for the Ottawa Rebels team and he took an interest in promoting ice hockey, but there is no information about him becoming a coach."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Lord Stanley amended the rules regarding the requirements for winning the ice hockey championship.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states 'He set a series of rules for the competition of his Cup'—he created the rules, he didn't amend (change) existing rules. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states 'He set a series of rules for the competition of his Cup'—he created the rules, he didn't amend (change) existing rules."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'He set a series of rules for the competition of his Cup'—he created the rules, he didn't amend (change) existing rules."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states 'He set a series of rules for the competition of his Cup'—he created the rules, he didn't amend (change) existing rules."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Only teams from the USA and Canada compete to win the Stanley Cup.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states 'to this day the Cup is competed for by the 30 teams from Canada and the United States in the NHL.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'to this day the Cup is competed for by the 30 teams from Canada and the United States in the NHL.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'to this day the Cup is competed for by the 30 teams from Canada and the United States in the NHL.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'to this day the Cup is competed for by the 30 teams from Canada and the United States in the NHL.'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Today, the Stanley Cup is held in security in a museum to protect it from players and fans.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states 'each player from the winning team gets to personally keep the Cup for one day'—it is not kept in a museum. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states 'each player from the winning team gets to personally keep the Cup for one day'—it is not kept in a museum."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'each player from the winning team gets to personally keep the Cup for one day'—it is not kept in a museum."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states 'each player from the winning team gets to personally keep the Cup for one day'—it is not kept in a museum."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the summary.\n\nChoose NO MORE THAN TWO WORDS from the passage for each answer.\n\nWrite your answers in boxes 6 – 10 on your answer sheet.",
+            "question": "Globally, sporting success is rewarded with a trophy for the winning team, nation or [field 1], and there is a wide range of trophies, cups and forms of [field 2], such as the Green Jacket or Yellow Jersey. Lord Preston, who was at the time the [field 3] of Canada, purchased and donated a trophy to be awarded to the winning ice hockey team after a series of national competitions. When the game changed from its amateur roots and developed into a [field 4] sport, the Stanley Cup is now competed for by the thirty teams in the National Hockey League. The Stanley Cup is one of the most famous trophies in sport, and has been enlarged with new [field 5] to fit the increasing list of past winners.",
+            "points": 5.0,
+            "no_answer_feedback": "Please provide answers for all fields. The correct answers are: Field 1: INDIVIDUAL, Field 2: APPAREL, Field 3: GOVERNOR-GENERAL (or GOVERNOR GENERAL), Field 4: PROFESSIONAL, Field 5: SILVER RINGS (or RINGS). Review the passage carefully to find these exact words.",
+            "correct_feedback": "Excellent! You've correctly identified all the key words from the passage.",
+            "incorrect_feedback": "Some of your answers are incorrect. Review the passage to find the exact words. The correct answers are: Field 1: INDIVIDUAL, Field 2: APPAREL, Field 3: GOVERNOR-GENERAL (or GOVERNOR GENERAL), Field 4: PROFESSIONAL, Field 5: SILVER RINGS (or RINGS).",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "summary_completion",
+            "field_count": 5,
+            "field_answers": {
+                "1": "INDIVIDUAL|individual",
+                "2": "APPAREL|apparel",
+                "3": "GOVERNOR-GENERAL|GOVERNOR GENERAL|governor-general|governor general",
+                "4": "PROFESSIONAL|professional",
+                "5": "SILVER RINGS|RINGS|silver rings|rings"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states trophies are awarded to 'the winning individual, team or country'.",
+                    "incorrect": "Incorrect. The correct answer is INDIVIDUAL. The passage states trophies are awarded to 'the winning individual, team or country'.",
+                    "no_answer": "The correct answer is INDIVIDUAL. The passage states trophies are awarded to 'the winning individual, team or country'."
+                },
+                "2": {
+                    "correct": "Correct! The passage mentions 'a wide range of trophies, cups and forms of apparel'.",
+                    "incorrect": "Incorrect. The correct answer is APPAREL. The passage mentions 'a wide range of trophies, cups and forms of apparel'.",
+                    "no_answer": "The correct answer is APPAREL. The passage mentions 'a wide range of trophies, cups and forms of apparel'."
+                },
+                "3": {
+                    "correct": "Correct! The passage states Lord Stanley was 'nominated by Queen Victoria as the Governor-General of Canada'.",
+                    "incorrect": "Incorrect. The correct answer is GOVERNOR-GENERAL (or GOVERNOR GENERAL). The passage states Lord Stanley was 'nominated by Queen Victoria as the Governor-General of Canada'.",
+                    "no_answer": "The correct answer is GOVERNOR-GENERAL (or GOVERNOR GENERAL). The passage states Lord Stanley was 'nominated by Queen Victoria as the Governor-General of Canada'."
+                },
+                "4": {
+                    "correct": "Correct! The passage states 'professionalism making its mark' in ice hockey.",
+                    "incorrect": "Incorrect. The correct answer is PROFESSIONAL. The passage states 'professionalism making its mark' in ice hockey.",
+                    "no_answer": "The correct answer is PROFESSIONAL. The passage states 'professionalism making its mark' in ice hockey."
+                },
+                "5": {
+                    "correct": "Correct! The passage states the Cup has grown in size 'with new silver rings being added'.",
+                    "incorrect": "Incorrect. The correct answer is SILVER RINGS (or RINGS). The passage states the Cup has grown in size 'with new silver rings being added'.",
+                    "no_answer": "The correct answer is SILVER RINGS (or RINGS). The passage states the Cup has grown in size 'with new silver rings being added'."
+                }
+            },
+            "ielts_question_type": "Summary Completion"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose THREE letters A – H.\n\nWhich THREE of the following statements are true of Lord Stanley and the Stanley Cup?\n\nA. Queen Victoria suggested that Lord Stanley present a trophy for the ice hockey champions in Canada.\nB. The Stanley Cup is professional sports' oldest trophy.\nC. In its early years, the Stanley Cup was usually won by amateur teams.\nD. Individual players from the winning team have been responsible for the Cup for one day each.\nE. Lord Stanley's proposal for the rules regarding the Cup was met with opposition.\nF. Because of its value, the Stanley Cup is heavily protected and kept away from players and the public.\nG. Lord Stanley had little interest in sports.\nH. The Stanley Cup is larger today than when it was first presented.",
+            "question": "Select three correct statements:",
+            "points": 3.0,
+            "no_answer_feedback": "The correct answers are C, D, and H. Review the passage carefully: C is correct because early competitions were amateur; D is correct because 'each player from the winning team gets to personally keep the Cup for one day'; H is correct because 'the Cup has grown in size, with new silver rings being added'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Excellent! You've correctly identified all three true statements about Lord Stanley and the Stanley Cup.",
+            "incorrect_feedback": "Some of your selections are incorrect. The correct answers are C, D, and H. Review the passage carefully: C is correct because early competitions were amateur; D is correct because 'each player from the winning team gets to personally keep the Cup for one day'; H is correct because 'the Cup has grown in size, with new silver rings being added'.",
+            "reading_text_id": 0,
+            "audio_section_id": 0,
+            "ielts_question_category": "multiple_choice_multiple_answers",
+            "mc_options": [
+                {
+                    "text": "Queen Victoria suggested that Lord Stanley present a trophy for the ice hockey champions in Canada.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states Lord Stanley advised the Association, not that Queen Victoria suggested it to him."
+                },
+                {
+                    "text": "The Stanley Cup is professional sports' oldest trophy.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states it is 'the oldest professional North American sports trophy', not the oldest in all professional sports."
+                },
+                {
+                    "text": "In its early years, the Stanley Cup was usually won by amateur teams.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage indicates professionalism came later, so early competitions were amateur."
+                },
+                {
+                    "text": "Individual players from the winning team have been responsible for the Cup for one day each.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'each player from the winning team gets to personally keep the Cup for one day'."
+                },
+                {
+                    "text": "Lord Stanley's proposal for the rules regarding the Cup was met with opposition.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'his proposal was accepted by the sports foundations throughout the country'."
+                },
+                {
+                    "text": "Because of its value, the Stanley Cup is heavily protected and kept away from players and the public.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Players keep the Cup for a day, though now with security guards to oversee it."
+                },
+                {
+                    "text": "Lord Stanley had little interest in sports.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage describes him as 'an avid sports fan'."
+                },
+                {
+                    "text": "The Stanley Cup is larger today than when it was first presented.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'the Cup has grown in size, with new silver rings being added'."
+                }
+            ],
+            "options": "Queen Victoria suggested that Lord Stanley present a trophy for the ice hockey champions in Canada.\nThe Stanley Cup is professional sports' oldest trophy.\nIn its early years, the Stanley Cup was usually won by amateur teams.\nIndividual players from the winning team have been responsible for the Cup for one day each.\nLord Stanley's proposal for the rules regarding the Cup was met with opposition.\nBecause of its value, the Stanley Cup is heavily protected and kept away from players and the public.\nLord Stanley had little interest in sports.\nThe Stanley Cup is larger today than when it was first presented.",
+            "correct_answer_count": 3,
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Multiple Answers)"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 2 has seven paragraphs, A – G.\n\nChoose the correct heading for paragraphs A – G from the list of headings below.\n\nWrite the correct number, i – ix, in boxes 14 – 20 on your answer sheet.\n\nNB There are more headings than paragraphs, so not all headings will be used.\n\nList of Headings\ni. Researchers conclude that the limits may have been reached\nii. One new field may possibly push human ability further\niii. Human or Super-Human: The next generation\niv. Should the rules be changed?\nv. The 100-metre record will not be lowered again\nvi. Questions surround the limits of human capability\nvii. Factors beyond human ability now bring records\nviii. The quest to be the best\nix. Gene therapy will result in new records",
+            "question": "Paragraph A",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is viii. The quest to be the best. Paragraph A discusses the historical drive to be the best and establish records in sport. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": 0,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "i - Researchers conclude that the limits may have been reached",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is viii. The quest to be the best. Paragraph A discusses the historical drive to be the best and establish records in sport."
+                },
+                {
+                    "text": "ii - One new field may possibly push human ability further",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is viii. The quest to be the best. Paragraph A discusses the historical drive to be the best and establish records in sport."
+                },
+                {
+                    "text": "iii - Human or Super-Human: The next generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is viii. The quest to be the best. Paragraph A discusses the historical drive to be the best and establish records in sport."
+                },
+                {
+                    "text": "iv - Should the rules be changed?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is viii. The quest to be the best. Paragraph A discusses the historical drive to be the best and establish records in sport."
+                },
+                {
+                    "text": "v - The 100-metre record will not be lowered again",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is viii. The quest to be the best. Paragraph A discusses the historical drive to be the best and establish records in sport."
+                },
+                {
+                    "text": "vi - Questions surround the limits of human capability",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is viii. The quest to be the best. Paragraph A discusses the historical drive to be the best and establish records in sport."
+                },
+                {
+                    "text": "vii - Factors beyond human ability now bring records",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is viii. The quest to be the best. Paragraph A discusses the historical drive to be the best and establish records in sport."
+                },
+                {
+                    "text": "viii - The quest to be the best",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph A discusses the historical drive to be the best and establish records in sport."
+                },
+                {
+                    "text": "ix - Gene therapy will result in new records",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is viii. The quest to be the best. Paragraph A discusses the historical drive to be the best and establish records in sport."
+                }
+            ],
+            "options": "i - Researchers conclude that the limits may have been reached\nii - One new field may possibly push human ability further\niii - Human or Super-Human: The next generation\niv - Should the rules be changed?\nv - The 100-metre record will not be lowered again\nvi - Questions surround the limits of human capability\nvii - Factors beyond human ability now bring records\nviii - The quest to be the best\nix - Gene therapy will result in new records",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Matching Headings"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph B",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is vi. Questions surround the limits of human capability. Paragraph B discusses the questions experts have about the limits of human athleticism. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": 0,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "i - Researchers conclude that the limits may have been reached",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vi. Questions surround the limits of human capability. Paragraph B discusses the questions experts have about the limits of human athleticism."
+                },
+                {
+                    "text": "ii - One new field may possibly push human ability further",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vi. Questions surround the limits of human capability. Paragraph B discusses the questions experts have about the limits of human athleticism."
+                },
+                {
+                    "text": "iii - Human or Super-Human: The next generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vi. Questions surround the limits of human capability. Paragraph B discusses the questions experts have about the limits of human athleticism."
+                },
+                {
+                    "text": "iv - Should the rules be changed?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vi. Questions surround the limits of human capability. Paragraph B discusses the questions experts have about the limits of human athleticism."
+                },
+                {
+                    "text": "v - The 100-metre record will not be lowered again",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vi. Questions surround the limits of human capability. Paragraph B discusses the questions experts have about the limits of human athleticism."
+                },
+                {
+                    "text": "vi - Questions surround the limits of human capability",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B discusses the questions experts have about the limits of human athleticism."
+                },
+                {
+                    "text": "vii - Factors beyond human ability now bring records",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vi. Questions surround the limits of human capability. Paragraph B discusses the questions experts have about the limits of human athleticism."
+                },
+                {
+                    "text": "viii - The quest to be the best",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vi. Questions surround the limits of human capability. Paragraph B discusses the questions experts have about the limits of human athleticism."
+                },
+                {
+                    "text": "ix - Gene therapy will result in new records",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vi. Questions surround the limits of human capability. Paragraph B discusses the questions experts have about the limits of human athleticism."
+                }
+            ],
+            "options": "i - Researchers conclude that the limits may have been reached\nii - One new field may possibly push human ability further\niii - Human or Super-Human: The next generation\niv - Should the rules be changed?\nv - The 100-metre record will not be lowered again\nvi - Questions surround the limits of human capability\nvii - Factors beyond human ability now bring records\nviii - The quest to be the best\nix - Gene therapy will result in new records",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Matching Headings"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph C",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is i. Researchers conclude that the limits may have been reached. Paragraph C presents researchers who believe we are at or near the limits of human capability. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": 0,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "i - Researchers conclude that the limits may have been reached",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C presents researchers who believe we are at or near the limits of human capability."
+                },
+                {
+                    "text": "ii - One new field may possibly push human ability further",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is i. Researchers conclude that the limits may have been reached. Paragraph C presents researchers who believe we are at or near the limits of human capability."
+                },
+                {
+                    "text": "iii - Human or Super-Human: The next generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is i. Researchers conclude that the limits may have been reached. Paragraph C presents researchers who believe we are at or near the limits of human capability."
+                },
+                {
+                    "text": "iv - Should the rules be changed?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is i. Researchers conclude that the limits may have been reached. Paragraph C presents researchers who believe we are at or near the limits of human capability."
+                },
+                {
+                    "text": "v - The 100-metre record will not be lowered again",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is i. Researchers conclude that the limits may have been reached. Paragraph C presents researchers who believe we are at or near the limits of human capability."
+                },
+                {
+                    "text": "vi - Questions surround the limits of human capability",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is i. Researchers conclude that the limits may have been reached. Paragraph C presents researchers who believe we are at or near the limits of human capability."
+                },
+                {
+                    "text": "vii - Factors beyond human ability now bring records",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is i. Researchers conclude that the limits may have been reached. Paragraph C presents researchers who believe we are at or near the limits of human capability."
+                },
+                {
+                    "text": "viii - The quest to be the best",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is i. Researchers conclude that the limits may have been reached. Paragraph C presents researchers who believe we are at or near the limits of human capability."
+                },
+                {
+                    "text": "ix - Gene therapy will result in new records",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is i. Researchers conclude that the limits may have been reached. Paragraph C presents researchers who believe we are at or near the limits of human capability."
+                }
+            ],
+            "options": "i - Researchers conclude that the limits may have been reached\nii - One new field may possibly push human ability further\niii - Human or Super-Human: The next generation\niv - Should the rules be changed?\nv - The 100-metre record will not be lowered again\nvi - Questions surround the limits of human capability\nvii - Factors beyond human ability now bring records\nviii - The quest to be the best\nix - Gene therapy will result in new records",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Matching Headings"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph D",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is vii. Factors beyond human ability now bring records. Paragraph D discusses how technology rather than human ability is now breaking records. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": 0,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "i - Researchers conclude that the limits may have been reached",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vii. Factors beyond human ability now bring records. Paragraph D discusses how technology rather than human ability is now breaking records."
+                },
+                {
+                    "text": "ii - One new field may possibly push human ability further",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vii. Factors beyond human ability now bring records. Paragraph D discusses how technology rather than human ability is now breaking records."
+                },
+                {
+                    "text": "iii - Human or Super-Human: The next generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vii. Factors beyond human ability now bring records. Paragraph D discusses how technology rather than human ability is now breaking records."
+                },
+                {
+                    "text": "iv - Should the rules be changed?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vii. Factors beyond human ability now bring records. Paragraph D discusses how technology rather than human ability is now breaking records."
+                },
+                {
+                    "text": "v - The 100-metre record will not be lowered again",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vii. Factors beyond human ability now bring records. Paragraph D discusses how technology rather than human ability is now breaking records."
+                },
+                {
+                    "text": "vi - Questions surround the limits of human capability",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vii. Factors beyond human ability now bring records. Paragraph D discusses how technology rather than human ability is now breaking records."
+                },
+                {
+                    "text": "vii - Factors beyond human ability now bring records",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D discusses how technology rather than human ability is now breaking records."
+                },
+                {
+                    "text": "viii - The quest to be the best",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vii. Factors beyond human ability now bring records. Paragraph D discusses how technology rather than human ability is now breaking records."
+                },
+                {
+                    "text": "ix - Gene therapy will result in new records",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is vii. Factors beyond human ability now bring records. Paragraph D discusses how technology rather than human ability is now breaking records."
+                }
+            ],
+            "options": "i - Researchers conclude that the limits may have been reached\nii - One new field may possibly push human ability further\niii - Human or Super-Human: The next generation\niv - Should the rules be changed?\nv - The 100-metre record will not be lowered again\nvi - Questions surround the limits of human capability\nvii - Factors beyond human ability now bring records\nviii - The quest to be the best\nix - Gene therapy will result in new records",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Matching Headings"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph E",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is ii. One new field may possibly push human ability further. Paragraph E discusses science as a field that may push human athletic performance further. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": 0,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "i - Researchers conclude that the limits may have been reached",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is ii. One new field may possibly push human ability further. Paragraph E discusses science as a field that may push human athletic performance further."
+                },
+                {
+                    "text": "ii - One new field may possibly push human ability further",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E discusses science as a field that may push human athletic performance further."
+                },
+                {
+                    "text": "iii - Human or Super-Human: The next generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is ii. One new field may possibly push human ability further. Paragraph E discusses science as a field that may push human athletic performance further."
+                },
+                {
+                    "text": "iv - Should the rules be changed?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is ii. One new field may possibly push human ability further. Paragraph E discusses science as a field that may push human athletic performance further."
+                },
+                {
+                    "text": "v - The 100-metre record will not be lowered again",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is ii. One new field may possibly push human ability further. Paragraph E discusses science as a field that may push human athletic performance further."
+                },
+                {
+                    "text": "vi - Questions surround the limits of human capability",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is ii. One new field may possibly push human ability further. Paragraph E discusses science as a field that may push human athletic performance further."
+                },
+                {
+                    "text": "vii - Factors beyond human ability now bring records",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is ii. One new field may possibly push human ability further. Paragraph E discusses science as a field that may push human athletic performance further."
+                },
+                {
+                    "text": "viii - The quest to be the best",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is ii. One new field may possibly push human ability further. Paragraph E discusses science as a field that may push human athletic performance further."
+                },
+                {
+                    "text": "ix - Gene therapy will result in new records",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is ii. One new field may possibly push human ability further. Paragraph E discusses science as a field that may push human athletic performance further."
+                }
+            ],
+            "options": "i - Researchers conclude that the limits may have been reached\nii - One new field may possibly push human ability further\niii - Human or Super-Human: The next generation\niv - Should the rules be changed?\nv - The 100-metre record will not be lowered again\nvi - Questions surround the limits of human capability\nvii - Factors beyond human ability now bring records\nviii - The quest to be the best\nix - Gene therapy will result in new records",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Matching Headings"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph F",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is iv. Should the rules be changed?. Paragraph F discusses the question of whether performance-enhancing drugs should be accepted. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": 0,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "i - Researchers conclude that the limits may have been reached",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iv. Should the rules be changed?. Paragraph F discusses the question of whether performance-enhancing drugs should be accepted."
+                },
+                {
+                    "text": "ii - One new field may possibly push human ability further",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iv. Should the rules be changed?. Paragraph F discusses the question of whether performance-enhancing drugs should be accepted."
+                },
+                {
+                    "text": "iii - Human or Super-Human: The next generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iv. Should the rules be changed?. Paragraph F discusses the question of whether performance-enhancing drugs should be accepted."
+                },
+                {
+                    "text": "iv - Should the rules be changed?",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F discusses the question of whether performance-enhancing drugs should be accepted."
+                },
+                {
+                    "text": "v - The 100-metre record will not be lowered again",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iv. Should the rules be changed?. Paragraph F discusses the question of whether performance-enhancing drugs should be accepted."
+                },
+                {
+                    "text": "vi - Questions surround the limits of human capability",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iv. Should the rules be changed?. Paragraph F discusses the question of whether performance-enhancing drugs should be accepted."
+                },
+                {
+                    "text": "vii - Factors beyond human ability now bring records",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iv. Should the rules be changed?. Paragraph F discusses the question of whether performance-enhancing drugs should be accepted."
+                },
+                {
+                    "text": "viii - The quest to be the best",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iv. Should the rules be changed?. Paragraph F discusses the question of whether performance-enhancing drugs should be accepted."
+                },
+                {
+                    "text": "ix - Gene therapy will result in new records",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iv. Should the rules be changed?. Paragraph F discusses the question of whether performance-enhancing drugs should be accepted."
+                }
+            ],
+            "options": "i - Researchers conclude that the limits may have been reached\nii - One new field may possibly push human ability further\niii - Human or Super-Human: The next generation\niv - Should the rules be changed?\nv - The 100-metre record will not be lowered again\nvi - Questions surround the limits of human capability\nvii - Factors beyond human ability now bring records\nviii - The quest to be the best\nix - Gene therapy will result in new records",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Matching Headings"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph G",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is iii. Human or Super-Human: The next generation. Paragraph G speculates about genetically-modified athletes in the future. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": 0,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "i - Researchers conclude that the limits may have been reached",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iii. Human or Super-Human: The next generation. Paragraph G speculates about genetically-modified athletes in the future."
+                },
+                {
+                    "text": "ii - One new field may possibly push human ability further",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iii. Human or Super-Human: The next generation. Paragraph G speculates about genetically-modified athletes in the future."
+                },
+                {
+                    "text": "iii - Human or Super-Human: The next generation",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G speculates about genetically-modified athletes in the future."
+                },
+                {
+                    "text": "iv - Should the rules be changed?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iii. Human or Super-Human: The next generation. Paragraph G speculates about genetically-modified athletes in the future."
+                },
+                {
+                    "text": "v - The 100-metre record will not be lowered again",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iii. Human or Super-Human: The next generation. Paragraph G speculates about genetically-modified athletes in the future."
+                },
+                {
+                    "text": "vi - Questions surround the limits of human capability",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iii. Human or Super-Human: The next generation. Paragraph G speculates about genetically-modified athletes in the future."
+                },
+                {
+                    "text": "vii - Factors beyond human ability now bring records",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iii. Human or Super-Human: The next generation. Paragraph G speculates about genetically-modified athletes in the future."
+                },
+                {
+                    "text": "viii - The quest to be the best",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iii. Human or Super-Human: The next generation. Paragraph G speculates about genetically-modified athletes in the future."
+                },
+                {
+                    "text": "ix - Gene therapy will result in new records",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is iii. Human or Super-Human: The next generation. Paragraph G speculates about genetically-modified athletes in the future."
+                }
+            ],
+            "options": "i - Researchers conclude that the limits may have been reached\nii - One new field may possibly push human ability further\niii - Human or Super-Human: The next generation\niv - Should the rules be changed?\nv - The 100-metre record will not be lowered again\nvi - Questions surround the limits of human capability\nvii - Factors beyond human ability now bring records\nviii - The quest to be the best\nix - Gene therapy will result in new records",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Matching Headings"
+        },
+        {
+            "type": "open_question",
+            "instructions": "From the information provided in the passage, choose ONE OR TWO WORDS from the passage to complete each sentence.\n\nWrite your answers in boxes 21 – 26 on your answer sheet.",
+            "question": "The record to run a mile had stood for so long at about four minutes 10 seconds, that the time of four minutes was often regarded as a [field 1] until it was broken.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is BARRIER. The passage states the four-minute mile was 'often called a barrier'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states the four-minute mile was 'often called a barrier'.",
+            "incorrect_feedback": "Incorrect. The correct answer is BARRIER. The passage states the four-minute mile was 'often called a barrier'.",
+            "reading_text_id": 1,
+            "audio_section_id": 0,
+            "ielts_question_category": "sentence_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "BARRIER|barrier"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states the four-minute mile was 'often called a barrier'.",
+                    "incorrect": "Incorrect. The correct answer is BARRIER. The passage states the four-minute mile was 'often called a barrier'.",
+                    "no_answer": "The correct answer is BARRIER. The passage states the four-minute mile was 'often called a barrier'."
+                }
+            },
+            "ielts_question_type": "Sentence Completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Evidence supported by a [field 1] have led one French researcher to believe that our physical limits could be reached within twenty years.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is STATISTICAL MODEL. The passage states Geoffroy Berthelot cited 'the statistical model developed at the institute'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states Geoffroy Berthelot cited 'the statistical model developed at the institute'.",
+            "incorrect_feedback": "Incorrect. The correct answer is STATISTICAL MODEL. The passage states Geoffroy Berthelot cited 'the statistical model developed at the institute'.",
+            "reading_text_id": 1,
+            "audio_section_id": 0,
+            "ielts_question_category": "sentence_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "STATISTICAL MODEL|statistical model"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states Geoffroy Berthelot cited 'the statistical model developed at the institute'.",
+                    "incorrect": "Incorrect. The correct answer is STATISTICAL MODEL. The passage states Geoffroy Berthelot cited 'the statistical model developed at the institute'.",
+                    "no_answer": "The correct answer is STATISTICAL MODEL. The passage states Geoffroy Berthelot cited 'the statistical model developed at the institute'."
+                }
+            },
+            "ielts_question_type": "Sentence Completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Another sports scientist, in the United States, has based his research on the [field 1] that humans can run to support his belief records will not be broken regularly in the future.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is MAXIMUM SPEED. The passage states Dr. Denny's research is 'in conjunction with the maximum speed capable by humans'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states Dr. Denny's research is 'in conjunction with the maximum speed capable by humans'.",
+            "incorrect_feedback": "Incorrect. The correct answer is MAXIMUM SPEED. The passage states Dr. Denny's research is 'in conjunction with the maximum speed capable by humans'.",
+            "reading_text_id": 1,
+            "audio_section_id": 0,
+            "ielts_question_category": "sentence_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "MAXIMUM SPEED|maximum speed"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states Dr. Denny's research is 'in conjunction with the maximum speed capable by humans'.",
+                    "incorrect": "Incorrect. The correct answer is MAXIMUM SPEED. The passage states Dr. Denny's research is 'in conjunction with the maximum speed capable by humans'.",
+                    "no_answer": "The correct answer is MAXIMUM SPEED. The passage states Dr. Denny's research is 'in conjunction with the maximum speed capable by humans'."
+                }
+            },
+            "ielts_question_type": "Sentence Completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Technology, such as 'super-bikes' in Barcelona, new swimsuits in Beijing, and [field 1] in Montreal, has seen records fall dramatically.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is GOGGLES. The passage mentions Montreal 1976 where swimmers were 'allowed to use goggles for the first time'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage mentions Montreal 1976 where swimmers were 'allowed to use goggles for the first time'.",
+            "incorrect_feedback": "Incorrect. The correct answer is GOGGLES. The passage mentions Montreal 1976 where swimmers were 'allowed to use goggles for the first time'.",
+            "reading_text_id": 1,
+            "audio_section_id": 0,
+            "ielts_question_category": "sentence_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "GOGGLES|goggles"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage mentions Montreal 1976 where swimmers were 'allowed to use goggles for the first time'.",
+                    "incorrect": "Incorrect. The correct answer is GOGGLES. The passage mentions Montreal 1976 where swimmers were 'allowed to use goggles for the first time'.",
+                    "no_answer": "The correct answer is GOGGLES. The passage mentions Montreal 1976 where swimmers were 'allowed to use goggles for the first time'."
+                }
+            },
+            "ielts_question_type": "Sentence Completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "The new swimsuits in Beijing were designed to squeeze [field 1] in an effort to gain extra speed in the water.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is THE MUSCLES. The passage states the swimsuits 'compressed the muscles'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states the swimsuits 'compressed the muscles'.",
+            "incorrect_feedback": "Incorrect. The correct answer is THE MUSCLES. The passage states the swimsuits 'compressed the muscles'.",
+            "reading_text_id": 1,
+            "audio_section_id": 0,
+            "ielts_question_category": "sentence_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "THE MUSCLES|MUSCLES|the muscles|muscles"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states the swimsuits 'compressed the muscles'.",
+                    "incorrect": "Incorrect. The correct answer is THE MUSCLES. The passage states the swimsuits 'compressed the muscles'.",
+                    "no_answer": "The correct answer is THE MUSCLES. The passage states the swimsuits 'compressed the muscles'."
+                }
+            },
+            "ielts_question_type": "Sentence Completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Some researchers now feel that some performance related drugs should be [field 1] in order to better control them and for the safety of the athlete.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is ACCEPTED. The passage states some suggest 'certain forms of drugs, heavily regulated, should be accepted'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states some suggest 'certain forms of drugs, heavily regulated, should be accepted'.",
+            "incorrect_feedback": "Incorrect. The correct answer is ACCEPTED. The passage states some suggest 'certain forms of drugs, heavily regulated, should be accepted'.",
+            "reading_text_id": 1,
+            "audio_section_id": 0,
+            "ielts_question_category": "sentence_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "ACCEPTED|accepted"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states some suggest 'certain forms of drugs, heavily regulated, should be accepted'.",
+                    "incorrect": "Incorrect. The correct answer is ACCEPTED. The passage states some suggest 'certain forms of drugs, heavily regulated, should be accepted'.",
+                    "no_answer": "The correct answer is ACCEPTED. The passage states some suggest 'certain forms of drugs, heavily regulated, should be accepted'."
+                }
+            },
+            "ielts_question_type": "Sentence Completion"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Do the following statements agree with the information given in Reading Passage 3?\n\nIn boxes 27-33 on your answer sheet, write\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this",
+            "question": "Poe's father died of tuberculosis.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Poe's first book of poems was published under a false name.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Poe moved to Maryland immediately following his dismissal from West Point.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Graham's Magazine was a Philadelphia-based publication.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Poe parted ways with Graham's Magazine in 1842.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Following publication of The Raven, Poe still struggled financially.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "During his lifetime, Poe was predominantly known as a poet in America.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the notes below.\n\nUse NO MORE THAN TWO WORDS OR A NUMBER from the passage for each answer.\n\nWrite your answers in boxes 34-38 on your answer sheet.",
+            "question": "Poe's sibling [field 1] was the first born.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is HENRY. The passage states 'his older brother Henry'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states 'his older brother Henry'.",
+            "incorrect_feedback": "Incorrect. The correct answer is HENRY. The passage states 'his older brother Henry'.",
+            "reading_text_id": 2,
+            "audio_section_id": 0,
+            "ielts_question_category": "note_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "HENRY|Henry|henry"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states 'his older brother Henry'.",
+                    "incorrect": "Incorrect. The correct answer is HENRY. The passage states 'his older brother Henry'.",
+                    "no_answer": "The correct answer is HENRY. The passage states 'his older brother Henry'."
+                }
+            },
+            "ielts_question_type": "Note Completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Poe left the Southern Literary Messenger because he had little autonomy and a poor [field 1]",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states he quit citing 'the low salary and lack of editorial control'.",
+            "incorrect_feedback": "Incorrect. The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'.",
+            "reading_text_id": 2,
+            "audio_section_id": 0,
+            "ielts_question_category": "note_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "SALARY|salary"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states he quit citing 'the low salary and lack of editorial control'.",
+                    "incorrect": "Incorrect. The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'.",
+                    "no_answer": "The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'."
+                }
+            },
+            "ielts_question_type": "Note Completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Poe married in [field 1] to a much younger woman.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
+            "incorrect_feedback": "Incorrect. The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
+            "reading_text_id": 2,
+            "audio_section_id": 0,
+            "ielts_question_category": "note_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "1836"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
+                    "incorrect": "Incorrect. The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
+                    "no_answer": "The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'."
+                }
+            },
+            "ielts_question_type": "Note Completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Publication of [field 1] helped Poe to become a household name in America.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states 'the publication of his poem The Raven' made him 'a household name'.",
+            "incorrect_feedback": "Incorrect. The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'.",
+            "reading_text_id": 2,
+            "audio_section_id": 0,
+            "ielts_question_category": "note_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "THE RAVEN|The Raven|the raven"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states 'the publication of his poem The Raven' made him 'a household name'.",
+                    "incorrect": "Incorrect. The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'.",
+                    "no_answer": "The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'."
+                }
+            },
+            "ielts_question_type": "Note Completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "As an author, Poe was a pioneering figure in the [field 1] genre.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states 'He is considered to be the originator of gothic fiction'.",
+            "incorrect_feedback": "Incorrect. The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'.",
+            "reading_text_id": 2,
+            "audio_section_id": 0,
+            "ielts_question_category": "note_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "GOTHIC FICTION|gothic fiction"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states 'He is considered to be the originator of gothic fiction'.",
+                    "incorrect": "Incorrect. The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'.",
+                    "no_answer": "The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'."
+                }
+            },
+            "ielts_question_type": "Note Completion"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose TWO letters, A-E.\n\nWhich TWO of the following are mentioned as being publications Poe worked for?\n\nA. The Gold Bug\nB. Broadway Journal\nC. Tales of the Grotesque and Arabesque\nD. Southern Literary Messenger\nE. The Raven",
+            "question": "Select two correct answers:",
+            "points": 2.0,
+            "no_answer_feedback": "The correct answers are B and D. The passage states Poe 'held a number of editorial positions with various leading literary journals of the day in both New York and Philadelphia, including the Broadway Journal' and earlier mentions he was 'editor of the Southern Literary Messenger'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Excellent! You've correctly identified the two publications Poe worked for as an editor.",
+            "incorrect_feedback": "Some of your selections are incorrect. The correct answers are B (Broadway Journal) and D (Southern Literary Messenger). The passage states Poe 'held a number of editorial positions with various leading literary journals of the day in both New York and Philadelphia, including the Broadway Journal' and earlier mentions he was 'editor of the Southern Literary Messenger'. Options A, C, and E are titles of Poe's works, not publications he worked for.",
+            "reading_text_id": 2,
+            "audio_section_id": 0,
+            "ielts_question_category": "multiple_choice_multiple_answers",
+            "mc_options": [
+                {
+                    "text": "The Gold Bug",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Gold Bug is a story Poe wrote, not a publication he worked for."
+                },
+                {
+                    "text": "Broadway Journal",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states Poe held editorial positions 'including the Broadway Journal'."
+                },
+                {
+                    "text": "Tales of the Grotesque and Arabesque",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is Poe's first volume of short stories, not a publication he worked for."
+                },
+                {
+                    "text": "Southern Literary Messenger",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states Poe was 'editor of the Southern Literary Messenger'."
+                },
+                {
+                    "text": "The Raven",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Raven is Poe's famous poem, not a publication he worked for."
+                }
+            ],
+            "options": "The Gold Bug\nBroadway Journal\nTales of the Grotesque and Arabesque\nSouthern Literary Messenger\nThe Raven",
+            "correct_answer_count": 2,
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Multiple Answers)"
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Passage 1",
+            "content": "<h4><strong>Travelling around the country with bus passes</strong></h4>\n<h5>Travel Rider pass</h5>\nThe Travel Rider pass is valid for one month from the day it is purchased and allows travel on any NorWest and Metro Link bus within the city. Photo identification is required to purchase a Travel Rider pass. Prices are £42 for adults, £30 for students and pensioners. Passes can be purchased from any of our branches. Please note that replacement passes can only be issued from the main office in Queen Street.\n<hr>\n<h5>Flexi-Pass</h5>\nFlexi-Pass allows travel between cities with an hours-based pass that can be topped up just like a pre paid phone card. With freedom to explore the national network of InterCity Coachlines, you can set your own itinerary and travel around the country, when and where you want. The more hours you buy, the cheaper each trip becomes and you can even use Flexi-Pass on the cross-channel ferry. You have three months to use the hours you purchase, so you don't have to pack too much travelling into a short time frame. The flexi-pass can be purchased from any of our branch offices.\nPrices:\n<ul>\n  <li>Up to 15 hours – £52</li>\n  <li>16 to 20 hours – £64</li>\n  <li>21 to 25 hours – £72</li>\n</ul>\nNOTE: No concessions are available on tickets.\n<hr>\n<h5>Destination Pass</h5>\nThe Destination Pass offers a range of 12 \"hop on and off\" fixed itinerary passes, based on the most popular touring routes throughout the country. The Destination Pass includes coach and ferry travel, as well as the additional options to sail on Brentwood Lake, all in the one pass. The destination Pass is available through travel agents worldwide or can be purchased through our website. When you're ready to travel, simply call us or log in online to book one of the 12 individual journeys. You can amend your travel plans up to two hours prior to departure without penalty. All trips must be taken within 6 months.\nPrices:\n<ul>\n  <li>4 trips – £115</li>\n  <li>8 trips – £215</li>\n  <li>12 trips – £390</li>\n</ul>\nStudent and group (5 people or more) discounts are available. Contact us for more details."
+        },
+        {
+            "title": "Reading Passage 2",
+            "content": "<h3>Gaston Community College evening classes</h3>\nThis semester, the following classes will be available.\n\n<strong>Class</strong>: English for beginners\n\n<strong>Description</strong>: An English language class to help new arrivals to the country learn better English. The course looks at using English in everyday situations, such as shopping, going to the doctors or getting a haircut.\n\n<strong>Times and days:</strong> Mondays and Thursdays at 7 p.m. to 8 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5 – 12\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £45\n\n<hr>\n\n<strong>Class</strong>: Intermediate Spanish\n\n<strong>Description</strong>: This class is ideally suited for students who have a basic knowledge of Spanish or who completed the Beginner's Spanish class held last semester\n\n<strong>Times and days:</strong> Tuesdays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5-18\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £55\n\n<hr>\n\n<strong>Class</strong>: Using your computer\n\n<strong>Description</strong>: No idea how to use a computer? Then this class if for you! It covers the basics of surfing the internet, sending and receiving emails, typing and understanding files and folders.\n\n<strong>Times and days:</strong> Wednesdays at 6.30 p.m. to 7.15 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £25\n\n<hr>\n\n<strong>Class</strong>: Beginners watercolour painting\n\n<strong>Description</strong>: Back by popular demand and once again run by local artist Ted Heath, this class gives you an opportunity to show your more creative side.\nNB: you will need to provide your own paper, paint and brushes\n\nThursdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-12\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<strong>Class</strong>: Better public speaking\n\n<strong>Description</strong>: For all those who have completed public speaking or presentation skills courses, or who have some experience and wish to brush up on their skills. Practise connecting with your audience and communicating your message with full effectiveness.\n\n<strong>Times and days:</strong> Tuesdays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £30\n\n<hr>\n\n<strong>Class</strong>: Successful interview techniques\n\n<strong>Description</strong>: Many courses focus on presenting yourself well at an interview, but this course will help you become a better interviewer – ideal for those perhaps run a small business and would like to be sure they are recruiting the right person. We will cover preparation, body language and good interview questions.\n\n<strong>Times and days:</strong> Mondays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £35\n\n<hr>\n\n<strong>Class</strong>: Authentic Thai cooking\n\n<strong>Description</strong>: Learn to cook Thai food the fun way with a native, experienced chef. A hands-on and demonstration course covering exciting dishes from all regions of Thailand. Aspects of Thai culture will be covered and all recipes and ingredients supplied.\n\n<strong>Times and days:</strong> Tuesdays from 7.00 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £35 + £55 food costs\n\n<hr>\n\n<strong>Class</strong>: Beginners guitar\n\n<strong>Description</strong>: Learn to play both classical and popular techniques. Please bring your own guitar, and a music stand and floor step if you have one. You will need to buy a textbook. Even if you've never played a note before, you should be able to play a tune by the end of the course.\n\n<strong>Times and days:</strong> Wednesdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-6\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £20\n\n<hr>\n\n<strong>Class</strong>: Digital photos\n\n<strong>Description</strong>: A fun & practical workshop just for digital camera users. Learn how to use the main functions of your camera. Lots of practice with portraits, action shots, night scenes & landscapes. Learn different ways to transfer your photos on to the computer – emailing, printing, resizing photos, changing colour or contrast, convert colour to black & white.\n\n<strong>Times and days:</strong> Mondays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<h3>ESITO dress code</h3>\nThe personal appearance of office workers and employees who have regular contact with the public is laid out in the company dress code. In brief, the code requires all employees to observe the following:\n<ul>\n  <li>Clean, pressed, properly fitting business casual attire is appropriate.</li>\n  <li>Hair should be clean, combed and neatly arranged. Long hair is acceptable if it is tied back.</li>\n  <li>Moustaches and beards should be neatly trimmed.</li>\n  <li>Good personal hygiene must be maintained.</li>\n  <li>Use perfume or cologne in small quantities or not at all (some people are allergic to various scents).</li>\n</ul>\nThe personal appearance of employees who do not regularly meet the public is to be decided by the requirements of safety, comfort and supervisor approval. Even so, because all employees are a representative of the company, they should be as neat and business-like as working conditions permit. The following are some examples of inappropriate dress at all times:\n<ul>\n  <li>Faded and/or tattered/torn jeans; t-shirts displaying advertising or writing</li>\n  <li>Faded overalls, cotton/fleece pants and jogging suits, shorts, tank tops or recreational attire</li>\n  <li>Clothing revealing bare backs, midriffs or shoulders; or any revealing clothing.</li>\n</ul>\nCasual Fridays: The Company has designated Fridays as casual days. Some clothing is still considered inappropriate even on casual days. Employees are requested to use good sense in this regard.\n\nBad weather days: The Company understands that inclement weather conditions can require different attire for the day. Use good judgment when dressing for weather conditions. NOTE: This only impacts on employees working in the yard.\n\nThe supervisor is responsible for evaluating the dress and appearance of employees under his or her supervision. If an employee is not dressed appropriately, the supervisor should take the following steps:\n\nOn the first occasion, a documented verbal warning should be given to the employee, and the department's dress and appearance standards should be reviewed. If the supervisor deems it necessary, the employee may be sent home to change into appropriate clothing.\n\nOn the second occasion, the employee must be sent home to change clothes immediately as well as given a written warning. Further violations may result in discipline up to and including discharge.\n\n<hr>\n\n<h4>Benefits and amendment to benefits for Glyph Interactive employees</h4>\n<h4>Pension scheme</h4>\nAll employees are automatically included in our pension scheme, although there is an 'opt out' policy for employees with private pension plans. The pension scheme is no longer non-contributory, with employees now being asked to pay 25% of the annual payment. Government contributions will amount to an additional 25%, with Glyph Interactive continuing to support employees by covering the remaining 50%. Employees need to pay into the pension scheme for a minimum of 20 years. Once an employee reaches the age of 65, the pension payments begin. Employees who do not reach the twenty year mark will be paid pro rata (that is, an employee who has worked only ten years will receive only 50% of that received by an employee with twenty years experience).\n<h4>Medical insurance</h4>\nDue to rising costs, we can no longer support offering medical insurance to retiring employees. Standard cover still applies to all active employees, with one important addition. The immediate family (spouse and children) of the employee can also be covered for the same benefits and services. This will attract an additional payment depending on the current health of those wishing to be covered, but will be well below the cost of seeking insurance with a private company.\n<h4>Access to company vehicles</h4>\nAll staff with a legitimate need to travel will have access to one of the company vehicles. Please note that this is to be used for company purposes only, and must be applied for in writing at least two days before the vehicle is needed. For urgent and unexpected requirements, please consult your manager. The only exception to this is for sales staff, who have already been issued their own vehicles.\n<h4>Communication</h4>\nAll members of staff have a laptop which is issued on the first day of employment. This will now be supplemented by the addition of a Smartphone. Please note, however, that all calls and communications using the Smartphone should be for company purposes only unless in an emergency. Training events will be posted in the next few weeks to help you get to grips with the new phone.\n<h4>Working from home</h4>\nWe are now in the second year of the trial of some employees working from home for at least a part of the week. Despite some earlier difficulties, the scheme has proven successful and will now be offered as an option for all staff (although final approval must be given by your manager)."
+        },
+        {
+            "title": "Reading Passage 3",
+            "content": "<h3>Reading Passage 3</h3>\n<h4>You should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.</h4>\n\n<h2>The Life and Work of Edgar Allan Poe</h2>\n\n<p>Edgar Allan Poe, one of the first prominent American authors, is perhaps best known today for his contribution to the short story form as well as his most famous poem, The Raven. Born in Boston, Massachusetts, on January 19, 1809, Poe was the second child of two professional actors. In the second year of his life, 1811, the young Poe, <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">his older brother Henry</span> and younger sister Rosalie, found themselves orphaned following the death of their mother from tuberculosis, the family having been abandoned by <span id=\"passage-q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">Poe's father a year earlier</span>.</p>\n\n<p>In 1811, Poe was adopted by the Allan family of Richmond, Virginia. Mainly as a result of financial pressures, Poe's relationship with Frances and John Allan, his foster parents, was often tense. After completing secondary school, Poe attended the University of Virginia in 1826 at the age of seventeen. Despite excelling academically, notably in French and Latin, Poe quit university before completing his first year, after falling out with John Allan over the cost of his education and debts that he had accrued. In 1827 Poe moved to Boston and enlisted in the United States Army using a false name, <span id=\"passage-q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">publishing an anonymous collection of poetry entitled Tamerlane and Other Poems</span> in the same year.</p>\n\n<p>After two years of military service, during which time Poe rose to the rank of Sergeant Major, he was granted a discharge to enter the United States Military Academy at West Point as a cadet and further his education. During this time Poe clashed again with his foster father regarding financial support for his studies, and it is said that the young writer deliberately broke rules and neglected his duties while at West Point so that he would be dismissed. <span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">In 1831, Poe was court-martialed for disobedience, afterwards moving to New York City for a brief period</span>. He had resolved to devote himself to his writing on a fulltime basis, publishing more poetry but having all of the short stories that he submitted to magazines rejected.</p>\n\n<p>Towards the end of 1831, Poe left New York City and moved into the house of his aunt, Maria Clemm, in Baltimore, Maryland. He stayed in Baltimore for the best part of four years, writing and selling a number of both poems and short stories during this period. However, the young writer still struggled financially, in no small part as a result of the lack of international copyright laws at the time, meaning that the editors of literary magazines preferred to reprint British works rather than publish those of new American authors. One of the short stories that Poe wrote while living under his Aunt's roof, The Manuscript Found in a Bottle, won a magazine contest, helping him to secure a position as editor of the Southern Literary Messenger in 1835.</p>\n\n<p>As editor of the Southern Literary Messenger in Richmond, Virginia, Poe was instrumental in lifting the publication's readership, raising circulation from fewer than 1000 to 3500 copies. During this time, Poe established his reputation as a literary critic and began to focus on writing prose, rather than poetry. He quit the paper in <span id=\"passage-q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">1836</span>, however, citing the <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">low salary</span> and lack of editorial control as the primary reasons. In the same <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">year, Poe married</span> a woman many years his junior, before returning to New York in 1837. Over the following decade, the writer held a number of editorial positions with various leading literary journals of the day in both <span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine</span>.</p>\n\n<p>The year 1839 saw the publication of Poe's first volume of short stories, Tales of the Grotesque and Arabesque, although he received no payment for the work, and supplemented his income from editing jobs by giving lectures and public readings. Continuing to write in different forms throughout this period of his life and career, in 1841 the author published what is generally considered to be the first story in the genre of detective fiction, entitled The Murders in the Rue Morgue. The following year, Poe quit his editing job with Graham's Magazine, planning to start his own publication, Stylus. Unfortunately, this venture was not successful. Poe attained further literary recognition in 1843, however, winning first prize in a competition for his story The Gold Bug, a tale heavily influenced by his interest in cryptography.</p>\n\n<p>In spite of winning one hundred dollars in prize money for The Gold Bug, Poe was still struggling to support his family financially. However, in 1845 the publication of his poem <span id=\"passage-q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">The Raven</span>, arguably the author's single most widely recognized work, won him lasting fame. <span id=\"passage-q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">Poe became an almost overnight literary sensation in his home country, and The Raven played a significant role in securing his international reputation as a writer</span>. The poem explores a number of the gothic themes common to Poe's writing, including those of love, beauty, death and loss. While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet, and was overcome by grief and sorrow following the death of his wife, Virginia, from tuberculosis in 1847.</p>\n\n<p>After the loss of his wife, it is said that Poe's behaviour became more erratic, and that his lifelong battle with depression worsened. He left the Bronx, in New York, where he and Virginia had been living and stayed in Rhode Island for a brief period, before returning to Richmond. The precise details surrounding Poe's death and his final days are a matter of considerable debate. It has been reported that the author left Richmond by train on September 27, 1849, supposedly with the intention of travelling to Philadelphia for an editing job. However, for reasons unknown, Poe ended up in Baltimore, where he was found in the street on October 3, semiconscious and in a state of delirium. He was taken to the Washington Medical College and died four days later, on October 7, 1849.</p>\n\n<p>While he was alive, <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor. At the same time, he was known as both a fiction writer and poet</span>, and one of the first nineteenth century American authors to attain greater popularity in Europe than in the United States. Today, Poe is one of America's most enduring writers, as well as being among the first to become a major figure in world literature. He is considered to be the originator of <span id=\"passage-q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">gothic fiction</span>, as well as being a contributor to the development of science fiction and the modern short story form. The works of Edgar Allan Poe have inspired and influenced a host of other notable artists, writers and film directors, the likes of Salvador Dali, Charles Baudelaire and Alfred Hitchcock, to name but a few.</p>"
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "reading",
+        "exercise_label": "practice_test",
+        "open_as_popup": "1",
+        "scoring_type": "ielts_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    }
+}

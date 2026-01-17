@@ -1,0 +1,1836 @@
+{
+    "title": "Academic IELTS Reading Test 15",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.\n\nQuestions 1 – 6\n\nDo the following statements agree with the information given in Reading Passage 1?\n\nIn boxes 1 – 6 on your answer sheet write\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this in the passage",
+            "question": "The kauri tree is found in the North Island of New Zealand and throughout the South Pacific.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states that the kauri is located in 'the north half of the North Island of New Zealand', not throughout the South Pacific. Other Agatha specimens are spread throughout the southern Pacific, but the kauri specifically is in New Zealand. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states that the kauri is located in 'the north half of the North Island of New Zealand', not throughout the South Pacific."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the kauri is found in the north half of the North Island of New Zealand, while other Agatha specimens are spread throughout the southern Pacific—not the kauri itself."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage clearly states where the kauri is located."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Some kauri trees still alive today have been around as long as people have been in New Zealand.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states that kauri trees have a 'life-span surpassing 2,000 years, which means some trees were 1,000 years old when the first peoples arrived in New Zealand.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that kauri trees can live for over 2,000 years, and 'some trees were 1,000 years old when the first peoples arrived in New Zealand.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage mentions that kauri trees have a life-span surpassing 2,000 years, with some trees being 1,000 years old when first peoples arrived."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage provides this information clearly."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Logging of kauri was done exclusively by Europeans because the Maori valued it as a spiritual commodity.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states that 'logging of kauri...began in earnest in the 1800s, by both the European settlers and the Maori.' The Maori understood its value as a trade commodity, not exclusively spiritual. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states logging was done 'by both the European settlers and the Maori.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage clearly states that logging was done 'by both the European settlers and the Maori', not exclusively by Europeans."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage provides clear information about who did the logging."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "House builders quickly realized the value of kauri because of its grain and natural colour.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. While the passage mentions that kauri was valued for house-building and for its parallel grain and elasticity, it does not mention natural colour as a reason for its value. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While grain is mentioned, natural colour is not stated as a reason for kauri's value in the passage."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't provide information about whether natural colour was a reason for its value."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions the grain and elasticity of kauri timber, but does not mention natural colour as a reason for its value."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Animals pose the greatest threat to the survival of the kauri.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states that over-logging is the main problem, with animals being a lesser threat: 'Other problems, besides over-logging, beset the kauri, although to a lesser extent.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states that over-logging is the main problem, with animals being 'to a lesser extent.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage clearly states that 'Other problems, besides over-logging, beset the kauri, although to a lesser extent', indicating that over-logging is the greatest threat, not animals."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage provides clear information about the relative threats."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Citizen action, as well as protection from the authorities, has begun to protect the kauri.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states: 'Both government intervention and volunteer work are underway to ensure a healthy future for kauri forests.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'Both government intervention and volunteer work are underway to ensure a healthy future for kauri forests.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage clearly mentions both government intervention and volunteer work."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage provides this information explicitly."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 7 – 11\n\nComplete the summary of information below.\n\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\n\nWrite your answers in boxes 7 – 11 on your answer sheet.\n\nThe Growth of the Kauri",
+            "question": "Kauri trees can live for more than 2,000 years, which makes them the _______ trees in New Zealand.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is LONGEST LIVING or LONGEST-LIVING. The passage states kauri trees have a 'life-span surpassing 2,000 years', making them the longest living trees. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion",
+            "summary_fields": [
+                {
+                    "answer": "longest living|longest-living",
+                    "correct_feedback": "Correct! The passage states the kauri is 'the largest- and longest-living' tree in New Zealand.",
+                    "incorrect_feedback": "Incorrect. The correct answer is LONGEST LIVING or LONGEST-LIVING.",
+                    "no_answer_feedback": "The correct answer is LONGEST LIVING or LONGEST-LIVING. The passage states kauri trees have a 'life-span surpassing 2,000 years', making them the longest living trees."
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "One of the biggest recorded kauri trees was nearly _______ metres around.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 27 (or TWENTY SEVEN/TWENTY-SEVEN). The passage mentions 'The Great Ghost' growing to 'more than 27 metres in girth'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion",
+            "summary_fields": [
+                {
+                    "answer": "27|twenty seven|twenty-seven",
+                    "correct_feedback": "Correct! The passage states 'The Great Ghost' grew to 'more than 27 metres in girth'.",
+                    "incorrect_feedback": "Incorrect. The correct answer is 27 (or TWENTY SEVEN/TWENTY-SEVEN).",
+                    "no_answer_feedback": "The correct answer is 27 (or TWENTY SEVEN/TWENTY-SEVEN). The passage mentions 'The Great Ghost' growing to 'more than 27 metres in girth'."
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The young trees have a strong vertical growth pattern, losing _______ at lower levels as the tree grows.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is BRANCHES. The passage states 'the lower branches are shed as the tree reaches greater heights'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion",
+            "summary_fields": [
+                {
+                    "answer": "branches",
+                    "correct_feedback": "Correct! The passage states 'the lower branches are shed as the tree reaches greater heights'.",
+                    "incorrect_feedback": "Incorrect. The correct answer is BRANCHES.",
+                    "no_answer_feedback": "The correct answer is BRANCHES. The passage states 'the lower branches are shed as the tree reaches greater heights'."
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Some trunks are free of branches as high as _______ metres.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 25 (or TWENTY FIVE/TWENTY-FIVE). The passage states 'Some of the largest kauri trees had clean trunks reaching up to 25 metres'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion",
+            "summary_fields": [
+                {
+                    "answer": "25|twenty five|twenty-five",
+                    "correct_feedback": "Correct! The passage states 'Some of the largest kauri trees had clean trunks reaching up to 25 metres'.",
+                    "incorrect_feedback": "Incorrect. The correct answer is 25 (or TWENTY FIVE/TWENTY-FIVE).",
+                    "no_answer_feedback": "The correct answer is 25 (or TWENTY FIVE/TWENTY-FIVE). The passage states 'Some of the largest kauri trees had clean trunks reaching up to 25 metres'."
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The kauri tree produces both male and female seeds, and has flat leaves which are the strength of _______.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is LEATHER. The passage states the leaves 'are flat and leather-tough'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion",
+            "summary_fields": [
+                {
+                    "answer": "leather",
+                    "correct_feedback": "Correct! The passage states the leaves 'are flat and leather-tough'.",
+                    "incorrect_feedback": "Incorrect. The correct answer is LEATHER.",
+                    "no_answer_feedback": "The correct answer is LEATHER. The passage states the leaves 'are flat and leather-tough'."
+                }
+            ],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 12 – 13\n\nChoose the appropriate letters A – D and write them in boxes 12 – 13 on your answer sheet.",
+            "question": "Maori recognized the value of kauri",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: 'and were able to use it as a trading commodity.' The passage states 'Maori leaders understood its value, and they exchanged it for European provisions, such as food products and muskets.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "before European settlers did.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. While the Maori did use kauri, the passage states both the Maori and European settlers recognized its value."
+                },
+                {
+                    "text": "and were able to use it as a trading commodity.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'kauri became a commodity for trade, as Maori leaders understood its value, and they exchanged it for European provisions, such as food products and muskets.'"
+                },
+                {
+                    "text": "because of its resistance to rot.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. While the passage mentions resistance to rot, it doesn't say this was why the Maori recognized its value."
+                },
+                {
+                    "text": "owing to the strength and durability of the resin gum.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The resin gum is mentioned, but not as the reason Maori recognized kauri's value."
+                }
+            ],
+            "options": "before European settlers did.\nand were able to use it as a trading commodity.\nbecause of its resistance to rot.\nowing to the strength and durability of the resin gum.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Logging of the kauri tree",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: 'has seen changes to the landscape in the north of the country.' The passage states 'massive deforestation of the kauri saw the northern part of New Zealand transformed.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "has been a major industry for Maori for over a thousand years.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage states logging began in earnest in the 1800s, not over a thousand years ago."
+                },
+                {
+                    "text": "has brought financial benefits for both Maori and Europeans because of the relative ease of logging operations.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage actually states that moving the logs was 'difficult and dangerous', not relatively easy."
+                },
+                {
+                    "text": "has kept pace with the regeneration of kauri forests.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage indicates that kauri forests were 'devastated' and are now 'scarce', showing logging did not keep pace with regeneration."
+                },
+                {
+                    "text": "has seen changes to the landscape in the north of the country.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'massive deforestation of the kauri saw the northern part of New Zealand transformed.'"
+                }
+            ],
+            "options": "has been a major industry for Maori for over a thousand years.\nhas brought financial benefits for both Maori and Europeans because of the relative ease of logging operations.\nhas kept pace with the regeneration of kauri forests.\nhas seen changes to the landscape in the north of the country.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.\n\nQuestions 14 – 20\n\nReading Passage 2 has seven paragraphs A – G.\n\nChoose the most suitable headings for paragraphs A – G from the list of headings below.\n\nWrite the appropriate numbers I – X in boxes 14 – 20 on your answer sheet.\n\nNB There are more headings than paragraphs, so some headings will not be used.",
+            "question": "Paragraph A",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is III: Why Lotto?. Review paragraph A to understand its main idea. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "I: Winning isn't everything.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is III: Why Lotto?."
+                },
+                {
+                    "text": "II: Lotteries can solve all financial problems.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is III: Why Lotto?."
+                },
+                {
+                    "text": "III: Why Lotto?",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "IV: An interesting variation.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is III: Why Lotto?."
+                },
+                {
+                    "text": "V: Universities benefit from lottery funds.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is III: Why Lotto?."
+                },
+                {
+                    "text": "VI: The early emergence of lotto-style games.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is III: Why Lotto?."
+                },
+                {
+                    "text": "VII: The introduction of the modern lottery.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is III: Why Lotto?."
+                },
+                {
+                    "text": "VIII: Criminal activity reduces the odds of winning.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is III: Why Lotto?."
+                },
+                {
+                    "text": "IX: The numbers explain the difficulty of winning.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is III: Why Lotto?."
+                },
+                {
+                    "text": "X: Examples of the funding provided by lotteries.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is III: Why Lotto?."
+                }
+            ],
+            "options": "i: Winning isn't everything.\nii: Lotteries can solve all financial problems.\niii: Why Lotto?\niv: An interesting variation.\nv: Universities benefit from lottery funds.\nvi: The early emergence of lotto-style games.\nvii: The introduction of the modern lottery.\nviii: Criminal activity reduces the odds of winning.\nix: The numbers explain the difficulty of winning.\nx: Examples of the funding provided by lotteries.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph B",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is VI: The early emergence of lotto-style games.. Review paragraph B to understand its main idea. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "I: Winning isn't everything.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI: The early emergence of lotto-style games.."
+                },
+                {
+                    "text": "II: Lotteries can solve all financial problems.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI: The early emergence of lotto-style games.."
+                },
+                {
+                    "text": "III: Why Lotto?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI: The early emergence of lotto-style games.."
+                },
+                {
+                    "text": "IV: An interesting variation.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI: The early emergence of lotto-style games.."
+                },
+                {
+                    "text": "V: Universities benefit from lottery funds.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI: The early emergence of lotto-style games.."
+                },
+                {
+                    "text": "VI: The early emergence of lotto-style games.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "VII: The introduction of the modern lottery.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI: The early emergence of lotto-style games.."
+                },
+                {
+                    "text": "VIII: Criminal activity reduces the odds of winning.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI: The early emergence of lotto-style games.."
+                },
+                {
+                    "text": "IX: The numbers explain the difficulty of winning.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI: The early emergence of lotto-style games.."
+                },
+                {
+                    "text": "X: Examples of the funding provided by lotteries.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI: The early emergence of lotto-style games.."
+                }
+            ],
+            "options": "i: Winning isn't everything.\nii: Lotteries can solve all financial problems.\niii: Why Lotto?\niv: An interesting variation.\nv: Universities benefit from lottery funds.\nvi: The early emergence of lotto-style games.\nvii: The introduction of the modern lottery.\nviii: Criminal activity reduces the odds of winning.\nix: The numbers explain the difficulty of winning.\nx: Examples of the funding provided by lotteries.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph C",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is VII: The introduction of the modern lottery.. Review paragraph C to understand its main idea. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "I: Winning isn't everything.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII: The introduction of the modern lottery.."
+                },
+                {
+                    "text": "II: Lotteries can solve all financial problems.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII: The introduction of the modern lottery.."
+                },
+                {
+                    "text": "III: Why Lotto?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII: The introduction of the modern lottery.."
+                },
+                {
+                    "text": "IV: An interesting variation.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII: The introduction of the modern lottery.."
+                },
+                {
+                    "text": "V: Universities benefit from lottery funds.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII: The introduction of the modern lottery.."
+                },
+                {
+                    "text": "VI: The early emergence of lotto-style games.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII: The introduction of the modern lottery.."
+                },
+                {
+                    "text": "VII: The introduction of the modern lottery.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "VIII: Criminal activity reduces the odds of winning.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII: The introduction of the modern lottery.."
+                },
+                {
+                    "text": "IX: The numbers explain the difficulty of winning.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII: The introduction of the modern lottery.."
+                },
+                {
+                    "text": "X: Examples of the funding provided by lotteries.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII: The introduction of the modern lottery.."
+                }
+            ],
+            "options": "i: Winning isn't everything.\nii: Lotteries can solve all financial problems.\niii: Why Lotto?\niv: An interesting variation.\nv: Universities benefit from lottery funds.\nvi: The early emergence of lotto-style games.\nvii: The introduction of the modern lottery.\nviii: Criminal activity reduces the odds of winning.\nix: The numbers explain the difficulty of winning.\nx: Examples of the funding provided by lotteries.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph D",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is IV: An interesting variation.. Review paragraph D to understand its main idea. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "I: Winning isn't everything.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV: An interesting variation.."
+                },
+                {
+                    "text": "II: Lotteries can solve all financial problems.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV: An interesting variation.."
+                },
+                {
+                    "text": "III: Why Lotto?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV: An interesting variation.."
+                },
+                {
+                    "text": "IV: An interesting variation.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "V: Universities benefit from lottery funds.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV: An interesting variation.."
+                },
+                {
+                    "text": "VI: The early emergence of lotto-style games.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV: An interesting variation.."
+                },
+                {
+                    "text": "VII: The introduction of the modern lottery.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV: An interesting variation.."
+                },
+                {
+                    "text": "VIII: Criminal activity reduces the odds of winning.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV: An interesting variation.."
+                },
+                {
+                    "text": "IX: The numbers explain the difficulty of winning.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV: An interesting variation.."
+                },
+                {
+                    "text": "X: Examples of the funding provided by lotteries.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV: An interesting variation.."
+                }
+            ],
+            "options": "i: Winning isn't everything.\nii: Lotteries can solve all financial problems.\niii: Why Lotto?\niv: An interesting variation.\nv: Universities benefit from lottery funds.\nvi: The early emergence of lotto-style games.\nvii: The introduction of the modern lottery.\nviii: Criminal activity reduces the odds of winning.\nix: The numbers explain the difficulty of winning.\nx: Examples of the funding provided by lotteries.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph E",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is X: Examples of the funding provided by lotteries.. Review paragraph E to understand its main idea. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "I: Winning isn't everything.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is X: Examples of the funding provided by lotteries.."
+                },
+                {
+                    "text": "II: Lotteries can solve all financial problems.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is X: Examples of the funding provided by lotteries.."
+                },
+                {
+                    "text": "III: Why Lotto?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is X: Examples of the funding provided by lotteries.."
+                },
+                {
+                    "text": "IV: An interesting variation.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is X: Examples of the funding provided by lotteries.."
+                },
+                {
+                    "text": "V: Universities benefit from lottery funds.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is X: Examples of the funding provided by lotteries.."
+                },
+                {
+                    "text": "VI: The early emergence of lotto-style games.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is X: Examples of the funding provided by lotteries.."
+                },
+                {
+                    "text": "VII: The introduction of the modern lottery.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is X: Examples of the funding provided by lotteries.."
+                },
+                {
+                    "text": "VIII: Criminal activity reduces the odds of winning.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is X: Examples of the funding provided by lotteries.."
+                },
+                {
+                    "text": "IX: The numbers explain the difficulty of winning.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is X: Examples of the funding provided by lotteries.."
+                },
+                {
+                    "text": "X: Examples of the funding provided by lotteries.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "i: Winning isn't everything.\nii: Lotteries can solve all financial problems.\niii: Why Lotto?\niv: An interesting variation.\nv: Universities benefit from lottery funds.\nvi: The early emergence of lotto-style games.\nvii: The introduction of the modern lottery.\nviii: Criminal activity reduces the odds of winning.\nix: The numbers explain the difficulty of winning.\nx: Examples of the funding provided by lotteries.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph F",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is IX: The numbers explain the difficulty of winning.. Review paragraph F to understand its main idea. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "I: Winning isn't everything.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IX: The numbers explain the difficulty of winning.."
+                },
+                {
+                    "text": "II: Lotteries can solve all financial problems.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IX: The numbers explain the difficulty of winning.."
+                },
+                {
+                    "text": "III: Why Lotto?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IX: The numbers explain the difficulty of winning.."
+                },
+                {
+                    "text": "IV: An interesting variation.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IX: The numbers explain the difficulty of winning.."
+                },
+                {
+                    "text": "V: Universities benefit from lottery funds.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IX: The numbers explain the difficulty of winning.."
+                },
+                {
+                    "text": "VI: The early emergence of lotto-style games.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IX: The numbers explain the difficulty of winning.."
+                },
+                {
+                    "text": "VII: The introduction of the modern lottery.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IX: The numbers explain the difficulty of winning.."
+                },
+                {
+                    "text": "VIII: Criminal activity reduces the odds of winning.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IX: The numbers explain the difficulty of winning.."
+                },
+                {
+                    "text": "IX: The numbers explain the difficulty of winning.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "X: Examples of the funding provided by lotteries.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IX: The numbers explain the difficulty of winning.."
+                }
+            ],
+            "options": "i: Winning isn't everything.\nii: Lotteries can solve all financial problems.\niii: Why Lotto?\niv: An interesting variation.\nv: Universities benefit from lottery funds.\nvi: The early emergence of lotto-style games.\nvii: The introduction of the modern lottery.\nviii: Criminal activity reduces the odds of winning.\nix: The numbers explain the difficulty of winning.\nx: Examples of the funding provided by lotteries.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph G",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is I: Winning isn't everything.. Review paragraph G to understand its main idea. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "I: Winning isn't everything.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "II: Lotteries can solve all financial problems.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I: Winning isn't everything.."
+                },
+                {
+                    "text": "III: Why Lotto?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I: Winning isn't everything.."
+                },
+                {
+                    "text": "IV: An interesting variation.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I: Winning isn't everything.."
+                },
+                {
+                    "text": "V: Universities benefit from lottery funds.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I: Winning isn't everything.."
+                },
+                {
+                    "text": "VI: The early emergence of lotto-style games.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I: Winning isn't everything.."
+                },
+                {
+                    "text": "VII: The introduction of the modern lottery.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I: Winning isn't everything.."
+                },
+                {
+                    "text": "VIII: Criminal activity reduces the odds of winning.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I: Winning isn't everything.."
+                },
+                {
+                    "text": "IX: The numbers explain the difficulty of winning.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I: Winning isn't everything.."
+                },
+                {
+                    "text": "X: Examples of the funding provided by lotteries.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I: Winning isn't everything.."
+                }
+            ],
+            "options": "i: Winning isn't everything.\nii: Lotteries can solve all financial problems.\niii: Why Lotto?\niv: An interesting variation.\nv: Universities benefit from lottery funds.\nvi: The early emergence of lotto-style games.\nvii: The introduction of the modern lottery.\nviii: Criminal activity reduces the odds of winning.\nix: The numbers explain the difficulty of winning.\nx: Examples of the funding provided by lotteries.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 21 – 24\n\nThe writer refers to various countries and the types of lotteries associated with them. Match the country (A – G) with the information provided about the lotteries.\n\nNB: Some countries might not be used.\n\nWrite the appropriate letter (A – G) in boxes 21 – 24 on your answer sheet.",
+            "question": "Differing classes of society viewed lotteries differently, and as a result, initially they proved less than successful.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is E: France. Review paragraph C of Reading Passage 2 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Canada",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: France."
+                },
+                {
+                    "text": "B: Italy",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: France."
+                },
+                {
+                    "text": "C: Japan",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: France."
+                },
+                {
+                    "text": "D: America",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: France."
+                },
+                {
+                    "text": "E: France",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "F: Portugal",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: France."
+                },
+                {
+                    "text": "G: England",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: France."
+                }
+            ],
+            "options": "A: Canada\nB: Italy\nC: Japan\nD: America\nE: France\nF: Portugal\nG: England",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Tertiary institutes, as well as other essential societal requirements, were funded by lotteries.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: America. Review paragraph C of Reading Passage 2 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Canada",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: America."
+                },
+                {
+                    "text": "B: Italy",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: America."
+                },
+                {
+                    "text": "C: Japan",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: America."
+                },
+                {
+                    "text": "D: America",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "E: France",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: America."
+                },
+                {
+                    "text": "F: Portugal",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: America."
+                },
+                {
+                    "text": "G: England",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: America."
+                }
+            ],
+            "options": "A: Canada\nB: Italy\nC: Japan\nD: America\nE: France\nF: Portugal\nG: England",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Poor people were helped by money raised by lotteries.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is F: Portugal. Review paragraph C of Reading Passage 2 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Canada",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Portugal."
+                },
+                {
+                    "text": "B: Italy",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Portugal."
+                },
+                {
+                    "text": "C: Japan",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Portugal."
+                },
+                {
+                    "text": "D: America",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Portugal."
+                },
+                {
+                    "text": "E: France",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Portugal."
+                },
+                {
+                    "text": "F: Portugal",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "G: England",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Portugal."
+                }
+            ],
+            "options": "A: Canada\nB: Italy\nC: Japan\nD: America\nE: France\nF: Portugal\nG: England",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The lottery was used for other purposes, such as deciding electoral victors.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: Italy. Review paragraph C of Reading Passage 2 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Canada",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Italy."
+                },
+                {
+                    "text": "B: Italy",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "C: Japan",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Italy."
+                },
+                {
+                    "text": "D: America",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Italy."
+                },
+                {
+                    "text": "E: France",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Italy."
+                },
+                {
+                    "text": "F: Portugal",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Italy."
+                },
+                {
+                    "text": "G: England",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Italy."
+                }
+            ],
+            "options": "A: Canada\nB: Italy\nC: Japan\nD: America\nE: France\nF: Portugal\nG: England",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 25 – 26\n\nChoose the appropriate letters A – D and write them in boxes 25 – 26 on your answer sheet.",
+            "question": "In paragraph C, the writer refers to lotteries as having a 'low profile', which means",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: 'that lotteries were not generally well-publicised as an activity.' Having a 'low profile' means not being well-known or publicized. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "they were illegal for a thousand years.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "that lotteries were considered a form of gaming only for poor people.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "that lotteries were not generally well-publicised as an activity.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "that lotteries ceased to exist.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                }
+            ],
+            "options": "they were illegal for a thousand years.\nthat lotteries were considered a form of gaming only for poor people.\nthat lotteries were not generally well-publicised as an activity.\nthat lotteries ceased to exist.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The chances of winning a lottery",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: 'differ from one country to the next.' Paragraph F states 'other countries have different lotteries which are far more complicated and offer worse odds.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "are impossible because the odds are too high against the ticket-buyer.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "increase each week when people buy tickets.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "differ from one country to the next.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "increase the stress on people who suddenly become wealthy.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                }
+            ],
+            "options": "are impossible because the odds are too high against the ticket-buyer.\nincrease each week when people buy tickets.\ndiffer from one country to the next.\nincrease the stress on people who suddenly become wealthy.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 3\n\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.\n\nQuestions 27 – 32\n\nDo the following statements agree with the information given in Reading Passage 3?\n\nIn boxes 27 – 32 on your answer sheet write\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this in the passage",
+            "question": "The main criteria in making a concert hall great are its location, seating and sightlines.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Older concert halls did not have good acoustic features.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The 'shoebox' design has the same acoustics as amphitheaters.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Inside a concert hall, the listener receives sound from not only the stage, but from different directions as well.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "All concert halls now use reflectors to direct the sound from the walls and from the ceiling.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Research has now determined that high and low frequencies determine the best sound delivery.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 33 – 37\n\nThe article details various facts about some of the famous concert halls. Match the concert halls (A – H) with the information provided about them.\n\nNB: Some letters might not be used, and some letters might be used more than once.\n\nWrite the appropriate letter (A – H) in boxes 33 – 37 on your answer sheet.",
+            "question": "An example of an older-style concert hall that used scientific principles to enhance its sound.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is G: Boston's Symphony Hall. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "This modern concert hall borrowed design features from multiple great old concert halls.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is E: Sao Paolo's Sala Sao Paolo. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "A concert hall that has seen famous composers leading orchestras.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Vienna's Musikverein. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The claim has been made that this is the finest concert hall in the world.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Vienna's Musikverein. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "A concert hall that used electronics to enhance the different sound frequencies.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: London's Royal Festival Hall. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 38 – 40\n\nChoose the appropriate letters A – D and write them in boxes 38 – 40 on your answer sheet.",
+            "question": "The sound quality of the great concert halls of the world",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: 'varies according to design.' The passage discusses how different designs affect sound quality. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "is solely the result of science and technology.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "has improved with modern discoveries in acoustic research and technology.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "varies according to design.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "depends on the architect's knowledge of sound frequencies.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                }
+            ],
+            "options": "is solely the result of science and technology.\nhas improved with modern discoveries in acoustic research and technology.\nvaries according to design.\ndepends on the architect's knowledge of sound frequencies.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "'Lateral reflections'",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: 'ensure that sound is directed and received at its highest quality.' The passage explains that lateral reflections enhance sound volume and timing. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "are sound waves that come from the ceiling.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "are received by the listener at the same time as direct waves.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "are used primarily in the world's greatest modern concert halls.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "ensure that sound is directed and received at its highest quality.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "are sound waves that come from the ceiling.\nare received by the listener at the same time as direct waves.\nare used primarily in the world's greatest modern concert halls.\nensure that sound is directed and received at its highest quality.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "London's Royal Festival Hall",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A: 'underwent a number of changes over many years to improve the quality of the sound.' The passage describes multiple renovations over 30 years. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "underwent a number of changes over many years to improve the quality of the sound.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "copied its design from the great traditional concert halls.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A."
+                },
+                {
+                    "text": "suffered primarily from poor frequency of sound.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A."
+                },
+                {
+                    "text": "had poor quality seating.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A."
+                }
+            ],
+            "options": "underwent a number of changes over many years to improve the quality of the sound.\ncopied its design from the great traditional concert halls.\nsuffered primarily from poor frequency of sound.\nhad poor quality seating.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Passage 1",
+            "content": "<h4><strong>Travelling around the country with bus passes</strong></h4>\n<h5>Travel Rider pass</h5>\nThe Travel Rider pass is valid for one month from the day it is purchased and allows travel on any NorWest and Metro Link bus within the city. Photo identification is required to purchase a Travel Rider pass. Prices are £42 for adults, £30 for students and pensioners. Passes can be purchased from any of our branches. Please note that replacement passes can only be issued from the main office in Queen Street.\n<hr>\n<h5>Flexi-Pass</h5>\nFlexi-Pass allows travel between cities with an hours-based pass that can be topped up just like a pre paid phone card. With freedom to explore the national network of InterCity Coachlines, you can set your own itinerary and travel around the country, when and where you want. The more hours you buy, the cheaper each trip becomes and you can even use Flexi-Pass on the cross-channel ferry. You have three months to use the hours you purchase, so you don't have to pack too much travelling into a short time frame. The flexi-pass can be purchased from any of our branch offices.\nPrices:\n<ul>\n  <li>Up to 15 hours – £52</li>\n  <li>16 to 20 hours – £64</li>\n  <li>21 to 25 hours – £72</li>\n</ul>\nNOTE: No concessions are available on tickets.\n<hr>\n<h5>Destination Pass</h5>\nThe Destination Pass offers a range of 12 \"hop on and off\" fixed itinerary passes, based on the most popular touring routes throughout the country. The Destination Pass includes coach and ferry travel, as well as the additional options to sail on Brentwood Lake, all in the one pass. The destination Pass is available through travel agents worldwide or can be purchased through our website. When you're ready to travel, simply call us or log in online to book one of the 12 individual journeys. You can amend your travel plans up to two hours prior to departure without penalty. All trips must be taken within 6 months.\nPrices:\n<ul>\n  <li>4 trips – £115</li>\n  <li>8 trips – £215</li>\n  <li>12 trips – £390</li>\n</ul>\nStudent and group (5 people or more) discounts are available. Contact us for more details."
+        },
+        {
+            "title": "Reading Passage 2",
+            "content": "<h3>Gaston Community College evening classes</h3>\nThis semester, the following classes will be available.\n\n<strong>Class</strong>: English for beginners\n\n<strong>Description</strong>: An English language class to help new arrivals to the country learn better English. The course looks at using English in everyday situations, such as shopping, going to the doctors or getting a haircut.\n\n<strong>Times and days:</strong> Mondays and Thursdays at 7 p.m. to 8 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5 – 12\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £45\n\n<hr>\n\n<strong>Class</strong>: Intermediate Spanish\n\n<strong>Description</strong>: This class is ideally suited for students who have a basic knowledge of Spanish or who completed the Beginner's Spanish class held last semester\n\n<strong>Times and days:</strong> Tuesdays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5-18\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £55\n\n<hr>\n\n<strong>Class</strong>: Using your computer\n\n<strong>Description</strong>: No idea how to use a computer? Then this class if for you! It covers the basics of surfing the internet, sending and receiving emails, typing and understanding files and folders.\n\n<strong>Times and days:</strong> Wednesdays at 6.30 p.m. to 7.15 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £25\n\n<hr>\n\n<strong>Class</strong>: Beginners watercolour painting\n\n<strong>Description</strong>: Back by popular demand and once again run by local artist Ted Heath, this class gives you an opportunity to show your more creative side.\nNB: you will need to provide your own paper, paint and brushes\n\nThursdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-12\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<strong>Class</strong>: Better public speaking\n\n<strong>Description</strong>: For all those who have completed public speaking or presentation skills courses, or who have some experience and wish to brush up on their skills. Practise connecting with your audience and communicating your message with full effectiveness.\n\n<strong>Times and days:</strong> Tuesdays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £30\n\n<hr>\n\n<strong>Class</strong>: Successful interview techniques\n\n<strong>Description</strong>: Many courses focus on presenting yourself well at an interview, but this course will help you become a better interviewer – ideal for those perhaps run a small business and would like to be sure they are recruiting the right person. We will cover preparation, body language and good interview questions.\n\n<strong>Times and days:</strong> Mondays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £35\n\n<hr>\n\n<strong>Class</strong>: Authentic Thai cooking\n\n<strong>Description</strong>: Learn to cook Thai food the fun way with a native, experienced chef. A hands-on and demonstration course covering exciting dishes from all regions of Thailand. Aspects of Thai culture will be covered and all recipes and ingredients supplied.\n\n<strong>Times and days:</strong> Tuesdays from 7.00 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £35 + £55 food costs\n\n<hr>\n\n<strong>Class</strong>: Beginners guitar\n\n<strong>Description</strong>: Learn to play both classical and popular techniques. Please bring your own guitar, and a music stand and floor step if you have one. You will need to buy a textbook. Even if you've never played a note before, you should be able to play a tune by the end of the course.\n\n<strong>Times and days:</strong> Wednesdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-6\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £20\n\n<hr>\n\n<strong>Class</strong>: Digital photos\n\n<strong>Description</strong>: A fun & practical workshop just for digital camera users. Learn how to use the main functions of your camera. Lots of practice with portraits, action shots, night scenes & landscapes. Learn different ways to transfer your photos on to the computer – emailing, printing, resizing photos, changing colour or contrast, convert colour to black & white.\n\n<strong>Times and days:</strong> Mondays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<h3>ESITO dress code</h3>\nThe personal appearance of office workers and employees who have regular contact with the public is laid out in the company dress code. In brief, the code requires all employees to observe the following:\n<ul>\n  <li>Clean, pressed, properly fitting business casual attire is appropriate.</li>\n  <li>Hair should be clean, combed and neatly arranged. Long hair is acceptable if it is tied back.</li>\n  <li>Moustaches and beards should be neatly trimmed.</li>\n  <li>Good personal hygiene must be maintained.</li>\n  <li>Use perfume or cologne in small quantities or not at all (some people are allergic to various scents).</li>\n</ul>\nThe personal appearance of employees who do not regularly meet the public is to be decided by the requirements of safety, comfort and supervisor approval. Even so, because all employees are a representative of the company, they should be as neat and business-like as working conditions permit. The following are some examples of inappropriate dress at all times:\n<ul>\n  <li>Faded and/or tattered/torn jeans; t-shirts displaying advertising or writing</li>\n  <li>Faded overalls, cotton/fleece pants and jogging suits, shorts, tank tops or recreational attire</li>\n  <li>Clothing revealing bare backs, midriffs or shoulders; or any revealing clothing.</li>\n</ul>\nCasual Fridays: The Company has designated Fridays as casual days. Some clothing is still considered inappropriate even on casual days. Employees are requested to use good sense in this regard.\n\nBad weather days: The Company understands that inclement weather conditions can require different attire for the day. Use good judgment when dressing for weather conditions. NOTE: This only impacts on employees working in the yard.\n\nThe supervisor is responsible for evaluating the dress and appearance of employees under his or her supervision. If an employee is not dressed appropriately, the supervisor should take the following steps:\n\nOn the first occasion, a documented verbal warning should be given to the employee, and the department's dress and appearance standards should be reviewed. If the supervisor deems it necessary, the employee may be sent home to change into appropriate clothing.\n\nOn the second occasion, the employee must be sent home to change clothes immediately as well as given a written warning. Further violations may result in discipline up to and including discharge.\n\n<hr>\n\n<h4>Benefits and amendment to benefits for Glyph Interactive employees</h4>\n<h4>Pension scheme</h4>\nAll employees are automatically included in our pension scheme, although there is an 'opt out' policy for employees with private pension plans. The pension scheme is no longer non-contributory, with employees now being asked to pay 25% of the annual payment. Government contributions will amount to an additional 25%, with Glyph Interactive continuing to support employees by covering the remaining 50%. Employees need to pay into the pension scheme for a minimum of 20 years. Once an employee reaches the age of 65, the pension payments begin. Employees who do not reach the twenty year mark will be paid pro rata (that is, an employee who has worked only ten years will receive only 50% of that received by an employee with twenty years experience).\n<h4>Medical insurance</h4>\nDue to rising costs, we can no longer support offering medical insurance to retiring employees. Standard cover still applies to all active employees, with one important addition. The immediate family (spouse and children) of the employee can also be covered for the same benefits and services. This will attract an additional payment depending on the current health of those wishing to be covered, but will be well below the cost of seeking insurance with a private company.\n<h4>Access to company vehicles</h4>\nAll staff with a legitimate need to travel will have access to one of the company vehicles. Please note that this is to be used for company purposes only, and must be applied for in writing at least two days before the vehicle is needed. For urgent and unexpected requirements, please consult your manager. The only exception to this is for sales staff, who have already been issued their own vehicles.\n<h4>Communication</h4>\nAll members of staff have a laptop which is issued on the first day of employment. This will now be supplemented by the addition of a Smartphone. Please note, however, that all calls and communications using the Smartphone should be for company purposes only unless in an emergency. Training events will be posted in the next few weeks to help you get to grips with the new phone.\n<h4>Working from home</h4>\nWe are now in the second year of the trial of some employees working from home for at least a part of the week. Despite some earlier difficulties, the scheme has proven successful and will now be offered as an option for all staff (although final approval must be given by your manager)."
+        },
+        {
+            "title": "Reading Passage 3",
+            "content": "What Makes A Great Concert Hall?\n\n<span id=\"passage-q27\" data-question=\"27\"></span>Think of the great concert halls in the world and some famous venues immediately come to mind: Sydney's iconic Opera House, Carnegie Hall in New York, Germany's Berlin Philharmonie and Tokyo's Opera City Concert Hall.  Two features stand out for each venue: the architectural lines which mark out the uniqueness of the structure, and the acoustic brilliance of each building, which elevates the sound to an almost new, ethereal, experience.  <span class=\"reading-answer-marker\">But what makes a great concert hall?  Is it simply a case of selecting the right location, ensuring enough seats and good sightlines, and letting the music loose?  The concert hall is more than that</span>, hosting a variety of performance genres and musical styles, so the acoustic requirements are demanding, and, as a result of years of experience, have now been lifted to a science.\n\n<span id=\"passage-q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">However, an interesting point is raised.  If the acoustics – that is, the overall sound, of the concert hall is now a science, how have some of the great concert halls of the world, which are also some of the oldest, such as Vienna's Musikverein, where Brahms and Mahler conducted, and Amsterdam's Concertgebouw, managed to capture the magic of sound before the art of acoustics had been moved to a science?</span>  What secrets did the architects and engineers of old know that enabled them to design and construct buildings that have stood the test of time in delivering the magic of music at such continuing exalted heights?  A simple analysis of some of the fundamental requirements of the delivery of sound reveals that some basic understanding of acoustic requirements has long been evident and has been successfully applied in the oldest, and, indeed, also the newest, and most loved buildings of our time.\n\n<span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">It appears that over time, as the presentation of music in a formal setting has evolved, the design of the basic 'shoebox' shape of an auditorium has been settled on.  Earlier versions of concert halls in the form of traditional amphitheatres and fan-shaped halls suffered from poor acoustics</span>, so, years of 'trial-and-error' have seen the concept of the long and narrow hall with, importantly, side sound reflectors, adapted as the best medium to deliver the optimum sound for concert-goers.  Some of the key elements were recognised early on as to what was required to deliver the best sound, and among those were the need to get rid of unwanted noises, the ability to allow the orchestra to attain dynamics of sound equally, whether at a low or high volume, and to maintain a clear and somewhat equal sound throughout the auditorium.\n\n<span id=\"passage-q30\" data-question=\"30\"></span>Comparing the sound of an outdoor concert and a concert at an indoor concert hall, it can be recognised that the difference is that the outdoor sound is thin, and directional, and distant, that is, coming straight from the source, which may be some way away, <span class=\"reading-answer-marker\">whereas in a concert hall, the sound seems to surround the listener, even for those who are some distance from the source.  Interestingly, after the source of the music has stopped, the sound appears to reverberate so that the listener seems to be totally enveloped by the sound, both spatially and time-wise.  Inside a concert hall, the two important elements are that sound is divided between direct sound, and reflected sound – direct sound being the primary source which reaches the ear, and reflected sound that bounces off the walls and ceiling.</span>  These two sounds arrive at the listeners' ears at slightly differing times and slightly different volumes, which add to the concept of being enveloped by the sound, often referred to as 'surround sound'.\n\n<span id=\"passage-q39\" data-question=\"39\"></span>Once this concept was realised by the early engineers and architects of concert halls, designs were put in place to enhance these discoveries.  The most important was the discovery of the 'shoebox' design, the rectangular, elongated shape which allowed the maximum re-direction of sound through reflectors, often hung from the sides of the concert hall, and now employed to be hung from the ceilings as well. <span class=\"reading-answer-marker\">This ensured the sound waves, known as 'lateral reflections', were being directed towards the audience from all angles, enhancing the sound volume and timing, and, thus, quality.</span>  Research and science have continued to more fully realize the extent of sound delivery, looking at the frequencies, both high and low, and the optimum delivery of the sound as intended by the composer and the conductor and orchestra.\n\n<span id=\"passage-q34\" data-question=\"34\"></span><span id=\"passage-q35\" data-question=\"35\"></span>Some of the great concert halls, both old and new, have incorporated the concepts of sound delivery magnificently.  <span class=\"reading-answer-marker\">Austria's Musikverein has been noted by some as the best concert hall in the world</span>, where the quietest of sounds seem to issue delicately from the stage, while a rising crescendo completely envelops the audience from all directions.  <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">In the United States, Boston's Symphony Hall based its shoebox design on a traditional German hall, the Gewandhaus in Leipzig, but used the then-modern physics from Harvard University to ensure that the sound would be the best possible.</span>\n\n<span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">In Sao Paolo, Brazil, in the 1990s, a new venue, the Sala Sao Paolo, was opened that copied proportions from the old; its width the same as Boston's Symphony Hall, and the length and height identical to Vienna's Musikverein</span>, but modern technology is also incorporated, with its huge adjustable ceiling.  Tokyo has the Opera City Concert Hall which, again, is based on the traditional rectangular shoebox with its two levels of side-seating, but like Sao Paolo, it has a unique feature, an enormous wood-panelled pyramid-shaped ceiling.\n\n<span id=\"passage-q37\" data-question=\"37\"></span><span id=\"passage-q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">Finally, it is worth looking at one concert hall for some salient lessons.  London's Royal Festival Hall, a 2,900-seater, was completed in 1951, and was designed using the best acoustic science concepts of the day, intending to emulate the sound of the great concert halls.  Unfortunately, it was immediately realised that the sound quality was poor, for varying reasons, with comments such as the sound being 'too dry' and different frequencies of sound suffering.  In the 1960s, an 'assisted resonance system' was employed, using the modern electronics of the day, and over the next 30 years, re-modelling was accomplished, including reducing the number of seats by 400, changing the tiling and fabric of the walls and ceiling, and adding acoustic canopies.</span>  Today, with the knowledge of the science of sound, and the gathered wisdom of decades, even centuries, of construction of concert halls, the Royal Festival Hall, home of the London Philharmonic, now stands as a great concert venue, with its own unique sound contributing to the legacy of the magnificent concert halls of the world."
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "ielts_academic_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-14 06:21:00",
+        "exported_by": "impact",
+        "plugin_version": "11.19",
+        "format_version": "1.0"
+    }
+}

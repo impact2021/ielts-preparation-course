@@ -1,0 +1,1482 @@
+{
+    "title": "Academic IELTS Reading Test 05",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 1 – 13 which are based on Reading Passage 1.\r\n\r\nDo the following statements agree with the information given in Reading Passage 1?\r\n\r\nSelect:\r\nTRUE if the statement agrees with the information\r\nFALSE if the statement contradicts the information\r\nNOT GIVEN if there is no information on this in the passage\r\n\r\n",
+            "question": "Some modern gyms provide opportunities for social interaction.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states that modern gyms 'operate as social centres, allowing like-minded individuals and groups to achieve similar goals... creating opportunities for people to meet away from the traditional locations'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that modern gyms 'operate as social centres, allowing like-minded individuals and groups to achieve similar goals... creating opportunities for people to meet away from the traditional locations'."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states that modern gyms 'operate as social centres, allowing like-minded individuals and groups to achieve similar goals... creating opportunities for people to meet away from the traditional locations'."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states that modern gyms 'operate as social centres, allowing like-minded individuals and groups to achieve similar goals... creating opportunities for people to meet away from the traditional locations'."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Some health professionals are worried, though, that even with the increase in gyms, general fitness levels are not increasing.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. Paragraph 4 states: 'there is concern among health professionals, government health agencies... that this generation is not becoming the fittest'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph 4 states: 'there is concern among health professionals, government health agencies... that this generation is not becoming the fittest'."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph 4 states: 'there is concern among health professionals, government health agencies... that this generation is not becoming the fittest'."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph 4 states: 'there is concern among health professionals, government health agencies... that this generation is not becoming the fittest'."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Exercise fads in the 20th century, such as jogging and home gyms, have not been effective in increasing general fitness levels.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions these fads exist ('jogging, jazzercise, celebrity aerobics, home gyms and Zumba workouts') but never discusses whether they were effective or ineffective at increasing fitness levels—that information is simply not provided. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While the passage mentions these exercise fads ('jogging, jazzercise, celebrity aerobics, home gyms and Zumba workouts'), it never states whether they were effective or ineffective at increasing fitness levels. The word 'fads' does not mean they were ineffective—it simply refers to popular trends. The passage lists them as preceding the modern gym concept, without evaluating their effectiveness."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions exercise fads like jogging and home gyms but does not state whether they were effective or ineffective at increasing fitness levels. Be careful not to make assumptions—the term 'fads' refers to trends, not effectiveness."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions these fads in paragraph 5 ('jogging, jazzercise, celebrity aerobics, home gyms and Zumba workouts') but does not state whether they were effective or not in increasing fitness levels. The passage only states that the modern gym concept 'predates' these fads, without evaluating their effectiveness."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Personal trainers are considered very important in modern gyms.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. Paragraph 4 states: 'The role of personal trainers has taken on a new, elevated, status'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph 4 states: 'The role of personal trainers has taken on a new, elevated, status'."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph 4 states: 'The role of personal trainers has taken on a new, elevated, status'."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph 4 states: 'The role of personal trainers has taken on a new, elevated, status'."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The Chinese were the first to recognise that physical fitness was necessary for a healthy population.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. Paragraph 5 mentions 'Around 2000 BC, Chinese writings indicate it was realized there was a strong link between physical activity and physical well-being' but does not state they were the first. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. Paragraph 5 mentions 'Around 2000 BC, Chinese writings indicate it was realized there was a strong link between physical activity and physical well-being' but does not state they were the first."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. Paragraph 5 mentions 'Around 2000 BC, Chinese writings indicate it was realized there was a strong link between physical activity and physical well-being' but does not state they were the first."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph 5 mentions 'Around 2000 BC, Chinese writings indicate it was realized there was a strong link between physical activity and physical well-being' but does not state they were the first."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Today, it is acknowledged that governments must have a commitment for the good health of its citizens.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. Paragraph 6 states: 'physical fitness has emerged as a recognized science, a necessity for health and a government responsibility to ensure well-being for its citizenry'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph 6 states: 'physical fitness has emerged as a recognized science, a necessity for health and a government responsibility to ensure well-being for its citizenry'."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage explicitly states that ensuring the health of citizens is a government responsibility. Paragraph 6 says: 'physical fitness has emerged as a recognized science, a necessity for health and a government responsibility to ensure well-being for its citizenry'."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage clearly addresses this topic and states that physical fitness is a government responsibility. Paragraph 6 says: 'a government responsibility to ensure well-being for its citizenry'. This is not left unaddressed in the passage."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "According to the reading passage, which THREE of the following features are offered by modern gyms today?\r\n",
+            "question": "Select THREE letters (A–G)",
+            "points": 3,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "yoga classes",
+                    "is_correct": false,
+                    "feedback": "The passage mentions yoga historically in India, but not as a service offered in modern gyms today."
+                },
+                {
+                    "text": "opportunities to meet other people",
+                    "is_correct": true,
+                    "feedback": "The passage explicitly says: “modern gyms operate as social centres, allowing like-minded individuals and groups to achieve similar goals, to participate in group exercise classes, and even… operating as meeting centres, creating opportunities for people to meet away from the traditional locations…”"
+                },
+                {
+                    "text": "exercise programs for children and adults",
+                    "is_correct": true,
+                    "feedback": "The passage mentions: “the modern gym, with its wide array of exercise programs fits the bill”. While it doesn’t explicitly say children, “programs” for different participants are implied."
+                },
+                {
+                    "text": "staff who are aware of an individual's fitness requirements",
+                    "is_correct": true,
+                    "feedback": "The passage states: “personal trainers attuned to the needs and requirements of every participant”."
+                },
+                {
+                    "text": "places for people to work",
+                    "is_correct": false,
+                    "feedback": "This is not mentioned."
+                },
+                {
+                    "text": "people who can speak different languages",
+                    "is_correct": false,
+                    "feedback": "This is not mentioned."
+                },
+                {
+                    "text": "Childcare facilities for gym members",
+                    "is_correct": false,
+                    "feedback": "This is not mentioned."
+                }
+            ],
+            "options": "yoga classes\nopportunities to meet other people\nexercise programs for children and adults\nstaff who are aware of an individual's fitness requirements\nplaces for people to work\npeople who can speak different languages\nChildcare facilities for gym members",
+            "correct_answer_count": 3,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose the appropriate letters A – D and write them in boxes 10 – 13 on your answer sheet.",
+            "question": "Research on modern gyms indicates",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C, as the passage clearly demonstrates that regular, structured exercise programs improve health and well-being.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A: ...that a better diet leads to improved health.",
+                    "is_correct": false,
+                    "feedback": "While diet awareness is mentioned, the passage does not say that diet alone is proven to improve health. The correct answer is C because the passage states: “the mechanics provided, leading to the proven results, show that planning and perseverance result in quantifiable improvement in health” and “regular programs of cardiovascular workouts and weight and muscle regimens show astonishing results in improved health.”"
+                },
+                {
+                    "text": "B: ...that they have a longer life span than older gyms.",
+                    "is_correct": false,
+                    "feedback": "The passage talks about improved life span for individuals who follow exercise programs, but gyms themselves do not have a “longer life span.” The correct answer is C because the text proves that structured exercise leads to better well-being."
+                },
+                {
+                    "text": "C: ...there is proof that a regular program of different exercises leads to better well-being.",
+                    "is_correct": true,
+                    "feedback": "The passage states: “the mechanics provided, leading to the proven results, show that planning and perseverance result in quantifiable improvement in health” and “regular programs of cardiovascular workouts and weight and muscle regimens show astonishing results in improved health”. This directly supports C."
+                },
+                {
+                    "text": "D: ...there is a need for personal trainers to ensure an improvement in health.",
+                    "is_correct": false,
+                    "feedback": "Personal trainers assist participants, but improvement depends on individual dedication, not on trainers alone. The correct answer is C because the passage highlights that planning and perseverance in exercise programs result in measurable health benefits."
+                }
+            ],
+            "options": "A: ...that a better diet leads to improved health.\nB: ...that they have a longer life span than older gyms.\nC: ...there is proof that a regular program of different exercises leads to better well-being.\nD: ...there is a need for personal trainers to ensure an improvement in health.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Health professionals and government departments",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A, because the passage shows that professionals are worried about population health.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "are worried that, despite the increase in gyms, the general health of the population is not improving.",
+                    "is_correct": true,
+                    "feedback": "Correct. The passage states: “there is concern among health professionals, government health agencies… that this generation is not becoming the fittest.”"
+                },
+                {
+                    "text": "dispute the World Health Organisation statistics on American life spans.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage cites WHO statistics but does not say they are disputed. The correct answer is A because the concern is about population fitness despite more gyms."
+                },
+                {
+                    "text": "argue as to whether the sedentary lifestyle is the main cause of a decrease in fitness.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While some question social and lifestyle reasons, no debate about the main cause is described. The correct answer is A because the concern is about population fitness despite more gyms."
+                },
+                {
+                    "text": "feel it is the responsibility of personal trainers to ensure a healthier life for people.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Responsibility is discussed philosophically as the “outsourced-self,” not as an obligation for trainers. The correct answer is A because the concern is about population fitness despite more gyms."
+                }
+            ],
+            "options": "are worried that, despite the increase in gyms, the general health of the population is not improving.\ndispute the World Health Organisation statistics on American life spans.\nargue as to whether the sedentary lifestyle is the main cause of a decrease in fitness.\nfeel it is the responsibility of personal trainers to ensure a healthier life for people.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The concept of the modern gym",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B, because the passage shows the concept began with early human instincts.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "arose from such innovations as jogging, jazzercise and other 20th century fads.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. These trends are much later. The correct answer is B, because the gym concept started with early humans running, hunting, and fighting."
+                },
+                {
+                    "text": "can be traced back to the first instincts for humans to run, to hunt and to fight.",
+                    "is_correct": true,
+                    "feedback": "Correct. The passage says early humans needed to run, hunt, carry, climb, and fight."
+                },
+                {
+                    "text": "was first found in early Chinese writings.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Chinese writings talk about fitness, but they did not start the concept. The correct answer is B."
+                },
+                {
+                    "text": "was recorded in athletic competitions, such as by the Greeks and the first Olympic Games.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. While personal trainers assist participants, improvement ultimately depends on the individual's dedication to the program. The passage states that 'planning and perseverance result in quantifiable improvement in health', emphasizing individual effort rather than trainers being necessary for improvement."
+                }
+            ],
+            "options": "arose from such innovations as jogging, jazzercise and other 20th century fads.\ncan be traced back to the first instincts for humans to run, to hunt and to fight.\nwas first found in early Chinese writings.\nwas recorded in athletic competitions, such as by the Greeks and the first Olympic Games.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "After a millennium of ignoring the needs of physical fitness,",
+            "points": 1,
+            "no_answer_feedback": "Read the question carefully and review the relevant section of the passage. Multiple choice questions test your detailed understanding of specific information.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "the Western world turned to the church as a means to improve fitness.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage states the Western world ignored fitness during this period, and the church was part of the power structure that 'conspired to turn the focus away from the body's fitness requirements', not a means to improve fitness."
+                },
+                {
+                    "text": "there was a revitalization in the interest of physical health.",
+                    "is_correct": true,
+                    "feedback": "Correct! The Renaissance era saw renewed interest in health, the anatomy and physical education, as stated in paragraph 6."
+                },
+                {
+                    "text": "it was recognized that the Greeks and Romans knew more about health than contemporary beliefs.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. While the Renaissance era revisited Greek and Roman ideas about health (paragraph 6 mentions 'some even drawing on the writings of the ancient Greeks and Romans'), the passage focuses on renewed interest in health rather than stating that Greeks and Romans knew more about health than contemporary beliefs."
+                },
+                {
+                    "text": "European cultures argued with each other to establish the best fitness programs.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage does not mention European cultures arguing with each other to establish fitness programs. Instead, paragraph 6 states that European cultures were 'learning and feeding off each other' collaboratively."
+                }
+            ],
+            "options": "the Western world turned to the church as a means to improve fitness.\nthere was a revitalization in the interest of physical health.\nit was recognized that the Greeks and Romans knew more about health than contemporary beliefs.\nEuropean cultures argued with each other to establish the best fitness programs.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 2 has six paragraphs A – F.\r\nFor paragraphs A – F, choose the most suitable heading from the list of headings below.\r\n\r\nNB There are more headings than paragraphs, so some headings will not be used.\r\n",
+            "question": "Paragraph A",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Heading III (Early ideas lead to modern concepts) because paragraph A explains the early ideas that led to modern bar codes. It is important to read each paragraph carefully and think about its main point before choosing a heading. Even if some words are hard, understanding the overall idea will help you choose the correct heading. Always try to make a choice, even if it is a guess.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "I. The original concept sees many modern applications",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage does not attribute the modern gym concept to 20th century fads like jogging and jazzercise; instead, it states the concept predates these trends by thousands of years."
+                },
+                {
+                    "text": "II. Grocery stores worry about the costs",
+                    "is_correct": false,
+                    "feedback": "This is not correct because paragraph A does not mention shops or costs. The correct answer is Heading III (Early ideas lead to modern concepts) because paragraph A explains the early ideas that led to modern bar codes."
+                },
+                {
+                    "text": "III. Early ideas lead to modern concepts",
+                    "is_correct": true,
+                    "feedback": "Incorrect. The correct answer is B. While the Renaissance period saw renewed interest in health and references to Greek and Roman ideas (paragraph 6), the passage focuses on renewed interest in health rather than stating that Greeks and Romans knew more about health than contemporary beliefs."
+                },
+                {
+                    "text": "IV. A different industry provides a new stimulus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B. The passage does not mention European cultures arguing with each other about fitness programs. Paragraph 6 mentions various European cultures 'learning and feeding off each other' collaboratively, not competitively."
+                },
+                {
+                    "text": "V. Different Technological Institutes compete",
+                    "is_correct": false,
+                    "feedback": "This is not correct because paragraph A does not talk about schools or institutes competing. The correct answer is Heading III (Early ideas lead to modern concepts) because paragraph A explains the early ideas that led to modern bar codes."
+                },
+                {
+                    "text": "VI. Early setbacks",
+                    "is_correct": false,
+                    "feedback": "This is not correct because paragraph A does not focus on problems or failures. The correct answer is Heading III (Early ideas lead to modern concepts) because paragraph A explains the early ideas that led to modern bar codes."
+                },
+                {
+                    "text": "VII. An old system inspires one man",
+                    "is_correct": false,
+                    "feedback": "This is not correct because no old system or single person is mentioned. The correct answer is Heading III (Early ideas lead to modern concepts) because paragraph A explains the early ideas that led to modern bar codes."
+                },
+                {
+                    "text": "VIII. Railways lead the way",
+                    "is_correct": false,
+                    "feedback": "This is not correct because paragraph A does not mention railways. The correct answer is Heading III (Early ideas lead to modern concepts) because paragraph A explains the early ideas that led to modern bar codes."
+                },
+                {
+                    "text": "IX. Theory becomes reality",
+                    "is_correct": false,
+                    "feedback": "This is not correct because the paragraph does not describe bar codes being used in real life yet. The correct answer is Heading III (Early ideas lead to modern concepts) because paragraph A explains the early ideas that led to modern bar codes."
+                }
+            ],
+            "options": "I. The original concept sees many modern applications\nII. Grocery stores worry about the costs\nIII. Early ideas lead to modern concepts\nIV. A different industry provides a new stimulus\nV. Different Technological Institutes compete\nVI. Early setbacks\nVII. An old system inspires one man\nVIII. Railways lead the way\nIX. Theory becomes reality",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 2 has six paragraphs A – F.\r\nFor paragraphs A – F, choose the most suitable heading from the list of headings below.\r\nWrite the appropriate numbers I - IX in boxes 14 – 19 on your answer sheet.\r\nNB There are more headings than paragraphs, so some headings will not be used.\r\nList of Headings:\r\nI. The original concept sees many modern applications\r\nII. Grocery stores worry about the costs\r\nIII. Early ideas lead to modern concepts\r\nIV. A different industry provides a new stimulus\r\nV. Different Technological Institutes compete\r\nVI. Early setbacks\r\nVII. An old system inspires one man\r\nVIII. Railways lead the way\r\nIX. Theory becomes reality\r\nYou should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
+            "question": "Paragraph B",
+            "points": 1,
+            "no_answer_feedback": "Review Paragraph B carefully and match it with the heading that best describes its main idea. The headings test your understanding of the paragraph's overall purpose, not just specific details.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "I. The original concept sees many modern applications",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Paragraph B focuses on how Norman Woodland was inspired by Morse Code to create the bar code concept, not on modern applications of the system."
+                },
+                {
+                    "text": "II. Grocery stores worry about the costs",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Paragraph B describes Norman Woodland's inspiration for the bar code design, not economic concerns of grocery stores."
+                },
+                {
+                    "text": "III. Early ideas lead to modern concepts",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. While Paragraph B discusses early work, it specifically focuses on one man (Norman Woodland) being inspired by an old system (Morse Code), not on early ideas leading to modern concepts generally."
+                },
+                {
+                    "text": "IV. A different industry provides a new stimulus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Paragraph B is about the grocery industry inspiring the bar code work, not about a different industry providing stimulus."
+                },
+                {
+                    "text": "V. Different Technological Institutes compete",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Paragraph B does not mention competition between technological institutes."
+                },
+                {
+                    "text": "VI. Early setbacks",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. While setbacks are discussed later, Paragraph B focuses on Woodland's inspiration from Morse Code."
+                },
+                {
+                    "text": "VII. An old system inspires one man",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "VIII. Railways lead the way",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "IX. Theory becomes reality",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Paragraph B describes the inspiration and concept phase, not the implementation into reality."
+                }
+            ],
+            "options": "I. The original concept sees many modern applications\nII. Grocery stores worry about the costs\nIII. Early ideas lead to modern concepts\nIV. A different industry provides a new stimulus\nV. Different Technological Institutes compete\nVI. Early setbacks\nVII. An old system inspires one man\nVIII. Railways lead the way\nIX. Theory becomes reality",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 2 has six paragraphs A – F.\r\nFor paragraphs A – F, choose the most suitable heading from the list of headings below.\r\nWrite the appropriate numbers I - IX in boxes 14 – 19 on your answer sheet.\r\nNB There are more headings than paragraphs, so some headings will not be used.\r\nList of Headings:\r\nI. The original concept sees many modern applications\r\nII. Grocery stores worry about the costs\r\nIII. Early ideas lead to modern concepts\r\nIV. A different industry provides a new stimulus\r\nV. Different Technological Institutes compete\r\nVI. Early setbacks\r\nVII. An old system inspires one man\r\nVIII. Railways lead the way\r\nIX. Theory becomes reality\r\nYou should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
+            "question": "Paragraph C",
+            "points": 1,
+            "no_answer_feedback": "Review Paragraph C carefully and match it with the heading that best describes its main idea. The headings test your understanding of the paragraph's overall purpose, not just specific details.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "I. The original concept sees many modern applications",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). Paragraph C discusses the patent and challenges, not modern applications."
+                },
+                {
+                    "text": "II. Grocery stores worry about the costs",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). Paragraph C focuses on technical limitations that prevented implementation, not grocery store concerns."
+                },
+                {
+                    "text": "III. Early ideas lead to modern concepts",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). While Paragraph C mentions early work, it specifically focuses on the setbacks—the technology being '20 years ahead of its time' and lacking computers and proper light sources."
+                },
+                {
+                    "text": "IV. A different industry provides a new stimulus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). Paragraph C discusses setbacks in the original bar code project, not a different industry providing stimulus."
+                },
+                {
+                    "text": "V. Different Technological Institutes compete",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). Paragraph C does not mention competition between institutes."
+                },
+                {
+                    "text": "VI. Early setbacks",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "VII. An old system inspires one man",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). Paragraph C discusses the challenges faced after the initial inspiration, not the inspiration itself."
+                },
+                {
+                    "text": "VIII. Railways lead the way",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). Paragraph C focuses on the grocery industry's bar code challenges, not railways."
+                },
+                {
+                    "text": "IX. Theory becomes reality",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI (Early setbacks). Paragraph C describes obstacles preventing implementation, not the theory becoming reality."
+                }
+            ],
+            "options": "I. The original concept sees many modern applications\nII. Grocery stores worry about the costs\nIII. Early ideas lead to modern concepts\nIV. A different industry provides a new stimulus\nV. Different Technological Institutes compete\nVI. Early setbacks\nVII. An old system inspires one man\nVIII. Railways lead the way\nIX. Theory becomes reality",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 2 has six paragraphs A – F.\r\nFor paragraphs A – F, choose the most suitable heading from the list of headings below.\r\nWrite the appropriate numbers I - IX in boxes 14 – 19 on your answer sheet.\r\nNB There are more headings than paragraphs, so some headings will not be used.\r\nList of Headings:\r\nI. The original concept sees many modern applications\r\nII. Grocery stores worry about the costs\r\nIII. Early ideas lead to modern concepts\r\nIV. A different industry provides a new stimulus\r\nV. Different Technological Institutes compete\r\nVI. Early setbacks\r\nVII. An old system inspires one man\r\nVIII. Railways lead the way\r\nIX. Theory becomes reality\r\nYou should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
+            "question": "Paragraph D",
+            "points": 1,
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "I. The original concept sees many modern applications",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "II. Grocery stores worry about the costs",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "III. Early ideas lead to modern concepts",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "IV. A different industry provides a new stimulus",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "V. Different Technological Institutes compete",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "VI. Early setbacks",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "VII. An old system inspires one man",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "VIII. Railways lead the way",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "IX. Theory becomes reality",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "I. The original concept sees many modern applications\nII. Grocery stores worry about the costs\nIII. Early ideas lead to modern concepts\nIV. A different industry provides a new stimulus\nV. Different Technological Institutes compete\nVI. Early setbacks\nVII. An old system inspires one man\nVIII. Railways lead the way\nIX. Theory becomes reality",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 2 has six paragraphs A – F.\r\nFor paragraphs A – F, choose the most suitable heading from the list of headings below.\r\nWrite the appropriate numbers I - IX in boxes 14 – 19 on your answer sheet.\r\nNB There are more headings than paragraphs, so some headings will not be used.\r\nList of Headings:\r\nI. The original concept sees many modern applications\r\nII. Grocery stores worry about the costs\r\nIII. Early ideas lead to modern concepts\r\nIV. A different industry provides a new stimulus\r\nV. Different Technological Institutes compete\r\nVI. Early setbacks\r\nVII. An old system inspires one man\r\nVIII. Railways lead the way\r\nIX. Theory becomes reality\r\nYou should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
+            "question": "Paragraph E",
+            "points": 1,
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "I. The original concept sees many modern applications",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "II. Grocery stores worry about the costs",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "III. Early ideas lead to modern concepts",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "IV. A different industry provides a new stimulus",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "V. Different Technological Institutes compete",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "VI. Early setbacks",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "VII. An old system inspires one man",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "VIII. Railways lead the way",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "IX. Theory becomes reality",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "I. The original concept sees many modern applications\nII. Grocery stores worry about the costs\nIII. Early ideas lead to modern concepts\nIV. A different industry provides a new stimulus\nV. Different Technological Institutes compete\nVI. Early setbacks\nVII. An old system inspires one man\nVIII. Railways lead the way\nIX. Theory becomes reality",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 2 has six paragraphs A – F.\r\nFor paragraphs A – F, choose the most suitable heading from the list of headings below.\r\nWrite the appropriate numbers I - IX in boxes 14 – 19 on your answer sheet.\r\nNB There are more headings than paragraphs, so some headings will not be used.\r\nList of Headings:\r\nI. The original concept sees many modern applications\r\nII. Grocery stores worry about the costs\r\nIII. Early ideas lead to modern concepts\r\nIV. A different industry provides a new stimulus\r\nV. Different Technological Institutes compete\r\nVI. Early setbacks\r\nVII. An old system inspires one man\r\nVIII. Railways lead the way\r\nIX. Theory becomes reality\r\nYou should spend about 20 minutes on Questions 14 – 26 which are based on Reading Passage 2.",
+            "question": "Paragraph F",
+            "points": 1,
+            "no_answer_feedback": "Review Paragraph F carefully and match it with the heading that best describes its main idea. The headings test your understanding of the paragraph's overall purpose, not just specific details.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "I. The original concept sees many modern applications",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "II. Grocery stores worry about the costs",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). Paragraph F does not discuss grocery store costs; it describes the wide variety of modern uses for bar codes."
+                },
+                {
+                    "text": "III. Early ideas lead to modern concepts",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). Paragraph F is about current applications, not early development of concepts."
+                },
+                {
+                    "text": "IV. A different industry provides a new stimulus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). Paragraph F focuses on diverse modern uses of bar codes, not on a different industry providing stimulus."
+                },
+                {
+                    "text": "V. Different Technological Institutes compete",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). Paragraph F does not mention competition between institutes."
+                },
+                {
+                    "text": "VI. Early setbacks",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). Paragraph F describes successful modern implementations, not setbacks."
+                },
+                {
+                    "text": "VII. An old system inspires one man",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). Paragraph F is about modern widespread use, not the original inspiration."
+                },
+                {
+                    "text": "VIII. Railways lead the way",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). Paragraph F mentions many industries using bar codes, not specifically railways leading the way."
+                },
+                {
+                    "text": "IX. Theory becomes reality",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is I (The original concept sees many modern applications). While implementation happened earlier, Paragraph F specifically describes the variety of modern applications across many fields."
+                }
+            ],
+            "options": "I. The original concept sees many modern applications\nII. Grocery stores worry about the costs\nIII. Early ideas lead to modern concepts\nIV. A different industry provides a new stimulus\nV. Different Technological Institutes compete\nVI. Early setbacks\nVII. An old system inspires one man\nVIII. Railways lead the way\nIX. Theory becomes reality",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
+            "question": "The idea of the bar code began with the concept of [field 1] which were used in the 1890 U.S. census, and experimented with in the 1930s.",
+            "points": 1,
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Sentence Completion",
+            "correct_answer": "punch cards",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: PUNCH CARDS. This answer is found in Paragraph A, which mentions 'punch cards being used in the 1890 U.S. census'.",
+                    "no_answer": "The correct answer is: PUNCH CARDS. This answer is found in Paragraph A, which mentions 'punch cards being used in the 1890 U.S. census'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
+            "question": "In the 1940s, grocery stores wanted an automated device that would capture [field 1] for inventory records and to speed up the checkout process.",
+            "points": 1,
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Sentence Completion",
+            "correct_answer": "product information",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: PRODUCT INFORMATION. This answer is found in Paragraph B, where it explains that grocery stores wanted 'an automated system to record product information during the checkout stage'.",
+                    "no_answer": "The correct answer is: PRODUCT INFORMATION. This answer is found in Paragraph B, where it explains that grocery stores wanted 'an automated system to record product information during the checkout stage'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
+            "question": "Two men worked on the concept and one came up with an idea based on the Morse Code, and the first barcode was actually a [field 1] design, shaped in a circle.",
+            "points": 1,
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Sentence Completion",
+            "correct_answer": "bulls-eye|bull's-eye",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: BULLS-EYE. This answer is found in Paragraph B, which describes: 'He then swept his fingers in a circle, creating a bulls-eye figure'.",
+                    "no_answer": "The correct answer is: BULLS-EYE. This answer is found in Paragraph B, which describes: 'He then swept his fingers in a circle, creating a bulls-eye figure'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
+            "question": "At the same time, the Railroad companies were looking for an automated system to keep track of their [field 1], and a colour-coded numbering system was introduced, with the designer looking for a way to simplify it to black-and-white lines.",
+            "points": 1,
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Sentence Completion",
+            "correct_answer": "railway cars",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: RAILWAY CARS. This answer is found in Paragraph D, which states: 'there was a big move in the American railroad industry for a system to identify railway cars'.",
+                    "no_answer": "The correct answer is: RAILWAY CARS. This answer is found in Paragraph D, which states: 'there was a big move in the American railroad industry for a system to identify railway cars'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
+            "question": "With the invention of the [field 1] light, the final innovation was made and in the 1960s, early bar code systems for inventory were introduced in car companies.",
+            "points": 1,
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Sentence Completion",
+            "correct_answer": "laser|laser light",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: LASER. This answer is found in Paragraph D, which mentions 'incorporating the new laser light system, one of the missing links'.",
+                    "no_answer": "The correct answer is: LASER. This answer is found in Paragraph D, which mentions 'incorporating the new laser light system, one of the missing links'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
+            "question": "The first retail product purchased using a bar code was in [field 1].",
+            "points": 1,
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Sentence Completion",
+            "correct_answer": "1974",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: 1974. This answer is found in Paragraph E, which states: 'In 1974, in Ohio, in the U.S., a package of chewing gum was scanned'.",
+                    "no_answer": "The correct answer is: 1974. This answer is found in Paragraph E, which states: 'In 1974, in Ohio, in the U.S., a package of chewing gum was scanned'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the summary of information below.\r\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\r\nWrite your answers in boxes 20 – 26 on your answer sheet.\r\nThe History of the Bar Code",
+            "question": "Today bar codes are used for a wide range of purposes, as well as reducing [field 1].",
+            "points": 1,
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Sentence Completion",
+            "correct_answer": "fraud",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: FRAUD. This answer is found in Paragraph F, which mentions bar codes are 'an important tool in the reduction in fraud'.",
+                    "no_answer": "The correct answer is: FRAUD. This answer is found in Paragraph F, which mentions bar codes are 'an important tool in the reduction in fraud'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Do the following statements agree with the information given in Reading Passage 3?\r\nIn boxes 27 – 32 on your answer sheet, write\r\nTRUE if the statement agrees with the information\r\nFALSE if the statement contradicts the information\r\nNOT GIVEN if there is no information on this\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
+            "question": "The majority of Pluto’s terrain was formed by collisions with other space bodies. ",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. Paragraph F states: 'in addition to the impact of other space bodies colliding with the planet, the majority of its terrain has been shaped by a combination of ice sublimation and tectonic forces'. The majority was NOT formed by collisions. Always take a guess—there's no penalty for wrong answers in IELTS.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Paragraph F states: 'in addition to the impact of other space bodies colliding with the planet, the majority of its terrain has been shaped by a combination of ice sublimation and tectonic forces'. The majority was NOT formed by collisions."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F states: 'in addition to the impact of other space bodies colliding with the planet, the majority of its terrain has been shaped by a combination of ice sublimation and tectonic forces'. The majority was NOT formed by collisions."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Paragraph F states: 'in addition to the impact of other space bodies colliding with the planet, the majority of its terrain has been shaped by a combination of ice sublimation and tectonic forces'. The majority was NOT formed by collisions."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Walt Disney named the planet Pluto after one of his cartoon characters.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. Paragraph B mentions: 'It has been rumoured that Pluto's discovery served as inspiration for Walt Disney's canine character' but does not say Disney named the planet. Always take a guess—there's no penalty for wrong answers in IELTS.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. Paragraph B mentions: 'It has been rumoured that Pluto's discovery served as inspiration for Walt Disney's canine character' but does not say Disney named the planet."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. Paragraph B mentions: 'It has been rumoured that Pluto's discovery served as inspiration for Walt Disney's canine character' but does not say Disney named the planet."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B mentions: 'It has been rumoured that Pluto's discovery served as inspiration for Walt Disney's canine character' but does not say Disney named the planet."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The New Horizons space probe has travelled beyond the Solar System.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage states New Horizons flew through the Pluto system in the Kuiper belt but does not explicitly state whether it has travelled beyond the Solar System. Always take a guess—there's no penalty for wrong answers in IELTS.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage states New Horizons flew through the Pluto system in the Kuiper belt but does not explicitly state whether it has travelled beyond the Solar System."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage states New Horizons flew through the Pluto system in the Kuiper belt but does not explicitly state whether it has travelled beyond the Solar System."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states New Horizons flew through the Pluto system in the Kuiper belt but does not explicitly state whether it has travelled beyond the Solar System."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Styx was discovered in 2011.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. Paragraph C states Styx was discovered in 2012, not 2011: 'the final two of Pluto's known moons, named Kerberos and Styx, being discovered in 2011 and 2012 respectively'. Always take a guess—there's no penalty for wrong answers in IELTS.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Paragraph C states Styx was discovered in 2012, not 2011: 'the final two of Pluto's known moons, named Kerberos and Styx, being discovered in 2011 and 2012 respectively'."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states Styx was discovered in 2012, not 2011: 'the final two of Pluto's known moons, named Kerberos and Styx, being discovered in 2011 and 2012 respectively'."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Paragraph C states Styx was discovered in 2012, not 2011: 'the final two of Pluto's known moons, named Kerberos and Styx, being discovered in 2011 and 2012 respectively'."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Pluto lies within the Kuiper belt.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states that Pluto is located in the Kuiper belt multiple times, including in paragraph A: 'flew through the Pluto system in the Kuiper belt'. Always take a guess—there's no penalty for wrong answers in IELTS.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that Pluto is located in the Kuiper belt multiple times, including in paragraph A: 'flew through the Pluto system in the Kuiper belt'."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states that Pluto is located in the Kuiper belt multiple times, including in paragraph A: 'flew through the Pluto system in the Kuiper belt'."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states that Pluto is located in the Kuiper belt multiple times, including in paragraph A: 'flew through the Pluto system in the Kuiper belt'."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Eris has insufficient mass to clear its orbit of smaller objects.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. Paragraph D explains that Eris, like Pluto, fails to clear its orbit, which is why it is not classified as a planet. Always take a guess—there's no penalty for wrong answers in IELTS.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D explains that Eris, like Pluto, fails to clear its orbit, which is why it is classified as a dwarf planet rather than a full planet."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph D explains that Eris, like Pluto, fails to meet the criteria of clearing its orbit of smaller objects, which is why both are classified as dwarf planets."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph D specifically addresses this, explaining that dwarf planets like Eris do not have sufficient mass to clear their orbits."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
+            "question": "Charles Tombaugh used a piece of specialist equipment called a .",
+            "points": 1,
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Sentence Completion",
+            "correct_answer": "blink microscope",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: BLINK MICROSCOPE. This answer is found in Paragraph B, where Tombaugh's use of specialist equipment is highlighted: 'detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'.",
+                    "no_answer": "The correct answer is: BLINK MICROSCOPE. This answer is found in Paragraph B, where Tombaugh's use of specialist equipment is highlighted: 'detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'. Remember to review the passage carefully for specific details."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
+            "question": "Pluto's largest satellite was discovered by .",
+            "points": 1,
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Sentence Completion",
+            "correct_answer": "James Christy",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: JAMES CHRISTY. This answer is found in Paragraph C, which states: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'.",
+                    "no_answer": "The correct answer is: JAMES CHRISTY. This answer is found in Paragraph C, which states: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'. Remember to review the passage carefully for specific details."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
+            "question": "Eris is located in an area of the Kuiper belt called the .",
+            "points": 1,
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Sentence Completion",
+            "correct_answer": "scattered disc",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: SCATTERED DISC. This answer is found in Paragraph D, which mentions 'the discovery in 2005 of a minor planet... Eris, in an outlying region of the Kuiper belt known as the scattered disc'.",
+                    "no_answer": "The correct answer is: SCATTERED DISC. This answer is found in Paragraph D, which mentions 'the discovery in 2005 of a minor planet... Eris, in an outlying region of the Kuiper belt known as the scattered disc'. Remember to review the passage carefully for specific details."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
+            "question": "The International Astronomical Union came up with a formal definition for planets at a meeting held in the .",
+            "points": 1,
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Sentence Completion",
+            "correct_answer": "Czech Republic",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: CZECH REPUBLIC. This answer is found in Paragraph E, which states: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic'.",
+                    "no_answer": "The correct answer is: CZECH REPUBLIC. This answer is found in Paragraph E, which states: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic'. Remember to review the passage carefully for specific details."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
+            "question": "The name of one area on the surface of Pluto, called , was inspired by the creation of a particular writer.",
+            "points": 1,
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Sentence Completion",
+            "correct_answer": "Cthulhu Regio",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: CTHULHU REGIO. This answer is found in Paragraph F, which mentions 'Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'.",
+                    "no_answer": "The correct answer is: CTHULHU REGIO. This answer is found in Paragraph F, which mentions 'Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'. Remember to review the passage carefully for specific details."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 3 has seven paragraphs, A – G.\r\nWhich paragraph contains the following information?\r\nWrite the correct letter A – G in boxes 38 – 40 on your answer sheet.",
+            "question": "The significance of the New Horizons mission.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. Paragraph A describes the mission and equipment, but Paragraph G discusses the significance of the mission to space exploration."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. Paragraph B discusses Pluto's discovery and naming, not the significance of New Horizons."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. Paragraph C discusses Pluto's moons, not the New Horizons mission's significance."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. Paragraph D discusses Pluto's reclassification, not the New Horizons mission's significance."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. Paragraph E discusses the IAU definition of planets, not the New Horizons mission's significance."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. Paragraph F describes Pluto's terrain, not the significance of the New Horizons mission."
+                },
+                {
+                    "text": "G",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G discusses how the mission represents 'the culmination of more than a decade's worth of preparation' and 'the beginning of a new chapter in space exploration'."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 3 has seven paragraphs, A – G.\r\nWhich paragraph contains the following information?\r\nWrite the correct letter A – G in boxes 38 – 40 on your answer sheet.",
+            "question": "The technological equipment on board New Horizons.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph A lists the technological equipment on board New Horizons: 'cameras for high resolution imagery', 'remote sensors, radio transmitters, computer subsystems, a large satellite dish and a radioisotope thermoelectric generator'."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph B discusses Pluto's discovery, not New Horizons equipment."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph C discusses Pluto's moons, not New Horizons equipment."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph D discusses Pluto's reclassification, not New Horizons equipment."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph E discusses the IAU planet definition, not New Horizons equipment."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph F describes Pluto's terrain from New Horizons images, but Paragraph A specifically lists the technological equipment on board."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph G discusses the mission's significance, not the equipment details."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 3 has seven paragraphs, A – G.\r\nWhich paragraph contains the following information?\r\nWrite the correct letter A – G in boxes 38 – 40 on your answer sheet.",
+            "question": "The number of dwarf planets.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E. Paragraph A discusses the New Horizons mission, not the count of dwarf planets."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E. Paragraph B discusses Pluto's discovery, not the number of dwarf planets."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E. Paragraph C discusses Pluto's moons, not dwarf planet counts."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E. Paragraph D discusses the discovery of Eris and reclassification but does not provide the total count of dwarf planets."
+                },
+                {
+                    "text": "E",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E states 'there are five known bodies in the Solar System that have been recognised by the IAU as dwarf planets' and lists them: Ceres, Pluto, Haumea, Makemake and Eris."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E. Paragraph F describes Pluto's terrain, not the number of dwarf planets."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E. Paragraph G discusses the mission's significance, not dwarf planet counts."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Passage 1",
+            "content": "<h4><strong>Travelling around the country with bus passes</strong></h4>\n<h5>Travel Rider pass</h5>\nThe Travel Rider pass is valid for one month from the day it is purchased and allows travel on any NorWest and Metro Link bus within the city. Photo identification is required to purchase a Travel Rider pass. Prices are £42 for adults, £30 for students and pensioners. Passes can be purchased from any of our branches. Please note that replacement passes can only be issued from the main office in Queen Street.\n<hr>\n<h5>Flexi-Pass</h5>\nFlexi-Pass allows travel between cities with an hours-based pass that can be topped up just like a pre paid phone card. With freedom to explore the national network of InterCity Coachlines, you can set your own itinerary and travel around the country, when and where you want. The more hours you buy, the cheaper each trip becomes and you can even use Flexi-Pass on the cross-channel ferry. You have three months to use the hours you purchase, so you don't have to pack too much travelling into a short time frame. The flexi-pass can be purchased from any of our branch offices.\nPrices:\n<ul>\n  <li>Up to 15 hours – £52</li>\n  <li>16 to 20 hours – £64</li>\n  <li>21 to 25 hours – £72</li>\n</ul>\nNOTE: No concessions are available on tickets.\n<hr>\n<h5>Destination Pass</h5>\nThe Destination Pass offers a range of 12 \"hop on and off\" fixed itinerary passes, based on the most popular touring routes throughout the country. The Destination Pass includes coach and ferry travel, as well as the additional options to sail on Brentwood Lake, all in the one pass. The destination Pass is available through travel agents worldwide or can be purchased through our website. When you're ready to travel, simply call us or log in online to book one of the 12 individual journeys. You can amend your travel plans up to two hours prior to departure without penalty. All trips must be taken within 6 months.\nPrices:\n<ul>\n  <li>4 trips – £115</li>\n  <li>8 trips – £215</li>\n  <li>12 trips – £390</li>\n</ul>\nStudent and group (5 people or more) discounts are available. Contact us for more details."
+        },
+        {
+            "title": "Reading Passage 2",
+            "content": "<h3>Gaston Community College evening classes</h3>\nThis semester, the following classes will be available.\n\n<strong>Class</strong>: English for beginners\n\n<strong>Description</strong>: An English language class to help new arrivals to the country learn better English. The course looks at using English in everyday situations, such as shopping, going to the doctors or getting a haircut.\n\n<strong>Times and days:</strong> Mondays and Thursdays at 7 p.m. to 8 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5 – 12\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £45\n\n<hr>\n\n<strong>Class</strong>: Intermediate Spanish\n\n<strong>Description</strong>: This class is ideally suited for students who have a basic knowledge of Spanish or who completed the Beginner's Spanish class held last semester\n\n<strong>Times and days:</strong> Tuesdays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5-18\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £55\n\n<hr>\n\n<strong>Class</strong>: Using your computer\n\n<strong>Description</strong>: No idea how to use a computer? Then this class if for you! It covers the basics of surfing the internet, sending and receiving emails, typing and understanding files and folders.\n\n<strong>Times and days:</strong> Wednesdays at 6.30 p.m. to 7.15 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £25\n\n<hr>\n\n<strong>Class</strong>: Beginners watercolour painting\n\n<strong>Description</strong>: Back by popular demand and once again run by local artist Ted Heath, this class gives you an opportunity to show your more creative side.\nNB: you will need to provide your own paper, paint and brushes\n\nThursdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-12\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<strong>Class</strong>: Better public speaking\n\n<strong>Description</strong>: For all those who have completed public speaking or presentation skills courses, or who have some experience and wish to brush up on their skills. Practise connecting with your audience and communicating your message with full effectiveness.\n\n<strong>Times and days:</strong> Tuesdays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £30\n\n<hr>\n\n<strong>Class</strong>: Successful interview techniques\n\n<strong>Description</strong>: Many courses focus on presenting yourself well at an interview, but this course will help you become a better interviewer – ideal for those perhaps run a small business and would like to be sure they are recruiting the right person. We will cover preparation, body language and good interview questions.\n\n<strong>Times and days:</strong> Mondays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £35\n\n<hr>\n\n<strong>Class</strong>: Authentic Thai cooking\n\n<strong>Description</strong>: Learn to cook Thai food the fun way with a native, experienced chef. A hands-on and demonstration course covering exciting dishes from all regions of Thailand. Aspects of Thai culture will be covered and all recipes and ingredients supplied.\n\n<strong>Times and days:</strong> Tuesdays from 7.00 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £35 + £55 food costs\n\n<hr>\n\n<strong>Class</strong>: Beginners guitar\n\n<strong>Description</strong>: Learn to play both classical and popular techniques. Please bring your own guitar, and a music stand and floor step if you have one. You will need to buy a textbook. Even if you've never played a note before, you should be able to play a tune by the end of the course.\n\n<strong>Times and days:</strong> Wednesdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-6\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £20\n\n<hr>\n\n<strong>Class</strong>: Digital photos\n\n<strong>Description</strong>: A fun & practical workshop just for digital camera users. Learn how to use the main functions of your camera. Lots of practice with portraits, action shots, night scenes & landscapes. Learn different ways to transfer your photos on to the computer – emailing, printing, resizing photos, changing colour or contrast, convert colour to black & white.\n\n<strong>Times and days:</strong> Mondays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<h3>ESITO dress code</h3>\nThe personal appearance of office workers and employees who have regular contact with the public is laid out in the company dress code. In brief, the code requires all employees to observe the following:\n<ul>\n  <li>Clean, pressed, properly fitting business casual attire is appropriate.</li>\n  <li>Hair should be clean, combed and neatly arranged. Long hair is acceptable if it is tied back.</li>\n  <li>Moustaches and beards should be neatly trimmed.</li>\n  <li>Good personal hygiene must be maintained.</li>\n  <li>Use perfume or cologne in small quantities or not at all (some people are allergic to various scents).</li>\n</ul>\nThe personal appearance of employees who do not regularly meet the public is to be decided by the requirements of safety, comfort and supervisor approval. Even so, because all employees are a representative of the company, they should be as neat and business-like as working conditions permit. The following are some examples of inappropriate dress at all times:\n<ul>\n  <li>Faded and/or tattered/torn jeans; t-shirts displaying advertising or writing</li>\n  <li>Faded overalls, cotton/fleece pants and jogging suits, shorts, tank tops or recreational attire</li>\n  <li>Clothing revealing bare backs, midriffs or shoulders; or any revealing clothing.</li>\n</ul>\nCasual Fridays: The Company has designated Fridays as casual days. Some clothing is still considered inappropriate even on casual days. Employees are requested to use good sense in this regard.\n\nBad weather days: The Company understands that inclement weather conditions can require different attire for the day. Use good judgment when dressing for weather conditions. NOTE: This only impacts on employees working in the yard.\n\nThe supervisor is responsible for evaluating the dress and appearance of employees under his or her supervision. If an employee is not dressed appropriately, the supervisor should take the following steps:\n\nOn the first occasion, a documented verbal warning should be given to the employee, and the department's dress and appearance standards should be reviewed. If the supervisor deems it necessary, the employee may be sent home to change into appropriate clothing.\n\nOn the second occasion, the employee must be sent home to change clothes immediately as well as given a written warning. Further violations may result in discipline up to and including discharge.\n\n<hr>\n\n<h4>Benefits and amendment to benefits for Glyph Interactive employees</h4>\n<h4>Pension scheme</h4>\nAll employees are automatically included in our pension scheme, although there is an 'opt out' policy for employees with private pension plans. The pension scheme is no longer non-contributory, with employees now being asked to pay 25% of the annual payment. Government contributions will amount to an additional 25%, with Glyph Interactive continuing to support employees by covering the remaining 50%. Employees need to pay into the pension scheme for a minimum of 20 years. Once an employee reaches the age of 65, the pension payments begin. Employees who do not reach the twenty year mark will be paid pro rata (that is, an employee who has worked only ten years will receive only 50% of that received by an employee with twenty years experience).\n<h4>Medical insurance</h4>\nDue to rising costs, we can no longer support offering medical insurance to retiring employees. Standard cover still applies to all active employees, with one important addition. The immediate family (spouse and children) of the employee can also be covered for the same benefits and services. This will attract an additional payment depending on the current health of those wishing to be covered, but will be well below the cost of seeking insurance with a private company.\n<h4>Access to company vehicles</h4>\nAll staff with a legitimate need to travel will have access to one of the company vehicles. Please note that this is to be used for company purposes only, and must be applied for in writing at least two days before the vehicle is needed. For urgent and unexpected requirements, please consult your manager. The only exception to this is for sales staff, who have already been issued their own vehicles.\n<h4>Communication</h4>\nAll members of staff have a laptop which is issued on the first day of employment. This will now be supplemented by the addition of a Smartphone. Please note, however, that all calls and communications using the Smartphone should be for company purposes only unless in an emergency. Training events will be posted in the next few weeks to help you get to grips with the new phone.\n<h4>Working from home</h4>\nWe are now in the second year of the trial of some employees working from home for at least a part of the week. Despite some earlier difficulties, the scheme has proven successful and will now be offered as an option for all staff (although final approval must be given by your manager)."
+        },
+        {
+            "title": "Reading Passage 3 - Dwarf Planet",
+            "content": "DWARF PLANET<br />\r\n<br />\r\nThe Discovery, Classification and Exploration of Pluto<br />\r\n<br />\r\n<strong>A: </strong><span id=\"passage-q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">On the 14th of July, 2015, a NASA deep space probe called New Horizons flew through <span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">the Pluto system in the Kuiper belt</span>, located almost 6 billion kilometres from our sun</span>, gathering high resolution photographs of the dwarf planet and its moons. Scientifically, the aims of the New Horizons mission were to provide experts on Earth with greater detail regarding the geomorphology, atmosphere, magnetosphere and surface composition of Pluto. As well as cameras for high resolution imagery, the spacecraft used an array of on-board scientific equipment to obtain information, including remote sensors, radio transmitters, computer subsystems, a large satellite dish and a radioisotope thermoelectric generator.<br />\r\n<br />\r\n<strong>B: </strong>Pluto was discovered in February, 1930, by the American Charles Tombaugh, a young self-taught astronomer working at the Lowell Observatory in Arizona. Tombaugh, then in his early twenties, detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope. His discovery soon made worldwide news headlines, and on the 25th of May, 1930, the members of the Lowell Observatory chose the name of Pluto for the ninth planet in the Solar System by unanimous vote. The name itself comes from that of the Roman god of the underworld, and was suggested by a schoolgirl living in England, whose uncle, a retired university librarian, had passed on her suggestion through academic acquaintances. <span id=\"passage-q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">It has been rumoured that Pluto's discovery served as inspiration for Walt Disney's canine character of the same name</span>. There is, however, no question surrounding the naming of the element plutonium, which was named after the planet following the creation of the former by a team of scientists at the University of California in the early 1940s.<br />\r\n<br />\r\n<strong>C: </strong>The estimated mass of Pluto was steadily revised downwards in the decades following its discovery, and was not accurately calculated until 1978, the same year in which Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy. While the original estimate of Pluto's mass had been seven times that of Earth, Christy and his colleague, Robert Harrington, compared Charon's orbital period and size with those of Pluto, estimating the planet's mass to be approximately 0.2 per cent that of the earth. A pair of smaller satellites, Nix and Hydra, was subsequently identified in 2005, with <span id=\"passage-q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">the final two of Pluto's known moons, named Kerberos and Styx, being discovered in 2011 and 2012 respectively</span>.<br />\r\n<br />\r\n<strong>D: </strong>However, in spite of having been regarded as the ninth planet in the solar system for more than fifty years, Pluto's status and classification began to come into question towards the close of the twentieth century. Initially, this was due to the fact that during the nineties a number of objects, made of rock and ice and of a similar size to Pluto, were discovered lying within the Kuiper belt, a circumstellar disc, in many ways resembling a gigantic asteroid belt, at the edge of the Solar System beyond Neptune. The first of these new Kuiper Belt Objects (KBOs) was identified in 1992 by a pair of astronomers, David Jewitt and Jane Luu, working out of the Mauna Kea Observatory in Hawaii. Many more Kuiper Belt Objects were found in the years that followed, making Pluto's official status as a planet increasingly controversial among many in the scientific community. While Pluto remains, at present, the largest of the known trans-Neptunian objects located in the Kuiper belt, the discovery in 2005 of a minor planet with a greater mass, Eris, in an outlying region of the Kuiper belt known as the scattered disc, prompted the International Astronomical Union (IAU) to create a formal definition of the term \"planet\" that excluded Pluto.<br />\r\n<br />\r\n<strong>E: </strong>When the New Horizons interplanetary space probe was launched from Cape Canaveral in January, 2006, its primary mission was to voyage to Pluto, at that time the only remaining unexplored planet in the Solar System. However, in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic, Pluto was reclassified as a dwarf planet on account of the fact that it did not meet one of the three formal conditions required to be classed as a planet. According to the official definition of the IAU, a planet must be in orbit around the sun and have sufficient mass both for its own gravity to make it spherical in shape and <span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">to have cleared the area around its orbit of smaller objects. Failing to meet the third of these criteria, Pluto was classified as a \"dwarf planet\"</span>. While the decision of the IAU to reduce the number of planets in the Solar System from nine to eight has received its fair share of both praise and criticism, the definition of Pluto as a dwarf planet, while controversial, remains in use. Today, there are five known bodies in the Solar System that have been recognised by the IAU as dwarf planets. In addition to Pluto, these are Ceres, Haumea, Makemake and Eris. At the same time, it has been estimated that there may be hundreds more as yet undiscovered and unclassified dwarf planets throughout the Solar System.<br />\r\n<br />\r\n<strong>F: </strong>The high resolution images of Pluto made during the New Horizons close flyby of the planet and beamed back to Earth from across the Solar System have revealed a unique terrain. Far from being a flat, dead world, the rocky dwarf planet's surface contains a multitude of varied, complex landscapes, ranging from oddly-textured ridges with the appearance of tree bark or dragon scales, ice cliffs, valleys and mountains and frozen lakes and oceans to heavily cratered and pitted plains. Experts theorise that, <span id=\"passage-q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">in addition to the impact of other space bodies colliding with the planet, the majority of its terrain has been shaped by a combination of ice sublimation and tectonic forces</span>. While still awaiting official approval from the International Astronomical Union, names for a number of Pluto's regions and topographical features have already been proposed by the New Horizons discovery team in consultation with the general public, including Tombaugh Regio, the Brass Knuckles, Tartarus Dorsa and Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft.<br />\r\n<br />\r\n<strong>G: </strong>Irrespective of its official present classification as a dwarf planet, the New Horizons reconnaissance of Pluto provides a wealth of knowledge and data regarding the last major body in the Solar System not previously visited by a space probe. While the planet, spacecraft and New Horizons team may be comparatively small, the mission to the Pluto system not only represents the culmination of more than a decade's worth of preparation on Earth, but also the beginning of a new chapter in space exploration at the edge of the Solar System and beyond."
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "ielts_academic_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-14 11:45:43",
+        "exported_by": "impact",
+        "plugin_version": "11.27",
+        "format_version": "1.0"
+    }
+}
