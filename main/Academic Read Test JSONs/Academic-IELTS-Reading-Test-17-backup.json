@@ -180,7 +180,7 @@
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is II. Coffee's arrival and reception in Europe. Check Reading Passage 1 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 0,
+            "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -244,7 +244,7 @@
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is III. The expansion of coffee cultivation worldwide. Check Reading Passage 1 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 0,
+            "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -308,7 +308,7 @@
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is IV. Modern developments in coffee culture. Check Reading Passage 1 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 0,
+            "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -372,7 +372,7 @@
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is VI. The economic importance of coffee today. Check Reading Passage 1 carefully.",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 0,
+            "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -436,7 +436,7 @@
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is B) served as important social and cultural centers. Paragraph B describes coffee houses as centers for social activity, conversation, music, and news.",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 0,
+            "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -475,7 +475,7 @@
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is C) quality, sustainability, and regional characteristics. Paragraph E describes the specialty coffee movement emphasizing these aspects.",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 0,
+            "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -514,7 +514,7 @@
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is D) climate change and price volatility. Paragraph F states \"the industry faces significant challenges, including climate change, which threatens coffee-growing regions, price volatility that affects farmers' incomes.\"",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 0,
+            "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -542,45 +542,6 @@
                 }
             ],
             "options": "declining global consumption.\noversupply of coffee beans.\nlack of skilled baristas.\nclimate change and price volatility.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Choose the appropriate letters A – D and write them in boxes 11 – 13 on your answer sheet.",
-            "question": "The passage suggests that modern coffee culture",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is D) reflects broader societal changes. Paragraph G states the evolution of coffee culture \"reflects broader changes in society.\"",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "is declining in popularity worldwide.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage doesn't suggest coffee culture is declining."
-                },
-                {
-                    "text": "has remained unchanged since the 17th century.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage describes significant evolution in coffee culture."
-                },
-                {
-                    "text": "focuses primarily on instant coffee consumption.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While instant coffee is mentioned, the passage describes diverse coffee experiences."
-                },
-                {
-                    "text": "reflects broader societal changes.",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph G states \"The evolution of coffee culture reflects broader changes in society, from globalization and technological advancement to growing awareness of sustainability and social responsibility.\""
-                }
-            ],
-            "options": "is declining in popularity worldwide.\nhas remained unchanged since the 17th century.\nfocuses primarily on instant coffee consumption.\nreflects broader societal changes.",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -1070,7 +1031,7 @@
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph B states red \"stimulates appetite, which explains its prevalent use by fast-food chains.\"",
             "correct_feedback": "Correct! Paragraph B explicitly states red \"stimulates appetite, which explains its prevalent use by fast-food chains.\"",
             "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph B clearly states red increases appetite.",
-            "reading_text_id": 1,
+            "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -1104,7 +1065,7 @@
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is NOT GIVEN. While Paragraph C states blue is \"one of the most universally favored colors,\" it doesn't claim it's THE most popular worldwide.",
             "correct_feedback": "Correct! While the passage says blue is universally favored, it doesn't state it's the most popular color worldwide.",
             "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't make this specific claim.",
-            "reading_text_id": 1,
+            "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -1133,46 +1094,12 @@
         {
             "type": "closed_question",
             "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
-            "question": "Yellow is commonly used as an accent color rather than a primary color by successful brands.",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph E states \"Many successful brands use yellow strategically as an accent color rather than a primary one.\"",
-            "correct_feedback": "Correct! Paragraph E states \"Many successful brands use yellow strategically as an accent color rather than a primary one.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is TRUE. This is stated in Paragraph E.",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph E states \"Many successful brands use yellow strategically as an accent color rather than a primary one, balancing its attention-grabbing properties with more neutral tones.\""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage explicitly states this in Paragraph E."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This information is clearly stated in Paragraph E."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
             "question": "Paragraph D: \"The human eye can distinguish more shades of green than any other color\"",
             "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph D states \"The human eye can distinguish more shades of green than any other color.\"",
             "correct_feedback": "Correct! Paragraph D explicitly states \"The human eye can distinguish more shades of green than any other color.\"",
             "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph D clearly makes this statement.",
-            "reading_text_id": 1,
+            "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -1192,6 +1119,40 @@
                     "text": "NOT GIVEN",
                     "is_correct": false,
                     "feedback": "Incorrect. This information is clearly stated in Paragraph D."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Complete the sentences below.\r\nChoose NO MORE THAN THREE WORDS from the passage for each answer.\r\nWrite your answers in boxes 24 – 26 on your answer sheet.",
+            "question": "According to the passage, color can increase by up to 80%.",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph D states \"The human eye can distinguish more shades of green than any other color.\"",
+            "correct_feedback": "Correct! Paragraph D explicitly states \"The human eye can distinguish more shades of green than any other color.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. This is stated in Paragraph D.",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D states \"The human eye can distinguish more shades of green than any other color.\""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage explicitly states this fact."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is clearly stated in Paragraph D."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -1672,7 +1633,7 @@
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph C states \"During the COVID-19 pandemic, for instance, urban farms in many cities proved resilient when conventional food supply chains were disrupted.\"",
             "correct_feedback": "Correct! Paragraph C states urban farms \"proved resilient when conventional food supply chains were disrupted\" during COVID-19.",
             "incorrect_feedback": "Incorrect. The correct answer is TRUE. This is stated in Paragraph C.",
-            "reading_text_id": 2,
+            "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -1706,7 +1667,7 @@
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is NOT GIVEN. While the passage discusses water efficiency in some urban farming methods, it doesn't state that ALL urban farms always use less water.",
             "correct_feedback": "Correct! The passage discusses water efficiency but doesn't make this absolute claim about all urban farms.",
             "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't make this blanket statement.",
-            "reading_text_id": 2,
+            "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -1740,7 +1701,7 @@
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph E states \"Schools with gardens have reported improved student engagement, better understanding of nutrition and food systems, and enhanced academic performance in science subjects.\"",
             "correct_feedback": "Correct! Paragraph E states schools with gardens reported \"enhanced academic performance in science subjects.\"",
             "incorrect_feedback": "Incorrect. The correct answer is TRUE. This is stated in Paragraph E.",
-            "reading_text_id": 2,
+            "reading_text_id": null,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -1760,6 +1721,40 @@
                     "text": "NOT GIVEN",
                     "is_correct": false,
                     "feedback": "Incorrect. This information is clearly stated in Paragraph E."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Complete the sentences below.\r\nChoose NO MORE THAN TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 38 – 40 on your answer sheet.",
+            "question": "Urban farms can help cities manage and reduce the urban heat island effect.",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is NOT GIVEN. Paragraph G states \"While some urban farms operate as successful commercial enterprises, many rely on volunteers, grants, or subsidies,\" but doesn't specify if MOST are profitable.",
+            "correct_feedback": "Correct! While the passage discusses economic viability, it doesn't state whether most urban farms are profitable.",
+            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't provide this specific information.",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage doesn't state this; in fact, it suggests many rely on grants or subsidies."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Close, but the correct answer is NOT GIVEN. While the passage suggests challenges, it doesn't definitively state most are unprofitable."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G states \"While some urban farms operate as successful commercial enterprises, many rely on volunteers, grants, or subsidies,\" but doesn't specify what proportion are profitable."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -1896,15 +1891,15 @@
     "reading_texts": [
         {
             "title": "Reading Passage 1 - The History and Evolution of Coffee Culture",
-            "content": "A: Coffee, one of the world's most widely consumed beverages, has a rich and fascinating history that spans centuries and continents. The story of coffee begins in the ancient coffee forests of Ethiopia, where legend tells of a goat herder named Kaldi who discovered the energizing effects of coffee beans after noticing his goats became unusually energetic after eating berries from a certain tree. From these humble beginnings, coffee would go on to become a global phenomenon, shaping cultures, economies, and social interactions across the world.<br />\r\n<br />\r\nB: The cultivation and trade of coffee first began on the Arabian Peninsula in the 15th century. By the 16th century, coffee was being grown in Yemen, and from there it spread to Persia, Egypt, Syria, and Turkey. Coffee houses, known as qahveh khaneh, began appearing in cities across the Middle East. <span id=\"passage-q10\" data-question=\"10\"></span>These establishments quickly became <span class=\"reading-answer-marker\">important centers for social activity</span> and communication, where people would gather not only to drink coffee and engage in conversation, but also to listen to music, watch performers, play chess, and keep current with news of the day. <span id=\"passage-q1\" data-question=\"1\"></span>Coffee houses were often referred to as <span class=\"reading-answer-marker\">\"Schools of the Wise\"</span> because of the intellectual discussions that took place within their walls.<br />\r\n<br />\r\n<span id=\"passage-q6\" data-question=\"6\"></span>C: European travelers to the Middle East brought back tales of the unusual dark beverage, and by the 17th century, coffee had made its way to Europe. Initial reactions were mixed, with some calling it the \"bitter invention of Satan.\" However, <span id=\"passage-q2\" data-question=\"2\"></span>Pope Clement VIII, upon tasting coffee, is said to have <span class=\"reading-answer-marker\">given it papal approval</span>, declaring it a Christian beverage. Coffee houses began to spring up in major European cities, including Venice, London, and Paris. In England, <span id=\"passage-q3\" data-question=\"3\"></span>these establishments became known as <span class=\"reading-answer-marker\">\"penny universities\"</span> because for the price of a penny, one could purchase a cup of coffee and engage in stimulating conversation. Coffee houses became important meeting places for artists, intellectuals, writers, and merchants, and played a significant role in the Age of Enlightenment.<br />\r\n<br />\r\n<span id=\"passage-q7\" data-question=\"7\"></span>D: The demand for coffee in Europe led to fierce competition to cultivate the crop outside of Arabia. <span id=\"passage-q4\" data-question=\"4\"></span>The Dutch were <span class=\"reading-answer-marker\">among the first to succeed</span>, establishing coffee plantations in their colonies in Indonesia in the late 17th century. From there, coffee cultivation spread to the Caribbean and Central and South America. By the 18th century, coffee had become one of the world's most profitable export crops. The development of coffee plantations, particularly in the Americas, had profound social and economic impacts, including the use of slave labor on many plantations, which remained a dark chapter in coffee's history until the abolition of slavery in the 19th century.<br />\r\n<br />\r\n<span id=\"passage-q5\" data-question=\"5\"></span><span id=\"passage-q8\" data-question=\"8\"></span>E: In the modern era, coffee culture has evolved significantly. The 20th century saw the rise of instant coffee, espresso machines, and international coffee chains that transformed coffee from a simple beverage into a lifestyle product. The specialty coffee movement, which began in the 1960s and gained momentum in the 1990s, <span id=\"passage-q11\" data-question=\"11\"></span>emphasized <span class=\"reading-answer-marker\">quality, sustainability, and the unique characteristics</span> of coffee from different regions. This movement introduced concepts such as single-origin coffees, fair trade practices, and artisanal roasting techniques. Today, coffee enthusiasts can trace their beans from specific farms, understand the processing methods used, and appreciate the subtle flavor notes that distinguish one coffee from another.<br />\r\n<br />\r\n<span id=\"passage-q9\" data-question=\"9\"></span>F: The global coffee industry now supports millions of livelihoods, from small-scale farmers in developing countries to baristas in urban cafes. Coffee remains the second most traded commodity in the world after oil. However, <span id=\"passage-q12\" data-question=\"12\"></span>the industry faces significant challenges, including <span class=\"reading-answer-marker\">climate change</span>, which threatens coffee-growing regions, price volatility that affects farmers' incomes, and concerns about sustainability and environmental impact. Many organizations are working to address these issues through initiatives promoting sustainable farming practices, fair pricing for farmers, and environmental conservation.<br />\r\n<br />\r\nG: Despite these challenges, coffee continues to bring people together and serves as a catalyst for social interaction, much as it did in the coffee houses of centuries past. Whether enjoyed as a quick espresso at a bustling city cafe, a carefully prepared pour-over at a specialty coffee shop, or a traditional coffee ceremony in Ethiopia, coffee remains an integral part of daily life for millions of people around the world. The evolution of coffee culture reflects broader changes in society, from globalization and technological advancement to growing awareness of sustainability and social responsibility."
+            "content": "A: Coffee, one of the world's most widely consumed beverages, has a rich and fascinating history that spans centuries and continents. The story of coffee begins in the ancient coffee forests of Ethiopia, where legend tells of a goat herder named Kaldi who discovered the energizing effects of coffee beans after noticing his goats became unusually energetic after eating berries from a certain tree. From these humble beginnings, coffee would go on to become a global phenomenon, shaping cultures, economies, and social interactions across the world.<br />\r\n<br />\r\nB: The cultivation and trade of coffee first began on the Arabian Peninsula in the 15th century. By the 16th century, coffee was being grown in Yemen, and from there it spread to Persia, Egypt, Syria, and Turkey. Coffee houses, known as qahveh khaneh, began appearing in cities across the Middle East. These establishments quickly became important centers for social activity and communication, where people would gather not only to drink coffee and engage in conversation, but also to listen to music, watch performers, play chess, and keep current with news of the day. Coffee houses were often referred to as \"Schools of the Wise\" because of the intellectual discussions that took place within their walls.<br />\r\n<br />\r\nC: European travelers to the Middle East brought back tales of the unusual dark beverage, and by the 17th century, coffee had made its way to Europe. Initial reactions were mixed, with some calling it the \"bitter invention of Satan.\" However, Pope Clement VIII, upon tasting coffee, is said to have given it papal approval, declaring it a Christian beverage. Coffee houses began to spring up in major European cities, including Venice, London, and Paris. In England, these establishments became known as \"penny universities\" because for the price of a penny, one could purchase a cup of coffee and engage in stimulating conversation. Coffee houses became important meeting places for artists, intellectuals, writers, and merchants, and played a significant role in the Age of Enlightenment.<br />\r\n<br />\r\nD: The demand for coffee in Europe led to fierce competition to cultivate the crop outside of Arabia. The Dutch were among the first to succeed, establishing coffee plantations in their colonies in Indonesia in the late 17th century. From there, coffee cultivation spread to the Caribbean and Central and South America. By the 18th century, coffee had become one of the world's most profitable export crops. The development of coffee plantations, particularly in the Americas, had profound social and economic impacts, including the use of slave labor on many plantations, which remained a dark chapter in coffee's history until the abolition of slavery in the 19th century.<br />\r\n<br />\r\nE: In the modern era, coffee culture has evolved significantly. The 20th century saw the rise of instant coffee, espresso machines, and international coffee chains that transformed coffee from a simple beverage into a lifestyle product. The specialty coffee movement, which began in the 1960s and gained momentum in the 1990s, emphasized quality, sustainability, and the unique characteristics of coffee from different regions. This movement introduced concepts such as single-origin coffees, fair trade practices, and artisanal roasting techniques. Today, coffee enthusiasts can trace their beans from specific farms, understand the processing methods used, and appreciate the subtle flavor notes that distinguish one coffee from another.<br />\r\n<br />\r\nF: The global coffee industry now supports millions of livelihoods, from small-scale farmers in developing countries to baristas in urban cafes. Coffee remains the second most traded commodity in the world after oil. However, the industry faces significant challenges, including climate change, which threatens coffee-growing regions, price volatility that affects farmers' incomes, and concerns about sustainability and environmental impact. Many organizations are working to address these issues through initiatives promoting sustainable farming practices, fair pricing for farmers, and environmental conservation.<br />\r\n<br />\r\nG: Despite these challenges, coffee continues to bring people together and serves as a catalyst for social interaction, much as it did in the coffee houses of centuries past. Whether enjoyed as a quick espresso at a bustling city cafe, a carefully prepared pour-over at a specialty coffee shop, or a traditional coffee ceremony in Ethiopia, coffee remains an integral part of daily life for millions of people around the world. The evolution of coffee culture reflects broader changes in society, from globalization and technological advancement to growing awareness of sustainability and social responsibility."
         },
         {
             "title": "Reading Passage 2 - The Psychology of Color in Marketing and Design",
-            "content": "A: Color is far more than a visual experience; it is a powerful tool that influences human emotions, perceptions, and behavior. In the fields of marketing and design, understanding color psychology has become essential for creating effective brand identities, advertising campaigns, and product designs. Research has shown that up to 90% of snap judgments made about products can be based on color alone, and that <span id=\"passage-q24\" data-question=\"24\"></span>color increases <span class=\"reading-answer-marker\">brand recognition</span> by up to 80%. These statistics underscore the critical importance of strategic color selection in commercial contexts.<br />\r\n<br />\r\n<span id=\"passage-q14\" data-question=\"14\"></span>B: The psychological effects of color have been studied extensively by researchers across multiple disciplines, including psychology, neuroscience, and marketing. While individual responses to color can be influenced by personal experiences, cultural background, and context, certain color associations appear to be relatively consistent across diverse populations. Red, for instance, is typically associated with energy, passion, and urgency. <span id=\"passage-q20\" data-question=\"20\"></span>It can increase heart rate and create a sense of excitement, which is why it is frequently used in clearance sales and <span class=\"reading-answer-marker\">fast-food restaurants to stimulate quick decision-making and appetite</span>. However, red can also signify danger or warning, demonstrating how context shapes color interpretation.<br />\r\n<br />\r\n<span id=\"passage-q15\" data-question=\"15\"></span><span id=\"passage-q21\" data-question=\"21\"></span>C: Blue, <span class=\"reading-answer-marker\">one of the most universally favored colors</span>, is associated with trust, stability, and calmness. This explains its prevalence in corporate branding, particularly in sectors such as banking, insurance, and technology, where establishing credibility and reliability is paramount. Studies have shown that blue can actually lower heart rate and reduce appetite, which is why it is rarely used in food marketing. Interestingly, there are very few naturally occurring blue foods, and humans may have evolved to be cautious about blue-colored items in their diet.<br />\r\n<br />\r\n<span id=\"passage-q16\" data-question=\"16\"></span>D: Green carries strong associations with nature, health, and tranquility. It is often used by brands that wish to convey environmental friendliness, organic products, or wellness services. Green is also associated with wealth and prosperity in many Western cultures, which explains its use in financial contexts. Research suggests that green can reduce stress and eye strain, making it a popular choice for office environments and healthcare settings. <span id=\"passage-q22\" data-question=\"22\"></span>The human eye can <span class=\"reading-answer-marker\">distinguish more shades of green than any other color</span>, possibly because our ancestors needed to differentiate between various types of vegetation for survival.<br />\r\n<br />\r\n<span id=\"passage-q17\" data-question=\"17\"></span>E: Yellow is the most visible color from a distance and is associated with optimism, happiness, and warmth. It captures attention quickly, which is why it is commonly used for warning signs and highlights. However, excessive use of bright yellow can cause eye fatigue and has been linked to feelings of anxiety or frustration in some contexts. Many successful brands use yellow strategically as an accent color rather than a primary one, balancing its attention-grabbing properties with more neutral tones.<br />\r\n<br />\r\n<span id=\"passage-q18\" data-question=\"18\"></span>F: The influence of color extends beyond individual hues to include combinations and contrasts. Color harmony, the pleasing arrangement of colors, and color contrast, the degree of difference between colors, both play crucial roles in visual communication. <span id=\"passage-q25\" data-question=\"25\"></span>High contrast combinations, such as black and white or blue and orange, tend to be highly <span class=\"reading-answer-marker\">readable</span> and attention-grabbing, while low contrast combinations create a more subtle, sophisticated appearance. Complementary colors (those opposite each other on the color wheel) create vibrant, dynamic effects, while analogous colors (those adjacent on the color wheel) produce harmonious, calming combinations.<br />\r\n<br />\r\n<span id=\"passage-q19\" data-question=\"19\"></span>G: Cultural context significantly affects color interpretation and preferences. While white is associated with purity and weddings in Western cultures, it represents mourning and death in many Eastern cultures. Red symbolizes good fortune and celebration in China but can represent danger or debt in Western contexts. Purple has historically been associated with royalty and luxury <span id=\"passage-q26\" data-question=\"26\"></span>due to the <span class=\"reading-answer-marker\">rarity and expense</span> of purple dye in ancient times, an association that persists in modern branding despite the color now being easily reproducible. Global brands must carefully consider these cultural variations when developing international marketing strategies.<br />\r\n<br />\r\nH: As our understanding of color psychology continues to evolve, new applications are being explored. Environmental psychologists are investigating how color in urban spaces affects mood and behavior, while healthcare professionals are using color strategically in treatment facilities to promote healing and reduce stress. The digital age has introduced new considerations, as colors appear differently on various screens and devices, requiring designers to adapt their approaches. Despite these complexities, the fundamental principle remains: color is a powerful communication tool that, when used strategically and thoughtfully, can significantly influence human experience and decision-making."
+            "content": "A: Color is far more than a visual experience; it is a powerful tool that influences human emotions, perceptions, and behavior. In the fields of marketing and design, understanding color psychology has become essential for creating effective brand identities, advertising campaigns, and product designs. Research has shown that up to 90% of snap judgments made about products can be based on color alone, and that color increases brand recognition by up to 80%. These statistics underscore the critical importance of strategic color selection in commercial contexts.<br />\r\n<br />\r\nB: The psychological effects of color have been studied extensively by researchers across multiple disciplines, including psychology, neuroscience, and marketing. While individual responses to color can be influenced by personal experiences, cultural background, and context, certain color associations appear to be relatively consistent across diverse populations. Red, for instance, is typically associated with energy, passion, and urgency. It can increase heart rate and create a sense of excitement, which is why it is frequently used in clearance sales and fast-food restaurants to stimulate quick decision-making and appetite. However, red can also signify danger or warning, demonstrating how context shapes color interpretation.<br />\r\n<br />\r\nC: Blue, one of the most universally favored colors, is associated with trust, stability, and calmness. This explains its prevalence in corporate branding, particularly in sectors such as banking, insurance, and technology, where establishing credibility and reliability is paramount. Studies have shown that blue can actually lower heart rate and reduce appetite, which is why it is rarely used in food marketing. Interestingly, there are very few naturally occurring blue foods, and humans may have evolved to be cautious about blue-colored items in their diet.<br />\r\n<br />\r\nD: Green carries strong associations with nature, health, and tranquility. It is often used by brands that wish to convey environmental friendliness, organic products, or wellness services. Green is also associated with wealth and prosperity in many Western cultures, which explains its use in financial contexts. Research suggests that green can reduce stress and eye strain, making it a popular choice for office environments and healthcare settings. The human eye can distinguish more shades of green than any other color, possibly because our ancestors needed to differentiate between various types of vegetation for survival.<br />\r\n<br />\r\nE: Yellow is the most visible color from a distance and is associated with optimism, happiness, and warmth. It captures attention quickly, which is why it is commonly used for warning signs and highlights. However, excessive use of bright yellow can cause eye fatigue and has been linked to feelings of anxiety or frustration in some contexts. Many successful brands use yellow strategically as an accent color rather than a primary one, balancing its attention-grabbing properties with more neutral tones.<br />\r\n<br />\r\nF: The influence of color extends beyond individual hues to include combinations and contrasts. Color harmony, the pleasing arrangement of colors, and color contrast, the degree of difference between colors, both play crucial roles in visual communication. High contrast combinations, such as black and white or blue and orange, tend to be highly readable and attention-grabbing, while low contrast combinations create a more subtle, sophisticated appearance. Complementary colors (those opposite each other on the color wheel) create vibrant, dynamic effects, while analogous colors (those adjacent on the color wheel) produce harmonious, calming combinations.<br />\r\n<br />\r\nG: Cultural context significantly affects color interpretation and preferences. While white is associated with purity and weddings in Western cultures, it represents mourning and death in many Eastern cultures. Red symbolizes good fortune and celebration in China but can represent danger or debt in Western contexts. Purple has historically been associated with royalty and luxury due to the rarity and expense of purple dye in ancient times, an association that persists in modern branding despite the color now being easily reproducible. Global brands must carefully consider these cultural variations when developing international marketing strategies.<br />\r\n<br />\r\nH: As our understanding of color psychology continues to evolve, new applications are being explored. Environmental psychologists are investigating how color in urban spaces affects mood and behavior, while healthcare professionals are using color strategically in treatment facilities to promote healing and reduce stress. The digital age has introduced new considerations, as colors appear differently on various screens and devices, requiring designers to adapt their approaches. Despite these complexities, the fundamental principle remains: color is a powerful communication tool that, when used strategically and thoughtfully, can significantly influence human experience and decision-making."
         },
         {
             "title": "Reading Passage 3 - Urban Agriculture: Growing Food in Cities",
-            "content": "A: As the world's population becomes increasingly urbanized, with the United Nations projecting that 68% of people will live in cities by 2050, the question of how to feed these growing urban populations has become increasingly urgent. Urban agriculture, the practice of cultivating, processing, and distributing food in or around urban areas, has emerged as a promising solution to multiple challenges facing modern cities. From rooftop gardens and vertical farms to community allotments and hydroponic systems, urban agriculture takes many forms and offers benefits that extend far beyond simple food production.<br />\r\n<br />\r\nB: The concept of growing food in cities is not new. Throughout history, urban dwellers have maintained gardens and kept livestock within city limits. In ancient Rome, citizens grew vegetables in courtyards and on rooftops. During World War II, \"victory gardens\" in cities across Europe and North America produced a significant portion of the vegetables consumed domestically, <span id=\"passage-q27\" data-question=\"27\"></span>with an estimated <span class=\"reading-answer-marker\">40% of American produce coming from such gardens in 1944</span>. However, the post-war period saw a shift toward industrial agriculture and long-distance food supply chains, with food production moving away from urban centers. The recent resurgence of interest in urban agriculture represents both a return to historical practices and an innovation-driven response to contemporary challenges.<br />\r\n<br />\r\nC: One of the primary drivers of the urban agriculture movement is food security. Urban farming can increase access to fresh, nutritious food in areas that lack adequate grocery stores or markets, <span id=\"passage-q28\" data-question=\"28\"></span>commonly known as \"food deserts.\" These are typically low-income neighborhoods where <span class=\"reading-answer-marker\">residents have limited access to affordable, healthy food options</span>. By growing food locally, urban agriculture projects can provide communities with fresh produce while reducing dependence on distant agricultural regions and complex supply chains that can be vulnerable to disruption. <span id=\"passage-q33\" data-question=\"33\"></span>During the COVID-19 pandemic, for instance, <span class=\"reading-answer-marker\">urban farms in many cities proved resilient</span> when conventional food supply chains were disrupted, highlighting the value of localized food production.<br />\r\n<br />\r\nD: Environmental benefits constitute another compelling argument for urban agriculture. Traditional agriculture is a major contributor to greenhouse gas emissions, water pollution, and habitat destruction. The transportation of food over long distances, often referred to as \"food miles,\" significantly increases the carbon footprint of our diets. <span id=\"passage-q29\" data-question=\"29\"></span>Urban agriculture <span class=\"reading-answer-marker\">reduces these food miles dramatically</span>, with some produce traveling mere meters from production to consumption. Additionally, <span id=\"passage-q37\" data-question=\"37\"></span>urban farms can help manage <span class=\"reading-answer-marker\">stormwater runoff</span>, improve air quality, reduce the urban heat island effect, and provide green spaces that support biodiversity. Green roofs and vertical gardens can also provide insulation for buildings, reducing energy consumption for heating and cooling.<br />\r\n<br />\r\nE: The social and educational impacts of urban agriculture should not be underestimated. <span id=\"passage-q30\" data-question=\"30\"></span>Community gardens bring together diverse groups of people, <span class=\"reading-answer-marker\">fostering social cohesion</span> and providing opportunities for intergenerational knowledge sharing. These spaces often become hubs for community activities, cultural celebrations, and educational programs. <span id=\"passage-q35\" data-question=\"35\"></span>Schools with gardens have reported improved student engagement, better understanding of nutrition and food systems, and <span class=\"reading-answer-marker\">enhanced academic performance in science subjects</span>. For children growing up in urban environments, these gardens provide crucial connections to nature and food production that might otherwise be absent from their lives.<br />\r\n<br />\r\n<span id=\"passage-q34\" data-question=\"34\"></span>F: Despite its numerous benefits, urban agriculture faces significant challenges. Land availability and security are major concerns in cities where property prices are high and vacant land is scarce. Many urban farming initiatives operate on temporary or uncertain land tenure, making long-term planning difficult. <span id=\"passage-q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">Soil contamination</span> is another serious issue, particularly in older industrial cities where soil may contain heavy metals or other pollutants that can be absorbed by plants and pose health risks. Water access and quality can also be problematic, as can the initial costs of establishing urban farms, particularly for high-tech solutions like vertical farming or aquaponics systems.<br />\r\n<br />\r\n<span id=\"passage-q32\" data-question=\"32\"></span>G: Economic viability remains a contentious issue in urban agriculture. <span id=\"passage-q36\" data-question=\"36\"></span>While <span class=\"reading-answer-marker\">some urban farms operate as successful commercial enterprises</span>, many rely on volunteers, grants, or subsidies to remain operational. The economics are complicated by factors such as high land and labor costs in urban areas, competition with industrial agriculture that benefits from economies of scale, and the challenge of pricing produce competitively while ensuring fair wages and sustainable practices. However, advocates argue that the full value of urban agriculture extends beyond direct financial returns to include social, environmental, and health benefits that are difficult to quantify in purely economic terms.<br />\r\n<br />\r\n<span id=\"passage-q40\" data-question=\"40\"></span>H: Technological innovation is opening new possibilities for urban agriculture. Vertical farming, which uses stacked layers of crops in controlled indoor environments, can produce high yields in small footprints. These systems use LED lighting, hydroponics or aeroponics, and climate control to optimize growing conditions and <span id=\"passage-q31\" data-question=\"31\"></span>enable <span class=\"reading-answer-marker\">year-round production regardless of external weather conditions</span>. While currently energy-intensive and expensive to establish, improvements in technology and renewable energy integration are making these systems increasingly viable. Aquaponics, which combines fish farming with plant cultivation in a symbiotic system, represents another innovative approach gaining traction in urban settings.<br />\r\n<br />\r\nI: Looking forward, urban agriculture is likely to play an increasingly important role in sustainable city planning. Many cities worldwide are now incorporating urban agriculture into their official policies and urban development plans. Singapore, for example, <span id=\"passage-q39\" data-question=\"39\"></span>aims to produce 30% of its nutritional needs locally by <span class=\"reading-answer-marker\">2030</span>, up from less than 10% currently, through a combination of vertical farms, rooftop gardens, and innovative technologies. Paris has committed to creating 100 hectares of urban agriculture by 2020, including on rooftops and walls. As climate change intensifies, water resources become scarcer, and urban populations continue to grow, the ability to produce food within cities may transition from being a nice-to-have amenity to an essential component of urban resilience and food security."
+            "content": "A: As the world's population becomes increasingly urbanized, with the United Nations projecting that 68% of people will live in cities by 2050, the question of how to feed these growing urban populations has become increasingly urgent. Urban agriculture, the practice of cultivating, processing, and distributing food in or around urban areas, has emerged as a promising solution to multiple challenges facing modern cities. From rooftop gardens and vertical farms to community allotments and hydroponic systems, urban agriculture takes many forms and offers benefits that extend far beyond simple food production.<br />\r\n<br />\r\nB: The concept of growing food in cities is not new. Throughout history, urban dwellers have maintained gardens and kept livestock within city limits. In ancient Rome, citizens grew vegetables in courtyards and on rooftops. During World War II, \"victory gardens\" in cities across Europe and North America produced a significant portion of the vegetables consumed domestically, with an estimated 40% of American produce coming from such gardens in 1944. However, the post-war period saw a shift toward industrial agriculture and long-distance food supply chains, with food production moving away from urban centers. The recent resurgence of interest in urban agriculture represents both a return to historical practices and an innovation-driven response to contemporary challenges.<br />\r\n<br />\r\nC: One of the primary drivers of the urban agriculture movement is food security. Urban farming can increase access to fresh, nutritious food in areas that lack adequate grocery stores or markets, commonly known as \"food deserts.\" These are typically low-income neighborhoods where residents have limited access to affordable, healthy food options. By growing food locally, urban agriculture projects can provide communities with fresh produce while reducing dependence on distant agricultural regions and complex supply chains that can be vulnerable to disruption. During the COVID-19 pandemic, for instance, urban farms in many cities proved resilient when conventional food supply chains were disrupted, highlighting the value of localized food production.<br />\r\n<br />\r\nD: Environmental benefits constitute another compelling argument for urban agriculture. Traditional agriculture is a major contributor to greenhouse gas emissions, water pollution, and habitat destruction. The transportation of food over long distances, often referred to as \"food miles,\" significantly increases the carbon footprint of our diets. Urban agriculture reduces these food miles dramatically, with some produce traveling mere meters from production to consumption. Additionally, urban farms can help manage stormwater runoff, improve air quality, reduce the urban heat island effect, and provide green spaces that support biodiversity. Green roofs and vertical gardens can also provide insulation for buildings, reducing energy consumption for heating and cooling.<br />\r\n<br />\r\nE: The social and educational impacts of urban agriculture should not be underestimated. Community gardens bring together diverse groups of people, fostering social cohesion and providing opportunities for intergenerational knowledge sharing. These spaces often become hubs for community activities, cultural celebrations, and educational programs. Schools with gardens have reported improved student engagement, better understanding of nutrition and food systems, and enhanced academic performance in science subjects. For children growing up in urban environments, these gardens provide crucial connections to nature and food production that might otherwise be absent from their lives.<br />\r\n<br />\r\nF: Despite its numerous benefits, urban agriculture faces significant challenges. Land availability and security are major concerns in cities where property prices are high and vacant land is scarce. Many urban farming initiatives operate on temporary or uncertain land tenure, making long-term planning difficult. Soil contamination is another serious issue, particularly in older industrial cities where soil may contain heavy metals or other pollutants that can be absorbed by plants and pose health risks. Water access and quality can also be problematic, as can the initial costs of establishing urban farms, particularly for high-tech solutions like vertical farming or aquaponics systems.<br />\r\n<br />\r\nG: Economic viability remains a contentious issue in urban agriculture. While some urban farms operate as successful commercial enterprises, many rely on volunteers, grants, or subsidies to remain operational. The economics are complicated by factors such as high land and labor costs in urban areas, competition with industrial agriculture that benefits from economies of scale, and the challenge of pricing produce competitively while ensuring fair wages and sustainable practices. However, advocates argue that the full value of urban agriculture extends beyond direct financial returns to include social, environmental, and health benefits that are difficult to quantify in purely economic terms.<br />\r\n<br />\r\nH: Technological innovation is opening new possibilities for urban agriculture. Vertical farming, which uses stacked layers of crops in controlled indoor environments, can produce high yields in small footprints. These systems use LED lighting, hydroponics or aeroponics, and climate control to optimize growing conditions and enable year-round production regardless of external weather conditions. While currently energy-intensive and expensive to establish, improvements in technology and renewable energy integration are making these systems increasingly viable. Aquaponics, which combines fish farming with plant cultivation in a symbiotic system, represents another innovative approach gaining traction in urban settings.<br />\r\n<br />\r\nI: Looking forward, urban agriculture is likely to play an increasingly important role in sustainable city planning. Many cities worldwide are now incorporating urban agriculture into their official policies and urban development plans. Singapore, for example, aims to produce 30% of its nutritional needs locally by 2030, up from less than 10% currently, through a combination of vertical farms, rooftop gardens, and innovative technologies. Paris has committed to creating 100 hectares of urban agriculture by 2020, including on rooftops and walls. As climate change intensifies, water resources become scarcer, and urban populations continue to grow, the ability to produce food within cities may transition from being a nice-to-have amenity to an essential component of urban resilience and food security."
         }
     ],
     "settings": {
@@ -1918,8 +1913,8 @@
         "starting_question_number": "1"
     },
     "_metadata": {
-        "exported_at": "2026-01-16 16:00:00",
-        "exported_by": "copilot-rebuild",
+        "exported_at": "2026-01-16 13:50:32",
+        "exported_by": "impact",
         "plugin_version": "11.27",
         "format_version": "1.0"
     }
