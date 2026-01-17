@@ -1140,50 +1140,6 @@
             "options": "A: The cost of fighting fires\nB: Duration of flights\nC: Criminal activity\nD: Mid-air collisions\nE: The inevitable rise of drones",
             "correct_answer_count": 2,
             "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 39-40\r\n\r\nChoose TWO letters, A-E.",
-            "question": "Which TWO of the following are mentioned as being risks or drawbacks associated with drone technology?",
-            "points": 2,
-            "no_answer_feedback": "The correct answers are B: 'Duration of flights' and D: 'Mid-air collisions.' Paragraph I explicitly mentions 'comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes)' and 'safety risks, in the potential for collisions across increasingly crowded airspace.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "A: The cost of fighting fires",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The cost of fighting fires is not mentioned as a drawback. The passage states fire departments use UAVs to 'reduce risks and costs.'"
-                },
-                {
-                    "text": "B: Duration of flights",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph I mentions 'comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes)' as a limitation."
-                },
-                {
-                    "text": "C: Criminal activity",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Criminal activity is not mentioned as a drawback; rather, drones are used to help detect criminal activity."
-                },
-                {
-                    "text": "D: Mid-air collisions",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph I mentions 'safety risks, in the potential for collisions across increasingly crowded airspace.'"
-                },
-                {
-                    "text": "E: The inevitable rise of drones",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The 'inexorable rise of drones' is described as a trend, not a specific risk or drawback."
-                }
-            ],
-            "options": "A: The cost of fighting fires\nB: Duration of flights\nC: Criminal activity\nD: Mid-air collisions\nE: The inevitable rise of drones",
-            "correct_answer_count": 2,
-            "show_option_letters": false
         }
     ],
     "reading_texts": [
