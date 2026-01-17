@@ -1238,7 +1238,7 @@
         },
         {
             "type": "open_question",
-            "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS AND A NUMBER from the text.\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.",
+            "instructions": "Complete the following sentences using NO MORE THAN THREE WORDS AND A NUMBER from the text.\r\nYou should spend about 20 minutes on Questions 27 – 39 which are based on Reading Passage 3.",
             "question": "27. The Nobel prizes are awarded for [field 1] in a number of fields.",
             "points": 1,
             "no_answer_feedback": "The correct answer is: outstanding contributions. Paragraph A states that the prizes are 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'.",
