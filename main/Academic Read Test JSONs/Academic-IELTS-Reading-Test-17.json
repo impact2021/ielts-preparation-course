@@ -1067,40 +1067,6 @@
             "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
             "question": "Blue is the most popular color worldwide.",
             "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph B states red \"stimulates appetite, which explains its prevalent use by fast-food chains.\"",
-            "correct_feedback": "Correct! Paragraph B explicitly states red \"stimulates appetite, which explains its prevalent use by fast-food chains.\"",
-            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph B clearly states red increases appetite.",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph B states red \"stimulates appetite, which explains its prevalent use by fast-food chains like McDonald's and KFC.\""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage explicitly states red stimulates appetite."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This information is clearly stated in Paragraph B."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
-            "question": "The human eye can detect more variations of green than any other color.",
-            "points": 1,
             "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is NOT GIVEN. While Paragraph C states blue is \"one of the most universally favored colors,\" it doesn't claim it's THE most popular worldwide.",
             "correct_feedback": "Correct! While the passage says blue is universally favored, it doesn't state it's the most popular color worldwide.",
             "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't make this specific claim.",
@@ -1124,6 +1090,40 @@
                     "text": "NOT GIVEN",
                     "is_correct": true,
                     "feedback": "Correct! While Paragraph C states blue is \"one of the most universally favored colors,\" it doesn't claim it's THE most popular worldwide."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Do the following statements agree with the information given in Reading Passage 2?\r\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this in the passage.",
+            "question": "The human eye can distinguish more shades of green than any other color.",
+            "points": 1,
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer. The correct answer is TRUE. Paragraph D states \"The human eye can distinguish more shades of green than any other color.\"",
+            "correct_feedback": "Correct! Paragraph D explicitly states \"The human eye can distinguish more shades of green than any other color.\"",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. This is stated in Paragraph D.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D states \"The human eye can distinguish more shades of green than any other color, possibly because our ancestors needed to differentiate between various types of vegetation for survival.\""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage explicitly states this in Paragraph D."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is clearly stated in Paragraph D."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
