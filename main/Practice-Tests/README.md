@@ -12,7 +12,12 @@ This folder contains quality review documentation for all IELTS practice tests i
 - Detailed breakdown of critical issues and other problems
 - Works offline - just open in your browser
 
-**👉 Bookmark this file for quick access anytime!**
+**👉 View it in your browser:**
+```
+https://raw.githack.com/impact2021/ielts-preparation-course/main/main/Practice-Tests/quality-dashboard.html
+```
+
+**📖 [See HOW-TO-VIEW-DASHBOARD.md for all viewing options](HOW-TO-VIEW-DASHBOARD.md)**
 
 ### READING_TESTS_QUALITY_REVIEW.md
 Comprehensive quality review table for all 21 Academic Reading Tests (Markdown format), showing:

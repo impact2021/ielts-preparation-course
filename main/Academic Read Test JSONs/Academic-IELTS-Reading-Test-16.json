@@ -1524,10 +1524,10 @@
         "starting_question_number": "1"
     },
     "_metadata": {
-        "exported_at": "2026-01-16 23:58:17",
+        "exported_at": "2026-01-17 00:14:02",
         "exported_by": "impact",
         "plugin_version": "11.27",
         "format_version": "1.0",
-        "note": "Fixed question count from 45 to 40 by removing 5 questions from Passage 3 and fixing reading_text_id for Passage 2 short answer questions"
+        "note": "Fixed: Corrected from 45 to 40 questions by fixing passage assignments and removing 5 excess questions"
     }
 }
