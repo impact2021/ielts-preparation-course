@@ -1,62 +1,165 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+Generate Quality Dashboard for IELTS Reading Tests
+
+This script correctly counts student-facing questions according to IELTS standards:
+- Summary completion: count fields in summary_fields
+- Open questions: use field_count value
+- Closed questions: use correct_answer_count value (default 1)
+
+See QUESTION_COUNTING_RULES.md for detailed explanation.
+"""
+
+import json
+import os
+import glob
+from datetime import datetime
+
+def count_student_questions(question):
+    """Count actual student-facing questions according to IELTS standards"""
+    q_type = question.get('type', '')
+    
+    # Rule 1: Summary Completion - count fields
+    if q_type == 'summary_completion':
+        return len(question.get('summary_fields', {}))
+    
+    # Rule 2: Open Questions - count field_count
+    elif q_type == 'open_question':
+        return question.get('field_count', 1)
+    
+    # Rule 3: Closed Questions - check correct_answer_count
+    else:
+        return question.get('correct_answer_count', 1)
+
+def analyze_test(file_path):
+    """Analyze a single test file for quality metrics"""
+    with open(file_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    
+    questions = data.get('questions', [])
+    json_objects = len(questions)
+    student_questions = sum(count_student_questions(q) for q in questions)
+    
+    test_name = os.path.basename(file_path)
+    test_num = test_name.split('-')[-1].replace('.json', '')
+    
+    # Analyze quality metrics
+    missing_feedback = []
+    not_linked = []
+    grammar_issues = []
+    
+    for i, q in enumerate(questions, 1):
+        # Check feedback
+        no_answer = q.get('no_answer_feedback', '').strip()
+        correct = q.get('correct_feedback', '').strip()
+        incorrect = q.get('incorrect_feedback', '').strip()
+        
+        if not no_answer and (not correct or not incorrect):
+            missing_feedback.append(i)
+        
+        # Check if linked to passage
+        reading_text_id = q.get('reading_text_id')
+        if reading_text_id is None:
+            not_linked.append(i)
+        
+        # Check for double spacing
+        question_text = q.get('question', '')
+        if '  ' in question_text:
+            grammar_issues.append(i)
+    
+    return {
+        'test_num': test_num,
+        'json_objects': json_objects,
+        'student_questions': student_questions,
+        'missing_feedback': missing_feedback,
+        'not_linked': not_linked,
+        'grammar_issues': grammar_issues,
+        'file_path': file_path
+    }
+
+def generate_html_dashboard(test_results):
+    """Generate the HTML quality dashboard"""
+    
+    # Calculate statistics
+    total_tests = len(test_results)
+    total_questions = sum(r['student_questions'] for r in test_results)
+    complete_tests = sum(1 for r in test_results if r['student_questions'] == 40)
+    incomplete_tests = total_tests - complete_tests
+    
+    total_missing_feedback = sum(len(r['missing_feedback']) for r in test_results)
+    total_not_linked = sum(len(r['not_linked']) for r in test_results)
+    total_grammar_issues = sum(len(r['grammar_issues']) for r in test_results)
+    
+    # Count tests by status
+    broken_tests = sum(1 for r in test_results if len(r['not_linked']) > 10)
+    tests_with_issues = sum(1 for r in test_results if 
+                           r['student_questions'] != 40 or 
+                           len(r['missing_feedback']) > 0 or
+                           len(r['not_linked']) > 0 or
+                           len(r['grammar_issues']) > 0)
+    good_tests = total_tests - tests_with_issues
+    
+    timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+    
+    html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IELTS Practice Tests - Quality Dashboard</title>
     <style>
-        * {
+        * {{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
+        }}
         
-        body {
+        body {{
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
-        }
+        }}
         
-        .container {
+        .container {{
             max-width: 1400px;
             margin: 0 auto;
             background: white;
             border-radius: 12px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             overflow: hidden;
-        }
+        }}
         
-        .header {
+        .header {{
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 30px;
             text-align: center;
-        }
+        }}
         
-        .header h1 {
+        .header h1 {{
             font-size: 2rem;
             margin-bottom: 10px;
-        }
+        }}
         
-        .header .subtitle {
+        .header .subtitle {{
             font-size: 1rem;
             opacity: 0.9;
-        }
+        }}
         
-        .header .timestamp {
+        .header .timestamp {{
             font-size: 0.85rem;
             opacity: 0.8;
             margin-top: 10px;
-        }
+        }}
         
-        .tabs {
+        .tabs {{
             display: flex;
             background: #f8f9fa;
             border-bottom: 2px solid #667eea;
-        }
+        }}
         
-        .tab {
+        .tab {{
             flex: 1;
             padding: 15px 20px;
             text-align: center;
@@ -67,75 +170,75 @@
             font-weight: 500;
             color: #495057;
             transition: all 0.3s ease;
-        }
+        }}
         
-        .tab:hover {
+        .tab:hover {{
             background: #dee2e6;
-        }
+        }}
         
-        .tab.active {
+        .tab.active {{
             background: white;
             color: #667eea;
             border-bottom: 3px solid #667eea;
             font-weight: 600;
-        }
+        }}
         
-        .tab-content {
+        .tab-content {{
             display: none;
-        }
+        }}
         
-        .tab-content.active {
+        .tab-content.active {{
             display: block;
-        }
+        }}
         
-        .stats-grid {
+        .stats-grid {{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             padding: 30px;
             background: #f8f9fa;
-        }
+        }}
         
-        .stat-card {
+        .stat-card {{
             background: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             text-align: center;
-        }
+        }}
         
-        .stat-card .number {
+        .stat-card .number {{
             font-size: 2rem;
             font-weight: bold;
             margin-bottom: 5px;
-        }
+        }}
         
-        .stat-card .label {
+        .stat-card .label {{
             font-size: 0.9rem;
             color: #666;
-        }
+        }}
         
-        .stat-card.good .number { color: #28a745; }
-        .stat-card.warning .number { color: #ffc107; }
-        .stat-card.critical .number { color: #dc3545; }
-        .stat-card.info .number { color: #667eea; }
+        .stat-card.good .number {{ color: #28a745; }}
+        .stat-card.warning .number {{ color: #ffc107; }}
+        .stat-card.critical .number {{ color: #dc3545; }}
+        .stat-card.info .number {{ color: #667eea; }}
         
-        .content {
+        .content {{
             padding: 30px;
-        }
+        }}
         
-        .table-container {
+        .table-container {{
             overflow-x: auto;
             margin-bottom: 30px;
-        }
+        }}
         
-        table {
+        table {{
             width: 100%;
             border-collapse: collapse;
             font-size: 0.9rem;
-        }
+        }}
         
-        th {
+        th {{
             background: #667eea;
             color: white;
             padding: 12px 8px;
@@ -144,122 +247,122 @@
             position: sticky;
             top: 0;
             z-index: 10;
-        }
+        }}
         
-        td {
+        td {{
             padding: 10px 8px;
             text-align: center;
             border-bottom: 1px solid #e9ecef;
-        }
+        }}
         
-        tr:hover {
+        tr:hover {{
             background: #f8f9fa;
-        }
+        }}
         
-        tr.highlighted {
+        tr.highlighted {{
             background: #fff3cd;
             font-weight: bold;
-        }
+        }}
         
-        .badge {
+        .badge {{
             display: inline-block;
             padding: 4px 8px;
             border-radius: 12px;
             font-size: 0.85rem;
             font-weight: 500;
-        }
+        }}
         
-        .badge.good {
+        .badge.good {{
             background: #d4edda;
             color: #155724;
-        }
+        }}
         
-        .badge.warning {
+        .badge.warning {{
             background: #fff3cd;
             color: #856404;
-        }
+        }}
         
-        .badge.critical {
+        .badge.critical {{
             background: #f8d7da;
             color: #721c24;
-        }
+        }}
         
-        .badge.yes {
+        .badge.yes {{
             background: #d4edda;
             color: #155724;
-        }
+        }}
         
-        .badge.no {
+        .badge.no {{
             background: #f8d7da;
             color: #721c24;
-        }
+        }}
         
-        .badge.excellent {
+        .badge.excellent {{
             background: #d4edda;
             color: #155724;
-        }
+        }}
         
-        .section {
+        .section {{
             margin-bottom: 30px;
-        }
+        }}
         
-        .section h2 {
+        .section h2 {{
             font-size: 1.5rem;
             margin-bottom: 15px;
             color: #333;
             border-bottom: 2px solid #667eea;
             padding-bottom: 10px;
-        }
+        }}
         
-        .section h3 {
+        .section h3 {{
             font-size: 1.2rem;
             margin-top: 20px;
             margin-bottom: 10px;
             color: #666;
-        }
+        }}
         
-        .issue-list {
+        .issue-list {{
             background: #f8f9fa;
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
-        }
+        }}
         
-        .issue-list ul {
+        .issue-list ul {{
             list-style: none;
             padding-left: 0;
-        }
+        }}
         
-        .issue-list li {
+        .issue-list li {{
             padding: 8px 0;
             border-bottom: 1px solid #e9ecef;
-        }
+        }}
         
-        .issue-list li:last-child {
+        .issue-list li:last-child {{
             border-bottom: none;
-        }
+        }}
         
-        .test-number {
+        .test-number {{
             font-weight: bold;
             color: #667eea;
-        }
+        }}
         
-        .footer {
+        .footer {{
             background: #f8f9fa;
             padding: 20px;
             text-align: center;
             color: #666;
             font-size: 0.85rem;
-        }
+        }}
         
-        @media print {
-            body {
+        @media print {{
+            body {{
                 background: white;
-            }
-            .container {
+            }}
+            .container {{
                 box-shadow: none;
-            }
-        }
+            }}
+        }}
     </style>
 </head>
 <body>
@@ -267,7 +370,7 @@
         <div class="header">
             <h1>📊 IELTS Practice Tests - Quality Dashboard</h1>
             <div class="subtitle">Comprehensive Quality Review for All Test Types</div>
-            <div class="timestamp">Last Updated: 2026-01-17 01:56:31 UTC</div>
+            <div class="timestamp">Last Updated: {timestamp}</div>
         </div>
         
         <div class="tabs">
@@ -281,23 +384,23 @@
         
         <div class="stats-grid">
             <div class="stat-card info">
-                <div class="number">21</div>
+                <div class="number">{total_tests}</div>
                 <div class="label">Total Tests</div>
             </div>
             <div class="stat-card info">
-                <div class="number">839</div>
+                <div class="number">{total_questions}</div>
                 <div class="label">Total Questions</div>
             </div>
             <div class="stat-card good">
-                <div class="number">20</div>
+                <div class="number">{complete_tests}</div>
                 <div class="label">✓ Complete (40 Qs)</div>
             </div>
             <div class="stat-card warning">
-                <div class="number">6</div>
+                <div class="number">{tests_with_issues}</div>
                 <div class="label">⚠ Issues</div>
             </div>
             <div class="stat-card critical">
-                <div class="number">1</div>
+                <div class="number">{incomplete_tests}</div>
                 <div class="label">🔴 Incomplete</div>
             </div>
         </div>
@@ -318,258 +421,132 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="test-number">01</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
+'''
+    
+    # Generate table rows
+    for result in test_results:
+        test_num = result['test_num']
+        student_q = result['student_questions']
+        missing_fb = len(result['missing_feedback'])
+        not_linked = len(result['not_linked'])
+        grammar = len(result['grammar_issues'])
+        
+        # Determine badges
+        q_badge = 'good' if student_q == 40 else 'critical'
+        fb_badge = 'yes' if missing_fb == 0 else 'no'
+        fb_text = '✓ Yes' if missing_fb == 0 else f'✗ No ({missing_fb})'
+        link_badge = 'yes' if not_linked == 0 else 'no'
+        link_text = '✓ Yes' if not_linked == 0 else f'✗ No ({not_linked})'
+        grammar_badge = 'excellent' if grammar == 0 else 'warning'
+        grammar_text = '✓ EXCELLENT' if grammar == 0 else f'⚠ Issues ({grammar})'
+        
+        # Determine overall status
+        if student_q == 40 and missing_fb == 0 and not_linked == 0 and grammar == 0:
+            status_badge = 'good'
+            status_text = '✓ COMPLETE'
+        elif student_q != 40:
+            status_badge = 'critical'
+            status_text = '🔴 INCOMPLETE'
+        else:
+            status_badge = 'good'
+            status_text = '✓ COMPLETE'
+        
+        html += f'''                            <tr>
+                                <td class="test-number">{test_num}</td>
+                                <td><span class="badge {q_badge}">{student_q}</span></td>
+                                <td><span class="badge {fb_badge}">{fb_text}</span></td>
+                                <td><span class="badge {link_badge}">{link_text}</span></td>
+                                <td><span class="badge {grammar_badge}">{grammar_text}</span></td>
+                                <td><span class="badge {status_badge}">{status_text}</span></td>
                             </tr>
-                            <tr>
-                                <td class="test-number">02</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">03</td>
-                                <td><span class="badge critical">39</span></td>
-                                <td><span class="badge no">✗ No (20)</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge critical">🔴 INCOMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">04</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">05</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge no">✗ No (4)</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">06</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge no">✗ No (17)</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge warning">⚠ Issues (1)</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">07</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge warning">⚠ Issues (1)</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">08</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">09</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">10</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">11</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">12</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">13</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge no">✗ No (7)</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">14</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">15</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">16</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">17</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge no">✗ No (15)</span></td>
-                                <td><span class="badge warning">⚠ Issues (2)</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">18</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">19</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">20</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                            <tr>
-                                <td class="test-number">21</td>
-                                <td><span class="badge good">40</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge yes">✓ Yes</span></td>
-                                <td><span class="badge excellent">✓ EXCELLENT</span></td>
-                                <td><span class="badge good">✓ COMPLETE</span></td>
-                            </tr>
-                        </tbody>
+'''
+    
+    html += '''                        </tbody>
                     </table>
                 </div>
             </div>
             
-            <div class="section">
+'''
+    
+    # Generate issue sections
+    critical_issues = [r for r in test_results if len(r['not_linked']) > 10]
+    if critical_issues:
+        html += '''            <div class="section">
                 <h2>🚨 Critical Issues</h2>
-                <div class="issue-list">
-                    <h3>🔴 Test 17 - CRITICAL</h3>
+'''
+        for result in critical_issues:
+            html += f'''                <div class="issue-list">
+                    <h3>🔴 Test {result['test_num']} - CRITICAL</h3>
                     <ul>
-                        <li><strong>⚠️ Not Linked to Reading Passage:</strong> Questions 6, 7, 8, 9, 10, 11, 12, 20, 21, 22, 23, 33, 34, 35, 36</li>
+                        <li><strong>⚠️ Not Linked to Reading Passage:</strong> Questions {', '.join(map(str, result['not_linked']))}</li>
                         <li>reading_text_id is null or invalid</li>
                     </ul>
                 </div>
-            </div>
+'''
+        html += '''            </div>
             
-            <div class="section">
+'''
+    
+    # Other issues
+    other_issues = [r for r in test_results if 
+                   len(r['missing_feedback']) > 0 or 
+                   len(r['grammar_issues']) > 0 or
+                   (len(r['not_linked']) > 0 and len(r['not_linked']) <= 10)]
+    
+    if other_issues:
+        html += '''            <div class="section">
                 <h2>⚠️ Other Issues</h2>
                 
-                <div class="issue-list">
-                    <h3>Test 03</h3>
-                    <ul>
-                        <li><strong>Missing Feedback:</strong> Questions 1, 2, 3, 4, 5, 10, 11, 12, 13, 18 ... and 10 more</li>
-                    </ul>
-                </div>
-                
-                <div class="issue-list">
-                    <h3>Test 05</h3>
-                    <ul>
-                        <li><strong>Missing Feedback:</strong> Questions 7, 36, 37, 38</li>
-                    </ul>
-                </div>
-                
-                <div class="issue-list">
-                    <h3>Test 06</h3>
-                    <ul>
-                        <li><strong>Missing Feedback:</strong> Questions 1, 2, 3, 4, 5, 12, 25, 26, 27, 28 ... and 7 more</li>
-                        <li><strong>Grammar Issues (double spacing):</strong> Questions 12</li>
-                    </ul>
-                </div>
-                
-                <div class="issue-list">
-                    <h3>Test 07</h3>
-                    <ul>
-                        <li><strong>Grammar Issues (double spacing):</strong> Questions 12</li>
-                    </ul>
-                </div>
-                
-                <div class="issue-list">
-                    <h3>Test 13</h3>
-                    <ul>
-                        <li><strong>Missing Feedback:</strong> Questions 9, 10, 13, 14, 15, 16, 33</li>
-                    </ul>
-                </div>
-                
-                <div class="issue-list">
-                    <h3>Test 17</h3>
-                    <ul>
-                        <li><strong>Grammar Issues (double spacing):</strong> Questions 23, 36</li>
-                    </ul>
-                </div>
-                
-            </div>
+'''
+        for result in other_issues:
+            if len(result['missing_feedback']) == 0 and len(result['grammar_issues']) == 0 and len(result['not_linked']) == 0:
+                continue
             
-            <div class="section">
+            html += f'''                <div class="issue-list">
+                    <h3>Test {result['test_num']}</h3>
+                    <ul>
+'''
+            if len(result['missing_feedback']) > 0:
+                fb_list = ', '.join(map(str, result['missing_feedback'][:10]))
+                if len(result['missing_feedback']) > 10:
+                    fb_list += f' ... and {len(result["missing_feedback"]) - 10} more'
+                html += f'''                        <li><strong>Missing Feedback:</strong> Questions {fb_list}</li>
+'''
+            if len(result['not_linked']) > 0 and len(result['not_linked']) <= 10:
+                html += f'''                        <li><strong>Not Linked to Passage:</strong> Questions {', '.join(map(str, result['not_linked']))}</li>
+'''
+            if len(result['grammar_issues']) > 0:
+                html += f'''                        <li><strong>Grammar Issues (double spacing):</strong> Questions {', '.join(map(str, result['grammar_issues']))}</li>
+'''
+            html += '''                    </ul>
+                </div>
+                
+'''
+        html += '''            </div>
+            
+'''
+    
+    # Statistics
+    html += f'''            <div class="section">
                 <h2>📈 Statistics Summary</h2>
                 <div class="issue-list">
                     <h3>🚨 Critical Issues</h3>
                     <ul>
-                        <li>Tests with BROKEN questions: <strong>1/21</strong></li>
-                        <li>Total questions not linked: <strong>15</strong></li>
+                        <li>Tests with BROKEN questions: <strong>{broken_tests}/{total_tests}</strong></li>
+                        <li>Total questions not linked: <strong>{total_not_linked}</strong></li>
                     </ul>
                     
                     <h3>⚠️ Other Issues</h3>
                     <ul>
-                        <li>Questions missing feedback: <strong>48</strong></li>
-                        <li>Questions with grammar issues: <strong>4</strong></li>
+                        <li>Questions missing feedback: <strong>{total_missing_feedback}</strong></li>
+                        <li>Questions with grammar issues: <strong>{total_grammar_issues}</strong></li>
                     </ul>
                     
                     <h3>Overall Quality</h3>
                     <ul>
-                        <li>✓ Complete: <strong>20/21 tests</strong> (95%)</li>
-                        <li>⚠ Issues: <strong>6/21 tests</strong> (28%)</li>
-                        <li>🔴 BROKEN: <strong>1/21 tests</strong> (4%)</li>
+                        <li>✓ Complete: <strong>{complete_tests}/{total_tests} tests</strong> ({100*complete_tests//total_tests}%)</li>
+                        <li>⚠ Issues: <strong>{tests_with_issues}/{total_tests} tests</strong> ({100*tests_with_issues//total_tests}%)</li>
+                        <li>🔴 BROKEN: <strong>{broken_tests}/{total_tests} tests</strong> ({100*broken_tests//total_tests if total_tests > 0 else 0}%)</li>
                     </ul>
                 </div>
             </div>
@@ -800,7 +777,7 @@
     </div>
     
     <script>
-        function switchTab(tabName) {
+        function switchTab(tabName) {{
             // Hide all tab contents
             const tabContents = document.querySelectorAll('.tab-content');
             tabContents.forEach(content => content.classList.remove('active'));
@@ -816,10 +793,45 @@
             const clickedTab = Array.from(tabs).find(tab => 
                 tab.getAttribute('onclick').includes(tabName)
             );
-            if (clickedTab) {
+            if (clickedTab) {{
                 clickedTab.classList.add('active');
-            }
-        }
+            }}
+        }}
     </script>
 </body>
 </html>
+'''
+    
+    return html
+
+def main():
+    """Main execution"""
+    test_dir = '/home/runner/work/ielts-preparation-course/ielts-preparation-course/main/Academic Read Test JSONs'
+    test_files = sorted(glob.glob(f'{test_dir}/Academic-IELTS-Reading-Test-*.json'))
+    
+    print("Analyzing all reading tests...")
+    test_results = []
+    for test_file in test_files:
+        result = analyze_test(test_file)
+        test_results.append(result)
+        print(f"Test {result['test_num']}: {result['student_questions']} questions")
+    
+    print("\nGenerating quality dashboard HTML...")
+    html_content = generate_html_dashboard(test_results)
+    
+    output_path = '/home/runner/work/ielts-preparation-course/ielts-preparation-course/main/Practice-Tests/quality-dashboard.html'
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(html_content)
+    
+    print(f"\n✓ Quality dashboard generated: {output_path}")
+    
+    # Summary
+    total = len(test_results)
+    complete = sum(1 for r in test_results if r['student_questions'] == 40)
+    print(f"\nSummary:")
+    print(f"  Total tests: {total}")
+    print(f"  Complete tests (40 questions): {complete}")
+    print(f"  Incomplete tests: {total - complete}")
+
+if __name__ == '__main__':
+    main()
