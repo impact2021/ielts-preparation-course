@@ -1,0 +1,1753 @@
+{
+    "title": "General Training Reading Test 15",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Questions 1–4\n\nMatch each statement to the correct category. Write the correct letter A, B, C, or D.",
+            "question": "1. Should only be packaged in boxes.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A: Miscellaneous items.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Miscellaneous items",
+                    "is_correct": true,
+                    "feedback": "Correct! Miscellaneous items should be placed in boxes with names clearly written on the box."
+                },
+                {
+                    "text": "B: Kitchenware",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
+                },
+                {
+                    "text": "C: Clothes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
+                },
+                {
+                    "text": "D: Books",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
+                }
+            ],
+            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "2. The school does not have many of these items to sell at the moment.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: Kitchenware.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Miscellaneous items",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
+                },
+                {
+                    "text": "B: Kitchenware",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that Kitchenware items are currently in short supply."
+                },
+                {
+                    "text": "C: Clothes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
+                },
+                {
+                    "text": "D: Books",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
+                }
+            ],
+            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "3. Should be labelled in one of three ways.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Clothes.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Miscellaneous items",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
+                },
+                {
+                    "text": "B: Kitchenware",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
+                },
+                {
+                    "text": "C: Clothes",
+                    "is_correct": true,
+                    "feedback": "Correct! Clothes should be marked as 'For Men', 'For Women' or 'For Children'."
+                },
+                {
+                    "text": "D: Books",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
+                }
+            ],
+            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "4. The school wants more of these which would be suitable for youngsters.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: Books.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Miscellaneous items",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
+                },
+                {
+                    "text": "B: Kitchenware",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
+                },
+                {
+                    "text": "C: Clothes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
+                },
+                {
+                    "text": "D: Books",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states they are especially looking for children's novels."
+                }
+            ],
+            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 5–9\n\nDo the following statements agree with the information given in Reading Text 1?\n\nWrite TRUE, FALSE or NOT GIVEN.",
+            "question": "5. The event is being held to raise money for school facilities.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "6. The school is collecting fresh fruit and vegetables to donate to a homeless shelter.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "7. Items will be picked up by volunteers between 9.30am and 3.00pm.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "8. Mr William Taylor will make arrangements for items to be collected.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "9. All helpers for the event are now confirmed.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 10–14\n\nMatch each book to the correct description. Write the correct Roman numeral I–IX.\n\nAn example is provided below:\n\nExample: Book A - I",
+            "question": "10. Book B",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is II: A book about European artists. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": true,
+                    "feedback": "Correct! Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "11. Book C",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is III: A book for secondary school students. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": true,
+                    "feedback": "Correct! Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "12. Book D",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is IV: A book for those who enjoy walking. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": true,
+                    "feedback": "Correct! Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "13. Book F",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is VI: A book comparing two ancient civilizations' art. Book F is 'An academic comparison of ancient Egyptian and Greek art.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": true,
+                    "feedback": "Correct! Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "14. Book G",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is VII: A book with activities for children. Book G is 'A creative activity book for children, covering art and craft projects.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": true,
+                    "feedback": "Correct! Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 15–17\n\nMatch each statement to the correct week. Write the correct letter A–D.\n\nAnswer options may be used more than once.",
+            "question": "15. The first assignment must be completed.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Week 3. Week 3 states that trainees 'submit Assignment 1'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Week 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
+                },
+                {
+                    "text": "B: Week 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
+                },
+                {
+                    "text": "C: Week 3",
+                    "is_correct": true,
+                    "feedback": "Correct! Week 3 states that trainees 'submit Assignment 1'."
+                },
+                {
+                    "text": "D: Week 4",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
+                }
+            ],
+            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "16. The first assessed teaching is done.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Week 3. Week 3 states trainees 'are formally assessed' for the first time.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Week 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
+                },
+                {
+                    "text": "B: Week 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
+                },
+                {
+                    "text": "C: Week 3",
+                    "is_correct": true,
+                    "feedback": "Correct! Week 3 states trainees 'are formally assessed' for the first time."
+                },
+                {
+                    "text": "D: Week 4",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
+                }
+            ],
+            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "17. Different ways of teaching are demonstrated.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A: Week 1. Week 1 covers 'Introduction to different teaching methodologies and styles'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Week 1",
+                    "is_correct": true,
+                    "feedback": "Correct! Week 1 covers 'Introduction to different teaching methodologies and styles'."
+                },
+                {
+                    "text": "B: Week 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
+                },
+                {
+                    "text": "C: Week 3",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
+                },
+                {
+                    "text": "D: Week 4",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
+                }
+            ],
+            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 18–20\n\nDo the following statements agree with the information given in Reading Text 3?\n\nWrite TRUE, FALSE or NOT GIVEN.",
+            "question": "18. Assignment 1 can be handwritten.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "19. The grammar training is easy for native speakers.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "20. The fourth week has the most trainees quitting the course.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 21–23\n\nChoose the correct letter A, B, C, or D.",
+            "question": "21. Staff…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: must attend three sessions. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A: must attend all sessions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                },
+                {
+                    "text": "B: must attend only the first and second session",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                },
+                {
+                    "text": "C: do not have to attend if they make arrangements with their supervisor",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                },
+                {
+                    "text": "D: must attend three sessions",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                }
+            ],
+            "options": "A: must attend all sessions\nB: must attend only the first and second session\nC: do not have to attend if they make arrangements with their supervisor\nD: must attend three sessions",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "22. The first session…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: has been arranged because of previous problems. Session 1 'Focuses on correct procedures following recent incidents'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A: is about how to make a complaint",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                },
+                {
+                    "text": "B: has been arranged because of previous problems",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 1 'Focuses on correct procedures following recent incidents'."
+                },
+                {
+                    "text": "C: will be held outside the company",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                },
+                {
+                    "text": "D: is likely to have few attendees",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                }
+            ],
+            "options": "A: is about how to make a complaint\nB: has been arranged because of previous problems\nC: will be held outside the company\nD: is likely to have few attendees",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "23. The third session…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: has limited seating. Session 3 is 'Limited to 70 places'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A: is the only one to have two facilitators",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                },
+                {
+                    "text": "B: will have two speakers from another company",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                },
+                {
+                    "text": "C: is already fully booked",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                },
+                {
+                    "text": "D: has limited seating",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 3 is 'Limited to 70 places'."
+                }
+            ],
+            "options": "A: is the only one to have two facilitators\nB: will have two speakers from another company\nC: is already fully booked\nD: has limited seating",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 24–26\n\nMatch each statement to the correct session. Write the correct letter A–D.\n\nAnswer options may be used more than once.",
+            "question": "24. Which session will not be held in the company?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: Session 4. Session 4 is 'Held externally at the Logan Hotel'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "classification",
+            "mc_options": [
+                {
+                    "text": "A: Session 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
+                },
+                {
+                    "text": "B: Session 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
+                },
+                {
+                    "text": "C: Session 3",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
+                },
+                {
+                    "text": "D: Session 4",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 4 is 'Held externally at the Logan Hotel'."
+                }
+            ],
+            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "25. Which session will have two facilitators from within the company?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: Session 4. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "classification",
+            "mc_options": [
+                {
+                    "text": "A: Session 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                },
+                {
+                    "text": "B: Session 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                },
+                {
+                    "text": "C: Session 3",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                },
+                {
+                    "text": "D: Session 4",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                }
+            ],
+            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "26. Which session is intended to prepare staff for future changes?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: Session 2. Session 2 'Covers upcoming changes to branding, stationery and uniforms'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "classification",
+            "mc_options": [
+                {
+                    "text": "A: Session 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                },
+                {
+                    "text": "B: Session 2",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                },
+                {
+                    "text": "C: Session 3",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                },
+                {
+                    "text": "D: Session 4",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                }
+            ],
+            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 27\n\nYou should spend about 27 minutes on Questions 27 – 40 which are based on Reading Passage 27.\n\nQuestions 27 – 32\n\nDo the following statements agree with the information given in Reading Passage 27?\n\nIn boxes 27 – 32 on your answer sheet write\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this in the passage",
+            "question": "The main criteria in making a concert hall great are its location, seating and sightlines.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Older concert halls did not have good acoustic features.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The 'shoebox' design has the same acoustics as amphitheaters.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Inside a concert hall, the listener receives sound from not only the stage, but from different directions as well.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "All concert halls now use reflectors to direct the sound from the walls and from the ceiling.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Research has now determined that high and low frequencies determine the best sound delivery.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 27 – 31\n\nThe article details various facts about some of the famous concert halls. Match the concert halls (A – H) with the information provided about them.\n\nNB: Some letters might not be used, and some letters might be used more than once.\n\nWrite the appropriate letter (A – H) in boxes 27 – 31 on your answer sheet.",
+            "question": "An example of an older-style concert hall that used scientific principles to enhance its sound.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is G: Boston's Symphony Hall. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "This modern concert hall borrowed design features from multiple great old concert halls.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is E: Sao Paolo's Sala Sao Paolo. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "A concert hall that has seen famous composers leading orchestras.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Vienna's Musikverein. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The claim has been made that this is the finest concert hall in the world.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Vienna's Musikverein. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "A concert hall that used electronics to enhance the different sound frequencies.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: London's Royal Festival Hall. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 27 – 29\n\nChoose the appropriate letters A – D and write them in boxes 27 – 29 on your answer sheet.",
+            "question": "The sound quality of the great concert halls of the world",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: 'varies according to design.' The passage discusses how different designs affect sound quality. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "is solely the result of science and technology.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "has improved with modern discoveries in acoustic research and technology.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "varies according to design.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "depends on the architect's knowledge of sound frequencies.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                }
+            ],
+            "options": "is solely the result of science and technology.\nhas improved with modern discoveries in acoustic research and technology.\nvaries according to design.\ndepends on the architect's knowledge of sound frequencies.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "'Lateral reflections'",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: 'ensure that sound is directed and received at its highest quality.' The passage explains that lateral reflections enhance sound volume and timing. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "are sound waves that come from the ceiling.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "are received by the listener at the same time as direct waves.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "are used primarily in the world's greatest modern concert halls.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "ensure that sound is directed and received at its highest quality.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "are sound waves that come from the ceiling.\nare received by the listener at the same time as direct waves.\nare used primarily in the world's greatest modern concert halls.\nensure that sound is directed and received at its highest quality.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "London's Royal Festival Hall",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A: 'underwent a number of changes over many years to improve the quality of the sound.' The passage describes multiple renovations over 30 years. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "underwent a number of changes over many years to improve the quality of the sound.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "copied its design from the great traditional concert halls.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A."
+                },
+                {
+                    "text": "suffered primarily from poor frequency of sound.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A."
+                },
+                {
+                    "text": "had poor quality seating.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A."
+                }
+            ],
+            "options": "underwent a number of changes over many years to improve the quality of the sound.\ncopied its design from the great traditional concert halls.\nsuffered primarily from poor frequency of sound.\nhad poor quality seating.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Text 1",
+            "content": "<h4><strong>Request for Unwanted but Useful Items for School Jumble Sale</strong></h4>\n\n<p>Dear Householder,</p>\n\n<p>As part of this year's fund-raising event, Edgehill College will be holding a jumble sale on May 24th. All profits will be used to assist in funding the new children's playground in the centre of town.</p>\n\n<p>We are now requesting donations of unwanted but useful items of usable quality to sell at our jumble sale stalls. Donations are requested in the following categories:</p>\n\n<p><strong>Clothes</strong> – Please place washed items in bags or boxes and mark them For Men, For Women or For Children.</p>\n\n<p><strong>Kitchenware</strong> – Any items are of use (e.g. plates, cups, glasses, cooking utensils, kitchen equipment such as food mixers etc). These items are currently in short supply.</p>\n\n<p><strong>Books</strong> – Complete books only (no missing pages). We are especially looking for children's novels.</p>\n\n<p><strong>Miscellaneous</strong> – Ornaments, pictures, toys, games, handbags etc. Please place items in boxes and clearly write the names of the items on the box.</p>\n\n<p>We will also be collecting food to donate to the local homeless shelter. If you wish to make a food donation, please provide tinned, dried or packet foodstuffs only. Please do not donate food items that are likely to spoil.</p>\n\n<p>If you are able to, please bring your donated items to the school reception Monday to Friday between 9.30am and 3.00pm. Otherwise, for larger loads, if you are unable to get to the school, we can arrange for a member of the team to collect your items. Please ring 762 8894 and ask to speak to Mr William Taylor, our School Liaison Officer, who will arrange for one of our volunteer parents to pick up your donation.</p>\n\n<p>On a final note, we are also still looking for additional volunteers to take care of stalls on the day of the jumble sale. The event will take place between 9.30am and 2.00pm. If you are free on that day and willing to help out, please contact the Deputy Headmistress Mrs Jayne Browne on 762 8889.</p>\n\n<p>Thank you in advance for your help and support. We look forward to seeing you on May 24th.</p>\n\n<p>Best wishes,<br>\nKarl Blackman<br>\nHeadmaster</p>"
+        },
+        {
+            "title": "Reading Text 2",
+            "content": "<h4><strong>Examples of Books Available at Edgehill School Jumble Sale</strong></h4>\n\n<p><strong>Book A</strong> – A children's story suitable for those who have recently started to learn to read. The story follows a young hero travelling across Europe.</p>\n\n<p><strong>Book B</strong> – A reference book for art enthusiasts, with historical accounts and illustrations of European masters.</p>\n\n<p><strong>Book C</strong> – A large educational book covering science, history, geography and art, including quizzes.</p>\n\n<p><strong>Book D</strong> – A guide to lesser-known hiking tracks for outdoor enthusiasts.</p>\n\n<p><strong>Book E</strong> – A camping handbook with information on cooking and accommodation.</p>\n\n<p><strong>Book F</strong> – An academic comparison of ancient Egyptian and Greek art.</p>\n\n<p><strong>Book G</strong> – A creative activity book for children, covering art and craft projects.</p>"
+        },
+        {
+            "title": "Reading Text 3",
+            "content": "<h4><strong>Corbridge Teacher Training Course</strong></h4>\n\n<p>The Corbridge teacher training course runs over four weeks and gradually increases both teaching responsibility and assessment pressure.</p>\n\n<p><strong>Week 1</strong> – Introduction to different teaching methodologies and styles. Trainees observe and discuss teaching but do not teach.</p>\n\n<p><strong>Week 2</strong> – Classroom practice begins. Trainees teach short lessons to small groups and submit the first draft of Assignment 1.</p>\n\n<p><strong>Week 3</strong> – Intensive grammar study begins. Trainees teach larger groups, are formally assessed, and submit Assignment 1.</p>\n\n<p><strong>Week 4</strong> – Trainees deliver five assessed lessons and submit Assignment 2, which must be computer typed.</p>\n\n<p>There is a high dropout rate beginning in Week 3, which increases in Week 4 due to the pressure of assessment.</p>"
+        },
+        {
+            "title": "Reading Text 4",
+            "content": "<h4><strong>Staff Training Sessions</strong></h4>\n\n<p>Starting the 3rd of next month, there will be a number of training sessions for all staff. Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.</p>\n\n<p><strong>Session 1 – Dealing with complaints</strong><br>\nFacilitated by Ms Weldgrove. Focuses on correct procedures following recent incidents. Held in the main conference room.</p>\n\n<p><strong>Session 2 – Company image</strong><br>\nLed by Mark Lorins. Covers upcoming changes to branding, stationery and uniforms. Held in the conference room.</p>\n\n<p><strong>Session 3 – Word processing suite</strong><br>\nTraining in new software by Gordon Sumner, with a guest speaker from MacroSwift. Limited to 70 places. Held in the computer room.</p>\n\n<p><strong>Session 4 – Internal communication systems</strong><br>\nA refresher course run by Jane Williams with Ruth Madocs from HR. Held externally at the Logan Hotel.</p>"
+        },
+        {
+            "title": "Reading Passage 3",
+            "content": "What Makes A Great Concert Hall?\n\n<span id=\"passage-q27\" data-question=\"27\"></span>Think of the great concert halls in the world and some famous venues immediately come to mind: Sydney's iconic Opera House, Carnegie Hall in New York, Germany's Berlin Philharmonie and Tokyo's Opera City Concert Hall.  Two features stand out for each venue: the architectural lines which mark out the uniqueness of the structure, and the acoustic brilliance of each building, which elevates the sound to an almost new, ethereal, experience.  <span class=\"reading-answer-marker\">But what makes a great concert hall?  Is it simply a case of selecting the right location, ensuring enough seats and good sightlines, and letting the music loose?  The concert hall is more than that</span>, hosting a variety of performance genres and musical styles, so the acoustic requirements are demanding, and, as a result of years of experience, have now been lifted to a science.\n\n<span id=\"passage-q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">However, an interesting point is raised.  If the acoustics – that is, the overall sound, of the concert hall is now a science, how have some of the great concert halls of the world, which are also some of the oldest, such as Vienna's Musikverein, where Brahms and Mahler conducted, and Amsterdam's Concertgebouw, managed to capture the magic of sound before the art of acoustics had been moved to a science?</span>  What secrets did the architects and engineers of old know that enabled them to design and construct buildings that have stood the test of time in delivering the magic of music at such continuing exalted heights?  A simple analysis of some of the fundamental requirements of the delivery of sound reveals that some basic understanding of acoustic requirements has long been evident and has been successfully applied in the oldest, and, indeed, also the newest, and most loved buildings of our time.\n\n<span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">It appears that over time, as the presentation of music in a formal setting has evolved, the design of the basic 'shoebox' shape of an auditorium has been settled on.  Earlier versions of concert halls in the form of traditional amphitheatres and fan-shaped halls suffered from poor acoustics</span>, so, years of 'trial-and-error' have seen the concept of the long and narrow hall with, importantly, side sound reflectors, adapted as the best medium to deliver the optimum sound for concert-goers.  Some of the key elements were recognised early on as to what was required to deliver the best sound, and among those were the need to get rid of unwanted noises, the ability to allow the orchestra to attain dynamics of sound equally, whether at a low or high volume, and to maintain a clear and somewhat equal sound throughout the auditorium.\n\n<span id=\"passage-q30\" data-question=\"30\"></span>Comparing the sound of an outdoor concert and a concert at an indoor concert hall, it can be recognised that the difference is that the outdoor sound is thin, and directional, and distant, that is, coming straight from the source, which may be some way away, <span class=\"reading-answer-marker\">whereas in a concert hall, the sound seems to surround the listener, even for those who are some distance from the source.  Interestingly, after the source of the music has stopped, the sound appears to reverberate so that the listener seems to be totally enveloped by the sound, both spatially and time-wise.  Inside a concert hall, the two important elements are that sound is divided between direct sound, and reflected sound – direct sound being the primary source which reaches the ear, and reflected sound that bounces off the walls and ceiling.</span>  These two sounds arrive at the listeners' ears at slightly differing times and slightly different volumes, which add to the concept of being enveloped by the sound, often referred to as 'surround sound'.\n\n<span id=\"passage-q39\" data-question=\"39\"></span>Once this concept was realised by the early engineers and architects of concert halls, designs were put in place to enhance these discoveries.  The most important was the discovery of the 'shoebox' design, the rectangular, elongated shape which allowed the maximum re-direction of sound through reflectors, often hung from the sides of the concert hall, and now employed to be hung from the ceilings as well. <span class=\"reading-answer-marker\">This ensured the sound waves, known as 'lateral reflections', were being directed towards the audience from all angles, enhancing the sound volume and timing, and, thus, quality.</span>  Research and science have continued to more fully realize the extent of sound delivery, looking at the frequencies, both high and low, and the optimum delivery of the sound as intended by the composer and the conductor and orchestra.\n\n<span id=\"passage-q34\" data-question=\"34\"></span><span id=\"passage-q35\" data-question=\"35\"></span>Some of the great concert halls, both old and new, have incorporated the concepts of sound delivery magnificently.  <span class=\"reading-answer-marker\">Austria's Musikverein has been noted by some as the best concert hall in the world</span>, where the quietest of sounds seem to issue delicately from the stage, while a rising crescendo completely envelops the audience from all directions.  <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">In the United States, Boston's Symphony Hall based its shoebox design on a traditional German hall, the Gewandhaus in Leipzig, but used the then-modern physics from Harvard University to ensure that the sound would be the best possible.</span>\n\n<span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">In Sao Paolo, Brazil, in the 1990s, a new venue, the Sala Sao Paolo, was opened that copied proportions from the old; its width the same as Boston's Symphony Hall, and the length and height identical to Vienna's Musikverein</span>, but modern technology is also incorporated, with its huge adjustable ceiling.  Tokyo has the Opera City Concert Hall which, again, is based on the traditional rectangular shoebox with its two levels of side-seating, but like Sao Paolo, it has a unique feature, an enormous wood-panelled pyramid-shaped ceiling.\n\n<span id=\"passage-q37\" data-question=\"37\"></span><span id=\"passage-q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">Finally, it is worth looking at one concert hall for some salient lessons.  London's Royal Festival Hall, a 2,900-seater, was completed in 1951, and was designed using the best acoustic science concepts of the day, intending to emulate the sound of the great concert halls.  Unfortunately, it was immediately realised that the sound quality was poor, for varying reasons, with comments such as the sound being 'too dry' and different frequencies of sound suffering.  In the 1960s, an 'assisted resonance system' was employed, using the modern electronics of the day, and over the next 30 years, re-modelling was accomplished, including reducing the number of seats by 400, changing the tiling and fabric of the walls and ceiling, and adding acoustic canopies.</span>  Today, with the knowledge of the science of sound, and the gathered wisdom of decades, even centuries, of construction of concert halls, the Royal Festival Hall, home of the London Philharmonic, now stands as a great concert venue, with its own unique sound contributing to the legacy of the magnificent concert halls of the world."
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "general_training",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "ielts_general_training_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    }
+}
