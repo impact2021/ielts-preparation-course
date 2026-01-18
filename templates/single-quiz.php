@@ -153,8 +153,8 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                             }
                         }
                         $question_count = max(1, $field_count);
-                    } elseif ($q['type'] === 'closed_question') {
-                        // For closed question, count number of correct answers
+                    } elseif ($q['type'] === 'closed_question' || $q['type'] === 'closed_question_dropdown') {
+                        // For closed question (including dropdown variant), count number of correct answers
                         $correct_answer_count = isset($q['correct_answer_count']) ? intval($q['correct_answer_count']) : 1;
                         $question_count = max(1, $correct_answer_count);
                     } elseif ($q['type'] === 'open_question') {
@@ -183,8 +183,8 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                         
                         <h4>
                             <?php 
-                            // For closed and open questions, show range differently
-                            if ($question['type'] === 'closed_question' || $question['type'] === 'open_question') {
+                            // For closed and open questions (including dropdown variants), show range differently
+                            if ($question['type'] === 'closed_question' || $question['type'] === 'closed_question_dropdown' || $question['type'] === 'open_question') {
                                 if ($display_nums['start'] === $display_nums['end']) {
                                     printf(__('Question %d', 'ielts-course-manager'), $display_nums['start']);
                                 } elseif ($display_nums['count'] == 2) {
@@ -249,6 +249,11 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                             if ($has_placeholders) {
                                 $skip_question_text[] = 'open_question';
                             }
+                        }
+                        
+                        // For closed_question_dropdown, always skip since it renders inline dropdowns
+                        if ($question['type'] === 'closed_question_dropdown') {
+                            $skip_question_text[] = 'closed_question_dropdown';
                         }
                         
                         if (!in_array($question['type'], $skip_question_text)):
@@ -671,6 +676,66 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 </div>
                                 <?php
                                 endif;
+                                break;
+                                
+                            case 'closed_question_dropdown':
+                                // Closed Question Dropdown - Multiple choice rendered as inline dropdowns
+                                // Uses [dropdown] placeholder in question text, similar to open_question's [blank]
+                                // Supports single or multiple dropdowns based on correct_answer_count
+                                
+                                $options = array();
+                                if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                                    $options = $question['mc_options'];
+                                } elseif (isset($question['options']) && !empty($question['options'])) {
+                                    $option_lines = array_filter(explode("\n", $question['options']));
+                                    foreach ($option_lines as $opt_text) {
+                                        $options[] = array('text' => trim($opt_text));
+                                    }
+                                }
+                                
+                                $correct_answer_count = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
+                                $question_text = isset($question['question']) ? $question['question'] : '';
+                                
+                                if (!empty($options) && !empty($question_text)) {
+                                    // Process question text to replace [dropdown] placeholders
+                                    $allowed_html = wp_kses_allowed_html('post');
+                                    $allowed_html['select'] = array(
+                                        'name' => true,
+                                        'class' => true,
+                                        'data-field-num' => true,
+                                    );
+                                    $allowed_html['option'] = array(
+                                        'value' => true,
+                                        'selected' => true,
+                                    );
+                                    
+                                    $processed_text = $question_text;
+                                    $dropdown_num = 1;
+                                    
+                                    // Replace each [dropdown] placeholder with a select element
+                                    while (stripos($processed_text, '[dropdown]') !== false && $dropdown_num <= $correct_answer_count) {
+                                        // Build the select dropdown
+                                        $select_field = '<select name="answer_' . esc_attr($index) . '_field_' . esc_attr($dropdown_num) . '" class="answer-select-inline closed-question-dropdown" data-field-num="' . esc_attr($dropdown_num) . '">';
+                                        $select_field .= '<option value="">-</option>'; // Empty default option
+                                        
+                                        // Add all options to the dropdown
+                                        foreach ($options as $opt_index => $option) {
+                                            $option_text = isset($option['text']) ? $option['text'] : $option;
+                                            $select_field .= '<option value="' . esc_attr($opt_index) . '">' . esc_html($option_text) . '</option>';
+                                        }
+                                        
+                                        $select_field .= '</select>';
+                                        
+                                        // Replace the first occurrence of [dropdown]
+                                        $processed_text = preg_replace('/\[dropdown\]/i', $select_field, $processed_text, 1);
+                                        $dropdown_num++;
+                                    }
+                                    
+                                    echo '<div class="closed-question-dropdown-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
+                                } else {
+                                    // Fallback: show question text as-is if no options or text
+                                    echo '<div class="closed-question-dropdown-text">' . wp_kses_post(wpautop($question_text)) . '</div>';
+                                }
                                 break;
                                 
                             case 'open_question':

@@ -207,6 +207,96 @@ Covers multiple question numbers based on `correct_answer_count`.
 - `points`: Usually equals `correct_answer_count`
 - **DO NOT include** `correct_feedback` or `incorrect_feedback` at the question level - those are per-option only
 
+### Closed Question Dropdown (Multiple Choice with Inline Dropdowns)
+
+This is a variant of closed_question that displays options as inline dropdown menus within the question text. Use `[dropdown]` placeholders in your question text to specify where dropdowns should appear.
+
+**Single Dropdown:**
+```json
+{
+  "type": "closed_question_dropdown",
+  "ielts_question_type": "Multiple Choice (Single Answer)",
+  "instructions": "Complete the sentence using the dropdown menu.",
+  "question": "I know that [dropdown] this might be difficult.",
+  "correct_answer_count": 1,
+  "mc_options": [
+    {
+      "text": "completing",
+      "is_correct": true,
+      "feedback": "Correct! 'Completing' is the right verb form here."
+    },
+    {
+      "text": "complete",
+      "is_correct": false,
+      "feedback": "Incorrect. The sentence requires a gerund (verb+ing form)."
+    },
+    {
+      "text": "completed",
+      "is_correct": false,
+      "feedback": "Incorrect. The past tense doesn't fit the context."
+    }
+  ],
+  "correct_answer": "field_1:0",
+  "no_answer_feedback": "You did not select an answer. The correct answer is 'completing'.",
+  "points": 1
+}
+```
+
+**Multiple Dropdowns:**
+```json
+{
+  "type": "closed_question_dropdown",
+  "ielts_question_type": "Multiple Choice (Multiple Answers)",
+  "instructions": "Complete the paragraph using the dropdown menus.",
+  "question": "The student [dropdown] to the library yesterday and [dropdown] three books.",
+  "correct_answer_count": 2,
+  "mc_options": [
+    {
+      "text": "go",
+      "is_correct": false,
+      "feedback": "Incorrect. This is present tense, but 'yesterday' indicates past tense."
+    },
+    {
+      "text": "went",
+      "is_correct": true,
+      "feedback": "Correct! 'Went' is the past tense of 'go'."
+    },
+    {
+      "text": "going",
+      "is_correct": false,
+      "feedback": "Incorrect. The gerund form doesn't fit this sentence."
+    },
+    {
+      "text": "borrow",
+      "is_correct": false,
+      "feedback": "Incorrect. This is present tense, but the sentence needs past tense."
+    },
+    {
+      "text": "borrowed",
+      "is_correct": true,
+      "feedback": "Correct! 'Borrowed' is the past tense."
+    }
+  ],
+  "correct_answer": "field_1:1|field_2:4",
+  "no_answer_feedback": "You did not complete all answers. The correct answers are 'went' and 'borrowed'.",
+  "points": 2
+}
+```
+
+**Key Points:**
+- `type`: Required field - use "closed_question_dropdown" for inline dropdown questions
+- `question`: Include `[dropdown]` placeholders where you want dropdowns to appear
+- `correct_answer_count`: Number of dropdowns in the question
+- `mc_options`: All dropdown menus will show the same set of options
+  - Each option MUST include `text`, `is_correct`, and `feedback`
+  - `is_correct`: For single dropdown, only one should be true; for multiple dropdowns, mark which options are correct for ANY position
+  - `feedback`: Specific feedback shown when this option is selected
+- `correct_answer`: Format is "field_1:X|field_2:Y" where X and Y are the 0-based indices of correct options for each dropdown
+  - Example: "field_1:0" means first dropdown's correct answer is option at index 0
+  - Example: "field_1:1|field_2:4" means first dropdown = option 1, second dropdown = option 4
+- `no_answer_feedback`: Shown when student submits without selecting all dropdowns
+- `points`: Usually equals `correct_answer_count`
+
 ## Settings
 
 ```json
