@@ -197,7 +197,7 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "Which class is the cheapest?",
+            "question": "Which class is the cheapest? [field 1]",
             "points": 1,
             "no_answer_feedback": "The correct answer is 'Beginners guitar' (\u00a320). Review the Gaston Community College evening classes section to find the class fees.",
             "correct_feedback": "Correct! Beginners guitar at \u00a320 is the cheapest class.",
@@ -214,7 +214,7 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "Which class has been designed for new migrants?",
+            "question": "Which class has been designed for new migrants? [field 1]",
             "points": 1,
             "no_answer_feedback": "The correct answer is 'English for beginners'. The description states it helps new arrivals to the country learn better English.",
             "correct_feedback": "Correct! English for beginners was designed to help new arrivals to the country.",
@@ -231,7 +231,7 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "How long is each computing class?",
+            "question": "How long is each computing class? [field 1]",
             "points": 1,
             "no_answer_feedback": "The correct answer is '45 minutes'. The 'Using your computer' class runs from 6.30 p.m. to 7.15 p.m.",
             "correct_feedback": "Correct! Each computing class is 45 minutes long.",
@@ -248,7 +248,7 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "What is the maximum number of students allowed in the Spanish class?",
+            "question": "What is the maximum number of students allowed in the Spanish class? [field 1]",
             "points": 1,
             "no_answer_feedback": "The correct answer is '18'. The Intermediate Spanish class has a maximum class size of 18 students.",
             "correct_feedback": "Correct! The Spanish class allows a maximum of 18 students.",
@@ -265,7 +265,7 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "Which class will help you use a modern camera better?",
+            "question": "Which class will help you use a modern camera better? [field 1]",
             "points": 1,
             "no_answer_feedback": "The correct answer is 'Digital photos'. This class teaches how to use the main functions of your digital camera.",
             "correct_feedback": "Correct! The Digital photos class helps you use a modern digital camera better.",
@@ -282,7 +282,7 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "Which local painter will teach students how to use watercolours?",
+            "question": "Which local painter will teach students how to use watercolours? [field 1]",
             "points": 1,
             "no_answer_feedback": "The correct answer is 'Ted Heath'. He runs the Beginners watercolour painting class.",
             "correct_feedback": "Correct! Ted Heath, a local artist, teaches the watercolour painting class.",
@@ -299,7 +299,7 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "Long hair must be .",
+            "question": "Long hair must be [field 1].",
             "points": 1,
             "no_answer_feedback": "The correct answer is 'tied back'. The ESITO dress code states that long hair is acceptable if it is tied back.",
             "correct_feedback": "Correct! Long hair must be tied back according to the dress code.",
@@ -316,7 +316,7 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "Facial hair should be .",
+            "question": "Facial hair should be [field 1].",
             "points": 1,
             "no_answer_feedback": "The correct answer is 'neatly trimmed'. The dress code states that moustaches and beards should be neatly trimmed.",
             "correct_feedback": "Correct! Facial hair should be neatly trimmed.",
@@ -333,7 +333,7 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "Employees should use little or no perfume or cologne because other staff may be .",
+            "question": "Employees should use little or no perfume or cologne because other staff may be [field 1].",
             "points": 1,
             "no_answer_feedback": "The correct answer is 'allergic'. The dress code mentions that some people are allergic to various scents.",
             "correct_feedback": "Correct! Some staff may be allergic to perfume or cologne.",
@@ -350,7 +350,7 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "A more relaxed approach to clothing is acceptable on",
+            "question": "A more relaxed approach to clothing is acceptable on [field 1]",
             "points": 1,
             "no_answer_feedback": "The correct answer is 'Friday' or 'Casual Friday'. The Company has designated Fridays as casual days.",
             "correct_feedback": "Correct! Fridays are designated as casual days.",
@@ -367,7 +367,7 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "Seasonal changes only affect the appearance of people working",
+            "question": "Seasonal changes only affect the appearance of people working [field 1]",
             "points": 1,
             "no_answer_feedback": "The correct answer is 'in the yard'. Bad weather days only impact employees working in the yard.",
             "correct_feedback": "Correct! Seasonal changes only affect employees working in the yard.",
@@ -384,7 +384,7 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "Ripped jeans and t-shirts with lettering are considered",
+            "question": "Ripped jeans and t-shirts with lettering are considered [field 1]",
             "points": 1,
             "no_answer_feedback": "The correct answer is 'inappropriate dress' or 'inappropriate'. These items are listed as examples of inappropriate dress at all times.",
             "correct_feedback": "Correct! Ripped jeans and t-shirts with lettering are considered inappropriate dress.",
@@ -401,7 +401,7 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "If in doubt, the decision about appropriate dress is made by a .",
+            "question": "If in doubt, the decision about appropriate dress is made by a [field 1].",
             "points": 1,
             "no_answer_feedback": "The correct answer is 'supervisor'. The supervisor is responsible for evaluating the dress and appearance of employees.",
             "correct_feedback": "Correct! The supervisor makes the decision about appropriate dress.",
@@ -418,7 +418,7 @@
         {
             "type": "open_answer",
             "instructions": "",
-            "question": "If an employee is considered to be improperly dressed on a second occasion, they are required to be without delay.",
+            "question": "If an employee is considered to be improperly dressed on a second occasion, they are required to be [field 1] without delay.",
             "points": 1,
             "no_answer_feedback": "The correct answer is 'sent home'. On the second occasion, the employee must be sent home to change clothes immediately.",
             "correct_feedback": "Correct! On the second occasion, employees are sent home to change.",
