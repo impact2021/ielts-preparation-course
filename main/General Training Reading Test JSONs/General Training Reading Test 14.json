@@ -3,1710 +3,312 @@
     "content": "",
     "questions": [
         {
-            "type": "closed_question",
-            "instructions": "Questions 1–4\n\nMatch each statement to the correct category. Write the correct letter A, B, C, or D.",
-            "question": "1. Should only be packaged in boxes.",
+            "type": "open_question",
+            "instructions": "Questions 1–6",
+            "question": "A professional couple who do not own a car but enjoy the arts",
             "points": 1,
-            "no_answer_feedback": "The correct answer is A: Miscellaneous items.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Miscellaneous items",
-                    "is_correct": true,
-                    "feedback": "Correct! Miscellaneous items should be placed in boxes with names clearly written on the box."
-                },
-                {
-                    "text": "B: Kitchenware",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
-                },
-                {
-                    "text": "C: Clothes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
-                },
-                {
-                    "text": "D: Books",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
-                }
-            ],
-            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "2. The school does not have many of these items to sell at the moment.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B: Kitchenware.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Miscellaneous items",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
-                },
-                {
-                    "text": "B: Kitchenware",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states that Kitchenware items are currently in short supply."
-                },
-                {
-                    "text": "C: Clothes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
-                },
-                {
-                    "text": "D: Books",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
-                }
-            ],
-            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "3. Should be labelled in one of three ways.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C: Clothes.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Miscellaneous items",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
-                },
-                {
-                    "text": "B: Kitchenware",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
-                },
-                {
-                    "text": "C: Clothes",
-                    "is_correct": true,
-                    "feedback": "Correct! Clothes should be marked as 'For Men', 'For Women' or 'For Children'."
-                },
-                {
-                    "text": "D: Books",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
-                }
-            ],
-            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "4. The school wants more of these which would be suitable for youngsters.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is D: Books.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Miscellaneous items",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
-                },
-                {
-                    "text": "B: Kitchenware",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
-                },
-                {
-                    "text": "C: Clothes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
-                },
-                {
-                    "text": "D: Books",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states they are especially looking for children's novels."
-                }
-            ],
-            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 5–9\n\nDo the following statements agree with the information given in Reading Text 1?\n\nWrite TRUE, FALSE or NOT GIVEN.",
-            "question": "5. The event is being held to raise money for school facilities.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "6. The school is collecting fresh fruit and vegetables to donate to a homeless shelter.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "7. Items will be picked up by volunteers between 9.30am and 3.00pm.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "8. Mr William Taylor will make arrangements for items to be collected.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "9. All helpers for the event are now confirmed.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 10–14\n\nMatch each book to the correct description. Write the correct Roman numeral I–IX.\n\nAn example is provided below:\n\nExample: Book A - I",
-            "question": "10. Book B",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is II: A book about European artists. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": true,
-                    "feedback": "Correct! Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "11. Book C",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is III: A book for secondary school students. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": true,
-                    "feedback": "Correct! Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "12. Book D",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is IV: A book for those who enjoy walking. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": true,
-                    "feedback": "Correct! Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "13. Book F",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is VI: A book comparing two ancient civilizations' art. Book F is 'An academic comparison of ancient Egyptian and Greek art.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": true,
-                    "feedback": "Correct! Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "14. Book G",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is VII: A book with activities for children. Book G is 'A creative activity book for children, covering art and craft projects.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": true,
-                    "feedback": "Correct! Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 15–17\n\nMatch each statement to the correct week. Write the correct letter A–D.\n\nAnswer options may be used more than once.",
-            "question": "15. The first assignment must be completed.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C: Week 3. Week 3 states that trainees 'submit Assignment 1'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Week 1",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
-                },
-                {
-                    "text": "B: Week 2",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
-                },
-                {
-                    "text": "C: Week 3",
-                    "is_correct": true,
-                    "feedback": "Correct! Week 3 states that trainees 'submit Assignment 1'."
-                },
-                {
-                    "text": "D: Week 4",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
-                }
-            ],
-            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "16. The first assessed teaching is done.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C: Week 3. Week 3 states trainees 'are formally assessed' for the first time.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Week 1",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
-                },
-                {
-                    "text": "B: Week 2",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
-                },
-                {
-                    "text": "C: Week 3",
-                    "is_correct": true,
-                    "feedback": "Correct! Week 3 states trainees 'are formally assessed' for the first time."
-                },
-                {
-                    "text": "D: Week 4",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
-                }
-            ],
-            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "17. Different ways of teaching are demonstrated.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is A: Week 1. Week 1 covers 'Introduction to different teaching methodologies and styles'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Week 1",
-                    "is_correct": true,
-                    "feedback": "Correct! Week 1 covers 'Introduction to different teaching methodologies and styles'."
-                },
-                {
-                    "text": "B: Week 2",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
-                },
-                {
-                    "text": "C: Week 3",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
-                },
-                {
-                    "text": "D: Week 4",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
-                }
-            ],
-            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 18–20\n\nDo the following statements agree with the information given in Reading Text 3?\n\nWrite TRUE, FALSE or NOT GIVEN.",
-            "question": "18. Assignment 1 can be handwritten.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "19. The grammar training is easy for native speakers.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "20. The fourth week has the most trainees quitting the course.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 21–23\n\nChoose the correct letter A, B, C, or D.",
-            "question": "21. Staff…",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is D: must attend three sessions. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice",
-            "mc_options": [
-                {
-                    "text": "A: must attend all sessions",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
-                },
-                {
-                    "text": "B: must attend only the first and second session",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
-                },
-                {
-                    "text": "C: do not have to attend if they make arrangements with their supervisor",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
-                },
-                {
-                    "text": "D: must attend three sessions",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
-                }
-            ],
-            "options": "A: must attend all sessions\nB: must attend only the first and second session\nC: do not have to attend if they make arrangements with their supervisor\nD: must attend three sessions",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "22. The first session…",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B: has been arranged because of previous problems. Session 1 'Focuses on correct procedures following recent incidents'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice",
-            "mc_options": [
-                {
-                    "text": "A: is about how to make a complaint",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
-                },
-                {
-                    "text": "B: has been arranged because of previous problems",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 1 'Focuses on correct procedures following recent incidents'."
-                },
-                {
-                    "text": "C: will be held outside the company",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
-                },
-                {
-                    "text": "D: is likely to have few attendees",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
-                }
-            ],
-            "options": "A: is about how to make a complaint\nB: has been arranged because of previous problems\nC: will be held outside the company\nD: is likely to have few attendees",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "23. The third session…",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is D: has limited seating. Session 3 is 'Limited to 70 places'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice",
-            "mc_options": [
-                {
-                    "text": "A: is the only one to have two facilitators",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
-                },
-                {
-                    "text": "B: will have two speakers from another company",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
-                },
-                {
-                    "text": "C: is already fully booked",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
-                },
-                {
-                    "text": "D: has limited seating",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 3 is 'Limited to 70 places'."
-                }
-            ],
-            "options": "A: is the only one to have two facilitators\nB: will have two speakers from another company\nC: is already fully booked\nD: has limited seating",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 24–26\n\nMatch each statement to the correct session. Write the correct letter A–D.\n\nAnswer options may be used more than once.",
-            "question": "24. Which session will not be held in the company?",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is D: Session 4. Session 4 is 'Held externally at the Logan Hotel'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "classification",
-            "mc_options": [
-                {
-                    "text": "A: Session 1",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
-                },
-                {
-                    "text": "B: Session 2",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
-                },
-                {
-                    "text": "C: Session 3",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
-                },
-                {
-                    "text": "D: Session 4",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 4 is 'Held externally at the Logan Hotel'."
-                }
-            ],
-            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "25. Which session will have two facilitators from within the company?",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is D: Session 4. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "classification",
-            "mc_options": [
-                {
-                    "text": "A: Session 1",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
-                },
-                {
-                    "text": "B: Session 2",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
-                },
-                {
-                    "text": "C: Session 3",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
-                },
-                {
-                    "text": "D: Session 4",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
-                }
-            ],
-            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "26. Which session is intended to prepare staff for future changes?",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B: Session 2. Session 2 'Covers upcoming changes to branding, stationery and uniforms'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "classification",
-            "mc_options": [
-                {
-                    "text": "A: Session 1",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
-                },
-                {
-                    "text": "B: Session 2",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
-                },
-                {
-                    "text": "C: Session 3",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
-                },
-                {
-                    "text": "D: Session 4",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
-                }
-            ],
-            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Reading Passage 3\n\nYou should spend about 20 minutes on Questions 23 – 40 which are based on Reading Passage 3.\n\nQuestions 23 – 29\n\nDo the following statements agree with the opinion of the writer?\n\nWrite YES if the statement agrees with the writer\nNO if the statement does not agree with the writer\nNOT GIVEN if there is no information about this in the passage.",
-            "question": "27. People from all around the world are united by the way they think about culture",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "28. Our 'values' are the most important aspect of ideology",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "29. Secularism is the most widely accepted system of beliefs, values and ideals",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "30. Shamans act as intermediaries between spirits and the living",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "31. Agricultural societies benefited from religion",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "32. All the people from the Aztec civilisation were rich",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "33. In the seventeenth and eighteenth centuries, European people began turning towards science",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 30 – 34\n\nComplete the summary of the reading text using words from the box.\n\nA: belief  B: latter  C: religion  D: faith  E: ascendancy\nF: former  G: rational  H: decline  I: animism  J: shaman",
-            "question": "34. Fill in blank 30",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "35. Fill in blank 31",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "36. Fill in blank 32",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "37. Fill in blank 33",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "38. Fill in blank 34",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+            "ielts_question_category": "short_answer"
         },
         {
             "type": "open_question",
-            "ielts_question_type": "Short Answer",
-            "instructions": "Questions 35 – 40\n\nAnswer the questions below using NO MORE THAN THREE WORDS.",
-            "question": "Answer the questions (Questions 35-40):",
-            "field_count": 6,
-            "field_labels": [
-                "35. What are beliefs, values and ideals specific categories of?",
-                "36. What was said to be necessary for the continuation of sunrise and sunset in ancient Mexico?",
-                "37. In Europe, what title was given to the advance of science and logic?",
-                "38. In addition to religion, what else influenced the development of capitalism?",
-                "39. Before modern advances in technology, what did anthropologists consider societies to be?",
-                "40. What theory is symbolic of the tensions between religion and science?"
-            ],
-            "field_answers": [
-                "ideology",
-                "human sacrifice|human blood",
-                "age of enlightenment|enlightenment",
-                "science",
-                "fully independent systems|independent systems|independent",
-                "natural evolution|evolution"
-            ],
-            "points": 6,
-            "reading_text_id": 4,
+            "instructions": "",
+            "question": "A young couple moving into their first home who have no furniture",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "field_feedback": {
-                "1": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "2": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "3": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "4": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "5": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "6": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                }
-            }
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "A brother and sister with two friends, one of whom owns a cat",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "A couple with a young child and a limited budget",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "A couple with two teenage children and the wife’s mother, who wants nearby but separate accommodation",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "A recently retired couple with a dog looking for a rural setting",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 7–11",
+            "question": "Recyclable waste will not be collected on the 14th or 15th.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "The train station will definitely remain open permanently.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Only local stallholders are allowed to apply for the festival.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Live music will be performed by an overseas band.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Free hot drinks will be given to anyone in the community.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 12–17",
+            "question": "Annual leave entitlement is stated in the",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Approved leave may be cancelled depending on",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Leave taken in the first year of employment will be",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Sick leave paperwork must be submitted to the",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Early maternity leave may be authorised by a manager or a",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "________ are allowed building access during most of the holiday period",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 18–22",
+            "question": "Applications for company credit cards",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "A. are handled by the National Bank",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "B. must be made in writing",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "C. can be used for supplier payments",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Issued cards",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
         }
     ],
     "reading_texts": [

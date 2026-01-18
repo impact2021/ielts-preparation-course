@@ -3,1767 +3,597 @@
     "content": "",
     "questions": [
         {
-            "type": "closed_question",
-            "instructions": "Questions 1–4\n\nMatch each statement to the correct category. Write the correct letter A, B, C, or D.",
-            "question": "1. Should only be packaged in boxes.",
+            "type": "open_question",
+            "instructions": "Questions 1–6\n\nAnswer the questions below.\n\nWrite NO MORE THAN TWO WORDS from the passage from the passage for each answer.",
+            "question": "What pets are not included in the sale?",
             "points": 1,
-            "no_answer_feedback": "The correct answer is A: Miscellaneous items.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Miscellaneous items",
-                    "is_correct": true,
-                    "feedback": "Correct! Miscellaneous items should be placed in boxes with names clearly written on the box."
-                },
-                {
-                    "text": "B: Kitchenware",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
-                },
-                {
-                    "text": "C: Clothes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
-                },
-                {
-                    "text": "D: Books",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
-                }
-            ],
-            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+            "ielts_question_category": "short_answer"
         },
         {
-            "type": "closed_question",
+            "type": "open_question",
             "instructions": "",
-            "question": "2. The school does not have many of these items to sell at the moment.",
+            "question": "What pet is currently unavailable?",
             "points": 1,
-            "no_answer_feedback": "The correct answer is B: Kitchenware.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Miscellaneous items",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
-                },
-                {
-                    "text": "B: Kitchenware",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states that Kitchenware items are currently in short supply."
-                },
-                {
-                    "text": "C: Clothes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
-                },
-                {
-                    "text": "D: Books",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
-                }
-            ],
-            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+            "ielts_question_category": "short_answer"
         },
         {
-            "type": "closed_question",
+            "type": "open_question",
             "instructions": "",
-            "question": "3. Should be labelled in one of three ways.",
+            "question": "What is the most expensive dog?",
             "points": 1,
-            "no_answer_feedback": "The correct answer is C: Clothes.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Miscellaneous items",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
-                },
-                {
-                    "text": "B: Kitchenware",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
-                },
-                {
-                    "text": "C: Clothes",
-                    "is_correct": true,
-                    "feedback": "Correct! Clothes should be marked as 'For Men', 'For Women' or 'For Children'."
-                },
-                {
-                    "text": "D: Books",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
-                }
-            ],
-            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+            "ielts_question_category": "short_answer"
         },
         {
-            "type": "closed_question",
+            "type": "open_question",
             "instructions": "",
-            "question": "4. The school wants more of these which would be suitable for youngsters.",
+            "question": "Apart from pets, what else can you buy at Masley Pets?",
             "points": 1,
-            "no_answer_feedback": "The correct answer is D: Books.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Miscellaneous items",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
-                },
-                {
-                    "text": "B: Kitchenware",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
-                },
-                {
-                    "text": "C: Clothes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
-                },
-                {
-                    "text": "D: Books",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states they are especially looking for children's novels."
-                }
-            ],
-            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+            "ielts_question_category": "short_answer"
         },
         {
-            "type": "closed_question",
-            "instructions": "Questions 5–9\n\nDo the following statements agree with the information given in Reading Text 1?\n\nWrite TRUE, FALSE or NOT GIVEN.",
-            "question": "5. The event is being held to raise money for school facilities.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
+            "type": "open_question",
             "instructions": "",
-            "question": "6. The school is collecting fresh fruit and vegetables to donate to a homeless shelter.",
+            "question": "Who is the best person to ask about cats?",
             "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+            "ielts_question_category": "short_answer"
         },
         {
-            "type": "closed_question",
+            "type": "open_question",
             "instructions": "",
-            "question": "7. Items will be picked up by volunteers between 9.30am and 3.00pm.",
+            "question": "What is the cheapest pet in the shop?",
             "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+            "ielts_question_category": "short_answer"
         },
         {
             "type": "closed_question",
-            "instructions": "",
-            "question": "8. Mr William Taylor will make arrangements for items to be collected.",
+            "instructions": "Questions 7–12\n\nChoose the correct letter, A, B, C, or D.",
+            "question": "There is no charge to",
             "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "9. All helpers for the event are now confirmed.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 10–14\n\nMatch each book to the correct description. Write the correct Roman numeral I–IX.\n\nAn example is provided below:\n\nExample: Book A - I",
-            "question": "10. Book B",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is II: A book about European artists. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": true,
-                    "feedback": "Correct! Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "11. Book C",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is III: A book for secondary school students. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": true,
-                    "feedback": "Correct! Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "12. Book D",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is IV: A book for those who enjoy walking. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": true,
-                    "feedback": "Correct! Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "13. Book F",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is VI: A book comparing two ancient civilizations' art. Book F is 'An academic comparison of ancient Egyptian and Greek art.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": true,
-                    "feedback": "Correct! Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "14. Book G",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is VII: A book with activities for children. Book G is 'A creative activity book for children, covering art and craft projects.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": true,
-                    "feedback": "Correct! Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 15–17\n\nMatch each statement to the correct week. Write the correct letter A–D.\n\nAnswer options may be used more than once.",
-            "question": "15. The first assignment must be completed.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C: Week 3. Week 3 states that trainees 'submit Assignment 1'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Week 1",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
-                },
-                {
-                    "text": "B: Week 2",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
-                },
-                {
-                    "text": "C: Week 3",
-                    "is_correct": true,
-                    "feedback": "Correct! Week 3 states that trainees 'submit Assignment 1'."
-                },
-                {
-                    "text": "D: Week 4",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
-                }
-            ],
-            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "16. The first assessed teaching is done.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C: Week 3. Week 3 states trainees 'are formally assessed' for the first time.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Week 1",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
-                },
-                {
-                    "text": "B: Week 2",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
-                },
-                {
-                    "text": "C: Week 3",
-                    "is_correct": true,
-                    "feedback": "Correct! Week 3 states trainees 'are formally assessed' for the first time."
-                },
-                {
-                    "text": "D: Week 4",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
-                }
-            ],
-            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "17. Different ways of teaching are demonstrated.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is A: Week 1. Week 1 covers 'Introduction to different teaching methodologies and styles'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Week 1",
-                    "is_correct": true,
-                    "feedback": "Correct! Week 1 covers 'Introduction to different teaching methodologies and styles'."
-                },
-                {
-                    "text": "B: Week 2",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
-                },
-                {
-                    "text": "C: Week 3",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
-                },
-                {
-                    "text": "D: Week 4",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
-                }
-            ],
-            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 18–20\n\nDo the following statements agree with the information given in Reading Text 3?\n\nWrite TRUE, FALSE or NOT GIVEN.",
-            "question": "18. Assignment 1 can be handwritten.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "19. The grammar training is easy for native speakers.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "20. The fourth week has the most trainees quitting the course.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 21–23\n\nChoose the correct letter A, B, C, or D.",
-            "question": "21. Staff…",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is D: must attend three sessions. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "multiple_choice",
             "mc_options": [
                 {
-                    "text": "A: must attend all sessions",
+                    "text": "A. bid for a vehicle",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                    "feedback": ""
                 },
                 {
-                    "text": "B: must attend only the first and second session",
+                    "text": "B. sell a vehicle",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                    "feedback": ""
                 },
                 {
-                    "text": "C: do not have to attend if they make arrangements with their supervisor",
+                    "text": "C. look over the vehicles",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                    "feedback": ""
                 },
                 {
-                    "text": "D: must attend three sessions",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                    "text": "D. receive an auction listing",
+                    "is_correct": false,
+                    "feedback": ""
                 }
             ],
-            "options": "A: must attend all sessions\nB: must attend only the first and second session\nC: do not have to attend if they make arrangements with their supervisor\nD: must attend three sessions",
+            "options": "A. bid for a vehicle\nB. sell a vehicle\nC. look over the vehicles\nD. receive an auction listing",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "22. The first session…",
+            "question": "The auction listing",
             "points": 1,
-            "no_answer_feedback": "The correct answer is B: has been arranged because of previous problems. Session 1 'Focuses on correct procedures following recent incidents'.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 3,
+            "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "multiple_choice",
             "mc_options": [
                 {
-                    "text": "A: is about how to make a complaint",
+                    "text": "A. tells you the year of the vehicle",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                    "feedback": ""
                 },
                 {
-                    "text": "B: has been arranged because of previous problems",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 1 'Focuses on correct procedures following recent incidents'."
+                    "text": "B. has a mechanic’s report",
+                    "is_correct": false,
+                    "feedback": ""
                 },
                 {
-                    "text": "C: will be held outside the company",
+                    "text": "C. gives the exact auction time",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                    "feedback": ""
                 },
                 {
-                    "text": "D: is likely to have few attendees",
+                    "text": "D. shows the final sale price",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                    "feedback": ""
                 }
             ],
-            "options": "A: is about how to make a complaint\nB: has been arranged because of previous problems\nC: will be held outside the company\nD: is likely to have few attendees",
+            "options": "A. tells you the year of the vehicle\nB. has a mechanic’s report\nC. gives the exact auction time\nD. shows the final sale price",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "23. The third session…",
+            "question": "Bidders",
             "points": 1,
-            "no_answer_feedback": "The correct answer is D: has limited seating. Session 3 is 'Limited to 70 places'.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 3,
+            "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "multiple_choice",
             "mc_options": [
                 {
-                    "text": "A: is the only one to have two facilitators",
+                    "text": "A. must display the vehicle’s lot number",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                    "feedback": ""
                 },
                 {
-                    "text": "B: will have two speakers from another company",
+                    "text": "B. should arrive before the expected bidding time",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                    "feedback": ""
                 },
                 {
-                    "text": "C: is already fully booked",
+                    "text": "C. are not required to buy if they win",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                    "feedback": ""
                 },
                 {
-                    "text": "D: has limited seating",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 3 is 'Limited to 70 places'."
+                    "text": "D. can be any age",
+                    "is_correct": false,
+                    "feedback": ""
                 }
             ],
-            "options": "A: is the only one to have two facilitators\nB: will have two speakers from another company\nC: is already fully booked\nD: has limited seating",
+            "options": "A. must display the vehicle’s lot number\nB. should arrive before the expected bidding time\nC. are not required to buy if they win\nD. can be any age",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 24–26\n\nMatch each statement to the correct session. Write the correct letter A–D.\n\nAnswer options may be used more than once.",
-            "question": "24. Which session will not be held in the company?",
+            "instructions": "",
+            "question": "Winning bidders",
             "points": 1,
-            "no_answer_feedback": "The correct answer is D: Session 4. Session 4 is 'Held externally at the Logan Hotel'.",
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A. must remove the vehicle immediately",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "B. may pay by cheque",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "C. need to go to the Collections desk",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "D. may cancel after inspection",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "A. must remove the vehicle immediately\nB. may pay by cheque\nC. need to go to the Collections desk\nD. may cancel after inspection",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Tarner’s auction house",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A. provides vehicle warranties",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "B. checks for outstanding finance",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "C. excludes trade buyers",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "D. auctions motorcycles",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "A. provides vehicle warranties\nB. checks for outstanding finance\nC. excludes trade buyers\nD. auctions motorcycles",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Sellers",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A. must contact Tarner’s in advance",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "B. pay only if the vehicle sells",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "C. submit paperwork after the auction",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "D. must present vehicles in tidy condition",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "A. must contact Tarner’s in advance\nB. pay only if the vehicle sells\nC. submit paperwork after the auction\nD. must present vehicles in tidy condition",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 13–16\n\nComplete the summary below.\n\nWrite NO MORE THAN ONE WORD from the text from the passage for each answer.",
+            "question": "Feelings of unfair ______ from workmates or superiors may indicate harassment.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Harassment may involve criticism in ______.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Work may be disrupted by lack of proper ______.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Harassment may be supported by ______.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 17–21\n\nAnswer the questions below.\n\nWrite NO MORE THAN TWO WORDS from the text from the passage for each answer.",
+            "question": "Why should records be kept?",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Who should be contacted if the manager is responsible?",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What action should employees avoid?",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What should employees avoid doing prematurely?",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Harassers gain increased ______ if victims leave.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 22–25\n\nDo the following statements agree with the information given in the reading passage?\n\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.",
+            "question": "Safety glasses must be worn at all times on site.",
+            "points": 1,
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "classification",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
-                    "text": "A: Session 1",
+                    "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
+                    "feedback": ""
                 },
                 {
-                    "text": "B: Session 2",
+                    "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
+                    "feedback": ""
                 },
                 {
-                    "text": "C: Session 3",
+                    "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
-                },
-                {
-                    "text": "D: Session 4",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 4 is 'Held externally at the Logan Hotel'."
+                    "feedback": ""
                 }
             ],
-            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "25. Which session will have two facilitators from within the company?",
+            "question": "Visitors may walk around the site alone after signing in.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is D: Session 4. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "classification",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
-                    "text": "A: Session 1",
+                    "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                    "feedback": ""
                 },
                 {
-                    "text": "B: Session 2",
+                    "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                    "feedback": ""
                 },
                 {
-                    "text": "C: Session 3",
+                    "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
-                },
-                {
-                    "text": "D: Session 4",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                    "feedback": ""
                 }
             ],
-            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "26. Which session is intended to prepare staff for future changes?",
+            "question": "Food and drink are completely banned from factories.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is B: Session 2. Session 2 'Covers upcoming changes to branding, stationery and uniforms'.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "classification",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
-                    "text": "A: Session 1",
+                    "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                    "feedback": ""
                 },
                 {
-                    "text": "B: Session 2",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": ""
                 },
                 {
-                    "text": "C: Session 3",
+                    "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
-                },
-                {
-                    "text": "D: Session 4",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                    "feedback": ""
                 }
             ],
-            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "J) Effects of the natural environment",
+            "question": "Smoking is permitted only in specific areas.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is D (Artificial causes of acid rain). Paragraph B explains manmade sources of acid rain.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 4,
+            "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "matching_headings",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
-                    "text": "I. Impact on the urban landscape",
+                    "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "The correct answer is IV. Artificial causes of acid rain. Paragraph B focuses on manmade sources like transportation, power plants, and industry."
+                    "feedback": ""
                 },
                 {
-                    "text": "II. Higher dispersal creates a global problem",
+                    "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "The correct answer is IV. Artificial causes of acid rain. Paragraph B focuses on manmade sources like transportation, power plants, and industry."
+                    "feedback": ""
                 },
                 {
-                    "text": "III. Natural sources",
+                    "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "The correct answer is IV. Artificial causes of acid rain. Paragraph B focuses on manmade sources like transportation, power plants, and industry."
-                },
-                {
-                    "text": "IV. Artificial causes of acid rain",
-                    "is_correct": true,
-                    "feedback": "Excellent! Paragraph B discusses \"the principal chemicals\" causing acid rain and explains \"the majority is unsurprisingly manmade,\" detailing artificial/manmade sources."
-                },
-                {
-                    "text": "V. Research into acid rain",
-                    "is_correct": false,
-                    "feedback": "The correct answer is IV. Artificial causes of acid rain. Paragraph B focuses on manmade sources like transportation, power plants, and industry."
-                },
-                {
-                    "text": "VI. International reactions",
-                    "is_correct": false,
-                    "feedback": "The correct answer is IV. Artificial causes of acid rain. Paragraph B focuses on manmade sources like transportation, power plants, and industry."
-                },
-                {
-                    "text": "VII. Secondary impact on flora and fauna",
-                    "is_correct": false,
-                    "feedback": "The correct answer is IV. Artificial causes of acid rain. Paragraph B focuses on manmade sources like transportation, power plants, and industry."
-                },
-                {
-                    "text": "VIII. The neutralising effect of natural elements",
-                    "is_correct": false,
-                    "feedback": "The correct answer is IV. Artificial causes of acid rain. Paragraph B focuses on manmade sources like transportation, power plants, and industry."
-                },
-                {
-                    "text": "IX. Public awareness and education",
-                    "is_correct": false,
-                    "feedback": "The correct answer is IV. Artificial causes of acid rain. Paragraph B focuses on manmade sources like transportation, power plants, and industry."
-                },
-                {
-                    "text": "X. Effects of the natural environment",
-                    "is_correct": false,
-                    "feedback": "The correct answer is IV. Artificial causes of acid rain. Paragraph B focuses on manmade sources like transportation, power plants, and industry."
+                    "feedback": ""
                 }
             ],
-            "options": "I. Impact on the urban landscape\nII. Higher dispersal creates a global problem\nIII. Natural sources\nIV. Artificial causes of acid rain\nV. Research into acid rain\nVI. International reactions\nVII. Secondary impact on flora and fauna\nVIII. The neutralising effect of natural elements\nIX. Public awareness and education\nX. Effects of the natural environment",
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "J) Effects of the natural environment",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is J (Effects of the natural environment). Paragraph C discusses natural filters and geological impacts.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_headings",
-            "mc_options": [
-                {
-                    "text": "I. Impact on the urban landscape",
-                    "is_correct": false,
-                    "feedback": "The correct answer is X. Effects of the natural environment. Paragraph C explains how natural geology either protects against or worsens acid rain effects."
-                },
-                {
-                    "text": "II. Higher dispersal creates a global problem",
-                    "is_correct": false,
-                    "feedback": "The correct answer is X. Effects of the natural environment. Paragraph C explains how natural geology either protects against or worsens acid rain effects."
-                },
-                {
-                    "text": "III. Natural sources",
-                    "is_correct": false,
-                    "feedback": "The correct answer is X. Effects of the natural environment. Paragraph C explains how natural geology either protects against or worsens acid rain effects."
-                },
-                {
-                    "text": "IV. Artificial causes of acid rain",
-                    "is_correct": false,
-                    "feedback": "The correct answer is X. Effects of the natural environment. Paragraph C explains how natural geology either protects against or worsens acid rain effects."
-                },
-                {
-                    "text": "V. Research into acid rain",
-                    "is_correct": false,
-                    "feedback": "The correct answer is X. Effects of the natural environment. Paragraph C explains how natural geology either protects against or worsens acid rain effects."
-                },
-                {
-                    "text": "VI. International reactions",
-                    "is_correct": false,
-                    "feedback": "The correct answer is X. Effects of the natural environment. Paragraph C explains how natural geology either protects against or worsens acid rain effects."
-                },
-                {
-                    "text": "VII. Secondary impact on flora and fauna",
-                    "is_correct": false,
-                    "feedback": "The correct answer is X. Effects of the natural environment. Paragraph C explains how natural geology either protects against or worsens acid rain effects."
-                },
-                {
-                    "text": "VIII. The neutralising effect of natural elements",
-                    "is_correct": false,
-                    "feedback": "The correct answer is X. Effects of the natural environment. Paragraph C explains how natural geology either protects against or worsens acid rain effects."
-                },
-                {
-                    "text": "IX. Public awareness and education",
-                    "is_correct": false,
-                    "feedback": "The correct answer is X. Effects of the natural environment. Paragraph C explains how natural geology either protects against or worsens acid rain effects."
-                },
-                {
-                    "text": "X. Effects of the natural environment",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph C discusses how \"naturally occurring substances such as limestone\" can neutralize acid rain, showing effects of the natural environment."
-                }
-            ],
-            "options": "I. Impact on the urban landscape\nII. Higher dispersal creates a global problem\nIII. Natural sources\nIV. Artificial causes of acid rain\nV. Research into acid rain\nVI. International reactions\nVII. Secondary impact on flora and fauna\nVIII. The neutralising effect of natural elements\nIX. Public awareness and education\nX. Effects of the natural environment",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "J) Effects of the natural environment",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is G (Secondary impact on flora and fauna). Paragraph D covers impacts on animals and crops.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_headings",
-            "mc_options": [
-                {
-                    "text": "I. Impact on the urban landscape",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VII. Secondary impact on flora and fauna. Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
-                },
-                {
-                    "text": "II. Higher dispersal creates a global problem",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VII. Secondary impact on flora and fauna. Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
-                },
-                {
-                    "text": "III. Natural sources",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VII. Secondary impact on flora and fauna. Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
-                },
-                {
-                    "text": "IV. Artificial causes of acid rain",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VII. Secondary impact on flora and fauna. Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
-                },
-                {
-                    "text": "V. Research into acid rain",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VII. Secondary impact on flora and fauna. Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
-                },
-                {
-                    "text": "VI. International reactions",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VII. Secondary impact on flora and fauna. Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
-                },
-                {
-                    "text": "VII. Secondary impact on flora and fauna",
-                    "is_correct": true,
-                    "feedback": "Well done! Paragraph D discusses environmental impact on lakes, animals like otters, and farmland with reduced crop yields - all secondary impacts on flora and fauna."
-                },
-                {
-                    "text": "VIII. The neutralising effect of natural elements",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VII. Secondary impact on flora and fauna. Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
-                },
-                {
-                    "text": "IX. Public awareness and education",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VII. Secondary impact on flora and fauna. Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
-                },
-                {
-                    "text": "X. Effects of the natural environment",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VII. Secondary impact on flora and fauna. Paragraph D describes effects on wildlife and plants beyond the direct acid rain damage."
-                }
-            ],
-            "options": "I. Impact on the urban landscape\nII. Higher dispersal creates a global problem\nIII. Natural sources\nIV. Artificial causes of acid rain\nV. Research into acid rain\nVI. International reactions\nVII. Secondary impact on flora and fauna\nVIII. The neutralising effect of natural elements\nIX. Public awareness and education\nX. Effects of the natural environment",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "J) Effects of the natural environment",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is A (Impact on the urban landscape). Paragraph E discusses acid rain's effects on urban areas.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_headings",
-            "mc_options": [
-                {
-                    "text": "I. Impact on the urban landscape",
-                    "is_correct": true,
-                    "feedback": "Excellent! Paragraph E focuses on cities, discussing monuments, structures, pipes, drinking water, visibility, and smog - all urban landscape impacts."
-                },
-                {
-                    "text": "II. Higher dispersal creates a global problem",
-                    "is_correct": false,
-                    "feedback": "The correct answer is I. Impact on the urban landscape. Paragraph E describes how acid rain affects cities and urban infrastructure."
-                },
-                {
-                    "text": "III. Natural sources",
-                    "is_correct": false,
-                    "feedback": "The correct answer is I. Impact on the urban landscape. Paragraph E describes how acid rain affects cities and urban infrastructure."
-                },
-                {
-                    "text": "IV. Artificial causes of acid rain",
-                    "is_correct": false,
-                    "feedback": "The correct answer is I. Impact on the urban landscape. Paragraph E describes how acid rain affects cities and urban infrastructure."
-                },
-                {
-                    "text": "V. Research into acid rain",
-                    "is_correct": false,
-                    "feedback": "The correct answer is I. Impact on the urban landscape. Paragraph E describes how acid rain affects cities and urban infrastructure."
-                },
-                {
-                    "text": "VI. International reactions",
-                    "is_correct": false,
-                    "feedback": "The correct answer is I. Impact on the urban landscape. Paragraph E describes how acid rain affects cities and urban infrastructure."
-                },
-                {
-                    "text": "VII. Secondary impact on flora and fauna",
-                    "is_correct": false,
-                    "feedback": "The correct answer is I. Impact on the urban landscape. Paragraph E describes how acid rain affects cities and urban infrastructure."
-                },
-                {
-                    "text": "VIII. The neutralising effect of natural elements",
-                    "is_correct": false,
-                    "feedback": "The correct answer is I. Impact on the urban landscape. Paragraph E describes how acid rain affects cities and urban infrastructure."
-                },
-                {
-                    "text": "IX. Public awareness and education",
-                    "is_correct": false,
-                    "feedback": "The correct answer is I. Impact on the urban landscape. Paragraph E describes how acid rain affects cities and urban infrastructure."
-                },
-                {
-                    "text": "X. Effects of the natural environment",
-                    "is_correct": false,
-                    "feedback": "The correct answer is I. Impact on the urban landscape. Paragraph E describes how acid rain affects cities and urban infrastructure."
-                }
-            ],
-            "options": "I. Impact on the urban landscape\nII. Higher dispersal creates a global problem\nIII. Natural sources\nIV. Artificial causes of acid rain\nV. Research into acid rain\nVI. International reactions\nVII. Secondary impact on flora and fauna\nVIII. The neutralising effect of natural elements\nIX. Public awareness and education\nX. Effects of the natural environment",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "J) Effects of the natural environment",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B (Higher dispersal creates a global problem). Paragraph F discusses long-distance transport of acid rain.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_headings",
-            "mc_options": [
-                {
-                    "text": "I. Impact on the urban landscape",
-                    "is_correct": false,
-                    "feedback": "The correct answer is II. Higher dispersal creates a global problem. Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
-                },
-                {
-                    "text": "II. Higher dispersal creates a global problem",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph F explains how \"tall chimneys dispersing pollutants high into the atmosphere\" allow wind to blow acid rain \"hundreds of miles\" creating a global problem."
-                },
-                {
-                    "text": "III. Natural sources",
-                    "is_correct": false,
-                    "feedback": "The correct answer is II. Higher dispersal creates a global problem. Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
-                },
-                {
-                    "text": "IV. Artificial causes of acid rain",
-                    "is_correct": false,
-                    "feedback": "The correct answer is II. Higher dispersal creates a global problem. Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
-                },
-                {
-                    "text": "V. Research into acid rain",
-                    "is_correct": false,
-                    "feedback": "The correct answer is II. Higher dispersal creates a global problem. Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
-                },
-                {
-                    "text": "VI. International reactions",
-                    "is_correct": false,
-                    "feedback": "The correct answer is II. Higher dispersal creates a global problem. Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
-                },
-                {
-                    "text": "VII. Secondary impact on flora and fauna",
-                    "is_correct": false,
-                    "feedback": "The correct answer is II. Higher dispersal creates a global problem. Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
-                },
-                {
-                    "text": "VIII. The neutralising effect of natural elements",
-                    "is_correct": false,
-                    "feedback": "The correct answer is II. Higher dispersal creates a global problem. Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
-                },
-                {
-                    "text": "IX. Public awareness and education",
-                    "is_correct": false,
-                    "feedback": "The correct answer is II. Higher dispersal creates a global problem. Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
-                },
-                {
-                    "text": "X. Effects of the natural environment",
-                    "is_correct": false,
-                    "feedback": "The correct answer is II. Higher dispersal creates a global problem. Paragraph F describes how acid rain now travels thousands of kilometers affecting distant regions."
-                }
-            ],
-            "options": "I. Impact on the urban landscape\nII. Higher dispersal creates a global problem\nIII. Natural sources\nIV. Artificial causes of acid rain\nV. Research into acid rain\nVI. International reactions\nVII. Secondary impact on flora and fauna\nVIII. The neutralising effect of natural elements\nIX. Public awareness and education\nX. Effects of the natural environment",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "J) Effects of the natural environment",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is F (International reactions). Paragraph G describes international cooperation to address acid rain.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_headings",
-            "mc_options": [
-                {
-                    "text": "I. Impact on the urban landscape",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VI. International reactions. Paragraph G focuses on global legislative responses to acid rain pollution."
-                },
-                {
-                    "text": "II. Higher dispersal creates a global problem",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VI. International reactions. Paragraph G focuses on global legislative responses to acid rain pollution."
-                },
-                {
-                    "text": "III. Natural sources",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VI. International reactions. Paragraph G focuses on global legislative responses to acid rain pollution."
-                },
-                {
-                    "text": "IV. Artificial causes of acid rain",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VI. International reactions. Paragraph G focuses on global legislative responses to acid rain pollution."
-                },
-                {
-                    "text": "V. Research into acid rain",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VI. International reactions. Paragraph G focuses on global legislative responses to acid rain pollution."
-                },
-                {
-                    "text": "VI. International reactions",
-                    "is_correct": true,
-                    "feedback": "Well done! Paragraph G discusses \"transboundary pollution\" prompting \"international responses\" and \"International legislation during the 1980s and 1990s.\""
-                },
-                {
-                    "text": "VII. Secondary impact on flora and fauna",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VI. International reactions. Paragraph G focuses on global legislative responses to acid rain pollution."
-                },
-                {
-                    "text": "VIII. The neutralising effect of natural elements",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VI. International reactions. Paragraph G focuses on global legislative responses to acid rain pollution."
-                },
-                {
-                    "text": "IX. Public awareness and education",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VI. International reactions. Paragraph G focuses on global legislative responses to acid rain pollution."
-                },
-                {
-                    "text": "X. Effects of the natural environment",
-                    "is_correct": false,
-                    "feedback": "The correct answer is VI. International reactions. Paragraph G focuses on global legislative responses to acid rain pollution."
-                }
-            ],
-            "options": "I. Impact on the urban landscape\nII. Higher dispersal creates a global problem\nIII. Natural sources\nIV. Artificial causes of acid rain\nV. Research into acid rain\nVI. International reactions\nVII. Secondary impact on flora and fauna\nVIII. The neutralising effect of natural elements\nIX. Public awareness and education\nX. Effects of the natural environment",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "A deterioration in lakes and forests in northern Europe was first noticed in [field 1].",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is \"the late 1970s\". Check the opening of paragraph A.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "sentence_completion_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "the late 1970s"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Excellent! Paragraph A begins \"In the late 1970s, people in northern Europe were observing a change in the lakes and forests.\"",
-                    "incorrect": "The correct answer is \"the late 1970s\". Paragraph A states when the changes were first observed.",
-                    "no_answer": "The correct answer is \"the late 1970s\". Check the opening of paragraph A."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Pollution in rain is a result of [field 1].",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is \"sulphuric and nitric acids\". Paragraph A explains what causes acid rain.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "sentence_completion_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "sulphuric and nitric acids"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph A states acid rain is \"pollutants in rain, snow, hail and fog caused by sulphuric and nitric acids.\"",
-                    "incorrect": "The correct answer is \"sulphuric and nitric acids\". Paragraph A identifies these as the cause of pollution in rain.",
-                    "no_answer": "The correct answer is \"sulphuric and nitric acids\". Paragraph A explains what causes acid rain."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Nearly half of manmade sources of acid rain are due to [field 1].",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is \"transportation sources\". Paragraph B breaks down sources of manmade acid rain.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "sentence_completion_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "transportation sources"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Well done! Paragraph B states \"transportation sources account for 40%\" - nearly half of the manmade sources listed.",
-                    "incorrect": "The correct answer is \"transportation sources\". Paragraph B shows transportation accounts for 40% of manmade acid rain.",
-                    "no_answer": "The correct answer is \"transportation sources\". Paragraph B breaks down sources of manmade acid rain."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Some animals have declined in number by over 50% because of scarcer [field 1].",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is \"fish\". Paragraph D discusses the food chain impact of acid rain.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "sentence_completion_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "fish"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Excellent! Paragraph D explains \"animals that rely on fish as a food source\" and mentions \"American otter have had their numbers reduced by over half.\"",
-                    "incorrect": "The correct answer is \"fish\". Paragraph D connects declining fish populations to animal population decreases.",
-                    "no_answer": "The correct answer is \"fish\". Paragraph D discusses the food chain impact of acid rain."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Land used for farming is becoming [field 1].",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is \"less productive\". Paragraph D discusses agricultural impacts.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "sentence_completion_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "less productive"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph D states acid rain is \"destroying the effectiveness of farmland, making it significantly less productive.\"",
-                    "incorrect": "The correct answer is \"less productive\". Paragraph D describes how acid rain reduces farmland productivity.",
-                    "no_answer": "The correct answer is \"less productive\". Paragraph D discusses agricultural impacts."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Urban household water supplies are contaminated by [field 1].",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is \"toxic metals\". Paragraph E discusses contamination of water supplies.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "sentence_completion_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "toxic metals"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Well done! Paragraph E states \"the drinking water is laced with toxic metals freed from metal pipes by the acidity.\"",
-                    "incorrect": "The correct answer is \"toxic metals\". Paragraph E explains how acidity releases toxic metals from pipes into drinking water.",
-                    "no_answer": "The correct answer is \"toxic metals\". Paragraph E discusses contamination of water supplies."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Air pollution is travelling further as it is disgorged through [field 1].",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is \"tall chimneys\". Paragraph F discusses how pollution dispersal has changed.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "sentence_completion_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "tall chimneys"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Excellent! Paragraph F states pollution \"can be transported thousands of kilometres due to the introduction of tall chimneys dispersing pollutants high into the atmosphere.\"",
-                    "incorrect": "The correct answer is \"tall chimneys\". Paragraph F explains that tall chimneys allow pollution to travel much farther.",
-                    "no_answer": "The correct answer is \"tall chimneys\". Paragraph F discusses how pollution dispersal has changed."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Legislation passed in the 1980s and the 1990s was a response to [field 1].",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is \"transboundary pollution\". Paragraph G explains what prompted international legislation.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "sentence_completion_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "transboundary pollution"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph G states \"Transboundary pollution, the spread of acid rain across political and international borders, has prompted a number of international responses. International legislation during the 1980s and 1990s...\"",
-                    "incorrect": "The correct answer is \"transboundary pollution\". Paragraph G links international legislation to the cross-border nature of acid rain.",
-                    "no_answer": "The correct answer is \"transboundary pollution\". Paragraph G explains what prompted international legislation."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "A solution to the problem must involve a [field 1].",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is \"cooperative global effort\". Paragraph G's conclusion states what is needed to solve the problem.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "sentence_completion_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "cooperative global effort"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Excellent! Paragraph G concludes \"without a cooperative global effort, the problem of acid rain will not simply blow away,\" indicating this is necessary for a solution.",
-                    "incorrect": "The correct answer is \"cooperative global effort\". Paragraph G emphasizes that global cooperation is essential to solve acid rain.",
-                    "no_answer": "The correct answer is \"cooperative global effort\". Paragraph G's conclusion states what is needed to solve the problem."
-                }
-            }
         }
     ],
     "reading_texts": [
         {
             "text_id": 0,
             "title": "Reading Text 1",
-            "content": "<h2 align=\"center\">Masley Pets sale</h2>\n<p align=\"center\">Come and see Eric and the team at Masley Pets to get a bargain! All pets are currently on sale with up to 20% off*!</p>\n<p align=\"center\"><sup>*excludes fish</sup></p>\n<p align=\"center\">Our knowledgeable staff will be able to advise you on which pet would suit your requirements best and how to keep your pet fit and healthy. Kane is our resident fish expert and Laura will tell you all you need to know about any of our four legged friends!</p>\n<p align=\"center\">We currently have the following in stock:</p>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n<tbody>\n<tr>\n<td width=\"20%\"><h4 align=\"center\">Pet</h4></td>\n<td width=\"30%\"><h4 align=\"center\">Breed</h4></td>\n<td width=\"25%\"><h4 align=\"center\">Quantity</h4></td>\n<td width=\"25%\"><h4 align=\"center\">Price</h4></td>\n</tr>\n<!-- Dogs -->\n<tr>\n<td align=\"center\" rowspan=\"3\">Dogs</td>\n<td align=\"center\">Cocker Spaniels</td>\n<td align=\"center\">3</td>\n<td align=\"center\">£700</td>\n</tr>\n<tr>\n<td align=\"center\">German Shepherd</td>\n<td align=\"center\">1</td>\n<td align=\"center\">£750</td>\n</tr>\n<tr>\n<td align=\"center\">Poodle</td>\n<td align=\"center\">3</td>\n<td align=\"center\">£650</td>\n</tr>\n<!-- Cats -->\n<tr>\n<td align=\"center\" rowspan=\"3\">Cats</td>\n<td align=\"center\">Persian</td>\n<td align=\"center\">2</td>\n<td align=\"center\">£500</td>\n</tr>\n<tr>\n<td align=\"center\">Siamese</td>\n<td align=\"center\">1</td>\n<td align=\"center\">£450</td>\n</tr>\n<tr>\n<td align=\"center\">Moggie</td>\n<td align=\"center\">2</td>\n<td align=\"center\">£90</td>\n</tr>\n<!-- Fish -->\n<tr>\n<td align=\"center\" rowspan=\"3\">Fish</td>\n<td align=\"center\">Angel Fish</td>\n<td align=\"center\">40 +</td>\n<td align=\"center\">£30</td>\n</tr>\n<tr>\n<td align=\"center\">Firemouth</td>\n<td align=\"center\">12</td>\n<td align=\"center\">£20</td>\n</tr>\n<tr>\n<td align=\"center\">Goldfish</td>\n<td align=\"center\">20</td>\n<td align=\"center\">£8</td>\n</tr>\n<!-- Birds -->\n<tr>\n<td align=\"center\" rowspan=\"4\">Birds</td>\n<td align=\"center\">Budgie</td>\n<td align=\"center\">OUT OF STOCK</td>\n<td align=\"center\">£25</td>\n</tr>\n<tr>\n<td align=\"center\">Canary</td>\n<td align=\"center\">6</td>\n<td align=\"center\">£25</td>\n</tr>\n<tr>\n<td align=\"center\">Finch</td>\n<td align=\"center\">12</td>\n<td align=\"center\">£22</td>\n</tr>\n<tr>\n<td align=\"center\">Lovebird</td>\n<td align=\"center\">4</td>\n<td align=\"center\">£28</td>\n</tr>\n<!-- Small animals -->\n<tr>\n<td align=\"center\" rowspan=\"4\">Small animals</td>\n<td align=\"center\">Mouse</td>\n<td align=\"center\">5</td>\n<td align=\"center\">£7</td>\n</tr>\n<tr>\n<td align=\"center\">Guinea pigs</td>\n<td align=\"center\">2</td>\n<td align=\"center\">£20</td>\n</tr>\n<tr>\n<td align=\"center\">Hamsters</td>\n<td align=\"center\">1</td>\n<td align=\"center\">£7.50</td>\n</tr>\n<tr>\n<td align=\"center\">Rats</td>\n<td align=\"center\">3</td>\n<td align=\"center\">£8.50</td>\n</tr>\n</tbody>\n</table>\n<p style=\"text-align: center\"><strong>We also have a wide range of accessories in stock.</strong></p>",
+            "content": "<h4><strong>Masley Pets Sale</strong></h4>\n\n<p>Come and see Eric and the team at Masley Pets to get a bargain! All pets are currently on sale with up to 20% off*.</p>\n\n<p>Excludes fish.</p>\n\n<p>Our knowledgeable staff will be able to advise you on which pet would suit your requirements best and how to keep your pet fit and healthy. Kane is our resident fish expert and Laura will tell you all you need to know about any of our four-legged friends.</p>\n\n<h4><strong>We currently have the following in stock:</strong></h4>\n\n<h4><strong>Dogs\nCocker Spaniels – 3 – £700\nGerman Shepherd – 1 – £750\nPoodle – 3 – £650</strong></h4>\n\n<h4><strong>Cats\nPersian – 2 – £500\nSiamese – 1 – £450\nMoggie – 2 – £90</strong></h4>\n\n<h4><strong>Fish\nAngel Fish – 40+ – £30\nFiremouth – 12 – £20\nGoldfish – 20 – £8</strong></h4>\n\n<p>Birds<br>\nBudgie – OUT OF STOCK – £25<br>\nCanary – 6 – £25<br>\nFinch – 12 – £22<br>\nLovebird – 4 – £28</p>\n\n<p>Small animals<br>\nMouse – 5 – £7<br>\nGuinea pigs – 2 – £20<br>\nHamsters – 1 – £7.50<br>\nRats – 3 – £8.50</p>\n\n<p>We also have a wide range of accessories in stock.</p>\n\n<h4><strong>Questions 1–6</strong></h4>\n\n<p>[Section 1<br>\nThis is an open question set.<br>\nQuestion type: Short answer.<br>\nThere are 6 questions (1–6).<br>\nAnswers must use NO MORE THAN TWO WORDS from the passage.]</p>\n\n<h4><strong>What pets are not included in the sale?\nAnswer: fish</strong></h4>\n\n<h4><strong>What pet is currently unavailable?\nAnswer: budgie</strong></h4>\n\n<h4><strong>What is the most expensive dog?\nAnswer: German Shepherd</strong></h4>\n\n<h4><strong>Apart from pets, what else can you buy at Masley Pets?\nAnswer: accessories</strong></h4>\n\n<h4><strong>Who is the best person to ask about cats?\nAnswer: Laura</strong></h4>\n\n<h4><strong>What is the cheapest pet in the shop?\nAnswer: mouse</strong></h4>",
             "tags": []
         },
         {
             "text_id": 1,
             "title": "Reading Text 2",
-            "content": "<h2 align=\"center\">Masley Pets sale</h2>\n<p align=\"center\">Come and see Eric and the team at Masley Pets to get a bargain! All pets are currently on sale with up to 20% off*!</p>\n<p align=\"center\"><sup>*excludes fish</sup></p>\n<p align=\"center\">Our knowledgeable staff will be able to advise you on which pet would suit your requirements best and how to keep your pet fit and healthy. Kane is our resident fish expert and Laura will tell you all you need to know about any of our four legged friends!</p>\n<p align=\"center\">We currently have the following in stock:</p>\n<p> <!-- Dogs --></p><p> <!-- Cats --></p><p> <!-- Fish --></p><p> <!-- Birds --></p><p> <!-- Small animals --></p><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n<tbody>\n<tr>\n<td width=\"20%\">\n<h4 align=\"center\">Pet</h4>\n</td>\n<td width=\"30%\">\n<h4 align=\"center\">Breed</h4>\n</td>\n<td width=\"25%\">\n<h4 align=\"center\">Quantity</h4>\n</td>\n<td width=\"25%\">\n<h4 align=\"center\">Price</h4>\n</td>\n</tr>\n<tr>\n<td align=\"center\" rowspan=\"3\">Dogs</td>\n<td align=\"center\">Cocker Spaniels</td>\n<td align=\"center\">3</td>\n<td align=\"center\">£700</td>\n</tr>\n<tr>\n<td align=\"center\">German Shepherd</td>\n<td align=\"center\">1</td>\n<td align=\"center\">£750</td>\n</tr>\n<tr>\n<td align=\"center\">Poodle</td>\n<td align=\"center\">3</td>\n<td align=\"center\">£650</td>\n</tr>\n<tr>\n<td align=\"center\" rowspan=\"3\">Cats</td>\n<td align=\"center\">Persian</td>\n<td align=\"center\">2</td>\n<td align=\"center\">£500</td>\n</tr>\n<tr>\n<td align=\"center\">Siamese</td>\n<td align=\"center\">1</td>\n<td align=\"center\">£450</td>\n</tr>\n<tr>\n<td align=\"center\">Moggie</td>\n<td align=\"center\">2</td>\n<td align=\"center\">£90</td>\n</tr>\n<tr>\n<td align=\"center\" rowspan=\"3\">Fish</td>\n<td align=\"center\">Angel Fish</td>\n<td align=\"center\">40 +</td>\n<td align=\"center\">£30</td>\n</tr>\n<tr>\n<td align=\"center\">Firemouth</td>\n<td align=\"center\">12</td>\n<td align=\"center\">£20</td>\n</tr>\n<tr>\n<td align=\"center\">Goldfish</td>\n<td align=\"center\">20</td>\n<td align=\"center\">£8</td>\n</tr>\n<tr>\n<td align=\"center\" rowspan=\"4\">Birds</td>\n<td align=\"center\">Budgie</td>\n<td align=\"center\">OUT OF STOCK</td>\n<td align=\"center\">£25</td>\n</tr>\n<tr>\n<td align=\"center\">Canary</td>\n<td align=\"center\">6</td>\n<td align=\"center\">£25</td>\n</tr>\n<tr>\n<td align=\"center\">Finch</td>\n<td align=\"center\">12</td>\n<td align=\"center\">£22</td>\n</tr>\n<tr>\n<td align=\"center\">Lovebird</td>\n<td align=\"center\">4</td>\n<td align=\"center\">£28</td>\n</tr>\n<tr>\n<td align=\"center\" rowspan=\"4\">Small animals</td>\n<td align=\"center\">Mouse</td>\n<td align=\"center\">5</td>\n<td align=\"center\">£7</td>\n</tr>\n<tr>\n<td align=\"center\">Guinea pigs</td>\n<td align=\"center\">2</td>\n<td align=\"center\">£20</td>\n</tr>\n<tr>\n<td align=\"center\">Hamsters</td>\n<td align=\"center\">1</td>\n<td align=\"center\">£7.50</td>\n</tr>\n<tr>\n<td align=\"center\">Rats</td>\n<td align=\"center\">3</td>\n<td align=\"center\">£8.50</td>\n</tr>\n</tbody>\n</table>\n<p style=\"text-align: center;\"><strong>We also have a wide range of accessories in stock.</strong></p>\n<p></p>",
-            "tags": []
-        },
-        {
-            "text_id": 2,
-            "title": "Reading Text 3",
-            "content": "<h3>Tarner’s auction house</h3>\n<h4>Entering the auction:</h4>\n<p>Inspecting the vehicles is free, but to enter the auction room you need to purchase a buyer ID card. This card has a unique number to identify you during the bidding process. As part of the payment, you will also receive an auction listing, detailing vehicles coming up for auction (number of previous owners, year of manufacture etc) and approximate auction times.</p>\n<h4>Inspecting a vehicle:</h4>\n<p>Before the auction starts, you will have time to look over the vehicle and, if required, have a mechanic perform a brief check. You are not allowed to test drive the vehicle. If you are interested in the vehicle, you will need to take a note of the lot number (a unique number assigned to each item in the auction). The lot number and approximate timing of when that car will be auctioned should be stuck to the front windscreen, as well as being in the auction listing.</p>\n<h4>Bidding at the auction:</h4>\n<em>NOTE: The time a vehicle will be auctioned is estimated – please ensure you are in the auction area at least 15 minutes beforehand in case the vehicle you are interested is called early.</em>\n<p>The bidding for a vehicle will begin once the vehicle has been brought into the auction room and the auctioneer has given a brief description of the lot. Anyone wishing to place a bid will need to have their buyer ID card clearly displayed so the auctioneer can determine who is making the bid. Remember that standard auction rules apply in that if you are successful in your bidding you are legally required to purchase the vehicle.  You must be over 20 to bid in a Tarner’s auction.</p>\n<h4>Collecting your newly purchased vehicle:</h4>\n<p>If you win the bid, go to the Collections desk to make payment. Credit cards and cash are accepted – sorry, no cheques. Once payment has been completed, you can take the vehicle away or arrange for collection at a later date. Remember that vehicles are sold as seen and once the last bid is final.</p>\n<h4>Rights and responsibilities:</h4>\n<p>Tarner’s take no responsibility for the state of the vehicle, and any warranties are a private matter between the seller and the buyer. Our only obligation is to check that all outstanding finance has been paid on the vehicle.</p>\n<h4>Additional information:</h4>\n<ul>\n<li>The general public and trade purchases are welcome</li>\n<li>We suggest you have a clear idea of what you are willing to spend before the auction to avoid disappointment</li>\n<li>Tarner’s deals solely in cars. Please do not bring any other type of vehicle for auction.</li>\n</ul>\n<h4>Selling at auction:</h4>\n<p>If you are bringing a vehicle to sell, we strongly suggest that you contact us before bringing the vehicle. Although this is not mandatory, we cannot guarantee that we can auction all vehicles brought without advance notice. All vehicles must be at the auction house a minimum of 4 hours before the auction begins and a listing fee for each vehicle must be paid regardless of whether the vehicle sells. Vehicles should be presented in a tidy fashion or will not be accepted for auction. All registration papers will need to be handed to the auction house before the auction begins.</p>\n<p>Sellers may set a reserve price beneath which the vehicle will not be sold. The reserve must within reasonable market value. Payment for successful sales will be transferred within three working days of the auction.</p>\n<p>Contact us for information on pricing.</p>",
-            "tags": []
-        },
-        {
-            "text_id": 3,
-            "title": "Reading Text 4",
-            "content": "<h3>Tarner’s auction house</h3>\n<h4>Entering the auction:</h4>\n<p>Inspecting the vehicles is free, but to enter the auction room you need to purchase a buyer ID card. This card has a unique number to identify you during the bidding process. As part of the payment, you will also receive an auction listing, detailing vehicles coming up for auction (number of previous owners, year of manufacture etc) and approximate auction times.</p>\n<h4>Inspecting a vehicle:</h4>\n<p>Before the auction starts, you will have time to look over the vehicle and, if required, have a mechanic perform a brief check. You are not allowed to test drive the vehicle. If you are interested in the vehicle, you will need to take a note of the lot number (a unique number assigned to each item in the auction). The lot number and approximate timing of when that car will be auctioned should be stuck to the front windscreen, as well as being in the auction listing.</p>\n<h4>Bidding at the auction:</h4>\n<p> <em>NOTE: The time a vehicle will be auctioned is estimated – please ensure you are in the auction area at least 15 minutes beforehand in case the vehicle you are interested is called early.</em></p>\n<p>The bidding for a vehicle will begin once the vehicle has been brought into the auction room and the auctioneer has given a brief description of the lot. Anyone wishing to place a bid will need to have their buyer ID card clearly displayed so the auctioneer can determine who is making the bid. Remember that standard auction rules apply in that if you are successful in your bidding you are legally required to purchase the vehicle.  You must be over 20 to bid in a Tarner’s auction.</p>\n<h4>Collecting your newly purchased vehicle:</h4>\n<p>If you win the bid, go to the Collections desk to make payment. Credit cards and cash are accepted – sorry, no cheques. Once payment has been completed, you can take the vehicle away or arrange for collection at a later date. Remember that vehicles are sold as seen and once the last bid is final.</p>\n<h4>Rights and responsibilities:</h4>\n<p>Tarner’s take no responsibility for the state of the vehicle, and any warranties are a private matter between the seller and the buyer. Our only obligation is to check that all outstanding finance has been paid on the vehicle.</p>\n<h4>Additional information:</h4>\n<ul>\n<li>The general public and trade purchases are welcome</li>\n<li>We suggest you have a clear idea of what you are willing to spend before the auction to avoid disappointment</li>\n<li>Tarner’s deals solely in cars. Please do not bring any other type of vehicle for auction.</li>\n</ul>\n<h4>Selling at auction:</h4>\n<p>If you are bringing a vehicle to sell, we strongly suggest that you contact us before bringing the vehicle. Although this is not mandatory, we cannot guarantee that we can auction all vehicles brought without advance notice. All vehicles must be at the auction house a minimum of 4 hours before the auction begins and a listing fee for each vehicle must be paid regardless of whether the vehicle sells. Vehicles should be presented in a tidy fashion or will not be accepted for auction. All registration papers will need to be handed to the auction house before the auction begins.</p>\n<p>Sellers may set a reserve price beneath which the vehicle will not be sold. The reserve must within reasonable market value. Payment for successful sales will be transferred within three working days of the auction.</p>\n<p>Contact us for information on pricing.</p>\n<p></p>",
+            "content": "<h4><strong>Workplace Harassment</strong></h4>\n\n<p>Workplace harassment may involve unfair criticism in public, withholding resources such as information or equipment, or encouraging co-workers to participate in harassment.</p>\n\n<h4><strong>If you feel harassed:</strong></h4>\n\n<p>Keep records of incidents, including dates, locations and witnesses.</p>\n\n<p>Talk to your manager, unless they are involved, in which case approach senior management in writing.</p>\n\n<p>Avoid retaliation, as it weakens your case.</p>\n\n<p>Do not resign prematurely. Harassment often continues with future staff if unreported.</p>\n\n<h4><strong>Questions 13–16</strong></h4>\n\n<p>[Section 2<br>\nThis is an open question set.<br>\nQuestion type: Summary completion.<br>\nThere are 4 questions (13–16).<br>\nAnswers must use NO MORE THAN ONE WORD from the text.]</p>\n\n<p>Feelings of unfair ______ from workmates or superiors may indicate harassment.<br>\nAnswer: pressure</p>\n\n<h4><strong>Harassment may involve criticism in ______.\nAnswer: public</strong></h4>\n\n<h4><strong>Work may be disrupted by lack of proper ______.\nAnswer: resources</strong></h4>\n\n<h4><strong>Harassment may be supported by ______.\nAnswer: co-workers</strong></h4>\n\n<h4><strong>Questions 17–21</strong></h4>\n\n<p>[Section 2<br>\nThis is an open question set.<br>\nQuestion type: Short answer.<br>\nThere are 5 questions (17–21).<br>\nAnswers must use NO MORE THAN TWO WORDS from the text.]</p>\n\n<h4><strong>Why should records be kept?\nAnswer: evidence / invaluable evidence</strong></h4>\n\n<p>Who should be contacted if the manager is responsible?<br>\nAnswer: senior management</p>\n\n<h4><strong>What action should employees avoid?\nAnswer: retaliate</strong></h4>\n\n<h4><strong>What should employees avoid doing prematurely?\nAnswer: quit</strong></h4>\n\n<h4><strong>Harassers gain increased ______ if victims leave.\nAnswer: confidence</strong></h4>",
             "tags": []
         },
         {
