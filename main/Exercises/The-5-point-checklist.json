@@ -1,0 +1,223 @@
+{
+    "title": "The 5 point checklist",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Checklist step 1: What is the graph about?",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The graph refers to the percentage of an average income that is received as a minimum wage.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Minimum cost of living in four different countries",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The graph refers to the percentage of an average income that is received as a minimum wage."
+                },
+                {
+                    "text": "Amount of wages received in four different countries",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The graph refers to the percentage of an average income that is received as a minimum wage."
+                },
+                {
+                    "text": "The percentage of an average income that is received as a minimum wage",
+                    "is_correct": true,
+                    "feedback": "Correct! The graph refers to the percentage of an average income that is received as a minimum wage."
+                },
+                {
+                    "text": "The number of workers on minimum wages",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The graph refers to the percentage of an average income that is received as a minimum wage."
+                },
+                {
+                    "text": "Percentage of wages spent in four different countries",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The graph refers to the percentage of an average income that is received as a minimum wage."
+                }
+            ],
+            "options": "Minimum cost of living in four different countries\nAmount of wages received in four different countries\nThe percentage of an average income that is received as a minimum wage\nThe number of workers on minimum wages\nPercentage of wages spent in four different countries",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Checklist step 2: What is on the vertical axis?",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The vertical axis refers to the percentage minimum wages are of the average wage.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Amount of wages",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The vertical axis refers to the percentage minimum wages are of the average wage."
+                },
+                {
+                    "text": "Age of people earning minimum wage",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The vertical axis refers to the percentage minimum wages are of the average wage."
+                },
+                {
+                    "text": "Percentage minimum wages are of the average wage",
+                    "is_correct": true,
+                    "feedback": "Correct! The vertical axis refers to the percentage minimum wages are of the average wage."
+                },
+                {
+                    "text": "The number of workers receiving minimum wage",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The vertical axis refers to the percentage minimum wages are of the average wage."
+                },
+                {
+                    "text": "Percent of people who work for minimum wage",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The vertical axis refers to the percentage minimum wages are of the average wage."
+                }
+            ],
+            "options": "Amount of wages\nAge of people earning minimum wage\nPercentage minimum wages are of the average wage\nThe number of workers receiving minimum wage\nPercent of people who work for minimum wage",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Checklist step 3: What is on the horizontal axis?",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The horizontal axis represents years.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Years",
+                    "is_correct": true,
+                    "feedback": "Correct! The horizontal axis represents years."
+                },
+                {
+                    "text": "Ages",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The horizontal axis represents years."
+                },
+                {
+                    "text": "Dates",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The horizontal axis represents years."
+                },
+                {
+                    "text": "Times",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The horizontal axis represents years."
+                }
+            ],
+            "options": "Years\nAges\nDates\nTimes",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Checklist step 4: Is a specific time given?",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. A specific time is given in the horizontal axis (1940 – 2000).",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Yes",
+                    "is_correct": true,
+                    "feedback": "Correct! A specific time is given in the horizontal axis (1940 – 2000)."
+                },
+                {
+                    "text": "No",
+                    "is_correct": false,
+                    "feedback": "Incorrect. A specific time is given in the horizontal axis (1940 – 2000)."
+                }
+            ],
+            "options": "Yes\nNo",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Checklist step 5: Is there any other information?",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The other information in this graph is that there are four countries (UK, New Zealand, USA and Australia).",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Yes – that there are four continents",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The other information in this graph is that there are four countries (UK, New Zealand, USA and Australia)."
+                },
+                {
+                    "text": "Yes – that there are four ages groups",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The other information in this graph is that there are four countries (UK, New Zealand, USA and Australia)."
+                },
+                {
+                    "text": "Yes – that there are four countries",
+                    "is_correct": true,
+                    "feedback": "Correct! The other information in this graph is that there are four countries (UK, New Zealand, USA and Australia)."
+                },
+                {
+                    "text": "Yes – that there are four levels of income",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The other information in this graph is that there are four countries (UK, New Zealand, USA and Australia)."
+                },
+                {
+                    "text": "Yes – that there are four categories of wages",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The other information in this graph is that there are four countries (UK, New Zealand, USA and Australia)."
+                }
+            ],
+            "options": "Yes – that there are four continents\nYes – that there are four ages groups\nYes – that there are four countries\nYes – that there are four levels of income\nYes – that there are four categories of wages",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_exercise",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "10",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-18 18:15:45",
+        "exported_by": "copilot",
+        "plugin_version": "12.2",
+        "format_version": "1.0"
+    }
+}

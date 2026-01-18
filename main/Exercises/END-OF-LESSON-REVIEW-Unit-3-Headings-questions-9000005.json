@@ -4,10 +4,10 @@
     "questions": [
         {
             "type": "closed_question",
-            "instructions": "The Reading Passage has six paragraphs A-F.\r\n\r\nChoose the correct heading for paragraphs A-D and F from the list of headings below.\r\n\r\nList of headings:\r\ni. Messing about on the water\r\nii. Boat ownership in the city\r\niii. The famous harbour bridge\r\niv. Enjoying the natural side\r\nv. From dining to shopping\r\nvi. Harbourside development\r\nvii. Something for every season\r\nviii. Options in the surrounding area\r\nix. Places to eat",
+            "instructions": "The Reading Passage has six paragraphs A-F.\r\n\r\nChoose the correct heading for paragraphs A-D and F from the list of headings below.\r\n\r\nList of headings:\r\nI. Messing about on the water\r\nII. Boat ownership in the city\r\nIII. The famous harbour bridge\r\nIV. Enjoying the natural side\r\nV. From dining to shopping\r\nVI. Harbourside development\r\nVII. Something for every season\r\nVIII. Options in the surrounding area\r\nIX. Places to eat",
             "question": "Paragraph A",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. Read paragraph A and identify the main theme of the paragraph.",
+            "no_answer_feedback": "Please select an answer. Read Paragraph A carefully and identify which heading best matches the main theme of the paragraph.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -17,52 +17,52 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Messing about on the water",
+                    "text": "I. Messing about on the water",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph A is all about water activities - it mentions the city is 'lapped on all sides by water', describes it as a 'giant aquatic playpen', and talks about ferries, boats, water taxis, and 48 islands for cruising."
                 },
                 {
-                    "text": "ii. Boat ownership in the city",
+                    "text": "II. Boat ownership in the city",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Messing about on the water. Paragraph A focuses on water-based activities, describing the city as a 'giant aquatic playpen' with boats, ferries, islands, and the highest density of pleasure boats in the world."
                 },
                 {
-                    "text": "iii. The famous harbour bridge",
+                    "text": "III. The famous harbour bridge",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Messing about on the water. Paragraph A focuses on water-based activities, describing the city as a 'giant aquatic playpen' with boats, ferries, islands, and the highest density of pleasure boats in the world."
                 },
                 {
-                    "text": "iv. Enjoying the natural side",
+                    "text": "IV. Enjoying the natural side",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Messing about on the water. Paragraph A focuses on water-based activities, describing the city as a 'giant aquatic playpen' with boats, ferries, islands, and the highest density of pleasure boats in the world."
                 },
                 {
-                    "text": "v. From dining to shopping",
+                    "text": "V. From dining to shopping",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Messing about on the water. Paragraph A focuses on water-based activities, describing the city as a 'giant aquatic playpen' with boats, ferries, islands, and the highest density of pleasure boats in the world."
                 },
                 {
-                    "text": "vi. Harbourside development",
+                    "text": "VI. Harbourside development",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Messing about on the water. Paragraph A focuses on water-based activities, describing the city as a 'giant aquatic playpen' with boats, ferries, islands, and the highest density of pleasure boats in the world."
                 },
                 {
-                    "text": "vii. Something for every season",
+                    "text": "VII. Something for every season",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Messing about on the water. Paragraph A focuses on water-based activities, describing the city as a 'giant aquatic playpen' with boats, ferries, islands, and the highest density of pleasure boats in the world."
                 },
                 {
-                    "text": "viii. Options in the surrounding area",
+                    "text": "VIII. Options in the surrounding area",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Messing about on the water. Paragraph A focuses on water-based activities, describing the city as a 'giant aquatic playpen' with boats, ferries, islands, and the highest density of pleasure boats in the world."
                 },
                 {
-                    "text": "ix. Places to eat",
+                    "text": "IX. Places to eat",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Messing about on the water. Paragraph A focuses on water-based activities, describing the city as a 'giant aquatic playpen' with boats, ferries, islands, and the highest density of pleasure boats in the world."
                 }
             ],
-            "options": "i. Messing about on the water\nii. Boat ownership in the city\niii. The famous harbour bridge\niv. Enjoying the natural side\nv. From dining to shopping\nvi. Harbourside development\nvii. Something for every season\nviii. Options in the surrounding area\nix. Places to eat",
+            "options": "I. Messing about on the water\nII. Boat ownership in the city\nIII. The famous harbour bridge\nIV. Enjoying the natural side\nV. From dining to shopping\nVI. Harbourside development\nVII. Something for every season\nVIII. Options in the surrounding area\nIX. Places to eat",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -71,7 +71,7 @@
             "instructions": "",
             "question": "Paragraph B",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. Read paragraph B and identify the main theme of the paragraph.",
+            "no_answer_feedback": "Please select an answer. Read Paragraph B carefully and identify which heading best matches the main theme of the paragraph.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -81,52 +81,52 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Messing about on the water",
+                    "text": "I. Messing about on the water",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Something for every season. Paragraph B discusses events and festivals throughout the year, including summer activities, winter sports, and seasonal celebrations like the Chinese Lantern festival and New Year concerts."
+                },
+                {
+                    "text": "II. Boat ownership in the city",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Something for every season. Paragraph B discusses events and festivals throughout the year, including summer activities, winter sports, and seasonal celebrations like the Chinese Lantern festival and New Year concerts."
+                },
+                {
+                    "text": "III. The famous harbour bridge",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Something for every season. Paragraph B discusses events and festivals throughout the year, including summer activities, winter sports, and seasonal celebrations like the Chinese Lantern festival and New Year concerts."
+                },
+                {
+                    "text": "IV. Enjoying the natural side",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Something for every season. Paragraph B discusses events and festivals throughout the year, including summer activities, winter sports, and seasonal celebrations like the Chinese Lantern festival and New Year concerts."
+                },
+                {
+                    "text": "V. From dining to shopping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Something for every season. Paragraph B discusses events and festivals throughout the year, including summer activities, winter sports, and seasonal celebrations like the Chinese Lantern festival and New Year concerts."
+                },
+                {
+                    "text": "VI. Harbourside development",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Something for every season. Paragraph B discusses events and festivals throughout the year, including summer activities, winter sports, and seasonal celebrations like the Chinese Lantern festival and New Year concerts."
+                },
+                {
+                    "text": "VII. Something for every season",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph B describes Auckland's seasonal attractions and year-round events, mentioning 'summer best between January and April', winter rugby games, and 'no matter when, Auckland always has an event or festival to celebrate'."
                 },
                 {
-                    "text": "ii. Boat ownership in the city",
+                    "text": "VIII. Options in the surrounding area",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VII. Something for every season. Paragraph B discusses events and festivals throughout the year, including summer activities, winter sports, and seasonal celebrations like the Chinese Lantern festival and New Year concerts."
                 },
                 {
-                    "text": "iii. The famous harbour bridge",
+                    "text": "IX. Places to eat",
                     "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "iv. Enjoying the natural side",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "v. From dining to shopping",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "vi. Harbourside development",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "vii. Something for every season",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "viii. Options in the surrounding area",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "ix. Places to eat",
-                    "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VII. Something for every season. Paragraph B discusses events and festivals throughout the year, including summer activities, winter sports, and seasonal celebrations like the Chinese Lantern festival and New Year concerts."
                 }
             ],
-            "options": "i. Messing about on the water\nii. Boat ownership in the city\niii. The famous harbour bridge\niv. Enjoying the natural side\nv. From dining to shopping\nvi. Harbourside development\nvii. Something for every season\nviii. Options in the surrounding area\nix. Places to eat",
+            "options": "I. Messing about on the water\nII. Boat ownership in the city\nIII. The famous harbour bridge\nIV. Enjoying the natural side\nV. From dining to shopping\nVI. Harbourside development\nVII. Something for every season\nVIII. Options in the surrounding area\nIX. Places to eat",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -135,7 +135,7 @@
             "instructions": "",
             "question": "Paragraph C",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. Read paragraph C and identify the main theme of the paragraph.",
+            "no_answer_feedback": "Please select an answer. Read Paragraph C carefully and identify which heading best matches the main theme of the paragraph.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -145,52 +145,52 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Messing about on the water",
+                    "text": "I. Messing about on the water",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI. Harbourside development. Paragraph C discusses the building boom triggered by the America's Cup, including the creation of Viaduct Harbour with new restaurants, hotels, and a convention centre."
+                },
+                {
+                    "text": "II. Boat ownership in the city",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI. Harbourside development. Paragraph C discusses the building boom triggered by the America's Cup, including the creation of Viaduct Harbour with new restaurants, hotels, and a convention centre."
+                },
+                {
+                    "text": "III. The famous harbour bridge",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI. Harbourside development. Paragraph C discusses the building boom triggered by the America's Cup, including the creation of Viaduct Harbour with new restaurants, hotels, and a convention centre."
+                },
+                {
+                    "text": "IV. Enjoying the natural side",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI. Harbourside development. Paragraph C discusses the building boom triggered by the America's Cup, including the creation of Viaduct Harbour with new restaurants, hotels, and a convention centre."
+                },
+                {
+                    "text": "V. From dining to shopping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VI. Harbourside development. Paragraph C discusses the building boom triggered by the America's Cup, including the creation of Viaduct Harbour with new restaurants, hotels, and a convention centre."
+                },
+                {
+                    "text": "VI. Harbourside development",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph C focuses on development and changes to the city, specifically mentioning 'ongoing building and additions', the America's Cup bringing 'a citywide spruce-up', and 'the creation of a swanky new Viaduct Harbour village' with restaurants, hotels, and a convention centre."
                 },
                 {
-                    "text": "ii. Boat ownership in the city",
+                    "text": "VII. Something for every season",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VI. Harbourside development. Paragraph C discusses the building boom triggered by the America's Cup, including the creation of Viaduct Harbour with new restaurants, hotels, and a convention centre."
                 },
                 {
-                    "text": "iii. The famous harbour bridge",
+                    "text": "VIII. Options in the surrounding area",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VI. Harbourside development. Paragraph C discusses the building boom triggered by the America's Cup, including the creation of Viaduct Harbour with new restaurants, hotels, and a convention centre."
                 },
                 {
-                    "text": "iv. Enjoying the natural side",
+                    "text": "IX. Places to eat",
                     "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "v. From dining to shopping",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "vi. Harbourside development",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "vii. Something for every season",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "viii. Options in the surrounding area",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "ix. Places to eat",
-                    "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VI. Harbourside development. Paragraph C discusses the building boom triggered by the America's Cup, including the creation of Viaduct Harbour with new restaurants, hotels, and a convention centre."
                 }
             ],
-            "options": "i. Messing about on the water\nii. Boat ownership in the city\niii. The famous harbour bridge\niv. Enjoying the natural side\nv. From dining to shopping\nvi. Harbourside development\nvii. Something for every season\nviii. Options in the surrounding area\nix. Places to eat",
+            "options": "I. Messing about on the water\nII. Boat ownership in the city\nIII. The famous harbour bridge\nIV. Enjoying the natural side\nV. From dining to shopping\nVI. Harbourside development\nVII. Something for every season\nVIII. Options in the surrounding area\nIX. Places to eat",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -199,7 +199,7 @@
             "instructions": "",
             "question": "Paragraph D",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. Read paragraph D and identify the main theme of the paragraph.",
+            "no_answer_feedback": "Please select an answer. Read Paragraph D carefully and identify which heading best matches the main theme of the paragraph.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -209,52 +209,52 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Messing about on the water",
+                    "text": "I. Messing about on the water",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VIII. Options in the surrounding area. Paragraph D discusses the North Shore region across the harbour, including Devonport village, Mt Victoria, North Head, and beaches extending beyond the city centre."
+                },
+                {
+                    "text": "II. Boat ownership in the city",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VIII. Options in the surrounding area. Paragraph D discusses the North Shore region across the harbour, including Devonport village, Mt Victoria, North Head, and beaches extending beyond the city centre."
+                },
+                {
+                    "text": "III. The famous harbour bridge",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VIII. Options in the surrounding area. Paragraph D discusses the North Shore region across the harbour, including Devonport village, Mt Victoria, North Head, and beaches extending beyond the city centre."
+                },
+                {
+                    "text": "IV. Enjoying the natural side",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VIII. Options in the surrounding area. Paragraph D discusses the North Shore region across the harbour, including Devonport village, Mt Victoria, North Head, and beaches extending beyond the city centre."
+                },
+                {
+                    "text": "V. From dining to shopping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VIII. Options in the surrounding area. Paragraph D discusses the North Shore region across the harbour, including Devonport village, Mt Victoria, North Head, and beaches extending beyond the city centre."
+                },
+                {
+                    "text": "VI. Harbourside development",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VIII. Options in the surrounding area. Paragraph D discusses the North Shore region across the harbour, including Devonport village, Mt Victoria, North Head, and beaches extending beyond the city centre."
+                },
+                {
+                    "text": "VII. Something for every season",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VIII. Options in the surrounding area. Paragraph D discusses the North Shore region across the harbour, including Devonport village, Mt Victoria, North Head, and beaches extending beyond the city centre."
+                },
+                {
+                    "text": "VIII. Options in the surrounding area",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph D explores areas beyond the city centre, specifically the North Shore across the Harbour Bridge, Devonport village, Mt Victoria, North Head, and beaches stretching north-east 'for over 10 kilometres from the middle of the city'."
                 },
                 {
-                    "text": "ii. Boat ownership in the city",
+                    "text": "IX. Places to eat",
                     "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "iii. The famous harbour bridge",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "iv. Enjoying the natural side",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "v. From dining to shopping",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "vi. Harbourside development",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "vii. Something for every season",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "viii. Options in the surrounding area",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "ix. Places to eat",
-                    "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VIII. Options in the surrounding area. Paragraph D discusses the North Shore region across the harbour, including Devonport village, Mt Victoria, North Head, and beaches extending beyond the city centre."
                 }
             ],
-            "options": "i. Messing about on the water\nii. Boat ownership in the city\niii. The famous harbour bridge\niv. Enjoying the natural side\nv. From dining to shopping\nvi. Harbourside development\nvii. Something for every season\nviii. Options in the surrounding area\nix. Places to eat",
+            "options": "I. Messing about on the water\nII. Boat ownership in the city\nIII. The famous harbour bridge\nIV. Enjoying the natural side\nV. From dining to shopping\nVI. Harbourside development\nVII. Something for every season\nVIII. Options in the surrounding area\nIX. Places to eat",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -263,7 +263,7 @@
             "instructions": "",
             "question": "Paragraph F",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. Read paragraph F and identify the main theme of the paragraph.",
+            "no_answer_feedback": "Please select an answer. Read Paragraph F carefully and identify which heading best matches the main theme of the paragraph.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -273,61 +273,61 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Messing about on the water",
+                    "text": "I. Messing about on the water",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV. Enjoying the natural side. Paragraph F focuses on natural attractions like fishing, national parks, scented gardens, One Tree Hill volcano, beaches, parks, and vineyards."
+                },
+                {
+                    "text": "II. Boat ownership in the city",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV. Enjoying the natural side. Paragraph F focuses on natural attractions like fishing, national parks, scented gardens, One Tree Hill volcano, beaches, parks, and vineyards."
+                },
+                {
+                    "text": "III. The famous harbour bridge",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV. Enjoying the natural side. Paragraph F focuses on natural attractions like fishing, national parks, scented gardens, One Tree Hill volcano, beaches, parks, and vineyards."
+                },
+                {
+                    "text": "IV. Enjoying the natural side",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph F emphasizes natural activities and outdoor spaces - fishing, tramping in a national park, gardens with roses, One Tree Hill volcano, beach walks, parks, vineyards, and 'wide open spaces'."
                 },
                 {
-                    "text": "ii. Boat ownership in the city",
+                    "text": "V. From dining to shopping",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is IV. Enjoying the natural side. Paragraph F focuses on natural attractions like fishing, national parks, scented gardens, One Tree Hill volcano, beaches, parks, and vineyards."
                 },
                 {
-                    "text": "iii. The famous harbour bridge",
+                    "text": "VI. Harbourside development",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is IV. Enjoying the natural side. Paragraph F focuses on natural attractions like fishing, national parks, scented gardens, One Tree Hill volcano, beaches, parks, and vineyards."
                 },
                 {
-                    "text": "iv. Enjoying the natural side",
+                    "text": "VII. Something for every season",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is IV. Enjoying the natural side. Paragraph F focuses on natural attractions like fishing, national parks, scented gardens, One Tree Hill volcano, beaches, parks, and vineyards."
                 },
                 {
-                    "text": "v. From dining to shopping",
+                    "text": "VIII. Options in the surrounding area",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is IV. Enjoying the natural side. Paragraph F focuses on natural attractions like fishing, national parks, scented gardens, One Tree Hill volcano, beaches, parks, and vineyards."
                 },
                 {
-                    "text": "vi. Harbourside development",
+                    "text": "IX. Places to eat",
                     "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "vii. Something for every season",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "viii. Options in the surrounding area",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "ix. Places to eat",
-                    "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is IV. Enjoying the natural side. Paragraph F focuses on natural attractions like fishing, national parks, scented gardens, One Tree Hill volcano, beaches, parks, and vineyards."
                 }
             ],
-            "options": "i. Messing about on the water\nii. Boat ownership in the city\niii. The famous harbour bridge\niv. Enjoying the natural side\nv. From dining to shopping\nvi. Harbourside development\nvii. Something for every season\nviii. Options in the surrounding area\nix. Places to eat",
+            "options": "I. Messing about on the water\nII. Boat ownership in the city\nIII. The famous harbour bridge\nIV. Enjoying the natural side\nV. From dining to shopping\nVI. Harbourside development\nVII. Something for every season\nVIII. Options in the surrounding area\nIX. Places to eat",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
-            "instructions": "The Reading Passage has seven paragraphs A-G.\r\n\r\nChoose the correct heading for paragraphs A-C and E-F from the list of headings below.\r\n\r\nList of headings:\r\ni. Caution in the future\r\nii. Parameters and purpose of the project\r\niii. History of genetic engineering\r\niv. Impact and potential of the project\r\nv. Research and resources\r\nvi. Impact of the project in the UK\r\nvii. Freedom of information\r\nviii. Designer babies or rights of the unborn?",
+            "instructions": "The Reading Passage has seven paragraphs A-G.\r\n\r\nChoose the correct heading for paragraphs A-C and E-F from the list of headings below.\r\n\r\nList of headings:\r\nI. Caution in the future\r\nII. Parameters and purpose of the project\r\nIII. History of genetic engineering\r\nIV. Impact and potential of the project\r\nV. Research and resources\r\nVI. Impact of the project in the UK\r\nVII. Freedom of information\r\nVIII. Designer babies or rights of the unborn?",
             "question": "Paragraph A",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. Read paragraph A and identify the main theme of the paragraph.",
+            "no_answer_feedback": "Please select an answer. Read Paragraph A carefully and identify which heading best matches the main theme of the paragraph.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -337,47 +337,47 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Caution in the future",
+                    "text": "I. Caution in the future",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is II. Parameters and purpose of the project. Paragraph A describes what the HGP aims to achieve (identify and locate all human genes within ten years) and mentions UNESCO establishing boundaries for the project."
+                },
+                {
+                    "text": "II. Parameters and purpose of the project",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph A defines the Human Genome Project's parameters - it 'aims to identify and locate all human genes by determining the entire sequence of the human genome within the next ten years' and mentions UNESCO establishing boundaries for the project."
                 },
                 {
-                    "text": "ii. Parameters and purpose of the project",
+                    "text": "III. History of genetic engineering",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is II. Parameters and purpose of the project. Paragraph A describes what the HGP aims to achieve (identify and locate all human genes within ten years) and mentions UNESCO establishing boundaries for the project."
                 },
                 {
-                    "text": "iii. History of genetic engineering",
+                    "text": "IV. Impact and potential of the project",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is II. Parameters and purpose of the project. Paragraph A describes what the HGP aims to achieve (identify and locate all human genes within ten years) and mentions UNESCO establishing boundaries for the project."
                 },
                 {
-                    "text": "iv. Impact and potential of the project",
+                    "text": "V. Research and resources",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is II. Parameters and purpose of the project. Paragraph A describes what the HGP aims to achieve (identify and locate all human genes within ten years) and mentions UNESCO establishing boundaries for the project."
                 },
                 {
-                    "text": "v. Research and resources",
+                    "text": "VI. Impact of the project in the UK",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is II. Parameters and purpose of the project. Paragraph A describes what the HGP aims to achieve (identify and locate all human genes within ten years) and mentions UNESCO establishing boundaries for the project."
                 },
                 {
-                    "text": "vi. Impact of the project in the UK",
+                    "text": "VII. Freedom of information",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is II. Parameters and purpose of the project. Paragraph A describes what the HGP aims to achieve (identify and locate all human genes within ten years) and mentions UNESCO establishing boundaries for the project."
                 },
                 {
-                    "text": "vii. Freedom of information",
+                    "text": "VIII. Designer babies or rights of the unborn?",
                     "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "viii. Designer babies or rights of the unborn?",
-                    "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is II. Parameters and purpose of the project. Paragraph A describes what the HGP aims to achieve (identify and locate all human genes within ten years) and mentions UNESCO establishing boundaries for the project."
                 }
             ],
-            "options": "i. Caution in the future\nii. Parameters and purpose of the project\niii. History of genetic engineering\niv. Impact and potential of the project\nv. Research and resources\nvi. Impact of the project in the UK\nvii. Freedom of information\nviii. Designer babies or rights of the unborn?",
+            "options": "I. Caution in the future\nII. Parameters and purpose of the project\nIII. History of genetic engineering\nIV. Impact and potential of the project\nV. Research and resources\nVI. Impact of the project in the UK\nVII. Freedom of information\nVIII. Designer babies or rights of the unborn?",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -386,7 +386,7 @@
             "instructions": "",
             "question": "Paragraph B",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. Read paragraph B and identify the main theme of the paragraph.",
+            "no_answer_feedback": "Please select an answer. Read Paragraph B carefully and identify which heading best matches the main theme of the paragraph.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -396,47 +396,47 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Caution in the future",
+                    "text": "I. Caution in the future",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV. Impact and potential of the project. Paragraph B discusses the 'astounding effects' of the HGP, including major technological advances and potential to revolutionize medicine, gene testing, and treatment of genetic diseases."
+                },
+                {
+                    "text": "II. Parameters and purpose of the project",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV. Impact and potential of the project. Paragraph B discusses the 'astounding effects' of the HGP, including major technological advances and potential to revolutionize medicine, gene testing, and treatment of genetic diseases."
+                },
+                {
+                    "text": "III. History of genetic engineering",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is IV. Impact and potential of the project. Paragraph B discusses the 'astounding effects' of the HGP, including major technological advances and potential to revolutionize medicine, gene testing, and treatment of genetic diseases."
+                },
+                {
+                    "text": "IV. Impact and potential of the project",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph B emphasizes the 'astounding effects' of the project, including technological advances, and states that future applications 'could revolutionise future biological research' and lead to understanding genetic diseases and new medical practices."
                 },
                 {
-                    "text": "ii. Parameters and purpose of the project",
+                    "text": "V. Research and resources",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is IV. Impact and potential of the project. Paragraph B discusses the 'astounding effects' of the HGP, including major technological advances and potential to revolutionize medicine, gene testing, and treatment of genetic diseases."
                 },
                 {
-                    "text": "iii. History of genetic engineering",
+                    "text": "VI. Impact of the project in the UK",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is IV. Impact and potential of the project. Paragraph B discusses the 'astounding effects' of the HGP, including major technological advances and potential to revolutionize medicine, gene testing, and treatment of genetic diseases."
                 },
                 {
-                    "text": "iv. Impact and potential of the project",
+                    "text": "VII. Freedom of information",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is IV. Impact and potential of the project. Paragraph B discusses the 'astounding effects' of the HGP, including major technological advances and potential to revolutionize medicine, gene testing, and treatment of genetic diseases."
                 },
                 {
-                    "text": "v. Research and resources",
+                    "text": "VIII. Designer babies or rights of the unborn?",
                     "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "vi. Impact of the project in the UK",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "vii. Freedom of information",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "viii. Designer babies or rights of the unborn?",
-                    "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is IV. Impact and potential of the project. Paragraph B discusses the 'astounding effects' of the HGP, including major technological advances and potential to revolutionize medicine, gene testing, and treatment of genetic diseases."
                 }
             ],
-            "options": "i. Caution in the future\nii. Parameters and purpose of the project\niii. History of genetic engineering\niv. Impact and potential of the project\nv. Research and resources\nvi. Impact of the project in the UK\nvii. Freedom of information\nviii. Designer babies or rights of the unborn?",
+            "options": "I. Caution in the future\nII. Parameters and purpose of the project\nIII. History of genetic engineering\nIV. Impact and potential of the project\nV. Research and resources\nVI. Impact of the project in the UK\nVII. Freedom of information\nVIII. Designer babies or rights of the unborn?",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -445,7 +445,7 @@
             "instructions": "",
             "question": "Paragraph C",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. Read paragraph C and identify the main theme of the paragraph.",
+            "no_answer_feedback": "Please select an answer. Read Paragraph C carefully and identify which heading best matches the main theme of the paragraph.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -455,47 +455,47 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Caution in the future",
+                    "text": "I. Caution in the future",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Freedom of information. Paragraph C discusses UNESCO's support for informed consent and 'the right of an individual to decide whether or not to be informed of information relating to their genetic profile'."
+                },
+                {
+                    "text": "II. Parameters and purpose of the project",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Freedom of information. Paragraph C discusses UNESCO's support for informed consent and 'the right of an individual to decide whether or not to be informed of information relating to their genetic profile'."
+                },
+                {
+                    "text": "III. History of genetic engineering",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Freedom of information. Paragraph C discusses UNESCO's support for informed consent and 'the right of an individual to decide whether or not to be informed of information relating to their genetic profile'."
+                },
+                {
+                    "text": "IV. Impact and potential of the project",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Freedom of information. Paragraph C discusses UNESCO's support for informed consent and 'the right of an individual to decide whether or not to be informed of information relating to their genetic profile'."
+                },
+                {
+                    "text": "V. Research and resources",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Freedom of information. Paragraph C discusses UNESCO's support for informed consent and 'the right of an individual to decide whether or not to be informed of information relating to their genetic profile'."
+                },
+                {
+                    "text": "VI. Impact of the project in the UK",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VII. Freedom of information. Paragraph C discusses UNESCO's support for informed consent and 'the right of an individual to decide whether or not to be informed of information relating to their genetic profile'."
+                },
+                {
+                    "text": "VII. Freedom of information",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph C focuses on informed consent and the individual's right to information, stating UNESCO 'supports the right of an individual to decide whether or not to be informed of information relating to their genetic profile'."
                 },
                 {
-                    "text": "ii. Parameters and purpose of the project",
+                    "text": "VIII. Designer babies or rights of the unborn?",
                     "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "iii. History of genetic engineering",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "iv. Impact and potential of the project",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "v. Research and resources",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "vi. Impact of the project in the UK",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "vii. Freedom of information",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "viii. Designer babies or rights of the unborn?",
-                    "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is VII. Freedom of information. Paragraph C discusses UNESCO's support for informed consent and 'the right of an individual to decide whether or not to be informed of information relating to their genetic profile'."
                 }
             ],
-            "options": "i. Caution in the future\nii. Parameters and purpose of the project\niii. History of genetic engineering\niv. Impact and potential of the project\nv. Research and resources\nvi. Impact of the project in the UK\nvii. Freedom of information\nviii. Designer babies or rights of the unborn?",
+            "options": "I. Caution in the future\nII. Parameters and purpose of the project\nIII. History of genetic engineering\nIV. Impact and potential of the project\nV. Research and resources\nVI. Impact of the project in the UK\nVII. Freedom of information\nVIII. Designer babies or rights of the unborn?",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -504,7 +504,7 @@
             "instructions": "",
             "question": "Paragraph E",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. Read paragraph E and identify the main theme of the paragraph.",
+            "no_answer_feedback": "Please select an answer. Read Paragraph E carefully and identify which heading best matches the main theme of the paragraph.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -514,47 +514,47 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Caution in the future",
+                    "text": "I. Caution in the future",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VIII. Designer babies or rights of the unborn? Paragraph E discusses reproductive issues including prenatal testing, abortion based on genetic disorders, and concerns about testing unborn infants who cannot give consent."
+                },
+                {
+                    "text": "II. Parameters and purpose of the project",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VIII. Designer babies or rights of the unborn? Paragraph E discusses reproductive issues including prenatal testing, abortion based on genetic disorders, and concerns about testing unborn infants who cannot give consent."
+                },
+                {
+                    "text": "III. History of genetic engineering",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VIII. Designer babies or rights of the unborn? Paragraph E discusses reproductive issues including prenatal testing, abortion based on genetic disorders, and concerns about testing unborn infants who cannot give consent."
+                },
+                {
+                    "text": "IV. Impact and potential of the project",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VIII. Designer babies or rights of the unborn? Paragraph E discusses reproductive issues including prenatal testing, abortion based on genetic disorders, and concerns about testing unborn infants who cannot give consent."
+                },
+                {
+                    "text": "V. Research and resources",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VIII. Designer babies or rights of the unborn? Paragraph E discusses reproductive issues including prenatal testing, abortion based on genetic disorders, and concerns about testing unborn infants who cannot give consent."
+                },
+                {
+                    "text": "VI. Impact of the project in the UK",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VIII. Designer babies or rights of the unborn? Paragraph E discusses reproductive issues including prenatal testing, abortion based on genetic disorders, and concerns about testing unborn infants who cannot give consent."
+                },
+                {
+                    "text": "VII. Freedom of information",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is VIII. Designer babies or rights of the unborn? Paragraph E discusses reproductive issues including prenatal testing, abortion based on genetic disorders, and concerns about testing unborn infants who cannot give consent."
+                },
+                {
+                    "text": "VIII. Designer babies or rights of the unborn?",
                     "is_correct": true,
-                    "feedback": ""
-                },
-                {
-                    "text": "ii. Parameters and purpose of the project",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "iii. History of genetic engineering",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "iv. Impact and potential of the project",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "v. Research and resources",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "vi. Impact of the project in the UK",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "vii. Freedom of information",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "viii. Designer babies or rights of the unborn?",
-                    "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph E addresses reproductive ethics, asking 'Is abortion on the basis of genetic disorder acceptable?', discussing testing unborn infants, and mentioning potential discrimination against infants with 'undesirable' genes - all relating to rights of the unborn."
                 }
             ],
-            "options": "i. Caution in the future\nii. Parameters and purpose of the project\niii. History of genetic engineering\niv. Impact and potential of the project\nv. Research and resources\nvi. Impact of the project in the UK\nvii. Freedom of information\nviii. Designer babies or rights of the unborn?",
+            "options": "I. Caution in the future\nII. Parameters and purpose of the project\nIII. History of genetic engineering\nIV. Impact and potential of the project\nV. Research and resources\nVI. Impact of the project in the UK\nVII. Freedom of information\nVIII. Designer babies or rights of the unborn?",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -563,7 +563,7 @@
             "instructions": "",
             "question": "Paragraph F",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. Read paragraph F and identify the main theme of the paragraph.",
+            "no_answer_feedback": "Please select an answer. Read Paragraph F carefully and identify which heading best matches the main theme of the paragraph.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -573,47 +573,47 @@
             "ielts_question_category": "",
             "mc_options": [
                 {
-                    "text": "i. Caution in the future",
+                    "text": "I. Caution in the future",
                     "is_correct": true,
-                    "feedback": ""
+                    "feedback": "Correct! Paragraph F warns about future threats, stating 'it has the potential to provide us with consequences that have not yet been considered' and argues that 'the advancement of our knowledge...is progressing faster than our ability to regulate its impact'."
                 },
                 {
-                    "text": "ii. Parameters and purpose of the project",
+                    "text": "II. Parameters and purpose of the project",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Caution in the future. Paragraph F warns that the project 'has the potential to provide us with consequences that have not yet been considered' and emphasizes the need for regulation and widespread education."
                 },
                 {
-                    "text": "iii. History of genetic engineering",
+                    "text": "III. History of genetic engineering",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Caution in the future. Paragraph F warns that the project 'has the potential to provide us with consequences that have not yet been considered' and emphasizes the need for regulation and widespread education."
                 },
                 {
-                    "text": "iv. Impact and potential of the project",
+                    "text": "IV. Impact and potential of the project",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Caution in the future. Paragraph F warns that the project 'has the potential to provide us with consequences that have not yet been considered' and emphasizes the need for regulation and widespread education."
                 },
                 {
-                    "text": "v. Research and resources",
+                    "text": "V. Research and resources",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Caution in the future. Paragraph F warns that the project 'has the potential to provide us with consequences that have not yet been considered' and emphasizes the need for regulation and widespread education."
                 },
                 {
-                    "text": "vi. Impact of the project in the UK",
+                    "text": "VI. Impact of the project in the UK",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Caution in the future. Paragraph F warns that the project 'has the potential to provide us with consequences that have not yet been considered' and emphasizes the need for regulation and widespread education."
                 },
                 {
-                    "text": "vii. Freedom of information",
+                    "text": "VII. Freedom of information",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Caution in the future. Paragraph F warns that the project 'has the potential to provide us with consequences that have not yet been considered' and emphasizes the need for regulation and widespread education."
                 },
                 {
-                    "text": "viii. Designer babies or rights of the unborn?",
+                    "text": "VIII. Designer babies or rights of the unborn?",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is I. Caution in the future. Paragraph F warns that the project 'has the potential to provide us with consequences that have not yet been considered' and emphasizes the need for regulation and widespread education."
                 }
             ],
-            "options": "i. Caution in the future\nii. Parameters and purpose of the project\niii. History of genetic engineering\niv. Impact and potential of the project\nv. Research and resources\nvi. Impact of the project in the UK\nvii. Freedom of information\nviii. Designer babies or rights of the unborn?",
+            "options": "I. Caution in the future\nII. Parameters and purpose of the project\nIII. History of genetic engineering\nIV. Impact and potential of the project\nV. Research and resources\nVI. Impact of the project in the UK\nVII. Freedom of information\nVIII. Designer babies or rights of the unborn?",
             "correct_answer_count": 1,
             "show_option_letters": false
         }
