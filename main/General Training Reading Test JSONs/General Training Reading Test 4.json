@@ -4,166 +4,10 @@
     "questions": [
         {
             "type": "closed_question",
-            "instructions": "Questions 1–4\n\nMatch each statement to the correct category. Write the correct letter A, B, C, or D.",
-            "question": "1. Should only be packaged in boxes.",
+            "instructions": "Questions 1–7\n\nDo the following statements agree with the information given in the reading passage?\n\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.",
+            "question": "On Wednesdays, Abdominal Strengthening is the shortest class.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is A: Miscellaneous items.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Miscellaneous items",
-                    "is_correct": true,
-                    "feedback": "Correct! Miscellaneous items should be placed in boxes with names clearly written on the box."
-                },
-                {
-                    "text": "B: Kitchenware",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
-                },
-                {
-                    "text": "C: Clothes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
-                },
-                {
-                    "text": "D: Books",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
-                }
-            ],
-            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "2. The school does not have many of these items to sell at the moment.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B: Kitchenware.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Miscellaneous items",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
-                },
-                {
-                    "text": "B: Kitchenware",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states that Kitchenware items are currently in short supply."
-                },
-                {
-                    "text": "C: Clothes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
-                },
-                {
-                    "text": "D: Books",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
-                }
-            ],
-            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "3. Should be labelled in one of three ways.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C: Clothes.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Miscellaneous items",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
-                },
-                {
-                    "text": "B: Kitchenware",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
-                },
-                {
-                    "text": "C: Clothes",
-                    "is_correct": true,
-                    "feedback": "Correct! Clothes should be marked as 'For Men', 'For Women' or 'For Children'."
-                },
-                {
-                    "text": "D: Books",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
-                }
-            ],
-            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "4. The school wants more of these which would be suitable for youngsters.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is D: Books.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Miscellaneous items",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
-                },
-                {
-                    "text": "B: Kitchenware",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
-                },
-                {
-                    "text": "C: Clothes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
-                },
-                {
-                    "text": "D: Books",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states they are especially looking for children's novels."
-                }
-            ],
-            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 5–9\n\nDo the following statements agree with the information given in Reading Text 1?\n\nWrite TRUE, FALSE or NOT GIVEN.",
-            "question": "5. The event is being held to raise money for school facilities.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -175,17 +19,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
+                    "feedback": ""
                 },
                 {
                     "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
+                    "is_correct": false,
+                    "feedback": ""
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
+                    "feedback": ""
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -195,9 +39,9 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "6. The school is collecting fresh fruit and vegetables to donate to a homeless shelter.",
+            "question": "The Monday class held in the Indoor Sports Hall is only open to private members.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -209,17 +53,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
+                    "feedback": ""
                 },
                 {
                     "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
+                    "is_correct": false,
+                    "feedback": ""
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
+                    "feedback": ""
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -229,9 +73,9 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "7. Items will be picked up by volunteers between 9.30am and 3.00pm.",
+            "question": "Only one Tuesday class takes place outdoors.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -243,17 +87,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
+                    "feedback": ""
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
+                    "feedback": ""
                 },
                 {
                     "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
+                    "is_correct": false,
+                    "feedback": ""
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -263,43 +107,9 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "8. Mr William Taylor will make arrangements for items to be collected.",
+            "question": "Aerobics and Tae Kwon Do last for the same length of time.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "9. All helpers for the event are now confirmed.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -311,17 +121,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
+                    "feedback": ""
                 },
                 {
                     "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
+                    "is_correct": false,
+                    "feedback": ""
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
+                    "feedback": ""
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -330,1125 +140,403 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 10–14\n\nMatch each book to the correct description. Write the correct Roman numeral I–IX.\n\nAn example is provided below:\n\nExample: Book A - I",
-            "question": "10. Book B",
+            "instructions": "",
+            "question": "There is only one class held before midday on each weekday.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is II: A book about European artists. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'",
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "No previous experience is required to attend the Friday Yoga class.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Fewer classes are available during university holidays.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 8–10\n\nChoose the correct letter, A, B, C, or D.",
+            "question": "Members who upset other users of the leisure centre",
+            "points": 1,
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": true,
-                    "feedback": "Correct! Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "11. Book C",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is III: A book for secondary school students. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": true,
-                    "feedback": "Correct! Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "12. Book D",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is IV: A book for those who enjoy walking. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": true,
-                    "feedback": "Correct! Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "13. Book F",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is VI: A book comparing two ancient civilizations' art. Book F is 'An academic comparison of ancient Egyptian and Greek art.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": true,
-                    "feedback": "Correct! Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "14. Book G",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is VII: A book with activities for children. Book G is 'A creative activity book for children, covering art and craft projects.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "I: A book for young children who are learning to read",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "II: A book about European artists",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "III: A book for secondary school students",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "IV: A book for those who enjoy walking",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "V: A book for those who like outdoor activities and camping",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "VI: A book comparing two ancient civilizations' art",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "VII: A book with activities for children",
-                    "is_correct": true,
-                    "feedback": "Correct! Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "VIII: A book about hiking in Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                },
-                {
-                    "text": "IX: A book about classical music",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
-                }
-            ],
-            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 15–17\n\nMatch each statement to the correct week. Write the correct letter A–D.\n\nAnswer options may be used more than once.",
-            "question": "15. The first assignment must be completed.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C: Week 3. Week 3 states that trainees 'submit Assignment 1'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Week 1",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
-                },
-                {
-                    "text": "B: Week 2",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
-                },
-                {
-                    "text": "C: Week 3",
-                    "is_correct": true,
-                    "feedback": "Correct! Week 3 states that trainees 'submit Assignment 1'."
-                },
-                {
-                    "text": "D: Week 4",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
-                }
-            ],
-            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "16. The first assessed teaching is done.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C: Week 3. Week 3 states trainees 'are formally assessed' for the first time.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Week 1",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
-                },
-                {
-                    "text": "B: Week 2",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
-                },
-                {
-                    "text": "C: Week 3",
-                    "is_correct": true,
-                    "feedback": "Correct! Week 3 states trainees 'are formally assessed' for the first time."
-                },
-                {
-                    "text": "D: Week 4",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
-                }
-            ],
-            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "17. Different ways of teaching are demonstrated.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is A: Week 1. Week 1 covers 'Introduction to different teaching methodologies and styles'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Week 1",
-                    "is_correct": true,
-                    "feedback": "Correct! Week 1 covers 'Introduction to different teaching methodologies and styles'."
-                },
-                {
-                    "text": "B: Week 2",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
-                },
-                {
-                    "text": "C: Week 3",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
-                },
-                {
-                    "text": "D: Week 4",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
-                }
-            ],
-            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 18–20\n\nDo the following statements agree with the information given in Reading Text 3?\n\nWrite TRUE, FALSE or NOT GIVEN.",
-            "question": "18. Assignment 1 can be handwritten.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "19. The grammar training is easy for native speakers.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "20. The fourth week has the most trainees quitting the course.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 21–23\n\nChoose the correct letter A, B, C, or D.",
-            "question": "21. Staff…",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is D: must attend three sessions. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "multiple_choice",
             "mc_options": [
                 {
-                    "text": "A: must attend all sessions",
+                    "text": "A. will be reported to the Club Manager",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                    "feedback": ""
                 },
                 {
-                    "text": "B: must attend only the first and second session",
+                    "text": "B. will be given a warning",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                    "feedback": ""
                 },
                 {
-                    "text": "C: do not have to attend if they make arrangements with their supervisor",
+                    "text": "C. will have their membership cancelled",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                    "feedback": ""
                 },
                 {
-                    "text": "D: must attend three sessions",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                    "text": "D. will be reported to the Membership Secretary",
+                    "is_correct": false,
+                    "feedback": ""
                 }
             ],
-            "options": "A: must attend all sessions\nB: must attend only the first and second session\nC: do not have to attend if they make arrangements with their supervisor\nD: must attend three sessions",
+            "options": "A. will be reported to the Club Manager\nB. will be given a warning\nC. will have their membership cancelled\nD. will be reported to the Membership Secretary",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "22. The first session…",
+            "question": "Membership may be put on hold",
             "points": 1,
-            "no_answer_feedback": "The correct answer is B: has been arranged because of previous problems. Session 1 'Focuses on correct procedures following recent incidents'.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 3,
+            "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "multiple_choice",
             "mc_options": [
                 {
-                    "text": "A: is about how to make a complaint",
+                    "text": "A. within fourteen days of joining",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                    "feedback": ""
                 },
                 {
-                    "text": "B: has been arranged because of previous problems",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 1 'Focuses on correct procedures following recent incidents'."
+                    "text": "B. through arrangement with the manager",
+                    "is_correct": false,
+                    "feedback": ""
                 },
                 {
-                    "text": "C: will be held outside the company",
+                    "text": "C. if the Membership Secretary agrees",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                    "feedback": ""
                 },
                 {
-                    "text": "D: is likely to have few attendees",
+                    "text": "D. in cases of injury only",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                    "feedback": ""
                 }
             ],
-            "options": "A: is about how to make a complaint\nB: has been arranged because of previous problems\nC: will be held outside the company\nD: is likely to have few attendees",
+            "options": "A. within fourteen days of joining\nB. through arrangement with the manager\nC. if the Membership Secretary agrees\nD. in cases of injury only",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "23. The third session…",
+            "question": "Damage to members’ vehicles",
             "points": 1,
-            "no_answer_feedback": "The correct answer is D: has limited seating. Session 3 is 'Limited to 70 places'.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 3,
+            "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "multiple_choice",
             "mc_options": [
                 {
-                    "text": "A: is the only one to have two facilitators",
+                    "text": "A. is unlikely due to secure parking",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                    "feedback": ""
                 },
                 {
-                    "text": "B: will have two speakers from another company",
+                    "text": "B. will be paid for by the centre if it is their fault",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                    "feedback": ""
                 },
                 {
-                    "text": "C: is already fully booked",
+                    "text": "C. is not the responsibility of the centre",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                    "feedback": ""
                 },
                 {
-                    "text": "D: has limited seating",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 3 is 'Limited to 70 places'."
+                    "text": "D. may result from staff negligence",
+                    "is_correct": false,
+                    "feedback": ""
                 }
             ],
-            "options": "A: is the only one to have two facilitators\nB: will have two speakers from another company\nC: is already fully booked\nD: has limited seating",
+            "options": "A. is unlikely due to secure parking\nB. will be paid for by the centre if it is their fault\nC. is not the responsibility of the centre\nD. may result from staff negligence",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
-            "type": "closed_question",
-            "instructions": "Questions 24–26\n\nMatch each statement to the correct session. Write the correct letter A–D.\n\nAnswer options may be used more than once.",
-            "question": "24. Which session will not be held in the company?",
+            "type": "open_question",
+            "instructions": "Questions 11–16\n\nAnswer the questions below.\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.",
+            "question": "When should new employees begin observing how others dress?",
             "points": 1,
-            "no_answer_feedback": "The correct answer is D: Session 4. Session 4 is 'Held externally at the Logan Hotel'.",
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What item of clothing might men choose not to wear after their first day?",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What type of colleague provides the best guide to appropriate dress?",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What type of company is introducing management uniforms?",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What might bright colours attract in the workplace?",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What must not be obvious on acceptable designer clothing?",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 17–23\n\nDo the following statements agree with the information given in the reading passage?\n\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.",
+            "question": "Training highlights areas where employees need improvement.",
+            "points": 1,
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "classification",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
-                    "text": "A: Session 1",
+                    "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
+                    "feedback": ""
                 },
                 {
-                    "text": "B: Session 2",
+                    "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
+                    "feedback": ""
                 },
                 {
-                    "text": "C: Session 3",
+                    "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
-                },
-                {
-                    "text": "D: Session 4",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 4 is 'Held externally at the Logan Hotel'."
+                    "feedback": ""
                 }
             ],
-            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "25. Which session will have two facilitators from within the company?",
+            "question": "Employees usually seek promotion immediately after training.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is D: Session 4. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "classification",
+            "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
-                    "text": "A: Session 1",
+                    "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                    "feedback": ""
                 },
                 {
-                    "text": "B: Session 2",
+                    "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                    "feedback": ""
                 },
                 {
-                    "text": "C: Session 3",
+                    "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
-                },
-                {
-                    "text": "D: Session 4",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                    "feedback": ""
                 }
             ],
-            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
+            "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "26. Which session is intended to prepare staff for future changes?",
+            "question": "Companies often ignore existing staff when expanding their workforce.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is B: Session 2. Session 2 'Covers upcoming changes to branding, stationery and uniforms'.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "classification",
-            "mc_options": [
-                {
-                    "text": "A: Session 1",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
-                },
-                {
-                    "text": "B: Session 2",
-                    "is_correct": true,
-                    "feedback": "Correct! Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
-                },
-                {
-                    "text": "C: Session 3",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
-                },
-                {
-                    "text": "D: Session 4",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
-                }
-            ],
-            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "You should spend about 20 minutes on Questions 27 – 40 which are based on <strong>Reading Passage 3.</strong>\r\n\r\nQuestions 27 – 31\r\n\r\nComplete each sentence with the correct ending, A – I, below.\r\n\r\nWrite the correct letter, A – I, in boxes 27 – 31 on your answer sheet.\r\n\r\nA: have been determined by the International Maritime Organisation.\r\nB: must be capped at 5,000 ppm by 2020 in certain areas.\r\nC: are 600 times more dangerous than other fuels.\r\nD: suffer from high levels of sulphur.\r\nE: has been as high as 1,000 ppm.\r\nF: were not recognised by the Exclusive Economic Zones.\r\nG: impact severely on large port cities.\r\nH: accounts for 90% of all vessels in international waters.\r\nI: relies heavily on HFO.",
-            "question": "27. Populous port cities, such as Hong Kong,",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is D (suffer from high levels of sulphur). Para 1 mentions that port cities like Hong Kong suffer from sulphur dioxide emissions from the shipping industry.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to guidelines, not port cities."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content regulations, not port cities."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not port cities."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 1 states that densely-populated port cities like Hong Kong suffer from high sulphur dioxide emissions from shipping."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content levels, not port cities."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not relate to port cities."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While this is related, the port cities are the subject being impacted, not doing the impacting."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the merchant fleet, not port cities."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the shipping industry, not port cities."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "28. Particulate matter emissions",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is G (impact severely on large port cities). Para 1 states that PM emissions have contributed to premature deaths and large port cities have borne the brunt of health issues.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The IMO determines guidelines, not PM emissions."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content, not PM emissions."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not PM emissions."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not PM emissions."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content in fuel, not PM emissions."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not relate to PM emissions."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 1 states that PM emissions contributed to 87,000 premature deaths and large port cities have borne the brunt of health issues."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the merchant fleet, not PM emissions."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the shipping industry, not PM emissions."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "29. The global merchant marine fleet",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is I (relies heavily on HFO). Para 2 states that heavy fuel oil has been the mainstay of energy and propulsion requirements for the global merchant fleet.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The IMO determines guidelines, not the merchant fleet."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to emission regulations, not the merchant fleet."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not the merchant fleet."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not the merchant fleet."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content, not the merchant fleet."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not relate to the merchant fleet."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to emissions, not the merchant fleet as a subject."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the fleet handles 90% of international trade, not that it accounts for 90% of vessels."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 2 states that heavy fuel oil has been the mainstay of energy and propulsion requirements."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "30. Guidelines to set safe standards of emissions",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is A (have been determined by the International Maritime Organisation). Para 3 states the IMO began formulating guidelines to determine and control safe standards for emissions.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 3 states the International Maritime Organisation began formulating guidelines to determine and control safe standards for emissions."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content regulations, not guidelines themselves."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not guidelines."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not guidelines."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content, not guidelines."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. ECAs implement guidelines, they don't fail to recognize them."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to emissions, not guidelines."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to trade statistics, not guidelines."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the shipping industry, not guidelines."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "31. The sulphur content of bunker fuels",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B (must be capped at 5,000 ppm by 2020 in certain areas). Para 3 states that from 2020, all vessels sailing outside any ECA must cap their emissions at 5,000 ppm.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While the IMO sets regulations, this doesn't complete the sentence about sulphur content."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 3 states that from 2020, the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This comparison relates to ocean fuel versus land transport diesel, not bunker fuels specifically."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not bunker fuels."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states bunker fuels ranged as high as 35,000 ppm, not 1,000 ppm."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not make sense with bunker fuels."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to emissions from fuels, not the fuels themselves."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to trade statistics, not bunker fuels."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Bunker fuels are HFO, so they don't rely on themselves."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 32 – 38\r\n\r\nDo the following statements agree with the information given in Reading Passage 3?\r\n\r\nIn boxes 32 – 38 on your answer sheet write\r\n\r\nTRUE if the statement agrees with the information\r\n\r\nFALSE if the statement contradicts the information\r\n\r\nNOT GIVEN if there is no information on this in the passage",
-            "question": "32. The costs involved with 'cleaning up' the heavy fuel oil will be met by only the shipping lines.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: FALSE. Para 4 states the economic cost comes to 'not only for the commercial enterprises, but also the shipping companies and, by extension, their shippers, and the national economies of the countries involved.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
             "ielts_question_category": "true_false_not_given",
             "mc_options": [
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. Multiple parties will bear the costs, not only shipping lines."
+                    "feedback": ""
                 },
                 {
                     "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states the costs will be borne by multiple parties, not only shipping lines."
+                    "is_correct": false,
+                    "feedback": ""
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. Para 4 clearly states multiple parties will bear the costs."
+                    "feedback": ""
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -1458,12 +546,12 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "33. The easiest approach to reduce emissions is to drop the sulphur content of fuel.",
+            "question": "The main purpose of staff training is learning to use office equipment.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: NOT GIVEN. While Para 4 mentions dropping sulphur content as one approach, there is no statement about which approach is easiest.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 4,
+            "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -1472,17 +560,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't state which approach is easiest."
+                    "feedback": ""
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While approaches are mentioned, no comparison of difficulty is made."
+                    "feedback": ""
                 },
                 {
                     "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions approaches but doesn't state which is easiest."
+                    "is_correct": false,
+                    "feedback": ""
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -1492,12 +580,12 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "34. One alternative fuel source would mean returning to a previous method of power.",
+            "question": "Customer service training is rarely prioritised.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. Para 5 mentions wind as an alternative fuel and describes it as 'an ironic twist on where shipping originally began', indicating a return to a previous method.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 4,
+            "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -1505,18 +593,18 @@
             "mc_options": [
                 {
                     "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 5 mentions wind power as 'an ironic twist on where shipping originally began', indicating a return to a previous method."
+                    "is_correct": false,
+                    "feedback": ""
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Wind power is mentioned as returning to where shipping originally began."
+                    "feedback": ""
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 5 clearly refers to wind as an 'ironic twist on where shipping originally began'."
+                    "feedback": ""
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -1526,12 +614,12 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "35. Nuclear energy is used mostly in naval fleets of many countries.",
+            "question": "Cultural awareness training benefits companies.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: NOT GIVEN. Para 5 states nuclear energy is 'used in many naval fleets' but doesn't say it is used 'mostly' in naval fleets or provide comparison with other uses.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 4,
+            "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -1540,17 +628,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't state nuclear energy is used 'mostly' in naval fleets."
+                    "feedback": ""
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While nuclear use in naval fleets is mentioned, no comparison is made."
+                    "feedback": ""
                 },
                 {
                     "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions nuclear energy is used in naval fleets but doesn't state this is its primary use."
+                    "is_correct": false,
+                    "feedback": ""
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -1560,12 +648,12 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "36. With 90% of international trade being carried on ships, the shipping industry is experiencing huge growth and profit levels.",
+            "question": "Health and safety training is becoming less important.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: FALSE. Para 6 states that the shipping trade is experiencing a serious down-turn in profits, with daily revenue dropping from US$34,000 in 2007 to US$9,800 in 2017.",
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 4,
+            "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
@@ -1574,85 +662,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The shipping industry is experiencing a down-turn in profits, not growth."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states the shipping industry is experiencing a serious down-turn in profits, not growth."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. Para 6 clearly describes a serious down-turn in profits."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "37. One factor that is slowing down the move to cleaner fuels is that there are no significant direct economic benefits to the parties concerned.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. Para 6 states 'there will be a reluctance on the part of ship-owners, national state carriers and major shippers to contribute towards a scheme that, while benefiting the global environment and national health interests, sees little direct economic return.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 6 states parties are reluctant to contribute to a scheme that sees little direct economic return."
+                    "feedback": ""
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 6 states there is reluctance due to little direct economic return."
+                    "feedback": ""
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 6 clearly states the scheme sees little direct economic return."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "38. The 2008 financial crisis helped introduce cost-saving measures for shipping lines.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. Para 7 states 'during the 2008 global crisis in finance and costs, sailing speeds on ocean vessels were reduced by oftentimes up to half, which resulted in massive fuel savings.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 7 describes how the 2008 financial crisis led to reduced sailing speeds and massive fuel savings."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 7 describes cost-saving measures introduced during the 2008 crisis."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 7 clearly states cost-saving measures were introduced during the 2008 crisis."
+                    "feedback": ""
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -1661,34 +681,45 @@
         },
         {
             "type": "open_question",
-            "instructions": "Questions 39 – 40\r\n\r\nComplete the following sentences, using NO MORE THAN THREE WORDS from the passage.\r\n\r\nWrite your answers in boxes 39 – 40 on your answer sheet.",
-            "question": "<p>Complete the following sentences:</p>\r\n<p>39. In order to comply with regulations regarding lowering emissions, shipping companies have the option of installing [field 1] to clean emissions.</p>\r\n<p>40. Even with all the restrictions and guidelines, most industry analysts, such as Lloyds Registry, feel that [field 2] will still be the shipping industry's main source of energy in the future.</p>\r\n",
-            "points": 2,
-            "no_answer_feedback": "39: scrubbers, 40: heavy fuel oil|HFO",
+            "instructions": "Questions 24–26\n\nComplete the summary below.\n\nWrite NO MORE THAN ONE WORD OR A NUMBER from the passage from the passage for each answer.",
+            "question": "Complete the summary below.",
+            "points": 1,
+            "no_answer_feedback": "",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 4,
+            "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 2,
-            "field_answers": {
-                "1": "scrubbers",
-                "2": "heavy fuel oil|HFO|heavy fuel oils|HFOs"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Excellent! You answered both questions correctly.",
-                    "incorrect": "Review the passage and try again. Question 39 is found in Para 4, and Question 40 is in Para 8.",
-                    "no_answer": "39: scrubbers, 40: heavy fuel oil|HFO"
-                },
-                "2": {
-                    "correct": "Excellent! You answered both questions correctly.",
-                    "incorrect": "Review the passage and try again. Question 39 is found in Para 4, and Question 40 is in Para 8.",
-                    "no_answer": "39: scrubbers, 40: heavy fuel oil|HFO"
-                }
-            }
+            "ielts_question_category": "summary_completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Staff training programmes can improve 24. ______, reduce staff turnover, and enhance a company’s public image.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Organisations that invest in training benefit from higher levels of 25. ______ and innovation.",
+            "points": 1,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion"
         }
     ],
     "reading_texts": [
