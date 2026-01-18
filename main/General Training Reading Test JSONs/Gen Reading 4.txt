@@ -1,180 +1,172 @@
 SECTION 1 – PART A
+Reading Text 1
 
-[This is a closed question set.
+City University Gym – Term-time Weekday Schedule (Semesters 1 & 2)
+
+Mondays & Wednesdays
+Abdominal Strengthening – 07:45–08:15 – Main Gym – Joanna
+Gym Circuit – 12:00–13:00 – Main Gym – Steve
+Five-a-side Football – 12:00–13:00 – Outdoor Pitch – Mark
+Aerobics – 17:30–18:30 – Dance Studio – Claire
+Tae Kwon Do – 18:30–19:30 – Indoor Sports Hall – Kim
+
+Tuesdays
+Yoga – 08:00–09:00 – Indoor Sports Hall – Priya
+Jogging Club – 12:30–13:15 – Outdoor Track – Staff
+Basketball – 18:00–19:00 – Indoor Sports Hall – Alex
+
+Thursdays
+Pilates – 09:00–10:00 – Main Gym – Joanna
+Gym Circuit – 12:00–13:00 – Main Gym – Steve
+Badminton – 17:00–18:00 – Indoor Sports Hall – Staff
+
+Fridays
+Yoga – 10:00–11:00 – Indoor Sports Hall – Priya
+Swimming – 16:00–17:00 – University Pool – Staff
+
+During university holidays, only selected classes operate.
+
+Questions 1–7
+
+[Section 1 Part A – Reading Text 1
+This is a closed question set.
 Question type: TRUE / FALSE / NOT GIVEN.
-There are 7 questions.
+There are 7 questions (1–7).
 Answer options must be displayed as: TRUE, FALSE, NOT GIVEN.
-All questions refer to the Reading Passage in Section 1 Part A only.]
+All questions refer to Reading Text 1 only.]
 
-Reading Passage (Section 1 Part A)
+On Wednesdays, Abdominal Strengthening is the shortest class.
 
-(City Harbour ⇄ Marine Island Ferry Service – Timetable / routes / fares)
-Note: This passage is a ferry service information page and includes a timetable, route information (including a direct route vs via Taylor Peninsula), and fare details (adult/child/senior etc).
+The Monday class held in the Indoor Sports Hall is only open to private members.
 
-Questions 1–7 (TRUE / FALSE / NOT GIVEN)
+Only one Tuesday class takes place outdoors.
 
-1. Ferries from City Harbour travel to Taylor Peninsula every day.
-Answer: TRUE
-Reason: The timetable indicates services run daily that include Taylor Peninsula. 
+Aerobics and Tae Kwon Do last for the same length of time.
 
-2. Ferries from City Harbour to Marine Island resort finish earliest on Saturdays.
-Answer: FALSE
-Reason: Saturday is not the earliest finishing day according to the timetable. 3. A ferry from Marine Island leaves Taylor Peninsula for City Harbour at around 10.15 on Wednesday mornings.
-Answer: TRUE
-Reason: The timetable includes a Wednesday morning departure around 10.15 from Taylor Peninsula. 4. A one-way adult ferry ticket is less expensive than a child’s return.
-Answer: FALSE
-Reason: The fare table shows the child return costs less than an adult one-way. 5. Senior citizens pay the least for ferry travel.
-Answer: FALSE
-Reason: The fare table indicates someone else (e.g., child) pays less than seniors. 6. The direct route is fifteen minutes quicker than the journey via the peninsula.
-Answer: TRUE
-Reason: The route notes compare direct vs via-peninsula journey times and show a 15-minute difference. 7. Routes via Taylor Peninsula take approximately 60 minutes.
-Answer: NOT GIVEN
-Reason: The passage does not state “approximately 60 minutes” for the via-peninsula route. 
+There is only one class held before midday on each weekday.
+
+No previous experience is required to attend the Friday Yoga class.
+
+Fewer classes are available during university holidays.
+
 SECTION 1 – PART B
+Reading Text 2
 
-[This section contains two question groups.
-Questions 8–10 are map-label matching using a shared list of options A–F.
-Questions 11–14 are short answer questions (NO MORE THAN ONE WORD OR A NUMBER).]
+Rules and Regulations for Members of Brightwood Leisure Centre
 
-Reading Passage (Section 1 Part B)
-
-Marine Island Accommodation Guide
-(Information about multiple accommodation options on Marine Island, including campsites, backpacker options, hotels/inns, facilities, locations, awards, and walking distances.)
+Membership allows individuals to use facilities subject to availability and centre regulations.
+The owners reserve the right to terminate membership in cases of rule breaches or offensive behaviour.
+Members must inform staff of any illness or disability before using facilities.
+All facilities are used at the member’s own risk.
+The centre accepts no responsibility for loss or damage to personal property unless caused by staff negligence.
+Cars must be parked correctly; no liability is accepted for loss or damage to vehicles.
+Unclaimed property will be donated to charity after 28 days.
 
 Questions 8–10
 
-[This is a closed question set.
-Question type: Map / plan labelling (matching).
-There are 3 questions.
-There is a shared list of 6 answer options labelled A–F.
-Each option may be used once only.
-Answers must be letters only.
-NOTE: This task requires an accompanying map/plan image. Do not publish this question set unless the map image is included.]
+[Section 1 Part B – Reading Text 2
+This is a closed question set.
+Question type: Multiple choice (single answer).
+There are 3 questions (8–10).
+Each question has four options labelled A–D.
+Only one option is correct.]
 
-Answer options (A–F):
-A. Ocean View Camping Resort
-B. Marine Island Village Park
-C. Backpacker Haven
-D. Marine Paradise
-E. Value Inn
-F. Marine Island Hotel
+Members who upset other users of the leisure centre
+A. will be reported to the Club Manager
+B. will be given a warning
+C. will have their membership cancelled
+D. will be reported to the Membership Secretary
 
-8. (Map label)
-Answer: F
-Reason: “Situated in the north-east tip of the island…” matches the map position. 
+Membership may be put on hold
+A. within fourteen days of joining
+B. through arrangement with the manager
+C. if the Membership Secretary agrees
+D. in cases of injury only
 
-9. (Map label)
-Answer: A
-Reason: Marine Island Village Park says it is the closest campsite to the ferry terminal; therefore the other campsite must be Ocean View Camping Resort. 10. (Map label)
-Answer: D
-Reason: “Our central location means highlights of the island are easily accessible…” matches Marine Paradise. 
-Questions 11–14
+Damage to members’ vehicles
+A. is unlikely due to secure parking
+B. will be paid for by the centre if it is their fault
+C. is not the responsibility of the centre
+D. may result from staff negligence
 
-[This is an open-answer question set.
-Question type: Short answer.
-There are 4 questions.
-Answers must be taken from the passage.
-Word limit: NO MORE THAN ONE WORD OR A NUMBER.]
-
-11. What has Ocean View Camping Resort won more than once?
-Answer: Eco-friendly Tourism Award
-Reason: The passage states Ocean View has won the Eco-friendly Tourism Award more than once. 
-
-12. How many years has Backpacker Haven been operating for?
-Answer: 17
-Reason: The passage states it has been operating for 17 years. 13. What does Marine Paradise offer to guests staying for at least 3 nights?
-Answer: free barbecue party
-Reason: The passage states guests staying 3+ nights receive a free barbecue party. 14. How long does it take on foot to get to the beach from the island’s most expensive accommodation?
-Answer: 2 minutes
-Reason: The passage states it is a 2-minute walk from the most expensive accommodation. 
 SECTION 2 – PART A
+Reading Text 3
 
-[This is a closed question set.
-Question type: Matching statements to categories.
-There are 6 questions (15–20).
-There is a shared list of 5 categories labelled A–E.
-A letter may be used more than once.
-Answers must be letters only.]
+Dressed for Work
 
-Reading Passage (Section 2 Part A)
+Choosing what to wear at work can be difficult, particularly when starting a new job. Dressing too casually may give the impression that you are not taking your role seriously, while dressing too formally can make colleagues think you are unapproachable.
 
-University Graduates’ Careers Conference
-September 23–27th 
+If possible, check the dress code after being offered a position. When attending interviews, observe what other employees are wearing.
 
-The conference is held at North City Campus and has over 500 exhibitors across the following areas: 
-A. Business & Commerce 
-B. Health & Social Work 
-C. Teaching 
-D. Computing & Information Technology 
-E. Post-Graduate Studies 
-Questions 15–20 (match A–E)
+For men, dark trousers, shoes and a simple shirt are generally acceptable. Wearing a tie on the first day is fine, but it may be unnecessary if no one else is wearing one.
 
-15. Certain areas of the field may qualify for government sponsorship for students wishing to continue their studies.
-Answer: B
-Reason: Health & Social Work includes information on government funding and grants for applicable post-graduate study areas. 
+For women, expectations vary widely, so observing colleagues in similar roles is often the best guide.
 
-16. In the previous year, the highest number of graduates gaining employment in the first half year after completing their studies studied in this area.
-Answer: D
-Reason: IT/Computing reports the highest success rate (90%+ employed within 6 months). 17. Details of opportunities in this area are found in a university publication.
-Answer: A
-Reason: Business & Commerce says details are found in the Student Gazette. 18. Limited information will be available at the conference though more details can be obtained elsewhere.
-Answer: E
-Reason: Post-graduate info is mostly internal at the conference, with other-institution info found at Careers Guidance Department on Redhill Rd Campus. 19. Information about temporary as well as long-term positions will be available.
-Answer: C
-Reason: Teaching includes relief (temporary) and permanent positions via recruiters. 20. Less than half of the exhibitors will be domestic.
-Answer: D
-Reason: Computing/IT notes over 50% of exhibitors present opportunities to work abroad. 
+In many countries, especially in large corporations, there has been a move towards stricter dress codes, including uniforms for management.
+
+Other useful advice includes choosing conservative colours, avoiding large jewellery, maintaining good hygiene, and avoiding clothing with obvious designer logos.
+
+Questions 11–16
+
+[Section 2 Part A – Reading Text 3
+This is an open question set.
+Question type: Short answer.
+There are 6 questions (11–16).
+Answers must use NO MORE THAN THREE WORDS AND/OR A NUMBER.]
+
+When should new employees begin observing how others dress?
+
+What item of clothing might men choose not to wear after their first day?
+
+What type of colleague provides the best guide to appropriate dress?
+
+What type of company is introducing management uniforms?
+
+What might bright colours attract in the workplace?
+
+What must not be obvious on acceptable designer clothing?
+
 SECTION 2 – PART B
+Reading Text 4
 
-[This section contains two question groups.
-Questions 21–23 are TRUE / FALSE / NOT GIVEN.
-Questions 24–26 are summary completion (NO MORE THAN ONE WORD OR A NUMBER).]
+Modern workplaces require continuous staff training. In the past, basic skills were often sufficient for an entire career, but today technology and work practices change rapidly.
 
-Reading Passage (Section 2 Part B)
+Training commonly focuses on technology, customer service, working in diverse environments, and health and safety. These programmes improve efficiency, staff morale, retention, and company image.
 
-Do you feel you need to develop your skills further? 
+Companies that invest in staff development benefit from increased motivation, innovation, and employee loyalty.
 
-A two-day workshop (Wednesday and Thursday of the last week of semester) led by career development trainer Steve Brighthall (Progress Solutions).
-Seminar is restricted to 50 places. Fee: £15 for current university students, £25 for non-enrolled students. Seminar details: 
+Questions 17–23
 
-
-Tutorial 1 – Making an Impact with your curriculum vitae
-Tutorial 2 – Make the most of your positive attributes during an interview
-Tutorial 3 – How to achieve success in the workplace
-Workshop 1 – Logical thinking
-Workshop 2 – Team-building
-Workshop 3 – Problem solving
-
-Enrol at reception in the Careers Guidance Centre. 
-
-Questions 21–23 (TRUE / FALSE / NOT GIVEN)
-
-[This is a closed question set.
+[Section 2 Part B – Reading Text 4
+This is a closed question set.
 Question type: TRUE / FALSE / NOT GIVEN.
-There are 3 questions.
+There are 7 questions (17–23).
 Answer options must be displayed as: TRUE, FALSE, NOT GIVEN.]
 
-21. Students may not possess social skills necessary for success in the workplace due to lack of emphasis placed on these areas in university degrees.
-Answer: NOT GIVEN
-Reason: The passage does not mention university degrees lacking emphasis on social skills. 
+Training highlights areas where employees need improvement.
 
-22. Research shows that employers may be reluctant to employ graduates without work experience.
-Answer: TRUE
-Reason: The passage references research and employer concerns about graduates without work experience. 23. The university’s students are given valuable opportunities many studying at other institutions are not.
-Answer: TRUE
-Reason: The passage indicates this university provides valuable opportunities not available to many at other institutions. 
-Questions 24–26 (Summary completion)
+Employees usually seek promotion immediately after training.
 
-[This is an open-answer question set.
-Question type: Summary completion.
-There are 3 answers.
-Word limit: NO MORE THAN ONE WORD OR A NUMBER.]
+Companies often ignore existing staff when expanding their workforce.
 
-Summary
+The main purpose of staff training is learning to use office equipment.
 
-The seminar is restricted to 50 places and costs 24. £_____ for attendees who are not presently studying internally. The three tutorial sessions focus on not only success in the workplace, but also securing a position through presenting yourself well at 25. _____ and developing an attractive resume. Potential weaknesses (as perceived by employers according to recent research) including finding solutions to problems, reasoning in a 26. _____ manner and working cooperatively with others are explored in the workshops. 
+Customer service training is rarely prioritised.
 
-24. 25
-Reason: Non-enrolled students pay £25. 25. interview
-Reason: Tutorial 2 is about interview performance (“during an interview”). 26. logical
-Reason: Workshop 1 is “Logical thinking”.
+Cultural awareness training benefits companies.
+
+Health and safety training is becoming less important.
+
+Questions 24–26
+
+[Section 2 Part B – Reading Text 4
+This is an open question set.
+Question type: Summary completion (short answer).
+There are 3 questions (24–26).
+Answers must use NO MORE THAN ONE WORD OR A NUMBER from the passage.]
+
+Complete the summary below.
+
+Staff training programmes can improve 24. ______, reduce staff turnover, and enhance a company’s public image.
+Organisations that invest in training benefit from higher levels of 25. ______ and innovation.
+Long-term advantages of training include increased employee 26. ______.
