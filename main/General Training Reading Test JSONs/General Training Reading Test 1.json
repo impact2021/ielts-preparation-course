@@ -423,7 +423,7 @@
             "no_answer_feedback": "The correct answer is 'sent home'. On the second occasion, the employee must be sent home to change clothes immediately.",
             "correct_feedback": "Correct! On the second occasion, employees are sent home to change.",
             "incorrect_feedback": "Incorrect. The correct answer is 'sent home'. Check the consequences for dress code violations.",
-            "reading_text_id": 3,
+            "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
