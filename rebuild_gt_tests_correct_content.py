@@ -17,6 +17,18 @@ from bs4 import BeautifulSoup
 
 BASE_DIR = Path("main/General Training Reading Test JSONs")
 
+# Constants for content validation
+HTML_FORMAT_CHECK_CHARS = 200  # Number of chars to check for HTML tags
+MIN_PASSAGE_LENGTH = 100  # Minimum length for a valid passage
+QUESTION_MARKER_LENGTH = 50  # Length to check for question markers
+
+# Expected content keywords for validation
+EXPECTED_CONTENT = {
+    4: ["Ferry", "Marine Island", "Passenger"],
+    5: ["Gym", "City University", "Term-time"],
+    10: ["TRADE WITH ME", "WWW.TRADE", "trade"],
+}
+
 def extract_passages_from_gen_reading(test_num):
     """
     Extract the ACTUAL reading passages from Gen Reading X.txt.
@@ -27,8 +39,8 @@ def extract_passages_from_gen_reading(test_num):
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # Check if it's plain text format (no HTML tags in first 200 chars)
-    if '<' not in content[:200]:
+    # Check if it's plain text format (no HTML tags in first HTML_FORMAT_CHECK_CHARS)
+    if '<' not in content[:HTML_FORMAT_CHECK_CHARS]:
         # Plain text format (Gen Reading 3, 11-15)
         return extract_passages_from_plain_text(content, test_num)
     
@@ -45,7 +57,7 @@ def extract_passages_from_gen_reading(test_num):
             if scroll_box:
                 passage_html = str(scroll_box.decode_contents())
                 passage_html = passage_html.strip()
-                if len(passage_html) > 100:
+                if len(passage_html) > MIN_PASSAGE_LENGTH:
                     passages.append(passage_html)
         
         return passages
@@ -68,7 +80,9 @@ def extract_passages_from_gen_reading(test_num):
                 passage_html = passage_html.strip()
                 
                 # Check if it's a passage (not questions)
-                if len(passage_html) > 100 and 'BLANK' not in passage_html and 'Questions' not in passage_html[:50]:
+                if (len(passage_html) > MIN_PASSAGE_LENGTH and 
+                    'BLANK' not in passage_html and 
+                    'Questions' not in passage_html[:QUESTION_MARKER_LENGTH]):
                     passages.append(passage_html)
     
     return passages
@@ -167,13 +181,12 @@ def create_test_with_real_content(test_num):
         first_preview = real_passages[0][:150].replace('\n', ' ').replace('  ', ' ')
         print(f"  First passage: {first_preview}...")
         
-        # Content verification
-        if test_num == 4 and 'Ferry' in real_passages[0]:
-            print("  ✓ Verified: Test 4 has Ferry Timetable")
-        elif test_num == 5 and ('Gym' in real_passages[0] or 'City University' in real_passages[0]):
-            print("  ✓ Verified: Test 5 has Gym content")
-        elif test_num == 10 and 'TRADE WITH ME' in real_passages[0]:
-            print("  ✓ Verified: Test 10 has Trade With Me content")
+        # Content verification using configuration
+        if test_num in EXPECTED_CONTENT:
+            keywords = EXPECTED_CONTENT[test_num]
+            if any(kw in real_passages[0] for kw in keywords):
+                matched = [kw for kw in keywords if kw in real_passages[0]][0]
+                print(f"  ✓ Verified: Test {test_num} has expected content ('{matched}')")
     
     # Create new test structure
     new_test = {
