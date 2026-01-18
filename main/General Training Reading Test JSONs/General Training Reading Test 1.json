@@ -438,106 +438,196 @@
             "exact_match": false
         },
         {
-            "type": "open_answer",
-            "instructions": "",
+            "type": "closed_question",
+            "instructions": "Questions 20-26: Do the following statements agree with the information given in Reading Passage 2?\n\nWrite:\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this",
             "question": "All employees must belong to the company’s pension plan.",
             "points": 1,
-            "no_answer_feedback": "false",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "false",
+            "no_answer_feedback": "The correct answer is FALSE. false",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer",
-            "correct_answer": "false",
-            "case_sensitive": false,
-            "exact_match": false
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The statement is FALSE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "open_answer",
+            "type": "closed_question",
             "instructions": "",
             "question": "No pension scheme payments need to be made after 20 years of employment.",
             "points": 1,
-            "no_answer_feedback": "not given",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "not given",
+            "no_answer_feedback": "The correct answer is NOT GIVEN. not given",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer",
-            "correct_answer": "not given",
-            "case_sensitive": false,
-            "exact_match": false
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The answer is NOT GIVEN."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "open_answer",
+            "type": "closed_question",
             "instructions": "",
             "question": "Employees can now have their families covered under the company insurance for cheaper than doing so privately.",
             "points": 1,
-            "no_answer_feedback": "true",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "true",
+            "no_answer_feedback": "The correct answer is TRUE. true",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer",
-            "correct_answer": "true",
-            "case_sensitive": false,
-            "exact_match": false
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The statement is TRUE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "open_answer",
+            "type": "closed_question",
             "instructions": "",
             "question": "All staff must request to use a company car 48 hours before required.",
             "points": 1,
-            "no_answer_feedback": "false",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "false",
+            "no_answer_feedback": "The correct answer is FALSE. false",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer",
-            "correct_answer": "false",
-            "case_sensitive": false,
-            "exact_match": false
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The statement is FALSE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "open_answer",
+            "type": "closed_question",
             "instructions": "",
             "question": "Laptops must only be used for company business only.",
             "points": 1,
-            "no_answer_feedback": "not given",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "not given",
+            "no_answer_feedback": "The correct answer is NOT GIVEN. not given",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer",
-            "correct_answer": "not given",
-            "case_sensitive": false,
-            "exact_match": false
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The answer is NOT GIVEN."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "open_answer",
+            "type": "closed_question",
             "instructions": "",
             "question": "The working from home option is not a success.",
             "points": 1,
-            "no_answer_feedback": "false",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "false",
+            "no_answer_feedback": "The correct answer is FALSE. false",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer",
-            "correct_answer": "false",
-            "case_sensitive": false,
-            "exact_match": false
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The statement is FALSE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
             "type": "closed_question",
