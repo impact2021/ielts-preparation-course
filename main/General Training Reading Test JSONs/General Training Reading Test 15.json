@@ -365,6 +365,622 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 3\n\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.\n\nQuestions 27 – 32\n\nDo the following statements agree with the information given in Reading Passage 3?\n\nIn boxes 27 – 32 on your answer sheet write\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this in the passage",
+            "question": "The main criteria in making a concert hall great are its location, seating and sightlines.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Older concert halls did not have good acoustic features.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The 'shoebox' design has the same acoustics as amphitheaters.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Inside a concert hall, the listener receives sound from not only the stage, but from different directions as well.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "All concert halls now use reflectors to direct the sound from the walls and from the ceiling.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Research has now determined that high and low frequencies determine the best sound delivery.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. Review Reading Passage 3 to find the supporting evidence. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 33 – 37\n\nThe article details various facts about some of the famous concert halls. Match the concert halls (A – H) with the information provided about them.\n\nNB: Some letters might not be used, and some letters might be used more than once.\n\nWrite the appropriate letter (A – H) in boxes 33 – 37 on your answer sheet.",
+            "question": "An example of an older-style concert hall that used scientific principles to enhance its sound.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is G: Boston's Symphony Hall. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G: Boston's Symphony Hall."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "This modern concert hall borrowed design features from multiple great old concert halls.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is E: Sao Paolo's Sala Sao Paolo. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Sao Paolo's Sala Sao Paolo."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "A concert hall that has seen famous composers leading orchestras.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Vienna's Musikverein. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The claim has been made that this is the finest concert hall in the world.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Vienna's Musikverein. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Vienna's Musikverein."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "A concert hall that used electronics to enhance the different sound frequencies.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: London's Royal Festival Hall. Review Reading Passage 3 to find this information. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Amsterdam's Concertgebouw",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "B: Sydney's Opera House",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "C: Vienna's Musikverein",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "D: London's Royal Festival Hall",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "E: Sao Paolo's Sala Sao Paolo",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "F: Tokyo's Opera City Concert Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "G: Boston's Symphony Hall",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                },
+                {
+                    "text": "H: Leipzig's Gewandhaus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: London's Royal Festival Hall."
+                }
+            ],
+            "options": "A: Amsterdam's Concertgebouw\nB: Sydney's Opera House\nC: Vienna's Musikverein\nD: London's Royal Festival Hall\nE: Sao Paolo's Sala Sao Paolo\nF: Tokyo's Opera City Concert Hall\nG: Boston's Symphony Hall\nH: Leipzig's Gewandhaus",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 38 – 40\n\nChoose the appropriate letters A – D and write them in boxes 38 – 40 on your answer sheet.",
+            "question": "The sound quality of the great concert halls of the world",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: 'varies according to design.' The passage discusses how different designs affect sound quality. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "is solely the result of science and technology.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "has improved with modern discoveries in acoustic research and technology.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                },
+                {
+                    "text": "varies according to design.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "depends on the architect's knowledge of sound frequencies.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C."
+                }
+            ],
+            "options": "is solely the result of science and technology.\nhas improved with modern discoveries in acoustic research and technology.\nvaries according to design.\ndepends on the architect's knowledge of sound frequencies.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "'Lateral reflections'",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: 'ensure that sound is directed and received at its highest quality.' The passage explains that lateral reflections enhance sound volume and timing. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "are sound waves that come from the ceiling.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "are received by the listener at the same time as direct waves.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "are used primarily in the world's greatest modern concert halls.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D."
+                },
+                {
+                    "text": "ensure that sound is directed and received at its highest quality.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "are sound waves that come from the ceiling.\nare received by the listener at the same time as direct waves.\nare used primarily in the world's greatest modern concert halls.\nensure that sound is directed and received at its highest quality.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "London's Royal Festival Hall",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A: 'underwent a number of changes over many years to improve the quality of the sound.' The passage describes multiple renovations over 30 years. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "underwent a number of changes over many years to improve the quality of the sound.",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "copied its design from the great traditional concert halls.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A."
+                },
+                {
+                    "text": "suffered primarily from poor frequency of sound.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A."
+                },
+                {
+                    "text": "had poor quality seating.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A."
+                }
+            ],
+            "options": "underwent a number of changes over many years to improve the quality of the sound.\ncopied its design from the great traditional concert halls.\nsuffered primarily from poor frequency of sound.\nhad poor quality seating.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         }
     ],
     "reading_texts": [

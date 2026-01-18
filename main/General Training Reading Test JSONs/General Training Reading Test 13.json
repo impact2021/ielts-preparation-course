@@ -365,6 +365,627 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose the most suitable headings for sections A–F from the list below. Use each heading once only.",
+            "question": "27. Section A",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A question of time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "Lack of teacher training",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "Student success",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "The argument for flexibility",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "Importance of teaching experience",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "Extra-curricular pressures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "The benefits of a varied curriculum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "Imbalanced focus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "Overreliance on examinations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Quality of quantity?'. Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                },
+                {
+                    "text": "Quality of quantity?",
+                    "is_correct": true,
+                    "feedback": "Correct! Section A questions 'Quality of quantity?': 'the modern school curriculum, in an effort to teach as many varied subjects as possible, is actually teaching students less.'"
+                }
+            ],
+            "options": "A question of time\nLack of teacher training\nStudent success\nThe argument for flexibility\nImportance of teaching experience\nExtra-curricular pressures\nThe benefits of a varied curriculum\nImbalanced focus\nOverreliance on examinations\nQuality of quantity?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "28. Section B",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A question of time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "Lack of teacher training",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "Student success",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "The argument for flexibility",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "Importance of teaching experience",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "Extra-curricular pressures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "The benefits of a varied curriculum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "Imbalanced focus",
+                    "is_correct": true,
+                    "feedback": "Correct! Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "Overreliance on examinations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                },
+                {
+                    "text": "Quality of quantity?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Imbalanced focus'. Section B discusses 'Imbalanced focus': 'the overwhelming amount of information teachers are required to present often only gives students time to learn facts, not to think in any great detail.'"
+                }
+            ],
+            "options": "A question of time\nLack of teacher training\nStudent success\nThe argument for flexibility\nImportance of teaching experience\nExtra-curricular pressures\nThe benefits of a varied curriculum\nImbalanced focus\nOverreliance on examinations\nQuality of quantity?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "29. Section C",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A question of time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "Lack of teacher training",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "Student success",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "The argument for flexibility",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "Importance of teaching experience",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "Extra-curricular pressures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "The benefits of a varied curriculum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "Imbalanced focus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "Overreliance on examinations",
+                    "is_correct": true,
+                    "feedback": "Correct! Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                },
+                {
+                    "text": "Quality of quantity?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Overreliance on examinations'. Section C covers 'Overreliance on examinations': 'There is a feeling in many educational establishments that students are no longer being educated, but taught how to pass tests.'"
+                }
+            ],
+            "options": "A question of time\nLack of teacher training\nStudent success\nThe argument for flexibility\nImportance of teaching experience\nExtra-curricular pressures\nThe benefits of a varied curriculum\nImbalanced focus\nOverreliance on examinations\nQuality of quantity?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "30. Section D",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A question of time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "Lack of teacher training",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "Student success",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "The argument for flexibility",
+                    "is_correct": true,
+                    "feedback": "Correct! Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "Importance of teaching experience",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "Extra-curricular pressures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "The benefits of a varied curriculum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "Imbalanced focus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "Overreliance on examinations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                },
+                {
+                    "text": "Quality of quantity?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'The argument for flexibility'. Section D presents 'The argument for flexibility': 'By giving more discretion to teachers, school courses could be tailored to suit the students.'"
+                }
+            ],
+            "options": "A question of time\nLack of teacher training\nStudent success\nThe argument for flexibility\nImportance of teaching experience\nExtra-curricular pressures\nThe benefits of a varied curriculum\nImbalanced focus\nOverreliance on examinations\nQuality of quantity?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "31. Section E",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A question of time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "Lack of teacher training",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "Student success",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "The argument for flexibility",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "Importance of teaching experience",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "Extra-curricular pressures",
+                    "is_correct": true,
+                    "feedback": "Correct! Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "The benefits of a varied curriculum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "Imbalanced focus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "Overreliance on examinations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "Quality of quantity?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'Extra-curricular pressures'. Section E discusses 'Extra-curricular pressures': 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                }
+            ],
+            "options": "A question of time\nLack of teacher training\nStudent success\nThe argument for flexibility\nImportance of teaching experience\nExtra-curricular pressures\nThe benefits of a varied curriculum\nImbalanced focus\nOverreliance on examinations\nQuality of quantity?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "32. Section F",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "A question of time",
+                    "is_correct": true,
+                    "feedback": "Correct! Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "Lack of teacher training",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "Student success",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "The argument for flexibility",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "Importance of teaching experience",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "Extra-curricular pressures",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "The benefits of a varied curriculum",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "Imbalanced focus",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "Overreliance on examinations",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                },
+                {
+                    "text": "Quality of quantity?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is 'A question of time'. Section F addresses 'A question of time': 'the process of rewriting a curriculum to incorporate only that which is essential but can be well learned would take far longer than most educational authorities have.'"
+                }
+            ],
+            "options": "A question of time\nLack of teacher training\nStudent success\nThe argument for flexibility\nImportance of teaching experience\nExtra-curricular pressures\nThe benefits of a varied curriculum\nImbalanced focus\nOverreliance on examinations\nQuality of quantity?",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "<p><em><strong>Questions 33 – 37</strong></em></p>\r\n<p>Do the following statements agree with the views of the writer?</p>\r\n<p>In boxes <strong>33 -37</strong> on your answer sheet write</p>\r\n<p>Write</p>\r\n<p><em><strong>YES</strong> </em>if the statement agrees with the writer<br>\r\n<em><strong>NO</strong> </em>if the statement does not agree with the writer<br>\r\n<em><strong>NOT GIVEN</strong> </em>if there is no information about this in the passage</p>",
+            "question": "33. Classes are often too short.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The passage mentions 'classes sometimes only 30 minutes long' but doesn't state an opinion on whether this is too short.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions 'classes sometimes only 30 minutes long' but doesn't state an opinion on whether this is too short."
+                },
+                {
+                    "text": "NO",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions 'classes sometimes only 30 minutes long' but doesn't state an opinion on whether this is too short."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions 'classes sometimes only 30 minutes long' but doesn't state an opinion on whether this is too short."
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "34. No subjects can be comprehensively learned without time to discuss and debate the facts.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is NO. The passage states 'There are, of course, certain aspects of education which need to be taught by simply inputting the information. Basic mathematics, for example.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NO. The passage states 'There are, of course, certain aspects of education which need to be taught by simply inputting the information. Basic mathematics, for example.'"
+                },
+                {
+                    "text": "NO",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'There are, of course, certain aspects of education which need to be taught by simply inputting the information. Basic mathematics, for example.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NO. The passage states 'There are, of course, certain aspects of education which need to be taught by simply inputting the information. Basic mathematics, for example.'"
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "35. Tests are a fair measure of ability.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is NO. The passage states 'there are many students who, despite clear intellectual ability, simply do not perform well in tests.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NO. The passage states 'there are many students who, despite clear intellectual ability, simply do not perform well in tests.'"
+                },
+                {
+                    "text": "NO",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'there are many students who, despite clear intellectual ability, simply do not perform well in tests.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NO. The passage states 'there are many students who, despite clear intellectual ability, simply do not perform well in tests.'"
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "36. Schools are trying to be responsible for too many aspects of a child's education.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is YES. The passage states 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "NO",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is YES. The passage states 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is YES. The passage states 'many of the areas of educating a young child which should be the responsibility of the parents have ill-advisedly been taken over by the school.'"
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "37. Future changes in the curriculum will improve the situation.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The passage says 'change will be slow' but doesn't state whether changes will improve the situation.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage says 'change will be slow' but doesn't state whether changes will improve the situation."
+                },
+                {
+                    "text": "NO",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage says 'change will be slow' but doesn't state whether changes will improve the situation."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage says 'change will be slow' but doesn't state whether changes will improve the situation."
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "<p><em><strong>Questions 38 – 40</strong></em></p>\r\n<p>Complete the summary below using <strong>NO MORE THAN TWO WORDS</strong> from the text.</p>",
+            "question": "Too much emphasis is placed on learning (38)[field 1]. The modern school curriculum is largely a response to increased (39)[field 2] for which graduates are expected to have a much broader general knowledge. One potential solution to this could be to give individual schools (40)[field 3] regarding what is taught.",
+            "points": 3,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion_r",
+            "field_count": 3,
+            "field_answers": {
+                "1": "facts",
+                "2": "job mobility",
+                "3": "more discretion|discretion|freedom"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "incorrect": "Incorrect. The correct answer is 'facts / rote learning'. The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "no_answer": "You didn't provide an answer. The passage critiques the modern curriculum's emphasis on certain types of knowledge."
+                },
+                "2": {
+                    "correct": "Correct! The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "incorrect": "Incorrect. The correct answer is 'facts / rote learning'. The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "no_answer": "You didn't provide an answer. The passage critiques the modern curriculum's emphasis on certain types of knowledge."
+                },
+                "3": {
+                    "correct": "Correct! The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "incorrect": "Incorrect. The correct answer is 'facts / rote learning'. The passage critiques the modern curriculum's emphasis on certain types of knowledge.",
+                    "no_answer": "You didn't provide an answer. The passage critiques the modern curriculum's emphasis on certain types of knowledge."
+                }
+            }
         }
     ],
     "reading_texts": [

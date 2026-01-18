@@ -351,6 +351,569 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "open_question",
+            "instructions": "Reading Passage 3\r\n\r\nYou should spend about 20 minutes on Questions 26 – 40 which are based on Reading Passage 3.\r\n\r\nQuestions 26 – 29\r\n\r\nComplete the sentences below. Use NO MORE THAN THREE WORDS from the text.",
+            "question": "Without office technology we couldn't [field 1].",
+            "points": 1,
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'work from home'. Paragraph B states that technology means we can do business efficiently regardless of location.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "work from home"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph B states that 'The technology available to us now means that we no longer need to be in the same office building as our colleagues'.",
+                    "incorrect": "Incorrect. Review Paragraph B which discusses how technology enables us to do business from different locations.",
+                    "no_answer": "Please provide an answer. The correct answer is 'work from home'. Paragraph B states that technology means we can do business efficiently regardless of location."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "With fewer requirements for space, businesses can benefit from lower static [field 1].",
+            "points": 1,
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'costs'. Paragraph C states that home-based workers require less office space reducing fixed costs.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "costs"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph C mentions that 'a workforce set up in such a way requires far less office space' reducing fixed costs.",
+                    "incorrect": "Incorrect. Review Paragraph C which discusses the financial benefits for companies of having home-based workers.",
+                    "no_answer": "Please provide an answer. The correct answer is 'costs'. Paragraph C states that home-based workers require less office space reducing fixed costs."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Despite political pressure, public transport is still [field 1].",
+            "points": 1,
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'unpopular'. Paragraph D states that governments have tried to persuade us to use public transport but 'this is still unpopular'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "unpopular"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph D states that 'Governments have been trying for years to persuade us to forsake our private car journey' but 'this is still unpopular'.",
+                    "incorrect": "Incorrect. Review Paragraph D which discusses people's resistance to using buses or trains instead of private cars.",
+                    "no_answer": "Please provide an answer. The correct answer is 'unpopular'. Paragraph D states that governments have tried to persuade us to use public transport but 'this is still unpopular'."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "It is important that the social aspects of working in an office are not [field 1].",
+            "points": 1,
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'overlooked'. Paragraph E states that workplace relationships 'are a significant part of our life and should not be overlooked'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "overlooked"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph E emphasizes that 'The relationships we have with our colleagues...are a significant part of our life and should not be overlooked'.",
+                    "incorrect": "Incorrect. Review Paragraph E which discusses the importance of workplace relationships and social aspects.",
+                    "no_answer": "Please provide an answer. The correct answer is 'overlooked'. Paragraph E states that workplace relationships 'are a significant part of our life and should not be overlooked'."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the summary by using words from the box below. Write the correct letter A - H.\r\n\r\nA benefits\r\nB friendships\r\nC conduct business\r\nD workplace\r\nE financial\r\nF flexibility\r\nG release\r\nH psychological",
+            "question": "Technology has allowed us to (30) [field 1] at home instead of the office. For the company, there are (31) [field 2] incentives and for the employee there is more (32) [field 3]. There are even (33) [field 4] for the environment. However, there is a (34) [field 5] factor to be considered.",
+            "points": 5,
+            "no_answer_feedback": "Please provide answers for all fields. The correct answers are: Field 1: C (conduct business), Field 2: E (financial), Field 3: F (flexibility), Field 4: A (benefits), Field 5: H (psychological).",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 5,
+            "field_answers": {
+                "1": "C",
+                "2": "E",
+                "3": "F",
+                "4": "A",
+                "5": "H"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! All your answers accurately summarize the key points about working from home.",
+                    "incorrect": "Incorrect. Review the passage to find the words that best complete the summary.",
+                    "no_answer": "Please provide answers for all fields. The correct answers are: Field 1: C (conduct business), Field 2: E (financial), Field 3: F (flexibility), Field 4: A (benefits), Field 5: H (psychological)."
+                },
+                "2": {
+                    "correct": "Correct! All your answers accurately summarize the key points about working from home.",
+                    "incorrect": "Incorrect. Review Paragraph C which discusses the financial incentives for companies.",
+                    "no_answer": "Please provide answers for all fields. The correct answers are: Field 1: C (conduct business), Field 2: E (financial), Field 3: F (flexibility), Field 4: A (benefits), Field 5: H (psychological)."
+                },
+                "3": {
+                    "correct": "Correct! All your answers accurately summarize the key points about working from home.",
+                    "incorrect": "Incorrect. Review Paragraph C which discusses employee benefits of working from home.",
+                    "no_answer": "Please provide answers for all fields. The correct answers are: Field 1: C (conduct business), Field 2: E (financial), Field 3: F (flexibility), Field 4: A (benefits), Field 5: H (psychological)."
+                },
+                "4": {
+                    "correct": "Correct! All your answers accurately summarize the key points about working from home.",
+                    "incorrect": "Incorrect. Review Paragraph D which discusses environmental benefits.",
+                    "no_answer": "Please provide answers for all fields. The correct answers are: Field 1: C (conduct business), Field 2: E (financial), Field 3: F (flexibility), Field 4: A (benefits), Field 5: H (psychological)."
+                },
+                "5": {
+                    "correct": "Correct! All your answers accurately summarize the key points about working from home.",
+                    "incorrect": "Incorrect. Review Paragraph E which discusses the psychological and social factors of working from home.",
+                    "no_answer": "Please provide answers for all fields. The correct answers are: Field 1: C (conduct business), Field 2: E (financial), Field 3: F (flexibility), Field 4: A (benefits), Field 5: H (psychological)."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose the appropriate heading for each paragraph of the following text from the list below.\r\n\r\nList of headings\r\n\r\nParagraph A",
+            "question": "Paragraph A",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'I. Time for a change?'. Paragraph A asks questions about wanting change and suggests working from home.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. Time for a change?",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph A asks questions about wanting change and suggests making a career change to work from home."
+                },
+                {
+                    "text": "II. Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "III. Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IV. Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "V. Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VI. Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VII. Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VIII. Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IX. Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "X. The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph B",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'IV. Flexibility of technology'. Paragraph B discusses how technology enables working from home.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "II. Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "III. Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IV. Flexibility of technology",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B discusses how technology enables flexible work arrangements and communication from any location."
+                },
+                {
+                    "text": "V. Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VI. Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VII. Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VIII. Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IX. Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "X. The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph C",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'VII. Benefits for all'. Paragraph C discusses benefits for both companies and employees.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "II. Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "III. Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IV. Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "V. Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VI. Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VII. Benefits for all",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C discusses the benefits for both companies (reduced costs) and employees (flexibility, time with family)."
+                },
+                {
+                    "text": "VIII. Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IX. Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "X. The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph D",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'IX. Keeping it clean'. Paragraph D discusses environmental benefits and pollution reduction.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "II. Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "III. Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IV. Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "V. Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VI. Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VII. Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VIII. Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IX. Keeping it clean",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D discusses environmental benefits of working from home, including reduced pollution and CO2 levels."
+                },
+                {
+                    "text": "X. The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph E",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'II. Social impact'. Paragraph E discusses workplace relationships and social interactions.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "II. Social impact",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E discusses the social aspects of work, relationships with colleagues, and the psychological impact of isolation."
+                },
+                {
+                    "text": "III. Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IV. Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "V. Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VI. Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VII. Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VIII. Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IX. Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "X. The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph F",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'X. The best of both worlds'. Paragraph F suggests combining home-based work with regular meetings.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "II. Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "III. Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IV. Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "V. Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VI. Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VII. Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VIII. Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IX. Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "X. The best of both worlds",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F suggests that a balance combining home-based work with regular office meetings is the best solution."
+                }
+            ],
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         }
     ],
     "reading_texts": [

@@ -337,6 +337,421 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Do the following statements agree with the information given in Reading Passage 3?\r\n\r\nIn boxes 27 – 32 on your answer sheet, write\r\n\r\nTRUE if the statement agrees with the information\r\n\r\nFALSE if the statement contradicts the information\r\n\r\nNOT GIVEN if there is no information on this",
+            "question": "The Tasmanian authorities introduced legislation to protect thylacines in 1935.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The second sentence of Paragraph A states: '…the last captive Tasmanian tiger died in Hobart Zoo on the 7th of September, 1936, less than two months after the Tasmanian government had passed a law to protect the animal.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph A which states the last captive Tasmanian tiger died in September 1936, less than two months after the Tasmanian government had passed a law to protect the animal, meaning the law was passed in 1936, not 1935."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The second sentence of Paragraph A states: '…the last captive Tasmanian tiger died in Hobart Zoo on the 7th of September, 1936, less than two months after the Tasmanian government had passed a law to protect the animal.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph A which states the last captive Tasmanian tiger died in September 1936, less than two months after the Tasmanian government had passed a law to protect the animal, meaning the law was passed in 1936, not 1935."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The Tasmanian tiger is genetically related to the dog family.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. Paragraph B states that: 'While the thylacine's body resembles that of members of the dog family, with sharp teeth and powerful jaws, it is, in fact, a true pouched marsupial related to the Tasmanian devil.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph B which explains that while the thylacine's body resembles that of the dog family, it is actually a true pouched marsupial related to the Tasmanian devil, not genetically related to dogs."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B states that: 'While the thylacine's body resembles that of members of the dog family, with sharp teeth and powerful jaws, it is, in fact, a true pouched marsupial related to the Tasmanian devil.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph B which explains that while the thylacine's body resembles that of the dog family, it is actually a true pouched marsupial related to the Tasmanian devil, not genetically related to dogs."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Hunting is regarded as the main cause of the extinction of the thylacine in Tasmania.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Paragraph C states that: 'Popular belief holds that the thylacine's extinction in Tasmania was largely due to the efforts of farmers and bounty hunters killing the animals.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states that: 'Popular belief holds that the thylacine's extinction in Tasmania was largely due to the efforts of farmers and bounty hunters killing the animals.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which indicates that popular belief holds that hunting by farmers and bounty hunters was largely responsible for the thylacine's extinction in Tasmania."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which indicates that popular belief holds that hunting by farmers and bounty hunters was largely responsible for the thylacine's extinction in Tasmania."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Photographs published by the New Scientist were suspected to be fake.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Paragraph D states that: 'Subsequent examination raised questions about the photographs' authenticity.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D states that: 'Subsequent examination raised questions about the photographs' authenticity.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph D which mentions that subsequent examination raised questions about the authenticity of the New Scientist photographs."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph D which mentions that subsequent examination raised questions about the authenticity of the New Scientist photographs."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The eyes of foxes shine green at night time.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. While Paragraph E states that 'the colour of dogs' and dingoes' eyes shining in torchlight is green', the colour of foxes' eyes is not mentioned.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Paragraph E mentions that dogs' and dingoes' eyes shine green in torchlight, there is no information given about what colour foxes' eyes shine, making this NOT GIVEN."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Paragraph E mentions that dogs' and dingoes' eyes shine green in torchlight, there is no information given about what colour foxes' eyes shine, making this NOT GIVEN."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! While Paragraph E states that 'the colour of dogs' and dingoes' eyes shining in torchlight is green', the colour of foxes' eyes is not mentioned."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Bill Laurance puts the chance of finding evidence of living thylacines at less than 3%.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Paragraph G states that Laurance '…believes that there exists a remote possibility of between one and two percent that the creature could persist in Cape York.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G states that Laurance '…believes that there exists a remote possibility of between one and two percent that the creature could persist in Cape York.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which states that Bill Laurance believes there is a remote possibility of between 1 and 2 percent, which is indeed less than 3%."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which states that Bill Laurance believes there is a remote possibility of between 1 and 2 percent, which is indeed less than 3%."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the sentences below.\r\n\r\nChoose NO MORE THAN TWO WORDS from the passage for each answer.\r\n\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
+            "question": "<p>The Tasmanian tiger was once the planet's biggest [field 1]. Thylacines could jump and move upright using their [field 2]. [field 3] brought dogs to Tasmania. The creature in photos published in New Scientist was [field 4] by vegetation. The James Cook University researchers intend to install a number of [field 5].</p>\r\n<p>[field 1]</p>\r\n<p>[field 2]</p>\r\n<p>[field 3]</p>\r\n<p>[field 4]</p>\r\n<p>[field 5]</p>\r\n",
+            "points": 5,
+            "no_answer_feedback": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion_r",
+            "field_count": 5,
+            "field_answers": {
+                "1": "MARSUPIAL PREDATOR",
+                "2": "HIND LEGS",
+                "3": "EUROPEAN SETTLERS|SETTLERS",
+                "4": "PARTLY HIDDEN|HIDDEN",
+                "5": "TRAIL CAMERAS|CAMERAS"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! All answers can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
+                },
+                "2": {
+                    "correct": "Correct! All answers can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
+                },
+                "3": {
+                    "correct": "Correct! All answers can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
+                },
+                "4": {
+                    "correct": "Correct! All answers can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
+                },
+                "5": {
+                    "correct": "Correct! All answers can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 3 has seven paragraphs, A-G.\r\n\r\nWhich paragraph contains the following information?\r\n\r\nWrite the correct letter, A-G, in boxes 38-40 on your answer sheet.",
+            "question": "The likelihood of discovering thylacines on the Cape York Peninsula",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is G. Paragraph G states that: '…the chance of rediscovering the Tasmanian tiger alive in north Queensland is very slim, given that it is unlikely that the species could survive in such low numbers, he believes that there exists a remote possibility of between one and two percent that the creature could persist in Cape York.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "G",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G discusses the probability or likelihood of rediscovering the Tasmanian tiger alive on the Cape York Peninsula in Queensland."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Reasons behind the Tasmanian tiger's extinction",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is C. A number of causes are mentioned in Paragraph C.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "C",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C discusses multiple causes of the thylacine's extinction including competition with introduced dogs, loss of prey, disease, and hunting."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Animals erroneously identified as being Tasmanian tigers",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is E. Paragraph E states: '…the vast majority of thylacine sightings are dismissed as cases of mistaken identity, where eyewitnesses are said to have seen foxes, dingoes or feral dogs,'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "E",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E discusses cases of mistaken identity where people have confused foxes, dingoes, or feral dogs for Tasmanian tigers."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         }
     ],
     "reading_texts": [
