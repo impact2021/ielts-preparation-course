@@ -42,6 +42,7 @@ For precise control over what text gets highlighted, use manual HTML markers.
 - **Class:** Use `reading-answer-marker` for reading passages
 - **No question badge** - Reading passages don't show the "Q1" badge
 - **Multiple markers:** You can use the same `id="passage-q#"` multiple times to highlight different sections for one question
+  - *Note: While HTML standards recommend unique IDs, the system is designed to handle multiple elements with the same `passage-q#` ID for this specific use case*
 
 **Example:**
 ```html
