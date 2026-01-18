@@ -1,5 +1,5 @@
 {
-    "title": "General Training Reading Test 4",
+    "title": "General Training Reading Test 9",
     "content": "",
     "questions": [
         {
@@ -953,330 +953,10 @@
         },
         {
             "type": "closed_question",
-            "instructions": "You should spend about 20 minutes on Question 27 which are based on <strong>Reading Passage 3.</strong>\r\n\r\nQuestion 27\r\n\r\nComplete each sentence with the correct ending, A – I, below.\r\n\r\nWrite the correct letter, A – I, in boxes 27 – 31 on your answer sheet.\r\n\r\nA: have been determined by the International Maritime Organisation.\r\nB: must be capped at 5,000 ppm by 2020 in certain areas.\r\nC: are 600 times more dangerous than other fuels.\r\nD: suffer from high levels of sulphur.\r\nE: has been as high as 1,000 ppm.\r\nF: were not recognised by the Exclusive Economic Zones.\r\nG: impact severely on large port cities.\r\nH: accounts for 90% of all vessels in international waters.\r\nI: relies heavily on HFO.",
-            "question": "27. Populous port cities, such as Hong Kong,",
+            "instructions": "Do the following statements agree with the information given in Reading Passage 3?\r\n\r\nIn boxes 27 – 32 on your answer sheet, write\r\n\r\nTRUE if the statement agrees with the information\r\n\r\nFALSE if the statement contradicts the information\r\n\r\nNOT GIVEN if there is no information on this",
+            "question": "The Tasmanian authorities introduced legislation to protect thylacines in 1935.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is D (suffer from high levels of sulphur). Para 1 mentions that port cities like Hong Kong suffer from sulphur dioxide emissions from the shipping industry.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to guidelines, not port cities."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content regulations, not port cities."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not port cities."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 1 states that densely-populated port cities like Hong Kong suffer from high sulphur dioxide emissions from shipping."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content levels, not port cities."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not relate to port cities."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While this is related, the port cities are the subject being impacted, not doing the impacting."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the merchant fleet, not port cities."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the shipping industry, not port cities."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "28. Particulate matter emissions",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is G (impact severely on large port cities). Para 1 states that PM emissions have contributed to premature deaths and large port cities have borne the brunt of health issues.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The IMO determines guidelines, not PM emissions."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content, not PM emissions."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not PM emissions."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not PM emissions."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content in fuel, not PM emissions."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not relate to PM emissions."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 1 states that PM emissions contributed to 87,000 premature deaths and large port cities have borne the brunt of health issues."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the merchant fleet, not PM emissions."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the shipping industry, not PM emissions."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "29. The global merchant marine fleet",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is I (relies heavily on HFO). Para 2 states that heavy fuel oil has been the mainstay of energy and propulsion requirements for the global merchant fleet.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The IMO determines guidelines, not the merchant fleet."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to emission regulations, not the merchant fleet."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not the merchant fleet."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not the merchant fleet."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content, not the merchant fleet."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not relate to the merchant fleet."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to emissions, not the merchant fleet as a subject."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the fleet handles 90% of international trade, not that it accounts for 90% of vessels."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 2 states that heavy fuel oil has been the mainstay of energy and propulsion requirements."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "30. Guidelines to set safe standards of emissions",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is A (have been determined by the International Maritime Organisation). Para 3 states the IMO began formulating guidelines to determine and control safe standards for emissions.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 3 states the International Maritime Organisation began formulating guidelines to determine and control safe standards for emissions."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content regulations, not guidelines themselves."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not guidelines."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not guidelines."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content, not guidelines."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. ECAs implement guidelines, they don't fail to recognize them."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to emissions, not guidelines."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to trade statistics, not guidelines."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the shipping industry, not guidelines."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "31. The sulphur content of bunker fuels",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B (must be capped at 5,000 ppm by 2020 in certain areas). Para 3 states that from 2020, all vessels sailing outside any ECA must cap their emissions at 5,000 ppm.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While the IMO sets regulations, this doesn't complete the sentence about sulphur content."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 3 states that from 2020, the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This comparison relates to ocean fuel versus land transport diesel, not bunker fuels specifically."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not bunker fuels."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states bunker fuels ranged as high as 35,000 ppm, not 1,000 ppm."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not make sense with bunker fuels."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to emissions from fuels, not the fuels themselves."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to trade statistics, not bunker fuels."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Bunker fuels are HFO, so they don't rely on themselves."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Question 32\r\n\r\nDo the following statements agree with the information given in Reading Passage 3?\r\n\r\nIn boxes 32 – 38 on your answer sheet write\r\n\r\nTRUE if the statement agrees with the information\r\n\r\nFALSE if the statement contradicts the information\r\n\r\nNOT GIVEN if there is no information on this in the passage",
-            "question": "32. The costs involved with 'cleaning up' the heavy fuel oil will be met by only the shipping lines.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: FALSE. Para 4 states the economic cost comes to 'not only for the commercial enterprises, but also the shipping companies and, by extension, their shippers, and the national economies of the countries involved.'",
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The second sentence of Paragraph A states: '…the last captive Tasmanian tiger died in Hobart Zoo on the 7th of September, 1936, less than two months after the Tasmanian government had passed a law to protect the animal.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 5,
@@ -1288,29 +968,29 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. Multiple parties will bear the costs, not only shipping lines."
+                    "feedback": "Incorrect. Review Paragraph A which states the last captive Tasmanian tiger died in September 1936, less than two months after the Tasmanian government had passed a law to protect the animal, meaning the law was passed in 1936, not 1935."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": true,
-                    "feedback": "Correct! The passage states the costs will be borne by multiple parties, not only shipping lines."
+                    "feedback": "Correct! The second sentence of Paragraph A states: '…the last captive Tasmanian tiger died in Hobart Zoo on the 7th of September, 1936, less than two months after the Tasmanian government had passed a law to protect the animal.'"
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. Para 4 clearly states multiple parties will bear the costs."
+                    "feedback": "Incorrect. Review Paragraph A which states the last captive Tasmanian tiger died in September 1936, less than two months after the Tasmanian government had passed a law to protect the animal, meaning the law was passed in 1936, not 1935."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "33. The easiest approach to reduce emissions is to drop the sulphur content of fuel.",
+            "question": "The Tasmanian tiger is genetically related to the dog family.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: NOT GIVEN. While Para 4 mentions dropping sulphur content as one approach, there is no statement about which approach is easiest.",
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. Paragraph B states that: 'While the thylacine's body resembles that of members of the dog family, with sharp teeth and powerful jaws, it is, in fact, a true pouched marsupial related to the Tasmanian devil.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 5,
@@ -1322,29 +1002,29 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't state which approach is easiest."
+                    "feedback": "Incorrect. Review Paragraph B which explains that while the thylacine's body resembles that of the dog family, it is actually a true pouched marsupial related to the Tasmanian devil, not genetically related to dogs."
                 },
                 {
                     "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While approaches are mentioned, no comparison of difficulty is made."
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B states that: 'While the thylacine's body resembles that of members of the dog family, with sharp teeth and powerful jaws, it is, in fact, a true pouched marsupial related to the Tasmanian devil.'"
                 },
                 {
                     "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions approaches but doesn't state which is easiest."
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph B which explains that while the thylacine's body resembles that of the dog family, it is actually a true pouched marsupial related to the Tasmanian devil, not genetically related to dogs."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "34. One alternative fuel source would mean returning to a previous method of power.",
+            "question": "Hunting is regarded as the main cause of the extinction of the thylacine in Tasmania.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. Para 5 mentions wind as an alternative fuel and describes it as 'an ironic twist on where shipping originally began', indicating a return to a previous method.",
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Paragraph C states that: 'Popular belief holds that the thylacine's extinction in Tasmania was largely due to the efforts of farmers and bounty hunters killing the animals.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 5,
@@ -1356,97 +1036,29 @@
                 {
                     "text": "TRUE",
                     "is_correct": true,
-                    "feedback": "Correct! Para 5 mentions wind power as 'an ironic twist on where shipping originally began', indicating a return to a previous method."
+                    "feedback": "Correct! Paragraph C states that: 'Popular belief holds that the thylacine's extinction in Tasmania was largely due to the efforts of farmers and bounty hunters killing the animals.'"
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Wind power is mentioned as returning to where shipping originally began."
+                    "feedback": "Incorrect. Review Paragraph C which indicates that popular belief holds that hunting by farmers and bounty hunters was largely responsible for the thylacine's extinction in Tasmania."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 5 clearly refers to wind as an 'ironic twist on where shipping originally began'."
+                    "feedback": "Incorrect. Review Paragraph C which indicates that popular belief holds that hunting by farmers and bounty hunters was largely responsible for the thylacine's extinction in Tasmania."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "35. Nuclear energy is used mostly in naval fleets of many countries.",
+            "question": "Photographs published by the New Scientist were suspected to be fake.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: NOT GIVEN. Para 5 states nuclear energy is 'used in many naval fleets' but doesn't say it is used 'mostly' in naval fleets or provide comparison with other uses.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't state nuclear energy is used 'mostly' in naval fleets."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While nuclear use in naval fleets is mentioned, no comparison is made."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions nuclear energy is used in naval fleets but doesn't state this is its primary use."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "36. With 90% of international trade being carried on ships, the shipping industry is experiencing huge growth and profit levels.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: FALSE. Para 6 states that the shipping trade is experiencing a serious down-turn in profits, with daily revenue dropping from US$34,000 in 2007 to US$9,800 in 2017.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The shipping industry is experiencing a down-turn in profits, not growth."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states the shipping industry is experiencing a serious down-turn in profits, not growth."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. Para 6 clearly describes a serious down-turn in profits."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "37. One factor that is slowing down the move to cleaner fuels is that there are no significant direct economic benefits to the parties concerned.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. Para 6 states 'there will be a reluctance on the part of ship-owners, national state carriers and major shippers to contribute towards a scheme that, while benefiting the global environment and national health interests, sees little direct economic return.'",
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Paragraph D states that: 'Subsequent examination raised questions about the photographs' authenticity.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 5,
@@ -1458,29 +1070,63 @@
                 {
                     "text": "TRUE",
                     "is_correct": true,
-                    "feedback": "Correct! Para 6 states parties are reluctant to contribute to a scheme that sees little direct economic return."
+                    "feedback": "Correct! Paragraph D states that: 'Subsequent examination raised questions about the photographs' authenticity.'"
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 6 states there is reluctance due to little direct economic return."
+                    "feedback": "Incorrect. Review Paragraph D which mentions that subsequent examination raised questions about the authenticity of the New Scientist photographs."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 6 clearly states the scheme sees little direct economic return."
+                    "feedback": "Incorrect. Review Paragraph D which mentions that subsequent examination raised questions about the authenticity of the New Scientist photographs."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "38. The 2008 financial crisis helped introduce cost-saving measures for shipping lines.",
+            "question": "The eyes of foxes shine green at night time.",
             "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. Para 7 states 'during the 2008 global crisis in finance and costs, sailing speeds on ocean vessels were reduced by oftentimes up to half, which resulted in massive fuel savings.'",
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. While Paragraph E states that 'the colour of dogs' and dingoes' eyes shining in torchlight is green', the colour of foxes' eyes is not mentioned.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Paragraph E mentions that dogs' and dingoes' eyes shine green in torchlight, there is no information given about what colour foxes' eyes shine, making this NOT GIVEN."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Paragraph E mentions that dogs' and dingoes' eyes shine green in torchlight, there is no information given about what colour foxes' eyes shine, making this NOT GIVEN."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! While Paragraph E states that 'the colour of dogs' and dingoes' eyes shining in torchlight is green', the colour of foxes' eyes is not mentioned."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Bill Laurance puts the chance of finding evidence of living thylacines at less than 3%.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Paragraph G states that Laurance '…believes that there exists a remote possibility of between one and two percent that the creature could persist in Cape York.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 5,
@@ -1492,53 +1138,233 @@
                 {
                     "text": "TRUE",
                     "is_correct": true,
-                    "feedback": "Correct! Para 7 describes how the 2008 financial crisis led to reduced sailing speeds and massive fuel savings."
+                    "feedback": "Correct! Paragraph G states that Laurance '…believes that there exists a remote possibility of between one and two percent that the creature could persist in Cape York.'"
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 7 describes cost-saving measures introduced during the 2008 crisis."
+                    "feedback": "Incorrect. Review Paragraph G which states that Bill Laurance believes there is a remote possibility of between 1 and 2 percent, which is indeed less than 3%."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 7 clearly states cost-saving measures were introduced during the 2008 crisis."
+                    "feedback": "Incorrect. Review Paragraph G which states that Bill Laurance believes there is a remote possibility of between 1 and 2 percent, which is indeed less than 3%."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
             "correct_answer_count": 1,
-            "show_option_letters": false
+            "show_option_letters": true
         },
         {
             "type": "open_question",
-            "instructions": "Question 39\r\n\r\nComplete the following sentences, using NO MORE THAN THREE WORDS from the passage.\r\n\r\nWrite your answers in boxes 39 – 40 on your answer sheet.",
-            "question": "<p>Complete the following sentences:</p>\r\n<p>39. In order to comply with regulations regarding lowering emissions, shipping companies have the option of installing [field 1] to clean emissions.</p>\r\n<p>40. Even with all the restrictions and guidelines, most industry analysts, such as Lloyds Registry, feel that [field 2] will still be the shipping industry's main source of energy in the future.</p>\r\n",
-            "points": 2,
-            "no_answer_feedback": "39: scrubbers, 40: heavy fuel oil|HFO",
+            "instructions": "Complete the sentences below.\r\n\r\nChoose NO MORE THAN TWO WORDS from the passage for each answer.\r\n\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
+            "question": "<p>The Tasmanian tiger was once the planet's biggest [field 1]. Thylacines could jump and move upright using their [field 2]. [field 3] brought dogs to Tasmania. The creature in photos published in New Scientist was [field 4] by vegetation. The James Cook University researchers intend to install a number of [field 5].</p>\r\n<p>[field 1]</p>\r\n<p>[field 2]</p>\r\n<p>[field 3]</p>\r\n<p>[field 4]</p>\r\n<p>[field 5]</p>\r\n",
+            "points": 5,
+            "no_answer_feedback": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 5,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 2,
+            "ielts_question_category": "summary_completion_r",
+            "field_count": 5,
             "field_answers": {
-                "1": "scrubbers",
-                "2": "heavy fuel oil|HFO|heavy fuel oils|HFOs"
+                "1": "MARSUPIAL PREDATOR",
+                "2": "HIND LEGS",
+                "3": "EUROPEAN SETTLERS|SETTLERS",
+                "4": "PARTLY HIDDEN|HIDDEN",
+                "5": "TRAIL CAMERAS|CAMERAS"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Excellent! You answered both questions correctly.",
-                    "incorrect": "Review the passage and try again. Question 39 is found in Para 4, and Question 40 is in Para 8.",
-                    "no_answer": "39: scrubbers, 40: heavy fuel oil|HFO"
+                    "correct": "Correct! All answers can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
                 },
                 "2": {
-                    "correct": "Excellent! You answered both questions correctly.",
-                    "incorrect": "Review the passage and try again. Question 39 is found in Para 4, and Question 40 is in Para 8.",
-                    "no_answer": "39: scrubbers, 40: heavy fuel oil|HFO"
+                    "correct": "Correct! All answers can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
+                },
+                "3": {
+                    "correct": "Correct! All answers can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
+                },
+                "4": {
+                    "correct": "Correct! All answers can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
+                },
+                "5": {
+                    "correct": "Correct! All answers can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
                 }
             }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 3 has seven paragraphs, A-G.\r\n\r\nWhich paragraph contains the following information?\r\n\r\nWrite the correct letter, A-G, in boxes 38-40 on your answer sheet.",
+            "question": "The likelihood of discovering thylacines on the Cape York Peninsula",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is G. Paragraph G states that: '…the chance of rediscovering the Tasmanian tiger alive in north Queensland is very slim, given that it is unlikely that the species could survive in such low numbers, he believes that there exists a remote possibility of between one and two percent that the creature could persist in Cape York.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "G",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G discusses the probability or likelihood of rediscovering the Tasmanian tiger alive on the Cape York Peninsula in Queensland."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Reasons behind the Tasmanian tiger's extinction",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is C. A number of causes are mentioned in Paragraph C.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "C",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C discusses multiple causes of the thylacine's extinction including competition with introduced dogs, loss of prey, disease, and hunting."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Animals erroneously identified as being Tasmanian tigers",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is E. Paragraph E states: '…the vast majority of thylacine sightings are dismissed as cases of mistaken identity, where eyewitnesses are said to have seen foxes, dingoes or feral dogs,'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "E",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E discusses cases of mistaken identity where people have confused foxes, dingoes, or feral dogs for Tasmanian tigers."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         }
     ],
     "reading_texts": [
@@ -1564,7 +1390,7 @@
         },
         {
             "title": "Reading Text 6",
-            "content": "Maritime Shipping's Heavy Fuel Oil Debate\r\n\r\n<span id=\"passage-q27\" data-question=\"27\"></span><span id=\"passage-q28\" data-question=\"28\"></span>In a world growing more and more concerned with pollution and the accompanying health issues, attention has turned to the heavy fuel oil (HFO) used by the world's shipping industry. <span class=\"reading-answer-marker\">In a densely-populated port city such as Hong Kong, the shipping industry, from local tugs to ocean-going container and bulk cargo vessels, accounts for the largest amount of sulphur dioxide <span id=\"passage-q27\" data-question=\"27\"></span>(SO2) emissions</span> as well as the emission of particulate matter (PM), the mixture of minute particles and liquid droplets suspended in air. One estimate put forward is that <span class=\"reading-answer-marker\">PM emissions contributed to 87,000 global premature deaths in 2012 and these large port cities like Hong Kong and Busan in Asia, Rotterdam and Antwerp in Europe and Los Angeles/Long Beach in the Americas have borne the brunt of the health issues</span> created by the growing volume of heavy emissions from the maritime industry.\r\n\r\n<span id=\"passage-q29\" data-question=\"29\"></span><span id=\"passage-q28\" data-question=\"28\"></span>Globally, there are more than 90,000 vessels in the international marine fleet, handling over 90% of international trade. <span class=\"reading-answer-marker\">Heavy fuel oil has been the mainstay of energy and propulsion requirements</span> through the second half of the 20th century as global trade has become the lifeblood of economic growth, but it is acknowledged that this same shipping now accounts for nearly 10% of the total emissions of SO2, which has been responsible for the environmentally devast<span id=\"passage-q29\" data-question=\"29\"></span>ating acid rain, and is a heavy contributor to respiratory problems and other illnesses in humans. In the United States alone, the Environmental Protection Agency estimates that there are 14,000 premature deaths annually owing to toxic emissions, and it is noted that the fuel used by ocean-plying vessels is 600 times dirtier than land transport diesel fuel.\r\n\r\n<span id=\"passage-q30\" data-question=\"30\"></span>Once it was recognised that there was a strong causal relationship between pollutant emissions and<span id=\"passage-q30\" data-question=\"30\"></span> health issues, <span class=\"reading-answer-marker\">the International Maritime Organisation, or IMO, a UN agency that sets and regulates industry standards for safety and the environment, began formulating guidelines to determine and control safe standards for emissions</span>. Beginning in 2015, the IMO ruled that the first areas to be designated as Emission Control Areas, or ECAs, would be the Exclusive Economic Zones of North America and Northern Europe, where Marine Gas Oil with a permitted sulphur content of only 1,000 ppm (parts per million) would be allowed. <span id=\"passage-q31\"<span id=\"passage-q31\" data-question=\"31\"></span> data-question=\"31\"></span>This was a dramatic proposal, as the then-current sulphur content of what are called bunker fuels ranged as high as 35,000 ppm. Further, from the year 2020, <span class=\"reading-answer-marker\">the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm</span>.\r\n\r\n<span id=\"passage-q32\" data-question=\"32\"></span><span id=\"passage-q39\" data-question=\"39\"></span>But all this comes at a huge economic cost, <span class=\"reading-answer-marker\">not only for the commercial enterprises, but also the shipping comp<span id=\"passage-q32\" data-question=\"32\"></span>anies and, by extension, their shippers, and the national economies of the countries involved</span>. As a result, much research has gone into determining the best approach to 'clean up', or even change, the fuel, and ultimately there seems to be two main approaches to comply with the requirements. Firstly, <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">the oil industry would have to drop the sulphur content of the fuel from 3.5% to 0.5%</span>, which would achieve the required emissions <span id=\"passage-q33\" data-question=\"33\"></span>levels, or <span class=\"reading-answer-marker\">vessels would have to be fitted with what are known as 'scrubbers', technology that can clean the emissions</span>. However, it is recognised that the refining industry is not yet moving towards complying with the regulations regarding sulphur content, and as far as scrubbing is concerned, at an estimated US$4 million per engine fit out, the cost is often too high for many shipping countries.\r\n\r\n<span id=\"passage-q34\" data-question=\"34\"></span><span id=\"passage-q35\" data-question=\"35\"></span>In addit<span id=\"passage-q34\" data-question=\"34\"></span>ion, along with other industries such as land transport and airline companies, much research is being conducted into looking at alternative fuels. For shipping, this revolves around investigating alternative sources such as Liquid (or Liquefied) Natural Gas, solar fuel cells, <span class=\"reading-answer-marker\">wind (an ironic twist on where shipping originally began)</span> and the controversial <span class=\"reading-answer-marker\">nuclear energy, used in many naval fleets</span>. However, apart from the view that HFO is the cheapest alternative <span id=\"passage-q35\" data-question=\"35\"></span>and that the merchant fleet is geared towards the continuing use of HFO, each alternative also presents some challenges. Natural gas takes up a large amount of storage on a vessel, thus reducing cargo-carrying capacity. Likewise, solar fuel cells, although effective, require huge amount of space and wind is not considered reliable enough. Nuclear energy remains a contentious issue, and many ports will restrict or deny entry to nuclear-powered vessels.\r\n\r\n<span id=\"passage-q36\" data-question=\"36\"></span><span id=\"passage-q37\" data-question=\"37\"></<span id=\"passage-q36\" data-question=\"36\"></span>span>At the same time, the international shipping trade is experiencing a serious down-turn in profits. In 2007, the average daily revenue of a merchant vessel was US$34,000 but in 2017 that same figure was just US$9800, according to Clarkson Research, a global shipping consultancy firm. Part of this decline in profits is due to an excess of shipping vessels, but it also relates to the 2008 global financial crisis, and changes in the oil and export markets. <span class=\"reading-answer-marker\">All this means there will be a reluctance on the part <span id=\"passage-q37\" data-question=\"37\"></span>of ship-owners, national state carriers and major shippers to contribute towards a scheme that, while benefiting the global environment and national health interests, sees little direct economic return.</span>\r\n\r\n<span id=\"passage-q38\" data-question=\"38\"></span>But the way forward is appearing. Gas-powered vessels are now operating, with its cleaner and more efficient fuel. Which, interestingly, has given rise to what is known as the \"fifth fuel\", that is energy efficiency. Because fuel traditionally accounts for up to half of all costs involved <span id=\"passage-q38\" data-question=\"38\"></span>in shipping, there have always been innovative energy-saving approaches. One example is that <span class=\"reading-answer-marker\">during the 2008 global crisis in finance and costs, sailing speeds on ocean vessels were reduced by oftentimes up to half, which resulted in massive fuel savings</span>. This has given rise to what is known as the Energy Efficiency Design Index, a compulsory outline of regulations that means that all new ships will be required to adhere to it from 2015.\r\n\r\n<span id=\"passage-q40\" data-question=\"40\"></span><span class=\"re<span id=\"passage-q39\" data-question=\"39\"></span>ading-answer-marker\">Heavy Fuel Oil, however, will be the backbone of energy for the foreseeable future.</span> If engine scrubbers are deployed, and are as effective as engineered, they can capture more than 90% of exhaust sulphur and they will continue to be the main force in energy requirements. <span class=\"reading-answer-marker\">Lloyds Registry, the industry classification organisation, believes that HFO will still make up nearly half of all fuels used in the maritime industry in 2030</span>, albeit with the agreed-upon restrictions set out.",
+            "content": "<h3>Reading Passage 3</h3>\r\n<h4>You should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.</h4>\r\n\r\n<h2>The Tasmanian Tiger</h2>\r\n<h3>Is the extinct marsupial still roaming the Australian mainland?</h3>\r\n\r\n<p><strong>A:</strong> Once found throughout continental Australia, as well as the islands of Tasmania and New Guinea, the large, carnivorous marsupial species commonly called the Tasmanian tiger or Tasmanian wolf, is believed to have become extinct in the 1930s. At one time the world's largest <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">marsupial predator</span>, <span id=\"passage-q27\" data-question=\"27\"></<span id=\"passage-q27\" data-question=\"27\"></span>span><span class=\"reading-answer-marker\">the last captive Tasmanian tiger died in Hobart Zoo on the 7th of September, 1936, less than two months after the Tasmanian government had passed a law to protect the animal</span>. However, since that time, there have been hundreds of reported sightings of the Tasmanian tiger in remote locations both on the Australian mainland and in Tasmania. In addition to eyewitness accounts, a number of sightings are supported by photographs and video footage of the animal, although this evidence is considered inconclusive. The thylacine, as the Tasmanian tiger is formally known, continues to be regarded as an extinct species by the scientific community.</p>\r\n\r\n<p><strong>B:</strong> The Tasmanian tiger's scie<span id=\"passage-q28\" data-question=\"28\"></span>ntific or binomial name, Thylacinus cynocephalus, means \"pouched and dog-headed\". In terms of its physical appearance, the thylacine is described as being a large, shorthaired, doglike animal, with yellow-brown fur, and dark, vertical stripes running down its lower back to the base of the tail, similar to those of a tiger. Its stripy coat earned the thylacine the nickname of Tasmanian tiger. While the thylacine's body resembles that of members of the dog family, with sharp teeth and powerful jaws, <span id=\"passage-q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">it is, in fact, a true pouched marsupial relat<span id=\"passage-q29\" data-question=\"29\"></span>ed to the Tasmanian devil</span>. It is thought that the Tasmanian tiger was predominantly quadrupedal, routinely walking on all fours, although captive animals were also observed as being able to stand on their <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">hind legs</span> and hop like a kangaroo.</p>\r\n\r\n<p><span id=\"passage-q39\" data-question=\"39\"></span><strong>C:</strong> <span class=\"reading-answer-marker\">Experts believe that the thylacine most likely became extinct in mainland Australia and New Guinea around 2000 years ago, largely as a result of competition for food with indigenous people and their introduced wild dogs, known as dingoes<span id=\"passage-q30\" data-question=\"30\"></span>. At the same time, it has been theorised that a lack of genetic diversity in the thylacine population, due to physical isolation, may have been another cause. As far as the fate of the species on the island state of Tasmania is concerned, a number of reasons have been put forward to explain its decline and subsequent extinction. These include competition with dogs introduced by</span> <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">European settlers</span>, the loss of prey species and natural habitat, disease and hunting. For more than a century, both the Van Diemen's Land Company and the Tasmanian government offered financial rewards, or bount<span id=\"passage-q31\" data-question=\"31\"></span>ies, on thylacines that were killed, with a view to controlling their numbers to reduce attacks on sheep by Tasmanian tigers. <span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">Popular belief holds that the thylacine's extinction in Tasmania was largely due to the efforts of farmers and bounty hunters killing the animals.</span></p>\r\n\r\n<p><strong>D:</strong> Despite the fact that most scientists consider the Tasmanian tiger to be extinct, each year dozens of unconfirmed sightings of the animal are reported from relatively uninhabited areas in New Guinea, Tasmania and mainland <span id=\"passage-q32\" data-question=\"32\"></span>Australia by people from all walks of life. However, to date, there has been no conclusive physical evidence of a living thylacine population in any of these locations. On 24 April 1986, the New Scientist magazine made world news when it published a series of colour photographs of an alleged Tasmanian tiger taken by Kevin Cameron, an expert tracker employed with the Agricultural Protection Board of Western Australia. The pictures showed a grey animal with fawn stripes, <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">partly hidden</span> from view in wilderness surrounds. <span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">Subsequent examination raised questions about the photographs' au<span id=\"passage-q33\" data-question=\"33\"></span>thenticity.</span></p>\r\n\r\n<p><span id=\"passage-q40\" data-question=\"40\"></span><strong>E:</strong> <span class=\"reading-answer-marker\">Recently, the British daily newspaper The Guardian, along with other media publications, ran a story detailing the plans of a group of scientists from James Cook University to undertake a search for the Tasmanian tiger on the remote Cape York Peninsula in Queensland's far north. The expedition was prompted by a pair of detailed sightings, one from a long-time employee of the Queensland National Parks Service, that appear to be both credible and plausible. While the vast majority of thylacine sightings are dismissed as cases of mistaken identity, where<span id=\"passage-q34\" data-question=\"34\"></span> eyewitnesses are said to have seen foxes, dingoes or feral dogs, the Cape York accounts differ in one key detail. Both observers reported that the animals' eyes shone red at night, whereas</span> <span id=\"passage-q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">the colour of dogs' and dingoes' eyes shining in torchlight is green</span>. In addition, the size, shape and behaviour of the creatures, as described by the Cape York eyewitnesses, were not consistent with those of other large species found in north Queensland.</p>\r\n\r\n<p><strong>F:</strong> The two James Cook University researchers undertaking the Cape York expedition, Professor Bill Laurance and Doctor S<span id=\"passage-q35\" data-question=\"35\"></span>andra Abell, have stated that they will set up more than fifty <span id=\"passage-q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">trail cameras</span> in the area of the sightings, one to two kilometres apart, in the hopes of photographing a live Tasmanian tiger. Isolated, uninhabited and not very extensively explored, the Cape York Peninsula in Australia's northeast is known to be home to a number of endangered species that are not found anywhere else on the continent. The traps will be baited with a scent that is attractive to predatory species, and the research team plan to check the cameras every few weeks and download the data, with a view to gathering photogr<span id=\"passage-q36\" data-question=\"36\"></span>aphic evidence of living thylacines.</p>\r\n\r\n<p><span id=\"passage-q38\" data-question=\"38\"></span><strong>G:</strong> <span class=\"reading-answer-marker\">While Laurance admits that the chance of rediscovering the Tasmanian tiger alive in north Queensland is very slim, given that it is unlikely that the species could survive in such low numbers, he</span> <span id=\"passage-q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">believes that there exists a remote possibility of between 1 and 2% that the creature could persist in Cape York</span>. Jack Ashby, manager of the Grant Museum of Zoology at University College London, shares this view. \"It's not impossible\", he says.</p>",
             "text_id": null
         }
     ],

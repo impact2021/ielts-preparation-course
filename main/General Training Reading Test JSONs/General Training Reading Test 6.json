@@ -1,5 +1,5 @@
 {
-    "title": "General Training Reading Test 4",
+    "title": "General Training Reading Test 6",
     "content": "",
     "questions": [
         {
@@ -953,590 +953,483 @@
         },
         {
             "type": "closed_question",
-            "instructions": "You should spend about 20 minutes on Question 27 which are based on <strong>Reading Passage 3.</strong>\r\n\r\nQuestion 27\r\n\r\nComplete each sentence with the correct ending, A – I, below.\r\n\r\nWrite the correct letter, A – I, in boxes 27 – 31 on your answer sheet.\r\n\r\nA: have been determined by the International Maritime Organisation.\r\nB: must be capped at 5,000 ppm by 2020 in certain areas.\r\nC: are 600 times more dangerous than other fuels.\r\nD: suffer from high levels of sulphur.\r\nE: has been as high as 1,000 ppm.\r\nF: were not recognised by the Exclusive Economic Zones.\r\nG: impact severely on large port cities.\r\nH: accounts for 90% of all vessels in international waters.\r\nI: relies heavily on HFO.",
-            "question": "27. Populous port cities, such as Hong Kong,",
+            "instructions": "Choose the most suitable headings for Paragraphs A-E from the list below. Use each heading once only.\r\n",
+            "question": "Paragraph A",
             "points": 1,
-            "no_answer_feedback": "The correct answer is D (suffer from high levels of sulphur). Para 1 mentions that port cities like Hong Kong suffer from sulphur dioxide emissions from the shipping industry.",
+            "no_answer_feedback": "The correct answer is provided in the feedback. In the IELTS test, you should always attempt an answer as there's no penalty for incorrect responses.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 5,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
-                    "text": "have been determined by the International Maritime Organisation.",
+                    "text": "I. Effect on modern industry",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to guidelines, not port cities."
+                    "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
                 },
                 {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "text": "II. New payment procedures",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content regulations, not port cities."
+                    "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
                 },
                 {
-                    "text": "are 600 times more dangerous than other fuels.",
+                    "text": "III. Labour problems",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not port cities."
+                    "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
                 },
                 {
-                    "text": "suffer from high levels of sulphur.",
+                    "text": "IV. The Model-T",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
+                },
+                {
+                    "text": "V. Creating a market",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
+                },
+                {
+                    "text": "VI. Revolutionary production techniques",
                     "is_correct": true,
-                    "feedback": "Correct! Para 1 states that densely-populated port cities like Hong Kong suffer from high sulphur dioxide emissions from shipping."
+                    "feedback": "Correct!"
                 },
                 {
-                    "text": "has been as high as 1,000 ppm.",
+                    "text": "VII. The Ford family today",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content levels, not port cities."
+                    "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
                 },
                 {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
+                    "text": "VIII. Impact on the global economy",
                     "is_correct": false,
-                    "feedback": "Incorrect. This does not relate to port cities."
+                    "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
                 },
                 {
-                    "text": "impact severely on large port cities.",
+                    "text": "IX. Overseas competition",
                     "is_correct": false,
-                    "feedback": "Incorrect. While this is related, the port cities are the subject being impacted, not doing the impacting."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the merchant fleet, not port cities."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the shipping industry, not port cities."
+                    "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
                 }
             ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
+            "options": "I. Effect on modern industry\nII. New payment procedures\nIII. Labour problems\nIV. The Model-T\nV. Creating a market\nVI. Revolutionary production techniques\nVII. The Ford family today\nVIII. Impact on the global economy\nIX. Overseas competition",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "28. Particulate matter emissions",
+            "question": "Paragraph B",
             "points": 1,
-            "no_answer_feedback": "The correct answer is G (impact severely on large port cities). Para 1 states that PM emissions have contributed to premature deaths and large port cities have borne the brunt of health issues.",
+            "no_answer_feedback": "The correct answer is provided in the feedback. In the IELTS test, you should always attempt an answer as there's no penalty for incorrect responses.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 5,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
-                    "text": "have been determined by the International Maritime Organisation.",
+                    "text": "I. Effect on modern industry",
                     "is_correct": false,
-                    "feedback": "Incorrect. The IMO determines guidelines, not PM emissions."
+                    "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
                 },
                 {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "text": "II. New payment procedures",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content, not PM emissions."
+                    "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
                 },
                 {
-                    "text": "are 600 times more dangerous than other fuels.",
+                    "text": "III. Labour problems",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not PM emissions."
+                    "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
                 },
                 {
-                    "text": "suffer from high levels of sulphur.",
+                    "text": "IV. The Model-T",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not PM emissions."
+                    "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
                 },
                 {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content in fuel, not PM emissions."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not relate to PM emissions."
-                },
-                {
-                    "text": "impact severely on large port cities.",
+                    "text": "V. Creating a market",
                     "is_correct": true,
-                    "feedback": "Correct! Para 1 states that PM emissions contributed to 87,000 premature deaths and large port cities have borne the brunt of health issues."
+                    "feedback": "Correct!"
                 },
                 {
-                    "text": "accounts for 90% of all vessels in international waters.",
+                    "text": "VI. Revolutionary production techniques",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to the merchant fleet, not PM emissions."
+                    "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
                 },
                 {
-                    "text": "relies heavily on HFO.",
+                    "text": "VII. The Ford family today",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to the shipping industry, not PM emissions."
+                    "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
+                },
+                {
+                    "text": "VIII. Impact on the global economy",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
+                },
+                {
+                    "text": "IX. Overseas competition",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
                 }
             ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
+            "options": "I. Effect on modern industry\nII. New payment procedures\nIII. Labour problems\nIV. The Model-T\nV. Creating a market\nVI. Revolutionary production techniques\nVII. The Ford family today\nVIII. Impact on the global economy\nIX. Overseas competition",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "29. The global merchant marine fleet",
+            "question": "Paragraph C",
             "points": 1,
-            "no_answer_feedback": "The correct answer is I (relies heavily on HFO). Para 2 states that heavy fuel oil has been the mainstay of energy and propulsion requirements for the global merchant fleet.",
+            "no_answer_feedback": "The correct answer is provided in the feedback. In the IELTS test, you should always attempt an answer as there's no penalty for incorrect responses.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 5,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
-                    "text": "have been determined by the International Maritime Organisation.",
+                    "text": "I. Effect on modern industry",
                     "is_correct": false,
-                    "feedback": "Incorrect. The IMO determines guidelines, not the merchant fleet."
+                    "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
                 },
                 {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "text": "II. New payment procedures",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to emission regulations, not the merchant fleet."
+                    "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
                 },
                 {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not the merchant fleet."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not the merchant fleet."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content, not the merchant fleet."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not relate to the merchant fleet."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to emissions, not the merchant fleet as a subject."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the fleet handles 90% of international trade, not that it accounts for 90% of vessels."
-                },
-                {
-                    "text": "relies heavily on HFO.",
+                    "text": "III. Labour problems",
                     "is_correct": true,
-                    "feedback": "Correct! Para 2 states that heavy fuel oil has been the mainstay of energy and propulsion requirements."
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "IV. The Model-T",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
+                },
+                {
+                    "text": "V. Creating a market",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
+                },
+                {
+                    "text": "VI. Revolutionary production techniques",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
+                },
+                {
+                    "text": "VII. The Ford family today",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
+                },
+                {
+                    "text": "VIII. Impact on the global economy",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
+                },
+                {
+                    "text": "IX. Overseas competition",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
                 }
             ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
+            "options": "I. Effect on modern industry\nII. New payment procedures\nIII. Labour problems\nIV. The Model-T\nV. Creating a market\nVI. Revolutionary production techniques\nVII. The Ford family today\nVIII. Impact on the global economy\nIX. Overseas competition",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "30. Guidelines to set safe standards of emissions",
+            "question": "Paragraph D",
             "points": 1,
-            "no_answer_feedback": "The correct answer is A (have been determined by the International Maritime Organisation). Para 3 states the IMO began formulating guidelines to determine and control safe standards for emissions.",
+            "no_answer_feedback": "The correct answer is provided in the feedback. In the IELTS test, you should always attempt an answer as there's no penalty for incorrect responses.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 5,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
-                    "text": "have been determined by the International Maritime Organisation.",
+                    "text": "I. Effect on modern industry",
                     "is_correct": true,
-                    "feedback": "Correct! Para 3 states the International Maritime Organisation began formulating guidelines to determine and control safe standards for emissions."
+                    "feedback": "Correct!"
                 },
                 {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "text": "II. New payment procedures",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content regulations, not guidelines themselves."
+                    "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
                 },
                 {
-                    "text": "are 600 times more dangerous than other fuels.",
+                    "text": "III. Labour problems",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not guidelines."
+                    "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
                 },
                 {
-                    "text": "suffer from high levels of sulphur.",
+                    "text": "IV. The Model-T",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not guidelines."
+                    "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
                 },
                 {
-                    "text": "has been as high as 1,000 ppm.",
+                    "text": "V. Creating a market",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content, not guidelines."
+                    "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
                 },
                 {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
+                    "text": "VI. Revolutionary production techniques",
                     "is_correct": false,
-                    "feedback": "Incorrect. ECAs implement guidelines, they don't fail to recognize them."
+                    "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
                 },
                 {
-                    "text": "impact severely on large port cities.",
+                    "text": "VII. The Ford family today",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to emissions, not guidelines."
+                    "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
                 },
                 {
-                    "text": "accounts for 90% of all vessels in international waters.",
+                    "text": "VIII. Impact on the global economy",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to trade statistics, not guidelines."
+                    "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
                 },
                 {
-                    "text": "relies heavily on HFO.",
+                    "text": "IX. Overseas competition",
                     "is_correct": false,
-                    "feedback": "Incorrect. This relates to the shipping industry, not guidelines."
+                    "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
                 }
             ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
+            "options": "I. Effect on modern industry\nII. New payment procedures\nIII. Labour problems\nIV. The Model-T\nV. Creating a market\nVI. Revolutionary production techniques\nVII. The Ford family today\nVIII. Impact on the global economy\nIX. Overseas competition",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "31. The sulphur content of bunker fuels",
+            "question": "Paragraph E",
             "points": 1,
-            "no_answer_feedback": "The correct answer is B (must be capped at 5,000 ppm by 2020 in certain areas). Para 3 states that from 2020, all vessels sailing outside any ECA must cap their emissions at 5,000 ppm.",
+            "no_answer_feedback": "The correct answer is provided in the feedback. In the IELTS test, you should always attempt an answer as there's no penalty for incorrect responses.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 5,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
-                    "text": "have been determined by the International Maritime Organisation.",
+                    "text": "I. Effect on modern industry",
                     "is_correct": false,
-                    "feedback": "Incorrect. While the IMO sets regulations, this doesn't complete the sentence about sulphur content."
+                    "feedback": ""
                 },
                 {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "text": "II. New payment procedures",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "III. Labour problems",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "IV. The Model-T",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "V. Creating a market",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VI. Revolutionary production techniques",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VII. The Ford family today",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "VIII. Impact on the global economy",
                     "is_correct": true,
-                    "feedback": "Correct! Para 3 states that from 2020, the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm."
+                    "feedback": "Correct!"
                 },
                 {
-                    "text": "are 600 times more dangerous than other fuels.",
+                    "text": "IX. Overseas competition",
                     "is_correct": false,
-                    "feedback": "Incorrect. This comparison relates to ocean fuel versus land transport diesel, not bunker fuels specifically."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not bunker fuels."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states bunker fuels ranged as high as 35,000 ppm, not 1,000 ppm."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not make sense with bunker fuels."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to emissions from fuels, not the fuels themselves."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to trade statistics, not bunker fuels."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Bunker fuels are HFO, so they don't rely on themselves."
+                    "feedback": ""
                 }
             ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Question 32\r\n\r\nDo the following statements agree with the information given in Reading Passage 3?\r\n\r\nIn boxes 32 – 38 on your answer sheet write\r\n\r\nTRUE if the statement agrees with the information\r\n\r\nFALSE if the statement contradicts the information\r\n\r\nNOT GIVEN if there is no information on this in the passage",
-            "question": "32. The costs involved with 'cleaning up' the heavy fuel oil will be met by only the shipping lines.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: FALSE. Para 4 states the economic cost comes to 'not only for the commercial enterprises, but also the shipping companies and, by extension, their shippers, and the national economies of the countries involved.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. Multiple parties will bear the costs, not only shipping lines."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states the costs will be borne by multiple parties, not only shipping lines."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. Para 4 clearly states multiple parties will bear the costs."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "33. The easiest approach to reduce emissions is to drop the sulphur content of fuel.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: NOT GIVEN. While Para 4 mentions dropping sulphur content as one approach, there is no statement about which approach is easiest.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't state which approach is easiest."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While approaches are mentioned, no comparison of difficulty is made."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions approaches but doesn't state which is easiest."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "34. One alternative fuel source would mean returning to a previous method of power.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. Para 5 mentions wind as an alternative fuel and describes it as 'an ironic twist on where shipping originally began', indicating a return to a previous method.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 5 mentions wind power as 'an ironic twist on where shipping originally began', indicating a return to a previous method."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Wind power is mentioned as returning to where shipping originally began."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 5 clearly refers to wind as an 'ironic twist on where shipping originally began'."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "35. Nuclear energy is used mostly in naval fleets of many countries.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: NOT GIVEN. Para 5 states nuclear energy is 'used in many naval fleets' but doesn't say it is used 'mostly' in naval fleets or provide comparison with other uses.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't state nuclear energy is used 'mostly' in naval fleets."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While nuclear use in naval fleets is mentioned, no comparison is made."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions nuclear energy is used in naval fleets but doesn't state this is its primary use."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "36. With 90% of international trade being carried on ships, the shipping industry is experiencing huge growth and profit levels.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: FALSE. Para 6 states that the shipping trade is experiencing a serious down-turn in profits, with daily revenue dropping from US$34,000 in 2007 to US$9,800 in 2017.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The shipping industry is experiencing a down-turn in profits, not growth."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states the shipping industry is experiencing a serious down-turn in profits, not growth."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. Para 6 clearly describes a serious down-turn in profits."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "37. One factor that is slowing down the move to cleaner fuels is that there are no significant direct economic benefits to the parties concerned.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. Para 6 states 'there will be a reluctance on the part of ship-owners, national state carriers and major shippers to contribute towards a scheme that, while benefiting the global environment and national health interests, sees little direct economic return.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 6 states parties are reluctant to contribute to a scheme that sees little direct economic return."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 6 states there is reluctance due to little direct economic return."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 6 clearly states the scheme sees little direct economic return."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "38. The 2008 financial crisis helped introduce cost-saving measures for shipping lines.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. Para 7 states 'during the 2008 global crisis in finance and costs, sailing speeds on ocean vessels were reduced by oftentimes up to half, which resulted in massive fuel savings.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 7 describes how the 2008 financial crisis led to reduced sailing speeds and massive fuel savings."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 7 describes cost-saving measures introduced during the 2008 crisis."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 7 clearly states cost-saving measures were introduced during the 2008 crisis."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "options": "I. Effect on modern industry\nII. New payment procedures\nIII. Labour problems\nIV. The Model-T\nV. Creating a market\nVI. Revolutionary production techniques\nVII. The Ford family today\nVIII. Impact on the global economy\nIX. Overseas competition",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "open_question",
-            "instructions": "Question 39\r\n\r\nComplete the following sentences, using NO MORE THAN THREE WORDS from the passage.\r\n\r\nWrite your answers in boxes 39 – 40 on your answer sheet.",
-            "question": "<p>Complete the following sentences:</p>\r\n<p>39. In order to comply with regulations regarding lowering emissions, shipping companies have the option of installing [field 1] to clean emissions.</p>\r\n<p>40. Even with all the restrictions and guidelines, most industry analysts, such as Lloyds Registry, feel that [field 2] will still be the shipping industry's main source of energy in the future.</p>\r\n",
-            "points": 2,
-            "no_answer_feedback": "39: scrubbers, 40: heavy fuel oil|HFO",
+            "instructions": "Question 32\r\n\r\nAnswer the following questions using NO MORE THAN TWO WORDS.",
+            "question": "What was used to move parts around the factory under Ford's production techniques? ",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is provided in the feedback. In the IELTS test, you should always attempt an answer as there's no penalty for incorrect responses.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 5,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 2,
+            "ielts_question_category": "sentence_completion_r",
+            "field_count": 1,
             "field_answers": {
-                "1": "scrubbers",
-                "2": "heavy fuel oil|HFO|heavy fuel oils|HFOs"
+                "1": "conveyor belt"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Excellent! You answered both questions correctly.",
-                    "incorrect": "Review the passage and try again. Question 39 is found in Para 4, and Question 40 is in Para 8.",
-                    "no_answer": "39: scrubbers, 40: heavy fuel oil|HFO"
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What did Ford reduce by 90% compared with more traditional methods of the time? ",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is provided in the feedback. In the IELTS test, you should always attempt an answer as there's no penalty for incorrect responses.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "labour costs|labor costs"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "When was the last Model-T Ford produced?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is provided in the feedback. In the IELTS test, you should always attempt an answer as there's no penalty for incorrect responses.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "1927"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What did Ford unsuccessfully oppose the organisation of? ",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is provided in the feedback. In the IELTS test, you should always attempt an answer as there's no penalty for incorrect responses.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "Labour Unions|labor unions|unions"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "What is the name given to the principles of mass production and associated practices?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is provided in the feedback. In the IELTS test, you should always attempt an answer as there's no penalty for incorrect responses.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "Fordism"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Question 37\r\n\r\nComplete the following summary using NO MORE THAN THREE WORDS FROM THE TEXT.",
+            "question": "One of the long-term effects of Ford’s business practices was that many developing countries became industrialised as a result of (38)[field 1]. For those working in the factory, the skills for (39)[field 2] were easily acquired and (40)[field 3] was minimal.",
+            "points": 3,
+            "no_answer_feedback": "The correct answer is provided in the feedback. In the IELTS test, you should always attempt an answer as there's no penalty for incorrect responses.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion_r",
+            "field_count": 3,
+            "field_answers": {
+                "1": "outsourcing",
+                "2": "assembly-line tasks",
+                "3": "training"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
                 },
                 "2": {
-                    "correct": "Excellent! You answered both questions correctly.",
-                    "incorrect": "Review the passage and try again. Question 39 is found in Para 4, and Question 40 is in Para 8.",
-                    "no_answer": "39: scrubbers, 40: heavy fuel oil|HFO"
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                },
+                "3": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
                 }
             }
         }
@@ -1564,7 +1457,7 @@
         },
         {
             "title": "Reading Text 6",
-            "content": "Maritime Shipping's Heavy Fuel Oil Debate\r\n\r\n<span id=\"passage-q27\" data-question=\"27\"></span><span id=\"passage-q28\" data-question=\"28\"></span>In a world growing more and more concerned with pollution and the accompanying health issues, attention has turned to the heavy fuel oil (HFO) used by the world's shipping industry. <span class=\"reading-answer-marker\">In a densely-populated port city such as Hong Kong, the shipping industry, from local tugs to ocean-going container and bulk cargo vessels, accounts for the largest amount of sulphur dioxide <span id=\"passage-q27\" data-question=\"27\"></span>(SO2) emissions</span> as well as the emission of particulate matter (PM), the mixture of minute particles and liquid droplets suspended in air. One estimate put forward is that <span class=\"reading-answer-marker\">PM emissions contributed to 87,000 global premature deaths in 2012 and these large port cities like Hong Kong and Busan in Asia, Rotterdam and Antwerp in Europe and Los Angeles/Long Beach in the Americas have borne the brunt of the health issues</span> created by the growing volume of heavy emissions from the maritime industry.\r\n\r\n<span id=\"passage-q29\" data-question=\"29\"></span><span id=\"passage-q28\" data-question=\"28\"></span>Globally, there are more than 90,000 vessels in the international marine fleet, handling over 90% of international trade. <span class=\"reading-answer-marker\">Heavy fuel oil has been the mainstay of energy and propulsion requirements</span> through the second half of the 20th century as global trade has become the lifeblood of economic growth, but it is acknowledged that this same shipping now accounts for nearly 10% of the total emissions of SO2, which has been responsible for the environmentally devast<span id=\"passage-q29\" data-question=\"29\"></span>ating acid rain, and is a heavy contributor to respiratory problems and other illnesses in humans. In the United States alone, the Environmental Protection Agency estimates that there are 14,000 premature deaths annually owing to toxic emissions, and it is noted that the fuel used by ocean-plying vessels is 600 times dirtier than land transport diesel fuel.\r\n\r\n<span id=\"passage-q30\" data-question=\"30\"></span>Once it was recognised that there was a strong causal relationship between pollutant emissions and<span id=\"passage-q30\" data-question=\"30\"></span> health issues, <span class=\"reading-answer-marker\">the International Maritime Organisation, or IMO, a UN agency that sets and regulates industry standards for safety and the environment, began formulating guidelines to determine and control safe standards for emissions</span>. Beginning in 2015, the IMO ruled that the first areas to be designated as Emission Control Areas, or ECAs, would be the Exclusive Economic Zones of North America and Northern Europe, where Marine Gas Oil with a permitted sulphur content of only 1,000 ppm (parts per million) would be allowed. <span id=\"passage-q31\"<span id=\"passage-q31\" data-question=\"31\"></span> data-question=\"31\"></span>This was a dramatic proposal, as the then-current sulphur content of what are called bunker fuels ranged as high as 35,000 ppm. Further, from the year 2020, <span class=\"reading-answer-marker\">the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm</span>.\r\n\r\n<span id=\"passage-q32\" data-question=\"32\"></span><span id=\"passage-q39\" data-question=\"39\"></span>But all this comes at a huge economic cost, <span class=\"reading-answer-marker\">not only for the commercial enterprises, but also the shipping comp<span id=\"passage-q32\" data-question=\"32\"></span>anies and, by extension, their shippers, and the national economies of the countries involved</span>. As a result, much research has gone into determining the best approach to 'clean up', or even change, the fuel, and ultimately there seems to be two main approaches to comply with the requirements. Firstly, <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">the oil industry would have to drop the sulphur content of the fuel from 3.5% to 0.5%</span>, which would achieve the required emissions <span id=\"passage-q33\" data-question=\"33\"></span>levels, or <span class=\"reading-answer-marker\">vessels would have to be fitted with what are known as 'scrubbers', technology that can clean the emissions</span>. However, it is recognised that the refining industry is not yet moving towards complying with the regulations regarding sulphur content, and as far as scrubbing is concerned, at an estimated US$4 million per engine fit out, the cost is often too high for many shipping countries.\r\n\r\n<span id=\"passage-q34\" data-question=\"34\"></span><span id=\"passage-q35\" data-question=\"35\"></span>In addit<span id=\"passage-q34\" data-question=\"34\"></span>ion, along with other industries such as land transport and airline companies, much research is being conducted into looking at alternative fuels. For shipping, this revolves around investigating alternative sources such as Liquid (or Liquefied) Natural Gas, solar fuel cells, <span class=\"reading-answer-marker\">wind (an ironic twist on where shipping originally began)</span> and the controversial <span class=\"reading-answer-marker\">nuclear energy, used in many naval fleets</span>. However, apart from the view that HFO is the cheapest alternative <span id=\"passage-q35\" data-question=\"35\"></span>and that the merchant fleet is geared towards the continuing use of HFO, each alternative also presents some challenges. Natural gas takes up a large amount of storage on a vessel, thus reducing cargo-carrying capacity. Likewise, solar fuel cells, although effective, require huge amount of space and wind is not considered reliable enough. Nuclear energy remains a contentious issue, and many ports will restrict or deny entry to nuclear-powered vessels.\r\n\r\n<span id=\"passage-q36\" data-question=\"36\"></span><span id=\"passage-q37\" data-question=\"37\"></<span id=\"passage-q36\" data-question=\"36\"></span>span>At the same time, the international shipping trade is experiencing a serious down-turn in profits. In 2007, the average daily revenue of a merchant vessel was US$34,000 but in 2017 that same figure was just US$9800, according to Clarkson Research, a global shipping consultancy firm. Part of this decline in profits is due to an excess of shipping vessels, but it also relates to the 2008 global financial crisis, and changes in the oil and export markets. <span class=\"reading-answer-marker\">All this means there will be a reluctance on the part <span id=\"passage-q37\" data-question=\"37\"></span>of ship-owners, national state carriers and major shippers to contribute towards a scheme that, while benefiting the global environment and national health interests, sees little direct economic return.</span>\r\n\r\n<span id=\"passage-q38\" data-question=\"38\"></span>But the way forward is appearing. Gas-powered vessels are now operating, with its cleaner and more efficient fuel. Which, interestingly, has given rise to what is known as the \"fifth fuel\", that is energy efficiency. Because fuel traditionally accounts for up to half of all costs involved <span id=\"passage-q38\" data-question=\"38\"></span>in shipping, there have always been innovative energy-saving approaches. One example is that <span class=\"reading-answer-marker\">during the 2008 global crisis in finance and costs, sailing speeds on ocean vessels were reduced by oftentimes up to half, which resulted in massive fuel savings</span>. This has given rise to what is known as the Energy Efficiency Design Index, a compulsory outline of regulations that means that all new ships will be required to adhere to it from 2015.\r\n\r\n<span id=\"passage-q40\" data-question=\"40\"></span><span class=\"re<span id=\"passage-q39\" data-question=\"39\"></span>ading-answer-marker\">Heavy Fuel Oil, however, will be the backbone of energy for the foreseeable future.</span> If engine scrubbers are deployed, and are as effective as engineered, they can capture more than 90% of exhaust sulphur and they will continue to be the main force in energy requirements. <span class=\"reading-answer-marker\">Lloyds Registry, the industry classification organisation, believes that HFO will still make up nearly half of all fuels used in the maritime industry in 2030</span>, albeit with the agreed-upon restrictions set out.",
+            "content": "A: In 1913 an American industrialist named Henry Ford employed an innovative system in his factory that changed the nature of American industry forever – the production line. Instead of a group of workers constructing a complete product, Ford's production-line techniques relied on machine parts being moved around the factory on a conveyor belt, passing each employee who had a single task to perform before the compone<span id=\"passage-q27\" data-question=\"27\"></span>nt moved down the line. This saved time in that employees were not required to move around, collect materials or change tools; they simply stood in one place and repeated the same procedure over and over again until the end of their shift. In this way, Ford was able to mass produce the now famous Model-T car for only 10% of traditional labour costs.<br />\r\n<br />\r\nB: Working on a production line was monotonous work, <span id=\"passage-q28\" data-question=\"28\"></span>undoubtedly, but it was not in the production line alone that Ford was something of a pioneer. In 1913 the average hourly rate for unskilled labour was under $2.50 and for such low wages and repetitive work, the labour turnover in Ford's factory was high, with many employees lasting less than a month. In order to combat this problem, he took a step that was condemned by other industrialists of the time, fearful that <span id=\"passage-q29\" data-question=\"29\"></span>they would lose their own workforce – he raised wages to $5 an hour. The benefits were twofold. Not only did Ford now have a stable and eager workforce, he also had potential customers. It was his intention 'to build a motorcar for the great multitude', and the Model-T car was one of the cheapest cars on the market at the time. At $5 an hour, many of his employees now found themselves in a position to feasibly afford<span id=\"passage-q30\" data-question=\"30\"></span> a car of their own. Ford's production practices meant that production time was reduced from 14 hours to a mere 93 minutes. In 1914 company profits were $30 million, yet just two years later this figure had doubled. Until 1927 when the last Model-T rolled off the production line, the company produced and sold about 15 million cars.<br />\r\n<br />\r\nC: Although Ford was without doubt successful, times changed and the co<span id=\"passage-q31\" data-question=\"31\"></span>mpany began losing its edge. One problem came from the labour force. Ford was a demanding employer who insisted that the majority of his staff remained on their feet during their shift. One error meant that the whole production line was often kept waiting, and Ford felt that workers were more attentive standing than sitting. Yet the 1930s saw some radical changes in the relationships between employer and employee, as<span id=\"passage-q32\" data-question=\"32\"></span> an increasing number of industries were forming Labour Unions. Ford flatly refused to get involved, employing spies in the workplace to sabotage any plans for a union within his factories. Eventually a strike in the early 1940s forced Ford to deal with unions. Another example of Ford being unable to adapt came from his unwillingness to branch out. Ford's competitors began operating the same systems and practices, bu<span id=\"passage-q33\" data-question=\"33\"></span>t also introduced the variety Ford was lacking. The Model-T had remained essentially the same, even down to the colour, and by the time he realised his error, he had already lost his pre-eminence in the industry. Subsequent involvement in aeroplane manufacturing, politics and publishing was a failure. Leaving the company to his grandson in 1945, he died two years later leaving an inheritance estimated at $700 million<span id=\"passage-q34\" data-question=\"34\"></span>.<br />\r\n<br />\r\nD: Yet the legacy of Fordism lives on. The development of mass production transformed the organisation of work in a number of important ways. Tasks were minutely subdivided and performed by unskilled workers, or at least semiskilled workers, since much of the skill was built into the machine. Second, manufacturing concerns grew to such a size that a large hierarchy of supervisors and managers became <span id=\"passage-q35\" data-question=\"35\"></span>necessary. Third, the increasing complexity of operations required employment of a large management staff of accountants, engineers, chemists, and, later, social psychologists, in addition to a large distribution and sales force. Mass production also heightened the trend towards an international division of labour. The huge new factories often needed raw materials from abroad, while saturation of national markets led<span id=\"passage-q36\" data-question=\"36\"></span> to a search for customers overseas. Thus, some countries became exporters of raw materials and importers of finished goods, while others did the reverse.<br />\r\n<br />\r\nE: In the 1970s and '80s some countries, particularly in Asia and South America, that had hitherto been largely agricultural and that had imported manufactured goods, began industrialising. The skills needed by workers on assembly-line tasks required<span id=\"passage-q37\" data-question=\"37\"></span> little training, and standards of living in these developing countries were so low that wages could be kept below those of the already industrialised nations. Many large manufacturers in the United States and elsewhere therefore began 'outsourcing' – that is, having parts made or whole products assembled in developing nations. Consequently, those countries are rapidly becoming integrated into the world economic community.",
             "text_id": null
         }
     ],

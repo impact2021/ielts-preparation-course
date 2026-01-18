@@ -1,5 +1,5 @@
 {
-    "title": "General Training Reading Test 4",
+    "title": "General Training Reading Test 8",
     "content": "",
     "questions": [
         {
@@ -953,568 +953,10 @@
         },
         {
             "type": "closed_question",
-            "instructions": "You should spend about 20 minutes on Question 27 which are based on <strong>Reading Passage 3.</strong>\r\n\r\nQuestion 27\r\n\r\nComplete each sentence with the correct ending, A – I, below.\r\n\r\nWrite the correct letter, A – I, in boxes 27 – 31 on your answer sheet.\r\n\r\nA: have been determined by the International Maritime Organisation.\r\nB: must be capped at 5,000 ppm by 2020 in certain areas.\r\nC: are 600 times more dangerous than other fuels.\r\nD: suffer from high levels of sulphur.\r\nE: has been as high as 1,000 ppm.\r\nF: were not recognised by the Exclusive Economic Zones.\r\nG: impact severely on large port cities.\r\nH: accounts for 90% of all vessels in international waters.\r\nI: relies heavily on HFO.",
-            "question": "27. Populous port cities, such as Hong Kong,",
+            "instructions": "Choose the most suitable headings for paragraphs B-G from the list below. Use each heading once only.",
+            "question": "Paragraph B",
             "points": 1,
-            "no_answer_feedback": "The correct answer is D (suffer from high levels of sulphur). Para 1 mentions that port cities like Hong Kong suffer from sulphur dioxide emissions from the shipping industry.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to guidelines, not port cities."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content regulations, not port cities."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not port cities."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 1 states that densely-populated port cities like Hong Kong suffer from high sulphur dioxide emissions from shipping."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content levels, not port cities."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not relate to port cities."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While this is related, the port cities are the subject being impacted, not doing the impacting."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the merchant fleet, not port cities."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the shipping industry, not port cities."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "28. Particulate matter emissions",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is G (impact severely on large port cities). Para 1 states that PM emissions have contributed to premature deaths and large port cities have borne the brunt of health issues.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The IMO determines guidelines, not PM emissions."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content, not PM emissions."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not PM emissions."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not PM emissions."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content in fuel, not PM emissions."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not relate to PM emissions."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 1 states that PM emissions contributed to 87,000 premature deaths and large port cities have borne the brunt of health issues."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the merchant fleet, not PM emissions."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the shipping industry, not PM emissions."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "29. The global merchant marine fleet",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is I (relies heavily on HFO). Para 2 states that heavy fuel oil has been the mainstay of energy and propulsion requirements for the global merchant fleet.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The IMO determines guidelines, not the merchant fleet."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to emission regulations, not the merchant fleet."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not the merchant fleet."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not the merchant fleet."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content, not the merchant fleet."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not relate to the merchant fleet."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to emissions, not the merchant fleet as a subject."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the fleet handles 90% of international trade, not that it accounts for 90% of vessels."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 2 states that heavy fuel oil has been the mainstay of energy and propulsion requirements."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "30. Guidelines to set safe standards of emissions",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is A (have been determined by the International Maritime Organisation). Para 3 states the IMO began formulating guidelines to determine and control safe standards for emissions.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 3 states the International Maritime Organisation began formulating guidelines to determine and control safe standards for emissions."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content regulations, not guidelines themselves."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to fuel comparison, not guidelines."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not guidelines."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to sulphur content, not guidelines."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. ECAs implement guidelines, they don't fail to recognize them."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to emissions, not guidelines."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to trade statistics, not guidelines."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to the shipping industry, not guidelines."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "31. The sulphur content of bunker fuels",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B (must be capped at 5,000 ppm by 2020 in certain areas). Para 3 states that from 2020, all vessels sailing outside any ECA must cap their emissions at 5,000 ppm.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "have been determined by the International Maritime Organisation.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While the IMO sets regulations, this doesn't complete the sentence about sulphur content."
-                },
-                {
-                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 3 states that from 2020, the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm."
-                },
-                {
-                    "text": "are 600 times more dangerous than other fuels.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This comparison relates to ocean fuel versus land transport diesel, not bunker fuels specifically."
-                },
-                {
-                    "text": "suffer from high levels of sulphur.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to port cities, not bunker fuels."
-                },
-                {
-                    "text": "has been as high as 1,000 ppm.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states bunker fuels ranged as high as 35,000 ppm, not 1,000 ppm."
-                },
-                {
-                    "text": "were not recognised by the Exclusive Economic Zones.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This does not make sense with bunker fuels."
-                },
-                {
-                    "text": "impact severely on large port cities.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to emissions from fuels, not the fuels themselves."
-                },
-                {
-                    "text": "accounts for 90% of all vessels in international waters.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This relates to trade statistics, not bunker fuels."
-                },
-                {
-                    "text": "relies heavily on HFO.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Bunker fuels are HFO, so they don't rely on themselves."
-                }
-            ],
-            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Question 32\r\n\r\nDo the following statements agree with the information given in Reading Passage 3?\r\n\r\nIn boxes 32 – 38 on your answer sheet write\r\n\r\nTRUE if the statement agrees with the information\r\n\r\nFALSE if the statement contradicts the information\r\n\r\nNOT GIVEN if there is no information on this in the passage",
-            "question": "32. The costs involved with 'cleaning up' the heavy fuel oil will be met by only the shipping lines.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: FALSE. Para 4 states the economic cost comes to 'not only for the commercial enterprises, but also the shipping companies and, by extension, their shippers, and the national economies of the countries involved.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. Multiple parties will bear the costs, not only shipping lines."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states the costs will be borne by multiple parties, not only shipping lines."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. Para 4 clearly states multiple parties will bear the costs."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "33. The easiest approach to reduce emissions is to drop the sulphur content of fuel.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: NOT GIVEN. While Para 4 mentions dropping sulphur content as one approach, there is no statement about which approach is easiest.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't state which approach is easiest."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While approaches are mentioned, no comparison of difficulty is made."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions approaches but doesn't state which is easiest."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "34. One alternative fuel source would mean returning to a previous method of power.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. Para 5 mentions wind as an alternative fuel and describes it as 'an ironic twist on where shipping originally began', indicating a return to a previous method.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 5 mentions wind power as 'an ironic twist on where shipping originally began', indicating a return to a previous method."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Wind power is mentioned as returning to where shipping originally began."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 5 clearly refers to wind as an 'ironic twist on where shipping originally began'."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "35. Nuclear energy is used mostly in naval fleets of many countries.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: NOT GIVEN. Para 5 states nuclear energy is 'used in many naval fleets' but doesn't say it is used 'mostly' in naval fleets or provide comparison with other uses.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't state nuclear energy is used 'mostly' in naval fleets."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While nuclear use in naval fleets is mentioned, no comparison is made."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions nuclear energy is used in naval fleets but doesn't state this is its primary use."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "36. With 90% of international trade being carried on ships, the shipping industry is experiencing huge growth and profit levels.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: FALSE. Para 6 states that the shipping trade is experiencing a serious down-turn in profits, with daily revenue dropping from US$34,000 in 2007 to US$9,800 in 2017.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The shipping industry is experiencing a down-turn in profits, not growth."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states the shipping industry is experiencing a serious down-turn in profits, not growth."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. Para 6 clearly describes a serious down-turn in profits."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "37. One factor that is slowing down the move to cleaner fuels is that there are no significant direct economic benefits to the parties concerned.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. Para 6 states 'there will be a reluctance on the part of ship-owners, national state carriers and major shippers to contribute towards a scheme that, while benefiting the global environment and national health interests, sees little direct economic return.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 6 states parties are reluctant to contribute to a scheme that sees little direct economic return."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 6 states there is reluctance due to little direct economic return."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 6 clearly states the scheme sees little direct economic return."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "38. The 2008 financial crisis helped introduce cost-saving measures for shipping lines.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. Para 7 states 'during the 2008 global crisis in finance and costs, sailing speeds on ocean vessels were reduced by oftentimes up to half, which resulted in massive fuel savings.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Para 7 describes how the 2008 financial crisis led to reduced sailing speeds and massive fuel savings."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 7 describes cost-saving measures introduced during the 2008 crisis."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. Para 7 clearly states cost-saving measures were introduced during the 2008 crisis."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "open_question",
-            "instructions": "Question 39\r\n\r\nComplete the following sentences, using NO MORE THAN THREE WORDS from the passage.\r\n\r\nWrite your answers in boxes 39 – 40 on your answer sheet.",
-            "question": "<p>Complete the following sentences:</p>\r\n<p>39. In order to comply with regulations regarding lowering emissions, shipping companies have the option of installing [field 1] to clean emissions.</p>\r\n<p>40. Even with all the restrictions and guidelines, most industry analysts, such as Lloyds Registry, feel that [field 2] will still be the shipping industry's main source of energy in the future.</p>\r\n",
-            "points": 2,
-            "no_answer_feedback": "39: scrubbers, 40: heavy fuel oil|HFO",
+            "no_answer_feedback": "You did not select an answer. The correct answer is vii. Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 5,
@@ -1522,21 +964,499 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "",
-            "field_count": 2,
+            "mc_options": [
+                {
+                    "text": "i. Government profiteering at the expense of citizens",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B focuses on short-term economic gains versus long-term environmental concerns, not specifically government profiteering. Review the paragraph's main theme."
+                },
+                {
+                    "text": "ii. A balance provides the best options",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses the conflict between economic needs and environmental destruction, not finding a balance. That theme appears in a different paragraph."
+                },
+                {
+                    "text": "iii. Resistance to a change in attitudes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph focuses on economic pressures driving deforestation, not resistance to changing attitudes. Review the main focus of the paragraph."
+                },
+                {
+                    "text": "iv. Landowners the driving force for positive political change",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The paragraph doesn't discuss landowners driving positive change. Review what Paragraph B actually discusses about economic pressures."
+                },
+                {
+                    "text": "v. Renewable forests unable to get public support",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This topic is not the focus of Paragraph B. The paragraph discusses economic pressures leading to deforestation."
+                },
+                {
+                    "text": "vi. The risks of an unequal share of land",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph B focuses on economic versus environmental concerns."
+                },
+                {
+                    "text": "vii. Temporary gain outweighing long term concerns",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability."
+                },
+                {
+                    "text": "viii. Options for alternative income generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This topic is covered in a different paragraph. Paragraph B focuses on the economic pressures driving current deforestation."
+                },
+                {
+                    "text": "ix. The impact personal decisions can have",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph B focuses on economic versus environmental priorities."
+                }
+            ],
+            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph C",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is viii. Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "i. Government profiteering at the expense of citizens",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C discusses alternative ways to generate income from forests, not government profiteering. Review the paragraph's focus."
+                },
+                {
+                    "text": "ii. A balance provides the best options",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While balance is mentioned elsewhere, Paragraph C specifically focuses on alternative income options like tourism."
+                },
+                {
+                    "text": "iii. Resistance to a change in attitudes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph presents alternatives, not resistance to change. Review what Paragraph C discusses."
+                },
+                {
+                    "text": "iv. Landowners the driving force for positive political change",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C doesn't discuss landowners or political change. It focuses on ecotourism and alternative income."
+                },
+                {
+                    "text": "v. Renewable forests unable to get public support",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not the topic of Paragraph C. The paragraph discusses tourism as an alternative income source."
+                },
+                {
+                    "text": "vi. The risks of an unequal share of land",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph C focuses on ecotourism alternatives."
+                },
+                {
+                    "text": "vii. Temporary gain outweighing long term concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This theme is in a different paragraph. Paragraph C presents sustainable alternatives like tourism."
+                },
+                {
+                    "text": "viii. Options for alternative income generation",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests."
+                },
+                {
+                    "text": "ix. The impact personal decisions can have",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph C focuses on ecotourism as an alternative."
+                }
+            ],
+            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph D",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is ii. Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "i. Government profiteering at the expense of citizens",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D discusses the need for balance between conservation and development, not government profiteering."
+                },
+                {
+                    "text": "ii. A balance provides the best options",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting."
+                },
+                {
+                    "text": "iii. Resistance to a change in attitudes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses balanced approaches and consequences, not resistance to change. Review Paragraph D's main theme."
+                },
+                {
+                    "text": "iv. Landowners the driving force for positive political change",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Landowners are not the focus of this paragraph. It discusses balanced forest management and global impacts."
+                },
+                {
+                    "text": "v. Renewable forests unable to get public support",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses balanced harvesting and environmental impacts, not public support issues."
+                },
+                {
+                    "text": "vi. The risks of an unequal share of land",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph D focuses on balanced approaches."
+                },
+                {
+                    "text": "vii. Temporary gain outweighing long term concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D actually discusses the OPPOSITE - countries realizing they need sustainable, long-term approaches."
+                },
+                {
+                    "text": "viii. Options for alternative income generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While alternatives are mentioned elsewhere, Paragraph D focuses on balanced harvesting and environmental impacts."
+                },
+                {
+                    "text": "ix. The impact personal decisions can have",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph D discusses policy-level balance."
+                }
+            ],
+            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph E",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is vi. Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "i. Government profiteering at the expense of citizens",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While government is mentioned, the focus is on land inequality and its consequences, not specifically profiteering."
+                },
+                {
+                    "text": "ii. A balance provides the best options",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses the problem of unequal land distribution, not solutions involving balance."
+                },
+                {
+                    "text": "iii. Resistance to a change in attitudes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses land inequality as a cause of deforestation, not resistance to change."
+                },
+                {
+                    "text": "iv. Landowners the driving force for positive political change",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The paragraph shows landowners as part of the PROBLEM, not driving positive change. They influence regulations negatively."
+                },
+                {
+                    "text": "v. Renewable forests unable to get public support",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Public support is not the focus. Paragraph E discusses how land inequality drives deforestation."
+                },
+                {
+                    "text": "vi. The risks of an unequal share of land",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil."
+                },
+                {
+                    "text": "vii. Temporary gain outweighing long term concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph specifically addresses land inequality, not the temporary versus long-term issue."
+                },
+                {
+                    "text": "viii. Options for alternative income generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Alternatives are discussed elsewhere. Paragraph E focuses on land distribution problems."
+                },
+                {
+                    "text": "ix. The impact personal decisions can have",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses structural land ownership issues, not personal decisions."
+                }
+            ],
+            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph F",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is ix. Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "i. Government profiteering at the expense of citizens",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F discusses government protection policies and individual consumer choices, not profiteering."
+                },
+                {
+                    "text": "ii. A balance provides the best options",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While balance might be implied, the specific focus is on the power of individual consumer choices."
+                },
+                {
+                    "text": "iii. Resistance to a change in attitudes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph encourages change through consumer choices, it doesn't discuss resistance to change."
+                },
+                {
+                    "text": "iv. Landowners the driving force for positive political change",
+                    "is_correct": false,
+                    "feedback": "Incorrect. It's the general population and consumers driving change, not landowners specifically."
+                },
+                {
+                    "text": "v. Renewable forests unable to get public support",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The paragraph actually discusses how public demand IS creating change, showing support exists."
+                },
+                {
+                    "text": "vi. The risks of an unequal share of land",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph F focuses on consumer power."
+                },
+                {
+                    "text": "vii. Temporary gain outweighing long term concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses solutions through consumer behavior, not the problem of short-term thinking."
+                },
+                {
+                    "text": "viii. Options for alternative income generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While alternatives are mentioned, the focus is on how personal choices drive demand for these alternatives."
+                },
+                {
+                    "text": "ix. The impact personal decisions can have",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism."
+                }
+            ],
+            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph G",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is iii. Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "i. Government profiteering at the expense of citizens",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G discusses the challenge of raising public awareness and changing habits, not government profiteering."
+                },
+                {
+                    "text": "ii. A balance provides the best options",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses the difficulty of changing behaviors, not finding balance."
+                },
+                {
+                    "text": "iii. Resistance to a change in attitudes",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption."
+                },
+                {
+                    "text": "iv. Landowners the driving force for positive political change",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses public behavior change challenges, not landowners."
+                },
+                {
+                    "text": "v. Renewable forests unable to get public support",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The focus is on difficulty changing habits, not lack of support for renewables."
+                },
+                {
+                    "text": "vi. The risks of an unequal share of land",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Land inequality is not discussed in this paragraph. It focuses on changing consumer behavior."
+                },
+                {
+                    "text": "vii. Temporary gain outweighing long term concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses resistance to behavioral change, not economic versus environmental priorities."
+                },
+                {
+                    "text": "viii. Options for alternative income generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Income alternatives are not the focus. Paragraph G discusses the challenge of raising awareness and changing habits."
+                },
+                {
+                    "text": "ix. The impact personal decisions can have",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While personal decisions are mentioned, the emphasis is on how DIFFICULT it is to change them, which is resistance to change."
+                }
+            ],
+            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "open_question",
+            "instructions": "Answer the following questions using NO MORE THAN TWO WORDS from the text.",
+            "question": "<p>What phenomenon is predicted to increase at a global level due to deforestation?</p>\r\n<p>36. Phenomenon:</p>\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
             "field_answers": {
-                "1": "scrubbers",
-                "2": "heavy fuel oil|HFO|heavy fuel oils|HFOs"
+                "1": "GREENHOUSE EFFECT|greenhouse effect|THE GREENHOUSE EFFECT|the greenhouse effect"
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Excellent! You answered both questions correctly.",
-                    "incorrect": "Review the passage and try again. Question 39 is found in Para 4, and Question 40 is in Para 8.",
-                    "no_answer": "39: scrubbers, 40: heavy fuel oil|HFO"
-                },
-                "2": {
-                    "correct": "Excellent! You answered both questions correctly.",
-                    "incorrect": "Review the passage and try again. Question 39 is found in Para 4, and Question 40 is in Para 8.",
-                    "no_answer": "39: scrubbers, 40: heavy fuel oil|HFO"
+                    "correct": "Correct! Paragraph D states that deforestation will lead to 'a 15 per cent rise in the greenhouse effect around the planet.'",
+                    "incorrect": "Incorrect. Review Paragraph D which discusses the global environmental phenomenon predicted to increase due to deforestation.",
+                    "no_answer": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'"
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "<p>What is becoming more common, allowing for more ecological uses of forested areas?</p>\r\n<p>37. What is becoming more common:</p>\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "INTERNATIONAL TRAVEL|international travel"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph C states 'International travel is becoming increasingly popular,' enabling ecological tourism in forests.",
+                    "incorrect": "Incorrect. Review Paragraph C which mentions what is becoming more popular and enabling ecological uses of forests.",
+                    "no_answer": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "<p>Over two thirds of people living in the countryside in Brazil are what?</p>\r\n<p>38. They are:</p>\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "LANDLESS|landless"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph E states that '70 per cent of rural households are landless' in Brazil.",
+                    "incorrect": "Incorrect. Review Paragraph E which discusses the situation of rural people in Brazil regarding land ownership.",
+                    "no_answer": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "<p>Which country has only one fiftieth of their original forested areas remaining?</p>\r\n<p>39. Country:</p>\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "UNITED STATES|United States|THE USA|USA|THE U.S.A.|U.S.A.|the USA|usa|the U.S.A.|u.s.a."
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph B states the United States 'has less than two per cent of its original forest' (which is one fiftieth).",
+                    "incorrect": "Incorrect. Review Paragraph B which mentions the country with only 2% (one fiftieth) of its original forests remaining.",
+                    "no_answer": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "<p>What needs to be increased so that people can begin to change negative habits?</p>\r\n<p>40. What needs to be increased:</p>\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "PUBLIC AWARENESS|public awareness|AWARENESS|awareness"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph G states that 'the raising of public awareness' is necessary for changing negative behaviors.",
+                    "incorrect": "Incorrect. Review Paragraph G which identifies what needs to be raised or increased to change people's harmful behaviors.",
+                    "no_answer": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change."
                 }
             }
         }
@@ -1564,7 +1484,7 @@
         },
         {
             "title": "Reading Text 6",
-            "content": "Maritime Shipping's Heavy Fuel Oil Debate\r\n\r\n<span id=\"passage-q27\" data-question=\"27\"></span><span id=\"passage-q28\" data-question=\"28\"></span>In a world growing more and more concerned with pollution and the accompanying health issues, attention has turned to the heavy fuel oil (HFO) used by the world's shipping industry. <span class=\"reading-answer-marker\">In a densely-populated port city such as Hong Kong, the shipping industry, from local tugs to ocean-going container and bulk cargo vessels, accounts for the largest amount of sulphur dioxide <span id=\"passage-q27\" data-question=\"27\"></span>(SO2) emissions</span> as well as the emission of particulate matter (PM), the mixture of minute particles and liquid droplets suspended in air. One estimate put forward is that <span class=\"reading-answer-marker\">PM emissions contributed to 87,000 global premature deaths in 2012 and these large port cities like Hong Kong and Busan in Asia, Rotterdam and Antwerp in Europe and Los Angeles/Long Beach in the Americas have borne the brunt of the health issues</span> created by the growing volume of heavy emissions from the maritime industry.\r\n\r\n<span id=\"passage-q29\" data-question=\"29\"></span><span id=\"passage-q28\" data-question=\"28\"></span>Globally, there are more than 90,000 vessels in the international marine fleet, handling over 90% of international trade. <span class=\"reading-answer-marker\">Heavy fuel oil has been the mainstay of energy and propulsion requirements</span> through the second half of the 20th century as global trade has become the lifeblood of economic growth, but it is acknowledged that this same shipping now accounts for nearly 10% of the total emissions of SO2, which has been responsible for the environmentally devast<span id=\"passage-q29\" data-question=\"29\"></span>ating acid rain, and is a heavy contributor to respiratory problems and other illnesses in humans. In the United States alone, the Environmental Protection Agency estimates that there are 14,000 premature deaths annually owing to toxic emissions, and it is noted that the fuel used by ocean-plying vessels is 600 times dirtier than land transport diesel fuel.\r\n\r\n<span id=\"passage-q30\" data-question=\"30\"></span>Once it was recognised that there was a strong causal relationship between pollutant emissions and<span id=\"passage-q30\" data-question=\"30\"></span> health issues, <span class=\"reading-answer-marker\">the International Maritime Organisation, or IMO, a UN agency that sets and regulates industry standards for safety and the environment, began formulating guidelines to determine and control safe standards for emissions</span>. Beginning in 2015, the IMO ruled that the first areas to be designated as Emission Control Areas, or ECAs, would be the Exclusive Economic Zones of North America and Northern Europe, where Marine Gas Oil with a permitted sulphur content of only 1,000 ppm (parts per million) would be allowed. <span id=\"passage-q31\"<span id=\"passage-q31\" data-question=\"31\"></span> data-question=\"31\"></span>This was a dramatic proposal, as the then-current sulphur content of what are called bunker fuels ranged as high as 35,000 ppm. Further, from the year 2020, <span class=\"reading-answer-marker\">the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm</span>.\r\n\r\n<span id=\"passage-q32\" data-question=\"32\"></span><span id=\"passage-q39\" data-question=\"39\"></span>But all this comes at a huge economic cost, <span class=\"reading-answer-marker\">not only for the commercial enterprises, but also the shipping comp<span id=\"passage-q32\" data-question=\"32\"></span>anies and, by extension, their shippers, and the national economies of the countries involved</span>. As a result, much research has gone into determining the best approach to 'clean up', or even change, the fuel, and ultimately there seems to be two main approaches to comply with the requirements. Firstly, <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">the oil industry would have to drop the sulphur content of the fuel from 3.5% to 0.5%</span>, which would achieve the required emissions <span id=\"passage-q33\" data-question=\"33\"></span>levels, or <span class=\"reading-answer-marker\">vessels would have to be fitted with what are known as 'scrubbers', technology that can clean the emissions</span>. However, it is recognised that the refining industry is not yet moving towards complying with the regulations regarding sulphur content, and as far as scrubbing is concerned, at an estimated US$4 million per engine fit out, the cost is often too high for many shipping countries.\r\n\r\n<span id=\"passage-q34\" data-question=\"34\"></span><span id=\"passage-q35\" data-question=\"35\"></span>In addit<span id=\"passage-q34\" data-question=\"34\"></span>ion, along with other industries such as land transport and airline companies, much research is being conducted into looking at alternative fuels. For shipping, this revolves around investigating alternative sources such as Liquid (or Liquefied) Natural Gas, solar fuel cells, <span class=\"reading-answer-marker\">wind (an ironic twist on where shipping originally began)</span> and the controversial <span class=\"reading-answer-marker\">nuclear energy, used in many naval fleets</span>. However, apart from the view that HFO is the cheapest alternative <span id=\"passage-q35\" data-question=\"35\"></span>and that the merchant fleet is geared towards the continuing use of HFO, each alternative also presents some challenges. Natural gas takes up a large amount of storage on a vessel, thus reducing cargo-carrying capacity. Likewise, solar fuel cells, although effective, require huge amount of space and wind is not considered reliable enough. Nuclear energy remains a contentious issue, and many ports will restrict or deny entry to nuclear-powered vessels.\r\n\r\n<span id=\"passage-q36\" data-question=\"36\"></span><span id=\"passage-q37\" data-question=\"37\"></<span id=\"passage-q36\" data-question=\"36\"></span>span>At the same time, the international shipping trade is experiencing a serious down-turn in profits. In 2007, the average daily revenue of a merchant vessel was US$34,000 but in 2017 that same figure was just US$9800, according to Clarkson Research, a global shipping consultancy firm. Part of this decline in profits is due to an excess of shipping vessels, but it also relates to the 2008 global financial crisis, and changes in the oil and export markets. <span class=\"reading-answer-marker\">All this means there will be a reluctance on the part <span id=\"passage-q37\" data-question=\"37\"></span>of ship-owners, national state carriers and major shippers to contribute towards a scheme that, while benefiting the global environment and national health interests, sees little direct economic return.</span>\r\n\r\n<span id=\"passage-q38\" data-question=\"38\"></span>But the way forward is appearing. Gas-powered vessels are now operating, with its cleaner and more efficient fuel. Which, interestingly, has given rise to what is known as the \"fifth fuel\", that is energy efficiency. Because fuel traditionally accounts for up to half of all costs involved <span id=\"passage-q38\" data-question=\"38\"></span>in shipping, there have always been innovative energy-saving approaches. One example is that <span class=\"reading-answer-marker\">during the 2008 global crisis in finance and costs, sailing speeds on ocean vessels were reduced by oftentimes up to half, which resulted in massive fuel savings</span>. This has given rise to what is known as the Energy Efficiency Design Index, a compulsory outline of regulations that means that all new ships will be required to adhere to it from 2015.\r\n\r\n<span id=\"passage-q40\" data-question=\"40\"></span><span class=\"re<span id=\"passage-q39\" data-question=\"39\"></span>ading-answer-marker\">Heavy Fuel Oil, however, will be the backbone of energy for the foreseeable future.</span> If engine scrubbers are deployed, and are as effective as engineered, they can capture more than 90% of exhaust sulphur and they will continue to be the main force in energy requirements. <span class=\"reading-answer-marker\">Lloyds Registry, the industry classification organisation, believes that HFO will still make up nearly half of all fuels used in the maritime industry in 2030</span>, albeit with the agreed-upon restrictions set out.",
+            "content": "<h3>Reading Passage 3</h3>\r\n<h2>The price of your newspaper</h2>\r\n\r\n<h4>Paragraph A</h4>\r\n<p>The average family buys two newspapers and a magazine every week, in addition to receiving up to three pieces of junk mail. Multiplied by the global population, this amounts to a lot of paper, and therefore a lot of wood. Although the rise of the home computer has gone a long way in reducing this excessive use of paper, the demand is still considerable.</p>\r\n\r\n<span id=\"passage-q27\" data-question=\"27\"></span><h4><span id=\"passage-q25\" data-question=\"25\"></span>Paragraph B</h4>\r\n<p>Social and economic concerns have over-ridden environmental common sense, and in many western countries, the woods and forests that once covered the land have long since been cleared away. A shocking example can be found by looking at the <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">United States</span>, which now has less than two per cent of its original forest. Other areas, predominantly tropical countries, <span id=\"passage-q28\" data-question=\"28\"></span>are now following the same destructive path. In 1995 over one million hectares of forest in Brazil were cleared, a disturbing statistic but nonetheless inevitable as timber and other related raw materials are important exports for countries that often have little other way of supporting themselves. They provide employment for those who harvest the wood, extract rubber or make products using available materials. With one third of the world depending on wood for fuel, it is very tempting, <span id=\"passage-q29\" data-question=\"29\"></span>though shortsighted, for poorer countries to exploit the market.</p>\r\n\r\n<h4><span id=\"passage-q26\" data-question=\"26\"></span>Paragraph C</h4>\r\n<p>It could be argued, then, that countries with rich wood resources should be fully entitled to exploit them. However, there are less destructive alternatives for generating an income from the rainforests. The forest environment provides a popular setting for ecotourism, which includes hiking, camping, bird watching and other outdoor adventure or<span id=\"passage-q30\" data-question=\"30\"></span> nature study activities. <span id=\"passage-q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">International travel</span> is becoming increasingly popular, making the rainforests accessible for the more adventurous holidaymaker.</p>\r\n\r\n<h4><span id=\"passage-q27\" data-question=\"27\"></span>Paragraph D</h4>\r\n<p>No matter what the solution, the rampant spread of deforestation has to be halted. Surveys in Cameroon, the Ivory Coast, G<span id=\"passage-q31\" data-question=\"31\"></span>hana and Liberia found that forest wildlife accounted for 70 to 90 per cent of the total animal protein consumed, thus arguing that some indigenous peoples are completely dependent on forests for food. In many of these countries, wood harvesting is carried out on a considerably more sensible scale. There appears to be the realisation that selling the wood is a temporary solution that would inevitably lead to worse problems for the future. Not only would the traditional food source be gone, but the trees which protected the soil a<span id=\"passage-q32\" data-question=\"32\"></span>gainst erosion would be gone. Landslides would become more common and rainwater would not be absorbed so easily into the ground, leading to a shortage of freshwater supplies. There is also the global impact, not only from the burning of the wood but also because trees provide an important role in the recycling of carbon dioxide and the production of oxygen. Estimates based on the current rate of deforestation have predicted a 15 per cent rise in <span id=\"passage-q31\" data-question=\"31\"><span id=\"passage-q33\" data-question=\"33\"></span></span><span class=\"reading-answer-marker\">the greenhouse effect</span> around the planet.</p>\r\n\r\n<h4><span id=\"passage-q28\" data-question=\"28\"></span>Paragraph E</h4>\r\n<p>In order to combat the problem of deforestation, it is important to consider its causes in greater detail. In Brazil, we should look at the unequal and unfair distribution of land – 4.5 per cent of landowners hold 81 per cent of the country's farmland, and 70 per cent <span id=\"passage-q34\" data-question=\"34\"></span>of rural households are <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">landless</span>. With either no legal claim to the land or ownership of so much, deforestation is inevitable as land owners profit from the land. This is the point in which the situation is in the hands of government, yet often the landowners have shown their ability to sway official regulations regarding timber harvesting.</p>\r\n\r\n<h4><span id=\"passage-q29\" data-question=\"29\"></span>Paragraph F</h4>\r\n<p>To effect a serious reversa<span id=\"passage-q35\" data-question=\"35\"></span>l of the damage, some governments are taking a more active role in forest management to protect the environment and employment – a change which has been largely encouraged by the voting and demands of the general population which have resulted in policies of replantation and protection. As well as creating political pressure, individuals can make a difference by practising green consumerism. Recycled paper is readily available, and we can all make an effort to purchase the most ecologica<span id=\"passage-q36\" data-question=\"36\"></span>lly sensitive products. Demanding alternative products, such as clear-cut free paper and eco-certified lumber, is important in convincing companies that markets exist for such products.</p>\r\n\r\n<h4><span id=\"passage-q30\" data-question=\"30\"></span>Paragraph G</h4>\r\n<p>None of these activities can occur without the raising of <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">public awareness</span> to inform consumers about the environmental effects of the<span id=\"passage-q37\" data-question=\"37\"></span>ir products, and this is not an easy task. Many people are too entrenched in their habits or too lazy to change, yet one of the most important ways for a person to have a positive effect is to reduce his or her consumption of forest and related products. An increase in the participation of the public in, and the accessibility and productiveness of facilities for, reducing, reusing and recycling is not only necessary, but also a duty. So next time you buy a newspaper, just consider the cost.</p>",
             "text_id": null
         }
     ],
