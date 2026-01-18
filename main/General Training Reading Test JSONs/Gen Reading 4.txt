@@ -1,172 +1,207 @@
 SECTION 1 – PART A
-Reading Text 1
+Reading Passage
 
-City University Gym – Term-time Weekday Schedule (Semesters 1 & 2)
+Passenger Ferry Timetable
 
-Mondays & Wednesdays
-Abdominal Strengthening – 07:45–08:15 – Main Gym – Joanna
-Gym Circuit – 12:00–13:00 – Main Gym – Steve
-Five-a-side Football – 12:00–13:00 – Outdoor Pitch – Mark
-Aerobics – 17:30–18:30 – Dance Studio – Claire
-Tae Kwon Do – 18:30–19:30 – Indoor Sports Hall – Kim
+City Harbour Ferry Terminal → Marine Island Resort
+Ferry Terminal: 102 Wharf Street
 
-Tuesdays
-Yoga – 08:00–09:00 – Indoor Sports Hall – Priya
-Jogging Club – 12:30–13:15 – Outdoor Track – Staff
-Basketball – 18:00–19:00 – Indoor Sports Hall – Alex
+(* = sails via Taylor Peninsula; leaves Taylor Peninsula approx. 10 minutes after City Harbour departure)
 
-Thursdays
-Pilates – 09:00–10:00 – Main Gym – Joanna
-Gym Circuit – 12:00–13:00 – Main Gym – Steve
-Badminton – 17:00–18:00 – Indoor Sports Hall – Staff
+Monday–Friday: 05:20*, 05:50, 06:30, 07:15, 08:15, 09:00*, 10:00, 11:00*, 12:00, 1:00*, 2:00, 3:00*, 4:00, 5:00, 5:30, 6:30, 7:15, 8:45, 10:15, 11:45
 
-Fridays
-Yoga – 10:00–11:00 – Indoor Sports Hall – Priya
-Swimming – 16:00–17:00 – University Pool – Staff
+Saturday: 06:30, 07:00, 08:15, 09:00*, 10:00, 11:00*, 12:00, 1:00*, 2:00, 3:00*, 4:00, 5:00*, 6:00, 7:30, 9:30, 11:45
 
-During university holidays, only selected classes operate.
+Sunday/Public Holidays: 07:00, 08:15, 09:00*, 10:00, 11:00*, 12:00, 1:00*, 2:00, 3:00*, 4:00, 5:00*, 6:00, 7:30, 9:30
+
+Marine Island Resort → City Harbour Ferry Terminal
+Island Wharf: 12 Quay Road
+
+(* = sails via Taylor Peninsula; leaves Taylor Peninsula approx. 15 minutes after Marine Island departure)
+
+Monday–Friday: 06:05*, 06:40, 07:20, 08:00, 09:00, 10:00*, 11:00, 12:00*, 1:00, 2:00*, 3:00, 4:00*, 4:45, 5:35, 6:15, 7:15, 8:00, 9:30, 11:00, 12:30
+
+Saturday: 07:20, 08:00, 09:00, 10:00*, 11:00, 12:00*, 1:00, 2:00*, 3:00, 4:00*, 5:00, 6:00*, 6:45, 8:15, 10:15, 12:30
+
+Sunday/Public Holidays: 08:00, 09:00, 10:00*, 11:00, 12:00*, 1:00, 2:00*, 3:00, 4:00*, 5:00, 6:00*, 6:45, 8:15, 10:15
+
+Ferry Prices
+
+Return
+
+Adult: $25.50
+
+Senior Citizen: $15.20
+
+Child (under 14): $14.25
+
+One Way
+
+Adult: $14.50
+
+Senior Citizen: $8.90
+
+Child (under 14): $8.50
+
+Service Information
+
+Direct route: approx. 45 minutes
+
+Via Taylor Peninsula: approx. 60 minutes
+
+Payment by cash or credit card only
 
 Questions 1–7
 
-[Section 1 Part A – Reading Text 1
-This is a closed question set.
-Question type: TRUE / FALSE / NOT GIVEN.
-There are 7 questions (1–7).
-Answer options must be displayed as: TRUE, FALSE, NOT GIVEN.
-All questions refer to Reading Text 1 only.]
+[TRUE / FALSE / NOT GIVEN]
 
-On Wednesdays, Abdominal Strengthening is the shortest class.
+Passengers can travel from City Harbour to Taylor Peninsula every day.
+Answer: TRUE
 
-The Monday class held in the Indoor Sports Hall is only open to private members.
+Ferries finish earliest on Saturdays.
+Answer: FALSE
 
-Only one Tuesday class takes place outdoors.
+A ferry leaves Taylor Peninsula for City Harbour at about 10:15 on Wednesday morning.
+Answer: TRUE
 
-Aerobics and Tae Kwon Do last for the same length of time.
+A one-way adult ticket costs less than a child’s return ticket.
+Answer: FALSE
 
-There is only one class held before midday on each weekday.
+Senior citizens pay the least for ferry travel.
+Answer: FALSE
 
-No previous experience is required to attend the Friday Yoga class.
+The direct route is 15 minutes faster than the route via the peninsula.
+Answer: TRUE
 
-Fewer classes are available during university holidays.
+Tickets can be purchased on the ferry.
+Answer: NOT GIVEN
 
 SECTION 1 – PART B
-Reading Text 2
+Reading Passage
 
-Rules and Regulations for Members of Brightwood Leisure Centre
+Accommodation Guide for Marine Island
 
-Membership allows individuals to use facilities subject to availability and centre regulations.
-The owners reserve the right to terminate membership in cases of rule breaches or offensive behaviour.
-Members must inform staff of any illness or disability before using facilities.
-All facilities are used at the member’s own risk.
-The centre accepts no responsibility for loss or damage to personal property unless caused by staff negligence.
-Cars must be parked correctly; no liability is accepted for loss or damage to vehicles.
-Unclaimed property will be donated to charity after 28 days.
+Budget Accommodation
+
+Ocean View Camping Resort
+Repeat winners of the Eco-friendly Tourism Award.
+Tent pitches only: $12 per night ($10 for bookings over 4 nights).
+
+Marine Island Village Park
+Closest campsite to ferry terminal (5–10 minute walk).
+Discounts for bookings of one week or more.
+
+Backpacker Haven
+Free BBQ party on Friday evenings.
+Dormitory and private twin rooms available.
+
+Mid-Range Accommodation
+
+Marine Paradise Bed & Breakfast
+Central location; continental breakfast included.
+
+Value Inn
+Best value award winner; 5 minutes from the beach.
+
+Top-End Accommodation
+
+Marine Island Hotel
+Most expensive option.
+Private beach access 2 minutes’ walk away.
 
 Questions 8–10
 
-[Section 1 Part B – Reading Text 2
-This is a closed question set.
-Question type: Multiple choice (single answer).
-There are 3 questions (8–10).
-Each question has four options labelled A–D.
-Only one option is correct.]
+[Map labelling – choose from A–F]
 
-Members who upset other users of the leisure centre
-A. will be reported to the Club Manager
-B. will be given a warning
-C. will have their membership cancelled
-D. will be reported to the Membership Secretary
+Marine Island Hotel
+Answer: F
 
-Membership may be put on hold
-A. within fourteen days of joining
-B. through arrangement with the manager
-C. if the Membership Secretary agrees
-D. in cases of injury only
+Ocean View Camping Resort
+Answer: A
 
-Damage to members’ vehicles
-A. is unlikely due to secure parking
-B. will be paid for by the centre if it is their fault
-C. is not the responsibility of the centre
-D. may result from staff negligence
+Marine Paradise Bed & Breakfast
+Answer: D
 
-SECTION 2 – PART A
-Reading Text 3
+Questions 11–14
 
-Dressed for Work
+[NO MORE THAN THREE WORDS AND/OR A NUMBER]
 
-Choosing what to wear at work can be difficult, particularly when starting a new job. Dressing too casually may give the impression that you are not taking your role seriously, while dressing too formally can make colleagues think you are unapproachable.
+What has Ocean View Camping Resort won more than once?
+Answer: Eco-friendly Tourism Award
 
-If possible, check the dress code after being offered a position. When attending interviews, observe what other employees are wearing.
+Shortest booking period to get a discount at Marine Island Village Park?
+Answer: one week
 
-For men, dark trousers, shoes and a simple shirt are generally acceptable. Wearing a tie on the first day is fine, but it may be unnecessary if no one else is wearing one.
+Free entertainment on Friday evenings?
+Answer: BBQ party
 
-For women, expectations vary widely, so observing colleagues in similar roles is often the best guide.
+Walking time to the beach from the most expensive accommodation?
+Answer: 2 minutes
 
-In many countries, especially in large corporations, there has been a move towards stricter dress codes, including uniforms for management.
+SECTION 2
+Reading Passage
 
-Other useful advice includes choosing conservative colours, avoiding large jewellery, maintaining good hygiene, and avoiding clothing with obvious designer logos.
+University Graduates’ Careers Conference
 
-Questions 11–16
+Fields represented:
 
-[Section 2 Part A – Reading Text 3
-This is an open question set.
-Question type: Short answer.
-There are 6 questions (11–16).
-Answers must use NO MORE THAN THREE WORDS AND/OR A NUMBER.]
+A. Business & Commerce
+B. Health & Social Work
+C. Teaching
+D. Computing & IT
+E. Post-Graduate Studies
 
-When should new employees begin observing how others dress?
+Questions 15–20
 
-What item of clothing might men choose not to wear after their first day?
+[Matching – A–E. Letters may be used more than once.]
 
-What type of colleague provides the best guide to appropriate dress?
+Government sponsorship may be available.
+Answer: B
 
-What type of company is introducing management uniforms?
+Highest employment success rate within six months.
+Answer: D
 
-What might bright colours attract in the workplace?
+Job details found in a university publication.
+Answer: A
 
-What must not be obvious on acceptable designer clothing?
+Limited information at conference; more elsewhere.
+Answer: E
 
-SECTION 2 – PART B
-Reading Text 4
+Temporary and permanent jobs discussed.
+Answer: C
 
-Modern workplaces require continuous staff training. In the past, basic skills were often sufficient for an entire career, but today technology and work practices change rapidly.
+Over half of exhibitors offer overseas opportunities.
+Answer: D
 
-Training commonly focuses on technology, customer service, working in diverse environments, and health and safety. These programmes improve efficiency, staff morale, retention, and company image.
+SECTION 3
+Reading Passage
 
-Companies that invest in staff development benefit from increased motivation, innovation, and employee loyalty.
+Graduates’ Newsletter – Edition 204
 
-Questions 17–23
+The article discusses the importance of soft skills, work experience, and a two-day workshop aimed at improving employability.
 
-[Section 2 Part B – Reading Text 4
-This is a closed question set.
-Question type: TRUE / FALSE / NOT GIVEN.
-There are 7 questions (17–23).
-Answer options must be displayed as: TRUE, FALSE, NOT GIVEN.]
+Questions 21–23
 
-Training highlights areas where employees need improvement.
+[TRUE / FALSE / NOT GIVEN]
 
-Employees usually seek promotion immediately after training.
+Universities deliberately avoid teaching social skills.
+Answer: NOT GIVEN
 
-Companies often ignore existing staff when expanding their workforce.
+Employers may hesitate to hire graduates without work experience.
+Answer: TRUE
 
-The main purpose of staff training is learning to use office equipment.
-
-Customer service training is rarely prioritised.
-
-Cultural awareness training benefits companies.
-
-Health and safety training is becoming less important.
+Students at this university have advantages others may not.
+Answer: TRUE
 
 Questions 24–26
 
-[Section 2 Part B – Reading Text 4
-This is an open question set.
-Question type: Summary completion (short answer).
-There are 3 questions (24–26).
-Answers must use NO MORE THAN ONE WORD OR A NUMBER from the passage.]
+[Summary completion – ONE WORD OR NUMBER]
 
-Complete the summary below.
+Cost for non-enrolled students: £
+Answer: 25
 
-Staff training programmes can improve 24. ______, reduce staff turnover, and enhance a company’s public image.
-Organisations that invest in training benefit from higher levels of 25. ______ and innovation.
-Long-term advantages of training include increased employee 26. ______.
+Presenting yourself well at an
+Answer: interview
+
+Reasoning in a ______ manner
+Answer: logical
