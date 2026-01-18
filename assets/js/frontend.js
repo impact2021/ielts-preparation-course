@@ -1547,16 +1547,23 @@
             $('.reading-text .reading-passage-highlight').removeClass('reading-passage-highlight');
             
             if ($questionMarker.length) {
-                // Highlight the answer text associated with this question
+                // Highlight ALL answer texts associated with this question (supports multiple sections)
                 var $container = $questionMarker.closest('.reading-text');
-                var $answerHighlight = $container.find('.reading-answer-highlight[data-question="' + questionNumber + '"], .reading-answer-marker[data-question="' + questionNumber + '"]').first();
+                var $answerHighlights = $container.find('.reading-answer-highlight[data-question="' + questionNumber + '"], .reading-answer-marker[data-question="' + questionNumber + '"]');
                 
-                if (!$answerHighlight.length) {
-                    $answerHighlight = $questionMarker.next('.reading-answer-marker');
+                if (!$answerHighlights.length) {
+                    // Fallback: find all markers with id="passage-q{N}" for this question
+                    // and highlight the immediately following .reading-answer-marker for each
+                    $('[id="passage-q' + questionNumber + '"]', $container).each(function() {
+                        var $nextMarker = $(this).next('.reading-answer-marker');
+                        if ($nextMarker.length) {
+                            $answerHighlights = $answerHighlights.add($nextMarker);
+                        }
+                    });
                 }
                 
-                if ($answerHighlight.length) {
-                    $answerHighlight.addClass('reading-passage-highlight');
+                if ($answerHighlights.length) {
+                    $answerHighlights.addClass('reading-passage-highlight');
                 } else {
                     var $paragraph = $questionMarker.closest('p');
                     if ($paragraph.length) {

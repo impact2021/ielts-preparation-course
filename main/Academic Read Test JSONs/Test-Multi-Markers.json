@@ -1,0 +1,68 @@
+{
+    "title": "Test Multiple Markers Per Question",
+    "content": "This test verifies that multiple sections can be highlighted for a single question.",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Choose TRUE, FALSE or NOT GIVEN.",
+            "question": "1. Multiple sections can prove a single answer.",
+            "points": 1,
+            "reading_text_id": 0,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false
+                }
+            ],
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "2. The system can only highlight one section.",
+            "points": 1,
+            "reading_text_id": 0,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false
+                }
+            ],
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Multi-Section Highlighting Test",
+            "content": "<p>This reading passage demonstrates the ability to highlight multiple sections for a single question. This is useful when <span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">proof of the answer appears in different parts of the text</span>, rather than in just one location.</p>\n\n<p>The original system would only highlight the first marker it found. However, sometimes <span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">evidence for a single answer is scattered across multiple paragraphs</span> and both sections need to be visible.</p>\n\n<p>For question 2, there is only one marker: <span id=\"passage-q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">the new system can highlight multiple sections simultaneously</span> which was not possible before.</p>\n\n<p>This enhancement allows students to see all relevant evidence at once when they click the \"Show me the section of the reading passage\" button.</p>"
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "timer_minutes": "10",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "test_purpose": "Verify multiple reading passage markers for a single question",
+        "created_at": "2026-01-18"
+    }
+}

@@ -41,11 +41,21 @@ For precise control over what text gets highlighted, use manual HTML markers.
 - **ID format:** Use `passage-q#` for reading passages
 - **Class:** Use `reading-answer-marker` for reading passages
 - **No question badge** - Reading passages don't show the "Q1" badge
+- **Multiple markers:** You can use the same `id="passage-q#"` multiple times to highlight different sections for one question
+  - *Note: While HTML standards recommend unique IDs, the system is designed to handle multiple elements with the same `passage-q#` ID for this specific use case*
 
 **Example:**
 ```html
 <p>Statistics in New Zealand show that <span id="passage-q1" data-question="1"></span><span class="reading-answer-marker">a list of 20 of the top multi-national earners in New Zealand reported an average profit of just 1.3 per cent for New Zealand-generated revenue</span>.</p>
 ```
+
+**Multiple Sections for One Question:**
+```html
+<p>Something something something <span id="passage-q1" data-question="1"></span><span class="reading-answer-marker">proof of the answer</span>. More text, more text, more text etc.</p>
+
+<p>Additional paragraph. <span id="passage-q1" data-question="1"></span><span class="reading-answer-marker">and this is the second part that proves Q1</span>.</p>
+```
+When the student clicks "Show me the section of the reading passage" for Q1, **both** highlighted sections will be shown simultaneously.
 
 ## Comparison: Listening vs Reading Markers
 
@@ -77,6 +87,7 @@ For precise control over what text gets highlighted, use manual HTML markers.
 - The answer spans multiple sentences
 - Smart boundary detection doesn't work well
 - You want to highlight specific portions
+- **You need to highlight multiple separate sections for one question**
 
 ## Complete Example: Manual Markers in Reading Passage
 
@@ -87,6 +98,20 @@ For precise control over what text gets highlighted, use manual HTML markers.
 
 <p><span id="passage-q2" data-question="2"></span><span class="reading-answer-marker">Worldwide, lost income from unpaid taxes is estimated to come in at 10 per cent of global corporate income.</span></p>
 ```
+
+## Example: Multiple Markers for One Question
+
+Sometimes evidence for a single answer appears in multiple locations. You can use the same question number multiple times:
+
+```html
+<p>The first piece of evidence shows that <span id="passage-q3" data-question="3"></span><span class="reading-answer-marker">companies use various tax avoidance strategies</span> to minimize their obligations.</p>
+
+<p>Some intervening text that is not relevant to the answer...</p>
+
+<p>Later in the passage, we see additional proof: <span id="passage-q3" data-question="3"></span><span class="reading-answer-marker">these strategies include transfer pricing and profit shifting</span> which reduce taxable income.</p>
+```
+
+When students click "Show me the section of the reading passage" for Q3, **both highlighted sections** will appear simultaneously, allowing them to see all relevant evidence at once.
 
 ## Best Practices
 
