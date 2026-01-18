@@ -1555,8 +1555,8 @@
                     // Fallback: find all markers with id="passage-q{N}" for this question
                     // and highlight the immediately following .reading-answer-marker for each
                     $('[id="passage-q' + questionNumber + '"]', $container).each(function() {
-                        // Use nextAll to find all following .reading-answer-marker elements
-                        // and take the first one (in case there are multiple in sequence)
+                        // Use nextAll to find the first .reading-answer-marker that follows this marker
+                        // (even if not immediately adjacent - there may be text nodes or other elements in between)
                         var $nextMarker = $(this).nextAll('.reading-answer-marker').first();
                         if ($nextMarker.length) {
                             $answerHighlights = $answerHighlights.add($nextMarker);
