@@ -1,1507 +1,1507 @@
 {
-    "title": "General Training Reading Test 8",
-    "content": "",
-    "questions": [
+  "title": "General Training Reading Test 8",
+  "content": "",
+  "questions": [
+    {
+      "type": "closed_question",
+      "instructions": "Questions 1 – 7\r\n\r\nDo the following statements agree with the information given in Reading Text 1?\r\n\r\nWrite TRUE, FALSE or NOT GIVEN.",
+      "question": "1. There are more available copies of the Bill Benjamin album than the Gerome and the Jives album.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: FALSE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
         {
-            "type": "closed_question",
-            "instructions": "Questions 1 – 7\r\n\r\nDo the following statements agree with the information given in Reading Text 1?\r\n\r\nWrite TRUE, FALSE or NOT GIVEN.",
-            "question": "1. There are more available copies of the Bill Benjamin album than the Gerome and the Jives album.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: FALSE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The passage contradicts this statement."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Incorrect. The correct answer is FALSE. Please review the passage carefully."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The passage clearly states the opposite."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. The passage contradicts this statement."
         },
         {
-            "type": "closed_question",
-            "instructions": "Questions 2",
-            "question": "2. The blues album on sale for less than £20 will be available from the middle of September.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The statement is TRUE based on the reading passage."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. The passage confirms this statement."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. The passage does provide information about this."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Incorrect. The correct answer is FALSE. Please review the passage carefully."
         },
         {
-            "type": "closed_question",
-            "instructions": "Questions 3",
-            "question": "3. The Janine Reynard album is only available at the cheaper price for a limited time.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The statement is TRUE based on the reading passage."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. The passage confirms this statement."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. The passage does provide information about this."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 4",
-            "question": "4. The Seeking Solitude jazz album is available for the first time in the UK.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: FALSE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The passage contradicts this statement."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Incorrect. The correct answer is FALSE. Please review the passage carefully."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The passage clearly states the opposite."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 5",
-            "question": "5. Jessica Wilson is a famous female blues and jazz artist from the UK.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The statement is TRUE based on the reading passage."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. The passage confirms this statement."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. The passage does provide information about this."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 6",
-            "question": "6. Not all special offers are available to customers outside the UK.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: TRUE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The statement is TRUE based on the reading passage."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. The passage confirms this statement."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. The passage does provide information about this."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 7",
-            "question": "7. Express delivery in the UK costs £6.50.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: FALSE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The passage contradicts this statement."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Incorrect. The correct answer is FALSE. Please review the passage carefully."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The passage clearly states the opposite."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 8 – 10\r\n\r\nChoose the correct letter A, B, C, or D.",
-            "question": "8. What is the annual cost of family membership at Brightwood Leisure Centre?",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C (£450 annually).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "A: £120 per year",
-                    "is_correct": false,
-                    "feedback": "Incorrect. That is the student membership price. The correct answer is C (£450 annually)."
-                },
-                {
-                    "text": "B: £280 per year",
-                    "is_correct": false,
-                    "feedback": "Incorrect. That is the full membership price. The correct answer is C (£450 annually)."
-                },
-                {
-                    "text": "C: £450 annually",
-                    "is_correct": true,
-                    "feedback": "Correct! Family membership costs £450 annually for up to four household members."
-                },
-                {
-                    "text": "D: £600 per year",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C (£450 annually)."
-                }
-            ],
-            "options": "A: £120 per year\nB: £280 per year\nC: £450 annually\nD: £600 per year",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "9. What type of swimwear is NOT acceptable in the pool area?",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B (shorts and t-shirts).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "A: Swimming caps",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Swimming caps are recommended but not mandatory. The correct answer is B."
-                },
-                {
-                    "text": "B: Shorts and t-shirts",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states that shorts and t-shirts are not acceptable in the pool area."
-                },
-                {
-                    "text": "C: One-piece swimsuits",
-                    "is_correct": false,
-                    "feedback": "Incorrect. One-piece swimsuits are appropriate swimwear. The correct answer is B."
-                },
-                {
-                    "text": "D: Swim trunks",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Swim trunks are appropriate swimwear. The correct answer is B."
-                }
-            ],
-            "options": "A: Swimming caps\nB: Shorts and t-shirts\nC: One-piece swimsuits\nD: Swim trunks",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "10. When does Brightwood Leisure Centre operate on weekends?",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C (8:00 AM to 6:00 PM).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "A: 6:00 AM to 10:00 PM",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Those are the weekday hours. The correct answer is C."
-                },
-                {
-                    "text": "B: 7:00 AM to 8:00 PM",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C (8:00 AM to 6:00 PM)."
-                },
-                {
-                    "text": "C: 8:00 AM to 6:00 PM",
-                    "is_correct": true,
-                    "feedback": "Correct! The centre operates from 8:00 AM to 6:00 PM on weekends."
-                },
-                {
-                    "text": "D: 9:00 AM to 5:00 PM",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C (8:00 AM to 6:00 PM)."
-                }
-            ],
-            "options": "A: 6:00 AM to 10:00 PM\nB: 7:00 AM to 8:00 PM\nC: 8:00 AM to 6:00 PM\nD: 9:00 AM to 5:00 PM",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 11 – 14\r\n\r\nComplete each sentence with the correct ending, A, B, C, or D.",
-            "question": "11. Members can bring guests to the centre provided that",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is A (the guests are accompanied by the member at all times).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "A: the guests are accompanied by the member at all times",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states that guests must be accompanied by their sponsoring member at all times."
-                },
-                {
-                    "text": "B: the guests have their own membership card",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Guest passes are free and valid for one visit only. The correct answer is A."
-                },
-                {
-                    "text": "C: the guests pay an additional fee",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Guest passes are free. The correct answer is A."
-                },
-                {
-                    "text": "D: the guests attend during off-peak hours",
-                    "is_correct": false,
-                    "feedback": "Incorrect. No such restriction is mentioned. The correct answer is A."
-                }
-            ],
-            "options": "A: the guests are accompanied by the member at all times\nB: the guests have their own membership card\nC: the guests pay an additional fee\nD: the guests attend during off-peak hours",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "12. Frequent guests who visit more than six times per year are",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B (encouraged to become members).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "A: required to pay a visitor fee",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage does not require them to pay a fee. The correct answer is B."
-                },
-                {
-                    "text": "B: encouraged to become members",
-                    "is_correct": true,
-                    "feedback": "Correct! Frequent guests are encouraged to become members to enjoy unlimited access."
-                },
-                {
-                    "text": "C: given priority booking for classes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Priority booking is only for members. The correct answer is B."
-                },
-                {
-                    "text": "D: not permitted to bring a guest",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is B (encouraged to become members)."
-                }
-            ],
-            "options": "A: required to pay a visitor fee\nB: encouraged to become members\nC: given priority booking for classes\nD: not permitted to bring a guest",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "13. Swimming lessons at Brightwood Leisure Centre are held",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C (every Saturday morning from 9:00 AM to 4:00 PM for children aged 3-10).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "A: three times a week during weekday evenings",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The lessons are held on Saturday mornings. The correct answer is C."
-                },
-                {
-                    "text": "B: only for children aged 5-14 years old",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Swimming lessons are for ages 3-10. The correct answer is C."
-                },
-                {
-                    "text": "C: every Saturday morning for children aged 3-10 years",
-                    "is_correct": true,
-                    "feedback": "Correct! Swimming lessons are held every Saturday morning from 9:00 AM to 4:00 PM for children aged 3-10."
-                },
-                {
-                    "text": "D: only during school holidays",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Holiday camps are for school holidays; swimming lessons are regular Saturday programs. The correct answer is C."
-                }
-            ],
-            "options": "A: three times a week during weekday evenings\nB: only for children aged 5-14 years old\nC: every Saturday morning for children aged 3-10 years\nD: only during school holidays",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "14. Children attending centre activities must have",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is D (a completed medical consent form on file).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "A: parental supervision at all times",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The requirement is a medical consent form. The correct answer is D."
-                },
-                {
-                    "text": "B: a valid health insurance policy",
-                    "is_correct": false,
-                    "feedback": "Incorrect. A medical consent form is required, not insurance. The correct answer is D."
-                },
-                {
-                    "text": "C: a swimming ability assessment",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The requirement is a medical consent form. The correct answer is D."
-                },
-                {
-                    "text": "D: a completed medical consent form on file",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states that children must have a completed medical consent form on file with emergency contact information and relevant medical conditions."
-                }
-            ],
-            "options": "A: parental supervision at all times\nB: a valid health insurance policy\nC: a swimming ability assessment\nD: a completed medical consent form on file",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 15 – 20\r\n\r\nDo the following statements agree with the information given in Reading Text 4?\r\n\r\nWrite TRUE, FALSE or NOT GIVEN.",
-            "question": "15. You should research industry salary standards before negotiating with your manager.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage explicitly states to research industry standards before initiating discussions."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage clearly recommends researching salary standards. The correct answer is TRUE."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage provides information about this. The correct answer is TRUE."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "16. You should focus on personal financial needs when presenting your case for a pay rise.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states to focus on value brought to the company, not personal needs. The correct answer is FALSE."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage clearly states to focus on value brought to the company rather than personal financial needs."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage provides this information. The correct answer is FALSE."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "17. It is best to request a pay rise during the morning hours.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage discusses timing (after projects, during reviews) but not time of day. The correct answer is NOT GIVEN."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage does not provide information about time of day. The correct answer is NOT GIVEN."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage does not mention what time of day is best for requesting a pay rise."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "18. If your initial pay rise request is declined, you should ask about future opportunities.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states to ask what improvements would make you eligible for a raise in the future."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage recommends asking about future opportunities. The correct answer is TRUE."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage provides this information. The correct answer is TRUE."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "19. Your manager must make a decision about your pay rise request within one week.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions a two-week timeframe for follow-up, not one week. The correct answer is FALSE."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage suggests requesting a follow-up meeting within two weeks, not one week."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage provides timing information. The correct answer is FALSE."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "20. Negotiation for salary increases is a standard business practice.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage explicitly states that negotiation is a normal business practice."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage confirms negotiation is a normal practice. The correct answer is TRUE."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage provides this information. The correct answer is TRUE."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 21 – 26\r\n\r\nWhich section of the cover letter rules does each of the following apply to? Write the correct section heading, A, B, C, or D.",
-            "question": "21. Your address, the date, and the employer's details",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is A (Format and Structure).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Format and Structure",
-                    "is_correct": true,
-                    "feedback": "Correct! The Format and Structure section covers contact information, date, and employer details."
-                },
-                {
-                    "text": "B: Content Guidelines",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is in the Format and Structure section. The correct answer is A."
-                },
-                {
-                    "text": "C: Closing Statements",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is in the Format and Structure section. The correct answer is A."
-                },
-                {
-                    "text": "D: Common Mistakes to Avoid",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is in the Format and Structure section. The correct answer is A."
-                }
-            ],
-            "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "22. Why you are interested in the company and role",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B (Content Guidelines).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Format and Structure",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is content-related. The correct answer is B."
-                },
-                {
-                    "text": "B: Content Guidelines",
-                    "is_correct": true,
-                    "feedback": "Correct! Explaining interest in the company and role is covered in the Content Guidelines section."
-                },
-                {
-                    "text": "C: Closing Statements",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is in Content Guidelines. The correct answer is B."
-                },
-                {
-                    "text": "D: Common Mistakes to Avoid",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is in Content Guidelines. The correct answer is B."
-                }
-            ],
-            "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "23. Expressing enthusiasm and requesting an interview",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C (Closing Statements).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Format and Structure",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is about closing statements. The correct answer is C."
-                },
-                {
-                    "text": "B: Content Guidelines",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is about closing statements. The correct answer is C."
-                },
-                {
-                    "text": "C: Closing Statements",
-                    "is_correct": true,
-                    "feedback": "Correct! Expressing enthusiasm and requesting an interview are part of the Closing Statements section."
-                },
-                {
-                    "text": "D: Common Mistakes to Avoid",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is in Closing Statements. The correct answer is C."
-                }
-            ],
-            "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "24. Using appropriate professional formatting and margins",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is A (Format and Structure).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Format and Structure",
-                    "is_correct": true,
-                    "feedback": "Correct! Formatting and margins are covered in the Format and Structure section."
-                },
-                {
-                    "text": "B: Content Guidelines",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is about formatting. The correct answer is A."
-                },
-                {
-                    "text": "C: Closing Statements",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is about formatting. The correct answer is A."
-                },
-                {
-                    "text": "D: Common Mistakes to Avoid",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is in Format and Structure. The correct answer is A."
-                }
-            ],
-            "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "25. Not using generic letters and avoiding informal language",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is D (Common Mistakes to Avoid).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Format and Structure",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is about mistakes to avoid. The correct answer is D."
-                },
-                {
-                    "text": "B: Content Guidelines",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is about mistakes to avoid. The correct answer is D."
-                },
-                {
-                    "text": "C: Closing Statements",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is about mistakes to avoid. The correct answer is D."
-                },
-                {
-                    "text": "D: Common Mistakes to Avoid",
-                    "is_correct": true,
-                    "feedback": "Correct! Not using generic letters and avoiding informal language are mistakes to avoid."
-                }
-            ],
-            "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "26. Mentioning the specific position and job listing source",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B (Content Guidelines).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Format and Structure",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is about content. The correct answer is B."
-                },
-                {
-                    "text": "B: Content Guidelines",
-                    "is_correct": true,
-                    "feedback": "Correct! The opening paragraph details about position and job listing are part of Content Guidelines."
-                },
-                {
-                    "text": "C: Closing Statements",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is in Content Guidelines. The correct answer is B."
-                },
-                {
-                    "text": "D: Common Mistakes to Avoid",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is in Content Guidelines. The correct answer is B."
-                }
-            ],
-            "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Choose the most suitable headings for paragraphs B-G from the list below. Use each heading once only.",
-            "question": "Paragraph B",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is vii. Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "i. Government profiteering at the expense of citizens",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph B focuses on short-term economic gains versus long-term environmental concerns, not specifically government profiteering. Review the paragraph's main theme."
-                },
-                {
-                    "text": "ii. A balance provides the best options",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses the conflict between economic needs and environmental destruction, not finding a balance. That theme appears in a different paragraph."
-                },
-                {
-                    "text": "iii. Resistance to a change in attitudes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph focuses on economic pressures driving deforestation, not resistance to changing attitudes. Review the main focus of the paragraph."
-                },
-                {
-                    "text": "iv. Landowners the driving force for positive political change",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The paragraph doesn't discuss landowners driving positive change. Review what Paragraph B actually discusses about economic pressures."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This topic is not the focus of Paragraph B. The paragraph discusses economic pressures leading to deforestation."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph B focuses on economic versus environmental concerns."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This topic is covered in a different paragraph. Paragraph B focuses on the economic pressures driving current deforestation."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph B focuses on economic versus environmental priorities."
-                }
-            ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Paragraph C",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is viii. Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "i. Government profiteering at the expense of citizens",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph C discusses alternative ways to generate income from forests, not government profiteering. Review the paragraph's focus."
-                },
-                {
-                    "text": "ii. A balance provides the best options",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While balance is mentioned elsewhere, Paragraph C specifically focuses on alternative income options like tourism."
-                },
-                {
-                    "text": "iii. Resistance to a change in attitudes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph presents alternatives, not resistance to change. Review what Paragraph C discusses."
-                },
-                {
-                    "text": "iv. Landowners the driving force for positive political change",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph C doesn't discuss landowners or political change. It focuses on ecotourism and alternative income."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is not the topic of Paragraph C. The paragraph discusses tourism as an alternative income source."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph C focuses on ecotourism alternatives."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This theme is in a different paragraph. Paragraph C presents sustainable alternatives like tourism."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph C focuses on ecotourism as an alternative."
-                }
-            ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Paragraph D",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is ii. Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "i. Government profiteering at the expense of citizens",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph D discusses the need for balance between conservation and development, not government profiteering."
-                },
-                {
-                    "text": "ii. A balance provides the best options",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting."
-                },
-                {
-                    "text": "iii. Resistance to a change in attitudes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses balanced approaches and consequences, not resistance to change. Review Paragraph D's main theme."
-                },
-                {
-                    "text": "iv. Landowners the driving force for positive political change",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Landowners are not the focus of this paragraph. It discusses balanced forest management and global impacts."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses balanced harvesting and environmental impacts, not public support issues."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph D focuses on balanced approaches."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph D actually discusses the OPPOSITE - countries realizing they need sustainable, long-term approaches."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While alternatives are mentioned elsewhere, Paragraph D focuses on balanced harvesting and environmental impacts."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph D discusses policy-level balance."
-                }
-            ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Paragraph E",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is vi. Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "i. Government profiteering at the expense of citizens",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While government is mentioned, the focus is on land inequality and its consequences, not specifically profiteering."
-                },
-                {
-                    "text": "ii. A balance provides the best options",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses the problem of unequal land distribution, not solutions involving balance."
-                },
-                {
-                    "text": "iii. Resistance to a change in attitudes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses land inequality as a cause of deforestation, not resistance to change."
-                },
-                {
-                    "text": "iv. Landowners the driving force for positive political change",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The paragraph shows landowners as part of the PROBLEM, not driving positive change. They influence regulations negatively."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Public support is not the focus. Paragraph E discusses how land inequality drives deforestation."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph specifically addresses land inequality, not the temporary versus long-term issue."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Alternatives are discussed elsewhere. Paragraph E focuses on land distribution problems."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses structural land ownership issues, not personal decisions."
-                }
-            ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Paragraph F",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is ix. Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "i. Government profiteering at the expense of citizens",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph F discusses government protection policies and individual consumer choices, not profiteering."
-                },
-                {
-                    "text": "ii. A balance provides the best options",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While balance might be implied, the specific focus is on the power of individual consumer choices."
-                },
-                {
-                    "text": "iii. Resistance to a change in attitudes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph encourages change through consumer choices, it doesn't discuss resistance to change."
-                },
-                {
-                    "text": "iv. Landowners the driving force for positive political change",
-                    "is_correct": false,
-                    "feedback": "Incorrect. It's the general population and consumers driving change, not landowners specifically."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The paragraph actually discusses how public demand IS creating change, showing support exists."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph F focuses on consumer power."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses solutions through consumer behavior, not the problem of short-term thinking."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While alternatives are mentioned, the focus is on how personal choices drive demand for these alternatives."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism."
-                }
-            ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Paragraph G",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is iii. Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "i. Government profiteering at the expense of citizens",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph G discusses the challenge of raising public awareness and changing habits, not government profiteering."
-                },
-                {
-                    "text": "ii. A balance provides the best options",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses the difficulty of changing behaviors, not finding balance."
-                },
-                {
-                    "text": "iii. Resistance to a change in attitudes",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption."
-                },
-                {
-                    "text": "iv. Landowners the driving force for positive political change",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses public behavior change challenges, not landowners."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The focus is on difficulty changing habits, not lack of support for renewables."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is not discussed in this paragraph. It focuses on changing consumer behavior."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses resistance to behavioral change, not economic versus environmental priorities."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Income alternatives are not the focus. Paragraph G discusses the challenge of raising awareness and changing habits."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While personal decisions are mentioned, the emphasis is on how DIFFICULT it is to change them, which is resistance to change."
-                }
-            ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "open_question",
-            "instructions": "Answer the following questions using NO MORE THAN TWO WORDS from the text.",
-            "question": "<p>What phenomenon is predicted to increase at a global level due to deforestation?</p>\r\n<p>36. Phenomenon:</p>\r\n",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "GREENHOUSE EFFECT|greenhouse effect|THE GREENHOUSE EFFECT|the greenhouse effect"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph D states that deforestation will lead to 'a 15 per cent rise in the greenhouse effect around the planet.'",
-                    "incorrect": "Incorrect. Review Paragraph D which discusses the global environmental phenomenon predicted to increase due to deforestation.",
-                    "no_answer": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'"
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "<p>What is becoming more common, allowing for more ecological uses of forested areas?</p>\r\n<p>37. What is becoming more common:</p>\r\n",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "INTERNATIONAL TRAVEL|international travel"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph C states 'International travel is becoming increasingly popular,' enabling ecological tourism in forests.",
-                    "incorrect": "Incorrect. Review Paragraph C which mentions what is becoming more popular and enabling ecological uses of forests.",
-                    "no_answer": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "<p>Over two thirds of people living in the countryside in Brazil are what?</p>\r\n<p>38. They are:</p>\r\n",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "LANDLESS|landless"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph E states that '70 per cent of rural households are landless' in Brazil.",
-                    "incorrect": "Incorrect. Review Paragraph E which discusses the situation of rural people in Brazil regarding land ownership.",
-                    "no_answer": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "<p>Which country has only one fiftieth of their original forested areas remaining?</p>\r\n<p>39. Country:</p>\r\n",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "UNITED STATES|United States|THE USA|USA|THE U.S.A.|U.S.A.|the USA|usa|the U.S.A.|u.s.a."
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph B states the United States 'has less than two per cent of its original forest' (which is one fiftieth).",
-                    "incorrect": "Incorrect. Review Paragraph B which mentions the country with only 2% (one fiftieth) of its original forests remaining.",
-                    "no_answer": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "<p>What needs to be increased so that people can begin to change negative habits?</p>\r\n<p>40. What needs to be increased:</p>\r\n",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 5,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "PUBLIC AWARENESS|public awareness|AWARENESS|awareness"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph G states that 'the raising of public awareness' is necessary for changing negative behaviors.",
-                    "incorrect": "Incorrect. Review Paragraph G which identifies what needs to be raised or increased to change people's harmful behaviors.",
-                    "no_answer": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change."
-                }
-            }
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. The passage clearly states the opposite."
         }
-    ],
-    "reading_texts": [
-        {
-            "title": "Reading Text 1",
-            "content": "<h4><strong>Hidden Treasures Music Store – September Members' Newsletter</strong></h4>\r\n\r\n<p>Stockists of rare and collectors' items – take a walk down Memory Lane!</p>\r\n\r\n<h5>Music categories</h5>\r\n<p><strong>J</strong> – Jazz &nbsp;&nbsp; <strong>B</strong> – Blues &nbsp;&nbsp; <strong>R</strong> – Rock &amp; Roll</p>\r\n\r\n<h5>New Arrivals This Month</h5>\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"12\" style=\"border-collapse:collapse;border:2px solid #2f3b52\">\r\n<tbody>\r\n<tr style=\"background:#2f3b52;color:#fff\">\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\" width=\"30%\">Artist</th>\r\n<th style=\"border:1px solid #2f3b52\" align=\"center\" width=\"8%\">Genre</th>\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\" width=\"62%\">Details</th>\r\n</tr>\r\n<tr style=\"background:#f3f6fb\">\r\n<td colspan=\"3\" style=\"border:1px solid #2f3b52\"><strong><span id=\"passage-q2\" data-question=\"2\"></span>\r\n<span class=\"reading-answer-marker\">Under £20</span></strong></td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\"><span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Bill Benjamin</span></td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">J</td>\r\n<td style=\"border:1px solid #ccc\">\r\nA rare chance to buy the artist's first album. <span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">5 copies in stock.</span>\r\n</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\"><span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Gerome and the Jives</span></td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">R</td>\r\n<td style=\"border:1px solid #ccc\"><span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">10 copies remaining</span>. Reduced from £30.</td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">Giles Bertram</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\"><span id=\"passage-q2\" data-question=\"2\"></span>\r\n<span class=\"reading-answer-marker\">B</span></td>\r\n<td style=\"border:1px solid #ccc\">\r\nCurrently out of stock. <span id=\"passage-q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">Expected delivery 25 September.</span>\r\n</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">The Rockerbillies</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">R</td>\r\n<td style=\"border:1px solid #ccc\">Digitally remastered for enhanced quality.</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<br>\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"12\" style=\"border-collapse:collapse;border:2px solid #2f3b52\">\r\n<tbody>\r\n<tr style=\"background:#2f3b52;color:#fff\">\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\" width=\"30%\">Artist</th>\r\n<th style=\"border:1px solid #2f3b52\" align=\"center\" width=\"8%\">Genre</th>\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\" width=\"62%\">Details</th>\r\n</tr>\r\n<tr style=\"background:#f3f6fb\">\r\n<td colspan=\"3\" style=\"border:1px solid #2f3b52\"><strong>Under £30</strong></td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">Clyde Forstrum</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">J/B</td>\r\n<td style=\"border:1px solid #ccc\">A mix of cover songs from well-known jazz and blues artists.</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">The Kings of Temple Street</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">B</td>\r\n<td style=\"border:1px solid #ccc\">Award-winning blues band from New Orleans.</td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">Brian Jefferson</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">B</td>\r\n<td style=\"border:1px solid #ccc\">Includes the chart-topping song \"Forever Yours\".</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">Janine Reynard</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">R</td>\r\n<td style=\"border:1px solid #ccc\">\r\n<span id=\"passage-q3\" data-question=\"3\"></span>\r\n<span class=\"reading-answer-marker\">Special offer this month only. Usually £55.</span>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<br>\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"12\" style=\"border-collapse:collapse;border:2px solid #2f3b52\">\r\n<tbody>\r\n<tr style=\"background:#2f3b52;color:#fff\">\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\" width=\"30%\">Artist</th>\r\n<th style=\"border:1px solid #2f3b52\" align=\"center\" width=\"8%\">Genre</th>\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\" width=\"62%\">Details</th>\r\n</tr>\r\n<tr style=\"background:#f3f6fb\">\r\n<td colspan=\"3\" style=\"border:1px solid #2f3b52\"><strong>Under £50</strong></td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">The Real McCoy</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">R</td>\r\n<td style=\"border:1px solid #ccc\">Voted their best album of all time by K20 radio listeners.</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">Seeking Solitude</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">J</td>\r\n<td style=\"border:1px solid #ccc\">\r\n<span id=\"passage-q4\" data-question=\"4\"></span>\r\n<span class=\"reading-answer-marker\">First time available in store.</span>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">Johnny Baxter</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">B</td>\r\n<td style=\"border:1px solid #ccc\">New arrival from the USA. Only available from Hidden Treasures in the UK.</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">Jessica Wilson</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">B/J</td>\r\n<td style=\"border:1px solid #ccc\">\r\n<span id=\"passage-q5\" data-question=\"5\"></span>\r\n<span class=\"reading-answer-marker\">The UK's best-known female jazz and blues star.</span>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<h5>Additional Special Offers</h5>\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"12\" style=\"border-collapse:collapse;border:2px solid #2f3b52\">\r\n<tbody>\r\n<tr style=\"background:#2f3b52;color:#fff\">\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\">Offer</th>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">\r\n<span id=\"passage-q6\" data-question=\"6\"></span>\r\n<span class=\"reading-answer-marker\">£20 voucher with any purchase over £100 (available until 5 October)</span>\r\n</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">Free delivery within the UK only for orders over £6 (valid until 30 September)</td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">Purchases over £60 automatically entered into prize draw</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<h5>Delivery Details</h5>\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"12\" style=\"border-collapse:collapse;border:2px solid #2f3b52\">\r\n<tbody>\r\n<tr style=\"background:#2f3b52;color:#fff\">\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\">Within the UK</th>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">\r\n<span id=\"passage-q7\" data-question=\"7\"></span>\r\n<span class=\"reading-answer-marker\">£6.50 regular post</span>\r\n</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">£16.80 courier service (next day delivery)</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<br>\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"12\" style=\"border-collapse:collapse;border:2px solid #2f3b52\">\r\n<tbody>\r\n<tr style=\"background:#2f3b52;color:#fff\">\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\">Outside the UK</th>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">Contact the store for prices</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">Surface delivery: approximately 6–8 weeks</td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">Airmail delivery: 1–2 weeks</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n"
-        },
-        {
-            "title": "Reading Text 2",
-            "content": "<h4><strong>Brightwood Leisure Centre – Facilities and Rules</strong></h4>\r\n\r\n<p>Welcome to Brightwood Leisure Centre. To ensure all members and guests enjoy their visit safely, please observe the following rules and regulations.</p>\r\n\r\n<h5>Membership Categories</h5>\r\n\r\n<p><span id=\"passage-q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">Full membership is available to individuals aged 16 years and above, with an annual fee of £280</span>. This includes unlimited access to all facilities during opening hours and priority booking for classes.</p>\r\n\r\n<p>Student membership is available to full-time students aged 18-25 for £120 per year. Valid student identification must be presented at registration.</p>\r\n\r\n<p><span id=\"passage-q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">Family membership covering up to four household members costs £450 annually</span> and is ideal for families who want to exercise together.</p>\r\n\r\n<h5>Facility Rules</h5>\r\n\r\n<p><span id=\"passage-q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">All swimmers must wear appropriate swimwear in the pool area; shorts and t-shirts are not acceptable</span>. Swimming caps are recommended but not mandatory. Shower facilities are available before and after use of the pool.</p>\r\n\r\n<p>Gym equipment must be used only as instructed by staff. Members must complete an induction session before using the weights room for the first time. Mobile phones should be set to silent mode in all facilities.</p>\r\n\r\n<p>Children under 8 years old are not permitted in the gym or weights room. Children aged 8-15 may use the gym only when supervised by an adult member.</p>\r\n\r\n<h5>Booking and Cancellations</h5>\r\n\r\n<p>Classes should be booked online at least 24 hours in advance. Cancellations must be made 12 hours before the class start time to avoid a £5 cancellation fee. No-shows will be recorded, and members with more than three no-shows in a month will have their class booking privileges suspended for one week.</p>\r\n\r\n<h5>Safety and Conduct</h5>\r\n\r\n<p>Staff members reserve the right to ask members to leave if they fail to comply with rules or behave inappropriately. All accidents should be reported immediately to staff. First aid facilities are available at the front desk.</p>\r\n\r\n<p>The centre operates from 6:00 AM to 10:00 PM weekdays and 8:00 AM to 6:00 PM weekends.</p>"
-        },
-        {
-            "title": "Reading Text 3",
-            "content": "<h4><strong>Guest and Children Policies at Brightwood Leisure Centre</strong></h4>\r\n\r\n<h5>Guest Privileges</h5>\r\n\r\n<p><span id=\"passage-q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">Members can bring up to two guests per visit, though guests must be accompanied by their sponsoring member at all times</span>. Guest passes are free and valid for one visit only.</p>\r\n\r\n<p>Guests do not have access to the changing facilities without supervision and must follow all centre rules. Guests are not permitted to use the weights room or attend specialized classes.</p>\r\n\r\n<p><span id=\"passage-q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">Frequent guests who visit more than six times per year are encouraged to become members</span> to enjoy unlimited access to all facilities.</p>\r\n\r\n<h5>Children's Programmes</h5>\r\n\r\n<p><span id=\"passage-q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">The centre offers swimming lessons for children aged 3-10 years old, held every Saturday morning from 9:00 AM to 4:00 PM</span>. Classes are taught by qualified instructors and grouped by ability level.</p>\r\n\r\n<p>Holiday camps are available during school holidays for children aged 5-14. These camps include a variety of activities such as swimming, games, sports, and craft activities. Early booking is essential as places are limited.</p>\r\n\r\n<p><span id=\"passage-q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">Children attending any centre activities must have a completed medical consent form on file</span>. This form should include emergency contact information and any relevant medical conditions.</p>\r\n\r\n<h5>Additional Information</h5>\r\n\r\n<p>Parents and caregivers are welcome to observe swimming lessons from the viewing gallery. For enquiries about children's programs, please contact the centre directly.</p>"
-        },
-        {
-            "title": "Reading Text 4",
-            "content": "<h4><strong>Guidelines for Negotiating a Pay Rise at Work</strong></h4>\r\n\r\n<p>Many employees feel uncertain about requesting a pay increase from their employer. However, with proper preparation and a professional approach, salary negotiations can be successful.</p>\r\n\r\n<h5>Before You Start</h5>\r\n\r\n<p><span id=\"passage-q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">Research industry salary standards for your position, experience level, and geographic location before initiating any discussion with your manager</span>. This ensures your request is realistic and backed by data.</p>\r\n\r\n<p><span id=\"passage-q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">Document your achievements and contributions over the past year, including successful projects, additional responsibilities you have assumed, and positive feedback from colleagues or clients</span>. This evidence strengthens your case considerably.</p>\r\n\r\n<p>Choose an appropriate time to request a meeting—ideally after a successful project completion, during performance reviews, or when the company is performing well financially.</p>\r\n\r\n<h5>The Negotiation Meeting</h5>\r\n\r\n<p><span id=\"passage-q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">Start the conversation by thanking your manager for considering your request and expressing your commitment to the organization</span>. This sets a positive tone for the discussion.</p>\r\n\r\n<p><span id=\"passage-q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">Present your case clearly by explaining why you deserve a raise, focusing on the value you bring to the company rather than personal financial needs</span>. Mention specific accomplishments and how you have improved efficiency or contributed to company goals.</p>\r\n\r\n<p>Listen carefully to your manager's feedback. They may outline concerns, budget constraints, or offer alternative benefits such as additional vacation days or flexible working arrangements.</p>\r\n\r\n<h5>After the Discussion</h5>\r\n\r\n<p><span id=\"passage-q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">If your manager needs time to consider, request a follow-up meeting within two weeks to discuss their decision</span>. Agree on a specific date before the meeting concludes.</p>\r\n\r\n<p><span id=\"passage-q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">Even if your initial request is declined, ask what specific improvements or achievements would make you eligible for a raise in the future, and establish clear goals to work towards</span>. This demonstrates your commitment to professional growth and keeps the door open for future negotiations.</p>\r\n\r\n<p>Remember that negotiation is a normal business practice, and most employers expect employees to request pay increases periodically.</p>"
-        },
-        {
-            "title": "Reading Text 5",
-            "content": "<h4><strong>Essential Rules for Writing an Effective Cover Letter</strong></h4>\r\n\r\n<h5>Format and Structure</h5>\r\n\r\n<p><span id=\"passage-q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">A cover letter should be one page long, written on white paper with professional margins of one inch on all sides</span>. Use a standard business font such as Arial or Times New Roman in size 11 or 12.</p>\r\n\r\n<p><span id=\"passage-q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">Include your contact information at the top of the letter, followed by the date, and then the employer's name and company address</span>. Address the letter to a specific person whenever possible; research the hiring manager's name on the company website or LinkedIn.</p>\r\n\r\n<h5>Content Guidelines</h5>\r\n\r\n<p><span id=\"passage-q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">The opening paragraph should mention the specific position you are applying for and where you found the job listing</span>. This shows that you have tailored your application to this particular opportunity.</p>\r\n\r\n<p><span id=\"passage-q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">In the main body, explain why you are interested in the company and the role, highlighting how your skills and experience match the job requirements</span>. Use specific examples from your background to demonstrate your qualifications.</p>\r\n\r\n<p>Avoid repeating information that is already in your CV. Instead, add value by explaining your genuine interest in the position and what you can contribute to the organization.</p>\r\n\r\n<h5>Closing Statements</h5>\r\n\r\n<p><span id=\"passage-q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">Conclude with a strong closing paragraph that expresses your enthusiasm for the opportunity and includes a call to action, such as requesting an interview</span>. Thank the reader for their time and consideration.</p>\r\n\r\n<p><span id=\"passage-q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">Sign off professionally with \"Sincerely\" or \"Best regards\" followed by your full name typed below, leaving space for your handwritten signature if submitting a printed copy</span>. Proofread carefully for spelling and grammar errors before sending.</p>\r\n\r\n<h5>Common Mistakes to Avoid</h5>\r\n\r\n<p>Do not use generic cover letters. Each letter should be customized for the specific position and company. Avoid using informal language or jokes that may not be appropriate in a professional context. Never include negative comments about previous employers.</p>"
-        },
-        {
-            "title": "Reading Text 6",
-            "content": "<h3>Reading Passage 3</h3>\r\n<h2>The price of your newspaper</h2>\r\n\r\n<h4>Paragraph A</h4>\r\n<p>The average family buys two newspapers and a magazine every week, in addition to receiving up to three pieces of junk mail. Multiplied by the global population, this amounts to a lot of paper, and therefore a lot of wood. Although the rise of the home computer has gone a long way in reducing this excessive use of paper, the demand is still considerable.</p>\r\n\r\n<span id=\"passage-q27\" data-question=\"27\"></span><h4><span id=\"passage-q25\" data-question=\"25\"></span>Paragraph B</h4>\r\n<p>Social and economic concerns have over-ridden environmental common sense, and in many western countries, the woods and forests that once covered the land have long since been cleared away. A shocking example can be found by looking at the <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">United States</span>, which now has less than two per cent of its original forest. Other areas, predominantly tropical countries, <span id=\"passage-q28\" data-question=\"28\"></span>are now following the same destructive path. In 1995 over one million hectares of forest in Brazil were cleared, a disturbing statistic but nonetheless inevitable as timber and other related raw materials are important exports for countries that often have little other way of supporting themselves. They provide employment for those who harvest the wood, extract rubber or make products using available materials. With one third of the world depending on wood for fuel, it is very tempting, <span id=\"passage-q29\" data-question=\"29\"></span>though shortsighted, for poorer countries to exploit the market.</p>\r\n\r\n<h4><span id=\"passage-q26\" data-question=\"26\"></span>Paragraph C</h4>\r\n<p>It could be argued, then, that countries with rich wood resources should be fully entitled to exploit them. However, there are less destructive alternatives for generating an income from the rainforests. The forest environment provides a popular setting for ecotourism, which includes hiking, camping, bird watching and other outdoor adventure or<span id=\"passage-q30\" data-question=\"30\"></span> nature study activities. <span id=\"passage-q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">International travel</span> is becoming increasingly popular, making the rainforests accessible for the more adventurous holidaymaker.</p>\r\n\r\n<h4><span id=\"passage-q27\" data-question=\"27\"></span>Paragraph D</h4>\r\n<p>No matter what the solution, the rampant spread of deforestation has to be halted. Surveys in Cameroon, the Ivory Coast, G<span id=\"passage-q31\" data-question=\"31\"></span>hana and Liberia found that forest wildlife accounted for 70 to 90 per cent of the total animal protein consumed, thus arguing that some indigenous peoples are completely dependent on forests for food. In many of these countries, wood harvesting is carried out on a considerably more sensible scale. There appears to be the realisation that selling the wood is a temporary solution that would inevitably lead to worse problems for the future. Not only would the traditional food source be gone, but the trees which protected the soil a<span id=\"passage-q32\" data-question=\"32\"></span>gainst erosion would be gone. Landslides would become more common and rainwater would not be absorbed so easily into the ground, leading to a shortage of freshwater supplies. There is also the global impact, not only from the burning of the wood but also because trees provide an important role in the recycling of carbon dioxide and the production of oxygen. Estimates based on the current rate of deforestation have predicted a 15 per cent rise in <span id=\"passage-q31\" data-question=\"31\"><span id=\"passage-q33\" data-question=\"33\"></span></span><span class=\"reading-answer-marker\">the greenhouse effect</span> around the planet.</p>\r\n\r\n<h4><span id=\"passage-q28\" data-question=\"28\"></span>Paragraph E</h4>\r\n<p>In order to combat the problem of deforestation, it is important to consider its causes in greater detail. In Brazil, we should look at the unequal and unfair distribution of land – 4.5 per cent of landowners hold 81 per cent of the country's farmland, and 70 per cent <span id=\"passage-q34\" data-question=\"34\"></span>of rural households are <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">landless</span>. With either no legal claim to the land or ownership of so much, deforestation is inevitable as land owners profit from the land. This is the point in which the situation is in the hands of government, yet often the landowners have shown their ability to sway official regulations regarding timber harvesting.</p>\r\n\r\n<h4><span id=\"passage-q29\" data-question=\"29\"></span>Paragraph F</h4>\r\n<p>To effect a serious reversa<span id=\"passage-q35\" data-question=\"35\"></span>l of the damage, some governments are taking a more active role in forest management to protect the environment and employment – a change which has been largely encouraged by the voting and demands of the general population which have resulted in policies of replantation and protection. As well as creating political pressure, individuals can make a difference by practising green consumerism. Recycled paper is readily available, and we can all make an effort to purchase the most ecologica<span id=\"passage-q36\" data-question=\"36\"></span>lly sensitive products. Demanding alternative products, such as clear-cut free paper and eco-certified lumber, is important in convincing companies that markets exist for such products.</p>\r\n\r\n<h4><span id=\"passage-q30\" data-question=\"30\"></span>Paragraph G</h4>\r\n<p>None of these activities can occur without the raising of <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">public awareness</span> to inform consumers about the environmental effects of the<span id=\"passage-q37\" data-question=\"37\"></span>ir products, and this is not an easy task. Many people are too entrenched in their habits or too lazy to change, yet one of the most important ways for a person to have a positive effect is to reduce his or her consumption of forest and related products. An increase in the participation of the public in, and the accessibility and productiveness of facilities for, reducing, reusing and recycling is not only necessary, but also a duty. So next time you buy a newspaper, just consider the cost.</p>",
-            "text_id": null
-        }
-    ],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_reading",
-        "cbt_test_type": "general_training",
-        "exercise_label": "practice_test",
-        "open_as_popup": "",
-        "scoring_type": "percentage",
-        "timer_minutes": "60",
-        "starting_question_number": "1"
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
     },
-    "_metadata": {
-        "exported_at": "2026-01-18 15:41:19",
-        "exported_by": "impact",
-        "plugin_version": "12.2",
-        "format_version": "1.0"
+    {
+      "type": "closed_question",
+      "instructions": "Questions 2",
+      "question": "2. The blues album on sale for less than £20 will be available from the middle of September.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: TRUE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The statement is TRUE based on the reading passage."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. The passage confirms this statement."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. The passage does provide information about this."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 3",
+      "question": "3. The Janine Reynard album is only available at the cheaper price for a limited time.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: TRUE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The statement is TRUE based on the reading passage."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. The passage confirms this statement."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. The passage does provide information about this."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 4",
+      "question": "4. The Seeking Solitude jazz album is available for the first time in the UK.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: FALSE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. The passage contradicts this statement."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Incorrect. The correct answer is FALSE. Please review the passage carefully."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. The passage clearly states the opposite."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 5",
+      "question": "5. Jessica Wilson is a famous female blues and jazz artist from the UK.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: TRUE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The statement is TRUE based on the reading passage."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. The passage confirms this statement."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. The passage does provide information about this."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 6",
+      "question": "6. Not all special offers are available to customers outside the UK.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: TRUE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The statement is TRUE based on the reading passage."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. The passage confirms this statement."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. The passage does provide information about this."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 7",
+      "question": "7. Express delivery in the UK costs £6.50.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: FALSE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. The passage contradicts this statement."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Incorrect. The correct answer is FALSE. Please review the passage carefully."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. The passage clearly states the opposite."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 8 – 10\r\n\r\nChoose the correct letter A, B, C, or D.",
+      "question": "8. What is the annual cost of family membership at Brightwood Leisure Centre?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C (£450 annually).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "A: £120 per year",
+          "is_correct": false,
+          "feedback": "Incorrect. That is the student membership price. The correct answer is C (£450 annually)."
+        },
+        {
+          "text": "B: £280 per year",
+          "is_correct": false,
+          "feedback": "Incorrect. That is the full membership price. The correct answer is C (£450 annually)."
+        },
+        {
+          "text": "C: £450 annually",
+          "is_correct": true,
+          "feedback": "Correct! Family membership costs £450 annually for up to four household members."
+        },
+        {
+          "text": "D: £600 per year",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is C (£450 annually)."
+        }
+      ],
+      "options": "A: £120 per year\nB: £280 per year\nC: £450 annually\nD: £600 per year",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "9. What type of swimwear is NOT acceptable in the pool area?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B (shorts and t-shirts).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "A: Swimming caps",
+          "is_correct": false,
+          "feedback": "Incorrect. Swimming caps are recommended but not mandatory. The correct answer is B."
+        },
+        {
+          "text": "B: Shorts and t-shirts",
+          "is_correct": true,
+          "feedback": "Correct! The passage states that shorts and t-shirts are not acceptable in the pool area."
+        },
+        {
+          "text": "C: One-piece swimsuits",
+          "is_correct": false,
+          "feedback": "Incorrect. One-piece swimsuits are appropriate swimwear. The correct answer is B."
+        },
+        {
+          "text": "D: Swim trunks",
+          "is_correct": false,
+          "feedback": "Incorrect. Swim trunks are appropriate swimwear. The correct answer is B."
+        }
+      ],
+      "options": "A: Swimming caps\nB: Shorts and t-shirts\nC: One-piece swimsuits\nD: Swim trunks",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "10. When does Brightwood Leisure Centre operate on weekends?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C (8:00 AM to 6:00 PM).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "A: 6:00 AM to 10:00 PM",
+          "is_correct": false,
+          "feedback": "Incorrect. Those are the weekday hours. The correct answer is C."
+        },
+        {
+          "text": "B: 7:00 AM to 8:00 PM",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is C (8:00 AM to 6:00 PM)."
+        },
+        {
+          "text": "C: 8:00 AM to 6:00 PM",
+          "is_correct": true,
+          "feedback": "Correct! The centre operates from 8:00 AM to 6:00 PM on weekends."
+        },
+        {
+          "text": "D: 9:00 AM to 5:00 PM",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is C (8:00 AM to 6:00 PM)."
+        }
+      ],
+      "options": "A: 6:00 AM to 10:00 PM\nB: 7:00 AM to 8:00 PM\nC: 8:00 AM to 6:00 PM\nD: 9:00 AM to 5:00 PM",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 11 – 14\r\n\r\nComplete each sentence with the correct ending, A, B, C, or D.",
+      "question": "11. Members can bring guests to the centre provided that",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is A (the guests are accompanied by the member at all times).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "A: the guests are accompanied by the member at all times",
+          "is_correct": true,
+          "feedback": "Correct! The passage states that guests must be accompanied by their sponsoring member at all times."
+        },
+        {
+          "text": "B: the guests have their own membership card",
+          "is_correct": false,
+          "feedback": "Incorrect. Guest passes are free and valid for one visit only. The correct answer is A."
+        },
+        {
+          "text": "C: the guests pay an additional fee",
+          "is_correct": false,
+          "feedback": "Incorrect. Guest passes are free. The correct answer is A."
+        },
+        {
+          "text": "D: the guests attend during off-peak hours",
+          "is_correct": false,
+          "feedback": "Incorrect. No such restriction is mentioned. The correct answer is A."
+        }
+      ],
+      "options": "A: the guests are accompanied by the member at all times\nB: the guests have their own membership card\nC: the guests pay an additional fee\nD: the guests attend during off-peak hours",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "12. Frequent guests who visit more than six times per year are",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B (encouraged to become members).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "A: required to pay a visitor fee",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage does not require them to pay a fee. The correct answer is B."
+        },
+        {
+          "text": "B: encouraged to become members",
+          "is_correct": true,
+          "feedback": "Correct! Frequent guests are encouraged to become members to enjoy unlimited access."
+        },
+        {
+          "text": "C: given priority booking for classes",
+          "is_correct": false,
+          "feedback": "Incorrect. Priority booking is only for members. The correct answer is B."
+        },
+        {
+          "text": "D: not permitted to bring a guest",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is B (encouraged to become members)."
+        }
+      ],
+      "options": "A: required to pay a visitor fee\nB: encouraged to become members\nC: given priority booking for classes\nD: not permitted to bring a guest",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "13. Swimming lessons at Brightwood Leisure Centre are held",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C (every Saturday morning from 9:00 AM to 4:00 PM for children aged 3-10).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "A: three times a week during weekday evenings",
+          "is_correct": false,
+          "feedback": "Incorrect. The lessons are held on Saturday mornings. The correct answer is C."
+        },
+        {
+          "text": "B: only for children aged 5-14 years old",
+          "is_correct": false,
+          "feedback": "Incorrect. Swimming lessons are for ages 3-10. The correct answer is C."
+        },
+        {
+          "text": "C: every Saturday morning for children aged 3-10 years",
+          "is_correct": true,
+          "feedback": "Correct! Swimming lessons are held every Saturday morning from 9:00 AM to 4:00 PM for children aged 3-10."
+        },
+        {
+          "text": "D: only during school holidays",
+          "is_correct": false,
+          "feedback": "Incorrect. Holiday camps are for school holidays; swimming lessons are regular Saturday programs. The correct answer is C."
+        }
+      ],
+      "options": "A: three times a week during weekday evenings\nB: only for children aged 5-14 years old\nC: every Saturday morning for children aged 3-10 years\nD: only during school holidays",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "14. Children attending centre activities must have",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is D (a completed medical consent form on file).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "A: parental supervision at all times",
+          "is_correct": false,
+          "feedback": "Incorrect. The requirement is a medical consent form. The correct answer is D."
+        },
+        {
+          "text": "B: a valid health insurance policy",
+          "is_correct": false,
+          "feedback": "Incorrect. A medical consent form is required, not insurance. The correct answer is D."
+        },
+        {
+          "text": "C: a swimming ability assessment",
+          "is_correct": false,
+          "feedback": "Incorrect. The requirement is a medical consent form. The correct answer is D."
+        },
+        {
+          "text": "D: a completed medical consent form on file",
+          "is_correct": true,
+          "feedback": "Correct! The passage states that children must have a completed medical consent form on file with emergency contact information and relevant medical conditions."
+        }
+      ],
+      "options": "A: parental supervision at all times\nB: a valid health insurance policy\nC: a swimming ability assessment\nD: a completed medical consent form on file",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 15 – 20\r\n\r\nDo the following statements agree with the information given in Reading Text 4?\r\n\r\nWrite TRUE, FALSE or NOT GIVEN.",
+      "question": "15. You should research industry salary standards before negotiating with your manager.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is TRUE.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The passage explicitly states to research industry standards before initiating discussions."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage clearly recommends researching salary standards. The correct answer is TRUE."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage provides information about this. The correct answer is TRUE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "16. You should focus on personal financial needs when presenting your case for a pay rise.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is FALSE.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states to focus on value brought to the company, not personal needs. The correct answer is FALSE."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage clearly states to focus on value brought to the company rather than personal financial needs."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage provides this information. The correct answer is FALSE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "17. It is best to request a pay rise during the morning hours.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is NOT GIVEN.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage discusses timing (after projects, during reviews) but not time of day. The correct answer is NOT GIVEN."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage does not provide information about time of day. The correct answer is NOT GIVEN."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! The passage does not mention what time of day is best for requesting a pay rise."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "18. If your initial pay rise request is declined, you should ask about future opportunities.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is TRUE.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states to ask what improvements would make you eligible for a raise in the future."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage recommends asking about future opportunities. The correct answer is TRUE."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage provides this information. The correct answer is TRUE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "19. Your manager must make a decision about your pay rise request within one week.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is FALSE.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage mentions a two-week timeframe for follow-up, not one week. The correct answer is FALSE."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage suggests requesting a follow-up meeting within two weeks, not one week."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage provides timing information. The correct answer is FALSE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "20. Negotiation for salary increases is a standard business practice.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is TRUE.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The passage explicitly states that negotiation is a normal business practice."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage confirms negotiation is a normal practice. The correct answer is TRUE."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage provides this information. The correct answer is TRUE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 21 – 26\r\n\r\nWhich section of the cover letter rules does each of the following apply to? Write the correct section heading, A, B, C, or D.",
+      "question": "21. Your address, the date, and the employer's details",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is A (Format and Structure).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_features",
+      "mc_options": [
+        {
+          "text": "A: Format and Structure",
+          "is_correct": true,
+          "feedback": "Correct! The Format and Structure section covers contact information, date, and employer details."
+        },
+        {
+          "text": "B: Content Guidelines",
+          "is_correct": false,
+          "feedback": "Incorrect. This is in the Format and Structure section. The correct answer is A."
+        },
+        {
+          "text": "C: Closing Statements",
+          "is_correct": false,
+          "feedback": "Incorrect. This is in the Format and Structure section. The correct answer is A."
+        },
+        {
+          "text": "D: Common Mistakes to Avoid",
+          "is_correct": false,
+          "feedback": "Incorrect. This is in the Format and Structure section. The correct answer is A."
+        }
+      ],
+      "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "22. Why you are interested in the company and role",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B (Content Guidelines).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_features",
+      "mc_options": [
+        {
+          "text": "A: Format and Structure",
+          "is_correct": false,
+          "feedback": "Incorrect. This is content-related. The correct answer is B."
+        },
+        {
+          "text": "B: Content Guidelines",
+          "is_correct": true,
+          "feedback": "Correct! Explaining interest in the company and role is covered in the Content Guidelines section."
+        },
+        {
+          "text": "C: Closing Statements",
+          "is_correct": false,
+          "feedback": "Incorrect. This is in Content Guidelines. The correct answer is B."
+        },
+        {
+          "text": "D: Common Mistakes to Avoid",
+          "is_correct": false,
+          "feedback": "Incorrect. This is in Content Guidelines. The correct answer is B."
+        }
+      ],
+      "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "23. Expressing enthusiasm and requesting an interview",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C (Closing Statements).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_features",
+      "mc_options": [
+        {
+          "text": "A: Format and Structure",
+          "is_correct": false,
+          "feedback": "Incorrect. This is about closing statements. The correct answer is C."
+        },
+        {
+          "text": "B: Content Guidelines",
+          "is_correct": false,
+          "feedback": "Incorrect. This is about closing statements. The correct answer is C."
+        },
+        {
+          "text": "C: Closing Statements",
+          "is_correct": true,
+          "feedback": "Correct! Expressing enthusiasm and requesting an interview are part of the Closing Statements section."
+        },
+        {
+          "text": "D: Common Mistakes to Avoid",
+          "is_correct": false,
+          "feedback": "Incorrect. This is in Closing Statements. The correct answer is C."
+        }
+      ],
+      "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "24. Using appropriate professional formatting and margins",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is A (Format and Structure).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_features",
+      "mc_options": [
+        {
+          "text": "A: Format and Structure",
+          "is_correct": true,
+          "feedback": "Correct! Formatting and margins are covered in the Format and Structure section."
+        },
+        {
+          "text": "B: Content Guidelines",
+          "is_correct": false,
+          "feedback": "Incorrect. This is about formatting. The correct answer is A."
+        },
+        {
+          "text": "C: Closing Statements",
+          "is_correct": false,
+          "feedback": "Incorrect. This is about formatting. The correct answer is A."
+        },
+        {
+          "text": "D: Common Mistakes to Avoid",
+          "is_correct": false,
+          "feedback": "Incorrect. This is in Format and Structure. The correct answer is A."
+        }
+      ],
+      "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "25. Not using generic letters and avoiding informal language",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is D (Common Mistakes to Avoid).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_features",
+      "mc_options": [
+        {
+          "text": "A: Format and Structure",
+          "is_correct": false,
+          "feedback": "Incorrect. This is about mistakes to avoid. The correct answer is D."
+        },
+        {
+          "text": "B: Content Guidelines",
+          "is_correct": false,
+          "feedback": "Incorrect. This is about mistakes to avoid. The correct answer is D."
+        },
+        {
+          "text": "C: Closing Statements",
+          "is_correct": false,
+          "feedback": "Incorrect. This is about mistakes to avoid. The correct answer is D."
+        },
+        {
+          "text": "D: Common Mistakes to Avoid",
+          "is_correct": true,
+          "feedback": "Correct! Not using generic letters and avoiding informal language are mistakes to avoid."
+        }
+      ],
+      "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "26. Mentioning the specific position and job listing source",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B (Content Guidelines).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_features",
+      "mc_options": [
+        {
+          "text": "A: Format and Structure",
+          "is_correct": false,
+          "feedback": "Incorrect. This is about content. The correct answer is B."
+        },
+        {
+          "text": "B: Content Guidelines",
+          "is_correct": true,
+          "feedback": "Correct! The opening paragraph details about position and job listing are part of Content Guidelines."
+        },
+        {
+          "text": "C: Closing Statements",
+          "is_correct": false,
+          "feedback": "Incorrect. This is in Content Guidelines. The correct answer is B."
+        },
+        {
+          "text": "D: Common Mistakes to Avoid",
+          "is_correct": false,
+          "feedback": "Incorrect. This is in Content Guidelines. The correct answer is B."
+        }
+      ],
+      "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Choose the most suitable headings for paragraphs B-G from the list below. Use each heading once only.",
+      "question": "Paragraph B",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is vii. Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "i. Government profiteering at the expense of citizens",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph B focuses on short-term economic gains versus long-term environmental concerns, not specifically government profiteering. Review the paragraph's main theme."
+        },
+        {
+          "text": "ii. A balance provides the best options",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses the conflict between economic needs and environmental destruction, not finding a balance. That theme appears in a different paragraph."
+        },
+        {
+          "text": "iii. Resistance to a change in attitudes",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph focuses on economic pressures driving deforestation, not resistance to changing attitudes. Review the main focus of the paragraph."
+        },
+        {
+          "text": "iv. Landowners the driving force for positive political change",
+          "is_correct": false,
+          "feedback": "Incorrect. The paragraph doesn't discuss landowners driving positive change. Review what Paragraph B actually discusses about economic pressures."
+        },
+        {
+          "text": "v. Renewable forests unable to get public support",
+          "is_correct": false,
+          "feedback": "Incorrect. This topic is not the focus of Paragraph B. The paragraph discusses economic pressures leading to deforestation."
+        },
+        {
+          "text": "vi. The risks of an unequal share of land",
+          "is_correct": false,
+          "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph B focuses on economic versus environmental concerns."
+        },
+        {
+          "text": "vii. Temporary gain outweighing long term concerns",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability."
+        },
+        {
+          "text": "viii. Options for alternative income generation",
+          "is_correct": false,
+          "feedback": "Incorrect. This topic is covered in a different paragraph. Paragraph B focuses on the economic pressures driving current deforestation."
+        },
+        {
+          "text": "ix. The impact personal decisions can have",
+          "is_correct": false,
+          "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph B focuses on economic versus environmental priorities."
+        }
+      ],
+      "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Paragraph C",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is viii. Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "i. Government profiteering at the expense of citizens",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph C discusses alternative ways to generate income from forests, not government profiteering. Review the paragraph's focus."
+        },
+        {
+          "text": "ii. A balance provides the best options",
+          "is_correct": false,
+          "feedback": "Incorrect. While balance is mentioned elsewhere, Paragraph C specifically focuses on alternative income options like tourism."
+        },
+        {
+          "text": "iii. Resistance to a change in attitudes",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph presents alternatives, not resistance to change. Review what Paragraph C discusses."
+        },
+        {
+          "text": "iv. Landowners the driving force for positive political change",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph C doesn't discuss landowners or political change. It focuses on ecotourism and alternative income."
+        },
+        {
+          "text": "v. Renewable forests unable to get public support",
+          "is_correct": false,
+          "feedback": "Incorrect. This is not the topic of Paragraph C. The paragraph discusses tourism as an alternative income source."
+        },
+        {
+          "text": "vi. The risks of an unequal share of land",
+          "is_correct": false,
+          "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph C focuses on ecotourism alternatives."
+        },
+        {
+          "text": "vii. Temporary gain outweighing long term concerns",
+          "is_correct": false,
+          "feedback": "Incorrect. This theme is in a different paragraph. Paragraph C presents sustainable alternatives like tourism."
+        },
+        {
+          "text": "viii. Options for alternative income generation",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests."
+        },
+        {
+          "text": "ix. The impact personal decisions can have",
+          "is_correct": false,
+          "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph C focuses on ecotourism as an alternative."
+        }
+      ],
+      "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Paragraph D",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is ii. Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "i. Government profiteering at the expense of citizens",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph D discusses the need for balance between conservation and development, not government profiteering."
+        },
+        {
+          "text": "ii. A balance provides the best options",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting."
+        },
+        {
+          "text": "iii. Resistance to a change in attitudes",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses balanced approaches and consequences, not resistance to change. Review Paragraph D's main theme."
+        },
+        {
+          "text": "iv. Landowners the driving force for positive political change",
+          "is_correct": false,
+          "feedback": "Incorrect. Landowners are not the focus of this paragraph. It discusses balanced forest management and global impacts."
+        },
+        {
+          "text": "v. Renewable forests unable to get public support",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses balanced harvesting and environmental impacts, not public support issues."
+        },
+        {
+          "text": "vi. The risks of an unequal share of land",
+          "is_correct": false,
+          "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph D focuses on balanced approaches."
+        },
+        {
+          "text": "vii. Temporary gain outweighing long term concerns",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph D actually discusses the OPPOSITE - countries realizing they need sustainable, long-term approaches."
+        },
+        {
+          "text": "viii. Options for alternative income generation",
+          "is_correct": false,
+          "feedback": "Incorrect. While alternatives are mentioned elsewhere, Paragraph D focuses on balanced harvesting and environmental impacts."
+        },
+        {
+          "text": "ix. The impact personal decisions can have",
+          "is_correct": false,
+          "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph D discusses policy-level balance."
+        }
+      ],
+      "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Paragraph E",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is vi. Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "i. Government profiteering at the expense of citizens",
+          "is_correct": false,
+          "feedback": "Incorrect. While government is mentioned, the focus is on land inequality and its consequences, not specifically profiteering."
+        },
+        {
+          "text": "ii. A balance provides the best options",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses the problem of unequal land distribution, not solutions involving balance."
+        },
+        {
+          "text": "iii. Resistance to a change in attitudes",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses land inequality as a cause of deforestation, not resistance to change."
+        },
+        {
+          "text": "iv. Landowners the driving force for positive political change",
+          "is_correct": false,
+          "feedback": "Incorrect. The paragraph shows landowners as part of the PROBLEM, not driving positive change. They influence regulations negatively."
+        },
+        {
+          "text": "v. Renewable forests unable to get public support",
+          "is_correct": false,
+          "feedback": "Incorrect. Public support is not the focus. Paragraph E discusses how land inequality drives deforestation."
+        },
+        {
+          "text": "vi. The risks of an unequal share of land",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil."
+        },
+        {
+          "text": "vii. Temporary gain outweighing long term concerns",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph specifically addresses land inequality, not the temporary versus long-term issue."
+        },
+        {
+          "text": "viii. Options for alternative income generation",
+          "is_correct": false,
+          "feedback": "Incorrect. Alternatives are discussed elsewhere. Paragraph E focuses on land distribution problems."
+        },
+        {
+          "text": "ix. The impact personal decisions can have",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses structural land ownership issues, not personal decisions."
+        }
+      ],
+      "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Paragraph F",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is ix. Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "i. Government profiteering at the expense of citizens",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph F discusses government protection policies and individual consumer choices, not profiteering."
+        },
+        {
+          "text": "ii. A balance provides the best options",
+          "is_correct": false,
+          "feedback": "Incorrect. While balance might be implied, the specific focus is on the power of individual consumer choices."
+        },
+        {
+          "text": "iii. Resistance to a change in attitudes",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph encourages change through consumer choices, it doesn't discuss resistance to change."
+        },
+        {
+          "text": "iv. Landowners the driving force for positive political change",
+          "is_correct": false,
+          "feedback": "Incorrect. It's the general population and consumers driving change, not landowners specifically."
+        },
+        {
+          "text": "v. Renewable forests unable to get public support",
+          "is_correct": false,
+          "feedback": "Incorrect. The paragraph actually discusses how public demand IS creating change, showing support exists."
+        },
+        {
+          "text": "vi. The risks of an unequal share of land",
+          "is_correct": false,
+          "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph F focuses on consumer power."
+        },
+        {
+          "text": "vii. Temporary gain outweighing long term concerns",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses solutions through consumer behavior, not the problem of short-term thinking."
+        },
+        {
+          "text": "viii. Options for alternative income generation",
+          "is_correct": false,
+          "feedback": "Incorrect. While alternatives are mentioned, the focus is on how personal choices drive demand for these alternatives."
+        },
+        {
+          "text": "ix. The impact personal decisions can have",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism."
+        }
+      ],
+      "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Paragraph G",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is iii. Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "i. Government profiteering at the expense of citizens",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph G discusses the challenge of raising public awareness and changing habits, not government profiteering."
+        },
+        {
+          "text": "ii. A balance provides the best options",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses the difficulty of changing behaviors, not finding balance."
+        },
+        {
+          "text": "iii. Resistance to a change in attitudes",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption."
+        },
+        {
+          "text": "iv. Landowners the driving force for positive political change",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses public behavior change challenges, not landowners."
+        },
+        {
+          "text": "v. Renewable forests unable to get public support",
+          "is_correct": false,
+          "feedback": "Incorrect. The focus is on difficulty changing habits, not lack of support for renewables."
+        },
+        {
+          "text": "vi. The risks of an unequal share of land",
+          "is_correct": false,
+          "feedback": "Incorrect. Land inequality is not discussed in this paragraph. It focuses on changing consumer behavior."
+        },
+        {
+          "text": "vii. Temporary gain outweighing long term concerns",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses resistance to behavioral change, not economic versus environmental priorities."
+        },
+        {
+          "text": "viii. Options for alternative income generation",
+          "is_correct": false,
+          "feedback": "Incorrect. Income alternatives are not the focus. Paragraph G discusses the challenge of raising awareness and changing habits."
+        },
+        {
+          "text": "ix. The impact personal decisions can have",
+          "is_correct": false,
+          "feedback": "Incorrect. While personal decisions are mentioned, the emphasis is on how DIFFICULT it is to change them, which is resistance to change."
+        }
+      ],
+      "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "open_question",
+      "instructions": "Answer the following questions using NO MORE THAN TWO WORDS from the text.",
+      "question": "<p>What phenomenon is predicted to increase at a global level due to deforestation?</p>\r\n<p>36. Phenomenon:</p>\r\n",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "GREENHOUSE EFFECT|greenhouse effect|THE GREENHOUSE EFFECT|the greenhouse effect"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Paragraph D states that deforestation will lead to 'a 15 per cent rise in the greenhouse effect around the planet.'",
+          "incorrect": "Incorrect. Review Paragraph D which discusses the global environmental phenomenon predicted to increase due to deforestation.",
+          "no_answer": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'"
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "<p>What is becoming more common, allowing for more ecological uses of forested areas?</p>\r\n<p>37. What is becoming more common:</p>\r\n",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "INTERNATIONAL TRAVEL|international travel"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Paragraph C states 'International travel is becoming increasingly popular,' enabling ecological tourism in forests.",
+          "incorrect": "Incorrect. Review Paragraph C which mentions what is becoming more popular and enabling ecological uses of forests.",
+          "no_answer": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "<p>Over two thirds of people living in the countryside in Brazil are what?</p>\r\n<p>38. They are:</p>\r\n",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "LANDLESS|landless"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Paragraph E states that '70 per cent of rural households are landless' in Brazil.",
+          "incorrect": "Incorrect. Review Paragraph E which discusses the situation of rural people in Brazil regarding land ownership.",
+          "no_answer": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "<p>Which country has only one fiftieth of their original forested areas remaining?</p>\r\n<p>39. Country:</p>\r\n",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "UNITED STATES|United States|THE USA|USA|THE U.S.A.|U.S.A.|the USA|usa|the U.S.A.|u.s.a."
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Paragraph B states the United States 'has less than two per cent of its original forest' (which is one fiftieth).",
+          "incorrect": "Incorrect. Review Paragraph B which mentions the country with only 2% (one fiftieth) of its original forests remaining.",
+          "no_answer": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "<p>What needs to be increased so that people can begin to change negative habits?</p>\r\n<p>40. What needs to be increased:</p>\r\n",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "PUBLIC AWARENESS|public awareness|AWARENESS|awareness"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Paragraph G states that 'the raising of public awareness' is necessary for changing negative behaviors.",
+          "incorrect": "Incorrect. Review Paragraph G which identifies what needs to be raised or increased to change people's harmful behaviors.",
+          "no_answer": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change."
+        }
+      }
     }
+  ],
+  "reading_texts": [
+    {
+      "title": "Reading Text 1",
+      "content": "<h4><strong>Hidden Treasures Music Store – September Members' Newsletter</strong></h4>\r\n\r\n<p>Stockists of rare and collectors' items – take a walk down Memory Lane!</p>\r\n\r\n<h5>Music categories</h5>\r\n<p><strong>J</strong> – Jazz &nbsp;&nbsp; <strong>B</strong> – Blues &nbsp;&nbsp; <strong>R</strong> – Rock &amp; Roll</p>\r\n\r\n<h5>New Arrivals This Month</h5>\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"12\" style=\"border-collapse:collapse;border:2px solid #2f3b52\">\r\n<tbody>\r\n<tr style=\"background:#2f3b52;color:#fff\">\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\" width=\"30%\">Artist</th>\r\n<th style=\"border:1px solid #2f3b52\" align=\"center\" width=\"8%\">Genre</th>\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\" width=\"62%\">Details</th>\r\n</tr>\r\n<tr style=\"background:#f3f6fb\">\r\n<td colspan=\"3\" style=\"border:1px solid #2f3b52\"><strong><span id=\"passage-q2\" data-question=\"2\"></span>\r\n<span class=\"reading-answer-marker\">Under £20</span></strong></td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\"><span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Bill Benjamin</span></td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">J</td>\r\n<td style=\"border:1px solid #ccc\">\r\nA rare chance to buy the artist's first album. <span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">5 copies in stock.</span>\r\n</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\"><span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Gerome and the Jives</span></td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">R</td>\r\n<td style=\"border:1px solid #ccc\"><span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">10 copies remaining</span>. Reduced from £30.</td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">Giles Bertram</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\"><span id=\"passage-q2\" data-question=\"2\"></span>\r\n<span class=\"reading-answer-marker\">B</span></td>\r\n<td style=\"border:1px solid #ccc\">\r\nCurrently out of stock. <span id=\"passage-q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">Expected delivery 25 September.</span>\r\n</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">The Rockerbillies</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">R</td>\r\n<td style=\"border:1px solid #ccc\">Digitally remastered for enhanced quality.</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<br>\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"12\" style=\"border-collapse:collapse;border:2px solid #2f3b52\">\r\n<tbody>\r\n<tr style=\"background:#2f3b52;color:#fff\">\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\" width=\"30%\">Artist</th>\r\n<th style=\"border:1px solid #2f3b52\" align=\"center\" width=\"8%\">Genre</th>\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\" width=\"62%\">Details</th>\r\n</tr>\r\n<tr style=\"background:#f3f6fb\">\r\n<td colspan=\"3\" style=\"border:1px solid #2f3b52\"><strong>Under £30</strong></td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">Clyde Forstrum</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">J/B</td>\r\n<td style=\"border:1px solid #ccc\">A mix of cover songs from well-known jazz and blues artists.</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">The Kings of Temple Street</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">B</td>\r\n<td style=\"border:1px solid #ccc\">Award-winning blues band from New Orleans.</td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">Brian Jefferson</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">B</td>\r\n<td style=\"border:1px solid #ccc\">Includes the chart-topping song \"Forever Yours\".</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">Janine Reynard</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">R</td>\r\n<td style=\"border:1px solid #ccc\">\r\n<span id=\"passage-q3\" data-question=\"3\"></span>\r\n<span class=\"reading-answer-marker\">Special offer this month only. Usually £55.</span>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<br>\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"12\" style=\"border-collapse:collapse;border:2px solid #2f3b52\">\r\n<tbody>\r\n<tr style=\"background:#2f3b52;color:#fff\">\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\" width=\"30%\">Artist</th>\r\n<th style=\"border:1px solid #2f3b52\" align=\"center\" width=\"8%\">Genre</th>\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\" width=\"62%\">Details</th>\r\n</tr>\r\n<tr style=\"background:#f3f6fb\">\r\n<td colspan=\"3\" style=\"border:1px solid #2f3b52\"><strong>Under £50</strong></td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">The Real McCoy</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">R</td>\r\n<td style=\"border:1px solid #ccc\">Voted their best album of all time by K20 radio listeners.</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">Seeking Solitude</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">J</td>\r\n<td style=\"border:1px solid #ccc\">\r\n<span id=\"passage-q4\" data-question=\"4\"></span>\r\n<span class=\"reading-answer-marker\">First time available in store.</span>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">Johnny Baxter</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">B</td>\r\n<td style=\"border:1px solid #ccc\">New arrival from the USA. Only available from Hidden Treasures in the UK.</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">Jessica Wilson</td>\r\n<td style=\"border:1px solid #ccc\" align=\"center\">B/J</td>\r\n<td style=\"border:1px solid #ccc\">\r\n<span id=\"passage-q5\" data-question=\"5\"></span>\r\n<span class=\"reading-answer-marker\">The UK's best-known female jazz and blues star.</span>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<h5>Additional Special Offers</h5>\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"12\" style=\"border-collapse:collapse;border:2px solid #2f3b52\">\r\n<tbody>\r\n<tr style=\"background:#2f3b52;color:#fff\">\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\">Offer</th>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">\r\n<span id=\"passage-q6\" data-question=\"6\"></span>\r\n<span class=\"reading-answer-marker\">£20 voucher with any purchase over £100 (available until 5 October)</span>\r\n</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">Free delivery within the UK only for orders over £6 (valid until 30 September)</td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">Purchases over £60 automatically entered into prize draw</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<h5>Delivery Details</h5>\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"12\" style=\"border-collapse:collapse;border:2px solid #2f3b52\">\r\n<tbody>\r\n<tr style=\"background:#2f3b52;color:#fff\">\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\">Within the UK</th>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">\r\n<span id=\"passage-q7\" data-question=\"7\"></span>\r\n<span class=\"reading-answer-marker\">£6.50 regular post</span>\r\n</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">£16.80 courier service (next day delivery)</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<br>\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"12\" style=\"border-collapse:collapse;border:2px solid #2f3b52\">\r\n<tbody>\r\n<tr style=\"background:#2f3b52;color:#fff\">\r\n<th style=\"border:1px solid #2f3b52\" align=\"left\">Outside the UK</th>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">Contact the store for prices</td>\r\n</tr>\r\n<tr style=\"background:#fafafa\">\r\n<td style=\"border:1px solid #ccc\">Surface delivery: approximately 6–8 weeks</td>\r\n</tr>\r\n<tr>\r\n<td style=\"border:1px solid #ccc\">Airmail delivery: 1–2 weeks</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n"
+    },
+    {
+      "title": "Reading Text 2",
+      "content": "<h4><strong>Brightwood Leisure Centre – Facilities and Rules</strong></h4>\r\n\r\n<p>Welcome to Brightwood Leisure Centre. To ensure all members and guests enjoy their visit safely, please observe the following rules and regulations.</p>\r\n\r\n<h5>Membership Categories</h5>\r\n\r\n<p><span id=\"passage-q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">Full membership is available to individuals aged 16 years and above, with an annual fee of £280</span>. This includes unlimited access to all facilities during opening hours and priority booking for classes.</p>\r\n\r\n<p>Student membership is available to full-time students aged 18-25 for £120 per year. Valid student identification must be presented at registration.</p>\r\n\r\n<p><span id=\"passage-q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">Family membership covering up to four household members costs £450 annually</span> and is ideal for families who want to exercise together.</p>\r\n\r\n<h5>Facility Rules</h5>\r\n\r\n<p><span id=\"passage-q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">All swimmers must wear appropriate swimwear in the pool area; shorts and t-shirts are not acceptable</span>. Swimming caps are recommended but not mandatory. Shower facilities are available before and after use of the pool.</p>\r\n\r\n<p>Gym equipment must be used only as instructed by staff. Members must complete an induction session before using the weights room for the first time. Mobile phones should be set to silent mode in all facilities.</p>\r\n\r\n<p>Children under 8 years old are not permitted in the gym or weights room. Children aged 8-15 may use the gym only when supervised by an adult member.</p>\r\n\r\n<h5>Booking and Cancellations</h5>\r\n\r\n<p>Classes should be booked online at least 24 hours in advance. Cancellations must be made 12 hours before the class start time to avoid a £5 cancellation fee. No-shows will be recorded, and members with more than three no-shows in a month will have their class booking privileges suspended for one week.</p>\r\n\r\n<h5>Safety and Conduct</h5>\r\n\r\n<p>Staff members reserve the right to ask members to leave if they fail to comply with rules or behave inappropriately. All accidents should be reported immediately to staff. First aid facilities are available at the front desk.</p>\r\n\r\n<p>The centre operates from 6:00 AM to 10:00 PM weekdays and 8:00 AM to 6:00 PM weekends.</p>"
+    },
+    {
+      "title": "Reading Text 3",
+      "content": "<h4><strong>Guest and Children Policies at Brightwood Leisure Centre</strong></h4>\r\n\r\n<h5>Guest Privileges</h5>\r\n\r\n<p><span id=\"passage-q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">Members can bring up to two guests per visit, though guests must be accompanied by their sponsoring member at all times</span>. Guest passes are free and valid for one visit only.</p>\r\n\r\n<p>Guests do not have access to the changing facilities without supervision and must follow all centre rules. Guests are not permitted to use the weights room or attend specialized classes.</p>\r\n\r\n<p><span id=\"passage-q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">Frequent guests who visit more than six times per year are encouraged to become members</span> to enjoy unlimited access to all facilities.</p>\r\n\r\n<h5>Children's Programmes</h5>\r\n\r\n<p><span id=\"passage-q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">The centre offers swimming lessons for children aged 3-10 years old, held every Saturday morning from 9:00 AM to 4:00 PM</span>. Classes are taught by qualified instructors and grouped by ability level.</p>\r\n\r\n<p>Holiday camps are available during school holidays for children aged 5-14. These camps include a variety of activities such as swimming, games, sports, and craft activities. Early booking is essential as places are limited.</p>\r\n\r\n<p><span id=\"passage-q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">Children attending any centre activities must have a completed medical consent form on file</span>. This form should include emergency contact information and any relevant medical conditions.</p>\r\n\r\n<h5>Additional Information</h5>\r\n\r\n<p>Parents and caregivers are welcome to observe swimming lessons from the viewing gallery. For enquiries about children's programs, please contact the centre directly.</p>"
+    },
+    {
+      "title": "Reading Text 4",
+      "content": "<h4><strong>Guidelines for Negotiating a Pay Rise at Work</strong></h4>\r\n\r\n<p>Many employees feel uncertain about requesting a pay increase from their employer. However, with proper preparation and a professional approach, salary negotiations can be successful.</p>\r\n\r\n<h5>Before You Start</h5>\r\n\r\n<p><span id=\"passage-q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">Research industry salary standards for your position, experience level, and geographic location before initiating any discussion with your manager</span>. This ensures your request is realistic and backed by data.</p>\r\n\r\n<p><span id=\"passage-q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">Document your achievements and contributions over the past year, including successful projects, additional responsibilities you have assumed, and positive feedback from colleagues or clients</span>. This evidence strengthens your case considerably.</p>\r\n\r\n<p>Choose an appropriate time to request a meeting—ideally after a successful project completion, during performance reviews, or when the company is performing well financially.</p>\r\n\r\n<h5>The Negotiation Meeting</h5>\r\n\r\n<p><span id=\"passage-q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">Start the conversation by thanking your manager for considering your request and expressing your commitment to the organization</span>. This sets a positive tone for the discussion.</p>\r\n\r\n<p><span id=\"passage-q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">Present your case clearly by explaining why you deserve a raise, focusing on the value you bring to the company rather than personal financial needs</span>. Mention specific accomplishments and how you have improved efficiency or contributed to company goals.</p>\r\n\r\n<p>Listen carefully to your manager's feedback. They may outline concerns, budget constraints, or offer alternative benefits such as additional vacation days or flexible working arrangements.</p>\r\n\r\n<h5>After the Discussion</h5>\r\n\r\n<p><span id=\"passage-q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">If your manager needs time to consider, request a follow-up meeting within two weeks to discuss their decision</span>. Agree on a specific date before the meeting concludes.</p>\r\n\r\n<p><span id=\"passage-q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">Even if your initial request is declined, ask what specific improvements or achievements would make you eligible for a raise in the future, and establish clear goals to work towards</span>. This demonstrates your commitment to professional growth and keeps the door open for future negotiations.</p>\r\n\r\n<p>Remember that negotiation is a normal business practice, and most employers expect employees to request pay increases periodically.</p>"
+    },
+    {
+      "title": "Reading Text 5",
+      "content": "<h4><strong>Essential Rules for Writing an Effective Cover Letter</strong></h4>\r\n\r\n<h5>Format and Structure</h5>\r\n\r\n<p><span id=\"passage-q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">A cover letter should be one page long, written on white paper with professional margins of one inch on all sides</span>. Use a standard business font such as Arial or Times New Roman in size 11 or 12.</p>\r\n\r\n<p><span id=\"passage-q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">Include your contact information at the top of the letter, followed by the date, and then the employer's name and company address</span>. Address the letter to a specific person whenever possible; research the hiring manager's name on the company website or LinkedIn.</p>\r\n\r\n<h5>Content Guidelines</h5>\r\n\r\n<p><span id=\"passage-q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">The opening paragraph should mention the specific position you are applying for and where you found the job listing</span>. This shows that you have tailored your application to this particular opportunity.</p>\r\n\r\n<p><span id=\"passage-q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">In the main body, explain why you are interested in the company and the role, highlighting how your skills and experience match the job requirements</span>. Use specific examples from your background to demonstrate your qualifications.</p>\r\n\r\n<p>Avoid repeating information that is already in your CV. Instead, add value by explaining your genuine interest in the position and what you can contribute to the organization.</p>\r\n\r\n<h5>Closing Statements</h5>\r\n\r\n<p><span id=\"passage-q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">Conclude with a strong closing paragraph that expresses your enthusiasm for the opportunity and includes a call to action, such as requesting an interview</span>. Thank the reader for their time and consideration.</p>\r\n\r\n<p><span id=\"passage-q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">Sign off professionally with \"Sincerely\" or \"Best regards\" followed by your full name typed below, leaving space for your handwritten signature if submitting a printed copy</span>. Proofread carefully for spelling and grammar errors before sending.</p>\r\n\r\n<h5>Common Mistakes to Avoid</h5>\r\n\r\n<p>Do not use generic cover letters. Each letter should be customized for the specific position and company. Avoid using informal language or jokes that may not be appropriate in a professional context. Never include negative comments about previous employers.</p>"
+    },
+    {
+      "title": "Reading Text 6",
+      "content": "<h3>Reading Passage 3</h3>\r\n<h2>The price of your newspaper</h2>\r\n\r\n<h4>Paragraph A</h4>\r\n<p>The average family buys two newspapers and a magazine every week, in addition to receiving up to three pieces of junk mail. Multiplied by the global population, this amounts to a lot of paper, and therefore a lot of wood. Although the rise of the home computer has gone a long way in reducing this excessive use of paper, the demand is still considerable.</p>\r\n\r\n<span id=\"passage-q27\" data-question=\"27\"></span><h4><span id=\"passage-q25\" data-question=\"25\"></span>Paragraph B</h4>\r\n<p>Social and economic concerns have over-ridden environmental common sense, and in many western countries, the woods and forests that once covered the land have long since been cleared away. A shocking example can be found by looking at the <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">United States</span>, which now has less than two per cent of its original forest. Other areas, predominantly tropical countries, <span id=\"passage-q28\" data-question=\"28\"></span>are now following the same destructive path. In 1995 over one million hectares of forest in Brazil were cleared, a disturbing statistic but nonetheless inevitable as timber and other related raw materials are important exports for countries that often have little other way of supporting themselves. They provide employment for those who harvest the wood, extract rubber or make products using available materials. With one third of the world depending on wood for fuel, it is very tempting, <span id=\"passage-q29\" data-question=\"29\"></span>though shortsighted, for poorer countries to exploit the market.</p>\r\n\r\n<h4><span id=\"passage-q26\" data-question=\"26\"></span>Paragraph C</h4>\r\n<p>It could be argued, then, that countries with rich wood resources should be fully entitled to exploit them. However, there are less destructive alternatives for generating an income from the rainforests. The forest environment provides a popular setting for ecotourism, which includes hiking, camping, bird watching and other outdoor adventure or<span id=\"passage-q30\" data-question=\"30\"></span> nature study activities. <span id=\"passage-q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">International travel</span> is becoming increasingly popular, making the rainforests accessible for the more adventurous holidaymaker.</p>\r\n\r\n<h4><span id=\"passage-q27\" data-question=\"27\"></span>Paragraph D</h4>\r\n<p>No matter what the solution, the rampant spread of deforestation has to be halted. Surveys in Cameroon, the Ivory Coast, G<span id=\"passage-q31\" data-question=\"31\"></span>hana and Liberia found that forest wildlife accounted for 70 to 90 per cent of the total animal protein consumed, thus arguing that some indigenous peoples are completely dependent on forests for food. In many of these countries, wood harvesting is carried out on a considerably more sensible scale. There appears to be the realisation that selling the wood is a temporary solution that would inevitably lead to worse problems for the future. Not only would the traditional food source be gone, but the trees which protected the soil a<span id=\"passage-q32\" data-question=\"32\"></span>gainst erosion would be gone. Landslides would become more common and rainwater would not be absorbed so easily into the ground, leading to a shortage of freshwater supplies. There is also the global impact, not only from the burning of the wood but also because trees provide an important role in the recycling of carbon dioxide and the production of oxygen. Estimates based on the current rate of deforestation have predicted a 15 per cent rise in <span id=\"passage-q31\" data-question=\"31\"><span id=\"passage-q33\" data-question=\"33\"></span></span><span class=\"reading-answer-marker\">the greenhouse effect</span> around the planet.</p>\r\n\r\n<h4><span id=\"passage-q28\" data-question=\"28\"></span>Paragraph E</h4>\r\n<p>In order to combat the problem of deforestation, it is important to consider its causes in greater detail. In Brazil, we should look at the unequal and unfair distribution of land – 4.5 per cent of landowners hold 81 per cent of the country's farmland, and 70 per cent <span id=\"passage-q34\" data-question=\"34\"></span>of rural households are <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">landless</span>. With either no legal claim to the land or ownership of so much, deforestation is inevitable as land owners profit from the land. This is the point in which the situation is in the hands of government, yet often the landowners have shown their ability to sway official regulations regarding timber harvesting.</p>\r\n\r\n<h4><span id=\"passage-q29\" data-question=\"29\"></span>Paragraph F</h4>\r\n<p>To effect a serious reversa<span id=\"passage-q35\" data-question=\"35\"></span>l of the damage, some governments are taking a more active role in forest management to protect the environment and employment – a change which has been largely encouraged by the voting and demands of the general population which have resulted in policies of replantation and protection. As well as creating political pressure, individuals can make a difference by practising green consumerism. Recycled paper is readily available, and we can all make an effort to purchase the most ecologica<span id=\"passage-q36\" data-question=\"36\"></span>lly sensitive products. Demanding alternative products, such as clear-cut free paper and eco-certified lumber, is important in convincing companies that markets exist for such products.</p>\r\n\r\n<h4><span id=\"passage-q30\" data-question=\"30\"></span>Paragraph G</h4>\r\n<p>None of these activities can occur without the raising of <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">public awareness</span> to inform consumers about the environmental effects of the<span id=\"passage-q37\" data-question=\"37\"></span>ir products, and this is not an easy task. Many people are too entrenched in their habits or too lazy to change, yet one of the most important ways for a person to have a positive effect is to reduce his or her consumption of forest and related products. An increase in the participation of the public in, and the accessibility and productiveness of facilities for, reducing, reusing and recycling is not only necessary, but also a duty. So next time you buy a newspaper, just consider the cost.</p>",
+      "text_id": null
+    }
+  ],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_reading",
+    "cbt_test_type": "general_training",
+    "exercise_label": "practice_test",
+    "open_as_popup": "",
+    "scoring_type": "ielts_general_training_reading",
+    "timer_minutes": "60",
+    "starting_question_number": "1"
+  },
+  "_metadata": {
+    "exported_at": "2026-01-18 15:41:19",
+    "exported_by": "impact",
+    "plugin_version": "12.2",
+    "format_version": "1.0"
+  }
 }
